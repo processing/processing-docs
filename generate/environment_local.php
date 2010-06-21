@@ -3,11 +3,13 @@
 require('../config.php');
 require('lib/Translation.class.php');
 $benchmark_start = microtime_float();
-
-// arguments
-$lang = isSet($_POST['lang']) ? $_POST['lang'] : 'en';
 $source = CONTENTDIR."/api_$lang/environment/";
 $path = DISTDIR."/environment/";
+
+// arguments
+//$lang = isSet($_POST['lang']) ? $_POST['lang'] : 'en';
+$lang = 'en';
+echo "language selected";
 
 // get translation file
 $translation = new Translation($lang);
