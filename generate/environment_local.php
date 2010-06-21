@@ -14,7 +14,6 @@ $path = DISTDIR."/environment/";
 $translation = new Translation($lang);
 
 // make page
-
 make_necessary_directories($path."images/file");
 $page = new LocalPage('Environment (IDE)', 'Environment', 'Environment', '../');
 $page->content(file_get_contents($source.'index.html'));
