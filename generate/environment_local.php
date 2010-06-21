@@ -13,12 +13,12 @@ $path = DISTDIR."/environment/";
 $translation = new Translation($lang);
 
 // make directories if they are not already there
-if (!is_dir($path)) { 
-	mkdir($path, '0775'); 
+if (!is_dir("/distribution/environment")) { 
+	mkdir("/distribution/environment", '0775'); 
 }
 echo "environment folder created";
-if (!is_dir($path.'images/file')) { 
-	mkdir($path.'images/file', '0775'); 
+if (!is_dir("/distribution/environment/images/")) { 
+	mkdir($path.'/distribution/environment/images/', '0775'); 
 }
 echo "image folder created"
 
