@@ -45,7 +45,7 @@ li { margin-bottom: 1em; }
 
 <div id="body">
 <p>&nbsp;</p>
-     <p><b>Generate reference files</b></p>
+     <p><b>Generate Reference Files</b></p>
      <!--<p><form action="#" method="post" onsubmit="new Ajax.Updater('status', 'svn_update.php',                      
                     { asynchronous: true, parameters: Form.serialize(this), onLoading: showloading }); return false;">
                         <select name="lang">
@@ -100,7 +100,7 @@ li { margin-bottom: 1em; }
 
 <p>&nbsp;</p>
 
-<strong>Generate English site files</strong>
+<strong>Generate Site Files</strong>
 <p>	
     <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
     <a href="#" onclick="remote_link('about.php');return false;">About</a> \ 
@@ -116,7 +116,7 @@ li { margin-bottom: 1em; }
 <p>&nbsp;</p>
 
 <p>
-<strong>Generate English files for distribution</strong>
+<strong>Generate Distribution Files</strong>
 </p>
 <p>		<a href="#" onclick="remote_link('reference_local.php'); return false;">Reference</a> \ 
 		<a href="#" onclick="remote_link('libraries_local.php'); return false;">Libraries</a> \ 

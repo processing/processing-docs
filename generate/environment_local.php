@@ -6,15 +6,23 @@ $benchmark_start = microtime_float();
 
 // arguments
 $lang = isSet($_POST['lang']) ? $_POST['lang'] : 'en';
-
+$source = CONTENTDIR."/api_$lang/environment/";
+$path = DISTDIR."/environment/";
 
 // get translation file
 $translation = new Translation($lang);
 
-// make overview page
-$source = CONTENTDIR."/api_$lang/environment/";
-$path = DISTDIR."/environment/";
-make_necessary_directories($path."images/file");
+// make directories if they are not already there
+if (!is_dir($path)) { 
+	mkdir($path, '0775'); 
+}
+if (!is_dir($path.'images/file')) { 
+	mkdir($path.'images/file', '0775'); 
+}
+
+// make page
+
+//make_necessary_directories($path."images/file");
 $page = new LocalPage("Environment (IDE)", "Environment", "Environment", '../');
 $page->content(file_get_contents($source."index.html"));
 $page->language($lang);
