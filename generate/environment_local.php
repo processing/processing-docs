@@ -16,9 +16,11 @@ $translation = new Translation($lang);
 if (!is_dir($path)) { 
 	mkdir($path, '0775'); 
 }
+echo "environment folder created";
 if (!is_dir($path.'images/file')) { 
 	mkdir($path.'images/file', '0775'); 
 }
+echo "image folder created"
 
 // make page
 
@@ -26,7 +28,7 @@ if (!is_dir($path.'images/file')) {
 $page = new LocalPage("Environment (IDE)", "Environment", "Environment", '../');
 $page->content(file_get_contents($source."index.html"));
 $page->language($lang);
-writeFile('distribution/environment/index.html', $page->out());
+writeFile($path.'index.html', $page->out());
 copydirr($source.'/images', $path.'/images');
 
 
