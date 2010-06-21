@@ -26,7 +26,7 @@ $benchmark_start = microtime_float();
 
 //$lang = isSet($_POST['lang']) ? $_POST['lang'] : 'en';
 $lang = 'en';
-echo "language selected";
+echo "Language selected";
 
 $source = CONTENTDIR."/api_$lang/environment/";
 $path = DISTDIR."/environment/";
@@ -36,13 +36,16 @@ $translation = new Translation($lang);
 
 // make directories if they are not already there
 if (!is_dir($path)) { 
-	mkdir($path, '0775'); 
+	//mkdir($path, '0775'); 
+	echo "Environment folder created";
+
 }
-echo "environment folder created";
+
 if (!is_dir($path.'images/')) { 
-	mkdir($path.'images/', '0775'); 
+	//mkdir($path.'images/', '0775'); 
+	echo "Image folder created";
+
 }
-echo "image folder created";
 
 // make page
 
