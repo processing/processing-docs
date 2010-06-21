@@ -13,20 +13,20 @@ $path = DISTDIR."/environment/";
 $translation = new Translation($lang);
 
 // make directories if they are not already there
-if (!is_dir("/distribution/environment")) { 
-	mkdir("/distribution/environment", '0775'); 
+if (!is_dir($path)) { 
+	mkdir($path, '0775'); 
 }
 echo "environment folder created";
-if (!is_dir("/distribution/environment/images/")) { 
-	mkdir($path.'/distribution/environment/images/', '0775'); 
+if (!is_dir($path.'images/')) { 
+	mkdir($path.'images/', '0775'); 
 }
-echo "image folder created"
+echo "image folder created";
 
 // make page
 
 //make_necessary_directories($path."images/file");
-$page = new LocalPage("Environment (IDE)", "Environment", "Environment", '../');
-$page->content(file_get_contents($source."index.html"));
+$page = new LocalPage('Environment (IDE)', 'Environment', 'Environment', '../');
+$page->content(file_get_contents($source.'index.html'));
 $page->language($lang);
 writeFile($path.'index.html', $page->out());
 copydirr($source.'/images', $path.'/images');
