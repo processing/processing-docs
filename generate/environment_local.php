@@ -13,13 +13,19 @@ $path = DISTDIR."/environment/";
 // get translation file
 $translation = new Translation($lang);
 
-// make page
-make_necessary_directories($path."images/file");
 $page = new LocalPage('Environment (IDE)', 'Environment', 'Environment', '../');
 $page->content(file_get_contents($source.'index.html'));
-$page->language($lang);
 writeFile($path.'index.html', $page->out());
-copydirr($source.'/images', $path.'/images');
+
+if (!is_dir(DISTDIR.'environment/images')) { 
+	mkdir(DISTDIR.'environment/images', '0757'); 
+}
+copydirr(CONTENTDIR."api_$lang/environment/images", DISTDIR.'environment/images');
+
+// make page
+//make_necessary_directories($path."images/file");
+//$page->language($lang);
+//copydirr($source.'/images', $path.'/images');
 
 
 $benchmark_end = microtime_float();

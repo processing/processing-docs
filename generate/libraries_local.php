@@ -16,13 +16,20 @@ $libraries = array('net', 'serial', 'video', 'opengl', 'dxf', 'pdf');
 
 $lib_dir = DISTDIR.'libraries';
 
+
+if (!is_dir(DISTDIR.'libraries/images')) { 
+	mkdir(DISTDIR.'libraries/images', '0757'); 
+}
+copydirr(CONTENTDIR."api_$lang/LIB_images", DISTDIR.'libraries/images');
+#make_necessary_directories(DISTDIR.'libraries/images/include.php');
+#copydirr(CONTENTDIR."api_$lang/LIB_images", DISTDIR.'libraries/images');
+
 // get library index
 $index = CONTENTDIR."api_$lang/libraries/index.html";
 $page = new LocalPage('Libraries', 'Libraries', 'Libraries', '../');
 $page->content(file_get_contents($index));
-make_necessary_directories(DISTDIR.'libraries/images/include.php');
 writeFile('distribution/libraries/index.html', $page->out());
-copydirr(CONTENTDIR."api_$lang/LIB_images", DISTDIR.'libraries/images');
+
 
 // foreach lib
 foreach ($libraries as $lib) {
@@ -48,7 +55,6 @@ foreach ($libraries as $lib) {
     writeFile('distribution/'.$destination.'/index.html', $page->out());
  
     // copy images directory
-    make_necessary_directories($lib_dir.'images');
 	copydirr(CONTENTDIR.$source.'/images', DISTDIR.$destination.'/images');
 }
 
