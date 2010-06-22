@@ -48,6 +48,7 @@ foreach ($libraries as $lib) {
     writeFile('distribution/'.$destination.'/index.html', $page->out());
  
     // copy images directory
+    make_necessary_directories($lib_dir.'images');
 	copydirr(CONTENTDIR.$source.'/images', DISTDIR.$destination.'/images');
 }
 
