@@ -317,6 +317,9 @@ td img { margin: 0; display: block; }
 #Tutorials .coltwo { width: 165px; float: left; margin-right: 25px; }
 #Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
 #Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
+#Tutorials h3 { margin-bottom: 2.2em; 
+				margin-top: 4em;
+}
 #Tutorials h1 { 
 	font-size			: 2.2em; 
 	font-family			: Arial, Geneva, Helvetica, Verdana, sans-serif; 
