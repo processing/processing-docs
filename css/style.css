@@ -317,12 +317,9 @@ td img { margin: 0; display: block; }
 #Tutorials .coltwo { width: 165px; float: left; margin-right: 25px; }
 #Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
 #Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
-#Tutorials h3 { font-size		: 1.6em;
+#Tutorials h3 { font-size		: 1.8em;
 				margin-bottom	: 0.4em; 
 				margin-top		: 1.4em;
-}
-#Tutorials h5 { font-size		: 0.7em;
-				font-weight		: bold; 
 }
 #Tutorials h1 { 
 	font-size			: 2.2em; 
