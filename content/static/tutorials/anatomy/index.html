@@ -8,9 +8,13 @@
     <tr>
     <td>
 
+    <p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</p>
+    
+    <p>
+You can <a href="code/polystar.zip">download the files from this tutorial</a>.
+</p>
 
-
-    <p class="ref-notice">This tutorial is for Processing version 1.0+. <em>If you see any errors or have comments, please <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=WebsiteBugs">let us know</a>.</em></p>
+<p>&nbsp;</p>
 
 <p>
 Many of the tutorials for Processing concentrate on what the language 
@@ -37,7 +41,7 @@ stye (though not their thought process!) by looking at the source code for
 the programs at <a href="http://openprocessing.org/">openProcessing.org</a>.
 </p>
 
-<h5>Drawing Regular Polygons</h5>
+<h3>Drawing Regular Polygons</h3>
 
 <p>
 You wouldn&rsquo;t think of building a house without a blueprint, and you
@@ -47,7 +51,7 @@ I always have to sketch out what I want as a result before I approach the
 keyboard. So that&rsquo;s where I started.
 </p>
 
-<h5>Step 1: Planning on paper</h5>
+<h3>Step 1: Planning on paper</h3>
 
 <p>
 The first step was to draw a crude diagram to dredge up old memories of how regular
@@ -75,7 +79,7 @@ Type something!&rdquo; Go to your kitchen table instead.
 </p>
 </blockquote>
 
-<h5>Step 2: Some basic trigonometry</h5>
+<h3>Step 2: Some basic trigonometry</h3>
 <p>
 So, if you have a line of length <em>r</em> starting at (0,0) at an angle theta (&theta;),
 what are its coordinates in terms of <em>x</em> and <em>y</em>? If you know a little bit of
@@ -95,7 +99,7 @@ Processing.
 <p><img src="imgs/sketch2.jpg" alt="Diagram of angle showing relationship of cosine and sine"
     width="250" height="164" /></p>
 
-<h5>Step 3: Design Decisions</h5>
+<h3>Step 3: Design Decisions</h3>
 <p>
 It looks like this is a job for a <code>for</code> loop that runs from 0 to
 <em>n</em> (the number of sides), calculating the points for each vertex and drawing
@@ -158,7 +162,7 @@ void polygon(int n, float cx, float cy, float r)
 
 </pre>
 
-<h5>Two Steps Forward, One Step Back</h5>
+<h3>Two Steps Forward, One Step Back</h3>
 <p>
 The program works, so it&rsquo;s time to see if there are things that
 could be added or changed.  First, the triangle and pentagon seem
@@ -277,7 +281,7 @@ the polygons to make sure that
 the vertices were within the proper area.
 </p>
 
-<h5>Too Many Parameters</h5>
+<h3>Too Many Parameters</h3>
 <p>
 I now had a much more flexible function for drawing polygons, but
 it came at the expense of more parameters. It would be nice to be
@@ -334,7 +338,7 @@ void setup()
 
 </pre>
 
-<h5>Safe Computing</h5>
+<h3>Safe Computing</h3>
 <p>
 What happens if someone tries to draw a polygon with 2 sides, 1 side,
 or worse, 0 sides?  The first two will generate a line and a point,
@@ -364,7 +368,7 @@ void polygon(int n, float cx, float cy, float w, float h, float startAngle)
 
 </pre>
 
-<h5>Drawing Stars</h5>
+<h3>Drawing Stars</h3>
 <p>
 Now that I was satisfied with the <code>polygon()</code> function, it was time
 to move on to drawing stars. From some playing around with a crude sketch, I
@@ -486,7 +490,7 @@ void star(int n, float cx, float cy, float w, float h,
 
 </pre>
 
-<h5>What Went Wrong?</h5>
+<h3>What Went Wrong?</h3>
 <p>
 When I ran this program, I just freaked out. Everything looked great,
 except for the three-sided star. How come I didn&rsquo;t
@@ -573,7 +577,7 @@ void setup()
 
 </pre>
 
-<h5>Using the Functions</h5>
+<h3>Using the Functions</h3>
 <p>
 Finally, in order to use the functions in something other
 than a test, I decided to write a program that
@@ -647,7 +651,7 @@ void draw()
 
 </pre>
 
-<h5>Polygons and Stars as Objects</h5>
+<h3>Polygons and Stars as Objects</h3>
 <p>
 Now that I have working functions for polygons and stars, it might
 be useful to make a <code>Polygon</code> and <code>Star</code> class
@@ -658,7 +662,7 @@ classes step by step, and finally use them in a full-blown program.
 a tutorial about objects in Processing.</a>
 </p>
 
-<h5>Summing Up</h5>
+<h3>Summing Up</h3>
 <p>
 This tutorial has shown you the things you never see in books.
 In a book, all the diagrams are
@@ -678,6 +682,12 @@ because we are all in this together.
 <p>
 You can <a href="code/polystar.zip">download the files from this tutorial</a>.
 </p>
+
+<p>&nbsp;</p>
+
+    <p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</p>
+
+
 
 </td>
   </tr>

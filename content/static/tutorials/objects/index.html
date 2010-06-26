@@ -4,11 +4,11 @@
 <table width="656">
    	<tr>
    	
-   	<p>Portions of this work are from the book, <a href="http://www.learningprocessing.com">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</p>
-   	
-   	<p class="ref-notice">This tutorial is for Processing version 1.0+. <em>If you see any errors or have comments, please <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=WebsiteBugs">let us know</a>.</em></p>
+   		<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</em></p>
+	
+	<p>&nbsp;</p>
 
-   <h5>I'm Down with OOP</h5>
+   <h3>I'm Down with OOP</h3>
 <p>
 Before we begin examining the details of how object-oriented programming (OOP) works in  Processing, let's embark on a short conceptual discussion of "objects"  themselves. Imagine you were not programming in  Processing, but were instead writing out a program for your day, a list of instructions, if you will. It might start out something like: 
 
@@ -45,7 +45,7 @@ Now, before we get too much further, we need to embark on a brief metaphysical d
 <br /><br /> 
 Think of a cookie cutter. A cookie cutter makes cookies, but it is not a cookie itself. The cookie cutter is the <em>class</em>, the cookies are the <em>objects</em>. 
 
-<h5>Using an Object</h5>
+<h3>Using an Object</h3>
 
 Before we look at the actual writing of a class itself, let's briefly look at how using objects in our main program (i.e., <strong>setup()</strong> and <strong>draw()</strong>) makes the world a better place. 
 <br /><br /> 
@@ -137,7 +137,7 @@ void draw()  {
 <br />
 We are going to get into the details regarding the above code in a moment, but before we do so, let's take a look at how the Car class itself is written.
 
-<h5>Writing the Cookie Cutter</h5>
+<h3>Writing the Cookie Cutter</h3>
 
 The simple Car example above demonstrates how the use of object in Processing makes for clean, readable code. The hard work goes into writing the object template, that is the class itself. When you are first learning about object-oriented programming, it is often a useful exercise to take a program written without objects and, not changing the functionality at all, rewrite it using objects. We will do exactly this 
 with the car example, recreating exactly the same look and behavior in an object-oriented manner.
@@ -173,7 +173,7 @@ class Car {
 }
 </pre>
 
-<h5>Using an Object: The Details</h5>
+<h3>Using an Object: The Details</h3>
 
 Earlier, we took a quick peek at how an object can greatly simplify the main parts of a Processing sketch (i.e. <strong>setup()</strong> and <strong>draw()</strong>).
 
@@ -235,7 +235,7 @@ myCar.drive();
 myCar.display();     
 </pre>
 
-<h5>Constructor Arguments</h5>
+<h3>Constructor Arguments</h3>
 In the above examples, the car object was initialized using the new operator followed by the constructor for the class. 
 <pre>
 Car myCar= new Car();  
@@ -337,7 +337,7 @@ class Car {
 }
 </pre>
 
-<h5>Objects are data types too!</h5> 
+<h3>Objects are data types too!</h3> 
 
 Assuming this is your first experience with object-oriented programming, it's important to take it easy. The examples here just one class and make, at most, two or three objects from that class. Nevertheless, there are no actual limitations. A Processing sketch can include as many classes as you feel like writing. 
 <br /><br />
@@ -369,6 +369,12 @@ void hit(Bullet b)  {
 When a primitive value (integer, float, etc.) is passed in a function, a copy is made. With objects, this is not the case, and the result is a bit more intuitive. If changes are made to an object after it is passed into a function, those changes will affect that object used anywhere else throughout the sketch. This is known as <em>pass by reference</em>  since instead of a copy, a reference to the actual object itself is passed into the function. 
 
 </p>
+
+
+	<p>&nbsp;</p>
+
+   		<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</em></p>
+   		
 </td>
 	</tr>
   </table>

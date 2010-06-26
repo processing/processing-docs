@@ -1,16 +1,18 @@
 <!--LINK TO DOWNLOAD ALL EXAMPLES-->
-<p>
-<a href="imgs/transform2d.zip">Download the files from this tutorial.</a>
-</p>
+
 <h1>2-D Transformations</h1>
     
 <table width="656">
     <tr>
     <td>
     
-    
-    
-    <p class="ref-notice">This tutorial is for Processing version 1.0+. <em>If you see any errors or have comments, please <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=WebsiteBugs">let us know</a>.</em></p>
+    <p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</p>
+		
+	<p>
+<a href="imgs/transform2d.zip">Download the files from this tutorial.</a>
+</p>
+
+	<p>&nbsp;</p>
 
 <p>
 Processing has built-in functions that make it easy for you
@@ -21,7 +23,7 @@ or shrink. This tutorial will introduce you to the
 in your sketches.
 </p>
 
-<h5>Translation: Moving the Grid</h5>
+<h3>Translation: Moving the Grid</h3>
 
 <p>
 As you know, your Processing window works like a piece of graph paper. When you
@@ -116,7 +118,7 @@ Later on in this tutorial, you will find out why those functions
 seem to have such strange names.
 </p>
 
-<h5>What&rsquo;s the Advantage?</h5>
+<h3>What&rsquo;s the Advantage?</h3>
 <p>
 You may be thinking that picking up the coordinate system and moving it
 is a lot more trouble than just adding to coordinates. For a simple example
@@ -180,7 +182,7 @@ void house(int x, int y)
 </pre>
 
 
-<h5>Rotation</h5>
+<h3>Rotation</h3>
 <p>
 In addition to moving the grid, you can also rotate it with the
 <code>rotate()</code> function. This function takes one argument, which is
@@ -232,7 +234,7 @@ the square still has its upper left corner at (40,&nbsp;40).
 <p><img src="imgs/rotated_grid.png" alt="shows grid rotated 45 degrees clockwise"
     width="275" height="250" /></p>
 
-<h5>Rotating the Correct Way</h5>
+<h3>Rotating the Correct Way</h3>
 <p>
 The correct way to rotate the square is to:
 </p>
@@ -309,7 +311,7 @@ void draw(){
 }
 </pre>
 
-<h5>Scaling</h5>
+<h3>Scaling</h3>
 <p>
 The final coordinate system transformation is
 scaling, which changes the size of the grid. Take a look at this example,
@@ -362,7 +364,7 @@ equally. Try using <code>scale(3.0,&nbsp;0.5)</code> to make the <i>x</i> dimens
 three times its normal size and the <i>y</i> dimension only half its normal size.
 </p>
 
-<h5>Order Matters</h5>
+<h3>Order Matters</h3>
 <p>
 When you do multiple transformations, the order makes a difference. A rotation
 followed by a translate followed by a scale will not give the same results as a
@@ -401,7 +403,7 @@ void setup()
 
 </pre>
 
-<h5>The Transformation Matrix</h5>
+<h3>The Transformation Matrix</h3>
 <p>
 Every time you do a rotation, translation, or scaling, the information
 required to do the transformation is accumulated into a table of
@@ -412,7 +414,7 @@ why the <code>pushMatrix()</code> and <code>popMatrix()</code> have that
 word in their name.
 </p>
 
-<h5>Push and Pop</h5>
+<h3>Push and Pop</h3>
 <p>
 What, about the <i>push</i> and <i>pop</i> part of the names? These come from a computer
 concept known as a <dfn>stack</dfn>, which works like a spring-loaded tray
@@ -438,7 +440,7 @@ Note: in Processing, the coordinate system is restored to its original state
 time that the <code>draw()</code> function is executed.
 </p>
 
-<h5>Three-dimensional Transforms</h5>
+<h3>Three-dimensional Transforms</h3>
 <p>
 If you are working in three dimensions, you can call the
 <code>translate()</code> function with three arguments for the
@@ -454,7 +456,7 @@ to rotate around each of the axes. All three of these functions
 expect one argument: the number of radians to rotate.
 </p>
 
-<h5>Case Study: An Arm-Waving Robot</h5>
+<h3>Case Study: An Arm-Waving Robot</h3>
 <p>
 Let&rsquo;s use these transformations to animate a blue
 robot waving its arms. Rather than try to write it all at
@@ -675,7 +677,7 @@ void drawRightArm()
 
 </pre>
 
-<h5>Case Study: Interactive Rotation</h5>
+<h3>Case Study: Interactive Rotation</h3>
 <p>
 Instead of having the arms move on their own, we will modify the program
 so that the arms follow the mouse while the mouse button is pressed. Instead
@@ -871,6 +873,10 @@ void drawRightArm()
 You can <a href="imgs/transform2d.zip">download the files from this tutorial</a>,
 including the program that made the grid diagrams.
 </p>
+
+<p>&nbsp;</p>
+
+    	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</p>
 
 </td>
     </tr>

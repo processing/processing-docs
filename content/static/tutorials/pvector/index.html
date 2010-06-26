@@ -4,6 +4,12 @@
 <table width="656">
    	<tr>
    	
+	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved. Thanks to <a href="http://www.mikewirthart.com/">Mike Wirth</a> for providing the illustrations.</em></p>   
+   	   		
+	<p>The source code contained in this tutorial is also <a href="http://www.learningprocessing.com/noc/code/chapter01_code.zip">available for download</a>.</p>
+	
+	<p>&nbsp;</p>
+	
    	<p>This tutorial is excerpted from an early draft of the book, <a href="http://www.learningprocessing.com/noc/">The Nature of Code</a>, by Daniel Shiffman.  Thanks to <a href="http://www.mikewirthart.com/">Mike Wirth</a> for providing the illustrations.   The source code contained in this tutorial is also <a href="http://www.learningprocessing.com/noc/code/chapter01_code.zip">available for download</a>.</p>
    	
    	<p class="ref-notice">This tutorial is for Processing version 1.0+. <em>If you see any errors or have comments, please <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=WebsiteBugs">let us know</a>.</em></p>
@@ -20,7 +26,7 @@ While all interesting, these are not the definitions we are looking for.   Rathe
 <br /><br />
 <img src="imgs/definition.jpg">
 
-<h5>Vectors: You Complete Me</h5>
+<h3>Vectors: You Complete Me</h3>
 
 Before we get into vectors themselves, let's look at a beginner Processing example that demonstrates why it is in the first place we should care.  If you've read any of the introductory Processing textbooks or taken a class on programming with Processing (and hopefully you've done one of these things to help prepare you for this book), you probably, at one point or another, learned to how to write a simple  bouncing ball sketch.  
 <br /><br />
@@ -99,7 +105,7 @@ Vectors aren't going to allow us to do anything new.  Using vectors won't sudden
 <br /><br />
 As an introduction to vectors, we're going to live in 2 dimensions for quite some time (at least until we get through the first several chapters.)  All of these examples can be fairly easily extended to three dimensions (and the class we will use -- <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> -- allows for three dimensions.)  However, for the time being, it's easier to start with just two.
 <br /><br />
-<h5>Vectors: What are they to us, the Processing programmer?</h5>
+<h3>Vectors: What are they to us, the Processing programmer?</h3>
 
 Technically speaking, the definition of a vector is the difference between two points.   Consider how you might go about providing instructions to walk from one point to another.
 <br /><br />
@@ -179,7 +185,7 @@ In an ideal world, we would just be able to rewrite the above to be:
 </pre><br />
 However, in Processing, the addition operator '+' is reserved for primitive values (integers, floats, etc.) only.  Processing doesn't know how to add two <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> objects together any more than it knows how to add two PFont objects or PImage objects.   Fortunately for us, the <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> class is implemented with functions for common mathematical operations.
 
-<h5>Vectors: Addition</h5>
+<h3>Vectors: Addition</h3>
 
 Before we continue looking at the <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> class and its <strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong> method (purely for the sake of learning since it's already implemented for us in Processing itself), let's examine vector addition using the notation found in math/physics textbooks.
 <br /><br />
@@ -303,7 +309,7 @@ if ((location.x > width) || (location.x < 0)) {
 }
 </pre><br />
 
-<h5>Vectors: More Algebra</h5>
+<h3>Vectors: More Algebra</h3>
 
 Addition was really just the first step.   There is a long list of common mathematical operations that are used with vectors when programming the motion of objects on the screen.   Following is a comprehensive list of all of the mathematical operations available as functions in the <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> class.  We'll then go through a few of the key ones now.  As our examples get more and more sophisticated we'll continue to reveal the details of these functions.
 <br /><br />
@@ -476,7 +482,7 @@ The associative rule: (n*m)*<strong>v</strong> = n*(m*<strong>v</strong>)
 </td></tr>
 </table>
 
-<h5>Vectors:  Magnitude</h5>
+<h3>Vectors:  Magnitude</h3>
 
 Multiplication and division, as we just saw, is a means by which the length of the vector can be changed without affecting direction.  And so, perhaps you're wondering: "Ok, so how do I know what the length of a vector is?"  I know the components (x and y), but I don't know how long (in pixels) that actual arrow is itself?! 
 <br /><br />  
@@ -532,7 +538,7 @@ void draw() {
 }
 </pre><br/>
 
-<h5>Vectors:  Normalizing</h5>
+<h3>Vectors:  Normalizing</h3>
 
 Calculating the magnitude of a vector is only the beginning.  The magnitude function opens the door to many possibilities, the first of which is <strong><em>normalization</em></strong>.  Normalizing refers to the process of making something "standard" or, well, "normal."  In the case of vectors, let's assume for the moment that a standard vector has a length of one.  To normalize a vector, therefore, is to take a vector of any length and, keeping it pointing in the same direction, change its length to one, turning it into what is referred to as a <strong><em>unit vector</em></strong>.
 <br /><br />
@@ -594,7 +600,7 @@ void draw() {
 }
 </pre><br/>
 
-<h5>Vectors: Motion</h5>
+<h3>Vectors: Motion</h3>
 
 Why should we care?  Yes, all this vector math stuff sounds like something we should know about, but why exactly?  How will it actually help me write code?   The truth of the matter is that we need to have some patience.  The awesomeness of using the PVector class will take some time to fully come to light.  This is quite common actually when first learning a new data structure.   For example, when you first learn about an array, it might have seemed like much more work to use an array than to just have several variables to talk about multiple things.   But that quickly breaks down when you need a hundred, or a thousand, or ten thousand things.  The same can be true for PVector.  What might seem like more work now will pay off later, and pay off quite nicely.  
 <br /><br />
@@ -909,7 +915,7 @@ While normalizing acceleration is not entirely necessary, it does prove useful a
 </pre><br/>
 While this may seem like an obvious point, it's crucial to understand that acceleration does not merely refer to the speeding up or slowing down of a moving object, but rather any change in velocity, either magnitude or direction.   Acceleration is used to steer an object, and it is the foundation of learning to program an object that make decisions about how to move about the screen.
 
-<h5>Vectors: Static vs. Non-Static</h5>
+<h3>Vectors: Static vs. Non-Static</h3>
 
 Before we get to acceleration algorithm #4 (accelerate towards the mouse), we need to cover one more rather important aspect of working with vectors and the PVector class, the difference between using static methods and non-static methods.
 <br /><br />
@@ -993,7 +999,7 @@ PVector w = PVector.add(v,u);
 </pre><br/>
 The PVector class has static versions of <strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong>, <strong><a href="http://processing.org/reference/PVector_sub_.html"><em>sub()</em></a></strong>, <strong><a href="http://processing.org/reference/PVector_mult_.html"><em>mult()</em></a></strong>, <strong><a href="http://processing.org/reference/PVector_div_.html"><em>div()</em></a></strong>.
 
-<h5>Vectors: Interactivity</h5>
+<h3>Vectors: Interactivity</h3>
 
 Ok, to finish out this tutorial, let's try something a bit more complex and a great deal more useful.  Let's dynamically calculate an object's acceleration according to a rule, acceleration algorithm #4 -- "the object accelerates towards the mouse."
 <br /><br />
@@ -1152,9 +1158,11 @@ class Mover {
   }
 
 }
-</pre><br/>
+</pre>
 
-<br /><br />
+	<p>&nbsp;</p>
+
+   		<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</em></p>
 
 
 </td>

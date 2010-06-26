@@ -10,7 +10,7 @@
 	<p>&nbsp;</p>
 
 <p>
-Trigonometry (really just a couple of the trig functions) is central to graphics programming. That being said if you’re anything like me you probably have a hazy memory of trig. Perhaps you remember the mnemonic device <strong>soh-cah-toa</strong>, used to remember the relationships between the trig functions and a right triangle. Here's a diagram to awaken your memory.
+Trigonometry (really just a couple of the trig functions) is central to graphics programming. That being said if you're anything like me you probably have a hazy memory of trig. Perhaps you remember the mnemonic device <strong>soh-cah-toa</strong>, used to remember the relationships between the trig functions and a right triangle. Here's a diagram to awaken your memory.
 <br /><br />
 <img src="imgs/sohcahtoa.jpg">
 <ul>
@@ -23,11 +23,11 @@ You should also notice in the figure that tangent equals sine(θ) over cosine(θ
 <br /><br />
 <img src="imgs/unit_circle.jpg">
 <br /><br />
-The unit circle is a circle with a radius of 1 unit in length—hence its imaginative name. When you work with the unit circle, you don’t use the regular and trusted Cartesian coordinate system; instead you use a polar coordinate system. The Cartesian system works great in a rectangular grid space, where a point can be located by a coordinate, such as (x, y). In a polar coordinate system, in contrast, location is specified by (r, θ), where r is the radius and θ (the Greek letter theta) is the angle of rotation. The unit circle has its origin at its center, and you measure angles of rotation beginning at the right-middle edge of the unit circle (facing 3 o’clock) and moving in a counterclockwise direction around it.
+The unit circle is a circle with a radius of 1 unit in length—hence its imaginative name. When you work with the unit circle, you don't use the regular and trusted Cartesian coordinate system; instead you use a polar coordinate system. The Cartesian system works great in a rectangular grid space, where a point can be located by a coordinate, such as (x, y). In a polar coordinate system, in contrast, location is specified by (r, θ), where r is the radius and θ (the Greek letter theta) is the angle of rotation. The unit circle has its origin at its center, and you measure angles of rotation beginning at the right-middle edge of the unit circle (facing 3 o'clock) and moving in a counterclockwise direction around it.
 <br /><br />
 In the unit_circle diagram, the point p is at 45° or pi / 4. You can use pi also to measure around the unit circle, as illustrated in the figure. Halfway around the circle (180°) is equal to pi radians, and all the way around the circle is equal to 2pi radians and also 0 radians, since a circle is continuous and ends where it begins. The number pi is a constant that is equal to the circumference of a circle divided by its diameter, and is approximately 3.142. 
 <br /><br />
-In the polar system, you use radians to measure angles, instead of degrees. The angle of rotation in radians is commonly referred to as θ (the Greek letter theta). The arc length of this rotation is calculated by r*θ where r is the radius. In a unit circle, with a radius of 1, θ is equal to the arc length of rotation (arc s in unit circle diagram). It’s nice to know the arc length, but most of the time (in computer graphics), you really just want to know the location of a point in relation to the unit circle. For example, if I wanted to rotate a point around the unit circle, I’d need to know how to place and move the point in a circle. With the unit circle, this is an incredibly easy task and precisely the kind of thing trig is used for.
+In the polar system, you use radians to measure angles, instead of degrees. The angle of rotation in radians is commonly referred to as θ (the Greek letter theta). The arc length of this rotation is calculated by r*θ where r is the radius. In a unit circle, with a radius of 1, θ is equal to the arc length of rotation (arc s in unit circle diagram). It's nice to know the arc length, but most of the time (in computer graphics), you really just want to know the location of a point in relation to the unit circle. For example, if I wanted to rotate a point around the unit circle, I'd need to know how to place and move the point in a circle. With the unit circle, this is an incredibly easy task and precisely the kind of thing trig is used for.
 <br /><br />
 There is a really simple relationship between the trig functions and the unit circle. Notice in the unit circle diagram that from point p on the ellipse, a right triangle is formed within the unit circle. This should immediately make you think of good old Pythagoras. Notice also that r (the radius) is the hypotenuse of the right triangle. In addition, you now also know that with the trig functions, you can use theta and any one side (opposite, adjacent, or hypotenuse) to solve the rest of the triangle. The big payoff of these relationships, for our purposes, is that to translate point p in the polar coordinate system to the Cartesian coordinate system (the system used by our monitors), you would use these simple expressions:
 <br /><br />
@@ -36,7 +36,7 @@ There is a really simple relationship between the trig functions and the unit ci
 <br /><br />
 These seemingly humble little expressions are very powerful and can be exploited for all sorts of expressive and organic purposes.
 <br /><br />
-Here’s how you actually use the trig functions in Processing:<br /><br />
+Here's how you actually use the trig functions in Processing:<br /><br />
 <pre>
 &nbsp;&nbsp;<strong>float x = cos(radians(angle)) * radius;<br />
 &nbsp;&nbsp;float y = sin(radians(angle)) * radius;</strong>
@@ -47,7 +47,7 @@ Notice the function call <strong>(radians(angle))</strong> inside each of the tr
 &nbsp;&nbsp;<strong>theta = angle*pi/180<br />
 &nbsp;&nbsp;angle = theta*180/pi</strong>
 <br /><br />
-Or better yet, just use Processing’s handy conversion functions:<br /><br />
+Or better yet, just use Processing's handy conversion functions:<br /><br />
 <pre>
 &nbsp;&nbsp;<strong>theta = radians(angle)<br />
 &nbsp;&nbsp;angle = degrees(theta)</strong>
@@ -55,7 +55,7 @@ Or better yet, just use Processing’s handy conversion functions:<br /><br />
 <br />
 </p>
 <p>
-Lastly, I include a Processing sketch that clearly demonstrates how the unit circle and sine function relate. A while back I came across a Java applet on the Web that showed this relationship (sorry, but I don’t remember the link), and I thought it was helpful, so I created a version in Processing (screen-shot below):
+Lastly, I include a Processing sketch that clearly demonstrates how the unit circle and sine function relate. A while back I came across a Java applet on the Web that showed this relationship (sorry, but I don't remember the link), and I thought it was helpful, so I created a version in Processing (screen-shot below):
 <pre>
 <img src="imgs/trig_console.jpg">
 <span style="color: #7E7E7E;">/**&nbsp;Sine&nbsp;Console</span>

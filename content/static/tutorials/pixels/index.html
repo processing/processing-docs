@@ -4,14 +4,14 @@
 <table width="656">
    	<tr>
    	
-   	<p>Portions of this work are from the book, <a href="http://www.learningprocessing.com">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</p>
-   	
-   	<p class="ref-notice">This tutorial is for Processing version 1.0+. <em>If you see any errors or have comments, please <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=WebsiteBugs">let us know</a>.</em></p>
+   		<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</em></p>
+	
+	<p>&nbsp;</p>
 
 
 A digital image is nothing more than data -- numbers indicating variations of red, green, and blue at a particular location on a grid of pixels.   Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen.  With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways.   This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
 
-<h5>Getting started with images.</h5>
+<h3>Getting started with images.</h3>
 
 Hopefully, you are comfortable with the idea of data types.  You probably specify them often -- a float variable "speed", an int "x", etc.  These are all primitive data types, bits sitting in the computer's memory ready for our use.   Though perhaps a bit trickier, you hopefully also use objects, complex data types that store multiple pieces of data (along with functionality) --  a "Ball" class, for example, might include floating point variables for location, size, and speed as well as methods to move, display itself, and so on.  
 <br /><br />
@@ -87,7 +87,7 @@ Once the image is loaded, it is displayed with the <a href="http://processing.or
 <pre>
 image(img,10,20,90,60);
 </pre>
-<h5>Your very first image processing filter</h5>
+<h3>Your very first image processing filter</h3>
 When displaying an image, you might like to alter its appearance.  Perhaps you would like the image to appear darker, transparent, blue-ish, etc.  This type of simple image filtering is achieved with Processing's tint() function.  tint() is essentially the image equivalent of shape's fill(), setting the color and alpha transparency for displaying an image on screen.  An image, nevertheless, is not usually all one color.  The arguments for tint() simply specify how much of a given color to use for every pixel of that image, as well as how transparent those pixels should appear. 
 <br /><br />
 
@@ -143,7 +143,7 @@ image(sunflower,0,0);
 </pre>
 
 
-<h5>Pixels, pixels, and more pixels</h5>
+<h3>Pixels, pixels, and more pixels</h3>
 
 If you've just begun using Processing you may have mistakenly thought that the only offered means for drawing to the screen is through a function call.  "Draw a line between these points" or "Fill an ellipse with red" or "load this JPG image and place it on the screen here."  But somewhere, somehow, someone had to write code that translates these function calls into setting the individual pixels on the screen to reflect the requested shape.  A line doesn't appear because we say <a href="http://processing.org/reference/line_.html">line()</a>, it appears because we color all the pixels along a linear path between two points.   Fortunately, we don't have to manage this lower-level-pixel-setting on a day-to-day basis.  We have the developers of Processing (and Java) to thank for the many drawing functions that take care of this business.
 <br /><br />
@@ -219,7 +219,7 @@ for (int x = 0; x < width; x++) {
 updatePixels(); 
 </pre>
 
-<h5>Intro To Image Processing</h5>
+<h3>Intro To Image Processing</h3>
 The previous section looked at examples that set pixel values according to an arbitrary calculation.  We will now look at how we might set pixels according those found in an existing <a href="http://processing.org/reference/PImage.html">PImage</a> object.   Here is some pseudo-code.
 <br /><br />
 (1) Load the image file into a PImage object<br />
@@ -280,7 +280,7 @@ int imageLoc = x + y*img.width;
 int displayLoc = x + y*width;
 </pre>
 
-<h5>Our second image filter, making our own "tint"</h5>
+<h3>Our second image filter, making our own "tint"</h3>
 
 Just a few paragraphs ago, we were enjoying a relaxing coding session, colorizing images and adding alpha transparency with the friendly tint() method.   For basic filtering, this method did the trick.   The pixel by pixel method, however, will allow us to develop custom algorithms for mathematically altering the colors of an image.  Consider brightness -- brighter colors have higher values for their red, green, and blue components.    It follows naturally that we can alter the brightness of an image by increasing or decreasing the color components of each pixel.  In the next example, we dynamically increase or decrease those values based on the mouse's horizontal location.  (Note, the next two examples include only the image processing loop itself, the rest of the code is assumed.) 
 <br /><br />
@@ -344,7 +344,7 @@ for (int x = 0; x < img.width; x++) {
 }
 </pre>
 
-<h5>Writing to another PImage object's pixels</h5>
+<h3>Writing to another PImage object's pixels</h3>
 All of our image processing examples have read every pixel from a source image and written a new pixel to the Processing window directly.  However, it's often more convenient to write the new pixels to a destination image (that you then display using the <a href="http://processing.org/reference/image_.html">image()</a> function).   We'll demonstrate this technique while looking at another simple pixel operation: threshold.
 <br /><br />
 A threshold filter displays each pixel of an image in only one of two states, black or white.    That state is set according to a particular threshold value.  If the pixel's brightness is greater than the threshold, we color the pixel white, less than, black.  In the code below, we use an arbitrary threshold of 100.
@@ -402,7 +402,7 @@ image(img,0,0);
 filter(THRESHOLD,0.5);
 </pre>
 
-<h5>Level II: Pixel Group Processing</h5>
+<h3>Level II: Pixel Group Processing</h3>
 
 In previous examples, we've seen a one-to-one relationship between source pixels and destination pixels.   To increase an image's brightness, we take one pixel from the source image, increase the RGB values, and display one pixel in the output window.  In order to perform more advanced image processing functions, we must move beyond the one-to-one pixel paradigm into pixel group processing. 
 <br /><br />
@@ -561,7 +561,7 @@ color convolution(int x, int y, float[][] matrix, int matrixsize, PImage img) {
 }
 </pre>
 
-<h5>Visualizing the Image</h5>
+<h3>Visualizing the Image</h3>
 
 You may be thinking: "Gosh, this is all very interesting, but seriously, when I want to blur an image or change its brightness, do I really need to write code?  I mean, can't I use Photoshop?"  Indeed, what we have achieved here is an merely an introductory understanding of what highly skilled programmers at Adobe do.  The power of Processing, however, is the potential for real-time, interactive graphics applications.  There is no need for us to live within the confines of "pixel point" and "pixel group" processing.  
 <br /><br />
@@ -648,6 +648,9 @@ void draw() {
 }
 </pre>
 
+	<p>&nbsp;</p>
+
+   		<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</em></p>
 
 </td>
 	</tr>
