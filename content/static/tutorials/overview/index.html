@@ -5,7 +5,9 @@
   <tr>
    	<td>
 
-	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a><em> by Ben Fry, O'Reilly 2007.</em></p>
+	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007.</em></p>
+	
+	<p>&nbsp;</p>
 	
 <p>Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to &ldquo;sketch&rdquo; ideas in code. As its capabilities have expanded over the past six years,  Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization.<br />
   <br />
@@ -26,7 +28,7 @@ Processing consists of:</p>
     <br />For this reason, references to &ldquo;Processing&rdquo; can be somewhat ambiguous. Are we talking about the API, the development environment, or the web site? We'll be careful in this text when referring to each.  </p>
 
 	
-<h5>Sketching with Processing</h5>
+<h3>Sketching with Processing</h3>
 	
     <p>A Processing program is called a <em>sketch</em>. The idea is to make Java-style programming feel more like scripting, and adopt the process of scripting to quickly write code. Sketches are stored in the <em>sketchbook</em>, a folder that's used as the default location for saving all of your projects. When you first run Processing, the sketch last used will automatically open. If this is the first time Processing is used (or if the sketch is no longer available), a new sketch will open.<br />
       <br />      
@@ -37,7 +39,7 @@ Processing consists of:</p>
 </p>
 
 
-<h5>Hello world</h5>
+<h3>Hello world</h3>
 
 
     <p>The Processing equivalent of a &quot;Hello World&quot; program is simply to draw a line:
@@ -70,7 +72,7 @@ The same alternatives work for the <tt>fill()</tt> function, which sets the fill
   <br />It's also possible to use the editor of your choice instead of the built-in editor. Simply select &ldquo;Use External Editor&rdquo; in the Preferences window (Processing &rarr; Preferences on Mac OS X, or File &rarr; Preferences on Windows and Linux). When using an external editor, editing will be disabled in the PDE, but the text will reload whenever you press Run.</td></tr></table></p>
 
 
-	  <h5>Hello mouse</h5>
+	  <h3>Hello mouse</h3>
 
       
 	  <p>A program written as a list of statements (like the previous examples) is called a <em>static</em> mode sketch. In static mode, a series of functions are used to perform tasks or create a single image without any animation or interaction. Interactive programs are drawn as a series of frames, which you can create by adding functions titled <tt>setup()</tt> and <tt>draw()</tt> as shown in the code below. These are built-in functions that are called automatically.<br />
@@ -124,7 +126,7 @@ More about static versus active mode programs can be found in the Programming Mo
       </p>
 		
 		
-		<h5>Exporting and distributing your work</h5>
+		<h3>Exporting and distributing your work</h3>
 		
 		
 		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an applet or application with just one click. Select File &rarr; Export to package your current sketch as an applet. This will create a folder named applet inside your sketch folder. Opening the <em>index.html</em> file inside that folder will open your sketch in a browser. The applet folder can be copied to a web site intact, and will be viewable by anyone who has Java installed on their system. Similarly, you can use File &rarr; Export Application to bundle your sketch as an application for Windows, Mac OS X, and Linux. <br />
@@ -136,7 +138,7 @@ More about static versus active mode programs can be found in the Programming Mo
       </p>
 
       
-		<h5>Creating images from your work</h5>
+		<h3>Creating images from your work</h3>
 		
 		<p>If you don't want to distribute the actual project, you might want to create images of its output instead. Images are saved with the <tt>saveFrame()</tt> function. Adding <tt>saveFrame()</tt> at the end of <tt>draw()</tt> will produce a numbered sequence of TIFF-format images of the program's output, named <em>screen-0001.tif</em>, <em>screen-0002.tif</em>, and so on. A new file will be saved each time <tt>draw()</tt> runs &mdash; watch out, this can quickly fill your sketch folder with hundreds of files. You can also specify your own name and file type for the file to be saved with a function like:
 		<pre>     saveFrame(&quot;output.png&quot;)</pre>
@@ -150,7 +152,7 @@ More about static versus active mode programs can be found in the Programming Mo
 
       </p>
       
-		<h5>Examples and reference</h5>
+		<h3>Examples and reference</h3>
 
 		<p>While many programmers learn to code in school, others teach themselves and learn on their own. Learning on your own involves looking at lots of other code: running, altering, breaking, and enhancing it until you can reshape it into something new. With this learning model in mind, the Processing software download includes dozens of examples that demonstrate different features of the environment and API.<br />
 		  <br />
@@ -163,7 +165,7 @@ More about static versus active mode programs can be found in the Programming Mo
       </p>
       
       
-		<h5>More about size()</h5>
+		<h3>More about size()</h3>
 
 		
 		
@@ -206,7 +208,7 @@ Each of the renderers has its own specific role. P2D and P3D are great for pixel
       </p>
       
       
-      <h5>Loading and displaying data</h5>
+      <h3>Loading and displaying data</h3>
       
       
       <p>One of the unique aspects of the Processing API is the way files are handled. The <tt>loadImage()</tt> and <tt>loadStrings()</tt> functions each expect to find a file inside a folder named <em>data</em>, which is a subdirectory of the sketch folder. <br />
@@ -242,7 +244,7 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
       </p>
       
       
-      <h5>Libraries add new features</h5>
+      <h3>Libraries add new features</h3>
 
       
       
@@ -271,7 +273,7 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
       </p>
       
       
-      <h5>Sketching and scripting</h5>
+      <h3>Sketching and scripting</h3>
       
       
       <p>Processing sketches are made up of one or more tabs, with each tab representing a piece of code. The environment is designed around projects that are a few pages of code, and often three to five tabs in total. This covers a significant number of projects developed to test and prototype ideas, often before embedding them into a larger project or building a more robust application for broader deployment.<br />
@@ -291,7 +293,7 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
       </p>
       
       
-      <h5>Don't start by trying to build a cathedral</h5>
+      <h3>Don't start by trying to build a cathedral</h3>
       
       
       <p>If you're already familiar with programming, it's important to understand how Processing differs from other development environments and languages. The Processing project encourages a style of work that builds code quickly, understanding that either the code will be used as a quick sketch, or ideas are being tested before developing a final project. This could be misconstrued as software engineering heresy. Perhaps we're not far from &ldquo;hacking,&rdquo; but this is more appropriate for the roles in which Processing is used. Why force students or casual programmers to learn about graphics contexts, threading, and event handling functions before they can show something on the screen that interacts with the mouse? The same goes for advanced developers: why should they always need to start with the same two pages of code whenever they begin a project?<br />
