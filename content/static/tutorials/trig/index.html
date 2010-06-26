@@ -9,9 +9,6 @@
 	
 	<p>&nbsp;</p>
 
-
-<h3>Some <em>thhhheor-ie</em></h3>
-
 <p>
 Trigonometry (really just a couple of the trig functions) is central to graphics programming. That being said if you’re anything like me you probably have a hazy memory of trig. Perhaps you remember the mnemonic device <strong>soh-cah-toa</strong>, used to remember the relationships between the trig functions and a right triangle. Here's a diagram to awaken your memory.
 <br /><br />
@@ -61,80 +58,80 @@ Or better yet, just use Processing’s handy conversion functions:<br /><br />
 Lastly, I include a Processing sketch that clearly demonstrates how the unit circle and sine function relate. A while back I came across a Java applet on the Web that showed this relationship (sorry, but I don’t remember the link), and I thought it was helpful, so I created a version in Processing (screen-shot below):
 <pre>
 <img src="imgs/trig_console.jpg">
-/** Sine Console
-* Processing: Creative Coding and
-* Computational Art
-* By Ira Greenberg */
+<span style="color: #7E7E7E;">/**&nbsp;Sine&nbsp;Console</span>
+<span style="color: #7E7E7E;">*&nbsp;Processing:&nbsp;Creative&nbsp;Coding&nbsp;and</span>
+<span style="color: #7E7E7E;">*&nbsp;Computational&nbsp;Art</span>
+<span style="color: #7E7E7E;">*&nbsp;By&nbsp;Ira&nbsp;Greenberg&nbsp;*/</span>
 
-float px, py, px2, py2;
-float angle, angle2;
-float radius = 100;
-float frequency = 2;
-float frequency2 = 2;
-float x, x2;
+<span style="color: #CC6600;">float</span> px, py, px2, py2;
+<span style="color: #CC6600;">float</span> angle, angle2;
+<span style="color: #CC6600;">float</span> radius = 100;
+<span style="color: #CC6600;">float</span> frequency = 2;
+<span style="color: #CC6600;">float</span> frequency2 = 2;
+<span style="color: #CC6600;">float</span> x, x2;
 
-// used to create font
-PFont myFont;
+<span style="color: #7E7E7E;">//&nbsp;used&nbsp;to&nbsp;create&nbsp;font</span>
+<span style="color: #CC6600;">PFont</span> myFont;
 
-void setup(){
-  size(600, 200);
-  background (127);
-  // generate processing font from system font
-  myFont = createFont("verdana", 12);
-  textFont(myFont);
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>(){
+&nbsp;&nbsp;<span style="color: #CC6600;">size</span>(600, 200);
+&nbsp;&nbsp;<span style="color: #CC6600;">background</span> (127);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// generate processing font from system font</span>
+&nbsp;&nbsp;myFont&nbsp;=&nbsp;<span style="color: #CC6600;">createFont</span>(<span style="color: #006699;">"verdana"</span>, 12);
+&nbsp;&nbsp;<span style="color: #CC6600;">textFont</span>(myFont);
 }
 
-void draw(){
-  background (127);
-  noStroke();
-  fill(255);
-  ellipse(width/8, 75, radius, radius);
-  // rotates rectangle around circle
-  px = width/8 + cos(radians(angle))*(radius/2);
-  py = 75 + sin(radians(angle))*(radius/2);
-  rectMode(CENTER);
-  fill(0);
-  //draw rectangle
-  rect (px, py, 5, 5);
-  stroke(100);
-  line(width/8, 75, px, py);
-  stroke(200);
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>draw</b></span>(){
+&nbsp;&nbsp;<span style="color: #CC6600;">background</span> (127);
+&nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
+&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
+&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8, 75, radius, radius);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// rotates rectangle around circle</span>
+&nbsp;&nbsp;px&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius/2);
+&nbsp;&nbsp;py&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius/2);
+&nbsp;&nbsp;<span style="color: #CC6600;">rectMode</span>(<span style="color: #006699;">CENTER</span>);
+&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(0);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">//draw rectangle</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">rect</span> (px, py, 5, 5);
+&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(100);
+&nbsp;&nbsp;<span style="color: #CC6600;">line</span>(<span style="color: #006699;">width</span>/8, 75, px, py);
+&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(200);
 
-  // keep reinitializing to 0, to avoid
-  // flashing during redrawing
-  angle2 = 0;
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// keep reinitializing to 0, to avoid</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// flashing during redrawing</span>
+&nbsp;&nbsp;angle2&nbsp;=&nbsp;0;
 
-  // draw static curve - y = sin(x)
-  for (int i = 0; i< width; i++){
-    px2 = width/8 + cos(radians(angle2))*(radius/2);
-    py2 = 75 + sin(radians(angle2))*(radius/2);
-    point(width/8+radius/2+i, py2);
-    angle2 -= frequency2;
-  }
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// draw static curve - y = sin(x)</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i< <span style="color: #006699;">width</span>; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;px2&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius/2);
+&nbsp;&nbsp;&nbsp;&nbsp;py2&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius/2);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">point</span>(<span style="color: #006699;">width</span>/8+radius/2+i, py2);
+&nbsp;&nbsp;&nbsp;&nbsp;angle2&nbsp;-=&nbsp;frequency2;
+&nbsp;&nbsp;}
 
-  // send small ellipse along sine curve
-  // to illustrate relationship of circle to wave
-  noStroke();
-  ellipse(width/8+radius/2+x, py, 5, 5);
-  angle -= frequency;
-  x+=1;
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// send small ellipse along sine curve</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// to illustrate relationship of circle to wave</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
+&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8+radius/2+x, py, 5, 5);
+&nbsp;&nbsp;angle&nbsp;-=&nbsp;frequency;
+&nbsp;&nbsp;x+=1;
 
-  // when little ellipse reaches end of window
-  // reinitialize some variables
-  if (x>= width-60) {
-    x = 0;
-    angle = 0;
-  }
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// when little ellipse reaches end of window</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// reinitialize some variables</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (x>= <span style="color: #006699;">width</span>-60) {
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;=&nbsp;0;
+&nbsp;&nbsp;}
 
-  // draw dynamic line connecting circular
-  // path with wave
-  stroke(50);
-  line(px, py, width/8+radius/2+x, py);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// draw dynamic line connecting circular</span>
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// path with wave</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(50);
+&nbsp;&nbsp;<span style="color: #CC6600;">line</span>(px, py, <span style="color: #006699;">width</span>/8+radius/2+x, py);
 
-  // output some calculations
-  text("y = sin x", 35, 185);
-  text("px = " + px, 105, 185);
-  text("py = " + py, 215, 185);
+&nbsp;&nbsp;<span style="color: #7E7E7E;">// output some calculations</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"y = sin x"</span>, 35, 185);
+&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"px = "</span> + px, 105, 185);
+&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"py = "</span> + py, 215, 185);
 }
 </pre>
 </p>
