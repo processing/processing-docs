@@ -28,9 +28,14 @@ if (is_dir($path.'learning/imgs')) {
 	copydirr($source.'imgs', $path.'learning/imgs', null, 0757, true);
 }
 
+// Index page
+
 $page = new Page("Tutorials", "Tutorials");
 $page->content(file_get_contents($source."index.html"));
 writeFile('learning/index.html', $page->out());
+
+
+// Start making the individual tutorial pages
 
 $page = new Page("Getting Started", "Tutorials");
 $page->content(file_get_contents($source."gettingstarted/index.html"));
@@ -40,6 +45,16 @@ if (!is_dir($path.'learning/gettingstarted/imgs')) {
 }
 if (is_dir($path.'learning/gettingstarted/imgs')) { 
 	copydirr($source.'gettingstarted/imgs', $path.'learning/gettingstarted/imgs', null, 0757, true);
+}
+
+$page = new Page("Overview", "Tutorials");
+$page->content(file_get_contents($source."overview/index.html"));
+writeFile('learning/overview/index.html', $page->out());
+if (!is_dir($path.'learning/overview/imgs')) { 
+	mkdir($path.'learning/overview/imgs', '0757'); 
+}
+if (is_dir($path.'learning/overview/imgs')) { 
+	copydirr($source.'overview/imgs', $path.'learning/overview/imgs', null, 0757, true);
 }
 
 $page = new Page("Processing in Eclipse", "Tutorials");
