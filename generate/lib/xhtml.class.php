@@ -97,17 +97,16 @@ class xhtml_plugin
 		
 		if ( is_array($this->elements) )
 		{
-			foreach( $this->elements as $k=>$v )
-			{				
+ 			foreach( $this->elements as $k => $v )
+			{
 				if ( is_array( $v ) )
 				{
 					$v = $this->process_array( $v );
 				}
 				
-				$v_class 	= get_class( $v );
-				/*$v_type 	= gettype( $v ); $v_type !== 'object' && */
+				$v_class 	= @get_class( $v );
 					
-				if ( $v_class === FALSE ) {
+				if ( $v_class === FALSE || $v == null ) {
 				
 					$this->data_raw = str_replace( $this->markup($k) , $this->process_input($v) , $this->data_raw );
 				

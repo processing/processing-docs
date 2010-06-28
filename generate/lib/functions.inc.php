@@ -227,6 +227,8 @@ Returns array of xml files for a language
 *****************************************************************/ 
 function getRefFiles($lang)
 {
+	$files = array();
+	
     // set directory path
     $dir = CONTENTDIR."api_$lang";
     // open directory pointer
@@ -250,6 +252,8 @@ function getRefFiles($lang)
 
 function getXMLFiles($dir)
 {
+	$files = array();
+	
     // open directory pointer
     if ($dp = @opendir($dir)) {
         // iterate through file pointers
@@ -274,19 +278,32 @@ Write a file
 *****************************************************************/ 
 function writeFile($filename, $content)
 {
-    make_necessary_directories(BASEDIR.$filename);
-    $fp = fopen(BASEDIR.$filename, 'w');
+	if ( strpos( $filename, BASEDIR ) !== 0  ) # force basedir
+		$filename = BASEDIR . $filename;
+		
+	#echo $filename . "\n";
+	#echo $content . "\n";
+	
+    make_necessary_directories($filename);
+    $fp = fopen($filename, 'w');
     fwrite($fp, $content);
     fclose($fp);
 }
 
 function make_necessary_directories($filepath)
 {	
-	foreach(split('/',dirname($filepath)) as $dirPart) {
-		if (!is_dir("$newDir$dirPart/") && !is_file("$newDir$dirPart/")) {
-			@mkdir("$newDir$dirPart/", 0777);
+	$newDir = '';
+		
+	foreach(split('/',dirname($filepath)) as $dirPart)
+	{
+		#echo $newDir . $dirPart . "/" . "\n";
+	
+		if (!is_dir( $newDir . $dirPart."/" ) && !is_file( $newDir . $dirPart."/" ))
+		{
+			mkdir( $newDir . $dirPart . "/", 0777);
 		}
-		$newDir="$newDir$dirPart/";
+	
+		$newDir = $newDir . $dirPart . "/";
 	}
 }
 

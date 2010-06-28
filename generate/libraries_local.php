@@ -32,7 +32,8 @@ writeFile('distribution/libraries/index.html', $page->out());
 
 
 // foreach lib
-foreach ($libraries as $lib) {
+foreach ($libraries as $lib)
+{
 	$source = "api_$lang/LIB_$lib";
 	$destination = "libraries/$lib";
 	make_necessary_directories(DISTDIR.$destination.'/images/include');
@@ -42,7 +43,8 @@ foreach ($libraries as $lib) {
 		//echo "couldn't open files"; 
 	} else {
 	// parse xml files and create pages
-	    foreach ($files as $file) {
+	    foreach ($files as $file)
+		{
 	        $page = new LocalLibReferencePage(new Ref($source.'/'.$file), $lib, $translation, '../../');
 	        $page->write();
 	    }

@@ -129,8 +129,10 @@ media
 
 // copy images directory from content folder to public folder
 $dirs = array('images', 'media', 'css', 'javascript', 'img', 'img/reference');
-foreach ($dirs as $d) {
-	if (!is_dir(DISTDIR.$d)) {
+foreach ($dirs as $d)
+{
+	if (!is_dir(DISTDIR.$d))
+    {
 		mkdir(DISTDIR.$d, 0757);
 	}
 }
@@ -148,4 +150,4 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 ?>
 
 <h2>Distribution Reference Generation Successful</h2>
-<p>Generated <?=$counter?> files in <?=$execution_time?> seconds.</p>
+<p>Generated <?=$count?> files in <?=$execution_time?> seconds.</p>

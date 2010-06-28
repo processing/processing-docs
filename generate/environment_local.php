@@ -5,10 +5,13 @@ $benchmark_start = microtime_float();
 
 $lang = isSet($_POST['lang']) ? $_POST['lang'] : 'en';
 //$lang = 'en';
-echo "Language selected";
+#echo "Language selected\n";
 
-$source = CONTENTDIR."/api_$lang/environment/";
+$source = CONTENTDIR."/api_".$lang."/environment/";
 $path = DISTDIR."/environment/";
+
+#echo $source . "\n";
+#echo $path . "\n";
 
 // get translation file
 $translation = new Translation($lang);
