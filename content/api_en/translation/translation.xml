@@ -126,8 +126,8 @@
 		<!-- Disclaimer and contact information -->
 		<!-- Feel free to include your email address -->
 		<disclaimer>Reference for Processing version 1.2. If you have a previous version, use the reference included with your software.</disclaimer>
-		<contact>If you see any errors or have suggestions, &raquo;<a href="http://code.google.com/p/processing/issues/list">please let us know</a>.
-		If you prefer a more technical reference, visit the &raquo;<a href="http://processing.googlecode.com/svn/trunk/processing/build/javadoc/core/index.html">Processing Javadoc</a>.</contact>
+		<contact>If you see any errors or have suggestions, <a href="http://code.google.com/p/processing/issues/list">please let us know</a>.
+		If you prefer a more technical reference, visit the <a href="http://processing.googlecode.com/svn/trunk/processing/build/javadoc/core/index.html">Processing Javadoc</a>.</contact>
 	</meta>
 
 </reference>
