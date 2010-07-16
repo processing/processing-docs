@@ -2,8 +2,8 @@
 // by Reas & Fry. O'Reilly / Make 2010
 
 int num = 60;
-int x[] = new int[num];
-int y[] = new int[num];
+int[] x = new int[num];
+int[] y = new int[num];
 
 void setup() {
   size(240, 120);

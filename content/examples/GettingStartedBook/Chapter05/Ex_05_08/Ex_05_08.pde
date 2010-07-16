@@ -3,7 +3,6 @@
 
 float x;
 float easing = 0.01;
-float diameter = 12;
 
 void setup() {
   size(220, 120);

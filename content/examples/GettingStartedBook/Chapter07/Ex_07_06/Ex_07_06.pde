@@ -19,7 +19,7 @@ void draw() {
   background(0);
   if (pct < 1.0) {
     x = startX + ((stopX-startX) * pct);
-    y = startY + ((stopY-startX) * pct);
+    y = startY + ((stopY-startY) * pct);
     pct += step;
   }
   ellipse(x, y, 20, 20);
