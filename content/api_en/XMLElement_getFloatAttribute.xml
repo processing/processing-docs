@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>getFloatAttribute()</name>
+<name>getFloat()</name>
 
 <category>XMLElement</category>
 
@@ -28,8 +28,8 @@ void setup() {
   int numSites = xml.getChildCount();
   for (int i = 0; i &lt; numSites; i++) {
     XMLElement kid = xml.getChild(i);
-    int id = kid.getIntAttribute("id"); 
-    float url = kid.getFloatAttribute("rank"); 
+    int id = kid.getInt("id"); 
+    float url = kid.getFloat("rank"); 
     String site = kid.getContent();
     println(id + " : " + url + " : " + site);    
   }
@@ -42,8 +42,8 @@ Returns a float attribute of the element. If the <b>default</b> parameter is use
 </description>
 
 <syntax>
-<c>xml</c>.getFloatAttribute(<c>name</c>)
-<c>xml</c>.getFloatAttribute(<c>name</c>, <c>default</c>)
+<c>xml</c>.getFloat(<c>name</c>)
+<c>xml</c>.getFloat(<c>name</c>, <c>default</c>)
 </syntax>
 
 <parameter>

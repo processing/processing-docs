@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>getIntAttribute()</name>
+<name>getInt()</name>
 
 <category>XMLElement</category>
 
@@ -28,8 +28,8 @@ void setup() {
   int numSites = xml.getChildCount();
   for (int i = 0; i &lt; numSites; i++) {
     XMLElement kid = xml.getChild(i);
-    int id = kid.getIntAttribute("id"); 
-    String url = kid.getStringAttribute("url"); 
+    int id = kid.getInt("id"); 
+    String url = kid.getString("url"); 
     String site = kid.getContent();
     println(id + " : " + url + " : " + site);    
   }
@@ -43,8 +43,8 @@ Returns an integer attribute of the element. If the <b>default</b> parameter is 
 </description>
 
 <syntax>
-<c>xml</c>.getIntAttribute(<c>name</c>)
-<c>xml</c>.getIntAttribute(<c>name</c>, <c>default</c>)
+<c>xml</c>.getInt(<c>name</c>)
+<c>xml</c>.getInt(<c>name</c>, <c>default</c>)
 </syntax>
 
 <parameter>

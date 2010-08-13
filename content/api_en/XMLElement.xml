@@ -28,8 +28,8 @@ void setup() {
   int numSites = xml.getChildCount();
   for (int i = 0; i &lt; numSites; i++) {
     XMLElement kid = xml.getChild(i);
-    int id = kid.getIntAttribute("id"); 
-    String url = kid.getStringAttribute("url"); 
+    int id = kid.getInt("id"); 
+    String url = kid.getString("url"); 
     String site = kid.getContent();
     println(id + " : " + url + " : " + site);    
   }
@@ -70,17 +70,17 @@ The encoding parameter inside XML files is ignored, only UTF-8 (or plain ASCII) 
 </method>
 
 <method>
-<mname>getIntAttribute()</mname>
+<mname>getInt()</mname>
 <mdescription>Returns an integer attribute of the element.</mdescription>
 </method>
 
 <method>
-<mname>getFloatAttribute()</mname>
+<mname>getFloat()</mname>
 <mdescription>Returns a float attribute of the element.</mdescription>
 </method>
 
 <method>
-<mname>getStringAttribute()</mname>
+<mname>getString()</mname>
 <mdescription>Returns a String attribute of the element.</mdescription>
 </method>
 
