@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+<software name="One Perfect Cube" by="Florian Jenett" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/one-perfect-cube.jpg</image>
+          <description>
+              Three synchronized clocks that form a cube image every twelve hours for exactly one second.
+          </description>
+          <location>http://florianjenett.de/one-perfect-cube-making-of/</location>
+          <link href="http://florianjenett.de/">FlorianJenett.de</link>
+</software>
+
 <software name="Feltron 2009 Annual Report" by="Nicholas Felton" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/feltron.jpg</image>
           <description>
