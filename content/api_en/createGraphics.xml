@@ -34,7 +34,7 @@ Creates and returns a new <b>PGraphics</b> object of the types P2D, P3D, and JAV
 <br/> <br/>
 It's important to call any drawing commands between beginDraw() and endDraw() statements. This is also true for any commands that affect drawing, such as smooth() or colorMode().
 <br/> <br/>
-Unlike the main drawing surface which is completely opaque, surfaces created with createGraphics() can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using save() to write a PNG or TGA file, the transparency of the graphics object will be honored. Note that transparency levels are binary: pixels are either complete opaque or transparent. For the time being (as of release 0127), this means that text characters will be opaque blocks. This will be fixed in a future release (<A HREF="http://dev.processing.org/bugs/show_bug.cgi?id=641">Bug 641</A>).
+Unlike the main drawing surface which is completely opaque, surfaces created with createGraphics() can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using save() to write a PNG or TGA file, the transparency of the graphics object will be honored. Note that transparency levels are binary: pixels are either complete opaque or transparent. For the time being (as of release 1.2.1), this means that text characters will be opaque blocks. This will be fixed in a future release (<A HREF="http://code.google.com/p/processing/issues/detail?id=80">Issue 80</A>).
 </description>
 
 <syntax>
@@ -54,7 +54,7 @@ createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>, <c>filename</c>)
 
 <parameter>
 <label>renderer</label>
-<description>Either P2D (not yet implemented), P3D, JAVA2D, PDF, DXF</description>
+<description>Either P2D, P3D, JAVA2D, PDF, DXF</description>
 </parameter>
 
 <parameter>
