@@ -30,7 +30,7 @@ void draw() {
 </example>
 
 <description>
-Creates and returns a new <b>PGraphics</b> object of the types P2D, P3D, and JAVA2D. Use this class if you need to draw into an off-screen graphics buffer. It's not possible to use <b>createGraphics()</b> with OPENGL, because it doesn't allow offscreen use. The DXF and PDF renderers require the filename parameter. 
+Creates and returns a new <b>PGraphics</b> object of the types P2D, P3D, and JAVA2D. Use this class if you need to draw into an off-screen graphics buffer. It's not possible to use <b>createGraphics()</b> with OPENGL, because it doesn't allow offscreen use. The PDF renderer requires the filename parameter. The DXF renderer should not be used with createGraphics(), it's only built for use with beginRaw() and endRaw().
 <br/> <br/>
 It's important to call any drawing commands between beginDraw() and endDraw() statements. This is also true for any commands that affect drawing, such as smooth() or colorMode().
 <br/> <br/>
@@ -54,7 +54,7 @@ createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>, <c>filename</c>)
 
 <parameter>
 <label>renderer</label>
-<description>Either P2D, P3D, JAVA2D, PDF, DXF</description>
+<description>Either P2D, P3D, JAVA2D, PDF</description>
 </parameter>
 
 <parameter>
