@@ -15,10 +15,8 @@ $path = BASEDIR;
 $where = CONTENTDIR . 'static';
 putenv('HOME=' . CONTENTDIR);
 
-// do the initial checkout
-//`cd /var/www/processing && /usr/local/bin/svn co svn://processing.org/trunk/web/content/`;
 
-`cd $where && /usr/local/bin/svn update`;
+`cd $where && /usr/bin/svn update`;
 
 // make troubleshooting page
 $source = CONTENTDIR."static/";

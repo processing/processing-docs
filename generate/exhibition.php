@@ -20,6 +20,8 @@ $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
 
 `cd $there && /usr/bin/svn update curated.xml`;
+`cd $there && /usr/bin/svn update curated_images/`;
+
 
 // Copy over the images for the tutorials index
 if (!is_dir($path.'exhibition/images')) { 
