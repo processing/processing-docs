@@ -91,4 +91,12 @@
   	<code>true</code> 
   </tutorial> 
   
+  <tutorial> 
+  	<title>Strings and Text</title> 
+  	<directory>text</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+  
+  
 </tutorials> 
