@@ -57,12 +57,13 @@ else
     $directory = $tutorial->directory;
     $imgs = $tutorial->imgs;
     $code = $tutorial->code;
-    echo "About to generate tutorial $title in directory $directory, imgs dir = $imgs, code dir = $code<br \>";
+	echo 'About to generate tutorial '.$title.' in directory '.$directory.', imgs dir = '.$imgs.', code dir = '.$code.'<br \>';
+	echo 'Copying '.$source.$directory.'/index.html to ' . 'learning/'.$directory.'/index.html<br \>';
   
     $page = new Page($title, "Tutorials");
-    $page->content(file_get_contents($source.$directory."/index.html"));
-    writeFile('learning/".$directory."/index.html', $page->out());
-
+    $page->content(file_get_contents($source.$directory.'/index.html'));
+    writeFile('learning/'.$directory.'/index.html', $page->out());
+    
     if ($imgs == 'true') {
       $newpath = $path.'learning/'.$directory.'/imgs';
       if (!is_dir($newpath)) { 
