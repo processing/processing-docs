@@ -19,10 +19,15 @@ $where = CONTENTDIR;
 $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
 
-// do the initial checkout
-//`cd /var/www/processing && /usr/local/bin/svn co svn://processing.org/trunk/web/content/`;
+`cd $there && /usr/bin/svn update curated.xml`;
 
-`cd $there && /usr/local/bin/svn update curated.xml`;
+// Copy over the images for the tutorials index
+if (!is_dir($path.'exhibition/images')) { 
+	mkdir($path.'exhibition/images', '0757'); 
+}
+if (is_dir($path.'exhibition/images')) { 
+	copydirr($source.'curated_images', $path.'exhibition/images', null, 0757, true);
+}
 
 
 /******************************************** CURATED ***/
@@ -121,13 +126,6 @@ if (!defined('COVER')) {
     // count number of pages needed
     $cnum_pages = ceil($ctotal / CURATED_PER_PAGE);
     
-    // create and write the first page
-    #$page = new Page('Exhibition', 'Index');
-    #$page->subtemplate('template.exhibition.html');
-    #$page->set('exhibition', get_curated_one($curated, 0, CURATED_PER_PAGE/2));
-    #$page->set('network', get_network_list($network, NETWORK_FIRST_PAGE));
-    #writeFile("exhibition/index.html", $page->out());
-    
     // create and write the other pages
     for ($i = 0; $i <= $cnum_pages; $i++) {
         $page = new Page('Exhibition Archives', 'Exhibition');
@@ -146,22 +144,20 @@ if (!defined('COVER')) {
     $benchmark_end = microtime_float();
     $execution_time = round($benchmark_end - $benchmark_start, 4);
     
+    
     if (!defined('SUBMIT')) {
         echo <<<EOC
 <h2>Exhibition Generation Successful</h2>
 <p>Generator took $execution_time seconds to execute</p>
 EOC;
     }
+    
 }
 
 function curated_nav($num, $current)
 {
     $html = '<p class="exhibition-nav">';
-    //if ($num == current) {
-    //  $links[] = sprintf("%d", $num);
-    //} else {
-    //  $links[] = sprintf("<a href=\"curated_page_%d.html\">%d</a>", $num, $num);
-    //}
+
     for ($i = $num; $i > 0; $i--) {
     	if ($i == $num) {
     	  if (($num-$i+1) == $current) {
