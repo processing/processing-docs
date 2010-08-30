@@ -45,7 +45,7 @@ writeFile('learning/index.html', $page->out());
 //////////////// BASED ON AN XML FILE TO READ   /////////////
 
 
-if( ! $xml = simplexml_load_file('tutorials.xml') ) 
+if( ! $xml = simplexml_load_file($source.'tutorials.xml') ) 
 { 
   echo 'XML file missing'; 
 } 
