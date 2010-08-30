@@ -15,10 +15,14 @@ $path = BASEDIR;
 $where = CONTENTDIR . 'static/tutorials';
 putenv('HOME=' . CONTENTDIR);
 
-// do the initial checkout
-//`cd /var/www/processing && /usr/local/bin/svn co svn://processing.org/trunk/web/content/`;
+// From: http://code.google.com/p/processing/source/checkout 
+// # Non-members may check out a read-only working copy anonymously over HTTP.
+// svn checkout http://processing.googlecode.com/svn/trunk/ processing-read-only 
 
-`cd $where && /usr/local/bin/svn update`;
+// do the initial checkout
+`cd /var/www/processing && /usr/bin/svn checkout http://processing.googlecode.com/svn/trunk/web/content/ processing-read-only`;
+
+//`cd $where && /usr/bin/svn update`;
 
 // Copy over the images for the tutorials index
 if (!is_dir($path.'learning/imgs')) { 
@@ -41,7 +45,7 @@ writeFile('learning/index.html', $page->out());
 //////////////// BASED ON AN XML FILE TO READ   /////////////
 
 
-if( ! $xml = simplexml_load_file($source.'tutorials.xml') ) 
+if( ! $xml = simplexml_load_file('tutorials.xml') ) 
 { 
   echo 'XML file missing'; 
 } 
@@ -53,14 +57,11 @@ else
     $directory = $tutorial->directory;
     $imgs = $tutorial->imgs;
     $code = $tutorial->code;
-    echo 'About to generate tutorial '.$title.' in directory '.$directory.', imgs dir = '.$imgs.', code dir = '.$code.'<br \>';
+    echo "About to generate tutorial $title in directory $directory, imgs dir = $imgs, code dir = $code<br \>";
   
     $page = new Page($title, "Tutorials");
-    
-    echo 'Copying '.$source.$directory.'/index.html to ' . 'learning/'.$directory.'/index.html<br \>';
-    
-    $page->content(file_get_contents($source.$directory.'/index.html'));
-    writeFile('learning/'.$directory.'/index.html', $page->out());
+    $page->content(file_get_contents($source.$directory."/index.html"));
+    writeFile('learning/".$directory."/index.html', $page->out());
 
     if ($imgs == 'true') {
       $newpath = $path.'learning/'.$directory.'/imgs';
