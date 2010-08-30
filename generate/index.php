@@ -41,7 +41,7 @@ li { margin-bottom: 1em; }
 </head>
 
 <body>
-<h1><img src="../img/processing_beta_cover.gif" alt="Processing" /></h1>
+<h1><img src="../img/processing.gif" alt="Processing" /></h1>
 
 <div id="body">
 <p>&nbsp;</p>
@@ -106,7 +106,7 @@ li { margin-bottom: 1em; }
 	<br />
 	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
 	<br />
-	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a><br /> \ 
+	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
 	<a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
 	<a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
 	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
