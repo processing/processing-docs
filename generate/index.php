@@ -46,6 +46,9 @@ li { margin-bottom: 1em; }
 <div id="body">
 
 <strong>Generate Site Files</strong>
+
+<p>&nbsp;</p>
+
 <p>	
 	Filip: <a href="#" onclick="remote_link('exhibition.php'); return false;">Exhibition and archives</a><br />
 	<br />
