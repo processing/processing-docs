@@ -20,7 +20,7 @@ putenv('HOME=' . CONTENTDIR);
 // svn checkout http://processing.googlecode.com/svn/trunk/ processing-read-only 
 
 // do the initial checkout
-`cd /var/www/processing && /usr/bin/svn checkout http://processing.googlecode.com/svn/trunk/web/content/ processing-read-only`;
+`cd /var/www/processing && /usr/bin/svn checkout http://processing.googlecode.com/svn/trunk/web/content/`;
 
 //`cd $where && /usr/bin/svn update`;
 
