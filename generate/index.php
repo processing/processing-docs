@@ -41,10 +41,27 @@ li { margin-bottom: 1em; }
 </head>
 
 <body>
-<h1><img src="../img/processing.gif" alt="Processing" /></h1>
+<h1><img src="../img/processing_cover.gif" alt="Processing" /></h1>
 
 <div id="body">
+
+<strong>Generate Site Files</strong>
+<p>	
+	Filip: <a href="#" onclick="remote_link('exhibition.php'); return false;">Exhibition and archives</a><br />
+	<br />
+	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
+	<br />
+	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
+	<a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
+	<a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
+	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
+	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
+	<a href="#" onclick="remote_link('about.php');return false;">About</a> \ 
+	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages (Copyright, Books, Shop)</a>
+	</p>
+
 <p>&nbsp;</p>
+
      <p><b>Generate Reference Files</b></p>
      <!--<p><form action="#" method="post" onsubmit="new Ajax.Updater('status', 'svn_update.php',                      
                     { asynchronous: true, parameters: Form.serialize(this), onLoading: showloading }); return false;">
@@ -97,23 +114,6 @@ li { margin-bottom: 1em; }
 			</form>
     </p>
 <p><a href="#" onclick="remote_link('reference_media.php'); return false;">Copy reference media to public directory</a></p>
-
-<p>&nbsp;</p>
-
-<strong>Generate Site Files</strong>
-<p>	
-	Filip: <a href="#" onclick="remote_link('exhibition.php'); return false;">Exhibition and archives</a><br />
-	<br />
-	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
-	<br />
-	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
-	<a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
-	<a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
-	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
-	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
-	<a href="#" onclick="remote_link('about.php');return false;">About</a> \ 
-	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages (Copyright, Books, Shop)</a>
-	</p>
 
 <p>&nbsp;</p>
 
