@@ -37,163 +37,48 @@ writeFile('learning/index.html', $page->out());
 
 // Start making the individual tutorial pages
 
-$page = new Page("Getting Started", "Tutorials");
-$page->content(file_get_contents($source."gettingstarted/index.html"));
-writeFile('learning/gettingstarted/index.html', $page->out());
-if (!is_dir($path.'learning/gettingstarted/imgs')) { 
-	mkdir($path.'learning/gettingstarted/imgs', '0757'); 
-}
-if (is_dir($path.'learning/gettingstarted/imgs')) { 
-	copydirr($source.'gettingstarted/imgs', $path.'learning/gettingstarted/imgs', null, 0757, true);
-}
-
-$page = new Page("Overview", "Tutorials");
-$page->content(file_get_contents($source."overview/index.html"));
-writeFile('learning/overview/index.html', $page->out());
-if (!is_dir($path.'learning/overview/imgs')) { 
-	mkdir($path.'learning/overview/imgs', '0757'); 
-}
-if (is_dir($path.'learning/overview/imgs')) { 
-	copydirr($source.'overview/imgs', $path.'learning/overview/imgs', null, 0757, true);
-}
-
-$page = new Page("Processing in Eclipse", "Tutorials");
-$page->content(file_get_contents($source."eclipse/index.html"));
-writeFile('learning/eclipse/index.html', $page->out());
-if (!is_dir($path.'learning/eclipse/imgs')) { 
-	mkdir($path.'learning/eclipse/imgs', '0757'); 
-}
-if (is_dir($path.'learning/eclipse/imgs')) { 
-	copydirr($source.'eclipse/imgs', $path.'learning/eclipse/imgs', null, 0757, true);
-}
-
-$page = new Page("Drawing", "Tutorials");
-$page->content(file_get_contents($source."drawing/index.html"));
-writeFile('learning/drawing/index.html', $page->out());
-if (!is_dir($path.'learning/drawing/imgs')) { 
-	mkdir($path.'learning/drawing/imgs', '0757'); 
-}
-if (is_dir($path.'learning/drawing/imgs')) { 
-	copydirr($source.'drawing/imgs', $path.'learning/drawing/imgs', null, 0757, true);
-}
-
-$page = new Page("Color", "Tutorials");
-$page->content(file_get_contents($source."color/index.html"));
-writeFile('learning/color/index.html', $page->out());
-if (!is_dir($path.'learning/color/imgs')) { 
-	mkdir($path.'learning/color/imgs', '0757'); 
-}
-if (is_dir($path.'learning/color/imgs')) { 
-	copydirr($source.'color/imgs', $path.'learning/color/imgs', null, 0757, true);
-}
-
-$page = new Page("Objects", "Tutorials");
-$page->content(file_get_contents($source."objects/index.html"));
-writeFile('learning/objects/index.html', $page->out());
-if (!is_dir($path.'learning/objects/imgs')) { 
-	mkdir($path.'learning/objects/imgs', '0757'); 
-}
-if (is_dir($path.'learning/objects/imgs')) { 
-	copydirr($source.'objects/imgs', $path.'learning/objects/imgs', null, 0757, true);
-}
-
-$page = new Page("Two-Dimensional Arrays", "Tutorials");
-$page->content(file_get_contents($source."2darray/index.html"));
-writeFile('learning/2darray/index.html', $page->out());
-if (!is_dir($path.'learning/2darray/imgs')) { 
-	mkdir($path.'learning/2darray/imgs', '0757'); 
-}
-if (is_dir($path.'learning/2darray/imgs')) { 
-	copydirr($source.'2darray/imgs', $path.'learning/2darray/imgs', null, 0757, true);
-}
-
-$page = new Page("Trig", "Tutorials");
-$page->content(file_get_contents($source."trig/index.html"));
-writeFile('learning/trig/index.html', $page->out());
-if (!is_dir($path.'learning/trig/imgs')) { 
-	mkdir($path.'learning/trig/imgs', '0757'); 
-}
-if (is_dir($path.'learning/trig/imgs')) { 
-	copydirr($source.'trig/imgs', $path.'learning/trig/imgs', null, 0757, true); 
-}
-
-$page = new Page("Images and Pixels", "Tutorials");
-$page->content(file_get_contents($source."pixels/index.html"));
-writeFile('learning/pixels/index.html', $page->out());
-if (!is_dir($path.'learning/pixels/imgs')) { 
-	mkdir($path.'learning/pixels/imgs', '0757'); 
-}
-if (is_dir($path.'learning/pixels/imgs')) { 
-	copydirr($source.'pixels/imgs', $path.'learning/pixels/imgs', null, 0757, true); 
-}
-
-$page = new Page("PVector", "Tutorials");
-$page->content(file_get_contents($source."pvector/index.html"));
-writeFile('learning/pvector/index.html', $page->out());
-if (!is_dir($path.'learning/pvector/imgs')) { 
-	mkdir($path.'learning/pvector/imgs', '0757'); 
-}
-if (is_dir($path.'learning/pvector/imgs')) { 
-	copydirr($source.'pvector/imgs', $path.'learning/pvector/imgs', null, 0757, true); 
-}
-
-$page = new Page("2D Transformations", "Tutorials");
-$page->content(file_get_contents($source."transform2d/index.html"));
-writeFile('learning/transform2d/index.html', $page->out());
-if (!is_dir($path.'learning/transform2d/imgs')) { 
-	mkdir($path.'learning/transform2d/imgs', '0757'); 
-}
-if (is_dir($path.'learning/transform2d/imgs')) { 
-	copydirr($source.'transform2d/imgs', $path.'learning/transform2d/imgs', null, 0757, true); 
-}
-
-// Trying to just blanket copy all files
-/*
-$page = new Page("Curves", "Tutorials");
-$page->content(file_get_contents($source."curves/index.html"));
-writeFile('learning/curves/index.html', $page->out());
-if (!is_dir($path.'learning/curves')) { 
-	mkdir($path.'learning/curves', '0757'); 
-}
-if (is_dir($path.'learning/curves')) { 
-	copydirr($source.'curves', $path.'learning/curves', null, 0757, true); 
-}
-*/
+//////////////// NOW WE WILL HAVE A LOOP TO DO INDIVIDUAL TUTORIALS /////////////
+//////////////// BASED ON AN XML FILE TO READ   /////////////
 
 
-$page = new Page("Curves", "Tutorials");
-$page->content(file_get_contents($source."curves/index.html"));
-writeFile('learning/curves/index.html', $page->out());
-if (!is_dir($path.'learning/curves/imgs')) { 
-	mkdir($path.'learning/curves/imgs', '0757'); 
-}
-if (is_dir($path.'learning/curves/imgs')) { 
-	copydirr($source.'curves/imgs', $path.'learning/curves/imgs', null, 0757, true); 
-}
-if (!is_dir($path.'learning/curves/code')) { 
-	mkdir($path.'learning/curves/code', '0757'); 
-}
-if (is_dir($path.'learning/curves/code')) { 
-	copydirr($source.'curves/code', $path.'learning/curves/code', true, 0757, true); 
-}
+if( ! $xml = simplexml_load_file('tutorials.xml') ) 
+{ 
+  echo 'XML file missing'; 
+} 
+else 
+{ 
+  foreach( $xml as $tutorial ) 
+  { 
+    $title = $tutorial->title;
+    $directory = $tutorial->directory;
+    $imgs = $tutorial->imgs;
+    $code = $tutorial->code;
+    echo "About to generate tutorial $title in directory $directory, imgs dir = $imgs, code dir = $code<br \>";
+  
+    $page = new Page($title, "Tutorials");
+    $page->content(file_get_contents($source.$directory."/index.html"));
+    writeFile('learning/".$directory."/index.html', $page->out());
 
-$page = new Page("Anatomy", "Tutorials");
-$page->content(file_get_contents($source."anatomy/index.html"));
-writeFile('learning/anatomy/index.html', $page->out());
-if (!is_dir($path.'learning/anatomy/imgs')) { 
-	mkdir($path.'learning/anatomy/imgs', '0757'); 
-}
-if (is_dir($path.'learning/anatomy/imgs')) { 
-	copydirr($source.'anatomy/imgs', $path.'learning/anatomy/imgs', null, 0757, true); 
-}
-if (!is_dir($path.'learning/anatomy/code')) { 
-	mkdir($path.'learning/anatomy/code', '0757'); 
-}
-if (is_dir($path.'learning/anatomy/code')) { 
-	copydirr($source.'anatomy/code', $path.'learning/anatomy/code', true, 0757, true); 
-}
-
-
+    if ($imgs == 'true') {
+      $newpath = $path.'learning/'.$directory.'/imgs';
+      if (!is_dir($newpath)) { 
+        mkdir($newpath, '0757'); 
+      }
+      if (is_dir($newpath)) { 
+        copydirr($source.$directory.'/imgs', $newpath, null, 0757, true); 
+      }
+    }
+    if ($code == 'true') {
+      $newpath = $path.'learning/'.$directory.'/code';
+      if (!is_dir($newpath)) { 
+        mkdir($newpath, '0757'); 
+      }
+      if (is_dir($newpath)) { 
+        copydirr($source.$directory.'/code', $newpath, null, 0757, true); 
+      }
+    }
+  } 
+} 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
 

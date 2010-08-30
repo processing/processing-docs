@@ -1,0 +1,94 @@
+<tutorials> 
+  <tutorial> 
+  	<title>Getting Started</title> 
+  	<directory>gettingstarted</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Overview</title> 
+  	<directory>overview</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+  
+  <tutorial> 
+  	<title>Processing in Eclipse</title> 
+  	<directory>eclipse</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial>  
+ 
+  <tutorial> 
+  	<title>Drawing</title> 
+  	<directory>drawing</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+  
+  <tutorial> 
+  	<title>Color</title> 
+  	<directory>color</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Objects</title> 
+  	<directory>objects</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Two-Dimensional Arrays</title> 
+  	<directory>2darray</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Trig</title> 
+  	<directory>trig</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Images and Pixels</title> 
+  	<directory>pixels</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>PVector</title> 
+  	<directory>pvector</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+ 
+  <tutorial> 
+  	<title>2D Transformations</title> 
+  	<directory>transform2d</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Curves</title> 
+  	<directory>curves</directory> 
+  	<imgs>true</imgs> 
+  	<code>true</code> 
+  </tutorial> 
+ 
+  <tutorial> 
+  	<title>Anatomy</title> 
+  	<directory>anatomy</directory> 
+  	<imgs>true</imgs> 
+  	<code>true</code> 
+  </tutorial> 
+  
+</tutorials> 
