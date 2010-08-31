@@ -142,7 +142,7 @@ textFont(f,36);
 fill(255);
 </pre>
 <p>
-6.  Call the <a href="http://processing.org/reference/text_.html">text()</a> function to display text.  (This function is just like shape or image drawing, it takes 3 arguments Ð the text to be displayed, and the x & y coordinate to display that text.)
+6.  Call the <a href="http://processing.org/reference/text_.html">text()</a> function to display text.  (This function is just like shape or image drawing, it takes 3 arguments -- the text to be displayed, and the x & y coordinate to display that text.)
 </p>
 <pre>
 text("Hello Strings!",10,100);
@@ -151,7 +151,7 @@ text("Hello Strings!",10,100);
 Here are all the steps together:
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-1-simple-displaying-text/">Simple Displaying Text</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-1-simple-displaying-text/"><b>Example Simple Displaying Text</b></a>
 PFont f;                               // STEP 2 Declare PFont variable
   
 void setup() {
@@ -183,10 +183,10 @@ println(PFont.list());
 
 <p>Let's look at two more useful Processing functions related to displaying text:
 </p><p>
-<a href="http://processing.org/reference/textAlign_.html">textAlign()</a> Ð specifies RIGHT, LEFT or CENTER alignment for text.
+<a href="http://processing.org/reference/textAlign_.html">textAlign()</a> -- specifies RIGHT, LEFT or CENTER alignment for text.
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-2/">Example: Text Align</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-2/"><b>Example Text Align</b></a>
 PFont f;
 
 void setup() {
@@ -263,7 +263,7 @@ if (x < -w) {
 Here's the full example that displays a different headline each time the previous headline leaves the screen.  The headlines are stored in a String array.
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-3/">Example: Scrolling Headlines</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-3/"><b>Example Scrolling Headlines</b></a>
 // An array of news headlines
 String[] headlines = {
   "Processing downloads break downloading record.", 
@@ -311,7 +311,7 @@ In addition to textAlign() and textWidth(), Processing also offers the functions
 <p><a href="http://processing.org/learning/transform2d/">Translation and rotation</a> can also be applied to text.  For example, to rotate text around its center, translate to an origin point and use textAlign(CENTER) before displaying the text.
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-5-rotating-text/">Example: Rotating Text</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-5-rotating-text/"><b>Example: Rotating Text</b></a>
 PFont f;
 String message = "this text is spinning";
 float theta;
@@ -335,7 +335,12 @@ void draw() {
 
 <h3>Displaying text character by character</h3>
 <p>
-In certain graphics applications, displaying text with each character rendered individually is required.  For example, if each character needs to move or be colored independently then simply saying text("a bunch of letters",0,0) will not do.
+In certain graphics applications, displaying text with each character rendered individually is required.  For example, if each character needs to move or be colored independently then simply saying</p>
+<pre>
+text("a bunch of letters",0,0);
+</pre>
+<p>
+will not do.
 </p><p>
 The solution is to loop through a String, displaying each character one at a time.
 </p><p>
@@ -376,7 +381,7 @@ for (int i = 0; i < message.length(); i++) {
 <p>
 Calling the <a href="http://processing.org/reference/text_.html">text()</a> function for each character will allow us more flexibility in future examples (for coloring, sizing, and placing characters within one String individually).   This example has a pretty major flaw, however.   Here, the x location is increased by 10 pixels for each character.  Although this is approximately correct, because each character is not exactly ten pixels wide, the spacing is off.  The proper spacing can be achieved using the textWidth() function as demonstrated in the following code.  Note how this example achieves the proper spacing even with each character being a random size!
 </p><p>
-<img src="imgs/charbychar.jpg">
+<img src="imgs/charbychar.jpg" border=1>
 </p>
 <pre>
 PFont f;
@@ -405,7 +410,7 @@ void draw() {
 This "letter by letter" methodology can also be applied to a sketch where characters from a String move independently of one another.   The following example uses object-oriented design to make each character from the original String a Letter object, allowing it to both be a displayed in its proper location as well as move about the screen individually.  
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-6/">Example: Text breaking up</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-6/"><b>Example Text breaking up</b></a>
 PFont f;
 String message = "click mouse to shake it up";
 // An array of Letter objects
@@ -481,7 +486,7 @@ class Letter {
 The character by character method also allows us to display text along a curve.  Before we move on to letters, let's first look at how we would draw a series of boxes along a curve.  This example makes heavy use of <a href="http://www.processing.org/learning/trig/">Trignometry</a>.
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-7/">Example: Boxes along a curve</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-7/"><b>Example Boxes along a curve</b></a>
 PFont f;
 // The radius of a circle
 float r = 100;
@@ -534,10 +539,10 @@ void draw() {
 <p>
 What we need to do is replace each box with a character from a String that fits inside the box.  And since characters all do not have the same width, instead of using a variable "w" that stays constant, each box will have a variable width along the curve according to the textWidth() function. 
 </p><p>
-<img src="imgs/textcurve.jpg">
+<img src="imgs/textcurve.jpg" border=1>
 </p>
 <pre>
-<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-8/">Example: Characters along a curve</a>
+<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-8/"><b>Example Characters along a curve</b></a>
 // The message to be displayed
 String message = "text along a curve";
 
