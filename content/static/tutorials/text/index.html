@@ -114,7 +114,7 @@ println("We got here and we're printing out the mouse location!!!");
 <p>
 While this is valuable for debugging, it's not going to help our goal of displaying text for a user.  To place text on screen, we have to follow a series of simple steps.
 </p><p>
-1.  Choose a font by selecting "Tools" ? "Create Font."  This will create and place the font file in your data directory.  Make note of the font filename for Step 3.   Processing uses a special font format, "vlw," that uses images to display each letter.  Because of this, you should create the font at the size you intend to display.
+1.  Choose a font by selecting "Tools" --> "Create Font."  This will create and place the font file in your data directory.  Make note of the font filename for Step 3.   Processing uses a special font format, "vlw," that uses images to display each letter.  Because of this, you should create the font at the size you intend to display.
 </p><p>
 <img src="imgs/createfont.jpg">
 </p><p>
@@ -152,18 +152,18 @@ Here are all the steps together:
 </p>
 <pre>
 <a href="http://www.learningprocessing.com/examples/chapter-17/example-17-1-simple-displaying-text/"><b>Example Simple Displaying Text</b></a>
-PFont f;                               // STEP 2 Declare PFont variable
+PFont f;                          // STEP 2 Declare PFont variable
   
 void setup() {
   size(200,200);
-  f = loadFont("ArialMT-16.vlw");      // STEP 3  Load Font
+  f = loadFont("ArialMT-16.vlw"); // STEP 3  Load Font
 }
 
 void draw() {
   background(255);
-  textFont(f,16);                      // STEP 4 Specify font to be used
-  fill(0);                             // STEP 5 Specify font color 
-  text("Mmmmm... Strings... ",10,100); // STEP 6 Display Text
+  textFont(f,16);                 // STEP 4 Specify font to be used
+  fill(0);                        // STEP 5 Specify font color 
+  text("Hello Strings!",10,100);  // STEP 6 Display Text
 }
 </pre>
 <p>
@@ -598,7 +598,9 @@ void draw() {
   }
 }
 </pre>
-
+<p>
+<i>Special thanks to <a href="http://ariel.chronotext.org/">Ariel Malka</a> for his advice on this last curved text example.</i>
+</p>
 	<p>&nbsp;</p>
 
    		<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorials is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright 2008 Elsevier Inc. All rights reserved.</em></p>
