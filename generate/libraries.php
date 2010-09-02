@@ -5,6 +5,14 @@ require_once('lib/Ref.class.php');
 require_once('lib/Translation.class.php');
 $benchmark_start = microtime_float();
 
+
+// content/static/libraries.html
+$where = CONTENTDIR . 'static/';
+putenv('HOME=' . CONTENTDIR);
+
+// update the file on the server
+`cd $where && /usr/bin/svn update libraries.html`;
+
 // arguments
 $lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
 
