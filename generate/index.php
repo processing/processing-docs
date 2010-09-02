@@ -54,8 +54,9 @@ li { margin-bottom: 1em; }
 	<br />
 	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
 	<br />
+	Andreas: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a><br />
+	<br />
 	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
-	<a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
 	<a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
 	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
 	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
