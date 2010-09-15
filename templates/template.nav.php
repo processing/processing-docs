@@ -63,6 +63,7 @@ function navigation($section = '')
     $html .= "\t\t\t\t\t" . "<a href=\"http://code.google.com/p/processing\"" . 'class="faq"' . ">&raquo;Code</a>\n";
     $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org\"" . 'class="wiki"' . ">&raquo;Wiki</a>\n";
 	$html .= "\t\t\t\t\t" . "<a href=\"http://forum.processing.org\"" . 'class="forum"' . ">&raquo;Forum</a>\n";
+	$html .= "\t\t\t\t\t" . "<a href=\"http://feed.processing.org\"" . 'class="feed"' . ">&raquo;Feed</a>\n";
        
     $html .= "\t\t\t\t</div>\n";
     
