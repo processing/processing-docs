@@ -27,7 +27,7 @@ People are often confused by the use of <b>length()</b> to get the size of a Str
 </description>
 
 <syntax>
-<c>str</c>.charAt()
+<c>str</c>.length()
 </syntax>
 
 <parameter>

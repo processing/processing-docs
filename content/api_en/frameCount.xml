@@ -27,7 +27,7 @@ The system variable <b>frameCount</b> contains the number of frames displayed si
 </description>
 
 <syntax>
-frameRate
+frameCount
 </syntax>
 
 <parameter>

@@ -12,7 +12,7 @@
 #$dir = "API";
 $dir = "../content/api_en/";
 # This path is for the configuration on Casey's local machine
-$path = "../../Processing/build/shared/lib/";
+$path = "../../processing/build/shared/lib/";
 
 # Open base file and copy into array
 open (BASE, "keywords_base.txt") || die "can't open keywords_base.txt: $!";
