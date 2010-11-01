@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+<software name="My Little Piece of Privacy" by="Niklas Roy" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/privacy.jpg</image>
+          <description>
+              Niklas' workshop is located in an old storefront with a big window facing towards the street. In an attempt to create more privacy inside, Niklas decided to install a small but smart curtain.
+          </description>
+          <location>http://www.niklasroy.com/project/88/my-little-piece-of-privacy/</location>
+          <link href="http://www.niklasroy.com">Niklas Roy</link>
+</software>
+
 <software name="Strata" by="Quayola" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/strata.jpg</image>
           <description>
