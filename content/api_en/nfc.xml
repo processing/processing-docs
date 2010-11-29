@@ -23,6 +23,8 @@ println(fi);  // Prints "42,525.34"
 
 <description>
 Utility function for formatting numbers into strings and placing appropriate commas to mark units of 1000. There are two versions, one for formatting ints and one for formatting an array of ints. The value for the <b>digits</b> parameter should always be a positive integer.
+<br/> <br/>
+For a non-US locale, this will insert periods instead of commas, or whatever is apprioriate for that region.
 </description>
 
 <syntax>
