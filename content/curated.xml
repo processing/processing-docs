@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+<software name="One Hundred and Eight" by="Nils Völker" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/108.jpg</image>
+          <description>
+              One Hundred and Eight is an interactive wall-mounted Installation made out of ordinary garbage bags. Controlled by an Arduino and Processing, each of the bags is selectively inflated and deflated in turn by cooling fans.
+          </description>
+          <location>http://nilsvoelker.com/content/onehundredandeight/index.html</location>
+          <link href="http://nilsvoelker.com/">Nils Völker</link>
+</software>
+
 <software name="My Little Piece of Privacy" by="Niklas Roy" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/privacy.jpg</image>
           <description>
