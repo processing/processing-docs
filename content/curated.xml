@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+<software name="Process Compendium 2004-2010" by="Casey Reas" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/casey_pc.jpg</image>
+          <description>
+              Process Compendium 2004-2010 is a collection of work and record of process by Casey Reas, co-founder of Processing, presented and created entirely in Processing. For download see <a href:"http://ca-n.in/aUxWki">this</a> post on CAN.
+          </description>
+          <location>http://reas.com/category.php?section=process</location>
+          <link href="http://reas.com">Casey Reas</link>
+</software>
+
 <software name="One Hundred and Eight" by="Nils Völker" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/108.jpg</image>
           <description>
