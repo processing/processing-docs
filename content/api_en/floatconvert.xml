@@ -14,15 +14,11 @@
 int i = 65;
 float f = float(i);
 println(i + " : " + f);  // Prints "65 : 65.0"
-
-char c = 'E';
-f = float(c);
-println(c + " : " + f);  // Prints "E : 69.0"
 </code>
 </example>
 
 <description>
-Converts a primitive datatype, string, or array to its floating point representation.
+Converts an int, string, or array to its floating point representation.
 </description>
 
 <syntax>
@@ -31,7 +27,7 @@ float(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>int, char, byte, boolean, String, int[], char[], byte[], boolean[], String[]</description>
+<description>int, String, int[], String[]</description>
 </parameter>
 
 <returns>float</returns>
