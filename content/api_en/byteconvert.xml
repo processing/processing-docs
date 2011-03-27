@@ -31,7 +31,7 @@ byte(<c>val</c>)
 
 <parameter>
 <label>val</label>
-<description>int, char, int[], char[]</description>
+<description>boolean, char, int, float, boolean[], char[], int[], float[]</description>
 </parameter>
 
 <returns>byte</returns>

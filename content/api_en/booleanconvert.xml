@@ -22,7 +22,7 @@ if (b) {
 </example>
 
 <description>
-Converts a primitive datatype, string, or array to its boolean representation. The number 0 evaluates to false and all other numbers evaluate to true.
+Converts an int, string, or array to its boolean representation. For int calues, the number 0 evaluates to false and all other numbers evaluate to true. 
 </description>
 
 <syntax>
@@ -31,7 +31,7 @@ boolean(<c>val</c>)
 
 <parameter>
 <label>val</label>
-<description>String, String[]</description>
+<description>int, int[], String, String[]</description>
 </parameter>
 
 <returns>boolean</returns>
