@@ -24,12 +24,6 @@ putenv('HOME=' . CONTENTDIR);
 `cd $where && /usr/local/bin/svn update`;
 
 
-if (!copy(CONTENTDIR . 'examples/core.jar',
-	  EXAMPLESDIR.strtolower($this->sub).'/media/core.jar')) {
-  echo "Could not copy core.jar.";
-}
-
-
 # --------------------------------- Basics
 
 $categories = get_examples_list('examples_basics.xml');
@@ -73,6 +67,12 @@ $html .= "</div>";
 
 $page->content($html);
 writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+
+if (!copy(CONTENTDIR . 'examples/core.jar',
+	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
+  echo 'Could not copy core.jar to ' . $subdir . '.';
+}
+
 
 
 # --------------------------------- 3D
@@ -119,6 +119,10 @@ $html .= "</div>";
 
 $page->content($html);
 writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+if (!copy(CONTENTDIR . 'examples/core.jar',
+	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
+  echo 'Could not copy core.jar to ' . $subdir . '.';
+}
 
 
 # --------------------------------- Topics
@@ -165,6 +169,10 @@ $html .= "</div>";
 
 $page->content($html);
 writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+if (!copy(CONTENTDIR . 'examples/core.jar',
+	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
+  echo 'Could not copy core.jar to ' . $subdir . '.';
+}
 
 
 
