@@ -24,7 +24,10 @@ putenv('HOME=' . CONTENTDIR);
 `cd $where && /usr/local/bin/svn update`;
 
 
-//$source = CONTENTDIR."static/";
+if (!copy(CONTENTDIR . 'examples/core.jar',
+	  EXAMPLESDIR.strtolower($this->sub).'/media/core.jar')) {
+  echo "Could not copy core.jar.";
+}
 
 
 # --------------------------------- Basics
