@@ -73,6 +73,10 @@ if (!copy(CONTENTDIR . 'examples/core.jar',
 	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
   echo 'Could not copy core.jar to ' . $subdir . '.';
 }
+if (!copy(CONTENTDIR . 'examples/loading.gif',
+	  EXAMPLESDIR.strtolower($subdir).'/media/loading.gif')) {
+  echo 'Could not copy loading.gif to ' . $subdir . '.';
+}
 
 
 
@@ -125,6 +129,10 @@ if (!copy(CONTENTDIR . 'examples/core.jar',
 	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
   echo 'Could not copy core.jar to ' . $subdir . '.';
 }
+if (!copy(CONTENTDIR . 'examples/loading.gif',
+	  EXAMPLESDIR.strtolower($subdir).'/media/loading.gif')) {
+  echo 'Could not copy loading.gif to ' . $subdir . '.';
+}
 
 
 # --------------------------------- Topics
@@ -176,7 +184,10 @@ if (!copy(CONTENTDIR . 'examples/core.jar',
 	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
   echo 'Could not copy core.jar to ' . $subdir . '.';
 }
-
+if (!copy(CONTENTDIR . 'examples/loading.gif',
+	  EXAMPLESDIR.strtolower($subdir).'/media/loading.gif')) {
+  echo 'Could not copy loading.gif to ' . $subdir . '.';
+}
 
 
 # --------------------------------- LIBRARY
