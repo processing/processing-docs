@@ -46,7 +46,7 @@ foreach ($categories as $cat => $array) {
 }
 
 $page = new Page('Basics', 'Basics');
-$page->subtemplate('template.examples.html');
+$page->subtemplate('template.examples-basics.html');
 
 $html = "<div class=\"ref-col\">\n";
 foreach ($categories as $cat => $array) {
