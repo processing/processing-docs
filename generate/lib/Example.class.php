@@ -101,10 +101,12 @@ class Example
 	    $html .= "  archive: 'media/" . $this->name . ".jar,media/core.jar',\n";
 	    $html .= "  width: '" . $this->width . "',\n";
 	    $html .= "  height: '" . $this->height . "',\n";
-	    #$html .= "  image: 'media/loading.gif'\n";
 	    $html .= "};\n";
-	    #$html .= "deployJava.runApplet(attributes, { }, '1.5');\n";
-	    $html .= "deployJava.runApplet(attributes, { image: 'media/loading.gif' }, '1.5');\n";
+	    $html .= "var parameters = {\n";
+	    $html .= "  image: 'media/loading.gif',\n";
+	    $html .= "  centerimage: 'true'\n";
+	    $html .= "};\n";
+	    $html .= "deployJava.runApplet(attributes, parameters, '1.5');\n";
 	    $html .= "/* ]]> */\n";
 	    $html .= "</script>\n\n";
 
