@@ -57,7 +57,8 @@ foreach ($categories as $cat => $array) {
         $thisfile = strtolower($file);
         $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
     }
-    echo '</p>';
+    #echo '</p>';
+    $html .= '</p>';
     
     if (in_array($cat, $break_after)) {
         $html .= "</div><div class=\"ref-col\">";
@@ -109,7 +110,8 @@ foreach ($categories as $cat => $array) {
         $thisfile = strtolower($file);
         $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
     }
-    echo '</p>';
+    #echo '</p>';
+    $html .= '</p>';
     
     if (in_array($cat, $break_after)) {
         $html .= "</div><div class=\"ref-col\">";
@@ -159,7 +161,8 @@ foreach ($categories as $cat => $array) {
         $thisfile = strtolower($file);
         $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
     }
-    echo '</p>';
+    #echo '</p>';
+    $html .= '</p>';
     
     if (in_array($cat, $break_after)) {
         $html .= "</div><div class=\"ref-col\">";

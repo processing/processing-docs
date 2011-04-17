@@ -132,7 +132,7 @@ class Example
         $page->set('examples_nav', $this->make_nav($menu_array));
         writeFile("learning/".strtolower($this->sub)."/".strtolower($this->name).".html", $page->out());
         $this->copy_media();
-        echo $this->name;
+        echo $this->name . '<br/>';
         #echo "learning/examples/".strtolower($this->sub)."/".strtolower($this->name).".html\n";
     }
     
@@ -190,12 +190,11 @@ class Example
         if (file_exists($this->applet)) {
             make_necessary_directories(EXAMPLESDIR.strtolower($this->sub).'/media/include');
             if (!copy($this->applet, EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar')) {
-                echo "Could not copy {$this->applet} to .";
+                echo "Could not copy {$this->applet} to . <br/>";
             }
-            #echo EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar';
-            echo EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar';
-        } else {
-          echo " | ";
+	    #echo EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar';
+        #} else {
+	  #echo " | ";
         }            
     }
 }
