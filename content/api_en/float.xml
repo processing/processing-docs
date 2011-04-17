@@ -18,8 +18,30 @@ float c = a + b;  // Declare variable "c" and assign it the sum of "a" and "b"
 </code>
 </example>
 
+<example>
+<image></image>
+<code>
+float f = 0;
+for (int i = 0 ; i &lt; 100000; i++) {  
+  f = f + 0.0001;  // bad idea! see below.
+}
+
+int count = 0;
+for (int i = 0; i &lt; 100000; i++) {
+  float f = i / 1000.0;  // count by thousandths
+  // f will work better here, less affected by rounding
+}
+</code>
+</example>
+
 <description>
-Datatype for floating-point numbers, a number that has a decimal point. Floating-point numbers are often used to approximate analog and continuous values because they have greater resolution than integers.  Floating-point numbers can be as large as 3.40282347E+38 and as low as -3.40282347E+38. They are stored as 32 bits of information. The first time a variable is written, it must be declared with a statement expressing its datatype. Subsequent uses of this variable must not reference the datatype because Processing will think the variable is being declared again.
+Data type for floating-point numbers, a number that has a decimal point. 
+<br/>
+Floats are not precise, so avoid adding small values (such as 0.0001) may not always increment because of rounding error. If you want to increment a value in small intervals, use an int, and divide by a float value before using it. (See example.)
+<br/>
+Floating-point numbers can be as large as 3.40282347E+38 and as low as -3.40282347E+38. They are stored as 32 bits (4 bytes) of information. The float data type is inherited from Java, and you can read more about the technical details <a href="http://download.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a> or <a href="http://java.sun.com/docs/books/jls/third_edition/html/typesValues.html#4.2.3">here</a>. 
+<br/>
+Processing supports the 'double' datatype from Java as well, however it is not documented because none of the Processing functions use double values, which are overkill for nearly all work created in Processing, and use more memory. We do not plan to support doubles, as it would require increasing the number of API functions significantly.
 </description>
 
 <syntax>
