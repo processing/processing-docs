@@ -18,31 +18,37 @@ class Example
         $this->cat = $cat;
         $this->sub = $sub;
 
-        $this->file = file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$name.'.pde');
-        $this->applet = CONTENTDIR.'examples/'.$cat.'/'.$name.'/applet/'.$name.'.jar';
+        #$this->file = file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$name.'.pde');
+	# use the .pde from the applet folder
+	$applet_dir = 
+	  CONTENTDIR . 'examples/' . $cat . '/' . $name . '/applet/';
+	$this->file = file_get_contents($applet_dir . $name.'.pde');
+        $this->applet = $applet_dir . $name . '.jar';
+#	$this->file = 
+#	  file_get_contents(CONTENTDIR . 'examples/' . $cat . '/' .
+#			    $name . '/applet/' . $name.'.pde');
+#        $this->applet = (CONTENTDIR . 'examples/' . $cat . '/' . 
+#			 $name . '/applet/' . $name . '.jar';
         
-        if ($handle = opendir(CONTENTDIR.'examples/'.$cat.'/'.$name)) {
+#        if ($handle = opendir(CONTENTDIR.'examples/'.$cat.'/'.$name)) {
+        if ($handle = opendir($applet_dir)) {
           while (false !== ($newfile = readdir($handle))) {
             //if ($file != "." && $file != "..") {
             if (preg_match("/pde/", $newfile)) {
               //echo " $newfile\n";
               if (strcmp($name.'.pde', $newfile) != 0) {
-                  $this->file .= "\n\n\n";
-                $this->file .= file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$newfile); 
+		$this->file .= "\n\n\n";
+		#$this->file .= file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$newfile); 
+		$this->file .= file_get_contents($applet_dir . $newfile); 
               }
             }
           }
           closedir($handle);
         }
         
-        #echo CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$name.'.pde';
-         
-        # "(?:^|\\s|;)size\\s*\\(\\s*(\\S+)\\s*,\\s*(\\d+),?\\s*([^\\)]*)\\s*\\)"
         preg_match("/(^|\s|;)size\s*\(\s*(\d+)\s*,\s*(\d+),?\s*([^\)]*)\s*\)/", $this->file, $matches);
-        //preg_match('/size\(200,200\)/', $this->file, $matches);
         $this->width = $matches[2];
         $this->height = $matches[3];
-        #echo "Special magic: $this->width  $this->height\n";
         
         $this->split_file();
     }
@@ -54,9 +60,6 @@ class Example
         $code_lines = array();
         $doc = true;
         foreach ($lines as $line) {
-            #if (!preg_match("/^\W/", $line) && $doc) {
-            #    $doc = false;
-            #}
             # Change for new comment style - cr
             if (preg_match("/\*\//", $line) && $doc) {
               $doc = false;  # End the documentation
@@ -65,10 +68,8 @@ class Example
               continue;
             }
             if ($doc) {
-                #$doc_lines[] = htmlspecialchars(str_replace('// ', '', $line));
-                # Change for new comment style - cr<br>
-                if(!preg_match("/\/\*\*/", $line)) {
-                  #$doc_lines[] = htmlspecialchars(str_replace(' * ', '', $line)); # Removed to allow arefs - cr
+	      # Change for new comment style - cr
+	      if (!preg_match("/\/\*\*/", $line)) {
                   $line = str_replace(" * ", "", $line);
                   $line = trim($line);
                   if($line == "") {
@@ -90,7 +91,11 @@ class Example
         if (file_exists($this->applet)) {
 
             $html .= "\n<div class=\"applet\">\n\t";
-            $html .= '<applet code="'.$this->name.'" archive="media/'.$this->name.'.jar" width="'.$this->width.'" height="'.$this->height.'"></applet>';
+            $html .= '<applet code="' . $this->name . '"' .
+	      ' archive="media/' . $this->name.'.jar,media/core.jar"' .
+	      ' width="' . $this->width.'"' .
+	      ' height="' . $this->height.'"' .
+	      '></applet>';
             $html .= "\n</div>";
             
             if ($this->width > 200) {
@@ -121,7 +126,6 @@ class Example
     
     function output_file(&$menu_array)
     {
-        //$page = new Page($this->name . ' \ Learning', 'Basics');
         $page = new Page($this->name . ' \ Learning', $this->sub);
         $page->subtemplate('template.example.html');
         $page->content($this->display());
