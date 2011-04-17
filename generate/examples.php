@@ -17,7 +17,7 @@ putenv('HOME=' . CONTENTDIR);
 // do the initial checkout
 //`cd /var/www/processing && /usr/local/bin/svn co svn://processing.org/trunk/web/content/`;
 
-`cd $there && /usr/local/bin/svn update examples.xml`;
+`cd $there && /usr/local/bin/svn update examples_basics.xml`;
 `cd $there && /usr/local/bin/svn update examples_3D.xml`;
 `cd $there && /usr/local/bin/svn update examples_libraries.xml`;
 `cd $there && /usr/local/bin/svn update examples_topics.xml`;
@@ -29,7 +29,7 @@ putenv('HOME=' . CONTENTDIR);
 
 # --------------------------------- Basics
 
-$categories = get_examples_list('examples.xml');
+$categories = get_examples_list('examples_basics.xml');
 $break_after = array('Control', 'Math');
 $subdir = 'Basics';
 $dir = CONTENTDIR.'examples/'.$subdir.'/';
