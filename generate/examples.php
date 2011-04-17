@@ -183,7 +183,7 @@ if (!copy(CONTENTDIR . 'examples/core.jar',
 
 #$categories = get_examples_list('examples_libraries.xml');
 #$break_after = array('Serial', 'Video (MovieMaker)');
-#$subdir = 'Library';
+$subdir = 'Library';
 #$dir = CONTENTDIR.'examples/'.$subdir.'/';
 
 #$count = 0;
