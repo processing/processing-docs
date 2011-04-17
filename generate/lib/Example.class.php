@@ -96,12 +96,12 @@ class Example
 	    $html .= '<script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>';
 	    $html .= '<script type="text/javascript">' . "\n";
 	    $html .= '/* <![CDATA[ */' . "\n";
-	    $html .= "var attributes = { ";
-	    $html .= "code: '" . $this->name . ".class',";
-	    $html .= "archive: 'media/" . $this->name . ".jar,media/core.jar',";
-	    $html .= "width: '" . $this->width . "',";
-	    $html .= "height: '" . $this->height . "',";
-	    $html .= "image: 'media/loading.gif'";
+	    $html .= "var attributes = {\n";
+	    $html .= "  code: '" . $this->name . ".class',\n";
+	    $html .= "  archive: 'media/" . $this->name . ".jar,media/core.jar',\n";
+	    $html .= "  width: '" . $this->width . "',\n";
+	    $html .= "  height: '" . $this->height . "',\n";
+	    $html .= "  image: 'media/loading.gif'\n";
 	    $html .= "};\n";
 	    $html .= "deployJava.runApplet(attributes, { }, '1.5');\n";
 	    $html .= "/* ]]> */\n";
