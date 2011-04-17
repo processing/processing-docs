@@ -36,16 +36,16 @@ $dir = CONTENTDIR.'examples/'.$subdir.'/';
 
 $count = 0;
 foreach ($categories as $cat => $array) {
-	if ($dp = opendir($dir.$cat)) {
-		while ($fp = readdir($dp)) {
-			if (substr($fp, 0, 1) != '.') {
-				$ex = new Example($fp, $subdir."/".$cat, $subdir);
-				//$ex = new Example($fp, $cat);
-				$ex->output_file($categories);
-				$count++;
-			}
-		}
-	}
+    if ($dp = opendir($dir.$cat)) {
+        while ($fp = readdir($dp)) {
+            if (substr($fp, 0, 1) != '.') {
+                $ex = new Example($fp, $subdir."/".$cat, $subdir);
+                //$ex = new Example($fp, $cat);
+                $ex->output_file($categories);
+                $count++;
+            }
+        }
+    }
 }
 
 $page = new Page('Basics', 'Basics');
@@ -53,18 +53,18 @@ $page->subtemplate('template.examples.html');
 
 $html = "<div class=\"ref-col\">\n";
 foreach ($categories as $cat => $array) {
-	
-	#$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
-	$html .= "<p><br /><b>$cat</b><br /><br />";
-	foreach ($array as $file => $name) {
-	    $thisfile = strtolower($file);
-		$html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-	}
-	echo '</p>';
-	
-	if (in_array($cat, $break_after)) {
-		$html .= "</div><div class=\"ref-col\">";
-	}
+    
+    #$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
+    $html .= "<p><br /><b>$cat</b><br /><br />";
+    foreach ($array as $file => $name) {
+        $thisfile = strtolower($file);
+        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
+    }
+    echo '</p>';
+    
+    if (in_array($cat, $break_after)) {
+        $html .= "</div><div class=\"ref-col\">";
+    }
 }
 $html .= "</div>";
 
@@ -82,16 +82,16 @@ $dir = CONTENTDIR.'examples/'.$subdir.'/';
 
 $count = 0;
 foreach ($categories as $cat => $array) {
-	if ($dp = opendir($dir.$cat)) {
-		while ($fp = readdir($dp)) {
-			if (substr($fp, 0, 1) != '.') {
-				$ex = new Example($fp, $subdir."/".$cat, $subdir);
-				//$ex = new Example($fp, $cat);
-				$ex->output_file($categories);
-				$count++;
-			}
-		}
-	}
+    if ($dp = opendir($dir.$cat)) {
+        while ($fp = readdir($dp)) {
+            if (substr($fp, 0, 1) != '.') {
+                $ex = new Example($fp, $subdir."/".$cat, $subdir);
+                //$ex = new Example($fp, $cat);
+                $ex->output_file($categories);
+                $count++;
+            }
+        }
+    }
 }
 
 $page = new Page('3D', '3D');
@@ -99,18 +99,18 @@ $page->subtemplate('template.examples-3d.html');
 
 $html = "<div class=\"ref-col\">\n";
 foreach ($categories as $cat => $array) {
-	
-	#$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
-	$html .= "<p><br /><b>$cat</b><br /><br />";
-	foreach ($array as $file => $name) {
-	    $thisfile = strtolower($file);
-		$html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-	}
-	echo '</p>';
-	
-	if (in_array($cat, $break_after)) {
-		$html .= "</div><div class=\"ref-col\">";
-	}
+    
+    #$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
+    $html .= "<p><br /><b>$cat</b><br /><br />";
+    foreach ($array as $file => $name) {
+        $thisfile = strtolower($file);
+        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
+    }
+    echo '</p>';
+    
+    if (in_array($cat, $break_after)) {
+        $html .= "</div><div class=\"ref-col\">";
+    }
 }
 $html .= "</div>";
 
@@ -128,16 +128,16 @@ $dir = CONTENTDIR.'examples/'.$subdir.'/';
 
 $count = 0;
 foreach ($categories as $cat => $array) {
-	if ($dp = opendir($dir.$cat)) {
-		while ($fp = readdir($dp)) {
-			if (substr($fp, 0, 1) != '.') {
-				$ex = new Example($fp, $subdir."/".$cat, $subdir);
-				//$ex = new Example($fp, $cat);
-				$ex->output_file($categories);
-				$count++;
-			}
-		}
-	}
+    if ($dp = opendir($dir.$cat)) {
+        while ($fp = readdir($dp)) {
+            if (substr($fp, 0, 1) != '.') {
+                $ex = new Example($fp, $subdir."/".$cat, $subdir);
+                //$ex = new Example($fp, $cat);
+                $ex->output_file($categories);
+                $count++;
+            }
+        }
+    }
 }
 
 $page = new Page('Topics', 'Topics');
@@ -145,18 +145,18 @@ $page->subtemplate('template.examples-topics.html');
 
 $html = "<div class=\"ref-col\">\n";
 foreach ($categories as $cat => $array) {
-	
-	#$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
-	$html .= "<p><br /><b>$cat</b><br /><br />";
-	foreach ($array as $file => $name) {
-	    $thisfile = strtolower($file);
-		$html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-	}
-	echo '</p>';
-	
-	if (in_array($cat, $break_after)) {
-		$html .= "</div><div class=\"ref-col\">";
-	}
+    
+    #$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
+    $html .= "<p><br /><b>$cat</b><br /><br />";
+    foreach ($array as $file => $name) {
+        $thisfile = strtolower($file);
+        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
+    }
+    echo '</p>';
+    
+    if (in_array($cat, $break_after)) {
+        $html .= "</div><div class=\"ref-col\">";
+    }
 }
 $html .= "</div>";
 
@@ -175,16 +175,16 @@ $dir = CONTENTDIR.'examples/'.$subdir.'/';
 
 $count = 0;
 foreach ($categories as $cat => $array) {
-	if ($dp = opendir($dir.$cat)) {
-		while ($fp = readdir($dp)) {
-			if (substr($fp, 0, 1) != '.') {
-				$ex = new Example($fp, $subdir."/".$cat, $subdir);
-				//$ex = new Example($fp, $cat);
-				$ex->output_file($categories);
-				$count++;
-			}
-		}
-	}
+    if ($dp = opendir($dir.$cat)) {
+        while ($fp = readdir($dp)) {
+            if (substr($fp, 0, 1) != '.') {
+                $ex = new Example($fp, $subdir."/".$cat, $subdir);
+                //$ex = new Example($fp, $cat);
+                $ex->output_file($categories);
+                $count++;
+            }
+        }
+    }
 }
 
 $page = new Page('Library', 'Library');
@@ -192,18 +192,18 @@ $page->subtemplate('template.examples-libraries.html');
 
 $html = "<div class=\"ref-col\">\n";
 foreach ($categories as $cat => $array) {
-	
-	#$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
-	$html .= "<p><br /><b>$cat</b><br /><br />";
-	foreach ($array as $file => $name) {
-	    $thisfile = strtolower($file);
-		$html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-	}
-	echo '</p>';
-	
-	if (in_array($cat, $break_after)) {
-		$html .= "</div><div class=\"ref-col\">";
-	}
+    
+    #$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
+    $html .= "<p><br /><b>$cat</b><br /><br />";
+    foreach ($array as $file => $name) {
+        $thisfile = strtolower($file);
+        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
+    }
+    echo '</p>';
+    
+    if (in_array($cat, $break_after)) {
+        $html .= "</div><div class=\"ref-col\">";
+    }
 }
 $html .= "</div>";
 
@@ -227,25 +227,25 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 
 function get_examples_list($exstr)
 {
-	$xml = openXML($exstr);
-	$my_cats = array();
-	foreach ($xml->childNodes as $c) {
-	    $name = htmlspecialchars($c->getAttribute('label'));
+    $xml = openXML($exstr);
+    $my_cats = array();
+    foreach ($xml->childNodes as $c) {
+        $name = htmlspecialchars($c->getAttribute('label'));
     
-	    if ($c->childCount > 0) {
-	        foreach ($c->childNodes as $s) {
-	            if ($s->nodeType == 1) {
-	                $my_cats[$name][$s->getAttribute('file')] = trim($s->firstChild->nodeValue);
-	            }
-	        }
-	    }
-	}
-	return $my_cats;
+        if ($c->childCount > 0) {
+            foreach ($c->childNodes as $s) {
+                if ($s->nodeType == 1) {
+                    $my_cats[$name][$s->getAttribute('file')] = trim($s->firstChild->nodeValue);
+                }
+            }
+        }
+    }
+    return $my_cats;
 }
 
 function removesymbols($str)
 {
-	return preg_replace("/\W/", "", $str);
+    return preg_replace("/\W/", "", $str);
 }
 
 ?>

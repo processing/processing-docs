@@ -10,17 +10,17 @@ class Page
     var $xhtml;
     var $lang;
     var $subtemplate = false;
-	var $section;
+    var $section;
     
     function Page($title = '', $section = '', $bodyid = '')
     {
-		$this->xhtml = new xhtml_page(TEMPLATEDIR.'template.html');
-		$this->xhtml->set('header', $section == 'Cover' ? HEADER : HEADER_LINK);
-		$this->section = $section;
-		$this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
-		$title = ($title == '') ? 'Processing.org' : $title . ' \ Processing.org';
-		$this->xhtml->set('title', $title);
-		$this->xhtml->set('navigation', navigation($section));
+        $this->xhtml = new xhtml_page(TEMPLATEDIR.'template.html');
+        $this->xhtml->set('header', $section == 'Cover' ? HEADER : HEADER_LINK);
+        $this->section = $section;
+        $this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
+        $title = ($title == '') ? 'Processing.org' : $title . ' \ Processing.org';
+        $this->xhtml->set('title', $title);
+        $this->xhtml->set('navigation', navigation($section));
     }
     
     function set($key, $value)
@@ -57,10 +57,10 @@ class Page
         $this->lang = $lang;
         $this->xhtml->set('charset', $LANGUAGES[$lang][1]);
         $this->xhtml->set('lang', $lang);
-	  if ($lang != 'en') {
+      if ($lang != 'en') {
             #$this->xhtml->set('navigation', navigation_tr($this->section));
             $this->xhtml->set('navigation', navigation($this->section));
-	  }
+      }
     }
     
     function out()
@@ -69,10 +69,10 @@ class Page
         return $this->xhtml->out();
     }
 
-	function set_rel_path($path = '') 
-	{
-		$this->xhtml->set('relpath', $path);
-	}
+    function set_rel_path($path = '') 
+    {
+        $this->xhtml->set('relpath', $path);
+    }
 }
 
 class ReferencePage
@@ -110,7 +110,7 @@ class ReferencePage
             $xhtml->set($key, $value);
         }
 
-		$xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
+        $xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
         
         $this->xhtml = $xhtml;
         $this->language($lang);
@@ -173,9 +173,9 @@ class LibReferencePage extends ReferencePage
         foreach ($translation->meta as $key => $value) {
             $xhtml->set($key, $value);
         }
-   	
-		$xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
-			
+       
+        $xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
+            
         $this->xhtml = $xhtml;
         $this->language($lang);
     }
@@ -194,9 +194,9 @@ class LocalPage extends Page
         $title = ($title == '') ? 'Processing 1.0' : $title . ' \ Processing 1.0';
         $this->xhtml->set('title', $title);
         $this->xhtml->set('navigation', local_nav($section, $rel_path));
-		$this->set('relpath', $rel_path);
-		$this->language('en');
-		$this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
+        $this->set('relpath', $rel_path);
+        $this->language('en');
+        $this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
     }
 }
 
@@ -232,8 +232,8 @@ class LocalReferencePage extends ReferencePage
             $xhtml->set($key, $value);
         }
 
-		$xhtml->set('relpath', $rel_path);
-		$xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
+        $xhtml->set('relpath', $rel_path);
+        $xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
         
         $this->xhtml = $xhtml;
         $this->language($lang);
@@ -245,7 +245,7 @@ class LocalLibReferencePage extends ReferencePage
     function LocalLibReferencePage(&$ref, $lib, $translation, $rel_path = '../../')
     {
         global $LANGUAGES;
-		$lang = 'en';
+        $lang = 'en';
         
         $this->filepath = "distribution/libraries/$lib/" . $ref->name();
         
@@ -273,9 +273,9 @@ class LocalLibReferencePage extends ReferencePage
         }
 
         $xhtml->set('content', $ref->display());
-   	
-		$xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
-		$xhtml->set('relpath', $rel_path);
+       
+        $xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
+        $xhtml->set('relpath', $rel_path);
         $this->xhtml = $xhtml;
     }
 }
