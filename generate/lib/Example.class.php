@@ -89,23 +89,40 @@ class Example
     {
         $html = "\n<div class=\"example\">";
         if (file_exists($this->applet)) {
+	    $html .= "\n<div class=\"applet\">\n\t";
 
-            $html .= "\n<div class=\"applet\">\n\t";
+	    # for newer browsers, use the deployment script 
+	    # which will let us use loading.gif instead of the coffee cup
+	    $html .= '<script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>';
+	    $html .= '<script type="text/javascript">' . "\n";
+	    $html .= '/* <![CDATA[ */' . "\n";
+	    $html .= "var attributes = { ";
+	    $html .= "code: '" . $this->name . ".class',";
+	    $html .= "archive: 'media/" . $this->name . ".jar,media/core.jar',";
+	    $html .= "width: '" . $this->width . "',";
+	    $html .= "height: '" . $this->height . "',";
+	    $html .= "image: 'media/loading.gif'";
+	    $html .= "};\n";
+	    $html .= "deployJava.runApplet(attributes, { }, '1.5');\n";
+	    $html .= "/* ]]> */\n";
+	    $html .= "</script>\n\n";
+
+	    # fallback for the oldschool folks
+	    $html .= "<noscript>\n";
             $html .= '<applet code="' . $this->name . '"' .
 	      ' archive="media/' . $this->name.'.jar,media/core.jar"' .
 	      ' width="' . $this->width.'"' .
 	      ' height="' . $this->height.'"' .
 	      '></applet>';
-            $html .= "\n</div>";
-            
-            if ($this->width > 200) {
-                
+            $html .= "\n";
+	    $html .= "</noscript>\n";
+	    $html .= "</div>\n";
+
+            if ($this->width > 200) {                
               $html .= "\n<p class=\"doc\">";
             
             } else {
-            
               $html .= "\n<p class=\"doc-float\">";
-            
             }
 
         } else {
