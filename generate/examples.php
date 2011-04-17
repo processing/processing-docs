@@ -189,10 +189,12 @@ writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 #    }
 #}
 
-#$page = new Page('Library', 'Library');
-#$page->subtemplate('template.examples-libraries.html');
+$page = new Page('Library', 'Library');
+$page->subtemplate('template.examples-libraries.html');
 
-#$html = "<div class=\"ref-col\">\n";
+$html = "<div class=\"ref-col\">\n";
+$html .= "Library examples are available from the examples window inside the Processing Development Environment.";
+
 #foreach ($categories as $cat => $array) {    
 #    $html .= "<p><br /><b>$cat</b><br /><br />";
 #    foreach ($array as $file => $name) {
@@ -205,10 +207,11 @@ writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 #        $html .= "</div><div class=\"ref-col\">";
 #    }
 #}
-#$html .= "</div>";
 
-#$page->content($html);
-#writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+$html .= "</div>";
+
+$page->content($html);
+writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 
 
 
