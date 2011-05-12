@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+<software name="Cascade" by="NYTimes R&D Lab" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/nytcascade.jpg</image>
+          <description>
+              Cascade is the latest project by NYTimes R&D Lab that allows precise analysis of the structures that underly sharing activity on the web. This tool links browsing behavior on a site to sharing activity to construct a detailed picture of how information propagates through the social media space.
+          </description>
+          <location>http://nytlabs.com/projects/cascade.html</location>
+		 <link href="http://nytlabs.com">NYTimes R&D Lab</link>
+</software>
+
 <software name="MIT Media Lab Identity" by="TheGreenEyl and E Roon Kang" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/mitidentity.jpg</image>
           <description>
