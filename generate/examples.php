@@ -4,6 +4,12 @@ require('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 
+// redefine location on local machine for examples in processing trunk
+define('BASEDIR',    '/Users/REAS/Documents/reas@processing.org/trunk/');
+define('CONTENTDIR', BASEDIR.'processing/java/');
+//define('EXAMPLESDIR', BASEDIR.'web/java/');
+define('EXAMPLESDIR',	BASEDIR.'learning/');
+
 // update the files on the server via SVN
 
 // look for the .subversion folder somewhere else
@@ -12,6 +18,7 @@ $benchmark_start = microtime_float();
 //$path = BASEDIR;
 $where = CONTENTDIR . 'examples';
 $there = CONTENTDIR;
+//$xmlwhere = BASEDIR . 'web/content/';
 putenv('HOME=' . CONTENTDIR);
 
 // do the initial checkout
