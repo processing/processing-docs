@@ -31,6 +31,8 @@ void mousePressed() {
 
 <description>
 Opens a new file and all subsequent drawing functions are echoed to this file as well as the display window. The <b>beginRecord()</b> function requires two parameters, the first is the renderer and the second is the file name. This function is always used with <b>endRecord()</b> to stop the recording process and close the file.
+<br /> <br />
+Note that beginRecord() will only pick up any settings that happen after it has been called. For instance, if you call textFont() before beginRecord(), then that font will not be set for the file that you're recording to. 
 </description>
 
 <syntax>
@@ -39,12 +41,12 @@ beginRecord(<c>renderer</c>, <c>filename</c>)
 
 <parameter>
 <label>renderer</label>
-<description>For example, PDF or DXF</description>
+<description>For example, PDF</description>
 </parameter>
 
 <parameter>
 <label>filename</label>
-<description>String:  filename for output</description>
+<description>String: filename for output</description>
 </parameter>
 
 
