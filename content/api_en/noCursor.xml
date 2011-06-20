@@ -24,7 +24,7 @@ void draw()
 </example>
 
 <description>
-Hides the cursor from view. Will not work when running the program in a web browser.
+Hides the cursor from view. Will not work when running the program in a web browser or when running in full screen (Present) mode.
 </description>
 
 <syntax>
