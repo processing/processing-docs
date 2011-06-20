@@ -30,7 +30,9 @@ println(hex(c, 6));  // Prints FFCC00
 
 
 <description>
-Converts a byte, char, int, or color to a String containing the equivalent hexadecimal notation. For example color(0, 102, 153, 255) will convert to the String "FF006699". This function can help make your geeky debugging sessions much happier.
+Converts a byte, char, int, or color to a String containing the equivalent hexadecimal notation. For example color(0, 102, 153) will convert to the String "FF006699". This function can help make your geeky debugging sessions much happier.
+<br/> <br/>
+Note that the maximum number of digits is 8, because an int value can only represent up to 32 bits. Specifying more than eight digits will simply shorten the string to eight anyway.
 </description>
 
 <syntax>
