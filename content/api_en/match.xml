@@ -44,7 +44,7 @@ if (m2 != null) {
 </example>
 
 <description>
-The match() function is used to apply a regular expression to a piece of text, and return matching groups (elements found inside parentheses) as a String array. No match will return null. If no groups are specified in the regexp, but the sequence matches, an array of length one (with the matched text as the first element of the array) will be returned. (shiffman test)
+The match() function is used to apply a regular expression to a piece of text, and return matching groups (elements found inside parentheses) as a String array. No match will return null. If no groups are specified in the regexp, but the sequence matches, an array of length one (with the matched text as the first element of the array) will be returned.
 <br/> <br/>
 To use the function, first check to see if the result is null. If the result is null, then the sequence did not match. If the sequence did match, an array is returned. 
 If there are groups (specified by sets of parentheses) in the regexp, then the contents of each will be returned in the array.  
