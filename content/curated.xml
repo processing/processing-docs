@@ -1,6 +1,15 @@
 
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
+	
+<software name="Prototyp-0" by="Yannick Mathey" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/prototyp0.jpg</image>
+          <description>
+              prototyp-0 is an application designed for the drawing of typographical characters. Created using Processing, the application automates the process allowing you to manipulate a large number of glyph properties in realtime.
+          </description>
+          <location>http://www.yannickmathey.com/prototyp</location>
+		 <link href="http://www.yannickmathey.com/">Yannick Mathey</link>
+</software>	
 
 <software name="Cascade" by="NYTimes R&D Lab" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/nytcascade.jpg</image>
