@@ -14,7 +14,7 @@
 float angle = 0.0; 
 beginShape(POLYGON); 
 vertex(width/2, height/2);
-while(angle < QUARTER_PI) { 
+while(angle &lt; QUARTER_PI) { 
   vertex(width/2 + cos(angle)*40, height/2 + sin(angle)*40); 
   angle += PI/12.0; 
 } 

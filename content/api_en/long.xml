@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <code>
-long a;          // Declare variable "a" of type int
+long a;          // Declare variable "a" of type long
 a = 23;          // Assign "a" the value 23
 long b = -256;   // Declare variable "b" and assign it the value -256
 long c = a + b;  // Declare variable "c" and assign it the sum of "a" and "b"

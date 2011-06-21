@@ -55,7 +55,7 @@ expand(<c>array</c>, <c>newSize</c>)
 <returns>Array (the same datatype as the input)</returns>
 
 <related>
-contract()
+shorten()
 </related>
 
 <availability>1.0</availability>

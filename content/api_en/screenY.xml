@@ -27,13 +27,13 @@ void draw() {
   line(x-10, y-10, z, x+10, y+10, z); 
   line(x+10, y-10, z, x-10, y+10, z); 
   
-  // Draw line in 2D at same y value
-  // Notice the parallax
+  // Draw gray line at z = 0 and same 
+  // y value. Notice the parallax
   stroke(102);
   line(0, y, 0, width, y, 0);
   
-  // Draw 2D line to match the y value
-  // element drawn at z = -100 
+  // Draw black line at z = 0 to match 
+  // the y value element drawn at z = -100 
   stroke(0);
   float theY = screenY(x, y, z);
   line(0, theY, 0, width, theY, 0);    

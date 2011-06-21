@@ -62,7 +62,7 @@ createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>, <c>filename</c>)
 <description>String: the name of the file</description>
 </parameter>
 
-<returns>PImage or null</returns>
+<returns>PGraphics</returns>
 
 <related>
 PGraphics

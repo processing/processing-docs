@@ -51,7 +51,7 @@ Writes bytes, chars, ints, bytes[], Strings to the serial port
 <description>byte, char, int, bytes[], String: data to write</description>
 </parameter>
 
-<returns>int</returns>
+<returns>void</returns>
 
 <related></related>
 
