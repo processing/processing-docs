@@ -11,9 +11,12 @@ startString = linePrefix + " ( begin auto-generated from %s )"
 endString = "%s ( end auto-generated )" % linePrefix
 shortString = "@generate"
 xmlDirectory = "somwhere/"
+codeDirectory = "/Users/REAS/Documents/reas\@processing.org/trunk/processing/core/src/processing/core/"
+xmlDirectory = "/Users/REAS/Documents/reas\@processing.org/trunk/web/content/api_en/"
 
 def main():
-	maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
+	#maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
+	maker = DescriptionIntegrator( codeDirectory, xmlDirectory )
 	# answer = raw_input("Replace descriptions in %s with those in %s? (Y/N): " % (codeDirectory, xmlDirectory))
 	answer = "y"
 	
