@@ -11,12 +11,13 @@ startString = linePrefix + " ( begin auto-generated from %s )"
 endString = "%s ( end auto-generated )" % linePrefix
 shortString = "@generate"
 xmlDirectory = "somwhere/"
-codeDirectory = "/Users/REAS/Documents/reas\@processing.org/trunk/processing/core/src/processing/core/"
-xmlDirectory = "/Users/REAS/Documents/reas\@processing.org/trunk/web/content/api_en/"
+#codeDir = "/Users/REAS/Documents/reas\@processing.org/trunk/processing/core/src/processing/core/"
+#xmlDir = "/Users/REAS/Documents/reas\@processing.org/trunk/web/java_generate/api_example/"
+thisFile = ""
 
 def main():
-	#maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
-	maker = DescriptionIntegrator( codeDirectory, xmlDirectory )
+	maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
+	#maker = DescriptionIntegrator( codeDirectory = codeDir, xmlDirectory = xmlDir)
 	# answer = raw_input("Replace descriptions in %s with those in %s? (Y/N): " % (codeDirectory, xmlDirectory))
 	answer = "y"
 	
@@ -51,20 +52,24 @@ class DescriptionIntegrator:
 				parts = line.split(" ")
 				[xml] = [ p for p in parts if p[-3:] == "xml" ]
 				description = self.getDescription(xml)
-				
 				index = portions.index(line)
+				print xml + " - gen insert"
 				portions.insert( index, startString % xml )
 				endIndex = self.insertDescription(description, portions, index+1 )
 				portions.insert( endIndex, endString )
 				portions.remove( line )
+				print " "
 				didEdit = True
 			elif( line.find("begin auto-generated") != -1 ):
 				parts = line.split(" ")
 				[xml] = [ p for p in parts if p[-3:] == "xml" ]
 				description = self.getDescription(xml)
 				index = portions.index(line) + 1
+				print xml + " - auto remove"
 				self.removeOldDescription(portions, index)
+				print xml + " - auto insert"
 				self.insertDescription( description, portions, index )
+				print " "
 				didEdit = True
 		if( didEdit == True ):
 			output = open(f, 'w')
@@ -84,7 +89,8 @@ class DescriptionIntegrator:
 			list.pop( startIndex )
 			
 	def getDescription(self, xml):
-		print xml
+		print xml 
+		thisFile = xml
 		doc = minidom.parse( self.xmlDirectory + xml )
 		elements = doc.getElementsByTagName("description")		
 		return elements[0].firstChild.nodeValue
