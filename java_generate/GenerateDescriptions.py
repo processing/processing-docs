@@ -39,6 +39,7 @@ class DescriptionIntegrator:
 						self.addDescriptionsToFile( os.path.join(root,name) )
 	
 	def addDescriptionsToFile(self, f):
+	
 		input = open(f,'r+')
 		text = input.read()
 		input.close()
@@ -83,9 +84,11 @@ class DescriptionIntegrator:
 			list.pop( startIndex )
 			
 	def getDescription(self, xml):
+		print xml
 		doc = minidom.parse( self.xmlDirectory + xml )
 		elements = doc.getElementsByTagName("description")		
 		return elements[0].firstChild.nodeValue
+		#return " ".join(t.nodeValue for t in elements[0].childNodes)
 
 
 if __name__ == '__main__':

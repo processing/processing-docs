@@ -9,16 +9,16 @@ javadoc -doclet ProcessingWeblet \
 	-webref ../tmp/web \
 	-localref ../tmp/local \
 	-templatedir ../templates \
-	-examplesdir ../api_examples \
-	-includedir ../api_examples/include \
+	-examplesdir ../../content/api_en \
+	-includedir ../../content/api_en/include \
 	-imagedir images \
 	-corepackage processing.xml \
 	-rootclass PGraphics \
 	-rootclass PConstants \
         ../../../processing/core/src/processing/core/*.java \
-        ../../../processing/core/src/processing/xml/*.java \
-        ../../../processing/java/libraries/net/src/processing/net/*.java \
-        ../../../processing/java/libraries/serial/src/processing/serial/*.java
+    #    ../../../processing/core/src/processing/xml/*.java \
+    #    ../../../processing/java/libraries/net/src/processing/net/*.java \
+    #    ../../../processing/java/libraries/serial/src/processing/serial/*.java
     # ../../../processing/video/src/processing/video/*.java \
 
 cp -R ../../css	 ../tmp/web
