@@ -11,6 +11,7 @@
 <example>
 <image></image>
 <code>
+<![CDATA[
 // Click within the image and press
 // the left and right mouse buttons to 
 // change the value of the rectangle
@@ -24,6 +25,7 @@ void draw() {
   }
   rect(25, 25, 50, 50);
 }
+]]>
 </code>
 </example>
 
