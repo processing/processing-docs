@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Writes a value to all the connected clients. It sends bytes out from the Server object.
-</description>
+]]></description>
 
 <syntax>
 <c>server</c>.write(<c>data</c>)
@@ -43,12 +43,12 @@ Writes a value to all the connected clients. It sends bytes out from the Server 
 
 <parameter>
 <label>server</label>
-<description>any variable of type Server</description>
+<description><![CDATA[any variable of type Server]]></description>
 </parameter>
 
 <parameter>
 <label>data</label>
-<description>byte, char, int, byte[], String: data to write</description>
+<description><![CDATA[byte, char, int, byte[], String: data to write]]></description>
 </parameter>
 
 <returns>None</returns>

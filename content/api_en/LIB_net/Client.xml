@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 A client connects to a server and sends data back and forth. If anything goes wrong with the connection, for example the host is not there or is listening on a different port, an exception is thrown.
-</description>
+]]></description>
 
 <syntax>
 </syntax>

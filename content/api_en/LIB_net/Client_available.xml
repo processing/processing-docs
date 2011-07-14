@@ -34,9 +34,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the number of bytes available. When any client has bytes available from the server, it returns the number of bytes.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.available()
@@ -44,7 +44,7 @@ Returns the number of bytes available. When any client has bytes available from 
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>int</returns>

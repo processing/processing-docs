@@ -19,7 +19,7 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Set various hints and hacks for the renderer. This is used to handle obscure rendering features that cannot be implemented in a consistent manner across renderers. Many options will often graduate to standard features instead of hints over time.
 <br/> <br/>
 hint(ENABLE_OPENGL_4X_SMOOTH) - Enable 4x anti-aliasing for OpenGL. This can help force anti-aliasing if it has not been enabled by the user. On some graphics cards, this can also be set by the graphics driver's control panel, however not all cards make this available. This hint must be called immediately after the size() command because it resets the renderer, obliterating any settings and anything drawn (and like size(), re-running the code that came before it again). 
@@ -37,7 +37,7 @@ hint(DISABLE_OPENGL_ERROR_REPORT) - Speeds up the OPENGL renderer setting by not
 <!--hint(ENABLE_ACCURATE_TEXTURES) - Enables better texture accuracy for the P3D renderer. This option will do a better job of dealing with textures in perspective. hint(DISABLE_ACCURATE_TEXTURES) returns to the default. This hint is not likely to last long.
 <br/> <br/>-->
 As of release 0149, unhint() has been removed in favor of adding additional ENABLE/DISABLE constants to reset the default behavior. This prevents the double negatives, and also reinforces which hints can be enabled or disabled.
-</description>
+]]></description>
 
 <syntax>
 hint(<c>item</c>)
@@ -45,7 +45,7 @@ hint(<c>item</c>)
 
 <parameter>
 <label>item</label>
-<description>constant: name of the hint to be enabled or disabled</description>
+<description><![CDATA[constant: name of the hint to be enabled or disabled]]></description>
 </parameter>
 
 <returns>None</returns>

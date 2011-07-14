@@ -36,9 +36,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Stops capturing frames from an attached device.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.stop()
@@ -46,7 +46,7 @@ Stops capturing frames from an attached device.
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns></returns>

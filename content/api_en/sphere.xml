@@ -18,9 +18,9 @@ sphere(28);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 A sphere is a hollow ball made from tessellated triangles.
-</description>
+]]></description>
 
 <syntax>
 sphere(<c>radius</c>)
@@ -28,7 +28,7 @@ sphere(<c>radius</c>)
 
 <parameter>
 <label>radius</label>
-<description>int or float: the radius of the sphere</description>
+<description><![CDATA[int or float: the radius of the sphere]]></description>
 </parameter>
 
 <returns>None</returns>

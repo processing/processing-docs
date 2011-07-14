@@ -21,9 +21,9 @@ rect(50, 20, 35, 60);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Extracts the blue value from a color, scaled to match current <b>colorMode()</b>. This value is always returned as a  float so be careful not to assign it to an int value.<br /><br />The <b>blue()</b> function is easy to use and undestand, but is slower than another technique. To achieve the same results when working in <b>colorMode(RGB, 255)</b>, but with greater speed, use a bit mask to remove the other color components. For example, the following two lines of code are equivalent:<br /><pre>float r1 = blue(myColor);<br />float r2 = myColor &amp; 0xFF;</pre>
-</description>
+]]></description>
 
 <syntax>
 blue(<c>color</c>)
@@ -31,7 +31,7 @@ blue(<c>color</c>)
 
 <parameter>
 <label>color</label>
-<description>any value of the color datatype</description>
+<description><![CDATA[any value of the color datatype]]></description>
 </parameter>
 
 <returns>float</returns>

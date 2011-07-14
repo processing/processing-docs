@@ -41,9 +41,9 @@ sphere(30);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Adds an ambient light. Ambient light doesn't come from a specific direction, the rays have light have bounced around so much that objects are evenly lit from all sides. Ambient lights are almost always used in combination with other types of lights. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The effect of the parameters is determined by the current color mode.
-</description>
+]]></description>
 
 <syntax>
 ambientLight(<c>v1</c>, <c>v2</c>, <c>v3</c>)
@@ -53,32 +53,32 @@ ambientLight(<c>v1</c>, <c>v2</c>, <c>v3</c>, <c>x</c>, <c>y</c>, <c>z</c>)
 
 <parameter>
 <label>v1</label>
-<description>int or float: red or hue value</description>
+<description><![CDATA[int or float: red or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>int or float: green or hue value</description>
+<description><![CDATA[int or float: green or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>v3</label>
-<description>int or float: blue or hue value</description>
+<description><![CDATA[int or float: blue or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>int or float: x-coordinate of the light</description>
+<description><![CDATA[int or float: x-coordinate of the light]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int or float: y-coordinate of the light</description>
+<description><![CDATA[int or float: y-coordinate of the light]]></description>
 </parameter>
 
 <parameter>
 <label>z</label>
-<description>int or float: z-coordinate of the light</description>
+<description><![CDATA[int or float: z-coordinate of the light]]></description>
 </parameter>
 
 <returns>None</returns>

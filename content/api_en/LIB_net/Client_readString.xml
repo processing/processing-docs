@@ -38,9 +38,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the all the data from the buffer as a String. This method assumes the incoming characters are ASCII. If you want to transfer Unicode data, first convert the String to a byte stream in the representation of your choice (i.e. UTF8 or two-byte Unicode data), and send it as a byte array.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.readString()
@@ -48,7 +48,7 @@ Returns the all the data from the buffer as a String. This method assumes the in
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>String</returns>

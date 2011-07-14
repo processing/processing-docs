@@ -24,9 +24,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Variable storing if a mouse button is pressed. The value of the system variable <b>mousePressed</b> is true if a mouse button is pressed and false if a button is not pressed.
-</description>
+]]></description>
 
 <syntax></syntax>
 

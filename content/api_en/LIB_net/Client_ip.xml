@@ -29,9 +29,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the IP address of the computer to which the Client is attached.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.available()
@@ -39,7 +39,7 @@ Returns the IP address of the computer to which the Client is attached.
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>String</returns>

@@ -30,11 +30,11 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Specifies an amount to displace the shape. The <b>x</b> parameter specifies left/right translation, the <b>y</b> parameter specifies up/down translation, and the <b>z</b> parameter specifies translations toward/away from the screen. Subsequent calls to the method accumulates the effect. For example, calling <b>translate(50, 0)</b> and then <b>translate(20, 0)</b> is the same as <b>translate(70, 0)</b>. This transformation is applied directly to the shape, it's not refreshed each time <b>draw()</b> is run. 
 <br /><br />
 Using this method with the <b>z</b> parameter requires using the P3D or OPENGL parameter in combination with size. 
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.translate(<c>x</c>, <c>y</c>);
@@ -43,22 +43,22 @@ Using this method with the <b>z</b> parameter requires using the P3D or OPENGL p
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>int or float: left/right translation</description>
+<description><![CDATA[int or float: left/right translation]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int or float: up/down translation</description>
+<description><![CDATA[int or float: up/down translation]]></description>
 </parameter>
 
 <parameter>
 <label>z</label>
-<description>int or float: forward/back translation</description>
+<description><![CDATA[int or float: forward/back translation]]></description>
 </parameter>
 
 

@@ -30,9 +30,9 @@ println(joinedNumbers); // Prints "8, 67, 5"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Combines an array of Strings into one String, each separated by the character(s) used for the <b>separator</b> parameter. To join arrays of ints or floats, it's necessary to first convert them to strings using <b>nf()</b> or <b>nfs()</b>.
-</description>
+]]></description>
 
 <syntax>
 join(<c>stringArray</c>, <c>separator</c>)
@@ -40,12 +40,12 @@ join(<c>stringArray</c>, <c>separator</c>)
 
 <parameter>
 <label>stringArray</label>
-<description>array of Strings</description>
+<description><![CDATA[array of Strings]]></description>
 </parameter>
 
 <parameter>
 <label>separator</label>
-<description>char or String: char or String to be placed between each item</description>
+<description><![CDATA[char or String: char or String to be placed between each item]]></description>
 </parameter>
 
 <returns>String</returns>

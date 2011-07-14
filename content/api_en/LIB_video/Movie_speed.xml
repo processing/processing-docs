@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the relative playback speed of the movie. The <b>rate</b> parameters sets the speed where 2.0 will play the movie twice as fast, 0.5 will play at half the speed, and -1 will play the movie in normal speed in reverse.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.speed(<c>rate</c>)
@@ -43,12 +43,12 @@ Sets the relative playback speed of the movie. The <b>rate</b> parameters sets t
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <parameter>
 <label>rate</label>
-<description>float: speed multiplier for movie playback</description>
+<description><![CDATA[float: speed multiplier for movie playback]]></description>
 </parameter>
 
 <returns>None</returns>

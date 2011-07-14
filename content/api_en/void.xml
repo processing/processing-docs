@@ -21,9 +21,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Keyword used indicate a function returns no value. Each function must either return a value of a specific datatype or use the keyword <b>void</b> to specify it returns nothing.
-</description>
+]]></description>
 
 <syntax>
 void <c>function</c> {
@@ -33,12 +33,12 @@ void <c>function</c> {
 
 <parameter>
 <label>function</label>
-<description>any function that is being defined or implemented</description>
+<description><![CDATA[any function that is being defined or implemented]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description><![CDATA[any valid statements]]></description>
 </parameter>
 
 <returns></returns>

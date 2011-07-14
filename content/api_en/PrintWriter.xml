@@ -32,9 +32,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Allows characters to print to a text-output stream. A new PrintWriter object is created with the <b>createWriter()</b> function. For the file to be made correctly, it should be flushed and must be closed with its <b>flush()</b> and <b>close()</b> methods (see above example). 
-</description>
+]]></description>
 
 <method>
 <mname>print()</mname>

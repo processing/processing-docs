@@ -20,9 +20,9 @@ void draw()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Constrains a value to not exceed a maximum and minimum value.
-</description>
+]]></description>
 
 <syntax>
 constrain(<c>value</c>, <c>min</c>, <c>max</c>)
@@ -30,17 +30,17 @@ constrain(<c>value</c>, <c>min</c>, <c>max</c>)
 
 <parameter>
 <label>value</label>
-<description>int or float: the value to constrain</description>
+<description><![CDATA[int or float: the value to constrain]]></description>
 </parameter>
 
 <parameter>
 <label>min</label>
-<description>int or float: minimum limit</description>
+<description><![CDATA[int or float: minimum limit]]></description>
 </parameter>
 
 <parameter>
 <label>max</label>
-<description>int or float: maximum limit</description>
+<description><![CDATA[int or float: maximum limit]]></description>
 </parameter>
 
 <returns>float or int (depending on the input values)</returns>

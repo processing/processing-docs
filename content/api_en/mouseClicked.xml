@@ -32,9 +32,9 @@ void mouseClicked() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The <b>mouseClicked()</b> function is called once after a mouse button has been pressed and then released.
-</description>
+]]></description>
 
 <syntax>
 mouseClicked()

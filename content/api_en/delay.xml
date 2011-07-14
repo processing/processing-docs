@@ -22,9 +22,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Forces the program to stop running for a specified time. Delay times are specified in thousandths of a second, therefore the function call <b>delay(3000)</b> will stop the program for three seconds. Because the screen is updated only at the end of <b>draw()</b>, the program may appear to "freeze", because the screen will not update when the <b>delay()</b> method is used. This function has no affect inside <b>setup()</b>.<br/><br/>
-</description>
+]]></description>
 
 <syntax>
 delay(<c>milliseconds</c>)
@@ -32,7 +32,7 @@ delay(<c>milliseconds</c>)
 
 <parameter>
 <label>milliseconds</label>
-<description>int: specified as milliseconds (there are 1000 milliseconds in 1 second)</description>
+<description><![CDATA[int: specified as milliseconds (there are 1000 milliseconds in 1 second)]]></description>
 </parameter>
 
 <returns>None</returns>

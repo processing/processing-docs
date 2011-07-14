@@ -23,9 +23,9 @@ if (a) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Inverts the Boolean value of an expression. Returns <b>true</b> if the expression is <b>false</b> and returns <b>false</b> if the expression is <b>true</b>. If the expression <b>(a&gt;b)</b> evaluates to true, then <b>!(a&gt;b)</b> evaluates to false. 
-</description>
+]]></description>
 
 <syntax>
 !<c>expression</c>
@@ -33,7 +33,7 @@ Inverts the Boolean value of an expression. Returns <b>true</b> if the expressio
 
 <parameter>
 <label>expression</label>
-<description>any valid expression</description>
+<description><![CDATA[any valid expression]]></description>
 </parameter>
 
 <returns></returns>

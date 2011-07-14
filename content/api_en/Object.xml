@@ -44,9 +44,9 @@ class HLine {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Objects are instances of classes. A class is a grouping of related methods (functions) and fields (variables and constants).
-</description>
+]]></description>
 
 <syntax>
 <c>class</c> <c>instance</c>
@@ -54,12 +54,12 @@ Objects are instances of classes. A class is a grouping of related methods (func
 
 <parameter>
 <label>class</label>
-<description>the class to created the object from</description>
+<description><![CDATA[the class to created the object from]]></description>
 </parameter>
 
 <parameter>
 <label>instance</label>
-<description>any variable name</description>
+<description><![CDATA[any variable name]]></description>
 </parameter>
 
 <returns></returns>

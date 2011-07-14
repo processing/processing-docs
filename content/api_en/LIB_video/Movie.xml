@@ -33,9 +33,9 @@ void movieEvent(Movie m) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Datatype for storing and playing movies in Apple's QuickTime format. Movies must be located in the sketch's data directory or an accessible place on the network to load without an error.
-</description>
+]]></description>
 
 <syntax>
 </syntax>

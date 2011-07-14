@@ -26,9 +26,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Called once when the program is started. Used to define initial enviroment properties such as screen size, background color, loading images, etc. before the <b>draw()</b> begins executing. Variables declared within <b>setup()</b> are not accessible within other functions, including<b>draw()</b>. There can only be one <b>setup()</b> function for each program and it should not be called again after it's initial execution.
-</description>
+]]></description>
 
 <syntax>
 void setup() {
@@ -38,7 +38,7 @@ void setup() {
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description><![CDATA[any valid statements]]></description>
 </parameter>
 
 <returns>None</returns>

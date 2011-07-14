@@ -27,9 +27,9 @@ void draw()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the seed value for <b>noise()</b>. By default, <b>noise()</b> produces different results each time the program is run. Set the <b>value</b> parameter to a constant to return the same pseudo-random numbers each time the software is run. 
-</description>
+]]></description>
 
 <syntax>
 noiseSeed(<c>x</c>)
@@ -37,7 +37,7 @@ noiseSeed(<c>x</c>)
 
 <parameter>
 <label>value</label>
-<description>int</description>
+<description><![CDATA[int]]></description>
 </parameter>
 
 <returns>float</returns>

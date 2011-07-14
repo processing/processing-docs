@@ -21,20 +21,20 @@ if(b == false) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Reserved word representing the logical value "false". Only variables of type <b>boolean</b> may be assigned the value <b>false</b>.
-</description>
+]]></description>
 
 <syntax></syntax>
 
 <parameter>
 <label></label>
-<description></description>
+<description><![CDATA[</description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description>any valid statements]]></description>
 </parameter>
 
 <returns></returns>

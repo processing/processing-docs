@@ -19,9 +19,9 @@ if(a != b) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Determines if one expression is not equivalent to another.
-</description>
+]]></description>
 
 <syntax>
 <c>value1</c> != <c>value2</c>
@@ -29,12 +29,12 @@ Determines if one expression is not equivalent to another.
 
 <parameter>
 <label>value1</label>
-<description>int, float, char, byte, boolean, String</description>
+<description><![CDATA[int, float, char, byte, boolean, String]]></description>
 </parameter>
 
 <parameter>
 <label>value2</label>
-<description>int, float, char, byte, boolean, String</description>
+<description><![CDATA[int, float, char, byte, boolean, String]]></description>
 </parameter>
 
 <returns></returns>

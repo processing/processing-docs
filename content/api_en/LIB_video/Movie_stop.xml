@@ -39,9 +39,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Stops a movie from continuing. The playback returns to the beginning so when a movie is played, it will begin from the beginning.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.stop()
@@ -49,7 +49,7 @@ Stops a movie from continuing. The playback returns to the beginning so when a m
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <returns></returns>

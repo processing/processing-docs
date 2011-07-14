@@ -39,9 +39,9 @@ void serverEvent(Server someServer, Client someClient) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The code inside <b>serverEvent()</b> is run when a new client connects to a server that has been created within the program.
-</description>
+]]></description>
 
 <syntax>
 void serverEvent(<c>server</c>, <c>client</c>) {
@@ -51,17 +51,17 @@ void serverEvent(<c>server</c>, <c>client</c>) {
 
 <parameter>
 <label>server</label>
-<description>Server: server the client is connecting to</description>
+<description><![CDATA[Server: server the client is connecting to]]></description>
 </parameter>
 
 <parameter>
 <label>client</label>
-<description>Client: client connecting to the server</description>
+<description><![CDATA[Client: client connecting to the server]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description><![CDATA[any valid statements]]></description>
 </parameter>
 
 <returns></returns>

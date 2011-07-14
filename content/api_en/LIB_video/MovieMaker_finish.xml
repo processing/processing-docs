@@ -39,9 +39,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Finishes and saves a movie file that is current being created.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.finish()
@@ -49,7 +49,7 @@ Finishes and saves a movie file that is current being created.
 
 <parameter>
 <label>mov</label>
-<description>any variable of type MovieMaker</description>
+<description><![CDATA[any variable of type MovieMaker]]></description>
 </parameter>
 
 <returns></returns>

@@ -31,9 +31,9 @@ void mouseDragged()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The <b>mouseDragged()</b> function is called once every time the mouse moves and a mouse button is pressed.
-</description>
+]]></description>
 
 <syntax>
 void mouseDragged() {

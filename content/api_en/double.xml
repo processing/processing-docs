@@ -19,8 +19,8 @@ float f = (float)c;  // Converts the value of "c" from a double to a float
 ]]></code>
 </example>
 
-<description>
-Datatype for floating-point numbers larger than those that can be stored in a <b>float</b>. A <b>float</b> is a 32-bit values that can be as large as 3.40282347E+38 and as low as -3.40282347E+38. A <b>double</b> can be used similarly to a float, but can have a greater magnitude because it's a 64-bit number. Processing functions don't use this datatype, so while they work in the language, you'll usually have to convert to a <b>float</b> using the <b>(float)</b> syntax before passing into a function.</description>
+<description><![CDATA[
+Datatype for floating-point numbers larger than those that can be stored in a <b>float</b>. A <b>float</b> is a 32-bit values that can be as large as 3.40282347E+38 and as low as -3.40282347E+38. A <b>double</b> can be used similarly to a float, but can have a greater magnitude because it's a 64-bit number. Processing functions don't use this datatype, so while they work in the language, you'll usually have to convert to a <b>float</b> using the <b>(float)</b> syntax before passing into a function.]]></description>
 
 <syntax>
 double <c>var</c>
@@ -29,12 +29,12 @@ double <c>var</c> = <c>value</c>
 
 <parameter>
 <label>var</label>
-<description>variable name referencing the float</description>
+<description><![CDATA[variable name referencing the float]]></description>
 </parameter>
 
 <parameter>
 <label>value</label>
-<description>any floating-point value</description>
+<description><![CDATA[any floating-point value]]></description>
 </parameter>
 
 <returns></returns>

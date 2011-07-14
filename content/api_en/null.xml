@@ -14,9 +14,9 @@
 <code></code>
 </example>
 
-<description>
+<description><![CDATA[
 Special value used to signify the target is not a valid data element. In Processing, you may run across the keyword <b>null</b> when trying to access data which is not there.
-</description>
+]]></description>
 
 <syntax></syntax>
 

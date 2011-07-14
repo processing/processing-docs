@@ -39,9 +39,9 @@ class HLine {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Creates a "new" object. The keyword <b>new</b> is typically used similarly to the applications in the above example. In this example, a new object "h1" of the datatype "HLine" is created. On the following line, a new array of floats called "speeds" is created.
-</description>
+]]></description>
 
 <syntax></syntax>
 

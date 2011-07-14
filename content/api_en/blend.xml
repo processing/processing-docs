@@ -45,7 +45,7 @@ blend(img, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Blends a region of pixels from one image into another (or in itself again) with full alpha channel support. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels in the destination image (B):<br />
 <br />
 BLEND - linear interpolation of colours: C = A*factor + B<br />
@@ -83,7 +83,7 @@ Called "Color Burn" in Illustrator and Photoshop.<br />
 All modes use the alpha information (highest byte) of source image pixels as the blending factor. If the source and destination regions are different sizes, the image will be automatically resized to match the destination size. If the <b>srcImg</b> parameter is not used, the display window is used as the source image.<br />
 <br />
 As of release 0149, this function ignores <b>imageMode()</b>.
-</description>
+]]></description>
 
 <syntax>
 blend(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>, <c>MODE</c>)
@@ -92,52 +92,52 @@ blend(<c>srcImg</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>dx</c>,
 
 <parameter>
 <label>x</label>
-<description>int: X coordinate of the source's upper left corner</description>
+<description><![CDATA[int: X coordinate of the source's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int: Y coordinate of the source's upper left corner</description>
+<description><![CDATA[int: Y coordinate of the source's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>width</label>
-<description>int: source image width</description>
+<description><![CDATA[int: source image width]]></description>
 </parameter>
 
 <parameter>
 <label>height</label>
-<description>int: source image height</description>
+<description><![CDATA[int: source image height]]></description>
 </parameter>
 
 <parameter>
 <label>dx</label>
-<description>int: X coordinate of the destinations's upper left corner</description>
+<description><![CDATA[int: X coordinate of the destinations's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>dy</label>
-<description>int: Y coordinate of the destinations's upper left corner</description>
+<description><![CDATA[int: Y coordinate of the destinations's upper left corner]]></description>
 </parameter>
 
 <parameter>
 <label>dwidth</label>
-<description>int: destination image width</description>
+<description><![CDATA[int: destination image width]]></description>
 </parameter>
 
 <parameter>
 <label>dheight</label>
-<description>int: destination image height</description>
+<description><![CDATA[int: destination image height]]></description>
 </parameter>
 
 <parameter>
 <label>srcImg</label>
-<description>PImage: a image variable referring to the source image</description>
+<description><![CDATA[PImage: a image variable referring to the source image]]></description>
 </parameter>
 
 <parameter>
 <label>MODE</label>
-<description>Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN</description>
+<description><![CDATA[Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN]]></description>
 </parameter>
 
 

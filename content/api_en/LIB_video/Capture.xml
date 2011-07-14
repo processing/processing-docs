@@ -44,9 +44,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Datatype for storing and manipulating video frames from an attached capture device such as a camera. Use <b>Capture.list()</b> to show the names of any attached devices. Using the version of the constructor without <b>name</b> will attempt to use the last device used by a QuickTime program.
-</description>
+]]></description>
 
 <syntax>
 </syntax>

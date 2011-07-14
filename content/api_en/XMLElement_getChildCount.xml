@@ -31,9 +31,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the number of children for the element.
-</description>
+]]></description>
 
 <syntax>
 <c>xml</c>.getChildCount()
@@ -41,7 +41,7 @@ Returns the number of children for the element.
 
 <parameter>
 <label>xml</label>
-<description>any variable of type XMLElement</description>
+<description><![CDATA[any variable of type XMLElement]]></description>
 </parameter>
 
 <returns>int</returns>

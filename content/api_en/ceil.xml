@@ -16,9 +16,9 @@ int a = ceil(x);  // Set "a" to 9
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the closest int value that is greater than or equal to the value of the parameter. For example, <b>ceil(9.03)</b> returns the value 10.
-</description>
+]]></description>
 
 <syntax>
 ceil(<c>value</c>)
@@ -26,7 +26,7 @@ ceil(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>float</description>
+<description><![CDATA[float]]></description>
 </parameter>
 
 <returns>int</returns>

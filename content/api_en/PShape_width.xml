@@ -21,9 +21,9 @@ println(s.width);  // Prints 281.0, the width of the shape
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The width of the PShape document.
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.width
@@ -31,7 +31,7 @@ The width of the PShape document.
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <returns></returns>

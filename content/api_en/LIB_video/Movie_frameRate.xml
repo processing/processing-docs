@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets how often frames are read from the movie. Setting the <b>fps</b> parameter to 4, for example, will cause 4 frames to be read per second.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.frameRate(<c>fps</c>)
@@ -43,12 +43,12 @@ Sets how often frames are read from the movie. Setting the <b>fps</b> parameter 
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <parameter>
 <label>fps</label>
-<description>float: speed of the movie in frames per second</description>
+<description><![CDATA[float: speed of the movie in frames per second]]></description>
 </parameter>
 
 <returns>None</returns>

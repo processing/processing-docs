@@ -35,9 +35,9 @@ class DragDrop extends Button {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Keyword used to reference the superclass of a subclass.
-</description>
+]]></description>
 
 <syntax></syntax>
 

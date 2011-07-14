@@ -33,9 +33,9 @@ myPort.write(65);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Class for sending and receiving data using the serial communication protocol.
-</description>
+]]></description>
 
 <syntax>
 </syntax>

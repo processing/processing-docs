@@ -19,9 +19,9 @@ if(b &gt; a) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Tests if the value on the left is larger than the value on the right. 
-</description>
+]]></description>
 
 <syntax>
 <c>value1</c> &gt; <c>value2</c>
@@ -29,12 +29,12 @@ Tests if the value on the left is larger than the value on the right.
 
 <parameter>
 <label>value1</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <parameter>
 <label>value2</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <returns></returns>

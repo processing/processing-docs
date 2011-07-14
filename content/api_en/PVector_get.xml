@@ -25,9 +25,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Gets a copy of the vector, returns a PVector object.
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.get()
@@ -35,7 +35,7 @@ Gets a copy of the vector, returns a PVector object.
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <returns>PVector</returns>

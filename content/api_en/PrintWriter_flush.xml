@@ -32,9 +32,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Flushes the <b>PrintWriter</b> object. This is necessary to ensure all remaining data is written to the file before it is closed.
-</description>
+]]></description>
 
 <syntax>
 <c>pw</c>.flush()
@@ -42,7 +42,7 @@ Flushes the <b>PrintWriter</b> object. This is necessary to ensure all remaining
 
 <parameter>
 <label>pw</label>
-<description>any object of the type PrintWriter</description>
+<description><![CDATA[any object of the type PrintWriter]]></description>
 </parameter>
 
 

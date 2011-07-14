@@ -22,9 +22,9 @@ text("word", 15, 70);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the current font size. This size will be used in all subsequent calls to the <b>text()</b> function. Font size is measured in units of pixels.
-</description>
+]]></description>
 
 <syntax>
 textSize(<c>size</c>)
@@ -32,7 +32,7 @@ textSize(<c>size</c>)
 
 <parameter>
 <label>size</label>
-<description>int or float: the size of the letters in units of pixels</description>
+<description><![CDATA[int or float: the size of the letters in units of pixels]]></description>
 </parameter>
 
 <returns>None</returns>

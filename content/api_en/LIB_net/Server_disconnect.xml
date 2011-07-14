@@ -45,9 +45,9 @@ void draw()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Disconnect a particular client.
-</description>
+]]></description>
 
 <syntax>
 <c>server</c>.disconnect(<b>client</b>)
@@ -55,12 +55,12 @@ Disconnect a particular client.
 
 <parameter>
 <label>server</label>
-<description>any variable of type Server</description>
+<description><![CDATA[any variable of type Server]]></description>
 </parameter>
 
 <parameter>
 <label>client</label>
-<description>Client: the client to disconnect</description>
+<description><![CDATA[Client: the client to disconnect]]></description>
 </parameter>
 
 <returns>None</returns>

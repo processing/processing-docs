@@ -31,11 +31,11 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Rotates a shape the amount specified by the <b>angle</b> parameter. Angles should be specified in radians (values from 0 to TWO_PI) or converted to radians with the <b>radians()</b> method.
 <br /><br />
 Shapes are always rotated around the upper-left corner of their bounding box. Positive numbers rotate objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the method accumulates the effect. For example, calling <b>rotate(HALF_PI)</b> and then <b>rotate(HALF_PI)</b> is the same as <b>rotate(PI)</b>. This transformation is applied directly to the shape, it's not refreshed each time <b>draw()</b> is run. 
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.rotate(<c>angle</c>)
@@ -43,12 +43,12 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <parameter>
 <label>angle</label>
-<description>float: angle of rotation specified in radians</description>
+<description><![CDATA[float: angle of rotation specified in radians]]></description>
 </parameter>
 
 <returns>none</returns>

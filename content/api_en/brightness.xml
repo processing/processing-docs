@@ -22,9 +22,9 @@ rect(50, 20, 35, 60);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Extracts the brightness value from a color.
-</description>
+]]></description>
 
 <syntax>
 brightness(<c>color</c>)
@@ -32,7 +32,7 @@ brightness(<c>color</c>)
 
 <parameter>
 <label>color</label>
-<description>any value of the color datatype</description>
+<description><![CDATA[any value of the color datatype]]></description>
 </parameter>
 
 <returns>float</returns>

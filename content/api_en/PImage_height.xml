@@ -17,9 +17,9 @@ rect(55, 10, img.width, img.height);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The height of the image in units of pixels.
-</description>
+]]></description>
 
 <syntax>
 <c>img</c>.height
@@ -27,7 +27,7 @@ The height of the image in units of pixels.
 
 <parameter>
 <label>img</label>
-<description>PImage: any variable of type PImage</description>
+<description><![CDATA[PImage: any variable of type PImage]]></description>
 </parameter>
 
 <returns></returns>

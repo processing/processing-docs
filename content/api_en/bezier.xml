@@ -32,9 +32,9 @@ bezier(30, 20,  80, 5,  80, 75,  30, 75);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Draws a Bezier curve on the screen. These curves are defined by a series of anchor and control points. The first two parameters specify the first anchor point and the last two parameters specify the other anchor point. The middle parameters specify the control points which define the shape of the curve. Bezier curves were developed by French engineer Pierre Bezier. Using the 3D version of requires rendering with P3D or OPENGL (see the Environment reference for more information).
-</description>
+]]></description>
 
 <syntax>
 bezier(<c>x1</c>, <c>y1</c>, <c>cx1</c>, <c>cy1</c>, <c>cx2</c>, <c>cy2</c>, <c>x2</c>, <c>y2</c>);
@@ -43,22 +43,22 @@ bezier(<c>x1</c>, <c>y1</c>, <c>z1</c>, <c>cx1</c>, <c>cy1</c>, <c>cz1</c>, <c>c
 
 <parameter>
 <label>x1, y1, z1</label>
-<description>int or float: coordinates for the first anchor point</description>
+<description><![CDATA[int or float: coordinates for the first anchor point]]></description>
 </parameter>
 
 <parameter>
 <label>cx1, cy1, cz1</label>
-<description>int or float: coordinates for the first control point</description>
+<description><![CDATA[int or float: coordinates for the first control point]]></description>
 </parameter>
 
 <parameter>
 <label>cx2, cy2, cz2</label>
-<description>int or float: coordinates for the second control point</description>
+<description><![CDATA[int or float: coordinates for the second control point]]></description>
 </parameter>
 
 <parameter>
 <label>x2, y2, z2</label>
-<description>int or float: coordinates for the second anchor point</description>
+<description><![CDATA[int or float: coordinates for the second anchor point]]></description>
 </parameter>
 
 <returns>None</returns>

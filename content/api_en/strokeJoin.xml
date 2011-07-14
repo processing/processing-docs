@@ -53,11 +53,11 @@ endShape();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the style of the joints which connect line segments. These joints are either mitered, beveled, or rounded and specified with the corresponding parameters MITER, BEVEL, and ROUND. The default joint is MITER. 
 <br/> <br/>
 This function is not available with the P2D, P3D, or OPENGL renderers (<a href="http://dev.processing.org/bugs/show_bug.cgi?id=955">see bug report</a>). More information about the renderers can be found in the <b>size()</b> reference.
-</description>
+]]></description>
 
 <syntax>
 strokeJoin(<c>MODE</c>)
@@ -65,7 +65,7 @@ strokeJoin(<c>MODE</c>)
 
 <parameter>
 <label>MODE</label>
-<description>Either MITER, BEVEL, or ROUND</description>
+<description><![CDATA[Either MITER, BEVEL, or ROUND]]></description>
 </parameter>
 
 <returns>None</returns>

@@ -30,9 +30,9 @@ void mouseMoved() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The <b>mouseMoved()</b> function is called every time the mouse moves and a mouse button is not pressed.
-</description>
+]]></description>
 
 <syntax>
 void mouseMoved() {

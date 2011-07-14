@@ -26,9 +26,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The y component of the vector. This field (variable) can be used to both get and set the value (see above example.)
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.y
@@ -36,7 +36,7 @@ The y component of the vector. This field (variable) can be used to both get and
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <returns></returns>

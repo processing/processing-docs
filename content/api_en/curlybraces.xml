@@ -25,9 +25,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Define the beginning and end of functions blocks and statement blocks such as the <b>for()</b> and <b>if()</b> structures. Curly braces are also used for defining inital values in array declarations.
-</description>
+]]></description>
 
 <syntax>
 { <c>statements</c> }
@@ -36,12 +36,12 @@ Define the beginning and end of functions blocks and statement blocks such as th
 
 <parameter>
 <label>statements</label>
-<description>any sequence of valid statements</description>
+<description><![CDATA[any sequence of valid statements]]></description>
 </parameter>
 
 <parameter>
 <label>ele0 ... eleN</label>
-<description>list of elements separated by commas</description>
+<description><![CDATA[list of elements separated by commas]]></description>
 </parameter>
 
 <returns></returns>

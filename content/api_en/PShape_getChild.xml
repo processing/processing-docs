@@ -24,9 +24,9 @@ shape(ohio, -48, 5);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Extracts a child shape from a parent shape. Specify the name of the shape with the <b>target</b> parameter. The shape is returned as a <b>PShape</b> object, or <b>null</b> is returned if there is an error.
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.getChild(<c>target</c>)
@@ -34,12 +34,12 @@ Extracts a child shape from a parent shape. Specify the name of the shape with t
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <parameter>
 <label>target</label>
-<description>String: the name of the shape to get</description>
+<description><![CDATA[String: the name of the shape to get]]></description>
 </parameter>
 
 <returns>PShape or null</returns>

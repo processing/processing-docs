@@ -34,11 +34,11 @@ println(p[3]); // Prints "d"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The splitTokens() function splits a String at one or many character "tokens." The <b>tokens</b> parameter specifies the character or characters to be used as a boundary.
 <br/> <br/>
 If no <b>tokens</b> character is specified, any whitespace character is used to split. Whitespace characters include tab (\\t), line feed (\\n), carriage return (\\r), form feed (\\f), and space. To convert a String to an array of integers or floats, use the datatype conversion functions <b>int()</b> and <b>float()</b> to convert the array of Strings.
-</description>
+]]></description>
 
 <syntax>
 splitTokens(<c>str</c>)
@@ -47,12 +47,12 @@ splitTokens(<c>str</c>, <c>tokens</c>)
 
 <parameter>
 <label>str</label>
-<description>the string to be split</description>
+<description><![CDATA[the string to be split]]></description>
 </parameter>
 
 <parameter>
 <label>tokens</label>
-<description>list of individual characters that will be used as separators</description>
+<description><![CDATA[list of individual characters that will be used as separators]]></description>
 </parameter>
 
 <returns>String[]</returns>

@@ -21,9 +21,9 @@ for(int i=0; i&lt;100; i=i+4) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the sine of an angle. This function expects the values of the <b>angle</b> parameter to be provided in radians (values from 0 to 6.28). Values are returned in the range -1 to 1.
-</description>
+]]></description>
 
 <syntax>
 sin(<c>rad</c>)
@@ -31,7 +31,7 @@ sin(<c>rad</c>)
 
 <parameter>
 <label>rad</label>
-<description>float: an angle in radians</description>
+<description><![CDATA[float: an angle in radians]]></description>
 </parameter>
 
 <returns>float</returns>

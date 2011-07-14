@@ -21,9 +21,9 @@ println(unbinary(s3));  // Prints 4
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts a String representation of a binary number to its equivalent integer value. For example, unbinary("00001000") will return 8.
-</description>
+]]></description>
 
 <syntax>
 unbinary(<c>str</c>)
@@ -31,7 +31,7 @@ unbinary(<c>str</c>)
 
 <parameter>
 <label>str</label>
-<description>String</description>
+<description><![CDATA[String]]></description>
 </parameter>
 
 <returns>int</returns>

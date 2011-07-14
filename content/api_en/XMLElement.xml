@@ -37,11 +37,11 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 XMLElement is a representation of an XML object. The object is able to parse XML code. The methods described here are the most basic. More are documented in the Developer's Reference.
 <br/> <br/>
 The encoding parameter inside XML files is ignored, only UTF-8 (or plain ASCII) are parsed properly.
-</description>
+]]></description>
 
 <syntax>
 </syntax>

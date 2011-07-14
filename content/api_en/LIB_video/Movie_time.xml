@@ -40,9 +40,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the location of the playback head in seconds. For example, if the movie has been playing for 4 seconds, the number 4.0 will be returned.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.time()
@@ -50,7 +50,7 @@ Returns the location of the playback head in seconds. For example, if the movie 
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <returns>float</returns>

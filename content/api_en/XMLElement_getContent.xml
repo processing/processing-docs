@@ -35,9 +35,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the content of an element. If there is no such content, <b>null</b> is returned.
-</description>
+]]></description>
 
 <syntax>
 <c>xml</c>.getContent()
@@ -45,7 +45,7 @@ Returns the content of an element. If there is no such content, <b>null</b> is r
 
 <parameter>
 <label>xml</label>
-<description>any variable of type XMLElement</description>
+<description><![CDATA[any variable of type XMLElement]]></description>
 </parameter>
 
 <returns>String</returns>

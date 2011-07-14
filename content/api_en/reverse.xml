@@ -17,9 +17,9 @@ print(sa);  // Prints "CA MA NY OH "
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Reverses the order of an array.
-</description>
+]]></description>
 
 <syntax>
 reverse(<c>array</c>)
@@ -27,7 +27,7 @@ reverse(<c>array</c>)
 
 <parameter>
 <label>array</label>
-<description>booleans[], bytes[], chars[], ints[], floats[], or Strings[]</description>
+<description><![CDATA[booleans[], bytes[], chars[], ints[], floats[], or Strings[]]]></description>
 </parameter>
 
 <returns>Array (the same datatype as the input)</returns>

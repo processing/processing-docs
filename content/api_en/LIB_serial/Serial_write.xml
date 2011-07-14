@@ -33,9 +33,9 @@ myPort.write(65);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Writes bytes, chars, ints, bytes[], Strings to the serial port
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.write(<c>data</c>)
@@ -43,12 +43,12 @@ Writes bytes, chars, ints, bytes[], Strings to the serial port
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <parameter>
 <label>data</label>
-<description>byte, char, int, bytes[], String: data to write</description>
+<description><![CDATA[byte, char, int, bytes[], String: data to write]]></description>
 </parameter>
 
 <returns>void</returns>

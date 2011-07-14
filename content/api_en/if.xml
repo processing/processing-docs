@@ -21,9 +21,9 @@ for (int i=5; i &lt; height; i+=5) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Allows the program to make a decision about which code to execute. If the <b>test</b> evaluates to <b>true</b>, the statements enclosed within the block are executed and if the <b>test</b> evaluates to <b>false</b> the statements are not executed.
-</description>
+]]></description>
 
 <syntax>
 if (<c>test</c>) { 
@@ -33,12 +33,12 @@ if (<c>test</c>) {
 
 <parameter>
 <label>expression</label>
-<description>any valid expression that evaluates to true or false</description>
+<description><![CDATA[any valid expression that evaluates to true or false]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>one or more statements to be executed</description>
+<description><![CDATA[one or more statements to be executed]]></description>
 </parameter>
 
 <returns></returns>

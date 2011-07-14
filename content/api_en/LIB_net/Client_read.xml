@@ -36,9 +36,9 @@ dataIn = myClient.read();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns a number between 0 and 255 for the next byte that's waiting in the buffer. Returns -1 if there is no byte, although this should be avoided by first cheacking <b>available()</b> to see if any data is available.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.read()
@@ -46,7 +46,7 @@ Returns a number between 0 and 255 for the next byte that's waiting in the buffe
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>int</returns>

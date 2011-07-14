@@ -48,13 +48,13 @@ text(s, 15, 20, 70, 70);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Draws text to the screen. Displays the information specified in the <b>data</b> or <b>stringdata</b> parameters on the screen in the position specified by the <b>x</b> and <b>y</b> parameters and the optional <b>z</b> parameter. A default font will be used unless a font is set with the <b>textFont()</b> function. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates. 
 <br/> <br/>
 The <b>width</b> and <b>height</b> parameters define a rectangular area to display within and may only be used with string data. For text drawn inside a rectangle, the coordinates are interpreted based on the current <b>rectMode()</b> setting.
 <br/> <br/>
 Use the <b>textMode()</b> function with the <b>SCREEN</b> parameter to display text in 2D at the surface of the window. 
-</description>
+]]></description>
 
 <syntax>
 text(<c>data</c>, <c>x</c>, <c>y</c>)
@@ -65,37 +65,37 @@ text(<c>stringdata</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>z</c
 
 <parameter>
 <label>data</label>
-<description>String, char, int, or float: the alphanumeric symbols to be displayed</description>
+<description><![CDATA[String, char, int, or float: the alphanumeric symbols to be displayed]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>int or float: x-coordinate of text</description>
+<description><![CDATA[int or float: x-coordinate of text]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int or float: y-coordinate of text</description>
+<description><![CDATA[int or float: y-coordinate of text]]></description>
 </parameter>
 
 <parameter>
 <label>z</label>
-<description>int or float: z-coordinate of text</description>
+<description><![CDATA[int or float: z-coordinate of text]]></description>
 </parameter>
 
 <parameter>
 <label>stringdata</label>
-<description>String: letters to be displayed</description>
+<description><![CDATA[String: letters to be displayed]]></description>
 </parameter>
 
 <parameter>
 <label>width</label>
-<description>int or float: width of text box</description>
+<description><![CDATA[int or float: width of text box]]></description>
 </parameter>
 
 <parameter>
 <label>height</label>
-<description>int or float: height of text box</description>
+<description><![CDATA[int or float: height of text box]]></description>
 </parameter>
 
 <returns>None</returns>

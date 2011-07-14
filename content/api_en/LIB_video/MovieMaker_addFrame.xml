@@ -39,9 +39,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Adds a new frame to a movie file that is current being created.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.addFrame()
@@ -49,7 +49,7 @@ Adds a new frame to a movie file that is current being created.
 
 <parameter>
 <label>mov</label>
-<description>any variable of type MovieMaker</description>
+<description><![CDATA[any variable of type MovieMaker]]></description>
 </parameter>
 
 <returns></returns>

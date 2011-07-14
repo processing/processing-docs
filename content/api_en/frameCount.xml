@@ -22,9 +22,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The system variable <b>frameCount</b> contains the number of frames displayed since the program started. Inside <b>setup()</b> the value is 0 and and after the first iteration of draw it is 1, etc.
-</description>
+]]></description>
 
 <syntax>
 frameCount

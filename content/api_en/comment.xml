@@ -18,9 +18,9 @@ line(50, 0, 50, 100);  // Draw the vertical line
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Explanatory notes embedded within the code. Comments are used to remind yourself and to inform others about the details of the code. Single-line comments are signified with the two forward slash characters. Comments are ignored by the compiler.
-</description>
+]]></description>
 
 <syntax>
 // <c>comment</c>
@@ -28,7 +28,7 @@ Explanatory notes embedded within the code. Comments are used to remind yourself
 
 <parameter>
 <label>comment</label>
-<description>any sequence of characters</description>
+<description><![CDATA[any sequence of characters]]></description>
 </parameter>
 
 <returns></returns>

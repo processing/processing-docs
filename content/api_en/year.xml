@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Processing communicates with the clock on your computer. The <b>year()</b> function returns the current year as an integer (2003, 2004, 2005, etc).
-</description>
+]]></description>
 
 <syntax>
 year()

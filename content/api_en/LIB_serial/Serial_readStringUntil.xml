@@ -46,9 +46,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Combination of <b>readBytesUntil()</b> and <b>readString()</b>. Returns <b>null</b> if it doesn't find what you're looking for.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.readStringUntil()
@@ -57,12 +57,12 @@ Combination of <b>readBytesUntil()</b> and <b>readString()</b>. Returns <b>null<
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <parameter>
 <label>interesting</label>
-<description>byte: character designated to mark the end of the data</description>
+<description><![CDATA[byte: character designated to mark the end of the data]]></description>
 </parameter>
 
 <returns>String</returns>

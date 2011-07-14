@@ -32,9 +32,9 @@ void movieEvent(Movie m) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Plays a movie one time and stops at the last frame.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.play()
@@ -42,7 +42,7 @@ Plays a movie one time and stops at the last frame.
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <returns></returns>

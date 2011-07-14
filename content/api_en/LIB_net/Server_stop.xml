@@ -59,9 +59,9 @@ void mousePressed()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Disconnects all clients and stops the server.
-</description>
+]]></description>
 
 <syntax>
 <c>server</c>.stop()
@@ -69,7 +69,7 @@ Disconnects all clients and stops the server.
 
 <parameter>
 <label>server</label>
-<description>any variable of type Server</description>
+<description><![CDATA[any variable of type Server]]></description>
 </parameter>
 
 <returns>None</returns>

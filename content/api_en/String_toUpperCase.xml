@@ -20,9 +20,9 @@ println(str1 + ":" + str2);  // Prints CCCP:RABBIT
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts all of the characters in the string to uppercase. For example, "abc" will convert to "ABC". 
-</description>
+]]></description>
 
 <syntax>
 <c>str</c>.toUpperCase()
@@ -30,7 +30,7 @@ Converts all of the characters in the string to uppercase. For example, "abc" wi
 
 <parameter>
 <label>str</label>
-<description>String: any variable of type String</description>
+<description><![CDATA[String: any variable of type String]]></description>
 </parameter>
 
 <returns>String</returns>

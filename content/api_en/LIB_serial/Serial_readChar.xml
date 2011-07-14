@@ -39,9 +39,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the next byte in the buffer as a char. Returns -1 or 0xffff if nothing is there.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.readChar()
@@ -49,7 +49,7 @@ Returns the next byte in the buffer as a char. Returns -1 or 0xffff if nothing i
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns>int</returns>

@@ -29,9 +29,9 @@ println(mag(x2, y2));  // Prints 106.30146
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the magnitude (or length) of a vector. A vector is a direction in space commonly used in computer graphics and linear algebra. Because it has no "start" position, the magnitude of a vector can be thought of as the distance from coordinate (0,0) to its (x,y) value. Therefore, mag() is a shortcut for writing "dist(0, 0, x, y)". 
-</description>
+]]></description>
 
 <syntax>
 mag(<c>a</c>, <c>b</c>)
@@ -40,17 +40,17 @@ mag(<c>a</c>, <c>b</c>, <c>c</c>)
 
 <parameter>
 <label>a</label>
-<description>float or int: first value</description>
+<description><![CDATA[float or int: first value]]></description>
 </parameter>
 
 <parameter>
 <label>b</label>
-<description>float or int: second value</description>
+<description><![CDATA[float or int: second value]]></description>
 </parameter>
 
 <parameter>
 <label>c</label>
-<description>float or int: third value</description>
+<description><![CDATA[float or int: third value]]></description>
 </parameter>
 
 <returns>float</returns>

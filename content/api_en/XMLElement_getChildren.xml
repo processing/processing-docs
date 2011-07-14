@@ -50,10 +50,10 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns all of the children as an XMLElement array.
 When the <b>path</b> parameter is specified, then it will return all children that match that path. The path is a series of elements and sub-elements, separated by slashes.
-</description>
+]]></description>
 
 <syntax>
 <c>xml</c>.getChildren()
@@ -62,7 +62,7 @@ When the <b>path</b> parameter is specified, then it will return all children th
 
 <parameter>
 <label>xml</label>
-<description>any variable of type XMLElement</description>
+<description><![CDATA[any variable of type XMLElement]]></description>
 </parameter>
 
 <returns>XMLElement[]</returns>

@@ -36,9 +36,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Jumps to a specific location within a movie. The parameter <b>where</b> is in terms of seconds. For example, if the movie is 12.2 seconds long, calling <b>jump(6.1)</b> would go to the middle of the movie.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.jump(<c>where</c>)
@@ -46,12 +46,12 @@ Jumps to a specific location within a movie. The parameter <b>where</b> is in te
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <parameter>
 <label>where</label>
-<description>float: position to jump to specified in seconds</description>
+<description><![CDATA[float: position to jump to specified in seconds]]></description>
 </parameter>
 
 <returns></returns>

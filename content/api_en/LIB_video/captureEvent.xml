@@ -30,8 +30,8 @@ void captureEvent(Capture myCapture) {
 ]]></code>
 </example>
 
-<description>
-Called when a new camera frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one capture device in the program, <b>captureEvent()</b> is called each time any of the devices has a new frame available. Use an <b>if()</b> within the function to determine which device is triggering the event.</description>
+<description><![CDATA[
+Called when a new camera frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one capture device in the program, <b>captureEvent()</b> is called each time any of the devices has a new frame available. Use an <b>if()</b> within the function to determine which device is triggering the event.]]></description>
 
 <syntax>
 void captureEvent(Capture <c>which</c>) {
@@ -41,12 +41,12 @@ void captureEvent(Capture <c>which</c>) {
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description><![CDATA[any valid statements]]></description>
 </parameter>
 
 <parameter>
 <label>which</label>
-<description>the camera with the event</description>
+<description><![CDATA[the camera with the event]]></description>
 </parameter>
 
 <returns></returns>

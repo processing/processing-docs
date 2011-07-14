@@ -25,9 +25,9 @@ println(Serial.list());
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Gets a list of all available serial ports. Use <b>println()</b> to write the information to the text window.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.list()
@@ -35,7 +35,7 @@ Gets a list of all available serial ports. Use <b>println()</b> to write the inf
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns></returns>

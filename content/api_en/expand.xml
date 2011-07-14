@@ -31,11 +31,11 @@ println(imgs.length);  // Prints "64"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Increases the size of an array. By default, this function doubles the size of the array, but the optional <b>newSize</b> parameter provides precise control over the increase in size. 
 <br/> <br/>
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) expand(originalArray)</em>.
-</description>
+]]></description>
 
 <syntax>
 expand(<c>array</c>)
@@ -44,12 +44,12 @@ expand(<c>array</c>, <c>newSize</c>)
 
 <parameter>
 <label>array</label>
-<description>boolean[], byte[], char[], int[], float[], String[], or an array of objects</description>
+<description><![CDATA[boolean[], byte[], char[], int[], float[], String[], or an array of objects]]></description>
 </parameter>
 
 <parameter>
 <label>newSize</label>
-<description>positive int: new size for the array</description>
+<description><![CDATA[positive int: new size for the array]]></description>
 </parameter>
 
 <returns>Array (the same datatype as the input)</returns>

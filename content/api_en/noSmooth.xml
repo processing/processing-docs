@@ -19,9 +19,9 @@ ellipse(30, 48, 36, 36);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Draws all geometry with jagged (aliased) edges.
-</description>
+]]></description>
 
 <syntax>
 noSmooth()

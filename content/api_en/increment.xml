@@ -17,9 +17,9 @@ int c = a;   // Sets "c" to 2
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Increases the value of an integer variable by 1. Equivalent to the operation <b>i = i + 1</b>. If the value of the variable <b>i</b> is five, then the expression <b>i++</b> increases the value of <b>i</b> to 6.
-</description>
+]]></description>
 
 <syntax>
 value++
@@ -27,7 +27,7 @@ value++
 
 <parameter>
 <label>value</label>
-<description>int</description>
+<description><![CDATA[int]]></description>
 </parameter>
 
 <returns></returns>

@@ -38,9 +38,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Removed the cropping set by the <b>crop()</b> function.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.noCrop()
@@ -48,7 +48,7 @@ Removed the cropping set by the <b>crop()</b> function.
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns></returns>

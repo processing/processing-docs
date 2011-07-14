@@ -30,9 +30,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The boolean system variable <b>keyPressed</b> is <b>true</b> if any key is pressed and <b>false</b> if no keys are pressed.
-</description>
+]]></description>
 
 <syntax>
 keyPressed

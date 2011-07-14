@@ -23,9 +23,9 @@ printCamera();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Prints the current camera matrix to the text window.
-</description>
+]]></description>
 
 <syntax>
 printCamera()

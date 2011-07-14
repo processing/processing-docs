@@ -29,9 +29,9 @@ printMatrix();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Prints the current matrix to the text window.
-</description>
+]]></description>
 
 <syntax>
 printMatrix()

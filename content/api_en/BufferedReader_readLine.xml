@@ -40,9 +40,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns a String that is the current line in the BufferedReader.
-</description>
+]]></description>
 
 <syntax>
 <c>br</c>.readLine()
@@ -50,7 +50,7 @@ Returns a String that is the current line in the BufferedReader.
 
 <parameter>
 <label>br</label>
-<description>any object of the type BufferedReader</description>
+<description><![CDATA[any object of the type BufferedReader]]></description>
 </parameter>
 
 

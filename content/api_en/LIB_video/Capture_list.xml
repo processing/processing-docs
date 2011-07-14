@@ -22,9 +22,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Gets a list of all available capture devices such as a camera. Use <b>print()</b> to write the information to the text window.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.list()
@@ -32,7 +32,7 @@ Gets a list of all available capture devices such as a camera. Use <b>print()</b
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns>String[]</returns>

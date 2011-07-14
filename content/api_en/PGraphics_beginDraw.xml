@@ -32,9 +32,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the default properties for a PGraphics object. It should be called before anything is drawn into the object.
-</description>
+]]></description>
 
 <syntax>
 <c>graphics</c>.beginDraw()
@@ -42,7 +42,7 @@ Sets the default properties for a PGraphics object. It should be called before a
 
 <parameter>
 <label>graphics</label>
-<description>any object of the type PGraphics</description>
+<description><![CDATA[any object of the type PGraphics]]></description>
 </parameter>
 
 

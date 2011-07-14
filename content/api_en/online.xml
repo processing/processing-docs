@@ -20,9 +20,9 @@ if(online) {  // of "if (online == true)"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Confirms if a Processing program is running inside a web browser. This variable is "true" if the program is online and "false" if not.
-</description>
+]]></description>
 
 <syntax>
 online

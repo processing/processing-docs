@@ -14,7 +14,7 @@
 </example>
 
 
-<description>
+<description><![CDATA[
 This is a method for advanced programmers to open a Java InputStream. The method is useful if you want to use the facilities provided by PApplet to easily open files from the data folder or from a URL, but want an InputStream object so that you can use other Java methods to take more control of how the stream is read.
 <br /><br />
 If the requested item doesn't exist, null is returned. 
@@ -29,7 +29,7 @@ The filename passed in can be:<br />
 - The full path to a file to be opened locally (when running as an application)
 <br /><br />
 If the file ends with <b>.gz</b>, the stream will automatically be gzip decompressed. If you don't want the automatic decompression, use the related function <b>createInputRaw()</b>.
-</description>
+]]></description>
 
 <syntax>
 createInput(filename)
@@ -37,7 +37,7 @@ createInput(filename)
 
 <parameter>
 <label>filename</label>
-<description>String: the name of the file to use as input</description>
+<description><![CDATA[String: the name of the file to use as input]]></description>
 </parameter>
 
 

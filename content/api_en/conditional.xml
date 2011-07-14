@@ -20,7 +20,7 @@ for(int i = 5; i &lt; 100; i += 5) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 A shortcut for writing an <b>if</b> and <b>else</b> structure. If the <b>condition</b> evaluates to <b>true</b>, <b>expression1</b> is evaluated and returned. If the <b>condition</b> evaluates to <b>false</b>, <b>expression2</b> is evaluated and returned.
 <br /><br />
 The following conditional: <br />
@@ -31,7 +31,7 @@ is equivalent to this structure: <br />
 } else { <br />
   result = expression2 <br />
 }</pre>
-</description>
+]]></description>
 
 <syntax>
 <c>condition</c> ? <c>expression1</c> : <c>expression2</c>
@@ -39,17 +39,17 @@ is equivalent to this structure: <br />
 
 <parameter>
 <label>condition</label>
-<description>any valid expression which evaluates to true or false</description>
+<description><![CDATA[any valid expression which evaluates to true or false]]></description>
 </parameter>
 
 <parameter>
 <label>expression1</label>
-<description>any valid expression</description>
+<description><![CDATA[any valid expression]]></description>
 </parameter>
 
 <parameter>
 <label>expression2</label>
-<description>any valid expression</description>
+<description><![CDATA[any valid expression]]></description>
 </parameter>
 
 <returns>Variable, dependent on the datatype of the expressions</returns>

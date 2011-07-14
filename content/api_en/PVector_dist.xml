@@ -29,9 +29,9 @@ println(d);  // Prints "78.10249"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the Euclidean distance between two points (considering a point as a vector object).
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.dist(<c>v</c>)
@@ -40,22 +40,22 @@ PVector.dist(<c>v1</c>, <c>v2</c>)
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <parameter>
 <label>v</label>
-<description>PVector: the x, y, and z coordinates of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z coordinates of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>v1</label>
-<description>PVector: the x, y, and z coordinates of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z coordinates of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>PVector: the x, y, and z coordinates of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z coordinates of a PVector object]]></description>
 </parameter>
 
 

@@ -24,7 +24,7 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The keyword <b>import</b> is used to load a library into a Processing sketch. 
 A library is one or more classes that are grouped together to extend the capabilities of Processing. 
 The <b>*</b> character is often used at the end of the import line (see the code example above)
@@ -32,7 +32,7 @@ to load all of the related classes at once, without having to reference them ind
 <br />
 The import statement will be created for you by selecting a library from 
 the "Import Library..." item in the Sketch menu.
-</description>
+]]></description>
 
 <syntax>
 import <c>libraryName</c>
@@ -40,7 +40,7 @@ import <c>libraryName</c>
 
 <parameter>
 <label>libraryName</label>
-<description>the name of the library to load (e.g. "processing.pdf.*")</description>
+<description><![CDATA[the name of the library to load (e.g. "processing.pdf.*")]]></description>
 </parameter>
 
 <returns></returns>

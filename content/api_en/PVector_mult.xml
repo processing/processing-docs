@@ -89,9 +89,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Multiplies a vector by a scalar or multiplies one vector by another.
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.mult(<c>scalar</c>)
@@ -102,27 +102,27 @@ PVector.mult(<c>v1</c>, <c>v2</c>)
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <parameter>
 <label>scalar</label>
-<description>float: the number to multiply with the vector</description>
+<description><![CDATA[float: the number to multiply with the vector]]></description>
 </parameter>
 
 <parameter>
 <label>v</label>
-<description>PVector: the vector to multiply by the scalar</description>
+<description><![CDATA[PVector: the vector to multiply by the scalar]]></description>
 </parameter>
 
 <parameter>
 <label>v1</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 <returns>None or PVector</returns>

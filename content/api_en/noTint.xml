@@ -20,9 +20,9 @@ image(b, 50, 0);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Removes the current fill value for displaying images and reverts to displaying images with their original hues.
-</description>
+]]></description>
 
 <syntax>
 noTint()

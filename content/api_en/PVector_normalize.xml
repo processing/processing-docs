@@ -18,9 +18,9 @@ println(v);  // Prints "[ 0.4454354, 0.8908708, 0.089087084 ]"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Normalize the vector to length 1 (make it a unit vector).
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.normalize()
@@ -28,7 +28,7 @@ Normalize the vector to length 1 (make it a unit vector).
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <returns>None</returns>

@@ -42,9 +42,9 @@ void draw()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the next client in line with a new message.
-</description>
+]]></description>
 
 <syntax>
 <c>server</c>.available()
@@ -52,7 +52,7 @@ Returns the next client in line with a new message.
 
 <parameter>
 <label>server</label>
-<description>any variable of type Server</description>
+<description><![CDATA[any variable of type Server]]></description>
 </parameter>
 
 <returns>Client</returns>

@@ -36,9 +36,9 @@ for(int i = 5; i &lt; 95; i += 5) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Extends the <b>if()</b> structure allowing the program to choose between two or more block of code. It specifies a block of code to execute when the expression in <b>if()</b> is <b>false</b>.
-</description>
+]]></description>
 
 <syntax>
 if(<c>expression</c>) { 
@@ -58,12 +58,12 @@ if(<c>expression</c>) {
 
 <parameter>
 <label>expression</label>
-<description>any valid expression that evaluates to true or false</description>
+<description><![CDATA[any valid expression that evaluates to true or false]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>one or more statements to be executed</description>
+<description><![CDATA[one or more statements to be executed]]></description>
 </parameter>
 
 <returns></returns>

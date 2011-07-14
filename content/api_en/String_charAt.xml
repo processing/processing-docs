@@ -20,9 +20,9 @@ println(c1 + ":" + c2 + ":" + c3);  // Prints 'C:C:P'
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the character at the specified index. An index ranges from 0 to the length of the string minus 1. The first character of the sequence is at index 0, the next at index 1, etc. 
-</description>
+]]></description>
 
 <syntax>
 <c>str</c>.charAt(<c>index</c>)
@@ -30,12 +30,12 @@ Returns the character at the specified index. An index ranges from 0 to the leng
 
 <parameter>
 <label>str</label>
-<description>String: any variable of type String</description>
+<description><![CDATA[String: any variable of type String]]></description>
 </parameter>
 
 <parameter>
 <label>index</label>
-<description>int: the index of the character</description>
+<description><![CDATA[int: the index of the character]]></description>
 </parameter>
 
 <returns>char</returns>

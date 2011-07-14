@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns "true" when a new video frame is available to read.
-</description>
+]]></description>
 
 <syntax>
 <c>vid</c>.read()
@@ -43,7 +43,7 @@ Returns "true" when a new video frame is available to read.
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns></returns>

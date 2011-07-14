@@ -25,11 +25,11 @@ if (s.isVisible() == false) {  // of if (!s.isVisible) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the shape to be visible or invisible. This is determined by the value of the <b>visible</b> parameter.
 <br/> <br/>
 The visibility of a shape is usually controlled by whatever program created the SVG file. For instance, this parameter is controlled by showing or hiding the shape in the layers palette in Adobe Illustrator.
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.setVisible(<c>visible</c>)
@@ -37,12 +37,12 @@ The visibility of a shape is usually controlled by whatever program created the 
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <parameter>
 <label>visible</label>
-<description>Boolean: "false" makes the shape invisible and "true" makes it visible</description>
+<description><![CDATA[Boolean: "false" makes the shape invisible and "true" makes it visible]]></description>
 </parameter>
 
 <returns>none</returns>

@@ -19,9 +19,9 @@ println(v3);  // Prints "[ -40.0, 60.0, -400.0 ]"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates and returns a vector composed of the cross product between two vectors.
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.cross(<c>v</c>)
@@ -29,12 +29,12 @@ Calculates and returns a vector composed of the cross product between two vector
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <parameter>
 <label>v</label>
-<description>PVector: the vector to calculate the cross product with</description>
+<description><![CDATA[PVector: the vector to calculate the cross product with]]></description>
 </parameter>
 
 <returns>PVector</returns>

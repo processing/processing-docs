@@ -28,9 +28,9 @@ endShape();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The <b>endShape()</b> function is the companion to <b>beginShape()</b> and may only be called after <b>beginShape()</b>. When <b>endshape()</b> is called, all of image data defined since the previous call to <b>beginShape()</b> is written into the image buffer. The constant CLOSE as the value for the MODE parameter to close the shape (to connect the beginning and the end). 
-</description>
+]]></description>
 
 <syntax>
 endShape()
@@ -39,7 +39,7 @@ endShape(<c>MODE</c>)
 
 <parameter>
 <label>MODE</label>
-<description>Use CLOSE to close the shape</description>
+<description><![CDATA[Use CLOSE to close the shape]]></description>
 </parameter>
 
 <returns>None</returns>

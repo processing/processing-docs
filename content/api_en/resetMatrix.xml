@@ -32,9 +32,9 @@ printMatrix();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Replaces the current matrix with the identity matrix. The equivalent function in OpenGL is glLoadIdentity(). 
-</description>
+]]></description>
 
 <syntax>
 resetMatrix()

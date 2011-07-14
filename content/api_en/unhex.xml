@@ -19,9 +19,9 @@ rect(30, 20, 55, 55);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts a String representation of a hexadecimal number to its equivalent integer value.
-</description>
+]]></description>
 
 <syntax>
 unhex(<c>str</c>)
@@ -29,7 +29,7 @@ unhex(<c>str</c>)
 
 <parameter>
 <label>str</label>
-<description>String</description>
+<description><![CDATA[String]]></description>
 </parameter>
 
 <returns>int</returns>

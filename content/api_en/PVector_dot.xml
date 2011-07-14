@@ -28,9 +28,9 @@ println(d);  // Prints "2200.0"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the dot product of two vectors.
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.dot(<c>x</c>, <c>y</c>, <c>z</c>)
@@ -39,27 +39,27 @@ Calculates the dot product of two vectors.
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>float: the x component of a vector</description>
+<description><![CDATA[float: the x component of a vector]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>float: the y component of a vector</description>
+<description><![CDATA[float: the y component of a vector]]></description>
 </parameter>
 
 <parameter>
 <label>z</label>
-<description>float: the z component of a vector</description>
+<description><![CDATA[float: the z component of a vector]]></description>
 </parameter>
 
 <parameter>
 <label>v</label>
-<description>PVector: the x, y, and z components from a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components from a PVector object]]></description>
 </parameter>
 
 

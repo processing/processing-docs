@@ -30,11 +30,11 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Increases or decreases the size of a shape by expanding and contracting vertices. Shapes always scale from the relative origin of their bounding box. Scale values are specified as decimal percentages. For example, the method call <b>scale(2.0)</b> increases the dimension of a shape by 200%. Subsequent calls to the method multiply the effect. For example, calling <b>scale(2.0)</b> and then <b>scale(1.5)</b> is the same as <b>scale(3.0)</b>. This transformation is applied directly to the shape, it's not refreshed each time <b>draw()</b> is run. 
 <br /><br />
 Using this fuction with the <b>z</b> parameter requires passing P3D or OPENGL into the size() parameter.
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.scale(<c>size</c>);
@@ -44,27 +44,27 @@ Using this fuction with the <b>z</b> parameter requires passing P3D or OPENGL in
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <parameter>
 <label>size</label>
-<description>float: percentage to scale the object</description>
+<description><![CDATA[float: percentage to scale the object]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>float: percentage to scale the object in the x-axis</description>
+<description><![CDATA[float: percentage to scale the object in the x-axis]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>float: percentage to scale the object in the y-axis</description>
+<description><![CDATA[float: percentage to scale the object in the y-axis]]></description>
 </parameter>
 
 <parameter>
 <label>z</label>
-<description>float: percentage to scale the object in the z-axis</description>
+<description><![CDATA[float: percentage to scale the object in the z-axis]]></description>
 </parameter>
 
 <returns>None</returns>

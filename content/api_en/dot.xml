@@ -44,9 +44,9 @@ class HLine {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Provides access to an object's methods and data. An object is an instance of a class and contains is a grouping of methods (object functions) and data (object variables and constants). The dot operator directs the program to the information encapsulated within an object.
-</description>
+]]></description>
 
 <syntax>
 <c>object</c>.<c>method()</c>
@@ -55,17 +55,17 @@ Provides access to an object's methods and data. An object is an instance of a c
 
 <parameter>
 <label>object</label>
-<description>the object you want to access</description>
+<description><![CDATA[the object you want to access]]></description>
 </parameter>
 
 <parameter>
 <label>method()</label>
-<description>method encapsulated in the object</description>
+<description><![CDATA[method encapsulated in the object]]></description>
 </parameter>
 
 <parameter>
 <label>data</label>
-<description>variable or constant encapsulated in the object</description>
+<description><![CDATA[variable or constant encapsulated in the object]]></description>
 </parameter>
 
 <returns></returns>

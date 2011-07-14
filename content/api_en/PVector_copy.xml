@@ -26,9 +26,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Copies the components of the vector and returns the result as a PVector. 
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.copy()
@@ -36,7 +36,7 @@ Copies the components of the vector and returns the result as a PVector.
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <returns>PVector</returns>

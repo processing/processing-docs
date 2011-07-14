@@ -58,9 +58,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Changes the way Processing interprets color data. By default, the parameters for <b>fill()</b>, <b>stroke()</b>, <b>background()</b>, and <b>color()</b> are defined by values between 0 and 255 using the RGB color model. The <b>colorMode()</b> function is used to change the numerical range used for specifying colors and to switch color systems. For example, calling <b>colorMode(RGB, 1.0)</b> will specify that values are specified between 0 and 1. The limits for defining colors are altered by setting the parameters range1, range2, range3, and range 4. 
-</description>
+]]></description>
 
 <syntax>
 colorMode(<c>mode</c>);
@@ -71,32 +71,32 @@ colorMode(<c>mode</c>, <c>range1</c>, <c>range2</c>, <c>range3</c>, <c>range4</c
 
 <parameter>
 <label>mode</label>
-<description>Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness</description>
+<description><![CDATA[Either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness]]></description>
 </parameter>
 
 <parameter>
 <label>range</label>
-<description>int or float: range for all color elements</description>
+<description><![CDATA[int or float: range for all color elements]]></description>
 </parameter>
 
 <parameter>
 <label>range1</label>
-<description>int or float: range for the red or hue depending on the current color mode</description>
+<description><![CDATA[int or float: range for the red or hue depending on the current color mode]]></description>
 </parameter>
 
 <parameter>
 <label>range2</label>
-<description>int or float: range for the green or saturation depending on the current color mode</description>
+<description><![CDATA[int or float: range for the green or saturation depending on the current color mode]]></description>
 </parameter>
 
 <parameter>
 <label>range3</label>
-<description>int or float: range for the blue or brightness depending on the current color mode</description>
+<description><![CDATA[int or float: range for the blue or brightness depending on the current color mode]]></description>
 </parameter>
 
 <parameter>
 <label>range4</label>
-<description>int or float: range for the alpha</description>
+<description><![CDATA[int or float: range for the alpha]]></description>
 </parameter>
 
 <returns>None</returns>

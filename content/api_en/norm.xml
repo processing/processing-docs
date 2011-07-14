@@ -19,14 +19,14 @@ println(n);  // prints "0.4"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Normalizes a number from another range into a value between 0 and 1. 
 <br/> <br/>
 Identical to map(value, low, high, 0, 1);
 <br/> <br/>
 Numbers outside the range are not clamped to 0 and 1, because
 out-of-range values are often intentional and useful.
-</description>
+]]></description>
 
 <syntax>
 norm(<c>value</c>, <c>low</c>, <c>high</c>)
@@ -34,17 +34,17 @@ norm(<c>value</c>, <c>low</c>, <c>high</c>)
 
 <parameter>
 <label>value</label>
-<description>float: The incoming value to be converted</description>
+<description><![CDATA[float: The incoming value to be converted]]></description>
 </parameter>
 
 <parameter>
 <label>low</label>
-<description>float: Lower bound of the value's current range</description>
+<description><![CDATA[float: Lower bound of the value's current range]]></description>
 </parameter>
 
 <parameter>
 <label>high</label>
-<description>float: Upper bound of the value's current range</description>
+<description><![CDATA[float: Upper bound of the value's current range]]></description>
 </parameter>
 
 <returns>float</returns>

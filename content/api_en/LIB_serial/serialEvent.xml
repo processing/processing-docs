@@ -46,9 +46,9 @@ void serialEvent(Serial p) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Called when data is available. Use one of the <b>read()</b> methods to capture this data. The <b>serialEvent()</b> can be set with <b>buffer()</b> to only trigger after a certain number of data elements are read and can be set with <b>bufferUntil()</b> to only trigger after a specific character is read. The <b>which</b> parameter contains the name of the port where new data is available, but is only useful when there is more than one serial connection open and it's necessary to distinguish between the two. 
-</description>
+]]></description>
 
 <syntax>
 void serialEvent(Serial <c>whichPort</c>) {
@@ -58,12 +58,12 @@ void serialEvent(Serial <c>whichPort</c>) {
 
 <parameter>
 <label>whichPort</label>
-<description>Serial: the port where new data is available</description>
+<description><![CDATA[Serial: the port where new data is available]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description><![CDATA[any valid statements]]></description>
 </parameter>
 
 <returns></returns>

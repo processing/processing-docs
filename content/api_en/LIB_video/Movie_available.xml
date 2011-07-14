@@ -32,9 +32,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns "true" when a new movie frame is available to read.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.available()
@@ -42,7 +42,7 @@ Returns "true" when a new movie frame is available to read.
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 <returns></returns>
 

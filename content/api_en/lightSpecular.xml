@@ -28,9 +28,9 @@ sphere(30);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the specular color for lights. Like <b>fill()</b>, it affects only the elements which are created after it in the code. Specular refers to light which bounces off a surface in a perferred direction (rather than bouncing in all directions like a diffuse light) and is used for creating highlights. The specular quality of a light interacts with the specular material qualities set through the <b>specular()</b> and <b>shininess()</b> functions.
-</description>
+]]></description>
 
 <syntax>
 lightSpecular(<c>v1</c>, <c>v2</c>, <c>v3</c>)
@@ -39,17 +39,17 @@ lightSpecular(<c>v1</c>, <c>v2</c>, <c>v3</c>)
 
 <parameter>
 <label>v1</label>
-<description>int or float: red or hue value</description>
+<description><![CDATA[int or float: red or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>int or float: green or hue value</description>
+<description><![CDATA[int or float: green or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>v3</label>
-<description>int or float: blue or hue value</description>
+<description><![CDATA[int or float: blue or hue value]]></description>
 </parameter>
 
 <returns>None</returns>

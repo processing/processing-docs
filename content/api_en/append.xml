@@ -17,11 +17,11 @@ println(sa2);  // Prints OH, NY, CA, MA
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Expands an array by one element and adds data to the new position. The datatype of the <b>element</b> parameter must be the same as the datatype of the array.
 <br/> <br/>
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) append(originalArray, element)</em>.
-</description>
+]]></description>
 
 <syntax>
 append(<c>array</c>, <c>element</c>)
@@ -29,12 +29,12 @@ append(<c>array</c>, <c>element</c>)
 
 <parameter>
 <label>array</label>
-<description>boolean[], byte[], char[], int[], float[], or String[], or an array of objects</description>
+<description><![CDATA[boolean[], byte[], char[], int[], float[], or String[], or an array of objects]]></description>
 </parameter>
 
 <parameter>
 <label>element</label>
-<description>new data for the array</description>
+<description><![CDATA[new data for the array]]></description>
 </parameter>
 
 <returns>Array (the same datatype as the input)</returns>

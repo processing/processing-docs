@@ -23,7 +23,7 @@ println(s);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Writes to the console area of the Processing environment. This is often helpful for looking at the data a program is producing. The companion function <b>println()</b> works like <b>print()</b>, but creates a new line of text for each call to the function. Individual elements can be separated with quotes ("") and joined with the addition operator (+). 
 <br/><br/>
 Beginning with release 0125, to print the contents of an array, use println(). 
@@ -36,7 +36,7 @@ With join(), you can choose any delimiter you like and <b>print()</b> the result
 Using <b>print()</b> on an object will output <b>null</b>, a memory location 
 that may look like "@10be08," or the result of the <b>toString()</b> method from the object that's being printed.
 Advanced users who want more useful output when calling print() on their own classes can add a toString() method to the class that returns a String.
-</description>
+]]></description>
 
 <syntax>
 print(<c>data</c>)
@@ -44,7 +44,7 @@ print(<c>data</c>)
 
 <parameter>
 <label>data</label>
-<description>boolean, byte, char, color, int, float, String, Object</description>
+<description><![CDATA[boolean, byte, char, color, int, float, String, Object]]></description>
 </parameter>
 
 <returns></returns>

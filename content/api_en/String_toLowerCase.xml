@@ -20,9 +20,9 @@ println(str1 + ":" + str2);  // Prints cccp:rabbit
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts all of the characters in the string to lowercase. For example, "ABC" will convert to "abc".
-</description>
+]]></description>
 
 <syntax>
 <c>str</c>.toLowerCase()
@@ -30,7 +30,7 @@ Converts all of the characters in the string to lowercase. For example, "ABC" wi
 
 <parameter>
 <label>str</label>
-<description>String: any variable of type String</description>
+<description><![CDATA[String: any variable of type String]]></description>
 </parameter>
 
 <returns>String</returns>

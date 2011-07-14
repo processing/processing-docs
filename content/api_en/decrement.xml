@@ -17,9 +17,9 @@ int c = a;    // Sets "c" to 4
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Substracts the value of an integer variable by 1. Equivalent to the operation <b>i = i - 1</b>. If the value of the variable <b>i</b> is five, then the expression <b>i--</b> decreases the value of <b>i</b> to 4.
-</description>
+]]></description>
 
 <syntax>
 <c>var</c>--
@@ -27,7 +27,7 @@ Substracts the value of an integer variable by 1. Equivalent to the operation <b
 
 <parameter>
 <label>var</label>
-<description>int</description>
+<description><![CDATA[int]]></description>
 </parameter>
 
 <returns></returns>

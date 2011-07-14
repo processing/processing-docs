@@ -27,9 +27,9 @@ line(sw, 50, sw, 100);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates and returns the width of any character or text string.
-</description>
+]]></description>
 
 <syntax>
 textWidth(<c>data</c>)
@@ -37,7 +37,7 @@ textWidth(<c>data</c>)
 
 <parameter>
 <label>data</label>
-<description>char or String</description>
+<description><![CDATA[char or String]]></description>
 </parameter>
 
 <returns>Float</returns>

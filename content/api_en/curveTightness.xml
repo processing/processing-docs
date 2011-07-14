@@ -49,9 +49,9 @@ endShape();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Modifies the quality of forms created with <b>curve()</b> and <b>curveVertex()</b>. The parameter <b>squishy</b> determines how the curve fits to the vertex points. The value 0.0 is the default value for <b>squishy</b> (this value defines the curves to be Catmull-Rom splines) and the value 1.0 connects all the points with straight lines. Values within the range -5.0 and 5.0 will deform the curves but will leave them recognizable and as values increase in magnitude, they will continue to deform.
-</description>
+]]></description>
 
 <syntax>
 curveTightness(<c>squishy</c>)
@@ -59,7 +59,7 @@ curveTightness(<c>squishy</c>)
 
 <parameter>
 <label>squishy</label>
-<description>float or int: amount of deformation from the original vertices</description>
+<description><![CDATA[float or int: amount of deformation from the original vertices]]></description>
 </parameter>
 
 <returns>None</returns>

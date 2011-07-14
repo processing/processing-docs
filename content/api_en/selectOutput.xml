@@ -22,9 +22,9 @@ if (savePath == null) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Open a platform-specific file save dialog to create of select a file for output. This function returns the full path to the selected file as a <b>String</b>, or <b>null</b> if no selection. If you select an existing file, that file will be replaced. Alternatively, you can navigate to a folder and create a new file to write to. 
-</description>
+]]></description>
 
 <syntax>
 selectOutput()
@@ -33,7 +33,7 @@ selectOutput(<c>prompt</c>)
 
 <parameter>
 <label>prompt</label>
-<description>String: message you want the user to see in the file chooser</description>
+<description><![CDATA[String: message you want the user to see in the file chooser]]></description>
 </parameter>
 
 <returns>String or null</returns>

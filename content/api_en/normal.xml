@@ -15,9 +15,9 @@ Coming soon...
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the current normal vector. This is for drawing three dimensional shapes and surfaces and specifies a vector perpendicular to the surface of the shape which determines how lighting affects it. Processing attempts to automatically assign normals to shapes, but since that's imperfect, this is a better option when you want more control. This function is identical to glNormal3f() in OpenGL.
-</description>
+]]></description>
 
 <syntax>
 normal(<c>nx</c>, <c>ny</c>, <c>nz</c>)
@@ -25,17 +25,17 @@ normal(<c>nx</c>, <c>ny</c>, <c>nz</c>)
 
 <parameter>
 <label>nx</label>
-<description>float: x direction</description>
+<description><![CDATA[float: x direction]]></description>
 </parameter>
 
 <parameter>
 <label>ny</label>
-<description>float: y direction</description>
+<description><![CDATA[float: y direction]]></description>
 </parameter>
 
 <parameter>
 <label>nz</label>
-<description>float: z direction</description>
+<description><![CDATA[float: z direction]]></description>
 </parameter>
 
 <returns>None</returns>

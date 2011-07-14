@@ -34,9 +34,9 @@ void movieEvent(Movie m) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Reads the current frame of the movie. 
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.read()
@@ -44,7 +44,7 @@ Reads the current frame of the movie.
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <returns></returns>

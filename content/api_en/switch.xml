@@ -65,9 +65,9 @@ switch(letter) {
 </example>
 
 
-<description>
+<description><![CDATA[
 Works like an <b>if else</b> structure, but <b>switch()</b> is more convenient when you need to select between three or more alternatives. Program controls jumps to the case with the same value as the expression. All remaining statements in the switch are executed unless redirected by a <b>break</b>. Only primitive datatypes which can convert to an integer (byte, char, and int) may be used as the <b>expression</b> parameter. The default is optional.
-</description>
+]]></description>
 
 <syntax>
 switch(<c>expression</c>)
@@ -83,17 +83,17 @@ switch(<c>expression</c>)
 
 <parameter>
 <label>expression</label>
-<description>byte, char, or int</description>
+<description><![CDATA[byte, char, or int]]></description>
 </parameter>
 
 <parameter>
 <label>label</label>
-<description>byte, char, or int</description>
+<description><![CDATA[byte, char, or int]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>one or more statements to be executed</description>
+<description><![CDATA[one or more statements to be executed]]></description>
 </parameter>
 
 <returns></returns>

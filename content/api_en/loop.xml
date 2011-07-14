@@ -38,9 +38,9 @@ void mouseReleased() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Causes Processing to continuously execute the code within <b>draw()</b>. If <b>noLoop()</b> is called, the code in <b>draw()</b> stops executing.
-</description>
+]]></description>
 
 <syntax>
 loop()

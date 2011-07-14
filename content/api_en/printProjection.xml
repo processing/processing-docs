@@ -22,9 +22,9 @@ printProjection();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Prints the current projection matrix to the text window.
-</description>
+]]></description>
 
 <syntax>
 printProjection()

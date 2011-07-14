@@ -24,9 +24,9 @@ line(d[0], d[1], d[2], d[1]);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Separates parameters in function calls and elements during assignment.
-</description>
+]]></description>
 
 <syntax>
 value1, ..., valueN
@@ -34,7 +34,7 @@ value1, ..., valueN
 
 <parameter>
 <label>value1, ..., valueN</label>
-<description>any int, float, byte, boolean, color, char, String</description>
+<description><![CDATA[any int, float, byte, boolean, color, char, String]]></description>
 </parameter>
 
 <returns></returns>

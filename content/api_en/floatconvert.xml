@@ -17,9 +17,9 @@ println(i + " : " + f);  // Prints "65 : 65.0"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts an int, string, or array to its floating point representation.
-</description>
+]]></description>
 
 <syntax>
 float(<c>value</c>)
@@ -27,7 +27,7 @@ float(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>int, String, int[], String[]</description>
+<description><![CDATA[int, String, int[], String[]]]></description>
 </parameter>
 
 <returns>float</returns>

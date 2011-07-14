@@ -21,9 +21,9 @@ line(50, 0, 50, 100);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Explanatory notes embedded within the code and written to the "index.html" file created when the code is exported. Doc comments (documentation comments) are used for sharing a description of your sketch when the program is exported. Export the code by hitting the "Export" button on the Toolbar.
-</description>
+]]></description>
 
 <syntax>
 /**
@@ -33,7 +33,7 @@ Explanatory notes embedded within the code and written to the "index.html" file 
 
 <parameter>
 <label>comment</label>
-<description>any sequence of characters</description>
+<description><![CDATA[any sequence of characters]]></description>
 </parameter>
 
 <returns></returns>

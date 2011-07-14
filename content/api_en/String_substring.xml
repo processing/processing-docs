@@ -21,9 +21,9 @@ println(ss1 + ":" + ss2 + ":" + ss3);  // Prints 'CP:bit:CC'
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns a new string that is a part of the original string. When using the <b>endIndex</b> parameter, the string between <b>beginIndex</b> and <b>endIndex</b>-1 is returned.
-</description>
+]]></description>
 
 <syntax>
 <c>str</c>.substring(<b>beginIndex</b>)
@@ -32,17 +32,17 @@ Returns a new string that is a part of the original string. When using the <b>en
 
 <parameter>
 <label>str</label>
-<description>String: any variable of type String</description>
+<description><![CDATA[String: any variable of type String]]></description>
 </parameter>
 
 <parameter>
 <label>beginIndex</label>
-<description>int: position from which to begin (inclusive)</description>
+<description><![CDATA[int: position from which to begin (inclusive)]]></description>
 </parameter>
 
 <parameter>
 <label>endIndex</label>
-<description>int: position from which to end (exclusive)</description>
+<description><![CDATA[int: position from which to end (exclusive)]]></description>
 </parameter>
 
 <returns>String</returns>

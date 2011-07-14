@@ -50,9 +50,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Empty the buffer, removes all the data stored there.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.clear()
@@ -60,7 +60,7 @@ Empty the buffer, removes all the data stored there.
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns>None</returns>

@@ -22,9 +22,9 @@ shape(s, 50, 10, 80, 80);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Disables the shape's style data and uses Processing's current styles. Styles include attributes such as colors, stroke weight, and stroke joints. 
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.disableStyle()
@@ -32,7 +32,7 @@ Disables the shape's style data and uses Processing's current styles. Styles inc
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <returns>none</returns>

@@ -13,11 +13,11 @@
 <code></code>
 </example>
 
-<description>
+<description><![CDATA[
 Save the contents of a stream to a file in the sketch folder. This is basically <b>saveBytes(blah, loadBytes())</b>, but done more efficiently (and with less confusing syntax).
 <br /><br />   
 When using the <b>targetFile</b> parameter, it writes to a <b>File</b> object for greater control over the file location. (Note that unlike other api methods, this will not automatically compress or uncompress gzip files.)
-</description>
+]]></description>
 
 <syntax>
 saveStream(<c>targetFilename</c>, <c>sourceLocation</c>)
@@ -26,17 +26,17 @@ saveStream(<c>targetFile</c>, <c>sourceLocation</c>)
 
 <parameter>
 <label>targetFilename</label>
-<description>String: name of the file to write to</description>
+<description><![CDATA[String: name of the file to write to]]></description>
 </parameter>
 
 <parameter>
 <label>sourceLocation</label>
-<description>String: location to save the file</description>
+<description><![CDATA[String: location to save the file]]></description>
 </parameter>
 
 <parameter>
 <label>targetFile</label>
-<description>File: the file to write to</description>
+<description><![CDATA[File: the file to write to]]></description>
 </parameter>
 
 <returns>None</returns>

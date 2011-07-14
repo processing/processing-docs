@@ -15,9 +15,9 @@ ellipse(56, 46, 55, 55);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Draws an ellipse (oval) in the display window. An ellipse with an equal <b>width</b> and <b>height</b> is a circle. The first two parameters set the location, the third sets the width, and the fourth sets the height. The origin may be changed with the <b>ellipseMode()</b> function. 
-</description>
+]]></description>
 
 <syntax>
 ellipse(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
@@ -25,22 +25,22 @@ ellipse(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
 
 <parameter>
 <label>x</label>
-<description>int or float: x-coordinate of the ellipse</description>
+<description><![CDATA[int or float: x-coordinate of the ellipse]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int or float: y-coordinate of the ellipse</description>
+<description><![CDATA[int or float: y-coordinate of the ellipse]]></description>
 </parameter>
 
 <parameter>
 <label>width</label>
-<description>int or float: width of the ellipse</description>
+<description><![CDATA[int or float: width of the ellipse]]></description>
 </parameter>
 
 <parameter>
 <label>height</label>
-<description>int or float: height of the ellipse</description>
+<description><![CDATA[int or float: height of the ellipse]]></description>
 </parameter>
 
 <returns>None</returns>

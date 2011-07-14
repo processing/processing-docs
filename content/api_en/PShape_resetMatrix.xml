@@ -32,9 +32,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Replaces the current matrix of a shape with the identity matrix. The equivalent function in OpenGL is glLoadIdentity(). 
-</description>
+]]></description>
 
 <syntax>
 <b>sh</b>.resetMatrix()
@@ -42,7 +42,7 @@ Replaces the current matrix of a shape with the identity matrix. The equivalent 
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <returns>None</returns>

@@ -17,9 +17,9 @@ Coming soon...
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Selects the capture input source. It's necessary to preface the source name with the class and the dot operator, for example <b>Capture.SVIDEO</b> 
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.source(Capture.<c>MODE</c>)
@@ -27,12 +27,12 @@ Selects the capture input source. It's necessary to preface the source name with
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <parameter>
 <label>MODE</label>
-<description>either TUNER, COMPOSITE, SVIDEO, or COMPONENT</description>
+<description><![CDATA[either TUNER, COMPOSITE, SVIDEO, or COMPONENT]]></description>
 </parameter>
 
 <returns></returns>

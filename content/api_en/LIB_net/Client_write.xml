@@ -47,9 +47,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Writes data to a server specified when constructing the client.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.write(<c>data</c>)
@@ -57,12 +57,12 @@ Writes data to a server specified when constructing the client.
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <parameter>
 <label>data</label>
-<description>byte, char, int, byte[], String: data to write</description>
+<description><![CDATA[byte, char, int, byte[], String: data to write]]></description>
 </parameter>
 
 <returns>int</returns>

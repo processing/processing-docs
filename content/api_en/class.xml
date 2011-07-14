@@ -41,19 +41,19 @@ class HLine {
         ]]></code>
     </example>
     
-    <description>Keyword used to indicate the declaration of a class. A class is a composite of data and methods (functions) which may be instantiated as objects. The first letter of a class name is usually uppercase to separate it from other kinds of variables. A related tutorial on <a href="http://java.sun.com/docs/books/tutorial/java/concepts/index.html" target="_blank">Object-Oriented Programming</a> is hosted from the Sun website.</description>
+    <description><![CDATA[Keyword used to indicate the declaration of a class. A class is a composite of data and methods (functions) which may be instantiated as objects. The first letter of a class name is usually uppercase to separate it from other kinds of variables. A related tutorial on <a href="http://java.sun.com/docs/books/tutorial/java/concepts/index.html" target="_blank">Object-Oriented Programming</a> is hosted from the Sun website.]]></description>
     <syntax>class <c>ClassName</c> {
   <c>statements</c>
 }</syntax>
     
     <parameter>
         <label>ClassName</label>
-        <description>Any valid variable name</description>
+        <description><![CDATA[Any valid variable name]]></description>
     </parameter>
     
     <parameter>
         <label>statements</label>
-        <description>any valid statements</description>
+        <description><![CDATA[any valid statements]]></description>
     </parameter>
     
     <returns></returns>

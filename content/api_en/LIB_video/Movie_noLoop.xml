@@ -36,9 +36,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 If a movie is looping, calling noLoop() will cause it to play until the end and then stop on the last frame.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.noLoop()
@@ -46,7 +46,7 @@ If a movie is looping, calling noLoop() will cause it to play until the end and 
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <returns></returns>

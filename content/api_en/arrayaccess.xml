@@ -20,9 +20,9 @@ int b = numbers[1] + numbers[2]; // Sets variable b to 180
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The array access operator is used to specify a location within an array. The data at this location can be defined with the syntax <b>array[element] = value</b> or read with the syntax <b>value = array[element]</b>.
-</description>
+]]></description>
 
 <syntax>
 <c>datatype</c>[]
@@ -31,17 +31,17 @@ The array access operator is used to specify a location within an array. The dat
 
 <parameter>
 <label>datatype</label>
-<description>any primitive or compound datatype, including user defined classes</description>
+<description><![CDATA[any primitive or compound datatype, including user defined classes]]></description>
 </parameter>
 
 <parameter>
 <label>array</label>
-<description>any valid variable name</description>
+<description><![CDATA[any valid variable name]]></description>
 </parameter>
 
 <parameter>
 <label>element</label>
-<description>int: must not exceed the length of the array - 1</description>
+<description><![CDATA[int: must not exceed the length of the array - 1]]></description>
 </parameter>
 
 <returns></returns>

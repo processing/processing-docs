@@ -17,9 +17,9 @@ Coming soon...
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the video format standard to use for the video digitizer. It's necessary to preface the format name with the class and the dot operator, for example <b>Capture.PAL</b> 
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.source(Capture.<c>MODE</c>)
@@ -27,12 +27,12 @@ Sets the video format standard to use for the video digitizer. It's necessary to
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <parameter>
 <label>MODE</label>
-<description>either NTSC, PAL, or SECAM</description>
+<description><![CDATA[either NTSC, PAL, or SECAM]]></description>
 </parameter>
 
 <returns></returns>

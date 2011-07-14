@@ -38,9 +38,9 @@ println(sc1);  // Prints Gorbachev1987
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Adds two values or concatenates string values. As a mathematical operator, it calculates the sum of two values. As a string operator, it combines two strings into one and converts from primitive datatypes into the String datatype if necessary. 
-</description>
+]]></description>
 
 <syntax>
 <c>value1</c> + <c>value2</c>
@@ -48,12 +48,12 @@ Adds two values or concatenates string values. As a mathematical operator, it ca
 
 <parameter>
 <label>value1</label>
-<description>String, int, float, char, byte, boolean</description>
+<description><![CDATA[String, int, float, char, byte, boolean]]></description>
 </parameter>
 
 <parameter>
 <label>value2</label>
-<description>String, int, float, char, byte, boolean</description>
+<description><![CDATA[String, int, float, char, byte, boolean]]></description>
 </parameter>
 
 <returns></returns>

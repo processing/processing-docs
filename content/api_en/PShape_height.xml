@@ -21,9 +21,9 @@ println(s.height);  // Prints 285.0, the height of the shape
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The height of the PShape document.
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.height
@@ -31,7 +31,7 @@ The height of the PShape document.
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <returns></returns>

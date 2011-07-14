@@ -50,9 +50,9 @@ for (int i = 30; i &lt; 80; i = i+5) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Controls a sequence of repetitions. A <b>for</b> structure has three parts: <b>init</b>, <b>test</b>, and <b>update</b>. Each part must be separated by a semi-colon ";". The loop continues until the test evaluates to <b>false</b>. When a <b>for</b> structure is executed, the following sequence of events occurs:<br />1. The init statement is executed<br />2. The test is evaluated to be true or false<br />3. If the test is true, jump to step 4. If the test is False, jump to step 6<br />4. Execute the statements within the block<br />5. Execute the update statement and jump to step 2<br />6. Exit the loop.
-</description>
+]]></description>
 
 <syntax>
 for (<c>init</c>; <c>test</c>; <c>update</c>) { 
@@ -62,22 +62,22 @@ for (<c>init</c>; <c>test</c>; <c>update</c>) {
 
 <parameter>
 <label>init</label>
-<description>statement executed once when beginning loop</description>
+<description><![CDATA[statement executed once when beginning loop]]></description>
 </parameter>
 
 <parameter>
 <label>test</label>
-<description>if the test evaluates to <b>true</b>, the statements execute</description>
+<description><![CDATA[if the test evaluates to <b>true</b>, the statements execute]]></description>
 </parameter>
 
 <parameter>
 <label>update</label>
-<description>executes at the end of each iteration</description>
+<description><![CDATA[executes at the end of each iteration]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>collection of statements executed each time through the loop</description>
+<description><![CDATA[collection of statements executed each time through the loop]]></description>
 </parameter>
 
 <returns></returns>

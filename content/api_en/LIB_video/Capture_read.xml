@@ -32,9 +32,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Reads the current video frame.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.read()
@@ -42,7 +42,7 @@ Reads the current video frame.
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns></returns>

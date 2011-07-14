@@ -19,9 +19,9 @@ void draw()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The system variable <b>mouseX</b> always contains the current horizontal coordinate of the mouse.
-</description>
+]]></description>
 
 <syntax></syntax>
 

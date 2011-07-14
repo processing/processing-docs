@@ -51,9 +51,9 @@ void serialEvent(Serial myPort) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the number of bytes to buffer before calling serialEvent()
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.buffer(<c>count</c>)
@@ -61,12 +61,12 @@ Sets the number of bytes to buffer before calling serialEvent()
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <parameter>
 <label>count</label>
-<description>int: number of bytes to buffer</description>
+<description><![CDATA[int: number of bytes to buffer]]></description>
 </parameter>
 
 <returns>int</returns>

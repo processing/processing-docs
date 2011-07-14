@@ -37,9 +37,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns a number between 0 and 255 for the next byte that's waiting in the buffer. Returns -1 if there is no byte, although this should be avoided by first cheacking <b>available()</b> to see if data is available.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.read()
@@ -47,7 +47,7 @@ Returns a number between 0 and 255 for the next byte that's waiting in the buffe
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns>int</returns>

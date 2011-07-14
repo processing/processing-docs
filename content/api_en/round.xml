@@ -24,9 +24,9 @@ int rz = round(z);  // Sets rz to 10
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the integer closest to the <b>value</b> parameter. For example, <b>round(9.2)</b> returns the value 9.
-</description>
+]]></description>
 
 <syntax>
 round(<c>value</c>)
@@ -34,7 +34,7 @@ round(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>float</description>
+<description><![CDATA[float]]></description>
 </parameter>
 
 <returns>int</returns>

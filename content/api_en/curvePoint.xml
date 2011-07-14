@@ -27,9 +27,9 @@ for (int i = 0; i &lt;= steps; i++) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Evalutes the curve at point t for points a, b, c, d. The parameter t varies between 0 and 1, a and d are points on the curve, and b and c are the control points. This can be done once with the x coordinates and a second time with the y coordinates to get the location of a curve at t.
-</description>
+]]></description>
 
 <syntax>
 curvePoint(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
@@ -37,27 +37,27 @@ curvePoint(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
 
 <parameter>
 <label>a</label>
-<description>int or float: coordinate of first point on the curve</description>
+<description><![CDATA[int or float: coordinate of first point on the curve]]></description>
 </parameter>
 
 <parameter>
 <label>b</label>
-<description>int or float: coordinate of second point on the curve</description>
+<description><![CDATA[int or float: coordinate of second point on the curve]]></description>
 </parameter>
 
 <parameter>
 <label>c</label>
-<description>int or float: coordinate of third point on the curve</description>
+<description><![CDATA[int or float: coordinate of third point on the curve]]></description>
 </parameter>
 
 <parameter>
 <label>d</label>
-<description>int or float: coordinate of fourth point on the curve</description>
+<description><![CDATA[int or float: coordinate of fourth point on the curve]]></description>
 </parameter>
 
 <parameter>
 <label>t</label>
-<description>float: value between 0 and 1</description>
+<description><![CDATA[float: value between 0 and 1]]></description>
 </parameter>
 
 <returns></returns>

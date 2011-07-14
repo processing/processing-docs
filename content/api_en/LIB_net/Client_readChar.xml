@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the next byte in the buffer as a char. Returns -1 or 0xffff if nothing is there.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.readChar()
@@ -43,7 +43,7 @@ Returns the next byte in the buffer as a char. Returns -1 or 0xffff if nothing i
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>char</returns>

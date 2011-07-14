@@ -21,9 +21,9 @@ println(c + " : " + i);  // Prints "E : 69"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts a primitive datatype, string, or array to its integer representation.
-</description>
+]]></description>
 
 <syntax>
 int(<c>value</c>)
@@ -31,7 +31,7 @@ int(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>boolean, float, char, byte, String, boolean[], float[], char[], byte[], String[]</description>
+<description><![CDATA[boolean, float, char, byte, String, boolean[], float[], char[], byte[], String[]]]></description>
 </parameter>
 
 <returns>int</returns>

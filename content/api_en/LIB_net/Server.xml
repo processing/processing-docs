@@ -30,9 +30,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 A server sends and receives data to and from its associated clients (other programs connected to it). When a server is started, it begins listening for connections on the port specified by the <b>port</b> parameter. Computers have many ports for transferring data and some are commonly used so be sure to not select one of these. For example, web servers usually use port 80 and POP mail uses port 110.
-</description>
+]]></description>
 
 <syntax>
 </syntax>

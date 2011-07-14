@@ -27,9 +27,9 @@ void setup()
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Opens the capture settings dialog box.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.settings()
@@ -37,7 +37,7 @@ Opens the capture settings dialog box.
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns></returns>

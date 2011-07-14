@@ -25,9 +25,9 @@ int h = min(list);            // Sets "h" to -3
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Determines the smallest value in a sequence of numbers.
-</description>
+]]></description>
 
 <syntax>
 min(<c>value1</c>, <c>value2</c>)
@@ -37,22 +37,22 @@ min(<c>array</c>)
 
 <parameter>
 <label>value1</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <parameter>
 <label>value2</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <parameter>
 <label>value3</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <parameter>
 <label>array</label>
-<description>int or float array</description>
+<description><![CDATA[int or float array]]></description>
 </parameter>
 
 <returns>int or float (depending on the inputs)</returns>

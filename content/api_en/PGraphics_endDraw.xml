@@ -32,9 +32,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Finalizes the rendering of a PGraphics object so that it can be shown on screen.
-</description>
+]]></description>
 
 <syntax>
 <c>graphics</c>.endDraw()
@@ -42,7 +42,7 @@ Finalizes the rendering of a PGraphics object so that it can be shown on screen.
 
 <parameter>
 <label>graphics</label>
-<description>any object of the type PGraphics</description>
+<description><![CDATA[any object of the type PGraphics]]></description>
 </parameter>
 
 

@@ -36,9 +36,9 @@ void clientEvent(Client someClient) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 This function is called when a server sends a byte to an existing Client object.
-</description>
+]]></description>
 
 <syntax>
 void clientEvent(<c>client</c>) {
@@ -48,12 +48,12 @@ void clientEvent(<c>client</c>) {
 
 <parameter>
 <label>statements</label>
-<description>any valid statements</description>
+<description><![CDATA[any valid statements]]></description>
 </parameter>
 
 <parameter>
 <label>client</label>
-<description>the client with new data</description>
+<description><![CDATA[the client with new data]]></description>
 </parameter>
 
 <returns></returns>

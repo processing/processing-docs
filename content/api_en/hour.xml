@@ -23,9 +23,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Processing communicates with the clock on your computer. The <b>hour()</b> function returns the current hour as a value from 0 - 23.
-</description>
+]]></description>
 
 <syntax>
 hour()

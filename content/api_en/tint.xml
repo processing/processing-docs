@@ -33,7 +33,7 @@ image(b, 50, 0);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the fill value for displaying images. Images can be tinted to specified colors or made transparent by setting the alpha. 
 <br/> <br/>
 To make an image transparent, but not change it's color, use white as the tint color and specify an alpha value. For instance, tint(255, 128) will make an image 50% transparent (unless <b>colorMode()</b> has been used).
@@ -43,7 +43,7 @@ When using hexadecimal notation to specify a color, use "#" or "0x" before the v
 The value for the parameter "gray" must be less than or equal to the current maximum value as specified by <b>colorMode()</b>. The default maximum value is 255.
 <br/> <br/>
 The tint() method is also used to control the coloring of textures in 3D. 
-</description>
+]]></description>
 
 <syntax>
 tint(<c>gray</c>)
@@ -58,37 +58,37 @@ tint(<c>hex</c>, <c>alpha</c>)
 
 <parameter>
 <label>gray</label>
-<description>int or float: any valid number</description>
+<description><![CDATA[int or float: any valid number]]></description>
 </parameter>
 
 <parameter>
 <label>alpha</label>
-<description>int or float: opacity of the image</description>
+<description><![CDATA[int or float: opacity of the image]]></description>
 </parameter>
 
 <parameter>
 <label>value1</label>
-<description>int or float: red or hue value</description>
+<description><![CDATA[int or float: red or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>value2</label>
-<description>int or float: green or saturation value</description>
+<description><![CDATA[int or float: green or saturation value]]></description>
 </parameter>
 
 <parameter>
 <label>value3</label>
-<description>int or float: blue or brightness value</description>
+<description><![CDATA[int or float: blue or brightness value]]></description>
 </parameter>
 
 <parameter>
 <label>color</label>
-<description>color: any value of the color datatype</description>
+<description><![CDATA[color: any value of the color datatype]]></description>
 </parameter>
 
 <parameter>
 <label>hex</label>
-<description>int: color value in hexadecimal notation (i.e. #FFCC00 or 0xFFFFCC00)</description>
+<description><![CDATA[int: color value in hexadecimal notation (i.e. #FFCC00 or 0xFFFFCC00)]]></description>
 </parameter>
 
 <returns>None</returns>

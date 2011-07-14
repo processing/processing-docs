@@ -18,9 +18,9 @@ println(fontList);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Gets a list of the fonts installed on the system. The data is returned as a String array. This list provides the names of each font for input into <b>createFont()</b>, which allows Processing to dynamically format fonts. This function is meant as a tool for programming local applications and is not recommended for use in applets.
-</description>
+]]></description>
 
 <syntax>
 <c>font</c>.list()
@@ -28,7 +28,7 @@ Gets a list of the fonts installed on the system. The data is returned as a Stri
 
 <parameter>
 <label>font</label>
-<description>any variable of type PFont</description>
+<description><![CDATA[any variable of type PFont]]></description>
 </parameter>
 
 <returns>String[]</returns>

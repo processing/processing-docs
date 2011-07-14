@@ -16,9 +16,9 @@ int h = g / 5;   // Sets h 2
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Divides the value of the second parameter by the value of the first parameter. The answer to the equation  20 / 4 is 5. The number 20 is the sum of 4 of the number 5. As an equation we see that 4 + 4 + 4 + 4 + 4 = 20.
-</description>
+]]></description>
 
 <syntax>
 <c>value1</c> / <c>value2</c>
@@ -26,12 +26,12 @@ Divides the value of the second parameter by the value of the first parameter. T
 
 <parameter>
 <label>value1</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <parameter>
 <label>value2</label>
-<description>int or float, but not zero (it is not possible  divide by zero)</description>
+<description><![CDATA[int or float, but not zero (it is not possible  divide by zero)]]></description>
 </parameter>
 
 <returns></returns>

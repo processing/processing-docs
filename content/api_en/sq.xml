@@ -21,9 +21,9 @@ rect(0, 65, c, 10);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Squares a number (multiplies a number by itself). The result is always a positive number, as multiplying two negative numbers always yields a positive result. For example, -1 * -1 = 1.
-</description>
+]]></description>
 
 <syntax>
 sq(<c>value</c>)
@@ -31,7 +31,7 @@ sq(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>int or float</description>
+<description><![CDATA[int or float]]></description>
 </parameter>
 
 <returns>float</returns>

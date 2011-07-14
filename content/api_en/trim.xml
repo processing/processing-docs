@@ -22,9 +22,9 @@ println(a2);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Removes whitespace characters from the beginning and end of a String. In addition to standard whitespace characters such as space, carriage return, and tab, this function also removes the Unicode "nbsp" character.
-</description>
+]]></description>
 
 <syntax>
 trim(<c>str</c>)
@@ -33,12 +33,12 @@ trim(<c>array</c>)
 
 <parameter>
 <label>str</label>
-<description>any String</description>
+<description><![CDATA[any String]]></description>
 </parameter>
 
 <parameter>
 <label>array</label>
-<description>a String array</description>
+<description><![CDATA[a String array]]></description>
 </parameter>
 
 <returns>String</returns>

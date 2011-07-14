@@ -23,9 +23,9 @@ if (folderPath == null) {
 </example>
 
 
-<description>
+<description><![CDATA[
 Opens a platform-specific file chooser dialog to select a folder for input. This function returns the full path to the selected folder as a <b>String</b>, or <b>null</b> if no selection.
-</description>
+]]></description>
 
 <syntax>
 selectFolder()
@@ -34,7 +34,7 @@ selectFolder(<c>prompt</c>)
 
 <parameter>
 <label>prompt</label>
-<description>String: message you want the user to see in the file chooser</description>
+<description><![CDATA[String: message you want the user to see in the file chooser]]></description>
 </parameter>
 
 

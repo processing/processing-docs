@@ -44,9 +44,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Empty the buffer, removes all the data stored there.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.clear()
@@ -54,7 +54,7 @@ Empty the buffer, removes all the data stored there.
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>None</returns>

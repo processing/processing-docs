@@ -46,9 +46,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Reads a group of bytes from the buffer. The version with no parameters returns a byte array of all data in the buffer. This is not efficient, but is easy to use. The version with the <b>byteBuffer</b> parameter is more memory and time efficient. It grabs the data in the buffer and puts it into the byte array passed in and returns an int value for the number of bytes read. If more bytes are available than can fit into the <b>byteBuffer</b>, only those that fit are read.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.readBytes()
@@ -57,12 +57,12 @@ Reads a group of bytes from the buffer. The version with no parameters returns a
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <parameter>
 <label>bytebuffer</label>
-<description>byte[]: passed in byte array to be altered</description>
+<description><![CDATA[byte[]: passed in byte array to be altered]]></description>
 </parameter>
 
 <returns>byte[] or int</returns>

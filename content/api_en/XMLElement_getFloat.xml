@@ -37,9 +37,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns a float attribute of the element. If the <b>default</b> parameter is used and the attribute doesn't exist, the <b>default</b> value is returned. When using the version of the method without the <b>default</b> parameter, if the attribute doesn't exist, the value 0 is returned.
-</description>
+]]></description>
 
 <syntax>
 <c>xml</c>.getFloat(<c>name</c>)
@@ -48,17 +48,17 @@ Returns a float attribute of the element. If the <b>default</b> parameter is use
 
 <parameter>
 <label>xml</label>
-<description>any variable of type XMLElement</description>
+<description><![CDATA[any variable of type XMLElement]]></description>
 </parameter>
 
 <parameter>
 <label>name</label>
-<description>String: the name of the attribute</description>
+<description><![CDATA[String: the name of the attribute]]></description>
 </parameter>
 
 <parameter>
 <label>default</label>
-<description>int: value returned if the attribute is not found</description>
+<description><![CDATA[int: value returned if the attribute is not found]]></description>
 </parameter>
 
 <returns>float</returns>

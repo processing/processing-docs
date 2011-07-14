@@ -27,9 +27,9 @@ switch(letter) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Denotes the different labels to be evaluated with the parameter in the <b>switch()</b> structure.
-</description>
+]]></description>
 
 <syntax>
 case <c>label</c>: <c>statements</c>
@@ -37,12 +37,12 @@ case <c>label</c>: <c>statements</c>
 
 <parameter>
 <label>label</label>
-<description>byte, char, or int</description>
+<description><![CDATA[byte, char, or int]]></description>
 </parameter>
 
 <parameter>
 <label>statements</label>
-<description>one or more valid statements</description>
+<description><![CDATA[one or more valid statements]]></description>
 </parameter>
 
 <returns></returns>

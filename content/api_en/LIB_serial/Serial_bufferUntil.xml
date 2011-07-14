@@ -47,9 +47,9 @@ void serialEvent(Serial p) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets a specific byte to buffer until before calling serialEvent().
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.bufferUntil(<c>what</c>)
@@ -57,12 +57,12 @@ Sets a specific byte to buffer until before calling serialEvent().
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <parameter>
 <label>what</label>
-<description>int: the value to buffer until</description>
+<description><![CDATA[int: the value to buffer until]]></description>
 </parameter>
 
 <returns>int</returns>

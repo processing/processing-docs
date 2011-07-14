@@ -22,9 +22,9 @@ rect(50, 20, 35, 60);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Extracts the saturation value from a color.
-</description>
+]]></description>
 
 <syntax>
 saturation(<c>color</c>)
@@ -32,7 +32,7 @@ saturation(<c>color</c>)
 
 <parameter>
 <label>color</label>
-<description>any value of the color datatype</description>
+<description><![CDATA[any value of the color datatype]]></description>
 </parameter>
 
 <returns>float</returns>

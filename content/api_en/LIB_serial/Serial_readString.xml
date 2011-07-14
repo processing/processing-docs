@@ -40,9 +40,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns all the data from the buffer as a String. This method assumes the incoming characters are ASCII. If you want to transfer Unicode data, first convert the String to a byte stream in the representation of your choice (i.e. UTF8 or two-byte Unicode data), and send it as a byte array.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.readString()
@@ -50,7 +50,7 @@ Returns all the data from the buffer as a String. This method assumes the incomi
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns>String</returns>

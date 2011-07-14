@@ -32,11 +32,11 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Creates a new file in the sketch folder, and a <b>PrintWriter</b> object to write to it. For the file to be made correctly, it should be flushed and must be closed with its <b>flush()</b> and <b>close()</b> methods (see above example). 
 <br/> <br/>
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
-</description>
+]]></description>
 
 <syntax>
 createWriter(<c>filename</c>)
@@ -44,7 +44,7 @@ createWriter(<c>filename</c>)
 
 <parameter>
 <label>filename</label>
-<description>Name of the file to be created</description>
+<description><![CDATA[Name of the file to be created]]></description>
 </parameter>
 
 <returns>PrintWriter or null</returns>

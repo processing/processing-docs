@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
+
 <name>binary()</name>
 
 <category>Data</category>
@@ -20,11 +21,11 @@ println(binary(c, 16)); // Prints 1100110000000000
 </example>
 
 
-<description>
+<description><![CDATA[
 Converts a byte, char, int, or color to a String containing the equivalent binary notation. For example color(0, 102, 153, 255) will convert to the String "11111111000000000110011010011001". This function can help make your geeky debugging sessions much happier.
 <br/> <br/>
 Note that the maximum number of digits is 32, because an int value can only represent up to 32 bits. Specifying more than 32 digits will simply shorten the string to 32 anyway.
-</description>
+]]></description>
 
 <syntax>
 binary(<c>value</c>)
@@ -33,12 +34,12 @@ binary(<c>value</c>, <c>digits</c>)
 
 <parameter>
 <label>value</label>
-<description>byte, char, int, color: value to convert</description>
+<description><![CDATA[byte, char, int, color: value to convert]]></description>
 </parameter>
 
 <parameter>
 <label>digits</label>
-<description>int: number of digits to return</description>
+<description><![CDATA[int: number of digits to return]]></description>
 </parameter>
 
 <returns>String</returns>
@@ -56,10 +57,6 @@ unbinary()
 <partof>IDE</partof>
 
 <level>extended</level>
-
-
-
-
 
 
 </root>

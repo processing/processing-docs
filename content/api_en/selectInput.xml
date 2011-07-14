@@ -23,9 +23,9 @@ if (loadPath == null) {
 </example>
 
 
-<description>
+<description><![CDATA[
 Opens a platform-specific file chooser dialog to select a file for input. This function returns the full path to the selected file as a <b>String</b>, or <b>null</b> if no selection.
-</description>
+]]></description>
 
 <syntax>
 selectInput()
@@ -34,7 +34,7 @@ selectInput(<c>prompt</c>)
 
 <parameter>
 <label>prompt</label>
-<description>String: message you want the user to see in the file chooser</description>
+<description><![CDATA[String: message you want the user to see in the file chooser]]></description>
 </parameter>
 
 

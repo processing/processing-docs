@@ -30,9 +30,9 @@ sphere(20);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the amount of gloss in the surface of shapes. Used in combination with <b>ambient()</b>, <b>specular()</b>, and <b>emissive()</b> in setting the material properties of shapes.
-</description>
+]]></description>
 
 <syntax>
 shininess(<c>shine</c>)
@@ -41,7 +41,7 @@ shininess(<c>shine</c>)
 
 <parameter>
 <label>shine</label>
-<description>float: degree of shininess</description>
+<description><![CDATA[float: degree of shininess]]></description>
 </parameter>
 
 <returns>None</returns>

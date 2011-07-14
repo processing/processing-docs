@@ -19,9 +19,9 @@ println(degrees(a));  // Prints "10.304827"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates and returns the angle (in radians) between two vectors.
-</description>
+]]></description>
 
 <syntax>
 PVector.angleBetween(<c>v1</c>, <c>v2</c>)
@@ -29,17 +29,17 @@ PVector.angleBetween(<c>v1</c>, <c>v2</c>)
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <parameter>
 <label>v1</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 

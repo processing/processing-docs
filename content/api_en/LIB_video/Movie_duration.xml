@@ -34,9 +34,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the length of the movie in seconds. If the movie is 1 minute and 20 seconds long the value returned will be 80.0.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.duration()
@@ -44,7 +44,7 @@ Returns the length of the movie in seconds. If the movie is 1 minute and 20 seco
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 <returns>float</returns>
 

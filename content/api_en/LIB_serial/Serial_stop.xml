@@ -49,9 +49,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Stops data communication on this port. Use to shut the connection when you're finished with the Serial.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.stop()
@@ -59,7 +59,7 @@ Stops data communication on this port. Use to shut the connection when you're fi
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns>int</returns>

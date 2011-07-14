@@ -33,9 +33,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Writes data to a <b>PrintWriter</b> object stream and then starts a new line.
-</description>
+]]></description>
 
 <syntax>
 <c>pw</c>.println(<c>data</c>)
@@ -43,12 +43,12 @@ Writes data to a <b>PrintWriter</b> object stream and then starts a new line.
 
 <parameter>
 <label>pw</label>
-<description>any object of the type PrintWriter</description>
+<description><![CDATA[any object of the type PrintWriter]]></description>
 </parameter>
 
 <parameter>
 <label>data</label>
-<description>boolean, byte, char, color, int, float, String</description>
+<description><![CDATA[boolean, byte, char, color, int, float, String]]></description>
 </parameter>
 
 

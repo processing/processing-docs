@@ -54,8 +54,7 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
-<![CDATA[
+<description><![CDATA[
 Defines the dimension of the display window in units of pixels. The <b>size()</b> function <em>must</em> be the first line in <b>setup()</b>. If <b>size()</b> is not called, the default size of the window is 100x100 pixels. The system variables <b>width</b> and <b>height</b> are set by the parameters passed to the <b>size()</b> function. <br /> <br />
 
 Do not use variables as the parameters to <b>size()</b> command, because it will cause problems when exporting your sketch. When variables are used, the dimensions of your sketch cannot be determined during export. Instead, employ numeric values in the <b>size()</b> statement, and then use the built-in <b>width</b> and <b>height</b> variables inside your program when you need the dimensions of the display window are needed. <br /><br />
@@ -85,8 +84,7 @@ Rendering graphics requires tradeoffs between speed, accuracy, and general usefu
 The maximum width and height is limited by your operating system, and is usually the width and height of your actual screen. On some machines it may simply be the number of pixels on your current screen, meaning that a screen that's 800x600 could support size(1600, 300), since it's the same number of pixels. This varies widely so you'll have to try different rendering modes and sizes until you get what you're looking for. If you need something larger, use <b>createGraphics</b> to create a non-visible drawing surface.
 <br/> <br/>
 Again, the size() method must be the first line of the code (or first item inside setup). Any code that appears before the size() command may run more than once, which can lead to confusing results.
-]]>
-</description>
+]]></description>
 
 <syntax>
 size(<c>width</c>, <c>height</c>)
@@ -95,17 +93,17 @@ size(<c>width</c>, <c>height</c>, <c>MODE</c>)
 
 <parameter>
 <label>width</label>
-<description>int: width of the display window in units of pixels</description>
+<description><![CDATA[int: width of the display window in units of pixels]]></description>
 </parameter>
 
 <parameter>
 <label>height</label>
-<description>int: height of the display window in units of pixels</description>
+<description><![CDATA[int: height of the display window in units of pixels]]></description>
 </parameter>
 
 <parameter>
 <label>MODE</label>
-<description>Either P2D, P3D, JAVA2D, or OPENGL</description>
+<description><![CDATA[Either P2D, P3D, JAVA2D, or OPENGL]]></description>
 </parameter>
 
 <returns>None</returns>

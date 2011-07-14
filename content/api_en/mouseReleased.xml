@@ -31,9 +31,9 @@ void mouseReleased() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The <b>mouseReleased()</b> function is called every time a mouse button is released.
-</description>
+]]></description>
 
 <syntax>
 void mouseReleased() {

@@ -26,9 +26,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Specifies the number of frames to be displayed every second. If the processor is not fast enough to maintain the specified rate, it will not be achieved. For example, the function call <b>frameRate(30)</b> will attempt to refresh 30 times a second. It is recommended to set the frame rate within <b>setup()</b>. The default rate is 60 frames per second.
-</description>
+]]></description>
 
 <syntax>
 frameRate(<c>fps</c>)
@@ -36,7 +36,7 @@ frameRate(<c>fps</c>)
 
 <parameter>
 <label>fps</label>
-<description>int: number of frames per second</description>
+<description><![CDATA[int: number of frames per second]]></description>
 </parameter>
 
 <returns>None</returns>

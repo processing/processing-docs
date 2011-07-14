@@ -32,9 +32,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Closes the <b>PrintWriter</b> object.
-</description>
+]]></description>
 
 <syntax>
 <c>pw</c>.close()
@@ -42,7 +42,7 @@ Closes the <b>PrintWriter</b> object.
 
 <parameter>
 <label>pw</label>
-<description>any object of the type PrintWriter</description>
+<description><![CDATA[any object of the type PrintWriter]]></description>
 </parameter>
 
 

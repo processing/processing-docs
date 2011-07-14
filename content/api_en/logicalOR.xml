@@ -19,9 +19,9 @@ for(int i=5 ; i&lt;=95; i+=5) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Compares two expressions and returns <b>true</b> if one or both evaluate to <b>true</b>. Returns <b>false</b> only if both expressions are <b>false</b>. The following list shows all possible combinations:<br /><br /><tt>true || false   // Evaluates true because the first is true <br />false || true   // Evaluates true because the second is true <br />true || true    // Evaluates true because both are true <br />false || false  // Evaluates false because both are false</tt> 
-</description>
+]]></description>
 
 <syntax>
 <c>expression1</c> || <c>expression2</c>
@@ -29,12 +29,12 @@ Compares two expressions and returns <b>true</b> if one or both evaluate to <b>t
 
 <parameter>
 <label>expression1</label>
-<description>any valid expression</description>
+<description><![CDATA[any valid expression]]></description>
 </parameter>
 
 <parameter>
 <label>expression2</label>
-<description>any valid expression</description>
+<description><![CDATA[any valid expression]]></description>
 </parameter>
 
 <returns></returns>

@@ -21,9 +21,9 @@ if (b) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts an int, string, or array to its boolean representation. For int calues, the number 0 evaluates to false and all other numbers evaluate to true. 
-</description>
+]]></description>
 
 <syntax>
 boolean(<c>val</c>)
@@ -31,7 +31,7 @@ boolean(<c>val</c>)
 
 <parameter>
 <label>val</label>
-<description>int, int[], String, String[]</description>
+<description><![CDATA[int, int[], String, String[]]]></description>
 </parameter>
 
 <returns>boolean</returns>

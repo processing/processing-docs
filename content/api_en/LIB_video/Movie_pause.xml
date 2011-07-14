@@ -42,9 +42,9 @@ void mouseReleased() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Pauses a movie during playback. If a movie is started again with play(), it will continue from where it was paused.
-</description>
+]]></description>
 
 <syntax>
 <c>mov</c>.pause()
@@ -52,7 +52,7 @@ Pauses a movie during playback. If a movie is started again with play(), it will
 
 <parameter>
 <label>mov</label>
-<description>any variable of type Movie</description>
+<description><![CDATA[any variable of type Movie]]></description>
 </parameter>
 
 <returns></returns>

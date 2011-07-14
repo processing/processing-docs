@@ -23,9 +23,9 @@ sphere(30);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Used in combination with <b>ambient()</b>, <b>specular()</b>, and <b>shininess()</b> in setting the material properties of shapes.
-</description>
+]]></description>
 
 <syntax>
 emissive(<c>gray</c>)
@@ -36,27 +36,27 @@ emissive(<c>v1</c>, <c>v2</c>, <c>v3</c>)
 
 <parameter>
 <label>gray</label>
-<description>int or float: number specifying value between white and black</description>
+<description><![CDATA[int or float: number specifying value between white and black]]></description>
 </parameter>
 
 <parameter>
 <label>color</label>
-<description>color: any value of the color datatype</description>
+<description><![CDATA[color: any value of the color datatype]]></description>
 </parameter>
 
 <parameter>
 <label>v1</label>
-<description>int or float: red or hue value</description>
+<description><![CDATA[int or float: red or hue value]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>int or float: green or saturation value</description>
+<description><![CDATA[int or float: green or saturation value]]></description>
 </parameter>
 
 <parameter>
 <label>v3</label>
-<description>int or float: blue or brightness value</description>
+<description><![CDATA[int or float: blue or brightness value]]></description>
 </parameter>
 
 <returns>None</returns>

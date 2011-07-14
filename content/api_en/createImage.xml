@@ -36,13 +36,13 @@ image(img, 34, 34);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Creates a new PImage (the datatype for storing images). This provides a fresh buffer of pixels to play with. Set the size of the buffer with the <b>width</b> and <b>height</b> parameters. The <b>format</b> parameter defines how the pixels are stored. See the PImage reference for more information.
 <br/> <br/>
 Be sure to include all three parameters, specifying only the width and height (but no format) will produce a strange error.
 <br/> <br/>
 Advanced users please note that createImage() should be used instead of the syntax <tt>new PImage()</tt>. 
-</description>
+]]></description>
 
 <syntax>
 createImage(<c>width</c>, <c>height</c>, <c>format</c>)
@@ -50,17 +50,17 @@ createImage(<c>width</c>, <c>height</c>, <c>format</c>)
 
 <parameter>
 <label>width</label>
-<description>int: width in pixels</description>
+<description><![CDATA[int: width in pixels]]></description>
 </parameter>
 
 <parameter>
 <label>height</label>
-<description>int: height in pixels</description>
+<description><![CDATA[int: height in pixels]]></description>
 </parameter>
 
 <parameter>
 <label>format</label>
-<description>Either RGB, ARGB, ALPHA (grayscale alpha channel)</description>
+<description><![CDATA[Either RGB, ARGB, ALPHA (grayscale alpha channel)]]></description>
 </parameter>
 
 <returns>PImage or null</returns>

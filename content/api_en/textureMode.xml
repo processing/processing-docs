@@ -40,9 +40,9 @@ endShape();
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the coordinate space for texture mapping. There are two options, IMAGE, which refers to the actual coordinates of the image, and NORMALIZED, which refers to a normalized space of values ranging from 0 to 1. The default mode is IMAGE. In IMAGE, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (0,100) (100,200) (0,200). The same mapping in NORMAL_SPACE is (0,0) (0,1) (1,1) (0,1).
-</description>
+]]></description>
 
 <syntax>
 textureMode(<c>MODE</c>); 
@@ -50,7 +50,7 @@ textureMode(<c>MODE</c>);
 
 <parameter>
 <label>MODE</label>
-<description>either IMAGE or NORMALIZED</description>
+<description><![CDATA[either IMAGE or NORMALIZED]]></description>
 </parameter>
 
 <returns>None</returns>

@@ -33,9 +33,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
  Sets how often frames are read from a capture device such as a camera. Setting the fps parameter to 4, for example, will cause 4 frames to be read per second.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.frameRate()
@@ -43,7 +43,7 @@ void draw() {
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <returns></returns>

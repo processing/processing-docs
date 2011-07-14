@@ -24,9 +24,9 @@ float log10 (int x) {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Calculates the natural logarithm (the base-<i>e</i> logarithm) of a number. This function expects the values greater than 0.0.
-</description>
+]]></description>
 
 <syntax>
 log(<c>value</c>)
@@ -34,7 +34,7 @@ log(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>int or float: number must be greater then 0.0</description>
+<description><![CDATA[int or float: number must be greater then 0.0]]></description>
 </parameter>
 
 <returns>float</returns>

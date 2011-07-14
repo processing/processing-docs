@@ -21,9 +21,9 @@ println(b + " : " + c);  // Prints "65 : A"
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Converts a primitive datatype or array to a numeric character representation.
-</description>
+]]></description>
 
 <syntax>
 char(<c>val</c>)
@@ -31,7 +31,7 @@ char(<c>val</c>)
 
 <parameter>
 <label>val</label>
-<description>int, byte, int[], byte[]</description>
+<description><![CDATA[int, byte, int[], byte[]]]></description>
 </parameter>
 
 <returns>char</returns>

@@ -30,9 +30,9 @@ println(sb);  // Prints 'false-28R-32.61024'
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the string representation of primitive datatypes and arrays. For example the integer 3 will return the string "3", the float -12.6 will return the string "-12.6", and a boolean value true will return the string "true".
-</description>
+]]></description>
 
 <syntax>
 str(<c>data</c>)
@@ -40,7 +40,7 @@ str(<c>data</c>)
 
 <parameter>
 <label>data</label>
-<description>boolean, byte, char, float, int, boolean[], byte[], char[], float[], int[]</description>
+<description><![CDATA[boolean, byte, char, float, int, boolean[], byte[], char[], float[], int[]]]></description>
 </parameter>
 
 <returns>String or String[]</returns>

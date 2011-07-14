@@ -36,9 +36,9 @@ void setup() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns the name of the element.
-</description>
+]]></description>
 
 <syntax>
 <c>xml</c>.getName()
@@ -46,7 +46,7 @@ Returns the name of the element.
 
 <parameter>
 <label>xml</label>
-<description>any variable of type XMLElement</description>
+<description><![CDATA[any variable of type XMLElement]]></description>
 </parameter>
 
 <returns>String</returns>

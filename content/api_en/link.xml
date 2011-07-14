@@ -35,9 +35,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Links to a webpage either in the same window or in a new window. The complete URL must be specified.
-</description>
+]]></description>
 
 <syntax>
 link(<c>url</c>)
@@ -46,12 +46,12 @@ link(<c>url</c>, <c>target</c>)
 
 <parameter>
 <label>url</label>
-<description>String: complete url as a String in quotes</description>
+<description><![CDATA[String: complete url as a String in quotes]]></description>
 </parameter>
 
 <parameter>
 <label>target</label>
-<description>String: name of the window to load the URL as a string in quotes</description>
+<description><![CDATA[String: name of the window to load the URL as a string in quotes]]></description>
 </parameter>
 
 <returns>None</returns>

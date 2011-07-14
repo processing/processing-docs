@@ -31,9 +31,9 @@ void keyPressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Complement to <b>beginRaw()</b>; they must always be used together. See the <a href="http://www.processing.org/reference/beginRaw_.html"><b>beginRaw()</b></a> reference for details.
-</description>
+]]></description>
 
 <syntax>
 endRaw()

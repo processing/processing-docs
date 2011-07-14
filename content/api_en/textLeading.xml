@@ -29,9 +29,9 @@ text(lines, 68, 25);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function.
-</description>
+]]></description>
 
 <syntax>
 textLeading(<c>dist</c>)
@@ -39,7 +39,7 @@ textLeading(<c>dist</c>)
 
 <parameter>
 <label>dist</label>
-<description>int or float: the size in pixels for spacing between lines</description>
+<description><![CDATA[int or float: the size in pixels for spacing between lines]]></description>
 </parameter>
 
 <returns>None</returns>

@@ -39,9 +39,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Disconnects from the server. Use to shut the connection when you're finished with the Client.
-</description>
+]]></description>
 
 <syntax>
 <c>client</c>.stop()
@@ -49,7 +49,7 @@ Disconnects from the server. Use to shut the connection when you're finished wit
 
 <parameter>
 <label>client</label>
-<description>any variable of type Client</description>
+<description><![CDATA[any variable of type Client]]></description>
 </parameter>
 
 <returns>int</returns>

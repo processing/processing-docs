@@ -29,9 +29,9 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Stops the recording process started by <b>beginRecord()</b> and closes the file.
-</description>
+]]></description>
 
 <syntax>
 endRecord()

@@ -30,9 +30,9 @@ println(a + " : " + t + " : " +  at);
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 The inverse of <b>tan()</b>, returns the arc tangent of a value. This function expects the values in the range of -Infinity to Infinity (exclusive) and values are returned in the range <b>-PI/2</b> to <b>PI/2 </b>.
-</description>
+]]></description>
 
 <syntax>
 atan(<c>value</c>)
@@ -40,7 +40,7 @@ atan(<c>value</c>)
 
 <parameter>
 <label>value</label>
-<description>float: -Infinity to Infinity (exclusive)</description>
+<description><![CDATA[float: -Infinity to Infinity (exclusive)]]></description>
 </parameter>
 
 <returns>float</returns>

@@ -37,9 +37,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Returns last byte received.
-</description>
+]]></description>
 
 <syntax>
 <c>serial</c>.last()
@@ -47,7 +47,7 @@ Returns last byte received.
 
 <parameter>
 <label>serial</label>
-<description>any variable of type Serial</description>
+<description><![CDATA[any variable of type Serial]]></description>
 </parameter>
 
 <returns>int</returns>

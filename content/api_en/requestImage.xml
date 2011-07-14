@@ -31,11 +31,11 @@ void draw() {
 </example>
 
 
-<description>
+<description><![CDATA[
 This function load images on a separate thread so that your sketch does not freeze while images load during <b>setup()</b>. While the image is loading, its width and height will be 0. If an error occurs while loading the image, its width and height will be set to -1. You'll know when the image has loaded properly because its width and height will be greater than 0. Asynchronous image loading (particularly when downloading from a server) can dramatically improve performance.<br />
 <br/>
 The <b>extension</b> parameter is used to determine the image type in cases where the image filename does not end with a proper extension. Specify the extension as the second parameter to <b>requestImage()</b>.
-</description>
+]]></description>
 
 <syntax>
 requestImage(<c>filename</c>)
@@ -44,12 +44,12 @@ requestImage(<c>filename</c>, <c>extension</c>)
 
 <parameter>
 <label>filename</label>
-<description>String: name of file to load, can be .gif, .jpg, .tga, or a handful of other image types depending on your platform</description>
+<description><![CDATA[String: name of file to load, can be .gif, .jpg, .tga, or a handful of other image types depending on your platform]]></description>
 </parameter>
 
 <parameter>
 <label>extension</label>
-<description>String: the type of image to load, for example "png", "gif", "jpg"</description>
+<description><![CDATA[String: the type of image to load, for example "png", "gif", "jpg"]]></description>
 </parameter>
 
 <returns>PImage or null</returns>

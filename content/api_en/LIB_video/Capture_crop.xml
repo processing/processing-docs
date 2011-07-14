@@ -35,9 +35,9 @@ void draw() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Crops the frame coming in from the camera. It seems common for cameras add lines to the top or bottom of an image and this can be useful for removing them. The parameters are affected by the current <b>imageMode()</b> from the parent applet. The <b>imageMode()</b> function changes the way the parameters work. For example, <b>imageMode(CENTER)</b> will change <b>x</b> and <b>y</b> to define the center of the image. A call to <b>imageMode(CORNERS)</b> will change the width and height parameters to define the <b>x</b> and <b>y</b> values of the opposite corner of the image.
-</description>
+]]></description>
 
 <syntax>
 <c>cam</c>.crop(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
@@ -45,27 +45,27 @@ Crops the frame coming in from the camera. It seems common for cameras add lines
 
 <parameter>
 <label>cam</label>
-<description>any variable of type Capture</description>
+<description><![CDATA[any variable of type Capture]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>int or float: x-coordinate of the image</description>
+<description><![CDATA[int or float: x-coordinate of the image]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>int or float: y-coordinate of the image</description>
+<description><![CDATA[int or float: y-coordinate of the image]]></description>
 </parameter>
 
 <parameter>
 <label>width</label>
-<description>int or float: width to display the image</description>
+<description><![CDATA[int or float: width to display the image]]></description>
 </parameter>
 
 <parameter>
 <label>height</label>
-<description>int or float: width to display the image</description>
+<description><![CDATA[int or float: width to display the image]]></description>
 </parameter>
 
 <returns></returns>

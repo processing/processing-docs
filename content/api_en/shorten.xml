@@ -19,11 +19,11 @@ println(sa2);  // sa2 now contains OH, NY
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Decreases an array by one element and returns the shortened array.
 <br/> <br/>
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) shorten(originalArray)</em>.
-</description>
+]]></description>
 
 <syntax>
 shorten(<c>array</c>)
@@ -31,7 +31,7 @@ shorten(<c>array</c>)
 
 <parameter>
 <label>array</label>
-<description>boolean[], byte[], char[], int[], float[], or String[], or an array of objects</description>
+<description><![CDATA[boolean[], byte[], char[], int[], float[], or String[], or an array of objects]]></description>
 </parameter>
 
 <returns>Array (the same datatype as the input)</returns>

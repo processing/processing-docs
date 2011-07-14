@@ -30,13 +30,13 @@ void mousePressed() {
 ]]></code>
 </example>
 
-<description>
+<description><![CDATA[
 Rotates a shape around the y-axis the amount specified by the <b>angle</b> parameter. Angles should be specified in radians (values from 0 to TWO_PI) or converted to radians with the <b>radians()</b> method.
 <br /><br />
 Shapes are always rotated around the upper-left corner of their bounding box. Positive numbers rotate objects in a clockwise direction. Subsequent calls to the method accumulates the effect. For example, calling <b>rotateY(HALF_PI)</b> and then <b>rotateY(HALF_PI)</b> is the same as <b>rotateY(PI)</b>. This transformation is applied directly to the shape, it's not refreshed each time <b>draw()</b> is run. 
 <br /><br />
 This method requires a 3D renderer. You need to pass P3D or OPENGL as a third parameter into the <b>size()</b> method as shown in the example above.
-</description>
+]]></description>
 
 <syntax>
 <c>sh</c>.rotateY(<c>angle</c>)
@@ -44,12 +44,12 @@ This method requires a 3D renderer. You need to pass P3D or OPENGL as a third pa
 
 <parameter>
 <label>sh</label>
-<description>PShape: any variable of type PShape</description>
+<description><![CDATA[PShape: any variable of type PShape]]></description>
 </parameter>
 
 <parameter>
 <label>angle</label>
-<description>float: angle of rotation specified in radians</description>
+<description><![CDATA[float: angle of rotation specified in radians]]></description>
 </parameter>
 <returns>none</returns>
 

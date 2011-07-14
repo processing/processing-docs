@@ -72,9 +72,9 @@ void draw() {
 </example>
 
 
-<description>
+<description><![CDATA[
 Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.
-</description>
+]]></description>
 
 <syntax>
 <c>vec</c>.sub(<c>x</c>, <c>y</c>, <c>z</c>)
@@ -84,42 +84,42 @@ PVector.sub(<c>v1</c>, <c>v2</c>)
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <parameter>
 <label>x</label>
-<description>float: the x component of the vector</description>
+<description><![CDATA[float: the x component of the vector]]></description>
 </parameter>
 
 <parameter>
 <label>y</label>
-<description>float: the y component of the vector</description>
+<description><![CDATA[float: the y component of the vector]]></description>
 </parameter>
 
 <parameter>
 <label>z</label>
-<description>float: the z component of the vector</description>
+<description><![CDATA[float: the z component of the vector]]></description>
 </parameter>
 
 <parameter>
 <label>v</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>v1</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>v2</label>
-<description>PVector: the x, y, and z components of a PVector object</description>
+<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
 </parameter>
 
 <parameter>
 <label>vec</label>
-<description>any variable of type PVector</description>
+<description><![CDATA[any variable of type PVector]]></description>
 </parameter>
 
 <returns>None or PVector</returns>
