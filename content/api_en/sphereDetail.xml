@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(100, 100, P3D); 
 }
@@ -25,7 +25,7 @@ void draw() {
   sphereDetail(mouseX / 4);
   sphere(40);
 }
-</code>
+]]></code>
 </example>
 
 <description>

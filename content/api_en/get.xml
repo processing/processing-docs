@@ -11,24 +11,24 @@
 
 <example>
 <image>get_.jpg</image>
-<code>
+<code><![CDATA[
 PImage myImage = loadImage("topanga.jpg");
 image(myImage, 0, 0);
 PImage cp = get();
 image(cp, 50, 0);
 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>get_2.jpg</image>
-<code>
+<code><![CDATA[
 PImage myImage = loadImage("topanga.jpg");
 image(myImage, 0, 0);
 color cp = get(30, 20);
 fill(cp);
 rect(30, 20, 55, 55);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,43 +11,43 @@
 <example>
 <image>for_.gif</image>
 <applet></applet>
-<code>
+<code><![CDATA[
 for (int i = 0; i &lt; 40; i = i+1) {
   line(30, i, 80, i);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image>for_2.gif</image>
 <applet></applet>
-<code>
+<code><![CDATA[
 for (int i = 0; i &lt; 80; i = i+5) {
   line(30, i, 80, i);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image>for_3.gif</image>
 <applet></applet>
-<code>
+<code><![CDATA[
 for (int i = 40; i &lt; 80; i = i+5) {
   line(30, i, 80, i);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image>for_4.gif</image>
 <applet></applet>
-<code>
+<code><![CDATA[
 for (int i = 30; i &lt; 80; i = i+5) {
   for (int j = 0; j &lt; 80; j = j+5) {
     point(i, j);
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

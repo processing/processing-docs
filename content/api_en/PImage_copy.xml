@@ -11,11 +11,11 @@
 
 <example>
 <image>PImage_copy.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("tower.jpg");
 img.copy(50, 0, 50, 100, 0, 0, 50, 100); 
 image(img, 0, 0);
-</code>
+]]></code>
 </example>
 
 <description>

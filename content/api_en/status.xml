@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Move mouse left and right and see the text
 // change in the lower-left corner of your browser
 void draw() {
@@ -20,7 +20,7 @@ void draw() {
     status("right");
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

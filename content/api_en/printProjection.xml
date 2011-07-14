@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 printProjection();
 
@@ -19,7 +19,7 @@ printProjection();
 // 00.0000  01.7321  00.0000  00.0000
 // 00.0000  00.0000 -01.0202 -17.4955
 // 00.0000  00.0000 -01.0000  00.0000
-</code>
+]]></code>
 </example>
 
 <description>

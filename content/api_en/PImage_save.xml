@@ -10,22 +10,22 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("tower.jpg");
 img.save("img.jpg");
 
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 size(100, 100);
 PImage img = loadImage("tower.jpg");
 PImage newImg = createImage(100, 100, RGB);
 newImg = img.get();
 newImg.save("newImg.jpg");
-</code>
+]]></code>
 </example>
 
 <description>

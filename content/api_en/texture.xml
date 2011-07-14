@@ -10,7 +10,7 @@
 
 <example>
 <image>texture_.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 noStroke();
 PImage a = loadImage("arch.jpg");
@@ -21,7 +21,7 @@ vertex(80, 5, 100, 0);
 vertex(95, 90, 100, 100);
 vertex(40, 95, 0, 100);
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

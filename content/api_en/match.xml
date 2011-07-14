@@ -10,17 +10,17 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String s = "Inside a tag, you will find &lt;tag&gt;content&lt;/tag&gt;.";
 String[] m = match(s, "&lt;tag&gt;(\\\\S+)&lt;/tag&gt;");
 println("Found " + m[1] + " inside the tag.");
 // Prints "Found content inside the tag." to the console
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String s1 = "Have you ever heard of a thing called fluoridation. 
              Fluoridation of water?";
 String s2 = "Uh? Yes, I-I have heard of that, Jack, yes. Yes.";
@@ -40,7 +40,7 @@ if (m2 != null) {
   // This will print to the console.
   println("No match found in '" + s2 + "'");  
 }
-</code>
+]]></code>
 </example>
 
 <description>

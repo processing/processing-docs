@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 char letter = 'F';
 
 switch(letter) {
@@ -24,7 +24,7 @@ switch(letter) {
     println("Zulu");   // Prints "Zulu"
     break;
 }
-</code>
+]]></code>
 </example>
 
 <description>

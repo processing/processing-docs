@@ -10,9 +10,9 @@
 
 <example>
 <image>quad_.gif</image>
-<code>
+<code><![CDATA[
 quad(38, 31, 86, 20, 69, 63, 30, 76);
-</code>
+]]></code>
 </example>
 
 <description>

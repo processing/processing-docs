@@ -10,24 +10,24 @@
 
 <example>
 <image>PImage_get.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("tower.jpg");
 background(img);
 noStroke(); 
 color c = img.get(60, 90); 
 fill(c); 
 rect(25, 25, 50, 50); 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>PImage_get2.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("tower.jpg");
 background(img);
 PImage b = img.get(50, 0, 50, 100); 
 image(b, 0, 0);  
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,19 +10,19 @@
 
 <example>
 <image>vertex_.gif</image>
-<code>
+<code><![CDATA[
 beginShape(POINTS);
 vertex(30, 20);
 vertex(85, 20);
 vertex(85, 75);
 vertex(30, 75);
 endShape();
-</code>
+]]></code>
 </example>
 
 <example>
 <image>vertex_3.gif</image>
-<code>
+<code><![CDATA[
 // Drawing vertices in 3D requires P3D
 // or OPENGL as a parameter to size()
 size(100, 100, P3D);
@@ -32,12 +32,12 @@ vertex(85, 20, -50);
 vertex(85, 75, -50);
 vertex(30, 75, -50);
 endShape();
-</code>
+]]></code>
 </example>
 
 <example>
 <image>vertex_2.gif</image>
-<code>
+<code><![CDATA[
 noStroke();
 PImage a = loadImage("arch.jpg");
 beginShape();
@@ -51,7 +51,7 @@ vertex(80, 5, 100, 0);
 vertex(95, 90, 100, 100);
 vertex(40, 95, 0, 100);
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

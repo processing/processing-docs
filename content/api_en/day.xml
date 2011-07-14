@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   PFont metaBold;
   metaBold = loadFont("fonts/Meta-Bold.vlw.gz"); 
@@ -29,7 +29,7 @@ void draw() {
   s = String.valueOf(y);
   text(s, 10, 84);
 }
-</code>
+]]></code>
 </example>
 
 <description>

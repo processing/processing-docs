@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 <![CDATA[
 // Open a file and read its binary data 
 byte b[] = loadBytes("something.dat"); 
@@ -29,7 +29,7 @@ for (int i = 0; i &lt; b.length; i++) {
 // Print a blank line at the end 
 println(); 
 ]]>
-</code>
+]]></code>
 </example>
 
 <description>

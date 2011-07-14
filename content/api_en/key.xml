@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Click on the window to give it focus
 // and press the 'B' key
 
@@ -24,7 +24,7 @@ void draw() {
   }
   rect(25, 25, 50, 50);
 }
-</code>
+]]></code>
 </example>
 
 <description>

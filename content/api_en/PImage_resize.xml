@@ -10,22 +10,22 @@
 
 <example>
 <image>PImage_resize.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("jelly.jpg");
 image(img, 0, 0);
 img.resize(100, 50);
 image(img, 0, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>PImage_resize_2.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("jelly.jpg");
 image(img, 0, 0);
 img.resize(0, 50);
 image(img, 0, 0);
-</code>
+]]></code>
 </example>
 
 <description>

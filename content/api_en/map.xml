@@ -12,12 +12,12 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 size(400, 400);
 float value = 25;
 float m = map(value, 0, 100, 0, width);
 ellipse(m, 200, 10, 10);
-</code>
+]]></code>
 </example>
 
 <description>

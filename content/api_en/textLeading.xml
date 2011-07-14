@@ -10,7 +10,7 @@
 
 <example>
 <image>textLeading_.gif</image>
-<code>
+<code><![CDATA[
 PFont font;
 // The font must be located in the sketch's 
 // "data" directory to load successfully 
@@ -26,7 +26,7 @@ text(lines, 36, 25);
 fill(0);    // Set value to black
 textLeading(30);
 text(lines, 68, 25); 
-</code>
+]]></code>
 </example>
 
 <description>

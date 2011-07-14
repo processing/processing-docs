@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PShape s;
 
 void setup() {
@@ -28,7 +28,7 @@ void mousePressed() {
   // Rotate the shape each time the mouse is pressed
   s.rotate(0.1);  
 }
-</code>
+]]></code>
 </example>
 
 <description>

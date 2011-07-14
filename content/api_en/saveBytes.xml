@@ -10,12 +10,12 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 byte[] nums = { 0, 34, 5, 127, 52};
 
 // now write the bytes to a file
 saveBytes("numbers.dat", nums);
-</code>
+]]></code>
 </example>
 
 <description>

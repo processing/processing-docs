@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(200, 200);
 }
@@ -24,13 +24,13 @@ void mousePressed() {
   open("/Applications/Process_4.app");
 }
 
-</code>
+]]></code>
 </example>
 
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(200, 200);
 }
@@ -44,7 +44,7 @@ void mousePressed() {
   open(params);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

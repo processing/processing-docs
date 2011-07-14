@@ -10,7 +10,7 @@
 
 <example>
 <image>endShape_.gif</image>
-<code>
+<code><![CDATA[
 noFill();
 
 beginShape();
@@ -25,7 +25,7 @@ vertex(75, 20);
 vertex(75, 80);
 endShape();
 
-</code>
+]]></code>
 </example>
 
 <description>

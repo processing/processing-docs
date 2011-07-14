@@ -10,11 +10,11 @@
 
 <example>
 <image>PImage.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("laDefense.jpg");
 image(b, 0, 0);
-</code>
+]]></code>
 </example>
 
 <description>

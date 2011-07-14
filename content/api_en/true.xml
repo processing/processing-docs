@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 rect(30, 20, 50, 50);
 boolean b = true;
 if(b == true) {
@@ -18,7 +18,7 @@ if(b == true) {
 } else {
   line(20, 80, 90, 10); 
 }
-</code>
+]]></code>
 </example>
 
 <description>

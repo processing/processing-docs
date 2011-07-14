@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Declare and contruct two objects (h1, h2) from the class HLine 
 HLine h1 = new HLine(20, 2.0); 
 HLine h2 = new HLine(50, 2.5); 
@@ -41,7 +41,7 @@ class HLine {
     line(0, ypos, width, ypos); 
   } 
 } 
-</code>
+]]></code>
 </example>
 
 <description>

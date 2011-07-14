@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(100, 100, P3D);
 }
@@ -38,7 +38,7 @@ void draw() {
   float theX = screenX(x, y, z);
   line(theX, 0, 0, theX, height, 0);    
 } 
-</code>
+]]></code>
 </example>
 
 <description>

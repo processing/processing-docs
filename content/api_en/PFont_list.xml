@@ -11,11 +11,11 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 size(200, 200);
 String[] fontList = PFont.list();
 println(fontList);
-</code>
+]]></code>
 </example>
 
 <description>

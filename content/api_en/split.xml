@@ -10,29 +10,29 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String men = "Chernenko,Andropov,Brezhnev";
 String[] list = split(men, ',');
 // list[0] is now Chernenko, list[1] is Andropov, ...
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String numbers = "8 67 5 309";
 int[] nums = int(split(numbers, ' '));
 // nums[0] is now 8, nums[1] is now 67, ...
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String men = "Chernenko ] Andropov ] Brezhnev";
 String[] list = split(men, " ] ");
 // list[0] is now Chernenko, list[1] is Andropov, ...
-</code>
+]]></code>
 </example>
 
 <description>

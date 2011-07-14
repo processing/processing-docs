@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PrintWriter output;
 
 void setup() {
@@ -30,7 +30,7 @@ void keyPressed() {
   exit(); // Stops the program
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

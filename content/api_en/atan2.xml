@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void draw() {
   background(204);
   translate(width/2, height/2);
@@ -18,7 +18,7 @@ void draw() {
   rotate(a);
   rect(-12, -5, 24, 10);
 }
-</code>
+]]></code>
 </example>
 
 <description>

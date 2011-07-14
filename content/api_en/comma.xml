@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <applet></applet>
-<code>
+<code><![CDATA[
 // Comma used to separate a list of variable declarations
 int a=20, b=30, c=80;
 
@@ -21,7 +21,7 @@ int[] d = { 20, 60, 80 };
 // Comma used to separate a list of parameters passed to a function
 line(a, b, c, b);
 line(d[0], d[1], d[2], d[1]);
-</code>
+]]></code>
 </example>
 
 <description>

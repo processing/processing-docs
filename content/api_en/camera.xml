@@ -10,7 +10,7 @@
 
 <example>
 <image>lookat_.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 noFill();
 background(204);
@@ -20,7 +20,7 @@ translate(50, 50, 0);
 rotateX(-PI/6);
 rotateY(PI/3);
 box(45);
-</code>
+]]></code>
 </example>
 
 <description>

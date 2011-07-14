@@ -15,6 +15,7 @@ javadoc -doclet ProcessingWeblet \
 	-corepackage processing.xml \
 	-rootclass PGraphics \
 	-rootclass PConstants \
+	-noisy \
         ../../../processing/core/src/processing/core/*.java \
     #    ../../../processing/core/src/processing/xml/*.java \
     #    ../../../processing/java/libraries/net/src/processing/net/*.java \

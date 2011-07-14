@@ -11,18 +11,18 @@
 
 <example>
 <image>filter_.jpg</image>
-<code>
+<code><![CDATA[
 PImage a;
 a = loadImage("archcrop.jpg");
 image(a, 0, 0);
 a.filter(GRAY);
 image(a, 50, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>filter_2.gif</image>
-<code>
+<code><![CDATA[
 PImage a, b;
 a = loadImage("archcrop.jpg");
 b = loadImage("archcrop.jpg");
@@ -30,7 +30,7 @@ a.filter(THRESHOLD, .6);
 image(a, 0, 0);
 b.filter(THRESHOLD, .4);
 image(b, 50, 0);
-</code>
+]]></code>
 </example>
 
 <description>

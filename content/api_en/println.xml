@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 println("begin");
 float f = 0.3;
 println("f is equal to " + f + " and i is equal to " + 1024);
@@ -21,12 +21,12 @@ println(s);
 // begin
 // f is equal to 0.3 and i is equal to 1024
 // end
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 float[] f = { 0.3, 0.4, 0.5 };
 println(f);
 
@@ -34,7 +34,7 @@ println(f);
 // 0.3
 // 0.4
 // 0.5
-</code>
+]]></code>
 </example>
 
 <description>

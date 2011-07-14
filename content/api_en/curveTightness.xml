@@ -10,7 +10,7 @@
 
 <example>
 <image>curveTightness_.gif</image>
-<code>
+<code><![CDATA[
 // White curve 
 noFill();
 stroke(255); 
@@ -46,7 +46,7 @@ curveVertex(83, 61);
 curveVertex(25, 65); 
 curveVertex(25, 65);
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Click on the image to give it focus,
 // and then press any key
 
@@ -28,7 +28,7 @@ void keyPressed() {
     value = 0;
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

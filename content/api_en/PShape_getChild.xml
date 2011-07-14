@@ -10,7 +10,7 @@
 
 <example>
 <image>PShape_getChild.jpg</image>
-<code>
+<code><![CDATA[
 PShape states;
 PShape ohio;
 states = loadShape("tristate.svg");
@@ -21,7 +21,7 @@ shape(states, -48, 5);
 ohio.disableStyle();
 fill(102, 0, 0);
 shape(ohio, -48, 5);
-</code>
+]]></code>
 </example>
 
 <description>

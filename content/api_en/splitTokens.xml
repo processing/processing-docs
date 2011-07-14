@@ -10,17 +10,17 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String t = "a b";
 String[] q = splitTokens(t);
 println(q[0]); // Prints "a"
 println(q[1]); // Prints "b"
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Despite the bad formatting, the data is parsed correctly.
 // The ", " as delimiter means to break whenever a comma *or*
 // a space is found in the String. Unlike the split() function, 
@@ -31,7 +31,7 @@ println(p[0]); // Prints "a"
 println(p[1]); // Prints "b"
 println(p[2]); // Prints "c"
 println(p[3]); // Prints "d"
-</code>
+]]></code>
 </example>
 
 <description>

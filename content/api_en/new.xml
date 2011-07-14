@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 HLine h1 = new HLine();
 float[] speeds = new float[3];
 float ypos;
@@ -36,7 +36,7 @@ class HLine {
   } 
 } 
 
-</code>
+]]></code>
 </example>
 
 <description>

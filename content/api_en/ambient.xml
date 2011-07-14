@@ -10,7 +10,7 @@
 
 <example>
 <image>ambient_.jpg</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 background(0);
 noStroke();
@@ -20,7 +20,7 @@ ambient(51, 26, 0);
 translate(70, 50, 0);
 sphere(30);
 
-</code>
+]]></code>
 </example>
 
 <description>

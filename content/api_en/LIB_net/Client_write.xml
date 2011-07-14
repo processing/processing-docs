@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe 
 // Creates a client that sends input to a server
 
@@ -44,7 +44,7 @@ void draw() {
   }
 } 
 
-</code>
+]]></code>
 </example>
 
 <description>

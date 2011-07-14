@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int m = 1 &lt;&lt; 3;   // In binary: 1 to 1000
 println(m);  // Prints "8"
 int n = 1 &lt;&lt; 8;   // In binary: 1 to 100000000
@@ -19,12 +19,12 @@ int o = 2 &lt;&lt; 3;   // In binary: 10 to 10000
 println(o);  // Prints "16"
 int p = 13 &lt;&lt; 1;  // In binary: 1101 to 11010
 println(p);  // Prints "26"
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Packs four 8 bit numbers into one 32 bit number
 int a = 255;  // Binary: 00000000000000000000000011111111
 int r = 204;  // Binary: 00000000000000000000000011001100
@@ -38,7 +38,7 @@ g = g &lt;&lt; 8;   // Binary: 00000000000000001100110000000000
 color argb = a | r | g | b;
 fill(argb);
 rect(30, 20, 55, 55);
-</code>
+]]></code>
 </example>
 
 <description>

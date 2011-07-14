@@ -10,7 +10,7 @@
 
 <example>
 <image>logicalAND.gif</image>
-<code>
+<code><![CDATA[
 for(int i=5; i&lt;=95; i+=5) {
   if((i &gt; 35) &amp;&amp; (i &lt; 60)) {
     stroke(0);    //Set color to black
@@ -19,7 +19,7 @@ for(int i=5; i&lt;=95; i+=5) {
   }
   line(30, i, 80, i);
 }
-</code>
+]]></code>
 </example>
 
 <description>

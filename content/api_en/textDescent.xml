@@ -10,7 +10,7 @@
 
 <example>
 <image>textDescent_.gif</image>
-<code>
+<code><![CDATA[
 PFont font;
 font = loadFont("FFScala-32.vlw"); 
 textFont(font);
@@ -24,7 +24,7 @@ textSize(64);
 descent = textDescent();
 text("dp", 35, 70);
 line(35, 70+descent, 100, 70+descent); 
-</code>
+]]></code>
 </example>
 
 <description>

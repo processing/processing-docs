@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String savePath = selectOutput();  // Opens file chooser
 if (savePath == null) {
   // If a file was not selected
@@ -19,7 +19,7 @@ if (savePath == null) {
   // If a file was selected, print path to folder
   println(savePath);
 }
-</code>
+]]></code>
 </example>
 
 <description>

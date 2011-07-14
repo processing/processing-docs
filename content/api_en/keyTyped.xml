@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Run this program to learn how each of these functions
 // relate to the others 
 
@@ -28,7 +28,7 @@ void keyReleased() {
   println("released " + int(key) + " " + keyCode);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

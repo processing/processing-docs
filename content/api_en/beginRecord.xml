@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.pdf.*;
 
 void setup() {
@@ -26,7 +26,7 @@ void mousePressed() {
   endRecord();
   exit();
 } 
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(200, 200);
   background(0);
@@ -23,7 +23,7 @@ int a = 0;
 void draw() {
   rect(a++%width, 10, 2, 80); 
 }
-</code>
+]]></code>
 </example>
 
 <description>

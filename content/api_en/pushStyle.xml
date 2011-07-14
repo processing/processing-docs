@@ -10,7 +10,7 @@
 
 <example>
 <image>pushStyle.gif</image>
-<code>
+<code><![CDATA[
 smooth();
 ellipse(0, 50, 33, 33);    // Left
 pushStyle();               // Start a new style
@@ -19,12 +19,12 @@ fill(204, 153, 0);
 ellipse(50, 50, 33, 33);   // Middle
 popStyle();                // Restore original style
 ellipse(100, 50, 33, 33);  // Right
-</code>
+]]></code>
 </example>
 
 <example>
 <image>pushStyle-2.gif</image>
-<code>
+<code><![CDATA[
 smooth();
 ellipse(0, 50, 33, 33);    // Left
 pushStyle();               // Start a new style
@@ -37,7 +37,7 @@ ellipse(66, 50, 33, 33);   // Right-Middle
 popStyle();                // Restore the previous style
 popStyle();                // Restore original style
 ellipse(100, 50, 33, 33);  // Right
-</code>
+]]></code>
 </example>
 
 <description>

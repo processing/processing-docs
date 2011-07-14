@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Sets the background gray value based on
 // the distance of the mouse from the center
 void draw() {
@@ -18,7 +18,7 @@ void draw() {
   fill(d*4);
   rect(0, 0, 99, 99);
 }
-</code>
+]]></code>
 </example>
 
 <description>

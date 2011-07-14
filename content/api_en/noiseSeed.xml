@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 float xoff = 0.0;
 
 void setup() {
@@ -24,7 +24,7 @@ void draw()
   float n = noise(xoff) * width;
   line(n, 0, n, height);
 }
-</code>
+]]></code>
 </example>
 
 <description>

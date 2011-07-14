@@ -10,13 +10,13 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(400, 400, OPENGL);
   // Enable 4x oversampling (if supported)
   hint(ENABLE_OPENGL_4X_SMOOTH);
 }
-</code>
+]]></code>
 </example>
 
 <description>

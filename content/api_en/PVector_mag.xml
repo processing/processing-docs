@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PVector v;
 
 void setup() {
@@ -20,7 +20,7 @@ void setup() {
   float m = v.mag();
   println(m);  // Prints "53.851646"
 }
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,13 +10,13 @@
 
 <example>
 <image>ellipseMode_.gif</image>
-<code>
+<code><![CDATA[
 ellipseMode(CENTER);
 ellipse(35, 35, 50, 50);
 ellipseMode(CORNER);
 fill(102);
 ellipse(35, 35, 50, 50);
-</code>
+]]></code>
 </example>
 
 <description>

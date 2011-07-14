@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.net.*;
 
 Client myClient;
@@ -33,7 +33,7 @@ void clientEvent(Client someClient) {
 
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

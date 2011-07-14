@@ -12,7 +12,7 @@
 
 <example>
 <image>mag_.gif</image>
-<code>
+<code><![CDATA[
 float x1 = 20;
 float x2 = 80;
 float y1 = 30;
@@ -26,7 +26,7 @@ line(0, 0, x1, y2);
 println(mag(x1, y2));  // Prints 72.8011
 line(0, 0, x2, y2);
 println(mag(x2, y2));  // Prints 106.30146
-</code>
+]]></code>
 </example>
 
 <description>

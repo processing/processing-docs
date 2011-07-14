@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String[] animals = new String[3]; 
 animals[0] = "cat"; 
 animals[1] = "seal"; 
@@ -27,7 +27,7 @@ numbers[2] = 5;
 String joinedNumbers = join(nf(numbers, 0), ", "); 
 println(joinedNumbers); // Prints "8, 67, 5" 
 
-</code>
+]]></code>
 </example>
 
 <description>

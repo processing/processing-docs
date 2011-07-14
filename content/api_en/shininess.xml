@@ -10,7 +10,7 @@
 
 <example>
 <image>shininess_.jpg</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D); 
 background(0); 
 noStroke(); 
@@ -27,7 +27,7 @@ translate(40, 0, 0);
 shininess(5.0); 
 sphere(20); 
 
-</code>
+]]></code>
 </example>
 
 <description>

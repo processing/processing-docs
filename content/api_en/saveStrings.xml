@@ -10,13 +10,13 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String words = "apple bear cat dog";
 String[] list = split(words, ' ');
 
 // now write the strings to a file, each on a separate line
 saveStrings("nouns.txt", list);
-</code>
+]]></code>
 </example>
 
 <description>

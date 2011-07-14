@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 import processing.net.*; 
@@ -26,7 +26,7 @@ void setup() {
   println(myClient.ip());
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

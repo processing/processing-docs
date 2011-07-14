@@ -10,7 +10,7 @@
 
 <example>
 <image>perspective_.gif</image>
-<code>
+<code><![CDATA[
 // Re-creates the default perspective
 size(100, 100, P3D);
 noFill();
@@ -22,7 +22,7 @@ translate(50, 50, 0);
 rotateX(-PI/6);
 rotateY(PI/3);
 box(45);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PFont myFont;
 
 void setup() {
@@ -23,7 +23,7 @@ void setup() {
   text("!@#$%", 10, 50);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

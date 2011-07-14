@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.net.*;
 
 Server myServer;
@@ -30,7 +30,7 @@ void draw() {
   myServer.write(val);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

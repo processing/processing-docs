@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PShape s;
 
 void setup() {
@@ -29,7 +29,7 @@ void mousePressed() {
   // Loads the identity matrix
   s.resetMatrix();
 }
-</code>
+]]></code>
 </example>
 
 <description>

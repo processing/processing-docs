@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(100, 100);
 
@@ -22,7 +22,7 @@ void setup() {
   int bgcolor = int(bgcolorStr);
   background(bgcolor);
 }
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Move the mouse quickly to see the difference 
 // between the current and previous position 
 void draw() 
@@ -18,7 +18,7 @@ void draw()
   background(204); 
   line(20, mouseY, 80, pmouseY); 
 } 
-</code>
+]]></code>
 </example>
 
 <description>

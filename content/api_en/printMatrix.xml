@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 printMatrix();
 // Prints:
@@ -26,7 +26,7 @@ printMatrix();
 // 0.0000  1.0000  0.0000  0.0000
 // 0.0000  0.0000  1.0000  0.0000
 // 0.0000  0.0000  0.0000  1.0000
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,34 +11,34 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int[] numbers = new int[3];
 numbers[0] = 90;
 numbers[1] = 150;
 numbers[2] = 30;
 int a = numbers[0] + numbers[1]; // Sets variable a to 240
 int b = numbers[1] + numbers[2]; // Sets variable b to 180 
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int[] numbers = { 90, 150, 30 };
 int a = numbers[0] + numbers[1]; // Sets variable a to 240
 int b = numbers[1] + numbers[2]; // Sets variable b to 180
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int degrees = 360;
 float[] cos_vals = new float[degrees];
 for(int i=0; i &lt; degrees; i++) {
   cos_vals[i] = cos(TWO_PI/degrees * i);
 }
-</code>
+]]></code>
 </example>
 
 <description>

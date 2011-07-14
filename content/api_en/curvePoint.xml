@@ -10,7 +10,7 @@
 
 <example>
 <image>curvePoint_.gif</image>
-<code>
+<code><![CDATA[
 curve(5, 26, 5, 26, 73, 24, 73, 61);
 curve(5, 26, 73, 24, 73, 61, 15, 65); 
 ellipseMode(CENTER);
@@ -24,7 +24,7 @@ for (int i = 0; i &lt;= steps; i++) {
   y = curvePoint(26, 24, 61, 65, t);
   ellipse(x, y, 5, 5);
 }
-</code>
+]]></code>
 </example>
 
 <description>

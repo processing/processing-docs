@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 import processing.serial.*;
@@ -30,7 +30,7 @@ myPort = new Serial(this, Serial.list()[0], 9600);
 // Send a capital A out the serial port
 myPort.write(65);
 
-</code>
+]]></code>
 </example>
 
 <description>

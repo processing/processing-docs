@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 print("begin- ");
 float f = 0.3;
 int i = 1024;
@@ -20,7 +20,7 @@ println(s);
 
 // The above code prints:
 // begin- f is 0.3 and i is 1024 -end
-</code>
+]]></code>
 </example>
 
 <description>

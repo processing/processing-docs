@@ -10,7 +10,7 @@
 
 <example>
 <image>textSize_.gif</image>
-<code>
+<code><![CDATA[
 PFont font;
 // The font must be located in the sketch's 
 // "data" directory to load successfully
@@ -19,7 +19,7 @@ textFont(font, 32);
 text("word", 15, 50); 
 textSize(14);
 text("word", 15, 70);
-</code>
+]]></code>
 </example>
 
 <description>

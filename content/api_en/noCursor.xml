@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Press the mouse to hide the cursor
 void draw() 
 {
@@ -20,7 +20,7 @@ void draw()
     cursor(HAND);
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

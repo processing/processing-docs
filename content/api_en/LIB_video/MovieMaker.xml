@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.video.*;
 
 MovieMaker mm;  // Declare MovieMaker object
@@ -35,7 +35,7 @@ void keyPressed() {
   }
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

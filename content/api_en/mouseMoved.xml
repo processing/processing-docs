@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Move the mouse across the image
 // to change its value
 
@@ -27,7 +27,7 @@ void mouseMoved() {
     value = 0;
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

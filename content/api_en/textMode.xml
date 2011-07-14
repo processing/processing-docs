@@ -10,7 +10,7 @@
 
 <example>
 <image>textMode_.gif</image>
-<code>
+<code><![CDATA[
 PFont metaBold;
 // The font "Meta-Bold.vlw.gz" must be located in the
 // current sketch's "data" directory to load successfully
@@ -19,7 +19,7 @@ String lines = "screen";
 textFont(metaBold);
 textMode(SCREEN);
 text(lines, 3, 70);
-</code>
+]]></code>
 </example>
 
 <description>

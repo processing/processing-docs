@@ -10,12 +10,12 @@
 
 <example>
 <image>color_.gif</image>
-<code>
+<code><![CDATA[
 color c1 = color(102, 102, 0);
 fill(c1);
 noStroke();
 rect(30, 20, 55, 55);
-</code>
+]]></code>
 </example>
 
 <description>

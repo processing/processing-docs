@@ -10,13 +10,13 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int a = 5;
 int b = 13;
 if(b &gt; a) {
   println("variable b is larger the variable a");
 }
-</code>
+]]></code>
 </example>
 
 <description>

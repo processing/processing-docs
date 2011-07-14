@@ -10,7 +10,7 @@
 
 <example>
 <image>pgraphics.jpg</image>
-<code>
+<code><![CDATA[
 PGraphics pg;
 
 void setup() {
@@ -26,7 +26,7 @@ void draw() {
   pg.endDraw();
   image(pg, 10, 10); 
 }
-</code>
+]]></code>
 </example>
 
 <description>

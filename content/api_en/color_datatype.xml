@@ -10,7 +10,7 @@
 
 <example>
 <image>color.gif</image>
-<code>
+<code><![CDATA[
 color c1 = color(204, 153, 0);
 color c2 = #FFCC00;
 noStroke();
@@ -21,7 +21,7 @@ rect(25, 0, 25, 100);
 color c3 = get(10, 50);
 fill(c3);
 rect(50, 0, 50, 100);
-</code>
+]]></code>
 </example>
 
 <description>

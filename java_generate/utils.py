@@ -6,12 +6,14 @@ import os
 import re
 
 def main():	
-	directory = 'api_examples'
+	#directory = 'api_examples'
+	directory = '../content/api_en'
 	for root, dirs, files in os.walk(directory):
 			for name in files:
 				# convertTags(os.path.join(root,name), 'c', 'kbd')
 				# moveFile(root,name)
-				# addCDATA(os.path.join(root, name))
+				addCDATA( os.path.join(root, name) )
+				#addCDATADescription( os.path.join( root, name ) )
 
 def moveFile(root, name):
 	data = open(os.path.join(root,name),'r').read()
@@ -19,8 +21,22 @@ def moveFile(root, name):
 	if(include(data)):
 		print "Moving " + os.path.join(root,name) + "to root" + "include/" + name
 		os.rename(os.path.join(root,name), root + "include/" + name)
+
+
+def addCDATADescription(f):
+	if(f[-3:] == 'xml'):
+		xml = open(f, 'r')
+		txt = xml.read()
+
+		pattern = re.compile(r'(<description>(?!<\!\[CDATA))([\s\S]+?)(</description>)', re.MULTILINE)
+		txt = re.sub( pattern, r'\1<![CDATA[\2]]>\3', txt)
 	
-		
+		xml.close()
+		xml = open(f, 'w')
+		xml.write(txt)
+		xml.close()
+
+	
 def addCDATA(f):
 	if(f[-3:] == 'xml'):
 		xml = open(f, 'r')

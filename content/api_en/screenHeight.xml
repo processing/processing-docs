@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(screenWidth, screenHeight);
 }
@@ -18,7 +18,7 @@ void setup() {
 void draw() {
   line(0, 0, screenWidth, screenHeight);
 }
-</code>
+]]></code>
 </example>
 
 <description>

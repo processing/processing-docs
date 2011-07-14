@@ -11,13 +11,13 @@
 
 <example>
 <image>alpha_.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("test.jpg");
 PImage alphaImg = loadImage("mask.jpg");
 img.alpha(alphaImg);
 image(img, 0, 0);
 image(img, 25, 0);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PGraphics pg;
 
 void setup() {
@@ -29,7 +29,7 @@ void draw() {
   image(pg, 10, 10); 
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

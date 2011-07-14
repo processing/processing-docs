@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String loadPath = selectInput();  // Opens file chooser
 if (loadPath == null) {
   // If a file was not selected
@@ -19,7 +19,7 @@ if (loadPath == null) {
   // If a file was selected, print path to file
   println(loadPath);
 }
-</code>
+]]></code>
 </example>
 
 

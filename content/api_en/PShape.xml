@@ -10,12 +10,12 @@
 
 <example>
 <image>svg.jpg</image>
-<code>
+<code><![CDATA[
 PShape s;
 s = loadShape("bot.svg");
 smooth();
 shape(s, 10, 10, 80, 80);
-</code>
+]]></code>
 </example>
 
 <description>

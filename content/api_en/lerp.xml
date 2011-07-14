@@ -12,7 +12,7 @@
 
 <example>
 <image>lerp_.gif</image>
-<code>
+<code><![CDATA[
 float a = 20;
 float b = 80;
 float c = lerp(a, b, .2);
@@ -25,12 +25,12 @@ vertex(c, 50);
 vertex(d, 50);
 vertex(e, 50);
 endShape();
-</code>
+]]></code>
 </example>
 
 <example>
 <image>lerp_2.gif</image>
-<code>
+<code><![CDATA[
 int x1 = 15;
 int y1 = 10;
 int x2 = 80;
@@ -41,7 +41,7 @@ for(int i=0; i&lt;=10; i++) {
   float y = lerp(y1, y2, i/10.0);
   point(x, y);
 }
-</code>
+]]></code>
 </example>
 
 <description>

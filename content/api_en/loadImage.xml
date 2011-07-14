@@ -10,16 +10,16 @@
 
 <example>
 <image>loadImage_.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("laDefense.jpg");
 image(b, 0, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>loadImage_.jpg</image>
-<code>
+<code><![CDATA[
 // Loading an image when using setup() and draw()
 
 PImage b;
@@ -32,12 +32,12 @@ void setup() {
 void draw() {
   image(b, 0, 0);
 }
-</code>
+]]></code>
 </example>
 
 
 <example>
-<code>
+<code><![CDATA[
 PImage online;
 
 void setup() {
@@ -49,7 +49,7 @@ void setup() {
 void draw() {
   image(online, 0, 0);
 }
-</code>
+]]></code>
 </example>
 
 

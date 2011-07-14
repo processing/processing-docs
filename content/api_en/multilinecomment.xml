@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 /*
    Draws two lines which divides the window 
    into four quadrants. First draws a horizontal
@@ -18,7 +18,7 @@
 */ 
 line(0, 50, 100, 50);
 line(50, 0, 50, 100);
-</code>
+]]></code>
 </example>
 
 <description>

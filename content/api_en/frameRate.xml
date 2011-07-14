@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   frameRate(4);
 }
@@ -23,7 +23,7 @@ void draw() {
     pos = 0;
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

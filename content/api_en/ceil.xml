@@ -10,10 +10,10 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 float x = 8.22;  
 int a = ceil(x);  // Set "a" to 9
-</code>
+]]></code>
 </example>
 
 <description>

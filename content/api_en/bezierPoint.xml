@@ -10,7 +10,7 @@
 
 <example>
 <image>bezierPoint_.gif</image>
-<code>
+<code><![CDATA[
 noFill();
 bezier(85, 20, 10, 10, 90, 90, 15, 80);
 fill(255);
@@ -21,7 +21,7 @@ for (int i = 0; i &lt;= steps; i++) {
   float y = bezierPoint(20, 10, 90, 80, t);
   ellipse(x, y, 5, 5);
 }
-</code>
+]]></code>
 </example>
 
 <description>

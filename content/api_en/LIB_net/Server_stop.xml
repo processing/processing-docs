@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 // Bug note: stopping the server produces an unrecoverable error:
@@ -56,7 +56,7 @@ void mousePressed()
   println("Server Status:" + "\t" + myServerRunning);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

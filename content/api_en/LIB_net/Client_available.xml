@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.net.*; 
 Client myClient;
 int dataIn; 
@@ -31,7 +31,7 @@ void draw() {
   background(dataIn);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

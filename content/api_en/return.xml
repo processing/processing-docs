@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int val = 30;
  
 void draw() {
@@ -22,12 +22,12 @@ int timestwo(int dVal) {
   dVal = dVal * 2;
   return dVal;
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int[] vals = {10, 20, 30}; 
   
 void draw() { 
@@ -42,12 +42,12 @@ int[] timestwo(int[] dVals) {
   } 
   return dVals; 
 } 
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void draw() {
   background(204);
   line(0, 0, width, height);
@@ -57,7 +57,7 @@ void draw() {
   line(0, height, width, 0);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

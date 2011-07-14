@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // This example is a code fragment, 
 // it will not compile on its own.
 
@@ -32,7 +32,7 @@ class DragDrop extends Button {
   }
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

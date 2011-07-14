@@ -7,42 +7,42 @@
 
 <example>
 <image>blend_add.jpg</image>
-<code>
+<code><![CDATA[
 background(loadImage("rockies.jpg")); 
 PImage img = loadImage("degaul.jpg"); 
 image(img, 0, 0);
 blend(img, 0, 0, 33, 100, 67, 0, 33, 100, ADD); 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>blend_subtract.jpg</image>
-<code>
+<code><![CDATA[
 background(loadImage("rockies.jpg")); 
 PImage img = loadImage("degaul.jpg"); 
 image(img, 0, 0);
 blend(img, 0, 0, 33, 100, 67, 0, 33, 100, SUBTRACT); 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>blend_darkest.jpg</image>
-<code>
+<code><![CDATA[
 background(loadImage("rockies.jpg")); 
 PImage img = loadImage("degaul.jpg"); 
 image(img, 0, 0);
 blend(img, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST); 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>blend_lightest.jpg</image>
-<code>
+<code><![CDATA[
 background(loadImage("rockies.jpg")); 
 PImage img = loadImage("degaul.jpg"); 
 image(img, 0, 0);
 blend(img, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST); 
-</code>
+]]></code>
 </example>
 
 <description>

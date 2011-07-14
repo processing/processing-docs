@@ -10,9 +10,9 @@
 
 <example>
 <image>triangle_.gif</image>
-<code>
+<code><![CDATA[
 triangle(30, 75, 58, 20, 86, 75);
-</code>
+]]></code>
 </example>
 
 <description>

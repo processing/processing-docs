@@ -10,23 +10,23 @@
 
 <example>
 <image>point_.gif</image>
-<code>
+<code><![CDATA[
 point(30, 20);
 point(85, 20);
 point(85, 75);
 point(30, 75);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>point_2.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 point(30, 20, -50);
 point(85, 20, -50);
 point(85, 75, -50);
 point(30, 75, -50);
-</code>
+]]></code>
 </example>
 
 <description>

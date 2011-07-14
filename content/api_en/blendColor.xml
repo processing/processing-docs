@@ -10,7 +10,7 @@
 
 <example>
 <image>blend_color.gif</image>
-<code>
+<code><![CDATA[
 color orange = color(204, 102, 0);
 color blue = color(0, 102, 153);
 color orangeblueadd = blendColor(orange, blue, ADD);
@@ -22,7 +22,7 @@ fill(orangeblueadd);
 rect(40, 20, 20, 60);
 fill(blue);
 rect(66, 20, 20, 60);
-</code>
+]]></code>
 </example>
 
 <description>

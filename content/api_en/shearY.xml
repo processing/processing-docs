@@ -10,12 +10,12 @@
 
 <example>
 <image>shearY_.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P2D);
 translate(width/4, height/4);
 shearY(PI/4.0);
 rect(0, 0, 30, 30);
-</code>
+]]></code>
 </example>
 
 <description>

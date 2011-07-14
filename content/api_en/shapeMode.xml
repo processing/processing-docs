@@ -10,7 +10,7 @@
 
 <example>
 <image>shapeMode.jpg</image>
-<code>
+<code><![CDATA[
 PShape bot = loadShape("bot1.svg");
 smooth();
 shapeMode(CENTER);
@@ -18,7 +18,7 @@ shape(bot, 35, 35, 50, 50);
 shapeMode(CORNER);
 fill(102);
 shape(bot, 35, 35, 50, 50);
-</code>
+]]></code>
 </example>
 
 <description>

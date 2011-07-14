@@ -10,18 +10,18 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String str1 = "CCCP";
 char data[] = {'C', 'C', 'C', 'P'};
 String str2 = new String(data);
 println(str1);  // Prints "CCCP" to the console
 println(str2);  // Prints "CCCP" to the console
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Comparing String objects, see reference below.
 String p = "potato";
 if (p == "potato") {
@@ -31,16 +31,16 @@ if (p == "potato") {
 if (p.equals("potato")) {
   println("Yes, the contents of p and potato are the same.");
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Use a backslash to include quotes in a String
 String quoted = "This one has \\"quotes\\"";
 println(quoted);  // This one has "quotes"
-</code>
+]]></code>
 </example>
 
 

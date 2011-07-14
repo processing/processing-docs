@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 DrawDot dd1 = new DrawDot(50, 80);
 
 void setup() { 
@@ -36,7 +36,7 @@ class DrawDot extends Dot {
   }
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

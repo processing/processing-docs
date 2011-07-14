@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 BufferedReader reader;
 String line;
  
@@ -36,7 +36,7 @@ void draw() {
     point(x, y);
   }
 } 
-</code>
+]]></code>
 </example>
 
 <description>

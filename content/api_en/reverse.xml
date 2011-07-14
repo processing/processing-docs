@@ -10,11 +10,11 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String sa[] = { "OH ", "NY ", "MA ", "CA "};
 sa = reverse(sa);
 print(sa);  // Prints "CA MA NY OH "
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int num = 1;
 
 switch(num) {
@@ -21,12 +21,12 @@ switch(num) {
     println("One");  // Prints "One"
     break;
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 char letter = 'N';
 
 switch(letter) {
@@ -40,12 +40,12 @@ switch(letter) {
     println("None");   // don't match the switch parameter
     break;
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Removing a "break" enables testing
 // for more than one value at once
 
@@ -61,7 +61,7 @@ switch(letter) {
     println("Bravo");  // Prints "Bravo"
     break;
 }
-</code>
+]]></code>
 </example>
 
 

@@ -93,8 +93,10 @@ class DescriptionIntegrator:
 		thisFile = xml
 		doc = minidom.parse( self.xmlDirectory + xml )
 		elements = doc.getElementsByTagName("description")		
-		return elements[0].firstChild.nodeValue
-		#return " ".join(t.nodeValue for t in elements[0].childNodes)
+		#return elements[0].firstChild.nodeValue
+		#return " ".join( t.nodeValue for t in elements[0].childNodes )
+		#return " ".join( t.nodeValue for t in elements[0].childNodes if t.nodeType == t.TEXT_NODE )
+		return " ".join( t.nodeValue for t in elements[0].childNodes if t.nodeType == t.CDATA_SECTION_NODE)
 
 
 if __name__ == '__main__':

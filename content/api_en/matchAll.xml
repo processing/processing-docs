@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String s = "Inside tags, you will find &lt;tag&gt;multiple &lt;/tag&gt;; 
              &lt;tag&gt;pieces &lt;/tag&gt; of  &lt;tag&gt;content&lt;/tag&gt;.";
 
@@ -20,7 +20,7 @@ for (int i = 0; i &lt; m.length; i++) {
 }
 // Prints "Found multiple inside a tag. Found pieces inside a tag. Found 
 // content inside a tag." to the console
-</code>
+]]></code>
 </example>
 
 <description>

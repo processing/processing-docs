@@ -10,12 +10,12 @@
 
 <example>
 <image>height.gif</image>
-<code>
+<code><![CDATA[
 noStroke();
 background(0);
 rect(40, 0, 20, height);
 rect(60, 0, 20, height/2);
-</code>
+]]></code>
 </example>
 
 <description>

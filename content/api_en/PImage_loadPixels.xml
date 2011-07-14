@@ -11,7 +11,7 @@
 
 <example>
 <image>loadPixels_.jpg</image>
-<code>
+<code><![CDATA[
 int halfImage = width*height/2;
 PImage myImage = loadImage("topanga.jpg");
 myImage.loadPixels();
@@ -20,7 +20,7 @@ for (int i = 0; i &lt; halfImage; i++) {
 }
 myImage.updatePixels();
 image(myImage, 0, 0);
-</code>
+]]></code>
 </example>
 
 <description>

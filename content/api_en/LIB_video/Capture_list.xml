@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.video.*; 
  
 void setup() { 
@@ -19,7 +19,7 @@ void setup() {
   println(Capture.list()); 
 } 
  
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 import processing.net.*; 
@@ -33,7 +33,7 @@ dataIn = myClient.read();
   background(dataIn);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

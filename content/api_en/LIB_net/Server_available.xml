@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 import processing.net.*;
@@ -39,7 +39,7 @@ void draw()
   } 
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Drag (click and hold) your mouse across the 
 // image to change the value of the rectangle
 
@@ -28,7 +28,7 @@ void mouseDragged()
     value = 0;
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

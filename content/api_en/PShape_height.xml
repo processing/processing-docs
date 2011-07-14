@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // The file "bot.svg" must be in the data folder
 // of the current sketch to load successfully
 PShape s;
@@ -18,7 +18,7 @@ s = loadShape("bot.svg");
 smooth();
 shape(s);
 println(s.height);  // Prints 285.0, the height of the shape
-</code>
+]]></code>
 </example>
 
 <description>

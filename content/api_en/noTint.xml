@@ -10,14 +10,14 @@
 
 <example>
 <image>noTint_.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("laDefense.jpg");
 tint(0, 153, 204); // Tint blue
 image(b, 0, 0);
 noTint(); // Disable tint
 image(b, 50, 0);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(320, 240);
   background(153);
@@ -19,12 +19,12 @@ void setup() {
 void draw() {
   line(0, 0, width, height);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(320, 240, P3D);
   background(153);
@@ -33,12 +33,12 @@ void setup() {
 void draw() {
   line(0, 0, 0, width, height, -200);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.opengl.*;
 
 // Unless running in "Present" mode, this will not hide 
@@ -51,7 +51,7 @@ void setup() {
 void draw() {
   line(0, 0, 0, width, height, -200);
 }
-</code>
+]]></code>
 </example>
 
 <description>

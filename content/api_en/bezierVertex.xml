@@ -10,24 +10,24 @@
 
 <example>
 <image>bezierVertex_.gif</image>
-<code>
+<code><![CDATA[
 noFill();
 beginShape();
 vertex(30, 20);
 bezierVertex(80, 0, 80, 75, 30, 75);
 endShape();
-</code>
+]]></code>
 </example>
 
 <example>
 <image>bezierVertex_2.gif</image>
-<code>
+<code><![CDATA[
 beginShape();
 vertex(30, 20);
 bezierVertex(80, 0, 80, 75, 30, 75);
 bezierVertex(50, 80, 60, 25, 30, 20);
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

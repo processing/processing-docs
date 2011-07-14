@@ -10,29 +10,29 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 float[] a = { 3.4, 3.6, 2, 0, 7.1 };
 a = sort(a);
 println(a);
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String[] s = { "deer", "elephant", "bear", "aardvark", "cat" };
 s = sort(s);
 println(s);  // Prints aardvark, bear, cat, deer, elephant on separate lines
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String[] s = { "deer", "elephant", "bear", "aardvark", "cat" };
 s = sort(s, 3);
 println(s);  // Prints bear, deer, elephant, aardvark, cat on separate lines
-</code>
+]]></code>
 </example>
 
 <description>

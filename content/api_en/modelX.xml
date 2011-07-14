@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   size(500, 500, P3D);
   noFill();
@@ -48,7 +48,7 @@ void draw() {
   box(50);
   popMatrix();
 } 
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image>textureMode_.gif</image>
-<code>
+<code><![CDATA[
 noStroke();
 PImage a = loadImage("arch.jpg");
 textureMode(IMAGE);
@@ -21,12 +21,12 @@ vertex(80, 5, 100, 0);
 vertex(95, 90, 100, 100);
 vertex(40, 95, 0, 100);
 endShape();
-</code>
+]]></code>
 </example>
 
 <example>
 <image>textureMode_2.gif</image>
-<code>
+<code><![CDATA[
 noStroke();
 PImage a = loadImage("arch.jpg");
 textureMode(NORMALIZED);
@@ -37,7 +37,7 @@ vertex(80, 5, 1, 0);
 vertex(95, 90, 1, 1);
 vertex(40, 95, 0, 1);
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

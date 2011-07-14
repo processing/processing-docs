@@ -10,7 +10,7 @@
 
 <example>
 <image>else.gif</image>
-<code>
+<code><![CDATA[
 for(int i = 5; i &lt; 95; i += 5) {
   if(i &lt; 35) {
     line( 30, i, 80, i );
@@ -18,12 +18,12 @@ for(int i = 5; i &lt; 95; i += 5) {
     line( 20, i, 90, i );
   }
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image>else2.gif</image>
-<code>
+<code><![CDATA[
 for(int i = 5; i &lt; 95; i += 5) {
   if(i &lt; 35) {
     line( 30, i, 80, i );
@@ -33,7 +33,7 @@ for(int i = 5; i &lt; 95; i += 5) {
     line( 0, i, 100, i ); 
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

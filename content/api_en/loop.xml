@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <applet></applet>
-<code>
+<code><![CDATA[
 void setup() {
   size(200, 200);
   noLoop();
@@ -35,7 +35,7 @@ void mousePressed() {
 void mouseReleased() {
   noLoop();
 }
-</code>
+]]></code>
 </example>
 
 <description>

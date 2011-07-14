@@ -10,7 +10,7 @@
 
 <example>
 <image>PShape_visible.jpg</image>
-<code>
+<code><![CDATA[
 // The file "bot.svg" must be in the data folder
 // of the current sketch to load successfully
 PShape s;
@@ -22,7 +22,7 @@ if (s.isVisible() == false) {  // of if (!s.isVisible) {
   noFill();
   rect(5, 5, 90, 90); 
 }
-</code>
+]]></code>
 </example>
 
 <description>

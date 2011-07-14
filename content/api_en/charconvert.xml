@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int i = 65;
 char c = char(i);
 println(i + " : " + c);  // Prints "65 : A"
@@ -18,7 +18,7 @@ println(i + " : " + c);  // Prints "65 : A"
 byte b = 65;
 c = char(b);
 println(b + " : " + c);  // Prints "65 : A"
-</code>
+]]></code>
 </example>
 
 <description>

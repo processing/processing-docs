@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.video.*;
 Movie myMovie;
 
@@ -39,7 +39,7 @@ void mouseReleased() {
   myMovie.play();
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

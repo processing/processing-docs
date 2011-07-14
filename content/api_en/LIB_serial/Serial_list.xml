@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 import processing.serial.*;
@@ -22,7 +22,7 @@ Serial myPort;
 // List all the available serial ports
 println(Serial.list());
  
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,13 +10,13 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String lines[] = loadStrings("list.txt");
 println("there are " + lines.length + " lines");
 for (int i=0; i &lt; lines.length; i++) {
   println(lines[i]);
 }
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,14 +10,14 @@
 
 <example>
 <image>textFont_.gif</image>
-<code>
+<code><![CDATA[
 PFont metaBold;
 // The font "Meta-Bold.vlw" must be located in the 
 // current sketch's "data" directory to load successfully
 metaBold = loadFont("Meta-Bold.vlw");
 textFont(metaBold, 44); 
 text("word", 15, 50); 
-</code>
+]]></code>
 </example>
 
 <description>

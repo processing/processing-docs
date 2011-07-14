@@ -10,7 +10,7 @@
 
 <example>
 <image>curveVertex_.gif</image>
-<code>
+<code><![CDATA[
 noFill();
 beginShape();
 curveVertex(84,  91);
@@ -20,7 +20,7 @@ curveVertex(21,  17);
 curveVertex(32, 100);
 curveVertex(32, 100);
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 color fillVal = color(126);
 
 void draw() {
@@ -29,7 +29,7 @@ void keyPressed() {
     fillVal = 126;
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

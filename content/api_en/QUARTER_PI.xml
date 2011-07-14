@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 float angle = 0.0; 
 beginShape(POLYGON); 
 vertex(width/2, height/2);
@@ -19,7 +19,7 @@ while(angle &lt; QUARTER_PI) {
   angle += PI/12.0; 
 } 
 endShape(CLOSE);
-</code>
+]]></code>
 </example>
 
 <description>

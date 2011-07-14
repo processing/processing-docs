@@ -10,13 +10,13 @@
 
 <example>
 <image>logicalOR.gif</image>
-<code>
+<code><![CDATA[
 for(int i=5 ; i&lt;=95; i+=5) {
   if((i &lt; 35) || (i &gt; 60)) {
     line(30, i, 80, i);
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

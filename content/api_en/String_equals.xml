@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String str1 = "CCCP";
 String str2 = "CCCP";
 // Tests to see if str1 is equal to str2
@@ -20,7 +20,7 @@ if(str1.equals(str2) == true) {
 } else {
   println("Not equal");
 }
-</code>
+]]></code>
 </example>
 
 <description>

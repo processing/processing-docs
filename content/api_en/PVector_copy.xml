@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PVector v1, v2;
 
 void setup() {
@@ -23,7 +23,7 @@ void setup() {
   println(v2.y);  // Prints "30.0"
   println(v2.z);  // Prints "40.0"
 }
-</code>
+]]></code>
 </example>
 
 <description>

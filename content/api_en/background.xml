@@ -10,25 +10,25 @@
 
 <example>
 <image>background_.gif</image>
-<code>
+<code><![CDATA[
 background(51); 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>background_2.gif</image>
-<code>
+<code><![CDATA[
 background(255, 204, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>background_3.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("laDefense.jpg");
 background(b); 
-</code>
+]]></code>
 </example>
 
 <description>

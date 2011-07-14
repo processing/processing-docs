@@ -7,53 +7,53 @@
 
 <example>
 <image>filter_threshold.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("topanga.jpg");
 image(b, 0, 0);
 filter(THRESHOLD);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>filter_gray.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("topanga.jpg");
 image(b, 0, 0);
 filter(GRAY);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>filter_invert.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("topanga.jpg");
 image(b, 0, 0);
 filter(INVERT);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>filter_posterize.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("topanga.jpg");
 image(b, 0, 0);
 filter(GRAY);
 filter(POSTERIZE, 4);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>filter_blur.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("topanga.jpg");
 image(b, 0, 0);
 filter(BLUR, 6);
-</code>
+]]></code>
 </example>
 
 <description>

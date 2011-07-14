@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 float x = 9.2;  
 int rx = round(x);  // Sets rx to 9
 
@@ -21,7 +21,7 @@ int ry = round(y);  // Sets ry to 10
 float z = 9.9;
 int rz = round(z);  // Sets rz to 10
 
-</code>
+]]></code>
 </example>
 
 <description>

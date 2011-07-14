@@ -10,11 +10,11 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int i = 65;
 float f = float(i);
 println(i + " : " + f);  // Prints "65 : 65.0"
-</code>
+]]></code>
 </example>
 
 <description>

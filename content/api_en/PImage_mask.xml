@@ -11,13 +11,13 @@
 
 <example>
 <image>mask_.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("test.jpg");
 PImage maskImg = loadImage("mask.jpg");
 img.mask(maskImg);
 image(img, 0, 0);
 image(img, 25, 0);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 boolean b = false;
 byte y = -28;
 char c = 'R';
@@ -27,7 +27,7 @@ String si = str(i);
 sb = sb + sy + sc + sf + si;
 
 println(sb);  // Prints 'false-28R-32.61024'
-</code>
+]]></code>
 </example>
 
 <description>

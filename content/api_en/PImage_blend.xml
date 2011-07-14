@@ -11,46 +11,46 @@
 
 <example>
 <image>PImage_blend_add.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("rockies.jpg");
 PImage img2 = loadImage("degaul.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, ADD); 
 image(img, 0, 0);
 image(img2, 0, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>PImage_blend_subtract.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("rockies.jpg");
 PImage img2 = loadImage("degaul.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, SUBTRACT); 
 image(img, 0, 0);
 image(img2, 0, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>PImage_blend_darkest.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("rockies.jpg");
 PImage img2 = loadImage("degaul.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST); 
 image(img, 0, 0);
 image(img2, 0, 0);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>PImage_blend_lightest.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("rockies.jpg");
 PImage img2 = loadImage("degaul.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST); 
 image(img, 0, 0);
 image(img2, 0, 0);
-</code>
+]]></code>
 </example>
 
 <description>

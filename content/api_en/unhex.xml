@@ -10,13 +10,13 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String hs = "FF006699";
 int hi = unhex(hs);
 fill(hi);
 rect(30, 20, 55, 55);
 
-</code>
+]]></code>
 </example>
 
 <description>

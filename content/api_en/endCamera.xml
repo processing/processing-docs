@@ -10,7 +10,7 @@
 
 <example>
 <image>beginCamera_.gif</image>
-<code>
+<code><![CDATA[
 // The image for this example has not been updated.
 size(100, 100, P3D);
 noFill();
@@ -23,7 +23,7 @@ endCamera();
 translate(50, 50, 0);
 rotateY(PI/3);
 box(45);
-</code>
+]]></code>
 </example>
 
 <description>

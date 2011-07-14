@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 <![CDATA[
 // Click within the image and press
 // the left and right mouse buttons to 
@@ -26,12 +26,12 @@ void draw() {
   rect(25, 25, 50, 50);
 }
 ]]>
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Click within the image and press
 // the left and right mouse buttons to 
 // change the value of the rectangle
@@ -48,7 +48,7 @@ void mousePressed() {
     fill(126);
   }
 }
-</code>
+]]></code>
 </example>
 
 <description>

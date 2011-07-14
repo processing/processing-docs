@@ -10,20 +10,20 @@
 
 <example>
 <image>box_.gif</image>
-<code>
+<code><![CDATA[
 translate(58, 48, 0); 
 rotateY(0.5);
 box(40);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>box_2.gif</image>
-<code>
+<code><![CDATA[
 translate(58, 48, 0); 
 rotateY(0.5);
 box(40, 20, 50);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 HashMap hm = new HashMap();
 
 hm.put("Ava", 1);
@@ -25,7 +25,7 @@ while (i.hasNext()) {
   print(me.getKey() + " is ");
   println(me.getValue());
 }
-</code>
+]]></code>
 </example>
 
 

@@ -10,36 +10,36 @@
 
 <example>
 <image>set_.gif</image>
-<code>
+<code><![CDATA[
 color black = color(0);
 set(30, 20, black);
 set(85, 20, black);
 set(85, 75, black);
 set(30, 75, black);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>set_2.jpg</image>
-<code>
+<code><![CDATA[
 for (int i = 30; i &lt; width-15; i++) {
   for(int j = 20; j &lt; height-25; j++) {
     color c = color(204-j, 153-i, 0);
     set(i, j, c);
   }
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image>set_3.jpg</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 PImage myImage = loadImage("topanga.jpg");
 set(0, 0, myImage);
 line(0, 0, width, height);
 line(0, height, width, 0);
-</code>
+]]></code>
 </example>
 
 <description>

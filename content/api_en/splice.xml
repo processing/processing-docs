@@ -12,7 +12,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String[] sa1 = { "OH", "NY", "CA" };
 sa1 = splice(sa1, "KY", 1);
 println(sa1);  // Prints OH, KY, NY, CA
@@ -21,7 +21,7 @@ println();
 String[] sa2 = { "VA", "CO", "IL" };
 sa1 = splice(sa1, sa2, 2);
 println(sa1);  // Prints OH, KY, VA, CO, IL, NY, CA
-</code>
+]]></code>
 </example>
 
 <description>

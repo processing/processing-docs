@@ -10,7 +10,7 @@
 
 <example>
 <image>PImage_pixels.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("tower.jpg");
 int dimension = (img.width*img.height);
 img.loadPixels();
@@ -19,7 +19,7 @@ for (int i=0; i &lt; dimension; i+=2) {
 } 
 img.updatePixels();
 image(img, 0, 0);
-</code>
+]]></code>
 </example>
 
 <description>

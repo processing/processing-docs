@@ -10,31 +10,31 @@
 
 <example>
 <image>translate_.gif</image>
-<code>
+<code><![CDATA[
 translate(30, 20);
 rect(0, 0, 55, 55);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>translate_2.gif</image>
-<code>
+<code><![CDATA[
 // Translating in 3D requires P3D
 // or OPENGL as a parameter to size()
 size(100, 100, P3D);
 translate(30, 20, -50);
 rect(0, 0, 55, 55);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>translate_3.gif</image>
-<code>
+<code><![CDATA[
 translate(30, 20);
 rect(0, 0, 55, 55);
 translate(14, 14);
 rect(0, 0, 55, 55);
-</code>
+]]></code>
 </example>
 
 <description>

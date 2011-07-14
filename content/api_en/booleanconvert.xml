@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String s = "true";
 boolean b = boolean(s);
 if (b) {
@@ -18,7 +18,7 @@ if (b) {
 } else {
   println("The boolean is false");
 }
-</code>
+]]></code>
 </example>
 
 <description>

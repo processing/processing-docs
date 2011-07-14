@@ -10,7 +10,7 @@
 
 <example>
 <image>strokeCap_.gif</image>
-<code>
+<code><![CDATA[
 smooth();
 strokeWeight(12.0);
 strokeCap(ROUND);
@@ -19,7 +19,7 @@ strokeCap(SQUARE);
 line(20, 50, 80, 50);
 strokeCap(PROJECT);
 line(20, 70, 80, 70);
-</code>
+]]></code>
 </example>
 
 <description>

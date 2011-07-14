@@ -7,14 +7,14 @@
 
 <example>
 <image>copy_.jpg</image>
-<code>
+<code><![CDATA[
 PImage img = loadImage("eames.jpg");
 image(img, 0, 0);
 copy(15, 25, 10, 10, 35, 25, 50, 50);
 noFill();
 // Rectangle shows area being copied
 rect(15, 25, 10, 10);
-</code>
+]]></code>
 </example>
 
 <description>

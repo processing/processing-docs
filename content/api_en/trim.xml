@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String s = "  Somerville MA ";
 println(s);  // Prints "  Somerville MA "
 String s2 = trim(s);
@@ -19,7 +19,7 @@ println(s2); // Prints "Somerville MA"
 String[] a = { " inconsistent ", " spacing" };
 String[] a2 = trim(a);
 println(a2);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int a=200, b=40, c=90;
 String sa = nf(a, 10);
 println(sa); // prints "0000000200"
@@ -26,7 +26,7 @@ String se = nf(e, 5, 3);
 println(se);  // prints "00040.200"
 String sf = nf(f, 3, 5);
 println(sf);  // prints "009.01200"
-</code>
+]]></code>
 </example>
 
 <description>

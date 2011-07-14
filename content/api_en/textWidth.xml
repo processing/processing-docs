@@ -10,7 +10,7 @@
 
 <example>
 <image>textWidth_.gif</image>
-<code>
+<code><![CDATA[
 PFont font;
 font = loadFont("FFScala-32.vlw"); 
 textFont(font, 32); 
@@ -24,7 +24,7 @@ String s = "Tokyo";
 float sw = textWidth(s);
 text(s, 0, 85);
 line(sw, 50, sw, 100);
-</code>
+]]></code>
 </example>
 
 <description>

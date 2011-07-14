@@ -10,10 +10,10 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int g = 50 / 5;  // Sets g 10
 int h = g / 5;   // Sets h 2
-</code>
+]]></code>
 </example>
 
 <description>

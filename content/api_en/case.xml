@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 char letter = 'B';
 
 switch(letter) {
@@ -24,7 +24,7 @@ switch(letter) {
     println("Zulu");   // Does not execute
     break;
 }
-</code>
+]]></code>
 </example>
 
 <description>

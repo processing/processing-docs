@@ -10,11 +10,11 @@
 
 <example>
 <image>rotate_.gif</image>
-<code>
+<code><![CDATA[
 translate(width/2, height/2);
 rotate(PI/3.0);
 rect(-26, -26, 52, 52);
-</code>
+]]></code>
 </example>
 
 <description>

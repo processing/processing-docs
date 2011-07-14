@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 // Creates a server that prints new client's IP addresses. 
 
@@ -36,7 +36,7 @@ void serverEvent(Server someServer, Client someClient) {
   println("We have a new client: " + someClient.ip());
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

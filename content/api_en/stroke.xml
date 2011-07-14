@@ -10,18 +10,18 @@
 
 <example>
 <image>stroke_.gif</image>
-<code>
+<code><![CDATA[
 stroke(153);
 rect(30, 20, 55, 55);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>stroke_2.gif</image>
-<code>
+<code><![CDATA[
 stroke(204, 102, 0);
 rect(30, 20, 55, 55);
-</code>
+]]></code>
 </example>
 
 <description>

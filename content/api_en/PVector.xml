@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PVector v1, v2;
 
 void setup() {
@@ -26,7 +26,7 @@ void draw() {
   v2.add(v1);
   ellipse(v2.x, v2.y, 24, 24);
 }
-</code>
+]]></code>
 </example>
 
 <description>

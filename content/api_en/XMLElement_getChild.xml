@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // The following short XML file called "sites.xml" is parsed 
 // in the code below. It must be in the project's "data" directory
 // &#60;?xml version="1.0"?&#62;
@@ -29,12 +29,12 @@ void setup() {
   String site = kid.getContent();
   println(site);    
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   // Download RSS feed of news stories from yahoo.com
   String url = "http://rss.news.yahoo.com/rss/topstories";
@@ -43,7 +43,7 @@ void setup() {
   XMLElement desc = rss.getChild("channel/description");
   println(desc.getContent());
 }
-</code>
+]]></code>
 </example>
 
 

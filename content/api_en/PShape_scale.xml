@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PShape s;
 
 void setup() {
@@ -27,7 +27,7 @@ void mousePressed() {
   // Shrink the shape 90% each time the mouse is pressed
   s.scale(0.9);  
 }
-</code>
+]]></code>
 </example>
 
 <description>

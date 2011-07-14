@@ -10,13 +10,13 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void draw()
 {
   background(204);
   line(mouseX, 20, mouseX, 80);
 }
-</code>
+]]></code>
 </example>
 
 <description>

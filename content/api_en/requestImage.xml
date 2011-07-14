@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PImage bigImage;
  
 void setup() {
@@ -27,7 +27,7 @@ void draw() {
     image(bigImage, 0, 0);
   }
 }
-</code>
+]]></code>
 </example>
 
 

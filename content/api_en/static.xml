@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   MiniClass mc1 = new MiniClass();
   MiniClass mc2 = new MiniClass();
@@ -23,12 +23,12 @@ void setup() {
 static class MiniClass {
   static int y = 10; // Class variable
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 void setup() {
   println(MiniClass.add(3, 4));  // Prints "7" to the console
 }
@@ -38,7 +38,7 @@ static class MiniClass {
     return(x + y);
   } 
 }
-</code>
+]]></code>
 </example>
 
 <description>

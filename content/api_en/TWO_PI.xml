@@ -10,7 +10,7 @@
 
 <example>
 <image>TWO_PI.gif</image>
-<code>
+<code><![CDATA[
 float f = 0.0;
 beginShape(POLYGON);
 while(f &lt; TWO_PI) {
@@ -18,7 +18,7 @@ while(f &lt; TWO_PI) {
   f += PI/12.0;
 }
 endShape();
-</code>
+]]></code>
 </example>
 
 <description>

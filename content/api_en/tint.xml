@@ -10,7 +10,7 @@
 
 <example>
 <image>tint_.jpg</image>
-<code>
+<code><![CDATA[
 PImage b; 
 b = loadImage("laDefense.jpg"); 
 image(b, 0, 0); 
@@ -18,19 +18,19 @@ image(b, 0, 0);
 tint(0, 153, 204); 
 image(b, 50, 0); 
 
-</code>
+]]></code>
 </example>
 
 <example>
 <image>tint_2.jpg</image>
-<code>
+<code><![CDATA[
 PImage b; 
 b = loadImage("laDefense.jpg"); 
 image(b, 0, 0); 
 // Tint blue and set transparency
 tint(0, 153, 204, 126); 
 image(b, 50, 0); 
-</code>
+]]></code>
 </example>
 
 <description>

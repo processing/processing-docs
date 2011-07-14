@@ -10,14 +10,14 @@
 
 <example>
 <image>frustum_.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 noFill();
 background(204);
 frustum(-width/2, width, 0, height, -100, 200.0);
 rotateY(PI/6);
 box(45);
-</code>
+]]></code>
 </example>
 
 <description>

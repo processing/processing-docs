@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int x = 0;
 void draw()
 {
@@ -24,12 +24,12 @@ void draw()
   // Saves each frame as screen-0000.tif, screen-0001.tif, etc.
   saveFrame(); 
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int x = 0;
 void draw()
 {
@@ -43,7 +43,7 @@ void draw()
   // Saves each frame as line-0000.tif, line-0001.tif, etc.
   saveFrame("line-####.tif"); 
 }
-</code>
+]]></code>
 </example>
 
 <description>

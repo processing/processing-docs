@@ -10,7 +10,7 @@
 
 <example>
 <image>lights_.jpg</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 background(0);
 noStroke();
@@ -21,12 +21,12 @@ translate(20, 50, 0);
 sphere(30);
 translate(60, 0, 0);
 sphere(30);
-</code>
+]]></code>
 </example>
 
 <example>
 <image>lights_2.jpg</image>
-<code>
+<code><![CDATA[
 void setup() {
   size(100, 100, P3D);
   background(0);
@@ -43,7 +43,7 @@ void draw() {
   sphere(30);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

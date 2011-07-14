@@ -10,14 +10,14 @@
 
 <example>
 <image>imageMode_.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 b = loadImage("laDefense_crop.jpg");
 imageMode(CORNERS);
 image(b, 10, 10, 60, 60);
 imageMode(CORNER);
 image(b, 35, 35, 50, 50);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -10,12 +10,12 @@
 
 <example>
 <image>sphere_.gif</image>
-<code>
+<code><![CDATA[
 noStroke();
 lights();
 translate(58, 48, 0);
 sphere(28);
-</code>
+]]></code>
 </example>
 
 <description>

@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PVector v1, v2;
 
 void setup() {
@@ -27,12 +27,12 @@ void draw() {
   v2.sub(v1);
   ellipse(v2.x, v2.y, 24, 24);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PVector v;
 
 void setup() {
@@ -47,12 +47,12 @@ void draw() {
   v.sub(40, 20, 0);
   ellipse(v.x, v.y, 24, 24);
 }
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PVector v1, v2;
 
 void setup() {
@@ -68,7 +68,7 @@ void draw() {
   PVector v3 = PVector.sub(v1, v2);
   ellipse(v3.x, v3.y, 24, 24);
 }
-</code>
+]]></code>
 </example>
 
 

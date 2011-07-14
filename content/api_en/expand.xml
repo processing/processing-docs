@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 int[] data = {0, 1, 3, 4};
 println(data.length);  // Prints "4"
 data = expand(data);
@@ -18,17 +18,17 @@ println(data.length);  // Prints "8"
 data = expand(data, 512);
 println(data.length);  // Prints "512"
 
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 PImage[] imgs = new PImage[32];
 println(imgs.length);  // Prints "32"
 imgs = (PImage[]) expand(imgs);
 println(imgs.length);  // Prints "64"
-</code>
+]]></code>
 </example>
 
 <description>

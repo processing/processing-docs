@@ -10,24 +10,24 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String[] north = { "OH", "IN", "MI"};
 String[] south = { "GA", "FL", "NC"}; 
 arrayCopy(north, south);
 print(south);  // Prints OH, IN, MI
 
-</code>
+]]></code>
 </example>
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 String[] north = { "OH", "IN", "MI"};
 String[] south = { "GA", "FL", "NC"}; 
 arrayCopy(north, 1, south, 0, 2);
 println(south);  // Prints IN, MI, NC
 
-</code>
+]]></code>
 </example>
 
 <description>

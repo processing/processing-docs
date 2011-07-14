@@ -10,12 +10,12 @@
 
 <example>
 <image>smooth_.gif</image>
-<code>
+<code><![CDATA[
 background(0);
 ellipse(30, 48, 36, 36);
 smooth();
 ellipse(70, 48, 36, 36);
-</code>
+]]></code>
 </example>
 
 <description>

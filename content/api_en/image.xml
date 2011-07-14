@@ -10,24 +10,24 @@
 
 <example>
 <image>image_.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 // Images must be in the "data" directory to load correctly
 b = loadImage("laDefense.jpg");
 image(b, 0, 0);
-</code>
+]]></code>
 </example>
 
 
 <example>
 <image>image_2.jpg</image>
-<code>
+<code><![CDATA[
 PImage b;
 // Images must be in the "data" directory to load correctly
 b = loadImage("laDefense.jpg");
 image(b, 0, 0);
 image(b, 0, 0, width/2, height/2);
-</code>
+]]></code>
 </example>
 
 

@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 // Example by Tom Igoe
 
 import processing.serial.*;
@@ -48,7 +48,7 @@ void serialEvent(Serial myPort) {
   inString = myPort.readString();
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

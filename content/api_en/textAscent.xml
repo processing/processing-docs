@@ -11,7 +11,7 @@
 
 <example>
 <image>textAscent_.gif</image>
-<code>
+<code><![CDATA[
 PFont font;
 font = loadFont("FFScala-32.vlw"); 
 textFont(font);
@@ -25,7 +25,7 @@ textSize(64);
 ascent = textAscent();
 text("dp", 35, 70);
 line(35, 70-ascent, 100, 70-ascent);
-</code>
+]]></code>
 </example>
 
 <description>

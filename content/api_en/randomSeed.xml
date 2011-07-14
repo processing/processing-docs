@@ -10,7 +10,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 randomSeed(0);
 for(int i=0; i &lt; 100; i++) {
   float r = random(0, 255);
@@ -18,7 +18,7 @@ for(int i=0; i &lt; 100; i++) {
   line(i, 0, i, 100);
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

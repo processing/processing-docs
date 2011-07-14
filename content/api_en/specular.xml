@@ -10,7 +10,7 @@
 
 <example>
 <image>specular_.jpg</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 background(0);
 noStroke();
@@ -25,7 +25,7 @@ translate(60, 0, 0);
 specular(204, 102, 0);
 sphere(30);
 
-</code>
+]]></code>
 </example>
 
 <description>

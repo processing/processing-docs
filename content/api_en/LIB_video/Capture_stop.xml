@@ -11,7 +11,7 @@
 
 <example>
 <image></image>
-<code>
+<code><![CDATA[
 import processing.video.*;
 Capture myCapture;
 
@@ -33,7 +33,7 @@ void mousePressed() {
   myCapture.stop();
 }
 
-</code>
+]]></code>
 </example>
 
 <description>

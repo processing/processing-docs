@@ -10,7 +10,7 @@
 
 <example>
 <image>applyMatrix_.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 noFill();
 translate(50, 50, 0);
@@ -27,7 +27,7 @@ applyMatrix(  ct, 0.0,  st,  0.0,
              0.0, 0.0, 0.0,  1.0);  
 stroke(255);
 box(50);
-</code>
+]]></code>
 </example>
 
 <description>

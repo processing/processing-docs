@@ -10,7 +10,7 @@
 
 <example>
 <image>resetMatrix_.gif</image>
-<code>
+<code><![CDATA[
 size(100, 100, P3D);
 noFill();
 box(80);
@@ -29,7 +29,7 @@ printMatrix();
 // 0.0000  1.0000  0.0000  0.0000
 // 0.0000  0.0000  1.0000  0.0000
 // 0.0000  0.0000  0.0000  1.0000
-</code>
+]]></code>
 </example>
 
 <description>
