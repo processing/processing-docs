@@ -17,7 +17,6 @@ String s3 = "00000100";
 println(unbinary(s1));  // Prints 16
 println(unbinary(s2));  // Prints 8
 println(unbinary(s3));  // Prints 4
-
 ]]></code>
 </example>
 
@@ -39,7 +38,6 @@ unbinary(<c>str</c>)
 <related>
 hex()
 binary()
-unbinary()
 </related>
 
 <availability>1.0</availability>
