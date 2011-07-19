@@ -64,12 +64,12 @@ void draw() {
 Keyword used to indicate the value to return from a function. The value being returned must be the same datatype as defined in the function declaration. Functions declared with <b>void</b> can't return values and shouldn't include a return value. The keyword <b>return</b> may also be used to break out of a function thus not allowing the program to read the remaining statements (see the third example above).
 ]]></description>
 
-<syntax>
-<c>type</c>&nbsp;<c>function</c> {
+<syntax><![CDATA[
+<c>type</c> <c>function</c> {
   <c>statements</c>
   return <c>value</c>
 }
-</syntax>
+]]></syntax>
 
 <parameter>
 <label>type</label>
