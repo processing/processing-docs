@@ -9,8 +9,11 @@ from xml.dom import minidom
 linePrefix = "   *"
 startString = linePrefix + " ( begin auto-generated from %s )"
 endString = "%s ( end auto-generated )" % linePrefix
+# the tag we're looking for to generate descriptions
 shortString = "@generate"
 xmlDirectory = "somwhere/"
+# auto-generated reference will get hard returns after this many characters
+maxCharsPerLine = 72
 #codeDir = "/Users/REAS/Documents/reas\@processing.org/trunk/processing/core/src/processing/core/"
 #xmlDir = "/Users/REAS/Documents/reas\@processing.org/trunk/web/java_generate/api_example/"
 thisFile = ""
@@ -45,7 +48,8 @@ class DescriptionIntegrator:
 		text = input.read()
 		input.close()
 		didEdit = False
-
+		
+		# split apart the source code by line
 		portions = text.split("\n")
 		for line in portions:
 			if( line.find( shortString ) != -1):
@@ -76,11 +80,39 @@ class DescriptionIntegrator:
 			output.write( '\n'.join(portions) )
 	
 	def insertDescription(self, description, list, startIndex):
-		parts = description.split("\n")
+		parts = self.generateLines( description, maxCharsPerLine )
 		for p in parts:
+			# insert each comment line into the source code
 			list.insert( startIndex, prefixedString(p) )
 			startIndex += 1
 		return startIndex
+	
+	def generateLines( self, text, maxLength ):
+		words = text.split(" ")
+		lines = []
+		txt = ""
+		for word in words:
+			# if we've hit a newline, break the line
+			if( word.find("\n") != -1 ):
+				pieces = word.split("\n")
+				txt = txt + pieces[0]
+				lines.append( txt )
+				txt = ""
+				if( pieces[1] != "" ):
+					word = pieces[1]
+				else:
+					continue
+			# if we're out of room, write the text
+			if( len(txt) + len(word) > maxLength ):
+				lines.append( txt )
+				txt = word + " "
+			else:
+				# keep adding words
+				txt = txt + word + " "
+		# if there's text left over, append it now
+		if( txt != "" ):
+			lines.append( txt )
+		return lines
 	
 	def removeOldDescription(self, list, startIndex):
 		lastIndex = list.index( endString, startIndex )
