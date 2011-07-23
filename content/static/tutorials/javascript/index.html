@@ -65,8 +65,7 @@
 	        <li><a href="http://hascanvas.com/">http://hascanvas.com/</a></li>
 	    </ul>
 	  
-	    <h3>
-	        <a name="creatingpjswebpage">Creating a Processing.js Web Page</a></h3>
+	<h3>Creating a Processing.js Web Page</a></h3>
 	
 	<p>
 	Once you have finished writing your sketch, you will likely want to publish it to the web.  After all this is the primary reason for using Javascript mode in the first place!  Javascript mode includes an "Export" option which will generate the HTML and javascript code required to publish your sketch.  This is the same as Standard mode's "Export" which generates an HTML page and JAR file for an embedded Java applet.   To export in Javascript mode, select "FILE --> export title" [NOTE: we should change this to something else, export title is confusing I think].</p>
@@ -80,9 +79,9 @@
 		<ul>
 			<li><b>index.html</b> -- index.html is the page that includes the appropriate 
 			HTML source for generating an HTML5 canvas and rendering the sketch.  It's got a lot of 
-			stuff to make a nice pretty looking page, but the key line is as follows: <br/>
+			stuff to make a nice pretty looking page, but the key line is as follows: <br/><br/>
 
-			<pre>&lt;canvas id="ContinuousLines" data-processing-sources="ContinuousLines.pde" width="640" height="200"&gt;</pre>
+			<pre>&lt;canvas id="ContinuousLines" data-processing-sources="ContinuousLines.pde" width="640" height="200"&gt;</pre><br/>
 
 			This is the &lt;canvas&gt tag. It  has an attribute, <b>data-processing-sources</b>. 
 			This is a list of filenames (or just one filename if you only have 1 file) separated 
@@ -104,19 +103,19 @@
 		</ul>
 	
 	    <h3>
-	        <a name="thingstoknowusingpjs">Things to Know as a Processing Developer using Processing.js</a></h3>
+	        Things to Know as a Processing Developer using Processing.js</h3>
 	    <p>
 	        While Processing.js is compatible with Processing, Java is not JavaScript, and canvas
 	        has some differences from Java's graphics classes. Here are some tricks and tips
 	        as you start working on more complex sketches in Processing.js.</p>
 	    <h4>
-	        <b><a name="nodatadirectory">Processing.js has no data directory</a></b></h4>
+	        <b>Processing.js has no data directory</b></h4>
 	    <p>
 	        Processing uses the concept of a <b>data</b> directory, where images and other resources
 	        are located. When you run a sketch in Javascript mode, the data directory is not used.  Instead all data files
 	        live in the same folder as the above three files.</p>
 	    <h4>
-	        <b><a name="implementationofjava">Processing.js implements Processing, but not all of Java</a></b></h4>
+	        <b>Processing.js implements Processing, but not all of Java</b></h4>
 	    <p>
 	        Processing.js is compatible with Processing, but is not, and will never be, fully
 	        compatible with Java. If your sketch uses functions or classes not defined as part
@@ -125,7 +124,7 @@
 	        will most likely not work, though hopefully this will change as more libraries are
 	        written for both modes.</p>
 	    <h4>
-	        <b><a name="explicitcasting">Division which is expected to produce an integer might need explicit casting</a></b></h4>
+	        <b>Division which is expected to produce an integer might need explicit casting</b></h4>
 	    <p>
 	        There are a class of bugs that arise when converting Processing code to Processing.js
 	        that involve integer vs. floating point division. What was straight-up integer division
@@ -135,14 +134,14 @@
 <pre>
   int g = mouseX / i;          // before
   int g = (int)(mouseX / i);   // after
-</pre>
+</pre><br/>
 
 	    <p>
 	        See <a href="https://processing-js.lighthouseapp.com/projects/41284/tickets/532-drawing-artifacts-in-processingjs-not-in-processing-with-this-code">
 	            lighthouse bug</a></p>
 
 	    <h4>
-	        <b><a name="synchronousIO">Processing.js has to cheat to simulate Processing's synchronous I/O</a></b></h4>
+	        <b>Processing.js has to cheat to simulate Processing's synchronous I/O</b></h4>
 	    <p>
 	        Processing uses a synchronous I/O model, which means that functions like <b>loadImage()</b>
 	        take time to execute, and while they are running, nothing else happens: the program
@@ -165,7 +164,7 @@
 	img = loadImage("picture.jpg");
 	image(img, 0, 0);
   }
-</pre>
+</pre><br/>
 
 	    <p>
 	        This code will not work in the browser with Processing.js, because the call to <b>image()</b>
@@ -181,7 +180,7 @@
 	img = loadImage("picture.jpg");
 	image(img, 0, 0);
   }
-</pre>
+</pre><br/>
 
 	    <p>
 	        Notice the extra comment line at the top of the code. The <b>@pjs</b> directive
@@ -191,10 +190,10 @@
 	        If you have multiple images to load, use a list like so:</p>
 <pre>
   /* @pjs preload="picture.jpg,picture2.jpg,picture3.png"; */
-</pre>
+</pre><br/>
 
 	    <h4>
-	        <b><a name="variablenamingcare">Processing.js requires more care with variable naming than Processing</a></b></h4>
+	        <b>Processing.js requires more care with variable naming than Processing</b></h4>
 	    <p>
 	        One of the powerful features of JavaScript is its dynamic, typeless nature. Where
 	        typed languages like Java, and therefore Processing, can reuse names without fear
@@ -204,7 +203,7 @@
 	        a variable named <b>line</b> might seem reasonable, but it will cause issues with
 	        the similarly named <b>line()</b> function built-into Processing and Processing.js.</p>
 	    <h3>
-	        <b><a name="whateveryoucandowiththeweb">Whatever you can do with the web, you can do with Processing.js</a></b></h3>
+	        <b>Whatever you can do with the web, you can do with Processing.js</b></h3>
 	    <p>
 	        Now that your sketch is working, and you have a basic web page, you'll probably
 	        start getting ideas about how to make this look more beautiful, how to better integrate
