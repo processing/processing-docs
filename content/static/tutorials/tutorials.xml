@@ -97,5 +97,12 @@
   	<imgs>true</imgs> 
   	<code>false</code> 
   </tutorial> 	
+
+  <tutorial> 
+  	<title>Javascript Mode</title> 
+  	<directory>javascript</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial>
   
 </tutorials> 
