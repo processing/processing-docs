@@ -78,28 +78,28 @@
 	<p><img src="imgs/appletjs.png"></p>
 			
 		<ul>
-	        <li><b>index.html</b> -- index.html is the page that includes the appropriate 
-				HTML source for generating an HTML5 canvas and rendering the sketch.  It's got a lot of 
-				stuff to make a nice pretty looking page, but the key line is as follows: <br/><br/>
-		
-				<pre>&lt;canvas id="ContinuousLines" data-processing-sources="ContinuousLines.pde" width="640" height="200"&gt;</pre>
-		
-				This is the &lt;canvas&gt tag. It  has an attribute, <b>data-processing-sources</b>. 
-				This is a list of filenames (or just one filename if you only have 1 file) separated 
-				by spaces. In this case, the browser is going to look for a file named <b>ContinuousLines.pde</b> 
-				located in the same directory, which leads us to the next file:</li><br/>
-		
+			<li><b>index.html</b> -- index.html is the page that includes the appropriate 
+			HTML source for generating an HTML5 canvas and rendering the sketch.  It's got a lot of 
+			stuff to make a nice pretty looking page, but the key line is as follows: <br/>
+
+			<pre>&lt;canvas id="ContinuousLines" data-processing-sources="ContinuousLines.pde" width="640" height="200"&gt;</pre>
+
+			This is the &lt;canvas&gt tag. It  has an attribute, <b>data-processing-sources</b>. 
+			This is a list of filenames (or just one filename if you only have 1 file) separated 
+			by spaces. In this case, the browser is going to look for a file named <b>ContinuousLines.pde</b> 
+			located in the same directory, which leads us to the next file:</li><br/>
+
 			<li><b>ContinuousLines.pde</b> -- The .pde file is your Processing code, nothing less and 
-				nothing more.  If your sketch has multiple tabs, you will have multiple PDE files.  The 
-				file or files are referenced by index.html when rendering the HTML5 canvas, and also serve 
-				the purpose of open sourcing your sketch by making the PDE available for viewing.  How 
-				does the browser know how to understand a Processing .pde file? Processing.js takes care 
-				of this, and will download, parse (i.e., translate to JavaScript), then run it automatically 
-				when the page is loaded, which leads us to the next file:</li><br/>
-			
+			nothing more.  If your sketch has multiple tabs, you will have multiple PDE files.  The 
+			file or files are referenced by index.html when rendering the HTML5 canvas, and also serve 
+			the purpose of open sourcing your sketch by making the PDE available for viewing.  How 
+			does the browser know how to understand a Processing .pde file? Processing.js takes care 
+			of this, and will download, parse (i.e., translate to JavaScript), then run it automatically 
+			when the page is loaded, which leads us to the next file:</li><br/>
+
 			<li><b>processing.js</b> -- This javascript file contains all of the Processing.js source code.
-				All of the heavy lifting, translating your Processing code to javascript, rendering and drawing
-				the canvas, is done here.  If you are interested in how Processing.js works you can dig into this file.
+			All of the heavy lifting, translating your Processing code to javascript, rendering and drawing
+			the canvas, is done here.  If you are interested in how Processing.js works you can dig into this file.
 			</li>
 		</ul>
 	
@@ -114,7 +114,7 @@
 	    <p>
 	        Processing uses the concept of a <b>data</b> directory, where images and other resources
 	        are located. When you run a sketch in Javascript mode, the data directory is not used.  Instead all data files
-	 		live in the same folder as the above three files.</p>
+	        live in the same folder as the above three files.</p>
 	    <h4>
 	        <b><a name="implementationofjava">Processing.js implements Processing, but not all of Java</a></b></h4>
 	    <p>
@@ -123,7 +123,7 @@
 	        of Processing, they are unlikely to work in Javascript mode Similarly, libraries
 	        that are written for Processing, which are written in Java instead of Processing,
 	        will most likely not work, though hopefully this will change as more libraries are
-			written for both modes.</p>
+	        written for both modes.</p>
 	    <h4>
 	        <b><a name="explicitcasting">Division which is expected to produce an integer might need explicit casting</a></b></h4>
 	    <p>
