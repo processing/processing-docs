@@ -1,9 +1,3 @@
-<script type="text/javascript" src="http://processingjs.org/js/pjs/processing.min.js"></script>
-<script type="text/javascript" src="http://processingjs.org/js/pjs/init.js" ></script>
-<script type="text/javascript" src="http://processingjs.org/js/shCore.js"></script>
-<script type="text/javascript" src="http://processingjs.org/js/shBrushProcessing.js"></script>
-<script type="text/javascript" src="http://processingjs.org/js/shBrushJScript.js"></script>
-<script type="text/javascript" src="http://processingjs.org/js/shBrushJScript.Xml"></script>  
 
 <h1>Javascript Mode</h1>
 	
@@ -108,14 +102,14 @@
 	        While Processing.js is compatible with Processing, Java is not JavaScript, and canvas
 	        has some differences from Java's graphics classes. Here are some tricks and tips
 	        as you start working on more complex sketches in Processing.js.</p>
-	    <h4>
-	        <b>Processing.js has no data directory</b></h4>
+	    <h5>
+	        <b>Processing.js has no data directory</b></h5>
 	    <p>
 	        Processing uses the concept of a <b>data</b> directory, where images and other resources
 	        are located. When you run a sketch in Javascript mode, the data directory is not used.  Instead all data files
 	        live in the same folder as the above three files.</p>
-	    <h4>
-	        <b>Processing.js implements Processing, but not all of Java</b></h4>
+	    <h5>
+	        <b>Processing.js implements Processing, but not all of Java</b></h5>
 	    <p>
 	        Processing.js is compatible with Processing, but is not, and will never be, fully
 	        compatible with Java. If your sketch uses functions or classes not defined as part
@@ -123,8 +117,8 @@
 	        that are written for Processing, which are written in Java instead of Processing,
 	        will most likely not work, though hopefully this will change as more libraries are
 	        written for both modes.</p>
-	    <h4>
-	        <b>Division which is expected to produce an integer might need explicit casting</b></h4>
+	    <h5>
+	        <b>Division which is expected to produce an integer might need explicit casting</b></h5>
 	    <p>
 	        There are a class of bugs that arise when converting Processing code to Processing.js
 	        that involve integer vs. floating point division. What was straight-up integer division
@@ -140,8 +134,8 @@
 	        See <a href="https://processing-js.lighthouseapp.com/projects/41284/tickets/532-drawing-artifacts-in-processingjs-not-in-processing-with-this-code">
 	            lighthouse bug</a></p>
 
-	    <h4>
-	        <b>Processing.js has to cheat to simulate Processing's synchronous I/O</b></h4>
+	    <h5>
+	        <b>Processing.js has to cheat to simulate Processing's synchronous I/O</b></h5>
 	    <p>
 	        Processing uses a synchronous I/O model, which means that functions like <b>loadImage()</b>
 	        take time to execute, and while they are running, nothing else happens: the program
@@ -192,8 +186,8 @@
   /* @pjs preload="picture.jpg,picture2.jpg,picture3.png"; */
 </pre><br/>
 
-	    <h4>
-	        <b>Processing.js requires more care with variable naming than Processing</b></h4>
+	    <h5>
+	        <b>Processing.js requires more care with variable naming than Processing</b></h5>
 	    <p>
 	        One of the powerful features of JavaScript is its dynamic, typeless nature. Where
 	        typed languages like Java, and therefore Processing, can reuse names without fear
