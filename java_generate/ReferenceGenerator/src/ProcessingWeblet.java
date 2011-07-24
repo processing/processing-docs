@@ -139,9 +139,9 @@ public class ProcessingWeblet extends Standard {
 							indexWriter.addItem(fn, tags[0]);
 						}
 					}
-					//also need to add fields, duh
+					//also need to add fields
 					for(FieldDoc doc : classDoc.fields()){
-						if(Shared.i().needsWriting(doc)){
+						if(Shared.i().isWebref(doc)){
 							FieldWriter.write(doc);
 							indexWriter.addItem(doc, doc.tags(Shared.i().getWebrefTagName())[0] );
 						}
