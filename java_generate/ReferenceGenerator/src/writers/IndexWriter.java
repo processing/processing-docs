@@ -33,8 +33,12 @@ public class IndexWriter extends BaseWriter {
 			//make things alphabetical in their sections
 			Collections.sort(sections.get(key));
 			
-			for(String s : sections.get(key)){
-				value = value.concat("\n").concat(s);
+			for(String s : sections.get(key))
+			{
+				if( ! value.contains(s) )
+				{					
+					value = value.concat("\n").concat(s);
+				}
 			}
 			ret.put(key, value);
 		}
@@ -47,7 +51,10 @@ public class IndexWriter extends BaseWriter {
 		
 		for(String key : sections.keySet()){
 			for( String s : sections.get(key)){
-				all.add(s);
+				if( ! all.contains(s) )
+				{
+					all.add(s);
+				}
 			}
 		}
 		
