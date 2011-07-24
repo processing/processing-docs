@@ -161,6 +161,15 @@ public class Shared {
 	}
 	
 	public boolean shouldOmit(Doc doc){
-		return doc.tags("nowebref").length > 0;
+		if( doc.tags("nowebref").length > 0 )
+		{
+			return true;
+		}
+		if( doc.tags("notWebref").length > 0 )
+		{
+			return true;
+		}
+		// if none found, we should include
+		return false;
 	}
 }
