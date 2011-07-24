@@ -113,7 +113,8 @@ public class IndexWriter extends BaseWriter {
 	
 	private String getKey(String category, String subCategory){
 		if( !subCategory.equals("") ){
-			return category.toLowerCase() + ":" + subCategory.toLowerCase();
+			String sub = subCategory.replaceAll(" ", "_");
+			return category.toLowerCase() + ":" + sub.toLowerCase();
 		}
 		return category.toLowerCase();
 	}
