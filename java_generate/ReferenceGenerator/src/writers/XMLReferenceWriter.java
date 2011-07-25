@@ -87,7 +87,7 @@ public class XMLReferenceWriter extends BaseWriter {
 			vars.put("description", description);
 			vars.put("syntax", syntax);
 			vars.put("usage", usage);
-			vars.put("parameters", getParameters(doc));	//need to write this out in a loop
+			vars.put("parameters", getParameters(doc));
 			vars.put("related", getRelated(doc));
 			
 			templateWriter.write("Generic.template.html", vars, anchor);
@@ -126,6 +126,7 @@ public class XMLReferenceWriter extends BaseWriter {
 		}
 		
 		TemplateWriter templateWriter = new TemplateWriter();
+		//write out all parameters with a short loop
 		return templateWriter.writeLoop("Parameter.partial.html", ret);
 	}
 	

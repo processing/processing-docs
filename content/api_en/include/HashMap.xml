@@ -44,20 +44,20 @@ HashMap(<c>initialCapacity</c>, <c>loadFactor</c>)
 HashMap(<c>m</c>)
 </constructor>
 
-<cparameter>
-<clabel>initialCapacity</clabel>
-<cdescription>int: defines the initial capacity of the map, it's 16 by default</cdescription>
-</cparameter>
+<parameter>
+<label>initialCapacity</label>
+<description>int: defines the initial capacity of the map, it's 16 by default</description>
+</parameter>
 
-<cparameter>
-<clabel>loadFactor</clabel>
-<cdescription>float: the load factor for the map, the default is 0.75</cdescription>
-</cparameter>
+<parameter>
+<label>loadFactor</label>
+<description>float: the load factor for the map, the default is 0.75</description>
+</parameter>
 
-<cparameter>
-<clabel>m</clabel>
-<cdescription>Map: gives the new HashMap the same mappings as this Map</cdescription>
-</cparameter>
+<parameter>
+<label>m</label>
+<description>Map: gives the new HashMap the same mappings as this Map</description>
+</parameter>
 
 <returns></returns>
 
