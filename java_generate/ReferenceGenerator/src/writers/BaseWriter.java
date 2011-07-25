@@ -433,7 +433,8 @@ public class BaseWriter {
 		if(tags.length != 0){
 			return tags[0].text();
 		}
-		return "No usage found";
+		// return empty string if no usage is found
+		return "";
 	}
 	
 	protected static String getInstanceName(ProgramElementDoc doc){
