@@ -27,7 +27,11 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Called once when the program is started. Used to define initial enviroment properties such as screen size, background color, loading images, etc. before the <b>draw()</b> begins executing. Variables declared within <b>setup()</b> are not accessible within other functions, including<b>draw()</b>. There can only be one <b>setup()</b> function for each program and it should not be called again after it's initial execution.
+The <b>setup()</b> function is called once when the program starts. It's used to define initial 
+enviroment properties such as screen size and background color and to load media such as images
+and fonts as the program starts. There can only be one <b>setup()</b> function for each program and 
+it shouldn't be called again after its initial execution. Note: Variables declared within 
+<b>setup()</b> are not accessible within other functions, including <b>draw()</b>. 
 ]]></description>
 
 <syntax>

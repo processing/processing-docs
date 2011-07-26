@@ -7,7 +7,7 @@ javadoc -doclet ProcessingWeblet \
         -docletpath bin/ \
         -public \
 	-webref ../tmp/web \
-	-localref ../tmp/local \
+	-localref ../../distribution \
 	-templatedir ../templates \
 	-examplesdir ../../content/api_en \
 	-includedir ../../content/api_en/include \
@@ -23,12 +23,12 @@ javadoc -doclet ProcessingWeblet \
 
 
 cp -R ../../css	 ../tmp/web
-cp -R ../../css	 ../tmp/local
+#cp -R ../../css	 ../../distribution/
 mkdir -p ../tmp/web/images
-mkdir -p ../tmp/local/images
+#mkdir -p ../../distribution/images
 cp -R ../../content/api_media/*.jpg ../tmp/web/images/
 cp -R ../../content/api_media/*.gif ../tmp/web/images/
 cp -R ../../content/api_media/*.png ../tmp/web/images/
-cp -R ../../content/api_media/*.jpg ../tmp/local/images/
-cp -R ../../content/api_media/*.gif ../tmp/local/images/
-cp -R ../../content/api_media/*.png ../tmp/local/images/
+cp -R ../../content/api_media/*.jpg ../../distribution/images/
+cp -R ../../content/api_media/*.gif ../../distribution/images/
+cp -R ../../content/api_media/*.png ../../distribution/images/
