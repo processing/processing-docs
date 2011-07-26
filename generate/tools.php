@@ -21,7 +21,7 @@ writeFile($tools_dir.'/index.html', $page->out());
 if (!is_dir(BASEDIR.$tools_dir.'/images')) { 
 	mkdir(BASEDIR.$tools_dir.'/images', '0757'); 
 }
-copydirr(CONTENTDIR."api_$lang/TOOL_images", BASEDIR.$tools_dir.'/images');
+copydirr(CONTENTDIR."api_$lang/tools/images", BASEDIR.$tools_dir.'/images');
 
 // copy over the files for the contributed libraries
 copy(CONTENTDIR."static/tools.html", BASEDIR.$tools_dir.'/tools.html');

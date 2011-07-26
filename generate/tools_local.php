@@ -23,7 +23,7 @@ writeFile('distribution/tools/index.html', $page->out());
 if (!is_dir(DISTDIR.'tools/images')) { 
 	mkdir(DISTDIR.'tools/images', '0757'); 
 }
-copydirr(CONTENTDIR."api_$lang/TOOL_images", DISTDIR.'tools/images');
+copydirr(CONTENTDIR."api_$lang/tools/images", DISTDIR.'tools/images');
 
 // copy over the files for the contributed libraries
 copy(CONTENTDIR."static/tools.html", DISTDIR.'tools/tools.html');
