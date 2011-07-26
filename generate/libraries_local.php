@@ -60,6 +60,11 @@ foreach ($libraries as $lib)
 	copydirr(CONTENTDIR.$source.'/images', DISTDIR.$destination.'/images');
 }
 
+if (!is_dir(DISTDIR.'libraries/images')) { 
+	mkdir(DISTDIR.'libraries/images', '0757'); 
+}
+copydirr(CONTENTDIR."api_$lang/LIB_images", DISTDIR.'libraries/images');
+
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
 
