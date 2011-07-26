@@ -39,7 +39,7 @@ Writes data to a <b>PrintWriter</b> object stream.
 ]]></description>
 
 <syntax>
-<c>pw</c>.println(<c>data</c>)
+<c>pw</c>.print(<c>data</c>)
 </syntax>
 
 <parameter>

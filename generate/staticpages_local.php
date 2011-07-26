@@ -11,9 +11,9 @@ $page = new LocalPage('Copyright', "Copyright", "Copyright", './');
 $page->content(file_get_contents($source."copyright.html"));
 writeFile('distribution/copyright.html', $page->out());
 
-$page = new LocalPage('People', "People", "People", './');
+$page = new LocalPage('People', "People", "People", '../');
 $page->content(file_get_contents($source."people.html"));
-writeFile('distribution/people.html', $page->out());
+writeFile('distribution/about/people.html', $page->out());
 
 
 $benchmark_end = microtime_float();

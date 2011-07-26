@@ -27,16 +27,6 @@ Reserved word representing the logical value "true". Only variables of type <b>b
 
 <syntax></syntax>
 
-<parameter>
-<label></label>
-<description><![CDATA[</description>
-</parameter>
-
-<parameter>
-<label>statements</label>
-<description>any valid statements]]></description>
-</parameter>
-
 <returns></returns>
 
 <related>

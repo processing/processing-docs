@@ -11,7 +11,8 @@
 
 <example>
 <image></image>
-<code><![CDATA[PVector v1, v2;
+<code><![CDATA[
+PVector v1, v2;
 
 void setup() {
   size(100, 100);

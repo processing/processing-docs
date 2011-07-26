@@ -16,11 +16,11 @@ javadoc -doclet ProcessingWeblet \
 	-rootclass PGraphics \
 	-rootclass PConstants \
 	-noisy \
-        ../../../processing/core/src/processing/core/*.java \
-    #    ../../../processing/core/src/processing/xml/*.java \
-    #    ../../../processing/java/libraries/net/src/processing/net/*.java \
-    #    ../../../processing/java/libraries/serial/src/processing/serial/*.java
-    # ../../../processing/video/src/processing/video/*.java \
+	../../../processing/java/libraries/net/src/processing/net/*.java \
+	../../../processing/java/libraries/serial/src/processing/serial/*.java \
+	../../../processing/java/libraries/video/src/processing/video/*.java \
+	../../../processing/core/src/processing/core/*.java
+
 
 cp -R ../../css	 ../tmp/web
 cp -R ../../css	 ../tmp/local

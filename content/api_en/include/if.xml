@@ -32,7 +32,7 @@ if (<c>test</c>) {
 </syntax>
 
 <parameter>
-<label>expression</label>
+<label>test</label>
 <description><![CDATA[any valid expression that evaluates to true or false]]></description>
 </parameter>
 
