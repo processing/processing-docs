@@ -11,7 +11,14 @@ class Translation
     function Translation($lang)
     {
         $file = "api_$lang/translation/translation.xml";
-        $xml =& openXML($file);
+        //$file = "api_en/translation/translation.xml";
+        
+        // Three new lines from Casey 25 July 2011
+        $xml = new DOMDocument('1.0', 'utf-8');
+		$xml->formatOutput = true;
+		$xml->preserveWhiteSpace = false;
+		$xml->load($file);
+        //$xml =& openXML($file);
         $this->parse($xml);
     }
     
