@@ -36,3 +36,10 @@ cp -R ../../content/api_media/*.png ../tmp/web/images/
 cp -R ../../content/api_media/*.jpg ../../distribution/images/
 cp -R ../../content/api_media/*.gif ../../distribution/images/
 cp -R ../../content/api_media/*.png ../../distribution/images/
+
+# run local reference creations files
+cd ../../generate/
+php environment_local.php
+php staticpages_local.php
+php tools_local.php
+php libraries_local.php
