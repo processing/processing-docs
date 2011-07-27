@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+<software name="The Digital Rube Goldberg Processor" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/golberg.jpg</image>
+          <description>
+              The Digital Rube Goldberg Processor is the outcome of a 4-day workshop The Product collective gave at the HfG Karlsruhe (Design School). Since they understand it is impossible to teach programming to beginners just within 4 days, they decided to focus more on the essential topics behind generative and computational design, to provide a grounded starting point for the students.
+          </description>
+          <location>http://www.the-product.org/rube-goldberg-processor</location>
+		 <link href="http://www.the-product.org/">The Product</link>
+</software>
+	
 <software name="Prototyp-0" by="Yannick Mathey" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/prototyp0.jpg</image>
           <description>
