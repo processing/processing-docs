@@ -6,8 +6,6 @@
 
 <subcategory>Creating &amp; Reading</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>blend_color.gif</image>
 <code><![CDATA[
@@ -28,38 +26,5 @@ rect(66, 20, 20, 60);
 <description><![CDATA[
 Blends two color values together based on the blending mode given as the <b>MODE</b> parameter. The possible modes are described in the reference for the <b>blend()</b> function.
 ]]></description>
-
-<syntax>
-blendColor(<c>c1</c>, <c>c2</c>, <c>MODE</c>)
-</syntax>
-
-<parameter>
-<label>c1</label>
-<description><![CDATA[color: the first color to blend]]></description>
-</parameter>
-
-<parameter>
-<label>c2</label>
-<description><![CDATA[color: the second color to blend]]></description>
-</parameter>
-
-<parameter>
-<label>MODE</label>
-<description><![CDATA[Either BLEND, ADD, SUBTRACT, DARKEST, LIGHTEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, or BURN]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-blend()
-color()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

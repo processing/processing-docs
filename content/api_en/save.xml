@@ -6,8 +6,6 @@
 
 <subcategory>Image</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -25,34 +23,5 @@ Saves an image from the display window. Images are saved in TIFF, TARGA, JPEG, a
 <br/>
 All images saved from the main drawing window will be opaque. To save images without a background, use <b>createGraphics()</b>.
 ]]></description>
-
-<syntax>
-save(<c>filename</c>)
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: any sequence of letters and numbers]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-saveFrame()
-createGraphics()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

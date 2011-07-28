@@ -3,7 +3,6 @@
 <name>copy()</name>
 <category>Image</category>
 <subcategory>Pixels</subcategory>
-<usage>Web &amp; Application</usage>
 
 <example>
 <image>copy_.jpg</image>
@@ -23,64 +22,4 @@ Copies a region of pixels from the display window to another area of the display
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
 
-<syntax>
-copy(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>)
-copy(<c>srcImg</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>)
-</syntax>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int: X coordinate of the source's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int: Y coordinate of the source's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int: source image width]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int: source image height]]></description>
-</parameter>
-
-<parameter>
-<label>dx</label>
-<description><![CDATA[int: X coordinate of the destination's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>dy</label>
-<description><![CDATA[int: Y coordinate of the destination's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>dwidth</label>
-<description><![CDATA[int: destination image width]]></description>
-</parameter>
-
-<parameter>
-<label>dheight</label>
-<description><![CDATA[int: destination image height]]></description>
-</parameter>
-
-<parameter>
-<label>srcImg</label>
-<description><![CDATA[PImage: image variable referring to the source image]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-blend()
-get()
-</related>
-
-<availability>1.0</availability>
-<type>Function</type>
-<partof>Core</partof>
 </root>

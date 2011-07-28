@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,30 +24,5 @@ System variable which stores the width of the computer screen. For example, if t
 <br /><br />
 To ensure that the sketch takes over the entire screen, use "Present" instead of "Run". Otherwise the window will still have a frame border around it and not be placed in the upper corner of the screen. On Mac OS X, the menu bar will remain present unless "Present" mode is used.
 ]]></description>
-
-<syntax></syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

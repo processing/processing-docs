@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -51,40 +49,5 @@ void setup() {
 Returns the child XMLElement as specified by the <b>index</b> parameter. The value of the <b>index</b> parameter must be less than the total number of children to avoid going out of the array storing the child elements.
 When the <b>path</b> parameter is specified, then it will return all children that match that path. The path is a series of elements and sub-elements, separated by slashes.
 ]]></description>
-
-<syntax>
-<c>xml</c>.getChild(<c>index</c>)
-<c>xml</c>.getChild(<c>path</c>)
-</syntax>
-
-<parameter>
-<label>xml</label>
-<description><![CDATA[any variable of type XMLElement]]></description>
-</parameter>
-
-<parameter>
-<label>index</label>
-<description><![CDATA[int: the element]]></description>
-</parameter>
-
-<parameter>
-<label>path</label>
-<description><![CDATA[String: path to a particular element]]></description>
-</parameter>
-
-<returns>XMLElement</returns>
-
-<related>
-XMLElement_getChildCount()
-XMLElement_getChildren()
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

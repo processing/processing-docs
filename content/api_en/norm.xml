@@ -8,8 +8,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -27,38 +25,5 @@ Identical to map(value, low, high, 0, 1);
 Numbers outside the range are not clamped to 0 and 1, because
 out-of-range values are often intentional and useful.
 ]]></description>
-
-<syntax>
-norm(<c>value</c>, <c>low</c>, <c>high</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[float: The incoming value to be converted]]></description>
-</parameter>
-
-<parameter>
-<label>low</label>
-<description><![CDATA[float: Lower bound of the value's current range]]></description>
-</parameter>
-
-<parameter>
-<label>high</label>
-<description><![CDATA[float: Upper bound of the value's current range]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-map()
-lerp()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

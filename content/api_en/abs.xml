@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -21,25 +19,5 @@ float d = abs(-9.23);  // Sets d to 9.23
 <description><![CDATA[
 Calculates the absolute value (magnitude) of a number. The absolute value of a number is always positive.
 ]]></description>
-
-<syntax>
-abs(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[float or int]]></description>
-</parameter>
-
-<returns>float or int (depending on the input values)</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
 
 </root>

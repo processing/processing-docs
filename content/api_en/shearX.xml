@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>shearX_.gif</image>
 <code><![CDATA[
@@ -23,38 +21,5 @@ Shears a shape around the x-axis the amount specified by the <b>angle</b> parame
 <br/> <br/>
 Technically, <b>shearX()</b> multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the <b>pushMatrix()</b> and <b>popMatrix()</b> functions.
 ]]></description>
-
-<syntax>
-shearX(<c>angle</c>); 
-</syntax>
-
-<parameter>
-<label>angle</label>
-<description><![CDATA[float: angle of shear specified in radians]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-shearY() 
-translate() 
-scale() 
-pushMatrix() 
-popMatrix() 
-radians()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

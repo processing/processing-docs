@@ -6,8 +6,6 @@
 
 <subcategory>Random</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,29 +22,5 @@ for(int i=0; i &lt; 100; i++) {
 <description><![CDATA[
 Sets the seed value for <b>random()</b>. By default, <b>random()</b> produces different results each time the program is run. Set the <b>value</b> parameter to a constant to return the same pseudo-random numbers each time the software is run.
 ]]></description>
-
-<syntax>
-randomSeed(<c>value</c>);
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-random()
-noise()
-noiseSeed()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

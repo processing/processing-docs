@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -29,27 +27,5 @@ void setup() {
 <description><![CDATA[
 Gets a copy of the vector, returns a PVector object.
 ]]></description>
-
-<syntax>
-<c>vec</c>.get()
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<returns>PVector</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

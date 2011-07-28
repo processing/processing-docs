@@ -6,8 +6,6 @@
 
 <subcategory>Mouse</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,40 +32,5 @@ void mouseReleased() {
 <description><![CDATA[
 The <b>mouseReleased()</b> function is called every time a mouse button is released.
 ]]></description>
-
-<syntax>
-void mouseReleased() {
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-mouseX
-mouseY
-mousePressed
-mousePressed()
-mouseMoved()
-mouseDragged()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

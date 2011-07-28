@@ -7,8 +7,6 @@
 
 <subcategory>Conversion</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,37 +24,5 @@ Converts a byte, char, int, or color to a String containing the equivalent binar
 <br/> <br/>
 Note that the maximum number of digits is 32, because an int value can only represent up to 32 bits. Specifying more than 32 digits will simply shorten the string to 32 anyway.
 ]]></description>
-
-<syntax>
-binary(<c>value</c>)
-binary(<c>value</c>, <c>digits</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[byte, char, int, color: value to convert]]></description>
-</parameter>
-
-<parameter>
-<label>digits</label>
-<description><![CDATA[int: number of digits to return]]></description>
-</parameter>
-
-<returns>String</returns>
-
-<related>
-unhex()
-hex()
-unbinary()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>IDE</partof>
-
-<level>extended</level>
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Time &amp; Date</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -35,39 +33,5 @@ void draw() {
 <description><![CDATA[
 Processing communicates with the clock on your computer. The <b>month()</b> function returns the current month as a value from 1 - 12.
 ]]></description>
-
-<syntax>
-month()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>int</returns>
-
-<related>
-millis() 
-second()
-minute()
-hour()
-day()
-month()
-year()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>resetMatrix_.gif</image>
 <code><![CDATA[
@@ -36,30 +34,5 @@ printMatrix();
 Replaces the current matrix with the identity matrix. The equivalent function in OpenGL is glLoadIdentity(). 
 ]]></description>
 
-<syntax>
-resetMatrix()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-pushMatrix()
-popMatrix()
-applyMatrix()
-printMatrix()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -28,50 +26,5 @@ int h = min(list);            // Sets "h" to -3
 <description><![CDATA[
 Determines the smallest value in a sequence of numbers.
 ]]></description>
-
-<syntax>
-min(<c>value1</c>, <c>value2</c>)
-min(<c>value1</c>, <c>value2</c>, <c>value 3</c>)
-min(<c>array</c>)
-</syntax>
-
-<parameter>
-<label>value1</label>
-<description><![CDATA[int or float]]></description>
-</parameter>
-
-<parameter>
-<label>value2</label>
-<description><![CDATA[int or float]]></description>
-</parameter>
-
-<parameter>
-<label>value3</label>
-<description><![CDATA[int or float]]></description>
-</parameter>
-
-<parameter>
-<label>array</label>
-<description><![CDATA[int or float array]]></description>
-</parameter>
-
-<returns>int or float (depending on the inputs)</returns>
-
-<related>
-max()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

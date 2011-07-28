@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -23,44 +21,5 @@ void draw()
 <description><![CDATA[
 Constrains a value to not exceed a maximum and minimum value.
 ]]></description>
-
-<syntax>
-constrain(<c>value</c>, <c>min</c>, <c>max</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int or float: the value to constrain]]></description>
-</parameter>
-
-<parameter>
-<label>min</label>
-<description><![CDATA[int or float: minimum limit]]></description>
-</parameter>
-
-<parameter>
-<label>max</label>
-<description><![CDATA[int or float: maximum limit]]></description>
-</parameter>
-
-<returns>float or int (depending on the input values)</returns>
-
-<related>
-max()
-min()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

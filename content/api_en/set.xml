@@ -6,8 +6,6 @@
 
 <subcategory>Pixels</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>set_.gif</image>
 <code><![CDATA[
@@ -51,51 +49,5 @@ As of release 1.0, this function ignores <b>imageMode()</b>.
 <br/> <br/>
 Due to what appears to be a bug in Apple's Java implementation, the point() and set() methods are extremely slow in some circumstances when used with the default renderer. Using P2D or P3D will fix the problem. Grouping many calls to point() or set() together can also help. (<a href="http://dev.processing.org/bugs/show_bug.cgi?id=1094">Bug 1094</a>)
 ]]></description>
-
-<syntax>
-set(<c>x</c>, <c>y</c>, <c>color</c>)
-set(<c>x</c>, <c>y</c>, <c>image</c>)
-</syntax>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int: x-coordinate of the pixel]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int: y-coordinate of the pixel]]></description>
-</parameter>
-
-<parameter>
-<label>color</label>
-<description><![CDATA[color: any value of the color datatype]]></description>
-</parameter>
-
-<parameter>
-<label>image</label>
-<description><![CDATA[PImage: any valid variable of type PImage]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-get()
-pixels[]
-imageMode
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

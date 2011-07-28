@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -32,27 +30,5 @@ void mousePressed() {
 <description><![CDATA[
 Stops the recording process started by <b>beginRecord()</b> and closes the file.
 ]]></description>
-
-<syntax>
-endRecord()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-beginRecord()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

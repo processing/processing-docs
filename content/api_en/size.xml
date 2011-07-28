@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -85,45 +83,5 @@ The maximum width and height is limited by your operating system, and is usually
 <br/> <br/>
 Again, the size() method must be the first line of the code (or first item inside setup). Any code that appears before the size() command may run more than once, which can lead to confusing results.
 ]]></description>
-
-<syntax>
-size(<c>width</c>, <c>height</c>)
-size(<c>width</c>, <c>height</c>, <c>MODE</c>)
-</syntax>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int: width of the display window in units of pixels]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int: height of the display window in units of pixels]]></description>
-</parameter>
-
-<parameter>
-<label>MODE</label>
-<description><![CDATA[Either P2D, P3D, JAVA2D, or OPENGL]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-createGraphics()
-screen
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

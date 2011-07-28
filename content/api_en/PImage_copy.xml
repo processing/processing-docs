@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>PImage_copy.jpg</image>
 <code><![CDATA[
@@ -23,74 +21,5 @@ Copies a region of pixels from one image into another. If the source and destina
 <br /><br />
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
-
-<syntax>
-<c>img</c>.copy(<c>sx</c>, <c>sy</c>, <c>swidth</c>, <c>sheight</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>);
-<c>img</c>.copy(<c>srcImg</c>, <c>sx</c>, <c>sy</c>, <c>swidth</c>,  <c>sheight</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>);
-</syntax>
-
-<parameter>
-<label>img</label>
-<description><![CDATA[PImage: any variable of type PImage]]></description>
-</parameter>
-
-<parameter>
-<label>sx</label>
-<description><![CDATA[int: X coordinate of the source's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>sy</label>
-<description><![CDATA[int: Y coordinate of the source's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>swidth</label>
-<description><![CDATA[int: source image width]]></description>
-</parameter>
-
-<parameter>
-<label>sheight</label>
-<description><![CDATA[int: source image height]]></description>
-</parameter>
-
-<parameter>
-<label>dx</label>
-<description><![CDATA[int: X coordinate of the destination's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>dy</label>
-<description><![CDATA[int: Y coordinate of the destination's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>dwidth</label>
-<description><![CDATA[int: destination image width]]></description>
-</parameter>
-
-<parameter>
-<label>dheight</label>
-<description><![CDATA[int: destination image height]]></description>
-</parameter>
-
-<parameter>
-<label>srcImg</label>
-<description><![CDATA[PImage: a image variable referring to the source image.]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-alpha()
-blend()
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
 
 </root>

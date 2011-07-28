@@ -6,8 +6,6 @@
 
 <subcategory>Coordinates</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -56,44 +54,5 @@ Returns the three-dimensional X, Y, Z position in model space. This returns the 
 <br/> <br/>
 In the example, the modelX(), modelY(), and modelZ() methods record the location of a box in space after being placed using a series of translate and rotate commands. After popMatrix() is called, those transformations no longer apply, but the (x, y, z) coordinate returned by the model functions is used to place another box in the same location.
 ]]></description>
-
-<syntax>
-modelX(<c>x</c>, <c>y</c>, <c>z</c>)
-</syntax>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: 3D x coordinate to be mapped]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: 3D y coordinate to be mapped]]></description>
-</parameter>
-
-<parameter>
-<label>z</label>
-<description><![CDATA[int or float: 3D z coordinate to be mapped]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-modelY()
-modelZ()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

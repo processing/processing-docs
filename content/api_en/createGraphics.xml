@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>pgraphics.jpg</image>
 <code><![CDATA[
@@ -41,44 +39,5 @@ Unlike the main drawing surface which is completely opaque, surfaces created wit
 createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>)
 createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>, <c>filename</c>)
 </syntax>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int: width in pixels]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int: height in pixels]]></description>
-</parameter>
-
-<parameter>
-<label>renderer</label>
-<description><![CDATA[Either P2D, P3D, JAVA2D, PDF]]></description>
-</parameter>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: the name of the file]]></description>
-</parameter>
-
-<returns>PGraphics</returns>
-
-<related>
-PGraphics
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

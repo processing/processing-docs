@@ -6,8 +6,6 @@
 
 <subcategory>Text Area</subcategory>
 
-<usage>IDE</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -42,34 +40,5 @@ Writes to the text area of the Processing environment's console. This is often h
 <br/><br/>
 Calling <b>println()</b> on an array (by itself) will write the contents of the array to the console. This is often helpful for looking at the data a program is producing. A new line is put between each element of the array. This function can only print one dimensional arrays. For arrays with higher dimensions, the result will be closer to that of <b>print()</b>.
 ]]></description>
-
-<syntax>
-println(<c>data</c>)
-</syntax>
-
-<parameter>
-<label>data</label>
-<description><![CDATA[boolean, byte, char, color, int, float, String, Object, boolean[], byte[], char[], color[], int[], float[], String[], Object[]]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-print()
-null
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

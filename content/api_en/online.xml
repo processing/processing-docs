@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -23,21 +21,5 @@ if(online) {  // of "if (online == true)"
 <description><![CDATA[
 Confirms if a Processing program is running inside a web browser. This variable is "true" if the program is online and "false" if not.
 ]]></description>
-
-<syntax>
-online
-</syntax>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

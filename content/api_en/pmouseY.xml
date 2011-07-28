@@ -6,8 +6,6 @@
 
 <subcategory>Mouse</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,35 +22,5 @@ void draw()
 <description><![CDATA[
 The system variable <b>pmouseY</b> always contains the vertical position of the mouse in the frame previous to the current frame. More detailed information about how <b>pmouseY</b> is updated inside of <b>draw()</b> and mouse events is explained in the reference for <a href="http://processing.org/reference/pmouseX.html"><b>pmouseX</b></a>.
 ]]></description>
-
-<syntax>
-pmouseY
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-pmouseX
-mouseX
-mouseY
-</related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

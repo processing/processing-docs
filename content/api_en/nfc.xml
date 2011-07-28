@@ -6,8 +6,6 @@
 
 <subcategory>String Functions</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,46 +24,5 @@ Utility function for formatting numbers into strings and placing appropriate com
 <br/> <br/>
 For a non-US locale, this will insert periods instead of commas, or whatever is apprioriate for that region.
 ]]></description>
-
-<syntax>
-nfc(<c>intValue</c>)
-nfc(<c>floatValue</c>, <c>right</c>)
-</syntax>
-
-<parameter>
-<label>intValue</label>
-<description><![CDATA[int or int[]: the number(s) to format]]></description>
-</parameter>
-
-<parameter>
-<label>floatValue</label>
-<description><![CDATA[float or float[]: the number(s) to format]]></description>
-</parameter>
-
-<parameter>
-<label>right</label>
-<description><![CDATA[int: number of digits to the right of the decimal point]]></description>
-</parameter>
-
-<returns>String or String[]</returns>
-
-<related>
-nf()
-nfs()
-nfp()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-<level>Extended</level>
-
-
-
-
 
 </root>

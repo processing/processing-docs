@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,32 +24,5 @@ if (folderPath == null) {
 <description><![CDATA[
 Opens a platform-specific file chooser dialog to select a folder for input. This function returns the full path to the selected folder as a <b>String</b>, or <b>null</b> if no selection.
 ]]></description>
-
-<syntax>
-selectFolder()
-selectFolder(<c>prompt</c>)
-</syntax>
-
-<parameter>
-<label>prompt</label>
-<description><![CDATA[String: message you want the user to see in the file chooser]]></description>
-</parameter>
-
-
-<returns>String or null</returns>
-
-<related>
-selectOutput()
-selectInput()
-</related>
-
-<availability>1.0</availability>
-
-<type>function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

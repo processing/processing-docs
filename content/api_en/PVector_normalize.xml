@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -21,27 +19,5 @@ println(v);  // Prints "[ 0.4454354, 0.8908708, 0.089087084 ]"
 <description><![CDATA[
 Normalize the vector to length 1 (make it a unit vector).
 ]]></description>
-
-<syntax>
-<c>vec</c>.normalize()
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

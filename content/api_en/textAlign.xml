@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>textAlign_.gif</image>
 <code><![CDATA[
@@ -34,41 +32,5 @@ When using <b>text()</b> with width and height parameters, BASELINE is ignored, 
 <br/> <br/>
 The vertical alignment is based on the value of <b>textAscent()</b>, which many fonts do not specify correctly. It may be necessary to use a hack and offset by a few pixels by hand so that the offset looks correct. To do this as less of a hack, use some percentage of <b>textAscent()</b> or <b>textDescent()</b> so that the hack works even if you change the size of the font.
 ]]></description>
-
-<syntax>
-textAlign(<c>ALIGN</c>)
-textAlign(<c>ALIGN</c>, <c>YALIGN</c>)
-</syntax>
-
-<parameter>
-<label>ALIGN</label>
-<description><![CDATA[Horizontal alignment, either LEFT, CENTER, or RIGHT]]></description>
-</parameter>
-
-<parameter>
-<label>YALIGN</label>
-<description><![CDATA[Vertical alignment, either TOP, BOTTOM, CENTER, or BASELINE]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-loadFont() 
-PFont 
-text() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Camera</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,29 +24,5 @@ printCamera();
 <description><![CDATA[
 Prints the current camera matrix to the text window.
 ]]></description>
-
-<syntax>
-printCamera()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-camera()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

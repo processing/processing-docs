@@ -7,8 +7,6 @@
 
 <subcategory>Array Functions</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,27 +22,5 @@ Decreases an array by one element and returns the shortened array.
 <br/> <br/>
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) shorten(originalArray)</em>.
 ]]></description>
-
-<syntax>
-shorten(<c>array</c>)
-</syntax>
-
-<parameter>
-<label>array</label>
-<description><![CDATA[boolean[], byte[], char[], int[], float[], or String[], or an array of objects]]></description>
-</parameter>
-
-<returns>Array (the same datatype as the input)</returns>
-
-<related>
-append()
-expand()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

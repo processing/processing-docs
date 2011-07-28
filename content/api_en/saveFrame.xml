@@ -6,8 +6,6 @@
 
 <subcategory>Image</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -54,40 +52,5 @@ It is not possible to use saveXxxxx() methods inside a web browser unless the sk
 <br/>
 All images saved from the main drawing window will be opaque. To save images without a background, use <b>createGraphics()</b>.
 ]]></description>
-
-<syntax>
-saveFrame()
-saveFrame("<c>filename</c>-####.<c>ext</c>")
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: any sequence of letters and numbers]]></description>
-</parameter>
-
-<parameter>
-<label>ext</label>
-<description><![CDATA[either "tif", "tga", "jpg", "png"]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-save()
-createGraphics()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

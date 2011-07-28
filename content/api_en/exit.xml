@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -28,31 +26,5 @@ Rather than terminating immediately, <b>exit()</b> will cause the sketch to exit
 <br/> <br/>
 For Java programmers, this is <em>not</em> the same as System.exit(). Further, System.exit() should not be used because closing out an application while draw() is running may cause a crash (particularly with OpenGL).
 ]]></description>
-
-<syntax>
-exit()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

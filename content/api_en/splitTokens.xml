@@ -6,8 +6,6 @@
 
 <subcategory>String Functions</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -39,34 +37,5 @@ The splitTokens() function splits a String at one or many character "tokens." Th
 <br/> <br/>
 If no <b>tokens</b> character is specified, any whitespace character is used to split. Whitespace characters include tab (\\t), line feed (\\n), carriage return (\\r), form feed (\\f), and space. To convert a String to an array of integers or floats, use the datatype conversion functions <b>int()</b> and <b>float()</b> to convert the array of Strings.
 ]]></description>
-
-<syntax>
-splitTokens(<c>str</c>)
-splitTokens(<c>str</c>, <c>tokens</c>)
-</syntax>
-
-<parameter>
-<label>str</label>
-<description><![CDATA[the string to be split]]></description>
-</parameter>
-
-<parameter>
-<label>tokens</label>
-<description><![CDATA[list of individual characters that will be used as separators]]></description>
-</parameter>
-
-<returns>String[]</returns>
-
-<related>
-split()
-join()
-trim()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

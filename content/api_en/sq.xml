@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>sq_.gif</image>
 <code><![CDATA[
@@ -24,33 +22,5 @@ rect(0, 65, c, 10);
 <description><![CDATA[
 Squares a number (multiplies a number by itself). The result is always a positive number, as multiplying two negative numbers always yields a positive result. For example, -1 * -1 = 1.
 ]]></description>
-
-<syntax>
-sq(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int or float]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-sqrt()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

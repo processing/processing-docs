@@ -6,8 +6,6 @@
 
 <subcategory>Camera</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>beginCamera_.gif</image>
 <code><![CDATA[
@@ -29,29 +27,5 @@ box(45);
 <description><![CDATA[
 The <b>beginCamera()</b> and <b>endCamera()</b> functions enable advanced customization of the camera space. Please see the reference for <b>beginCamera()</b> for a description of how the functions are used.
 ]]></description>
-
-<syntax>
-endCamera()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-beginCamera()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

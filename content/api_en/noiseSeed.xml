@@ -6,8 +6,6 @@
 
 <subcategory>Random</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -30,36 +28,5 @@ void draw()
 <description><![CDATA[
 Sets the seed value for <b>noise()</b>. By default, <b>noise()</b> produces different results each time the program is run. Set the <b>value</b> parameter to a constant to return the same pseudo-random numbers each time the software is run. 
 ]]></description>
-
-<syntax>
-noiseSeed(<c>x</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-noise()
-noiseDetail()
-random()
-randomSeed()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

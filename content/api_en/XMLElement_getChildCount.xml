@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,30 +32,5 @@ void setup() {
 <description><![CDATA[
 Returns the number of children for the element.
 ]]></description>
-
-<syntax>
-<c>xml</c>.getChildCount()
-</syntax>
-
-<parameter>
-<label>xml</label>
-<description><![CDATA[any variable of type XMLElement]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related>
-XMLElement_getChild()
-XMLElement_getChildren()
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

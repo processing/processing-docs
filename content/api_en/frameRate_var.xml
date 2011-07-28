@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -25,31 +23,5 @@ void draw() {
 <description><![CDATA[
 The system variable <b>frameRate</b> contains the approximate frame rate of the software as it executes. The initial value is 10 fps and is updated with each frame. The value is averaged (integrated) over several frames. As such, this value won't be valid until after 5-10 frames.
 ]]></description>
-
-<syntax></syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-frameRate()
-</related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

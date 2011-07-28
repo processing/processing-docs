@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <applet></applet>
@@ -59,28 +57,5 @@ When <b>noLoop()</b> is used, it's not possible to manipulate or access the scre
 <br/> <br/>
 Note that if the sketch is resized, <b>redraw()</b> will be called to update the sketch, even after <b>noLoop()</b> has been specified. Otherwise, the sketch would enter an odd state until <b>loop()</b> was called.
 ]]></description>
-
-<syntax>
-noLoop()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-loop()
-redraw()
-draw()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
 
 </root>

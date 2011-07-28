@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -38,30 +36,5 @@ hint(DISABLE_OPENGL_ERROR_REPORT) - Speeds up the OPENGL renderer setting by not
 <br/> <br/>-->
 As of release 0149, unhint() has been removed in favor of adding additional ENABLE/DISABLE constants to reset the default behavior. This prevents the double negatives, and also reinforces which hints can be enabled or disabled.
 ]]></description>
-
-<syntax>
-hint(<c>item</c>)
-</syntax>
-
-<parameter>
-<label>item</label>
-<description><![CDATA[constant: name of the hint to be enabled or disabled]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-PGraphics
-createGraphics()
-size()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

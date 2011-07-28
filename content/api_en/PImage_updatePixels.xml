@@ -7,8 +7,6 @@
 
 <subcategory>Pixels</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>updatePixels_.jpg</image>
 <code><![CDATA[
@@ -30,25 +28,5 @@ Certain renderers may or may not seem to require <b>loadPixels()</b> or <b>updat
 <br/> <br/>
 Currently, none of the renderers use the additional parameters to <b>updatePixels()</b>, however this may be implemented in the future. 
 ]]></description>
-
-<syntax>
-<c>img</c>.updatePixels()
-<c>img</c>.updatePixels(<c>x</c>, <c>y</c>, <c>w</c>, <c>h</c>)
-</syntax>
-
-<parameter>
-<label>img</label>
-<description><![CDATA[any variable of type PImage]]></description>
-</parameter>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
 
 </root>

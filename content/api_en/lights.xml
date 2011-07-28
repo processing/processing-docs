@@ -6,8 +6,6 @@
 
 <subcategory>Lights</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>lights_.jpg</image>
 <code><![CDATA[
@@ -49,37 +47,5 @@ void draw() {
 <description><![CDATA[
 Sets the default ambient light, directional light, falloff, and specular values. The defaults are ambientLight(128, 128, 128) and directionalLight(128, 128, 128, 0, 0, -1), lightFalloff(1, 0, 0), and lightSpecular(0, 0, 0). Lights need to be included in the draw() to remain persistent in a looping program. Placing them in the setup() of a looping program will cause them to only have an effect the first time through the loop.
 ]]></description>
-
-<syntax>
-lights()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-ambientLight()
-directionalLight()
-pointLight()
-spotLight()
-noLights()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Loading &amp; Displaying</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -35,51 +33,5 @@ The <b>size</b> parameter states the font size you want to generate. The <b>smoo
 <br /><br />
 This function creates a bitmapped version of a font in the same manner as the Create Font tool. It loads a font by name, and converts it to a series of images based on the size of the font. When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont(). For instance, when using the default renderer setting (JAVA2D), the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P2D, P3D, and OPENGL renderer settings, the bitmapped version will be used. While this can drastically improve speed and appearance, results are poor when exporting if the sketch does not include the .otf or .ttf file, and the requested font is not available on the machine running the sketch. 
 ]]></description>
-
-<syntax>
-createFont(<c>name</c>, <c>size</c>)
-createFont(<c>name</c>, <c>size</c>, <c>smooth</c>)
-createFont(<c>name</c>, <c>size</c>, <c>smooth</c>, <c>charset</c>)
-</syntax>
-
-<parameter>
-<label>name</label>
-<description><![CDATA[String: name of the font to load]]></description>
-</parameter>
-
-<parameter>
-<label>size</label>
-<description><![CDATA[float: point size of the font]]></description>
-</parameter>
-
-<parameter>
-<label>charset</label>
-<description><![CDATA[char[]: array containing characters to be generated]]></description>
-</parameter>
-
-<parameter>
-<label>smooth</label>
-<description><![CDATA[boolean: true for an antialiased font, false for aliased]]></description>
-</parameter>
-
-<returns>PFont</returns>
-
-<related>
-PFont 
-textFont()
-text()
-loadFont()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-<level>Extended</level>
-
-
 
 </root>

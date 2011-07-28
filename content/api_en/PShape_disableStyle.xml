@@ -6,8 +6,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>PShape_disableStyle.jpg</image>
 <code><![CDATA[
@@ -25,26 +23,5 @@ shape(s, 50, 10, 80, 80);
 <description><![CDATA[
 Disables the shape's style data and uses Processing's current styles. Styles include attributes such as colors, stroke weight, and stroke joints. 
 ]]></description>
-
-<syntax>
-<c>sh</c>.disableStyle()
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: any variable of type PShape]]></description>
-</parameter>
-
-<returns>none</returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
 
 </root>

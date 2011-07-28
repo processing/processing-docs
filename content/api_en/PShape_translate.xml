@@ -6,8 +6,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -35,43 +33,5 @@ Specifies an amount to displace the shape. The <b>x</b> parameter specifies left
 <br /><br />
 Using this method with the <b>z</b> parameter requires using the P3D or OPENGL parameter in combination with size. 
 ]]></description>
-
-<syntax>
-<c>sh</c>.translate(<c>x</c>, <c>y</c>);
-<c>sh</c>.translate(<c>x</c>, <c>y</c>, <c>z</c>);
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: any variable of type PShape]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: left/right translation]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: up/down translation]]></description>
-</parameter>
-
-<parameter>
-<label>z</label>
-<description><![CDATA[int or float: forward/back translation]]></description>
-</parameter>
-
-
-<returns>none</returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
 
 </root>

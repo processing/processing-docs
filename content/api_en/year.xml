@@ -6,8 +6,6 @@
 
 <subcategory>Time &amp; Date</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -36,39 +34,5 @@ void draw() {
 <description><![CDATA[
 Processing communicates with the clock on your computer. The <b>year()</b> function returns the current year as an integer (2003, 2004, 2005, etc).
 ]]></description>
-
-<syntax>
-year()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>int</returns>
-
-<related>
-millis() 
-second()
-minute()
-hour()
-day()
-month()
-year()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

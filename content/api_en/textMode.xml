@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>textMode_.gif</image>
 <code><![CDATA[
@@ -31,34 +29,5 @@ The SHAPE mode draws text using the the glyph outlines of individual characters 
 <br /><br />
 The textMode(SHAPE) option in OPENGL mode can be combined with beginRaw() to write vector-accurate text to 2D and 3D output files, for instance DXF or PDF. textMode(SHAPE) is not currently optimized for OPENGL, so if recording shape data, use textMode(MODEL) until you're ready to capture the geometry with beginRaw().
 ]]></description>
-
-<syntax>
-textMode(<c>MODE</c>)
-</syntax>
-
-<parameter>
-<label>MODE</label>
-<description><![CDATA[either MODEL, SCREEN, or SHAPE]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-loadFont() 
-PFont 
-text()
-textFont() 
-createFont()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
 
 </root>

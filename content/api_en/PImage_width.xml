@@ -6,8 +6,6 @@
 
 <subcategory>field</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>PImage_width.jpg</image>
 <code><![CDATA[
@@ -20,24 +18,5 @@ rect(55, 10, img.width, img.height);
 <description><![CDATA[
 The width of the image in units of pixels.
 ]]></description>
-
-<syntax>
-<c>img</c>.width
-</syntax>
-
-<parameter>
-<label>img</label>
-<description><![CDATA[PImage: any variable of type PImage]]></description>
-</parameter>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Field</type>
-
-<partof>Core</partof>
 
 </root>

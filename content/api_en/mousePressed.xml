@@ -6,8 +6,6 @@
 
 <subcategory>Mouse</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,41 +32,5 @@ void mousePressed() {
 <description><![CDATA[
 The <b>mousePressed()</b> function is called once after every time a mouse button is pressed. The <b>mouseButton</b> variable (see the related reference entry) can be used to determine which button has been pressed.
 ]]></description>
-
-<syntax>
-void mousePressed() { 
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-mouseX
-mouseY
-mouseButton
-mousePressed
-mouseReleased()
-mouseMoved()
-mouseDragged()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

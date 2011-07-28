@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>strokeWeight_.gif</image>
 <code><![CDATA[
@@ -31,26 +29,4 @@ When used with P3D, strokeWeight does not interpolate the Z-coordinates of the l
 When using OPENGL, the minimum and maximum values for strokeWeight() are controlled by the graphics card and the operating system's OpenGL implementation. For instance, the weight may not go higher than 10. 
 ]]></description>
 
-<syntax>
-strokeWeight(<c>width</c>)
-</syntax>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int or float: the weight (in pixels) of the stroke]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-stroke()
-strokeJoin()
-strokeCap()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>textSize_.gif</image>
 <code><![CDATA[
@@ -25,36 +23,5 @@ text("word", 15, 70);
 <description><![CDATA[
 Sets the current font size. This size will be used in all subsequent calls to the <b>text()</b> function. Font size is measured in units of pixels.
 ]]></description>
-
-<syntax>
-textSize(<c>size</c>)
-</syntax>
-
-<parameter>
-<label>size</label>
-<description><![CDATA[int or float: the size of the letters in units of pixels]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-loadFont() 
-PFont 
-text()
-textFont() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

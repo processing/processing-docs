@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code></code>
@@ -22,30 +20,5 @@ This method is a convenience over the Java approach that requires you to 1) crea
 <br /><br />
 If the output filename ends with <b>.gz</b>, the output will be automatically GZIP compressed as it is written.
 ]]></description>
-
-<syntax>
-createOutput(<c>filename</c>)
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: name of the file to open]]></description>
-</parameter>
-
-<returns>OutputStream or null</returns>
-
-<related>
-createInput()
-selectOutput()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

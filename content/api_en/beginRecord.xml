@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,33 +32,5 @@ Opens a new file and all subsequent drawing functions are echoed to this file as
 <br /> <br />
 Note that beginRecord() will only pick up any settings that happen after it has been called. For instance, if you call textFont() before beginRecord(), then that font will not be set for the file that you're recording to. 
 ]]></description>
-
-<syntax>
-beginRecord(<c>renderer</c>, <c>filename</c>)
-</syntax>
-
-<parameter>
-<label>renderer</label>
-<description><![CDATA[For example, PDF]]></description>
-</parameter>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: filename for output]]></description>
-</parameter>
-
-
-<returns></returns>
-
-<related>
-endRecord()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>String Functions</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -33,37 +31,5 @@ Assuming, a loop with counter variable i, element [i][0] of a regexp match retur
 The syntax can be found in the reference for Java's <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html">Pattern</A> class. For regular expression syntax, read the <A HREF="http://java.sun.com/docs/books/tutorial/essential/regex/">Java Tutorial</A> on the topic. 
 <br/> <br/>
 ]]></description>
-
-<syntax>
-matchAll(<c>str</c>, <c>regexp</c>)
-</syntax>
-
-<parameter>
-<label>str</label>
-<description><![CDATA[the String to search inside]]></description>
-</parameter>
-
-<parameter>
-<label>regexp</label>
-<description><![CDATA[the regexp to be used for matching]]></description>
-</parameter>
-
-<returns>String[][]</returns>
-
-<related>
-match()
-split()
-splitTokens()
-join()
-trim()
-</related>
-
-<availability>1.0</availability>
-
-<level>Extended</level>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

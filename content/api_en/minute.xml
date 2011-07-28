@@ -6,8 +6,6 @@
 
 <subcategory>Time &amp; Date</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,39 +24,5 @@ void draw() {
 <description><![CDATA[
 Processing communicates with the clock on your computer. The <b>minute()</b> function returns the current minute as a value from 0 - 59.
 ]]></description>
-
-<syntax>
-minute()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>int</returns>
-
-<related>
-millis() 
-second()
-minute()
-hour()
-day()
-month()
-year()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

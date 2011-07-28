@@ -6,8 +6,6 @@
 
 <subcategory>Loading &amp; Displaying</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>text_.gif</image>
 <code><![CDATA[
@@ -55,70 +53,5 @@ The <b>width</b> and <b>height</b> parameters define a rectangular area to displ
 <br/> <br/>
 Use the <b>textMode()</b> function with the <b>SCREEN</b> parameter to display text in 2D at the surface of the window. 
 ]]></description>
-
-<syntax>
-text(<c>data</c>, <c>x</c>, <c>y</c>)
-text(<c>data</c>, <c>x</c>, <c>y</c>, <c>z</c>)
-text(<c>stringdata</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
-text(<c>stringdata</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>z</c>)
-</syntax>
-
-<parameter>
-<label>data</label>
-<description><![CDATA[String, char, int, or float: the alphanumeric symbols to be displayed]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: x-coordinate of text]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: y-coordinate of text]]></description>
-</parameter>
-
-<parameter>
-<label>z</label>
-<description><![CDATA[int or float: z-coordinate of text]]></description>
-</parameter>
-
-<parameter>
-<label>stringdata</label>
-<description><![CDATA[String: letters to be displayed]]></description>
-</parameter>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int or float: width of text box]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int or float: height of text box]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-textAlign()
-textMode()
-loadFont() 
-PFont 
-textFont() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Conversion</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -23,34 +21,5 @@ println(unbinary(s3));  // Prints 4
 <description><![CDATA[
 Converts a String representation of a binary number to its equivalent integer value. For example, unbinary("00001000") will return 8.
 ]]></description>
-
-<syntax>
-unbinary(<c>str</c>)
-</syntax>
-
-<parameter>
-<label>str</label>
-<description><![CDATA[String]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related>
-hex()
-binary()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>IDE</partof>
-
-<level>extended</level>
-
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -19,34 +17,5 @@ int a = floor(x);  // Set "a" to 2
 <description><![CDATA[
 Calculates the closest int value that is less than or equal to the value of the parameter.
 ]]></description>
-
-<syntax>
-floor(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[float]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related>
-ceil()
-round()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

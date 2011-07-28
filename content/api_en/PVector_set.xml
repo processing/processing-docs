@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -63,56 +61,5 @@ void setup() {
 <description><![CDATA[
 Sets the x, y, and z component of the vector using three separate variables, the data from a PVector, or the values from a float array.
 ]]></description>
-
-<syntax>
-<c>vec</c>.set(<c>x</c>, <c>y</c>, <c>z</c>)
-<c>vec</c>.set(<c>v</c>)
-<c>vec</c>.set(<c>array</c>)
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[float: the x component of the vector]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[float: the y component of the vector]]></description>
-</parameter>
-
-<parameter>
-<label>z</label>
-<description><![CDATA[float: the z component of the vector]]></description>
-</parameter>
-
-<parameter>
-<label>v</label>
-<description><![CDATA[PVector: the x, y, and z components from a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>array</label>
-<description><![CDATA[float[]: the x, y (and maybe z) components from a float array]]></description>
-</parameter>
-
- 
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

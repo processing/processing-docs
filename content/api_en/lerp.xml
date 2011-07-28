@@ -8,8 +8,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>lerp_.gif</image>
 <code><![CDATA[
@@ -47,37 +45,5 @@ for(int i=0; i&lt;=10; i++) {
 <description><![CDATA[
 Calculates a number between two numbers at a specific increment. The <b>amt</b> parameter is the amount to interpolate between the two values where 0.0 equal to the first point, 0.1 is very near the first point, 0.5 is half-way in between, etc. The lerp function is convenient for creating motion along a straight path and for drawing dotted lines.
 ]]></description>
-
-<syntax>
-lerp(<c>value1</c>, <c>value2</c>, <c>amt</c>)
-</syntax>
-
-<parameter>
-<label>value1</label>
-<description><![CDATA[float or int: first value]]></description>
-</parameter>
-
-<parameter>
-<label>value2</label>
-<description><![CDATA[float or int: second value]]></description>
-</parameter>
-
-<parameter>
-<label>amt</label>
-<description><![CDATA[float: between 0.0 and 1.0]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-curvePoint()
-bezierPoint()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

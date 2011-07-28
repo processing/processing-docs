@@ -6,8 +6,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -35,24 +33,5 @@ void mousePressed() {
 <description><![CDATA[
 Replaces the current matrix of a shape with the identity matrix. The equivalent function in OpenGL is glLoadIdentity(). 
 ]]></description>
-
-<syntax>
-<b>sh</b>.resetMatrix()
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: any variable of type PShape]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
 
 </root>

@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -32,44 +30,5 @@ println(d);  // Prints "78.10249"
 <description><![CDATA[
 Calculates the Euclidean distance between two points (considering a point as a vector object).
 ]]></description>
-
-<syntax>
-<c>vec</c>.dist(<c>v</c>)
-PVector.dist(<c>v1</c>, <c>v2</c>)
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<parameter>
-<label>v</label>
-<description><![CDATA[PVector: the x, y, and z coordinates of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>v1</label>
-<description><![CDATA[PVector: the x, y, and z coordinates of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>v2</label>
-<description><![CDATA[PVector: the x, y, and z coordinates of a PVector object]]></description>
-</parameter>
-
-
-<returns>float</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

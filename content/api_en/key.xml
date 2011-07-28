@@ -6,8 +6,6 @@
 
 <subcategory>Keyboard</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -32,29 +30,5 @@ The system variable <b>key</b> always contains the value of the most recent key 
 <br/> <br/>
 For non-ASCII keys, use the <b>keyCode</b> variable. The keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) do not require checking to see if they key is coded, and you should simply use the <b>key</b> variable instead of <b>keyCode</b> If you're making cross-platform projects, note that the ENTER key is commonly used on PCs and Unix and the RETURN key is used instead on Macintosh. Check for both ENTER and RETURN to make sure your program will work for all platforms.
 ]]></description>
-
-<syntax>
-key
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-keyPressed 
-keyCode
-keyPressed() 
-keyReleased() 
-</related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
 
 </root>

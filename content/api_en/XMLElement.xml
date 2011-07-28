@@ -7,8 +7,6 @@
 
 <subcategory>Composite</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -42,79 +40,5 @@ XMLElement is a representation of an XML object. The object is able to parse XML
 <br/> <br/>
 The encoding parameter inside XML files is ignored, only UTF-8 (or plain ASCII) are parsed properly.
 ]]></description>
-
-<syntax>
-</syntax>
-
-<parameters>
-</parameters>
-
-<method>
-<mname>getChildCount()</mname>
-<mdescription>Returns the number of children for the element.</mdescription>
-</method>
-
-<method>
-<mname>getChild()</mname>
-<mdescription>Returns a single child.</mdescription>
-</method>
-
-<method>
-<mname>getChildren()</mname>
-<mdescription>Returns all of the children as an XMLElement array.</mdescription>
-</method>
-
-<method>
-<mname>getContent()</mname>
-<mdescription>Returns the content of an element</mdescription>
-</method>
-
-<method>
-<mname>getInt()</mname>
-<mdescription>Returns an integer attribute of the element.</mdescription>
-</method>
-
-<method>
-<mname>getFloat()</mname>
-<mdescription>Returns a float attribute of the element.</mdescription>
-</method>
-
-<method>
-<mname>getString()</mname>
-<mdescription>Returns a String attribute of the element.</mdescription>
-</method>
-
-<method>
-<mname>getName()</mname>
-<mdescription>Returns the name of the element.</mdescription>
-</method>
-
-
-<constructor>
-XML(<c>parent</c>, <c>file</c>)
-</constructor>
-
-<cparameter>
-<clabel>parent</clabel>
-<cdescription>PApplet: typically use "this"</cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>file</clabel>
-<cdescription>String: name of the XML file to load</cdescription>
-</cparameter>
-
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

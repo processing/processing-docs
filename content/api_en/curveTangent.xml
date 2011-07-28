@@ -6,8 +6,6 @@
 
 <subcategory>Curves</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>curveTangent_.gif</image>
 <code><![CDATA[
@@ -31,51 +29,5 @@ for (int i = 0; i &lt;= steps; i++) {
 <description><![CDATA[
 Calculates the tangent of a point on a curve. There is a good definition of "tangent" at Wikipedia: <a href="http://en.wikipedia.org/wiki/Tangent" target="new">http://en.wikipedia.org/wiki/Tangent</a>
 ]]></description>
-
-<syntax>
-curveTangent(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
-</syntax>
-
-<parameter>
-<label>a</label>
-<description><![CDATA[int or float: coordinate of first point on the curve]]></description>
-</parameter>
-
-<parameter>
-<label>b</label>
-<description><![CDATA[int or float: coordinate of first control point]]></description>
-</parameter>
-
-<parameter>
-<label>c</label>
-<description><![CDATA[int or float: coordinate of second control point]]></description>
-</parameter>
-
-<parameter>
-<label>d</label>
-<description><![CDATA[int or float: coordinate of second point on the curve]]></description>
-</parameter>
-
-<parameter>
-<label>t</label>
-<description><![CDATA[float: value between 0 and 1 ]]></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-curve()
-curveVertex()
-curvePoint()
-bezierTangent()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Mouse</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,40 +32,5 @@ void mouseDragged()
 <description><![CDATA[
 The <b>mouseDragged()</b> function is called once every time the mouse moves and a mouse button is pressed.
 ]]></description>
-
-<syntax>
-void mouseDragged() {
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-mouseX
-mouseY
-mousePressed
-mousePressed()
-mouseReleased()
-mouseMoved()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

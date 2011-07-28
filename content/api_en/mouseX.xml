@@ -6,8 +6,6 @@
 
 <subcategory>Mouse</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -22,36 +20,5 @@ void draw()
 <description><![CDATA[
 The system variable <b>mouseX</b> always contains the current horizontal coordinate of the mouse.
 ]]></description>
-
-<syntax></syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-mouseY
-mousePressed
-mousePressed()
-mouseReleased()
-mouseMoved()
-mouseDragged()
-</related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

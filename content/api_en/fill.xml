@@ -6,8 +6,6 @@
 
 <subcategory>Setting</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>fill_.gif</image>
 <code><![CDATA[
@@ -33,67 +31,5 @@ The value for the parameter "gray" must be less than or equal to the current max
 <br/> <br/>
 To change the color of an image (or a texture), use tint().
 ]]></description>
-
-<syntax>
-fill(<c>gray</c>)
-fill(<c>gray</c>, <c>alpha</c>)
-fill(<c>value1</c>, <c>value2</c>, <c>value3</c>)
-fill(<c>value1</c>, <c>value2</c>, <c>value3</c>, <c>alpha</c>)
-fill(<c>color</c>)
-fill(<c>color</c>, <c>alpha</c>)
-fill(<c>hex</c>)
-fill(<c>hex</c>, <c>alpha</c>)
-</syntax>
-
-<parameter>
-<label>gray</label>
-<description><![CDATA[int or float: number specifying value between white and black]]></description>
-</parameter>
-
-<parameter>
-<label>alpha</label>
-<description><![CDATA[int or float: opacity of the fill]]></description>
-</parameter>
-
-<parameter>
-<label>value1</label>
-<description><![CDATA[int or float: red or hue value]]></description>
-</parameter>
-
-<parameter>
-<label>value2</label>
-<description><![CDATA[int or float: green or saturation value]]></description>
-</parameter>
-
-<parameter>
-<label>value3</label>
-<description><![CDATA[int or float: blue or brightness value]]></description>
-</parameter>
-
-<parameter>
-<label>color</label>
-<description><![CDATA[color: any value of the color datatype]]></description>
-</parameter>
-
-<parameter>
-<label>hex</label>
-<description><![CDATA[int: color value in hexadecimal notation (i.e. #FFCC00 or 0xFFFFCC00)]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-noFill()
-stroke()
-tint()
-background()
-colorMode()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

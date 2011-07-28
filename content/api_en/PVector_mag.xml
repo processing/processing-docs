@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,27 +24,5 @@ void setup() {
 <description><![CDATA[
 Calculates the magnitude (length) of the vector and returns the result as a float (this is simply the equation <em>sqrt(x*x + y*y + z*z)</em>.)
 ]]></description>
-
-<syntax>
-<c>vec</c>.mag()
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

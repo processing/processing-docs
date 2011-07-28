@@ -6,8 +6,6 @@
 
 <subcategory>Creating &amp; Reading</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>brightness_.gif</image>
 <code><![CDATA[
@@ -25,32 +23,5 @@ rect(50, 20, 35, 60);
 <description><![CDATA[
 Extracts the brightness value from a color.
 ]]></description>
-
-<syntax>
-brightness(<c>color</c>)
-</syntax>
-
-<parameter>
-<label>color</label>
-<description><![CDATA[any value of the color datatype]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-red() 
-green() 
-blue() 
-hue() 
-saturation() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
 
 </root>

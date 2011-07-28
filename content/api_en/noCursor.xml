@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -26,33 +24,5 @@ void draw()
 <description><![CDATA[
 Hides the cursor from view. Will not work when running the program in a web browser or when running in full screen (Present) mode.
 ]]></description>
-
-<syntax>
-noCursor()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-cursor()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

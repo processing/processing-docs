@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -21,32 +19,5 @@ println(v);  // Prints "[ 2.2271771, 4.4543543, 0.4454354 ]"
 <description><![CDATA[
 Limit the magnitude of this vector to the value used for the <b>max</b> parameter.
 ]]></description>
-
-<syntax>
-<c>vec</c>.limit(<c>max</c>)
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<parameter>
-<label>max</label>
-<description><![CDATA[float: the maximum magnitude for the vector]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

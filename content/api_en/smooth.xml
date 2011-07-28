@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>smooth_.gif</image>
 <code><![CDATA[
@@ -27,35 +25,5 @@ Starting in Processing 1.0, smoothing is always enabled with the OPENGL renderer
 <br/><br/>
 In the current release, smoothing is imperfect with the P2D and P3D renderers. In some situations, drawing with smooth() will create <a href="http://dev.processing.org/bugs/show_bug.cgi?id=200">small hairlines inside filled shapes</a> or <a href="http://dev.processing.org/bugs/show_bug.cgi?id=1000">inaccuracies with shape depth</a> can cause odd visual artifacts at the edges of shapes.
 ]]></description>
-
-<syntax>
-smooth()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-noSmooth()
-hint()
-size()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof></partof>
-
-
-
-
-
-
-
 
 </root>

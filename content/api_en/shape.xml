@@ -6,8 +6,6 @@
 
 <subcategory>Loading &amp; Displaying</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>svg.jpg</image>
 <code><![CDATA[
@@ -43,52 +41,5 @@ Displays shapes to the screen. The shapes must be in the sketch's "data" directo
 <br /><br />
 Note complex shapes may draw awkwardly with P2D, P3D, and OPENGL. Those renderers do not yet support shapes that have holes or complicated breaks. 
 ]]></description>
-
-<syntax>
-shape(<c>sh</c>)
-shape(<c>sh</c>, <c>x</c>, <c>y</c>)
-shape(<c>sh</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: the shape to display]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: x-coordinate of the shape]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: y-coordinate of the shape]]></description>
-</parameter>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int or float: width to display the shape]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int or float: height to display the shape]]></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-PShape
-loadShape() 
-shapeMode() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
 
 </root>

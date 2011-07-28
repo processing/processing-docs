@@ -6,9 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
-
 <example>
 <image>createImage.jpg</image>
 <code><![CDATA[
@@ -43,41 +40,5 @@ Be sure to include all three parameters, specifying only the width and height (b
 <br/> <br/>
 Advanced users please note that createImage() should be used instead of the syntax <tt>new PImage()</tt>. 
 ]]></description>
-
-<syntax>
-createImage(<c>width</c>, <c>height</c>, <c>format</c>)
-</syntax>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int: width in pixels]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int: height in pixels]]></description>
-</parameter>
-
-<parameter>
-<label>format</label>
-<description><![CDATA[Either RGB, ARGB, ALPHA (grayscale alpha channel)]]></description>
-</parameter>
-
-<returns>PImage or null</returns>
-
-<related>
-PImage
-PGraphics
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
 
 </root>

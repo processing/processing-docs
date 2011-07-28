@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -21,38 +19,5 @@ float d = pow(-3, 5);  // Sets "d" to -3*-3*-3*-3*-3 = -243
 <description><![CDATA[
 Facilitates exponential expressions. The <b>pow()</b> function is an efficient way of multiplying numbers by themselves (or their reciprocal) in large quantities. For example, <b>pow(3, 5)</b> is equivalent to the expression 3*3*3*3*3 and <b>pow(3, -5)</b> is equivalent to 1 / 3*3*3*3*3.
 ]]></description>
-
-<syntax>
-pow(<c>num</c>, <c>exponent</c>)
-</syntax>
-
-<parameter>
-<label>num</label>
-<description><![CDATA[int or float: base of the exponential expression]]></description>
-</parameter>
-
-<parameter>
-<label>exponent</label>
-<description><![CDATA[int or float: power of which to raise the base ]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-sqrt()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

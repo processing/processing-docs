@@ -6,8 +6,6 @@
 
 <subcategory>Material Properties</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>emissive_.jpg</image>
 <code><![CDATA[
@@ -26,58 +24,5 @@ sphere(30);
 <description><![CDATA[
 Sets the emissive color of the material used for drawing shapes drawn to the screen. Used in combination with <b>ambient()</b>, <b>specular()</b>, and <b>shininess()</b> in setting the material properties of shapes.
 ]]></description>
-
-<syntax>
-emissive(<c>gray</c>)
-emissive(<c>color</c>)
-emissive(<c>v1</c>, <c>v2</c>, <c>v3</c>)
-</syntax>
-
-
-<parameter>
-<label>gray</label>
-<description><![CDATA[int or float: number specifying value between white and black]]></description>
-</parameter>
-
-<parameter>
-<label>color</label>
-<description><![CDATA[color: any value of the color datatype]]></description>
-</parameter>
-
-<parameter>
-<label>v1</label>
-<description><![CDATA[int or float: red or hue value]]></description>
-</parameter>
-
-<parameter>
-<label>v2</label>
-<description><![CDATA[int or float: green or saturation value]]></description>
-</parameter>
-
-<parameter>
-<label>v3</label>
-<description><![CDATA[int or float: blue or brightness value]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-ambient()
-specular()
-shininess()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

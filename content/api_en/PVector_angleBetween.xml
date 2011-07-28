@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -22,38 +20,5 @@ println(degrees(a));  // Prints "10.304827"
 <description><![CDATA[
 Calculates and returns the angle (in radians) between two vectors.
 ]]></description>
-
-<syntax>
-PVector.angleBetween(<c>v1</c>, <c>v2</c>)
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<parameter>
-<label>v1</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>v2</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-
-<returns>Float</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

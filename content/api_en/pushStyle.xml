@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>pushStyle.gif</image>
 <code><![CDATA[
@@ -46,29 +44,5 @@ The <b>pushStyle()</b> function saves the current style settings and <b>popStyle
 The style information controlled by the following functions are included in the style:
 fill(), stroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), imageMode(), rectMode(), ellipseMode(), shapeMode(), colorMode(), textAlign(), textFont(), textMode(), textSize(), textLeading(), emissive(), specular(), shininess(), ambient() 
 ]]></description>
-
-<syntax>
-pushStyle()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-popStyle()
-</related>
-
-<availability>1.0</availability>
-
-<type>Processing Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

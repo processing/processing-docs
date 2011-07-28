@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -35,29 +33,5 @@ Reads the contents of a file or url and places it in a byte array. If a file is 
 <br/> <br/>
 The filename parameter can also be a URL to a file found online. For security reasons, a Processing sketch found online can only download files from the same server from which it came. Getting around this restriction requires a <A HREF="http://java.sun.com/developer/onlineTraining/Programming/JDCBook/signed.html">signed applet</A>.
 ]]></description>
-
-<syntax>
-loadBytes(<c>filename</c>);
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: name of a file in the data folder or a URL.]]></description>
-</parameter>
-
-<returns>byte[]</returns>
-
-<related>
-loadStrings()
-saveStrings()
-saveBytes() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

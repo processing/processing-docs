@@ -6,8 +6,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -37,31 +35,5 @@ Shapes are always rotated around the upper-left corner of their bounding box. Po
 <br /><br />
 This method requires a 3D renderer. You need to pass P3D or OPENGL as a third parameter into the <b>size()</b> method as shown in the example above.
 ]]></description>
-
-<syntax>
-<c>sh</c>.rotateX(<c>angle</c>)
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: any variable of type PShape]]></description>
-</parameter>
-
-<parameter>
-<label>angle</label>
-<description><![CDATA[float: angle of rotation specified in radians]]></description>
-</parameter>
-
-<returns>none</returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
 
 </root>

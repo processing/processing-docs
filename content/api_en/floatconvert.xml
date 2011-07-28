@@ -6,8 +6,6 @@
 
 <subcategory>Conversion</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -20,35 +18,5 @@ println(i + " : " + f);  // Prints "65 : 65.0"
 <description><![CDATA[
 Converts an int, string, or array to its floating point representation.
 ]]></description>
-
-<syntax>
-float(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int, String, int[], String[]]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-float
-int()
-byte()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

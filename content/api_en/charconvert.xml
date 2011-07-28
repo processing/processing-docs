@@ -6,8 +6,6 @@
 
 <subcategory>Conversion</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,36 +22,5 @@ println(b + " : " + c);  // Prints "65 : A"
 <description><![CDATA[
 Converts a primitive datatype or array to a numeric character representation.
 ]]></description>
-
-<syntax>
-char(<c>val</c>)
-</syntax>
-
-<parameter>
-<label>val</label>
-<description><![CDATA[int, byte, int[], byte[]]]></description>
-</parameter>
-
-<returns>char</returns>
-
-<related>
-char
-int()
-float()
-byte()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>IDE</partof>
-
-
-
-
-
-
-
 
 </root>

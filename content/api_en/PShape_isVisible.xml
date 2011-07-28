@@ -6,8 +6,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>PShape_visible.jpg</image>
 <code><![CDATA[
@@ -30,26 +28,5 @@ Returns a boolean value "true" if the image is set to be visible, "false" if not
 <br/> <br/>
 The visibility of a shape is usually controlled by whatever program created the SVG file. For instance, this parameter is controlled by showing or hiding the shape in the layers palette in Adobe Illustrator.
 ]]></description>
-
-<syntax>
-<c>sh</c>.isVisible()
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: any variable of type PShape]]></description>
-</parameter>
-
-<returns>none</returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
 
 </root>

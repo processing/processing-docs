@@ -6,8 +6,6 @@
 
 <subcategory>Primitive</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>color.gif</image>
 <code><![CDATA[
@@ -35,44 +33,5 @@ Web color notation only works for opaque colors. To define a color with an alpha
 <br/> <br/>
 From a technical standpoint, colors are 32 bits of information ordered as AAAAAAAARRRRRRRRGGGGGGGGBBBBBBBB where the A's contain the alpha value, the R's are the red value, G's are green, and B's are blue. Each component is 8 bits (a number between 0 and 255). These values can be manipulated with <a href="rightshift.html">bit shifting</a>.
 ]]></description>
-
-<syntax>
-color <c>var</c>
-color <c>var</c> = <c>colorvalue</c>
-</syntax>
-
-<parameter>
-<label>var</label>
-<description><![CDATA[variable name referencing the value]]></description>
-</parameter>
-
-<parameter>
-<label>colorvalue</label>
-<description><![CDATA[any color value]]></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-colorMode()
-color()
-hex()
-red()
-green()
-blue()
-</related>
-
-<availability>1.0</availability>
-
-<type>Datatype</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

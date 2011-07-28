@@ -6,8 +6,6 @@
 
 <subcategory>Keyboard</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,38 +32,5 @@ void keyReleased() {
 <description><![CDATA[
 The <b>keyReleased()</b> function is called once every time a key is released. The key that was released will be stored in the <b>key</b> variable. See <b>key</b> and <b>keyReleased</b> for more information.
 ]]></description>
-
-<syntax>
-void keyReleased() { 
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-keyPressed 
-key 
-keyCode
-keyPressed() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

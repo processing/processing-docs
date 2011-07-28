@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -75,64 +73,5 @@ void draw() {
 <description><![CDATA[
 Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.
 ]]></description>
-
-<syntax>
-<c>vec</c>.sub(<c>x</c>, <c>y</c>, <c>z</c>)
-<c>vec</c>.sub(<c>v</c>)
-PVector.sub(<c>v1</c>, <c>v2</c>)
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[float: the x component of the vector]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[float: the y component of the vector]]></description>
-</parameter>
-
-<parameter>
-<label>z</label>
-<description><![CDATA[float: the z component of the vector]]></description>
-</parameter>
-
-<parameter>
-<label>v</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>v1</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>v2</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<returns>None or PVector</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

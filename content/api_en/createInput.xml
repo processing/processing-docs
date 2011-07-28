@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application &amp; Web</usage>
-
 <example>
 <image></image>
 <code></code>
@@ -34,28 +32,5 @@ If the file ends with <b>.gz</b>, the stream will automatically be gzip decompre
 <syntax>
 createInput(filename)
 </syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: the name of the file to use as input]]></description>
-</parameter>
-
-
-<returns>InputStream or null</returns>
-
-<related>
-createOutput()
-selectOutput()
-selectInput()
-</related>
-
-<availability>1.0</availability>
-
-<type>function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

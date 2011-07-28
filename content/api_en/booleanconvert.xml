@@ -6,8 +6,6 @@
 
 <subcategory>Conversion</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,33 +22,5 @@ if (b) {
 <description><![CDATA[
 Converts an int, string, or array to its boolean representation. For int calues, the number 0 evaluates to false and all other numbers evaluate to true. 
 ]]></description>
-
-<syntax>
-boolean(<c>val</c>)
-</syntax>
-
-<parameter>
-<label>val</label>
-<description><![CDATA[int, int[], String, String[]]]></description>
-</parameter>
-
-<returns>boolean</returns>
-
-<related>
-boolean
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>IDE</partof>
-
-
-
-
-
-
-
 
 </root>

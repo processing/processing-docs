@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -32,36 +30,5 @@ printMatrix();
 <description><![CDATA[
 Prints the current matrix to the text window.
 ]]></description>
-
-<syntax>
-printMatrix()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-pushMatrix()
-popMatrix()
-resetMatrix()
-applyMatrix()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-<level>Extended</level>
-
-
-
-
 
 </root>

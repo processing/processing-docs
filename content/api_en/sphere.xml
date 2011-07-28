@@ -6,8 +6,6 @@
 
 <subcategory>3D Primitives</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>sphere_.gif</image>
 <code><![CDATA[
@@ -21,31 +19,5 @@ sphere(28);
 <description><![CDATA[
 A sphere is a hollow ball made from tessellated triangles.
 ]]></description>
-
-<syntax>
-sphere(<c>radius</c>)
-</syntax>
-
-<parameter>
-<label>radius</label>
-<description><![CDATA[int or float: the radius of the sphere]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

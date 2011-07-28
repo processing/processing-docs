@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -28,29 +26,5 @@ If the file is not available or an error occurs, <b>null</b> will be returned an
 <br/> <br/>
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
-
-<syntax>
-loadStrings(<c>filename</c>)
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: name of the file or url to load]]></description>
-</parameter>
-
-<returns>String[]</returns>
-
-<related>
-loadBytes() 
-saveStrings()
-saveBytes()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
 
 </root>

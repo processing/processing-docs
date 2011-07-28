@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -58,32 +56,5 @@ This function behaves differently on each platform. On Windows, the parameters a
 <br/> <br/>
 For users familiar with Java, this is not quite the same as Runtime.exec(), because the launcher command is prepended. Instead, the <b>exec(String[])</b> function is a shortcut for Runtime.getRuntime.exec(String[]). 
 ]]></description>
-
-<syntax>
-open(<c>file</c>)
-open(<c>args</c>)
-</syntax>
-
-<parameter>
-<label>file</label>
-<description><![CDATA[String: name of the file]]></description>
-</parameter>
-
-<parameter>
-<label>args</label>
-<description><![CDATA[String[]: list of commands passed to the command line]]></description>
-</parameter>
-
-<returns>None or Process</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

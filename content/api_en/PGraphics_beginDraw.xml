@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -35,26 +33,5 @@ void draw() {
 <description><![CDATA[
 Sets the default properties for a PGraphics object. It should be called before anything is drawn into the object.
 ]]></description>
-
-<syntax>
-<c>graphics</c>.beginDraw()
-</syntax>
-
-<parameter>
-<label>graphics</label>
-<description><![CDATA[any object of the type PGraphics]]></description>
-</parameter>
-
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
 
 </root>

@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -38,27 +36,5 @@ void setup() {
 <description><![CDATA[
 Returns the content of an element. If there is no such content, <b>null</b> is returned.
 ]]></description>
-
-<syntax>
-<c>xml</c>.getContent()
-</syntax>
-
-<parameter>
-<label>xml</label>
-<description><![CDATA[any variable of type XMLElement]]></description>
-</parameter>
-
-<returns>String</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

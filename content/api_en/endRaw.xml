@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -34,24 +32,5 @@ void keyPressed() {
 <description><![CDATA[
 Complement to <b>beginRaw()</b>; they must always be used together. See the <a href="http://www.processing.org/reference/beginRaw_.html"><b>beginRaw()</b></a> reference for details.
 ]]></description>
-
-<syntax>
-endRaw()
-</syntax>
-
-<returns></returns>
-
-<related>
-beginRaw()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

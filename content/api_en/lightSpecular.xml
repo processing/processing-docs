@@ -6,8 +6,6 @@
 
 <subcategory>Lights</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>lightSpecular_.jpg</image>
 <code><![CDATA[
@@ -31,47 +29,5 @@ sphere(30);
 <description><![CDATA[
 Sets the specular color for lights. Like <b>fill()</b>, it affects only the elements which are created after it in the code. Specular refers to light which bounces off a surface in a perferred direction (rather than bouncing in all directions like a diffuse light) and is used for creating highlights. The specular quality of a light interacts with the specular material qualities set through the <b>specular()</b> and <b>shininess()</b> functions.
 ]]></description>
-
-<syntax>
-lightSpecular(<c>v1</c>, <c>v2</c>, <c>v3</c>)
-</syntax>
-
-
-<parameter>
-<label>v1</label>
-<description><![CDATA[int or float: red or hue value]]></description>
-</parameter>
-
-<parameter>
-<label>v2</label>
-<description><![CDATA[int or float: green or hue value]]></description>
-</parameter>
-
-<parameter>
-<label>v3</label>
-<description><![CDATA[int or float: blue or hue value]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-lights()
-ambientLight()
-pointLight()
-spotLight()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

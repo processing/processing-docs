@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -92,50 +90,5 @@ void draw() {
 <description><![CDATA[
 Multiplies a vector by a scalar or multiplies one vector by another.
 ]]></description>
-
-<syntax>
-<c>vec</c>.mult(<c>scalar</c>)
-<c>vec</c>.mult(<c>v</c>)
-PVector.mult(<c>v</c>, <c>scalar</c>)
-PVector.mult(<c>v1</c>, <c>v2</c>)
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<parameter>
-<label>scalar</label>
-<description><![CDATA[float: the number to multiply with the vector]]></description>
-</parameter>
-
-<parameter>
-<label>v</label>
-<description><![CDATA[PVector: the vector to multiply by the scalar]]></description>
-</parameter>
-
-<parameter>
-<label>v1</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-<parameter>
-<label>v2</label>
-<description><![CDATA[PVector: the x, y, and z components of a PVector object]]></description>
-</parameter>
-
-<returns>None or PVector</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>sqrt_.gif</image>
 <code><![CDATA[
@@ -24,34 +22,5 @@ rect(0, 65, c, 10);
 <description><![CDATA[
 Calculates the square root of a number. The square root of a number is always positive, even though there may be a valid negative root. The square root <b>s</b> of number <b>a</b> is such that <b>s*s = a</b>. It is the opposite of squaring.
 ]]></description>
-
-<syntax>
-sqrt(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int or float: non-negative number]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-pow()
-sq()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

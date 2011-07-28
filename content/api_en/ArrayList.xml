@@ -7,8 +7,6 @@
 
 <subcategory>Composite</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -58,31 +56,6 @@ An ArrayList is a resizable-array implementation of the Java List interface. It 
 <br /><br />
 For a list of the numerous <b>ArrayList</b> features, please read the <a href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ArrayList.html">Java reference description</a>.
 ]]></description>
-
-<syntax></syntax>
-
-<constructor>
-ArrayList()
-ArrayList(<c>initialCapacity</c>)
-</constructor>
-
-<cparameter>
-<clabel>initialCapacity</clabel>
-<cdescription>int: defines the initial capacity of the list, it's empty by default</cdescription>
-</cparameter>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>PDE</partof>
-
-<level>Extended</level>
-
 
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Keyboard</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -38,38 +36,5 @@ For non-ASCII keys, use the <b>keyCode</b> variable. The keys included in the AS
 <br/> <br/>
 Because of how operating systems handle key repeats, holding down a key may cause multiple calls to keyPressed() (and keyReleased() as well). The rate of repeat is set by the operating system and how each computer is configured.
 ]]></description>
-
-<syntax>
-void keyPressed() { 
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-keyPressed 
-key 
-keyCode
-keyReleased() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>textWidth_.gif</image>
 <code><![CDATA[
@@ -30,31 +28,5 @@ line(sw, 50, sw, 100);
 <description><![CDATA[
 Calculates and returns the width of any character or text string.
 ]]></description>
-
-<syntax>
-textWidth(<c>data</c>)
-</syntax>
-
-<parameter>
-<label>data</label>
-<description><![CDATA[char or String]]></description>
-</parameter>
-
-<returns>Float</returns>
-
-<related>
-loadFont() 
-PFont 
-text()
-textFont() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
 
 </root>

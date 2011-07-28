@@ -6,8 +6,6 @@
 
 <subcategory>Conversion</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,34 +22,5 @@ println(i + " : " + b);  // Prints "130 : -126"
 <description><![CDATA[
 Converts a primitive datatype or array to its byte representation. A byte can only be a whole number between -128 and 127, therefore when a number outside this range is converted, its value wraps to the corresponding byte representation.
 ]]></description>
-
-<syntax>
-byte(<c>val</c>)
-</syntax>
-
-<parameter>
-<label>val</label>
-<description><![CDATA[boolean, char, int, float, boolean[], char[], int[], float[]]]></description>
-</parameter>
-
-<returns>byte</returns>
-
-<related>
-byte
-int()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>IDE</partof>
-
-
-
-
-
-
-
 
 </root>

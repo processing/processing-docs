@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -30,50 +28,5 @@ Sets the cursor to a predefined symbol, an image, or makes it visible if already
 <br /> <br />
 Setting or hiding the cursor generally does not work with "Present" mode (when running full-screen).
 ]]></description>
-
-<syntax>
-cursor()
-cursor(<c>MODE</c>)
-cursor(<c>image</c>, <c>x</c>, <c>y</c>)
-</syntax>
-
-<parameter>
-<label>MODE</label>
-<description><![CDATA[either ARROW, CROSS, HAND, MOVE, TEXT, WAIT]]></description>
-</parameter>
-
-<parameter>
-<label>image</label>
-<description><![CDATA[PImage: any variable of type PImage]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int: the horizonal active spot of the cursor]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int: the vertical active spot of the cursor]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-noCursor()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

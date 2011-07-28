@@ -6,8 +6,6 @@
 
 <subcategory>field</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -24,24 +22,5 @@ println(s.width);  // Prints 281.0, the width of the shape
 <description><![CDATA[
 The width of the PShape document.
 ]]></description>
-
-<syntax>
-<c>sh</c>.width
-</syntax>
-
-<parameter>
-<label>sh</label>
-<description><![CDATA[PShape: any variable of type PShape]]></description>
-</parameter>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Field</type>
-
-<partof>Core</partof>
 
 </root>

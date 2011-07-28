@@ -6,8 +6,6 @@
 
 <subcategory>Curves</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>curvePoint_.gif</image>
 <code><![CDATA[
@@ -30,52 +28,5 @@ for (int i = 0; i &lt;= steps; i++) {
 <description><![CDATA[
 Evalutes the curve at point t for points a, b, c, d. The parameter t varies between 0 and 1, a and d are points on the curve, and b and c are the control points. This can be done once with the x coordinates and a second time with the y coordinates to get the location of a curve at t.
 ]]></description>
-
-<syntax>
-curvePoint(<c>a</c>, <c>b</c>, <c>c</c>, <c>d</c>, <c>t</c>)
-</syntax>
-
-<parameter>
-<label>a</label>
-<description><![CDATA[int or float: coordinate of first point on the curve]]></description>
-</parameter>
-
-<parameter>
-<label>b</label>
-<description><![CDATA[int or float: coordinate of second point on the curve]]></description>
-</parameter>
-
-<parameter>
-<label>c</label>
-<description><![CDATA[int or float: coordinate of third point on the curve]]></description>
-</parameter>
-
-<parameter>
-<label>d</label>
-<description><![CDATA[int or float: coordinate of fourth point on the curve]]></description>
-</parameter>
-
-<parameter>
-<label>t</label>
-<description><![CDATA[float: value between 0 and 1]]></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-curve()
-curveVertex()
-bezierPoint()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
 
 </root>

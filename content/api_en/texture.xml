@@ -6,8 +6,6 @@
 
 <subcategory>Vertex</subcategory>
 
-<usage>Application &amp; Web</usage>
-
 <example>
 <image>texture_.gif</image>
 <code><![CDATA[
@@ -29,35 +27,5 @@ Sets a texture to be applied to vertex points. The <b>texture()</b> function mus
 <br/> <br/>
 When textures are in use, the fill color is ignored. Instead, use tint() to specify the color of the texture as it is applied to the shape.
 ]]></description>
-
-<syntax>
-texture(<c>img</c>); 
-</syntax>
-
-<parameter>
-<label>img</label>
-<description><![CDATA[PImage: the texture to apply]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-textureMode()
-beginShape()
-endShape()
-vertex()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
 
 </root>

@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -27,28 +25,5 @@ float log10 (int x) {
 <description><![CDATA[
 Calculates the natural logarithm (the base-<i>e</i> logarithm) of a number. This function expects the values greater than 0.0.
 ]]></description>
-
-<syntax>
-log(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int or float: number must be greater then 0.0]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

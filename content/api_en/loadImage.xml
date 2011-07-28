@@ -6,8 +6,6 @@
 
 <subcategory>Loading &amp; Displaying</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>loadImage_.jpg</image>
 <code><![CDATA[
@@ -64,42 +62,5 @@ If an image is not loaded successfully, the <b>null</b> value is returned and an
 <br/> <br/>
 Depending on the type of error, a <b>PImage</b> object may still be returned, but the width and height of the image will be set to -1. This happens if bad image data is returned or cannot be decoded properly. Sometimes this happens with image URLs that produce a 403 error or that redirect to a password prompt, because <b>loadImage()</b> will attempt to interpret the HTML as image data.
 ]]></description>
-
-<syntax>
-loadImage(<c>filename</c>)
-loadImage(<c>filename</c>, <c>extension</c>)
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: name of file to load, can be .gif, .jpg, .tga, or a handful of other image types depending on your platform.]]></description>
-</parameter>
-
-<parameter>
-<label>extension</label>
-<description><![CDATA[String: the type of image to load, for example "png", "gif", "jpg"]]></description>
-</parameter>
-
-<returns>PImage or null</returns>
-
-<related>
-PImage 
-image() 
-imageMode() 
-background() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

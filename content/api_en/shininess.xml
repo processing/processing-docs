@@ -6,8 +6,6 @@
 
 <subcategory>Material Properties</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>shininess_.jpg</image>
 <code><![CDATA[
@@ -33,36 +31,5 @@ sphere(20);
 <description><![CDATA[
 Sets the amount of gloss in the surface of shapes. Used in combination with <b>ambient()</b>, <b>specular()</b>, and <b>emissive()</b> in setting the material properties of shapes.
 ]]></description>
-
-<syntax>
-shininess(<c>shine</c>)
-</syntax>
-
-
-<parameter>
-<label>shine</label>
-<description><![CDATA[float: degree of shininess]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-ambient()
-specular()
-emissive()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

@@ -7,8 +7,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -54,31 +52,5 @@ void setup() {
 Returns all of the children as an XMLElement array.
 When the <b>path</b> parameter is specified, then it will return all children that match that path. The path is a series of elements and sub-elements, separated by slashes.
 ]]></description>
-
-<syntax>
-<c>xml</c>.getChildren()
-<c>xml</c>.getChildren(<c>path</c>)
-</syntax>
-
-<parameter>
-<label>xml</label>
-<description><![CDATA[any variable of type XMLElement]]></description>
-</parameter>
-
-<returns>XMLElement[]</returns>
-
-<related>
-XMLElement_getChildCount()
-XMLElement_getChild()
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

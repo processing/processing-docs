@@ -6,8 +6,6 @@
 
 <subcategory>Method</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>PImage_resize.jpg</image>
 <code><![CDATA[
@@ -33,43 +31,5 @@ Resize the image to a new width and height. To make the image scale proportional
 <br /> <br />
 Even though a PGraphics is technically a PImage, it is not possible to rescale the image data found in a PGraphics. (It's simply not possible to do this consistently across renderers: technically infeasible with OpenGL, or what would it even do with PDF?) If you want to resize PGraphics content, first get a copy of its image data using the get() method, and call resize() on the PImage that is returned.
 ]]></description>
-
-<syntax>
-<c>img</c>.resize(<c>wide</c>, <c>high</c>)
-</syntax>
-
-<parameter>
-<label>img</label>
-<description><![CDATA[PImage: any variable of type PImage]]></description>
-</parameter>
-
-<parameter>
-<label>wide</label>
-<description><![CDATA[int: the resized image width]]></description>
-</parameter>
-
-<parameter>
-<label>high</label>
-<description><![CDATA[int: the resized image height]]></description>
-</parameter>
-
-<returns>void</returns>
-
-<related>
-get()
-</related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

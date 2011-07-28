@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -23,19 +21,5 @@ if (focused) {  // or "if (focused == true)"
 <description><![CDATA[
 Confirms if a Processing program is "focused", meaning that it is active and will accept input from mouse or keyboard. This variable is "true" if it is focused and "false" if not. This variable is often used when you want to warn people they need to click on or roll over an applet before it will work.
 ]]></description>
-
-<syntax></syntax>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
 
 </root>

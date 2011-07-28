@@ -6,8 +6,6 @@
 
 <subcategory>Loading &amp; Displaying</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>image_.jpg</image>
 <code><![CDATA[
@@ -37,59 +35,5 @@ Displays images to the screen. The images must be in the sketch's "data" directo
 Starting with release 0124, when using the default (JAVA2D) renderer, 
 smooth() will also improve image quality of resized images.
 ]]></description>
-
-<syntax>
-image(<c>img</c>, <c>x</c>, <c>y</c>)
-image(<c>img</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
-</syntax>
-
-<parameter>
-<label>img</label>
-<description><![CDATA[PImage: the image to display]]></description>
-</parameter>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: x-coordinate of the image]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: y-coordinate of the image]]></description>
-</parameter>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int or float: width to display the image]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int or float: height to display the image]]></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-loadImage() 
-PImage  
-imageMode()
-tint() 
-background() 
-alpha()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

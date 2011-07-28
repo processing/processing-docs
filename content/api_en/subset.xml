@@ -8,8 +8,6 @@
 
 <subcategory>Array Functions</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -27,37 +25,5 @@ Extracts an array of elements from an existing array. The <b>array</b> parameter
 <br/> <br/>
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) subset(originalArray, 0, 4)</em>.
 ]]></description>
-
-<syntax>
-subset(<c>array</c>, <c>offset</c>)
-subset(<c>array</c>, <c>offset</c>, <c>length</c>)
-</syntax>
-
-<parameter>
-<label>array</label>
-<description><![CDATA[boolean[], byte[], char[], int[], float[], String[], or an array of objects]]></description>
-</parameter>
-
-<parameter>
-<label>offset</label>
-<description><![CDATA[int: position to begin]]></description>
-</parameter>
-
-<parameter>
-<label>length</label>
-<description><![CDATA[int: number of values to extract]]></description>
-</parameter>
-
-<returns>Array (the same datatype as the input)</returns>
-
-<related>
-splice()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

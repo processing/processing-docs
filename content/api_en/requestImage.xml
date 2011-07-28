@@ -6,8 +6,6 @@
 
 <subcategory>Loading &amp; Displaying</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -36,36 +34,5 @@ This function load images on a separate thread so that your sketch does not free
 <br/>
 The <b>extension</b> parameter is used to determine the image type in cases where the image filename does not end with a proper extension. Specify the extension as the second parameter to <b>requestImage()</b>.
 ]]></description>
-
-<syntax>
-requestImage(<c>filename</c>)
-requestImage(<c>filename</c>, <c>extension</c>)
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: name of file to load, can be .gif, .jpg, .tga, or a handful of other image types depending on your platform]]></description>
-</parameter>
-
-<parameter>
-<label>extension</label>
-<description><![CDATA[String: the type of image to load, for example "png", "gif", "jpg"]]></description>
-</parameter>
-
-<returns>PImage or null</returns>
-
-<related>
-loadImage() 
-PImage  
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

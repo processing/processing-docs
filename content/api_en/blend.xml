@@ -3,7 +3,6 @@
 <name>blend()</name>
 <category>Image</category>
 <subcategory>Pixels</subcategory>
-<usage>Web &amp; Application</usage>
 
 <example>
 <image>blend_add.jpg</image>
@@ -84,71 +83,5 @@ All modes use the alpha information (highest byte) of source image pixels as the
 <br />
 As of release 0149, this function ignores <b>imageMode()</b>.
 ]]></description>
-
-<syntax>
-blend(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>, <c>MODE</c>)
-blend(<c>srcImg</c>, <c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>, <c>dx</c>, <c>dy</c>, <c>dwidth</c>, <c>dheight</c>, <c>MODE</c>)
-</syntax>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int: X coordinate of the source's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int: Y coordinate of the source's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int: source image width]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int: source image height]]></description>
-</parameter>
-
-<parameter>
-<label>dx</label>
-<description><![CDATA[int: X coordinate of the destinations's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>dy</label>
-<description><![CDATA[int: Y coordinate of the destinations's upper left corner]]></description>
-</parameter>
-
-<parameter>
-<label>dwidth</label>
-<description><![CDATA[int: destination image width]]></description>
-</parameter>
-
-<parameter>
-<label>dheight</label>
-<description><![CDATA[int: destination image height]]></description>
-</parameter>
-
-<parameter>
-<label>srcImg</label>
-<description><![CDATA[PImage: a image variable referring to the source image]]></description>
-</parameter>
-
-<parameter>
-<label>MODE</label>
-<description><![CDATA[Either BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY, SCREEN, OVERLAY, HARD_LIGHT, SOFT_LIGHT, DODGE, BURN]]></description>
-</parameter>
-
-
-<returns>None</returns>
-
-<related>
-filter()
-</related>
-
-<availability>1.0</availability>
-<type>Function</type>
-<partof>Core</partof>
 
 </root>

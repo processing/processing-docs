@@ -6,8 +6,6 @@
 
 <subcategory>Calculation</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -20,28 +18,5 @@ println(v1);  // Prints "2.7182817"
 <description><![CDATA[
 Returns Euler's number <i>e</i> (2.71828...) raised to the power of the <b>value</b> parameter.
 ]]></description>
-
-<syntax>
-exp(<c>value</c>)
-</syntax>
-
-<parameter>
-<label>value</label>
-<description><![CDATA[int or float: the exponent to raise <i>e</i> to]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

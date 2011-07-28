@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -33,36 +31,5 @@ and fonts as the program starts. There can only be one <b>setup()</b> function f
 it shouldn't be called again after its initial execution. Note: Variables declared within 
 <b>setup()</b> are not accessible within other functions, including <b>draw()</b>. 
 ]]></description>
-
-<syntax>
-void setup() {
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label>statements</label>
-<description><![CDATA[any valid statements]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-loop()
-size()
-</related>
-
-<availability>1.0</availability>
-
-<type>Processing Function</type>
-
-<partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

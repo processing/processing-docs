@@ -6,8 +6,6 @@
 
 <subcategory></subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -25,33 +23,5 @@ endShape(CLOSE);
 <description><![CDATA[
 QUARTER_PI is a mathematical constant with the value 0.7853982. It is one quarter the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <b>sin()</b> and <b>cos()</b>. 
 ]]></description>
-
-<syntax></syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-PI
-TWO_PI
-HALF_PI
-</related>
-
-<availability>1.0</availability>
-
-<type>Constant</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

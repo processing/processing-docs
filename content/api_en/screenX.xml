@@ -6,8 +6,6 @@
 
 <subcategory>Coordinates</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -44,44 +42,5 @@ void draw() {
 <description><![CDATA[
 Takes a three-dimensional X, Y, Z position and returns the X value for where it will appear on a (two-dimensional) screen.
 ]]></description>
-
-<syntax>
-screenX(<c>x</c>, <c>y</c>, <c>z</c>)
-</syntax>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: 3D x coordinate to be mapped]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: 3D y coordinate to be mapped]]></description>
-</parameter>
-
-<parameter>
-<label>z</label>
-<description><![CDATA[int or float: 3D z coordinate to be mapped]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-screenY()
-screenZ()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

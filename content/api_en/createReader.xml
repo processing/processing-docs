@@ -6,8 +6,6 @@
 
 <subcategory>Files</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -44,30 +42,5 @@ Creates a <b>BufferedReader</b> object that can be used to read files line-by-li
 <br/> <br/>
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
-
-<syntax>
-createReader(<c>filename</c>)
-</syntax>
-
-<parameter>
-<label>filename</label>
-<description><![CDATA[String: name of the file to be opened]]></description>
-</parameter>
-
-<returns>BufferedReader or null</returns>
-
-<related>
-BufferedReader
-createWriter()
-PrintWriter
-try
-catch
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

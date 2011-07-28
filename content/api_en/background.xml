@@ -6,8 +6,6 @@
 
 <subcategory>Setting</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>background_.gif</image>
 <code><![CDATA[
@@ -40,74 +38,5 @@ Images used as background will ignore the current <b>tint()</b> setting.
 <br/> <br/>
 It is not possible to use transparency (alpha) in background colors with the main drawing surface, however they will work properly with <b>createGraphics()</b>.
 ]]></description>
-
-<syntax>
-background(<c>gray</c>)
-background(<c>gray</c>, <c>alpha</c>)
-background(<c>value1</c>, <c>value2</c>, <c>value3</c>)
-background(<c>value1</c>, <c>value2</c>, <c>value3</c>, <c>alpha</c>)
-background(<c>color</c>)
-background(<c>color</c>, <c>alpha</c>)
-background(<c>hex</c>)
-background(<c>hex</c>, <c>alpha</c>)
-</syntax>
-
-<parameter>
-<label>gray</label>
-<description><![CDATA[int or float: specifies a value between white and black]]></description>
-</parameter>
-
-<parameter>
-<label>alpha</label>
-<description><![CDATA[int or float: opacity of the background]]></description>
-</parameter>
-
-<parameter>
-<label>value1</label>
-<description><![CDATA[int or float: red or hue value (depending on the current color mode)]]></description>
-</parameter>
-
-<parameter>
-<label>value2</label>
-<description><![CDATA[int or float: green or saturation value (depending on the current color mode)]]></description>
-</parameter>
-
-<parameter>
-<label>value3</label>
-<description><![CDATA[int or float: blue or brightness value (depending on the current color mode)]]></description>
-</parameter>
-
-<parameter>
-<label>color</label>
-<description><![CDATA[color: any value of the color datatype]]></description>
-</parameter>
-
-<parameter>
-<label>hex</label>
-<description><![CDATA[int: color value in hexadecimal notation (i.e. #FFCC00 or 0xFFFFCC00)]]></description>
-</parameter>
-
-
-<returns>None</returns>
-
-<related>
-stroke()
-fill()
-tint()
-colorMode()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

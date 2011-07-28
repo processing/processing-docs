@@ -6,8 +6,6 @@
 
 <subcategory>Keyboard</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -33,36 +31,5 @@ void draw() {
 <description><![CDATA[
 The boolean system variable <b>keyPressed</b> is <b>true</b> if any key is pressed and <b>false</b> if no keys are pressed.
 ]]></description>
-
-<syntax>
-keyPressed
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns></returns>
-
-<related>
-key 
-keyCode
-keyPressed() 
-keyReleased() 
-</related>
-
-<availability>1.0</availability>
-
-<type>System variable</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

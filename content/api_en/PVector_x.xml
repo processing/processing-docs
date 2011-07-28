@@ -7,8 +7,6 @@
 
 <subcategory>Field</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -29,27 +27,5 @@ void setup() {
 <description><![CDATA[
 The x component of the vector. This field (variable) can be used to both get and set the value (see above example.)
 ]]></description>
-
-<syntax>
-<c>vec</c>.x
-</syntax>
-
-<parameter>
-<label>vec</label>
-<description><![CDATA[any variable of type PVector]]></description>
-</parameter>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Field</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

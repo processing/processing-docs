@@ -6,8 +6,6 @@
 
 <subcategory>Mouse</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image></image>
 <code><![CDATA[
@@ -33,40 +31,5 @@ void mouseMoved() {
 <description><![CDATA[
 The <b>mouseMoved()</b> function is called every time the mouse moves and a mouse button is not pressed.
 ]]></description>
-
-<syntax>
-void mouseMoved() {
-  <c>statements</c>
-}
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-mouseX
-mouseY
-mousePressed
-mousePressed()
-mouseReleased()
-mouseDragged()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

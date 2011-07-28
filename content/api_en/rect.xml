@@ -6,8 +6,6 @@
 
 <subcategory>2D Primitives</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>rect_.gif</image>
 <code><![CDATA[
@@ -18,49 +16,5 @@ rect(30, 20, 55, 55);
 <description><![CDATA[
 Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. These parameters may be changed with the <b>rectMode()</b> function. 
 ]]></description>
-
-<syntax>
-rect(<c>x</c>, <c>y</c>, <c>width</c>, <c>height</c>)
-</syntax>
-
-<parameter>
-<label>x</label>
-<description><![CDATA[int or float: x-coordinate of the upper-left corner]]></description>
-</parameter>
-
-<parameter>
-<label>y</label>
-<description><![CDATA[int or float: y-coordinate of the upper-left corner]]></description>
-</parameter>
-
-<parameter>
-<label>width</label>
-<description><![CDATA[int or float: width of the rectangle]]></description>
-</parameter>
-
-<parameter>
-<label>height</label>
-<description><![CDATA[int or float: height of the rectangle]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-rectMode()
-quad()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

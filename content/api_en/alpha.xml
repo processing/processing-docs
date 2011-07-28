@@ -6,8 +6,6 @@
 
 <subcategory>Creating &amp; Reading</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>alpha_.gif</image>
 <code><![CDATA[
@@ -24,33 +22,5 @@ rect(50, 15, 35, 70);
 <description><![CDATA[
 Extracts the alpha value from a color.
 ]]></description>
-
-<syntax>
-alpha(<c>color</c>)
-</syntax>
-
-<parameter>
-<label>color</label>
-<description><![CDATA[any value of the color datatype]]></description>
-</parameter>
-
-<returns>float</returns>
-
-<related>
-green() 
-red()
-blue() 
-hue() 
-saturation() 
-brightness() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
 
 </root>

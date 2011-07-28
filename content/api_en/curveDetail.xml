@@ -6,8 +6,6 @@
 
 <subcategory>Curves</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>curveDetail_.gif</image>
 <code><![CDATA[
@@ -40,35 +38,5 @@ void drawCurves(float y) {
 <description><![CDATA[
 Sets the resolution at which curves display. The default value is 20. This function is only useful when using the P3D or OPENGL renderer as the default (JAVA2D) renderer does not use this information.
 ]]></description>
-
-<syntax>
-curveDetail(<c>detail</c>)
-</syntax>
-
-<parameter>
-<label>detail</label>
-<description><![CDATA[int: resolution of the curves]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-curve()
-curveVertex()
-curveTightness()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
-
-
-
-
 
 </root>

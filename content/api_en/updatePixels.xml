@@ -6,8 +6,6 @@
 
 <subcategory>Pixels</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>updatePixels_.jpg</image>
 <code><![CDATA[
@@ -45,23 +43,5 @@ Certain renderers may or may not seem to require <b>loadPixels()</b> or <b>updat
 <br/> <br/>
 Currently, none of the renderers use the additional parameters to <b>updatePixels()</b>, however this may be implemented in the future. 
 ]]></description>
-
-<syntax>
-updatePixels()
-updatePixels(<c>x</c>, <c>y</c>, <c>w</c>, <c>h</c>)
-</syntax>
-
-<returns></returns>
-
-<related>
-pixels[]
-loadPixels()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
 
 </root>

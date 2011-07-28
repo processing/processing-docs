@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>noSmooth_.gif</image>
 <code><![CDATA[
@@ -22,33 +20,5 @@ ellipse(30, 48, 36, 36);
 <description><![CDATA[
 Draws all geometry with jagged (aliased) edges.
 ]]></description>
-
-<syntax>
-noSmooth()
-</syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-smooth()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
-
-
-
-
-
 
 </root>

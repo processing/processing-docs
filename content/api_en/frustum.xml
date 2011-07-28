@@ -6,8 +6,6 @@
 
 <subcategory>Camera</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>frustum_.gif</image>
 <code><![CDATA[
@@ -23,56 +21,5 @@ box(45);
 <description><![CDATA[
 Sets a perspective matrix defined through the parameters. Works like glFrustum, except it wipes out the current perspective matrix rather than muliplying itself with it.
 ]]></description>
-
-<syntax>
-frustum(<c>left</c>, <c>right</c>, <c>bottom</c>, <c>top</c>, <c>near</c>, <c>far</c>)
-</syntax>
-
-<parameter>
-<label>left</label>
-<description><![CDATA[float: left coordinate of the clipping plane]]></description>
-</parameter>
-
-<parameter>
-<label>right</label>
-<description><![CDATA[float: right coordinate of the clipping plane]]></description>
-</parameter>
-
-<parameter>
-<label>bottom</label>
-<description><![CDATA[float: bottom coordinate of the clipping plane]]></description>
-</parameter>
-
-<parameter>
-<label>top</label>
-<description><![CDATA[float: top component of the clipping plane]]></description>
-</parameter>
-
-<parameter>
-<label>near</label>
-<description><![CDATA[float: near component of the clipping plane]]></description>
-</parameter>
-
-<parameter>
-<label>far</label>
-<description><![CDATA[float: far component of the clipping plane]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-camera()
-endCamera()
-perspective()
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-<level>Extended</level>
-
 
 </root>

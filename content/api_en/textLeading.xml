@@ -6,8 +6,6 @@
 
 <subcategory>Attributes</subcategory>
 
-<usage>Web &amp; Application</usage>
-
 <example>
 <image>textLeading_.gif</image>
 <code><![CDATA[
@@ -32,31 +30,5 @@ text(lines, 68, 25);
 <description><![CDATA[
 Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function.
 ]]></description>
-
-<syntax>
-textLeading(<c>dist</c>)
-</syntax>
-
-<parameter>
-<label>dist</label>
-<description><![CDATA[int or float: the size in pixels for spacing between lines]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related>
-loadFont() 
-PFont 
-text()
-textFont() 
-</related>
-
-<availability>1.0</availability>
-
-<type>Function</type>
-
-<partof>Core</partof>
-
-
 
 </root>
