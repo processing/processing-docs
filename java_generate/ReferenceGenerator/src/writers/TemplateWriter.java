@@ -63,7 +63,7 @@ public class TemplateWriter extends BaseWriter {
 		for( String line : templateFile )
 		{
 			//check if it contains a variable we want to replace, then replace it
-			line = writeLine(line, vars);		
+			line = writeLine(line, vars, false);		
 			output.add(line);
 		}
 		for( String line : output )
@@ -80,7 +80,7 @@ public class TemplateWriter extends BaseWriter {
 		
 		for( String line : templateFile )
 		{
-			line = writeLine(line, vars);
+			line = writeLine(line, vars, false );
 			ret = ret.concat(line+"\n");
 		}
 		
@@ -97,11 +97,13 @@ public class TemplateWriter extends BaseWriter {
 		String[] templateFile = FileUtils.loadStrings(Shared.i().TEMPLATE_DIRECTORY()+templateName);
 		String ret = "";
 		
+		int index = 0;
 		for( HashMap<String, String> vars : varSet )
-		{			
+		{
+			index++;
 			for( String line : templateFile )
 			{
-				ret = ret + writeLine(line, vars) + separator;
+				ret = ret + writeLine(line, vars, (index == varSet.size()) ) + separator;
 			}
 		}
 		if(ret.endsWith(separator)){
@@ -111,19 +113,25 @@ public class TemplateWriter extends BaseWriter {
 		return ret;
 	}
 	
-	private String writeLine(String line, HashMap<String, String> map)
+	private String writeLine(String line, HashMap<String, String> map, boolean isFinalLine )
 	{
 		for( String key : map.keySet())
 		{
-			String var = varPrefix + key + varSuffix;
-			if(line.contains(var))
+			if(line.contains(key))
 			{
 				String value = map.get(key);
 				value = value.replace("$", "\\$");
-
+				// what variable in html the value should replace
+				String var = varPrefix + key + varSuffix;
+				
+				// place our value into the html
 				line = line.replaceFirst(var, value);
+				
+				// find html that requires presence or lack of value
 				String requireStart = varPrefix + "require:" + key + varSuffix;
 				String requireEnd = varPrefix + "end" + varSuffix;
+				String requireAbsenceStart = varPrefix + "unless:" + key + varSuffix;
+				String unlessLastStart = varPrefix + "unless:last_fragment" + varSuffix;
 				
 				if(value.equals(""))
 				{	//remove html around things that are absent (like images)
@@ -132,10 +140,31 @@ public class TemplateWriter extends BaseWriter {
 						String sub = line.substring(line.indexOf(requireStart), line.indexOf(requireEnd) + requireEnd.length());
 						line = line.replace(sub, "");
 					}
-				} else{
-					line = line.replaceAll(requireStart, "");
-					line = line.replaceAll(requireEnd, "");
 				}
+				else
+				{
+					// remove things that should only exist in absence of this value
+					while(line.contains(requireAbsenceStart))
+					{	
+						String sub = line.substring(line.indexOf(requireAbsenceStart), line.indexOf(requireEnd) + requireEnd.length());
+						line = line.replace(sub, "");
+					}
+				}
+				
+				if( isFinalLine )
+				{
+					while(line.contains(unlessLastStart))
+					{	
+						String sub = line.substring(line.indexOf(unlessLastStart), line.indexOf(requireEnd) + requireEnd.length());
+						line = line.replace(sub, "");
+					}
+				}
+				
+				// finally, remove all the meta junk
+				line = line.replaceAll(requireStart, "");
+				line = line.replaceAll(requireEnd, "");
+				line = line.replaceAll(requireAbsenceStart, "");
+				line = line.replaceAll(unlessLastStart, "");
 			}
 		}			
 		return line;
