@@ -36,7 +36,8 @@ public class XMLReferenceWriter extends BaseWriter {
 		
 		for(File f : files )
 		{
-			if(f.getAbsolutePath().endsWith(".xml")){				
+			if(f.getAbsolutePath().endsWith(".xml"))
+			{
 				parseFile(f, dstDir, indexWriter);
 			}
 		}
@@ -73,7 +74,11 @@ public class XMLReferenceWriter extends BaseWriter {
 			String name = (String) xpath.evaluate("//name", doc, XPathConstants.STRING);
 			String description = (String) xpath.evaluate("//description", doc, XPathConstants.STRING);
 			String syntax = (String) xpath.evaluate("//syntax", doc, XPathConstants.STRING);
-			String anchor = dst + getAnchorFromName(name);
+			
+			// get anchor from original filename
+			String path = f.getAbsolutePath();
+			String anchor = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml")) + ".html";
+//			String anchor = dst + getAnchorFromName(name);
 			String usage = (String) xpath.evaluate("//usage", doc, XPathConstants.STRING);
 			if(indexWriter instanceof LibraryIndexWriter ){				
 				((LibraryIndexWriter) indexWriter).addEvent(name, anchor);
