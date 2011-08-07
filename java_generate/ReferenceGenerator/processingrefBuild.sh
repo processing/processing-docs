@@ -15,7 +15,6 @@ javadoc -doclet ProcessingWeblet \
 	-includedir ../../content/api_en/include \
 	-imagedir images \
 	-corepackage processing.xml \
-	-rootclass PGraphics \
 	-rootclass PConstants \
 	-noisy \
 	../../../processing/java/libraries/net/src/processing/net/*.java \
@@ -39,7 +38,7 @@ cp -R ../../content/api_media/*.png ../../distribution/images/
 
 # run local reference creations files
 cd ../../generate/
-php environment_local.php
-php staticpages_local.php
-php tools_local.php
-php libraries_local.php
+# php environment_local.php
+# php staticpages_local.php
+# php tools_local.php
+# php libraries_local.php

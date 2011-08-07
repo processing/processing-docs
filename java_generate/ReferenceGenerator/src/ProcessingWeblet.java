@@ -119,9 +119,6 @@ public class ProcessingWeblet extends Standard {
 
 	private static void writeContents(RootDoc root) throws IOException {		
 		for( ClassDoc classDoc : root.classes() ){
-			
-			
-
 			if(Shared.i().isCore(classDoc)){
 				// Document the core functions and classes
 				if(Shared.i().isRootLevel(classDoc)){
