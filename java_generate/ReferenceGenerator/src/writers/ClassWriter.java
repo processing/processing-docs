@@ -20,8 +20,9 @@ public class ClassWriter extends BaseWriter {
 	}
 
 	@SuppressWarnings("unchecked")
-	public void write(ClassDoc classDoc) throws IOException {
-		if( needsWriting(classDoc)){
+	public void write( ClassDoc classDoc ) throws IOException {
+		if( needsWriting(classDoc) )
+		{
 			TemplateWriter templateWriter = new TemplateWriter();
 			this.classDoc = classDoc;
 			String classname = getName(classDoc);
@@ -34,7 +35,8 @@ public class ClassWriter extends BaseWriter {
 			vars.put("classanchor", anchor);
 			String desc = getXMLDescription(classDoc);
 			if( desc != "" ){ vars.put("description", desc); }
-			if( !Shared.i().isCore(classDoc)){
+			if( !Shared.i().isCore(classDoc))
+			{	// documenting a library
 				vars.put("isLibrary", "true" );
 				vars.put("csspath", "../../");
 			}

@@ -146,7 +146,7 @@ public class ProcessingWeblet extends Standard {
 					
 				} else {
 					// document a class and its public properties
-					new ClassWriter().write(classDoc);
+					new ClassWriter().write( classDoc );
 					Tag[] classTags = classDoc.tags(Shared.i().getWebrefTagName());
 					if (classTags.length != 0) {
 						// add to the index under the @webref category:sub_category
