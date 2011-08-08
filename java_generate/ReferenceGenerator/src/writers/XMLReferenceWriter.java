@@ -79,8 +79,15 @@ public class XMLReferenceWriter extends BaseWriter {
 			
 			// get anchor from original filename
 			String path = f.getAbsolutePath();
-			String anchor = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml")) + ".html";
-//			String anchor = dst + getAnchorFromName(name);
+			String anchorBase = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml"));
+			if( name.endsWith("()") )
+			{
+				if( !anchorBase.endsWith("_" ) )
+				{
+					anchorBase += "_";
+				}
+			}
+			String anchor = anchorBase + ".html";
 			String usage = (String) xpath.evaluate("//usage", doc, XPathConstants.STRING);
 			if(indexWriter instanceof LibraryIndexWriter ){				
 				((LibraryIndexWriter) indexWriter).addEvent(name, anchor);
@@ -101,15 +108,18 @@ public class XMLReferenceWriter extends BaseWriter {
 			vars.put( "category",  category );
 			vars.put( "subcategory", subcategory );
 			
-			// TODO: pull in methods and other things
-			vars.put( "methods", "" );
-			vars.put( "fields", "" );
-			
 			if( constructors != "" )
 			{	// we are documenting a class
 				vars.put("classname", name);
+				// TODO: pull in methods and other things
+				ArrayList< HashMap<String, String> > methodSet = getPropertyInfo( doc, xpath, "method", anchorBase + "_" );
+				ArrayList< HashMap<String, String> > fieldSet = getPropertyInfo( doc, xpath, "field", anchorBase + "_" );
+				
+				vars.put( "methods", templateWriter.writeLoop("Property.partial.html", methodSet) );
+				vars.put( "fields", templateWriter.writeLoop("Property.partial.html", fieldSet) );
+				
 				if( vars.get("parameters") == "" )
-				{
+				{	// get constructor parameters
 					vars.put("parameters", getParameters(doc, "c" ));
 				}
 				templateWriter.write("Class.template.html", vars, anchor);
@@ -134,14 +144,48 @@ public class XMLReferenceWriter extends BaseWriter {
 		String constructors = "";
 		try {
 			constructors = (String) xpath.evaluate("//constructor", doc, XPathConstants.STRING );
-			System.out.println( "Got some constructors: " + constructors );
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return constructors;
 	}
+	
+	protected static ArrayList< HashMap<String, String > > getPropertyInfo( Document doc, XPath xpath, String tag, String anchorBase ) 
+	{
+		ArrayList<HashMap<String, String>> ret = new ArrayList< HashMap<String, String> >();
+		try 
+		{
+			String prefix = tag.substring(0, 1);
+			XPathExpression expr = xpath.compile("//" + tag);
+			Object result = expr.evaluate( doc, XPathConstants.NODESET);
+			NodeList properties = (NodeList) result;
 
+			for (int i = 0; i < properties.getLength(); i++ )
+			{
+				HashMap<String, String> property = new HashMap<String, String>();
+				
+				expr = xpath.compile( prefix + "name" );
+				String name = (String) expr.evaluate( properties.item(i), XPathConstants.STRING );
+				String anchor = anchorBase + getAnchorFromName( name );
+				String description = (String) xpath.evaluate( prefix + "description", properties.item(i), XPathConstants.STRING );
+				
+				System.out.println("Writing " + tag + ": " + name );
+				System.out.println( i );
+				
+				property.put("name", name );
+				property.put("anchor", anchor );
+				property.put("desc", description );
+			
+				ret.add( property );
+			}
+		} catch (XPathExpressionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ret;
+	}
+	
 	protected static String getParameters(Document doc, String tagPrefix) throws IOException{
 		
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();

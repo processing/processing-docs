@@ -307,8 +307,8 @@ public class BaseWriter {
 				example.put("image", Shared.i().getImageDirectory()
 						+ img);
 				if(img.equals(""))
-				{
-					example.put("image", img);
+				{	// if no image, replace with empty string
+					example.put("image", "");
 				}
 				example.put("code", code);
 
