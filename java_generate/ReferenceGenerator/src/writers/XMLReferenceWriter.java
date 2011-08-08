@@ -18,6 +18,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import com.sun.javadoc.ConstructorDoc;
+import com.sun.javadoc.Parameter;
+
 public class XMLReferenceWriter extends BaseWriter {
 	
 	public static void write(String sourceDir, IndexWriter indexWriter) throws IOException
@@ -75,6 +78,8 @@ public class XMLReferenceWriter extends BaseWriter {
 			String description = (String) xpath.evaluate("//description", doc, XPathConstants.STRING);
 			String syntax = (String) xpath.evaluate("//syntax", doc, XPathConstants.STRING);
 			
+			String constructors = getConstructors( xpath, doc );
+			
 			// get anchor from original filename
 			String path = f.getAbsolutePath();
 			String anchor = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml")) + ".html";
@@ -94,8 +99,25 @@ public class XMLReferenceWriter extends BaseWriter {
 			vars.put("usage", usage);
 			vars.put("parameters", getParameters(doc));
 			vars.put("related", getRelated(doc));
+			vars.put( "constructors", constructors );
 			
-			templateWriter.write("Generic.template.html", vars, anchor);
+			vars.put( "category",  category );
+			vars.put( "subcategory", subcategory );
+			
+			// TODO: pull in methods and other things
+			vars.put( "methods", "" );
+			vars.put( "fields", "" );
+			
+			if( constructors != "" )
+			{	// we are documenting a class
+				vars.put("classname", name);
+				templateWriter.write("Class.template.html", vars, anchor);
+			}
+			else
+			{
+				vars.put( "classname", category );
+				templateWriter.write("Generic.template.html", vars, anchor);
+			}
 			
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
@@ -106,6 +128,19 @@ public class XMLReferenceWriter extends BaseWriter {
 		}
 	}
 	
+	private static String getConstructors( XPath xpath, Document doc)
+	{
+		String constructors = "";
+		try {
+			constructors = (String) xpath.evaluate("//constructor", doc, XPathConstants.STRING );
+			System.out.println( "Got some constructors: " + constructors );
+		} catch (XPathExpressionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return constructors;
+	}
+
 	protected static String getParameters(Document doc) throws IOException{
 		
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
