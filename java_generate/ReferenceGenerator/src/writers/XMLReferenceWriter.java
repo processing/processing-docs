@@ -18,9 +18,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.sun.javadoc.ConstructorDoc;
-import com.sun.javadoc.Parameter;
-
 public class XMLReferenceWriter extends BaseWriter {
 	
 	public static void write(String sourceDir, IndexWriter indexWriter) throws IOException
@@ -97,7 +94,7 @@ public class XMLReferenceWriter extends BaseWriter {
 			vars.put("description", description);
 			vars.put("syntax", syntax);
 			vars.put("usage", usage);
-			vars.put("parameters", getParameters(doc));
+			vars.put("parameters", getParameters(doc, "" ));
 			vars.put("related", getRelated(doc));
 			vars.put( "constructors", constructors );
 			
@@ -111,6 +108,10 @@ public class XMLReferenceWriter extends BaseWriter {
 			if( constructors != "" )
 			{	// we are documenting a class
 				vars.put("classname", name);
+				if( vars.get("parameters") == "" )
+				{
+					vars.put("parameters", getParameters(doc, "c" ));
+				}
 				templateWriter.write("Class.template.html", vars, anchor);
 			}
 			else
@@ -141,19 +142,19 @@ public class XMLReferenceWriter extends BaseWriter {
 		return constructors;
 	}
 
-	protected static String getParameters(Document doc) throws IOException{
+	protected static String getParameters(Document doc, String tagPrefix) throws IOException{
 		
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
 		//get parameters for this methos
 		XPath xpath = getXPath();
 		try{
-			XPathExpression expr = xpath.compile("//parameter");
+			XPathExpression expr = xpath.compile("//" + tagPrefix + "parameter");
 			Object result = expr.evaluate(doc, XPathConstants.NODESET);
 			NodeList parameters = (NodeList) result;
 
 			for (int i = 0; i < parameters.getLength(); i++) { 
-				String name = (String) xpath.evaluate("label", parameters.item(i), XPathConstants.STRING);
-				String desc = (String) xpath.evaluate("description", parameters.item(i), XPathConstants.STRING);
+				String name = (String) xpath.evaluate( tagPrefix + "label", parameters.item(i), XPathConstants.STRING);
+				String desc = (String) xpath.evaluate( tagPrefix + "description", parameters.item(i), XPathConstants.STRING);
 
 				HashMap<String, String> map = new HashMap<String, String>();
 				map.put("name", name);
