@@ -170,9 +170,6 @@ public class XMLReferenceWriter extends BaseWriter {
 				String anchor = anchorBase + getAnchorFromName( name );
 				String description = (String) xpath.evaluate( prefix + "description", properties.item(i), XPathConstants.STRING );
 				
-				System.out.println("Writing " + tag + ": " + name );
-				System.out.println( i );
-				
 				property.put("name", name );
 				property.put("anchor", anchor );
 				property.put("desc", description );
