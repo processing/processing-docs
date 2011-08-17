@@ -102,7 +102,7 @@
   	<title>Javascript Mode</title> 
   	<directory>javascript</directory> 
   	<imgs>true</imgs> 
-  	<code>false</code> 
+  	<code>true</code> 
   </tutorial>
   
 </tutorials> 
