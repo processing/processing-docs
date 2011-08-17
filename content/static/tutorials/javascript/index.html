@@ -5,7 +5,7 @@
 <script type="text/javascript" src="http://processingjs.org/js/shBrushJScript.js"></script>
 <script type="text/javascript" src="http://processingjs.org/js/shBrushJScript.Xml"></script>  
 
-<h1>Javascript Mode</h1>
+<h1>JavaScript Mode</h1>
 	
 <p>
 
@@ -16,7 +16,7 @@
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.  This tutorial is adapted from <a href="http://processingjs.org/reference/articles/p5QuickStart">Processing.js Quick Start - Processing Developer Edition</a> by David Humphrey.</em></p>
 	
 	<p>&nbsp;</p>
-	<h3>Why Javascript Mode?</a></h3>
+	<h3>Why JavaScript Mode?</a></h3>
 
 	<p>
 	Since 2001, when the Processing project first began, every single line of code anyone has ever written in Processing has been a line of Java code.  When you deploy your Processing sketch as an application, it runs as a Java application.  When you export your Processing sketch to applet form, it runs as a Java web applet.  Even if you've used the recent Android mode to run a Processing sketch on an Android device (see Android tutorial: _________), you're really just running a Java application.  After all, just like Processing, Android is built on top of Java.   If you are looking to build a desktop or mobile application with Processing, you are covered by Java (the default) and Android modes.  But what if you are looking to deploy your Processing sketch to the web?</p>
@@ -25,33 +25,34 @@
 	Today, most web browsers still support Java Applets by means of a plugin. However, few web developers deploy Java-based web applications now, due to long load and startup times and difficulties relying on Java (or compatible Java versions) being installed. This trend is not isolated to Java, but is happening to all browser plugins (e.g., Flash), which are becoming less popular as issues of security, installation, deployment, etc. make them inconvenient or risky.</p>
 			
 	<p>
-	In 2010 (??), [INSERT NAME HERE] developed <a href="http://processingjs.org">Processing.js</a> which is currently being developed and maintained by [INSERT NAME LINK HERE?]. For Processing 2.0, Processing.js has been integrated directly into the core and can be accessed via <b><i>Javascript mode</b></i> developed by [INSERT NAME LINK HERE] (more about this in a moment).  Processing.js is really two things: a Processing-to-JavaScript translator; and an implementation of the Processing API (e.g., functions like line(), stroke(), etc.) written in JavaScript instead of Java. It might seem odd at first to imagine your Processing sketches running in a browser without modification. But this is exactly what Processing.js enables.</p>
+	In 2010 (??), John Resig developed <a href="http://processingjs.org">Processing.js</a> which is currently being developed and maintained by [INSERT NAME LINK HERE?]. For Processing 2.0, Processing.js has been integrated directly into the core and can be accessed via <b><i>JavaScript mode</b></i> (more about this in a moment) developed by Florian Jenett and Chris Lonnen.  Processing.js is really two things: a Processing-to-JavaScript translator; and an implementation of the Processing API (e.g., functions like line(), stroke(), etc.) written in JavaScript instead of Java. It might seem odd at first to imagine your Processing sketches running in a browser without modification. But this is exactly what Processing.js enables.</p>
 	
 	<p>
-	Processing.js automatically converts your Processing code to JavaScript. This means that you don't have to learn JavaScript in order to run your code in a browser.  You can, quite literally, write your code using the Processing IDE like you always have, and using the new Javascript mode (described in more detail below) get it running on the web. There's nothing new to learn, beyond getting a simple web page created.</p>
+	Processing.js automatically converts your Processing code to JavaScript. This means that you don't have to learn JavaScript in order to run your code in a browser.  You can, quite literally, write your code using the Processing IDE like you always have, and using the new JavaScript mode (described in more detail below) get it running on the web. There's nothing new to learn, beyond getting a simple web page created.</p>
 	
 	<p>
-	Under the hood, Javascript mode uses the new HTML5 canvas element to create your sketch's graphics. The canvas element is a new feature of the web, and is either implemented or will be implemented by all major web browsers. All Processing drawing features have been reimplemented in Processing.js to use canvas, so any browser that supports canvas will also support Processing.js.</p>
+	Under the hood, JavaScript mode uses the new HTML5 canvas element to create your sketch's graphics. The canvas element is a new feature of the web, and is either implemented or will be implemented by all major web browsers. All Processing drawing features have been reimplemented in Processing.js to use canvas, so any browser that supports canvas will also support Processing.js.</p>
 	
 	<p>
-	It is important to note, however, that Javascript mode does not currently support libraries.  All Processing libraries are written with Java and would require a Javascript translation for each and every library to work in Javascript mode.  Because Javascript mode is brand new for Processing 2.0, no one has had the chance to reimplement their libraries in Javascript.  If you are a library creator and are interested in creating a Javascript compatible library, please see [INSERT SOME LINK TO LIBRARY MAKING TUTORIAL THAT I AM GOING TO WRITE]
+	It is important to note, however, that JavaScript mode does not currently support libraries.  All Processing libraries are written with Java and would require a JavaScript translation for each and every library to work in JavaScript mode.  Because JavaScript mode is brand new for Processing 2.0, no one has had the chance to reimplement their libraries in JavaScript.  If you are a library creator and are interested in creating a JavaScript compatible library, please see [INSERT SOME LINK TO LIBRARY MAKING TUTORIAL THAT I AM GOING TO WRITE]
 	</p>
 
 	<p>
-	Here's a sample of a Processing.js sketch running in the browser. If you can see it working, your browser supports everything you need already, and you can move on to instructions below.</p>
+	Here's a sample of a Processing.js sketch ("Continuous Lines") running in the browser. Just click in the grey box and draw.  If you can see it working, your browser supports everything you need already, and you can move on to instructions below.</p>
 	
-	<canvas data-src="http://processingjs.org/source/basic-example/basic-example.pjs"></canvas>
-	
-	<h3>Switching to Javascript Mode</h3>
+	<canvas id="ContinuousLines" data-processing-sources="code/ContinuousLines.pde" width="200" height="200"></canvas>
+	<br/>Draw with the mouse!
+		
+	<h3>Switching to JavaScript Mode</h3>
 		
 	<p>
-	A Processing sketch will open in "Standard" mode (otherwise known as "Java" mode) by default.   If you want to run your sketch in Javascript mode, simply click on the mode button on the top right of your Processing sketch window and you will see all the mode options.  Select Javascript.
+	A Processing sketch will open in "Standard" mode (otherwise known as "Java" mode) by default.   If you want to run your sketch in JavaScript mode, simply click on the mode button on the top right of your Processing sketch window and you will see all the mode options.  Select JavaScript.
 	</p>
 	
 	<p><img src="imgs/modes.png"></p>
 	
 	<p>
-	Once the sketch is in Javascript mode, you can work on your sketch just like you always do, writing code, making tabs, looking up functions in the reference.  The only thing that changes is what happens when you press the "play" button.  Instead of launching an application window like in standard mode, Processing will launch a web server in the background and run your sketch in a browser.  
+	Once the sketch is in JavaScript mode, you can work on your sketch just like you always do, writing code, making tabs, looking up functions in the reference.  The only thing that changes is what happens when you press the "play" button.  Instead of launching an application window like in standard mode, Processing will launch a web server in the background and run your sketch in a browser.  
 	</p>
 		
 	<p><img src="imgs/browser.png"></p>
@@ -68,7 +69,7 @@
 	<h3>Creating a Processing.js Web Page</a></h3>
 	
 	<p>
-	Once you have finished writing your sketch, you will likely want to publish it to the web.  After all this is the primary reason for using Javascript mode in the first place!  Javascript mode includes an "Export" option which will generate the HTML and javascript code required to publish your sketch.  This is the same as Standard mode's "Export" which generates an HTML page and JAR file for an embedded Java applet.   To export in Javascript mode, select "FILE --> export title" [NOTE: we should change this to something else, export title is confusing I think].</p>
+	Once you have finished writing your sketch, you will likely want to publish it to the web.  After all this is the primary reason for using JavaScript mode in the first place!  JavaScript mode will automatically generate the HTML and javascript code required to publish your sketch for you.  Just take a look in your sketch directory for a folder named "applet_js." This folder is generated each time you run your sketch (you can also force its generation by running FILE --> EXPORT which works similarly to Standard mode's "Export" that generates an HTML page and JAR file for an embedded Java applet.)
 			
 	<p><img src="imgs/export.png"></p>
 		
@@ -112,14 +113,14 @@
 	        <b>Processing.js has no data directory</b></h5>
 	    <p>
 	        Processing uses the concept of a <b>data</b> directory, where images and other resources
-	        are located. When you run a sketch in Javascript mode, the data directory is not used.  Instead all data files
+	        are located. When you run a sketch in JavaScript mode, the data directory is not used.  Instead all data files
 	        live in the same folder as the above three files.</p>
 	    <h5>
 	        <b>Processing.js implements Processing, but not all of Java</b></h5>
 	    <p>
 	        Processing.js is compatible with Processing, but is not, and will never be, fully
 	        compatible with Java. If your sketch uses functions or classes not defined as part
-	        of Processing, they are unlikely to work in Javascript mode Similarly, libraries
+	        of Processing, they are unlikely to work in JavaScript mode Similarly, libraries
 	        that are written for Processing, which are written in Java instead of Processing,
 	        will most likely not work, though hopefully this will change as more libraries are
 	        written for both modes.</p>
@@ -138,7 +139,7 @@
 
 	    <p>
 	        See <a href="https://processing-js.lighthouseapp.com/projects/41284/tickets/532-drawing-artifacts-in-processingjs-not-in-processing-with-this-code">
-	            lighthouse bug</a></p>
+	            bug report</a></p>
 
 	    <h5>
 	        <b>Processing.js has to cheat to simulate Processing's synchronous I/O</b></h5>
@@ -185,7 +186,8 @@
 	    <p>
 	        Notice the extra comment line at the top of the code. The <b>@pjs</b> directive
 	        is for Processing.js, and not the developer. Think of it as an extra line of code
-	        that will be executed before the program begins.</p>
+	        that will be executed before the program begins.  There is also a directives editor under
+	        the JavaScript menubar which makes it easier to add syntactically correct directives to a sketch/p>
 	    <p>
 	        If you have multiple images to load, use a list like so:</p>
 <pre>
