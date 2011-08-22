@@ -19,27 +19,27 @@
 #   Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 """
-Reads a configuration file listing direct links to libraries grouped by
+Reads a configuration file listing direct links to contributions grouped by
 category. The config file is formatted using the following style:
 
     # A comment. Everything after the hash is ignored
     [Library : Sound] # Type of software : category name.
     # A url of a library in the sound category
-    http://example.com/libs/soundlib1.zip
+    http://example.com/libs/soundlib1.txt
     # Another url of a library in the sound category
-    http://example.org/libs/soundlib2.zip 
+    http://example.org/libs/soundlib2.txt
 
     [Library : Vision] # Another category
-    http://example.net/libs/visionlib.zip
+    http://example.net/libs/visionlib.txt
 
     [Library Compilation : Compilation] # Library compilations are zip files
                                         # containing multiple libraries
-    http://example.net/libs/awesomelibs.zip
+    http://example.net/libs/awesomelibs.txt
 
-After parsing the config file, information on each library is retreived from
-text files assumed to be at the same address as the library, but with a txt
-file ending rather than zip.  For example, visionlib in the example above
-would be found at http://example.com/libs/visionlib.txt
+After parsing the config file, information on each library is retrieved from
+the text files, and the contribution is assumed to be hosted at the same address
+as the txt, but with .zip.  For example, visionlib in the example above
+would be found at http://example.com/libs/visionlib.zip
 
 This script takes two arguments
   Arg 1: The name of a config file to read from
@@ -197,25 +197,25 @@ if __name__ == "__main__":
     software.append(category)
     urls = url_by_category[cat]
     for url in urls:
-      software_type, url = url
-      exports_url = url[:url.rfind('.')] + '.txt'
+      software_type, prop_url = url
+      download_url = prop_url[:prop_url.rfind('.')] + '.zip'
       try:
         element = None
-        exports = get_exports(urlopen(exports_url))
+        exports = get_exports(urlopen(prop_url))
 
         if software_type == LIBRARY:
-          element = create_common_element(exports, 'library', url)
+          element = create_common_element(exports, 'library', download_url)
         elif software_type == LIBRARY_COMPILATION:
-          element = create_common_element(exports, 'librarycompilation', url)
+          element = create_common_element(exports, 'librarycompilation', download_url)
         elif software_type == TOOL:
-          element = create_common_element(exports, 'tool', url)
+          element = create_common_element(exports, 'tool', download_url)
         elif software_type == MODE:
-          element = create_common_element(exports, 'mode', url)
+          element = create_common_element(exports, 'mode', download_url)
 
         if element != None:
           category.append(element)
       except IOError as inst:
-        print 'Error reading', exports_url
+        print 'Error reading', prop_url
         print inst
 
   software_tree = ElementTree()

@@ -6,6 +6,11 @@
    <version id="12" pretty="3.2.0" />
    <location url="http://www.gicentre.org/utils/gicentreUtils.zip" />
   </library>
+  <library name="GenerativeDesign" url="http://www.generative-gestaltung.de/">
+   <description authorList="Hartmut Bohnacker and Benedikt Gross" paragraph="It supplies classes and functions for 3d-surfaces, simple physics (nodes, springs, attractors), graphic tablets, ASE-export or asynchronous loading of xml, html and images." sentence="Compilation of various functions belonging to the book GENERATIVE GESTALTUNG (german version) and DESIGN GENERATIF (french version)." />
+   <version id="4" pretty="1.03" />
+   <location url="http://www.generative-gestaltung.de/downloads/generativedesign.zip" />
+  </library>
  </category>
  <category name="Animation">
   <library name="Ani" url="http://www.looksgood.de/libraries/Ani/">
