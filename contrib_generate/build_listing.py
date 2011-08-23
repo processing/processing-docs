@@ -114,7 +114,7 @@ def is_valid(exports):
 
   return True
 
-def create_common_element(exports, tag, url):
+def create_common_element(exports, tag, download_url):
   """
   Creates an XML element for a contribution using a dictionary containing
   attributes from its export file and a url that's a direct-link to
@@ -141,8 +141,20 @@ def create_common_element(exports, tag, url):
 
   libelement.append(version)
 
-  location = Element('location')
-  location.set('url', url)
+  has_explicit_links = False
+  location = Element('download')
+  for attr, value in exports.iteritems():
+    if attr.startswith('download'):
+      has_explicit_links = True
+      dot = attr.find('.')
+      if dot == -1:
+        location.set('other', value)
+      else:
+        location.set(attr[dot + 1:], value)
+  
+  if not has_explicit_links:
+    location.set('other', download_url)
+
   libelement.append(location)
 
   return libelement
