@@ -51,6 +51,7 @@ from sys import argv
 from urllib2 import *
 from xml.etree.ElementTree import *
 import re
+import shutil
 
 LIBRARY = 'library'
 LIBRARY_COMPILATION = 'librarycompilation'
@@ -225,5 +226,8 @@ if __name__ == "__main__":
   software_tree = ElementTree()
   autoindent(software)
   software_tree._setroot(software)
-  software_tree.write(xmlout, ENCODING, True)
+  
+  tmpfile = xmlout + '.tmp'
+  software_tree.write(tmpfile, ENCODING, True)
+  shutil.move(tmpfile, xmlout)
 
