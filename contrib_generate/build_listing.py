@@ -100,25 +100,14 @@ def autoindent(elem, level=0, is_last=True):
     autoindent(next_elem, level + 1, is_last)
 
 
-def is_valid(exports):
-  """
-  Returns True if the dictionary 'exports' contains all required fields
-  for a library, False otherwise
-  """
-
-  required = ['name', 'authorList', 'url', 'sentence', 'version']
-
-  for attr in required:
-    if not exports.has_key(attr) or len(exports[attr]) == 0:
-      return False
-
-  return True
-
 def create_common_element(exports, tag, download_url):
   """
   Creates an XML element for a contribution using a dictionary containing
   attributes from its export file and a url that's a direct-link to
   download it
+
+  Throws a KeyError if one of the required attributes isn't in exports.
+  Required keys are 'name', 'authorList', 'url', 'sentence', and 'version'
   """
   libelement = Element(tag)
   libelement.set('name', exports['name'])
@@ -229,6 +218,9 @@ if __name__ == "__main__":
       except IOError as inst:
         print 'Error reading', prop_url
         print inst
+      except KeyError as inst:
+        print 'Error reading', prop_url
+        print '  No value for "' + inst.args[0] + '". Maybe it\'s a 404 page'
 
   software_tree = ElementTree()
   autoindent(software)
