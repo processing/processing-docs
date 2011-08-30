@@ -43,9 +43,6 @@ println(quoted);  // This one has "quotes"
 ]]></code>
 </example>
 
-
-
-
 <description><![CDATA[
 A string is a sequence of characters. The class <b>String</b> includes methods for examining individual characters, comparing strings, searching strings, extracting parts of strings, and for converting an entire string uppercase and lowercase. Strings are always defined inside double quotes ("Abc") and characters are always defined inside single quotes('A'). 
 <br /> <br />
@@ -126,11 +123,6 @@ text()
 <type>Object</type>
 
 <partof>PDE</partof>
-
-
-
-
-
 
 
 

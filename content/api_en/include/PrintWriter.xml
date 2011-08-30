@@ -36,6 +36,8 @@ void keyPressed() {
 Allows characters to print to a text-output stream. A new PrintWriter object is created with the <b>createWriter()</b> function. For the file to be made correctly, it should be flushed and must be closed with its <b>flush()</b> and <b>close()</b> methods (see above example). 
 ]]></description>
 
+<syntax></syntax>
+
 <method>
 <mname>print()</mname>
 <mdescription>Adds data to the stream</mdescription>
@@ -56,6 +58,8 @@ Allows characters to print to a text-output stream. A new PrintWriter object is 
 <mdescription>Closes the stream</mdescription>
 </method>
 
+<constructor> </constructor>
+
 <returns></returns>
 
 <related>
@@ -66,7 +70,7 @@ createWriter()
 
 <type>Object</type>
 
-<partof>Core</partof>
+<partof>PDE</partof>
 
 
 </root>

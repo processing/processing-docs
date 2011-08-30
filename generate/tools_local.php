@@ -10,7 +10,7 @@ $lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
 $tools_dir = DISTDIR.'tools';
 
 // get translation file
-$translation = new Translation($lang);
+//$translation = new Translation($lang);
 
 // get tools index
 $index = CONTENTDIR."api_en/tools/index.html";

@@ -9,7 +9,7 @@ $benchmark_start = microtime_float();
 $lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
 
 // get translation file
-$translation = new Translation($lang);
+//$translation = new Translation($lang);
 
 // each lib
 $libraries = array('net', 'serial', 'video', 'opengl', 'dxf', 'pdf');

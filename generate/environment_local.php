@@ -14,7 +14,7 @@ $path = DISTDIR."/environment/";
 #echo $path . "\n";
 
 // get translation file
-$translation = new Translation($lang);
+//$translation = new Translation($lang);
 
 $page = new LocalPage('Environment (IDE)', 'Environment', 'Environment', '../');
 $page->content(file_get_contents($source.'index.html'));

@@ -3,6 +3,8 @@
 #remove everything old
 rm -rf ../tmp
 mkdir ../tmp
+rm -rf ../../distribution
+mkdir ../../distribution
 
 #generate everything anew
 javadoc -doclet ProcessingWeblet \
@@ -30,15 +32,23 @@ cp -R ../../content/api_media/*.gif ../tmp/web/images/
 cp -R ../../content/api_media/*.png ../tmp/web/images/
 
 # manage local reference
-#cp -R ../../css	 ../../distribution/
-#mkdir -p ../../distribution/images
+cp -R ../../css	 ../../distribution/
+mkdir -p ../../distribution/images
 cp -R ../../content/api_media/*.jpg ../../distribution/images/
 cp -R ../../content/api_media/*.gif ../../distribution/images/
 cp -R ../../content/api_media/*.png ../../distribution/images/
 
+# copy images for local reference
+mkdir -p ../../distribution/img
+mkdir -p ../../distribution/img/about/
+cp ../../favicon.ico ../../distribution/img/
+cp ../../img/processing_cover.gif ../../distribution/img/
+cp ../../img/about/people-header.gif ../../distribution/img/about/
+cp ../../content/api_en/images/header.gif ../../distribution/img/
+
 # run local reference creations files
 cd ../../generate/
-# php environment_local.php
-# php staticpages_local.php
-# php tools_local.php
-# php libraries_local.php
+php staticpages_local.php
+php tools_local.php
+php libraries_local.php
+php environment_local.php

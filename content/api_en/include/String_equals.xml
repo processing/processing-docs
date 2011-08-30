@@ -33,11 +33,6 @@ Compares two strings to see if they are the same. This method is necessary becau
 
 <parameter>
 <label>str</label>
-<description><![CDATA[String: any variable of type String]]></description>
-</parameter>
-
-<parameter>
-<label>str</label>
 <description><![CDATA[String: any valid String]]></description>
 </parameter>
 

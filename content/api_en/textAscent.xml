@@ -10,19 +10,17 @@
 <example>
 <image>textAscent_.gif</image>
 <code><![CDATA[
-PFont font;
-font = loadFont("FFScala-32.vlw"); 
-textFont(font);
+float base = height * 0.75;
 
-textSize(32); 
-float ascent = textAscent();
-text("dp", 0, 70);
-line(0, 70-ascent, 100, 70-ascent); 
+textSize(30);
+float a1 = textAscent();
+text("Tj", 0, base);
+line(0, base-a1, width*0.25, base-a1); 
 
-textSize(64);
-ascent = textAscent();
-text("dp", 35, 70);
-line(35, 70-ascent, 100, 70-ascent);
+textSize(60);
+float a2 = textAscent();
+text("Tj", width*0.25, base);
+line(width*0.25, base-a2, width, base-a2);
 ]]></code>
 </example>
 
