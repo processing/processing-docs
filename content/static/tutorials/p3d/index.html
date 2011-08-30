@@ -1,0 +1,147 @@
+<h1>P3D</h1>
+	
+<p>
+
+<table width="656">
+  <tr>
+   	<td>
+
+	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
+	
+	<p>&nbsp;</p>
+	<h3>What is P3D?</h3>
+
+	<p>
+	Back in the old days, Processing had a slew of "render modes" to choose from: JAVA2D, P2D, P3D, and OPENGL.   In Processing 2.0, things have been greatly simplified and there are now only two modes: P2D and P3D.   By default, Processing will use P2D, however, you can specify which rendering mode you would like to use in the <a href="http://processing.org/reference/size_.html">size()</a> function.  For example:
+		
+<pre>
+void setup() {
+  size(200,200,P3D);
+}
+</pre>
+
+	Now, you may be wondering: "Which render mode should I choose and why?"   The mode tells Processing what to do behind the scenes when rendering the display window.   For example, P2D employs existing Java 2D libraries to draw shapes, set colors, display text, etc.  When deciding which renderer to use, you are mostly likely going to be balancing a number of factors: speed, accuracy, and general usefulness of the available features.  In most cases, particularly when you are first learning Processing, you will want to use the default (P2D) renderer setting.   It provides the most elegant and accurate results when drawing in 2D.
+	</p>
+	
+	<p>
+	Switching to P3D is advisable when one of the following scenarios appears:
+	
+	<ul>
+		<li><strong>You are drawing in 3D!</strong>.  In three-dimensional space (such as the actual, real-world space where you are reading this book), a third axis (commonly referred to as the “Z-axis”) refers to the depth of any given point.   In a Processing sketch’s window, a coordinate along this Z-axis indicates how far in front or behind the window a pixel lives.   Now, we all know there are no actual pixels floating in the air in front of or behind your LCD monitor!   What we're talking about here is how to use the theoretical Z-axis to create the illusion of three-dimensional space in your Processing window.  P3D is required for this.</li>
+		<li><strong>You want your sketch to run faster!</strong>.  P3D mode makes use of OpenGL-compatible graphics hardware.  In other words, some of the work required to draw all the pixels in the window can happen on your computer's graphics card and thus save time and energy that the regular old RAM and Processing can dedicate to other stuff. Keep in mind that OpenGL is not magic pixie dust that makes any sketch faster (though it's close), you will also need to carefully consider the techniques you are using to do the drawing itself as well.  In particular, using the new "shape recording" functionality available in PShape (see PShape tutorial [LINK]) can massively increase speed in P3D.</li>
+		<li><strong>You want to use a particular graphic effect available only in P3D!</strong>.  This is a smaller and less common point, but still important to note.  Some graphics functions are only available in P3D.  [WHAT GOES HERE? BLEND MODES?  TEXTURES? SOME LIGHTING STUFF?]</li>
+	</ul>
+	
+	</p>
+	
+	<h3>3D Transformations</h3>
+	
+	<p>
+	So, you are ready to draw in 3D.  Before we begin, it's important to note that as soon as we enter this world of "3D" pixels coordinates, a certain amount of control must be relinquished to the P3D renderer.  You can no longer control exact pixel locations as you might with 2D shapes, because XY locations will be adjusted to create the illusion of 3D perspective.
+	</p>
+
+	<p>
+	In order to draw something at a point in three dimensions the coordinates are specified in the order you would expect: x, y, z.  Cartesian 3D systems can be described as "left-handed" or "right-handed." If you point your index finger in the positive y direction (up) and your thumb in the positive x direction (to the right), the rest of your fingers will point towards the positive z direction. It's left-handed if you use your left hand and do the same. In Processing, the system is left-handed, as follows:
+	</p>
+	
+	<p><img src="imgs/coordinatesystem.png"></p>
+
+	<p>
+	In other words, positive is coming at you, negative is moving away from you.  Let's say we want to draw a rectangle that moves towards the viewer using P3D.   We know that to draw a rectangle, the rect() function takes four arguments: an x location, a y location, a width, and a height.
+	</p>
+
+<pre>
+rect(x,y,w,h);
+</pre>
+
+	<p>Our first instinct might be to add another argument to the rect() function.</p>  
+
+<pre>
+<del>rect(x,y,<strong>z</strong>,w,h);</del>
+</pre>
+
+	<p>
+	The rect() function, however, does not allow for this possibility.  In order to specify 3D coordinates for shapes in Processing, you have to use translate().   Now, translate() is not exclusive to 3D sketches and is quite commonly used in 2D.  In fact, there's an <a href="">entire 2D transformations tutorial</a> that I suggest you stop and read right now unless you are already comfortable with the concept of translation (and rotation) in Processing.  Assuming, however, that you are already familiar with how translate() works in 2D, you only need to add one more argument: z.
+	</p>
+	
+<pre>
+void draw() {
+  translate(x,y,z);
+  rect(0,0,w,h);
+
+  z++; // The rectangle moves forward as z increments.
+}
+</pre>
+
+	<p>
+	The third dimension also opens up the possibility of rotating around different axes.  When we say plain old rotate() in Processing, what we are really saying is rotate around the Z axis (i.e. spin on the plane of the window itself).  In 3D, we can now go ahead and specify the rotation axis itself by using the function rotateZ().
+	</p>
+	
+<p><img src="imgs/rotateZ.png"></p>
+<pre>
+translate(x,y,z);
+rotateZ(angle);
+rectMode(CENTER);
+rect(0,0,w,h);
+</pre>
+
+<p>And once we can do the z-axis, we can also rotate around the x and y axis.</p>
+
+<p><img src="imgs/rotateX.png"></p>
+<pre>
+rotateX(angle);
+</pre>
+
+<p><img src="imgs/rotateY.png"></p>
+<pre>
+rotateY(angle);
+</pre>
+
+As well as multiple axes at a time.
+
+<p><img src="imgs/rotateXYZ.png"></p>
+<pre>
+translate(x,y,z);
+rotateX(angle1);
+rotateY(angle2);
+rotateZ(angle3);
+rect(0,0,w,h);
+</pre>
+
+	<h3>3D Shapes</h3>
+	
+	<p>
+	The first feature of P3D we'll look at is drawing three dimensional shapes.  You are probably quite comfortable with drawing shapes in 2D: line(), rect(), ellipse(), triangle(), etc.  Not to mention custom 2D polygons using beginShape(), endShape(), and vertex().  Shapes in 3D work pretty much the same way.  There are primitive shapes that you get for free, i.e. box() and sphere(), and you can build your own custom shapes by specifying vertices.  
+	</p>
+	
+	<p><img src="imgs/primitives3D.png"></p>
+	
+	In addition, you can 
+	
+	
+	
+	
+	
+
+	<h3>3D Transformations</h3>
+
+	<h3>Textures</h3>
+
+	<h3>Lighting</h3>
+
+	<h3>Perspective</h3>
+
+	<h3>Camera</h3>
+
+	<h3>PShape</h3>
+
+
+	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
+
+	
+   </td>
+  </tr>
+</table>
+
+</p>
+
