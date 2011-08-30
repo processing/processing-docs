@@ -18,7 +18,7 @@
 void setup() {
   size(200,200,P3D);
 }
-</pre>
+</pre><br/>
 
 	Now, you may be wondering: "Which render mode should I choose and why?"   The mode tells Processing what to do behind the scenes when rendering the display window.   For example, P2D employs existing Java 2D libraries to draw shapes, set colors, display text, etc.  When deciding which renderer to use, you are mostly likely going to be balancing a number of factors: speed, accuracy, and general usefulness of the available features.  In most cases, particularly when you are first learning Processing, you will want to use the default (P2D) renderer setting.   It provides the most elegant and accurate results when drawing in 2D.
 	</p>
@@ -52,13 +52,13 @@ void setup() {
 
 <pre>
 rect(x,y,w,h);
-</pre>
+</pre><br/>
 
 	<p>Our first instinct might be to add another argument to the rect() function.</p>  
 
 <pre>
 <del>rect(x,y,<strong>z</strong>,w,h);</del>
-</pre>
+</pre><br/>
 
 	<p>
 	The rect() function, however, does not allow for this possibility.  In order to specify 3D coordinates for shapes in Processing, you have to use translate().   Now, translate() is not exclusive to 3D sketches and is quite commonly used in 2D.  In fact, there's an <a href="">entire 2D transformations tutorial</a> that I suggest you stop and read right now unless you are already comfortable with the concept of translation (and rotation) in Processing.  Assuming, however, that you are already familiar with how translate() works in 2D, you only need to add one more argument: z.
@@ -71,7 +71,7 @@ void draw() {
 
   z++; // The rectangle moves forward as z increments.
 }
-</pre>
+</pre><br/>
 
 	<p>
 	The third dimension also opens up the possibility of rotating around different axes.  When we say plain old rotate() in Processing, what we are really saying is rotate around the Z axis (i.e. spin on the plane of the window itself).  In 3D, we can now go ahead and specify the rotation axis itself by using the function rotateZ().
@@ -83,19 +83,19 @@ translate(x,y,z);
 rotateZ(angle);
 rectMode(CENTER);
 rect(0,0,w,h);
-</pre>
+</pre><br/>
 
 <p>And once we can do the z-axis, we can also rotate around the x and y axis.</p>
 
 <p><img src="imgs/rotateX.png"></p>
 <pre>
 rotateX(angle);
-</pre>
+</pre><br/>
 
 <p><img src="imgs/rotateY.png"></p>
 <pre>
 rotateY(angle);
-</pre>
+</pre><br/>
 
 As well as multiple axes at a time.
 
@@ -106,24 +106,67 @@ rotateX(angle1);
 rotateY(angle2);
 rotateZ(angle3);
 rect(0,0,w,h);
-</pre>
+</pre><br/>
 
 	<h3>3D Shapes</h3>
 	
 	<p>
-	The first feature of P3D we'll look at is drawing three dimensional shapes.  You are probably quite comfortable with drawing shapes in 2D: line(), rect(), ellipse(), triangle(), etc.  Not to mention custom 2D polygons using beginShape(), endShape(), and vertex().  Shapes in 3D work pretty much the same way.  There are primitive shapes that you get for free, i.e. box() and sphere(), and you can build your own custom shapes by specifying vertices.  
+	Once you know how to translate and rotate around a three dimensional coordinate system, you are ready to draw some three dimensional shapes.  You are probably quite comfortable with drawing shapes in 2D whether primitive (line(), rect(), ellipse(), triangle(), etc.) or custom (beginShape(), endShape(), and vertex()).  The good news is that shapes in 3D work pretty much the same way.  There are primitive shapes that you get for free such as box() and sphere().
 	</p>
 	
 	<p><img src="imgs/primitives3D.png"></p>
-	
-	In addition, you can 
-	
-	
-	
-	
-	
+<pre>
+pushMatrix();
+translate(130, height/2, 0);
+rotateY(1.25);
+rotateX(-0.4);
+noStroke();
+box(100);
+popMatrix();
 
-	<h3>3D Transformations</h3>
+pushMatrix();
+translate(500, height*0.35, -200);
+noFill();
+stroke(255);
+sphere(280);
+popMatrix();
+</pre><br/>
+<p>See also: <a href="http://processing.org/learning/3d/primitives3d.html">Primitives3D</a></p>
+	
+	<p>
+	In the above example, note that the functions box() and sphere() each only take one argument: size. These 3D shapes cannot be positioned via arguments, rather you should use the translate() and rotate() methods described previously.
+	</p>
+	
+	<p>
+	Three-dimensional shapes can also be drawn using beginShape(), endShape(), and vertex() by placing multiple polygons side by side.  In 3D, the vertex() function takes 3 arguments: x, y, and z.  Let's say we want to draw a four-sided pyramid made up of four triangles, all connected to one point (the "apex") and a flat plane (the "base").
+	
+	
+	<p><img src="imgs/pyramid3D.png"></p>
+<pre>
+  translate(width/2, height/2, 0);
+  rotateX(angle1);
+  rotateY(angle2);
+  scale(100);
+  beginShape();
+  vertex(-1, -1, -1);
+  vertex( 1, -1, -1);
+  vertex( 0,  0,  1);
+
+  vertex( 1, -1, -1);
+  vertex( 1,  1, -1);
+  vertex( 0,  0,  1);
+
+  vertex( 1, 1, -1);
+  vertex(-1, 1, -1);
+  vertex( 0, 0,  1);
+
+  vertex(-1,  1, -1);
+  vertex(-1, -1, -1);
+  vertex( 0,  0,  1);
+  endShape();
+</pre><br/>
+
+Note above how it's often simpler to specify vertex locations using a standardized unit of measure (i.e. 1 pixel) and relative to a point of origin (0,0,0).   The size and position of the shape is then set using matrix transformations: translate(), rotate(), and scale().   For some examples of more sophisticated custom shapes built in 3D, take a look at these examples: <a href="http://processing.org/learning/3d/rgbcube.html">RGB Cube</a>, <a href="http://processing.org/learning/3d/vertices.html">Vertices</a>,<a href="http://processing.org/learning/3d/toroid.html">Toroid</a>, <a href="http://processing.org/learning/3d/icosahedra.html">Isocahedra</a>, <a href="http://processing.org/learning/3d/bricktower.html">Brick Tower</a>.
 
 	<h3>Textures</h3>
 
