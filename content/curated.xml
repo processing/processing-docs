@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+<software name="The Creators" by="Constanza Casas, Mark C Mitchell and Pieter Steyaert" scroll="yes" resize="yes" width="1024" height="700">
+        <image>images/creators.jpg</image>
+          <description>
+              The Creators is a response by information visualisation students at the University of Sydney to a design brief that called for an interactive experience on a 42″ multitouch table that visualised data in a novel.The team chose realtime audio of the room as the dataset, as a meditation on cause and effect: the viewers become participators, creators, even if they are unaware of it.
+          </description>
+          <location>http://www.thecreators.tv</location>
+		 <link href="http://www.thecreators.tv">The Creators</link>
+</software>
+	
 <software name="The Digital Rube Goldberg Processor" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
         <image>images/golberg.jpg</image>
           <description>
