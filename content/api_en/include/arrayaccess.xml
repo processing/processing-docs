@@ -21,7 +21,7 @@ int b = numbers[1] + numbers[2]; // Sets variable b to 180
 </example>
 
 <description><![CDATA[
-The array access operator is used to specify a location within an array. The data at this location can be defined with the syntax <b>array[element] = value</b> or read with the syntax <b>value = array[element]</b>.
+The array access operator is used to specify a location within an array. The data at this location can be defined with the syntax <b>array[element] = value</b> and read with the syntax <b>value = array[element]</b> as shown in the above example.
 ]]></description>
 
 <syntax>

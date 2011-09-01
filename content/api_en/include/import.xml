@@ -11,10 +11,10 @@
 <example>
 <image></image>
 <code><![CDATA[
-import processing.opengl.*;
+import processing.pdf.*;
 
 void setup() {
-  size(screen.width, screen.height, OPENGL);
+  size(screen.width, screen.height, PDF);
 }
 
 void draw() {
@@ -30,8 +30,8 @@ A library is one or more classes that are grouped together to extend the capabil
 The <b>*</b> character is often used at the end of the import line (see the code example above)
 to load all of the related classes at once, without having to reference them individually.<br />
 <br />
-The import statement will be created for you by selecting a library from 
-the "Import Library..." item in the Sketch menu.
+The import statement will be created for you by selecting a library from the "Import Library..." 
+item in the Sketch menu.
 ]]></description>
 
 <syntax>

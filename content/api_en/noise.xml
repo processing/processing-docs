@@ -10,8 +10,8 @@
 <image></image>
 <code><![CDATA[
 float xoff = 0.0;
-void draw() 
-{
+
+void draw() {
   background(204);
   xoff = xoff + .01;
   float n = noise(xoff) * width;
@@ -24,6 +24,7 @@ void draw()
 <image></image>
 <code><![CDATA[
 float noiseScale=0.02;
+
 void draw() {
   background(0);
   for(int x=0; x < width; x++) {

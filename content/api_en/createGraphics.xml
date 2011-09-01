@@ -7,37 +7,32 @@
 <subcategory></subcategory>
 
 <example>
-<image>pgraphics.jpg</image>
+<image></image>
 <code><![CDATA[
 PGraphics pg;
 
 void setup() {
-  size(100, 100);
-  pg = createGraphics(80, 80, P3D);
+  int d = int(width*0.8);
+  pg = createGraphics(d, d, P2D);
 }
 
 void draw() {
   pg.beginDraw();
   pg.background(102);
   pg.stroke(255);
-  pg.line(40, 40, mouseX, mouseY);
+  pg.line(pg.width*0.5, pg.height*0.5, mouseX, mouseY);
   pg.endDraw();
-  image(pg, 10, 10); 
+  image(pg, width*0.1, height*0.1); 
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Oy2. Creates and returns a new <b>PGraphics</b> object of the types P2D, P3D, and JAVA2D. Use this class if you need to draw into an off-screen graphics buffer. It's not possible to use <b>createGraphics()</b> with OPENGL, because it doesn't allow offscreen use. The PDF renderer requires the filename parameter. The DXF renderer should not be used with createGraphics(), it's only built for use with beginRaw() and endRaw().
+Creates and returns a new <b>PGraphics</b> object of the types P2D or P3D. Use this class if you need to draw into an off-screen graphics buffer. The PDF renderer requires the filename parameter. The DXF renderer should not be used with <b>createGraphics()</b>, it's only built for use with <b>beginRaw()</b> and <b>endRaw()</b>.
+<br /> <br />
+It's important to call any drawing functions between <b>beginDraw()</b> and <b>endDraw()</b> statements. This is also true for any functions that affect drawing, such as <b>smooth()</b> or <b>colorMode()</b>.
 <br/> <br/>
-It's important to call any drawing commands between beginDraw() and endDraw() statements. This is also true for any commands that affect drawing, such as smooth() or colorMode().
-<br/> <br/>
-Unlike the main drawing surface which is completely opaque, surfaces created with createGraphics() can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using save() to write a PNG or TGA file, the transparency of the graphics object will be honored. Note that transparency levels are binary: pixels are either complete opaque or transparent. For the time being (as of release 1.2.1), this means that text characters will be opaque blocks. This will be fixed in a future release (<A HREF="http://code.google.com/p/processing/issues/detail?id=80">Issue 80</A>).
+Unlike the main drawing surface which is completely opaque, surfaces created with <b>createGraphics()</b> can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using <b>save()</b> to write a PNG or TGA file, the transparency of the graphics object will be honored. Note that transparency levels are binary: pixels are either complete opaque or transparent. For the time being (as of release 1.2.1), this means that text characters will be opaque blocks. This will be fixed in a future release (<A HREF="http://code.google.com/p/processing/issues/detail?id=80">Issue 80</A>).
 ]]></description>
-
-<syntax>
-createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>)
-createGraphics(<c>width</c>, <c>height</c>, <c>renderer</c>, <c>filename</c>)
-</syntax>
 
 </root>

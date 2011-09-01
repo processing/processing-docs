@@ -10,9 +10,17 @@
 <example>
 <image>PImage_copy.jpg</image>
 <code><![CDATA[
-PImage img = loadImage("tower.jpg");
-img.copy(50, 0, 50, 100, 0, 0, 50, 100); 
-image(img, 0, 0);
+PImage img;
+
+void setup() {
+  img = loadImage("tower.jpg");
+  int x = width/2;
+  img.copy(x, 0, x, height, 0, 0, x, height);
+}
+
+void draw() {
+  image(img, 0, 0);
+}
 ]]></code>
 </example>
 

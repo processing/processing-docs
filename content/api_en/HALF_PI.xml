@@ -9,13 +9,13 @@
 <example>
 <image>HALF_PI.gif</image>
 <code><![CDATA[
-float f = 0.0;
-beginShape(POLYGON);
-while(f &lt; HALF_PI) {
-  vertex(width/2 + cos(f)*40, height/2 + sin(f)*40);
-  f += PI/12.0;
-}
-endShape();
+float x = width/2;
+float y = height/2;
+float d = width * 0.8;
+arc(x, y, d, d, 0, QUARTER_PI);
+arc(x, y, d-20, d-20, 0, HALF_PI);
+arc(x, y, d-40, d-40, 0, PI);
+arc(x, y, d-60, d-60, 0, TWO_PI);
 ]]></code>
 </example>
 

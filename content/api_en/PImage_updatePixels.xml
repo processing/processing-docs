@@ -10,14 +10,22 @@
 <example>
 <image>updatePixels_.jpg</image>
 <code><![CDATA[
-int halfImage = width*height/2;
-PImage myImage = loadImage("topanga.jpg");
-myImage.loadPixels();
-for (int i = 0; i &lt; halfImage; i++) {
-  myImage.pixels[i+halfImage] = pixels[i];
+PImage myImage;
+int halfImage;
+
+void setup() {
+  halfImage = width * height/2;
+  myImage = loadImage("topanga.jpg");
+  myImage.loadPixels();
+  for (int i = 0; i &lt; halfImage; i++) {
+    myImage.pixels[i+halfImage] = pixels[i];
+  }
+  myImage.updatePixels();
 }
-myImage.updatePixels();
-image(myImage, 0, 0);
+
+void draw() {
+  image(myImage, 0, 0);
+}
 ]]></code>
 </example>
 

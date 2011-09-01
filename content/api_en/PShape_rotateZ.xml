@@ -33,7 +33,7 @@ Rotates a shape around the z-axis the amount specified by the <b>angle</b> param
 <br /><br />
 Shapes are always rotated around the upper-left corner of their bounding box. Positive numbers rotate objects in a clockwise direction. Subsequent calls to the method accumulates the effect. For example, calling <b>rotateZ(HALF_PI)</b> and then <b>rotateZ(HALF_PI)</b> is the same as <b>rotateZ(PI)</b>. This transformation is applied directly to the shape, it's not refreshed each time <b>draw()</b> is run. 
 <br /><br />
-This method requires a 3D renderer. You need to pass P3D or OPENGL as a third parameter into the <b>size()</b> method as shown in the example above.
+This method requires a 3D renderer. You need to use P3D as a third parameter for the <b>size()</b> function as shown in the example above.
 ]]></description>
 
 </root>

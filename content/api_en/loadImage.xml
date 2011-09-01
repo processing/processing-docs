@@ -18,7 +18,7 @@ image(b, 0, 0);
 <example>
 <image>loadImage_.jpg</image>
 <code><![CDATA[
-// Loading an image when using setup() and draw()
+// Load an image with setup() and draw()
 
 PImage b;
 
@@ -36,10 +36,12 @@ void draw() {
 
 <example>
 <code><![CDATA[
+// Load an image over a network
+
 PImage online;
 
 void setup() {
-  String url = "http://processing.org/img/processing_beta_cover.gif";
+  String url = "http://processing.org/img/processing_cover.gif";
   online = loadImage(url, "png");
   noLoop();
 }
