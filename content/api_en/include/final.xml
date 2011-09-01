@@ -18,9 +18,9 @@ constant += 12.84;  // ERROR! It's not possible to change a "final" value
 </example>
 
 <description><![CDATA[
-Keyword used to state that a value, class, or method can't be changed. If the <b>final</b> keyword is used to define a variable, the variable can't be changed within the program. When used to define a class, a <b>final</b> class cannot be subclassed. When used to define a method, a <b>final</b> method can't be overridden by subclasses.<br />
+Keyword used to state that a value, class, or method can't be changed. If the <b>final</b> keyword is used to define a variable, the variable can't be changed within the program. When used to define a class, a <b>final</b> class cannot be subclassed. When used to define a function or method, a <b>final</b> method can't be overridden by subclasses.<br />
 <br />
-This keyword is an essential part of Java programming and is not usually used with Processing. Consult a Java language reference or tutorial for more information, such as <a href="http://en.wikipedia.org/wiki/Final_(Java)">this one</a>. 
+This keyword is an essential part of Java programming and is not usually used with Processing. Consult a Java language reference or tutorial for more information. 
 ]]></description>
 
 <syntax></syntax>

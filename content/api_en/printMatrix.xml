@@ -28,7 +28,7 @@ printMatrix();
 </example>
 
 <description><![CDATA[
-Prints the current matrix to the text window.
+Prints the current matrix to the Console (the text window at the bottom of Processing).
 ]]></description>
 
 </root>

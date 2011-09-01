@@ -30,7 +30,7 @@ void keyPressed() {
 </example>
 
 <description><![CDATA[
-Complement to <b>beginRaw()</b>; they must always be used together. See the <a href="http://www.processing.org/reference/beginRaw_.html"><b>beginRaw()</b></a> reference for details.
+Complement to <b>beginRaw()</b>; they must always be used together. See the <b>beginRaw()</b> reference for details.
 ]]></description>
 
 </root>

@@ -11,16 +11,16 @@
 <code><![CDATA[
 // Move the mouse quickly to see the difference 
 // between the current and previous position 
-void draw() 
-{ 
+void draw() { 
   background(204); 
   line(20, mouseY, 80, pmouseY); 
+  println(mouseY + " : " + pmouseY);
 } 
 ]]></code>
 </example>
 
 <description><![CDATA[
-The system variable <b>pmouseY</b> always contains the vertical position of the mouse in the frame previous to the current frame. More detailed information about how <b>pmouseY</b> is updated inside of <b>draw()</b> and mouse events is explained in the reference for <a href="http://processing.org/reference/pmouseX.html"><b>pmouseX</b></a>.
+The system variable <b>pmouseY</b> always contains the vertical position of the mouse in the frame previous to the current frame. More detailed information about how <b>pmouseY</b> is updated inside of <b>draw()</b> and mouse events is explained in the reference for <b>pmouseX</b>.
 ]]></description>
 
 </root>

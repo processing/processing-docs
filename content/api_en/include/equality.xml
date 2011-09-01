@@ -20,9 +20,9 @@ if(a == b) {
 </example>
 
 <description><![CDATA[
-Determines if two values are equivalent. The equality operator is different from the assignment operator.
-<br /> <br />
-Note that when comparing String objects, you must use the equals() method instead of == to compare their contents. See the reference for String or the <a href="http://processing.org/reference/troubleshooting/index.html#strings">troubleshooting</a> note for more explanation.
+Determines if two values are equivalent. The equality operator is different from the assignment operator.<br /> 
+<br />
+Note that when comparing String objects, you must use the equals() method instead of == to compare their contents. See the reference for String or the <a href="http://wiki.processing.org/w/Troubleshooting#Why_don.27t_these_Strings_equal.3F">troubleshooting</a> note for more explanation.
 ]]></description>
 
 <syntax>
@@ -54,12 +54,5 @@ Note that when comparing String objects, you must use the equals() method instea
 <type>Operator</type>
 
 <partof>PDE</partof>
-
-
-
-
-
-
-
 
 </root>

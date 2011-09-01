@@ -27,7 +27,7 @@ for (int i = 0; i &lt;= steps; i++) {
 </example>
 
 <description><![CDATA[
-Calculates the tangent of a point on a curve. There is a good definition of "tangent" at Wikipedia: <a href="http://en.wikipedia.org/wiki/Tangent" target="new">http://en.wikipedia.org/wiki/Tangent</a>
+Calculates the tangent of a point on a curve. There's a good definition of <em><a href="http://en.wikipedia.org/wiki/Tangent" target="new">tangent</em> on Wikipedia</a>.
 ]]></description>
 
 </root>

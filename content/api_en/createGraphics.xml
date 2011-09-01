@@ -28,11 +28,11 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Creates and returns a new <b>PGraphics</b> object of the types P2D or P3D. Use this class if you need to draw into an off-screen graphics buffer. The PDF renderer requires the filename parameter. The DXF renderer should not be used with <b>createGraphics()</b>, it's only built for use with <b>beginRaw()</b> and <b>endRaw()</b>.
-<br /> <br />
-It's important to call any drawing functions between <b>beginDraw()</b> and <b>endDraw()</b> statements. This is also true for any functions that affect drawing, such as <b>smooth()</b> or <b>colorMode()</b>.
-<br/> <br/>
-Unlike the main drawing surface which is completely opaque, surfaces created with <b>createGraphics()</b> can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using <b>save()</b> to write a PNG or TGA file, the transparency of the graphics object will be honored. Note that transparency levels are binary: pixels are either complete opaque or transparent. For the time being (as of release 1.2.1), this means that text characters will be opaque blocks. This will be fixed in a future release (<A HREF="http://code.google.com/p/processing/issues/detail?id=80">Issue 80</A>).
+Creates and returns a new <b>PGraphics</b> object of the types P2D or P3D. Use this class if you need to draw into an off-screen graphics buffer. The PDF renderer requires the filename parameter. The DXF renderer should not be used with <b>createGraphics()</b>, it's only built for use with <b>beginRaw()</b> and <b>endRaw()</b>.<br /> 
+<br />
+It's important to call any drawing functions between <b>beginDraw()</b> and <b>endDraw()</b> statements. This is also true for any functions that affect drawing, such as <b>smooth()</b> or <b>colorMode()</b>.<br/> 
+<br/>
+Unlike the main drawing surface which is completely opaque, surfaces created with <b>createGraphics()</b> can have transparency. This makes it possible to draw into a graphics and maintain the alpha channel. By using <b>save()</b> to write a PNG or TGA file, the transparency of the graphics object will be honored. Note that transparency levels are binary: pixels are either complete opaque or transparent. For the time being, this means that text characters will be opaque blocks. This will be fixed in a future release (<a href="http://code.google.com/p/processing/issues/detail?id=80">Issue 80</a>).
 ]]></description>
 
 </root>

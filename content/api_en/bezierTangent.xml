@@ -56,7 +56,7 @@ for (int i = 0; i &lt;= steps; i++) {
 </example>
 
 <description><![CDATA[
-Calculates the tangent of a point on a Bezier curve. There is a good definition of "tangent" at Wikipedia: <a href="http://en.wikipedia.org/wiki/Tangent" target="new">http://en.wikipedia.org/wiki/Tangent</a>
+Calculates the tangent of a point on a Bezier curve. There is a good definition of <a href="http://en.wikipedia.org/wiki/Tangent" target="new"><em>tangent</em> on Wikipedia</a>.
 ]]></description>
 
 </root>

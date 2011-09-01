@@ -49,7 +49,7 @@ The <b>renderer</b> parameter selects which rendering engine to use. For example
 <br />
 <b>PDF</b> - The PDF renderer draws 2D graphics directly to an Acrobat PDF file. This produces excellent results when you need vector shapes for high resolution output or printing. You must first use Import Library &rarr; PDF to make use of the library. More information can be found in the PDF library reference.<br />
 <br />
-The P3D renderer doesn't support strokeCap() or strokeJoin(), which can lead to ugly results when using strokeWeight(). (<a href="http://dev.processing.org/bugs/show_bug.cgi?id=955">Bug 955</a>) <br />
+The P3D renderer doesn't support strokeCap() or strokeJoin(), which can lead to ugly results when using strokeWeight(). (<a href="http://code.google.com/p/processing/issues/detail?id=123">Issue 123</a>) <br />
 <br />
 The maximum width and height is limited by your operating system, and is usually the width and height of your actual screen. On some machines it may simply be the number of pixels on your current screen, meaning that a screen of 800x600 could support size(1600, 300), since it's the same number of pixels. This varies widely so you'll have to try different rendering modes and sizes until you get what you're looking for. If you need something larger, use <b>createGraphics</b> to create a non-visible drawing surface.<br />
 <br />

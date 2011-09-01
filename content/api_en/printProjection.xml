@@ -14,14 +14,14 @@ printProjection();
 
 // The program above prints this data:
 // 01.7321  00.0000  00.0000  00.0000
-// 00.0000  01.7321  00.0000  00.0000
+// 00.0000 -01.7321  00.0000  00.0000
 // 00.0000  00.0000 -01.0202 -17.4955
 // 00.0000  00.0000 -01.0000  00.0000
 ]]></code>
 </example>
 
 <description><![CDATA[
-Prints the current projection matrix to the text window.
+Prints the current projection matrix to the Console (the text window at the bottom of Processing).
 ]]></description>
 
 </root>

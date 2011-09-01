@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-    <name>class</name>
-    <category>Structure</category>
-    <subcategory></subcategory>
-    <usage>Web &amp; Application</usage>
     
-    <example>
-        <image></image>
-        <code><![CDATA[
+<name>class</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+    
+<example>
+<image></image>
+<code><![CDATA[
 // Declare and contruct two objects (h1, h2) from the class HLine 
 HLine h1 = new HLine(20, 2.0); 
 HLine h2 = new HLine(50, 2.5); 
@@ -38,27 +42,35 @@ class HLine {
     line(0, ypos, width, ypos); 
   } 
 } 
-        ]]></code>
-    </example>
+]]></code>
+</example>
     
-    <description><![CDATA[Keyword used to indicate the declaration of a class. A class is a composite of data and methods (functions) which may be instantiated as objects. The first letter of a class name is usually uppercase to separate it from other kinds of variables. A related tutorial on <a href="http://java.sun.com/docs/books/tutorial/java/concepts/index.html" target="_blank">Object-Oriented Programming</a> is hosted from the Sun website.]]></description>
-    <syntax>class <c>ClassName</c> {
+<description><![CDATA[
+Keyword used to indicate the declaration of a class. A class is a composite of data and methods (functions) which may be instantiated as objects. The first letter of a class name is usually uppercase to separate it from other kinds of variables. A related tutorial on <a href="http://download.oracle.com/javase/tutorial/java/concepts/index.html" target="_blank">Object-Oriented Programming</a> is hosted on the Oracle website.
+]]></description>
+
+<syntax>
+class <c>ClassName</c> {
   <c>statements</c>
-}</syntax>
+}
+</syntax>
     
-    <parameter>
-        <label>ClassName</label>
-        <description><![CDATA[Any valid variable name]]></description>
-    </parameter>
+<parameter>
+    <label>ClassName</label>
+    <description><![CDATA[Any valid variable name]]></description>
+</parameter>
     
-    <parameter>
-        <label>statements</label>
-        <description><![CDATA[any valid statements]]></description>
-    </parameter>
+<parameter>
+    <label>statements</label>
+    <description><![CDATA[any valid statements]]></description>
+</parameter>
     
-    <returns></returns>
-    <related>Object</related>
-    <availability>1.0</availability>
-    <partof>PDE</partof>
+<returns></returns>
+
+<related>Object</related>
+
+<availability>1.0</availability>
+
+<partof>PDE</partof>
 
 </root>
