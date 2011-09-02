@@ -1,15 +1,10 @@
-<span class="lib-nav">
-	<a href="../index.html">Libraries</a>
-</span>
 
-<div class="librarytitle">
-  <h3>PDF Export</h3>
-</div>
+<div class="librarytitle"><h3>PDF Export</h3></div>
 
 <div class="full-alt">
-    <p>This library makes it possible to write PDF files directly from Processing. These vector graphics files can be scaled to any size and output at very high resolutions. There is also a contributed library for exporting images to SVG format; check the <a href="http://www.processing.org/reference/libraries/">libraries</a> section of the website for more information. The PDF library can flatten 3D data into a 2D vector file, but to export 3D data, use the DXF library.<br />
-<br />
-This library is frequently used with the core Processing function <strong>size()</strong>, with a combination of <strong>beginRecord()</strong> and <strong>endRecord()</strong>, or with <strong>beginRaw()</strong> and <strong>endRaw()</strong>. The <strong>createGraphics()</strong> function can also be useful. See the examples below for different techniques.</p> 
+    <p>The PDF library makes it possible to write PDF files directly from Processing. These vector graphics files can be scaled to any size and output at very high resolutions. The PDF library can flatten 3D data into a 2D vector file, but to export 3D data, use the DXF library.<br />
+    <br />
+    This library is frequently used with the core Processing function <strong>size()</strong>, with a combination of <strong>beginRecord()</strong> and <strong>endRecord()</strong>, or with <strong>beginRaw()</strong> and <strong>endRaw()</strong>. The <strong>createGraphics()</strong> function can also be useful. See the examples below for different techniques.</p> 
 </div>
 
 <div class="full">
@@ -267,11 +262,11 @@ what happens when image data is written to it at 72 dpi.
 
 <li>Starting in release 0120, text is no longer treated as shape data by 
 default, meaning that the font will need to be installed to view the
-PDF that's created. The upside is that the PDF will render better 
-(particularly in light of the Mac OS X bug noted here). To force text
+PDF that's created. The upside is that the PDF will render better. To force text
 to be treated as shape data, use textMode(SHAPE), immediately after size().
-See the developer reference for textMode() inside 
-<A HREF="http://dev.processing.org/reference/everything/javadoc/processing/pdf/PGraphicsPDF.html">PGraphicsPDF</A> for more specifics.
+<!--See the developer reference for textMode() inside 
+<A HREF="http://dev.processing.org/reference/everything/javadoc/processing/pdf/PGraphicsPDF.html">
+PGraphicsPDF</A> for more specifics.-->
 
 <li>Another option for type, is to use createFont() with a TrueType font 
 (some OpenType fonts also work). Any font that shows up in PFont.list() 
@@ -282,18 +277,20 @@ calling createFont("fontname.ttf") will also work.
 bitmapped and ugly. In some cases, hint(ENABLE_NATIVE_FONTS) 
 may improve the situation if the font is installed on the machine.
 
-<li>On Mac OS X, the seems to be a bug in Apple's Java implementation 
+<!-- Removed by REAS, 1 September 2011, couldn't find reference in the current Issue database-->
+<!--<li>On Mac OS X, the seems to be a bug in Apple's Java implementation 
 that confuses cubic vs. quadric splines. This makes text look jagged, 
 even though it's not bitmapped.
-(<A HREF="http://dev.processing.org/bugs/show_bug.cgi?id=404">Bug 404</A>)
+(<A HREF="http://dev.processing.org/bugs/show_bug.cgi?id=404">Bug 404</A>)-->
 
-<li>If the results with beginRaw() from P3D to PDF look bizarre, 
+<!-- Removed by REAS, 1 September 2011, couldn't find reference in the current Issue database-->
+<!--<li>If the results with beginRaw() from P3D to PDF look bizarre, 
 it's probably because the polygons are not sorted. 
 To attempt sorting of 3D shapes before they're written to a file, 
 use hint(ENABLE_DEPTH_SORT). This method is still 
 not particularly good, but will help in some situations. 
 See <a href="http://dev.processing.org/bugs/show_bug.cgi?id=176">Bug 
-176</a> for status of the implementation.</p>
+176</a> for status of the implementation.</p>-->
 
 <li>Starting a new page is a matter of calling nextPage() like so:
 <pre>  

@@ -9,13 +9,16 @@ from xml.dom import minidom
 linePrefix = "   *"
 startString = linePrefix + " ( begin auto-generated from %s )"
 endString = "%s ( end auto-generated )" % linePrefix
+
 # the tag we're looking for to generate descriptions
 shortString = "@generate"
 xmlDirectory = "somwhere/"
+
 # auto-generated reference will get hard returns after this many characters
 maxCharsPerLine = 72
+
 #codeDir = "/Users/REAS/Documents/reas\@processing.org/trunk/processing/core/src/processing/core/"
-#xmlDir = "/Users/REAS/Documents/reas\@processing.org/trunk/web/java_generate/api_example/"
+#xmlDir = "/Users/REAS/Documents/reas\@processing.org/trunk/web/content/api_en/"
 thisFile = ""
 
 def main():
@@ -112,6 +115,7 @@ class DescriptionIntegrator:
 		# if there's text left over, append it now
 		if( txt != "" ):
 			lines.append( txt )
+		lines.append( "" )
 		return lines
 	
 	def removeOldDescription(self, list, startIndex):

@@ -297,6 +297,8 @@ If you do this, however, you'll need to pass the PApplet object to that object i
       Mode, Continuous Mode, and Java Mode. People new to programming should begin 
       with the Basic Mode to learn about coordinates, variables, and loops before 
       moving to Continuous and Java modes. </p>
+      
+      
     <h6>Basic</h6>
     <p>This mode is used drawing static images and learning fundamentals of programming. 
       Simple lines of code have a direct representation on the screen. The following 
@@ -307,6 +309,8 @@ noStroke();
 fill(255, 204, 0);
 rect(30, 20, 50, 50);
 </pre>
+
+
     <h6>Continuous</h6>
     <p>This mode provides a setup() structure that is run once when the program 
       begins and a draw() structure which by default continually loops through 
@@ -352,6 +356,8 @@ void draw() {
   rect(mouseX, mouseY, 50, 50);
 }
 </pre>
+
+
     <h6>Java</h6>
     <p>This mode is the most flexible, allowing complete Java programs to be written from inside the Processing Environment (as long as they're still subclasses of PApplet). This mode is for advanced users only and is not really recommended. Using this mode means that any additional tabs will no longer be inner classes, meaning that you'll have to do extra work to make them communicate properly with the host PApplet. It is not necessary to use this mode just to get features of the Java language. </p>
 
@@ -375,12 +381,13 @@ void draw() {
 
     <h5 id="Rendering_modes"><a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> 
       Rendering Modes</h5>
-    <p>Processing currently has three rendering modes. The programs written with 
-      Processing can be rendered using the P2D (Java 2D) drawing libraries, P3D (OpenGL 
-      using the JOGL interface), and as PDF file. The rendering mode is specified 
-      through the size() function. A large effort has been made to make the Processing language 
-      behave similarly across the different rendering modes, but there are currently some 
-      inconsistencies.</p>
+      
+    <p>
+      Processing has two built-in rendering modes; P2D is for drawing two-dimensional 
+      shapes and P3D is for drawing both two- and three-dimensional shapes. The rendering mode is 
+      specified through the size() function. A large effort has been made to make the Processing 
+      renderers behave similarly across the different modes, but there are currently some inconsistencies.
+    </p>
       
     <p>For more information, see the <a href="../size_.html">size()</a> reference entry.</b>
     
