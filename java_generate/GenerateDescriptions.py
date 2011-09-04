@@ -17,18 +17,32 @@ xmlDirectory = "somwhere/"
 # auto-generated reference will get hard returns after this many characters
 maxCharsPerLine = 72
 
-#codeDir = "/Users/REAS/Documents/reas\@processing.org/trunk/processing/core/src/processing/core/"
-#xmlDir = "/Users/REAS/Documents/reas\@processing.org/trunk/web/content/api_en/"
+codeDir = "/Users/REAS/Documents/reas@processing.org/trunk/processing/core/src/processing/core/"
+xmlDir = "/Users/REAS/Documents/reas@processing.org/trunk/web/content/api_en/"
+
+netCodeDir = "/Users/REAS/Documents/reas@processing.org/trunk/processing/java/libraries/net/src/processing/net/"
+netXmlDir = "/Users/REAS/Documents/reas@processing.org/trunk/web/content/api_en/LIB_net/"
+
+videoCodeDir = "/Users/REAS/Documents/reas@processing.org/trunk/processing/java/libraries/video/src/processing/video/"
+videoXmlDir = "/Users/REAS/Documents/reas@processing.org/trunk/web/content/api_en/LIB_video/"
+
 thisFile = ""
 
 def main():
-	maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
-	#maker = DescriptionIntegrator( codeDirectory = codeDir, xmlDirectory = xmlDir)
-	# answer = raw_input("Replace descriptions in %s with those in %s? (Y/N): " % (codeDirectory, xmlDirectory))
-	answer = "y"
+	#maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
 	
-	if( answer[0] == "Y" or answer[0] == "y" ):
-		maker.run()
+	makerVideo = DescriptionIntegrator( codeDirectory=videoCodeDir, xmlDirectory=videoXmlDir )
+	makerVideo.run()
+	
+	maker = DescriptionIntegrator( codeDirectory=codeDir, xmlDirectory=xmlDir )
+	maker.run()
+	
+	makerNet = DescriptionIntegrator( codeDirectory=netCodeDir, xmlDirectory=netXmlDir )
+	makerNet.run()
+	
+
+
+    
 
 def prefixedString( input ):
 	return "%s %s" % (linePrefix, input)
@@ -56,6 +70,7 @@ class DescriptionIntegrator:
 		portions = text.split("\n")
 		for line in portions:
 			if( line.find( shortString ) != -1):
+				print line + " - full line"
 				parts = line.split(" ")
 				[xml] = [ p for p in parts if p[-3:] == "xml" ]
 				description = self.getDescription(xml)

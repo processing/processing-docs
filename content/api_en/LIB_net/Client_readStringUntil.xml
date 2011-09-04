@@ -46,30 +46,5 @@ void draw() {
 Combination of <b>readBytesUntil()</b> and <b>readString()</b>. Returns <b>null</b> if it doesn't find what you're looking for.
 ]]></description>
 
-<syntax>
-<c>client</c>.readStringUntil()
-<c>client</c>.readStringUntil(<c>interesting</c>)
-</syntax>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[any variable of type Client]]></description>
-</parameter>
-
-<parameter>
-<label>interesting</label>
-<description><![CDATA[byte: character designated to mark the end of the data]]></description>
-</parameter>
-
-<returns>String</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

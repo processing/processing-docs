@@ -23,9 +23,7 @@ Serial myPort;  // The serial port
 void setup() {
   // List all the available serial ports
   println(Serial.list());
-  // I know that the first port in the serial list on my mac
-  // is always my  Keyspan adaptor, so I open Serial.list()[0].
-  // Open whatever port is the one you're using.
+  // Open the port you are using at the rate you want:
   myPort = new Serial(this, Serial.list()[0], 9600);
   myPort.clear();
   // Throw out the first reading, in case we started reading 
@@ -49,31 +47,6 @@ void draw() {
 <description><![CDATA[
 Combination of <b>readBytesUntil()</b> and <b>readString()</b>. Returns <b>null</b> if it doesn't find what you're looking for.
 ]]></description>
-
-<syntax>
-<c>serial</c>.readStringUntil()
-<c>serial</c>.readStringUntil(<c>interesting</c>)
-</syntax>
-
-<parameter>
-<label>serial</label>
-<description><![CDATA[any variable of type Serial]]></description>
-</parameter>
-
-<parameter>
-<label>interesting</label>
-<description><![CDATA[byte: character designated to mark the end of the data]]></description>
-</parameter>
-
-<returns>String</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
 
 
 </root>

@@ -29,24 +29,5 @@ println(Serial.list());
 Gets a list of all available serial ports. Use <b>println()</b> to write the information to the text window.
 ]]></description>
 
-<syntax>
-<c>serial</c>.list()
-</syntax>
-
-<parameter>
-<label>serial</label>
-<description><![CDATA[any variable of type Serial]]></description>
-</parameter>
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

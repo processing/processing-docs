@@ -38,23 +38,5 @@ void draw() {
 Returns the number of bytes available. When any client has bytes available from the server, it returns the number of bytes.
 ]]></description>
 
-<syntax>
-<c>client</c>.available()
-</syntax>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[any variable of type Client]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
 
 </root>

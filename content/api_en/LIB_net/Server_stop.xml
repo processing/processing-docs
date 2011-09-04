@@ -63,24 +63,5 @@ void mousePressed()
 Disconnects all clients and stops the server.
 ]]></description>
 
-<syntax>
-<c>server</c>.stop()
-</syntax>
-
-<parameter>
-<label>server</label>
-<description><![CDATA[any variable of type Server]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

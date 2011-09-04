@@ -51,29 +51,5 @@ void draw() {
 Writes data to a server specified when constructing the client.
 ]]></description>
 
-<syntax>
-<c>client</c>.write(<c>data</c>)
-</syntax>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[any variable of type Client]]></description>
-</parameter>
-
-<parameter>
-<label>data</label>
-<description><![CDATA[byte, char, int, byte[], String: data to write]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

@@ -46,24 +46,5 @@ void draw()
 Returns the next client in line with a new message.
 ]]></description>
 
-<syntax>
-<c>server</c>.available()
-</syntax>
-
-<parameter>
-<label>server</label>
-<description><![CDATA[any variable of type Server]]></description>
-</parameter>
-
-<returns>Client</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

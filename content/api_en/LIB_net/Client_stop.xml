@@ -43,24 +43,5 @@ void mousePressed() {
 Disconnects from the server. Use to shut the connection when you're finished with the Client.
 ]]></description>
 
-<syntax>
-<c>client</c>.stop()
-</syntax>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[any variable of type Client]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

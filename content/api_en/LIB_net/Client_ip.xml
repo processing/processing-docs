@@ -33,24 +33,5 @@ void setup() {
 Returns the IP address of the computer to which the Client is attached.
 ]]></description>
 
-<syntax>
-<c>client</c>.available()
-</syntax>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[any variable of type Client]]></description>
-</parameter>
-
-<returns>String</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

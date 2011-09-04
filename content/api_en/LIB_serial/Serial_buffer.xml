@@ -28,10 +28,7 @@ void setup() {
   textFont(myFont, 18);
   // List all the available serial ports:
   println(Serial.list());
-
-  // I know that the first port in the serial list on my mac
-  // is always my  Keyspan adaptor, so I open Serial.list()[0].
-  // Open whatever port is the one you're using.
+  // Open the port you are using at the rate you want:
   myPort = new Serial(this, Serial.list()[0], 9600);
   myPort.buffer(3);
 
@@ -55,28 +52,5 @@ void serialEvent(Serial myPort) {
 Sets the number of bytes to buffer before calling serialEvent()
 ]]></description>
 
-<syntax>
-<c>serial</c>.buffer(<c>count</c>)
-</syntax>
-
-<parameter>
-<label>serial</label>
-<description><![CDATA[any variable of type Serial]]></description>
-</parameter>
-
-<parameter>
-<label>count</label>
-<description><![CDATA[int: number of bytes to buffer]]></description>
-</parameter>
-
-<returns>int</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
 
 </root>

@@ -22,9 +22,7 @@ Serial myPort;
 // List all the available serial ports:
 println(Serial.list());
 
-// I know that the first port in the serial list on my mac
-// is always my  Keyspan adaptor, so I open Serial.list()[0].
-// Open whatever port is the one you're using.
+// Open the port you are using at the rate you want:
 myPort = new Serial(this, Serial.list()[0], 9600);
 
 // Send a capital A out the serial port
@@ -36,30 +34,6 @@ myPort.write(65);
 <description><![CDATA[
 Writes bytes, chars, ints, bytes[], Strings to the serial port
 ]]></description>
-
-<syntax>
-<c>serial</c>.write(<c>data</c>)
-</syntax>
-
-<parameter>
-<label>serial</label>
-<description><![CDATA[any variable of type Serial]]></description>
-</parameter>
-
-<parameter>
-<label>data</label>
-<description><![CDATA[byte, char, int, bytes[], String: data to write]]></description>
-</parameter>
-
-<returns>void</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
 
 
 </root>

@@ -29,7 +29,7 @@ void setup()
   // in the next line with one from Capture.list()
   // myCapture = new Capture(this, width, height, "Camera Name", 30);
   
-  // This code will try to use the camera used
+  // This code will try to use the camera last used
   myCapture = new Capture(this, width, height, 30);
 }
 
@@ -47,80 +47,5 @@ void draw() {
 <description><![CDATA[
 Datatype for storing and manipulating video frames from an attached capture device such as a camera. Use <b>Capture.list()</b> to show the names of any attached devices. Using the version of the constructor without <b>name</b> will attempt to use the last device used by a QuickTime program.
 ]]></description>
-
-<syntax>
-</syntax>
-
-<parameters>
-</parameters>
-
-<method>
-<mname>read()</mname>
-<mdescription>Reads the current image</mdescription>
-</method>
-
-<method>
-<mname>available()</mname>
-<mdescription>Returns true when a new image is available</mdescription>
-</method>
-
-<method>
-<mname>list()</mname>
-<mdescription>Lists the devices current attached and on</mdescription>
-</method>
-
-<method>
-<mname>frameRate()</mname>
-<mdescription>Sets how often new frames are read</mdescription>
-</method>
-
-<method>
-<mname>stop()</mname>
-<mdescription>Stops capturing frames</mdescription>
-</method>
-
-<constructor>
-Capture(<c>parent</c>, <c>width</c>, <c>height</c>)
-Capture(<c>parent</c>, <c>width</c>, <c>height</c>, <c>fps</c>)
-Capture(<c>parent</c>, <c>width</c>, <c>height</c>, <c>name</c>, )
-Capture(<c>parent</c>, <c>width</c>, <c>height</c>, <c>name</c>, <c>fps</c>)
-</constructor>
-
-<cparameter>
-<clabel>parent</clabel>
-<cdescription>PApplet: typically use "this"</cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>width</clabel>
-<cdescription>int: width of the frame</cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>height</clabel>
-<cdescription>int: height of the frame</cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>fps</clabel>
-<cdescription>int: number of frames to read per second</cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>name</clabel>
-<cdescription>String: name of the camera</cdescription>
-</cparameter>
-
-<returns></returns>
-
-<related>
-captureEvent()
-</related>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>Library</partof>
 
 </root>

@@ -40,19 +40,5 @@ dataIn = myClient.read();
 Returns a number between 0 and 255 for the next byte that's waiting in the buffer. Returns -1 if there is no byte, although this should be avoided by first cheacking <b>available()</b> to see if any data is available.
 ]]></description>
 
-<syntax>
-<c>client</c>.read()
-</syntax>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[any variable of type Client]]></description>
-</parameter>
-
-<returns>int</returns>
-<related></related>
-<availability>1.0</availability>
-<type>Method</type>
-<partof>Library</partof>
 
 </root>

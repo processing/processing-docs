@@ -49,29 +49,5 @@ void draw()
 Disconnect a particular client.
 ]]></description>
 
-<syntax>
-<c>server</c>.disconnect(<b>client</b>)
-</syntax>
-
-<parameter>
-<label>server</label>
-<description><![CDATA[any variable of type Server]]></description>
-</parameter>
-
-<parameter>
-<label>client</label>
-<description><![CDATA[Client: the client to disconnect]]></description>
-</parameter>
-
-<returns>None</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>
