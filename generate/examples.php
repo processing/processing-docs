@@ -4,31 +4,36 @@ require('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 
-// redefine location on local machine for examples in processing trunk
-define('BASEDIR',    '/Users/REAS/Documents/reas@processing.org/trunk/');
-define('CONTENTDIR', BASEDIR.'processing/java/');
-//define('EXAMPLESDIR', BASEDIR.'web/java/');
-define('EXAMPLESDIR',	BASEDIR.'learning/');
+$local = true;
 
-// update the files on the server via SVN
+// Redefine location on local machine for examples in processing trunk
+if ($local) {
+  //define('BASEDIR',    '/Users/REAS/Documents/reas@processing.org/trunk/');
+  define('EXAMPLESOURCEDIR', '/Users/REAS/Documents/reas@processing.org/trunk/processing/java/examples/');
+} else {
+  define('EXAMPLESOURCEDIR', '/Users/REAS/Documents/reas@processing.org/trunk/processing/java/examples/');
+}
+//define('CONTENTDIR', BASEDIR.'processing/java/');
+//define('EXAMPLESDIR',	BASEDIR.'learning/');
+
+
+// Update the files on the server via SVN
 
 // look for the .subversion folder somewhere else
 // otherwise will go looking for /home/root/.subversion or some other user
-//$source = CONTENTDIR."examples";
-//$path = BASEDIR;
 $where = CONTENTDIR . 'examples';
 $there = CONTENTDIR;
-//$xmlwhere = BASEDIR . 'web/content/';
 putenv('HOME=' . CONTENTDIR);
 
 // do the initial checkout
 //`cd /var/www/processing && /usr/local/bin/svn co svn://processing.org/trunk/web/content/`;
 
-`cd $there && /usr/local/bin/svn update examples_basics.xml`;
-`cd $there && /usr/local/bin/svn update examples_3D.xml`;
-#`cd $there && /usr/local/bin/svn update examples_libraries.xml`;
-`cd $there && /usr/local/bin/svn update examples_topics.xml`;
-`cd $where && /usr/local/bin/svn update`;
+if (!$local) {
+  `cd $there && /usr/local/bin/svn update examples_basics.xml`;
+  `cd $there && /usr/local/bin/svn update examples_3D.xml`;
+  `cd $there && /usr/local/bin/svn update examples_topics.xml`;
+  `cd $where && /usr/local/bin/svn update`;
+}
 
 
 # --------------------------------- Basics
@@ -36,23 +41,28 @@ putenv('HOME=' . CONTENTDIR);
 $categories = get_examples_list('examples_basics.xml');
 $break_after = array('Control', 'Math');
 $subdir = 'Basics';
-$dir = CONTENTDIR.'examples/'.$subdir.'/';
+$dir = EXAMPLESOURCEDIR . $subdir.'/';
 
 $count = 0;
 foreach ($categories as $cat => $array) {
+	echo $cat;
     if ($dp = opendir($dir.$cat)) {
         while ($fp = readdir($dp)) {
             if (substr($fp, 0, 1) != '.') {
                 $ex = new Example($fp, $subdir."/".$cat, $subdir);
                 //$ex = new Example($fp, $cat);
-                $ex->output_file($categories);
+                if (!$local) {
+                  $ex->output_file($categories);
+                } else {
+                  $ex->output_file($categories, "../../");
+                }
                 $count++;
             }
         }
     }
 }
 
-$page = new Page('Basics', 'Basics');
+$page = new Page('Basics', 'Basics', "", "../../");
 $page->subtemplate('template.examples-basics.html');
 
 $html = "<div class=\"ref-col\">\n";
@@ -76,6 +86,66 @@ $html .= "</div>";
 $page->content($html);
 writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 
+//if (!copy(CONTENTDIR . 'examples/core.jar',
+//	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
+//  echo 'Could not copy core.jar to ' . $subdir . '.';
+//}
+//if (!copy(CONTENTDIR . 'examples/loading.gif',
+//	  EXAMPLESDIR.strtolower($subdir).'/media/loading.gif')) {
+//  echo 'Could not copy loading.gif to ' . $subdir . '.';
+//}
+
+
+# --------------------------------- Topics
+
+$categories = get_examples_list('examples_topics.xml');
+$break_after = array('GUI', 'Textures');
+$subdir = 'Topics';
+$dir = EXAMPLESOURCEDIR .$subdir.'/';
+
+$count = 0;
+foreach ($categories as $cat => $array) {
+    if ($dp = opendir($dir.$cat)) {
+        while ($fp = readdir($dp)) {
+            if (substr($fp, 0, 1) != '.') {
+                $ex = new Example($fp, $subdir."/".$cat, $subdir);
+                //$ex = new Example($fp, $cat);
+                if (!$local) {
+                  $ex->output_file($categories);
+                } else {
+                  $ex->output_file($categories, "../../");
+                }
+                $count++;
+            }
+        }
+    }
+}
+
+$page = new Page('Topics', 'Topics', "", "../../");
+$page->subtemplate('template.examples-topics.html');
+
+$html = "<div class=\"ref-col\">\n";
+foreach ($categories as $cat => $array) {
+    
+    #$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
+    $html .= "<p><br /><b>$cat</b><br /><br />";
+    foreach ($array as $file => $name) {
+        $thisfile = strtolower($file);
+        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
+    }
+    #echo '</p>';
+    $html .= '</p>';
+    
+    if (in_array($cat, $break_after)) {
+        $html .= "</div><div class=\"ref-col\">";
+    }
+}
+$html .= "</div>";
+
+$page->content($html);
+writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+
+/**
 if (!copy(CONTENTDIR . 'examples/core.jar',
 	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
   echo 'Could not copy core.jar to ' . $subdir . '.';
@@ -84,9 +154,9 @@ if (!copy(CONTENTDIR . 'examples/loading.gif',
 	  EXAMPLESDIR.strtolower($subdir).'/media/loading.gif')) {
   echo 'Could not copy loading.gif to ' . $subdir . '.';
 }
+*/
 
-
-
+/**
 # --------------------------------- 3D
 
 
@@ -141,111 +211,7 @@ if (!copy(CONTENTDIR . 'examples/loading.gif',
   echo 'Could not copy loading.gif to ' . $subdir . '.';
 }
 
-
-# --------------------------------- Topics
-
-
-$categories = get_examples_list('examples_topics.xml');
-$break_after = array('File IO', 'Effects');
-$subdir = 'Topics';
-$dir = CONTENTDIR.'examples/'.$subdir.'/';
-
-$count = 0;
-foreach ($categories as $cat => $array) {
-    if ($dp = opendir($dir.$cat)) {
-        while ($fp = readdir($dp)) {
-            if (substr($fp, 0, 1) != '.') {
-                $ex = new Example($fp, $subdir."/".$cat, $subdir);
-                //$ex = new Example($fp, $cat);
-                $ex->output_file($categories);
-                $count++;
-            }
-        }
-    }
-}
-
-$page = new Page('Topics', 'Topics');
-$page->subtemplate('template.examples-topics.html');
-
-$html = "<div class=\"ref-col\">\n";
-foreach ($categories as $cat => $array) {
-    
-    #$html .= "<h3><img src=\"images/".strtolower(removesymbols($cat)).".gif\" alt=\"$cat\" /></h3>\n<p>";
-    $html .= "<p><br /><b>$cat</b><br /><br />";
-    foreach ($array as $file => $name) {
-        $thisfile = strtolower($file);
-        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-    }
-    #echo '</p>';
-    $html .= '</p>';
-    
-    if (in_array($cat, $break_after)) {
-        $html .= "</div><div class=\"ref-col\">";
-    }
-}
-$html .= "</div>";
-
-$page->content($html);
-writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
-if (!copy(CONTENTDIR . 'examples/core.jar',
-	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
-  echo 'Could not copy core.jar to ' . $subdir . '.';
-}
-if (!copy(CONTENTDIR . 'examples/loading.gif',
-	  EXAMPLESDIR.strtolower($subdir).'/media/loading.gif')) {
-  echo 'Could not copy loading.gif to ' . $subdir . '.';
-}
-
-
-# --------------------------------- LIBRARY
-
-# library examples are now part of each library folder and will 
-# have to be handled differently
-
-#$categories = get_examples_list('examples_libraries.xml');
-#$break_after = array('Serial', 'Video (MovieMaker)');
-$subdir = 'Library';
-#$dir = CONTENTDIR.'examples/'.$subdir.'/';
-
-#$count = 0;
-#foreach ($categories as $cat => $array) {
-#    if ($dp = opendir($dir.$cat)) {
-#        while ($fp = readdir($dp)) {
-#            if (substr($fp, 0, 1) != '.') {
-#                $ex = new Example($fp, $subdir."/".$cat, $subdir);
-#                //$ex = new Example($fp, $cat);
-#                $ex->output_file($categories);
-#                $count++;
-#            }
-#        }
-#    }
-#}
-
-$page = new Page('Library', 'Library');
-$page->subtemplate('template.examples-libraries.html');
-
-$html = "<div class=\"ref-col\">\n";
-$html .= "Library examples are available from the examples window inside the Processing Development Environment.";
-
-#foreach ($categories as $cat => $array) {    
-#    $html .= "<p><br /><b>$cat</b><br /><br />";
-#    foreach ($array as $file => $name) {
-#        $thisfile = strtolower($file);
-#        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-#    }
-#    echo '</p>';
-#    
-#    if (in_array($cat, $break_after)) {
-#        $html .= "</div><div class=\"ref-col\">";
-#    }
-#}
-
-$html .= "</div>";
-
-$page->content($html);
-writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
-
-
+*/
 
 
 $benchmark_end = microtime_float();

@@ -1012,6 +1012,7 @@ class DOMIT_Lite_Document extends DOMIT_ChildNodes_Interface {
 	*/
 	function loadXML($filename, $useSAXY = true, $preserveCDATA = true, $fireLoadEvent = false) {
 		$xmlText = $this->getTextFromFile($filename);
+		echo $xmlText;
 		return $this->parseXML($xmlText, $useSAXY, $preserveCDATA, $fireLoadEvent);
 	} //loadXML
 	

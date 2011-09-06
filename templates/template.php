@@ -3,6 +3,7 @@
 require(TEMPLATEDIR.'template.nav.php');
 
 define('HEADER', '<img src="/img/processing_cover.gif" alt="Processing cover" />');
+define('REL_HEADER', '<a href="/"><img src="../../img/processing.gif" alt="Processing" title="Back to the Procesing cover." /></a>');
 define('HEADER_LINK', '<a href="/"><img src="/img/processing.gif" alt="Processing" title="Back to the Procesing cover." /></a>');
 
 class Page
@@ -12,10 +13,15 @@ class Page
     var $subtemplate = false;
     var $section;
     
-    function Page($title = '', $section = '', $bodyid = '')
+    function Page($title = '', $section = '', $bodyid = '', $rel_path = '/')
     {
         $this->xhtml = new xhtml_page(TEMPLATEDIR.'template.html');
-        $this->xhtml->set('header', $section == 'Cover' ? HEADER : HEADER_LINK);
+        $this->set('relpath', $rel_path);
+        if (strcmp($rel_path, '/')) {
+          $this->xhtml->set('header', REL_HEADER);
+        } else {
+          $this->xhtml->set('header', $section == 'Cover' ? HEADER : HEADER_LINK);
+        }
         $this->section = $section;
         $this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
         $title = ($title == '') ? 'Processing.org' : $title . ' \ Processing.org';

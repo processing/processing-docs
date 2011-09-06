@@ -28,6 +28,7 @@ videoXmlDir = "/Users/REAS/Documents/reas@processing.org/trunk/web/content/api_e
 
 thisFile = ""
 
+
 def main():
 	#maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
 	
@@ -39,10 +40,7 @@ def main():
 	
 	makerNet = DescriptionIntegrator( codeDirectory=netCodeDir, xmlDirectory=netXmlDir )
 	makerNet.run()
-	
 
-
-    
 
 def prefixedString( input ):
 	return "%s %s" % (linePrefix, input)

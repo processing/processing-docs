@@ -496,7 +496,7 @@ class SAXY_Parser extends SAXY_Parser_Base {
 	* @param string The start element tag name
 	* @param Array The start element attributes
 	*/
-	function _fireStartElementEvent($tagName, &$myAttributes) {
+	function _fireStartElementEvent(&$tagName, &$myAttributes) {
 	    $this->elementNameStack[] = $tagName;
 	    
 	    if ($this->isNamespaceAware) {
@@ -729,7 +729,7 @@ class SAXY_Parser extends SAXY_Parser_Base {
 	* @param string The processing instruction data
 	*/
 	function fireProcessingInstructionEvent($target, $data) {
-		call_user_func($this->processingInstructionHandler, $this, $target, $data);
+		call_user_func($this->processingInstructionHandler, &$this, $target, $data);
 	} //fireProcessingInstructionEvent
 	
 	/**

@@ -10,8 +10,8 @@ $pages = array(
         'Tutorials'   => array('/learning/', 2),  
         'Basics'      => array('/learning/basics/', 2),  
         'Topics'      => array('/learning/topics/', 2), 
-        '3D'          => array('/learning/3d/', 2),  
-        'Library'     => array('/learning/library/', 2),  
+     #   '3D'          => array('/learning/3d/', 2),  
+     #   'Library'     => array('/learning/library/', 2),  
         'Books'       => array('/learning/books/', 2),
             
     'Reference'       => array('/reference/', 1),
@@ -93,9 +93,9 @@ function navigation($section = '')
         
         $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . " \\\n Examples: ";
         $html .= "\t\t\t\t\t" . l('Basics', $section == 'Basics') . ", \n";
-        $html .= "\t\t\t\t\t" . l('Topics', $section == 'Topics') . ", \n";
-        $html .= "\t\t\t\t\t" . l('3D', $section == '3D') . ",  \n";
-        $html .= "\t\t\t\t\t" . l('Library', $section == 'Library') . " \\\n";
+        $html .= "\t\t\t\t\t" . l('Topics', $section == 'Topics') . " \\\n";
+        #$html .= "\t\t\t\t\t" . l('3D', $section == '3D') . ",  \n";
+        #$html .= "\t\t\t\t\t" . l('Library', $section == 'Library') . " \\\n";
         $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . " \n";
         $html .= "\t\t\t\t</div>\n";
     }
