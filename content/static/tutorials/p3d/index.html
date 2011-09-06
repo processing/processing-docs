@@ -369,9 +369,56 @@ void draw()  {
 	<p>
 	When looking at a 3D scene in a graphics window, we often think of our view of the scene as the camera.  Zoom in closer to the objects and the camera zooms in.  Rotate around the scene and the camera rotates.  Of course, there is no actual camera, this is just a convenient concept for us to have a common language around traversing a 3D scene.  And the effect of a camera can be achieved through clever transformations: translate(), rotate(), and scale().  Nevertheless, for convenience there is also a <a href="http://processing.org/reference/camera_.html">camera()</a> function whose purpose is simulate a camera.  A camera is defined as having an "eye position", i.e. the camera location, a scene "center" which tells the camera which way to point, and an upward axis which aligns the camera vertically.
 	</p>
-	<p>The default camera position is essentially your head, a location out in front of the window.  
-	<h3>PShape</h3>
+	<p>The default camera position is essentially right between your eyes: a location out in front of the window aligned straight up and pointing towards the screen.  Here are the numbers for the default position.
+	<ul>
+		<li>Eye position: x = width/2, y = height/2, z = (height/2) / tan(PI/6)</li>
+		<li>Scene center: x = width/2, y = height/2, z = 0</li>
+		<li>Upwards axis: x = 0, y = 1, z = 0</li>
+	</ul>
+	<p>
+	When written in code, this looks like:
+<pre>
+camera(width/2, height/2, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
+</pre><br/>
+	</p>
+	<p>
+	Any of the arguments in the camera() function can be made into a variable to simulate camera movements. For example, by moving the x position of the eye according to the mouse, you can rotate around an object to see it from a different angle.  
+	
+<p><img src="imgs/eye1.png"> &nbsp; <img src="imgs/eye2.png"><br/>
+<pre>
+void setup() {
+  size(640, 360, P3D);
+}
 
+void draw() {
+  background(0);
+  camera(<b>mouseX</b>, height/2, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
+  translate(width/2, height/2, -100);
+  stroke(255);
+  noFill();
+  box(200);
+}
+</pre><br/>
+</p>
+  
+	<p>
+	If you move both the eye position and the scene's center according to the mouse, you can create the effect of panning.
+<p><img src="imgs/pan1.png"> &nbsp; <img src="imgs/pan2.png"><br/>
+<pre>
+void setup() {
+  size(640, 360, P3D);
+}
+
+void draw() {
+  background(0);
+  camera(<b>mouseX</b>, height/2, (height/2) / tan(PI/6), <b>mouseX</b>, height/2, 0, 0, 1, 0);
+  translate(width/2, height/2, -100);
+  stroke(255);
+  noFill();
+  box(200);
+}</pre><br/>
+</p>
+For other examples that make use of the camera() function, take a look at: <a href="http://processing.org/learning/3d/moveeye.html">Move Eye</a>.	
 
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
 
