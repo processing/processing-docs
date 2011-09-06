@@ -26,6 +26,13 @@
    <download other="http://www.die-seite.ch/colladaLoader11.zip" />
   </library>
  </category>
+ <category name="Data / Protocols">
+  <library name="GML4U" url="https://github.com/01010101/GML4U/wiki">
+   <description authorList="[Jerome Saint-Clair](http://www.saint-clair.net/)" paragraph="GML is an open file format designed to store graffiti motion data." sentence="A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing." />
+   <version id="6" pretty="0.1.6" />
+   <download other="http://www.saint-clair.net/download/gml4u/GML4U.zip" />
+  </library>
+ </category>
  <category name="Simulation / Math">
   <library name="Cell Noise" url="http://www.carljohanrosen.com/processing/">
    <description authorList="[Carl-Johan Rosén](http://www.carljohanrosen.com)" paragraph="These patterns are useful in animation and more." sentence="Algorithm for generating cell/worley noise." />
