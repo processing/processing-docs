@@ -282,13 +282,13 @@ void draw() {
 	<ul>
 		<li><a href="http://processing.org/reference/ambientLight_.html">ambientLight()</a> -- Ambient light doesn't come from a specific direction, the rays have light have bounced around so much that objects are evenly lit from all sides. Ambient lights are almost always used in combination with other types of lights.  An ambient light is specified with an RGB color and, optionally, an xyz location for the light.  For example, a blue ambient light can be added to a scene as follows:
 			
-			<p><img src="imgs/ambientlights.png"><br/></li>
+			<br/><img src="imgs/ambientlights.png"><br/></li>
 
 <pre>
 ambientLight(0,0,255);
 </pre><br/>	
 	<li><a href="http://processing.org/reference/directionalLight_.html">directionalLight()</a> -- Directional light comes from one direction and is stronger when hitting a surface squarely and weaker if it hits at a a gentle angle. After hitting a surface, a directional lights scatters in all directions.  A directional light is specified with an RGB color and an xyz vector that defines a direction for the light.  For example, a green light that comes from below the scene can be added to a scene as follows:
-		<p><img src="imgs/directionallight.png"><br/></li>
+		<br/><img src="imgs/directionallight.png"><br/></li>
 			[WHOOPS, IS THIS THE REVERSE OF WHAT I THINK?]	
 <pre>
 directionalLight(0, 255, 0, 0, -1, 0);
@@ -304,7 +304,7 @@ directionalLight(0, 255, 0, 0, -1, 0);
 		</ul>
 	<br/>
 	All together it looks like:
-	<p><img src="imgs/spotlight.png"><br/></li>
+	<br/><img src="imgs/spotlight.png"><br/></li>
 	
 <pre>
 spotLight(255, 0, 0, width/2, height/2, 400, 0, 0, -1, PI/4, 2);
@@ -420,7 +420,8 @@ void draw() {
   box(200);
 }</pre><br/>
 </p>
-For other examples that make use of the camera() function, take a look at: <a href="http://processing.org/learning/3d/moveeye.html">Move Eye</a>.	
+For other examples that make use of the camera() function, take a look at: <a href="http://processing.org/learning/3d/moveeye.html">Move Eye</a>.
+</p>	
 
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
 
