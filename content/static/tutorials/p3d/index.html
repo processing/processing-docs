@@ -27,8 +27,8 @@ void setup() {
 	
 	<ul>
 		<li><strong>You are drawing in 3D!</strong>.  In three-dimensional space, a third axis (the z-axis) refers to the depth of any given point.   How far in front or behind the window does a pixel live?   Now, we all know there are no actual pixels floating in the air in front of or behind your screen!   What we're talking about here is how to use the theoretical z-axis to create the illusion of three-dimensional space in your Processing window.  P3D is required for this.</li>
-		<li><strong>You want your sketch to run faster!</strong>.  P3D mode makes use of OpenGL-compatible graphics hardware.  In other words, some of the work required to draw all the pixels in the window can happen on your computer's graphics card and thus save time and energy that the regular old RAM and Processing can dedicate to other stuff. Keep in mind that OpenGL is not magic pixie dust that makes any sketch faster (though it's close), you will also need to carefully consider the techniques you are using to do the drawing as well.  In particular, using the new "shape recording" functionality available in PShape (see PShape tutorial [LINK]) can greatly increase speed in P3D mode.</li>
-		<li><strong>You are drawing in 2D but want to use a particular graphic effect available only in P3D!</strong>.  This is a smaller and less common point, but still important to note.  Some graphics functions are only available in P3D such as textures and lighting.</li>
+		<li><strong>You want your sketch to run faster!</strong>.  P3D mode makes use of OpenGL-compatible graphics hardware.  In other words, some of the work required to draw all the pixels in the window can happen on your computer's graphics card which is often more effecient. Keep in mind that OpenGL is not magic pixie dust that makes any sketch faster (though it's close), you will also need to carefully consider the techniques you are using to do the drawing as well.  In particular, using the new "shape recording" functionality available in PShape (see PShape tutorial [LINK]) can greatly increase speed in P3D mode.</li>
+		<li><strong>You are drawing in 2D but want to use a particular graphic effect available only in P3D!</strong>.  Some graphics functions are only available in P3D such as textures and lighting (see below).</li>
 	</ul>
 	
 	</p>
@@ -60,7 +60,7 @@ rect(x,y,w,h);
 </pre><br/>
 
 	<p>
-	This, however, is incorrect.  In order to specify 3D coordinates for shapes in Processing, you have to use <a href="http://processing.org/reference/translate_.html">translate()</a>.   Now, translate() is not exclusive to 3D sketches and is quite commonly used in 2D.  In fact, there's an <a href="http://processing.org/learning/transform2d/">entire 2D transformations tutorial</a> that I suggest you stop and read right now unless you are already comfortable with the concept of translation (and rotation) in Processing.  Assuming, however, that you are already familiar with how translate() works in 2D, there isn't a lot to learn here beyond the addition of a single argument.  Where in 2D we said "translate(x,y)", in 3D we add one more argument, saying "translate(x,y,z)".
+	This, however, is incorrect.  In order to specify 3D coordinates for shapes in Processing, you have to use <a href="http://processing.org/reference/translate_.html">translate()</a>.   Now, translate() is not exclusive to 3D sketches and is quite commonly used in 2D.  In fact, there's an <a href="http://processing.org/learning/transform2d/">entire 2D transformations tutorial</a> that I suggest you stop and read right now unless you are already comfortable with the concept of translation (and rotation) in Processing.  Assuming, however, that you are already familiar with how translate() works in 2D, there isn't a lot to learn here beyond the addition of a single argument.  In 2D, translate looks like: "translate(x,y)", and 3D we add one more argument: "translate(x,y,z)".
 	</p>
 	
 <pre>
@@ -110,12 +110,12 @@ rect(0,0,w,h);
 	<h3>3D Shapes</h3>
 	
 	<p>
-	Once you know how to translate and rotate around a three dimensional coordinate system, you are ready to draw some three dimensional shapes.  You are probably quite comfortable with drawing shapes in 2D whether primitive (<a href="http://processing.org/reference/line_.html">line()</a>, <a href="http://processing.org/reference/rect_.html">rect()</a>, <a href="http://processing.org/reference/ellipse_.html">ellipse()</a>, <a href="http://processing.org/reference/triangle_.html">triangle()</a>, etc.) or custom (<a href="http://processing.org/reference/beginShape_.html">beginShape()</a>, <a href="http://processing.org/reference/endShape_.html">endShape()</a>, and <a href="http://processing.org/reference/vertex_.html">vertex()</a>).
+	Once you know how to translate and rotate around a three-dimensional coordinate system, you are ready to draw some three-dimensional shapes.  You are probably quite comfortable with drawing shapes in 2D whether primitive (<a href="http://processing.org/reference/line_.html">line()</a>, <a href="http://processing.org/reference/rect_.html">rect()</a>, <a href="http://processing.org/reference/ellipse_.html">ellipse()</a>, <a href="http://processing.org/reference/triangle_.html">triangle()</a>, etc.) or custom (<a href="http://processing.org/reference/beginShape_.html">beginShape()</a>, <a href="http://processing.org/reference/endShape_.html">endShape()</a>, and <a href="http://processing.org/reference/vertex_.html">vertex()</a>).
 	</p>
 	
 	<p>
-	The good news is that shapes in 3D work pretty much the same way.  There are primitive shapes that you get for free such as <a href="http://processing.org/reference/box_.html">box()</a> and <a href="http://processing.org/reference/sphere_.html">sphere()</a> as well as custom shapes you can make with custom vertices.
-	</p>
+	The good news is that shapes in 3D work pretty much the same way.  There are primitive shapes that you get for free such as <a href="http://processing.org/reference/box_.html">box()</a> and <a href="http://processing.org/reference/sphere_.html">sphere()</a> as well as custom shapes you can make with calls to vertex().
+</p>
 	
 	<p><img src="imgs/primitives3D.png"></p>
 <pre>
@@ -169,16 +169,16 @@ popMatrix();
   endShape();
 </pre><br/>
 
-Note above how it's often simpler to specify vertex locations using a standardized unit of measure (i.e. 1 pixel) and relative to a point of origin (0,0,0).   The size and position of the shape is then set using matrix transformations: translate(), rotate(), and scale().   For some examples of more sophisticated custom shapes built in 3D, take a look at these examples: <a href="http://processing.org/learning/3d/rgbcube.html">RGB Cube</a>, <a href="http://processing.org/learning/3d/vertices.html">Vertices</a>,<a href="http://processing.org/learning/3d/toroid.html">Toroid</a>, <a href="http://processing.org/learning/3d/icosahedra.html">Isocahedra</a>, <a href="http://processing.org/learning/3d/bricktower.html">Brick Tower</a>.
+Note above how it's often simpler to specify vertex locations using a standardized unit of measure (i.e. 1 pixel) and relative to a point of origin (0,0,0).   The size and position of the shape is then set using matrix transformations: translate(), rotate(), and scale().   For some examples of more sophisticated custom shapes built in 3D, take a look at these examples: <a href="http://processing.org/learning/3d/rgbcube.html">RGB Cube</a>, <a href="http://processing.org/learning/3d/vertices.html">Vertices</a>, <a href="http://processing.org/learning/3d/toroid.html">Toroid</a>, <a href="http://processing.org/learning/3d/icosahedra.html">Isocahedra</a>, <a href="http://processing.org/learning/3d/bricktower.html">Brick Tower</a>.
 
 	<h3>Textures</h3>
 	
-	In P3D mode, you can load and display images just like you do in 2D (see: <a href="http://processing.org/learning/pixels/">Images and Pixels Tutorial</a>).  Everything we covered under transformations can be applied to images; they can be translated, rotated, and scaled in a virtual 3D space.   In addition to drawing an image the old-fashioned way, however, images can be made into "textures" and applied to a shape.  This is particularly useful when you want a 3D shape to resemble a real-world object.  For example, you may want to texture a map of the earth on a sphere so that it looks like a globe or texture an image of the side of a wooden box to make a cube look like a crate.  
+	In P3D mode, you can load and display images just like you do in 2D (see: <a href="http://processing.org/learning/pixels/">Images and Pixels Tutorial</a>).  Everything we covered under transformations can be applied to images; they can be translated, rotated, and scaled in a virtual 3D space.   In addition to drawing an image the old-fashioned way, however, images can be made into "textures" and applied to a shape.  This is particularly useful when you want a 3D shape to resemble a real-world object.  For example, applying a an image of earth as a texture on a sphere will result in a globe.  
 	
 	<p><img src="imgs/globe.png"><br/>
 	<a href="http://processing.org/learning/library/texturedsphere.html">Example: Textured Sphere</a></p>
 	
-	To apply an image as a texture to a shape, we first need to establish the shape using the beginShape() and endShape() technique we demonstrated in the previous section.  Let's say you are drawing a rectangle, like so:
+	To apply an image as a texture to a shape, we first need to define the shape using beginShape() and endShape() as demonstrated in the previous section.  Let's say you are drawing a rectangle, like so:
 	
 	<p><img src="imgs/texture1.png"><br/>
 <pre>
@@ -202,12 +202,12 @@ Note above how it's often simpler to specify vertex locations using a standardiz
 	1) Load an image into a PImage object.
 	</p>
 <pre>
-	PImage img;
+PImage img;
 
-	void setup() {
-	  size(640, 360, P3D);
-	  img = loadImage("berlin-1.jpg");
-	}
+void setup() {
+  size(640, 360, P3D);
+  img = loadImage("berlin-1.jpg");
+}
 </pre>
 	<p>
 	2) Call <a href="http://processing.org/reference/texture_.html">texture()</a>.  The texture() function must be called between beginShape() and endShape() and before any calls to vertex().  The texture() function receives only one argument, the PImage that will be applied as a texture.
@@ -223,8 +223,10 @@ void draw() {
 </pre><br/>
 
 	<p>
-	Once we have specified the texture itself, we have to then define the mapping of the image to the shape itself.  This is a simple problem when the shape is rectangular (four corners of a shape map to four corners of an image), but grows more complex the more vertices in a shape (such as in the globe example above).   To define the mapping, two more arguments (usually referred to as <b><i>u</i></b> and <b><i>v</i></b> are added to each call to vertex().  By default, the coordinates used for <b><i>u</i></b> and <b><i>v</i></b> are specified in relation to the image's size in pixels, but this relation can be changed with <a href="http://processing.org/reference/textureMode_.html">textureMode()</a>.  	In addition, when textures are in use, the fill color is ignored. Instead, use <a href="http://processing.org/reference/tint_.html">tint()</a> to specify the color of the texture as it is applied to the shape.
+	Once we have specified the texture itself, we have to then define the mapping of the image to the shape itself.  This is a simple problem when the shape is rectangular (four corners of a shape map to four corners of an image), but grows more complex when you have many more vertices in a shape (such as in the globe example above).   To define the mapping, two more arguments (usually referred to as <b><i>u</i></b> and <b><i>v</i></b> are added to each call to vertex().  By default, the coordinates used for <b><i>u</i></b> and <b><i>v</i></b> are specified in relation to the image's size in pixels, but this relation can be changed with <a href="http://processing.org/reference/textureMode_.html">textureMode()</a>.  	In addition, when textures are in use, the fill color is ignored. Instead, use <a href="http://processing.org/reference/tint_.html">tint()</a> to specify the color of the texture as it is applied to the shape.
 	</p>
+	
+	[THIS COULD MAYBE USE A NICE DIAGRAM HERE]
 	
 	<p><img src="imgs/texture2.png"><br/>
 		<a href="http://processing.org/learning/3d/texture1.html">Example: Texture1</a></p>
@@ -249,9 +251,9 @@ void draw() {
 
 	<h3>Lighting</h3>
 	
-	<p>In P3D, you can also manipulate the lighting of the elements in your scene.  Of course, just as drawing in three-dimensions is an illusion, the addition of lighting to a Processing sketch is a simulation of the idea of real world lighting for the purpose of creating a variety of effects.  In addition, some objects (such as a sphere) do not appear three-dimensional until they are lit.</p>
+	<p>In P3D, you can also manipulate the lighting of the elements in your scene.  Of course, just as drawing in three-dimensions is an illusion, the addition of lighting to a Processing sketch is a simulation of the idea of real world lighting for the purpose of creating a variety of effects.  This is particularly useful since some objects (such as a sphere) do not appear three-dimensional until they are lit.</p>
 	
-	<p>If you don't want to get into the details of setting custom lighting for a 3D scene you can use Processing's <a href="http://processing.org/reference/lights_.html">lights</a> function which sets default lighting.  Take a look at the following example, where a sphere is lit with default lighting only when the mouse is pressed.</p>
+	<p>If you don't want to get into the details of setting custom lighting for a 3D scene you can use Processing's <a href="http://processing.org/reference/lights_.html">lights()</a> function which sets default lighting.  Take a look at the following example, where a sphere is lit with default lighting only when the mouse is pressed.</p>
 	
 <p>
 [DS TO ADD IMAGE, INVESTIGATE WHY LIGHTS SEEM TO NOT BE WORKING THE WAY I EXPECT]<br/>
@@ -273,7 +275,7 @@ void draw() {
 </pre><br/>	
 </p>
 
-	<p>Note how the call to the lights() function is included in draw().  Just as with matrix transformations, the 3D scene is reset each time through draw() therefore must be included in order to remain persistent (but of course you could choose to turn them off and on).</p>
+	<p>Note how the call to the lights() function is included in draw().  Just as with matrix transformations, the 3D scene is reset each time through draw() any therefore any lighting must be included in order to remain persistent.</p>
 	
 	<p>In order to set custom lighting for your scene there are four different kinds of lights.</p>
 	
@@ -313,12 +315,12 @@ pointLight(255, 0, 0, width/2, height/2, 400);
 </pre><br/>
 </ul>
 
-	<p>For additional examples of lighting in Processing, take a look at: <a href="http://processing.org/learning/3d/lights1.html">Lights1</a>, <a href="http://processing.org/learning/3d/lights2.html">Lights2</a>, <a href="http://processing.org/learning/3d/spot.html">Spot</a>, <a href="http://processing.org/learning/3d/directional.html">Directional</a>, <a href="http://processing.org/learning/library/lightsgl.html">LightsGL</a>
+	<p>For additional examples of lighting in Processing, take a look at: <a href="http://processing.org/learning/3d/lights1.html">Lights1</a>, <a href="http://processing.org/learning/3d/lights2.html">Lights2</a>, <a href="http://processing.org/learning/3d/spot.html">Spot</a>, <a href="http://processing.org/learning/3d/directional.html">Directional</a>, <a href="http://processing.org/learning/library/lightsgl.html">LightsGL</a>.
 	
 	<h3>Perspective</h3>
 	
 	<p>
-	P3D mode consists of two different "projection" modes, which describe the algorithm by which the renderer creates the 3d illusion.  "Perspective" mode is the default and uses the trick of rendering objects that are farther away as smaller.  This effect is commonly referred to as "foreshortening."  In most cases, you don't need to specify the parameters of perspective projection, but Processing allows you to alter the way the 3d illusion is rendered via the <a href="http://processing.org/reference/perspective_.html">perspective()</a> function.  The parameters of the function define a viewing volume with the shape of truncated pyramid. Objects near to the front of the volume appear their actual size, while farther objects appear smaller.   The triangle has a field of view (angle in radians), an aspect ratio, and a maximum and minimum z location that defines the clipping plane (how far and how close Processing will actually bother to try to render things).   An example (that recreates the default perspective) looks like so:
+	P3D mode consists of two different "projection" modes which control the way the renderer creates the 3D illusion.  "Perspective" mode is the default and uses the trick of displaying objects that are farther away as smaller.  This effect is commonly referred to as "foreshortening."  In most cases, you don't need to specify the parameters of perspective projection, but you can with the <a href="http://processing.org/reference/perspective_.html">perspective()</a> function.  The parameters of the function define a viewing volume with the shape of truncated pyramid. Objects near to the front of the volume appear their actual size, while farther objects appear smaller.   The triangle has a field of view (angle in radians), an aspect ratio, and a maximum and minimum z location that defines the clipping plane (how far and how close Processing will actually bother to try to render things).   An example (that recreates the default perspective) looks like so:
 
 <pre>
 float fov = PI/3;
@@ -327,11 +329,11 @@ perspective(fov, float(width)/float(height), cameraZ/10.0, cameraZ*10.0);
 </pre><br/>
 	</p>
 	<p>
-It's not too often you'll need to change these parameters, but if you do, altering the "fov" tends to have the effect of zooming objects in and out (as the viewing volume grows and shrinks) and changing the aspect ratio can skew the rendering of objects making the appear fatter or skinnier.  For an example of this, take a look at: <a href="http://processing.org/learning/3d/perspective.html">Perspective</a>.		
+It's not too often you'll need to change these parameters, but if you do, altering the field of view ("fov") tends to have the effect of zooming objects in and out (as the viewing volume grows and shrinks) and changing the aspect ratio can skew the rendering of objects making the appear fatter or skinnier.  For an example of this, take a look at: <a href="http://processing.org/learning/3d/perspective.html">Perspective</a>.		
 	</p>
 	
 	<p>
-	The other projection mode available in P3D is known as "orthographic" projection.  In ortho mode, all objects with the same dimension appear the same size, regardless of whether they are near or far from the camera.   This is commonly used to achieve a certain visual style, such as one found in early video games like Q-Bert.  To enable orthographic projection, all you need to do is call <a href="http://processing.org/reference/ortho_.html">ortho()</a>  ortho() doesn't require any arguments, although you'll see there are some optional ones to define a clipping plane.  Following is an example that shows a scene in both projection modes, depending on whether the mouse is pressed.
+	The other projection mode available in P3D is known as "orthographic" projection.  In orthographic mode, all objects with the same dimension appear the same size, regardless of whether they are near or far from the camera.   This is commonly used to achieve a certain visual style, such as one found in early video games like Q-Bert.  To enable orthographic projection, all you need to do is call <a href="http://processing.org/reference/ortho_.html">ortho()</a>  ortho() doesn't require any arguments, although you'll see there are some optional ones to define a clipping plane.  Following is an example that shows a scene in both projection modes, depending on whether the mouse is pressed.
 	</p>
 
 
@@ -367,13 +369,13 @@ void draw()  {
 	<h3>Camera</h3>
 	
 	<p>
-	When looking at a 3D scene in a graphics window, we often think of our view of the scene as the camera.  Zoom in closer to the objects and the camera zooms in.  Rotate around the scene and the camera rotates.  Of course, there is no actual camera, this is just a convenient concept for us to have a common language around traversing a 3D scene.  And the effect of a camera can be achieved through clever transformations: translate(), rotate(), and scale().  Nevertheless, for convenience there is also a <a href="http://processing.org/reference/camera_.html">camera()</a> function whose purpose is simulate a camera.  A camera is defined as having an "eye position", i.e. the camera location, a scene "center" which tells the camera which way to point, and an upward axis which aligns the camera vertically.
+	When looking at a 3D scene in a Processing window, we can think of our view of the scene as a camera.  Zoom in closer to the objects and we can imagine a camera zooming in.  Rotate around the scene and the camera rotates.  Of course, there is no actual camera, this is just a convenient device to help us understand how to traverse a 3D scene.  Simulating a camera can be done through clever transformations at the beginning of draw() by using translate(), rotate(), and scale() to manipulate our view of the scene.  Nevertheless, for convenience there is also a <a href="http://processing.org/reference/camera_.html">camera()</a> function whose purpose is also to simulate a camera.  The function defines a camera as having an "eye position", i.e. the camera location, a scene "center" which tells the camera which way to point, and an upward axis which aligns the camera vertically.
 	</p>
 	<p>The default camera position is essentially right between your eyes: a location out in front of the window aligned straight up and pointing towards the screen.  Here are the numbers for the default position.
 	<ul>
-		<li>Eye position: x = width/2, y = height/2, z = (height/2) / tan(PI/6)</li>
-		<li>Scene center: x = width/2, y = height/2, z = 0</li>
-		<li>Upwards axis: x = 0, y = 1, z = 0</li>
+		<li>Eye position: <b><i>width/2, height/2, (height/2) / tan(PI/6)</b></i></li>
+		<li>Scene center: <b><i>width/2, height/2, 0</b></i></li>
+		<li>Upwards axis: <b><i>0, 1, 0</b></i></li>
 	</ul>
 	<p>
 	When written in code, this looks like:
