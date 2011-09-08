@@ -7,7 +7,9 @@
 
 <p>&nbsp;</p>
 
-   	This tutorial assumes you already have Java and Processing installed on your computer.  This is also not an Eclipse tutorial, but just covers the basics to get you up and running with Processing in Eclipse.
+<p>   	This tutorial assumes you already have Java and Processing installed on your computer.  This is also not an Eclipse tutorial, but just covers the basics to get you up and running with Processing in Eclipse.</p>
+
+<p>		This tutorial outlines how to manually set-up a Processing project in Eclipse.  However, I recommend you check out the Eclipse Plug-in <a href="http://code.google.com/p/proclipsing/">proclipsing</p> that is designed to make working with Processing in Eclipse much easier, taking care of several of the steps below for you.</p>
 
 <h3>Step 1.  Download and install Eclipse</h3>
 
@@ -19,7 +21,7 @@
 
 <h3>Step 3. Import the Processing libraries</h3>
 
-<p>Eclipse doesn't know anything about Processing so we'll have to go and get the Processing libraries ourselves.   One way to do this is by pointing Eclipse to Processing's "lib" directory (see <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Integrate;action=display;num=1117133941">this tutorial</a>), however, because we intend on sharing the project via a CVS, it's a good idea to copy the necessary Processing files into the project folder itself so that everything stays together.  Go to:
+<p>Eclipse doesn't know anything about Processing so we'll have to go and get the Processing libraries ourselves.   One way to do this is by pointing Eclipse to Processing's "lib" directory (see <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Integrate;action=display;num=1117133941">this tutorial</a>), however, it's sometimes a good idea to copy the necessary Processing files into the project folder itself so that everything stays together.  Go to:
 <br /><br />
 FILE --&gt; IMPORT --&gt; GENERAL --&gt; FILE SYSTEM.
 <br /><br />
@@ -96,7 +98,8 @@ Once you've added the main() function, you can select:
 RUN --&gt; RUN AS --&gt; JAVA APPLICATION
 
 <h3>Processing in Eclipse with Multiple Classes</h3>
-<p>Take a look at this <a href="http://www.mostpixelsever.com/examples/stripes/">example Processing sketch</a>.  The example is object-oriented and contains a class called "Stripe."  In Processing, all classes are treated as "inner classes," meaning they are not individual entities unto themselves, but rather are classes inside of the larger PApplet.  This is why you can do anything you can do in a PApplet inside of the Stripe class.  You can draw onto the window calling rect() and access the PApplet variables such as width and height.   To get this example working in Eclipse, it's perfectly reasonable to just copy it in as is and include the Stripe class code below setup() and draw() inside the parent PApplet class.   However, the inner class methodology can quickly become unwieldy in the case of larger applications with lots and lots of classes.
+
+<p>Take a look at this <a href="http://www.processing.org/learning/eclipse/code/stripes/">example Processing sketch</a>.  The example is object-oriented and contains a class called "Stripe."  In Processing, all classes are treated as "inner classes," meaning they are not individual entities unto themselves, but rather are classes inside of the larger PApplet.  This is why you can do anything you can do in a PApplet inside of the Stripe class.  You can draw onto the window calling rect() and access the PApplet variables such as width and height.   To get this example working in Eclipse, it's perfectly reasonable to just copy it in as is and include the Stripe class code below setup() and draw() inside the parent PApplet class.   However, the inner class methodology can quickly become unwieldy in the case of larger applications with lots and lots of classes.
 <br /><br />
 And so we find ourselves in need of a means for creating separate Java classes in Eclipse that we can use in conjunction with a Processing-based application.
 <br /><br />
