@@ -1,0 +1,135 @@
+<h1>Android</h1>
+	
+<p>
+
+<table width="656">
+  <tr>
+   	<td>
+
+	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.  This tutorial is adapted from <a href="http://blog.blprnt.com/blog/blprnt/processing-android-mobile-app-development-made-very-easy">'Processing & Android: Mobile App Development Made (Very) Easy'</a> by <a href="http://blog.blprnt.com/">Jer Thorp</a></em></p>
+	
+	<h3>Android How To</h3>
+
+	<p><img src="imgs/android1.jpg" width="500" height="304"></p>
+	
+	<p>You can now use Processing to quickly create apps for mobile devices that use the <a href="http://en.wikipedia.org/wiki/Android_(operating_system)">Android operating system</a>.</p> 
+	<p>Let&#8217;s get a from-scratch Android app working on a device (Following this tutorial mostly involves installing software).</p> 
+	<p><em>** You don&#8217;t need to have an Android device to do this tutorial, since we can see the app that we&#8217;ll build in a software emulator. But it&#8217;s much cooler if it&#8217;s on a device.<a href="http://www.java.com/en/download/manual.jsp"></a></em></p> 
+	<p><em>** Before you start on this tutorial, I&#8217;d recommend that you make sure you have a recent version of Java installed. Mac users can run Software Update &#8211; Windows folks should <a href="http://www.java.com/en/download/manual.jsp">go here and download the latest Java version.</a></em></p> 
+	
+	<h3>Step One: Install the Android SDK</h3> 
+	
+	<p>I promise. This isn&#8217;t going to be one of those tutorials that is full of three-letter acronyms that you don&#8217;t understand. But before we get started building our app in Processing, we need to download some software that will allow us to author Android applications (Processing manages all of the tricky bits of this, and will eventually download and install the SDK for you as well &#8211; for now we have to do a tiny bit of manual labour). This bundle of software is called a &#8216;Software Development Kit&#8217; and is fairly easy to get and install.</p> 
+	<p>First, go to the URL below, and download the appropriate SDK for your operating system:</p> 
+	<p><a href="http://developer.android.com/sdk">http://developer.android.com/sdk</a></p> 
+	<p>This download should un-zip to a folder called something like &#8216;android-sdk-mac_x86&#8242;. Move that folder to a safe location on your machine , and then open the &#8216;tools&#8217; directory inside of it. Double-click on the file named &#8216;android&#8217; &#8211; on a Mac this will fire up Terminal and in turn will open the Android SDK and AVD manager, which looks something like this:</p> 
+	
+	<p><img src="imgs/android2.png" width="500" height="304"></p>
+	
+	 
+	<p>We&#8217;re going to use the manager to install the Android packages that we need to build our apps. Click on the left menu option &#8216;Available Packages&#8217; and check the box that appears in the centre window. The manager will check with the Android repository and then list all of the packages and tools that are available for download:</p> 
+	
+	<p><img src="imgs/android3.png" width="500" height="304"></p>
+	
+	
+	<p>We can install all of the packages &#8211; that way we know we&#8217;ll get everything we need. Click &#8216;Install Selected&#8217;. In the next window, click &#8216;Accept All&#8217;, and then &#8216;Install&#8217;. That&#8217;s it! We now have the Android SDK files that we need to work with Processing Android. Now we need to download the latest and greatest version of Processing.</p> 
+	
+	<h3>Step Two: Make an Android App</h3>
+	
+	<p>Before we do anything even somewhat complicated, let&#8217;s take the time to learn how Processing Android works. Let&#8217;s start with a really simple sketch, which draws a white square in the middle of an orange field:</p> 
+	<pre class="brush: java; title: ; notranslate" title=""> 
+void setup() {
+  size(480,800);
+  noStroke();
+  fill(255);
+  rectMode(CENTER);     // This sets all rectangles to draw from the center point
+}
+
+void draw() {
+  background(#FF9900);
+  rect(width/2, height/2, 150, 150);
+}
+</pre> 
+
+	<p><img src="imgs/android4.png" width="500" height="304"></p>
+
+	<p>If we press the run button (or hit Apple-R), Processing compiles our sketch to run as a temporary Java applet, which we see running in a separate window (go ahead and try this). This is the basic Processing behaviour. I have a few other options for compiling my little sketch. I could select &#8216;Sketch &gt; Present&#8217; from the menubar to present the sketch in fullscreen, I could select &#8216;File &gt; Export&#8217; to compile my sketch as a Java applet to display in the browser, or I could select &#8216;File &gt; Export Application&#8217; to produce a stand-alone file to launch like a &#8216;real&#8217; application. These three basic options for compiling (run, present, export) have slightly different functions in Android Mode.</p> 
+	<p>Wait. What? Android Mode? Here we discover the genius of our new, super Processing &#8211; we can build sketches the same way that we are normally used to, then switch into Android Mode to preview and publish our droidified sketches. Let&#8217;s do that with our simple rectangle sketch.</p> 
+	<p>From the shiny new &#8216;Android&#8217; menubar heading, select Android mode. Let&#8217;s first see what the sketch looks like in the emulator, by pressing the run button:</p> 
+	
+	<p><img src="imgs/android5.png" width="500" height="304"></p>
+	
+	<p><em>* The first time you try this you might get an error message telling you that the Android SDK hasn&#8217;t been installed. Press &#8216;yes&#8217; and locate the Android SDK folder that you downloaded in Step One. Then run the sketch again.</em></p> 
+	<p><em> </em></p> 
+	<p><em>** Be patient! The emulator can take a while to get started. You might have to run the sketch again one the desktop appears in the emulator.<br /> 
+	</em></p> 
+	<p>Exciting, right? Right?</p> 
+	<p>OK. Maybe not. It&#8217;s just a white square. But&#8230; let&#8217;s make it a white square <em>on an Android Device!!</em></p>
+	 
+	<h3>Step Three: Running the App on a Device</h3> 
+	
+	<p><strong>Very Important: To get the app running on your device, you&#8217;ll first have to make sure that USB debugging is turned on. You can do this from the Settings&gt;Applications&gt;development menu on your device. If you&#8217;re on Windows, you might have to do <a href="http://developer.android.com/guide/developing/device.html">some other setup, too</a></strong><strong>.</strong></p> 
+	<p>Connect your Android device, and then select &#8216;Sketch&gt;Present&#8217; from the menubar (or, press Shit-Apple-R).</p> 
+	
+	<p><img src="imgs/android6.jpg" width="500" height="304"></p>
+		
+	<p>Yahoo!</p> 
+	<p>Now that we know that everything is working, let&#8217;s add a little bit of interactivity. We&#8217;ll make the box rotate as we slide our finger left to right, and make the background color change as we move our finger up and down. We&#8217;ll also add a little ball-and-stick indicator to show where the &#8216;mouse&#8217; is:</p> 
+	<pre class="brush: java; title: ; notranslate" title=""> 
+/*
+World's simplest Android App!
+blprnt@blprnt.com
+Sept 25, 2010
+*/
+
+// Build a container to hold the current rotation of the box
+float boxRotation = 0;
+
+void setup() {
+  // Set the size of the screen (this is not really necessary in Android mode, but we'll do it anyway)
+  size(480,800);
+  // Turn on smoothing to make everything pretty.
+  smooth();
+  // Set the fill and stroke color for the box and circle
+  fill(255);
+  stroke(255);
+  // Tell the rectangles to draw from the center point (the default is the TL corner)
+  rectMode(CENTER);
+}
+
+void draw() {
+  // Set the background color, which gets more red as we move our finger down the screen.
+  background(mouseY * (255.0/800), 100, 0);
+  // Change our box rotation depending on how our finger has moved right-to-left
+  boxRotation += (float) (pmouseX - mouseX)/100;
+
+  // Draw the ball-and-stick
+  line(width/2, height/2, mouseX, mouseY);
+  ellipse(mouseX, mouseY, 40, 40);
+
+  // Draw the box
+  pushMatrix();
+  translate(width/2, height/2);
+  rotate(boxRotation);
+  rect(0,0, 150, 150);
+  popMatrix();
+}
+</pre> 
+	<p>Again, we can use Present (Shift-Apple-R) to run the sketch on our device:<br /> 
+	
+		<p><img src="imgs/android7.jpg" width="500" height="304"></p>
+	
+	
+	<p>Some helpful tips when you&#8217;re working with Processing &amp; Android:</p> 
+	<p>- I know I&#8217;ve said this before, but be patient. Canceling a process (ie. the emulator load or a device compile) can cause problems. If you do this inadvertently, you&#8217;re best off restarting Processing.</p> 
+	<p>- Make sure to check out the <a href="http://wiki.processing.org/w/Android">Processing Android Wik</a>i, where you&#8217;ll find some troubleshooting advice, and some tips on how to get your sketches working properly on your device.</p>
+
+	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.  This tutorial is adapted from <a href="http://blog.blprnt.com/blog/blprnt/processing-android-mobile-app-development-made-very-easy">'Processing & Android: Mobile App Development Made (Very) Easy'</a> by <a href="http://blog.blprnt.com/">Jer Thorp</a></em></p>
+
+	
+   </td>
+  </tr>
+</table>
+
+</p>
+
