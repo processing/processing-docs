@@ -17,7 +17,7 @@
   	<title>Processing in Eclipse</title> 
   	<directory>eclipse</directory> 
   	<imgs>true</imgs> 
-  	<code>false</code> 
+  	<code>true</code> 
   </tutorial>  
  
   <tutorial> 
