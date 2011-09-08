@@ -99,7 +99,7 @@ RUN --&gt; RUN AS --&gt; JAVA APPLICATION
 
 <h3>Processing in Eclipse with Multiple Classes</h3>
 
-<p>Take a look at this <a href="http://www.processing.org/learning/eclipse/code/stripes/">example Processing sketch</a>.  The example is object-oriented and contains a class called "Stripe."  In Processing, all classes are treated as "inner classes," meaning they are not individual entities unto themselves, but rather are classes inside of the larger PApplet.  This is why you can do anything you can do in a PApplet inside of the Stripe class.  You can draw onto the window calling rect() and access the PApplet variables such as width and height.   To get this example working in Eclipse, it's perfectly reasonable to just copy it in as is and include the Stripe class code below setup() and draw() inside the parent PApplet class.   However, the inner class methodology can quickly become unwieldy in the case of larger applications with lots and lots of classes.
+<p>Take a look at this <a href="http://www.learningprocessing.com/examples/chapter-9/example-9-10/">example Processing sketch</a>.  The example is object-oriented and contains a class called "Stripe."  In Processing, all classes are treated as "inner classes," meaning they are not individual entities unto themselves, but rather are classes inside of the larger PApplet.  This is why you can do anything you can do in a PApplet inside of the Stripe class.  You can draw onto the window calling rect() and access the PApplet variables such as width and height.   To get this example working in Eclipse, it's perfectly reasonable to just copy it in as is and include the Stripe class code below setup() and draw() inside the parent PApplet class.   However, the inner class methodology can quickly become unwieldy in the case of larger applications with lots and lots of classes.
 <br /><br />
 And so we find ourselves in need of a means for creating separate Java classes in Eclipse that we can use in conjunction with a Processing-based application.
 <br /><br />
@@ -140,19 +140,19 @@ If we add the Processing code, Eclipse will give us a bunch of errors.
 <img src="imgs/errors.jpg" border="1" />
 <br /><br />
 The errors are all on lines where we call a Processing function (such as rect()) or reference a Processing variable (such as width).  This is because a Stripe is not a PApplet and knows nothing about PApplets!  We might be tempted to have Stripe extend PApplet, but this would be a fatal error.  A Stripe is not a PApplet.  A Stripe is a rectangular object that we want to draw <em>onto a PApplet</em>. What PApplet do we want to draw onto?  The PApplet that is MyProcessingSketch.   Instead of extending PApplet, we simply want to tell a Stripe object about a MyProcessingSketch.
-<br />
+<br /><br />
 <pre>
 public class Stripe {
   PApplet parent; // The parent PApplet that we will render ourselves onto</pre>
 <br />
 In the constructor, we initialize the parent:
-<br />
+<br /><br />
 <pre>
   Stripe(PApplet p) {
     parent = p;</pre>
 <br />
 And then anytime we want to call a Processing function, we access it via the parent variable.
-<br />
+<br /><br />
 <pre>
   // Draw stripe
   void display() {
@@ -198,11 +198,12 @@ public class Stripe {
 </pre>
 <br />
 Finally, the last change we have to make is how we call the constructor.  Previously, we had:
-<br /><pre>
+<br /><br />
+<pre>
   stripes[i] = new Stripe();</pre>
 <br />
 But now when we construct a Stripe object, we must pass in a reference to a PApplet.  And here, the PApplet is <strong><em>this</em></strong>, a reference to ourselves, the PApplet we are right now, MyProcessingSketch.
-<br />
+<br /><br />
 <pre>
   stripes[i] = new Stripe(this);</pre>
 <br />
@@ -210,17 +211,19 @@ Here is <a href="http://www.learningprocessing.com/files/ProcessingTest.zip">the
 <br /><br />
 Another important note.  The Processing "color" primitive does not exist in Java.   In fact, in Processing a "color" is really just an integer (32 bits with red, green, blue, and alpha components).  Processing translates "color" to "int", but 
 Eclipse won't do that for you.  So instead of saying:
-<br />
+<br /><br />
 <pre>
 color pink = color(255,200,200);
 </pre>
 <br />
 you should say:
-<br />
+<br /><br />
 <pre>
 int pink = color(255,200,200);
 </pre>
+<br />
 and if you are in another class and have to refer to the "parent" PApplet:
+<br />
 <pre>
 int pink = parent.color(255,200,200); 
 </pre>
