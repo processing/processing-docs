@@ -20,7 +20,7 @@
   </library>
  </category>
  <category name="Import / Export">
-  <library name="Collada Loader for Google Sketchup" url="http://www.die-seite.ch/">
+  <library name="Collada-Loader" url="http://www.die-seite.ch/">
    <description authorList="[Markus Zimmermann](http://www.die-seite.ch/)" paragraph="For error free working take a look to the [instructions](http://die-seite.ch/?colladaloader) or [forum](http://die-seite.ch/?guest&amp;thema=colladaloader)" sentence="imports into Processing kmz or dae files that is created by Google Sketchup 8" />
    <version id="11" pretty="1.1" />
    <download other="http://www.die-seite.ch/colladaLoader11.zip" />

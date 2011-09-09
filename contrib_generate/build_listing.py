@@ -25,16 +25,16 @@ category. The config file is formatted using the following style:
     # A comment. Everything after the hash is ignored
     [Library : Sound] # Type of software : category name.
     # A url of a library in the sound category
-    http://example.com/libs/soundlib1.txt
+    SoundLib1 \ http://example.com/libs/soundlib1.txt
     # Another url of a library in the sound category
-    http://example.org/libs/soundlib2.txt
+    SoundLib2 \ http://example.org/libs/soundlib2.txt
 
     [Library : Vision] # Another category
-    http://example.net/libs/visionlib.txt
+    VisionLib \ http://example.net/libs/visionlib.txt
 
     [Library Compilation : Compilation] # Library compilations are zip files
                                         # containing multiple libraries
-    http://example.net/libs/awesomelibs.txt
+    AwesomeLibs \ http://example.net/libs/awesomelibs.txt
 
 After parsing the config file, information on each library is retrieved from
 the text files, and the contribution is assumed to be hosted at the same address
@@ -152,11 +152,12 @@ def create_common_element(exports, tag, download_url):
 def get_lib_locations(f):
   """
   Reads a config file and returns a dictionary with categories as keys and
-  lists of tuples as values, each containing (software_type, download_url).
+  lists of tuples as values, each containing
+                          (software_type, contribution_name, download_url)
   """
   software_type = None
   category = None
-  url_by_category = {}
+  urls_by_category = {}
   for line in f.readlines():
     hash = line.find('#')
     line = line.strip() if hash == -1 else line[:hash]
@@ -170,40 +171,57 @@ def get_lib_locations(f):
         software_type = contents[0].strip()
         software_type = ''.join(software_type.split()).lower()
         category = contents[1].strip()
+      else:
+        software_type = None
+        category = None
     else:
-      if category == None:
-        print "Ignoring library without catgory"
+      if software_type == None or category == None:
+        # XXX Error. Bad syntax for .conf file
+        print "Ignoring contribution without type or category"
         continue
-      if not url_by_category.has_key(category):
-        url_by_category[category] = []
-      url_by_category[category].append((software_type, line))
 
-  return url_by_category
+      contents = line.split('\\')
+      if len(contents) != 2:
+        print 'Lines for contributions must be of the form "Contribution Name : http://example.com/location.zip"'
+        print contents
+        continue
 
+      name = contents[0].strip()
+      url = contents[1].strip()
+
+      if not urls_by_category.has_key(category):
+        urls_by_category[category] = []
+      urls_by_category[category].append((software_type, name, url))
+
+  return urls_by_category
 
 if __name__ == "__main__":
   if len(argv) != 3:
-    print "Usage is [Input Configutation File] [Output XML file]"
+    print "Usage is [Input Configuration File] [Output XML file]"
     exit()
 
   script, conf, xmlout = argv
   f = open(conf)
-  url_by_category = get_lib_locations(f);
+  urls_by_category = get_lib_locations(f);
   f.close()
 
   software = Element('software')
 
-  for cat in url_by_category:
+  for cat in urls_by_category:
     category = Element('category')
     category.set('name', cat)
     software.append(category)
-    urls = url_by_category[cat]
-    for url in urls:
-      software_type, prop_url = url
+    contribs = urls_by_category[cat]
+
+    for contrib in contribs:
+      software_type, name, prop_url = contrib
       download_url = prop_url[:prop_url.rfind('.')] + '.zip'
       try:
         element = None
         exports = get_exports(urlopen(prop_url))
+
+        # Overwrite the name with what was in the .conf file
+        exports['name'] = name
 
         if software_type == LIBRARY:
           element = create_common_element(exports, 'library', download_url)
