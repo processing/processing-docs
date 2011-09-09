@@ -1,5 +1,5 @@
 library
-category=Compilations
+category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
 name=gicentreUtils
 sentence=Assists creation of data visualization sketches.
@@ -10,7 +10,7 @@ version=12
 download=http://www.gicentre.org/utils/gicentreUtils.zip
 
 library
-category=Compilations
+category=Compilation
 authorList=Hartmut Bohnacker and Benedikt Gross
 name=GenerativeDesign
 sentence=Compilation of various functions belonging to the book GENERATIVE GESTALTUNG (german version) and DESIGN GENERATIF (french version).
