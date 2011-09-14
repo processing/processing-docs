@@ -46,7 +46,7 @@ class HLine {
 </example>
     
 <description><![CDATA[
-Keyword used to indicate the declaration of a class. A class is a composite of data and methods (functions) which may be instantiated as objects. The first letter of a class name is usually uppercase to separate it from other kinds of variables. A related tutorial on <a href="http://download.oracle.com/javase/tutorial/java/concepts/index.html" target="_blank">Object-Oriented Programming</a> is hosted on the Oracle website.
+Keyword used to indicate the declaration of a class. A class is a composite of fields (data) and methods (functions that are a part of the class) which may be instantiated as objects. The first letter of a class name is usually uppercase to separate it from other kinds of variables. A related tutorial on <a href="http://download.oracle.com/javase/tutorial/java/concepts/index.html" target="_blank">Object-Oriented Programming</a> is hosted on the Oracle website.
 ]]></description>
 
 <syntax>

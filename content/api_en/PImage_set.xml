@@ -27,9 +27,11 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Changes the color of any pixel or writes an image directly into the image. The <b>x</b> and <b>y</b> parameter specify the pixel or the upper-left corner of the image. The <b>color</b> parameter specifies the color value.<br />
+Changes the color of any pixel or writes an image directly into the display window.<br />
 <br />
-Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as fast as putting the data directly into <b>pixels[]</b>. The equivalent statement to "set(x, y, #000000)" using <b>pixels[]</b> is "pixels[y*width+x] = #000000". Processing requires calling <b>loadPixels()</b> to load the display window data into the <b>pixels[]</b> array before getting the values and calling <b>updatePixels()</b> to update the window.
+The <b>x</b> and <b>y</b> parameters specify the pixel to change and the <b>color</b> parameter specifies the color value. The color parameter is affected by the current color mode (the default is RGB values from 0 to 255). When setting an image, the <b>x</b> and <b>y</b> parameters define the coordinates for the upper-left corner of the image, regardless of the current <b>imageMode()</b>.
+<br /><br />
+Setting the color of a single pixel with <b>set(x, y)</b> is easy, but not as fast as putting the data directly into <b>pixels[]</b>. The equivalent statement to <b>set(x, y, #000000)</b> using <b>pixels[]</b> is <b>pixels[y*width+x] = #000000</b>. See the reference for <b>pixels[]</b> for more information.
 ]]></description>
 
 </root>

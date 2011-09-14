@@ -13,7 +13,7 @@
 
 
 <description><![CDATA[
-This is a method for advanced programmers to open a Java InputStream. The method is useful if you want to use the facilities provided by PApplet to easily open files from the data folder or from a URL, but want an InputStream object so that you can use other Java methods to take more control of how the stream is read.<br />
+This is a function for advanced programmers to open a Java InputStream. It's useful if you want to use the facilities provided by PApplet to easily open files from the data folder or from a URL, but want an InputStream object so that you can use other parts of Java to take more control of how the stream is read.<br />
 <br />
 The filename passed in can be:<br />
 - A URL, for instance <b>openStream("http://processing.org/")</b><br />

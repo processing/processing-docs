@@ -9,18 +9,18 @@
 <example>
 <image>updatePixels_.jpg</image>
 <code><![CDATA[
-int halfImage = width*height/2;
 PImage myImage = loadImage("topanga.jpg");
 image(myImage, 0, 0);
-
+int halfImage = img.width * img.height/2;
 loadPixels();
-for (int i = 0; i &lt; halfImage; i++) {
+for (int i = 0; i < halfImage; i++) {
   pixels[i+halfImage] = pixels[i];
 }
 updatePixels();
 ]]></code>
 </example>
 
+<!--
 <example>
 <image>updatePixels_2.jpg</image>
 <code><![CDATA[
@@ -29,12 +29,13 @@ PImage myImage = loadImage("towerFlip.jpg");
 image(myImage, 0, 0);
 
 loadPixels();
-for (int i = 0; i &lt; halfImage; i++) {
+for (int i = 0; i < halfImage; i++) {
   pixels[i+halfImage] = pixels[i];
 }
 updatePixels(50, 0, 50, 100);
 ]]></code>
 </example>
+-->
 
 <description><![CDATA[
 Updates the display window with the data in the <b>pixels[]</b> array. Use in conjunction with <b>loadPixels()</b>. If you're only reading pixels from the array, there's no need to call <b>updatePixels()</b> unless there are changes.

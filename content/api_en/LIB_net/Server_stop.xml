@@ -18,7 +18,6 @@
 // "java.net.SocketException: Socket closed
 //  at java.net.PlainSocketImpl.socketAccept(Native Method)"
  
-
 import processing.net.*;
 
 int port = 10002;

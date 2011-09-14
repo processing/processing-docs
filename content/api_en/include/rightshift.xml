@@ -25,7 +25,7 @@ println(p);  // Prints "13"
 <example>
 <image></image>
 <code><![CDATA[
-// Using "right shift" as a faster method than red(), green(), and blue()
+// Using "right shift" as a faster technique than red(), green(), and blue()
 color argb = color(204, 204, 51, 255);
 int a = (argb &gt;&gt; 24) &amp; 0xFF;
 int r = (argb &gt;&gt; 16) &amp; 0xFF;  // Faster way of getting red(argb)
