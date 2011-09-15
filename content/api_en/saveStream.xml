@@ -12,9 +12,9 @@
 </example>
 
 <description><![CDATA[
-Save the contents of a stream to a file in the sketch folder. This is basically <b>saveBytes(blah, loadBytes())</b>, but done more efficiently (and with less confusing syntax).
-<br /><br />   
-When using the <b>targetFile</b> parameter, it writes to a <b>File</b> object for greater control over the file location. (Note that unlike other api methods, this will not automatically compress or uncompress gzip files.)
+Save the contents of a stream to a file in the sketch folder. This is basically <b>saveBytes(blah, loadBytes())</b>, but done more efficiently (and with less confusing syntax).<br />
+<br />   
+When using the <b>targetFile</b> parameter, it writes to a <b>File</b> object for greater control over the file location. (Note that unlike some other functions, this will not automatically compress or uncompress gzip files.)
 ]]></description>
 
 </root>

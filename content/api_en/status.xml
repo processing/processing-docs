@@ -10,9 +10,9 @@
 <image></image>
 <code><![CDATA[
 // Move mouse left and right and see the text
-// change in the lower-left corner of your browser
+// change in the status area of your browser
 void draw() {
-  if(mouseX &lt; 50) {
+  if(mouseX < width/2) {
     status("left");
   } else {
     status("right");

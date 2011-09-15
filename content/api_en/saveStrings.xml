@@ -20,7 +20,7 @@ saveStrings("nouns.txt", list);
 <description><![CDATA[
 Writes an array of strings to a file, one line per string. This file is saved to the sketch's folder, which is opened by selecting "Show sketch folder" from the "Sketch" menu.<br />
 <br />
-It is not possible to use saveXxxxx() methods inside a web browser unless the sketch is <a href="http://wiki.processing.org/w/Sign_an_Applet">signed applet</A>. To save a file back to a server, see the <a href="http://wiki.processing.org/w/Saving_files_to_a_web-server">save to web</A> code snippet on the Processing Wiki.<br/>
+It is not possible to use saveXxxxx() functions inside a web browser unless the sketch is <a href="http://wiki.processing.org/w/Sign_an_Applet">signed applet</A>. To save a file back to a server, see the <a href="http://wiki.processing.org/w/Saving_files_to_a_web-server">save to web</A> code snippet on the Processing Wiki.<br/>
 <br/ >
 Starting with Processing 1.0, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>

@@ -14,7 +14,7 @@
 import processing.pdf.*;
 
 void setup() {
-  size(screen.width, screen.height, PDF);
+  size(screenWidth, screenHeight, PDF);
 }
 
 void draw() {
