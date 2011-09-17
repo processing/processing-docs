@@ -3,13 +3,14 @@
 	<cat label="Geometry">
 		<ex file="Vertices.html">Vertices</ex>
 		<ex file="RGBCube.html">RGB Cube</ex>
+		<ex file="SpaceJunk.html">Space Junk</ex>
 		<ex file="ShapeTransform.html">Shape Transform</ex>
 		<ex file="Toroid.html">Toroid</ex>
 		<ex file="Icosahedra.html">Icosahedra</ex>
+		<ex file="NoiseSphere.html">Noise Sphere</ex>
 	</cat>
 	<cat label="Drawing">
 		<ex file="ContinuousLines.html">Continuous Lines</ex>
-		<ex file="CustomTool.html">Custom Tool</ex>
 		<ex file="Pattern.html">Pattern</ex>
 		<ex file="Pulses.html">Pulses</ex>
 		<ex file="Animator.html">Animator</ex>
@@ -54,7 +55,6 @@
 		<ex file="Convolution.html">Convolution</ex>
 		<ex file="Blur.html">Blur</ex>
 		<ex file="EdgeDetection.html">Edge Detection</ex>
-		<ex file="Extrusion.html">Extrusion</ex>
 		<ex file="Zoom.html">Zoom</ex>
 		<ex file="Explode.html">Explode</ex>
 	</cat>
@@ -63,6 +63,7 @@
 		<ex file="TextureTriangle.html">Texture Triangle</ex>
 		<ex file="TextureCylinder.html">Texture Cylinder</ex>
 		<ex file="TextureCube.html">Texture Cube</ex>
+		<ex file="TextureSphere.html">Texture Sphere</ex>
 	</cat>
 	<cat label="Simulate">
 		<ex file="Spring.html">Spring</ex>

@@ -1,0 +1,33 @@
+2.0 Example Updates
+
+- New XML/JSON (DS, JT)
+- New Regex (DS)
+- New PVector (DS)
+o New GUI (DS)
+- New PShape (DS)
+- PTable (DS, JT)
+- add stringIntPair to Hashmap (DS)
+- thread() example (DS)
+- Analyize PVector in examples (DS)
+- New P3D (CR,DS,AC)
+x Cull OpenGL (CR)
+o Library examples missing from site (CR)
+- New JavaScript (FJ,CR)
+- New PDF w/ typography (CR,BF)
+- 2 David Muth examples (CR)
+x All P2D and P3D must be removed from examples (CR)
+- More with proper type in OpenGL, meaning textMode(SHAPE) in OpenGL (CR)
+- Emphasize createFont() over loadFont() (CR)
+
+2.0 Tutorial Updates
+- New Generics (DS)
+$ New OpenGL(2) (JT)
+- Update Eclipse (DS)
+$ New Android (DS, JT)
+
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done

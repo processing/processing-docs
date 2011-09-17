@@ -10,7 +10,6 @@
 		<ex file="Redraw.html">Redraw</ex>
 		<ex file="Functions.html">Functions</ex>
 		<ex file="Recursion.html">Recursion</ex>
-		<ex file="Recursion2.html">Recursion 2</ex>
 		<ex file="CreateGraphics.html">CreateGraphics</ex>
 	</cat>
 	<cat label="Form">
@@ -46,12 +45,11 @@
 		<ex file="LoadDisplayImage.html">Load and Display Image</ex>
 		<ex file="BackgroundImage.html">Background Image</ex>
 		<ex file="Transparency.html">Transparency</ex>
-		<ex file="Sprite.html">Sprite</ex>
 		<ex file="Alphamask.html">Alphamask</ex>
 		<ex file="CreateImage.html">CreateImage</ex>
 		<ex file="Pointillism.html">Pointillism</ex>
 	</cat>
-	<cat label="Shape (SVG)">
+	<cat label="Shape">
 		<ex file="LoadDisplayShape.html">Load and Display Shape</ex>
 		<ex file="DisableStyle.html">Disable Style</ex>
 		<ex file="ScaleShape.html">Scale Shape</ex>
@@ -118,10 +116,11 @@
 	</cat>
 		<cat label="Lights">
 		<ex file="OnOff.html">On/Off</ex>
-		<ex file="Mixture.html">Mixture</ex>
 		<ex file="Directional.html">Directional</ex>
 		<ex file="Spot.html">Spot</ex>
 		<ex file="Reflection.html">Reflection</ex>
+		<ex file="Mixture.html">Mixture</ex>
+		<ex file="MixtureGrid.html">Mixture Grid</ex>
 	</cat>
 	<cat label="Camera">
 		<ex file="Perspective.html">Perspective</ex>
