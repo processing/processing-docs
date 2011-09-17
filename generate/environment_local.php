@@ -21,9 +21,10 @@ $page->content(file_get_contents($source.'index.html'));
 $page->language($lang);
 writeFile($path.'index.html', $page->out());
 
-if (!is_dir(DISTDIR.'environment/images')) { 
-	mkdir(DISTDIR.'environment/images', '0757'); 
-}
+//if (!is_dir(DISTDIR.'environment/images')) { 
+rmdir(DISTDIR.'environment/images');
+mkdir(DISTDIR.'environment/images', '0751'); 
+//}
 copydirr(CONTENTDIR."api_$lang/environment/images", DISTDIR.'environment/images');
 
 

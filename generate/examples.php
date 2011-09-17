@@ -30,7 +30,6 @@ putenv('HOME=' . CONTENTDIR);
 
 if (!$local) {
   `cd $there && /usr/local/bin/svn update examples_basics.xml`;
-  `cd $there && /usr/local/bin/svn update examples_3D.xml`;
   `cd $there && /usr/local/bin/svn update examples_topics.xml`;
   `cd $where && /usr/local/bin/svn update`;
 }
@@ -86,6 +85,7 @@ $html .= "</div>";
 $page->content($html);
 writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 
+// Copy over a shared core.jar
 //if (!copy(CONTENTDIR . 'examples/core.jar',
 //	  EXAMPLESDIR.strtolower($subdir).'/media/core.jar')) {
 //  echo 'Could not copy core.jar to ' . $subdir . '.';

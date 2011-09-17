@@ -6,6 +6,7 @@ class Example
     var $cat;
     var $file;
     var $applet;
+    var $data_dir;
     var $doc;
     var $code;
     var $fullcode;
@@ -23,11 +24,14 @@ class Example
         
 		# use the .pde from the applet folder
 		#$applet_dir = CONTENTDIR . 'examples/' . $cat . '/' . $name . '/applet/';
+		
 		$pde_dir = EXAMPLESOURCEDIR . $cat . '/' . $name . '/';
-		$applet_dir = $pde_dir . '/applet/';
+		#$applet_dir = $pde_dir . '/applet/';
+		
+		$this->data_dir = $pde_dir . 'data/';
 	
 		$this->file = file_get_contents($pde_dir . $name.'.pde');
-    	$this->applet = $applet_dir . $name . '.jar';
+    	#$this->applet = $applet_dir . $name . '.jar';
 
 #		$this->file = file_get_contents(CONTENTDIR . 'examples/' . $cat . '/' .
 #		$name . '/applet/' . $name.'.pde');
@@ -262,12 +266,20 @@ class Example
 	  		#echo " | ";
         }
         */
-        
+        /**
         if (file_exists($this->applet)) {
             #make_necessary_directories(EXAMPLESDIR.strtolower($this->sub).'/media/include');
             if (!copy($this->applet, EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar')) {
                 echo "Could not copy {$this->applet} to . <br/>";
             }
+        }
+        */
+        if (file_exists($this->data_dir)) {
+            if (!copydirr($this->data_dir, EXAMPLESDIR.strtolower($this->sub).'/')) {
+                echo "Could not copy" . EXAMPLESDIR.strtolower($this->sub).'/' . "<br />";
+            }
+        } else {
+          echo "No data here: " . $this->data . "<br />";
         }
     }
 }

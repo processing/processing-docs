@@ -58,9 +58,10 @@ foreach ($libraries as $lib)
 	//copydirr(CONTENTDIR.$source.'/images', DISTDIR.$destination.'/images');
 }
 
-if (!is_dir(DISTDIR.'libraries/images')) { 
-	mkdir(DISTDIR.'libraries/images', '0757'); 
-}
+//if (!is_dir(DISTDIR.'libraries/images')) { 
+rmdir(DISTDIR.'libraries/images');
+mkdir(DISTDIR.'libraries/images', '0751'); 
+//}
 copydirr(CONTENTDIR."api_$lang/libraries/images", DISTDIR.'libraries/images');
 
 $benchmark_end = microtime_float();
