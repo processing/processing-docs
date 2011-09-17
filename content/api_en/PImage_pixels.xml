@@ -15,7 +15,7 @@ void setup() {
   img = loadImage("tower.jpg");
   int dimension = img.width*img.height;
   img.loadPixels();
-  for (int i = 0; i &lt; dimension; i += 2) { 
+  for (int i = 0; i < dimension; i += 2) { 
     img.pixels[i] = color(0, 0, 0); 
   } 
   img.updatePixels();
