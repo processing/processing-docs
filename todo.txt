@@ -1,33 +1,160 @@
-2.0 Example Updates
+// // // // // // // // // // // // // // // // // // // // //
 
-- New XML/JSON (DS, JT)
-- New Regex (DS)
-- New PVector (DS)
-o New GUI (DS)
-- New PShape (DS)
-- PTable (DS, JT)
-- add stringIntPair to Hashmap (DS)
-- thread() example (DS)
-- Analyize PVector in examples (DS)
-- New P3D (CR,DS,AC)
-x Cull OpenGL (CR)
-o Library examples missing from site (CR)
-- New JavaScript (FJ,CR)
-- New PDF w/ typography (CR,BF)
-- 2 David Muth examples (CR)
-x All P2D and P3D must be removed from examples (CR)
-- More with proper type in OpenGL, meaning textMode(SHAPE) in OpenGL (CR)
-- Emphasize createFont() over loadFont() (CR)
+2.0 EXAMPLE
 
-2.0 Tutorial Updates
-- New Generics (DS)
-$ New OpenGL(2) (JT)
-- Update Eclipse (DS)
-$ New Android (DS, JT)
-
+- New XML/JSON  --DS, JT
+- New Regex  --DS
+- New PVector  --DS
+o New GUI  --DS
+- New PShape  --DS
+- PTable  --DS,JT
+- add stringIntPair to Hashmap  --DS
+- thread--) example  --DS
+- Analyize PVector in examples  --DS
+- New P3D  --CR,DS,AC
+x Cull OpenGL  --CR
+o Library examples missing from site  --CR
+- New JavaScript  --FJ,CR
+- New PDF w/ typography  --CR,BF
+- 2 David Muth examples  --CR
+x All P2D and P3D must be removed from examples  --CR
+- More with proper type in OpenGL, meaning textMode--SHAPE) in OpenGL  --CR
+x Emphasize createFont() over loadFont()  --CR
+- Custom font examples using loadFont()  --CR
+x Rework/edit/resize all existing examples  --CR
+x Modify examples for Processing.js  --CR
 
 Key:
 - To do
 $ In progress
 o N/A anymore
 x Done
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 TUTORIAL
+
+- New Generics  --DS
+$ New P3D  --DS (CR to help with links and images)
+- Update Eclipse  --DS
+$ New Android  --DS, JT
+- Processing.js  --CR,FJ
+- Tutorial CSS  --CR
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 REFERENCE ENGINE
+
+DAVID
+
+- The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
+  This only affects PrintWriter, BufferedReader, String, the only in "includes" with methods
+
+- Everything in "includes" HTML files has a Class field at the top of the HTML (except classes are correct)
+  See web/distribution/false.html for an example.
+
+- For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
+  link including the class name. For example see web/distribution/arc_.html and see the links in Related
+
+- Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
+  Capital letters should be integrated with the lowercase letters, rather than at the beginning.
+  
+- How to make a reference for captureEvent() etc in the Libraries
+	Complete list of functions not found in libraries:
+		1.Video
+			Everything in "Capture Class", "Video Events"
+		2. Serial
+			serialEvent()
+		3. Network
+			All "Network Events"
+			
+- Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
+	e.g. shorten(), splice(), and sort()
+	*Also happens in libraries e.g. Network Library - Server Class - write()
+	
+- 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 REFERENCE
+
+- Parameter decisions  --BF,CR,SM
+- Parameter alignment (after above decisions)  --SM
+- New PNG images for reference for smooth() change  --SM
+
+- All in "reviewing_reference.txt" file produced by Cindy  --SM
+
+- PImage's mask() needs an @brief  --CR
+- normal() example needed  --SM
+- lightFalloff() example needed  --SM
+- implements example needed  --SM
+- look at example for red() to make clearer  --SM
+- null has a blank 'Examples'  --SM
+
+NEW LANGUAGE ELEMENTS IN REFERENCE
+- rounded rect()  --CR
+- new arc()  --CR
+- blendMode()  --CR
+- quadraticVertex()  --CR
+- Movie class  --CR
+- XML  --DS
+- JSON  --DS
+- PTABLE  --DS
+
+THE FOLLOWING IS FROM PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
+
+- Pdf fonts
+-   rewrite documentation about pdf fonts (errors with non-native fonts)
+-   figure out why font naming not working correctly
+o Add blendMode() to reference, remove blend()
+o Need documentation for quadraticVertex()
+o Docs for rect(x, y, w, h, r) and rect(x, y, w, h, tl, tr, br, bl)
+o Docs for new arc()
+- "Find in Reference" for copy() goes to PVector (oog)
+- TRIANGLE_STRIP not highlighted for "find in reference"
+-   nor is it listed on the reference page
+-   so students can't find the ref for it
+-   needs to link TRIANGLE_STRIP to the beginShape() reference
+- Find in reference issues
+-   if() and for() don't work, they look for for_.html instead of for.html
+-   XMLElement is not linked for find in ref
+-   the ? operator is not in find in ref (no ref page either?)
+- Update keywords generator script on the site
+-   perhaps move this closer to the dev process?
+- Move reference folder around so that it matches site organization
+-   otherwise several links break on the main faq page
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 DOCUMENTATION
+
+- Prepare one-page document explaining Processing, 2.0 changes  --CR
+- Syntax highlighting  --CR
+- Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
+- 
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 DESIGN
+
+- Prepare MODE images for JavaScript, Android  --CR
+- New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
+- Check all page header images for gray values  --CR
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+POST 2.0
+
+- JavaScript reference integration on Processing.org  --FJ,CR
+- JavaScript example integration on Processing.org  --FJ,CR
+- Hire freelance to enhance tutorial figures  --CR
+- Look through 404 issues on the site  --FJ
