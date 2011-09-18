@@ -19,7 +19,7 @@ o Library examples missing from site  --CR
 - New PDF w/ typography  --CR,BF
 - 2 David Muth examples  --CR
 x All P2D and P3D must be removed from examples  --CR
-- More with proper type in OpenGL, meaning textMode--SHAPE) in OpenGL  --CR
+- More with proper type in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
 x Emphasize createFont() over loadFont()  --CR
 - Custom font examples using loadFont()  --CR
 x Rework/edit/resize all existing examples  --CR
