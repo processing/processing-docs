@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #remove everything old
-rm -rf ../tmp
-mkdir ../tmp
+rm -rf ../../reference
+mkdir ../../reference
 rm -rf ../../distribution
 mkdir ../../distribution
 
@@ -10,7 +10,7 @@ mkdir ../../distribution
 javadoc -doclet ProcessingWeblet \
         -docletpath bin/ \
         -public \
-	-webref ../tmp/web \
+	-webref ../../reference \
 	-localref ../../distribution \
 	-templatedir ../templates \
 	-examplesdir ../../content/api_en \
@@ -25,11 +25,11 @@ javadoc -doclet ProcessingWeblet \
 	../../../processing/core/src/processing/core/*.java
 
 # manage web reference
-cp -R ../../css	 ../tmp/web
-mkdir -p ../tmp/web/images
-cp -R ../../content/api_media/*.jpg ../tmp/web/images/
-cp -R ../../content/api_media/*.gif ../tmp/web/images/
-cp -R ../../content/api_media/*.png ../tmp/web/images/
+cp -R ../../css	 ../../reference/
+mkdir -p ../../reference/images
+cp -R ../../content/api_media/*.jpg ../../reference/images/
+cp -R ../../content/api_media/*.gif ../../reference/images/
+cp -R ../../content/api_media/*.png ../../reference/images/
 
 # manage local reference
 cp -R ../../css	 ../../distribution/
@@ -38,17 +38,30 @@ cp -R ../../content/api_media/*.jpg ../../distribution/images/
 cp -R ../../content/api_media/*.gif ../../distribution/images/
 cp -R ../../content/api_media/*.png ../../distribution/images/
 
+# copy images for web reference isn't needed because they are already on server
+
 # copy images for local reference
 mkdir -p ../../distribution/img
+chmod 755 ../../distribution/img
 mkdir -p ../../distribution/img/about/
 cp ../../favicon.ico ../../distribution/img/
 cp ../../img/processing_cover.gif ../../distribution/img/
 cp ../../img/about/people-header.gif ../../distribution/img/about/
 cp ../../content/api_en/images/header.gif ../../distribution/img/
 
-# run local reference creations files
+# move to folder for generating other files
 cd ../../generate/
+
+# run web reference creations files
+# the static pages are best run separately, the tools and libraries are run by the librarian
+#php staticpages.php
+#php tools.php
+#php libraries.php
+php environment.php
+
+# run local reference creations files
 php staticpages_local.php
 php tools_local.php
 php libraries_local.php
 php environment_local.php
+
