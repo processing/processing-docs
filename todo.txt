@@ -27,6 +27,7 @@ x Modify examples for Processing.js  --CR
 - Follow up with Processing.js team regarding Example ports  --CR
 - Mention examples are running with Processing.js  --CR
 - Remove "there are more examples" from individual pages and put in Index  --CR
+- Modify build script to work on Server to build Web examples  --CR
 
 Key:
 - To do
@@ -90,6 +91,7 @@ DAVID
 
 2.0 REFERENCE
 
+- Modify build script to work on Server  --CR
 - Parameter decisions  --BF,CR,SM
 - Parameter alignment (after above decisions)  --SM
 - New PNG images for reference for smooth() change  --SM
@@ -101,6 +103,10 @@ DAVID
 - implements example needed  --SM
 - look at example for red() to make clearer  --SM
 - null has a blank 'Examples'  --SM
+- enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
+- createInput() example  --SM
+- PGraphics link to developers reference  --SM
+- text() change at least one example to not require loadFont() and describe  --SM
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 - rounded rect()  --CR
@@ -155,7 +161,7 @@ x Done
 2.0 DOCUMENTATION
 
 - Prepare one-page document explaining Processing, 2.0 changes  --CR
-- Syntax highlighting  --CR
+- Syntax highlighting (see Issues above)  --CR
 - Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
 - Environment  --CR
 -   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
