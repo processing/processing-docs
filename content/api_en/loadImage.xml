@@ -18,13 +18,10 @@ image(b, 0, 0);
 <example>
 <image>loadImage_.jpg</image>
 <code><![CDATA[
-// Load an image with setup() and draw()
-
 PImage b;
 
 void setup() {
   b = loadImage("laDefense.jpg");
-  noLoop();
 }
 
 void draw() {
@@ -35,19 +32,19 @@ void draw() {
 
 
 <example>
+<image>loadImage_2.jpg</image>
 <code><![CDATA[
-// Load an image over a network
-
-PImage online;
+PImage webImg;
 
 void setup() {
   String url = "http://processing.org/img/processing_cover.gif";
-  online = loadImage(url, "png");
-  noLoop();
+  // Load image from a web server
+  webImg = loadImage(url, "png");
 }
 
 void draw() {
-  image(online, 0, 0);
+  background(0);
+  image(webImg, 0, 0);
 }
 ]]></code>
 </example>

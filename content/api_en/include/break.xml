@@ -28,7 +28,7 @@ switch(letter) {
 </example>
 
 <description><![CDATA[
-Ends the execution of a structure such as switch(), for(), or while() and jumps to the next statement after.
+Ends the execution of a structure such as <b>switch</b>, <b>for</b>, or <b>while</b> and jumps to the next statement after.
 ]]></description>
 
 <syntax></syntax>
@@ -37,9 +37,9 @@ Ends the execution of a structure such as switch(), for(), or while() and jumps 
 <returns></returns>
 
 <related>
-switch()
-for()
-while()
+switch
+for
+while
 </related>
 
 <availability>1.0</availability>

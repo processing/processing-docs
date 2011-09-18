@@ -45,7 +45,7 @@ Compares two expressions and returns <b>true</b> only if both evaluate to <b>tru
 <related>
 || (logical OR)
 ! (logical NOT)
-if()
+if
 </related>
 
 <availability>1.0</availability>

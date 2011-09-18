@@ -28,7 +28,7 @@ switch(letter) {
 </example>
 
 <description><![CDATA[
-Denotes the different labels to be evaluated with the parameter in the <b>switch()</b> structure.
+Denotes the different labels to be evaluated with the parameter in the <b>switch</b> structure.
 ]]></description>
 
 <syntax>
@@ -48,7 +48,7 @@ case <c>label</c>: <c>statements</c>
 <returns></returns>
 
 <related>
-switch()
+switch
 default
 break
 </related>

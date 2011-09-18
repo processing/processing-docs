@@ -63,7 +63,7 @@ void movieEvent(Movie m) {
 </example>
 
 <description><![CDATA[
-Called when a new movie frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one movie in the program, <b>movieEvent()</b> is called each time any of the movies has a new frame available. Use an <b>if()</b> to determine which movie is triggering the event. See the above example for implementation details.
+Called when a new movie frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one movie in the program, <b>movieEvent()</b> is called each time any of the movies has a new frame available. Use an <b>if</b> to determine which movie is triggering the event. See the above example for implementation details.
 ]]></description>
 
 <syntax>

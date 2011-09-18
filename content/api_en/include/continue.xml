@@ -21,7 +21,7 @@ for(int i = 0; i < 100; i += 10) {
 </example>
 
 <description><![CDATA[
-When run inside of a for() or while(), it skips the remainder of the block and starts the next iteration.
+When run inside of a <b>for</b> or <b>while</b>, it skips the remainder of the block and starts the next iteration.
 ]]></description>
 
 <syntax>
@@ -36,8 +36,8 @@ When run inside of a for() or while(), it skips the remainder of the block and s
 <returns></returns>
 
 <related>
-for()
-while()
+for
+while
 </related>
 
 <availability>1.0</availability>

@@ -41,7 +41,7 @@ Inverts the Boolean value of an expression. Returns <b>true</b> if the expressio
 <related>
 || (logical OR)
 &amp;&amp; (logical AND)
-if()
+if
 </related>
 
 <availability>1.0</availability>

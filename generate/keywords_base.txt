@@ -228,7 +228,24 @@ openStream	KEYWORD2	openStream_
 
 # KEYWORD2 specifies methods and functions
 
-cache	KEYWORD2		
+cache	KEYWORD2
+start	KEYWORD2
+stop	KEYWORD2
+breakShape	KEYWORD2
+createPath	KEYWORD2
+dataFile	KEYWORD2
+dataPath	KEYWORD2
+loadMatrix	KEYWORD2
+noHint	KEYWORD2
+parseBoolean	KEYWORD2
+parseByte	KEYWORD2
+parseChar	KEYWORD2
+parseFloat	KEYWORD2
+parseInt	KEYWORD2
+saveFile	KEYWORD2
+savePath	KEYWORD2
+sketchFile	KEYWORD2
+sketchPath	KEYWORD2
 
 
 # THE TEXT ABOVE IS HAND-WRITTEN AND FOUND IN THE FILE "keywords_base.txt"

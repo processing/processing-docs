@@ -31,7 +31,7 @@ void captureEvent(Capture myCapture) {
 </example>
 
 <description><![CDATA[
-Called when a new camera frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one capture device in the program, <b>captureEvent()</b> is called each time any of the devices has a new frame available. Use an <b>if()</b> within the function to determine which device is triggering the event.]]></description>
+Called when a new camera frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one capture device in the program, <b>captureEvent()</b> is called each time any of the devices has a new frame available. Use an <b>if</b> within the function to determine which device is triggering the event.]]></description>
 
 <syntax>
 void captureEvent(Capture <c>which</c>) {

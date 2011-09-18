@@ -42,7 +42,7 @@ Compares two expressions and returns <b>true</b> if one or both evaluate to <b>t
 <related>
 &amp;&amp; (logical AND)
 ! (logical NOT)
-if()
+if
 </related>
 
 <availability>1.0</availability>
