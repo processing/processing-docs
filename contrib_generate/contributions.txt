@@ -86,3 +86,14 @@ paragraph=Main features include: 1. Default interactivity through the mouse and
 version=5
 download=http://otrolado.info/proscene.zip
 
+library
+category=3D
+authorList=[Frederik Vanhoutte](http://www.wblut.com/)
+name=HE-Mesh
+sentence=He-Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
+url=http://hemesh.wblut.com/
+prettyVersion=1.50
+paragraph=
+version=5
+download=http://hemesh.wblut.com/hemesh-latest.zip
+
