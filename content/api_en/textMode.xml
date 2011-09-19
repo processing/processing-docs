@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>textMode()</name>
+
+<category>Typography</category>
+
+<subcategory>Attributes</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example to come 
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the way text draws to the screen. In the default configuration, the <b>MODEL</b> mode, it's possible to rotate, scale, and place letters in two and three dimensional space.<br />
+<br />
+The <b>SHAPE</b> mode draws text using the the glyph outlines of individual characters rather than as textures. This mode is only supported with the <b>PDF</b> and <b>P3D</b> renderer settings. With the <b>PDF</b> renderer, you must call <b>textMode(SHAPE)</b> before any other drawing occurs. If the outlines are not available, then <b>textMode(SHAPE)</b> will be ignored and <b>textMode(MODEL)</b> will be used instead.<br />
+<br />
+The <b>textMode(SHAPE)</b> option in <b>P3D</b> can be combined with <b>beginRaw()</b> to write vector-accurate text to 2D and 3D output files, for instance <b>DXF</b> or <b>PDF</b>. The <b>SHAPE</b> mode is not currently optimized for <b>P3D</b>, so if recording shape data, use <b>textMode(MODEL)</b> until you're ready to capture the geometry with <b>beginRaw()</b>.
+]]></description>
+
+</root>

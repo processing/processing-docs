@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>last()</name>
+
+<category>Serial</category>
+
+<subcategory>Serial</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example by Tom Igoe
+
+import processing.serial.*;
+
+Serial myPort;  // The serial port:
+
+void setup() {
+  // List all the available serial ports:
+  println(Serial.list());
+  // Open the port you are using at the rate you want:
+  myPort = new Serial(this, Serial.list()[0], 9600);
+}
+
+void draw() {
+  while (myPort.available() &gt; 0) {
+    int lastIn = myPort.last();
+    println(lastIn);
+  }
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns last byte received.
+]]></description>
+
+
+</root>

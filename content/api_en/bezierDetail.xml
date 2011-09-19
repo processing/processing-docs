@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>bezierDetail()</name>
+
+<category>Shape</category>
+
+<subcategory>Curves</subcategory>
+
+<example>
+<image>bezierDetail_.gif</image>
+<code><![CDATA[
+void setup() {
+  size(100, 100, P3D);
+  noFill();
+  noLoop();
+}
+
+void draw() {
+  bezierDetail(1);
+  bezier(85, 20, 10, 10, 90, 90, 15, 80);
+  stroke(126);
+  bezierDetail(3);
+  bezier(85, 20, 10, 10, 90, 90, 15, 80);
+  stroke(255);
+  bezierDetail(12);
+  bezier(85, 20, 10, 10, 90, 90, 15, 80);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the resolution at which Beziers display. The default value is 20. This function is only useful when using the P3D renderer as the default P2D renderer does not use this information.
+]]></description>
+
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>createInput()</name>
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<example>
+<image></image>
+<code></code>
+</example>
+
+
+<description><![CDATA[
+This is a function for advanced programmers to open a Java InputStream. It's useful if you want to use the facilities provided by PApplet to easily open files from the data folder or from a URL, but want an InputStream object so that you can use other parts of Java to take more control of how the stream is read.<br />
+<br />
+The filename passed in can be:<br />
+- A URL, for instance <b>openStream("http://processing.org/")</b><br />
+- A file in the sketch's <b>data</b> folder<br />
+- The full path to a file to be opened locally (when running as an application)<br />
+<br />
+If the requested item doesn't exist, null is returned. If not online, this will also check to see if the user is asking for a file whose name isn't properly capitalized. If capitalization is different, an error will be printed to the console. This helps prevent issues that appear when a sketch is exported to the web, where case sensitivity matters, as opposed to running from inside the Processing Development Environment on Windows or Mac OS, where case sensitivity is preserved but ignored.<br />
+<br />
+If the file ends with <b>.gz</b>, the stream will automatically be gzip decompressed. If you don't want the automatic decompression, use the related function <b>createInputRaw()</b>.
+<br />
+In earlier releases, this function was called <b>openStream()</b>.<br />
+<br />
+]]></description>
+
+<syntax>
+createInput(filename)
+</syntax>
+
+</root>

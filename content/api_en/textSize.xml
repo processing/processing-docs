@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>textSize()</name>
+
+<category>Typography</category>
+
+<subcategory>Attributes</subcategory>
+
+<example>
+<image>textSize_.gif</image>
+<code><![CDATA[
+PFont font;
+// The font must be located in the sketch's 
+// "data" directory to load successfully
+font = loadFont("FFScala-32.vlw"); 
+textFont(font, 32); 
+text("word", 15, 50); 
+textSize(14);
+text("word", 15, 70);
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the current font size. This size will be used in all subsequent calls to the <b>text()</b> function. Font size is measured in units of pixels.
+]]></description>
+
+</root>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>ip()</name>
+
+<category>Client</category>
+
+<subcategory>Client</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example by Tom Igoe
+
+import processing.net.*; 
+Client myClient;
+
+void setup() {
+  size(200, 200);
+  // Connect to the local machine at port 5204.
+  // This example will not run if you haven't
+  // previously started a server on this port
+  myClient = new Client(this, "127.0.0.1", 5204);
+  println(myClient.ip());
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the IP address of the computer to which the Client is attached.
+]]></description>
+
+
+</root>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>limit()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v = new PVector(10, 20, 2);
+v.limit(5);
+println(v);  // Prints "[ 2.2271771, 4.4543543, 0.4454354 ]"
+]]></code>
+</example>
+
+<description><![CDATA[
+Limit the magnitude of this vector to the value used for the <b>max</b> parameter.
+]]></description>
+
+</root>

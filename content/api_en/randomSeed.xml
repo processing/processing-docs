@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>randomSeed()</name>
+
+<category>Math</category>
+
+<subcategory>Random</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+randomSeed(0);
+for(int i=0; i &lt; 100; i++) {
+  float r = random(0, 255);
+  stroke(r);
+  line(i, 0, i, 100);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the seed value for <b>random()</b>. By default, <b>random()</b> produces different results each time the program is run. Set the <b>value</b> parameter to a constant to return the same pseudo-random numbers each time the software is run.
+]]></description>
+
+</root>

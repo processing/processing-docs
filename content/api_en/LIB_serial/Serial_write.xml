@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>write()</name>
+
+<category>Serial</category>
+
+<subcategory>Serial</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example by Tom Igoe
+
+import processing.serial.*;
+
+// The serial port:
+Serial myPort;
+
+// List all the available serial ports:
+println(Serial.list());
+
+// Open the port you are using at the rate you want:
+myPort = new Serial(this, Serial.list()[0], 9600);
+
+// Send a capital A out the serial port
+myPort.write(65);
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Writes bytes, chars, ints, bytes[], Strings to the serial port
+]]></description>
+
+
+</root>

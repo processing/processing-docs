@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>reverse()</name>
+
+<category>Data</category>
+
+<subcategory>Array Functions</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+String sa[] = { "OH ", "NY ", "MA ", "CA "};
+sa = reverse(sa);
+print(sa);  // Prints "CA MA NY OH "
+]]></code>
+</example>
+
+<description><![CDATA[
+Reverses the order of an array.
+]]></description>
+
+</root>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>Capture</name>
+
+<category>Video</category>
+
+<subcategory></subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.video.*;
+Capture myCapture;
+
+void setup() 
+{
+  size(200, 200);
+
+  // The name of the capture device is dependent on
+  // the cameras that are currently attached to your 
+  // computer. To get a list of the 
+  // choices, uncomment the following line 
+  // println(Capture.list());
+  
+  // To select the camera, replace "Camera Name" 
+  // in the next line with one from Capture.list()
+  // myCapture = new Capture(this, width, height, "Camera Name", 30);
+  
+  // This code will try to use the camera last used
+  myCapture = new Capture(this, width, height, 30);
+}
+
+void captureEvent(Capture myCapture) {
+  myCapture.read();
+}
+
+void draw() {
+  image(myCapture, 0, 0);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Datatype for storing and manipulating video frames from an attached capture device such as a camera. Use <b>Capture.list()</b> to show the names of any attached devices. Using the version of the constructor without <b>name</b> will attempt to use the last device used by a QuickTime program.
+]]></description>
+
+</root>

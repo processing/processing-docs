@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>specular()</name>
+
+<category>Lights, Camera</category>
+
+<subcategory>Material Properties</subcategory>
+
+<example>
+<image>specular_.jpg</image>
+<code><![CDATA[
+size(100, 100, P3D);
+background(0);
+noStroke();
+background(0);
+fill(0, 51, 102);
+lightSpecular(255, 255, 255);
+directionalLight(204, 204, 204, 0, 0, -1);
+translate(20, 50, 0);
+specular(255, 255, 255);
+sphere(30);
+translate(60, 0, 0);
+specular(204, 102, 0);
+sphere(30);
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the specular color of the materials used for shapes drawn to the screen, which sets the color of hightlights. Specular refers to light which bounces off a surface in a perferred direction (rather than bouncing in all directions like a diffuse light). Used in combination with <b>emissive()</b>, <b>ambient()</b>, and <b>shininess()</b> in setting the material properties of shapes.
+]]></description>
+
+</root>

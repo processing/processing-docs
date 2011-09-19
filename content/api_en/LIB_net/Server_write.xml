@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>write()</name>
+
+<category>Server</category>
+
+<subcategory></subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.net.*;
+
+Server myServer;
+int port = 5204;
+int val = 0;
+
+void setup() {
+  size(200, 200);
+  // Starts a myServer on port 5204
+  myServer = new Server(this, port);
+}
+
+void draw() {
+  val = val + 1;
+  background(val);
+  myServer.write(val);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Writes a value to all the connected clients. It sends bytes out from the Server object.
+]]></description>
+
+
+</root>

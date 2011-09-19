@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>float</name>
+
+<category>Data</category>
+
+<subcategory>Primitive</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+float a;           // Declare variable "a" of type float
+a = 1.5387;        // Assign "a" the value 1.5387
+float b = -2.984;  // Declare variable "b" and assign it the value -2.984
+float c = a + b;   // Declare variable "c" and assign it the sum of "a" and "b"
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+float f = 0;
+for (int i = 0 ; i &lt; 100000; i++) {  
+  f = f + 0.0001;  // Bad idea! see below.
+}
+
+int count = 0;
+for (int i = 0; i &lt; 100000; i++) {
+  // The variable "f" will work better here, less affected by rounding
+  float f = i / 1000.0;  // count by thousandths
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Data type for floating-point numbers, a number that has a decimal point. 
+<br/>
+Floats are not precise, so avoid adding small values (such as 0.0001) may not always increment because of rounding error. If you want to increment a value in small intervals, use an int, and divide by a float value before using it. (See above example.)<br />
+<br />
+Floating-point numbers can be as large as 3.40282347E+38 and as low as -3.40282347E+38. They are stored as 32 bits (4 bytes) of information. The float data type is inherited from Java, and you can read more about the technical details <a href="http://download.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a> or <a href="http://java.sun.com/docs/books/jls/third_edition/html/typesValues.html#4.2.3">here</a>.<br />
+<br />
+Processing supports the 'double' datatype from Java as well, however it is not documented because none of the Processing functions use double values, which are overkill for nearly all work created in Processing and use more memory. We do not plan to support doubles, as it would require increasing the number of API functions significantly.
+]]></description>
+
+<syntax>
+float <c>var</c>
+float <c>var</c> = <c>value</c>
+</syntax>
+
+<parameter>
+<label>var</label>
+<description><![CDATA[variable name referencing the float]]></description>
+</parameter>
+
+<parameter>
+<label>value</label>
+<description><![CDATA[any floating-point value]]></description>
+</parameter>
+
+<returns></returns>
+
+<related>
+int
+</related>
+
+<availability>1.0</availability>
+
+<type>Datatype</type>
+
+<partof>PDE</partof>
+
+</root>

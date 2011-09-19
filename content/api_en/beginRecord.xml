@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>beginRecord()</name>
+
+<category>Output</category>
+
+<subcategory>Files</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.pdf.*;
+
+void setup() {
+  size(400, 400);
+  beginRecord(PDF, "everything.pdf");
+}
+
+void draw() {
+  ellipse(mouseX, mouseY, 10, 10);
+}
+
+void mousePressed() {
+  endRecord();
+  exit();
+} 
+]]></code>
+</example>
+
+<description><![CDATA[
+Opens a new file and all subsequent drawing functions are echoed to this file as well as the display window. The <b>beginRecord()</b> function requires two parameters, the first is the renderer and the second is the file name. This function is always used with <b>endRecord()</b> to stop the recording process and close the file.
+<br /> <br />
+Note that beginRecord() will only pick up any settings that happen after it has been called. For instance, if you call textFont() before beginRecord(), then that font will not be set for the file that you're recording to. 
+]]></description>
+
+</root>

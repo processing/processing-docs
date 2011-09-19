@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>XMLElement</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+// The following short XML file called "sites.xml" is parsed 
+// in the code below. It must be in the project's "data" directory
+// &#60;?xml version="1.0"?&#62;
+// &#60;websites&#62;
+//   &#60;site id="0" url="processing.org"&#62;Processing&#60;/site&#62;
+//   &#60;site id="1" url="mobile.processing.org"&#62;Processing Mobile&#60;/site&#62;
+// &#60;/websites&#62;
+
+XMLElement xml;
+
+void setup() {
+  size(200, 200);
+  xml = new XMLElement(this, "sites.xml");
+  int numSites = xml.getChildCount();
+  for (int i = 0; i &lt; numSites; i++) {
+    XMLElement kid = xml.getChild(i);
+    int id = kid.getInt("id"); 
+    String url = kid.getString("url"); 
+    String site = kid.getContent();
+    println(id + " : " + url + " : " + site);    
+  }
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+XMLElement is a representation of an XML object. The object is able to parse XML code. The methods described here are the most basic. More are documented in the Developer's Reference.
+<br/> <br/>
+The encoding parameter inside XML files is ignored, only UTF-8 (or plain ASCII) are parsed properly.
+]]></description>
+
+</root>

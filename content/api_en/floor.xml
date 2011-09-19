@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>floor()</name>
+
+<category>Math</category>
+
+<subcategory>Calculation</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+float x = 2.88;  
+int a = floor(x);  // Set "a" to 2
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates the closest int value that is less than or equal to the value of the parameter.
+]]></description>
+
+</root>

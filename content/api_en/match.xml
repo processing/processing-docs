@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>match()</name>
+
+<category>Data</category>
+
+<subcategory>String Functions</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+String s = "Inside a tag, you will find &lt;tag&gt;content&lt;/tag&gt;.";
+String[] m = match(s, "&lt;tag&gt;(\\\\S+)&lt;/tag&gt;");
+println("Found " + m[1] + " inside the tag.");
+// Prints "Found content inside the tag." to the console
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+String s1 = "Have you ever heard of a thing called fluoridation. 
+             Fluoridation of water?";
+String s2 = "Uh? Yes, I-I have heard of that, Jack, yes. Yes.";
+
+String[] m1 = match(s1, "fluoridation");
+if (m1 != null) {
+  // This will print to the console.
+  println("Found a match in '" + s1 + "'");  
+} else {
+  println("No match found in '" + s1 + "'");
+}
+
+String[] m2 = match(s2, "fluoridation");
+if (m2 != null) {
+  println("Found a match in '" + s2 + "'");
+} else {
+  // This will print to the console.
+  println("No match found in '" + s2 + "'");  
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+The match() function is used to apply a regular expression to a piece of text, and return matching groups (elements found inside parentheses) as a String array. No match will return null. If no groups are specified in the regexp, but the sequence matches, an array of length one (with the matched text as the first element of the array) will be returned.<br />
+<br />
+To use the function, first check to see if the result is null. If the result is null, then the sequence did not match. If the sequence did match, an array is returned. 
+If there are groups (specified by sets of parentheses) in the regexp, then the contents of each will be returned in the array.  
+Element [0] of a regexp match returns the entire matching string, and the match groups start at element [1] (the first group is [1], the second [2], and so on).<br />
+<br />
+The syntax can be found in the reference for Java's <a href="http://download.oracle.com/javase/6/docs/api/">Pattern</a> class. For regular expression syntax, read the <a href="http://download.oracle.com/javase/tutorial/essential/regex/">Java Tutorial</a> on the topic.
+]]></description>
+
+</root>

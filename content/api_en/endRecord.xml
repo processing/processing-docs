@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>endRecord()</name>
+
+<category>Output</category>
+
+<subcategory>Files</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.pdf.*;
+
+void setup() {
+  size(400, 400);
+  beginRecord(PDF, "everything.pdf");
+}
+
+void draw() {
+  ellipse(mouseX, mouseY, 10, 10);
+}
+
+void mousePressed() {
+  endRecord();
+  exit();
+} 
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops the recording process started by <b>beginRecord()</b> and closes the file.
+]]></description>
+
+</root>

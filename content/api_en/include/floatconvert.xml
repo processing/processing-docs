@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>float()</name>
+
+<category>Data</category>
+
+<subcategory>Conversion</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+int i = 65;
+float f = float(i);
+println(i + " : " + f);  // Prints "65 : 65.0"
+]]></code>
+</example>
+
+<description><![CDATA[
+Converts an int, string, or array to its floating point representation.
+]]></description>
+
+</root>

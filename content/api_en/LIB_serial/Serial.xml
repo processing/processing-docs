@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Serial</name>
+
+<category>Net</category>
+
+<subcategory></subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example by Tom Igoe
+
+import processing.serial.*;
+
+// The serial port:
+Serial myPort;       
+
+// List all the available serial ports:
+println(Serial.list());
+
+// Open the port you are using at the rate you want:
+myPort = new Serial(this, Serial.list()[0], 9600);
+  
+// Send a capital A out the serial port:
+myPort.write(65);
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Class for sending and receiving data using the serial communication protocol.
+]]></description>
+
+
+</root>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Client</name>
+
+<category>Net</category>
+
+<subcategory></subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.net.*; 
+Client myClient; 
+int dataIn; 
+ 
+void setup() { 
+  size(200, 200); 
+  // Connect to the local machine at port 5204.
+  // This example will not run if you haven't
+  // previously started a server on this port
+  myClient = new Client(this, "127.0.0.1", 5204); 
+} 
+ 
+void draw() { 
+  if (myClient.available() &gt; 0) { 
+    dataIn = myClient.read(); 
+  } 
+  background(dataIn); 
+} 
+
+]]></code>
+</example>
+
+<description><![CDATA[
+A client connects to a server and sends data back and forth. If anything goes wrong with the connection, for example the host is not there or is listening on a different port, an exception is thrown.
+]]></description>
+
+
+</root>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<root>
+
+<name>PImage</name>
+
+<category>Image</category>
+
+<subcategory>PImage</subcategory>
+
+<example>
+<image>PImage.jpg</image>
+<code><![CDATA[
+PImage b;
+
+void setup() {
+  b = loadImage("laDefense.jpg");
+}
+
+void draw() {
+  image(b, 0, 0);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Datatype for storing images. Processing can display <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, and <b>.png</b> images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the <b>loadImage()</b> function. The <b>PImage</b> class contains fields for the <b>width</b> and <b>height</b> of the image, as well as an array called <b>pixels[]</b> that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.<br/>
+<br/>
+Before using the <b>pixels[]</b> array, be sure to use the <b>loadPixels()</b> method on the image to make sure that the pixel data is properly loaded.<br/>
+<br/>
+To create a new image, use the <b>createImage()</b> function. Do not use the syntax <b>new PImage()</b>. 
+]]></description>
+
+</root>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>directionalLight()</name>
+
+<category>Lights, Camera</category>
+
+<subcategory>Lights</subcategory>
+
+<example>
+<image>directionalLight_.jpg</image>
+<code><![CDATA[
+size(100, 100, P3D);
+background(0);
+noStroke();
+directionalLight(51, 102, 126, -1, 0, 0);
+translate(20, 50, 0);
+sphere(30);
+]]></code>
+</example>
+
+<example>
+<image>directionalLight_2.jpg</image>
+<code><![CDATA[
+size(100, 100, P3D);
+background(0);
+noStroke();
+directionalLight(51, 102, 126, 0, -1, 0);
+translate(80, 50, 0);
+sphere(30);
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Adds a directional light. Directional light comes from one direction and is stronger when hitting a surface squarely and weaker if it hits at a a gentle angle. After hitting a surface, a directional lights scatters in all directions. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The affect of the <b>v1</b>, <b>v2</b>, and <b>v3</b> parameters is determined by the current color mode. The <b>nx</b>, <b>ny</b>, and <b>nz</b> parameters specify the direction the light is facing. For example, setting <b>ny</b> to -1 will cause the geometry to be lit from below (the light is facing directly upward).
+]]></description>
+
+</root>

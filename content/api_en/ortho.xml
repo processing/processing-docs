@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>ortho()</name>
+
+<category>Lights, Camera</category>
+
+<subcategory>Camera</subcategory>
+
+<example>
+<image>ortho_.gif</image>
+<code><![CDATA[
+size(100, 100, P3D);
+noFill();
+ortho(0, width, 0, height, -10, 10);
+translate(100, 100, 0);
+rotateX(-PI/6);
+rotateY(PI/3);
+box(45);
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets an orthographic projection and defines a parallel clipping volume. All objects with the same dimension appear the same size, regardless of whether they are near or far from the camera. The parameters to this function specify the clipping volume where left and right are the minimum and maximum x values, top and bottom are the minimum and maximum y values, and near and far are the minimum and maximum z values. If no parameters are given, the default is used: ortho(0, width, 0, height, -10, 10).
+]]></description>
+
+</root>

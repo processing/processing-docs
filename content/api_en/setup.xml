@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>setup()</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(200, 200);
+  background(0);
+  noStroke();
+  fill(102);
+}
+
+int a = 0;
+
+void draw() {
+  rect(a++%width, 10, 2, 80); 
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>setup()</b> function is called once when the program starts. It's used to define initial 
+enviroment properties such as screen size and background color and to load media such as images
+and fonts as the program starts. There can only be one <b>setup()</b> function for each program and 
+it shouldn't be called again after its initial execution. Note: Variables declared within 
+<b>setup()</b> are not accessible within other functions, including <b>draw()</b>. 
+]]></description>
+
+</root>

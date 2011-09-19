@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>noCursor()</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Press the mouse to hide the cursor
+void draw() 
+{
+  if(mousePressed == true) {
+    noCursor();
+  } else {
+    cursor(HAND);
+  }
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Hides the cursor from view. Will not work when running the program in a web browser or when running in full screen (Present) mode.
+]]></description>
+
+</root>

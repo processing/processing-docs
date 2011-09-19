@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>applyMatrix()</name>
+
+<category>Transform</category>
+
+<subcategory></subcategory>
+
+<example>
+<image>applyMatrix_.gif</image>
+<code><![CDATA[
+size(100, 100, P3D);
+noFill();
+translate(50, 50, 0);
+rotateY(PI/6); 
+stroke(153);
+box(35);
+// Set rotation angles
+float ct = cos(PI/9.0);
+float st = sin(PI/9.0);          
+// Matrix for rotation around the Y axis
+applyMatrix(  ct, 0.0,  st,  0.0,
+             0.0, 1.0, 0.0,  0.0,
+             -st, 0.0,  ct,  0.0,
+             0.0, 0.0, 0.0,  1.0);  
+stroke(255);
+box(50);
+]]></code>
+</example>
+
+<description><![CDATA[
+Multiplies the current matrix by the one specified through the parameters. This is very slow because it will try to calculate the inverse of the transform, so avoid it whenever possible. The equivalent function in OpenGL is glMultMatrix().
+]]></description>
+
+</root>
