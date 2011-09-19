@@ -71,18 +71,7 @@ li { margin-bottom: 1em; }
 <p>&nbsp;</p>
 
      <p><b>Generate Reference Files</b></p>
-     <!--<p><form action="#" method="post" onsubmit="new Ajax.Updater('status', 'svn_update.php',                      
-                    { asynchronous: true, parameters: Form.serialize(this), onLoading: showloading }); return false;">
-                        <select name="lang">
-     <?
-      foreach ($LANGUAGES as $code => $array) {
-        echo "\t\t\t\t<option value=\"$code\">$array[0]</option>\n";
-      }
-      ?>
-                        </select> 
-                        <input type="submit" value="Update XML files from SVN" />
-                </form>
-        </p>-->
+     
     <p>
 			<form action="#" method="post" onsubmit="new Ajax.Updater('status', 'reference.php', 
 			    { asynchronous: true, parameters: Form.serialize(this), onLoading: showloading }); return false;">
