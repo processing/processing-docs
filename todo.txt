@@ -63,11 +63,9 @@ DAVID
 
 - Everything in "includes" HTML files has a Class field at the top of the HTML (except classes are correct)
   See web/distribution/false.html for an example.
-
-- For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
-  link including the class name. For example see web/distribution/arc_.html and see the links in Related
   
 - for() and while() 
+	what about them?
   
 - How to make a reference for captureEvent() etc in the Libraries
 	Complete list of functions not found in libraries:
@@ -82,6 +80,9 @@ DAVID
 	e.g. shorten(), splice(), and sort()
 	*Also happens in libraries e.g. Network Library - Server Class - write()
 DONE:
+X For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
+  link including the class name. For example see web/distribution/arc_.html and see the links in Related
+	restored PGraphics and PImage -rootclass flags in processingrefBuild.sh
 X 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
 	this was due to using the actual parameter type in reference
 	now replacing 'long' with 'int' in all reference materials

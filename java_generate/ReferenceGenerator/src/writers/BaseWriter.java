@@ -70,7 +70,8 @@ public class BaseWriter {
 	{
 		String ret = getAnchorFromName(getName(doc));
 		
-		if(doc.containingClass() != null && !Shared.i().isRootLevel(doc.containingClass())){
+		if(doc.containingClass() != null && !Shared.i().isRootLevel(doc.containingClass()))
+		{
 			ret = doc.containingClass().name() + "_" + ret;
 		}
 		
