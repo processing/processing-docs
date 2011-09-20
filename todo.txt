@@ -74,22 +74,22 @@ DAVID
 	e.g. shorten(), splice(), and sort()
 	*Also happens in libraries e.g. Network Library - Server Class - write()
 DONE:
-X The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
+x The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
   This only affects PrintWriter, BufferedReader, String, the only in "includes" with methods
 
-X Everything in "includes" HTML files has a Class field at the top of the HTML (except classes are correct)
+x Everything in "includes" HTML files has a Class field at the top of the HTML (except classes are correct)
   See web/distribution/false.html for an example.
 	removed instances of "class Structure" and the like
 
-X For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
+x For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
   link including the class name. For example see web/distribution/arc_.html and see the links in Related
 	restored PGraphics and PImage -rootclass flags in processingrefBuild.sh
-X 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
+x 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
 	this was due to using the actual parameter type in reference
 	now replacing 'long' with 'int' in all reference materials
 	also replacing 'double' with 'float'
 	types are being filtered through the BaseWriter::getSimplifiedType() method
-X Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
+$ Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
   Capital letters should be integrated with the lowercase letters, rather than at the beginning.
 
 // // // // // // // // // // // // // // // // // // // // //
