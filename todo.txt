@@ -57,9 +57,6 @@ x Done
 2.0 REFERENCE ENGINE
 
 DAVID
-
-- The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
-  This only affects PrintWriter, BufferedReader, String, the only in "includes" with methods
   
 - for() and while() 
 	what about them?
@@ -77,6 +74,9 @@ DAVID
 	e.g. shorten(), splice(), and sort()
 	*Also happens in libraries e.g. Network Library - Server Class - write()
 DONE:
+X The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
+  This only affects PrintWriter, BufferedReader, String, the only in "includes" with methods
+
 X Everything in "includes" HTML files has a Class field at the top of the HTML (except classes are correct)
   See web/distribution/false.html for an example.
 	removed instances of "class Structure" and the like

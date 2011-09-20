@@ -74,6 +74,14 @@ public class XMLReferenceWriter extends BaseWriter {
 			String name = (String) xpath.evaluate("//name", doc, XPathConstants.STRING);
 			String description = (String) xpath.evaluate("//description", doc, XPathConstants.STRING);
 			String syntax = (String) xpath.evaluate("//syntax", doc, XPathConstants.STRING);
+			String classname = (String) xpath.evaluate("//classname", doc, XPathConstants.STRING);
+			String classAnchor = "";
+			
+			if( subcategory.equals("Method") )
+			{
+				classname = category;
+				classAnchor = getAnchorFromName( classname );
+			}
 			
 			String constructors = getConstructors( xpath, doc );
 			
@@ -104,6 +112,8 @@ public class XMLReferenceWriter extends BaseWriter {
 			vars.put("parameters", getParameters(doc, "" ));
 			vars.put("related", getRelated(doc));
 			vars.put( "constructors", constructors );
+			vars.put( "classname", classname );
+			vars.put( "classanchor", classAnchor );
 			
 			vars.put( "category",  category );
 			vars.put( "subcategory", subcategory );
