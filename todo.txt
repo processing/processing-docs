@@ -58,10 +58,8 @@ x Done
 
 DAVID
   
-- for() and while() 
-	what about them?
-  
 - How to make a reference for captureEvent() etc in the Libraries
+	will approach with .xml files, like include/ for boolean/true/while/etc.
 	Complete list of functions not found in libraries:
 		1.Video
 			Everything in "Capture Class", "Video Events"
@@ -72,8 +70,11 @@ DAVID
 			
 - Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
 	e.g. shorten(), splice(), and sort()
+	*parameter types are being omitted
 	*Also happens in libraries e.g. Network Library - Server Class - write()
 DONE:
+x for() and while() 
+
 x The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
   This only affects PrintWriter, BufferedReader, String, the only in "includes" with methods
 
