@@ -1,38 +1,57 @@
 <?
-
 define('CURATED_PER_PAGE', 12);
+
 define('NETWORK_FIRST_PAGE', 25);
+
 define('NETWORK_PER_PAGE', 90);
 
+
 if (!defined('SUBMIT')) {
-    require('../config.php');
+	require('../config.php');
+
 }
 require(GENERATEDIR.'lib/Curated.class.php');
 
+
 // update the files on the server via SVN
 
+
 // look for the .subversion folder somewhere else
+
 // otherwise will go looking for /home/root/.subversion or some other user
 $source = CONTENTDIR;
 $path = BASEDIR;
+
 $where = CONTENTDIR;
+
 $there = CONTENTDIR;
+
+
 putenv('HOME=' . CONTENTDIR);
 
+
 `cd $there && /usr/bin/svn update curated.xml`;
+
 `cd $there && /usr/bin/svn update curated_images/`;
+
 
 
 // Copy over the images for the tutorials index
 if (!is_dir($path.'exhibition/images')) { 
+	
 	mkdir($path.'exhibition/images', '0757'); 
+
 }
+
 if (is_dir($path.'exhibition/images')) { 
 	copydirr($source.'curated_images', $path.'exhibition/images', null, 0757, true);
+
 }
+
 
 
 /******************************************** CURATED ***/
+
 
 function get_curated($curated, $start = 0, $num = 12)
 {
