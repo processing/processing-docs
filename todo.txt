@@ -66,9 +66,6 @@ DAVID
 
 - For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
   link including the class name. For example see web/distribution/arc_.html and see the links in Related
-
-- Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
-  Capital letters should be integrated with the lowercase letters, rather than at the beginning.
   
 - for() and while() 
   
@@ -86,6 +83,10 @@ DAVID
 	*Also happens in libraries e.g. Network Library - Server Class - write()
 	
 - 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
+
+DONE:
+X Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
+  Capital letters should be integrated with the lowercase letters, rather than at the beginning.
 
 // // // // // // // // // // // // // // // // // // // // //
 

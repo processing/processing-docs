@@ -31,7 +31,7 @@ public class IndexWriter extends BaseWriter {
 		for(String key : sections.keySet()){
 			String value = "";
 			//make things alphabetical in their sections
-			Collections.sort(sections.get(key));
+			Collections.sort( sections.get(key), String.CASE_INSENSITIVE_ORDER );
 			
 			for(String s : sections.get(key))
 			{
@@ -58,7 +58,7 @@ public class IndexWriter extends BaseWriter {
 			}
 		}
 		
-		Collections.sort(all);
+		Collections.sort(all, String.CASE_INSENSITIVE_ORDER );
 		String value = "";
 		float numColumns = 3.0f;
 		int currentColumn = 0;
