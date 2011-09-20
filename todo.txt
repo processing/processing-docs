@@ -81,10 +81,12 @@ DAVID
 - Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
 	e.g. shorten(), splice(), and sort()
 	*Also happens in libraries e.g. Network Library - Server Class - write()
-	
-- 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
-
 DONE:
+X 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
+	this was due to using the actual parameter type in reference
+	now replacing 'long' with 'int' in all reference materials
+	also replacing 'double' with 'float'
+	types are being filtered through the BaseWriter::getSimplifiedType() method
 X Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
   Capital letters should be integrated with the lowercase letters, rather than at the beginning.
 

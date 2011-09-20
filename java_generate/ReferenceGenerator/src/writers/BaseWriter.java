@@ -99,7 +99,8 @@ public class BaseWriter {
 		if(doc.containingClass() != null){
 			for(MethodDoc m : doc.containingClass().methods()){
 				if(m.name().equals(doc.name()) && m.returnType() != doc.returnType()){
-					String name = importedName(m.returnType().toString());
+					String name = getSimplifiedType( importedName(m.returnType().toString()) );
+					
 					if( ! ret.contains( name ))
 					{						
 						ret += " or " + name;
@@ -108,6 +109,14 @@ public class BaseWriter {
 			}
 		} 
 		return ret;
+	}
+	
+	protected static String getSimplifiedType( String str )
+	{
+		if( str.equals("long") ){ return "int"; }
+		if( str.equals("double") ){ return "float"; }
+		
+		return str;
 	}
 	
 	protected static String getName(Doc doc) { // handle
@@ -525,7 +534,7 @@ public class BaseWriter {
 	protected static ArrayList<HashMap<String, String>> parseParameters(ExecutableMemberDoc doc){
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
 		for( Parameter param : doc.parameters()){
-			String type = importedName(param.type().toString()).concat(": "); 
+			String type = getSimplifiedType( importedName(param.type().toString()) ).concat(": "); 
 			String name = param.name();
 			String desc = "";
 
