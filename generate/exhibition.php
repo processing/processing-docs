@@ -59,52 +59,36 @@ function get_curated($curated, $start = 0, $num = 12)
 {
     // output html
     $html = '<table width="448" cellspacing="0" cellpadding="0" border="0">';
-    
     $j = 0;
-    
     for ($i = $start; $i < $start+$num; $i++) {
+    	if ($curated[$i]) {
     
-        if ($curated[$i]) {
-    
-            if ($j % 2 == 0) $html .= '<tr>';
+   	if ($j % 2 == 0) $html .= '<tr>';
             $html .= '<td>' . $curated[$i]->display() . '</td>';
             if ($j % 2 != 0) $html .= '</tr>';
-            
             $j++;
-            
         }
-            
     }
-            
     if ($j % 2 != 0) $html .= '<td>&nbsp;</td></tr>';
     return $html . '</table>';
 }
 
 function get_curated_one($curated, $start = 0, $num = 12)
 {
+	// output html
+	$html = '<table width="224" cellspacing="0" cellpadding="0" border="0">';
+	$j = 0;
+	for ($i = $start; $i < $start+$num; $i++) {
+		if ($curated[$i]) {
+			$html .= '<tr>';
 
-    // output html
+			$html .= '<td>' . $curated[$i]->display() . '</td>';
+			$html .= '</tr>';
+			$j++;
+		}
+	}
 
-    $html = '<table width="224" cellspacing="0" cellpadding="0" border="0">';
-
-    $j = 0;
-
-    for ($i = $start; $i < $start+$num; $i++) {
-
-      if ($curated[$i]) {
-
-        $html .= '<tr>';
-
-	$html .= '<td>' . $curated[$i]->display() . '</td>';
-        $html .= '</tr>';
-
-        $j++;
-
-      }
-
-    }
-
-    // if ($j % 2 != 0) $html .= '<td>&nbsp;</td></tr>';
+   // if ($j % 2 != 0) $html .= '<td>&nbsp;</td></tr>';
 
    return $html . '</table>';
 
@@ -137,6 +121,7 @@ function get_curated_three($curated, $start = 0, $num = 12)
   if ($j % 3 == 1) $html .= '<td>&nbsp;</td></tr>';
 
   if ($j % 3 == 2) $html .= '<td>&nbsp;</td><td>&nbsp;</td></tr>';
+
   return $html . '</table>';
 }
 
