@@ -126,7 +126,6 @@ public class XMLReferenceWriter extends BaseWriter {
 			}
 			else
 			{
-				vars.put( "classname", category );
 				templateWriter.write("Generic.template.html", vars, anchor);
 			}
 			
