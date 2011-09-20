@@ -127,11 +127,11 @@ function get_curated_three($curated, $start = 0, $num = 12)
 
 function get_curated_short()
 {
-    $curated = curated_xml(5);
+    $curated = curated_xml(4);
     
     // output html
     foreach ($curated as $c) {
-        $html .= $c->display_short();
+        $html .= $c->display_short_home();
     }
     return $html;
 }

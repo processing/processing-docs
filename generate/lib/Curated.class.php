@@ -38,9 +38,9 @@ class Curated
         $this->description = innerHTML($xml, 'description');
         $this->location = getValue($xml, 'location');
         
-		$links			= $xml->getElementsByTagName('link');
+		$links = $xml->getElementsByTagName('link');
 		
-		$links			= $links->toArray();
+		$links = $links->toArray();
 		
 		foreach($links as $link) {
 			
@@ -49,26 +49,45 @@ class Curated
 		}
     }
     
-    function display()
+    function display()                                   
     {
-        $html = $this->display_piece();
+        
+    	$html = $this->display_piece();
         $html .= "\t<p>{$this->description}</p><p>Links: \n";
-	$linkcount = count($links);
-	$ii = 0;
-	foreach ($this->links as $link) {
-           if ($ii > 0) {
-              $html .= sprintf(", ");
-            } 
-            $html .= sprintf("<a href=\"%s\">%s</a>", $link['href'], $link['title']);
-	    $ii++;
-        }
+		$linkcount = count($links);
+	
+		$ii = 0;
+	
+		foreach ($this->links as $link) {
+        	if ($ii > 0) {
+              
+        		$html .= sprintf(", ");
+            
+        	} 
+            
+        	$html .= sprintf("<a href=\"%s\">%s</a>", $link['href'], $link['title']);
+	    	$ii++;
+        
+	    }
         $html .= "</p></div>\n\n";
         return $html;
     }
     
     
     
+    function display_short_home()
+    
+    {
+        
+    	$html = $this->display_piece_home();
+        
+    	$html .= "</div>\n\n";
+        return $html;
+    
+    }
+    
     function display_short()
+    
     {
         
     	$html = $this->display_piece();
@@ -78,41 +97,22 @@ class Curated
     
     }
     
-	function display_piece()
-    {
-        //$link = sprintf("<a href=\"%s\" onclick=\"javascript:MM_openBrWindow(this.href,'%s','menubar=yes,location=yes,
-        
-        //                 status=yes,scrollbars=%s,resizable=%s,width=%d,height=%d');return false;\">",
-        
-        //                $this->location, $this->name, $this->scroll, $this->resize, $this->width, $this->height);
-        
-        
-        // Removed window open link 20 Sep 2011  --CR
-        //$link = sprintf("<a href=\"%s\" onclick=\"javascript:MM_openBrWindow(this.href,'%s',''toolbar=yes,
-        				 
-        //status=yes,
-        				 
-        //scrollbars=yes,
-        				 
-        //menubar=yes,
-        				 
-        //location=yes,
-                         
-        //status=yes,
-                         
-        //resizable=yes,
-                         
-        //width=%d,height=%d');return false;\">",
-                         
-        //$this->location, $this->name, $this->width, $this->height);
- 
-        
-        $link = sprintf("<a href=\"%s\">",
-                         
-        $this->location, $this->name, $this->width, $this->height);
+    function display_piece_home()
+    {        
+        $link = sprintf("<a href=\"%s\">", $this->location);
         $html  = "<div class=\"curated-item\">\n";
         $html .= "\t$link<img src=\"/exhibition/{$this->image}\" width=\"223\" height=\"72\" alt=\"preview image\" title=\"{$this->name} by {$this->by}\" /></a>\n";
         $html .= "\t<p>$link{$this->name}</a><br />\n";
+        $html .= "\tby {$this->by}</p>\n";
+        return $html;
+    }
+    
+	function display_piece()
+    {       
+        $link = sprintf("<a href=\"%s\">", $this->location);
+        $html  = "<div class=\"curated-item\">\n";
+        $html .= "\t$link<img src=\"/exhibition/{$this->image}\" width=\"223\" height=\"72\" alt=\"preview image\" title=\"{$this->name} by {$this->by}\" /></a>\n";
+        $html .= "\t<br /><p>$link{$this->name}</a><br />\n";
         $html .= "\tby {$this->by}</p>\n";
         return $html;
     }
