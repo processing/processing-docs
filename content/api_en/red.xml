@@ -7,20 +7,26 @@
 <subcategory>Creating &amp; Reading</subcategory>
 
 <example>
-<image>red_.gif</image>
+<image>red_.png</image>
 <code><![CDATA[
-noStroke();
-color c = color(0, 126, 255);
-fill(c);
-rect(15, 20, 35, 60);
-float value = red(c);  // Sets "value" to "0"
-fill(value);
-rect(50, 20, 35, 60);
+	color c = color(255, 204, 0);  // Define color 'c'
+	fill(c);  // Use color variable 'c' as fill color
+	rect(15, 20, 35, 60);  // Draw left rectangle
+		
+	float redValue = red(c);  // Set 'redValue' to the red value of 'c'
+	println(redValue);  // Print "255.0"
+	fill(redValue, 0, 0);  // Use 'redValue' as part of new fill color
+	rect(50, 20, 35, 60);  // Draw right rectangle
 ]]></code>
 </example>
 
 <description><![CDATA[
-Extracts the red value from a color, scaled to match current <b>colorMode()</b>. This value is always returned as a  float so be careful not to assign it to an int value.<br /><br />The red() function is easy to use and undestand, but is slower than another technique. To achieve the same results when working in <b>colorMode(RGB, 255)</b>, but with greater speed, use the &gt;&gt; (right shift) operator with a bit mask. For example, the following two lines of code are equivalent:<br /><pre>float r1 = red(myColor);<br />float r2 = myColor &gt;&gt; 16 &amp; 0xFF;</pre>
+	Extracts the red value from a color, scaled to match current <b>colorMode()</b>. The value is always returned as a float, so be careful not to assign it to an int value.<br />
+	<br />
+	The <b>red()</b> function is easy to use and understand, but it is slower than a technique called bit shifting. When working in <b>colorMode(RGB, 255)</b>, you can acheive the same results as <b>red()</b> but with greater speed by using the right shift operator (<b>>></b>) with a bit mask. For example, the following two lines of code are equivalent means of getting the red value of the color value <b>c</b>:<br />
+	<br />
+	<pre>float r1 = red(c);  // Simpler, but slower to calculate<br />
+		 float r2 = c >> 16 & 0xFF;  // Very fast to calculate</pre>
 ]]></description>
 
 </root>
