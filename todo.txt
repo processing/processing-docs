@@ -57,6 +57,8 @@ x Done
 2.0 REFERENCE ENGINE
 
 DAVID
+
+- Fix links to methods of root classes within class doc 
   
 - How to make a reference for captureEvent() etc in the Libraries
 	will approach with .xml files, like include/ for boolean/true/while/etc.
@@ -72,7 +74,6 @@ DAVID
 	e.g. shorten(), splice(), and sort()
 	*parameter types are being omitted
 	*Also happens in libraries e.g. Network Library - Server Class - write()
-DONE:
 x for() and while() 
 
 x The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
@@ -82,9 +83,16 @@ x Everything in "includes" HTML files has a Class field at the top of the HTML (
   See web/distribution/false.html for an example.
 	removed instances of "class Structure" and the like
 
-x For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
+# Requires additional editing work in the .java files:
+$ For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
   link including the class name. For example see web/distribution/arc_.html and see the links in Related
-	restored PGraphics and PImage -rootclass flags in processingrefBuild.sh
+	this needs to be fixed on a per-function basis by including the correct @see tags
+	@see PApplet#imageMode( int ) will reference the core function
+	@see PGraphics#imageMode( int ) will reference the PGraphics method
+	I corrected this for PImage.html by editing the comments in PImage.java
+x PGraphics and PImage (root classes) aren't getting documented, although their methods are
+	this was a side-effect of an attempt to fix the above, no longer an issue
+	
 x 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) and noiseSeed(long)
 	this was due to using the actual parameter type in reference
 	now replacing 'long' with 'int' in all reference materials

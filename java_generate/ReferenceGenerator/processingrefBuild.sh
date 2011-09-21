@@ -18,8 +18,6 @@ javadoc -doclet ProcessingWeblet \
 	-imagedir images \
 	-corepackage processing.xml \
 	-rootclass PConstants \
-	-rootclass PGraphics \
-	-rootclass PImage \
 	-noisy \
 	../../../processing/java/libraries/net/src/processing/net/*.java \
 	../../../processing/java/libraries/serial/src/processing/serial/*.java \
