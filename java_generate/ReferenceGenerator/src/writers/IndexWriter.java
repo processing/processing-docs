@@ -3,12 +3,28 @@ package writers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 
 import com.sun.javadoc.Doc;
 import com.sun.javadoc.Tag;
 
 public class IndexWriter extends BaseWriter {
+	
+	class Alphabetizer implements Comparator<String>
+	{
+
+		public int compare(String o1, String o2) {
+			// TODO Auto-generated method stub
+			int tagEnd = o1.indexOf(">");
+			String inside1 = o1.substring( tagEnd + 1, tagEnd + 2 );
+			tagEnd = o2.indexOf(">");
+			String inside2 = o2.substring( tagEnd + 1, tagEnd + 2 );
+			
+			return String.CASE_INSENSITIVE_ORDER.compare( inside1, inside2 );
+		}
+		
+	}
 	
 	HashMap<String, ArrayList<String>> sections;
 	
@@ -31,7 +47,7 @@ public class IndexWriter extends BaseWriter {
 		for(String key : sections.keySet()){
 			String value = "";
 			//make things alphabetical in their sections
-			Collections.sort( sections.get(key), String.CASE_INSENSITIVE_ORDER );
+			Collections.sort( sections.get(key), new Alphabetizer() );
 			
 			for(String s : sections.get(key))
 			{
@@ -58,19 +74,35 @@ public class IndexWriter extends BaseWriter {
 			}
 		}
 		
-		Collections.sort(all, String.CASE_INSENSITIVE_ORDER );
+		Collections.sort(all, new Alphabetizer() );
+		
 		String value = "";
 		float numColumns = 3.0f;
 		int currentColumn = 0;
 		float perColumn = all.size()/numColumns;
+		
 		float counter = 0.0f;
 		
+		String startString = all.get(0);
+		
+		String currentLetterGroup = startString.substring( startString.indexOf(">") + 1, startString.indexOf(">") + 2 );
+		// find the stuff inside brackets
+		
 		for(String s : all){			
-			value = value.concat(s);
 			counter++;
-			if(counter%10 == 0){
+			int tagEnd = s.indexOf(">");
+			String currentLetter = s.substring( tagEnd + 1, tagEnd + 2 );
+			
+			
+			if( currentLetter.matches( "[a-zA-Z0-9]") && ! currentLetter.equalsIgnoreCase( currentLetterGroup ) )
+			{	// add a break at letter change
+				System.out.println("Wrapping at: " + currentLetterGroup + ", " + currentLetter );
 				value = value.concat("<br/>");
+				currentLetterGroup = currentLetter;
 			}
+			
+			value = value.concat( s );
+			
 			if( counter >= perColumn ){
 				counter = 0;
 				currentColumn++;

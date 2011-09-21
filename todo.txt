@@ -56,10 +56,19 @@ x Done
 
 2.0 REFERENCE ENGINE
 
-DAVID
+Various folks, probably:
+Requires additional editing work in the .java files:
+$ For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
+  link including the class name. For example see web/distribution/arc_.html and see the links in Related
+	this needs to be fixed on a per-function basis by including the correct @see tags
+	@see PApplet#imageMode( int ) will reference the core function
+	@see PGraphics#imageMode( int ) will reference the PGraphics method
+	I corrected this for PImage.html by editing the comments in PImage.java
 
-- Fix links to methods of root classes within class doc 
+DAVID
   
+- add @see_external tag for linking to xml content
+
 - How to make a reference for captureEvent() etc in the Libraries
 	will approach with .xml files, like include/ for boolean/true/while/etc.
 	Complete list of functions not found in libraries:
@@ -82,14 +91,6 @@ x The <!-- classanchor --> tag is not working for files in "includes", see web/d
 x Everything in "includes" HTML files has a Class field at the top of the HTML (except classes are correct)
   See web/distribution/false.html for an example.
 	removed instances of "class Structure" and the like
-
-# Requires additional editing work in the .java files:
-$ For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
-  link including the class name. For example see web/distribution/arc_.html and see the links in Related
-	this needs to be fixed on a per-function basis by including the correct @see tags
-	@see PApplet#imageMode( int ) will reference the core function
-	@see PGraphics#imageMode( int ) will reference the PGraphics method
-	I corrected this for PImage.html by editing the comments in PImage.java
 x PGraphics and PImage (root classes) aren't getting documented, although their methods are
 	this was a side-effect of an attempt to fix the above, no longer an issue
 	
@@ -100,6 +101,8 @@ x 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) an
 	types are being filtered through the BaseWriter::getSimplifiedType() method
 $ Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
   Capital letters should be integrated with the lowercase letters, rather than at the beginning.
+	Implemented a custom Comparator for alphabetization. Now human-style
+	Need to remove String_charAt_ and other methods from the alphabetical index (they don't appear in categories)
 
 // // // // // // // // // // // // // // // // // // // // //
 
