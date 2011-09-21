@@ -21,6 +21,19 @@ public class IndexWriter extends BaseWriter {
 			tagEnd = o2.indexOf(">");
 			String inside2 = o2.substring( tagEnd + 1, tagEnd + 2 );
 			
+			// check alphanumericity of both strings
+			if( inside1.matches( "[a-zA-Z0-9 ]+" ) && ! inside2.matches("[a-zA-Z0-9 ]+") )
+			{
+				// if only the second is a symbol
+				return 1;
+			}
+			else if( inside2.matches( "[a-zA-Z0-9 ]+" ) && ! inside1.matches("[a-zA-Z0-9 ]+") )
+			{
+				// if only the first is a symbol
+				return 0;
+			}
+			
+			// do a normal string comparison on the insides (not the html tags)
 			return String.CASE_INSENSITIVE_ORDER.compare( inside1, inside2 );
 		}
 		
