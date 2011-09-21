@@ -9,24 +9,24 @@
 <example>
 <image>green_.png</image>
 <code><![CDATA[
-	color c = color(20, 75, 200);  // Define color 'c'
-	fill(c);  // Use color variable 'c' as fill color
-	rect(15, 20, 35, 60);  // Draw left rectangle
-	
-	float greenValue = green(c);  // Set 'greenValue' to the green value of 'c'
-	println(greenValue);  // Print "75.0"
-	fill(0, greenValue, 0);  // Use 'greenValue' as part of new fill color
-	rect(50, 20, 35, 60);  // Draw right rectangle
+color c = color(20, 75, 200);  // Define color 'c'
+fill(c);  // Use color variable 'c' as fill color
+rect(15, 20, 35, 60);  // Draw left rectangle
+
+float greenValue = green(c);  // Set 'greenValue' to the green value of 'c'
+println(greenValue);  // Print "75.0"
+fill(0, greenValue, 0);  // Use 'greenValue' as part of new fill color
+rect(50, 20, 35, 60);  // Draw right rectangle
 ]]></code>
 </example>
 
 <description><![CDATA[
-	Extracts the green value from a color, scaled to match current <b>colorMode()</b>. The value is always returned as a float, so be careful not to assign it to an int value.<br />
-	<br />
-	The <b>green()</b> function is easy to use and understand, but it is slower than a technique called bit shifting. When working in <b>colorMode(RGB, 255)</b>, you can acheive the same results as <b>green()</b> but with greater speed by using the right shift operator (<b>>></b>) with a bit mask. For example, the following two lines of code are equivalent means of getting the green value of the color value <b>c</b>:<br />
-	<br />
-	<pre>float r1 = green(c);  // Simpler, but slower to calculate<br />
-		 float r2 = c >> 8 & 0xFF;  // Very fast to calculate</pre>
+Extracts the green value from a color, scaled to match current <b>colorMode()</b>. The value is always returned as a float, so be careful not to assign it to an int value.<br />
+<br />
+The <b>green()</b> function is easy to use and understand, but it is slower than a technique called bit shifting. When working in <b>colorMode(RGB, 255)</b>, you can acheive the same results as <b>green()</b> but with greater speed by using the right shift operator (<b>>></b>) with a bit mask. For example, the following two lines of code are equivalent means of getting the green value of the color value <b>c</b>:<br />
+<br />
+<pre>float r1 = green(c);  // Simpler, but slower to calculate<br />
+float r2 = c >> 8 & 0xFF;  // Very fast to calculate</pre>
 ]]></description>
 
 </root>
