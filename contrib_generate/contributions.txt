@@ -1,4 +1,37 @@
 library
+category=I/O
+authorList=[Markus Zimmermann](http://www.die-seite.ch/)
+name=Collada-Loader
+sentence=imports into Processing kmz or dae files that is created by Google Sketchup 8
+url=http://www.die-seite.ch/
+prettyVersion=1.1
+paragraph=For error free working take a look to the [instructions](http://die-seite.ch/?colladaloader) or [forum](http://die-seite.ch/?guest&thema=colladaloader)
+version=11
+download=http://www.die-seite.ch/colladaLoader11.zip
+
+library
+category=I/O
+authorList=[Elie Zananiri](http://www.silentlycrashing.net/)
+name=ezGestures
+sentence=A modular gesture recognition library.
+url=http://silentlycrashing.net/ezgestures/
+prettyVersion=1.0
+paragraph=
+version=1
+download=http://www.silentlycrashing.net/ezgestures/files/ezgestures.zip
+
+library
+category=Simulation & Math
+authorList=[Carl-Johan Rosén](http://www.carljohanrosen.com)
+name=Cell Noise
+sentence=Algorithm for generating cell/worley noise.
+url=http://www.carljohanrosen.com/processing/
+prettyVersion=1.0
+paragraph=These patterns are useful in animation and more.
+version=1
+download=http://www.carljohanrosen.com/processing/images/cellnoise-latest.zip
+
+library
 category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
 name=gicentreUtils
@@ -21,6 +54,28 @@ version=4
 download=http://www.generative-gestaltung.de/downloads/generativedesign.zip
 
 library
+category=Utilities
+authorList=[Michael Krumpus](http://nootropicdesign.com/)
+name=Layers
+sentence=Create sketches with multiple layers that are drawn independently of one another.
+url=http://nootropicdesign.com/processing-layers/
+prettyVersion=1.2
+paragraph=
+version=2
+download=http://nootropicdesign.com/processing-layers/downloads/layers.zip
+
+library
+category=Video & Vision
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=Open Kinect
+sentence=A Kinect implementation for Processing using open source drivers (libfreenect)
+url=http://www.shiffman.net/p5/kinect/
+prettyVersion=0.1a
+paragraph=
+version=1
+download=http://www.shiffman.net/p5/libraries/openkinect/openkinect.zip
+
+library
 category=Animation
 authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
@@ -32,18 +87,7 @@ version=1
 download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
 
 library
-category=Import / Export
-authorList=[Markus Zimmermann](http://www.die-seite.ch/)
-name=Collada-Loader
-sentence=imports into Processing kmz or dae files that is created by Google Sketchup 8
-url=http://www.die-seite.ch/
-prettyVersion=1.1
-paragraph=For error free working take a look to the [instructions](http://die-seite.ch/?colladaloader) or [forum](http://die-seite.ch/?guest&thema=colladaloader)
-version=11
-download=http://www.die-seite.ch/colladaLoader11.zip
-
-library
-category=Data / Protocols
+category=Data
 authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
 name=GML4U
 sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
@@ -54,26 +98,26 @@ version=6
 download=http://www.saint-clair.net/download/gml4u/GML4U.zip
 
 library
-category=Simulation / Math
-authorList=[Carl-Johan Rosén](http://www.carljohanrosen.com)
-name=Cell Noise
-sentence=Algorithm for generating cell/worley noise.
-url=http://www.carljohanrosen.com/processing/
-prettyVersion=1.0
-paragraph=These patterns are useful in animation and more.
+category=Data
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=SFTP
+sentence=SFTP direct from Processing (using JSch)
+url=http://www.shiffman.net/2007/06/04/sftp-with-java-processing/
+prettyVersion=0.1a
+paragraph=Includes ls and get, needs to be updated with put
 version=1
-download=http://www.carljohanrosen.com/processing/images/cellnoise-latest.zip
+download=http://www.shiffman.net/p5/libraries/sftp/sftp.zip
 
 library
-category=Tools
-authorList=[Michael Krumpus](http://nootropicdesign.com/)
-name=Layers
-sentence=Create sketches with multiple layers that are drawn independently of one another.
-url=http://nootropicdesign.com/processing-layers/
-prettyVersion=1.2
+category=Data
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=QRCode
+sentence=Reads QR Code images, a two-dimensional barcode format.
+url=http://www.shiffman.net/p5/pqrcode/
+prettyVersion=0.1a
 paragraph=
-version=2
-download=http://nootropicdesign.com/processing-layers/downloads/layers.zip
+version=1
+download=http://www.shiffman.net/p5/libraries/pqrcode/pqrcode.zip
 
 library
 category=3D
@@ -92,8 +136,8 @@ authorList=[Frederik Vanhoutte](http://www.wblut.com/)
 name=HE-Mesh
 sentence=He-Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
 url=http://hemesh.wblut.com/
-prettyVersion=1.50
+prettyVersion=1.50a
 paragraph=
-version=5
+version=6
 download=http://hemesh.wblut.com/hemesh-latest.zip
 

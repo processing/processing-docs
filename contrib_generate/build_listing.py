@@ -131,9 +131,13 @@ def get_lib_locations(f):
 
   return urls_by_category
 
-def has_required_keys(exports):
+def missing_key(exports):
   keys = exports.keys()
-  return keys.count('name') and keys.count('authorList') and keys.count('url') and keys.count('category') and keys.count('sentence') and keys.count('version')
+  required_keys = ['name', 'authorList', 'url', 'category', 'sentence', 'version']
+  for key in required_keys:
+    if not keys.count(key):
+      return key
+  return None
 
 if __name__ == "__main__":
   if len(argv) != 3:
@@ -161,9 +165,10 @@ if __name__ == "__main__":
         exports['name'] = name
         exports['category'] = cat
 
-        if not has_required_keys(exports):
+        key = missing_key(exports)
+        if key:
           print 'Error reading', prop_url
-          print '  No value for "' + inst.args[0] + '". Maybe it\'s a 404 page'
+          print "  No value for '%s'. Maybe it's a 404 page" % key
           continue
         # if no download is explicitly provided, use the default download url
         m = re.compile('download.*')
