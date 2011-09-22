@@ -28,6 +28,7 @@ import com.sun.javadoc.ConstructorDoc;
 import com.sun.javadoc.Doc;
 import com.sun.javadoc.ExecutableMemberDoc;
 import com.sun.javadoc.FieldDoc;
+import com.sun.javadoc.MemberDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.ParamTag;
 import com.sun.javadoc.Parameter;
@@ -553,20 +554,56 @@ public class BaseWriter {
 		return ret;
 	}
 	
-	protected static String getRelated(ProgramElementDoc doc) throws IOException{
+	protected static String getRelated(ProgramElementDoc doc) throws IOException
+	{
 		TemplateWriter templateWriter = new TemplateWriter();
 		ArrayList<HashMap<String, String>> vars = new ArrayList<HashMap<String,String>>();
+		
+		HashMap<String, ProgramElementDoc> classMembers = new HashMap<String, ProgramElementDoc>();
+		
+		if( doc.isMethod() || doc.isField() )
+		{
+			ClassDoc containingClass = doc.containingClass();
+			// consider only doing this if we aren't in the core, although the core would protect against certain errors
+			// if( !containingClass.name().equalsIgnoreCase("PApplet") )
+			{
+				for( MethodDoc m : containingClass.methods() )
+				{
+					if( needsWriting( m ) )
+					{
+						classMembers.put( m.name(), m );
+					}
+				}
+				for( FieldDoc f : containingClass.fields() )
+				{
+					if( needsWriting( f ) )
+					{
+						classMembers.put( f.name(), f );
+					}
+				}
+			}
+		}
+		
 		for( SeeTag tag : doc.seeTags() ){
 			HashMap<String, String> map = new HashMap<String, String>();
-			//add the referenced member or the referenced class if no member exists
-			if(tag.referencedMember() != null){
-				map.put("name", getName(tag.referencedMember()));
-				map.put("anchor", getAnchor(tag.referencedMember()));				
-			} else {
-				map.put("name", getName(tag.referencedClass()));
-				map.put("anchor", getAnchor(tag.referencedClass()));
+			
+			ProgramElementDoc ref = tag.referencedClass();
+			if( tag.referencedMember() != null )
+			{ 
+				ref = tag.referencedMember();
+				if( classMembers.containsKey( ref.name() ) )
+				{
+					ref = classMembers.get( ref.name() );
+				}
 			}
-			vars.add(map);
+			
+			if( needsWriting( ref ) )
+			{		
+				// add links to things that are actually written
+				map.put("name", getName( ref ));
+				map.put("anchor", getAnchor( ref ));				
+				vars.add(map);
+			}
 		}
 		return templateWriter.writeLoop("Related.partial.html", vars);
 	}

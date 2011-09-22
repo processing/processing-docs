@@ -73,14 +73,14 @@ $ For the functions inside PGraphics and PImage, the Related links aren't workin
 	I corrected this for PImage.html by editing the comments in PImage.java
 
 DAVID
-  
-- add @see_external tag for linking to xml content
 
-- How to make a reference for captureEvent() etc in the Libraries
+$ How to make a reference for captureEvent() etc in the Libraries
 	will approach with .xml files, like include/ for boolean/true/while/etc.
 	Complete list of functions not found in libraries:
 		1.Video
 			Everything in "Capture Class", "Video Events"
+			Capture shows up
+			need captureEvent
 		2. Serial
 			serialEvent()
 		3. Network
@@ -90,6 +90,11 @@ DAVID
 	e.g. shorten(), splice(), and sort()
 	*parameter types are being omitted
 	*Also happens in libraries e.g. Network Library - Server Class - write()
+
+- (nicety) add @see_external tag for linking to xml content
+
+x 'Related' links now try to link to methods within the same class if possible (regardless of how typed in). Should only link to files that exist.
+
 x for() and while() 
 
 x The <!-- classanchor --> tag is not working for files in "includes", see web/distribution/String_indexOf_.html as an example
@@ -106,9 +111,10 @@ x 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) an
 	now replacing 'long' with 'int' in all reference materials
 	also replacing 'double' with 'float'
 	types are being filtered through the BaseWriter::getSimplifiedType() method
-$ Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
+x Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
   Capital letters should be integrated with the lowercase letters, rather than at the beginning.
 	Implemented a custom Comparator for alphabetization. Now human-style
+$ Alphabetical index is incorrectly showing class methods
 	Need to remove String_charAt_ and other methods from the alphabetical index (they don't appear in categories)
 
 // // // // // // // // // // // // // // // // // // // // //

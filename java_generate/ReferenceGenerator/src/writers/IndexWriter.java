@@ -21,6 +21,7 @@ public class IndexWriter extends BaseWriter {
 			tagEnd = o2.indexOf(">");
 			String inside2 = o2.substring( tagEnd + 1, tagEnd + 2 );
 			
+			// compare first letter for symbols
 			// check alphanumericity of both strings
 			if( inside1.matches( "[a-zA-Z0-9 ]+" ) && ! inside2.matches("[a-zA-Z0-9 ]+") )
 			{
@@ -33,6 +34,10 @@ public class IndexWriter extends BaseWriter {
 				return 0;
 			}
 			
+			// compare whole strings, starting with words
+			inside1 = o1.substring( o1.indexOf(">") + 1, o1.length() );
+			
+			inside2 = o2.substring( o2.indexOf(">") + 1, o2.length() );
 			// do a normal string comparison on the insides (not the html tags)
 			return String.CASE_INSENSITIVE_ORDER.compare( inside1, inside2 );
 		}
@@ -109,7 +114,6 @@ public class IndexWriter extends BaseWriter {
 			
 			if( currentLetter.matches( "[a-zA-Z0-9]") && ! currentLetter.equalsIgnoreCase( currentLetterGroup ) )
 			{	// add a break at letter change
-				System.out.println("Wrapping at: " + currentLetterGroup + ", " + currentLetter );
 				value = value.concat("<br/>");
 				currentLetterGroup = currentLetter;
 			}

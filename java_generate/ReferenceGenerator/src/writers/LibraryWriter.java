@@ -11,6 +11,7 @@ public class LibraryWriter extends BaseWriter {
 	String pkg;
 	LibraryIndexWriter indexWriter;
 	String dir;
+	ArrayList<String> filesRead;
 	static TemplateWriter templateWriter;
 	static ArrayList<String> writtenLibraries;
 	
@@ -21,9 +22,15 @@ public class LibraryWriter extends BaseWriter {
 		if(writtenLibraries == null){
 			writtenLibraries = new ArrayList<String>();
 		}
+		
+		filesRead = new ArrayList<String>();
 	}
 	
-	public void write(PackageDoc doc) {
+	public void write(PackageDoc doc)
+	{
+		
+		// check for xml files that haven't been read
+		
 		
 		if(writtenLibraries.contains(doc.name())){
 			return;
@@ -46,5 +53,12 @@ public class LibraryWriter extends BaseWriter {
 				e.printStackTrace();
 			}
 		}
+		
+		writeRemainingXml( "path/to/files" );
+	}
+	
+	private void writeRemainingXml( String xmlDir )
+	{
+		
 	}
 }
