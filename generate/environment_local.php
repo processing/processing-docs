@@ -5,12 +5,12 @@ require('lib/Translation.class.php');
 $benchmark_start = microtime_float();
 
 
-$source = CONTENTDIR."/api_en/environment/";
+$source = CONTENTDIR."api_en/environment/";
 $path = DISTDIR."/environment/";
 
 $page = new LocalPage('Environment (IDE)', 'Environment', 'Environment', '../');
 $page->content(file_get_contents($source.'index.html'));
-$page->language($lang);
+$page->language('en');
 writeFile($path.'index.html', $page->out());
 
 if (is_dir(DISTDIR.'environment/images')) { 
