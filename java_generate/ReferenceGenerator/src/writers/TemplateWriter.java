@@ -1,6 +1,7 @@
 package writers;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,14 +39,15 @@ public class TemplateWriter extends BaseWriter {
 			vars.put("isLanguage", "class='active'");
 		}
 		
-		write( templateName, vars, outputName, false );
+		Boolean written = write( templateName, vars, outputName, false );
 		write( templateName, vars, outputName, true );
-		if(Shared.i().isNoisy()){			
-			System.out.println("Writing " + outputName + " from template");
+		if( written && Shared.i().isNoisy() )
+		{			
+			System.out.println("Wrote " + outputName + " from template");
 		}
 	}
 	
-	private void write( String templateName, HashMap<String, String> vars, String outputName, Boolean isLocal ) throws IOException
+	private Boolean write( String templateName, HashMap<String, String> vars, String outputName, Boolean isLocal ) throws IOException
 	{
 		String[] templateFile = FileUtils.loadStrings(Shared.i().TEMPLATE_DIRECTORY() + templateName);
 		ArrayList<String> output = new ArrayList<String>();
@@ -58,19 +60,30 @@ public class TemplateWriter extends BaseWriter {
 			vars.put("navigation", writePartial("Nav.web.template.html", vars));
 		}
 		
-		BufferedWriter out = makeWriter(outputName, isLocal);
+		File f = new File( getWriterPath( outputName, isLocal ) );
 		
-		for( String line : templateFile )
-		{
-			//check if it contains a variable we want to replace, then replace it
-			line = writeLine(line, vars, false);		
-			output.add(line);
+		if( ! f.exists() )
+		{			
+			BufferedWriter out = makeWriter(outputName, isLocal);
+			
+			for( String line : templateFile )
+			{
+				//check if it contains a variable we want to replace, then replace it
+				line = writeLine(line, vars, false);		
+				output.add(line);
+			}
+			for( String line : output )
+			{
+				out.write(line+"\n");			
+			}
+			out.close();
+			
+			return true;
 		}
-		for( String line : output )
+		else
 		{
-			out.write(line+"\n");			
+			return false;
 		}
-		out.close();
 	}
 	
 	public String writePartial( String templateName, HashMap<String, String> vars )

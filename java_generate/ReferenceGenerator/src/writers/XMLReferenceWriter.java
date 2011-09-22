@@ -43,7 +43,7 @@ public class XMLReferenceWriter extends BaseWriter {
 		}
 	}
 	
-	private static void parseFile(File f, String dst, IndexWriter indexWriter)
+	public static void parseFile(File f, String dst, IndexWriter indexWriter)
 	{
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setNamespaceAware(true);
@@ -132,11 +132,11 @@ public class XMLReferenceWriter extends BaseWriter {
 				{	// get constructor parameters
 					vars.put("parameters", getParameters(doc, "c" ));
 				}
-				templateWriter.write("Class.template.html", vars, anchor);
+				templateWriter.write("Class.template.html", vars, dst + anchor);
 			}
 			else
 			{
-				templateWriter.write("Generic.template.html", vars, anchor);
+				templateWriter.write("Generic.template.html", vars, dst + anchor);
 			}
 			
 		} catch (XPathExpressionException e) {

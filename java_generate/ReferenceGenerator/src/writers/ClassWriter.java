@@ -17,7 +17,7 @@ public class ClassWriter extends BaseWriter {
 	
 	public ClassWriter() {
 		
-	}
+	} 
 
 	@SuppressWarnings("unchecked")
 	public void write( ClassDoc classDoc ) throws IOException {

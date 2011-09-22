@@ -38,9 +38,10 @@ import com.sun.javadoc.Tag;
 
 public class BaseWriter {
 	// Some utilities
-	static ArrayList<String> writtenElements;
-	public BaseWriter() {
-
+	
+	public BaseWriter()
+	{
+		
 	}
 	
 	protected static boolean needsWriting(ProgramElementDoc doc){
@@ -55,15 +56,20 @@ public class BaseWriter {
 	{
 		return makeWriter(anchor, false);
 	}
-
-	protected static BufferedWriter makeWriter(String anchor, Boolean isLocal) throws IOException {
-		FileWriter fw;
+	
+	protected static String getWriterPath( String anchor, Boolean isLocal )
+	{
 		if (!isLocal) {
-			fw = new FileWriter(Shared.i().getOutputDirectory() + "/" + anchor );
+			return Shared.i().getOutputDirectory() + "/" + anchor;
 		} else 
 		{
-			fw = new FileWriter(Shared.i().getLocalOutputDirectory() + anchor );
+			return Shared.i().getLocalOutputDirectory() + anchor;
 		}
+	}
+	
+	protected static BufferedWriter makeWriter(String anchor, Boolean isLocal) throws IOException {
+		FileWriter fw = new FileWriter( getWriterPath( anchor, isLocal ) );
+		
 		return new BufferedWriter(fw);
 	}
 	
@@ -238,6 +244,7 @@ public class BaseWriter {
 			String[] pkg = doc.containingPackage().name().split("\\.");
 			path = path + "LIB_" + pkg[pkg.length-1] + "/";
 		}
+		
 		
 		return path + name + suffix;
 	}

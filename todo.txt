@@ -74,7 +74,7 @@ $ For the functions inside PGraphics and PImage, the Related links aren't workin
 
 DAVID
 
-$ How to make a reference for captureEvent() etc in the Libraries
+x? How to make a reference for captureEvent() etc in the Libraries
 	will approach with .xml files, like include/ for boolean/true/while/etc.
 	Complete list of functions not found in libraries:
 		1.Video
@@ -85,6 +85,7 @@ $ How to make a reference for captureEvent() etc in the Libraries
 			serialEvent()
 		3. Network
 			All "Network Events"
+	The script now checks all the .xml files for the library and will write out html for ones that haven't been documented through source code
 			
 - Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
 	e.g. shorten(), splice(), and sort()

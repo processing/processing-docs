@@ -1,5 +1,6 @@
 package writers;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class LibraryWriter extends BaseWriter {
 	String pkg;
 	LibraryIndexWriter indexWriter;
 	String dir;
-	ArrayList<String> filesRead;
+	
 	static TemplateWriter templateWriter;
 	static ArrayList<String> writtenLibraries;
 	
@@ -23,7 +24,7 @@ public class LibraryWriter extends BaseWriter {
 			writtenLibraries = new ArrayList<String>();
 		}
 		
-		filesRead = new ArrayList<String>();
+		
 	}
 	
 	public void write(PackageDoc doc)
@@ -46,19 +47,33 @@ public class LibraryWriter extends BaseWriter {
 		//grab all relevant information for the doc
 		for( ClassDoc classDoc : doc.allClasses() ){
 			// document the class if it has a @webref tag
-			try {
+			try 
+			{
 				new ClassWriter().write(classDoc);
-			} catch (IOException e) {
+				
+			} catch (IOException e)
+			{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		
-		writeRemainingXml( "path/to/files" );
+		String path = Shared.i().getXMLDirectory() + "LIB_" + pkg;
+		writeRemainingXml( path);
 	}
 	
 	private void writeRemainingXml( String xmlDir )
 	{
-		
+		File directory = new File( xmlDir );
+		File[] files = directory.listFiles();
+		for( File f : files )
+		{
+			if( f.getAbsolutePath().endsWith("xml") )
+			{
+				// try writing everything (will not overwrite any existing docs)
+				XMLReferenceWriter.parseFile( f.getAbsoluteFile(), dir, indexWriter );
+			}
+				
+		}
 	}
 }
