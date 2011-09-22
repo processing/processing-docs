@@ -31,7 +31,7 @@ foreach ($libraries as $lib)
     writeFile('distribution/'.$destination.'/index.html', $page->out());
 }
 
-if (!is_dir(DISTDIR.'libraries/images')) { 
+if (is_dir(DISTDIR.'libraries/images')) { 
   rmdir(DISTDIR.'libraries/images');
 }
 mkdir(DISTDIR.'libraries/images', 0755); 
@@ -43,5 +43,5 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 
 ?>
 
-<h2>Library Generation Successful</h2>
+<h2>Local library generation successful!</h2>
 <p>Generated files in <?=$execution_time?> seconds.</p>

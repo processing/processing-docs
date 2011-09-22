@@ -25,5 +25,5 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 
 ?>
 
-<h2>Environment page generation Successful</h2>
+<h2>Local environment page generation successful!</h2>
 <p>Generated files in <?=$execution_time?> seconds.</p>

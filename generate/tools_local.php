@@ -19,7 +19,6 @@ if (is_dir(DISTDIR.'tools/images')) {
 	rmdir(DISTDIR.'tools/images');
 }
 mkdir(DISTDIR.'tools/images', 0755); 
-//chmod(DISTDIR.'tools/images', 0755);
 copydirr(CONTENTDIR.'api_en/tools/images', DISTDIR.'tools/images');
 
 // Copy file for the contributed Tools
@@ -31,5 +30,5 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 
 ?>
 
-<h2>Tool Generation Successful</h2>
+<h2>Local tool generation successful!</h2>
 <p>Generated files in <?=$execution_time?> seconds.</p>
