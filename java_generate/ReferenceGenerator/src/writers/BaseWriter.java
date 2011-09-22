@@ -28,7 +28,6 @@ import com.sun.javadoc.ConstructorDoc;
 import com.sun.javadoc.Doc;
 import com.sun.javadoc.ExecutableMemberDoc;
 import com.sun.javadoc.FieldDoc;
-import com.sun.javadoc.MemberDoc;
 import com.sun.javadoc.MethodDoc;
 import com.sun.javadoc.ParamTag;
 import com.sun.javadoc.Parameter;
@@ -111,11 +110,19 @@ public class BaseWriter {
 					
 					if( ! ret.contains( name ))
 					{						
-						ret += " or " + name;
+						ret += ", " + name;
 					}
 				}
 			}
 		} 
+		
+		// add "or" (split first to make sure we don't mess up the written description)
+		ret = ret.replaceFirst( ",([^,]+)$", ", or$1" );
+		if( ! ret.matches(".+,.+,.+") )
+		{
+			ret = ret.replace( ",", "" );
+		}
+		
 		return ret;
 	}
 	
@@ -426,7 +433,8 @@ public class BaseWriter {
 				String params = templateWriter.writeLoop("Method.Parameter.partial.html", parameters, ", ");
 				
 				map.put("parameters", params);
-				if(! ret.contains(map)){
+				if( ! ret.contains(map) )
+				{
 					//don't put in duplicate function syntax
 					ret.add(map);					
 				}
@@ -517,26 +525,51 @@ public class BaseWriter {
 	}
 	
 	protected static void removeDuplicateParameters(ArrayList<HashMap<String, String>> ret){
-		//combine duplicate parameter names
-		for(HashMap<String, String> map : ret){
-			String desc = map.get("description");
-			if(!desc.endsWith(": ")){
-				for(HashMap<String, String> map2 : ret){
-					String desc2 = map2.get("description");
-					if(desc2.endsWith(": ") && map2.get("name").equals(map.get("name"))){
-						if(! desc.contains(desc2.substring(0, desc2.indexOf(": ")))){
-							String newDescription = desc2.replace(":", ",") + desc;
-							map.put("description", newDescription);							
+		// combine duplicate parameter names with differing types
+		for(HashMap<String, String> parameter : ret)
+		{
+			String desc = parameter.get("description");
+			if(!desc.endsWith(": "))
+			{
+				// if the chosen description has actual text
+				// e.g. float: something about the float
+				for(HashMap<String, String> parameter2 : ret)
+				{
+					String desc2 = parameter2.get("description");
+					
+					if( desc2.endsWith(": ") && parameter2.get("name").equals( parameter.get("name") ) )
+					{
+						// freshen up our variable with the latest description
+						desc = parameter.get("description");
+						
+						if( ! desc.contains( desc2.substring( 0, desc2.indexOf(": ") ) ) )
+						{
+							// if the similar item doesn't have actual text
+							// e.g. Boolean: 
+							String newDescription = desc2.replace(":", ",").concat( desc );
+							parameter.put("description", newDescription);
 						}
 					}
 				}
 			}
 		}
 		//remove parameters without descriptions
-		for(int i=ret.size()-1; i >= 0; i-- ){
-			if(ret.get(i).get("description").endsWith(": ")){
+		for( int i=ret.size()-1; i >= 0; i-- )
+		{
+			if(ret.get(i).get("description").endsWith(": "))
+			{
 				ret.remove(i);
 			}
+		}
+		
+		// add "or" (split first to make sure we don't mess up the written description)
+		for( HashMap<String, String> param : ret )
+		{
+			String desc = param.get("description");
+			String start = desc.substring( 0, desc.indexOf(":")+1 ).replaceFirst( ",([^,]+:)", ", or$1" );
+			String end = desc.substring( desc.indexOf(":")+1, desc.length() );
+			
+			param.put( "description", start.concat( end ) );
 		}
 	}
 	

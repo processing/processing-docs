@@ -93,10 +93,14 @@ x web_application is not inserted consistently into entries. I'm in favor of rem
   JavaScript to be supported.
 	"Usage" removed from html
 			
-- Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
+x Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
 	e.g. shorten(), splice(), and sort()
 	*parameter types are being omitted
 	*Also happens in libraries e.g. Network Library - Server Class - write()
+	Multiple parameters now properly displaying in reference
+	Also using Oxford commas in lists of parameters and return types
+	e.g. 	int, float, or String
+		int or PImage
 
 - (nicety) add @see_external tag for linking to xml content
 
