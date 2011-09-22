@@ -86,6 +86,11 @@ x? How to make a reference for captureEvent() etc in the Libraries
 		3. Network
 			All "Network Events"
 	The script now checks all the .xml files for the library and will write out html for ones that haven't been documented through source code
+	
+- web_application is not inserted consistently into entries. I'm in favor of removing the Usage 
+  category entirely from the HTML. It doesn't scale to other modes and I think it's better to have
+  this listed in the description, it's such an uncommon occurance for only Web or Application or
+  JavaScript to be supported.
 			
 - Variable types that include 'boolean[], byte[], char[], int[], float[], or String[]' are not displaying correctly in the Parameters section:
 	e.g. shorten(), splice(), and sort()
@@ -135,6 +140,7 @@ $ Alphabetical index is incorrectly showing class methods
 - implements example needed  --SM
 - look at example for red() to make clearer  --SM
 - null has a blank 'Examples'  --SM
+- Add @see to the source where appropriate, PShape methods need obvious help  --SM
 
 - createInput() example  --SM
 - PGraphics link to developers reference  --SM

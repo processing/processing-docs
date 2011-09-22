@@ -7,30 +7,26 @@
 <subcategory>Curves</subcategory>
 
 <example>
-<image>bezierDetail_.gif</image>
+<image></image>
 <code><![CDATA[
+// Move the mouse left and right to see the detail change
+
 void setup() {
   size(100, 100, P3D);
   noFill();
-  noLoop();
 }
 
 void draw() {
-  bezierDetail(1);
-  bezier(85, 20, 10, 10, 90, 90, 15, 80);
-  stroke(126);
-  bezierDetail(3);
-  bezier(85, 20, 10, 10, 90, 90, 15, 80);
-  stroke(255);
-  bezierDetail(12);
+  background(204);
+  int d = int(map(mouseX, 0, 100, 1, 20));
+  bezierDetail(d);
   bezier(85, 20, 10, 10, 90, 90, 15, 80);
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Sets the resolution at which Beziers display. The default value is 20. This function is only useful when using the P3D renderer as the default P2D renderer does not use this information.
+Sets the resolution at which Beziers display. The default value is 20. This function is only useful when using the <b>P3D</b> renderer; the default <b>P2D</b> renderer does not use this information.
 ]]></description>
 
 </root>
