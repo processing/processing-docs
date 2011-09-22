@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+# GENERATE REFERENCE ENTRIES AND INDEX THROUGH JAVADOC - BY DAVID WICKS
+
 #remove everything old
 rm -rf ../../reference
 mkdir ../../reference
@@ -24,8 +27,11 @@ javadoc -doclet ProcessingWeblet \
 	../../../processing/java/libraries/video/src/processing/video/*.java \
 	../../../processing/core/src/processing/core/*.java
 
+
+# COPY IMAGES FROM CONTENT FOLDER TO CORRECT FOLDERS
+
 # manage web reference
-cp -R ../../css	 ../../reference/
+#cp -R ../../css	 ../../reference/
 mkdir -p ../../reference/images
 cp -R ../../content/api_media/*.jpg ../../reference/images/
 cp -R ../../content/api_media/*.gif ../../reference/images/
@@ -38,6 +44,9 @@ cp -R ../../content/api_media/*.jpg ../../distribution/images/
 cp -R ../../content/api_media/*.gif ../../distribution/images/
 cp -R ../../content/api_media/*.png ../../distribution/images/
 
+
+# COPY IMAGES
+
 # copy images for web reference isn't needed because they are already on server
 
 # copy images for local reference
@@ -49,11 +58,14 @@ cp ../../img/processing_cover.gif ../../distribution/img/
 cp ../../img/about/people-header.gif ../../distribution/img/about/
 cp ../../content/api_en/images/header.gif ../../distribution/img/
 
+
+# GENERATE OTHER REFERENCE CONTENT
+
 # move to folder for generating other files
 cd ../../generate/
 
 # run web reference creations files
-# the static pages are best run separately, the tools and libraries are run by the librarian
+# the static pages are run separately, the tools and libraries are run by the librarian
 #php staticpages.php
 #php tools.php
 #php libraries.php
