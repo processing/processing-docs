@@ -2,762 +2,768 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
-<software name="The Creators" by="Constanza Casas, Mark C Mitchell and Pieter Steyaert" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/creators.jpg</image>
-          <description>
-              The Creators is a response by information visualisation students at the University of Sydney to a design brief that called for an interactive experience on a 42″ multitouch table that visualised data in a novel.The team chose realtime audio of the room as the dataset, as a meditation on cause and effect: the viewers become participators, creators, even if they are unaware of it.
-          </description>
-          <location>http://www.thecreators.tv</location>
+	<software name="The Creators" by="Constanza Casas, Mark C Mitchell and Pieter Steyaert" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/creators.jpg</image>
+		  <description>
+			  The Creators is a response by information visualisation students at the University of Sydney to a design brief that called for an interactive experience on a 42″ multitouch table that visualised data in a novel.The team chose realtime audio of the room as the dataset, as a meditation on cause and effect: the viewers become participators, creators, even if they are unaware of it.
+		  </description>
+		  <location>http://www.thecreators.tv</location>
 		 <link href="http://www.thecreators.tv">The Creators</link>
-</software>
+	</software>
 	
-<software name="The Digital Rube Goldberg Processor" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/golberg.jpg</image>
-          <description>
-              The Digital Rube Goldberg Processor is the outcome of a 4-day workshop The Product collective gave at the HfG Karlsruhe (Design School). Since they understand it is impossible to teach programming to beginners just within 4 days, they decided to focus more on the essential topics behind generative and computational design, to provide a grounded starting point for the students.
-          </description>
-          <location>http://www.the-product.org/rube-goldberg-processor</location>
+	<software name="The Digital Rube Goldberg Processor" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/golberg.jpg</image>
+		  <description>
+			  The Digital Rube Goldberg Processor is the outcome of a 4-day workshop The Product collective gave at the HfG Karlsruhe (Design School). Since they understand it is impossible to teach programming to beginners just within 4 days, they decided to focus more on the essential topics behind generative and computational design, to provide a grounded starting point for the students.
+		  </description>
+		  <location>http://www.the-product.org/rube-goldberg-processor</location>
 		 <link href="http://www.the-product.org/">The Product</link>
-</software>
+	</software>
 	
-<software name="Prototyp-0" by="Yannick Mathey" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/prototyp0.jpg</image>
-          <description>
-              prototyp-0 is an application designed for the drawing of typographical characters. Created using Processing, the application automates the process allowing you to manipulate a large number of glyph properties in realtime.
-          </description>
-          <location>http://www.yannickmathey.com/prototyp</location>
+	<software name="Prototyp-0" by="Yannick Mathey" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/prototyp0.jpg</image>
+		  <description>
+			  prototyp-0 is an application designed for the drawing of typographical characters. Created using Processing, the application automates the process allowing you to manipulate a large number of glyph properties in realtime.
+		  </description>
+		  <location>http://www.yannickmathey.com/prototyp</location>
 		 <link href="http://www.yannickmathey.com/">Yannick Mathey</link>
-</software>	
-
-<software name="Cascade" by="NYTimes R&D Lab" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/nytcascade.jpg</image>
-          <description>
-              Cascade is the latest project by NYTimes R&D Lab that allows precise analysis of the structures that underly sharing activity on the web. This tool links browsing behavior on a site to sharing activity to construct a detailed picture of how information propagates through the social media space.
-          </description>
-          <location>http://nytlabs.com/projects/cascade.html</location>
+	</software>	
+	
+	<software name="Cascade" by="NYTimes R&D Lab" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/nytcascade.jpg</image>
+		  <description>
+			  Cascade is the latest project by NYTimes R&D Lab that allows precise analysis of the structures that underly sharing activity on the web. This tool links browsing behavior on a site to sharing activity to construct a detailed picture of how information propagates through the social media space.
+		  </description>
+		  <location>http://nytlabs.com/projects/cascade.html</location>
 		 <link href="http://nytlabs.com">NYTimes R&D Lab</link>
-</software>
-
-<software name="MIT Media Lab Identity" by="TheGreenEyl and E Roon Kang" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mitidentity.jpg</image>
-          <description>
-              The new visual identity of the MIT Media Lab inspired by the community it comprises: Highly creative people from all kinds of backgrounds come together, inspire each other and collaboratively develop a vision of the future.
-          </description>
-          <location>http://www.thegreeneyl.com/mit-media-lab-identity-1</location>
+	</software>
+	
+	<software name="MIT Media Lab Identity" by="TheGreenEyl and E Roon Kang" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/mitidentity.jpg</image>
+		  <description>
+			  The new visual identity of the MIT Media Lab inspired by the community it comprises: Highly creative people from all kinds of backgrounds come together, inspire each other and collaboratively develop a vision of the future.
+		  </description>
+		  <location>http://www.thegreeneyl.com/mit-media-lab-identity-1</location>
 		 <link href="http://www.thegreeneyl.com">TheGreenEyl</link>
-</software>
-
-<software name="Continuum" by="Mary Huang" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/continuum.jpg</image>
-          <description>
-              The project is an attempt to blend rapid fabrication, interactive software, and the accessibility of the web, to let individuals participate directly in the design and production process of consumer products.
-          </description>
-          <location>http://www.rhymeandreasoncreative.com/portfolio/index.php?project=continuum</location>
+	</software>
+	
+	<software name="Continuum" by="Mary Huang" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/continuum.jpg</image>
+		  <description>
+			  The project is an attempt to blend rapid fabrication, interactive software, and the accessibility of the web, to let individuals participate directly in the design and production process of consumer products.
+		  </description>
+		  <location>http://www.rhymeandreasoncreative.com/portfolio/index.php?project=continuum</location>
 		 <link href="http://www.rhymeandreasoncreative.com">Mary Huang</link>
-</software>
-
-<software name="Moullinex – Catalina" by="Luis Clara Gomes, Luis Calçada" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/catalina.jpg</image>
-          <description>
-              Music video for Catalina, a track off the Chocolat EP by Moullinex, created using Processing, Microsoft Kinect, Cinema 4D and After Effects.
-          </description>
-          <location>http://moullinex.tumblr.com</location>
+	</software>
+	
+	<!--
+	<software name="Moullinex – Catalina" by="Luis Clara Gomes, Luis Calçada" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/catalina.jpg</image>
+		  <description>
+			  Music video for Catalina, a track off the Chocolat EP by Moullinex, created using Processing, Microsoft Kinect, Cinema 4D and After Effects.
+		  </description>
+		  <location>http://moullinex.tumblr.com</location>
 		 <link href="http://moullinex.tumblr.com/">Moullinex</link>
-</software>
-
-<software name="Process Compendium 2004-2010" by="Casey Reas" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/casey_pc.jpg</image>
-          <description>
-              Process Compendium 2004-2010 is a collection of work and record of process by Casey Reas, co-founder of Processing, presented and created entirely in Processing.
-          </description>
-          <location>http://reas.com/category.php?section=process</location>
-          <link href="http://ca-n.in/aUxWki">Download from CAN</link>
+	</software>
+	-->
+	
+	<software name="Process Compendium 2004-2010" by="Casey Reas" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/casey_pc.jpg</image>
+		  <description>
+			  Process Compendium 2004-2010 is a collection of work and record of process by Casey Reas, co-founder of Processing, presented and created entirely in Processing.
+		  </description>
+		  <location>http://vimeo.com/22955812</location>
+		  <link href="http://reas.com/category.php?section=process">Process Works</link>
+		  <link href="http://ca-n.in/aUxWki">Download from CAN</link>
 		 <link href="http://reas.com">Casey Reas</link>
-</software>
+	</software>
+	
+	<software name="One Hundred and Eight" by="Nils Völker" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/108.jpg</image>
+		  <description>
+			  One Hundred and Eight is an interactive wall-mounted Installation made out of ordinary garbage bags. Controlled by an Arduino and Processing, each of the bags is selectively inflated and deflated in turn by cooling fans.
+		  </description>
+		  <location>http://nilsvoelker.com/content/onehundredandeight/index.html</location>
+		  <link href="http://nilsvoelker.com/">Nils Völker</link>
+	</software>
+	
+	<software name="My Little Piece of Privacy" by="Niklas Roy" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/privacy.jpg</image>
+		  <description>
+			  Niklas' workshop is located in an old storefront with a big window facing towards the street. In an attempt to create more privacy inside, Niklas decided to install a small but smart curtain.
+		  </description>
+		  <location>http://www.niklasroy.com/project/88/my-little-piece-of-privacy/</location>
+		  <link href="http://www.niklasroy.com">Niklas Roy</link>
+	</software>
+	
+	<software name="Strata" by="Quayola" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/strata.jpg</image>
+		  <description>
+			  The Strata project by Quayola consist of a series of films, prints and installations investigating improbable relationships between contemporary digital aesthetics and icons of classical art and architecture.
+		  </description>
+		  <location>http://www.quayola.com/selectedartworks/strata3/</location>
+		  <link href="http://www.quayola.com">Quayola</link>
+	</software>
+	
+	<software name="Understanding Shakespeare" by="Stephan Thiel" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/shakespeare.jpg</image>
+		  <description>
+			  Introducing a new form of reading drama to help understand Shakespeare’s works in new and insightful way. Using Processing, a number of word visualizations are created to highlight relationships throughout the play.
+		  </description>
+		  <location>http://www.understanding-shakespeare.com</location>
+		  <link href="http://www.stephanthiel.com/">Stephan Thiel</link>
+	</software>
+	
+	<software name="One Perfect Cube" by="Florian Jenett" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/one-perfect-cube.jpg</image>
+		  <description>
+			  Three synchronized clocks that form a cube image every twelve hours for exactly one second.
+		  </description>
+		  <location>http://florianjenett.de/one-perfect-cube-making-of/</location>
+		  <link href="http://florianjenett.de/">FlorianJenett.de</link>
+	</software>
+	
+	<software name="Feltron 2009 Annual Report" by="Nicholas Felton" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/feltron.jpg</image>
+		  <description>
+			  Each day in 2009, Felton asked every person with whom he had a meaningful encounter to submit a record of this meeting through an online survey...
+		  </description>
+		  <location>http://feltron.com/ar09_01.html</location>
+		  <link href="http://feltron.tumblr.com/post/384316419/processing-and-the-2009-annual-report">2009 Report and Processing</link>
+		  <link href="http://feltron.com/">Feltron.com</link>
+	</software>
+	
+	<software name="Computing Kaizen" by="GSAPP Hasegawa/Collins Studio" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/computing-kaizen.jpg</image>
+		  <description>
+			  Toy software produced by an advanced graduate studio at the Columbia University GSAPP. Centered around the design of a technology incubator in the Akihabara district of Tokyo, this studio explored evolutionary structures that anticipate change and internalize complex relationships.
+		  </description>
+		  <location>http://proxyarch.com/kaizen</location>
+		  <link href="http://www.proxyarch.com">Proxy</link>
+		  <link href="http://www.arch.columbia.edu/">GSAPP</link>
+	</software>
+	
+	<software name="Fine Collection of Curious Sound Objects" by="Georg Reil, Kathy Scheuring" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/finecollection.jpg</image>
+		  <description>
+			  Storytelling combined with physical computing. Six mundane objects incorporate sensors that trigger feedback to the user as part of a fictional history of the objects.
+		  </description>
+		  <location>http://vimeo.com/10173262</location>
+		  <link href="http://www.geschoir.de/">geschoir.de</link>
+		  <link href="http://www.theplacetofindme.de/">theplacetofindme.de</link>
+	</software>
+	
+	<software name="Just Landed" by="Jer Thorp" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/justlanded.jpg</image>
+		  <description>
+			  Combines Processing, Twitter, and MetaCarta to map the phrase "Just landed in..." onto the globe and renders as video.
+		  </description>
+		  <location>http://blog.blprnt.com/blog/blprnt/just-landed-processing-twitter-metacarta-hidden-data</location>
+		  <link href="http://blog.blprnt.com/">blprnt.com</link>
+	</software>
+	
+	<software name="John Henry von Neumann" by="Chandler B. McWilliams" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/johnhenry.jpg</image>
+		  <description>
+			 Performance that recasts the archetypal conflict between human and machine labor as a competition to complete an algorithmic drawing in an eight-hour workday.
+		  </description>
+		  <location>http://brysonian.com/john-henry-von-neumann</location>
+		  <link href="http://brysonian.com/">brysonian.com</link>
+	</software>
+	
+	<software name="In the Air" by="Victor Viña, Nerea Calvillo" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/intheair.jpg</image>
+		  <description>
+			 Visualization project to reavel the invisible agents of Madrid's air (gases, particles, pollen, etc.), to see how they relate to the city.
+		  </description>
+		  <location>http://www.intheair.es</location>
+		  <link href="http://www.dosislas.org/">Victor Viña</link>
+		  <link href="http://www.cmasarquitectos.net/">Nerea Calvillo</link>
+	</software>
+	
+	<software name="Silica-Esc" by="Vladimir Todorovic" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/silica.jpg</image>
+		  <description>
+			 Generative movie that portrays a possible computing platform for the future. The story takes place in Singapore, where a decision about the new device is about to be made.
+		  </description>
+		  <location>http://vimeo.com/10154340</location>
+		  <link href="http://tadar.net/">tadar.net</link>
+		  <link href="http://www.flickr.com/photos/tadar/">tadar Flickr</link>
+	</software>
+	
+	<software name="Mycelium" by="Ryan Alexander" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/mycelium.png</image>
+		  <description>
+			 A simulation of fungal hyphae growth using images as food. 
+		  </description>
+		  <location>http://onecm.com/projects/mycelium/</location>
+		  <link href="http://onecm.com/">onecm.com</link>
+		  <link href="http://www.flickr.com/photos/onecm/">onecm Flickr</link>
+	</software>
+	
+	<software name="The Jelly Face Experiments" by="NYX (Liina Nilsson)" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/nyx.jpg</image>
+		  <description>
+			 Experiments with pixel-by-pixel operations in real time exploring the possibilities of the Processing video libraries. Playing with techniques like slit scan, frame differencing, and datamoshing.
+		  </description>
+		  <location>http://vimeo.com/3872857</location>
+		  <link href="http://nyxedition.wordpress.com/">NYX Blog</link>
+	</software>
+	
+	<software name="New Year's Cards, 2001-2010" by="Golan Levin" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/golan_cards.jpg</image>
+		  <description>
+			 For nearly a decade, Golan Levin has used Processing to create his annual interactive holiday cards. Explore this set of modest projects which connect the dots through one artist's process -- and happy holidays!
+		  </description>
+		  <location>http://www.flong.com/projects/newyear/</location>
+		  <link href="http://www.flong.com/">Flong</link>
+	</software>
 
-<software name="One Hundred and Eight" by="Nils Völker" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/108.jpg</image>
-          <description>
-              One Hundred and Eight is an interactive wall-mounted Installation made out of ordinary garbage bags. Controlled by an Arduino and Processing, each of the bags is selectively inflated and deflated in turn by cooling fans.
-          </description>
-          <location>http://nilsvoelker.com/content/onehundredandeight/index.html</location>
-          <link href="http://nilsvoelker.com/">Nils Völker</link>
-</software>
-
-<software name="My Little Piece of Privacy" by="Niklas Roy" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/privacy.jpg</image>
-          <description>
-              Niklas' workshop is located in an old storefront with a big window facing towards the street. In an attempt to create more privacy inside, Niklas decided to install a small but smart curtain.
-          </description>
-          <location>http://www.niklasroy.com/project/88/my-little-piece-of-privacy/</location>
-          <link href="http://www.niklasroy.com">Niklas Roy</link>
-</software>
-
-<software name="Strata" by="Quayola" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/strata.jpg</image>
-          <description>
-              The Strata project by Quayola consist of a series of films, prints and installations investigating improbable relationships between contemporary digital aesthetics and icons of classical art and architecture.
-          </description>
-          <location>http://www.quayola.com/index.php?/strata-3-bordeaux/</location>
-          <link href="http://www.quayola.com">Quayola</link>
-</software>
-
-<software name="Understanding Shakespeare" by="Stephan Thiel" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/shakespeare.jpg</image>
-          <description>
-              Introducing a new form of reading drama to help understand Shakespeare’s works in new and insightful way. Using Processing, a number of word visualizations are created to highlight relationships throughout the play.
-          </description>
-          <location>http://www.understanding-shakespeare.com</location>
-          <link href="http://www.stephanthiel.com/">Stephan Thiel</link>
-</software>
-
-<software name="One Perfect Cube" by="Florian Jenett" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/one-perfect-cube.jpg</image>
-          <description>
-              Three synchronized clocks that form a cube image every twelve hours for exactly one second.
-          </description>
-          <location>http://florianjenett.de/one-perfect-cube-making-of/</location>
-          <link href="http://florianjenett.de/">FlorianJenett.de</link>
-</software>
-
-<software name="Feltron 2009 Annual Report" by="Nicholas Felton" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/feltron.jpg</image>
-          <description>
-              Each day in 2009, Felton asked every person with whom he had a meaningful encounter to submit a record of this meeting through an online survey...
-          </description>
-          <location>http://feltron.com/index.php?/content/2009_annual_report/</location>
-          <link href="http://feltron.tumblr.com/post/384316419/processing-and-the-2009-annual-report">2009 Report and Processing</link>
-          <link href="http://feltron.com/">Feltron.com</link>
-</software>
-
-<software name="Computing Kaizen" by="GSAPP Hasegawa/Collins Studio" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/computing-kaizen.jpg</image>
-          <description>
-              Toy software produced by an advanced graduate studio at the Columbia University GSAPP. Centered around the design of a technology incubator in the Akihabara district of Tokyo, this studio explored evolutionary structures that anticipate change and internalize complex relationships.
-          </description>
-          <location>http://proxyarch.com/kaizen</location>
-          <link href="http://www.proxyarch.com">Proxy</link>
-          <link href="http://www.arch.columbia.edu/">GSAPP</link>
-</software>
-
-<software name="Fine Collection of Curious Sound Objects" by="Georg Reil, Kathy Scheuring" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/finecollection.jpg</image>
-          <description>
-              Storytelling combined with physical computing. Six mundane objects incorporate sensors that trigger feedback to the user as part of a fictional history of the objects.
-          </description>
-          <location>http://vimeo.com/10173262</location>
-          <link href="http://www.geschoir.de/">geschoir.de</link>
-          <link href="http://www.theplacetofindme.de/">theplacetofindme.de</link>
-</software>
-
-<software name="Just Landed" by="Jer Thorp" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/justlanded.jpg</image>
-          <description>
-              Combines Processing, Twitter, and MetaCarta to map the phrase "Just landed in..." onto the globe and renders as video.
-          </description>
-          <location>http://blog.blprnt.com/blog/blprnt/just-landed-processing-twitter-metacarta-hidden-data</location>
-          <link href="http://blog.blprnt.com/">blprnt.com</link>
-</software>
-
-<software name="John Henry von Neumann" by="Chandler B. McWilliams" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/johnhenry.jpg</image>
-          <description>
-             Performance that recasts the archetypal conflict between human and machine labor as a competition to complete an algorithmic drawing in an eight-hour workday.
-          </description>
-          <location>http://brysonian.com/john-henry-von-neumann</location>
-          <link href="http://brysonian.com/">brysonian.com</link>
-</software>
-
-<software name="In the Air" by="Victor Viña, Nerea Calvillo" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/intheair.jpg</image>
-          <description>
-             Visualization project to reavel the invisible agents of Madrid's air (gases, particles, pollen, etc.), to see how they relate to the city.
-          </description>
-          <location>http://www.intheair.es</location>
-          <link href="http://www.dosislas.org/">Victor Viña</link>
-          <link href="http://www.cmasarquitectos.net/">Nerea Calvillo</link>
-</software>
-
-<software name="Silica-Esc" by="Vladimir Todorovic" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/silica.jpg</image>
-          <description>
-             Generative movie that portrays a possible computing platform for the future. The story takes place in Singapore, where a decision about the new device is about to be made.
-          </description>
-          <location>http://vimeo.com/10154340</location>
-          <link href="http://tadar.net/">tadar.net</link>
-          <link href="http://www.flickr.com/photos/tadar/">tadar Flickr</link>
-</software>
-
-<software name="Mycelium" by="Ryan Alexander" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mycelium.png</image>
-          <description>
-             A simulation of fungal hyphae growth using images as food. 
-          </description>
-          <location>http://onecm.com/projects/mycelium/</location>
-          <link href="http://onecm.com/">onecm.com</link>
-          <link href="http://www.flickr.com/photos/onecm/">onecm Flickr</link>
-</software>
-
-<software name="The Jelly Face Experiments" by="NYX (Liina Nilsson)" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/nyx.jpg</image>
-          <description>
-             Experiments with pixel-by-pixel operations in real time exploring the possibilities of the Processing video libraries. Playing with techniques like slit scan, frame differencing, and datamoshing.
-          </description>
-          <location>http://vimeo.com/nyxvideo/videos</location>
-          <link href="http://nyxedition.wordpress.com/">NYX Blog</link>
-</software>
-
-<software name="New Year's Cards, 2001-2010" by="Golan Levin" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/golan_cards.jpg</image>
-          <description>
-             For nearly a decade, Golan Levin has used Processing to create his annual interactive holiday cards. Explore this set of modest projects which connect the dots through one artist's process -- and happy holidays!
-          </description>
-          <location>http://www.flong.com/projects/newyear/</location>
-          <link href="http://www.flong.com/">Flong</link>
-</software>
-
-<software name="COP15 Generative Identity" by="Mikkel Koser" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/cop15.jpg</image>
-          <description>
-             Software for generating the COP15 identity - the UN Climate Change Conference held in Copenhagen Dec 2009. It explores how turbulence and naturally evolving patterns can illustrate the complex decision making that goes on at the conference.
-          </description>
-          <location>http://www.okdeluxe.co.uk/cop15/</location>
-          <link href="http://www.okdeluxe.co.uk/">okdeluxe</link>
-          <link href="http://www.shiftcontrol.dk/">shiftcontrol</link>
-          <link href="http://www.nr2154.com/">NR2154</link>
-</software>
+	<software name="COP15 Generative Identity" by="Mikkel Koser" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/cop15.jpg</image>
+	  <description>
+		 Software for generating the COP15 identity - the UN Climate Change Conference held in Copenhagen Dec 2009. It explores how turbulence and naturally evolving patterns can illustrate the complex decision making that goes on at the conference.
+	  </description>
+	  <location>http://www.okdeluxe.co.uk/cop15/</location>
+	  <link href="http://www.okdeluxe.co.uk/">okdeluxe</link>
+	  <link href="http://www.shiftcontrol.dk/">shiftcontrol</link>
+	  <link href="http://www.nr2154.com/">NR2154</link>
+	</software>
         
-        <software name="Branching Morphogenesis" by="Sabin+Jones LabStudio" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/branching.jpg</image>
-          <description>
-             Explores fundamental processes in living systems and their potential application in architecture. The installation materializes five slices in time that capture the force network exerted by interacting vascular cells.
-          </description>
-          <location>http://www.sabin-jones.com/arselectronica.html</location>
-          <link href="http://www.sabin-jones.com/">Sabin+Jones LabStudio</link>
-          <link href="http://www.jennysabin.com/">Jenny Sabin</link>
-          <link href="http://www.andrewlucia.com/">Andrew Lucia</link>
-          <link href="http://www.uphs.upenn.edu/ime/PJones/">Jones Lab</link>
-        </software>
+	<software name="Branching Morphogenesis" by="Sabin+Jones LabStudio" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/branching.jpg</image>
+	  <description>
+		 Explores fundamental processes in living systems and their potential application in architecture. The installation materializes five slices in time that capture the force network exerted by interacting vascular cells.
+	  </description>
+	  <location>http://www.sabin-jones.com/arselectronica.html</location>
+	  <link href="http://www.sabin-jones.com/">Sabin+Jones LabStudio</link>
+	  <link href="http://www.jennysabin.com/">Jenny Sabin</link>
+	  <link href="http://www.andrewlucia.com/">Andrew Lucia</link>
+	  <link href="http://www.uphs.upenn.edu/ime/PJones/">Jones Lab</link>
+	</software>
         
-<software name="Telekom Realtime Information Graphics" by="Zum Kuckuck" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/realtime.jpg</image>
-          <description>
-             Realtime Information Graphics showing the international data interchange and the network traffic at the Product Experience Center of the Deutsche Telekom in Darmstadt, Germany.
-          </description>
-          <location>http://projects.zumkuckuck.com/realtime/</location>
-          <link href="http://www.zumkuckuck.com">Zum Kuckuck</link>
-          <link href="http://www.markgraph.de">Atelier Markgraph</link>
-        </software>
+	<software name="Telekom Realtime Information Graphics" by="Zum Kuckuck" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/realtime.jpg</image>
+	  <description>
+		 Realtime Information Graphics showing the international data interchange and the network traffic at the Product Experience Center of the Deutsche Telekom in Darmstadt, Germany.
+	  </description>
+	  <location>http://projects.zumkuckuck.com/realtime/</location>
+	  <link href="http://www.zumkuckuck.com">Zum Kuckuck</link>
+	  <link href="http://www.markgraph.de">Atelier Markgraph</link>
+	</software>
         
-<software name="Wayfarer" by="Ben Hemmendinger" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/wf3.png</image>
-          <description>
-             Wayfarer is a developing roguelike game with retro, quasi-3D graphics. Explore randomly generated dungeons and battle peculiar foes! Perish horribly!
-          </description>
-          <location>http://benhem.com/games/wayfarer</location>
-          <link href="http://benhem.com/">benhem.com</link>
-          <link href="http://roguebasin.roguelikedevelopment.org/index.php?title=Wayfarer">RogueBasin</link>
-        </software>
+	<software name="Wayfarer" by="Ben Hemmendinger" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/wf3.png</image>
+	  <description>
+		 Wayfarer is a developing roguelike game with retro, quasi-3D graphics. Explore randomly generated dungeons and battle peculiar foes! Perish horribly!
+	  </description>
+	  <location>http://benhem.com/games/wayfarer</location>
+	  <link href="http://benhem.com/">benhem.com</link>
+	  <link href="http://roguebasin.roguelikedevelopment.org/index.php?title=Wayfarer">RogueBasin</link>
+	</software>
         
-<software name="Mud Tub" by="Tom Gerhardt" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mud.jpg</image>
-          <description>
-             This experimental organic interface allows people to control a computer while playing in the mud. Through an API built with Processing, artists and designers develop mud-controlled games, physics simulations, and expressive tools.
-          </description>
-          <location>http://tomgerhardt.com/mudtub</location>
-          <link href="http://tomgerhardt.com/">tomgerhardt.com</link>
-          <link href="http://itp.nyu.edu/itp/">NYU ITP</link>
-        </software>
+	<software name="Mud Tub" by="Tom Gerhardt" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/mud.jpg</image>
+	  <description>
+		 This experimental organic interface allows people to control a computer while playing in the mud. Through an API built with Processing, artists and designers develop mud-controlled games, physics simulations, and expressive tools.
+	  </description>
+	  <location>http://tomgerhardt.com/mudtub</location>
+	  <link href="http://tomgerhardt.com/">tomgerhardt.com</link>
+	  <link href="http://itp.nyu.edu/itp/">NYU ITP</link>
+	</software>
+	
+	<software name="MOSstack" by="MOS (Michael Meredith, Hilary Sample, William Macfarlane)" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/mos.gif</image>
+	  <description>
+		 This software is for stacking blocks within an environment of forces. As each unit is stacked it simultaneously calculates its own weight and balance in real-time to produce strange structural forms.
+	  </description>
+	  <location>http://www.mos-office.net/project/2008_Onthevergeofcollapse</location>
+	  <link href="http://www.mos-office.net/project/2008_MOScat">MOScat</link>
+	  <link href="http://www.mos-office.net/project/2008_9_ComputationalPile">ComputationalPile</link>
+	  <link href="http://www.mos-office.net/project/2008_Arcade">Arcade</link>
+	</software>
         
-<software name="MOSstack" by="MOS (Michael Meredith, Hilary Sample, William Macfarlane)" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mos.gif</image>
-          <description>
-             This software is for stacking blocks within an environment of forces. As each unit is stacked it simultaneously calculates its own weight and balance in real-time to produce strange structural forms.
-          </description>
-          <location>http://www.mos-office.net/project/2008_Onthevergeofcollapse</location>
-          <link href="http://www.mos-office.net/project/2008_MOScat">MOScat</link>
-          <link href="http://www.mos-office.net/project/2008_9_ComputationalPile">ComputationalPile</link>
-          <link href="http://www.mos-office.net/project/2008_Arcade">Arcade</link>
-        </software>
-        
-<software name="Terre Natale (Exits 2)" by="Stewart Smith, Robert Gerard Pietrusko, Aaron Meyers, Michael Doherty, and Hans-Christoph Steiner" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/terre.jpg</image>
-          <description>
-             A half-hour immersive visualization of human migration data; premiered at the Fondation Cartier in Paris, 2008. Produced under Diller Scofidio + Renfro, et al.
-          </description>
-          <location>http://stewdio.org/work/terrenatale/</location>
-          <link href="http://stewdio.org">Stewart Smith</link>
-          <link href="http://warning-office.org">Robert Gerard Pietrusko</link>
-          <link href="http://universaloscillation.com">Aaron Meyers</link>
-          <link href="http://neufuture.com">Michael Doherty</link>
-          <link href="http://at.or.at/hans">Hans-Christoph Steiner</link>
-        </software>
-        
-<software name="MTV Brazil ID 2009" by="Dimitre Lima" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mtv.gif</image>
-          <description>
-             A software particle system creates variations of the MTV logotype.
-          </description>
-          <location>http://dmtr.org/mtv_rewind/</location>
-          <link href="http://dmtr.org/">Dmtr.org</link>
-          <link href="http://piloto.tv/refresh-mtv-2009/">Piloto</link>
-        </software>
-        
-<software name="Interim Camp" by="Marcus Wendt, Vera-Maria Glahn, Arran Poole" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/camp.jpg</image>
-          <description>
-              An experimental animation film based on drifting and morphing surface structures, created with a custom generative software tool. A meditation about the pursuit of an idea; about obstacles, struggle and failure along the way.
-             </description>
-          <location>http://www.field.io/project/interim-camp</location>
-          <link href="http://www.field.io/">field</link>
-        </software>
-        
-<software name="People Mover" by="Aeolab" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/aeolab.jpg</image>
-          <description>
-              A clockwork of colorful 'mobiles' assembles and unwinds according to data collected by three users of Nokia N95 smartphones over a period of several months.
-             </description>
-          <location>http://www.aeolab.com/projects/peoplemover/applet/</location>
-          <link href="http://www.aeolab.com/">Aeolab</link>
-        </software>
-        
-<software name="BallDroppings" by="Josh Nimoy" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/balldroppings.gif</image>
-          <description>
-              Turn your sound up. Draw lines on the black screen to bounce the balls. Enjoy the music.
-             </description>
-          <location>http://balldroppings.com/js/</location>
-          <link href="http://balldroppings.com/">BallDroppings</link>
-          <link href="http://www.jtnimoy.net/">JTNimoy.net</link>
-        </software>
-        
-<software name="Oasis" by="Yunsil Heo, Hyunwoo Bang" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/oasis.gif</image>
-          <description>
-             A playful space where people discover and explore virtual life.
-             </description>
-          <location>http://everyware.kr/portfolio/contents/09_oasis/</location>
-          <link href="http://everyware.kr">everyware</link>
-        </software>
-        
-<software name="Platonic Solids" by="Michael Hansmeyer" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/platonic.jpg</image>
-          <description>
-             Three-dimensional subdivision of platonic solids, inspired by Ernst Haeckel's 'Kunstformen der Natur.'
-             </description>
-          <location>http://www.michael-hansmeyer.com/projects/project4.html</location>
-          <link href="http://www.michael-hansmeyer.com">Michael Hansmeyer</link>
-          <link href="http://www.flickr.com/photos/junearch/sets/72157602857326020/">Subdivision Flickr Set</link>
-        </software>
-        
-<software name="Monsters" by="Lukas Vojir (Ed.)" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/monsters.gif</image>
-          <description>
-             Black and white, reactive monsters created by the Processing community.       
-          </description>
-          <location>http://www.rmx.cz/monsters/</location>
-          <link href="http://www.rmx.cz/">Rmx</link>
-        </software>
-        
-<software name="Big Screens 2" by="NYU ITP" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/itp2.jpg</image>
-          <description>
-             For the second year, Dan Shiffman's NYU students write software for a 120 by 12 
-             foot video wall at IAC's world headquarters in NYC.          
-          </description>
-          <location>http://gizmodo.com/5110633/120-feet-of-video-art-final-exams-at-nyus-big-screens-class</location>
-          <link href="http://www.shiffman.net/">Shiffman.net</link>
-        </software>
-        
-<software name="The Emergence Project" by="Daniel Sauter, Mark Hereld" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/emergence.jpg</image>
-          <description>
-             Realtime art installation that explores how complex systems and patterns arise out of 
-             a multiplicity of simple interactions.
-          </description>
-          <location>http://emergenceproject.org/blog/?page_id=180</location>
-          <link href="http://emergenceproject.org/blog/">The Emergence Project</link>
-          <link href="http://daniel-sauter.com/">Daniel Sauter</link>
-        </software>
-        
-<software name="Roots" by="Memo Akten, Owen Vallis, Jordan Hochenbaum" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/roots.jpg</image>
-          <description>
-             An interactive installation where participants engage in making generative / semi-generative / and or 
-             composed music by moving their fingers and objects around the Brick multi-touch surface.
-          </description>
-          <location>http://bricktable.wordpress.com/about/what-is-roots/</location>
-          <link href="http://www.memo.tv/projects/roots_minitek_festival_2008">Memo.tv</link>
-        </software>
-        
-<software name="NPZvisualizer" by="Neil Banas" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/npz.gif</image>
-          <description>
-             Tool for exploring the dynamics of coastal marine ecosystems.
-         Exchanges between plankton populations push the system sometimes
-         toward equilibrium, sometimes into simple cycles, sometimes into
-         chaos.
-          </description>
-          <location>http://coast.ocean.washington.edu/~neil/NPZvisualizer/</location>
-          <link href="http://neilbanas.com">Banas' design</link>
-          <link href="http://coast.ocean.washington.edu/~neil/">Banas' oceanography</link>
-        </software>
-        
-<software name="Mæve" by="Interface Design Team of FH Potsdam" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/maeve.jpg</image>
-          <description>
-             Provides visual and tangible access to the conceptual networks behind architectural projects. 
-             The installation is part of the 11th International Architecture Exhibition of the Venice Biennale.
-          </description>
-          <location>http://portal.mace-project.eu/maeve/</location>
-          <link href="http://interface.fh-potsdam.de">FH Potsdam</link>
-          <link href="http://www.mace-project.eu">MACE</link>
-        </software>
-        
-<software name="YMYI" by="Joao Martinho Moura and Jorge Sousa" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/ymyi.jpg</image>
-          <description>
-             Space where the user interacts with a living image through his body movements.
-          </description>
-          <location>http://www.ymyi.org</location>
-          <link href="http://www.jmartinho.org">Joao Martinho Moura</link>
-          <link href="http://mtad.dsi.uminho.pt/en/">Master in Technology and Digital Art</link>
-        </software>
+	<software name="Terre Natale (Exits 2)" by="Stewart Smith, Robert Gerard Pietrusko, Aaron Meyers, Michael Doherty, and Hans-Christoph Steiner" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/terre.jpg</image>
+	  <description>
+		 A half-hour immersive visualization of human migration data; premiered at the Fondation Cartier in Paris, 2008. Produced under Diller Scofidio + Renfro, et al.
+	  </description>
+	  <location>http://stewdio.org/work/terrenatale/</location>
+	  <link href="http://stewdio.org">Stewart Smith</link>
+	  <link href="http://warning-office.org">Robert Gerard Pietrusko</link>
+	  <link href="http://universaloscillation.com">Aaron Meyers</link>
+	  <link href="http://neufuture.com">Michael Doherty</link>
+	  <link href="http://at.or.at/hans">Hans-Christoph Steiner</link>
+	</software>
+	
+	<software name="MTV Brazil ID 2009" by="Dimitre Lima" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/mtv.gif</image>
+	  <description>
+		 A software particle system creates variations of the MTV logotype.
+	  </description>
+	  <location>http://dmtr.org/mtv_rewind/</location>
+	  <link href="http://dmtr.org/">Dmtr.org</link>
+	  <link href="http://piloto.tv/refresh-mtv-2009/">Piloto</link>
+	</software>
+	
+	<software name="Interim Camp" by="Marcus Wendt, Vera-Maria Glahn, Arran Poole" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/camp.jpg</image>
+	  <description>
+		  An experimental animation film based on drifting and morphing surface structures, created with a custom generative software tool. A meditation about the pursuit of an idea; about obstacles, struggle and failure along the way.
+		 </description>
+	  <location>http://www.field.io/project/interim-camp</location>
+	  <link href="http://www.field.io/">field</link>
+	</software>
+	
+	<software name="People Mover" by="Aeolab" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/aeolab.jpg</image>
+	  <description>
+		  A clockwork of colorful 'mobiles' assembles and unwinds according to data collected by three users of Nokia N95 smartphones over a period of several months.
+		 </description>
+	  <location>http://www.aeolab.com/projects/peoplemover/applet/</location>
+	  <link href="http://www.aeolab.com/">Aeolab</link>
+	</software>
+	
+	<software name="BallDroppings" by="Josh Nimoy" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/balldroppings.gif</image>
+	  <description>
+		  Turn your sound up. Draw lines on the black screen to bounce the balls. Enjoy the music.
+		 </description>
+	  <location>http://balldroppings.com/js/</location>
+	  <link href="http://balldroppings.com/">BallDroppings</link>
+	  <link href="http://www.jtnimoy.net/">JTNimoy.net</link>
+	</software>
+	
+	<software name="Oasis" by="Yunsil Heo, Hyunwoo Bang" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/oasis.gif</image>
+	  <description>
+		 A playful space where people discover and explore virtual life.
+		 </description>
+	  <location>http://everyware.kr/portfolio/contents/09_oasis/</location>
+	  <link href="http://everyware.kr">everyware</link>
+	</software>
+	
+	<software name="Platonic Solids" by="Michael Hansmeyer" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/platonic.jpg</image>
+	  <description>
+		 Three-dimensional subdivision of platonic solids, inspired by Ernst Haeckel's 'Kunstformen der Natur.'
+		 </description>
+	  <location>http://www.michael-hansmeyer.com/projects/project4.html</location>
+	  <link href="http://www.michael-hansmeyer.com">Michael Hansmeyer</link>
+	  <link href="http://www.flickr.com/photos/junearch/sets/72157602857326020/">Subdivision Flickr Set</link>
+	</software>
+	
+	<software name="Monsters" by="Lukas Vojir (Ed.)" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/monsters.gif</image>
+	  <description>
+		 Black and white, reactive monsters created by the Processing community.       
+	  </description>
+	  <location>http://www.rmx.cz/monsters/</location>
+	  <link href="http://www.rmx.cz/">Rmx</link>
+	</software>
+	
+	<software name="Big Screens 2" by="NYU ITP" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/itp2.jpg</image>
+	  <description>
+		 For the second year, Dan Shiffman's NYU students write software for a 120 by 12 
+		 foot video wall at IAC's world headquarters in NYC.          
+	  </description>
+	  <location>http://gizmodo.com/5110633/120-feet-of-video-art-final-exams-at-nyus-big-screens-class</location>
+	  <link href="http://www.shiffman.net/">Shiffman.net</link>
+	</software>
+	
+	<software name="The Emergence Project" by="Daniel Sauter, Mark Hereld" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/emergence.jpg</image>
+	  <description>
+		 Realtime art installation that explores how complex systems and patterns arise out of 
+		 a multiplicity of simple interactions.
+	  </description>
+	  <location>http://emergenceproject.org/blog/?page_id=180</location>
+	  <link href="http://emergenceproject.org/blog/">The Emergence Project</link>
+	  <link href="http://daniel-sauter.com/">Daniel Sauter</link>
+	</software>
+	
+	<software name="Roots" by="Memo Akten, Owen Vallis, Jordan Hochenbaum" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/roots.jpg</image>
+	  <description>
+		 An interactive installation where participants engage in making generative / semi-generative / and or 
+		 composed music by moving their fingers and objects around the Brick multi-touch surface.
+	  </description>
+	  <location>http://bricktable.wordpress.com/about/what-is-roots/</location>
+	  <link href="http://www.memo.tv/projects/roots_minitek_festival_2008">Memo.tv</link>
+	</software>
+	
+	<software name="NPZvisualizer" by="Neil Banas" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/npz.gif</image>
+	  <description>
+		 Tool for exploring the dynamics of coastal marine ecosystems.
+	 Exchanges between plankton populations push the system sometimes
+	 toward equilibrium, sometimes into simple cycles, sometimes into
+	 chaos.
+	  </description>
+	  <location>http://coast.ocean.washington.edu/~neil/NPZvisualizer/</location>
+	  <link href="http://neilbanas.com">Banas' design</link>
+	  <link href="http://coast.ocean.washington.edu/~neil/">Banas' oceanography</link>
+	</software>
+	
+	<software name="Mæve" by="Interface Design Team of FH Potsdam" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/maeve.jpg</image>
+	  <description>
+		 Provides visual and tangible access to the conceptual networks behind architectural projects. 
+		 The installation is part of the 11th International Architecture Exhibition of the Venice Biennale.
+	  </description>
+	  <location>http://portal.mace-project.eu/maeve/</location>
+	  <link href="http://interface.fh-potsdam.de">FH Potsdam</link>
+	  <link href="http://www.mace-project.eu">MACE</link>
+	</software>
+	
+	<software name="YMYI" by="Joao Martinho Moura and Jorge Sousa" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/ymyi.jpg</image>
+	  <description>
+		 Space where the user interacts with a living image through his body movements.
+	  </description>
+	  <location>http://ymyi.jmartinho.net/</location>
+	  <link href="http://www.jmartinho.net">Joao Martinho Moura</link>
+	  <link href="http://mtad.dsi.uminho.pt/en/">Master in Technology and Digital Art</link>
+	</software>
+	
+	<software name="Body Navigation" by="Jonas Jongejan and Ole Kristensen for Recoil Performance Group" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/bodynavigation.jpg</image>
+	  <description>
+		 Infrared motion tracking and floor projection installation for a Danish Dance Theatre production with choreographer Tina Tarpgaard.
+	  </description>
+	  <location>http://3xw.ole.kristensen.name/works/body-navigation/</location>
+	  <link href="http://ole.kristensen.name/">Ole Kristensen</link>
+	  <link href="http://halfdanj.dk/">HalfdanJ</link>
+	  <link href="http://recoil-performance.org/">Recoil Performance Group</link>
+	</software>
 
-<software name="Body Navigation" by="Jonas Jongejan and Ole Kristensen for Recoil Performance Group" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/bodynavigation.jpg</image>
-          <description>
-             Infrared motion tracking and floor projection installation for a Danish Dance Theatre production with choreographer Tina Tarpgaard.
-          </description>
-          <location>http://3xw.ole.kristensen.name/works/body-navigation/</location>
-          <link href="http://ole.kristensen.name/">Ole Kristensen</link>
-          <link href="http://halfdanj.dk/">HalfdanJ</link>
-          <link href="http://recoil-performance.org/">Recoil Performance Group</link>
-        </software>
-
-<software name="News Knitter" by="Ebru Kurbak & Mahir M. Yavuz" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/newsknitter.jpg</image>
-          <description>
-             Visualization of news feeds as knitted garments.
-          </description>
-          <location>http://casualdata.com/newsknitter</location>
-	  <link href="http://mahirmyavuz.com/">Mahir M. Yavuz</link>
-        </software>
-
-<software name="Wordscapes" by="Peter Cho" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/cho.jpg</image>
-          <description>
-             A collection of reactive one-word poem landscapes.
-          </description>
-          <location>http://www.typotopo.com/wordscapes/</location>
-          <link href="http://www.typotopo.com/">Typotopo.com</link>
-          <link href="http://www.pcho.net/">Pcho.net</link>
-        </software>
-
-<software name="Counterclockwise" by="David Muth" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/muth.jpg</image>
-          <description>
-             A generative video piece with music by Hiaz. 
-          </description>
-          <location>http://www.davidmuth.net/videos/counterclockwise/</location>
-          <link href="http://www.davidmuth.net/">DavidMuth.net</link>
-        </software>
-
-<software name="proximityOfNeeds" by="Lia" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/proximity.gif</image>
-          <description>
-             Generative, parameterized images and sound. 
-          </description>
-          <location>http://www.proximityofneeds.org/</location>
-          <link href="http://www.strangethingshappen.org/">strangethingshappen.org</link>
-        </software>
-
-
-<software name="Volume of Emptiness" by="John Houck" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/houck.jpg</image>
-          <description>
-             Volume of Emptiness is an installation that continually unfolds architectural spaces. Virtual volumes are created by a field of motors in the ceiling that each have a number of threads attached to them.
-          </description>
-          <location>http://www.johnhouck.com/p/</location>
-          <link href="http://www.johnhouck.com">JohnHouck.com</link>
-        </software>
-
-<software name="Big Screens" by="NYU ITP" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/itp.jpg</image>
-          <description>
-             Dan Shiffman's NYU students write software for a 120 by 12 foot video wall
-             at IAC's world headquarters designed by Frank Gehry.          
-          </description>
-          <location>http://itp.nyu.edu/bigscreens/</location>
-          <link href="http://www.flickr.com/photos/shiffman/sets/72157601572932676/">Flickr Gallery</link>
-          <link href="http://www.shiffman.net/">Shiffman.net</link>
-        </software>
-
-<software name="Nervous System, Play + Learn" by="Jessica Rosenkrantz and Jesse Louis-Rosenberg" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/nervous.jpg</image>
-          <description>
-          Shows the global exchange of information by visualizing volumes of data flowing
-         in and out of New York City.
-          </description>
-          <location>http://www.n-e-r-v-o-u-s.com/play_and_learn.php</location>
-          <link href="http://www.n-e-r-v-o-u-s.com/">Nervous System</link>
-        </software>
-
-<software name="NYTE" by="SENSEable City Lab" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mit.jpg</image>
-          <description>
-          Shows the global exchange of information by visualizing volumes of data flowing 
-         in and out of New York City.
-          </description>
-          <location>http://senseable.mit.edu/nyte/</location>
-          <link href="http://senseable.mit.edu/">SENSEable City Lab</link>
-	  <link href="http://www.aaronkoblin.com/">AaronKoblin.com</link>
-        </software>
-
-<software name="Cascade on Wheels" by="Steph Thirion et al." scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/cascade.jpg</image>
-          <description>
-          Two visualizations of traffic patterns in Madrid.
-          </description>
-          <location>http://www.trsp.net/cow/</location>
-          <link href="http://www.trsp.net/">Transparent</link>
-        </software>
-
-<software name="MYPOCKET" by="Burak Arikan" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/mypocket.jpg</image>
-          <description>
-          Discloses the artist's personal financial records by exploring and revealing essential   
-	  patterns in daily transactions.
-          </description>
-          <location>http://transition.turbulence.org/Works/mypocket/</location>
-          <link href="http://burak-arikan.com/">Burak-Arikan.com</link>
-        </software>
-
-<software name="Michael Fakesch Vidos" by="Danny Franzreb (Taobot)" scroll="yes" resize="yes" width="1024" height="900">
-        <image>images/taobot.jpg</image>
-          <description>
-	  Music video for Michael Fakesch's upcoming DVD release Vidos that accompanies his album Dos.
-          </description>
-          <location>http://www.taobot.com/projects/various/michael-fakesch-vidos</location>
-          <link href="http://www.taobot.com/">Taobot</link>
-          <link href="http://www.michaelfakesch.com/">Michael Fakesch</link>
-        </software>
-
-<software name="White Glove Tracking" by="Evan Roth & Ben Engebreth" scroll="yes" resize="yes" width="1024" height="900">
-        <image>images/whiteglove.jpg</image>
-          <description>
-Internet users isolated and then visualized Michael Jackson's white glove in all 10,060 frames of his nationally televised landmark performance of Billy Jean.
-          </description>
-          <location>http://whiteglovetracking.com/</location>
-          <link href="http://ni9e.com">Evan Roth</link>
-          <link href="http://www.benengebreth.org/">Ben Engebreth</link>
-        </software>
-
-<software name="Birds!" by="Robert Hodgin" scroll="yes" resize="yes" width="1024" height="900">
-        <image>images/foxmovies.jpg</image>
-          <description>
-Exploration of flocking behavior used to collaborate with Nando Costa in producing telvision spots for FOX Japan.
-          </description>
-          <location>http://www.flight404.com/blog/?p=99</location>
-          <link href="http://www.flight404.com/">Flight404</link>
-          <link href="http://nervo.tv/index.html?sect=5&proj=foxmovies">Nervo</link>
-        </software>
-
-<software name="Microsoft Live / Operation Smile" by="Firstborn" scroll="yes" resize="yes" width="1024" height="900">
-        <image>images/firstborn.jpg</image>
-          <description>
-A generative art exhibition projected onto a seven-story sphere located at New York's South Street Seaport.
-          </description>
-          <location>http://www.firstbornmultimedia.com/#/our-portfolio/1007/</location>
-          <link href="http://www.firstbornmultimedia.com/">Firstborn</link>
-        </software>
-
-<software name="Similar Diversity" by="Philipp Steinweber & Andreas Koller" scroll="yes" resize="yes" width="900" height="900">
-        <image>images/simdiv.jpg</image>
-          <description>
- A data visualization based on the Holy Books of five world religions.
-          </description>
-          <location>http://similardiversity.net</location>
-          <link href="http://phl.kontxt.net">Philipp Steinweber</link>
-	  <link href="http://andreaskoller.com">Andreas Koller</link>
-        </software>
-
-<software name="Query Burst Visualizer" by="Yahoo! Design Innovation Team" scroll="yes" resize="yes"\
- width="1024" height="900">
-        <image>images/yahoo.jpg</image>
-          <description>
- Shows global locations of popular Yahoo! search queries related to current events. 
-          </description>
-          <location>http://design.yahoo.com/project.php?pid=9</location>
-          <link href="http://design.yahoo.com/">Yahoo! Design Innovation Team</link>
-        </software>
-
-<software name="The Sheep Market" by="Aaron Koblin" scroll="yes" resize="yes"\
- width="1024" height="900">
-        <image>images/sheep.gif</image>
-          <description>
-The Sheep Market is a collection of 10,000 sheep made by workers on Amazon's Mechanical Turk. Workers were paid $0.02 (USD) to &quot;draw a sheep facing to the left.&quot;
-          </description>
-          <location>http://www.aaronkoblin.com/work/thesheepmarket/</location>
-          <link href="http://www.thesheepmarket.com">TheSheepMarket.com</link>
-          <link href="http://www.aaronkoblin.com">Aaron Koblin</link>
-        </software>
+	<software name="News Knitter" by="Ebru Kurbak & Mahir M. Yavuz" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/newsknitter.jpg</image>
+	  <description>
+		 Visualization of news feeds as knitted garments.
+	  </description>
+	  <location>http://casualdata.com/newsknitter</location>
+	<link href="http://mahirmyavuz.com/">Mahir M. Yavuz</link>
+	</software>
+	
+	<software name="Wordscapes" by="Peter Cho" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/cho.jpg</image>
+	  <description>
+		 A collection of reactive one-word poem landscapes.
+	  </description>
+	  <location>http://www.typotopo.com/wordscapes/</location>
+	  <link href="http://www.typotopo.com/">Typotopo.com</link>
+	  <link href="http://www.pcho.net/">Pcho.net</link>
+	</software>
+	
+	<software name="Counterclockwise" by="David Muth" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/muth.jpg</image>
+	  <description>
+		 A generative video piece with music by Hiaz. 
+	  </description>
+	  <location>http://www.davidmuth.net/videos/counterclockwise/</location>
+	  <link href="http://www.davidmuth.net/">DavidMuth.net</link>
+	</software>
+	
+	<software name="proximityOfNeeds" by="Lia" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/proximity.gif</image>
+	  <description>
+		 Generative, parameterized images and sound. 
+	  </description>
+	  <location>http://www.proximityofneeds.org/</location>
+	  <link href="http://www.strangethingshappen.org/">strangethingshappen.org</link>
+	</software>
+	
+	
+	<software name="Volume of Emptiness" by="John Houck" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/houck.jpg</image>
+	  <description>
+		 Volume of Emptiness is an installation that continually unfolds architectural spaces. Virtual volumes are created by a field of motors in the ceiling that each have a number of threads attached to them.
+	  </description>
+	  <location>http://www.johnhouck.com/p/</location>
+	  <link href="http://www.johnhouck.com">JohnHouck.com</link>
+	</software>
+	
+	<software name="Big Screens" by="NYU ITP" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/itp.jpg</image>
+	  <description>
+		 Dan Shiffman's NYU students write software for a 120 by 12 foot video wall
+		 at IAC's world headquarters designed by Frank Gehry.          
+	  </description>
+	  <location>http://www.flickr.com/photos/shiffman/sets/72157601572932676/</location>
+	  <!--<location>http://itp.nyu.edu/bigscreens/</location>-->
+	  <!--<link href="http://www.flickr.com/photos/shiffman/sets/72157601572932676/">Flickr Gallery</link>-->
+	  <link href="http://www.shiffman.net/">Shiffman.net</link>
+	</software>
+	
+	<software name="Nervous System, Play + Learn" by="Jessica Rosenkrantz and Jesse Louis-Rosenberg" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/nervous.jpg</image>
+	  <description>
+	  	Shows the global exchange of information by visualizing volumes of data flowing
+	 	in and out of New York City.
+	  </description>
+	  <location>http://www.n-e-r-v-o-u-s.com/play_and_learn.php</location>
+	  <link href="http://www.n-e-r-v-o-u-s.com/">Nervous System</link>
+	</software>
+	
+	<software name="NYTE" by="SENSEable City Lab" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/mit.jpg</image>
+	  <description>
+	  	Shows the global exchange of information by visualizing volumes of data flowing 
+	 	in and out of New York City.
+	  </description>
+	  <location>http://senseable.mit.edu/nyte/</location>
+	  <link href="http://senseable.mit.edu/">SENSEable City Lab</link>
+	<link href="http://www.aaronkoblin.com/">AaronKoblin.com</link>
+	</software>
+	
+	<software name="Cascade on Wheels" by="Steph Thirion et al." scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/cascade.jpg</image>
+	  <description>
+	  	Two visualizations of traffic patterns in Madrid.
+	  </description>
+	  <location>http://www.trsp.net/cow/</location>
+	  <link href="http://www.trsp.net/">Transparent</link>
+	</software>
+	
+	<software name="MYPOCKET" by="Burak Arikan" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/mypocket.jpg</image>
+	  <description>
+	  	Discloses the artist's personal financial records by exploring and revealing essential   
+		patterns in daily transactions.
+	  </description>
+	  <location>http://transition.turbulence.org/Works/mypocket/</location>
+	  <link href="http://burak-arikan.com/">Burak-Arikan.com</link>
+	</software>
+	
+	<software name="Michael Fakesch Vidos" by="Danny Franzreb (Taobot)" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/taobot.jpg</image>
+	  <description>
+		Music video for Michael Fakesch's upcoming DVD release Vidos that accompanies his album Dos.
+	  </description>
+	  <location>http://www.taobot.com/projects/various/michael-fakesch-vidos</location>
+	  <link href="http://www.taobot.com/">Taobot</link>
+	  <link href="http://www.michaelfakesch.com/">Michael Fakesch</link>
+	</software>
+	
+	<software name="White Glove Tracking" by="Evan Roth & Ben Engebreth" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/whiteglove.jpg</image>
+	  <description>
+		Internet users isolated and then visualized Michael Jackson's white glove in all 10,060 frames of his nationally televised landmark performance of Billy Jean.
+	  </description>
+	  <location>http://whiteglovetracking.com/</location>
+	  <link href="http://ni9e.com">Evan Roth</link>
+	  <link href="http://www.benengebreth.org/">Ben Engebreth</link>
+	</software>
+	
+	<software name="Birds!" by="Robert Hodgin" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/foxmovies.jpg</image>
+	  <description>
+		Exploration of flocking behavior used to collaborate with Nando Costa in producing telvision spots for FOX Japan.
+	  </description>
+	  <location>http://www.flight404.com/blog/?p=99</location>
+	  <link href="http://www.flight404.com/">Flight404</link>
+	  <link href="http://nervo.tv/index.html?sect=5&proj=foxmovies">Nervo</link>
+	</software>
+	
+	<software name="Microsoft Live / Operation Smile" by="Firstborn" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/firstborn.jpg</image>
+	  <description>
+		A generative art exhibition projected onto a seven-story sphere located at New York's South Street Seaport.
+	  </description>
+	  <location>http://www.firstborn.com/#/our-portfolio/1007/</location>
+	  <link href="http://www.firstbornmultimedia.com/">Firstborn</link>
+	</software>
+	
+	<software name="Similar Diversity" by="Philipp Steinweber & Andreas Koller" scroll="yes" resize="yes" width="900" height="900">
+	<image>images/simdiv.jpg</image>
+	  <description>
+		A data visualization based on the Holy Books of five world religions.
+	  </description>
+	  <location>http://similardiversity.net</location>
+	  <link href="http://phl.kontxt.net">Philipp Steinweber</link>
+	<link href="http://andreaskoller.com">Andreas Koller</link>
+	</software>
+	
+	<!--
+	<software name="Query Burst Visualizer" by="Yahoo! Design Innovation Team" scroll="yes" resize="yes"\
+	width="1024" height="900">
+	<image>images/yahoo.jpg</image>
+	  <description>
+	Shows global locations of popular Yahoo! search queries related to current events. 
+	  </description>
+	  <location>http://design.yahoo.com/project.php?pid=9</location>
+	  <link href="http://design.yahoo.com/">Yahoo! Design Innovation Team</link>
+	</software>
+	-->
+	
+	<software name="The Sheep Market" by="Aaron Koblin" scroll="yes" resize="yes"\
+	width="1024" height="900">
+	<image>images/sheep.gif</image>
+	  <description>
+	The Sheep Market is a collection of 10,000 sheep made by workers on Amazon's Mechanical Turk. Workers were paid $0.02 (USD) to &quot;draw a sheep facing to the left.&quot;
+	  </description>
+	  <location>http://www.aaronkoblin.com/work/thesheepmarket/</location>
+	  <link href="http://www.thesheepmarket.com">TheSheepMarket.com</link>
+	  <link href="http://www.aaronkoblin.com">Aaron Koblin</link>
+	</software>
 
  
-<software name="Celestial Workshops" by="Paul Catanese" scroll="yes" resize="yes"\
- width="800" height="900">
-        <image>images/catanese.jpg</image>
-          <description>
-Celestial Workshops is a suite of drawing tools created in Processing that
-control CNC milling machinery as a method of carving relief blocks for
-printmaking.
-          </description>
-          <location>http://www.paulcatanese.com/artwork/celestial/process.html</location>
-          <link href="http://www.paulcatanese.com">PaulCatanese.com</link>
-        </software>
-
-<software name="Anymails" by="Carolin Horn" scroll="yes" resize="yes"\
- width="1024" height="900">
-        <image>images/any.gif</image>
-          <description>
-Email visualization that uses the visual language of microbes to show mail structure and attributes.
-          </description>
-          <location>http://carohorn.de/anymails/</location>
-          <link href="http://carohorn.de/">CaroHorn.de</link>
-        </software>
-
-<software name="Champs d'Ozone" by="HeHe" scroll="yes" resize="yes"\
- width="1024" height="900">
-        <image>images/hehe.jpg</image>
-          <description>
-A moving cloud that hangs above the skyline of Paris and changes color with the
-actual air quality.
-          </description>
-          <location>http://hehe.org.free.fr/hehe/champsdozone/</location>
-          <link href="http://www.hehe.org">HeHe</link>
-        </software>
-
-<software name="Time Travel Tube Map" by="Tom Carden" scroll="yes" resize="yes" width="1024" height="900">
-        <image>images/carden.jpg</image>
-          <description>
-             Reorganizes the London Underground map to visualize travel times from station to station.
-          </description>
-          <location>http://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/</location>
-          <link href="http://www.tom-carden.co.uk/">Tom Carden</link>
-        </software>
-
-<software name="Fidg't Visualizer" by="Protohaus" scroll="yes" resize="yes" width="1024" height="700">
-        <image>images/proto.jpg</image>
-          <description>
-	     Visualize social networks through Flickr and LastFM tags.
-          </description>
-          <location>http://www.fidgt.com/visualize/</location>
-          <link href="http://protohaus.com">Protohaus</link>
-        </software>
-
-<software name="Lovebytes 2007" by="Universal Everything / Toxi" scroll="yes\
-" resize="yes" width="900" height="700">
-        <image>images/lovebytes.png</image>
-          <description>
-	  A population of unique friendly furry faces to appear across all festival literature  for Lovebytes 2007.	  
-          </description>
-          <location>http://universaleverything.com/recent_activity/205</location>
-          <link href="http://universaleverything.com">Universal Everything</link>
-        </software>
-
-      <software name="Reconfigurable House" by="Usman Haque & Adam Somlai-Fischer" scroll="yes" resize="yes" width="900" height="700">
-        <image>images/house.jpg</image>
-          <description>
-             An environment constructed from thousands of low tech components that can be reconfigured by its occupants.	     
-          </description>
-          <location>http://house.propositions.org.uk/</location>
-          <link href="http://www.haque.co.uk/">Haque</link>
-          <link href="http://www.aether.hu/">Aether</link>
-          <link href="http://www.reorient.hu/">Reorient</link>
-        </software>
-
-      <software name="Muon Launch" by="Moving Brands" scroll="yes" resize="yes" width="900" height="700">
-        <image>images/muon.jpg</image>
-          <description>
-             Audio responsive installation for the launch of the Muon speakers at the Milan Furniture Fair 2007.
-          </description>
-          <location>http://www.movingbrands.com/pages/home/responsive?casestudyid=147&flash=1</location>
-          <link href="http://www.movingbrands.com">Moving Brands</link>
-        </software>
-
-      <software name="Universe" by="Jonathan Harris" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/universe.gif</image>
-          <description>
-             If we could make new constellations in today's night sky, what would they be?  Universe is a system to help us decide.
-          </description>
-          <location>http://universe.daylife.com</location>
-          <link href="http://www.number27.org">Jonathan Harris</link>
-        </software>
-
-       <software name="Mobzombies" by="Will Carter & Aaron Meyers" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/mz.png</image>
-          <description>
-             Mobzombies is a game where you run away from pixel-art zombies by physically running.  A player's motion data is read into Processing from a compass/accelerometer sensor, which controls an avatar in a virtual world full of zombies. 
-          </description>
-          <location>http://mobzombies.com/</location>
-          <link href="http://www.youtube.com/watch?v=5sJ6L6aKum4">Mobzombies trailer</link>
-        </software>
-
-       <software name="Software Kaleidoscope" by="Suzung Kim" scroll="yes" resize="yes" width="900" height="600">
-        <image>images/suzung.jpg</image>
-          <description>
-             Installation for Samsung that turns images from the environment into symmetrical patterns.
-          </description>
-          <location>http://www.suzung.com/cebit2006/display.htm</location>
-          <link href="http://www.suzung.com/">Studio Site Suzung</link>
-        </software>
-
-       <software name="State of the Union" by="Brad Borevitz" scroll="yes" resize="yes" width="1050" height="800">
-        <image>images/stateoftheunion.gif</image>
-          <description>
-              Provides access to the corpus of all the State of the Union addresses from 1790 to 2006. 
-          </description>
-          <location>http://stateoftheunion.onetwothree.net/</location>
-          <link href="http://www.onetwothree.net">onetwothree</link>
-        </software>
-
-       <software name="PixelRoller" by="rAndom international" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/pixelroller.jpg</image>
-          <description>
-	      PixelRoller is a paint roller that paints pixels, designed as a rapid response printing tool specifically to print digital information such as imagery or text onto a great range of surfaces. 
-          </description>
-          <location>http://www.random-international.com/pixelroller-overview/</location>
-          <link href="http://www.random-international.com/">rAndom international</link>
-        </software>
-
-       <software name="Yo soy la Juani" by="Aleix Fernandez" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/juani.jpg</image>
-          <description>
-	     The title sequence of Bigas Luna's feature film "Yo soy la Juani" (2006) was made using Processing.
-          </description>
-          <location>http://www.onionlab.com/processing/YSLJTitles.html</location>
-          <link href="http://www.onionlab.com/">Onionlab</link>
-          <link href="http://yosoylajuani.com">Yo soy la Juani</link>
-        </software>
-
-       <software name="Spies" by="Lisa Strausfeld and James N. Sears" scroll="yes" resize="yes" width="1024" height="800">
-        <image>images/spies.gif</image>
-          <description>
-	      Physics-based modeling of the relationships between key phrases that describe terrorist attacks.
-          </description>
-          <location>http://jamesnsears.com/applets/spies/</location>
-          <link href="http://www.pentagram.com/">Pentagram</link>
-          <link href="http://jamesnsears.com/">JamesNSears.com</link>
-        </software>
-
-       <software name="Mutualism" by="David Pereira" scroll="yes" resize="yes" width="1024" height="620">
-        <image>images/mutualism.jpg</image>
-          <description>
-	      The continuous mutual shape of a shared public server.
-          </description>
-          <location>http://www.davidpereira.com/mutualism/</location>
-          <link href="http://www.davidpereira.com/">DavidPereira.com</link>
-        </software>
+	<software name="Celestial Workshops" by="Paul Catanese" scroll="yes" resize="yes" width="800" height="900">
+	<image>images/catanese.jpg</image>
+	  <description>
+		Celestial Workshops is a suite of drawing tools created in Processing that
+		control CNC milling machinery as a method of carving relief blocks for
+		printmaking.
+	  </description>
+	  <location>http://www.paulcatanese.com/artwork/celestial/process.html</location>
+	  <link href="http://www.paulcatanese.com">PaulCatanese.com</link>
+	</software>
+	
+	<software name="Anymails" by="Carolin Horn" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/any.gif</image>
+	  <description>
+		Email visualization that uses the visual language of microbes to show mail structure and attributes.
+	  </description>
+	  <location>http://carohorn.de/anymails/</location>
+	  <link href="http://carohorn.de/">CaroHorn.de</link>
+	</software>
+	
+	<software name="Champs d'Ozone" by="HeHe" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/hehe.jpg</image>
+	  <description>
+		A moving cloud that hangs above the skyline of Paris and changes color with the
+		actual air quality.
+	  </description>
+	  <location>http://hehe.org.free.fr/hehe/champsdozone/</location>
+	  <link href="http://www.hehe.org">HeHe</link>
+	</software>
+	
+	<software name="Time Travel Tube Map" by="Tom Carden" scroll="yes" resize="yes" width="1024" height="900">
+	<image>images/carden.jpg</image>
+	  <description>
+		 Reorganizes the London Underground map to visualize travel times from station to station.
+	  </description>
+	  <location>http://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/</location>
+	  <link href="http://www.tom-carden.co.uk/">Tom Carden</link>
+	</software>
+	
+	<software name="Fidg't Visualizer" by="Protohaus" scroll="yes" resize="yes" width="1024" height="700">
+	<image>images/proto.jpg</image>
+	  <description>
+	 	Visualize social networks through Flickr and LastFM tags.
+	  </description>
+	  <location>http://www.fidgt.com/visualize/</location>
+	  <link href="http://protohaus.com">Protohaus</link>
+	</software>
+	
+	<software name="Lovebytes 2007" by="Universal Everything / Toxi" scroll="yes" resize="yes" width="900" height="700">
+	<image>images/lovebytes.png</image>
+	  <description>
+		A population of unique friendly furry faces to appear across all festival literature  for Lovebytes 2007.	  
+	  </description>
+	  <location>http://universaleverything.com/#/UE205</location>
+	  <link href="http://universaleverything.com">Universal Everything</link>
+	</software>
+	
+	<software name="Reconfigurable House" by="Usman Haque & Adam Somlai-Fischer" scroll="yes" resize="yes" width="900" height="700">
+	<image>images/house.jpg</image>
+	  <description>
+		 An environment constructed from thousands of low tech components that can be reconfigured by its occupants.	     
+	  </description>
+	  <location>http://house.propositions.org.uk/</location>
+	  <link href="http://www.haque.co.uk/">Haque</link>
+	  <link href="http://www.aether.hu/">Aether</link>
+	  <link href="http://www.reorient.hu/">Reorient</link>
+	</software>
+	
+	<software name="Muon Launch" by="Moving Brands" scroll="yes" resize="yes" width="900" height="700">
+	<image>images/muon.jpg</image>
+	  <description>
+		 Audio responsive installation for the launch of the Muon speakers at the Milan Furniture Fair 2007.
+	  </description>
+	  <location>http://www.movingbrands.com/?category_name=kef-work#experience</location>
+	  <link href="http://www.movingbrands.com">Moving Brands</link>
+	</software>
+	
+	<software name="Universe" by="Jonathan Harris" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/universe.gif</image>
+	  <description>
+		 If we could make new constellations in today's night sky, what would they be?  Universe is a system to help us decide.
+	  </description>
+	  <location>http://www.number27.org/universe.html</location>
+	  <link href="http://www.number27.org">Jonathan Harris</link>
+	</software>
+	
+	<!--
+	<software name="Mobzombies" by="Will Carter & Aaron Meyers" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/mz.png</image>
+	  <description>
+		 Mobzombies is a game where you run away from pixel-art zombies by physically running.  A player's motion data is read into Processing from a compass/accelerometer sensor, which controls an avatar in a virtual world full of zombies. 
+	  </description>
+	  <location>http://mobzombies.com/</location>
+	  <link href="http://www.youtube.com/watch?v=5sJ6L6aKum4">Mobzombies trailer</link>
+	</software>
+	-->
+	
+	<software name="Software Kaleidoscope" by="Suzung Kim" scroll="yes" resize="yes" width="900" height="600">
+	<image>images/suzung.jpg</image>
+	  <description>
+		 Installation for Samsung that turns images from the environment into symmetrical patterns.
+	  </description>
+	  <location>http://www.suzung.com/body/2006/Kaleido/display.htm</location>
+	  <link href="http://www.suzung.com/">Studio Site Suzung</link>
+	</software>
+	
+	<software name="State of the Union" by="Brad Borevitz" scroll="yes" resize="yes" width="1050" height="800">
+	<image>images/stateoftheunion.gif</image>
+	  <description>
+		  Provides access to the corpus of all the State of the Union addresses from 1790 to 2006. 
+	  </description>
+	  <location>http://stateoftheunion.onetwothree.net/</location>
+	  <link href="http://www.onetwothree.net">onetwothree</link>
+	</software>
+	
+	<!--
+	<software name="PixelRoller" by="rAndom international" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/pixelroller.jpg</image>
+	  <description>
+	  PixelRoller is a paint roller that paints pixels, designed as a rapid response printing tool specifically to print digital information such as imagery or text onto a great range of surfaces. 
+	  </description>
+	  <location>http://www.random-international.com/pixelroller-overview/</location>
+	  <link href="http://www.random-international.com/">rAndom international</link>
+	</software>
+	-->
+	
+	<software name="Yo soy la Juani" by="Aleix Fernandez" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/juani.jpg</image>
+	  <description>
+	 The title sequence of Bigas Luna's feature film "Yo soy la Juani" (2006) was made using Processing.
+	  </description>
+	  <location>http://v3.onionlab.com/#1700165/Main-titles-of-Yo-soy-la-Juani-My-name-is-Juani-by-Bigas-luna</location>
+	  <link href="http://www.onionlab.com/">Onionlab</link>
+	  <link href="http://yosoylajuani.com">Yo soy la Juani</link>
+	</software>
+	
+	<software name="Spies" by="Lisa Strausfeld and James N. Sears" scroll="yes" resize="yes" width="1024" height="800">
+	<image>images/spies.gif</image>
+	  <description>
+	  Physics-based modeling of the relationships between key phrases that describe terrorist attacks.
+	  </description>
+	  <location>http://jamesnsears.com/applets/spies/</location>
+	  <link href="http://www.pentagram.com/">Pentagram</link>
+	  <link href="http://jamesnsears.com/">JamesNSears.com</link>
+	</software>
+	
+	<software name="Mutualism" by="David Pereira" scroll="yes" resize="yes" width="1024" height="620">
+	<image>images/mutualism.jpg</image>
+	  <description>
+	  The continuous mutual shape of a shared public server.
+	  </description>
+	  <location>http://www.davidpereira.com/mutualism/</location>
+	  <link href="http://www.davidpereira.com/">DavidPereira.com</link>
+	</software>
 
 	<software name="Grass" by="The Barbarian Group" scroll="yes" resize="yes" width="820" height="700">
 	<image>images/grass.jpg</image>
@@ -796,16 +802,18 @@ actual air quality.
 	  <link href="http://www.aether.hu/">Aether Architecture</link>
 	</software>
 
+	<!--
 	<software name="Nike One" by="Motion Theory" scroll="yes" resize="yes" width="600" height="600">
 	<image>images/nikeone.jpg</image>
 	  <description>
-              Motion Theory used coding and design to visualize the thoughts and mechanics of the creative process of two engineers.
+	 	Motion Theory used coding and design to visualize the thoughts and mechanics of the creative process of two engineers.
 	  </description>
 	  <location>http://dev.motiontheory.com/nikegolf/</location>
 	  <link href="http://www.motiontheory.com/work/nike_one">Nike 'One' at Motion Theory</link>
 	  <link href="http://www.motiontheory.com/">Motion Theory</link>
 	</software>
-
+	-->
+	
 	<software name="We Feel Fine" by="Jonathan Harris and Sepandar Kamvar" scroll="yes" resize="yes" width="900" height="600">
 	<image>images/wefeelfine.jpg</image>
 	  <description>
@@ -882,6 +890,7 @@ actual air quality.
 	  <link href="http://tokage.cafe24.com/">Gone</link>
 	</software>
 
+	<!--
 	<software name="Process" by="ART+COM" scroll="yes" resize="yes" width="825" height="700">
 	<image>images/ac.jpg</image>
 	  <description>
@@ -890,6 +899,7 @@ actual air quality.
 	  <location>http://www.artcom.de/process/</location>
 	  <link href="http://www.artcom.de">ART+COM</link>
 	</software>
+	-->
 
 	<software name="Jellyfish" by="Carolin Horn" scroll="yes" resize="yes" width="825" height="650">
 	<image>images/jellyfish.jpg</image>
@@ -905,7 +915,7 @@ actual air quality.
 	  <description>
 	       Flight pattern visualizations from FAA data parsed and plotted in Processing.
 	  </description>
-	  <location>http://www.aaronkoblin.com/work/faa/</location>
+	  <location>http://www.aaronkoblin.com/work/flightpatterns/</location>
 	  <link href="http://www.aaronkoblin.com/">Aaron Koblin</link>
 	</software>
 
@@ -996,6 +1006,7 @@ actual air quality.
 	  <link href="http://www.bewitched.com/">Bewitched</link>
 	</software>
 
+	<!--
 	<software name="Haohao" by="Ichitaro Masuda" scroll="yes" resize="yes" width="900" height="900">
 	<image>images/haohao.jpg</image>
 	  <description>
@@ -1004,7 +1015,9 @@ actual air quality.
 	  <location>http://www.iamas.ac.jp/~madman03/haohao/</location>
 	  <source>haohao/haohao.pde</source>
 	</software>
+	-->
 	
+	<!--
 	<software name="Structural Collider" by="Allan William Martin" scroll="yes" resize="yes" width="900" height="700">
 	<image>images/collider.jpg</image>
 	  <description>
@@ -1014,6 +1027,7 @@ actual air quality.
 	  <source>collider/collider.pde</source>
 	  <link href="http://pantheon.yale.edu/~awm9">awm</link>
 	</software>
+	-->
 	
 	<software name="Timescape" by="Ji-Hoon Byun &amp; E.J. Gone" scroll="yes" resize="yes" width="900" height="570">
 	<image>images/timescape.jpg</image>
@@ -1057,6 +1071,7 @@ actual air quality.
 	  <link href="http://www.limiteazero.com/">Limiteazero</link>
 	</software>
 	
+	<!--
 	<software name="Life vs. Life" by="Justin Bakse &amp; Eric Williams" scroll="yes" resize="yes" width="600" height="400">
 	<image>images/lifevslife.gif</image>
 	  <description>
@@ -1067,6 +1082,7 @@ actual air quality.
 	  <link href="http://www.volcanokit.com">volcanokit</link>
 	  <link href="http://www.helveticore.com">helveticore</link>
 	</software>
+	-->
 	
 	<software name="Chronodraw" by="Andreas Gysin" scroll="yes" resize="yes" width="980" height="680">
 	<image>images/chronodraw.gif</image>
@@ -1089,6 +1105,7 @@ actual air quality.
 	  <link href="http://www.motiontheory.com">Motion Theory</link>
 	</software>
 	
+	<!--
 	<software name="Liquid Liquid" by="v3ga" scroll="no" resize="no" width="300" height="300">
 	<image>images/liquidliquid.gif</image>
 	  <description>
@@ -1099,6 +1116,7 @@ actual air quality.
 	  <link href="http://processing.v3ga.net">processing.v3ga.net</link>
 	  <link href="http://www.2roqsmuseum.net">2roqsmuseum</link>
 	</software>
+	-->
 	
 	<software name="Ecstasy of Communication" by="Lucas Kuzma" scroll="yes" resize="yes" width="1024" height="768">
 	<image>images/ecstasy.gif</image>
@@ -1284,6 +1302,7 @@ actual air quality.
 	  <source>bees/bees6.pde</source>
 	</software>
 	
+	<!--
 	<software name="Fluidtime Applets" by="Victor Zambrano" scroll="yes" resize="yes" width="830" height="650">
 	<image>images/fluidtime.jpg</image>
 	  <description>
@@ -1294,7 +1313,9 @@ actual air quality.
 	  <link href="http://www.fluidtime.net">Fluidtime</link>
 	  <link href="http://www.00forward.com">00Forward</link>
 	</software>
+	-->
 	
+	<!--
 	<software name="Moovl Prototype" by="Ed Burton" scroll="yes" resize="yes" width="700" height="650">
 	<image>images/moovl.gif</image>
 	  <description>
@@ -1305,6 +1326,7 @@ actual air quality.
 	  <link href="http://www.moovl.com">moovl</link>
 	  <link href="http://www.soda.co.uk">soda</link>
 	</software>
+	-->
 	
 	<software name="Bubble Chamber" by="Jared Tarbell" scroll="no" resize="no" width="435" height="460">
 	<image>images/chamber.gif</image>
