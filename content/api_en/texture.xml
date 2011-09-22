@@ -11,9 +11,9 @@
 <code><![CDATA[
 size(100, 100, P3D);
 noStroke();
-PImage a = loadImage("arch.jpg");
+PImage img = loadImage("arch.jpg");
 beginShape();
-texture(a);
+texture(img);
 vertex(10, 20, 0, 0);
 vertex(80, 5, 100, 0);
 vertex(95, 90, 100, 100);
@@ -23,9 +23,9 @@ endShape();
 </example>
 
 <description><![CDATA[
-Sets a texture to be applied to vertex points. The <b>texture()</b> function must be called between <b>beginShape()</b> and <b>endShape()</b> and before any calls to <b>vertex()</b>.
-<br/> <br/>
-When textures are in use, the fill color is ignored. Instead, use tint() to specify the color of the texture as it is applied to the shape.
+Sets a texture to be applied to vertex points. The <b>texture()</b> function must be called between <b>beginShape()</b> and <b>endShape()</b> and before any calls to <b>vertex()</b>.<br/> 
+<br/>
+When textures are in use, the fill color is ignored. Instead, use <b>tint()</b> to specify the color of the texture as it is applied to the shape.
 ]]></description>
 
 </root>

@@ -7,9 +7,9 @@
 <example>
 <image>filter_threshold.jpg</image>
 <code><![CDATA[
-PImage b;
-b = loadImage("topanga.jpg");
-image(b, 0, 0);
+PImage img;
+img = loadImage("topanga.jpg");
+image(img, 0, 0);
 filter(THRESHOLD);
 ]]></code>
 </example>
@@ -17,9 +17,9 @@ filter(THRESHOLD);
 <example>
 <image>filter_gray.jpg</image>
 <code><![CDATA[
-PImage b;
-b = loadImage("topanga.jpg");
-image(b, 0, 0);
+PImage img;
+img = loadImage("topanga.jpg");
+image(img, 0, 0);
 filter(GRAY);
 ]]></code>
 </example>
@@ -27,9 +27,9 @@ filter(GRAY);
 <example>
 <image>filter_invert.jpg</image>
 <code><![CDATA[
-PImage b;
-b = loadImage("topanga.jpg");
-image(b, 0, 0);
+PImage img;
+img = loadImage("topanga.jpg");
+image(img, 0, 0);
 filter(INVERT);
 ]]></code>
 </example>
@@ -37,9 +37,9 @@ filter(INVERT);
 <example>
 <image>filter_posterize.jpg</image>
 <code><![CDATA[
-PImage b;
-b = loadImage("topanga.jpg");
-image(b, 0, 0);
+PImage img;
+img = loadImage("topanga.jpg");
+image(img, 0, 0);
 filter(GRAY);
 filter(POSTERIZE, 4);
 ]]></code>
@@ -48,9 +48,9 @@ filter(POSTERIZE, 4);
 <example>
 <image>filter_blur.jpg</image>
 <code><![CDATA[
-PImage b;
-b = loadImage("topanga.jpg");
-image(b, 0, 0);
+PImage img;
+img = loadImage("topanga.jpg");
+image(img, 0, 0);
 filter(BLUR, 6);
 ]]></code>
 </example>

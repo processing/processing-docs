@@ -11,14 +11,14 @@
 <example>
 <image>PImage.jpg</image>
 <code><![CDATA[
-PImage b;
+PImage img;
 
 void setup() {
-  b = loadImage("laDefense.jpg");
+  img = loadImage("laDefense.jpg");
 }
 
 void draw() {
-  image(b, 0, 0);
+  image(img, 0, 0);
 }
 ]]></code>
 </example>

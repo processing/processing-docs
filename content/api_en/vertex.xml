@@ -37,9 +37,9 @@ endShape();
 <image>vertex_2.gif</image>
 <code><![CDATA[
 noStroke();
-PImage a = loadImage("arch.jpg");
+PImage img = loadImage("arch.jpg");
 beginShape();
-texture(a);
+texture(img);
 // "arch.jpg" is 100x100 pixels in size so
 // the values 0 and 100 are used for the
 // parameters "u" and "v" to map it directly

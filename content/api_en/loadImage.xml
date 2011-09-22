@@ -9,23 +9,23 @@
 <example>
 <image>loadImage_.jpg</image>
 <code><![CDATA[
-PImage b;
-b = loadImage("laDefense.jpg");
-image(b, 0, 0);
+PImage img;
+img = loadImage("laDefense.jpg");
+image(img, 0, 0);
 ]]></code>
 </example>
 
 <example>
 <image>loadImage_.jpg</image>
 <code><![CDATA[
-PImage b;
+PImage img;
 
 void setup() {
-  b = loadImage("laDefense.jpg");
+  img = loadImage("laDefense.jpg");
 }
 
 void draw() {
-  image(b, 0, 0);
+  image(img, 0, 0);
 }
 ]]></code>
 </example>

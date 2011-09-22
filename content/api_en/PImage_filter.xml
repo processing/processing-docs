@@ -10,17 +10,17 @@
 <example>
 <image>filter_.jpg</image>
 <code><![CDATA[
-PImage a, b;
+PImage img1, img2;
 
 void setup() {
-  a = loadImage("archcrop.jpg");
-  b = loadImage("archcrop.jpg");
-  a.filter(GRAY);
+  img1 = loadImage("archcrop.jpg");
+  img2 = loadImage("archcrop.jpg");
+  img1.filter(GRAY);
 }
 
 void draw() {
-  image(a, 0, 0);
-  image(b, width/2, 0);
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
 }
 ]]></code>
 </example>
@@ -28,18 +28,18 @@ void draw() {
 <example>
 <image>filter_2.gif</image>
 <code><![CDATA[
-PImage a, b;
+PImage img1, img2;
 
 void setup() {
-  a = loadImage("archcrop.jpg");
-  b = loadImage("archcrop.jpg");
-  a.filter(THRESHOLD, .6);
-  b.filter(THRESHOLD, .4);
+  img1 = loadImage("archcrop.jpg");
+  img2 = loadImage("archcrop.jpg");
+  img1.filter(THRESHOLD, .6);
+  img2.filter(THRESHOLD, .4);
 }
 
 void draw() {
-  image(a, 0, 0);
-  image(b, width/2, 0);
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
 }
 ]]></code>
 </example>

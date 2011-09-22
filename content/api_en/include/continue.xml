@@ -28,11 +28,6 @@ When run inside of a <b>for</b> or <b>while</b>, it skips the remainder of the b
 <c>continue</c>
 </syntax>
 
-<parameter>
-<label></label>
-<description></description>
-</parameter>
-
 <returns></returns>
 
 <related>

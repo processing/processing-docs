@@ -9,17 +9,17 @@
 <example>
 <image>imageMode_.jpg</image>
 <code><![CDATA[
-PImage b;
+PImage img;
 
 void setup() {
-  b = loadImage("laDefense_crop.jpg");
+  img = loadImage("laDefense_crop.jpg");
   imageMode(CORNERS);
 }
 
 void draw() {
-  image(b, 10, 10, 60, 60);
+  image(img, 10, 10, 60, 60);
   imageMode(CORNER);
-  image(b, 35, 35, 50, 50);
+  image(img, 35, 35, 50, 50);
 }
 ]]></code>
 </example>

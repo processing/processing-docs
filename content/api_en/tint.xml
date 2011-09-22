@@ -9,12 +9,12 @@
 <example>
 <image>tint_.jpg</image>
 <code><![CDATA[
-PImage b; 
-b = loadImage("laDefense.jpg"); 
-image(b, 0, 0); 
+PImage img; 
+img = loadImage("laDefense.jpg"); 
+image(img, 0, 0); 
 // Tint blue
 tint(0, 153, 204); 
-image(b, 50, 0); 
+image(img, 50, 0); 
 
 ]]></code>
 </example>
@@ -22,12 +22,12 @@ image(b, 50, 0);
 <example>
 <image>tint_2.jpg</image>
 <code><![CDATA[
-PImage b; 
-b = loadImage("laDefense.jpg"); 
-image(b, 0, 0); 
+PImage img; 
+img = loadImage("laDefense.jpg"); 
+image(img, 0, 0); 
 // Tint blue and set transparency
 tint(0, 153, 204, 126); 
-image(b, 50, 0); 
+image(img, 50, 0); 
 ]]></code>
 </example>
 

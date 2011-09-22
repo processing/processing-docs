@@ -23,8 +23,8 @@ rect(25, 25, 50, 50);
 <code><![CDATA[
 PImage img = loadImage("tower.jpg");
 background(img);
-PImage b = img.get(50, 0, 50, 100); 
-image(b, 0, 0);  
+PImage img = img.get(50, 0, 50, 100); 
+image(img, 0, 0);  
 ]]></code>
 </example>
 

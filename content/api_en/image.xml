@@ -9,15 +9,15 @@
 <example>
 <image>image_.jpg</image>
 <code><![CDATA[
-PImage b;
+PImage img;
 
 void setup() {
   // Images must be in the "data" directory to load correctly
-  b = loadImage("laDefense.jpg");
+  img = loadImage("laDefense.jpg");
 }
 
 void draw() {
-  image(b, 0, 0);
+  image(img, 0, 0);
 }
 ]]></code>
 </example>
@@ -26,16 +26,16 @@ void draw() {
 <example>
 <image>image_2.jpg</image>
 <code><![CDATA[
-PImage b;
+PImage img;
 
 void setup() {
   // Images must be in the "data" directory to load correctly
-  b = loadImage("laDefense.jpg");
+  img = loadImage("laDefense.jpg");
 }
 
 void draw() {
-  image(b, 0, 0);
-  image(b, 0, 0, width/2, height/2);
+  image(img, 0, 0);
+  image(img, 0, 0, width/2, height/2);
 }
 ]]></code>
 </example>
