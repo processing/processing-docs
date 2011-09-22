@@ -274,11 +274,15 @@ li {margin-bottom: 1em; }
 }
 #Cover .leftcol { width: 250px; }
 
+
 #Cover ul {
 	list-style: none;
-	margin-left: 0;
-	padding-left: 1em;
-	text-indent: -1em;
+	
+				margin-left: 0;
+	
+				padding-left: 1em;
+	
+				text-indent: -1em;
 }
 
 
@@ -309,8 +313,10 @@ td img { margin: 0; display: block; }
 /**************************************************************** Exhibition ***/
 
 //#Exhibition .colone { width: 224px; float: left; margin-right: 35px; }
+
 #Exhibition .colone { width: 675px; float: left; margin-right: 35px; }
 #Exhibition .coltwo { width: 165px; float: left; margin-right: 25px; }
+
 #Exhibition .colthree { width: 224px; float: left; margin-right: 20px; }
 #Exhibition h2 { margin: 0 0 20px 0; font-size: 1em; }
 #Exhibition h2.with-nav { margin-bottom: 0; }
@@ -323,42 +329,38 @@ td img { margin: 0; display: block; }
         position: relative;
 }
 
-/**
-#Collection .colone { width: 675px; float: left; margin-right: 35px; }
-#Collection .coltwo { width: 165px; float: left; margin-right: 25px; }
-#Collection .colthree { width: 224px; float: left; margin-right: 20px; }
-#Collection h2 { margin: 0 0 20px 0; font-size: 1em; }
-#Collection h2.with-nav { margin-bottom: 0; }
-#Collection .onecol { clear: both; }
-#Collection td { vertical-align: top; }
 
-#Collection .content {
-        margin-left    : 55px;
-        margin-right   : 0px;
-        position: relative;
-}
-*/
+
 
 #Tutorials .colone { width: 224px; float: left; margin-right: 35px; }
 #Tutorials .coltwo { width: 165px; float: left; margin-right: 25px; }
+
 #Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
 #Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
-#Tutorials h3 { font-size		: 1.8em;
-				margin-bottom	: 0.4em; 
-				margin-top		: 1.4em;
+
+#Tutorials h3 { 	font-size		: 1.8em;
+				
+					margin-bottom	: 0.4em; 
+				
+					margin-top		: 1.4em;
 }
+
 #Tutorials h1 { 
 	font-size			: 2.2em; 
-	font-family			: Arial, Geneva, Helvetica, Verdana, sans-serif; 
-	font-weight			: lighter;
-	font-style			: normal;
+	
+					font-family			: Arial, Geneva, Helvetica, Verdana, sans-serif; 
+					font-weight			: lighter;
+	
+					font-style			: normal;
 }
 #Tutorials h2.with-nav { margin-bottom: 0; }
 #Tutorials .onecol { clear: both; }
 #Tutorials td { vertical-align: top; }
 
+
 #Index .colone { width: 224px; float: left; margin-right: 35px; }
 #Index .coltwo { width: 165px; float: left; margin-right: 25px; }
+
 #Index .colthree { width: 224px; float: left; margin-right: 20px; }
 #Index h2 { margin: 0 0 20px 0; font-size: 1em; }
 #Index h2.with-nav { margin-bottom: 0; }
@@ -383,8 +385,8 @@ dl.network dt { font-style: normal; }
 dl.network dd { margin: 0; }
 dl.network dd.date { color: #999999; margin-bottom: 1em; }
 
-p.network { margin: 0 23px 1em 0; width:200px; }
-p.network span.date { color: #999999; }
+//p.network { margin: 0 23px 1em 0; width:200px; }
+//p.network span.date { color: #999999; }
 
 p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 
@@ -519,6 +521,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 
 
 /************************************************************** Tools Indices ***/
+
 #Tools-index .colone {
 	width: 300px;
 	float: left;
@@ -573,7 +576,9 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tools .threecol p { margin-top: 0; margin-bottom: 2em; }
 
 
+
 /************************************************************** Library Indices ***/
+
 
 #Libraries .colone {
 	width: 300px;
@@ -647,7 +652,9 @@ h2 { margin-bottom: 0; margin-top: 0;}
 
 #Libraries h2 { margin-top: 2em; }
 //#Libraries h3 { clear: both; margin-bottom: 0; }
+
 #Libraries h3 { margin-top: 0; margin-bottom: 0;}
+
 #Libraries h5 { font-size: 1em; margin: 0; font-weight: bold; }
 #Libraries h5 a { font-weight: bold; }
 #Libraries h4 { font-size: 1em; margin-bottom: .5em; }
@@ -657,6 +664,8 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Libraries .threecol p { margin-top: 0; margin-bottom: 2em; }
 
 //#Libraries h5 { margin-bottom: 0; font-size: 1em; }
+
+
 
 /*
 
@@ -714,8 +723,11 @@ h2 { margin-bottom: 0; margin-top: 0;}
 
 */
 
+
 /************************************************************** environment ***/
 #Environment h1 { margin-top: 2em; }
+#Environment h5 { margin-top: 3em; }
+#Environment h6 { margin-bottom: 0em; }
 #Environment h5 a { float: left; margin-left: -30px; }
 ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 #Environment td { padding-bottom: 1em; }
@@ -758,7 +770,9 @@ pre.code { clear: both; margin-top: 10px; }
 
 /* #examples-nav { margin-left: -44px; display: relative; } */
 //#examples-nav { margin-left: 0px; display: relative; }
+
 .examples-nav-div { margin-left: -44px; margin-top: -10px; width: 480px; display: relative; align: left; }
+
 #examples-nav img { display: absolute; top: 15px; left: 100px; }
 
 #Examples h1 { margin-bottom: 0; }

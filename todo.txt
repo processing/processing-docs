@@ -28,6 +28,9 @@ x Modify examples for Processing.js  --CR
 - Mention examples are running with Processing.js  --CR
 - Remove "there are more examples" from individual pages and put in Index  --CR
 - Modify build script to work on Server to build Web examples  --CR
+- Remove extra "f" from Java floats
+
+- Syntax hightlighting for Example code online --FJ
 
 Key:
 - To do
@@ -44,6 +47,10 @@ $ New P3D  --DS (CR to help with links and images)
 - Update Eclipse  --DS
 $ New Android  --DS, JT
 - Processing.js  --CR,FJ
+- Typography (or merge into Strings and Drawing Text?)  --CR,DS
+- Update Processing Overview for 2.0
+- Update Getting Started for 2.0
+
 - Tutorial CSS  --CR
 
 Key:
@@ -115,12 +122,13 @@ $ Alphabetical Index file is incorrectly alphabetized (for people) and should br
 - All in "reviewing_reference.txt" file produced by Cindy  --SM
 - loadShape() not in index.html  --CR
 - PImage's mask() needs an @brief  --CR
+- enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - normal() example needed  --SM
 - lightFalloff() example needed  --SM
 - implements example needed  --SM
 - look at example for red() to make clearer  --SM
 - null has a blank 'Examples'  --SM
-- enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
+
 - createInput() example  --SM
 - PGraphics link to developers reference  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
@@ -180,12 +188,13 @@ x Done
 - Prepare one-page document explaining Processing, 2.0 changes  --CR
 - Syntax highlighting (see Issues above)  --CR
 - Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
-- Environment  --CR
--   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
--   Change to "active" and "static" mode for draw() and without
+o Environment  --CR
+o   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
+o   Change to "active" and "static" mode for draw() and without
 -   New IDE Image
--   Modify menu descriptions for 2.0 final menus
-- Documentation for "Manage Libraries" / "Manage Tools"  --CR
+o   Modify menu descriptions for 2.0 final menus
+- Add section for Preferences
+- Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
 
 Key:
 - To do
@@ -197,7 +206,7 @@ x Done
 
 2.0 DESIGN
 
-- Prepare MODE images for JavaScript, Android  --CR
+* Prepare MODE images for JavaScript, Android  --CR
 - New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
 - Check all page header images for gray values  --CR
 
