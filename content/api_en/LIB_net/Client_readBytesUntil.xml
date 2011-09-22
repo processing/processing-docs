@@ -32,7 +32,7 @@ void setup() {
 } 
 
 void draw() { 
-  if (myClient.available() &gt; 0) { 
+  if (myClient.available() > 0) { 
     background(0);
     // Read until we get a linefeed
     int byteCount = myClient.readBytesUntil(interesting, byteBuffer); 

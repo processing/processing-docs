@@ -20,7 +20,7 @@ void setup() {
 } 
  
 void draw() {
-  if(h2.speed &gt; 1.0) {
+  if (h2.speed > 1.0) {
     h2.speed -= 0.01;
   } 
   h1.update(); 
@@ -35,7 +35,7 @@ class HLine {
   } 
   void update() { 
     ypos += speed; 
-    if (ypos &gt; width) { 
+    if (ypos > width) { 
       ypos = 0; 
     } 
     line(0, ypos, width, ypos); 

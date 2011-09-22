@@ -41,15 +41,15 @@ Extends the <b>if</b> structure allowing the program to choose between two or mo
 ]]></description>
 
 <syntax>
-if(<c>expression</c>) { 
+if (<c>expression</c>) { 
   <c>statements</c> 
 } else { 
   <c>statements</c> 
 } 
 
-if(<c>expression</c>) { 
+if (<c>expression</c>) { 
   <c>statements</c> 
-} else if(<c>expression</c>) { 
+} else if (<c>expression</c>) { 
   <c>statements</c> 
 } else { 
   <c>statements</c> 

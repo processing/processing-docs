@@ -27,7 +27,7 @@ void setup() {
 }
 
 void draw() {
-  while (myPort.available() &gt; 0) {
+  while (myPort.available() > 0) {
     char inByte = myPort.readChar();
     println(inByte);
   }

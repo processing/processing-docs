@@ -30,11 +30,11 @@ void setup() {
 } 
 
 void draw() { 
-  if (myClient.available() &gt; 0) { 
+  if (myClient.available() > 0) { 
     background(0);
     // Read in the bytes
     int byteCount = myClient.readBytes(byteBuffer); 
-    if (byteCount &gt; 0 ) {
+    if (byteCount > 0 ) {
       // Convert the byte array to a String
       String myString = new String(byteBuffer);
       // Show it text area

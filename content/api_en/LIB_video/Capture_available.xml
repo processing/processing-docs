@@ -24,7 +24,7 @@ void setup() {
 void draw() { 
   // myCapture.available() returns true 
   // when there is a new frame
-  if(myCapture.available()) { 
+  if (myCapture.available()) { 
     myCapture.read(); 
   } 
   image(myCapture, 0, 0); 

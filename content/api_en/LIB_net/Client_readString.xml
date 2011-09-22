@@ -28,7 +28,7 @@ void setup() {
 } 
 
 void draw() { 
-  if (myClient.available() &gt; 0) { 
+  if (myClient.available() > 0) { 
     background(0); 
     inString = myClient.readString(); 
     println(inString); 

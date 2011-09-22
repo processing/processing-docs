@@ -35,7 +35,7 @@ int b = numbers[1] + numbers[2]; // Sets variable b to 180
 <code><![CDATA[
 int degrees = 360;
 float[] cos_vals = new float[degrees];
-for(int i=0; i &lt; degrees; i++) {
+for (int i=0; i < degrees; i++) {
   cos_vals[i] = cos(TWO_PI/degrees * i);
 }
 ]]></code>

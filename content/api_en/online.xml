@@ -9,7 +9,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-if(online) {  // of "if (online == true)"
+if (online) {  // of "if (online == true)"
   ellipse(50, 50, 60, 60);
 } else {
   line(0, 0, 100, 100);

@@ -20,7 +20,7 @@ void setup() {
 void draw() { 
   background(204);
   yPos = yPos - 1.0;
-  if(yPos &lt; 0) {
+  if (yPos < 0) {
     yPos = height;
   }
   line(0, yPos, width, yPos);

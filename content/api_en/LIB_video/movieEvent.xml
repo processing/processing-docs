@@ -52,9 +52,9 @@ void draw() {
 }
 
 void movieEvent(Movie m) {
-  if(m == myMovie) {
+  if (m == myMovie) {
     myMovie.read();
-  } else if(m == yourMovie) {
+  } else if (m == yourMovie) {
     yourMovie.read();
   }
 }

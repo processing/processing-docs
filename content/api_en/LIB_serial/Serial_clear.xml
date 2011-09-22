@@ -30,9 +30,9 @@ void setup() {
 
 void draw() {
   // Read until we have 10 bytes, then close the port
-  if (myPort.available() &gt; 1) {
-    if (i &gt;= 10) {
-      // Clear the buffer, or available() will still be &gt; 0:
+  if (myPort.available() > 1) {
+    if (i >= 10) {
+      // Clear the buffer, or available() will still be > 0:
       myPort.clear();
       // Close the port
       myPort.stop();

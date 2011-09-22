@@ -13,7 +13,7 @@
 // and press the 'B' key
 
 void draw() {
-  if(keyPressed) {
+  if (keyPressed) {
     if (key == 'b' || key == 'B') {
       fill(0);
     }

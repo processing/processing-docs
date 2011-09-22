@@ -13,7 +13,7 @@
 <code><![CDATA[
 int a = 22;
 int b = 23;
-if(a &lt; b) {
+if (a < b) {
   println("variable a is less then variable b ");
 }
 ]]></code>

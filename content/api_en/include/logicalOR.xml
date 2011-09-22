@@ -11,8 +11,8 @@
 <example>
 <image>logicalOR.gif</image>
 <code><![CDATA[
-for(int i=5 ; i&lt;=95; i+=5) {
-  if((i &lt; 35) || (i &gt; 60)) {
+for (int i = 5 ; i <= 95; i += 5) {
+  if ((i < 35) || (i > 60)) {
     line(30, i, 80, i);
   }
 }

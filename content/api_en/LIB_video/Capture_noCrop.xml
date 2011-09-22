@@ -25,7 +25,7 @@ void setup()
 }
 
 void draw() {
-  if(myCapture.available()) {
+  if (myCapture.available()) {
     myCapture.read();
   }
   image(myCapture, 10, 10);

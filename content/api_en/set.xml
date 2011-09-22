@@ -20,8 +20,8 @@ set(30, 75, black);
 <example>
 <image>set_2.jpg</image>
 <code><![CDATA[
-for (int i = 30; i &lt; width-15; i++) {
-  for(int j = 20; j &lt; height-25; j++) {
+for (int i = 30; i < width-15; i++) {
+  for (int j = 20; j < height-25; j++) {
     color c = color(204-j, 153-i, 0);
     set(i, j, c);
   }

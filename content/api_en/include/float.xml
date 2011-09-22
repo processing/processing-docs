@@ -22,12 +22,12 @@ float c = a + b;   // Declare variable "c" and assign it the sum of "a" and "b"
 <image></image>
 <code><![CDATA[
 float f = 0;
-for (int i = 0 ; i &lt; 100000; i++) {  
+for (int i = 0 ; i < 100000; i++) {  
   f = f + 0.0001;  // Bad idea! see below.
 }
 
 int count = 0;
-for (int i = 0; i &lt; 100000; i++) {
+for (int i = 0; i < 100000; i++) {
   // The variable "f" will work better here, less affected by rounding
   float f = i / 1000.0;  // count by thousandths
 }

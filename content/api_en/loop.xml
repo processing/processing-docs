@@ -20,7 +20,7 @@ float x = 0;
 void draw() {
   background(204);
   x = x + .1;
-  if (x &gt; width) {
+  if (x > width) {
     x = 0;
   }
   line(x, 0, x, height); 
@@ -39,5 +39,6 @@ void mouseReleased() {
 <description><![CDATA[
 Causes Processing to continuously execute the code within <b>draw()</b>. If <b>noLoop()</b> is called, the code in <b>draw()</b> stops executing.
 ]]></description>
+
 
 </root>

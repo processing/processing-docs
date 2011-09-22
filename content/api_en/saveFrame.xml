@@ -13,7 +13,7 @@ int x = 0;
 void draw()
 {
   background(204);
-  if(x &lt; 100) {
+  if (x < 100) {
     line(x, 0, x, 100);
     x = x + 1;
   } else {
@@ -32,7 +32,7 @@ int x = 0;
 void draw()
 {
   background(204);
-  if(x &lt; 100) {
+  if (x < 100) {
     line(x, 0, x, 100);
     x = x + 1;
   } else {

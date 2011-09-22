@@ -33,7 +33,7 @@ void setup() {
 }
 
 void draw() {
-  while (myPort.available() &gt; 0) {
+  while (myPort.available() > 0) {
     myString = myPort.readStringUntil(lf);
     if (myString != null) {
       println(myString);

@@ -14,7 +14,7 @@
 
 void draw() 
 {
-  if(mouseX &lt; 50) {
+  if (mouseX < 50) {
     cursor(CROSS);
   } else {
     cursor(HAND);

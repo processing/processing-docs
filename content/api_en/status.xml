@@ -12,7 +12,7 @@
 // Move mouse left and right and see the text
 // change in the status area of your browser
 void draw() {
-  if(mouseX < width/2) {
+  if (mouseX < width/2) {
     status("left");
   } else {
     status("right");

@@ -22,7 +22,7 @@ void draw() {
 void mouseDragged() 
 {
   value = value + 5;
-  if (value &gt; 255) {
+  if (value > 255) {
     value = 0;
   }
 }
