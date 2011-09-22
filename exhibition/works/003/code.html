@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>processing.org >> Software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../processing.css">
+</head>
+<body bgcolor="#FFFFFF" text="#CCCCCC" link="#CC9900" vlink="#CC9900" alink="#999900" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+<table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+  <tr> 
+    <td width="550" colspan="2"> <img src="../../images/processing.gif" width="500" height="50"></td>
+    <td width="180" align="right" valign="top"> <img src="../../images/1pix.gif" width="100" height="5"><br>
+    </td>
+    <td width="20"><img src="../../images/nav_topright.gif" width="20" height="50"></td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="55" valign="top"><img src="../../images/1pix.gif" width="55" height="60"></td>
+    <td width="675" valign="top">&nbsp;</td>
+    <td width="20" valign="top" colspan="8">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="55" valign="top"><img src="../../images/1pix.gif" width="55" height="60"></td>
+    <td width="675" valign="top"> <font color="#CC0000">This code was written 
+      with the _ALPHA_ version of Processing <br>
+      and it may not run correctly with the current vesion.</font><br>
+      <br>
+      <pre>// Matchboxes
+// by Schoenerwissen 
+
+// Reassembling a movieclip database by using the properties of the 
+// collected information to generate a new visual data matrix
+
+// This program will not run if you cut and paste it into your Processing environment.
+// It relies on the text file "sc.db", the font &quot;Univers55.vlw.gz&quot; <br>// and the image &quot;schoenerwissen.gif&quot;
+ 
+
+String[] dataLines;
+String[][] finalData;
+ScreenMatrix[] sm;
+GeoLocation[] gl;
+String[] geoLocation;
+BFont fontA;
+BImage swLogo;
+
+int[] geoCount;
+static int NAME = 0, ACTIVITY = 1, GREYSCALE = 2, MOTION = 4, DISTANCE = 5, GEOLOCATION = 6, SUBJECT = 8;
+static float SGREY = 240;
+static char SEPARATOR = '\t';
+static int TEXTSHOWTIME = 48;
+static float FAR, MEDIUM, CLOSE, VERYCLOSE, NODIST;
+static float fixedist = 6.6;
+int frameCounter = TEXTSHOWTIME + 1;
+int clipselect = 0;
+float maxgrey = 0;
+
+void setup() {
+  size(640, 480);
+  colorMode(RGB, 255);
+  background(255, 255, 255);
+
+  VERYCLOSE = width/fixedist;
+  CLOSE = width/(fixedist*2);
+  FAR = width/(fixedist*4);
+  MEDIUM = width/(fixedist*8);
+  NODIST = width/(fixedist*16);
+
+  fontA = loadFont("Univers55.vlw.gz");
+  setFont(fontA);
+
+  swLogo = loadImage("schoenerwissen.gif");
+
+  loadData();
+  computeGeolocations();
+  organizeLocations();
+  calculateMatrix();
+}
+
+void loop() {
+
+  for (int geolo = 0; geolo &lt; gl.length; geolo++) {
+    gl[geolo].draw();
+  }
+  paintStandards();
+  for (int clips = 0; clips &lt; sm.length; clips++) {
+    sm[clips].update();
+    sm[clips].draw();
+  }
+  if (frameCounter &gt; TEXTSHOWTIME) {
+    clipselect = (int)(random(sm.length));
+    frameCounter = 0;
+  }
+  frameCounter++;
+
+  sm[clipselect].subject(finalData[clipselect][SUBJECT]);
+}
+
+void loadData() {
+  dataLines = loadStrings("sc.db");
+  finalData = new String[dataLines.length][];
+
+  for (int dataline = 0; dataline &lt; dataLines.length; dataline++) {
+    finalData[dataline] = splitStrings(dataLines[dataline], SEPARATOR);
+  }
+}
+
+void calculateMatrix() {
+  sm = new ScreenMatrix[dataLines.length];
+
+  for (int dataline = 0; dataline &lt; dataLines.length; dataline++) {
+    float grey = Float.valueOf(finalData[dataline][GREYSCALE]).floatValue();
+    if (grey &gt; maxgrey) {
+      maxgrey = grey;
+    }
+    for (int geoline = 0; geoline &lt; geoCount.length; geoline++) {
+      if (gl[geoline].name.equals(finalData[dataline][GEOLOCATION])) {
+        float distance = calculateDistance(finalData[dataline][DISTANCE]);
+        float activity = Float.valueOf(finalData[dataline][ACTIVITY]).floatValue()*(width/800);
+        Point motion = calculateMotion(finalData[dataline][MOTION]);
+        sm[dataline] = new ScreenMatrix(distance * motion.x, distance * motion.y, gl[geoline].x, gl[geoline].y, distance,
+        activity*100, motion, gl[geoline].c1, grey);
+      }
+    }
+  }
+}
+
+void computeGeolocations() {
+  String allGeolocations = "";
+
+  for(int dataline = 0; dataline &lt; dataLines.length; dataline++) {
+    if(allGeolocations.indexOf(finalData[dataline][GEOLOCATION]) == -1) {
+      allGeolocations += finalData[dataline][GEOLOCATION] + SEPARATOR;
+    }
+  }
+
+  geoLocation = splitStrings(allGeolocations, SEPARATOR);
+  geoCount = new int[geoLocation.length];
+
+  for(int dataline = 0; dataline &lt; dataLines.length; dataline++) {
+    for(int geoline = 0; geoline &lt; geoLocation.length; geoline++) {
+      if (finalData[dataline][GEOLOCATION].equals(geoLocation[geoline])) {
+        geoCount[geoline]++;
+      }
+    }
+  }
+
+}
+
+void organizeLocations() {
+  gl = new GeoLocation[geoCount.length];
+  float x, y = 0;
+  int[] geoCountBuffer = new int[geoCount.length];
+  String[] geoLocationBuffer = new String[geoCount.length];
+
+  for (int geoline = 0; geoline &lt; geoCount.length; geoline++) {
+    int maximl = maxPoint(geoCount);
+    geoCountBuffer[geoline] = geoCount[maximl];
+    geoLocationBuffer[geoline] = geoLocation[maximl];
+    geoCount[maximl] = 0;
+  }
+
+  int halfArray = (int)(geoCount.length/2);
+
+  for (int geoline = 0; geoline &lt; geoCount.length; geoline = geoline+2) {
+    geoCount[halfArray] = geoCountBuffer[geoline];
+    geoLocation[halfArray] = geoLocationBuffer[geoline];
+    halfArray--;
+  }
+
+  halfArray = geoCount.length-1;
+
+  for (int geoline = geoCount.length-2; geoline &gt; 0; geoline = geoline-2) {
+    geoCount[halfArray] = geoCountBuffer[geoline];
+    geoLocation[halfArray] = geoLocationBuffer[geoline];
+    halfArray--;
+  }
+
+  for (int geoline = 0; geoline &lt; geoCount.length; geoline++) {
+    x = (width/(geoCount.length))*geoline+((width/(geoCount.length))/2);
+    y = (height/(geoCount.length))*geoline+((height/(geoCount.length))/2);
+    float c1 = random(255), c2 = random(255), c3 = random(255);
+    gl[geoline] = new GeoLocation(x, y, geoLocation[geoline], c1, c2, c3);
+  }
+}
+
+class GeoLocation {
+  float x, y, c1, c2, c3, cross;
+  String name;
+
+  GeoLocation(float ix, float iy, String iname, float ic1, float ic2, float ic3) {
+    x = ix;
+    y = iy;
+    name = iname;
+    c1 = ic1;
+    c2 = ic2;
+    c3 = ic3;
+    cross = 15;
+    if (name.length() &gt; 6) {
+      cross = 30;
+    }
+  }
+
+  void draw() {
+    stroke(SGREY);
+    line(0, y, width, y);
+    line(x, 0, x, height);
+    fill(0);
+    push();
+    scale(1.2);
+    text(name, (x-cross)/1.2, (y-5)/1.2);
+    pop();
+  }
+}
+
+class ScreenMatrix {
+  float x, y, xc, yc, distance, activity, angle, cross, col, grey;
+  Point motion;
+
+  ScreenMatrix(float ix, float iy, float iw, float ih, float idistance, float iactivity, Point imotion, float icol, float igrey) {
+    x = iw+ix;
+    y = ih+iy;
+    xc = iw;
+    yc = ih;
+    distance = idistance;
+    activity = iactivity;
+    motion = imotion;
+    col = icol;
+    grey = igrey;
+    angle = 0;
+    cross = distance/8;
+  }
+
+  void update() {
+    x += (motion.x) * activity;
+    y += (motion.y) * activity;
+
+    if ( motion.x == 0 && motion.y == 0) {
+    if (angle &gt; 360) { angle = 0; }
+      x =  xc + (distance * sin(PI * angle));
+      y =  yc + (-distance * cos(PI * angle));
+      angle += activity * .01;
+    } else {
+      if ( x &gt; width ) {
+        x = 0;
+      } else if ( x &lt; 0) {
+        x = width;
+      } else if ( y &gt; height) {
+        y = 0;
+      } else if ( y &lt; 0) {
+        y = height;
+      }
+
+    }
+  }
+
+  void draw() {
+    noStroke();
+    colorMode(HSB, 255);
+    fill(col, 255-((grey*255)/maxgrey), 255-((grey*255)/maxgrey));
+    rect(x, y, cross, cross);
+    colorMode(RGB, 255);
+  }
+
+  void subject(String txt) {
+    stroke(160);
+    rect(x, y, cross, cross);
+    line(x, y, xc, yc);
+    push();
+    scale(1.5);
+    noStroke();
+    fill(255, 0, 255);
+    text(txt, (x + 5)/1.5, (y - 5)/1.5);
+    pop();
+  }
+}
+
+float calculateDistance(String distance) {
+  float distf = 0;
+
+  if (distance.equals("far")) {
+    distf = FAR;
+  } else if (distance.equals("medium")) {
+    distf = MEDIUM;
+  } else if (distance.equals("close")) {
+    distf = CLOSE;
+  } else if (distance.equals("very_close")) {
+    distf = VERYCLOSE;
+  } else {
+    distf = NODIST;
+  }
+  return dist;
+}
+
+Point calculateMotion(String motion) {
+  Point p = new Point(0,0);
+
+  if (motion.equals("forward")) {
+    p.x = 0;
+    p.y = -1;
+  } else if (motion.equals("right")) {
+    p.x = 1;
+    p.y = 0;
+  } else if (motion.equals("left")) {
+    p.x = -1;
+    p.y = 0;
+  } else if (motion.equals("away")) {
+    p.x = 0;
+    p.y = 1;
+  } else {
+    p.x = 0;
+    p.y = 0;
+  }
+
+  return p;
+}
+
+int maxPoint(int[] value) {
+  int maximum = Integer.MIN_VALUE;
+  int mp = 0;
+
+  for (int aset=0; aset &lt; value.length; aset++) {
+    if (value[aset] &gt; maximum) {
+      maximum = value[aset];
+      mp = aset;
+    }
+  }
+  return mp;
+}
+
+void paintStandards() {
+  stroke(SGREY);
+  line(0, 0, width, height);
+  unhint(SMOOTH_IMAGES);
+  image(swLogo, 0, height-50);
+  hint(SMOOTH_IMAGES);
+}
+
+
+</pre>
+    </td>
+    <td width="20" valign="top" colspan="8">&nbsp;</td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td height="160"><img src="../images/1pix.gif" width="1" height="160"> 
+    <td width="695" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="55" bgcolor="#CC9900" valign="top"><img src="../../images/nav_midleft.gif" width="55" height="25"></td>
+    <td width="675" valign="middle" bgcolor="#CC9900">&nbsp;</td>
+    <td width="20" bgcolor="#CC9900" valign="top"><img src="../../images/nav_midright.gif" width="20" height="25"></td>
+  </tr>
+  <tr> 
+    <td width="55" bgcolor="#996600"><img src="../../images/nav_midleft.gif" width="55" height="25"></td>
+    <td width="675" valign="middle" bgcolor="#996600">&nbsp;</td>
+    <td width="20" bgcolor="#996600"><img src="../../images/nav_midright.gif" width="20" height="25"></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+

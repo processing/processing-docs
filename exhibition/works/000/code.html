@@ -1,0 +1,485 @@
+<html>
+<head>
+<title>processing.org >> Software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../processing.css">
+</head>
+<body bgcolor="#FFFFFF" text="#CCCCCC" link="#CC9900" vlink="#CC9900" alink="#999900" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+<table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+  <tr> 
+    <td width="550" colspan="2"> <img src="../../images/processing.gif" width="500" height="50"></td>
+    <td width="180" align="right" valign="top"> <img src="../../images/1pix.gif" width="100" height="5"><br>
+    </td>
+    <td width="20"><img src="../../images/nav_topright.gif" width="20" height="50"></td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="55" valign="top"><img src="../../images/1pix.gif" width="55" height="60"></td>
+    <td width="675" valign="top">&nbsp;</td>
+    <td width="20" valign="top" colspan="8">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="55" valign="top"><img src="../../images/1pix.gif" width="55" height="60"></td>
+    <td width="675" valign="top"> <font color="#CC0000">This code was written 
+      with the _ALPHA_ version of Processing <br>
+      and it may not run correctly with the current vesion.</font><br>
+      <br>
+      <pre>// Tissue
+// Casey Reas
+
+
+int NOO = 900;  // Number of objects
+int LOO = 150;  // Length of objects
+int mx = 0;     // Mouse X position  
+int my = 0;     // Mouse Y position
+int pw = 600;   // Project width
+int ph = 300;   // Project height
+int lightCount;  
+BShape[] all = new BShape[NOO];
+float[][] lights = new float[3][2];
+float[][] lightsNew = new float[3][2];
+int rr, gg, bb;
+int NUMBER_OF_LIGHTS = 3;
+int CLICK = 0;
+int barW = 21;
+float markerY = 150;
+float markerN = 150;
+float markerYnew = 150.0;
+float markerNnew = 150.0;
+boolean markerN_on = false;
+boolean markerY_on = false;
+int whichLight = 100;
+int lightOn = 100;
+boolean a_on = false;
+
+
+void setup() {
+  size(600, 300);
+  colorMode(RGB, 255);
+  background(255, 255, 255);
+  noStroke();
+  ellipseMode(CENTER_DIAMETER);
+  
+  for(int i=0; i&lt;NUMBER_OF_LIGHTS; i++) {
+    lights[i][0] = lightsNew[i][0] = random(pw-40) + 20;
+    lights[i][1] = lightsNew[i][1] = random(ph-40) + 20;
+  }
+
+  for(int i=0; i&lt;NOO; i++) {
+    int tm = i%4;
+    if (tm == 0) {
+      rr = 153; gg = 0; bb = 0;
+    } else if (tm == 1) {
+      rr = 102; gg = 102; bb = 102;
+    } else if (tm == 2) {
+      rr = 204; gg = 102; bb = 0;
+    } else if (tm == 3) {
+      rr = 102; gg = 51; bb = 0;
+    }
+          
+    int temp = (int)random(0, 4);
+    if (temp == 0) {
+      all[i] = new BShape(random(pw-barW), random(ph), random(360), 
+                          rr, gg, bb, tm, 0, 150, 20);
+    } else if (temp == 1) {
+      all[i] = new BShape(random(pw-barW), random(ph), random(360), 
+                          rr, gg, bb, tm, 50, 150, 20);
+    } else if (temp == 2) {
+      all[i] = new BShape(random(pw-barW), random(ph), random(360), 
+                          rr, gg, bb, tm, 100, 150, 20);
+    } else if (temp == 3) {
+      all[i] = new BShape(random(pw-barW), random(ph), random(360), 
+                          rr, gg, bb, tm, 150, 150, 20);
+    }
+  }
+}
+
+
+void loop() {
+  bIdle();
+  bDraw();
+  bDrawUI();
+}
+
+boolean insideC(float x, float y) {
+  float dx = sqrt((mouseX-x) * (mouseX-x) + (mouseY-y) * (mouseY-y));
+  if (dx &lt; 8.0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+int clipX(int x) {
+  if(x &gt; pw-barW ) { x = pw-barW; }
+  if (x &lt; 0 ) { x = 0; }
+  return x;  
+}
+
+int clipY(int y) {
+  if (y &gt; ph) { y = ph; }
+  if (y &lt; 0) { y = 0; }
+  return y;
+}
+
+
+void bIdle() {
+  mx = mouseX;
+  my = mouseY;
+  
+  if(mousePressed) {
+    if(!markerY_on && !markerN_on) {
+      lightOn = whichLight; 
+    }
+  } else {
+    a_on = false;
+    whichLight = 100;
+    lightOn = 100;
+    markerY_on = false;
+    markerN_on = false;
+  }
+  
+  for (int i=0; i&lt;NUMBER_OF_LIGHTS; i++) {
+    if (lightOn == i) {
+      a_on = true;
+      lightsNew[i][0] = clipX(mouseX);
+      lightsNew[i][1] = clipY(mouseY);
+    } 
+    if(abs(lightsNew[i][0] - lights[i][0]) &gt; 1.0) {
+      lights[i][0] = lights[i][0] + (lightsNew[i][0] - lights[i][0])/2.0;
+    }
+    if(abs(lightsNew[i][1] - lights[i][1]) &gt; 1.0) {
+      lights[i][1] = lights[i][1] + (lightsNew[i][1] - lights[i][1])/2.0;
+    }
+  }
+
+  
+  for(int i=0; i&lt;NOO; i++) {
+    all[i].idle();
+  }
+  
+  // Markers
+  idleMarkers();
+}
+
+void bDraw() {
+  int numm = NOO-((int)markerY*3);
+  if (numm &lt; 4) { numm = 4; } 
+  for(int i=0; i&lt;numm; i++) {
+    all[i].draw();
+  }
+  
+  noStroke();
+
+  for(int i=0; i&lt;3; i++) {
+    if((insideC(lights[i][0], lights[i][1]) && !a_on) || lightOn == i) {
+      fill(76, 26, 0);   
+      whichLight = i;
+    } else {
+      fill(204, 153, 0); 
+    }
+    ellipse(lights[i][0], lights[i][1], 14, 14);
+  }
+  
+
+}
+
+
+/////////////////////////////////////////
+
+void idleMarkers() {
+  if(markerY_on) {
+    markerYnew = my;
+    if (markerYnew &gt; 291) { markerYnew = 291; }
+    if (markerYnew &lt; 0) { markerYnew = 0; }
+  }
+  if(markerN_on) {
+    markerNnew = my;
+    if (markerNnew &gt; 291) { markerNnew = 291; }
+    if (markerNnew &lt; 0) { markerNnew = 0; }
+  }
+  
+  if(abs(markerNnew - markerN) &gt; 1.0) {
+    markerN = markerN + (markerNnew - markerN)/2.0;
+  }
+    
+  if(abs(markerYnew - markerY) &gt; 1.0) {
+    markerY = markerY + (markerYnew - markerY)/2.0;
+  }
+  
+  noStroke();
+  // Marker for number
+  if(((mx &gt; pw-barW && mx &lt; pw-10 && !markerN_on && !a_on) || markerY_on)) {
+    fill(66, 16, 0);
+    if (mousePressed) {
+      markerY_on = true;
+      a_on = true;
+    }
+  } else {
+    fill(204, 153, 0);
+  }
+  rect(pw-21, markerY, 9, 9);
+    
+  // Marker for length
+  if((mx &gt; pw-10 && mx &lt; pw && !markerY_on && !a_on) || markerN_on) {
+    fill(66, 16, 0);
+    if(mousePressed) {
+      markerN_on = true;
+      a_on = true;
+    }
+  } else {
+    fill(204, 153, 0);
+  }
+  rect(pw-10, markerN, 9, 9); 
+}
+
+void bDrawUI() {
+
+  fill(153, 51, 0);
+  beginShape(QUADS);
+  vertex(pw-21, 0);
+  vertex(pw, 0);
+  fill(102, 26, 0);
+  vertex(pw, ph);
+  vertex(pw-21, ph);
+  endShape();
+  
+  stroke(153, 51, 0);
+  line(pw-11, 0, pw-11, ph);
+  
+  noStroke();
+  // marker for number
+  if((mx &gt; pw-barW && mx &lt; pw-10 && !markerN_on && !a_on) || markerY_on) {
+    fill(76, 26, 0);
+    if (mousePressed) {
+      markerY_on = true;
+    }
+  } else {
+    fill(204, 153, 0);
+  }
+  rect(pw-21, markerY, 9, 9);
+    
+  // marker for length
+  if((mx &gt; pw-10 && mx &lt; pw && !markerY_on && !a_on) || markerN_on) {
+    fill(76, 26, 0);
+    if(mousePressed) {
+      markerN_on = true;
+    }
+  } else {
+    fill(204, 153, 0);
+  }
+  rect(pw-10, markerN, 9, 9); 
+
+}
+
+
+/////////////////////////////////////////
+/////////////////////////////////////////
+  
+
+class BShape {
+  int NNN = LOO;
+  float pos_x = 0;
+  float pos_y = 0;
+  float light_x = 0;
+  float light_y = 0;
+  int direction = 1;
+  float lineRotate;
+  float lineRotateNew = 0;
+  float lineWidth = 50.0;
+  int r, g, b;
+  float ld = 0.0;
+  float rd = 0.0;
+  float left_sensor_x = 0.0;
+  float left_sensor_y = 0.0;
+  float right_sensor_x = 0.0;
+  float right_sensor_y = 0.0;
+  float dx, dy;
+  float yd, xd;
+  float max_distance = sqrt(pw*pw + ph*ph);
+  float lineSpeed = 2.0;
+  float MAX_SPEED = 6.0;
+  float tempX = 0;
+  float tempY = 0;
+  int type = 0;
+  int xW = 0;
+  int h = 0;
+  float size = 45.0 * random(1.0) + 5.0;
+  float[] past_x = new float[NNN];
+  float[] past_y = new float[NNN];
+    
+  BShape (float xIn, float yIn, float theta, 
+          int rIn, int gIn, int bIn, int typeIn,
+          int xBin, int xWin, int Height) {
+    pos_x = xIn;
+    pos_y = yIn;
+    lineRotate = theta;
+    r = rIn; 
+    g = gIn; 
+    b = bIn;
+    type = typeIn;
+    xW = xWin;
+    h = Height;
+    for( int i=0; i&lt;NNN; i++) {
+      past_x[i] = xIn;
+      past_y[i] = yIn;
+    }
+    
+  }
+  
+  float hump(float sa) {
+    sa = (sa - 0.5) * 2.0; //scale from -1 to 1
+    sa = 1 - sa*sa;
+    return sa;
+  }
+    
+  void idle() {
+    lineRotateNew = lineRotate/180.0 * PI;
+    
+    for (int i=0; i&lt;NUMBER_OF_LIGHTS; i++) {
+      if(i==0) { lineSpeed = 0.0; }
+      
+      // Position of light
+      light_x = lights[i][0];
+      light_y = lights[i][1];
+      
+      // Position of left sensor
+      float lrn = lineRotateNew+PI/5.0;
+      left_sensor_x = pos_x + cos(lrn)*lineWidth;
+      left_sensor_y = pos_y + sin(lrn)*lineWidth;
+      
+      // Position of right sensor  
+      float lrl = lineRotateNew-PI/5.0;
+      right_sensor_x = pos_x + cos(lrl)*lineWidth;
+      right_sensor_y = pos_y + sin(lrl)*lineWidth;
+      
+      // Distance from left sensor        
+      dx = light_x - left_sensor_x;
+      dy = light_y - left_sensor_y;
+      ld = sqrt(dx*dx + dy*dy);
+                           
+      // Distance from right sensor                     
+      dx = light_x - right_sensor_x;
+      dy = light_y - right_sensor_y;
+      rd = sqrt(dx*dx + dy*dy);
+        
+      float norm_sensor_left = 0.0;
+      float norm_sensor_right = 0.0;
+      float turnSpeed = 8.0; //8.0;
+      float norm_sensor_average = 0.0;
+        
+      norm_sensor_left = ld/max_distance;
+      norm_sensor_right = rd/max_distance;
+      norm_sensor_right =  hump(norm_sensor_right);
+      norm_sensor_left =  hump(norm_sensor_left);
+      norm_sensor_average = (norm_sensor_left + norm_sensor_right) / 2.0;
+      lineSpeed += MAX_SPEED - MAX_SPEED * norm_sensor_average;
+      lineSpeed /= 2 + (size/25.0);
+              
+      if (type == 0) {
+        lineRotate += ld/turnSpeed * (1-norm_sensor_left);
+        lineRotate -= rd/turnSpeed * (1-norm_sensor_right);
+      } else if (type == 1) {
+        lineRotate += rd/turnSpeed * (1-norm_sensor_left);
+        lineRotate -= ld/turnSpeed * (1-norm_sensor_right);
+      } else if (type == 2) {
+        lineRotate -= (ld/turnSpeed * (1-norm_sensor_left));
+        lineRotate += (rd/turnSpeed * (1-norm_sensor_right));
+      } else if (type == 3) {
+        lineRotate -= (rd/turnSpeed * (1-norm_sensor_left));
+        lineRotate += (ld/turnSpeed * (1-norm_sensor_right)); 
+      }
+      
+      lineRotate += random(-7, 7);
+      if(lineRotate &gt;= 360) { lineRotate = 0.0; }
+      
+      // Convert to radians
+      lineRotateNew = lineRotate/180.0 * PI;
+           
+      if (lineRotateNew &lt; PI/2.0) {
+        yd = sin(lineRotateNew) * lineSpeed;
+        xd = cos(lineRotateNew) * lineSpeed;
+        pos_x += xd * direction;
+        pos_y += yd * direction;
+      } else if (lineRotateNew &lt; PI) {
+        lineRotateNew -= PI/2.0;
+        yd = cos(lineRotateNew) * lineSpeed;
+        xd = sin(lineRotateNew) * lineSpeed;
+        pos_x -= xd * direction;
+        pos_y += yd * direction;
+      } else if (lineRotateNew &lt; PI + PI/2.0) {
+        lineRotateNew -= PI;
+        yd = sin(lineRotateNew) * lineSpeed;
+        xd = cos(lineRotateNew) * lineSpeed;
+        pos_x -= xd * direction;
+        pos_y -= yd * direction;
+      } else {
+        lineRotateNew -= PI+PI/2.0;
+        yd = cos(lineRotateNew) * lineSpeed;
+        xd = sin(lineRotateNew) * lineSpeed;
+        pos_x += xd * direction;
+        pos_y -= yd * direction;
+      }
+      
+      if (pos_x &gt; pw-barW || pos_x &lt; 0 || pos_y &gt; ph || pos_y &lt; 0) {
+        if(pos_x &gt; pw-barW) { pos_x = past_x[0]; pos_y = past_y[0]; } 
+        if(pos_x &lt; 0) { pos_x = past_x[0]; pos_y = past_y[0]; }
+        if(pos_y &gt; ph) { pos_x = past_x[0]; pos_y = past_y[0]; }
+        if(pos_y &lt; 0) { pos_x = past_x[0]; pos_y = past_y[0]; }
+        reset();
+      }
+      
+      for (int j=NNN-1; j&gt;0; j--) {
+  	past_x[j] = past_x[j-1];
+  	past_y[j] = past_y[j-1];
+      }
+      past_x[0] = pos_x;
+      past_y[0] = pos_y;
+    }
+  }
+  
+  void reset() {
+    direction *= -1;
+    lineRotate += 1;
+  }
+    
+  void draw() {
+    push();
+    stroke(r, g, b);
+    beginShape(LINE_STRIP);
+    for( int j=1; j&lt;NNN-markerN/2; j++) {
+      vertex(past_x[j], past_y[j]);
+    }
+    endShape();
+    pop();
+  }
+}  
+
+</pre>
+    </td>
+    <td width="20" valign="top" colspan="8">&nbsp;</td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td height="160"><img src="../images/1pix.gif" width="1" height="160"> 
+    <td width="695" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="55" bgcolor="#CC9900" valign="top"><img src="../../images/nav_midleft.gif" width="55" height="25"></td>
+    <td width="675" valign="middle" bgcolor="#CC9900">&nbsp;</td>
+    <td width="20" bgcolor="#CC9900" valign="top"><img src="../../images/nav_midright.gif" width="20" height="25"></td>
+  </tr>
+  <tr> 
+    <td width="55" bgcolor="#996600"><img src="../../images/nav_midleft.gif" width="55" height="25"></td>
+    <td width="675" valign="middle" bgcolor="#996600">&nbsp;</td>
+    <td width="20" bgcolor="#996600"><img src="../../images/nav_midright.gif" width="20" height="25"></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+

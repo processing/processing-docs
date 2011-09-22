@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="spacial representation/visualization of 4-letter words">
+<meta name="keywords" content="Processing,visualization,four letter word,language,open source,4d,dataset,java">
+<meta name="author" content="Karsten Schmidt,toxi">
+<title>base26: Built with Processing</title>
+<script type="text/javascript">
+<!--
+function insertApplet() {
+  document.write('<applet code="base26oop" archive="base26oop.jar" width="500" height="600"><param name="boxmessage" value="loading base26 (140KB)..."><param name="boxbgcolor" value="#d8d8d8"><param name="boxfgcolor" value="#666666"><param name="progressbar" value="true"><param name="progresscolor" value="#ffffff"><'+'/applet>');
+}
+//-->
+</script>
+<style type="text/css">
+html, body { background:#fff; color:#fff; margin: 0px;}
+a:link { color:#cc0; }
+a:active { color:#990; }
+a:visited { color:#cc0; }
+body,td { font-size:11px; font-family:Tahoma,Verdana,Helvetica,sans-serif; }
+.whiteBG { background:#fff; color:#333; margin: 10px; }
+</style>
+</head>
+<body marginwidth="0" marginheight="0" marginleft="0" margintop="0">
+  <table width="520" border="0" cellspacing="0" cellpadding="10">
+    <tr class="whiteBG">
+      <td align="left"><script type="text/javascript">insertApplet();</script><br/>
+      <img src="legend.gif" width="500" height="40" border="0" vspace="10"/><br/>
+      <h2>base26</h2>
+      <p>four-letter words have a special status in the english language and culture. counting in at over 1650 words, in most cases the term is only used to address the more crude, sexual subset and its use has been effectively eliminated from the language of "good" society, mainly due to its negative connotations with lack of education, etiquette and status. in a way, the use of those four-letter words reflects the schizoid prudence and class system in english speaking societies, still evident today.</p>
+      
+      <p>this small project is an attempt to give a spacial overview of the entirety of this part of english language heritage, as well as to explore and visualize relations between all those words. in order to do so, the words are first re-interpreted &amp; transformed in 2 steps:</p>
+      
+      <p><strong>step 1)</strong> each letter of the word is considered an unique number in the base26 domain, such that a=0*26<sup>n</sup>, b=1*26<sup>n</sup>... z=25*26<sup>n</sup> and where <strong>n</strong> is the position of the letter in the word, with n=3 for the 1st letter and decreasing until n=0 for the last letter.</p>
+      
+      <p><strong>step 2)</strong> stems from the idea of re-interpreting a number as coordinate: 4D in this case, with 3 letters specifying XYZ coordinates plus another for time as the 4th dimension. so the word "BASE" would define a unique 4D point at time=B, x=A, z=S, y=E. note that for purely cosmetic/representational reasons Y and Z are reversed in order. based on those assumptions, it is now possible to map all four-letter words to unique points and compute a visualization.</p>
+      
+      <p>there're 2 extra dimensions of information used here, as the graph also incorporates types of words and the frequency of occurence of letter combinations. in the visualization the nodes representing the words are colour coded based on the word being either an adjective/adverb, noun, verb, other (preposition, pronoun etc.) or combinations thereof. use the filter buttons at the bottom of the applet to include/exclude words from the dataset.</p>
+      
+      <p>the wireframe surface surrounding the nodes represents the frequency of occurence of nodes across all words. eg. the 3d point described by the letters "ear" occurs in all those words: bear, dear, fear, gear, hear, near, pear etc. the higher the frequency, the bigger the surface's radius around that node. because computing this surface is quite CPU intensive, you can adjust the resolution, as well as its looseness via the plus/minus buttons in the top right corner.</p>
+      
+      <p>the words used here have been manually extracted from the Oxford Paperback Dictionary and do not represent an all-inclusive, complete dataset, although i believe to have covered at least 95%. in cases where known, i've also tried to incorporate american spelling. please send any error reports to info-at-toxi.co.uk. thanks!</p>
+      
+      <p><br><br>ps. toxi is a four-letter word ;)</p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

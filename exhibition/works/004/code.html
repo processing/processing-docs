@@ -1,0 +1,512 @@
+<html>
+<head>
+<title>processing.org >> Software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../../processing.css">
+</head>
+<body bgcolor="#FFFFFF" text="#CCCCCC" link="#CC9900" vlink="#CC9900" alink="#999900" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0">
+<table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+  <tr> 
+    <td width="550" colspan="2"> <img src="../../images/processing.gif" width="500" height="50"></td>
+    <td width="180" align="right" valign="top"> <img src="../../images/1pix.gif" width="100" height="5"><br>
+    </td>
+    <td width="20"><img src="../../images/nav_topright.gif" width="20" height="50"></td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="55" valign="top"><img src="../../images/1pix.gif" width="55" height="60"></td>
+    <td width="675" valign="top">&nbsp;</td>
+    <td width="20" valign="top" colspan="8">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="55" valign="top"><img src="../../images/1pix.gif" width="55" height="60"></td>
+    <td width="675" valign="top"> <font color="#CC0000">This code was written 
+      with the _ALPHA_ version of Processing <br>
+      and it may not run correctly with the current vesion.</font><br>
+      <br>
+<pre>// ALPHABOT
+// by Nikita Pashenkov
+//
+// Created:                  Oct 2000
+// Ported to Processing:     Dec 2002
+  
+
+float rotX, rotY;
+int POS_NUM = 19;
+
+float preset_a[] = {0, 30, 0, 0, 0, 60, 30, 0, 0, 0, 0, -90, 0, 0, 0, 0, 0, 0, 0};
+float preset_b[] = {0, 0, 0, 0, 0, -10, -20, -90, -100, -110, 80, 100, 110, 0, 0, 0, 0, 0, 0};
+float preset_c[] = {10, 20, 90, 0, 0, 0, -20, 0, 0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0};
+float preset_d[] = {0, 0, 80, 120, 0, 0, 0, 0, 0, 0, 80, 120, 0, 0, 0, 0, 0, 0, 0};
+float preset_e[] = {0, 0, 0, 270, 0, 0, 0, -90, 0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0};
+float preset_f[] = {0, 0, 0, 270, 0, 0, 0, -90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+float preset_g[] = {10, 20, 90, 0, 0, 0, -20, 0, 0, 0, 90, 100, 0, 0, 0, 0, 0, 0, 0};
+float preset_h[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -90, 0, 0, -90, 0, 0, 150, 0};
+float preset_i[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 75, 0, 0};
+float preset_j[] = {-20, -25, 0, 0, 0, 0, 20, 0, 0, 0, -90, -120, 0, 0, 0, 0, 110, 0, 0};
+float preset_k[] = {0, 0, 0, -60, -150, -10, -90, 0, 0, 0, 0, 0, 0, -130, 0, 0, 0, 0, 0};
+float preset_l[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0};
+float preset_m[] = {0, 0, 40, 160, 0, 0, 0, 40, 160, 0, 0, 0, 0, 0, 0, 0, -50, 200, 0};
+float preset_n[] = {0, 0, 30, 180, 180, 0, 0, 0, 180, 180, 0, 0, 0, -30, 180, 180, 0, 160, 0};
+float preset_o[] = {0, 0, 90, 0, 0, 0, 0, 90, 0, 0, 90, 0, 0, -90, 0, 0, 0, 150, 0};
+float preset_p[] = {0, 0, 90, 90, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+float preset_q[] = {0, 0, 90, 0, 0, 0, 0, 90, 0, 0, 90, -165, 0, -90, 0, 0, 0, 150, 0};
+float preset_r[] = {0, 0, 90, 90, 125, -10, -90, 0, 0, 0, 0, 0, 0, -130, 0, 0, 0, 0, 0};
+float preset_s[] = {0, -90, 0, 0, 0, 90, 90, 0, 0, 0, -90, 0, 0, 0, 0, 0, 125, 0, 0};
+float preset_t[] = {0, 0, 90, 0, 0, 0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0, 75, 0, 0};
+float preset_u[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90, 0, 0, -90, 0, 0, 0, 150, 0};
+float preset_v[] = {20, 20, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 140, 0};
+float preset_w[] = {20, 20, 0, 0, 0, 0, 15, 0, 0, 0, 50, 140, 0, -50, 140, 0, 0, 210, 0};
+float preset_x[] = {-30, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -135, 30};
+float preset_y[] = {0, 30, 0, 0, 0, 0, 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 75, 0, 0};
+float preset_z[] = {-20, 0, 0, 0, 0, 0, 0, 70, 0, 0, 70, 0, 0, 0, 0, 0, 0, 0, 0};
+// preset_*[0]        // angle: part 1 bottom
+// preset_*[1]        // angle: part 1 middle 
+// preset_*[2]        // angle: part 1 top 1st degree
+// preset_*[3]        // angle: part 1 top 2nd degree
+// preset_*[4]        // angle: part 1 top 3rd degree
+// preset_*[5]        // angle: part 2 top
+// preset_*[6]        // angle: part 2 middle
+// preset_*[7]        // angle: part 2 top 1st degree
+// preset_*[8]        // angle: part 2 top 2nd degree
+// preset_*[9]        // angle: part 2 top 3rd degree
+// preset_*[10]       // angle: part 1 bottom 1st degree
+// preset_*[11]       // angle: part 1 bottom 2nd degree
+// preset_*[12]       // angle: part 1 bottom 3rd degree
+// preset_*[13]       // angle: part 2 bottom 1st degree
+// preset_*[14]       // angle: part 2 bottom 2nd degree
+// preset_*[15]       // angle: part 2 bottom 3rd degree
+// preset_*[16]       // distance: part 1 starting distance
+// preset_*[17]       // distance: part 2 starting distance
+// preset_*[18]       // distance: part 2 'x' special case
+
+
+float pos_preset[];
+float pos_current[];
+
+
+void setup()
+{
+  size(400, 400);
+  background(255);
+
+  rotX = 0;
+  rotY = 0;
+
+  lights();
+  //noStroke();
+
+  pos_preset = new float[POS_NUM];
+  pos_current = new float[POS_NUM];
+  
+  for(int i=0; i&lt;POS_NUM; i++)
+    pos_preset[i] = preset_a[i]; 
+}
+
+
+void mouseDragged()
+{
+  rotX += mouseX - pmouseX;
+  rotY += mouseY - pmouseY;
+}
+
+
+void keyPressed() 
+{
+  if(key == 'a' || key == 'A') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_a[i]; 
+       
+  else if(key == 'b' || key == 'B') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_b[i];  
+      
+  else if(key == 'c' || key == 'C') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_c[i];  
+      
+  else if(key == 'd' || key == 'D') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_d[i];  
+      
+  else if(key == 'e' || key == 'E') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_e[i];  
+      
+  else if(key == 'f' || key == 'F') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_f[i];  
+      
+  else if(key == 'g' || key == 'G') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_g[i];  
+      
+  else if(key == 'h' || key == 'H') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_h[i];  
+      
+  else if(key == 'i' || key == 'I') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_i[i];  
+      
+  else if(key == 'j' || key == 'J') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_j[i];  
+      
+  else if(key == 'k' || key == 'K') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_k[i];
+        
+  else if(key == 'l' || key == 'L') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_l[i];  
+      
+  else if(key == 'm' || key == 'M') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_m[i];  
+      
+  else if(key == 'n' || key == 'N') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_n[i];  
+      
+  else if(key == 'o' || key == 'O') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_o[i];  
+      
+  else if(key == 'p' || key == 'P') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_p[i];  
+      
+  else if(key == 'q' || key == 'Q') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_q[i];  
+      
+  else if(key == 'r' || key == 'R') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_r[i];  
+      
+  else if(key == 's' || key == 'S') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_s[i];  
+      
+  else if(key == 't' || key == 'T') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_t[i];  
+      
+  else if(key == 'u' || key == 'U') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_u[i];  
+      
+  else if(key == 'v' || key == 'V') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_v[i]; 
+       
+  else if(key == 'w' || key == 'W') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_w[i];  
+    
+  else if(key == 'x' || key == 'X') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_x[i];  
+      
+  else if(key == 'y' || key == 'Y') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_y[i];  
+
+  else if(key == 'z' || key == 'Z') 
+    for(int i=0; i&lt;POS_NUM; i++)
+      pos_preset[i] = preset_z[i];  
+}
+
+
+void loop()
+{
+  translate(200, 200, 75);
+  scale(.65);
+
+  rotateZ(-PI/2);                                          
+  rotateX(0.9*PI);  
+  rotateX(-rotX*0.005);
+  translate(0, 0, -75);
+
+  fill(102, 153, 102);
+  draw_bot();
+  fold_bot();
+  //delay(10);
+}
+
+
+void draw_bot()
+{
+  boolean flip = true;
+
+  translate(-150, 50-pos_current[16], 0);               // initial parts translate
+  rotateZ(pos_current[0]*PI/180);                       // initial parts angle
+  draw_part(160, 40, 70, !flip);
+
+  push();
+    translate(10, 0, 10);  
+    rotateZ(-pos_current[10]*PI/180);                   // part 1 bottom 1st degree
+    draw_part(140, 35, 50, flip);
+
+    translate(110, 12, 10);
+    rotateZ(PI-pos_current[11]*PI/180);                 // part 1 bottom 2nd degree
+    draw_part(122.5, 30.625, 30, flip);
+
+    translate(95, 5, 10);
+    rotateZ(PI-pos_current[12]*PI/180);                 // part 1 bottom 3rd degree
+    draw_part(107, 26.8, 10, flip);
+  pop();
+
+  translate(150, 0, 0);
+  rotateZ(-pos_current[1]*PI/180);                      // part 1 bend
+  translate(150, 0, 70);
+  rotateY(180*PI/180);
+  draw_part(160, 40, 70, !flip);
+
+  push();                                               // part 1
+    translate(10, 0, 10);
+    rotateZ(-pos_current[2]*PI/180);                    // part 1 top 1st degree
+    draw_part(140, 35, 50, flip);
+
+    translate(110, 12, 10);
+    rotateZ(PI-pos_current[3]*PI/180);                  // part 1 top 2nd degree
+    draw_part(122.5, 30.625, 30, flip);
+
+    translate(94, 5, 10);
+    rotateZ(PI-pos_current[4]*PI/180);                  // part 1 top 3rd degree
+    draw_part(107, 26.8, 10, flip);
+  pop();
+  
+  rotateX(180*PI/180);                                  // flip part
+  rotateZ(pos_current[18]*PI/180);                      // part 2 starting distance
+  translate(0, pos_current[17], 0);                     // 'x' special case
+  rotateZ(pos_current[5]*PI/180);                       // angle between parts
+  draw_part(160, 40, 70, !flip);
+
+  push();                                               // part 2
+    translate(10, 0, 10);
+    rotateZ(-pos_current[7]*PI/180);                    // part 2 top 1st degree
+    draw_part(140, 35, 50, flip);
+
+    translate(110, 12, 10);
+    rotateZ(PI-pos_current[8]*PI/180);                  // part 2 top 2nd degree
+    draw_part(122.5, 30.625, 30, flip);
+
+    translate(96, 5, 10);
+    rotateZ(PI-pos_current[9]*PI/180);                  // part 2 top 3rd degree
+    draw_part(107, 26.8, 10, flip);
+  pop();
+
+  translate(150, 0, 0);
+  rotateZ(-pos_current[6]*PI/180);                      // part 2 bend
+  translate(150, 0, 70);
+  rotateY(PI);
+  draw_part(160, 40, 70, !flip);
+
+  push();            
+    translate(10, 0, 10);
+    rotateZ(pos_current[13]*PI/180);                    // part 2 bottom 1st degree
+    draw_part(140, 35, 50, flip);
+
+    translate(110, 12, 10);
+    rotate(PI-pos_current[14]*PI/180);                  // part 2 bottom 2nd degree
+    draw_part(122.5, 30.625, 30, flip);
+
+    translate(94, 5, 10);
+    rotate(PI-pos_current[15]*PI/180);                  // part 2 bottom 3rd degree
+    draw_part(107, 26.8, 10, flip);
+  pop();
+}
+
+
+void draw_part(float x, float y, float z, boolean flip)
+{
+  push();
+    translate(-10, -20, 0);
+    draw_part_h(0, x, 0, y, 0, 10);
+
+    if(z &gt; 10)                                          // if larger than smallest part 
+    {
+      if(flip)
+        draw_part_v2(0, x, 0, y, 0, z);
+      else
+        draw_part_v1(0, x, 0, y, 0, z);
+      draw_part_h(0, x, 0, y, z-10, z);
+    }
+  pop();
+ }
+
+
+void draw_part_v1(float x0, float x1, float y0, float y1, float z0, float z1)
+{
+  float dx = x1 - x0;
+  float dy = y1 - y0;
+
+  beginShape(QUADS);
+    vertex(dx*0.375,  dy*1.5,      z0+10);
+    vertex(dx*0.75,   dy*1.5,      z0+10);
+    vertex(dx*0.75,   dy*1.5,      z1-10);
+    vertex(dx*0.375,  dy*1.5,      z1-10);
+    
+    vertex(dx*0.75,   dy*1.5,      z0+10);
+    vertex(dx*0.75,   dy*1.5-10,   z0+10);
+    vertex(dx*0.75,   dy*1.5-10,   z1-10);
+    vertex(dx*0.75,   dy*1.5,      z1-10);
+    
+    vertex(dx*0.75,   dy*1.5-10,   z0+10);
+    vertex(dx*0.375,  dy*1.5-10,   z0+10);
+    vertex(dx*0.375,  dy*1.5-10,   z1-10);
+    vertex(dx*0.75,   dy*1.5-10,   z1-10);
+    
+    vertex(dx*0.25,   dy*1.33,     z0+10);
+    vertex(dx*0.375,  dy*1.5,      z0+10);
+    vertex(dx*0.375,  dy*1.5,      z1-10);
+    vertex(dx*0.25,   dy*1.33,     z1-10);
+    
+    vertex(dx*0.25,   dy*1.33,     z0+10);
+    vertex(dx*0.25,   dy*1.33-10,  z0+10);
+    vertex(dx*0.25,   dy*1.33-10,  z1-10);
+    vertex(dx*0.25,   dy*1.33,     z1-10);
+    
+    vertex(dx*0.25,   dy*1.33-10,  z0+10);
+    vertex(dx*0.375,  dy*1.5-10,   z0+10);
+    vertex(dx*0.375,  dy*1.5-10,   z1-10);
+    vertex(dx*0.25,   dy*1.33-10,  z1-10);
+  endShape();  
+}
+
+
+void draw_part_v2(float x0, float x1, float y0, float y1, float z0, float z1)
+{
+  float dx = x1 - x0;
+  float dy = y1 - y0;
+  
+  beginShape(QUADS);
+    vertex(dx*2/8,     y0,         z0+10);
+    vertex(dx*5/8,     y0,         z0+10);
+    vertex(dx*5/8,     y0,         z1-10);
+    vertex(dx*2/8,     y0,         z1-10);
+    
+    vertex(dx*5/8,     y0,         z0+10);
+    vertex(dx*6/8,     dy/6,       z0+10);
+    vertex(dx*6/8,     dy/6,       z1-10);
+    vertex(dx*5/8,     y0,         z1-10);
+    
+    vertex(dx*6/8,     dy/6,       z0+10);
+    vertex(dx*6/8,     dy/6+10,    z0+10);
+    vertex(dx*6/8,     dy/6+10,    z1-10);
+    vertex(dx*6/8,     dy/6,       z1-10);
+    
+    vertex(dx*5/8,     y0+10,      z0+10);
+    vertex(dx*6/8,     dy/6+10,    z0+10);
+    vertex(dx*6/8,     dy/6+10,    z1-10);
+    vertex(dx*5/8,     y0+10,      z1-10);
+      
+    vertex(dx*2/8,     y0+10,      z0+10);
+    vertex(dx*5/8,     y0+10,      z0+10);
+    vertex(dx*5/8,     y0+10,      z1-10);
+    vertex(dx*2/8,     y0+10,      z1-10);
+    
+    vertex(dx*2/8,     y0,         z0+10);
+    vertex(dx*2/8,     y0+10,      z0+10);
+    vertex(dx*2/8,     y0+10,      z1-10);
+    vertex(dx*2/8,     y0,         z1-10);
+  endShape();  
+}
+
+
+void draw_part_h(float x0, float x1, float y0, float y1, float z0, float z1)
+{
+  float dx = x1 - x0;
+  float dy = y1 - y0;
+  
+  beginShape(POLYGON);
+    vertex(x0,         y0,         z0);
+    vertex(dx*0.625,   y0,         z0);
+    vertex(x1,         dy*0.5,     z0);
+    vertex(x1,         dy*1.5,     z0);
+    vertex(dx*0.375,   dy*1.5,     z0);
+    vertex(x0,         y1,         z0);
+  endShape();
+    
+  beginShape(POLYGON);
+    vertex(x0,         y0,         z1);
+    vertex(dx*0.625,   y0,         z1);
+    vertex(x1,         dy*0.5,     z1);
+    vertex(x1,         dy*1.5,     z1);
+    vertex(dx*0.375,   dy*1.5,     z1);
+    vertex(x0,         y1,         z1);
+  endShape();
+    
+  beginShape(QUADS);
+    vertex(x0,        y0,          z0);
+    vertex(x0,         dy,         z0);
+    vertex(x0,         dy,         z1);
+    vertex(x0,         y0,         z1);
+      
+    vertex(x0,         dy,         z0);
+    vertex(dx*0.375,   dy*1.5,     z0);
+    vertex(dx*0.375,   dy*1.5,     z1);
+    vertex(x0,         dy,         z1);
+      
+    vertex(dx*0.375,   dy*1.5,     z0);
+    vertex(dx,         dy*1.5,     z0);
+    vertex(dx,         dy*1.5,     z1);
+    vertex(dx*0.375,   dy*1.5,     z1);
+      
+    vertex(dx,         dy*1.5,     z0);
+    vertex(dx,         dy*0.5,     z0);
+    vertex(dx,         dy*0.5,     z1);
+    vertex(dx,         dy*1.5,     z1);
+      
+    vertex(dx,         dy*0.5,     z0);
+    vertex(dx*5/8,     y0,         z0);
+    vertex(dx*5/8,     y0,         z1);
+    vertex(dx,         dy*0.5,     z1);
+      
+    vertex(dx*5/8,     y0,         z0);
+    vertex(x0,         y0,         z0);
+    vertex(x0,         y0,         z1);
+    vertex(dx*5/8,     y0,         z1);
+  endShape();  
+}
+
+
+void fold_bot()
+{
+  for(int i=0; i&lt;POS_NUM; i++)
+  {
+    if(pos_current[i] &lt; pos_preset[i])      
+      pos_current[i]++;
+    else if(pos_current[i] &gt; pos_preset[i])  
+      pos_current[i]--;
+  }
+}
+</pre>
+    </td>
+    <td width="20" valign="top" colspan="8">&nbsp;</td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td height="160"><img src="../images/1pix.gif" width="1" height="160"> 
+    <td width="695" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="55" bgcolor="#CC9900" valign="top"><img src="../../images/nav_midleft.gif" width="55" height="25"></td>
+    <td width="675" valign="middle" bgcolor="#CC9900">&nbsp;</td>
+    <td width="20" bgcolor="#CC9900" valign="top"><img src="../../images/nav_midright.gif" width="20" height="25"></td>
+  </tr>
+  <tr> 
+    <td width="55" bgcolor="#996600"><img src="../../images/nav_midleft.gif" width="55" height="25"></td>
+    <td width="675" valign="middle" bgcolor="#996600">&nbsp;</td>
+    <td width="20" bgcolor="#996600"><img src="../../images/nav_midright.gif" width="20" height="25"></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+

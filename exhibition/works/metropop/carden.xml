@@ -1,0 +1,10 @@
+<images firstImage="early2.jpg" firstText="Click to explore some variations of Tom Carden's images..." firstColor="0x000000" upColor="0xE6E6E6" overColor="0x808080" selectColor="0x505050">
+	<image file="early4.jpg" textColor="0x000000">An attempt to use colours related to the direction of the particles.</image>
+	<image file="early5.jpg" textColor="0xff8080">Mapping particle direction to a more limited colour palette (1).</image>
+	<image file="early6.jpg" textColor="0xff8080">Mapping particle direction to a more limited colour palette (2).</image>
+	<image file="early7.jpg" textColor="0x000000">Mapping particle direction to a more limited colour palette (3).</image>
+	<image file="early8.jpg" textColor="0xff8080">Using additive particles to mimic photographic exposure.</image>
+	<image file="early3.jpg" textColor="0x000000">A harsher, more granular black and white piece.</image>
+	<image file="early1.jpg" textColor="0x000000">An attempt to replicate the effect of a pencil sketch.</image>
+	<image file="early2.jpg" textColor="0x000000">A linear exposure method similar to that used in the Metropop Denim tool.</image>
+</images>

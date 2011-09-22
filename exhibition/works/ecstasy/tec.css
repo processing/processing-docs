@@ -1,0 +1,55 @@
+p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #CCCCCC;
+	line-height: 14px;
+
+}
+a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #eeeedd;
+	text-decoration: none;
+	line-height: 14px;
+
+}
+a:hover { text-decoration: underline; color: #ffffcc;}
+
+code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 11px;
+	color: #EEEEDD;
+	line-height: 14px;
+
+}
+.head {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #eeeeee;
+	line-height: 14px;
+
+}
+
+#java {
+	position:absolute;
+	left:32px;
+	top:32px;
+	width:480px;
+	height:480px;
+}
+
+#title {
+	position:absolute;
+	left:32px;
+	top:568px;
+	width:480px;
+	height:63px;
+}
+
+#subtitle {
+	position:absolute;
+	left:32px;
+	top:631px;
+	width:480px;
+	height:32px;
+}

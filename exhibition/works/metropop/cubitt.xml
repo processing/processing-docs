@@ -1,0 +1,9 @@
+<images firstImage="06-vi.jpg" firstText="Click to explore the process behind Clayton Cubitt's cover image..." firstColor="0x505080" upColor="0xE6E6E6" overColor="0x979797" selectColor="0x505080">
+	<image file="01-vi.jpg" textColor="0x505080">Raw image. Used for symmetrical shoulders.</image>
+	<image file="02-vi.jpg" textColor="0x505080">Head and left shoulder from different image was blended with original image. Collarbones were curved and highlighted. Blemishes removed.</image>
+	<image file="03-vi.jpg" textColor="0x505080">Here we're starting to move the image towards it's final tonal value. I wanted to push the limits on contrast and brightness, so we pushed all the values down, and then selectively brought back those areas that we wanted detail in.</image>
+	<image file="04-vi.jpg" textColor="0x505080">Here we brought back a lot of tone on the custom denim headpiece.</image>
+	<image file="05-vi.jpg" textColor="0x505080">We took two generative pieces (the retouchers affectionately called them "swirlies"), adjusted them for contrast, and worked them into her body, slightly bending them to fit in pleasing ways. I wanted the generative art to blend and mingle with the models swirled hair, which was styled on set to fit this way.</image>
+	<image file="06-vi.jpg" textColor="0x505080">Here we've dropped out all color. Almost done!</image>
+	<image file="07-vi.jpg" textColor="0x505080">The denim headpiece was hand-colored to highlight it to subtly telegraph the theme of the issue (denim). Final contrast adjustments were made, and the model's skin was made to look slightly less wet. The image was cropped to the squarer dimensions of the final layout. Total creation time of the whole story (cover plus fashion, including shooting, generating "swirlies" and retouching) was about 60 hours.</image>
+</images>
