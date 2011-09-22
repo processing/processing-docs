@@ -66,7 +66,7 @@ li { margin-bottom: 1em; }
 	
 <p>Experimental! Please don't click for now.</p>
 
-<p><a href="#" onclick="remote_link('../java_generate/ReferenceGenerator/processingrefBuild.sh');return false;">Reference</a></p>
+<p><a href="#" onclick="remote_link('reference2.php');return false;">Reference</a></p>
 
 
 <!--
