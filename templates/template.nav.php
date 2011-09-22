@@ -7,12 +7,12 @@ $pages = array(
     'Exhibition'      => array('/exhibition/', 1), 
     
     'Learning'        => array('/learning/', 1), 
-        'Tutorials'   => array('/learning/', 2),  
-        'Basics'      => array('/learning/basics/', 2),  
-        'Topics'      => array('/learning/topics/', 2), 
+    	'Tutorials'   => array('/learning/', 2),  
+    	'Basics'      => array('/learning/basics/', 2),  
+    	'Topics'      => array('/learning/topics/', 2), 
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
-        'Books'       => array('/learning/books/', 2),
+    'Books'       => array('/learning/books/', 2),
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
@@ -39,7 +39,7 @@ function navigation($section = '')
 {  
     global $lang;
     global $translation;
-    $tr = $translation->navigation;
+    //$tr = $translation->navigation;  // Removed 22 Sep 2011  --CR
 
     $abo = array('About', 'Overview', 'People', 'Patrons');
     $ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
@@ -68,12 +68,12 @@ function navigation($section = '')
     $html .= "\t\t\t\t</div>\n";
     
     if (in_array($section, $abo)) {
-         $html .= "\t\t\t\t" . '<div class="navBar abo" id="subNav">' . "\n";
+        $html .= "\t\t\t\t" . '<div class="navBar abo" id="subNav">' . "\n";
     
-         $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . " \\\n";
-         $html .= "\t\t\t\t\t" . l('People', $section == 'People') . " \\\n";
-          $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . " \n";
-          $html .= "\t\t\t\t</div>\n";      
+        $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . " \\\n";
+        $html .= "\t\t\t\t\t" . l('People', $section == 'People') . " \\\n";
+        $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . " \n";
+        $html .= "\t\t\t\t</div>\n";      
    
      } else if (in_array($section, $ref)) {
         $html .= "\t\t\t\t" . '<div class="navBar" id="subNav">' . "\n";
@@ -143,6 +143,11 @@ function local_nav($section, $rel_path='')
     return $html;    
 }
 
+
+// Removed 22 Sep 2011  --CR
+
+/**
+
 function reference_nav($current = '')
 {
     global $lang;
@@ -193,4 +198,7 @@ function library_nav($current=null)
 function examples_nav($current) {
     // $html = "\n\t<div id=\"examples-nav\">\n";
 }
+
+*/
+
 ?>

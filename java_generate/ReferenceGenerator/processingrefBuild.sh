@@ -31,7 +31,7 @@ javadoc -doclet ProcessingWeblet \
 # COPY IMAGES FROM CONTENT FOLDER TO CORRECT FOLDERS
 
 # manage web reference
-#cp -R ../../css	 ../../reference/
+cp -R ../../css	 ../../reference/
 mkdir -p ../../reference/images
 cp -R ../../content/api_media/*.jpg ../../reference/images/
 cp -R ../../content/api_media/*.gif ../../reference/images/
@@ -65,10 +65,9 @@ cp ../../content/api_en/images/header.gif ../../distribution/img/
 cd ../../generate/
 
 # run web reference creations files
-# the static pages are run separately, the tools and libraries are run by the librarian
-#php staticpages.php
-#php tools.php
-#php libraries.php
+php staticpages.php
+php tools.php
+php libraries.php
 php environment.php
 
 # run local reference creations files

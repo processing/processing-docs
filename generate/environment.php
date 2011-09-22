@@ -11,7 +11,7 @@ $lang = isSet($_POST['lang']) ? $_POST['lang'] : 'en';
 //$translation = new Translation($lang);
 
 // make overview page
-$source = CONTENTDIR."/api_$lang/environment/";
+$source = CONTENTDIR."api_$lang/environment/";
 $path = REFERENCEDIR . ($lang == 'en' ? '' : "/$lang") . "/environment/";
 
 make_necessary_directories($path."images/file");
