@@ -59,12 +59,14 @@ li { margin-bottom: 1em; }
 	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ <a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
 	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ <a href="#" onclick="remote_link('about.php');return false;">About</a> \ 
 	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages (Copyright, Books, Shop)</a>
-	</p>
+</p>
 	
-	<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 	
-	<p>New reference generator is coming...</p>
+<p>Experimental! Please don't click for now.</p>
+
+<p><a href="#" onclick="remote_link('../java_generate/ReferenceGenerator/processingrefBuild.sh');return false;">Reference</a></p>
 
 
 <!--
