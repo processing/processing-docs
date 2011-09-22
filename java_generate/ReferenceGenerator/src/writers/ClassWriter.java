@@ -61,8 +61,8 @@ public class ClassWriter extends BaseWriter {
 			}
 			String constructors = getConstructors();
 			
-			String methods = templateWriter.writeLoop("Property.partial.html", methodSet);
-			String fields = templateWriter.writeLoop("Property.partial.html", fieldSet);
+			String methods = templateWriter.writeLoop("property.partial.html", methodSet);
+			String fields = templateWriter.writeLoop("property.partial.html", fieldSet);
 			vars.put("methods", methods);
 			vars.put("fields", fields);
 			vars.put("examples", getExamples(classDoc));
@@ -75,7 +75,7 @@ public class ClassWriter extends BaseWriter {
 				vars.put("usage", tags[0].text());				
 			}
 			
-			templateWriter.write("Class.template.html", vars, anchor);
+			templateWriter.write("class.template.html", vars, anchor);
 		}
 		
 	}

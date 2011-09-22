@@ -112,7 +112,7 @@ public class LibraryIndexWriter extends IndexWriter {
 	}
 	
 	public void write(String path) throws IOException{
-		templateWriter.write("Library.Index.template.html", sections, path+"index.html");
+		templateWriter.write("library.index.template.html", sections, path+"index.html");
 	}
 	
 	public void addItem(ClassDoc doc){
@@ -133,17 +133,17 @@ public class LibraryIndexWriter extends IndexWriter {
 			}
 		}
 		
-		cmap.put("methods", templateWriter.writeLoop("Related.partial.html", methods));
+		cmap.put("methods", templateWriter.writeLoop("related.partial.html", methods));
 		cmap.put("classname", getName(doc) + " Class");
 		cmap.put("classdescription", getBriefDescriptionFromSource(doc));
 		
-		classes.add(templateWriter.writePartial("Library.Section.partial.html", cmap));
+		classes.add(templateWriter.writePartial("library.section.partial.html", cmap));
 	}
 	
 	public void addEvent(String name, String anchor){
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("name", name);
 		map.put("anchor", getAnchorFromName(name));
-		events.add(templateWriter.writePartial("Related.partial.html", map) + "\n");
+		events.add(templateWriter.writePartial("related.partial.html", map) + "\n");
 	}
 }

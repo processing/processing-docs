@@ -19,7 +19,7 @@ public class FunctionWriter extends BaseWriter {
 			TemplateWriter templateWriter = new TemplateWriter();
 			
 			HashMap<String, String> vars = new HashMap<String, String>();
-			String syntax = templateWriter.writeLoop("Function.Syntax.partial.html", getSyntax(doc, ""));
+			String syntax = templateWriter.writeLoop("function.syntax.partial.html", getSyntax(doc, ""));
 			
 			vars.put("examples", getExamples( doc ));
 			vars.put("description", getXMLDescription(doc));
@@ -30,7 +30,7 @@ public class FunctionWriter extends BaseWriter {
 			vars.put("parameters", getParameters(doc));
 			vars.put("related", getRelated(doc));
 			
-			templateWriter.write("Generic.template.html", vars, anchor);
+			templateWriter.write("generic.template.html", vars, anchor);
 		}
 		
 	}	

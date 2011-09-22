@@ -125,18 +125,18 @@ public class XMLReferenceWriter extends BaseWriter {
 				ArrayList< HashMap<String, String> > methodSet = getPropertyInfo( doc, xpath, "method", anchorBase + "_" );
 				ArrayList< HashMap<String, String> > fieldSet = getPropertyInfo( doc, xpath, "field", anchorBase + "_" );
 				
-				vars.put( "methods", templateWriter.writeLoop("Property.partial.html", methodSet) );
-				vars.put( "fields", templateWriter.writeLoop("Property.partial.html", fieldSet) );
+				vars.put( "methods", templateWriter.writeLoop("property.partial.html", methodSet) );
+				vars.put( "fields", templateWriter.writeLoop("property.partial.html", fieldSet) );
 				
 				if( vars.get("parameters") == "" )
 				{	// get constructor parameters
 					vars.put("parameters", getParameters(doc, "c" ));
 				}
-				templateWriter.write("Class.template.html", vars, dst + anchor);
+				templateWriter.write("class.template.html", vars, dst + anchor);
 			}
 			else
 			{
-				templateWriter.write("Generic.template.html", vars, dst + anchor);
+				templateWriter.write("generic.template.html", vars, dst + anchor);
 			}
 			
 		} catch (XPathExpressionException e) {
@@ -218,7 +218,7 @@ public class XMLReferenceWriter extends BaseWriter {
 		
 		TemplateWriter templateWriter = new TemplateWriter();
 		//write out all parameters with a short loop
-		return templateWriter.writeLoop("Parameter.partial.html", ret);
+		return templateWriter.writeLoop("parameter.partial.html", ret);
 	}
 	
 	protected static String getRelated(Document doc) throws IOException{
@@ -245,7 +245,7 @@ public class XMLReferenceWriter extends BaseWriter {
 		}catch(XPathExpressionException e){
 			
 		}
-		return templateWriter.writeLoop("Related.partial.html", vars);
+		return templateWriter.writeLoop("related.partial.html", vars);
 	}
 	
 	static protected XPath getXPath(){

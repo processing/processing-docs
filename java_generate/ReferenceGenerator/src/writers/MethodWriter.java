@@ -29,7 +29,7 @@ public class MethodWriter extends BaseWriter {
 		vars.put("examples", getExamples(doc));
 		vars.put("description", getXMLDescription(doc));
 		vars.put("name", getName(doc));
-		String syntax = templateWriter.writeLoop("Method.Syntax.partial.html", getSyntax(doc, getInstanceName(doc)));
+		String syntax = templateWriter.writeLoop("method.syntax.partial.html", getSyntax(doc, getInstanceName(doc)));
 		vars.put("syntax", syntax);
 		vars.put("returns", getReturnTypes(doc));
 		
@@ -37,7 +37,7 @@ public class MethodWriter extends BaseWriter {
 		vars.put("usage", getUsage(doc));
 		vars.put("related", getRelated(doc));
 		
-		templateWriter.write("Generic.template.html", vars, filename);
+		templateWriter.write("generic.template.html", vars, filename);
 	}
 	
 }

@@ -54,8 +54,8 @@ public class IndexWriter extends BaseWriter {
 	}
 	
 	public void write() throws IOException{
-		templateWriter.write("Index.template.html", getCompressedSections(), "index.html");
-		templateWriter.write("Index.Alphabetical.template.html", getAlphabetical(), "alpha.html");
+		templateWriter.write("index.template.html", getCompressedSections(), "index.html");
+		templateWriter.write("index.alphabetical.template.html", getAlphabetical(), "alpha.html");
 //		System.out.println("Alphabetical:\n" + getAlphabetical().get("c2"));
 	}
 	
@@ -149,7 +149,7 @@ public class IndexWriter extends BaseWriter {
 		vars.put("anchor", anchor);
 		vars.put("name", name);
 		
-		String value = templateWriter.writePartial("Index.entry.partial.html", vars);
+		String value = templateWriter.writePartial("index.entry.partial.html", vars);
 		if( sections.containsKey(key))
 		{
 			sections.get(key).add(value);

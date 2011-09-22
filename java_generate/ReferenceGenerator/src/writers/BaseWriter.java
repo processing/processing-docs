@@ -344,10 +344,10 @@ public class BaseWriter {
 			e.printStackTrace();
 		}
 
-		String exampleInner = templateWriter.writeLoop("/Example.partial.html", exampleList);
+		String exampleInner = templateWriter.writeLoop("/example.partial.html", exampleList);
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("examples", exampleInner);
-		return templateWriter.writePartial("Examples.partial.html", map);
+		return templateWriter.writePartial("examples.partial.html", map);
 	}
 	
 	protected static String getXMLDescription(ProgramElementDoc doc) throws IOException {
@@ -430,7 +430,7 @@ public class BaseWriter {
 					paramMap.put("parameter", p.name());
 					parameters.add(paramMap);
 				}
-				String params = templateWriter.writeLoop("Method.Parameter.partial.html", parameters, ", ");
+				String params = templateWriter.writeLoop("method.parameter.partial.html", parameters, ", ");
 				
 				map.put("parameters", params);
 				if( ! ret.contains(map) )
@@ -507,7 +507,7 @@ public class BaseWriter {
 		
 		
 		TemplateWriter templateWriter = new TemplateWriter();
-		return templateWriter.writeLoop("Parameter.partial.html", ret);
+		return templateWriter.writeLoop("parameter.partial.html", ret);
 	}
 	
 	protected static String getParameters(ClassDoc doc) throws IOException{
@@ -521,7 +521,7 @@ public class BaseWriter {
 		removeDuplicateParameters(ret);
 		
 		TemplateWriter templateWriter = new TemplateWriter();
-		return templateWriter.writeLoop("Parameter.partial.html", ret);
+		return templateWriter.writeLoop("parameter.partial.html", ret);
 	}
 	
 	protected static void removeDuplicateParameters(ArrayList<HashMap<String, String>> ret){
@@ -645,7 +645,7 @@ public class BaseWriter {
 				vars.add(map);
 			}
 		}
-		return templateWriter.writeLoop("Related.partial.html", vars);
+		return templateWriter.writeLoop("related.partial.html", vars);
 	}
 	
 	protected static String getEvents(ProgramElementDoc doc){

@@ -31,12 +31,12 @@ public class FieldWriter extends BaseWriter {
 			vars.put("classname", "");
 		} else {
 			vars.put("classanchor", getLocalAnchor(doc.containingClass()));
-			vars.put("parameters", templateWriter.writePartial("Parameter.partial.html", getParent(doc)));			
-			String syntax = templateWriter.writePartial("Field.Syntax.partial.html", getSyntax(doc));
+			vars.put("parameters", templateWriter.writePartial("parameter.partial.html", getParent(doc)));			
+			String syntax = templateWriter.writePartial("field.syntax.partial.html", getSyntax(doc));
 			vars.put("syntax", syntax);	
 		}
 		
-		templateWriter.write("Generic.template.html", vars, filename);
+		templateWriter.write("generic.template.html", vars, filename);
 	}
 	
 	
