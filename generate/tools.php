@@ -5,11 +5,11 @@ require_once('lib/Translation.class.php');
 $benchmark_start = microtime_float();
 
 // arguments
-$lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
-$tools_dir = 'reference/'.($lang != 'en' ? "$lang/" : '').'tools';
+//$lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
+//$tools_dir = 'reference/'.($lang != 'en' ? "$lang/" : '').'tools';
 
 // get translation file
-$translation = new Translation($lang);
+//$translation = new Translation($lang);
 
 // get tools index
 $index = CONTENTDIR."api_en/tools/index.html";
@@ -19,9 +19,11 @@ $page->content(file_get_contents($index));
 writeFile($tools_dir.'/index.html', $page->out());
 
 if (!is_dir(BASEDIR.$tools_dir.'/images')) { 
-	mkdir(BASEDIR.$tools_dir.'/images', '0757'); 
+	
+  mkdir(BASEDIR.$tools_dir.'/images', 0757); 
+
 }
-copydirr(CONTENTDIR."api_$lang/tools/images", BASEDIR.$tools_dir.'/images');
+copydirr(CONTENTDIR."api_en/tools/images", BASEDIR.$tools_dir.'/images');
 
 // copy over the files for the contributed libraries
 copy(CONTENTDIR."static/tools.html", BASEDIR.$tools_dir.'/tools.html');

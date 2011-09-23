@@ -3,34 +3,33 @@
 require_once('../config.php');
 require_once('lib/Ref.class.php');
 require_once('lib/Translation.class.php');
+
 $benchmark_start = microtime_float();
 
 
-// content/static/libraries.html
+
+
 $where = CONTENTDIR . 'static/';
+
 putenv('HOME=' . CONTENTDIR);
 
+
 // update the file on the server
+
 `cd $where && /usr/bin/svn update libraries.html`;
 
-// arguments
-$lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
-
-// get translation file
-$translation = new Translation($lang);
 
 // each lib
-$libraries = array('net', 'serial', 'video', 'opengl', 'dxf', 'pdf');
-
-$lib_dir = 'reference/'.($lang != 'en' ? "$lang/" : '').'libraries';
+$libraries = array('net', 'serial', 'video', 'dxf', 'pdf');
+$lib_dir = 'reference/libraries';
 
 // get library index
-$index = CONTENTDIR."api_$lang/libraries/index.html";
+$index = CONTENTDIR."api_en/libraries/index.html";
 $page = new Page('Libraries', 'Libraries');
 $page->content(file_get_contents($index));
 make_necessary_directories(BASEDIR.$lib_dir.'/images/include.php');
 writeFile($lib_dir.'/index.html', $page->out());
-copydirr(CONTENTDIR."api_$lang/libraries/images", BASEDIR.$lib_dir.'/images');
+copydirr(CONTENTDIR."api_en/libraries/images", BASEDIR.$lib_dir.'/images');
 
 // copy over the files for the contributed libraries
 copy(CONTENTDIR."static/libraries.html", BASEDIR.$lib_dir.'/libraries.html');
@@ -38,8 +37,8 @@ copy(CONTENTDIR."static/libraries.html", BASEDIR.$lib_dir.'/libraries.html');
 
 // foreach lib
 foreach ($libraries as $lib) {
-	$source = "api_$lang/LIB_$lib";
-	$destination = ($lang != 'en' ? "$lang/" : '')."libraries/$lib";
+	$source = "api_en/LIB_$lib";
+	$destination = "libraries/$lib";
 	make_necessary_directories(REFERENCEDIR.$destination.'/images/include');
 
     // get xml files
@@ -48,7 +47,7 @@ foreach ($libraries as $lib) {
 	} else {
 	// parse xml files and create pages
 	    foreach ($files as $file) {
-	        $page = new LibReferencePage(new Ref($source.'/'.$file), $lib, $translation, $lang);
+	        $page = new LibReferencePage(new Ref($source.'/'.$file), $lib, $translation, "en");
 	        $page->write();
 	    }
 	}
@@ -61,7 +60,7 @@ foreach ($libraries as $lib) {
 	  //$page = new Page(ucfirst($lib) . ' \\ Libraries', 'Library-index');
 	  $page = new Page(ucfirst($lib) . ' \\ Libraries', 'Libraries');
 	}
-	$page->language($lang);
+	$page->language("en");
     $page->content(file_get_contents($index));
     writeFile('reference/'.$destination.'/index.html', $page->out());
     
