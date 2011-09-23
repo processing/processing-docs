@@ -16,7 +16,7 @@ $local = false;
 //define('CONTENTDIR', BASEDIR.'processing/java/');
 //define('EXAMPLESDIR',	BASEDIR.'learning/');
 
-$where = CONTENTDIR . 'examples';
+$where = EXAMPLESOURCEDIR; //CONTENTDIR . 'examples';
 $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
 
