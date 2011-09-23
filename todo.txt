@@ -125,7 +125,7 @@ x 'long' appearing in reference when it should be 'int' e.g. randomSeed(long) an
 x Alphabetical Index file is incorrectly alphabetized (for people) and should break at letter changes (e.g. between A and B)
   Capital letters should be integrated with the lowercase letters, rather than at the beginning.
 	Implemented a custom Comparator for alphabetization. Now human-style
-$ Alphabetical index is incorrectly showing class methods
+x Alphabetical index is incorrectly showing class methods
 	Need to remove String_charAt_ and other methods from the alphabetical index (they don't appear in categories)
 
 // // // // // // // // // // // // // // // // // // // // //

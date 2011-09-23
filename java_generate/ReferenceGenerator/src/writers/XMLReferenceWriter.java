@@ -97,10 +97,12 @@ public class XMLReferenceWriter extends BaseWriter {
 			}
 			String anchor = anchorBase + ".html";
 			String usage = (String) xpath.evaluate("//usage", doc, XPathConstants.STRING);
-			if(indexWriter instanceof LibraryIndexWriter ){				
+			if(indexWriter instanceof LibraryIndexWriter )
+			{				
 				((LibraryIndexWriter) indexWriter).addEvent(name, anchor);
 				vars.put("csspath", "../../");
-			} else {				
+			} else if( ! subcategory.equals("Method") )
+			{				
 				indexWriter.addItem(category, subcategory, name, anchor);
 			}
 			
