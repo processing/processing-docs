@@ -2,33 +2,35 @@
 
 2.0 EXAMPLE
 
+o New GUI  --DS
 - New XML/JSON  --DS, JT
 - New Regex  --DS
 - New PVector  --DS
-o New GUI  --DS
 - New PShape  --DS
 - PTable  --DS,JT
 - add stringIntPair to Hashmap  --DS
 - thread--) example  --DS
 - Analyize PVector in examples  --DS
 - New P3D  --CR,DS,AC
-x Cull OpenGL  --CR
+
 o Library examples missing from site  --CR
 - Scrollbar example needs new images that fit the new size and the @pjs directive  --CR
-- New JavaScript  --FJ,CR
 - New PDF w/ typography  --CR,BF
+- Mention examples are running with Processing.js  --CR
 - 2 David Muth examples  --CR
-x All P2D and P3D must be removed from examples  --CR
 - More with proper type in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
-x Emphasize createFont() over loadFont()  --CR
 - Custom font examples using loadFont()  --CR
+- Follow up with Processing.js team regarding Example ports  --CR
+- Remove "there are more examples" from individual pages and put in Index  --CR
+- Remove extra "f" from Java floats  --CR
+- New JavaScript  --FJ,CR
+
+x Modify build script to work on Server to build Web examples  --CR
+x Cull OpenGL  --CR
+x All P2D and P3D must be removed from examples  --CR
 x Rework/edit/resize all existing examples  --CR
 x Modify examples for Processing.js  --CR
-- Follow up with Processing.js team regarding Example ports  --CR
-- Mention examples are running with Processing.js  --CR
-- Remove "there are more examples" from individual pages and put in Index  --CR
-- Modify build script to work on Server to build Web examples  --CR
-- Remove extra "f" from Java floats
+x Emphasize createFont() over loadFont()  --CR
 
 - Syntax hightlighting for Example code online --FJ
 
@@ -46,12 +48,13 @@ x Done
 $ New P3D  --DS (CR to help with links and images)
 - Update Eclipse  --DS
 $ New Android  --DS, JT
-- Processing.js  --CR,FJ
-- Typography (or merge into Strings and Drawing Text?)  --CR,DS
-- Update Processing Overview for 2.0
-- Update Getting Started for 2.0
+- Processing.js  --DS,FJ
 
+- Update Processing Overview for 2.0  --CR
+- Update Getting Started for 2.0  --CR
 - Tutorial CSS  --CR
+
+- Typography (or merge into Strings and Drawing Text?)  --CR,DS
 
 Key:
 - To do
@@ -61,7 +64,140 @@ x Done
 
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 REFERENCE ENGINE
+2.0 REFERENCE
+
+- Parameter decisions  --BF,CR,SM
+
+- Parameter alignment (after above decisions)  --SM
+- New PNG images for reference for smooth() change  --SM
+- All in "reviewing_reference.txt" file produced by Cindy  --SM
+
+x Modify build script to work on Server  --CR
+x loadShape() not in index.html  --CR
+- PImage's mask() needs an @brief  --CR
+
+- enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
+- normal() example needed  --SM
+- lightFalloff() example needed  --SM
+- implements example needed  --SM
+- look at example for red() to make clearer  --SM
+- null has a blank 'Examples'  --SM
+- createInput() example  --SM
+- PGraphics link to developers reference  --SM
+- text() change at least one example to not require loadFont() and describe  --SM
+
+RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
+
+- Add @see to the source where appropriate, PShape methods need obvious help  --SM
+
+- Add @see_external links where appropriate  --SM
+    note: use is with the file naming convention for simplicity
+	also helps clarify that these links are to files
+	will search in both the base and include/ directories
+	for libraries @see_external LIB_serial/serialEvent
+    e.g.
+	@see_external String
+	@see_external String_charAt
+	etc.
+	See PGraphics#text() and net.Client for examples of use
+	
+- Correct all Related" links  --SM
+	Requires additional editing work in the .java files:
+	$ For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
+  	link including the class name. For example see web/distribution/arc_.html and see the links in Related
+	this needs to be fixed on a per-function basis by including the correct @see tags
+	@see PApplet#imageMode( int ) will reference the core function
+	@see PGraphics#imageMode( int ) will reference the PGraphics method
+	I corrected this for PImage.html by editing the comments in PImage.java
+
+NEW LANGUAGE ELEMENTS IN REFERENCE
+
+- rounded rect()  --CR
+- new arc()  --CR
+- blendMode()  --CR
+- quadraticVertex()  --CR
+- Movie class  --CR
+
+- XML  --DS
+- JSON  --DS
+- PTABLE  --DS
+
+
+FROM ISSUE DB
+
+- 200 Need to document NaN and Inf or -Inf for functions that can return them  --CR
+- 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --CR
+- 250 Details regarding keywords.txt  --CR
+- 085 Constants in PConstants not syntax highlighting  --CR
+- 333 Parameters to filer() and PImage.filter()  --CR
+
+
+THE FOLLOWING IS FROM PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
+
+- Pdf fonts
+-   rewrite documentation about pdf fonts (errors with non-native fonts)
+-   figure out why font naming not working correctly
+- "Find in Reference" for copy() goes to PVector (oog)
+- TRIANGLE_STRIP not highlighted for "find in reference"
+-   nor is it listed on the reference page
+-   so students can't find the ref for it
+-   needs to link TRIANGLE_STRIP to the beginShape() reference
+- Find in reference issues
+-   if() and for() don't work, they look for for_.html instead of for.html
+-   XMLElement is not linked for find in ref
+-   the ? operator is not in find in ref (no ref page either?)
+- Update keywords generator script on the site
+-   perhaps move this closer to the dev process?
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 DOCUMENTATION
+
+- Prepare one-page document explaining Processing, 2.0 changes  --CR
+- Syntax highlighting (see major Issues above)  --CR
+- Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
+o Environment  --CR
+o   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
+o   Change to "active" and "static" mode for draw() and without
+-   New IDE Image
+o   Modify menu descriptions for 2.0 final menus
+o Add section for Preferences
+- Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 DESIGN
+
+* Prepare MODE images for JavaScript, Android  --CR
+- New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
+- Check all page header images for gray values  --CR
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+POST 2.0
+
+- JavaScript reference integration on Processing.org  --FJ,CR
+- JavaScript example integration on Processing.org  --FJ,CR
+- Hire freelance to enhance tutorial figures  --CR
+- Look through 404 issues on the site  --FJ
+
+// // // // // // // // // // // // // // // // // // // // //
+
+
+2.0 REFERENCE ENGINE (COMPLETE, SEE ABOVE FOR RELATED TODO)
 
 Various folks, probably:
 Requires additional editing work in the .java files:
@@ -136,116 +272,6 @@ x Alphabetical Index file is incorrectly alphabetized (for people) and should br
 	Implemented a custom Comparator for alphabetization. Now human-style
 x Alphabetical index is incorrectly showing class methods
 	Need to remove String_charAt_ and other methods from the alphabetical index (they don't appear in categories)
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 REFERENCE
-
-- Modify build script to work on Server  --CR
-- Parameter decisions  --BF,CR,SM
-- Parameter alignment (after above decisions)  --SM
-- New PNG images for reference for smooth() change  --SM
-- All in "reviewing_reference.txt" file produced by Cindy  --SM
-- loadShape() not in index.html  --CR
-- PImage's mask() needs an @brief  --CR
-- enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
-- normal() example needed  --SM
-- lightFalloff() example needed  --SM
-- implements example needed  --SM
-- look at example for red() to make clearer  --SM
-- null has a blank 'Examples'  --SM
-- Add @see to the source where appropriate, PShape methods need obvious help  --SM
-
-- createInput() example  --SM
-- PGraphics link to developers reference  --SM
-- text() change at least one example to not require loadFont() and describe  --SM
-
-NEW LANGUAGE ELEMENTS IN REFERENCE
-- rounded rect()  --CR
-- new arc()  --CR
-- blendMode()  --CR
-- quadraticVertex()  --CR
-- Movie class  --CR
-- XML  --DS
-- JSON  --DS
-- PTABLE  --DS
-
-FROM ISSUE DB ALL FOR CR
-
-- 200 Need to document NaN and Inf or -Inf for functions that can return them
-- 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation
-- 250 Details regarding keywords.txt
-- 085 Constants in PConstants not syntax highlighting
-- 333 Parameters to filer() and PImage.filter()
-
-
-THE FOLLOWING IS FROM PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
-
-- Pdf fonts
--   rewrite documentation about pdf fonts (errors with non-native fonts)
--   figure out why font naming not working correctly
-o Add blendMode() to reference, remove blend()
-o Need documentation for quadraticVertex()
-o Docs for rect(x, y, w, h, r) and rect(x, y, w, h, tl, tr, br, bl)
-o Docs for new arc()
-- "Find in Reference" for copy() goes to PVector (oog)
-- TRIANGLE_STRIP not highlighted for "find in reference"
--   nor is it listed on the reference page
--   so students can't find the ref for it
--   needs to link TRIANGLE_STRIP to the beginShape() reference
-- Find in reference issues
--   if() and for() don't work, they look for for_.html instead of for.html
--   XMLElement is not linked for find in ref
--   the ? operator is not in find in ref (no ref page either?)
-- Update keywords generator script on the site
--   perhaps move this closer to the dev process?
-- Move reference folder around so that it matches site organization
--   otherwise several links break on the main faq page
-
-Key:
-- To do
-$ In progress
-o N/A anymore
-x Done
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 DOCUMENTATION
-
-- Prepare one-page document explaining Processing, 2.0 changes  --CR
-- Syntax highlighting (see Issues above)  --CR
-- Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
-o Environment  --CR
-o   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
-o   Change to "active" and "static" mode for draw() and without
--   New IDE Image
-o   Modify menu descriptions for 2.0 final menus
-- Add section for Preferences
-- Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
-
-Key:
-- To do
-$ In progress
-o N/A anymore
-x Done
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 DESIGN
-
-* Prepare MODE images for JavaScript, Android  --CR
-- New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
-- Check all page header images for gray values  --CR
-
-
-// // // // // // // // // // // // // // // // // // // // //
-
-POST 2.0
-
-- JavaScript reference integration on Processing.org  --FJ,CR
-- JavaScript example integration on Processing.org  --FJ,CR
-- Hire freelance to enhance tutorial figures  --CR
-- Look through 404 issues on the site  --FJ
 
 // // // // // // // // // // // // // // // // // // // // //
 
