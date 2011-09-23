@@ -279,7 +279,7 @@ class Example
                 echo "Could not copy" . EXAMPLESDIR.strtolower($this->sub).'/' . "<br />";
             }
         } else {
-          echo "No data here: " . $this->data . "<br />";
+          echo "No data here: " . $this->data_dir . "<br />";
         }
     }
 }
