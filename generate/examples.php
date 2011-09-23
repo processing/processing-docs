@@ -4,7 +4,7 @@ require('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 
-//$local = true;
+$local = false;
 
 // Redefine location on local machine for examples in processing trunk
 //if ($local) {
