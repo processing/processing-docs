@@ -180,7 +180,7 @@ class LibReferencePage extends ReferencePage
             $xhtml->set($key, $value);
         }
        
-        $xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
+        //$xhtml->set('updated', date('F d, Y h:i:sa T', filemtime(CONTENTDIR.'/'.$ref->filepath)));
             
         $this->xhtml = $xhtml;
         $this->language($lang);

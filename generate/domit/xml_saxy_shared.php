@@ -284,7 +284,7 @@ class SAXY_Parser_Base {
 	* @param string The CDATA Section data
 	*/
 	function fireCDataSectionEvent($data) {
-		call_user_func($this->cDataSectionHandler, $this, $data);
+		call_user_func($this->cDataSectionHandler, &$this, $data);
 	} //fireCDataSectionEvent	
 } //SAXY_Parser_Base
 

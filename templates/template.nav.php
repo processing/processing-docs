@@ -167,6 +167,8 @@ function reference_nav($current = '')
     return $html;
 }
 
+*/
+
 function language_nav($current)
 {
     global $LANGUAGES;
@@ -184,6 +186,8 @@ function language_nav($current)
     return $html;
 }
 
+
+
 function library_nav($current=null)
 {
     $html = "\n\t<span class=\"lib-nav\">\n";
@@ -199,6 +203,6 @@ function examples_nav($current) {
     // $html = "\n\t<div id=\"examples-nav\">\n";
 }
 
-*/
+
 
 ?>
