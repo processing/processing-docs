@@ -45,109 +45,97 @@ public class XMLReferenceWriter extends BaseWriter {
 	
 	public static void parseFile(File f, String dst, IndexWriter indexWriter)
 	{
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setNamespaceAware(true);
-		DocumentBuilder builder;
-		Document doc = null;
-		try {
-			builder = factory.newDocumentBuilder();
-			doc = builder.parse(f.getPath());
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Failed to parse " + f.getAbsolutePath());
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Failed to parse " + f.getAbsolutePath());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Failed to parse " + f.getAbsolutePath());
+		Document doc = Shared.loadXmlDocument( f.getPath() );
+		
+		if( doc != null )
+		{	
+			TemplateWriter templateWriter = new TemplateWriter();
+			XPathFactory xpathFactory = XPathFactory.newInstance();
+			XPath xpath = xpathFactory.newXPath();
+			try {			
+				HashMap<String, String> vars = new HashMap<String, String>();
+				
+				String category = (String) xpath.evaluate("//category", doc, XPathConstants.STRING);
+				String subcategory = (String) xpath.evaluate("//subcategory", doc, XPathConstants.STRING);
+				String name = (String) xpath.evaluate("//name", doc, XPathConstants.STRING);
+				String description = (String) xpath.evaluate("//description", doc, XPathConstants.STRING);
+				String syntax = (String) xpath.evaluate("//syntax", doc, XPathConstants.STRING);
+				String classname = (String) xpath.evaluate("//classname", doc, XPathConstants.STRING);
+				String classAnchor = "";
+				
+				if( subcategory.equals("Method") )
+				{
+					classname = category;
+					classAnchor = getAnchorFromName( classname );
+				}
+				
+				String constructors = getConstructors( xpath, doc );
+				
+				// get anchor from original filename
+				String path = f.getAbsolutePath();
+				String anchorBase = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml"));
+				if( name.endsWith("()") )
+				{
+					if( !anchorBase.endsWith("_" ) )
+					{
+						anchorBase += "_";
+					}
+				}
+				String anchor = anchorBase + ".html";
+				String usage = (String) xpath.evaluate("//usage", doc, XPathConstants.STRING);
+				if(indexWriter instanceof LibraryIndexWriter )
+				{				
+					((LibraryIndexWriter) indexWriter).addEvent(name, anchor);
+					vars.put("csspath", "../../");
+				} else if( ! subcategory.equals("Method") )
+				{				
+					indexWriter.addItem(category, subcategory, name, anchor);
+				}
+				
+				vars.put("examples", getExamples(doc));
+				vars.put("name", name);
+				vars.put("description", description);
+				vars.put("syntax", syntax);
+				vars.put("usage", usage);
+				vars.put("parameters", getParameters(doc, "" ));
+				vars.put("related", getRelated(doc));
+				vars.put( "constructors", constructors );
+				vars.put( "classname", classname );
+				vars.put( "classanchor", classAnchor );
+				
+				vars.put( "category",  category );
+				vars.put( "subcategory", subcategory );
+				
+				if( constructors != "" )
+				{	// we are documenting a class
+					vars.put("classname", name);
+					// TODO: pull in methods and other things
+					ArrayList< HashMap<String, String> > methodSet = getPropertyInfo( doc, xpath, "method", anchorBase + "_" );
+					ArrayList< HashMap<String, String> > fieldSet = getPropertyInfo( doc, xpath, "field", anchorBase + "_" );
+					
+					vars.put( "methods", templateWriter.writeLoop("property.partial.html", methodSet) );
+					vars.put( "fields", templateWriter.writeLoop("property.partial.html", fieldSet) );
+					
+					if( vars.get("parameters") == "" )
+					{	// get constructor parameters
+						vars.put("parameters", getParameters(doc, "c" ));
+					}
+					templateWriter.write("class.template.html", vars, dst + anchor);
+				}
+				else
+				{
+					templateWriter.write("generic.template.html", vars, dst + anchor);
+				}
+				
+			} catch (XPathExpressionException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Failed to parse " + f.getAbsolutePath());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Failed to parse " + f.getAbsolutePath());
+			}
 		}
 		
-		TemplateWriter templateWriter = new TemplateWriter();
-        XPathFactory xpathFactory = XPathFactory.newInstance();
-        XPath xpath = xpathFactory.newXPath();
-		try {			
-			HashMap<String, String> vars = new HashMap<String, String>();
-			
-			String category = (String) xpath.evaluate("//category", doc, XPathConstants.STRING);
-			String subcategory = (String) xpath.evaluate("//subcategory", doc, XPathConstants.STRING);
-			String name = (String) xpath.evaluate("//name", doc, XPathConstants.STRING);
-			String description = (String) xpath.evaluate("//description", doc, XPathConstants.STRING);
-			String syntax = (String) xpath.evaluate("//syntax", doc, XPathConstants.STRING);
-			String classname = (String) xpath.evaluate("//classname", doc, XPathConstants.STRING);
-			String classAnchor = "";
-			
-			if( subcategory.equals("Method") )
-			{
-				classname = category;
-				classAnchor = getAnchorFromName( classname );
-			}
-			
-			String constructors = getConstructors( xpath, doc );
-			
-			// get anchor from original filename
-			String path = f.getAbsolutePath();
-			String anchorBase = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml"));
-			if( name.endsWith("()") )
-			{
-				if( !anchorBase.endsWith("_" ) )
-				{
-					anchorBase += "_";
-				}
-			}
-			String anchor = anchorBase + ".html";
-			String usage = (String) xpath.evaluate("//usage", doc, XPathConstants.STRING);
-			if(indexWriter instanceof LibraryIndexWriter )
-			{				
-				((LibraryIndexWriter) indexWriter).addEvent(name, anchor);
-				vars.put("csspath", "../../");
-			} else if( ! subcategory.equals("Method") )
-			{				
-				indexWriter.addItem(category, subcategory, name, anchor);
-			}
-			
-			vars.put("examples", getExamples(doc));
-			vars.put("name", name);
-			vars.put("description", description);
-			vars.put("syntax", syntax);
-			vars.put("usage", usage);
-			vars.put("parameters", getParameters(doc, "" ));
-			vars.put("related", getRelated(doc));
-			vars.put( "constructors", constructors );
-			vars.put( "classname", classname );
-			vars.put( "classanchor", classAnchor );
-			
-			vars.put( "category",  category );
-			vars.put( "subcategory", subcategory );
-			
-			if( constructors != "" )
-			{	// we are documenting a class
-				vars.put("classname", name);
-				// TODO: pull in methods and other things
-				ArrayList< HashMap<String, String> > methodSet = getPropertyInfo( doc, xpath, "method", anchorBase + "_" );
-				ArrayList< HashMap<String, String> > fieldSet = getPropertyInfo( doc, xpath, "field", anchorBase + "_" );
-				
-				vars.put( "methods", templateWriter.writeLoop("property.partial.html", methodSet) );
-				vars.put( "fields", templateWriter.writeLoop("property.partial.html", fieldSet) );
-				
-				if( vars.get("parameters") == "" )
-				{	// get constructor parameters
-					vars.put("parameters", getParameters(doc, "c" ));
-				}
-				templateWriter.write("class.template.html", vars, dst + anchor);
-			}
-			else
-			{
-				templateWriter.write("generic.template.html", vars, dst + anchor);
-			}
-			
-		} catch (XPathExpressionException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Failed to parse " + f.getAbsolutePath());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Failed to parse " + f.getAbsolutePath());
-		}
 	}
 	
 	private static String getConstructors( XPath xpath, Document doc)

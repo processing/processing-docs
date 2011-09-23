@@ -74,7 +74,7 @@ $ For the functions inside PGraphics and PImage, the Related links aren't workin
 
 DAVID
 
-x? How to make a reference for captureEvent() etc in the Libraries
+x How to make a reference for captureEvent() etc in the Libraries
 	will approach with .xml files, like include/ for boolean/true/while/etc.
 	Complete list of functions not found in libraries:
 		1.Video
@@ -102,7 +102,16 @@ x Variable types that include 'boolean[], byte[], char[], int[], float[], or Str
 	e.g. 	int, float, or String
 		int or PImage
 
-- (nicety) add @see_external tag for linking to xml content
+x (nicety) add @see_external tag for linking to xml content
+	note:	use is with the file naming convention for simplicity
+		also helps clarify that these links are to files
+		will search in both the base and include/ directories
+		for libraries @see_external LIB_serial/serialEvent
+	e.g.
+	@see_external String
+	@see_external String_charAt
+	etc.
+	See PGraphics#text() and net.Client for examples of use
 
 x 'Related' links now try to link to methods within the same class if possible (regardless of how typed in). Should only link to files that exist.
 

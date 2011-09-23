@@ -39,7 +39,6 @@ public class ProcessingWeblet extends Standard {
 	private static String verboseFlag = "-noisy";
 	private static String rootFlag = "-rootclass";
 	private static String xmlDescriptionFlag = "-includeXMLTag";
-	private static String exceptionsList = "";
 	private static IndexWriter indexWriter;
 
 	public static boolean start(RootDoc root) {
@@ -55,10 +54,11 @@ public class ProcessingWeblet extends Standard {
 			
 			System.out.println("===Source code @webref files written.===");
 			
-			if (!exceptionsList.equals("")) { // need to get something back from
+			if (!Shared.i().getIncludeDirectory().equals(""))
+			{   // need to get something back from
 												// this to create index
 				System.out.println("\n===Writing XML-sourced reference.===");
-				XMLReferenceWriter.write(exceptionsList, indexWriter);
+				XMLReferenceWriter.write( Shared.i().getIncludeDirectory(), indexWriter);
 				System.out.println("===Include directory files written.===");
 			}
 			System.out.println("\n===Telling the index to write itself.===");
@@ -86,7 +86,7 @@ public class ProcessingWeblet extends Standard {
 				Shared.i().setOutputDirectory(option[1]);
 			} else if (option[0].equals(exceptionsFlag)) {
 				// write out files based on exceptions index
-				exceptionsList = option[1];
+				Shared.i().setIncludeDirectory( option[1] );
 			} else if (option[0].equals(imagesFlag)) {
 				Shared.i().setImageDirectory(option[1]);
 			} else if( option[0].equals(localFlag) )

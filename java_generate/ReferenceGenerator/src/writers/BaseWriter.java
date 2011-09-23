@@ -594,7 +594,7 @@ public class BaseWriter {
 		return ret;
 	}
 	
-	protected static String getRelated(ProgramElementDoc doc) throws IOException
+	protected static String getRelated( ProgramElementDoc doc ) throws IOException
 	{
 		TemplateWriter templateWriter = new TemplateWriter();
 		ArrayList<HashMap<String, String>> vars = new ArrayList<HashMap<String,String>>();
@@ -604,7 +604,8 @@ public class BaseWriter {
 		if( doc.isMethod() || doc.isField() )
 		{
 			ClassDoc containingClass = doc.containingClass();
-			// consider only doing this if we aren't in the core, although the core would protect against certain errors
+			// consider only doing this if we aren't in the core
+			// doing this in the core protects against errant references to PGraphics
 			// if( !containingClass.name().equalsIgnoreCase("PApplet") )
 			{
 				for( MethodDoc m : containingClass.methods() )
@@ -624,6 +625,7 @@ public class BaseWriter {
 			}
 		}
 		
+		// add link to each @see item
 		for( SeeTag tag : doc.seeTags() ){
 			HashMap<String, String> map = new HashMap<String, String>();
 			
@@ -645,6 +647,57 @@ public class BaseWriter {
 				vars.add(map);
 			}
 		}
+		
+		// add link to each @see_external item
+		for( Tag tag : doc.tags( Shared.i().getSeeAlsoTagName() ) )
+		{
+			// get xml for method
+			String filename = tag.text() + ".xml";
+			String basePath = Shared.i().getXMLDirectory();
+			File f = new File( basePath + filename );
+			
+			if( ! f.exists() )
+			{
+				basePath = Shared.i().getIncludeDirectory();
+				f = new File( basePath + filename );
+			}
+			
+			if( f.exists() )
+			{				
+				Document xmlDoc = Shared.loadXmlDocument( f.getPath() );
+				XPathFactory xpathFactory = XPathFactory.newInstance();
+				XPath xpath = xpathFactory.newXPath();
+					
+				try
+				{
+					String name = (String) xpath.evaluate("//name", xmlDoc, XPathConstants.STRING);
+					// get anchor from original filename
+					String path = f.getAbsolutePath();
+					String anchorBase = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml"));
+					if( name.endsWith("()") )
+					{
+						if( !anchorBase.endsWith("_" ) )
+						{
+							anchorBase += "_";
+						}
+					}
+					String anchor = anchorBase + ".html";
+					
+					// get method name from xml
+					// get anchor from method name
+					HashMap<String, String> map = new HashMap<String, String>();
+					map.put( "name", name );
+					map.put( "anchor", anchor );
+					vars.add( map );
+				} catch (XPathExpressionException e)
+				{
+					e.printStackTrace();
+				}
+				
+			}
+			
+		}
+		
 		return templateWriter.writeLoop("related.partial.html", vars);
 	}
 	

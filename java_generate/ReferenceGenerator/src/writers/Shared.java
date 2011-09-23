@@ -1,7 +1,15 @@
 package writers;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 import com.sun.javadoc.Doc;
 import com.sun.javadoc.ProgramElementDoc;
@@ -10,6 +18,7 @@ public class Shared {
 //	what we're looking for
 	private static Shared instance;
 	private String webrefTagName = "webref";
+	private String seeAlsoTagName = "see_external";
 	private String coreClassName = "PApplet";
 	private ArrayList<String> descriptionSets;
 	
@@ -22,6 +31,8 @@ public class Shared {
 	//where things come from
 	private String templateDirectory = "templates";
 	private String exampleDirectory = "web_examples";
+	private String includeDirectory = "include";
+	
 	boolean noisy = false;
 	public ArrayList<String> corePackages;
 	public ArrayList<String> rootClasses;
@@ -47,13 +58,31 @@ public class Shared {
 		return webrefTagName;
 	}
 	
-	public void setWebrefTagName(String webrefTagName) {
+	public String getSeeAlsoTagName()
+	{
+		return seeAlsoTagName;
+	}
+	
+	public void setIncludeDirectory( String s )
+	{
+		includeDirectory = s;
+	}
+	
+	public String getIncludeDirectory()
+	{
+		return includeDirectory + "/";
+	}
+	
+	public void setWebrefTagName(String webrefTagName)
+	{
 		this.webrefTagName = webrefTagName;
 	}
-	public void setCoreClassName(String coreClassName) {
+	public void setCoreClassName(String coreClassName)
+	{
 		this.coreClassName = coreClassName;
 	}
-	public String getCoreClassName() {
+	public String getCoreClassName()
+	{
 		return coreClassName;
 	}
 	
@@ -150,6 +179,29 @@ public class Shared {
 		
 		f = new File(OUTPUT_DIRECTORY() + dir);
 		f.mkdirs();
+	}
+	
+	public static Document loadXmlDocument( String path )
+	{
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setNamespaceAware(true);
+		DocumentBuilder builder;
+		Document doc = null;
+		try {
+			builder = factory.newDocumentBuilder();
+			doc = builder.parse( path );
+		} catch (ParserConfigurationException e) {
+			System.out.println("Failed to parse " + path );
+			System.out.println( e.getLocalizedMessage() );
+		} catch (SAXException e) {
+			System.out.println("Failed to parse " + path );
+			System.out.println( e.getLocalizedMessage() );
+		} catch (IOException e) {
+			System.out.println("Failed to parse " + path );
+			System.out.println( e.getLocalizedMessage() );
+		}
+		
+		return doc;
 	}
 	
 	public void createBaseDirectories(){
