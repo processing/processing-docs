@@ -22,10 +22,15 @@ $page = new Page('Libraries', 'Libraries');
 $page->content(file_get_contents($index));
 make_necessary_directories(BASEDIR.$lib_dir.'/images/include.php');
 writeFile($lib_dir.'index.html', $page->out());
-copydirr(CONTENTDIR."api_en/libraries/images", BASEDIR.$lib_dir.'images');
+
+if (is_dir($lib_dir.'images')) { 
+  rmdir($lib_dir.'images');
+}
+mkdir($lib_dir.'images', 0755); 
+copydirr(CONTENTDIR."api_en/libraries/images", $lib_dir.'images');
 
 // copy over the file for the contributed libraries
-copy(CONTENTDIR."static/libraries.html", BASEDIR.$lib_dir.'libraries.html');
+copy(CONTENTDIR."static/libraries.html", $lib_dir.'libraries.html');
 
 // For each Library
 foreach ($libraries as $lib) {
