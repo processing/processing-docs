@@ -9,8 +9,10 @@
 - All in "reviewing_reference.txt" file produced by Cindy  --SM
 
 - Contributed Libraries and Tools are not appearing on the site  --CR
+- Broken header links for Distribution
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
+- add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
 - normal() example needed  --SM
 - lightFalloff() example needed  --SM
 - implements example needed  --SM
@@ -24,7 +26,7 @@
 
 RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
 
-- Add @see to the source where appropriate, PShape methods need obvious help  --SM
+- Add @see in the source where appropriate, PShape methods need obvious help  --SM
 
 - Add @see_external links where appropriate  --SM
     note: use is with the file naming convention for simplicity
@@ -39,9 +41,10 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 	
 - Correct all Related" links  --SM
 	Requires additional editing work in the .java files:
-	$ For the functions inside PGraphics and PImage, the Related links aren't working, they are linking to the full
-  	link including the class name. For example see web/distribution/arc_.html and see the links in Related
-	this needs to be fixed on a per-function basis by including the correct @see tags
+	$ For the functions inside PGraphics and PImage, the Related links aren't working, 
+	they are linking to the full link including the class name. For example see 
+	web/distribution/arc_.html and see the links in Related this needs to be fixed on a 
+	per-function basis by including the correct @see tags
 	@see PApplet#imageMode( int ) will reference the core function
 	@see PGraphics#imageMode( int ) will reference the PGraphics method
 	I corrected this for PImage.html by editing the comments in PImage.java
@@ -96,21 +99,20 @@ x Modify build script to work on Server  --CR
 x loadShape() not in index.html  --CR
 
 
-
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 DOCUMENTATION
 
+- Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
 - Syntax highlighting (see major Issues above)  --CR
 - New IDE image for About page
-- Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
 o Environment  --CR
 o   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
 o   Change to "active" and "static" mode for draw() and without
 -   New IDE Image
 o   Modify menu descriptions for 2.0 final menus
 o Add section for Preferences
-- Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
+- Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
 
 
 Key:
@@ -118,6 +120,7 @@ Key:
 $ In progress
 o N/A anymore
 x Done
+
 
 // // // // // // // // // // // // // // // // // // // // //
 
