@@ -78,13 +78,13 @@ function navigation($section = '')
      } else if (in_array($section, $ref)) {
         $html .= "\t\t\t\t" . '<div class="navBar" id="subNav">' . "\n";
     
-        if ($lang == 'en') {
+        //if ($lang == 'en') {
           $html .= "\t\t\t\t\t" . l('Language', $section == 'Language') . " (";
           $html .= l('A-Z', $section == 'A-Z') . ") \\\n";
           $html .= "\t\t\t\t\t" . l('Libraries', $section == 'Libraries') . " \\\n";
           $html .= "\t\t\t\t\t" . l('Tools', $section == 'Tools') . " \\\n";
           $html .= "\t\t\t\t\t" . l('Environment', $section == 'Environment') . " \n";
-        }
+        //}
     
         $html .= "\t\t\t\t</div>\n";
         

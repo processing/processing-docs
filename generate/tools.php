@@ -4,19 +4,13 @@ require_once('../config.php');
 require_once('lib/Translation.class.php');
 $benchmark_start = microtime_float();
 
-// arguments
-//$lang = isset($_POST['lang']) ? $_POST['lang'] : 'en';
-//$tools_dir = 'reference/'.($lang != 'en' ? "$lang/" : '').'tools';
+
 $tools_dir = 'reference/tools';
 
-// get translation file
-//$translation = new Translation($lang);
-
-// get tools index
 $index = CONTENTDIR."api_en/tools/index.html";
 $page = new Page('Tools', 'Tools', 'Tools');
 $page->content(file_get_contents($index));
-make_necessary_directories(BASEDIR.$tools_dir.'/images/include.php');
+//make_necessary_directories(BASEDIR.$tools_dir.'/images/include.php');
 writeFile($tools_dir.'/index.html', $page->out());
 
 if (!is_dir(BASEDIR.$tools_dir.'/images')) { 	
