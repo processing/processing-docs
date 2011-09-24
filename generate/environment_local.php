@@ -17,8 +17,7 @@ if (is_dir(DISTDIR.'environment/images')) {
   rmdir(DISTDIR.'environment/images');
 }
 mkdir(DISTDIR.'environment/images', 0755); 
-copydirr(CONTENTDIR."api_en/environment/images", DISTDIR.'environment/images');
-
+copydirr($source.'images', DISTDIR.'environment/images');
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);

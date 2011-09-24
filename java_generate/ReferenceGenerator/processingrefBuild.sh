@@ -54,7 +54,7 @@ mkdir -p ../../distribution/img
 chmod 755 ../../distribution/img
 mkdir -p ../../distribution/img/about/
 cp ../../favicon.ico ../../distribution/img/
-cp ../../img/processing_cover.gif ../../distribution/img/
+cp ../../img/processing.gif ../../distribution/img/
 cp ../../img/about/people-header.gif ../../distribution/img/about/
 cp ../../content/api_en/images/header.gif ../../distribution/img/
 
