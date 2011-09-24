@@ -22,7 +22,7 @@ foreach ($libraries as $lib)
 {
 	$source = "api_en/LIB_$lib";
 	$destination = "libraries/$lib";
-	make_necessary_directories(DISTDIR.$destination.'/images/include');
+	//make_necessary_directories(DISTDIR.$destination.'/images/include');
 	
     $index = CONTENTDIR.$source.'/index.html';
     $page = new LocalPage(ucfirst($lib) . ' \\ Libraries', 'Libraries', 'Libraries', '../../');
