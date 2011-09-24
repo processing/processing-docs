@@ -14,15 +14,13 @@ $tools_dir = 'reference/tools';
 
 // get tools index
 $index = CONTENTDIR."api_en/tools/index.html";
-$page = new Page('Tools', 'Tools');
+$page = new Page('Tools', 'Tools', 'Tools');
 $page->content(file_get_contents($index));
-//make_necessary_directories(BASEDIR.$tools_dir.'/images/include.php');
+make_necessary_directories(BASEDIR.$tools_dir.'/images/include.php');
 writeFile($tools_dir.'/index.html', $page->out());
 
-if (!is_dir(BASEDIR.$tools_dir.'/images')) { 
-	
+if (!is_dir(BASEDIR.$tools_dir.'/images')) { 	
   mkdir(BASEDIR.$tools_dir.'/images', 0757); 
-
 }
 copydirr(CONTENTDIR."api_en/tools/images", BASEDIR.$tools_dir.'/images');
 

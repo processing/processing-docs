@@ -9,7 +9,8 @@
 - All in "reviewing_reference.txt" file produced by Cindy  --SM
 
 - Navigation for Libraries and Tools in Reference is broken  --CR
-- PImage's mask() needs an @brief  --CR
+- Contributed Libraries and Tools are not appearing on the site  --CR
+- Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - normal() example needed  --SM
@@ -21,6 +22,7 @@
 - PGraphics link to developers reference  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
 - add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
+
 
 RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
 
@@ -46,6 +48,7 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 	@see PGraphics#imageMode( int ) will reference the PGraphics method
 	I corrected this for PImage.html by editing the comments in PImage.java
 
+
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - rounded rect()  --CR
@@ -58,21 +61,17 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 - PTABLE  --DS
 
 
-FROM ISSUE DB
+THE FOLLOWING IS FROM DB AND PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
 
 - 200 Need to document NaN and Inf or -Inf for functions that can return them  --CR
 - 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --CR
 - 250 Details regarding keywords.txt  --CR
 - 085 Constants in PConstants not syntax highlighting  --CR
 - 333 Parameters to filer() and PImage.filter()  --CR
-
-
-THE FOLLOWING IS FROM PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
-
-- Pdf fonts
+- PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts)
 -   figure out why font naming not working correctly
-- "Find in Reference" for copy() goes to PVector (oog)
+- "Find in Reference" for copy() goes to PVector
 - TRIANGLE_STRIP not highlighted for "find in reference"
 -   nor is it listed on the reference page
 -   so students can't find the ref for it
@@ -92,6 +91,7 @@ x Done
 
 
   DONE
+x PImage's mask() needs an @brief  --CR
 x Modify build script to work on Server  --CR
 x loadShape() not in index.html  --CR
 
@@ -111,7 +111,6 @@ o   Change to "active" and "static" mode for draw() and without
 o   Modify menu descriptions for 2.0 final menus
 o Add section for Preferences
 - Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
-- Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
 
 
 Key:
@@ -166,7 +165,7 @@ x Done
 
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 TUTORIAL
+2.0 TUTORIAL  --XXX
 
   NEED
 $ New P3D  --DS (CR to help with links and images)
