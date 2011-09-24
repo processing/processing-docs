@@ -7,7 +7,6 @@ require_once('lib/Translation.class.php');
 $benchmark_start = microtime_float();
 
 
-
 $libraries = array('net', 'serial', 'video', 'dxf', 'pdf');
 $lib_dir = DISTDIR.'libraries';
 

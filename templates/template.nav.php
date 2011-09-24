@@ -12,7 +12,7 @@ $pages = array(
     	'Topics'      => array('/learning/topics/', 2), 
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
-    'Books'       => array('/learning/books/', 2),
+    'Books'       	  => array('/learning/books/', 2),
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
