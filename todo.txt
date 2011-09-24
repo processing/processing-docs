@@ -8,9 +8,7 @@
 - New PNG images for reference for smooth() change  --SM
 - All in "reviewing_reference.txt" file produced by Cindy  --SM
 
-- Navigation for Libraries and Tools in Reference is broken  --CR
 - Contributed Libraries and Tools are not appearing on the site  --CR
-- Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - normal() example needed  --SM
@@ -91,6 +89,8 @@ x Done
 
 
   DONE
+x Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
+x Navigation for Libraries and Tools in Reference is broken  --CR
 x PImage's mask() needs an @brief  --CR
 x Modify build script to work on Server  --CR
 x loadShape() not in index.html  --CR
