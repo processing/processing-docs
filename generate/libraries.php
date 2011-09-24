@@ -7,32 +7,25 @@ require_once('lib/Translation.class.php');
 $benchmark_start = microtime_float();
 
 
-
-
-
-$where = CONTENTDIR . 'static/';
-
+// Update the files on the server
 putenv('HOME=' . CONTENTDIR);
-
-
-// update the file on the server
-
+$where = CONTENTDIR . 'static/';
 `cd $where && /usr/bin/svn update libraries.html`;
 
-// each lib
+
 $libraries = array('net', 'serial', 'video', 'dxf', 'pdf');
-$lib_dir = 'reference/libraries';
+$lib_dir = REFERENCEDIR.'libraries/';
 
 // Create Index
 $index = CONTENTDIR."api_en/libraries/index.html";
 $page = new Page('Libraries', 'Libraries');
 $page->content(file_get_contents($index));
 make_necessary_directories(BASEDIR.$lib_dir.'/images/include.php');
-writeFile($lib_dir.'/index.html', $page->out());
-copydirr(CONTENTDIR."api_en/libraries/images", BASEDIR.$lib_dir.'/images');
+writeFile($lib_dir.'index.html', $page->out());
+copydirr(CONTENTDIR."api_en/libraries/images", BASEDIR.$lib_dir.'images');
 
 // copy over the file for the contributed libraries
-copy(CONTENTDIR."static/libraries.html", BASEDIR.$lib_dir.'/libraries.html');
+copy(CONTENTDIR."static/libraries.html", BASEDIR.$lib_dir.'libraries.html');
 
 // For each Library
 foreach ($libraries as $lib) {
@@ -55,7 +48,6 @@ foreach ($libraries as $lib) {
     
     // copy images directory
 	//copydirr(CONTENTDIR.$source.'/images', REFERENCEDIR.$destination.'/images');
-
 }
 
 $benchmark_end = microtime_float();

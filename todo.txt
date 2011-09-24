@@ -1,74 +1,5 @@
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 EXAMPLE  --XXX
-
-- New XML/JSON  --DS, JT
-- New Regex  --DS
-- New PVector  --DS
-- Analyize PVector in examples  --DS
-- New PShape  --DS
-- PTable  --DS,JT
-- add stringIntPair to Hashmap  --DS
-- thread() example  --DS
-- New P3D  --CR,DS,AC
-
-  NICE
-$ 2 David Muth examples  --CR
-- More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
-- Custom font examples using loadFont()  --CR
-- New JavaScript Examples  --FJ,CR
-- New PDF w/ typography  --CR,BF
-- Syntax hightlighting for Example code online --FJ
-
-o New GUI  --DS
-x Scrollbar example needs new images that fit the new size and the @pjs directive  --CR
-x Mention examples are running with Processing.js  --CR
-x Remove "there are more examples" from individual pages and put in Index  --CR
-x Library examples missing from site  --CR
-x Follow up with Processing.js team regarding Example ports  --CR
-o Remove extra "f" from Java floats  --CR
-x Modify build script to work on Server to build Web examples  --CR
-x Cull OpenGL  --CR
-x All P2D and P3D must be removed from examples  --CR
-x Rework/edit/resize all existing examples  --CR
-x Modify examples for Processing.js  --CR
-x Emphasize createFont() over loadFont()  --CR
-
-
-Key:
-- To do
-$ In progress
-o N/A anymore
-x Done
-
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 TUTORIAL
-
-  NEED
-$ New P3D  --DS (CR to help with links and images)
-- Update Eclipse  --DS
-$ New Android  --DS, JT
-$ Processing.js  --DS,FJ
-x Update Processing Overview for 2.0  --CR
-x Update Getting Started for 2.0  --CR
--   New PDE drawing / image
--   Antialiased circle
-x Tutorial CSS  --CR
-
-  NICE
-- New Generics  --DS
-- Typography (or merge into Strings and Drawing Text?)  --CR,DS
-
-Key:
-- To do
-$ In progress
-o N/A anymore
-x Done
-
-// // // // // // // // // // // // // // // // // // // // //
-
 2.0 REFERENCE
 
 - Parameter decisions  --BF,CR,SM
@@ -89,6 +20,7 @@ x Done
 - createInput() example  --SM
 - PGraphics link to developers reference  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
+- add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
 
 RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
 
@@ -187,6 +119,76 @@ Key:
 $ In progress
 o N/A anymore
 x Done
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 EXAMPLE  --XXX
+
+- New XML/JSON  --DS, JT
+- New Regex  --DS
+- New PVector  --DS
+- Analyize PVector in examples  --DS
+- New PShape  --DS
+- PTable  --DS,JT
+- add stringIntPair to Hashmap  --DS
+- thread() example  --DS
+- New P3D  --CR,DS,AC
+
+  NICE
+$ 2 David Muth examples  --CR
+- More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
+- Custom font examples using loadFont()  --CR
+- New JavaScript Examples  --FJ,CR
+- New PDF w/ typography  --CR,BF
+- Syntax hightlighting for Example code online --FJ
+
+o New GUI  --DS
+x Scrollbar example needs new images that fit the new size and the @pjs directive  --CR
+x Mention examples are running with Processing.js  --CR
+x Remove "there are more examples" from individual pages and put in Index  --CR
+x Library examples missing from site  --CR
+x Follow up with Processing.js team regarding Example ports  --CR
+o Remove extra "f" from Java floats  --CR
+x Modify build script to work on Server to build Web examples  --CR
+x Cull OpenGL  --CR
+x All P2D and P3D must be removed from examples  --CR
+x Rework/edit/resize all existing examples  --CR
+x Modify examples for Processing.js  --CR
+x Emphasize createFont() over loadFont()  --CR
+
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 TUTORIAL
+
+  NEED
+$ New P3D  --DS (CR to help with links and images)
+- Update Eclipse  --DS
+$ New Android  --DS, JT
+$ Processing.js  --DS,FJ
+x Update Processing Overview for 2.0  --CR
+x Update Getting Started for 2.0  --CR
+-   New PDE drawing / image
+-   Antialiased circle
+x Tutorial CSS  --CR
+
+  NICE
+- New Generics  --DS
+- Typography (or merge into Strings and Drawing Text?)  --CR,DS
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
+
 
 // // // // // // // // // // // // // // // // // // // // //
 

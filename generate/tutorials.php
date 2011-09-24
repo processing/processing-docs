@@ -64,7 +64,7 @@ else
 		if ($imgs == 'true') {
 			$newpath = $path.'learning/'.$directory.'/imgs';
 			if (!is_dir($newpath)) {
-				mkdir($newpath, '0757');
+				mkdir($newpath, 0757);
 			}
 			if (is_dir($newpath)) {
 				copydirr($source.$directory.'/imgs', $newpath, null, 0757, true);
