@@ -5,7 +5,7 @@
   <tr>
    	<td>
 
-	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007.</em></p>
+	<p><em>This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007.</em></p>
 	
 	<p>&nbsp;</p>
 	
@@ -20,9 +20,9 @@ The latest version of Processing can be downloaded at <a href="http://processing
 <br />
 Processing consists of:</p>
 <ul><li>The Processing Development Environment (PDE). This is the software that runs when you double-click the Processing icon. The PDE is an Integrated Development Environment (IDE) with a minimalist set of features designed as a simple introduction to programming or for testing one-off ideas.
-    <li>A collection of functions (also referred to as commands or methods) that make up the &ldquo;core&rdquo; programming interface, or API, as well as several libraries that support more advanced features such as drawing with OpenGL, reading XML files, and saving complex imagery in PDF format.
+    <li>A collection of functions (also referred to as commands or methods) that make up the &ldquo;core&rdquo; programming interface, or API, as well as several libraries that support more advanced features such as sending data over a network, reading live images from a webcam, and saving complex imagery in PDF format.
     <li>A language syntax, identical to Java but with a few modifications. 
-    <li>An active online community, hosted at <a href="http://processing.org"><em>http://processing.org</em></a>.</ul>
+    <li>An active online community, based at <a href="http://processing.org"><em>http://processing.org</em></a>.</ul>
 
   
     <br />For this reason, references to &ldquo;Processing&rdquo; can be somewhat ambiguous. Are we talking about the API, the development environment, or the web site? We'll be careful in this text when referring to each.  </p>
@@ -30,13 +30,13 @@ Processing consists of:</p>
 	
 <h3>Sketching with Processing</h3>
 	
-    <p>A Processing program is called a <em>sketch</em>. The idea is to make Java-style programming feel more like scripting, and adopt the process of scripting to quickly write code. Sketches are stored in the <em>sketchbook</em>, a folder that's used as the default location for saving all of your projects. When you first run Processing, the sketch last used will automatically open. If this is the first time Processing is used (or if the sketch is no longer available), a new sketch will open.<br />
-      <br />      
-      Sketches that are stored in the sketchbook can be accessed from File &rarr; Sketchbook. Alternatively, File &rarr; Open... can be used to open a sketch from elsewhere on the system.<br />
-
-      <br />
-      Advanced programmers need not use the PDE, and may instead choose to use its libraries with the Java environment of choice. However, if you're just getting started, it's recommended that you use the PDE for your first few projects to gain familiarity with the way things are done. While Processing is based on Java, it was never meant to be a Java IDE with training wheels. To better address our target audience, the conceptual model (how programs work, how interfaces are built, and how files are handled) is somewhat different from Java. <br />
-</p>
+	<p>
+	A Processing program is called a <em>sketch</em>. The idea is to make Java-style programming feel more like scripting, and adopt the process of scripting to quickly write code. Sketches are stored in the <em>sketchbook</em>, a folder that's used as the default location for saving all of your projects. When you first run Processing, the sketch last used will automatically open. If this is the first time Processing is used (or if the sketch is no longer available), a new sketch will open.<br />
+	<br />      
+	Sketches that are stored in the sketchbook can be accessed from File &rarr; Sketchbook. Alternatively, File &rarr; Open... can be used to open a sketch from elsewhere on the system.<br />
+	<br />
+	Advanced programmers need not use the PDE, and may instead choose to use its libraries with the Java environment of choice. However, if you're just getting started, it's recommended that you use the PDE for your first few projects to gain familiarity with the way things are done. While Processing is based on Java, it was never meant to be a Java IDE with training wheels. To better address our target audience, the conceptual model (how programs work, how interfaces are built, and how files are handled) is somewhat different from Java. <br />
+	</p>
 
 
 <h3>Hello world</h3>
@@ -75,7 +75,7 @@ The same alternatives work for the <tt>fill()</tt> function, which sets the fill
 	  <h3>Hello mouse</h3>
 
       
-	  <p>A program written as a list of statements (like the previous examples) is called a <em>static</em> mode sketch. In static mode, a series of functions are used to perform tasks or create a single image without any animation or interaction. Interactive programs are drawn as a series of frames, which you can create by adding functions titled <tt>setup()</tt> and <tt>draw()</tt> as shown in the code below. These are built-in functions that are called automatically.<br />
+	  <p>A program written as a list of statements (like the previous examples) is called a <em>static</em> sketch. In a static sketch, a series of functions are used to perform tasks or create a single image without any animation or interaction. Interactive programs are drawn as a series of frames, which you can create by adding functions titled <tt>setup()</tt> and <tt>draw()</tt> as shown in the code below. These are built-in functions that are called automatically.<br />
 
 <br />
 <pre>     void setup() {
@@ -104,9 +104,9 @@ The same alternatives work for the <tt>fill()</tt> function, which sets the fill
        line(150, 25, mouseX, mouseY);
      }</pre>
 		<br />
-        Static mode programs are most commonly used for extremely simple examples, or for scripts that run in a linear fashion and then exit. For instance, a static mode program might start, draw a page to a PDF file, and exit.<br />
+        Static programs are most commonly used for extremely simple examples, or for scripts that run in a linear fashion and then exit. For instance, a static program might start, draw a page to a PDF file, and exit.<br />
         <br />
-Most programs will employ active mode, which use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More advanced mouse handling can also be introduced; for instance, the <tt>mousePressed()</tt> function will be called whenever the mouse is pressed. So in the following example, when the mouse is pressed, the screen is cleared via the <tt>background()</tt> function:<br />
+Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More advanced mouse handling can also be introduced; for instance, the <tt>mousePressed()</tt> function will be called whenever the mouse is pressed. In the following example, when the mouse is pressed, the screen is cleared via the <tt>background()</tt> function:<br />
 
 <br />
 		<pre>     void setup() {
@@ -122,19 +122,19 @@ Most programs will employ active mode, which use the <tt>setup()</tt> and <tt>dr
        background(192, 64, 0);
      }</pre>
 <br />
-More about static versus active mode programs can be found in the Programming Modes section of the reference, which can be viewed from Help &rarr; Environment, or online at <a href="http://processing.org/reference/environment/"><em>http://processing.org/reference/environment</em></a><br />
+<!--More about static versus active mode programs can be found in the Programming Modes section of the reference, which can be viewed from Help &rarr; Environment, or online at <a href="http://processing.org/reference/environment/"><em>http://processing.org/reference/environment</em></a><br />-->
       </p>
 		
 		
 		<h3>Exporting and distributing your work</h3>
 		
 		
-		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an applet or application with just one click. Select File &rarr; Export to package your current sketch as an applet. This will create a folder named applet inside your sketch folder. Opening the <em>index.html</em> file inside that folder will open your sketch in a browser. The applet folder can be copied to a web site intact, and will be viewable by anyone who has Java installed on their system. Similarly, you can use File &rarr; Export Application to bundle your sketch as an application for Windows, Mac OS X, and Linux. <br />
+		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an application or applet with just one click. Select File &rarr; Export to package your current sketch as an application. This will to bundle your sketch as an application for Windows, Mac OS X, and Linux. Similarly, you can use File &rarr; Export Applet to create a Java Applet from your code. This will create a folder named applet inside your sketch folder. Opening the <em>index.html</em> file inside that folder will open your sketch in a browser. The applet folder can be copied to a web site intact, and will be viewable by anyone who has Java installed on their system. <br />
 
-		  <br />
-		  The applet and application folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the <em>index.html</em> file or the contents of the folder. <br />
-		  <br />
-        More about the export features can be found in the reference at <a href="http://processing.org/reference/environment/export.html"><em>http://processing.org/reference/environment/export.html</em></a><br />
+	  <br />
+	  The application and applet folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the <em>index.html</em> file or the contents of the folder. Alternatively, you can turn off the automatic file erasure in the Preferences.<br />
+	  <br />
+        More about the export features can be found in the reference at <a href="http://processing.org/reference/environment/#Export"><em>http://processing.org/reference/environment/#Export</em></a><br />
       </p>
 
       
@@ -154,11 +154,10 @@ More about static versus active mode programs can be found in the Programming Mo
       
 		<h3>Examples and reference</h3>
 
-		<p>While many programmers learn to code in school, others teach themselves and learn on their own. Learning on your own involves looking at lots of other code: running, altering, breaking, and enhancing it until you can reshape it into something new. With this learning model in mind, the Processing software download includes dozens of examples that demonstrate different features of the environment and API.<br />
+		<p>While many programmers learn to code in school, others teach themselves and learn on their own. Learning on your own involves looking at lots of other code: running, altering, breaking, and enhancing it until you can reshape it into something new. With this learning model in mind, the Processing software download includes hundreds of examples that demonstrate different features of the environment and API.<br />
 		  <br />
 		  The examples can be accessed from the File &rarr; Examples menu. They're grouped into categories based on their function (such as Motion, Typography, and Image) or the libraries they use (PDF, Network, and Video). <br />
           <br />
-
           Find an interesting topic in the list and try an example. You'll see functions that are familiar, e.g. <tt>stroke()</tt>, <tt>line()</tt>, and <tt>background()</tt>, as well as others that have not yet been covered. To see how a function works, select its name, and then right-click and choose Find in Reference from the pop-up menu (Find in Reference can also be found beneath the Help menu). This will open the reference for that function in your default web browser.<br />
           <br />
           In addition to a description of the function's syntax, each reference page includes an example that uses the function. The reference examples are much shorter (usually four or five lines apiece) and easier to follow than the longer code examples. <br />
@@ -166,10 +165,8 @@ More about static versus active mode programs can be found in the Programming Mo
       
       
 		<h3>More about size()</h3>
-
 		
-		
-		<p>The <tt>size()</tt> function also sets the global variables width and height. For objects whose size is dependent on the screen, always use the width and height variables instead of a number. This prevents problems when the size() line is altered.
+		<p>The <tt>size()</tt> function sets the global variables width and height. For objects whose size is dependent on the screen, always use the width and height variables instead of a number. This prevents problems when the size() line is altered.
 		<pre>     size(400, 400);
 
      // The wrong way to specify the middle of the screen
@@ -181,30 +178,20 @@ More about static versus active mode programs can be found in the Programming Mo
         In the earlier examples, the <tt>size()</tt> function specified only a width and height for the window to be created. An optional parameter to the <tt>size()</tt> function specifies how graphics are rendered. A renderer handles how the Processing API is implemented for a particular output function (whether the screen, or a screen driven by a high-end graphics card, or a PDF file). Several renderers are included with Processing, each having a unique function. At the risk of getting too far into the specifics, here's a description of the possible drawing modes to use with Processing. <br />
 
         <br />
-<pre>     size(400, 400, JAVA2D);</pre>
+<pre>     size(400, 400, P2D);</pre>
 <br />
-        The Java2D renderer is used by default, so this statement is identical to size(400, 400). The Java2D renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels is slower compared to the P2D and P3D renderers.<br />
+        The P2D renderer is used by default, so this statement is identical to size(400, 400). The P2D renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels directly is slow.<br />
 <br />
-        <pre>     size(400, 400, P2D);</pre>
-        <br />
-        The Processing 2D renderer is intended for simpler graphics and fast pixel operations. It lacks niceties like stroke caps and joins on thick lines, but makes up for it when you need to draw thousands of simple shapes or directly manipulate pixels of an image or video.<br />
 
-        <br />
 <pre>     size(400, 400, P3D);</pre>
 <br />
-        Similar to P2D, the Processing 3D renderer is intended for speed and pixel operations. It also produces 3D graphics inside a web browser, even without the use of a library like Java3D. Image quality is poorer (the <tt>smooth()</tt> function is disabled, and image accuracy is low) but you can draw thousands of triangles very quickly. <br />
+        The P3D renderer uses Sun's JOGL (Java for OpenGL) library for faster rendering, while using Processing's simpler graphics APIs and the Processing development environment's easy application export. <!--OpenGL applets also run within a web browser without additional modification, but a dialog box will appear asking the user whether they trust &ldquo;Sun Microsystems, Inc.&rdquo; to run Java for OpenGL on their computer.--><br />
         <br />
-<pre>     size(400, 400, OPENGL);</pre>
-
-<br />
-        The OpenGL renderer uses Sun's JOGL (Java for OpenGL) library for faster rendering, while using Processing's simpler graphics APIs and the Processing development environment's easy applet and application export. To use OpenGL graphics, in addition to altering your <tt>size()</tt> function, you must select Import Library, then OpenGL from the Sketch menu. OpenGL applets also run within a web browser without additional modification, but a dialog box will appear asking the user whether they trust &ldquo;Sun Microsystems, Inc.&rdquo; to run Java for OpenGL on their computer. If this poses a problem, the P3D renderer is a simpler, if less full-featured, solution.<br />
-        <br />
+        
 <pre>     size(400, 400, PDF, &quot;output.pdf&quot;);</pre>
-
 <br />
-        The PDF renderer draws all geometry to a file instead of the screen. Like the OpenGL library, you must import the PDF library before using it. This is a cousin of the Java2D renderer, but instead writes directly to PDF files. <br />
+        The PDF renderer draws all geometry to a file instead of the screen. To use PDF, in addition to altering your size() function, you must select Import Library, then PDF from the Sketch menu. This is a cousin of the Java2D renderer, but instead writes directly to PDF files. <br />
         <br />
-Each of the renderers has its own specific role. P2D and P3D are great for pixel-based work, while the JAVA2D and PDF settings will give you the highest quality 2D graphics. When the Processing project first began, the P2D and P3D renderers were a single choice (and in fact, the only available renderer). This was an attempt to offer a unified mode of thinking about drawing, whether in two or three dimensions. However, this became too burdensome because of the number of tradeoffs that must be made between 2D and 3D. A very different expectation of quality exists for 2D and 3D, for instance, and trying to cover both sides meant doing both poorly.<br />
       </p>
       
       
@@ -255,7 +242,7 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
         One example is the PDF Export library. This library makes it possible to write PDF files directly from Processing. These vector graphics files can be scaled to any size and output at very high resolutions.<br />
 
         <br />
-        To use the PDF library in a project, choose Sketch &rarr; Import Library &rarr; PDF Export. This will add the following line to the top of the sketch:
+        To use the PDF library in a project, choose Sketch &rarr; Import Library &rarr; pdf. This will add the following line to the top of the sketch:
       <pre>     import processing.pdf.*;</pre>
       <br />
       Java programmers will recognize the <tt>import</tt> command. In Processing, this line is also used to determine what code is packaged with a sketch when it is exported as an applet or application.<br />
@@ -268,7 +255,7 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
 
         Each drawing function such as <tt>line()</tt> and <tt>ellipse()</tt> will now draw to the screen as well as to the PDF.<br />
         <br />
-        Other libraries provide features such as writing movie files, reading images from a camera, sending and receiving MIDI and OSC commands, sophisticated 3D camera control, and access to MySQL databases.<br />
+        Other libraries provide features such as reading images from a camera, sending and receiving MIDI and OSC commands, sophisticated 3D camera control, and access to MySQL databases.<br />
 
       </p>
       
@@ -278,7 +265,7 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
       
       <p>Processing sketches are made up of one or more tabs, with each tab representing a piece of code. The environment is designed around projects that are a few pages of code, and often three to five tabs in total. This covers a significant number of projects developed to test and prototype ideas, often before embedding them into a larger project or building a more robust application for broader deployment.<br />
         <br />
-        The idea of sketching is identical to that of scripting, except that you're not working in an interpreted scripting language, but rather gaining the performance benefit of compiling to Java class files. Of course, strictly speaking, Java is itself an interpreted language, but its bytecode compilation brings it much closer to the &quot;metal&quot; than languages such as JavaScript, ActionScript, Python, or Ruby.<br />
+        The idea of sketching is identical to that of scripting, except that you're not working in an interpreted scripting language, but rather gaining the performance benefit of compiling to Java class files. Of course, strictly speaking, Java is itself an interpreted language, but its bytecode compilation brings it much closer to the &quot;metal&quot; than languages such as JavaScript, Python, or Ruby.<br />
         <br />
 
         Processing was never intended as the ultimate language for programming visuals; instead, we set out to make something that was:
@@ -309,7 +296,7 @@ Of course, once things are working, avoid the urge to rewrite for its own sake. 
 
 	<p>&nbsp;</p>
 	
-	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007.</em></p>
+	<p><em>This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007.</em></p>
 	
 
     </td>

@@ -6,36 +6,36 @@
   <tr>
    	<td>
 
-	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#reasfry2">Getting Started with Processing</a>, by Casey Reas and Ben Fry, O'Reilly / Make 2010.</em></p>
+	<p><em>This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial was adapted from the book, <a href="http://www.processing.org/learning/books/#reasfry2">Getting Started with Processing</a>, by Casey Reas and Ben Fry, O'Reilly / Make 2010.</em></p>
 	
 	<p>&nbsp;</p>
 	
 	<p>
-	Start by visiting http://processing.org/download and selecting the Mac,
-Windows, or Linux version, depending on what machine you have. Installation
-on each machine is straightforward:
+	Start by visiting <a href="http://processing.org/download">http://processing.org/download</a> and 
+	selecting the Mac, Windows, or Linux version, depending on what machine you have. Installation
+	on each machine is straightforward:
 
 	<ul>
 	<li>On Windows, you'll have a .zip file. Double-click it, and drag the folder inside
-to a location on your hard disk. It could be Program Files or simply
-the desktop, but the important thing is for the processing folder to be
-pulled out of that .zip file. Then double-click processing.exe to start.</li>
+		to a location on your hard disk. It could be Program Files or simply
+		the desktop, but the important thing is for the processing folder to be
+		pulled out of that .zip file. Then double-click processing.exe to start.</li>
 
 	<li>The Mac OS X version is a disk image (.dmg) file. Drag the Processing
-icon to the Applications folder. If you're using someone else's machine
-and can't modify the Applications folder, just drag the application to the
-desktop. Then double-click the Processing icon to start.</li>
+		icon to the Applications folder. If you're using someone else's machine
+		and can't modify the Applications folder, just drag the application to the
+		desktop. Then double-click the Processing icon to start.</li>
 
 	<li>The Linux version is a .tar.gz file, which should be familiar to most Linux
-users. Download the file to your home directory, then open a terminal
-window, and type:<br />
-<tt>tar xvfz processing-xxxx.tgz</tt><br />
-(Replace xxxx with the rest of the file's name, which is the version
-number.) This will create a folder named processing-1.0 or something
-similar. Then change to that directory:<br />
-<tt>cd processing-xxxx</tt><br />
-and run it:<br />
-<tt>./processing</tt></li>
+		users. Download the file to your home directory, then open a terminal
+		window, and type:<br />
+		<tt>tar xvfz processing-xxxx.tgz</tt><br />
+		(Replace xxxx with the rest of the file's name, which is the version
+		number.) This will create a folder named processing-2.0 or something
+		similar. Then change to that directory:<br />
+		<tt>cd processing-xxxx</tt><br />
+		and run it:<br />
+		<tt>./processing</tt></li>
 
 	</ul>
 
@@ -51,7 +51,6 @@ otherwise stuck, visit the <a href="http://wiki.processing.org/w/Troubleshooting
    	
    	<p>
    	<img src="imgs/Fig_02_01.gif" width="500" height="369" alt="PDE" /><br />
-   	<br />
    	<em>The Processing Development Environment.</em>
    	</p>
    	
@@ -65,8 +64,6 @@ There's not much to it; the large area is the Text Editor, and there's a row
 of buttons across the top; this is the toolbar. Below the editor is the Message
 Area, and below that is the Console. The Message Area is used for
 one line messages, and the Console is used for more technical details.</p>
-
-	<h5>Example 1: Draw an Ellipse</h5>
 	
 	<p>In the editor, type the following:</p>
 	
@@ -97,18 +94,14 @@ software isn't always smart enough to know what you mean, and can be
 quite fussy about the placement of punctuation. You'll get used to it with a
 little practice.</p>
 
-	<p>Next, we'll skip ahead to a sketch that's a little more exciting.</p>
-
-	<h5>Example 2-2: Make Circles</h5>
-	
-	<p>Delete the text from the last example, and try this:</p>
+	<p>Next, we'll skip ahead to a sketch that's a little more exciting. 
+	Delete the text from the last example, and try this:</p>
 	
 	<p><img src="imgs/Ex_02_02.gif" width="480" height="120" /></p>
 	
 	<p><pre>
 <span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>() {
 &nbsp;&nbsp;<span style="color: #CC6600;">size</span>(480, 120);
-&nbsp;&nbsp;<span style="color: #CC6600;">smooth</span>();
 }
 
 <span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>draw</b></span>() {
@@ -186,19 +179,38 @@ the toolbar:</p>
 
 	<p><img src="imgs/Menu-Export.gif" width="60" height="60" alt="Export" /></p>
 
-	<p>will bundle your code into a single folder titled applet that can be uploaded
-to a web server. After exporting, the applet folder will open on
+	
+	<p>will bundle your code into an application for your choice of Mac, Windows, and/or Linux. 
+This is an easy way to make self-contained, double-clickable versions of your projects.
+	</p>
+	
+	   	
+	<p>&nbsp;</p>
+	   	   	
+   	<p>
+   	<img src="imgs/Fig_02_03.gif" width="350" height="267" alt="Export to Application menu" /><br />
+   	<em>Export to Application menu.</em>
+   	</p>
+	
+	<p>&nbsp;</p>
+
+   	
+   	<p>You can also find Export, along with its sibling Export to Applet,
+underneath the File menu. Export to Applet bundles your code into a single folder titled applet 
+that can be uploaded to a web server. After exporting, the applet folder will open on
 your desktop. The PDE file is the source code, the JAR file is the program,
 the HTML file is the web page, and the GIF file is displayed in the web
 browser while the program is loading. Double-clicking the index.html file
 will launch your web browser and show your sketch on the web page it has
 created.</p>
 
+<p>Holding down Shift when you press the Export button on the toolbar is
+another way to use Export to Applet.</p>
+
 	<p>&nbsp;</p>
    	
    	<p>
    	<img src="imgs/Fig_02_02.gif" width="500" height="200" alt="Applet folder" /><br />
-   	<br />
    	<em>The applet folder contains the exported sketch.</em>
    	</p>
    	
@@ -208,34 +220,22 @@ created.</p>
    	<table width="600" bgcolor="#CCCCCC" cellpadding="20">
    	  <tr>
    	    <td>
-   	  	<em>NOTE: The applet folder is erased and recreated each time you use the
+   	  	<em>NOTE: The export folders are erased and recreated each time you use the
 Export command, so be sure to move the folder elsewhere before you
-make any changes to the HTML file or anything else inside.</em>
+make any changes to the HTML file or anything else inside. Alternatively, you can turn off the 
+automatic file erasure in the Preferences.</em>
    	    </td>
    	  </tr>
    	</table>
    	</p>
 
-	<p>You can also find Export, along with its sibling Export to Application,
-underneath the File menu. Export to Application creates an application for
-your choice of Mac, Windows, and/or Linux. This is an easy way to make
-self-contained, double-clickable versions of your projects.
-	</p>
+	<p>In addition to exporting your code as applications and applets, you can switch to 
+	a different <em>mode</em> within Processing to export to other platforms. For example, 
+	changing to <a href="http://processing.org/learning/javascript/">JavaScript Mode</a> 
+	exports HTML5 Canvas and WebGL. Changing to <a href="http://processing.org/learning/android/">Android</a> 
+	mode exports application for Android phones and tablets. 
 	
 	
-	<p>&nbsp;</p>
-   	
-   	<p>
-   	<img src="imgs/Fig_02_03.gif" width="350" height="267" alt="Export to Application menu" /><br />
-   	<br />
-   	<em>Export to Application menu.</em>
-   	</p>
-   	
-   	<p>&nbsp;</p>
-   	
-   	<p>Holding down Shift when you press the Export button on the toolbar is
-another way to use Export to Application.</p>
-
 
 	<h3>Examples and Reference</h3>
 	
@@ -273,7 +273,7 @@ clicking on the link at the top of each reference page.</p>
 
 	<p>&nbsp;</p>
 
-	<p><em>This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#reasfry2">Getting Started with Processing</a>, by Casey Reas and Ben Fry, O'Reilly / Make 2010.</em></p>
+	<p><em>This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>. This tutorial was adapted from the book, <a href="http://www.processing.org/learning/books/#reasfry2">Getting Started with Processing</a>, by Casey Reas and Ben Fry, O'Reilly / Make 2010.</em></p>
 	
    </td>
   </tr>

@@ -3,9 +3,10 @@ By Lenny Burdette
 
 Derived from code by Kevin Cannon, http://www.multiblah.com and
 Florian Jenett, mail@florianjenett.de
+Reworked by CR, 23 Sep 2011
 
 Created: 2005.08.29 04:28PM
-Last Modified: 2005.08.30 06:23PM
+x Last Modified: 2005.08.30 06:23PM
 
 */
 
@@ -209,11 +210,9 @@ a:link:visited {
 h1, h2, h3, h4, h5, h6
 	{
 	/*margin-bottom 		: 5px;*/
-
 	color				: #5A5A5A; 
 	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-weight			: normal;
-
 	line-height			: 1.6em;
 	}
 
@@ -277,19 +276,16 @@ li {margin-bottom: 1em; }
 
 #Cover ul {
 	list-style: none;
-	
-				margin-left: 0;
-	
-				padding-left: 1em;
-	
-				text-indent: -1em;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
 }
 
 
 #Cover .content {
-        margin-left    : 55px;
-        margin-right   : 0px;
-        position: relative;
+	margin-left    : 55px;
+	margin-right   : 0px;
+	position: relative;
 }
 
 #Cover h3 { margin: 40px 0 0 0; }
@@ -328,34 +324,6 @@ td img { margin: 0; display: block; }
         margin-right   : 0px;
         position: relative;
 }
-
-
-
-
-#Tutorials .colone { width: 224px; float: left; margin-right: 35px; }
-#Tutorials .coltwo { width: 165px; float: left; margin-right: 25px; }
-
-#Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
-#Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
-
-#Tutorials h3 { 	font-size		: 1.8em;
-				
-					margin-bottom	: 0.4em; 
-				
-					margin-top		: 1.4em;
-}
-
-#Tutorials h1 { 
-	font-size			: 2.2em; 
-	
-					font-family			: Arial, Geneva, Helvetica, Verdana, sans-serif; 
-					font-weight			: lighter;
-	
-					font-style			: normal;
-}
-#Tutorials h2.with-nav { margin-bottom: 0; }
-#Tutorials .onecol { clear: both; }
-#Tutorials td { vertical-align: top; }
 
 
 #Index .colone { width: 224px; float: left; margin-right: 35px; }
@@ -410,7 +378,7 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 #reference-nav { position: relative; width: 300px; height: 2em; padding-top: .5em; }
 #reference-nav p { position: absolute; right: 10px; top: 0; margin: 0; }
 
-.ref-notice { margin: 1.5em 0 2.5em 0; color: #006699; clear: both; margin-right: 40px;}
+.ref-notice { margin: 1.5em 0 2.5em 0; color: #CC6600; clear: both; margin-right: 40px;}
 
 .ref-item { margin-bottom: 60px; }
 .ref-item th { width: 100px; font-weight: normal; text-align: left; vertical-align: top; }
@@ -450,17 +418,6 @@ div.ref-col { width: 30%;
 
 .ref-col p { margin-top: -.5em; margin-bottom: 2em; }
 
-/**************************************************************** updates, courses, happenings ***/
-#Courses .content, #Updates .content, #Happenings .content {
-    width: 595px; 
-     }
-#Updates h2 { margin-top: 0 0 20px 0; }
-
-
-.course-desc p { margin: 0; }
-.course-desc p.date { margin: 0; }
-.course-desc h3 { margin: 0; font-size: 1em; font-weight: bold; line-height: 1em; }
-.course-desc { margin-bottom: 2em; }
 
 /**************************************************************** download ***/
 
@@ -488,7 +445,7 @@ div.ref-col { width: 30%;
         position: relative;
 }
 
-/************************************************************** Learning ***/
+/************************************************************** learning ***/
 
 #Learning  h1 { margin-bottom: 0; margin-top: 0;}
 #Learning .message { margin-top: 0; margin-right: 40px; }
@@ -513,6 +470,40 @@ h2 { margin-bottom: 0; margin-top: 0;}
 
 #Copyright p { margin-right: 20px; }
 
+
+/************************************************************** tutorials ***/
+
+#Tutorials .colone { width: 224px; float: left; margin-right: 35px; }
+#Tutorials .coltwo { width: 165px; float: left; margin-right: 25px; }
+#Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
+#Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
+
+#Tutorials h3 { 
+	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size			: 1.3em;
+	font-weight			: bold;
+	margin-bottom		: 0.4em; 
+	margin-top			: 1.8em;
+}
+
+#Tutorials h5 { 
+	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-weight			: bold;
+	font-size			: 1.0em;
+	margin-bottom		: 0.4em; 
+	margin-top			: 1.4em;
+}
+
+#Tutorials h1 { 
+	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size			: 2.0em; 
+	font-weight			: normal;
+	font-style			: normal;
+}
+
+#Tutorials h2.with-nav { margin-bottom: 0; }
+#Tutorials .onecol { clear: both; }
+#Tutorials td { vertical-align: top; }
 
 /************************************************************** Books ***/
 
@@ -663,66 +654,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Libraries .threecol { float: left; width: 210px; margin-right: 20px; }
 #Libraries .threecol p { margin-top: 0; margin-bottom: 2em; }
 
-//#Libraries h5 { margin-bottom: 0; font-size: 1em; }
-
-
-
-/*
-
-#Library-index .colone {
-	width: 300px;
-	float: left;
-	margin-right: 40px;
-}
-
-#Library-index .twocol {
-	width: 330px;
-	float: left; 
-}
-
-#Library-index .full {
-	width: 650px;
-	float: left;
-	margin-right: 0px;
-	margin-top: 30px;
-}
-
-#Libraries .content {
-        margin-left    : 55px;
-        margin-right   : 0px;
-        position: relative;
-}
-
-#Library-index .content {
-        margin-left    : 55px;
-        margin-right   : 0px;
-        position: relative;
-}
-
-
-#Library-index h5 { margin-bottom: 0; font-size: 1em; }
-#Library-index .twocol p { margin-top: 0; }
-.lib-nav { display: block; 
-	margin-bottom: 10px; 
-	margin-left: -30px; 
-	padding: 7px 0 3px 30px; 
-	background: url(/img/back_off.gif) no-repeat 
-}
-
-#Library-index pre { margin-left: 30px; margin-bottom: 30px; }
-
-#Libraries h2 { margin-top: 2em; }
-#Libraries h5 { font-size: 1em; margin: 0; font-weight: bold; }
-#Libraries h5 a { font-weight: bold; }
-#Libraries h3 { clear: both; margin-bottom: 0; }
-#Libraries h4 { font-size: 1em; margin-bottom: .5em; }
-#Libraries h4 a {float:left; margin-left:-30px; martin-top:-5px; }
-
-#Libraries .threecol { float: left; width: 210px; margin-right: 20px; }
-#Libraries .threecol p { margin-top: 0; margin-bottom: 2em; }
-
-*/
-
 
 /************************************************************** environment ***/
 #Environment h1 { margin-top: 2em; }
@@ -738,31 +669,8 @@ ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
         position: relative;
 }
 
-/************************************************************** comparison ***/
-#Compare h1 { margin-top: 2em; }
-#Compare h2 { margin-bottom: 0; }
-#Compare .threecol { float: left; width: 210px; margin-right: 20px; }
-#Compare .threecol p { margin-top: 0; }
-
-
-#Compare .content {
-        margin-left    : 55px;
-        margin-right   : 0px;
-        position: relative;
-}
-
-
-/************************************************************** troubleshooting ***/
-#Troubleshooting h1 { margin-top: 2em; }
-#Troubleshooting h5 a { float: left; margin-left: -30px; }
-ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
-#Troubleshooting td { padding-bottom: 1em; }
-
-/************************************************************** FAQ ***/
-
-#FAQ h5 a { float: left; margin-left: -30px; }
-
 /************************************************************** examples ***/
+
 div.applet { float: left; margin-bottom: 40px; }
 p.doc-float { margin-left: 250px; }
 p.doc { margin-right: 40px; margin-top: 30px;}
@@ -785,4 +693,48 @@ div.updateRequired a {
 	color:#999;
 }
 
+
+/**************************************************************** updates, courses, happenings ***/
+/*
+#Courses .content, #Updates .content, #Happenings .content {
+    width: 595px; 
+     }
+#Updates h2 { margin-top: 0 0 20px 0; }
+
+
+.course-desc p { margin: 0; }
+.course-desc p.date { margin: 0; }
+.course-desc h3 { margin: 0; font-size: 1em; font-weight: bold; line-height: 1em; }
+.course-desc { margin-bottom: 2em; }
+*/
+
+/************************************************************** comparison ***/
+/*
+
+#Compare h1 { margin-top: 2em; }
+#Compare h2 { margin-bottom: 0; }
+#Compare .threecol { float: left; width: 210px; margin-right: 20px; }
+#Compare .threecol p { margin-top: 0; }
+
+
+#Compare .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
+*/
+
+/************************************************************** troubleshooting ***/
+/*
+#Troubleshooting h1 { margin-top: 2em; }
+#Troubleshooting h5 a { float: left; margin-left: -30px; }
+ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
+#Troubleshooting td { padding-bottom: 1em; }
+*/
+
+/************************************************************** FAQ ***/
+
+/*
+#FAQ h5 a { float: left; margin-left: -30px; }
+*/
 
