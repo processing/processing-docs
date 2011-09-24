@@ -10,7 +10,7 @@ public class TemplateWriter extends BaseWriter {
 	
 	public static String varPrefix = "<!-- ";
 	public static String varSuffix = " -->";
-	static String[] genericFields = {"classname", "returns", "related", "parameters", "syntax", "csspath"};
+	static String[] genericFields = {"classname", "returns", "related", "parameters", "syntax", "webcontentpath"};
 	static String[] navFields = {"isLibrary", "isAlphabetical", "isLanguage"};
 	
 	public TemplateWriter()
@@ -55,9 +55,11 @@ public class TemplateWriter extends BaseWriter {
 		if(isLocal)
 		{ //add local nav
 			vars.put("navigation", writePartial("nav.local.template.html", vars));
+			vars.put( "webcontentpath",  "" );
 		} else
 		{
 			vars.put("navigation", writePartial("nav.web.template.html", vars));
+			vars.put( "webcontentpath",  "/" );
 		}
 		
 		File f = new File( getWriterPath( outputName, isLocal ) );
