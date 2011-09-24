@@ -51,9 +51,11 @@ $ New P3D  --DS (CR to help with links and images)
 - Update Eclipse  --DS
 $ New Android  --DS, JT
 $ Processing.js  --DS,FJ
-- Update Processing Overview for 2.0  --CR
-- Update Getting Started for 2.0  --CR
-- Tutorial CSS  --CR
+x Update Processing Overview for 2.0  --CR
+x Update Getting Started for 2.0  --CR
+-   New PDE drawing / image
+-   Antialiased circle
+x Tutorial CSS  --CR
 
   NICE
 - New Generics  --DS
