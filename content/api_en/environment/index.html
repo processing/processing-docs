@@ -57,12 +57,10 @@
 		sketches easier by providing interfaces for tasks like selecting colors.
 	</p>
        
-	<p>[??? Still deciding on the name of [PROCESSING/JAVA] Mode. See paragraph below... ]</p>
-       
     <p>
 		Processing has different <em>programming modes</em> to make it possible to deploy sketches
-		on different platforms. The three current programming modes are <em>[JAVA]</em>, 
-		<em>JavaScript</em>, and <em>Android</em>. The [JAVA] mode makes Java Applications and 
+		on different platforms. The three current programming modes are <em>Java</em>, 
+		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications and 
 		Java Applets, the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
 		and the Android mode makes sketches that run on Android phones and tablets.
     </p>
@@ -97,8 +95,8 @@ Big-picture keywords / concepts for getting into Processing
 	
 	<p>
 		There are three variations of the PDE, one for each programming mode. The menus
-		change a little depending if it currently in [JAVA], JavaScript, or Android mode.
-		The [JAVA] and JavaScript modes are documented here. For more information about
+		change a little depending if it currently in Java, JavaScript, or Android mode.
+		The Java and JavaScript modes are documented here. For more information about
 		Android mode, please visit the <a href="http://wiki.processing.org/w/Android">Processing 
 		for Android reference</a>.
 	</p>
@@ -128,7 +126,7 @@ Big-picture keywords / concepts for getting into Processing
         <td valign="top" width="30"><img src="images/play.gif" height="23" width="23"></td>
         <td width="15">&nbsp;</td>
         <td valign="top" width="480"><em>Run</em><br />
-			Runs the sketch. In [JAVA] mode, it compiles the code and opens a new display window.
+			Runs the sketch. In Java mode, it compiles the code and opens a new display window.
 			In JavaScript mode, it starts a new server and opens the sketch in a web browser.
 		</td>
       </tr>
@@ -170,12 +168,12 @@ Big-picture keywords / concepts for getting into Processing
         <td valign="top"><img src="images/export.gif" height="21" width="21"></td>
         <td>&nbsp;</td>
         <td valign="top"><em>Export</em><br />
-			In [JAVA] mode, it exports the current sketch as a Java application and
+			In Java mode, it exports the current sketch as a Java application and
           	the folder containing the files is opened. Hold down shift to export an applet 
           	instead of an application. In JavaScript mode, this button exports the current sketch 
           	as JavaScript and HTML files and the folder containing the files is opened.
-          	(Note: exporting a sketch will delete the previous contents of the "applet", 
-          	"[JAVASCRIPT EXPORT FOLDER]", or "application.xxxx" folders. 
+          	(Note: Exporting a sketch will delete the previous contents of the export folder,
+          	unless this preference is unchecked in the Preferences.) 
           </td>
       </tr>
     </table>
@@ -207,7 +205,7 @@ Big-picture keywords / concepts for getting into Processing
       Saves the currently open sketch, with the option of giving it a different 
       name. Does not replace the previous version of the sketch.</li>
     <li><em>Export (Ctrl+E)</em><br />
-      In [JAVA] mode, exports a Java application as an executable file and opens the folder 
+      In Java mode, exports a Java application as an executable file and opens the folder 
       containing the exported files. In JavaScript mode, exports the JavaScript and HTML needed 
       to run the sketch in a browser and opens the folder containing the exported files. 
       Note that exporting a sketch will delete the previous contents of the "application.xxxxx" 
@@ -273,7 +271,7 @@ Big-picture keywords / concepts for getting into Processing
 	</ul>
 
 	
-	<h6>Sketch ([JAVA] Mode)</h6>
+	<h6>Sketch (Java Mode)</h6>
 	<ul>
     <li><em>Run (Ctrl+R)</em><br />
       Runs the code (compiles the code, opens the display window, and runs the 
@@ -366,7 +364,7 @@ Big-picture keywords / concepts for getting into Processing
 	</li>
 	</ul>
 	
-    <h6>Help ([JAVA] Mode)</h6>
+    <h6>Help (Java Mode)</h6>
     <ul>
 
     <li><em>About Processing</em><br />
@@ -631,7 +629,27 @@ void draw() {
     </h5>
     
     <p>
-    	Do it!
+    	Processing 2.0 includes a set of new features to make it easier to install, update, and
+    	remove Libraries, Tools, and Modes.
+    </p>
+    
+    <p>
+    	Add contributed libraries by selecting "Add Library..." from the "Import Library..." 
+    	submenu within the Sketch menu. Not all available libraries have been converted to 
+    	show up in "Add Library...". If a library isn't there, it will need to be installed 
+    	manually. Follow the <a href="http://wiki.processing.org/w/How_to_Install_a_Contributed_Library">
+    	How to Install a Contributed Library</a> instructions on the Processing 
+    	Wiki for more information.  
+    </p>
+    
+    <p>
+    	Add contributed tools by selecting "Add Tool..." from the Tools menu to select a Tool 
+    	to download. 
+    </p>
+    
+    <p>
+    	Add contributed modes by selecting "Add Mode..." from the Mode menu in the upper-right
+    	corner of the PDE.
 	</p>
 	
 	
@@ -645,8 +663,8 @@ void draw() {
     
     <p>
     	Processing has different <em>programming modes</em> to make it possible to deploy 
-    	sketches on different platforms. The three current programming modes are <em>[JAVA]</em>, 
-		<em>JavaScript</em>, and <em>Android</em>. The [JAVA] mode makes Java Applications and 
+    	sketches on different platforms. The three current programming modes are <em>Java</em>, 
+		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications and 
 		Java Applets, the JavaScript mode makes sketches that run through HTML5 Canvas and
 		WebGL, and the Android mode makes sketches that run on Android phones and tablets. 
 		Each mode has unique menu items, examples, and a distinct visual theme for the PDE.
@@ -661,7 +679,7 @@ void draw() {
     </p>
       
       
-    <h6>[JAVA/PROCESSING] Mode</h6>
+    <h6>Java Mode</h6>
     
     <p>
     	This mode makes it possible to write short programs to draw to the screen, but also
@@ -672,16 +690,12 @@ void draw() {
     </p>
     
     <p>
-		[??? Do we need some additional explanation here?]
-    </p>
-    
-    <p>
 		<table width="100%" border="0" cellpadding="20" bgcolor="#E6E6E6">
   			<tr>
   				<td>
 		<em>Advanced</em><br />
 		<br />
-		Java files with the extension .java can be included with a [JAVA] mode sketch. 
+		Java files with the extension .java can be included with a Java mode sketch. 
 		They may be created directly in the PDE or copied into the sketch folder through 
 		the "Add File..." item in the Sketch menu or dragged into the text editor. It's possible 
 		to write any Java code in files with the .java extension. In fact, complete Java code 
@@ -739,7 +753,7 @@ public class MyDemo extends PApplet {
     </p>
     
     <p>
-    	Similar to .java tabs in the [JAVA] mode, JavaScript files may be added to 
+    	Similar to .java tabs in the Java mode, JavaScript files may be added to 
     	a sketch. Create a new tab with a name ending in ".js" or drag an existing ".js" file 
     	into the text editor of the sketch to copy it. JavaScript tabs make it possible to
     	write pure JavaScript code inside the PDE that can reach beyond what the Processing 
@@ -888,7 +902,7 @@ void draw() {
     <p>
     	The <a href="http://wiki.processing.org/w/Export_Info_and_Tips">Export information and 
     	Tips</a> page on the Processing Wiki covers the details of exporting Applets (including 
-    	security restrictions and customizing the HTML) and Applications from [JAVA] mode.
+    	security restrictions and customizing the HTML) and Applications from Java mode.
     </p>
     
     <p>

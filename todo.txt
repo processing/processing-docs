@@ -8,8 +8,7 @@
 - New PNG images for reference for smooth() change  --SM
 - All in "reviewing_reference.txt" file produced by Cindy  --SM
 
-- Contributed Libraries and Tools are not appearing on the site  --CR
-- Broken header links for Distribution
+- Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
@@ -20,6 +19,7 @@
 - null has a blank 'Examples'  --SM
 - createInput() example  --SM
 - PGraphics link to developers reference  --SM
+- Add examples for filter() and PImage.filter() for erode() and dilate() methods  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
 - add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
 
@@ -52,11 +52,9 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
-- rounded rect()  --CR
+- quadraticVertex()  --CR [This look currently commented out in the code...]
 - new arc()  --CR
 - blendMode()  --CR
-- quadraticVertex()  --CR
-
 - XML  --DS
 - JSON  --DS
 - PTABLE  --DS
@@ -64,15 +62,16 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 THE FOLLOWING IS FROM DB AND PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
 
-- 200 Need to document NaN and Inf or -Inf for functions that can return them  --CR
 - 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --CR
-- 250 Details regarding keywords.txt  --CR
-- 085 Constants in PConstants not syntax highlighting  --CR
-- 333 Parameters to filer() and PImage.filter()  --CR
 - PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts)
 -   figure out why font naming not working correctly
 - "Find in Reference" for copy() goes to PVector
+
+KEYWORD HIGHLIGHTING AND FIND IN REFERENCE
+
+- 085 Constants in PConstants not syntax highlighting  --CR
+- 250 Details regarding keywords.txt  --CR
 - TRIANGLE_STRIP not highlighted for "find in reference"
 -   nor is it listed on the reference page
 -   so students can't find the ref for it
@@ -92,6 +91,10 @@ x Done
 
 
   DONE
+x 200 Need to document NaN and Inf or -Inf for functions that can return them  --CR
+x 333 Parameters to filter() and PImage.filter()  --CR
+x rounded rect()  --CR
+x Broken header links for Distribution
 x Better links from Local Reference to online lists of Contributed Tools and Libraries  --CR
 x Navigation for Libraries and Tools in Reference is broken  --CR
 x PImage's mask() needs an @brief  --CR
@@ -103,23 +106,19 @@ x loadShape() not in index.html  --CR
 
 2.0 DOCUMENTATION
 
-- Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
 - Syntax highlighting (see major Issues above)  --CR
-- New IDE image for About page
-o Environment  --CR
-o   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
-o   Change to "active" and "static" mode for draw() and without
--   New IDE Image
-o   Modify menu descriptions for 2.0 final menus
-o Add section for Preferences
+- New IDE image for About page and Environment page  --CR
 - Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
 
 
-Key:
-- To do
-$ In progress
-o N/A anymore
-x Done
+  DONE
+x Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
+x Environment  --CR
+o   New IDE Image
+x   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawing "Modes")
+x   Change to "active" and "static" mode for draw() and without
+x   Modify menu descriptions for 2.0 final menus
+x Add section for Preferences
 
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -175,11 +174,11 @@ $ New P3D  --DS (CR to help with links and images)
 - Update Eclipse  --DS
 $ New Android  --DS, JT
 $ Processing.js  --DS,FJ
-x Update Processing Overview for 2.0  --CR
-x Update Getting Started for 2.0  --CR
+
+$ Update Getting Started for 2.0  --CR
 -   New PDE drawing / image
 -   Antialiased circle
-x Tutorial CSS  --CR
+
 
   NICE
 - New Generics  --DS
@@ -191,12 +190,16 @@ $ In progress
 o N/A anymore
 x Done
 
+  DONE
+x Tutorial CSS  --CR
+x Update Processing Overview for 2.0  --CR
+
 
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 DESIGN
 
-* Prepare MODE images for JavaScript, Android  --CR
+- Prepare MODE images for JavaScript, Android  --CR
 - New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
 - Check all page header images for gray values  --CR
 

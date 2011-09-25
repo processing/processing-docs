@@ -45,21 +45,31 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Filters an image as defined by one of the following modes:<br /><br />THRESHOLD - converts the image to black and white pixels depending if they are above or below the threshold defined by the level parameter. The level must be between 0.0 (black) and 1.0(white). If no level is specified, 0.5 is used.<br />
+Filters the image as defined by one of the following modes:<br />
 <br />
-GRAY - converts any colors in the image to grayscale equivalents<br />
+THRESHOLD<br />
+Converts the image to black and white pixels depending if they are above or below the threshold defined by the level parameter. The parameter must be between 0.0 (black) and 1.0 (white). If no level is specified, 0.5 is used.<br />
 <br />
-INVERT - sets each pixel to its inverse value<br />
+GRAY<br />
+Converts any colors in the image to grayscale equivalents. No parameter is used.<br />
 <br />
-POSTERIZE - limits each channel of the image to the number of colors specified as the level parameter<br />
+OPAQUE<br />
+Sets the alpha channel to entirely opaque. No parameter is used.<br />
 <br />
-BLUR - executes a Guassian blur with the level parameter specifying the extent of the blurring. If no level parameter is used, the blur is equivalent to Guassian blur of radius 1<br />
+INVERT<br />
+Sets each pixel to its inverse value. No parameter is used.<br />
 <br />
-OPAQUE - sets the alpha channel to entirely opaque<br />
+POSTERIZE<br />
+Limits each channel of the image to the number of colors specified as the parameter. The parameter can be set to values between 2 and 255, but results are most noticeable in the lower ranges.<br />
 <br />
-ERODE - reduces the light areas with the amount defined by the level parameter<br />
+BLUR<br />
+Executes a Guassian blur with the level parameter specifying the extent of the blurring. If no parameter is used, the blur is equivalent to Guassian blur of radius 1. Larger values increase the blur.<br />
 <br />
-DILATE - increases the light areas with the amount defined by the level parameter
+ERODE<br />
+Reduces the light areas with the amount defined by the parameter. No parameter is used.<br />
+<br />
+DILATE<br />
+Increases the light areas with the amount defined by the parameter. No parameter is used.<br />
 ]]></description>
 
 </root>
