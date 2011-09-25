@@ -13,6 +13,7 @@
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
 - normal() example needed  --SM
+- image not correct for color(), should not have a stroke  --SM
 - lightFalloff() example needed  --SM
 - implements example needed  --SM
 - look at example for red() to make clearer  --SM
@@ -143,6 +144,7 @@ $ 2 David Muth examples  --CR
 - New PDF w/ typography  --CR,BF
 - Syntax hightlighting for Example code online --FJ
 
+  DONE
 o New GUI  --DS
 x Scrollbar example needs new images that fit the new size and the @pjs directive  --CR
 x Mention examples are running with Processing.js  --CR
