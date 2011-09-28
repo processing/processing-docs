@@ -7,17 +7,17 @@
 <subcategory>Creating &amp; Reading</subcategory>
 
 <example>
-<image>color_.gif</image>
+<image>color_.png</image>
 <code><![CDATA[
-color c1 = color(102, 102, 0);
-fill(c1);
-noStroke();
-rect(30, 20, 55, 55);
+color c = color(255, 204, 0);  // Define color 'c'
+fill(c);  // Use color variable 'c' as fill color
+noStroke();  // Don't draw a stroke around shapes
+rect(30, 20, 55, 55);  // Draw rectangle
 ]]></code>
 </example>
 
 <description><![CDATA[
-Creates colors for storing in variables of the <b>color</b> datatype. The parameters are interpreted as RGB or HSB values depending on the current <b>colorMode()</b>. The default mode is RGB values from 0 to 255 and therefore, the function call <b>color(255, 204, 0)</b> will return a bright yellow color. More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
+Creates colors for storing in variables of the <b>color</b> datatype. The parameters are interpreted as RGB or HSB values depending on the current <b>colorMode()</b>. The default mode is RGB values from 0 to 255 and, therefore, the function call <b>color(255, 204, 0)</b> will return a bright yellow color. More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
 ]]></description>
 
 </root>
