@@ -81,9 +81,9 @@ authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
 sentence=A lightweight library for creating animations and transitions.
 url=http://www.looksgood.de/libraries/Ani/
-prettyVersion=1.3
+prettyVersion=2.0
 paragraph=
-version=1
+version=2
 download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
 
 library
@@ -140,4 +140,13 @@ prettyVersion=1.50a
 paragraph=
 version=6
 download=http://hemesh.wblut.com/hemesh-latest.zip
+
+library
+category=3D
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+name=PeasyCam
+sentence=A mouse driven camera-control library for 3D sketches.
+url=http://mrfeinberg.com/peasycam/
+version=101
+download=http://mrfeinberg.com/peasycam/peasycam.zip
 
