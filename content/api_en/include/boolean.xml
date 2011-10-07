@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>boolean.gif</image>
+<image>boolean.png</image>
 <code><![CDATA[
 boolean a = false; 
 if (!a) { 

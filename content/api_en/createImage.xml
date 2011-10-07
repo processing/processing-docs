@@ -7,7 +7,7 @@
 <subcategory></subcategory>
 
 <example>
-<image>createImage.jpg</image>
+<image>createImage_0.png</image>
 <code><![CDATA[
 PImage img = createImage(66, 66, RGB);
 img.loadPixels();
@@ -20,7 +20,7 @@ image(img, 17, 17);
 </example>
 
 <example>
-<image>createImage_2.jpg</image>
+<image>createImage_1.png</image>
 <code><![CDATA[
 PImage img = createImage(66, 66, ARGB);
 img.loadPixels();

@@ -7,7 +7,7 @@
 <subcategory>Creating &amp; Reading</subcategory>
 
 <example>
-<image>blend_color.gif</image>
+<image>blendColor_.png</image>
 <code><![CDATA[
 color orange = color(204, 102, 0);
 color blue = color(0, 102, 153);

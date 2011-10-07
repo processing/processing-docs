@@ -7,7 +7,7 @@
 <subcategory>Creating &amp; Reading</subcategory>
 
 <example>
-<image>brightness_.gif</image>
+<image>brightness_.png</image>
 <code><![CDATA[
 noStroke();
 colorMode(HSB, 255);

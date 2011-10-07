@@ -7,7 +7,7 @@
 <subcategory>Vertex</subcategory>
 
 <example>
-<image>bezierVertex_.gif</image>
+<image>bezierVertex_0.png</image>
 <code><![CDATA[
 noFill();
 beginShape();
@@ -18,7 +18,7 @@ endShape();
 </example>
 
 <example>
-<image>bezierVertex_2.gif</image>
+<image>bezierVertex_1.png</image>
 <code><![CDATA[
 beginShape();
 vertex(30, 20);

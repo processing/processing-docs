@@ -7,10 +7,12 @@
 <subcategory>Curves</subcategory>
 
 <example>
-<image>curvePoint_.gif</image>
+<image>curvePoint_.png</image>
 <code><![CDATA[
+noFill();
 curve(5, 26, 5, 26, 73, 24, 73, 61);
-curve(5, 26, 73, 24, 73, 61, 15, 65); 
+curve(5, 26, 73, 24, 73, 61, 15, 65);
+fill(255);
 ellipseMode(CENTER);
 int steps = 6;
 for (int i = 0; i <= steps; i++) {

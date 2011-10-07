@@ -7,19 +7,23 @@
 <subcategory>3D Primitives</subcategory>
 
 <example>
-<image>box_.gif</image>
+<image>box_0.png</image>
 <code><![CDATA[
+size(100, 100, P3D);
 translate(58, 48, 0); 
 rotateY(0.5);
+noFill();
 box(40);
 ]]></code>
 </example>
 
 <example>
-<image>box_2.gif</image>
+<image>box_1.png</image>
 <code><![CDATA[
+size(100, 100, P3D);
 translate(58, 48, 0); 
 rotateY(0.5);
+noFill();
 box(40, 20, 50);
 ]]></code>
 </example>

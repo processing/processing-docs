@@ -7,25 +7,25 @@
 <subcategory>Setting</subcategory>
 
 <example>
-<image>background_.gif</image>
+<image>background_0.png</image>
 <code><![CDATA[
-background(51); 
+background(51);
 ]]></code>
 </example>
 
 <example>
-<image>background_2.gif</image>
+<image>background_1.png</image>
 <code><![CDATA[
 background(255, 204, 0);
 ]]></code>
 </example>
 
 <example>
-<image>background_3.jpg</image>
+<image>background_2.png</image>
 <code><![CDATA[
 PImage img;
 img = loadImage("laDefense.jpg");
-background(img); 
+background(img);
 ]]></code>
 </example>
 

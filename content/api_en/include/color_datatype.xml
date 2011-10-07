@@ -7,7 +7,7 @@
 <subcategory>Primitive</subcategory>
 
 <example>
-<image>color.gif</image>
+<image>color.png</image>
 <code><![CDATA[
 color c1 = color(204, 153, 0);
 color c2 = #FFCC00;

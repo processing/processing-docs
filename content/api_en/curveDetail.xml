@@ -7,7 +7,7 @@
 <subcategory>Curves</subcategory>
 
 <example>
-<image>curveDetail_.gif</image>
+<image>curveDetail_.png</image>
 <code><![CDATA[
 void setup() {
   size(100, 100, P3D);

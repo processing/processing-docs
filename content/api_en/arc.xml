@@ -3,7 +3,7 @@
 <name>arc()</name>
 
 <example>
-<image>arc_.gif</image>
+<image>arc_.png</image>
 <code><![CDATA[
 arc(50, 55, 50, 50, 0, HALF_PI);
 noFill();

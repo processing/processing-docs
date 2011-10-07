@@ -7,7 +7,7 @@
 <subcategory></subcategory>
 
 <example>
-<image>applyMatrix_.gif</image>
+<image>applyMatrix_.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 noFill();

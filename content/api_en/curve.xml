@@ -7,7 +7,7 @@
 <subcategory>Curves</subcategory>
 
 <example>
-<image>curve_.gif</image>
+<image>curve_.png</image>
 <code><![CDATA[
 noFill();
 stroke(255, 102, 0);

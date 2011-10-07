@@ -7,7 +7,7 @@
 <subcategory>Curves</subcategory>
 
 <example>
-<image>curveTangent_.gif</image>
+<image>curveTangent_.png</image>
 <code><![CDATA[
 noFill();
 curve(5, 26, 73, 24, 73, 61, 15, 65); 
@@ -27,7 +27,7 @@ for (int i = 0; i <= steps; i++) {
 </example>
 
 <description><![CDATA[
-Calculates the tangent of a point on a curve. There's a good definition of <em><a href="http://en.wikipedia.org/wiki/Tangent" target="new">tangent</em> on Wikipedia</a>.
+Calculates the tangent of a point on a curve. There's a good definition of <a href="http://en.wikipedia.org/wiki/Tangent" target="new"><em>tangent</em> on Wikipedia</a>.
 ]]></description>
 
 </root>

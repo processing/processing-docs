@@ -7,7 +7,7 @@
 <subcategory>Lights</subcategory>
 
 <example>
-<image>ambientLight_.gif</image>
+<image>ambientLight_0.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 background(0);
@@ -19,12 +19,11 @@ translate(20, 50, 0);
 sphere(30);
 translate(60, 0, 0);
 sphere(30);
-
 ]]></code>
 </example>
 
 <example>
-<image>directional_ambient_.jpg</image>
+<image>ambientLight_1.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 background(0);
