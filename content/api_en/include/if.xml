@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>if_.gif</image>
+<image>if_.png</image>
 <code><![CDATA[
 for (int i = 5; i < height; i += 5) {
   stroke(255);  //Set the color to white

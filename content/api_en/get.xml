@@ -7,24 +7,24 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>get_.jpg</image>
+<image>get_0.png</image>
 <code><![CDATA[
-PImage myImage = loadImage("topanga.jpg");
+PImage myImage = loadImage("apples.jpg");
 image(myImage, 0, 0);
 PImage c = get();
 image(c, width/2, 0);
-
 ]]></code>
 </example>
 
 <example>
-<image>get_2.jpg</image>
+<image>get_1.png</image>
 <code><![CDATA[
-PImage myImage = loadImage("topanga.jpg");
+PImage myImage = loadImage("apples.jpg");
 image(myImage, 0, 0);
-color c = get(30, 20);
+color c = get(25, 25);
 fill(c);
-rect(30, 20, 55, 55);
+noStroke();
+rect(25, 25, 50, 50);
 ]]></code>
 </example>
 

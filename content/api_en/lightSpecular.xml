@@ -7,7 +7,7 @@
 <subcategory>Lights</subcategory>
 
 <example>
-<image>lightSpecular_.jpg</image>
+<image>lightSpecular_.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 background(0);
@@ -22,7 +22,6 @@ sphere(30);
 translate(60, 0, 0);
 specular(102, 102, 102);
 sphere(30);
-
 ]]></code>
 </example>
 

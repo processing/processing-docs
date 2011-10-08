@@ -7,7 +7,7 @@
 <subcategory>Setting</subcategory>
 
 <example>
-<image>noFill_.gif</image>
+<image>noFill_.png</image>
 <code><![CDATA[
 rect(15, 10, 55, 55);
 noFill();

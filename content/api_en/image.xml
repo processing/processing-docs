@@ -7,7 +7,7 @@
 <subcategory>Loading &amp; Displaying</subcategory>
 
 <example>
-<image>image_.jpg</image>
+<image>image_0.png</image>
 <code><![CDATA[
 PImage img;
 
@@ -24,7 +24,7 @@ void draw() {
 
 
 <example>
-<image>image_2.jpg</image>
+<image>image_1.png</image>
 <code><![CDATA[
 PImage img;
 

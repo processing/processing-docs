@@ -7,7 +7,7 @@
 <subcategory>Vertex</subcategory>
 
 <example>
-<image>endShape_.gif</image>
+<image>endShape_.png</image>
 <code><![CDATA[
 noFill();
 
@@ -22,7 +22,6 @@ vertex(50, 20);
 vertex(75, 20);
 vertex(75, 80);
 endShape();
-
 ]]></code>
 </example>
 

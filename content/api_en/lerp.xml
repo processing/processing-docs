@@ -9,7 +9,7 @@
 <subcategory>Calculation</subcategory>
 
 <example>
-<image>lerp_.gif</image>
+<image>lerp_0.png</image>
 <code><![CDATA[
 float a = 20;
 float b = 80;
@@ -27,7 +27,7 @@ endShape();
 </example>
 
 <example>
-<image>lerp_2.gif</image>
+<image>lerp_1.png</image>
 <code><![CDATA[
 int x1 = 15;
 int y1 = 10;

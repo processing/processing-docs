@@ -7,17 +7,16 @@
 <subcategory>Loading &amp; Displaying</subcategory>
 
 <example>
-<image>svg.jpg</image>
+<image>loadShape_0.png</image>
 <code><![CDATA[
 PShape s;
 s = loadShape("bot.svg");
-smooth();
 shape(s, 10, 10, 80, 80);
 ]]></code>
 </example>
 
 <example>
-<image>svg.jpg</image>
+<image>loadShape_1.png</image>
 <code><![CDATA[
 // Loading a shape when using setup() and draw()
 
@@ -25,8 +24,6 @@ PShape s;
 
 void setup() {
   s = loadShape("bot.svg");
-  smooth();
-  noLoop();
 }
 
 void draw() {

@@ -7,7 +7,7 @@
 <subcategory>Lights</subcategory>
 
 <example>
-<image>lights_.jpg</image>
+<image>lights_0.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 background(0);
@@ -23,7 +23,7 @@ sphere(30);
 </example>
 
 <example>
-<image>lights_2.jpg</image>
+<image>lights_1.png</image>
 <code><![CDATA[
 void setup() {
   size(100, 100, P3D);
@@ -40,7 +40,6 @@ void draw() {
   translate(60, 0, 0);
   sphere(30);
 }
-
 ]]></code>
 </example>
 

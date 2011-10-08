@@ -8,10 +8,10 @@
 <subcategory>Method</subcategory>
 
 <example>
-<image>PImage_blend_add.jpg</image>
+<image>PImage_blend_add.png</image>
 <code><![CDATA[
 PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("degaul.jpg"); 
+PImage img2 = loadImage("bricks.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, ADD); 
 image(img, 0, 0);
 image(img2, 0, 0);
@@ -19,10 +19,10 @@ image(img2, 0, 0);
 </example>
 
 <example>
-<image>PImage_blend_subtract.jpg</image>
+<image>PImage_blend_subtract.png</image>
 <code><![CDATA[
 PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("degaul.jpg"); 
+PImage img2 = loadImage("bricks.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, SUBTRACT); 
 image(img, 0, 0);
 image(img2, 0, 0);
@@ -30,10 +30,10 @@ image(img2, 0, 0);
 </example>
 
 <example>
-<image>PImage_blend_darkest.jpg</image>
+<image>PImage_blend_darkest.png</image>
 <code><![CDATA[
 PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("degaul.jpg"); 
+PImage img2 = loadImage("bricks.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST); 
 image(img, 0, 0);
 image(img2, 0, 0);
@@ -41,10 +41,10 @@ image(img2, 0, 0);
 </example>
 
 <example>
-<image>PImage_blend_lightest.jpg</image>
+<image>PImage_blend_lightest.png</image>
 <code><![CDATA[
 PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("degaul.jpg"); 
+PImage img2 = loadImage("bricks.jpg"); 
 img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST); 
 image(img, 0, 0);
 image(img2, 0, 0);

@@ -7,13 +7,13 @@
 <subcategory>Loading &amp; Displaying</subcategory>
 
 <example>
-<image>noTint_.jpg</image>
+<image>noTint_.png</image>
 <code><![CDATA[
 PImage img;
 img = loadImage("laDefense.jpg");
-tint(0, 153, 204); // Tint blue
+tint(0, 153, 204);  // Tint blue
 image(img, 0, 0);
-noTint(); // Disable tint
+noTint();  // Disable tint
 image(img, 50, 0);
 ]]></code>
 </example>

@@ -7,14 +7,14 @@
 <subcategory>Loading &amp; Displaying</subcategory>
 
 <example>
-<image>loadFont_.gif</image>
+<image>loadFont_.png</image>
 <code><![CDATA[
 PFont font;
 // The font must be located in the sketch's 
 // "data" directory to load successfully
-font = loadFont("FFScala-32.vlw"); 
-textFont(font, 32); 
-text("word", 15, 50); 
+font = loadFont("LetterGothicStd-32.vlw");
+textFont(font, 32);
+text("word", 10, 50);
 ]]></code>
 </example>
 

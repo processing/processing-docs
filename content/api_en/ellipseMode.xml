@@ -7,7 +7,7 @@
 <subcategory>Attributes</subcategory>
 
 <example>
-<image>ellipseMode_.gif</image>
+<image>ellipseMode_.png</image>
 <code><![CDATA[
 ellipseMode(CENTER);
 ellipse(35, 35, 50, 50);

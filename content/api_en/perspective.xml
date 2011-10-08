@@ -7,7 +7,7 @@
 <subcategory>Camera</subcategory>
 
 <example>
-<image>perspective_.gif</image>
+<image>perspective_.png</image>
 <code><![CDATA[
 // Re-creates the default perspective
 size(100, 100, P3D);

@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>logicalOR.gif</image>
+<image>logicalOR.png</image>
 <code><![CDATA[
 for (int i = 5 ; i <= 95; i += 5) {
   if ((i < 35) || (i > 60)) {

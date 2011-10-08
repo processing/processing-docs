@@ -7,7 +7,7 @@
 <subcategory>Setting</subcategory>
 
 <example>
-<image>noStroke_.gif</image>
+<image>noStroke_.png</image>
 <code><![CDATA[
 noStroke();
 rect(30, 20, 55, 55);

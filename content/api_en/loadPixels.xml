@@ -7,10 +7,10 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>loadPixels_.jpg</image>
+<image>loadPixels_.png</image>
 <code><![CDATA[
 int halfImage = width*height/2;
-PImage myImage = loadImage("topanga.jpg");
+PImage myImage = loadImage("apples.jpg");
 image(myImage, 0, 0);
 
 loadPixels();

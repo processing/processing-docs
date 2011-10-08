@@ -5,40 +5,40 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>filter_threshold.jpg</image>
+<image>filter_0_threshold.png</image>
 <code><![CDATA[
 PImage img;
-img = loadImage("topanga.jpg");
+img = loadImage("apples.jpg");
 image(img, 0, 0);
 filter(THRESHOLD);
 ]]></code>
 </example>
 
 <example>
-<image>filter_gray.jpg</image>
+<image>filter_1_gray.png</image>
 <code><![CDATA[
 PImage img;
-img = loadImage("topanga.jpg");
+img = loadImage("apples.jpg");
 image(img, 0, 0);
 filter(GRAY);
 ]]></code>
 </example>
 
 <example>
-<image>filter_invert.jpg</image>
+<image>filter_2_invert.png</image>
 <code><![CDATA[
 PImage img;
-img = loadImage("topanga.jpg");
+img = loadImage("apples.jpg");
 image(img, 0, 0);
 filter(INVERT);
 ]]></code>
 </example>
 
 <example>
-<image>filter_posterize.jpg</image>
+<image>filter_3_posterize.png</image>
 <code><![CDATA[
 PImage img;
-img = loadImage("topanga.jpg");
+img = loadImage("apples.jpg");
 image(img, 0, 0);
 filter(GRAY);
 filter(POSTERIZE, 4);
@@ -46,10 +46,10 @@ filter(POSTERIZE, 4);
 </example>
 
 <example>
-<image>filter_blur.jpg</image>
+<image>filter_4_blur.png</image>
 <code><![CDATA[
 PImage img;
-img = loadImage("topanga.jpg");
+img = loadImage("apples.jpg");
 image(img, 0, 0);
 filter(BLUR, 6);
 ]]></code>
