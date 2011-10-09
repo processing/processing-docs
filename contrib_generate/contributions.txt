@@ -21,17 +21,6 @@ version=1
 download=http://www.silentlycrashing.net/ezgestures/files/ezgestures.zip
 
 library
-category=Simulation & Math
-authorList=[Carl-Johan Rosén](http://www.carljohanrosen.com)
-name=Cell Noise
-sentence=Algorithm for generating cell/worley noise.
-url=http://www.carljohanrosen.com/processing/
-prettyVersion=1.0
-paragraph=These patterns are useful in animation and more.
-version=1
-download=http://www.carljohanrosen.com/processing/images/cellnoise-latest.zip
-
-library
 category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
 name=gicentreUtils
@@ -65,15 +54,26 @@ version=2
 download=http://nootropicdesign.com/processing-layers/downloads/layers.zip
 
 library
-category=Video & Vision
-authorList=[Daniel Shiffman](http://www.shiffman.net)
-name=Open Kinect
-sentence=A Kinect implementation for Processing using open source drivers (libfreenect)
-url=http://www.shiffman.net/p5/kinect/
-prettyVersion=0.1a
-paragraph=
+category=Simulation
+authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
+name=Fisica
+sentence=A wrapper for JBox2D, a 2D physics engine.
+url=http://www.ricardmarxer.com/fisica
+prettyVersion=
+paragraph=It is simply a wrapper around [JBox2D](http://www.jbox2d.org/). It tries to make it much easier to create physical models by exposing an object oriented API similar to [PPhys2D](http://pphys2d.jmcouillard.com/) physics library for Processing.
+version=10
+download=http://www.ricardmarxer.com/fisica/download/fisica.zip
+
+library
+category=Simulation
+authorList=[Carl-Johan Rosén](http://www.carljohanrosen.com)
+name=Cell Noise
+sentence=Algorithm for generating cell/worley noise.
+url=http://www.carljohanrosen.com/processing/
+prettyVersion=1.0
+paragraph=These patterns are useful in animation and more.
 version=1
-download=http://www.shiffman.net/p5/libraries/openkinect/openkinect.zip
+download=http://www.carljohanrosen.com/processing/images/cellnoise-latest.zip
 
 library
 category=Animation
@@ -85,6 +85,17 @@ prettyVersion=2.0
 paragraph=
 version=2
 download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
+
+library
+category=Video & Vision
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=Open Kinect
+sentence=A Kinect implementation for Processing using open source drivers (libfreenect)
+url=http://www.shiffman.net/p5/kinect/
+prettyVersion=0.1a
+paragraph=
+version=1
+download=http://www.shiffman.net/p5/libraries/openkinect/openkinect.zip
 
 library
 category=Data
