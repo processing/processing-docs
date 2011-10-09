@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="Max Planck Reasearch Networks" by="Moritz Stefaner and Christopher Warnow" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/maxplanck.jpg</image>
+		  <description>
+			  This multi-touch installation reveals how Max Planck Institutes collaborate with each other, and with their international partners. For this visualization, the team analysed data from SciVerse Scopus for over 94,000 publications over the last ten years. A dynamic network and touch interface provide a high-level map of the institutes and their connections.
+		  </description>
+		  <location>http://max-planck-research-networks.net/</location>
+		 <link href="http://max-planck-research-networks.net">Max Planck Reasearch Networks</link>
+	</software>
+	
 	<software name="The Creators" by="Constanza Casas, Mark C Mitchell and Pieter Steyaert" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/creators.jpg</image>
 		  <description>
