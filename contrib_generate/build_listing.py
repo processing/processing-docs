@@ -59,8 +59,10 @@ def read_exports(f):
   """
   Reads a library's export.txt file and returns a dictionary.
   """
+  lines = f.read().replace('\r\n', '\n').replace('\r', '\n')
+  lines = lines.split('\n')
   export_table = {}
-  for line in f.readlines():
+  for line in lines:
     hash = line.find('#')
     line = line.strip() if hash == -1 else line[:hash]
     if len(line) == 0:
