@@ -7,11 +7,10 @@
 <subcategory>PShape</subcategory>
 
 <example>
-<image>svg.jpg</image>
+<image>PShape.png</image>
 <code><![CDATA[
 PShape s;
 s = loadShape("bot.svg");
-smooth();
 shape(s, 10, 10, 80, 80);
 ]]></code>
 </example>

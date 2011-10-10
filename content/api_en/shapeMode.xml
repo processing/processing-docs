@@ -7,14 +7,12 @@
 <subcategory>Loading &amp; Displaying</subcategory>
 
 <example>
-<image>shapeMode.jpg</image>
+<image>shapeMode_.png</image>
 <code><![CDATA[
-PShape bot = loadShape("bot1.svg");
-smooth();
+PShape bot = loadShape("bot.svg");
 shapeMode(CENTER);
 shape(bot, 35, 35, 50, 50);
 shapeMode(CORNER);
-fill(102);
 shape(bot, 35, 35, 50, 50);
 ]]></code>
 </example>

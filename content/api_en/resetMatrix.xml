@@ -7,7 +7,7 @@
 <subcategory></subcategory>
 
 <example>
-<image>resetMatrix_.gif</image>
+<image>resetMatrix_.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 noFill();
@@ -31,7 +31,7 @@ printMatrix();
 </example>
 
 <description><![CDATA[
-Replaces the current matrix with the identity matrix. The equivalent function in OpenGL is glLoadIdentity(). 
+Replaces the current matrix with the identity matrix. The equivalent function in OpenGL is <b>glLoadIdentity()</b>. 
 ]]></description>
 
 

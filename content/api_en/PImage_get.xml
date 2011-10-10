@@ -7,24 +7,24 @@
 <subcategory>Method</subcategory>
 
 <example>
-<image>PImage_get.jpg</image>
+<image>PImage_get_0.png</image>
 <code><![CDATA[
-PImage img = loadImage("tower.jpg");
+PImage img = loadImage("rockies.jpg");
 background(img);
-noStroke(); 
-color c = img.get(60, 90); 
-fill(c); 
-rect(25, 25, 50, 50); 
+noStroke();
+color c = img.get(60, 90);
+fill(c);
+rect(25, 25, 50, 50);
 ]]></code>
 </example>
 
 <example>
-<image>PImage_get2.jpg</image>
+<image>PImage_get_1.png</image>
 <code><![CDATA[
-PImage img = loadImage("tower.jpg");
+PImage img = loadImage("rockies.jpg");
 background(img);
-PImage img = img.get(50, 0, 50, 100); 
-image(img, 0, 0);  
+PImage img2 = img.get(50, 0, 50, 100); 
+image(img2, 0, 0); 
 ]]></code>
 </example>
 

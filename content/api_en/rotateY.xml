@@ -7,7 +7,7 @@
 <subcategory></subcategory>
 
 <example>
-<image>rotateY_.gif</image>
+<image>rotateY_0.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 translate(width/2, height/2);
@@ -17,7 +17,7 @@ rect(-26, -26, 52, 52);
 </example>
 
 <example>
-<image>rotateY_.gif</image>
+<image>rotateY_1.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
 translate(width/2, height/2);

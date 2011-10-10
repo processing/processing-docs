@@ -8,17 +8,17 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>updatePixels_.jpg</image>
+<image>PImage_updatePixels_.png</image>
 <code><![CDATA[
 PImage myImage;
 int halfImage;
 
 void setup() {
   halfImage = width * height/2;
-  myImage = loadImage("topanga.jpg");
+  myImage = loadImage("apples.jpg");
   myImage.loadPixels();
   for (int i = 0; i < halfImage; i++) {
-    myImage.pixels[i+halfImage] = pixels[i];
+    myImage.pixels[i+halfImage] = myImage.pixels[i];
   }
   myImage.updatePixels();
 }

@@ -7,7 +7,7 @@
 <subcategory></subcategory>
 
 <example>
-<image>shearY_.gif</image>
+<image>shearY_.png</image>
 <code><![CDATA[
 size(100, 100);
 translate(width/4, height/4);

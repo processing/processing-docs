@@ -10,15 +10,16 @@
 <image>noSmooth_.png</image>
 <code><![CDATA[
 background(0);
+noStroke();
 smooth();
-ellipse(70, 48, 36, 36);
-noSmooth();
 ellipse(30, 48, 36, 36);
+noSmooth();
+ellipse(70, 48, 36, 36);
 ]]></code>
 </example>
 
 <description><![CDATA[
-Draws all geometry with jagged (aliased) edges.
+Draws all geometry with jagged (aliased) edges.  Note that <b>smooth()</b> is active by default, so it is necessary to call <b>noSmooth()</b> to disable smoothing of geometry, images, and fonts.
 ]]></description>
 
 </root>

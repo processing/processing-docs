@@ -7,16 +7,15 @@
 <subcategory>Method</subcategory>
 
 <example>
-<image>PShape_visible.jpg</image>
+<image>PShape_setVisible_.png</image>
 <code><![CDATA[
 // The file "bot.svg" must be in the data folder
 // of the current sketch to load successfully
 PShape s;
 s = loadShape("bot.svg");
-smooth();
-shape(s, 10, 10, 80, 80);      // Right shape
+shape(s, 10, 10, 80, 80);  // Draw shape
 s.setVisible(false);
-if (s.isVisible() == false) {  // of if (!s.isVisible) {
+if (s.isVisible() == false) {  // Or use: if (!s.isVisible) {
   noFill();
   rect(5, 5, 90, 90); 
 }

@@ -7,7 +7,7 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>pixels.gif</image>
+<image>pixels.png</image>
 <code><![CDATA[
 color pink = color(255, 102, 204);
 loadPixels();

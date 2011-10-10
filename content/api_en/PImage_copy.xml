@@ -8,12 +8,12 @@
 <subcategory>Method</subcategory>
 
 <example>
-<image>PImage_copy.jpg</image>
+<image>PImage_copy_.png</image>
 <code><![CDATA[
 PImage img;
 
 void setup() {
-  img = loadImage("tower.jpg");
+  img = loadImage("apples.jpg");
   int x = width/2;
   img.copy(x, 0, x, height, 0, 0, x, height);
 }

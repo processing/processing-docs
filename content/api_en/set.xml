@@ -7,7 +7,7 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>set_.gif</image>
+<image>set_0.png</image>
 <code><![CDATA[
 color black = color(0);
 set(30, 20, black);
@@ -18,7 +18,7 @@ set(30, 75, black);
 </example>
 
 <example>
-<image>set_2.jpg</image>
+<image>set_1.png</image>
 <code><![CDATA[
 for (int i = 30; i < width-15; i++) {
   for (int j = 20; j < height-25; j++) {
@@ -30,10 +30,10 @@ for (int i = 30; i < width-15; i++) {
 </example>
 
 <example>
-<image>set_3.jpg</image>
+<image>set_2.png</image>
 <code><![CDATA[
 size(100, 100);
-PImage myImage = loadImage("topanga.jpg");
+PImage myImage = loadImage("apples.jpg");
 set(0, 0, myImage);
 line(0, 0, width, height);
 line(0, height, width, 0);

@@ -7,7 +7,7 @@
 <subcategory>Method</subcategory>
 
 <example>
-<image>PImage_resize.jpg</image>
+<image>PImage_resize_0.png</image>
 <code><![CDATA[
 PImage img = loadImage("jelly.jpg");
 image(img, 0, 0);
@@ -17,7 +17,7 @@ image(img, 0, 0);
 </example>
 
 <example>
-<image>PImage_resize_2.jpg</image>
+<image>PImage_resize_1.png</image>
 <code><![CDATA[
 PImage img = loadImage("jelly.jpg");
 image(img, 0, 0);

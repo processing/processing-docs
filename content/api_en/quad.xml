@@ -7,7 +7,7 @@
 <subcategory>2D Primitives</subcategory>
 
 <example>
-<image>quad_.gif</image>
+<image>quad_.png</image>
 <code><![CDATA[
 quad(38, 31, 86, 20, 69, 63, 30, 76);
 ]]></code>

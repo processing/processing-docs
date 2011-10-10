@@ -7,13 +7,12 @@
 <subcategory>Method</subcategory>
 
 <example>
-<image>PShape_disableStyle.jpg</image>
+<image>PShape_disableStyle_.png</image>
 <code><![CDATA[
 // The file "bot.svg" must be in the data folder
 // of the current sketch to load successfully
 PShape s;
 s = loadShape("bot.svg");
-smooth();
 shape(s, -30, 10, 80, 80);
 s.disableStyle();
 shape(s, 50, 10, 80, 80);

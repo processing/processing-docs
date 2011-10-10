@@ -8,14 +8,14 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>filter_.jpg</image>
+<image>PImage_filter_0.png</image>
 <code><![CDATA[
 PImage img1, img2;
 
 void setup() {
-  img1 = loadImage("archcrop.jpg");
-  img2 = loadImage("archcrop.jpg");
-  img1.filter(GRAY);
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img2.filter(GRAY);
 }
 
 void draw() {
@@ -26,15 +26,15 @@ void draw() {
 </example>
 
 <example>
-<image>filter_2.gif</image>
+<image>PImage_filter_1.png</image>
 <code><![CDATA[
 PImage img1, img2;
 
 void setup() {
-  img1 = loadImage("archcrop.jpg");
-  img2 = loadImage("archcrop.jpg");
-  img1.filter(THRESHOLD, .6);
-  img2.filter(THRESHOLD, .4);
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img1.filter(THRESHOLD, 0.3);
+  img2.filter(THRESHOLD, 0.7);
 }
 
 void draw() {

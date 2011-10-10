@@ -7,8 +7,9 @@
 <subcategory>2D Primitives</subcategory>
 
 <example>
-<image>point_.gif</image>
+<image>point_0.png</image>
 <code><![CDATA[
+noSmooth();
 point(30, 20);
 point(85, 20);
 point(85, 75);
@@ -17,9 +18,10 @@ point(30, 75);
 </example>
 
 <example>
-<image>point_2.gif</image>
+<image>point_1.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
+noSmooth();
 point(30, 20, -50);
 point(85, 20, -50);
 point(85, 75, -50);
