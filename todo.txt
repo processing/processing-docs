@@ -5,29 +5,34 @@
 - Parameter decisions  --BF,CR,SM
 
 - Parameter alignment (after above decisions)  --SM
-- New PNG images for reference for smooth() change  --SM
 - All in "reviewing_reference.txt" file produced by Cindy  --SM
 
 - Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
-- normal() example needed  --SM
 - image not correct for color(), should not have a stroke  --SM
-- lightFalloff() example needed  --SM
-- implements example needed  --SM
 - look at example for red() to make clearer  --SM
 - null has a blank 'Examples'  --SM
-- createInput() example  --SM
 - PGraphics link to developers reference  --SM
-- Add examples for filter() and PImage.filter() for erode() and dilate() methods  --SM
+- Add examples to filter() and PImage.filter() for erode() and dilate() methods  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
 - add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
+- create examples for all of the following:  --SM
+	normal()
+	lightFalloff()
+	createInput()
+	implements
+- General writing and style clean-up: check the comments in all examples to make sure:  --SM
+	variable names are put in single quotes (not double quotes!)
+	println values are put in double quotes
 
 
 RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
+- Add as related to each other: specular() and lightSpecular() --SM
+- Add ">>" as related to each of these: red(), blue(), green()
 
 - Add @see_external links where appropriate  --SM
     note: use is with the file naming convention for simplicity
@@ -101,6 +106,7 @@ x Navigation for Libraries and Tools in Reference is broken  --CR
 x PImage's mask() needs an @brief  --CR
 x Modify build script to work on Server  --CR
 x loadShape() not in index.html  --CR
+x New PNG images for reference for smooth() change  --SM
 
 
 // // // // // // // // // // // // // // // // // // // // //
