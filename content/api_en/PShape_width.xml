@@ -13,7 +13,6 @@
 // of the current sketch to load successfully
 PShape s;
 s = loadShape("bot.svg");
-smooth();
 shape(s);
 println(s.width);  // Prints 281.0, the width of the shape
 ]]></code>

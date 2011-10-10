@@ -14,7 +14,6 @@ PShape s;
 void setup() {
   size(100, 100);
   s = loadShape("ohio.svg");
-  smooth();
 }
 
 void draw() {

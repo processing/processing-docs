@@ -13,7 +13,6 @@ PShape s;
 
 void setup() {
   s = loadShape("bot.svg");
-  smooth();
 }
 
 void draw() {

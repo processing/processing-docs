@@ -13,7 +13,6 @@
 PVector v;
 
 void setup() {
-  smooth();
   noLoop();
   v = new PVector(5, 10, 0);
 }
@@ -32,7 +31,6 @@ void draw() {
 PVector v1, v2;
 
 void setup() {
-  smooth();
   noLoop();
   v1 = new PVector(5, 10, 0);
   v2 = new PVector(15, 8, 0); 
@@ -53,7 +51,6 @@ void draw() {
 PVector v1;
 
 void setup() {
-  smooth();
   noLoop();
   v1 = new PVector(5, 10, 0);
 }
@@ -72,7 +69,6 @@ void draw() {
 PVector v1, v2;
 
 void setup() {
-  smooth();
   noLoop();
   v1 = new PVector(5, 10, 0);
   v2 = new PVector(15, 8, 0); 
