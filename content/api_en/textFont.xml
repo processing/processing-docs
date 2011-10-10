@@ -7,14 +7,14 @@
 <subcategory>Loading &amp; Displaying</subcategory>
 
 <example>
-<image>textFont_.gif</image>
+<image>textFont_.png</image>
 <code><![CDATA[
-PFont metaBold;
-// The font "Meta-Bold.vlw" must be located in the 
+PFont letterGothic;
+// The font "LetterGothicStd-48.vlw" must be located in the 
 // current sketch's "data" directory to load successfully
-metaBold = loadFont("Meta-Bold.vlw");
-textFont(metaBold, 44); 
-text("word", 15, 50); 
+letterGothic = loadFont("LetterGothicStd-32.vlw");
+textFont(letterGothic, 32);
+text("word", 10, 50);
 ]]></code>
 </example>
 

@@ -7,21 +7,23 @@
 <subcategory>Metrics</subcategory>
 
 <example>
-<image>textDescent_.gif</image>
+<image>textDescent_.png</image>
 <code><![CDATA[
 PFont font;
-font = loadFont("FFScala-32.vlw"); 
+font = loadFont("Sabon-Roman-32.vlw");
 textFont(font);
 
-textSize(32); 
-float descent = textDescent();
-text("dp", 0, 70);
-line(0, 70+descent, 100, 70+descent); 
+float base = height * 0.75;
 
-textSize(64);
-descent = textDescent();
-text("dp", 35, 70);
-line(35, 70+descent, 100, 70+descent); 
+textSize(32);  // Set initial text size
+float d = textDescent();  // Calc descent
+line(0, base+d, width, base+d);
+text("dp", 0, base);  // Draw text on baseline
+
+textSize(60);  // Increase text size
+d = textDescent();  // Recalc descent
+line(40, base+d, width, base+d);
+text("dp", 40, base);  // Draw text on baseline
 ]]></code>
 </example>
 

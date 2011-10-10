@@ -7,10 +7,11 @@
 <subcategory>Vertex</subcategory>
 
 <example>
-<image>textureMode_.gif</image>
+<image>textureMode_0.png</image>
 <code><![CDATA[
+size(100, 100, P3D);
 noStroke();
-PImage img = loadImage("arch.jpg");
+PImage img = loadImage("laDefense.jpg");
 textureMode(IMAGE);
 beginShape();
 texture(img);
@@ -23,10 +24,11 @@ endShape();
 </example>
 
 <example>
-<image>textureMode_2.gif</image>
+<image>textureMode_1.png</image>
 <code><![CDATA[
+size(100, 100, P3D);
 noStroke();
-PImage img = loadImage("arch.jpg");
+PImage img = loadImage("laDefense.jpg");
 textureMode(NORMALIZED);
 beginShape();
 texture(img);
@@ -39,7 +41,7 @@ endShape();
 </example>
 
 <description><![CDATA[
-Sets the coordinate space for texture mapping. There are two options, IMAGE, which refers to the actual coordinates of the image, and <b>NORMALIZED</b>, which refers to a normalized space of values ranging from 0 to 1. The default mode is <b>IMAGE</b>. In <b>IMAGE</b>, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (0,100) (100,200) (0,200). The same mapping in <b>NORMAL_SPACE</b> is (0,0) (0,1) (1,1) (0,1).
+Sets the coordinate space for texture mapping. There are two options, IMAGE, which refers to the actual coordinates of the image, and NORMALIZED, which refers to a normalized space of values ranging from 0 to 1. The default mode is IMAGE. In IMAGE, if an image is 100 x 200 pixels, mapping the image onto the entire size of a quad would require the points (0,0) (0,100) (100,200) (0,200). The same mapping in NORMAL_SPACE is (0,0) (0,1) (1,1) (0,1).
 ]]></description>
 
 </root>

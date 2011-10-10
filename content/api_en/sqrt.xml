@@ -7,7 +7,7 @@
 <subcategory>Calculation</subcategory>
 
 <example>
-<image>sqrt_.gif</image>
+<image>sqrt_.png</image>
 <code><![CDATA[
 noStroke();
 float a = sqrt(6561);  // Sets a to 81

@@ -7,7 +7,7 @@
 <subcategory>Vertex</subcategory>
 
 <example>
-<image>vertex_.gif</image>
+<image>vertex_0.png</image>
 <code><![CDATA[
 beginShape(POINTS);
 vertex(30, 20);
@@ -19,7 +19,7 @@ endShape();
 </example>
 
 <example>
-<image>vertex_3.gif</image>
+<image>vertex_1.png</image>
 <code><![CDATA[
 // Drawing vertices in 3D requires P3D
 // as a parameter to size()
@@ -34,13 +34,14 @@ endShape();
 </example>
 
 <example>
-<image>vertex_2.gif</image>
+<image>vertex_2.png</image>
 <code><![CDATA[
+size(100, 100, P3D);
+PImage img = loadImage("laDefense.jpg");
 noStroke();
-PImage img = loadImage("arch.jpg");
 beginShape();
 texture(img);
-// "arch.jpg" is 100x100 pixels in size so
+// "laDefense.jpg" is 100x100 pixels in size so
 // the values 0 and 100 are used for the
 // parameters "u" and "v" to map it directly
 // to the vertex points
@@ -53,11 +54,11 @@ endShape();
 </example>
 
 <description><![CDATA[
-All shapes are constructed by connecting a series of vertices. <b>vertex()</b> is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons and is used exclusively within the <b>beginShape()</b> and <b>endShape()</b> function.<br />
-<br />
-Drawing a vertex in 3D using the <b>z</b> parameter requires the P3D parameter in combination with size as shown in the above example.<br />
-<br />
-This function is also used to map a texture onto the geometry. The <b>texture()</b> function declares the texture to apply to the geometry and the <b>u</b> and <b>v</b> coordinates set define the mapping of this texture to the form. By default, the coordinates used for <b>u</b> and <b>v</b> are specified in relation to the image's size in pixels, but this relation can be changed with <b>textureMode()</b>.
+All shapes are constructed by connecting a series of vertices. <b>vertex()</b> is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons. It is used exclusively within the <b>beginShape()</b> and <b>endShape()</b> functions.
+<br/><br/>
+Drawing a vertex in 3D using the <b>z</b> parameter requires the P3D parameter in combination with size, as shown in the above example.
+<br/><br/>
+This function is also used to map a texture onto geometry. The <b>texture()</b> function declares the texture to apply to the geometry and the <b>u</b> and <b>v</b> coordinates set define the mapping of this texture to the form. By default, the coordinates used for <b>u</b> and <b>v</b> are specified in relation to the image's size in pixels, but this relation can be changed with <b>textureMode()</b>.
 ]]></description>
 
 </root>

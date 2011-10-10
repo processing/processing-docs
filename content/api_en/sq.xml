@@ -7,7 +7,7 @@
 <subcategory>Calculation</subcategory>
 
 <example>
-<image>sq_.gif</image>
+<image>sq_.png</image>
 <code><![CDATA[
 noStroke();
 float a = sq(1);   // Sets a to 1

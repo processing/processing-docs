@@ -9,7 +9,7 @@
 <usage>Web &amp; Application</usage>
 
 <example>
-<image>while_.gif</image>
+<image>while_.png</image>
 <code><![CDATA[
 int i = 0;
 while (i < 80) {
@@ -22,7 +22,7 @@ while (i < 80) {
 <description><![CDATA[
 Controls a sequence of repetitions. The <b>while</b> structure executes a series of statements continuously while the <b>expression</b> is <b>true</b>. The expression must be updated during the repetitions or the program will never "break out" of <b>while</b>.
 <br/> <br/>
-This function can be dangerous because the code inside the <b>while</b> loop will not finish until the expression inside <b>while</b> becomes true. It will lock out all other code from running (mouse events will not be updated, etc.) So be careful because this can lock up your code (and sometimes even the Processing environment itself) if used incorrectly.
+This function can be dangerous because the code inside the <b>while</b> loop will not finish until the expression inside <b>while</b> becomes true. It will lock out all other code from running (e.g., mouse and keyboard events will not be updated). Be careful &mdash; if used incorrectly, this can lock up your code (and sometimes even the Processing environment itself).
 ]]></description>
 
 <syntax>

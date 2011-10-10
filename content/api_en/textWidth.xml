@@ -7,11 +7,11 @@
 <subcategory>Attributes</subcategory>
 
 <example>
-<image>textWidth_.gif</image>
+<image>textWidth_.png</image>
 <code><![CDATA[
 PFont font;
-font = loadFont("FFScala-32.vlw"); 
-textFont(font, 32); 
+font = loadFont("Sabon-Roman-32.vlw");
+textFont(font, 32);
 
 char c = 'T';
 float cw = textWidth(c);

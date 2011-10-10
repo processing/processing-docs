@@ -7,7 +7,7 @@
 <subcategory>Trigonometry</subcategory>
 
 <example>
-<image>tan_.gif</image>
+<image>tan_.png</image>
 <code><![CDATA[
 float a = 0.0;
 float inc = TWO_PI/50.0;

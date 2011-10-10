@@ -7,19 +7,19 @@
 <subcategory>Attributes</subcategory>
 
 <example>
-<image>textAlign_.gif</image>
+<image>textAlign_.png</image>
 <code><![CDATA[
 PFont font;
-// The font must be located in the current sketch's 
-// "data" directory to load successfully 
-font = loadFont("EurekaMonoCond-Bold-20.vlw"); 
+// The font must be located in the current sketch's
+// "data" directory to load successfully
+font = loadFont("LetterGothicStd-32.vlw");
 textFont(font, 20);
 textAlign(RIGHT);
-text("word", 50, 30); 
+text("word", 50, 30);
 textAlign(CENTER);
-text("word", 50, 50); 
+text("word", 50, 50);
 textAlign(LEFT);
-text("word", 50, 70); 
+text("word", 50, 70);
 ]]></code>
 </example>
 

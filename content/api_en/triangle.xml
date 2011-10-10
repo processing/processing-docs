@@ -7,7 +7,7 @@
 <subcategory>2D Primitives</subcategory>
 
 <example>
-<image>triangle_.gif</image>
+<image>triangle_.png</image>
 <code><![CDATA[
 triangle(30, 75, 58, 20, 86, 75);
 ]]></code>
