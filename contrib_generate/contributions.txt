@@ -1,4 +1,15 @@
 library
+category=Sound
+authorList=[Severin Smith](http://www.smallbutdigital.com/)
+name=The MidiBus
+sentence=The MidiBus is a minimal MIDI library for Processing, no frills, no limitations.
+url=http://www.smallbutdigital.com/themidibus.php
+prettyVersion=005
+paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. currently no built in sequencer, file read/write, MIDI recording/playback).
+version=005
+download=http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
+
+library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
 name=Collada-Loader
