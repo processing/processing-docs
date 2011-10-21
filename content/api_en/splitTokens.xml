@@ -11,8 +11,8 @@
 <code><![CDATA[
 String t = "a b";
 String[] q = splitTokens(t);
-println(q[0]); // Prints "a"
-println(q[1]); // Prints "b"
+println(q[0]);  // Prints "a"
+println(q[1]);  // Prints "b"
 ]]></code>
 </example>
 
@@ -24,18 +24,21 @@ println(q[1]); // Prints "b"
 // a space is found in the String. Unlike the split() function, 
 // multiple adjacent delimiters are treated as a single break.
 String s = "a, b c ,,d "; 
-String[] p = splitTokens(s, ", ");
-println(p[0]); // Prints "a"
-println(p[1]); // Prints "b"
-println(p[2]); // Prints "c"
-println(p[3]); // Prints "d"
+String[] q = splitTokens(s, ", ");
+println(q.length + " values found");  // Prints "4 values found"
+println(q[0]);  // Prints "a"
+println(q[1]);  // Prints "b"
+println(q[2]);  // Prints "c"
+println(q[3]);  // Prints "d"
 ]]></code>
 </example>
 
 <description><![CDATA[
-The splitTokens() function splits a String at one or many character "tokens." The <b>tokens</b> parameter specifies the character or characters to be used as a boundary.
-<br/> <br/>
-If no <b>tokens</b> character is specified, any whitespace character is used to split. Whitespace characters include tab (\\t), line feed (\\n), carriage return (\\r), form feed (\\f), and space. To convert a String to an array of integers or floats, use the datatype conversion functions <b>int()</b> and <b>float()</b> to convert the array of Strings.
+The <b>splitTokens()</b> function splits a String at one or many character "tokens." The <b>tokens</b> parameter specifies the character or characters to be used as a boundary.<br/>
+<br/>
+If no <b>tokens</b> character is specified, any whitespace character is used to split. Whitespace characters include tab (\\t), line feed (\\n), carriage return (\\r), form feed (\\f), and space.<br/>
+<br/>
+After using this function to parse incoming data, it is common to convert the data from Strings to integers or floats by using the datatype conversion functions <b>int()</b> and <b>float()</b>.
 ]]></description>
 
 </root>

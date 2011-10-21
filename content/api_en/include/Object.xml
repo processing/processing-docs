@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Declare and contruct two objects (h1, h2) from the class HLine 
+// Declare and construct two objects (h1, h2) from the class HLine 
 HLine h1 = new HLine(20, 2.0); 
 HLine h2 = new HLine(50, 2.5); 
  
@@ -49,17 +49,17 @@ Objects are instances of classes. A class is a grouping of related methods (func
 ]]></description>
 
 <syntax>
-<c>class</c> <c>instance</c>
+<c>ClassName</c> <c>instanceName</c>
 </syntax>
 
 <parameter>
-<label>class</label>
-<description><![CDATA[the class to created the object from]]></description>
+<label>ClassName</label>
+<description><![CDATA[the class from which to create the new object]]></description>
 </parameter>
 
 <parameter>
-<label>instance</label>
-<description><![CDATA[any variable name]]></description>
+<label>instanceName</label>
+<description><![CDATA[the name for the new object]]></description>
 </parameter>
 
 <returns></returns>

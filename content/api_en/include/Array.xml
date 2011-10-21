@@ -13,9 +13,9 @@
 <image></image>
 <code><![CDATA[
 int[] numbers = new int[3];
-numbers[0] = 90;
-numbers[1] = 150;
-numbers[2] = 30;
+numbers[0] = 90;  // Assign value to first element in the array
+numbers[1] = 150; // Assign value to second element in the array
+numbers[2] = 30;  // Assign value to third element in the array
 int a = numbers[0] + numbers[1]; // Sets variable a to 240
 int b = numbers[1] + numbers[2]; // Sets variable b to 180 
 ]]></code>
@@ -24,9 +24,9 @@ int b = numbers[1] + numbers[2]; // Sets variable b to 180
 <example>
 <image></image>
 <code><![CDATA[
-int[] numbers = { 90, 150, 30 };
-int a = numbers[0] + numbers[1]; // Sets variable a to 240
-int b = numbers[1] + numbers[2]; // Sets variable b to 180
+int[] numbers = { 90, 150, 30 };  // Alternate syntax
+int a = numbers[0] + numbers[1];  // Sets variable a to 240
+int b = numbers[1] + numbers[2];  // Sets variable b to 180
 ]]></code>
 </example>
 
@@ -35,14 +35,20 @@ int b = numbers[1] + numbers[2]; // Sets variable b to 180
 <code><![CDATA[
 int degrees = 360;
 float[] cos_vals = new float[degrees];
-for (int i=0; i < degrees; i++) {
+// Use a for() loop to quickly iterate
+// through all values in an array
+for (int i=0; i < degrees; i++) {         
   cos_vals[i] = cos(TWO_PI/degrees * i);
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-An array is a list of data. It is possible to have an array of any type of data. Each piece of data in an array is identified by an index number representing its position in the array. The first element in the array is <b>[0]</b>, the second element is <b>[1]</b>, and so on. Arrays are similar to objects, so they must be created with the keyword <b>new</b>. Every array has a variable <b>length</b> which is an integer value for the total number of elements in the array. (People are often confused by the use of <b>length()</b> to get the size of a String and <b>length</b> to get the size of an array. Notice the absence of the parentheses when working with arrays.)
+An array is a list of data. It is possible to have an array of any type of data. Each piece of data in an array is identified by an index number representing its position in the array. The first element in the array is <b>[0]</b>, the second element is <b>[1]</b>, and so on. Arrays are similar to objects, so they must be created with the keyword <b>new</b>.<br/>
+<br/>
+Each array has a variable <b>length</b>, which is an integer value for the total number of elements in the array. Note that since index numbering begins at zero (not 1), the last value in an array with a <b>length</b> of 5 should be referenced as <b>array[4]</b> (that is, the <b>length</b> minus 1), not <b>array[5]</b>, which would trigger an error.<br/>
+<br/>
+Another common source of confusion is the difference between using <b>length</b> to get the size of an array and <b>length()</b> to get the size of a String. Notice the presence of parentheses when working with Strings. (<b>array.length</b> is a variable, while <b>String.length()</b> is a method specific to the String class.)
 ]]></description>
 
 <syntax>
@@ -63,12 +69,12 @@ An array is a list of data. It is possible to have an array of any type of data.
 
 <parameter>
 <label>element</label>
-<description><![CDATA[int: must not exceed the length of the array - 1]]></description>
+<description><![CDATA[int: must not exceed the length of the array minus 1]]></description>
 </parameter>
 
 <parameter>
 <label>value</label>
-<description><![CDATA[data to assign to the array element, must be the same datatype as the array]]></description>
+<description><![CDATA[data to assign to the array element; must be the same datatype as the array]]></description>
 </parameter>
 
 <returns></returns>

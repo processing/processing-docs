@@ -12,7 +12,7 @@
 <code><![CDATA[
 void setup() {
   size(200, 200);
-  noLoop();
+  noLoop();  // draw() will not loop
 }
 
 float x = 0;
@@ -27,17 +27,17 @@ void draw() {
 }
 
 void mousePressed() {
-  loop();
+  loop();  // Holding down the mouse activates looping
 }
 
 void mouseReleased() {
-  noLoop();
+  noLoop();  // Releasing the mouse stops looping draw()
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Causes Processing to continuously execute the code within <b>draw()</b>. If <b>noLoop()</b> is called, the code in <b>draw()</b> stops executing.
+By default, Processing loops through <b>draw()</b> continuously, executing the code within it. However, the <b>draw()</b> loop may be stopped by calling <b>noLoop()</b>. In that case, the <b>draw()</b> loop can be resumed with <b>loop()</b>.
 ]]></description>
 
 

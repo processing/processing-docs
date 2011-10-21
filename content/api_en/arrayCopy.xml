@@ -9,11 +9,14 @@
 <example>
 <image></image>
 <code><![CDATA[
-String[] north = { "OH", "IN", "MI"};
-String[] south = { "GA", "FL", "NC"}; 
+String[] north = { "OH", "IN", "MI" };
+String[] south = { "GA", "FL", "NC" };
 arrayCopy(north, south);
-print(south);  // Prints OH, IN, MI
-
+println(south);
+// Prints updated array contents to the console:
+// [0] "OH"
+// [1] "IN"
+// [2] "MI"
 ]]></code>
 </example>
 
@@ -23,13 +26,20 @@ print(south);  // Prints OH, IN, MI
 String[] north = { "OH", "IN", "MI"};
 String[] south = { "GA", "FL", "NC"}; 
 arrayCopy(north, 1, south, 0, 2);
-println(south);  // Prints IN, MI, NC
-
+println(south);
+// Prints updated array contents to the console:
+// [0] "IN"
+// [1] "MI"
+// [2] "NC"
 ]]></code>
 </example>
 
 <description><![CDATA[
-Copies an array (or part of an array) to another array. The <b>src</b> array is copied to the <b>dst</b> array, beginning at the position specified by <b>srcPos</b> and into the position specified by <b>dstPos</b>. The number of elements to copy is determined by <b>length</b>. The simplified version with two arguments copies an entire array to another of the same size. It is equivalent to "arrayCopy(src, 0, dst, 0, src.length)". This function is far more efficient for copying array data than iterating through a <b>for</b> and copying each element.
+Copies an array (or part of an array) to another array. The <b>src</b> array is copied to the <b>dst</b> array, beginning at the position specified by <b>srcPosition</b> and into the position specified by <b>dstPosition</b>. The number of elements to copy is determined by <b>length</b>. Note that copying values overwrites existing values in the destination array. To append values instead of overwriting them, use <b>concat()</b>.<br/>
+<br/>
+The simplified version with only two arguments &mdash; <b>arrayCopy(src, dst)</b> &mdash; copies an entire array to another of the same size. It is equivalent to <b>arrayCopy(src, 0, dst, 0, src.length)</b>.<br/>
+<br/>
+Using this function is far more efficient for copying array data than iterating through a <b>for()</b> loop and copying each element individually.
 ]]></description>
 
 </root>

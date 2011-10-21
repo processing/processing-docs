@@ -42,6 +42,8 @@ for (int i = 40; i < 80; i = i+5) {
 <image>for_3.png</image>
 <applet></applet>
 <code><![CDATA[
+// Nested for() loops can be used to
+// generate two-dimensional patterns
 for (int i = 30; i < 80; i = i+5) {
   for (int j = 0; j < 80; j = j+5) {
     point(i, j);
@@ -51,7 +53,16 @@ for (int i = 30; i < 80; i = i+5) {
 </example>
 
 <description><![CDATA[
-Controls a sequence of repetitions. A <b>for</b> structure has three parts: <b>init</b>, <b>test</b>, and <b>update</b>. Each part must be separated by a semi-colon ";". The loop continues until the test evaluates to <b>false</b>. When a <b>for</b> structure is executed, the following sequence of events occurs:<br />1. The init statement is executed<br />2. The test is evaluated to be true or false<br />3. If the test is true, jump to step 4. If the test is False, jump to step 6<br />4. Execute the statements within the block<br />5. Execute the update statement and jump to step 2<br />6. Exit the loop.
+Controls a sequence of repetitions. A <b>for</b> structure has three parts: <b>init</b>, <b>test</b>, and <b>update</b>. Each part must be separated by a semicolon (;). The loop continues until the test evaluates to <b>false</b>. When a <b>for</b> structure is executed, the following sequence of events occurs:<br/>
+<br/>
+1. The init statement is executed.<br/>
+2. The test is evaluated to be true or false.<br/>
+3. If the test is <em>true</em>, jump to step 4. If the test is <em>false</em>, jump to step 6.<br/>
+4. Execute the statements within the block.<br/>
+5. Execute the update statement and jump to step 2.<br/>
+6. Exit the loop.<br/>
+<br/>
+In the first example above, the <b>for</b> loop is executed 40 times. In the init statement, the value <em>i</em> is created and set to zero. <em>i</em> is less than 40, so the test evaluates as <em>true</em>. At the end of each loop, <em>i</em> is incremented by one. On the 41st execution, the test is evaluated as <em>false</em>, because <em>i</em> is then equal to 40, so <em>i &lt; 40</em> is no longer true. Thus, the loop exits.
 ]]></description>
 
 <syntax>
@@ -67,7 +78,7 @@ for (<c>init</c>; <c>test</c>; <c>update</c>) {
 
 <parameter>
 <label>test</label>
-<description><![CDATA[if the test evaluates to <b>true</b>, the statements execute]]></description>
+<description><![CDATA[if the test evaluates to <em>true</em>, the statements execute]]></description>
 </parameter>
 
 <parameter>

@@ -3,17 +3,12 @@
 2.0 REFERENCE
 
 - Parameter decisions  --BF,CR,SM
-
 - Parameter alignment (after above decisions)  --SM
-- All in "reviewing_reference.txt" file produced by Cindy  --SM
 
 - Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
-- image not correct for color(), should not have a stroke  --SM
-- look at example for red() to make clearer  --SM
-- null has a blank 'Examples'  --SM
 - PGraphics link to developers reference  --SM
 - Add examples to filter() and PImage.filter() for erode() and dilate() methods  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
@@ -26,13 +21,18 @@
 - General writing and style clean-up: check the comments in all examples to make sure:  --SM
 	variable names are put in single quotes (not double quotes!)
 	println values are put in double quotes
+- Add an example for "implements" --SM
+- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 
 
 RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
 - Add as related to each other: specular() and lightSpecular() --SM
-- Add ">>" as related to each of these: red(), blue(), green()
+- Add ">>" as related to each of these: red(), blue(), green() --SM
+- Add redraw() and frameRate() as related to draw() --SM
+- Add "implements" as related to "extends" --SM
+- Add concat() as related to arrayCopy() and vice versa --SM
 
 - Add @see_external links where appropriate  --SM
     note: use is with the file naming convention for simplicity
@@ -89,13 +89,6 @@ KEYWORD HIGHLIGHTING AND FIND IN REFERENCE
 - Update keywords generator script on the site
 -   perhaps move this closer to the dev process?
 
-Key:
-- To do
-$ In progress
-o N/A anymore
-x Done
-
-
   DONE
 x 200 Need to document NaN and Inf or -Inf for functions that can return them  --CR
 x 333 Parameters to filter() and PImage.filter()  --CR
@@ -107,6 +100,16 @@ x PImage's mask() needs an @brief  --CR
 x Modify build script to work on Server  --CR
 x loadShape() not in index.html  --CR
 x New PNG images for reference for smooth() change  --SM
+x All in "reviewing_reference.txt" file produced by Cindy  --SM
+x image not correct for color(), should not have a stroke  --SM
+x look at example for red() to make clearer  --SM
+x wrote and added an example to 'null'  --SM
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
 
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -117,7 +120,6 @@ x New PNG images for reference for smooth() change  --SM
 - New IDE image for About page and Environment page  --CR
 - Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
 
-
   DONE
 x Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
 x Environment  --CR
@@ -126,6 +128,12 @@ x   Add JavaScript and Android Modes (NOTE: Need to change terminology for Drawi
 x   Change to "active" and "static" mode for draw() and without
 x   Modify menu descriptions for 2.0 final menus
 x Add section for Preferences
+
+Key:
+- To do
+$ In progress
+o N/A anymore
+x Done
 
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -164,7 +172,6 @@ x All P2D and P3D must be removed from examples  --CR
 x Rework/edit/resize all existing examples  --CR
 x Modify examples for Processing.js  --CR
 x Emphasize createFont() over loadFont()  --CR
-
 
 Key:
 - To do
@@ -223,7 +230,6 @@ POST 2.0
 
 
 // // // // // // // // // // // // // // // // // // // // //
-
 
 2.0 REFERENCE ENGINE (COMPLETE, SEE ABOVE FOR RELATED TODO)
 

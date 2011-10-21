@@ -18,9 +18,11 @@ void draw() {
   println(t);
 }
 
+// The first 'int' in the function declaration
+// specifies the type of data to be returned.
 int timestwo(int dVal) {
   dVal = dVal * 2;
-  return dVal;
+  return dVal;  // Returns an int of 60, in this case
 }
 ]]></code>
 </example>
@@ -40,8 +42,8 @@ int[] timestwo(int[] dVals) {
   for (int i = 0; i < dVals.length; i++) { 
     dVals[i] = dVals[i] * 2; 
   } 
-  return dVals; 
-} 
+  return dVals;  // Returns an array of 3 ints: 20, 40, 60 
+}
 ]]></code>
 </example>
 
@@ -52,16 +54,17 @@ void draw() {
   background(204);
   line(0, 0, width, height);
   if (mousePressed) {
-    return;
+    return;  // Break out of draw(), skipping the line statement below
   }
-  line(0, height, width, 0);
+  line(0, height, width, 0);  // Executed only if mouse is not pressed
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Keyword used to indicate the value to return from a function. The value being returned must be the same datatype as defined in the function declaration. Functions declared with <b>void</b> can't return values and shouldn't include a return value. The keyword <b>return</b> may also be used to break out of a function thus not allowing the program to read the remaining statements (see the third example above).
+Keyword used to indicate the value to return from a function. The value being returned must be the same datatype as defined in the function declaration. Functions declared with <b>void</b> can't return values and shouldn't include a return value.<br/>
+<br/>
+The keyword <b>return</b> may also be used to break out of a function, thus not allowing the program to  the remaining statements. (See the third example above.)
 ]]></description>
 
 <syntax><![CDATA[

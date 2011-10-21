@@ -35,12 +35,13 @@ class DrawDot extends Dot {
     ellipse(xpos, ypos, 200, 200);
   }
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Allows a new class to <em>inherit</em> the methods and fields (data members) from an existing class. In code, state the name of the new class, followed by the keyword <b>extends</b> and the name of the <i>base class</i>. The concept of inheritance is one of the fundamental principles of object oriented programming.
+Allows a new class to <em>inherit</em> the methods and data fields (variables and constants) from an existing class. In code, state the name of the new class, followed by the keyword <b>extends</b> and the name of the <i>base class</i>. The concept of inheritance is one of the fundamental principles of object oriented programming.<br/>
+<br/>
+Note that in Java, and therefore also Processing, you cannot extend a class more than once. Instead, see <b>implements</b>.
 ]]></description>
 
 <syntax></syntax>

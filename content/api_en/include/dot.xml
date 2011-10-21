@@ -11,41 +11,41 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Declare and contruct two objects (h1, h2) from the class HLine
+// Declare and construct two objects (h1 and h2) of the class HLine
 HLine h1 = new HLine(20, 1.0);
-HLine h2 = new HLine(50, 5.0); 
- 
-void setup() { 
-  size(200, 200); 
-} 
- 
+HLine h2 = new HLine(50, 5.0);
+
+void setup() {
+  size(200, 200);
+}
+
 void draw() {
-  if (h2.speed > 1.0) {
-    h2.speed -= 0.01;
-  } 
-  h1.update(); 
-  h2.update();  
-} 
- 
-class HLine { 
-  float ypos, speed; 
-  HLine (float y, float s) {  
-    ypos = y; 
-    speed = s; 
-  } 
-  void update() { 
-    ypos += speed; 
-    if (ypos > width) { 
-      ypos = 0; 
-    } 
-    line(0, ypos, width, ypos); 
-  } 
-} 
+  if (h2.speed > 1.0) {  // Dot syntax can be used to get a value
+    h2.speed -= 0.01;    // or set a value.
+  }
+  h1.update();  // Calls the h1 object's update() function
+  h2.update();  // Calls the h2 object's update() function
+}
+
+class HLine {  // Class definition
+  float ypos, speed;  // Data
+  HLine (float y, float s) {  // Object constructor
+    ypos = y;
+    speed = s;
+  }
+  void update() {  // Update method
+    ypos += speed;
+    if (ypos > width) {
+      ypos = 0;
+    }
+    line(0, ypos, width, ypos);
+  }
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-Provides access to an object's methods and data. An object is an instance of a class and contains is a grouping of methods (object functions) and data (object variables and constants). The dot operator directs the program to the information encapsulated within an object.
+Provides access to an object's methods and data. An object is one instance of a class and may contain both methods (object functions) and data (object variables and constants), as specified in the class definition. The dot operator directs the program to the information encapsulated within an object.
 ]]></description>
 
 <syntax>

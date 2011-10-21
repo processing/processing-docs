@@ -13,9 +13,9 @@ void setup() {
   size(100, 100);
 
   // Read the value "51" from the following text embedded in an HTML page:
-  // <applet code="param_example" archive="param_example.jar" width=100 height=100>
-  // <param name="back" VALUE="51">  
-  // </applet>
+  // &lt;applet code="param_example" archive="param_example.jar" width=100 height=100&gt;
+  // &lt;param name="back" VALUE="51"&gt;
+  // &lt;/applet&gt;
   String bgcolorStr = param("back");
   int bgcolor = int(bgcolorStr);
   background(bgcolor);

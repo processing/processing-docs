@@ -8,46 +8,51 @@
 
 <example>
 <image></image>
-<applet></applet>
 <code><![CDATA[
-float yPos = 0.0; 
+float yPos = 0.0;
 
-void setup() { 
-  size(200, 200); 
+void setup() {  // setup() runs once
+  size(200, 200);
   frameRate(30);
-} 
+}
  
-void draw() { 
+void draw() {  // draw() loops forever, until stopped
   background(204);
   yPos = yPos - 1.0;
   if (yPos < 0) {
     yPos = height;
   }
   line(0, yPos, width, yPos);
-} 
-
+}
 ]]></code>
 </example>
 
 <example>
 <image></image>
-<applet></applet>
 <code><![CDATA[
 void setup() {
   size(200, 200);
 }
 
+// Although empty here, draw() is needed so
+// the sketch can process user input events
+// (mouse presses in this case).
 void draw() { }
 
 void mousePressed() {
   line(mouseX, 10, mouseX, 90);
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Called directly after <b>setup()</b> and continuously executes the lines of code contained inside its block until the program is stopped or <b>noLoop()</b> is called. The <b>draw()</b> function is called automatically and should never be called explicitly. It should always be controlled with <b>noLoop()</b>, <b>redraw()</b> and <b>loop()</b>. After <b>noLoop()</b> stops the code in <b>draw()</b> from executing, <b>redraw()</b> causes the code inside <b>draw()</b> to execute once and <b>loop()</b> will causes the code inside <b>draw()</b> to execute continuously again. The number of times <b>draw()</b> executes in each second may be controlled with the <b>delay()</b> and <b>frameRate()</b> functions. There can only be one <b>draw()</b> function for each sketch and <b>draw()</b> must exist if you want the code to run continuously or to process events such as <b>mousePressed()</b>. Sometimes, you might have an empty call to <b>draw()</b> in your program as shown in the above example. 
+Called directly after <b>setup()</b>, the <b>draw()</b> function continuously executes the lines of code contained inside its block until the program is stopped or <b>noLoop()</b> is called. <b>draw()</b> is called automatically and should never be called explicitly.<br/>
+<br/>
+It should always be controlled with <b>noLoop()</b>, <b>redraw()</b> and <b>loop()</b>. After <b>noLoop()</b> stops the code in <b>draw()</b> from executing, <b>redraw()</b> causes the code inside <b>draw()</b> to execute once, and <b>loop()</b> will cause the code inside <b>draw()</b> to resume executing continuously.<br/>
+<br/>
+The number of times <b>draw()</b> executes in each second may be controlled with the <b>frameRate()</b> function.<br/>
+<br/>
+There can only be one <b>draw()</b> function for each sketch, and <b>draw()</b> must exist if you want the code to run continuously, or to process events such as <b>mousePressed()</b>. Sometimes, you might have an empty call to <b>draw()</b> in your program, as shown in the above example. 
 ]]></description>
 
 </root>

@@ -9,14 +9,17 @@
 <example>
 <image></image>
 <code><![CDATA[
-String s = "  Somerville MA ";
-println(s);  // Prints "  Somerville MA "
-String s2 = trim(s);
-println(s2); // Prints "Somerville MA"
+String s1 = "    Somerville MA ";
+println(s1);  // Prints "    Somerville MA "
+String s2 = trim(s1);
+println(s2);  // Prints "Somerville MA"
 
-String[] a = { " inconsistent ", " spacing" };
-String[] a2 = trim(a);
+String[] a1 = { " inconsistent ", " spacing" };  // Note spaces
+String[] a2 = trim(a1);
 println(a2);
+// Prints the following array contents to the console:
+// [0] "inconsistent"
+// [1] "spacing"
 ]]></code>
 </example>
 
