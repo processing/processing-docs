@@ -8,7 +8,26 @@
 <subcategory>Pixels</subcategory>
 
 <example>
-<image>PImage_filter_0.png</image>
+<image>PImage_filter_0_threshold.png</image>
+<code><![CDATA[
+PImage img1, img2;
+
+void setup() {
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img1.filter(THRESHOLD, 0.3);
+  img2.filter(THRESHOLD, 0.7);
+}
+
+void draw() {
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
+}
+]]></code>
+</example>
+
+<example>
+<image>PImage_filter_1_gray.png</image>
 <code><![CDATA[
 PImage img1, img2;
 
@@ -26,15 +45,86 @@ void draw() {
 </example>
 
 <example>
-<image>PImage_filter_1.png</image>
+<image>PImage_filter_2_invert.png</image>
 <code><![CDATA[
 PImage img1, img2;
 
 void setup() {
   img1 = loadImage("apples.jpg");
   img2 = loadImage("apples.jpg");
-  img1.filter(THRESHOLD, 0.3);
-  img2.filter(THRESHOLD, 0.7);
+  img2.filter(INVERT);
+}
+
+void draw() {
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
+}
+]]></code>
+</example>
+
+<example>
+<image>PImage_filter_3_posterize.png</image>
+<code><![CDATA[
+PImage img1, img2;
+
+void setup() {
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img2.filter(POSTERIZE, 4);
+}
+
+void draw() {
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
+}
+]]></code>
+</example>
+
+<example>
+<image>PImage_filter_4_blur.png</image>
+<code><![CDATA[
+PImage img1, img2;
+
+void setup() {
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img2.filter(BLUR, 6);
+}
+
+void draw() {
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
+}
+]]></code>
+</example>
+
+<example>
+<image>PImage_filter_5_erode.png</image>
+<code><![CDATA[
+PImage img1, img2;
+
+void setup() {
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img2.filter(ERODE);
+}
+
+void draw() {
+  image(img1, 0, 0);
+  image(img2, width/2, 0);
+}
+]]></code>
+</example>
+
+<example>
+<image>PImage_filter_6_dilate.png</image>
+<code><![CDATA[
+PImage img1, img2;
+
+void setup() {
+  img1 = loadImage("apples.jpg");
+  img2 = loadImage("apples.jpg");
+  img2.filter(DILATE);
 }
 
 void draw() {
@@ -66,10 +156,10 @@ BLUR<br />
 Executes a Guassian blur with the level parameter specifying the extent of the blurring. If no parameter is used, the blur is equivalent to Guassian blur of radius 1. Larger values increase the blur.<br />
 <br />
 ERODE<br />
-Reduces the light areas with the amount defined by the parameter. No parameter is used.<br />
+Reduces the light areas. No parameter is used.<br />
 <br />
 DILATE<br />
-Increases the light areas with the amount defined by the parameter. No parameter is used.<br />
+Increases the light areas. No parameter is used.
 ]]></description>
 
 </root>

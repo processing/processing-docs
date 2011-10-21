@@ -40,7 +40,6 @@ filter(INVERT);
 PImage img;
 img = loadImage("apples.jpg");
 image(img, 0, 0);
-filter(GRAY);
 filter(POSTERIZE, 4);
 ]]></code>
 </example>
@@ -52,6 +51,26 @@ PImage img;
 img = loadImage("apples.jpg");
 image(img, 0, 0);
 filter(BLUR, 6);
+]]></code>
+</example>
+
+<example>
+<image>filter_5_erode.png</image>
+<code><![CDATA[
+PImage img;
+img = loadImage("apples.jpg");
+image(img, 0, 0);
+filter(ERODE);
+]]></code>
+</example>
+
+<example>
+<image>filter_6_dilate.png</image>
+<code><![CDATA[
+PImage img;
+img = loadImage("apples.jpg");
+image(img, 0, 0);
+filter(DILATE);
 ]]></code>
 </example>
 
@@ -77,10 +96,10 @@ BLUR<br />
 Executes a Guassian blur with the level parameter specifying the extent of the blurring. If no parameter is used, the blur is equivalent to Guassian blur of radius 1. Larger values increase the blur.<br />
 <br />
 ERODE<br />
-Reduces the light areas with the amount defined by the parameter. No parameter is used.<br />
+Reduces the light areas. No parameter is used.<br />
 <br />
 DILATE<br />
-Increases the light areas with the amount defined by the parameter. No parameter is used.<br />
+Increases the light areas. No parameter is used.
 ]]></description>
 
 </root>

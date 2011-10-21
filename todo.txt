@@ -10,7 +10,6 @@
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 - add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
 - PGraphics link to developers reference  --SM
-- Add examples to filter() and PImage.filter() for erode() and dilate() methods  --SM
 - text() change at least one example to not require loadFont() and describe  --SM
 - add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
 - create examples for all of the following:  --SM
@@ -104,6 +103,7 @@ x All in "reviewing_reference.txt" file produced by Cindy  --SM
 x image not correct for color(), should not have a stroke  --SM
 x look at example for red() to make clearer  --SM
 x wrote and added an example to 'null'  --SM
+x Add examples to filter() and PImage.filter() for erode() and dilate() methods  --SM
 
 Key:
 - To do
