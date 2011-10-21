@@ -38,9 +38,6 @@ text("word", 15, 60);  // Default depth, no z-value specified
 <example>
 <image>text_2.png</image>
 <code><![CDATA[
-PFont font;
-font = loadFont("LetterGothicStd-Bold-12.vlw"); 
-textFont(font); 
 String s = "The quick brown fox jumped over the lazy dog.";
 fill(50);
 text(s, 10, 10, 70, 80);  // Text wraps within text box
@@ -50,7 +47,9 @@ text(s, 10, 10, 70, 80);  // Text wraps within text box
 <description><![CDATA[
 Draws text to the screen. Displays the information specified in the <b>data</b> or <b>stringdata</b> parameters on the screen in the position specified by the <b>x</b> and <b>y</b> parameters and the optional <b>z</b> parameter. A default font will be used unless a font is set with the <b>textFont()</b> function. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates.
 <br /><br />
-The <b>x2</b> and <b>y2</b> parameters define a rectangular area to display within and may only be used with string data. For text drawn inside a rectangle, the coordinates are interpreted based on the current <b>rectMode()</b> setting.
+The <b>x2</b> and <b>y2</b> parameters define a rectangular area to display within and may only be used with string data. For text drawn inside a rectangle, the coordinates are interpreted based on the current <b>rectMode()</b> setting.<br/>
+<br/>
+Note that Processing now lets you call <b>text()</b> without first specifying a PFont with <b>textFont()</b>. In that case, a generic sans-serif font will be used instead. (See the third example above.)
 ]]></description>
 
 </root>

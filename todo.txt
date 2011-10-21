@@ -4,24 +4,23 @@
 
 - Parameter decisions  --BF,CR,SM
 - Parameter alignment (after above decisions)  --SM
+	- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 
 - Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
-- add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
-- PGraphics link to developers reference  --SM
-- text() change at least one example to not require loadFont() and describe  --SM
+
 - add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
+- add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
 - create examples for all of the following:  --SM
 	normal()
 	lightFalloff()
 	createInput()
 	implements
+
 - General writing and style clean-up: check the comments in all examples to make sure:  --SM
 	variable names are put in single quotes (not double quotes!)
 	println values are put in double quotes
-- Add an example for "implements" --SM
-- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 
 
 RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
@@ -104,6 +103,8 @@ x image not correct for color(), should not have a stroke  --SM
 x look at example for red() to make clearer  --SM
 x wrote and added an example to 'null'  --SM
 x Add examples to filter() and PImage.filter() for erode() and dilate() methods  --SM
+x Fixed PGraphics link to developers reference  --SM
+x text() change at least one example to not require loadFont() and describe  --SM
 
 Key:
 - To do
