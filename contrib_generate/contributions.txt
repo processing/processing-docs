@@ -31,6 +31,17 @@ paragraph=
 version=1
 download=http://www.silentlycrashing.net/ezgestures/files/ezgestures.zip
 
+tool
+category=
+authorList=Manindra Moharana
+name=Color Selector Plus
+sentence=Advanced color selector and screen color picker.
+url=http://code.google.com/p/color-selector-plus/
+prettyVersion=2.0.1
+paragraph=Color Selector Plus is the Processing's default Color Selector tool on steroids. Multiple colors can be saved in palettes. Also, grab any color from the screen using the screen color picker.
+version=5
+download=http://color-selector-plus.googlecode.com/files/ColorSelectorPlusTool-latest.zip
+
 library
 category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
