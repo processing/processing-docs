@@ -24,17 +24,17 @@ category. The config file is formatted using the following style:
 
     # A comment. Everything after the hash is ignored
     [Library : Sound] # Type of software : category name.
-    # A url of a library in the sound category
-    SoundLib1 \ http://example.com/libs/soundlib1.txt
-    # Another url of a library in the sound category
-    SoundLib2 \ http://example.org/libs/soundlib2.txt
+    # Contribution ID \ A url of a library in the sound category
+    043 \ http://example.com/libs/soundlib1.txt
+    # Contribution ID \ Another url of a library in the sound category
+    074 \ http://example.org/libs/soundlib2.txt
 
     [Library : Vision] # Another category
-    VisionLib \ http://example.net/libs/visionlib.txt
+    012 \ http://example.net/libs/visionlib.txt
 
     [Library Compilation : Compilation] # Library compilations are zip files
                                         # containing multiple libraries
-    AwesomeLibs \ http://example.net/libs/awesomelibs.txt
+    033 \ http://example.net/libs/awesomelibs.txt
 
 After parsing the config file, information on each library is retrieved from
 the text files, and the contribution is assumed to be hosted at the same
@@ -158,13 +158,13 @@ if __name__ == "__main__":
     contribs = urls_by_category[cat]
 
     for contrib in contribs:
-      software_type, name, prop_url = contrib
+      software_type, contrib_id, prop_url = contrib
       download_url = prop_url[:prop_url.rfind('.')] + '.zip'
       try:
         exports = read_exports(urlopen(prop_url))
 
-        # overwrite the name and category with what was in the .conf file
-        exports['name'] = name
+        exports['id'] = contrib_id
+        # overwrite the category with what was in the .conf file
         exports['category'] = cat
 
         key = missing_key(exports)

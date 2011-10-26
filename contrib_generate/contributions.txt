@@ -8,17 +8,19 @@ prettyVersion=005
 paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. currently no built in sequencer, file read/write, MIDI recording/playback).
 version=005
 download=http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
+id=019
 
 library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
-name=Collada-Loader
+name=Collada Loader for Google Sketchup
 sentence=imports into Processing kmz or dae files that is created by Google Sketchup 8
 url=http://www.die-seite.ch/
 prettyVersion=1.1
 paragraph=For error free working take a look to the [instructions](http://die-seite.ch/?colladaloader) or [forum](http://die-seite.ch/?guest&thema=colladaloader)
 version=11
 download=http://www.die-seite.ch/colladaLoader11.zip
+id=006
 
 library
 category=I/O
@@ -30,6 +32,7 @@ prettyVersion=1.0
 paragraph=
 version=1
 download=http://www.silentlycrashing.net/ezgestures/files/ezgestures.zip
+id=016
 
 tool
 category=
@@ -41,6 +44,7 @@ prettyVersion=2.0.1
 paragraph=Color Selector Plus is the Processing's default Color Selector tool on steroids. Multiple colors can be saved in palettes. Also, grab any color from the screen using the screen color picker.
 version=5
 download=http://color-selector-plus.googlecode.com/files/ColorSelectorPlusTool-latest.zip
+id=020
 
 library
 category=Compilation
@@ -52,6 +56,7 @@ prettyVersion=3.2.0
 paragraph=Includes color utilities, statistical graphics, morphing classes, spatial utilities and map projections, text input/output and multi-sketch tools. Together these make the task of creating data visualization sketches much faster by providing code for commonly repeated tasks such as zooming in and out of a sketch, setting up color tables etc. For documentation and examples, see the [gicentreUtils pages](http://www.gicentre.org/utils/).
 version=12
 download=http://www.gicentre.org/utils/gicentreUtils.zip
+id=004
 
 library
 category=Compilation
@@ -63,6 +68,7 @@ prettyVersion=1.03
 paragraph=It supplies classes and functions for 3d-surfaces, simple physics (nodes, springs, attractors), graphic tablets, ASE-export or asynchronous loading of xml, html and images.
 version=4
 download=http://www.generative-gestaltung.de/downloads/generativedesign.zip
+id=007
 
 library
 category=Utilities
@@ -74,6 +80,7 @@ prettyVersion=1.2
 paragraph=
 version=2
 download=http://nootropicdesign.com/processing-layers/downloads/layers.zip
+id=005
 
 library
 category=Simulation
@@ -85,6 +92,7 @@ prettyVersion=
 paragraph=It is simply a wrapper around [JBox2D](http://www.jbox2d.org/). It tries to make it much easier to create physical models by exposing an object oriented API similar to [PPhys2D](http://pphys2d.jmcouillard.com/) physics library for Processing.
 version=10
 download=http://www.ricardmarxer.com/fisica/download/fisica.zip
+id=018
 
 library
 category=Simulation
@@ -96,6 +104,7 @@ prettyVersion=1.0
 paragraph=These patterns are useful in animation and more.
 version=1
 download=http://www.carljohanrosen.com/processing/images/cellnoise-latest.zip
+id=002
 
 library
 category=Simulation
@@ -107,6 +116,7 @@ prettyVersion=0.1a
 paragraph=
 version=1
 download=http://www.shiffman.net/p5/libraries/pbox2d/pbox2d.zip
+id=014
 
 library
 category=Hardware
@@ -118,6 +128,19 @@ prettyVersion=0.1a
 paragraph=Through server / client communication multiple sketches can be run on separate machines and synced.
 version=1
 download=http://www.shiffman.net/p5/libraries/mpe/mpe.zip
+id=010
+
+library
+category=Hardware
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=Sudden Motion Sensor
+sentence=Interface to the Apple Sudden Motion Sensor in MacBooks.
+url=http://www.shiffman.net/p5/sms/
+prettyVersion=0.1a
+paragraph=
+version=1
+download=http://www.shiffman.net/p5/libraries/sms/sms.zip
+id=015
 
 library
 category=Animation
@@ -129,6 +152,7 @@ prettyVersion=2.0
 paragraph=
 version=2
 download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
+id=003
 
 library
 category=Video & Vision
@@ -140,6 +164,7 @@ prettyVersion=0.1a
 paragraph=
 version=1
 download=http://www.shiffman.net/p5/libraries/openkinect/openkinect.zip
+id=013
 
 library
 category=Data
@@ -151,6 +176,7 @@ prettyVersion=0.1.6
 paragraph=GML is an open file format designed to store graffiti motion data.
 version=6
 download=http://www.saint-clair.net/download/gml4u/GML4U.zip
+id=008
 
 library
 category=Data
@@ -162,6 +188,7 @@ prettyVersion=0.1a
 paragraph=Includes ls and get, needs to be updated with put
 version=1
 download=http://www.shiffman.net/p5/libraries/sftp/sftp.zip
+id=011
 
 library
 category=Data
@@ -173,6 +200,7 @@ prettyVersion=0.1a
 paragraph=
 version=1
 download=http://www.shiffman.net/p5/libraries/pqrcode/pqrcode.zip
+id=012
 
 library
 category=3D
@@ -184,6 +212,7 @@ prettyVersion=1.1.0
 paragraph=Main features include: 1. Default interactivity through the mouse and
 version=5
 download=http://otrolado.info/proscene.zip
+id=001
 
 library
 category=3D
@@ -195,6 +224,7 @@ prettyVersion=1.50a
 paragraph=
 version=6
 download=http://hemesh.wblut.com/hemesh-latest.zip
+id=009
 
 library
 category=3D
@@ -204,4 +234,5 @@ sentence=A mouse driven camera-control library for 3D sketches.
 url=http://mrfeinberg.com/peasycam/
 version=101
 download=http://mrfeinberg.com/peasycam/peasycam.zip
+id=017
 
