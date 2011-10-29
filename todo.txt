@@ -10,7 +10,6 @@
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 
-- add two examples for color() to show gray and with colorMode(HSB), change awful green color  --SM
 - add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
 - create examples for all of the following:  --SM
 	normal()
@@ -105,6 +104,7 @@ x wrote and added an example to 'null'  --SM
 x Add examples to filter() and PImage.filter() for erode() and dilate() methods  --SM
 x Fixed PGraphics link to developers reference  --SM
 x text() change at least one example to not require loadFont() and describe  --SM
+x add two examples for color() to show gray and with colorMode(HSB) --SM
 
 Key:
 - To do

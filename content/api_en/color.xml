@@ -7,7 +7,7 @@
 <subcategory>Creating &amp; Reading</subcategory>
 
 <example>
-<image>color_.png</image>
+<image>color_0.png</image>
 <code><![CDATA[
 color c = color(255, 204, 0);  // Define color 'c'
 fill(c);  // Use color variable 'c' as fill color
@@ -16,8 +16,47 @@ rect(30, 20, 55, 55);  // Draw rectangle
 ]]></code>
 </example>
 
+<example>
+<image>color_1.png</image>
+<code><![CDATA[
+color c = color(255, 204, 0);  // Define color 'c'
+fill(c);  // Use color variable 'c' as fill color
+noStroke();  // Don't draw a stroke around shapes
+ellipse(25, 25, 80, 80);  // Draw left circle
+
+// Using only one value with color()
+// generates a grayscale value.
+c = color(65);  // Update 'c' with grayscale value
+fill(c);  // Use updated 'c' as fill color
+ellipse(75, 75, 80, 80);  // Draw right circle
+]]></code>
+</example>
+
+<example>
+<image>color_2.png</image>
+<code><![CDATA[
+color c;  // Declare color 'c'
+noStroke();  // Don't draw a stroke around shapes
+
+// If no colorMode is specified, then the
+// default of RGB with scale of 0-255 is used.
+c = color(50, 55, 100);  // Create a color for 'c'
+fill(c);  // Use color variable 'c' as fill color
+rect(0, 10, 45, 80);  // Draw left rect
+
+colorMode(HSB, 100);  // Use HSB with scale of 0-100
+c = color(50, 55, 100);  // Update 'c' with new color
+fill(c);  // Use updated 'c' as fill color
+rect(55, 10, 45, 80);  // Draw right rect
+]]></code>
+</example>
+
 <description><![CDATA[
-Creates colors for storing in variables of the <b>color</b> datatype. The parameters are interpreted as RGB or HSB values depending on the current <b>colorMode()</b>. The default mode is RGB values from 0 to 255 and, therefore, the function call <b>color(255, 204, 0)</b> will return a bright yellow color. More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
+Creates colors for storing in variables of the <b>color</b> datatype. The parameters are interpreted as RGB or HSB values depending on the current <b>colorMode()</b>. The default mode is RGB values from 0 to 255 and, therefore, the function call <b>color(255, 204, 0)</b> will return a bright yellow color (see the first example above).<br/>
+<br/>
+Note that if only one value is provided to <b>color()</b>, it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either RGB or HSB values. Adding a fourth value applies alpha transparency.<br/>
+<br/>
+More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
 ]]></description>
 
 </root>
