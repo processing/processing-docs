@@ -34,6 +34,30 @@ version=1
 download=http://www.silentlycrashing.net/ezgestures/files/ezgestures.zip
 id=016
 
+library
+category=I/O
+authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
+name=NXTComm Processing
+sentence=The NXTComm Processing library allows you to control the Lego Mindstorms NXT robots.
+url=http://jorgecardoso.eu/processing/ID3/
+prettyVersion=0.91
+paragraph=
+version=4
+download=http://jorgecardoso.eu/processing/NXTComm/NXTComm.zip
+id=025
+
+library
+category=I/O
+authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
+name=MindSet Processing
+sentence=The MindSetProcessing library allows you to use the NeuroSky Mindset brainwave sensing headset with Processing.
+url=http://jorgecardoso.eu/processing/ID3/
+prettyVersion=0.1.1
+paragraph=It gives you access to the raw wave values, to the eSense meters (Attention and Meditation) and to the EEG values. It does not provide blink data. This library was implemented using the Think Gear Communications driver J2ME implementation provided in the Mindset Development Tools 2.1.
+version=1
+download=http://jorgecardoso.eu/processing/MindSetProcessing/MindSetProcessing.zip
+id=026
+
 tool
 category=
 authorList=Manindra Moharana
@@ -81,6 +105,42 @@ paragraph=
 version=2
 download=http://nootropicdesign.com/processing-layers/downloads/layers.zip
 id=005
+
+library
+category=Utilities
+authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
+name=ID3
+sentence=Extracts ID3 tags from Mp3 files.
+url=http://jorgecardoso.eu/processing/ID3/
+prettyVersion=0.9
+paragraph=Allows you read the ID3v1.1 tags from MP3 files. If you want to know more about ID3 tags check the [id3.org](http://id3.org) page.
+version=1
+download=http://jorgecardoso.eu/processing/ID3/ID3.zip
+id=027
+
+library
+category=Utilities
+authorList=[Yonas Sandbaek](http://www.seltar.org/)
+name=UnZipIt
+sentence=Reading Bytes, Strings, PFonts or PImages from a Zip-File.
+url=http://libraries.seltar.org/unzipit/
+prettyVersion=1.1
+paragraph=
+version=2
+download=http://libraries.seltar.org/unzipit/unzipit.zip
+id=029
+
+library
+category=Utilities
+authorList=[Yonas Sandbaek](http://www.seltar.org/)
+name=Post To Web
+sentence=Upload files to a web server, supported formats are pdf, png, jpeg, gif and tiff.
+url=http://libraries.seltar.org/postToWeb/
+prettyVersion=0.7
+paragraph=
+version=11
+download=http://libraries.seltar.org/postToWeb/postToWeb.zip
+id=031
 
 library
 category=Simulation
@@ -143,6 +203,30 @@ download=http://www.shiffman.net/p5/libraries/sms/sms.zip
 id=015
 
 library
+category=Hardware
+authorList=[David A. Mellis](http://dam.mellis.org/)
+name=Arduino (Firmata)
+sentence=Controls Arduino boards running the Firmata firmware.
+url=http://arduino.cc/playground/Interfacing/Processing
+prettyVersion=2.2
+paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
+version=1
+download=http://arduino.cc/playground/uploads/Interfacing/processing-arduino.zip
+id=024
+
+library
+category=Hardware
+authorList=[Martin Raedlinger](http://www.formatlos.de/)
+name=Apple Light Sensor
+sentence=Interface to the Light Sensor in MacBook Pro computers.
+url=http://projects.formatlos.de/ambientlightsensor/
+prettyVersion=1.0
+paragraph=
+version=1
+download=http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.zip
+id=028
+
+library
 category=Animation
 authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
@@ -155,6 +239,18 @@ download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
 id=003
 
 library
+category=Animation
+authorList=[Yonas Sandbaek](http://www.seltar.org/)
+name=Motion
+sentence=Motion simplified.
+url=http://libraries.seltar.org/motion/
+prettyVersion=1.3
+paragraph=
+version=3
+download=http://libraries.seltar.org/motion/motion.zip
+id=030
+
+library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://www.shiffman.net)
 name=Open Kinect
@@ -165,6 +261,18 @@ paragraph=
 version=1
 download=http://www.shiffman.net/p5/libraries/openkinect/openkinect.zip
 id=013
+
+library
+category=Video & Vision
+authorList=[Julien 'v3ga' Gachadoat](http://www.v3ga.net)
+name=BlobDetection
+sentence=Computer vision library for finding blobs in an image
+url=http://www.v3ga.net/processing/BlobDetection/
+prettyVersion=1.00
+paragraph=
+version=1
+download=http://www.v3ga.net/processing/BlobDetection/blobDetection.zip
+id=023
 
 library
 category=Data
@@ -203,6 +311,18 @@ download=http://www.shiffman.net/p5/libraries/pqrcode/pqrcode.zip
 id=012
 
 library
+category=Math
+authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/)
+name=gwoptics
+sentence=Tools for drawing graphs in 2D and 3D.
+url=http://www.gwoptics.org/processing/gwoptics_p5lib/
+prettyVersion=0.4.3
+paragraph=We have developped the library to create simple scientific simulations and data displays, as shown on our [projects page](http://www.gwoptics.org/processing/).
+version=43
+download=http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
+id=021
+
+library
 category=3D
 authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
@@ -232,7 +352,31 @@ authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
 name=PeasyCam
 sentence=A mouse driven camera-control library for 3D sketches.
 url=http://mrfeinberg.com/peasycam/
-version=101
+version=102
 download=http://mrfeinberg.com/peasycam/peasycam.zip
 id=017
+
+library
+category=3D
+authorList=[Stephen Williams](http://www.onato.com/)
+name=Fluid Forms Libs
+sentence=Provides 3D mouse navigation, parameter management and STL export.
+url=http://fluidforms.eu/processing/fluid-forms-libs/
+prettyVersion=0.2.02
+paragraph=Fluid Forms Libs provides funtionalities to processing that are often require when creating physical forms with code. This includes, amoung other things, mouse navigation for viewing a model, parameter management and importing files into, and export files from, processing sketches in formats such as STL and OBJ.
+version=2
+download=http://fluidforms.eu/processing/fluid-forms-libs/download/FluidFormsLibs.zip
+id=022
+
+library
+category=3D
+authorList=[Nicolas Clavaud](mailto:antiplastik@gmail.com)
+name=Picking
+sentence=A simple toolkit to enable 3D picking in Processing sketches.
+url=http://n.clavaud.free.fr/processing/library/picking/
+prettyVersion=0.1.6
+paragraph=This library provides a simple wrapper around the [color buffer picking](http://wiki.processing.org/w/Picking_with_a_color_buffer) technique.
+version=4
+download=http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
+id=032
 
