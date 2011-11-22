@@ -21,7 +21,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-The system variable <b>frameRate</b> contains the approximate frame rate of the software as it executes. The initial value is 10 fps and is updated with each frame. The value is averaged (integrated) over several frames. As such, this value won't be valid until after 5-10 frames.
+The system variable <b>frameRate</b> contains the approximate frame rate of a running sketch. The initial value is 10 fps and is updated with each frame. The value is averaged over several frames, and so will only be accurate after the draw function has run 5-10 times.
 ]]></description>
 
 </root>

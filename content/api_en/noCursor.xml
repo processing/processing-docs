@@ -22,7 +22,7 @@ void draw()
 </example>
 
 <description><![CDATA[
-Hides the cursor from view. Will not work when running the program in a web browser or when running in full screen (Present) mode.
+Hides the cursor from view. Will not work when running the program in a web browser or in full screen (Present) mode.
 ]]></description>
 
 </root>
