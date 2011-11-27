@@ -1,12 +1,22 @@
 // // // // // // // // // // // // // // // // // // // // //
 
+2.0 DESIGN
+
+- Prepare MODE images for JavaScript, Android  --CR
+
+o New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
+x Check all page header images for gray values  --CR
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
 2.0 REFERENCE
 
 - Parameter decisions  --BF,CR,SM
 - Parameter alignment (after above decisions)  --SM
 	- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 
-- Contributed Libraries and Tools are not appearing on the site  --CR,BF
+x Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 
@@ -55,9 +65,9 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
-- quadraticVertex()  --CR [This look currently commented out in the code...]
-- new arc()  --CR
-- blendMode()  --CR
+? quadraticVertex()  --CR [This look currently commented out in the code...]
+? new arc()  --CR
+? blendMode()  --CR
 - XML  --DS
 - JSON  --DS
 - PTABLE  --DS
@@ -195,7 +205,6 @@ $ Update Getting Started for 2.0  --CR
 -   New PDE drawing / image
 -   Antialiased circle
 
-
   NICE
 - New Generics  --DS
 - Typography (or merge into Strings and Drawing Text?)  --CR,DS
@@ -209,15 +218,6 @@ x Done
   DONE
 x Tutorial CSS  --CR
 x Update Processing Overview for 2.0  --CR
-
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 DESIGN
-
-- Prepare MODE images for JavaScript, Android  --CR
-- New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
-- Check all page header images for gray values  --CR
 
 
 // // // // // // // // // // // // // // // // // // // // //
