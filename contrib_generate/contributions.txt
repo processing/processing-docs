@@ -6,9 +6,21 @@ sentence=The MidiBus is a minimal MIDI library for Processing, no frills, no lim
 url=http://www.smallbutdigital.com/themidibus.php
 prettyVersion=005
 paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. currently no built in sequencer, file read/write, MIDI recording/playback).
-version=005
+version=006
 download=http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
 id=019
+
+library
+category=Sound
+authorList=[Daniel Jones](http://www.erase.net/)
+name=SuperCollider client for Processing
+sentence=Framework to interface with the SuperCollider synthesis engine.
+url=http://www.erase.net/projects/processing-sc/
+prettyVersion=0.3.0
+paragraph=This library provides a simple approach to interfacing with the powerful [SuperCollider](http://supercollider.sourceforge.net) sound synthesis engine. It provides objects to encapsulate common functions such as creating and manipulating Synth, Buffer and Bus objects.
+version=1
+download=http://www.erase.net/projects/processing-sc/files/processing-sc.zip
+id=035
 
 library
 category=I/O
@@ -143,6 +155,18 @@ download=http://libraries.seltar.org/postToWeb/postToWeb.zip
 id=031
 
 library
+category=Utilities
+authorList=[David Bouchard](http://www.deadpixel.ca)
+name=Keystone
+sentence=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
+url=http://keystonep5.sourceforge.net/
+prettyVersion=002
+paragraph=
+version=2
+download=http://keystonep5.sourceforge.net/download/keystone.zip
+id=034
+
+library
 category=Simulation
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Fisica
@@ -251,6 +275,18 @@ download=http://libraries.seltar.org/motion/motion.zip
 id=030
 
 library
+category=Animation
+authorList=[Ekene Ijeoma](http://ekeneijeoma.com)
+name=ijeomamotion
+sentence=Creates fast and easy time/frame based animations using tweens.
+url=http://ekeneijeoma.com/processing/ijeomamotion
+prettyVersion=3.9.6
+paragraph=
+version=25
+download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
+id=033
+
+library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://www.shiffman.net)
 name=Open Kinect
@@ -352,19 +388,19 @@ authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
 name=PeasyCam
 sentence=A mouse driven camera-control library for 3D sketches.
 url=http://mrfeinberg.com/peasycam/
-version=102
+version=105
 download=http://mrfeinberg.com/peasycam/peasycam.zip
 id=017
 
 library
 category=3D
 authorList=[Stephen Williams](http://www.onato.com/)
-name=Fluid Forms Libs
+name=FluidFormsLibs
 sentence=Provides 3D mouse navigation, parameter management and STL export.
 url=http://fluidforms.eu/processing/fluid-forms-libs/
-prettyVersion=0.2.02
+prettyVersion=0.2.03
 paragraph=Fluid Forms Libs provides funtionalities to processing that are often require when creating physical forms with code. This includes, amoung other things, mouse navigation for viewing a model, parameter management and importing files into, and export files from, processing sketches in formats such as STL and OBJ.
-version=2
+version=4
 download=http://fluidforms.eu/processing/fluid-forms-libs/download/FluidFormsLibs.zip
 id=022
 
