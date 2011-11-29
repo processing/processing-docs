@@ -2,11 +2,7 @@
 
 2.0 DESIGN
 
-- Prepare MODE images for JavaScript, Android  --CR
-
-o New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
-x Check all page header images for gray values  --CR
-
+$ Prepare MODE images for JavaScript, Android  --CR
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -65,7 +61,7 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
-? quadraticVertex()  --CR [This look currently commented out in the code...]
+x quadraticVertex()  --CR [This look currently commented out in the code...]
 ? new arc()  --CR
 ? blendMode()  --CR
 - XML  --DS
@@ -79,24 +75,21 @@ THE FOLLOWING IS FROM DB AND PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AN
 - PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts)
 -   figure out why font naming not working correctly
-- "Find in Reference" for copy() goes to PVector
+o "Find in Reference" for copy() goes to PVector
 
-KEYWORD HIGHLIGHTING AND FIND IN REFERENCE
-
-- 085 Constants in PConstants not syntax highlighting  --CR
-- 250 Details regarding keywords.txt  --CR
-- TRIANGLE_STRIP not highlighted for "find in reference"
--   nor is it listed on the reference page
--   so students can't find the ref for it
--   needs to link TRIANGLE_STRIP to the beginShape() reference
-- Find in reference issues
--   if() and for() don't work, they look for for_.html instead of for.html
--   XMLElement is not linked for find in ref
--   the ? operator is not in find in ref (no ref page either?)
-- Update keywords generator script on the site
--   perhaps move this closer to the dev process?
 
   DONE
+o XMLElement is not linked for find in ref
+x 085 Constants in PConstants not syntax highlighting  --CR
+x 250 Details regarding keywords.txt  --CR
+x if() and for() don't work, they look for for_.html instead of for.html
+x the ? operator is not in find in ref (no ref page either?)
+o Update keywords generator script on the site
+o   perhaps move this closer to the dev process?
+x TRIANGLE_STRIP not highlighted for "find in reference"
+x   nor is it listed on the reference page
+x   so students can't find the ref for it
+x   needs to link TRIANGLE_STRIP to the beginShape() reference
 x 200 Need to document NaN and Inf or -Inf for functions that can return them  --CR
 x 333 Parameters to filter() and PImage.filter()  --CR
 x rounded rect()  --CR
@@ -307,6 +300,11 @@ x Alphabetical Index file is incorrectly alphabetized (for people) and should br
 	Implemented a custom Comparator for alphabetization. Now human-style
 x Alphabetical index is incorrectly showing class methods
 	Need to remove String_charAt_ and other methods from the alphabetical index (they don't appear in categories)
+
+// // // // // // // // // // // // // // // // // // // // //
+
+o New application icon, load screen, site header (do we want this?)  --CR,FJ,BF
+x Check all page header images for gray values  --CR
 
 // // // // // // // // // // // // // // // // // // // // //
 
