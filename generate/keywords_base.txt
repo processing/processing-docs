@@ -220,7 +220,7 @@ void	KEYWORD1
 volatile	KEYWORD1
 while	KEYWORD1	
 
-# Depricated API
+# Deprecated API
 
 arraycopy	KEYWORD2	arraycopy_
 openStream	KEYWORD2	openStream_
