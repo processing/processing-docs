@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
+
 <name>filter()</name>
+
 <category>Image</category>
+
 <subcategory>Pixels</subcategory>
+
+<type></type>
 
 <example>
 <image>filter_0_threshold.png</image>
