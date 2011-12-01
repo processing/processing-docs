@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="Composition No. 1" by="Visual Editions" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/visualeditions.jpg</image>
+		  <description>
+			  First written in 1961 by Marc Saporta, the new edition of this book is published by Visual Editions and designed by Universal Everything. The “book in a box” includes a cover illustration created using Processing.
+		  </description>
+		  <location>http://www.visual-editions.com</location>
+		 <link href="http://www.visual-editions.com/our-books/book/composition-no1">Visual Editions</link>
+	</software>
+	
 	<software name="Max Planck Reasearch Networks" by="Moritz Stefaner and Christopher Warnow" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/maxplanck.jpg</image>
 		  <description>
