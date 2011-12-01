@@ -11,9 +11,11 @@
 <example>
 <image></image>
 <code><![CDATA[
-if (online) {  // of "if (online == true)"
+if (online) {  // Or "if (online == true)"
+  // Draw a circle
   ellipse(50, 50, 60, 60);
 } else {
+  // Draw an X
   line(0, 0, 100, 100);
   line(100, 0, 0, 100);
 }
@@ -21,7 +23,7 @@ if (online) {  // of "if (online == true)"
 </example>
 
 <description><![CDATA[
-Confirms if a Processing program is running inside a web browser. This variable is "true" if the program is online and "false" if not.
+Reports whether or not a Processing program is running as a Java applet inside of a web browser. The <b>online</b> variable is "true" if running as a web applet and "false" if not.
 ]]></description>
 
 </root>
