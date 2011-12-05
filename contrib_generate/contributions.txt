@@ -83,6 +83,18 @@ download=http://color-selector-plus.googlecode.com/files/ColorSelectorPlusTool-l
 id=020
 
 library
+category=Geometry
+authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
+name=Geomerative
+sentence=Extends 2D geometry operations to facilitate generative geometry. Includes a TrueType font interpreter.
+url=http://www.ricardmarxer.com/geomerative
+prettyVersion=
+paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
+version=35
+download=http://www.ricardmarxer.com/geomerative/geomerative.zip
+id=039
+
+library
 category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
 name=gicentreUtils
@@ -251,6 +263,18 @@ download=http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSe
 id=028
 
 library
+category=Typography
+authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
+name=Geomerative
+sentence=Extends 2D geometry operations to facilitate generative geometry. Includes a TrueType font interpreter.
+url=http://www.ricardmarxer.com/geomerative
+prettyVersion=
+paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
+version=35
+download=http://www.ricardmarxer.com/geomerative/geomerative.zip
+id=038
+
+library
 category=Animation
 authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
@@ -415,4 +439,26 @@ paragraph=This library provides a simple wrapper around the [color buffer pickin
 version=4
 download=http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
 id=032
+
+library
+category=3D
+authorList=[Kristian Damkjer](http://www.gdsstudios.com/)
+name=OCD: Obsessive Camera Direction
+sentence=The Obsessive Camera Direction (OCD) library allows intuitive control and creation of Processing viewport Cameras.
+url=http://www.gdsstudios.com/processing/libraries/ocd/
+prettyVersion=1.5
+paragraph=With OCD, it is easy set up several cameras and switch between them. It is also easy to manipulate individual cameras using standard camera movement commands.
+version=5
+download=http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.zip
+id=036
+
+library
+category=3D
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+name=Patchy
+sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
+url=http://mrfeinberg.com/patchy/
+version=100
+download=http://mrfeinberg.com/patchy/patchy.zip
+id=037
 
