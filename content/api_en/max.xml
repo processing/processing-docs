@@ -11,22 +11,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-int a = max(5, 9);            // Sets "a" to 9
-int b = max(-4, -12);         // Sets "b" to -4
-float c = max(12.3, 230.24);  // Sets "c" to 230.24
+int a = max(5, 9);            // Sets 'a' to 9
+int b = max(-4, -12);         // Sets 'b' to -4
+float c = max(12.3, 230.24);  // Sets 'c' to 230.24
 ]]></code>
 </example>
 
 <example>
 <image></image>
 <code><![CDATA[
-int[] list = { 9, -4, 230.24 };
-int h = max(list);            // Sets "h" to 230.24
+int[] values = { 9, -4, 362, 21 };  // Create an array of ints
+int d = max(values);                // Sets 'd' to 362
 ]]></code>
 </example>
 
 <description><![CDATA[
-Determines the largest value in a sequence of numbers.
+Determines the largest value in a sequence of numbers, and then returns that value. <b>max()</b> accepts either two or three <b>float</b> or <b>int</b> values as parameters, or an array of any length.
 ]]></description>
 
 </root>
