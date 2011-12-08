@@ -12,7 +12,7 @@ $ Prepare MODE images for JavaScript, Android  --CR
 - Parameter alignment (after above decisions)  --SM
 	- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 
-x Contributed Libraries and Tools are not appearing on the site  --CR,BF
+$ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
 
@@ -21,7 +21,8 @@ x Contributed Libraries and Tools are not appearing on the site  --CR,BF
 	normal()
 	lightFalloff()
 	createInput()
-	implements
+
+- review "implements" description
 
 - General writing and style clean-up: check the comments in all examples to make sure:  --SM
 	variable names are put in single quotes (not double quotes!)
@@ -61,12 +62,16 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
-x quadraticVertex()  --CR [This look currently commented out in the code...]
-? new arc()  --CR
-? blendMode()  --CR
-- XML  --DS
-- JSON  --DS
-- PTABLE  --DS
+- XML  --SM
+- JSON  --SM
+- PTABLE  --SM
+x quadraticVertex()  --CR
+- new arc()  --CR
+- blendMode()  --CR
+- createShape()  --CR
+- begin/endContour()  --CR
+- clip()/noClip()  --CR
+? thread()  --CR
 
 
 THE FOLLOWING IS FROM DB AND PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
@@ -120,7 +125,7 @@ x Done
 
 2.0 DOCUMENTATION
 
-- Syntax highlighting (see major Issues above)  --CR
+$ Syntax highlighting (see major Issues above)  --CR
 - New IDE image for About page and Environment page  --CR
 - Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
 
@@ -144,6 +149,7 @@ x Done
 
 2.0 EXAMPLE  --XXX
 
+- Move "Directory List" to File IO category  --CR
 - New XML/JSON  --DS, JT
 - New Regex  --DS
 - New PVector  --DS
