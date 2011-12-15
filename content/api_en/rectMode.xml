@@ -9,22 +9,43 @@
 <type></type>
 
 <example>
-<image>rectMode_.png</image>
+<image>rectMode_0.png</image>
 <code><![CDATA[
-rectMode(CENTER);
-fill(255);
-rect(35, 35, 50, 50);  // White rect
+rectMode(CORNER);  // Default rectMode is CORNER
+fill(255);  // Set fill to white
+rect(25, 25, 50, 50);  // Draw white rect using CORNER mode
 
-rectMode(CORNER);
-fill(102);
-rect(35, 35, 50, 50);  // Gray rect
+rectMode(CORNERS);  // Set rectMode to CORNERS
+fill(100);  // Set fill to gray
+rect(25, 25, 50, 50);  // Draw gray rect using CORNERS mode
+]]></code>
+</example>
+
+<example>
+<image>rectMode_1.png</image>
+<code><![CDATA[
+rectMode(RADIUS);  // Set rectMode to RADIUS
+fill(255);  // Set fill to white
+rect(50, 50, 30, 30);  // Draw white rect using RADIUS mode
+
+rectMode(CENTER);  // Set rectMode to CENTER
+fill(100);  // Set fill to gray
+rect(50, 50, 30, 30);  // Draw gray rect using CENTER mode
 ]]></code>
 </example>
 
 <description><![CDATA[
-Modifies the location from which rectangles draw. The default mode is <b>rectMode(CORNER)</b>, which specifies the location to be the upper left corner of the shape and uses the third and fourth parameters of <b>rect()</b> to specify the width and height. The syntax <b>rectMode(CORNERS)</b> uses the first and second parameters of <b>rect()</b> to set the location of one corner and uses the third and fourth parameters to set the opposite corner. The syntax <b>rectMode(CENTER)</b> draws the shape from its center point and uses the third and forth parameters of <b>rect()</b> to specify the shape's width and height. The syntax <b>rectMode(RADIUS)</b> draws the image from its center point and uses the third and forth parameters of <b>rect()</b> to specify half of the shapes's width and height.<br />
+Modifies the location from which rectangles are drawn by changing the way in which parameters given to <b>rect()</b> are intepreted.<br/>
+<br/>
+The default mode is <b>rectMode(CORNER)</b>, which interprets the first two parameters of <b>rect()</b> as the upper-left corner of the shape, while the third and fourth parameters are its width and height.<br/>
+<br/>
+<b>rectMode(CORNERS)</b> interprets the first two parameters of <b>rect()</b> as the location of one corner, and the third and fourth parameters as the location of the opposite corner.<br/>
+<br/>
+<b>rectMode(CENTER)</b> interprets the first two parameters of <b>rect()</b> as the shape's center point, while the third and fourth parameters are its width and height.<br/>
+<br/>
+<b>rectMode(RADIUS)</b> also uses the first two parameters of <b>rect()</b> as the shape's center point, but uses the third and fourth parameters to specify half of the shapes's width and height.<br />
 <br />
-The parameter must be written in ALL CAPS because Processing is a case sensitive language.
+The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
 ]]></description>
 
 </root>

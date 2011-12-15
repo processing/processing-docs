@@ -16,15 +16,14 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
-- enhance descriptions affected by modes, rectMode(), ellipseMode(), imageMode()  --SM,CR
+- enhance descriptions affected by modes: ellipseMode(), imageMode()  --SM,CR
 
-- add examples for each MODE for rectMode(), ellipseMode(), imageMode(), textureMode()  --SM
+- add examples for each MODE for ellipseMode(), imageMode(), textureMode()  --SM
+
 - create examples for all of the following:  --SM
 	normal()
 	lightFalloff()
 	createInput()
-
-- review "implements" description
 
 - General writing and style clean-up: check the comments in all examples to make sure:  --SM
 	variable names are put in single quotes (not double quotes!)
@@ -39,6 +38,7 @@ RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done foll
 - Add redraw() and frameRate() as related to draw() --SM
 - Add "implements" as related to "extends" --SM
 - Add concat() as related to arrayCopy() and vice versa --SM
+- To text(), add as related: rectMode() and fill() --SM
 
 - Add @see_external links where appropriate  --SM
     note: use is with the file naming convention for simplicity
@@ -115,6 +115,8 @@ x Add examples to filter() and PImage.filter() for erode() and dilate() methods 
 x Fixed PGraphics link to developers reference  --SM
 x text() change at least one example to not require loadFont() and describe  --SM
 x add two examples for color() to show gray and with colorMode(HSB) --SM
+x review "implements" description --SM
+x enhanced descriptions affected by rectMode(), added new examples for each MODE to rectMode() --SM
 
 Key:
 - To do

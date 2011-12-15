@@ -47,9 +47,9 @@ text(s, 10, 10, 70, 80);  // Text wraps within text box
 </example>
 
 <description><![CDATA[
-Draws text to the screen. Displays the information specified in the <b>data</b> or <b>stringdata</b> parameters on the screen in the position specified by the <b>x</b> and <b>y</b> parameters and the optional <b>z</b> parameter. A default font will be used unless a font is set with the <b>textFont()</b> function. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates.
-<br /><br />
-The <b>x2</b> and <b>y2</b> parameters define a rectangular area to display within and may only be used with string data. For text drawn inside a rectangle, the coordinates are interpreted based on the current <b>rectMode()</b> setting.<br/>
+Draws text to the screen. Displays the information specified in the <b>data</b> or <b>stringdata</b> parameters on the screen in the position specified by the <b>x</b> and <b>y</b> parameters and the optional <b>z</b> parameter. A default font will be used unless a font is set with the <b>textFont()</b> function. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates.<br/>
+<br/>
+The <b>x2</b> and <b>y2</b> parameters define a rectangular area to display within and may only be used with string data. When these parameters are specified, they are interpreted based on the current <b>rectMode()</b> setting. Text that does not fit completely within the rectangle specified will not be drawn to the screen.<br/>
 <br/>
 Note that Processing now lets you call <b>text()</b> without first specifying a PFont with <b>textFont()</b>. In that case, a generic sans-serif font will be used instead. (See the third example above.)
 ]]></description>

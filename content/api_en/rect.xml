@@ -23,9 +23,13 @@ rect(30, 20, 55, 55, 3, 6, 12, 18);
 </example>
 
 <description><![CDATA[
-Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. These parameters may be changed with the <b>rectMode()</b> function.<br />
+Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. The way these parameters are interpreted, however, may be changed with the <b>rectMode()</b> function.<br />
 <br />
-The version of <b>rect()</b> with eight parameters can draw a rounded rectangle. The second group of four parameters sets the radius of the arc at each corner, starting with the top-left corner and moving clockwise around the rectangle. The <b>r</b> parameter is a shortcut to set the radii of all corners to the same value.
+To draw a rounded rectangle, add a fifth parameter, which is used as the radius value for all four corners.<br/>
+<br/>
+To use a different radius value for each corner, include eight parameters. When using eight parameters, the latter four set the radius of the arc at each corner separately, starting with the top-left corner and moving clockwise around the rectangle.
+
+
 ]]></description>
 
 </root>
