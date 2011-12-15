@@ -201,12 +201,12 @@ x Done
 2.0 TUTORIAL  --XXX
 
   NEED
-$ New P3D  --DS (CR to help with links and images)
-x Update Eclipse  --DS
-$ New Android  --DS, JT
-$ Processing.js  --DS,FJ
 - new PShape --DS
-- update Strings and Text re: createFont() --DS
+$ New P3D  --DS (CR to help with links and images, needs one diagram)
+$ Processing.js  --DS,FJ (need info for processing's credits from Dave Humphries)
+x update Strings and Text re: createFont() --DS
+x Update Eclipse  --DS
+x New Android  --DS, JT
 
 $ Update Getting Started for 2.0  --CR
 -   New PDE drawing / image
@@ -217,9 +217,9 @@ $ Update Getting Started for 2.0  --CR
 - New Regex --DS
 
   WIKI TUTORIALS
-- update thread tutorial with thread() function --DS
-- fix exception tutorial with loadStrings() --DS
-- common errors --DS
+x update thread tutorial with thread() function --DS
+x fix exception tutorial with loadStrings() --DS
+x common errors --DS
 
 Key:
 - To do
