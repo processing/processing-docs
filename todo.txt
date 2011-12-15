@@ -154,16 +154,17 @@ x Done
 2.0 EXAMPLE  --XXX
 
 - Move "Directory List" to File IO category  --CR
-- New XML/JSON  --DS, JT
-- New Regex  --DS
+- new JSON? -- DS,JT
 - New PVector  --DS
-- Analyze PVector in examples  --DS
 - New PShape  --DS
 - PTable  --DS,JT
 - add stringIntPair to Hashmap  --DS
-- thread() example  --DS
 - New P3D  --CR,DS,AC
-- new saveFrame() for recording example --DS
+x New Regex  --DS
+x Analyze PVector in examples  --DS
+x thread() example  --DS
+x new saveFrame() for recording example --DS (oops there is already a SavingManyImages example)
+x New XML --DS (where should these go?  File IO?)
 
   NICE
 $ 2 David Muth examples  --CR
@@ -171,7 +172,7 @@ $ 2 David Muth examples  --CR
 - Custom font examples using loadFont()  --CR
 - New JavaScript Examples  --FJ,CR
 - New PDF w/ typography  --CR,BF
-- Syntax hightlighting for Example code online --FJ
+- Syntax highlighting for Example code online --FJ
 
   DONE
 o New GUI  --DS
