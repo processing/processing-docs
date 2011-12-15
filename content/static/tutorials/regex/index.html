@@ -1,0 +1,49 @@
+<h2>Regular Expressions</h2>
+<p><b><i>WARNING: This is a woefully incomplete overview of regular expressions.  It would be absurd to try to fully cover the topic in a short handout like this.  Hopefully, this will provide some of the basics to get you started, but to really understand regular expressions, I implore you to read as much of <a href="http://safari.oreilly.com/0596002890/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://safari.oreilly.com']);">Mastering Regular Expressions</a> by Jeffrey E.F. Friedl as you have time for.</i></b></p>
+<p>A <b><a href="http://en.wikipedia.org/wiki/Regular_expression" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://en.wikipedia.org']);">regular expression</a></b> is a sequences of characters that describes or matches a given amount of text.  For example, the sequence <regex>bob</regex>, considered as a regular expression, would match any occurance of the word &#8220;bob&#8221; inside of another text.    The following is a rather rudimentary introduction to the basics of regular expressions.  We could spend the entire semester studying regular expressions if we put our mind to it. . . Nevertheless, we&#8217;ll just have a basic introduction to them this week and learn more advanced technique as we explore different text processing applications over the course of the semester.</p>
+<p>A truly wonderful book written on the subject is: <a href="http://regex.info/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://regex.info']);">Mastering Regular Expressions</a> by Jeffrey Friedl.   Chapter 1, available via the Safari Network (through NYU) can be found here:</p>
+<p><a href=" http://safari.oreilly.com/0596002890/mastregex2-CHP-1" > http://safari.oreilly.com/0596002890/mastregex2-CHP-1</a></p>
+<p>Regular expressions (sometimes referred to as &#8216;regex&#8217; for short) have both literal characters and meta characters.  In <regex>bob</regex>, all three characters are literal, i.e. the &#8216;b&#8217; wants to match a &#8216;b&#8217;, the &#8216;o&#8217; an &#8216;o&#8217;, etc.    We might also have the regular expression:</p>
+<p><regex>^bob</regex></p>
+<p>In this case, the &#8216;^&#8217; is a meta character, i.e. it does not want to match the character &#8216;^&#8217;, but instead indicates the &#8220;beginning of a line.&#8221;  In other words the regex above would find a match in:</p>
+<p><i>bob goes to the park.</i></p>
+<p>but would not find a match in:</p>
+<p><i>jill and bob go to the park.</i></p>
+<p>Here are a few common meta-characters (I&#8217;m listing them below as they would appear in a Java regular expression, which may differ slightly from perl, php, .net, etc.) used to get us started:  </p>
+<p><b>Position Metacharacters:</b></p>
+
+<div class="wp_syntax"><div class="code"><pre class="java" style="font-family:monospace;"><span style="color: #339933;">^</span>     beginning of line
+$     end of line
+\\b    word boundary
+\\B    a non word boundary</pre></div></div>
+
+<p><b>Single Character Metacharacters:</b></p>
+
+<div class="wp_syntax"><div class="code"><pre class="java" style="font-family:monospace;">.     <span style="color: #006633;">any</span> one character
+\\d    any digit from <span style="color: #cc66cc;">0</span> to <span style="color: #cc66cc;">9</span>
+\\w    any word character <span style="color: #009900;">&#40;</span>a<span style="color: #339933;">-</span>z,A<span style="color: #339933;">-</span>Z,<span style="color: #cc66cc;">0</span><span style="color: #339933;">-</span><span style="color: #cc66cc;">9</span><span style="color: #009900;">&#41;</span>
+\\W    any non<span style="color: #339933;">-</span>word character
+\\s    any whitespace character <span style="color: #009900;">&#40;</span>tab, <span style="color: #000000; font-weight: bold;">new</span> line, form feed, end of line, carriage <span style="color: #000000; font-weight: bold;">return</span><span style="color: #009900;">&#41;</span>
+\\S    any non whitespace character</pre></div></div>
+
+<p><b>Quantifiers (refer to the character that precedes it):</b></p>
+
+<div class="wp_syntax"><div class="code"><pre class="java" style="font-family:monospace;"><span style="color: #339933;">?</span>     appearing once or not at all
+<span style="color: #339933;">*</span>     appearing zero or more times
+<span style="color: #339933;">+</span>     appearing one or more times
+<span style="color: #009900;">&#123;</span>min,max<span style="color: #009900;">&#125;</span> appearing within the specified range</pre></div></div>
+
+<p>Using the above, we could come up with some quick examples:</p>
+<p><regex>^$</regex> &#8211;> matches beginning of line followed by end of line, i.e. match any blank line!</p>
+<p><regex>ing\b</regex> &#8211;> matches &#8216;ing&#8217; followed by a word boundary, i.e. any time &#8216;ing&#8217; appears at the end of a word!</p>
+<p><b>Character Classes</b> allow one to do an &#8220;or&#8221; statement amongst individual characters and are denoted by characters enclosed in brackets, i.e. <regex>[aeiou]</regex> means match any vowel.  Using a &#8220;^&#8221; negates the character class, i.e. <regex>[^aeiou]</regex> means match any character not a vowel (note this isn&#8217;t just limited to letters, it really means <i>anything at all</i> that is not an a, e, i, o, or u.)  A hyphen indicates a range of characters, such as <regex>[0-9]</regex> or <regex>[a-z]</regex>.</p>
+<p>Another key metacharacter is |, meaning or.  This is known as the concept of <b>Alternation</b>.  </p>
+<p> <regex>John | Jon</regex> -> match &#8220;John&#8221; or Jon&#8221;</p>
+<p>note: this regex could also be written as <regex>Joh?n</regex>, meaning match &#8220;Jon&#8221; with an option &#8220;h&#8221; between the &#8220;o&#8221; and &#8220;n.&#8221;</p>
+<p>Parentheses can also be used to constrain the alternation, i.e.:</p>
+<p><regex> (212|646|917)\d*</regex>  matches any sequence of zero or more digits preceded by 212, 646, or 917 (presumably to retrieve phone #&#8217;s with NYC area codes).  Note this regular expression would need to be improved to take into consideration white spaces and/or punctuation.</p>
+<p>Parentheses also serve the purpose of capturing groups for back-references.  For example, examine the following regular expression:</p>
+<p><regex>\b([0-9A-Za-z]+)\s+\1\b</regex></p>
+<p>The first part of the expression without parentheses would read: <regex>\b([0-9A-Za-z]+)</regex> meaning match any &#8220;word&#8221; containing at least one or more letters/digits.  The next part <regex>\s+</regex> means any sequence of at least one white space.  The third part <regex>\1</regex> says match whatever you matched that was enclosed inside the first set of parentheses, i.e. <regex>([0-9A-Za-z]+)</regex>.   So, thinking this over, what will this regular expression match in the following line:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="java" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">This</span> is really really <span style="color: #000000; font-weight: bold;">super</span> <span style="color: #000000; font-weight: bold;">super</span> duper duper fun.  <span style="color: #006633;">Fun</span><span style="color: #339933;">!</span></pre></div></div>

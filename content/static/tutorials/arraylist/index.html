@@ -1,0 +1,180 @@
+In truth, we could use a simple array to manage our Particle objects.  Some particle systems might have a fixed number of particles, and arrays are magnificently efficient in those instances.  Processing also offers expand(), contract(), subset(), splice() and other methods for resizing arrays.   However, for these examples, the Java class ArrayList (found in the java.util package: http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html) will prove to be the best solution.  Using an ArrayList is conceptually similar to a standard array, but the syntax is different. Here is some code (that assumes the existence of a generic Particle class) demonstrating identical results: first with an array, and second with an ArrayList.    
+
+// THE STANDARD ARRAY WAY
+int total = 10;
+//declaring the array
+Particle[] parray = new Particle[total];
+
+// Initialize the array in setup
+void setup() {
+  for (int i = 0; i < parray.length; i++) {
+    parray[i] = new Particle();
+  }
+}
+
+// Loop through the array to call methods in draw
+void draw() {
+  for (int i = 0; i < parray.length; i++) {
+    Particle p = parray[i];
+    p.run();
+  }
+}
+
+
+// THE NEWFANGLED ARRAYLIST WAY
+int total = 10;
+// Declaring and creating the ArrayList instance
+ArrayList<Particle> plist = new ArrayList<Particle>(); 
+
+void setup() {
+  for (int i = 0; i < total; i++) {
+    plist.add(new Particle());
+  }
+}
+
+void draw() {
+  for (int i = 0; i < plist.size(); i++) {
+    Particle p = plist.get(i);
+    p.run();
+  }
+}
+
+
+This last for loop looks pretty similar to our code that looped through a “regular” array.  We initialize a variable called “i” to zero and count up by one accessing each element of the ArrayList until we get to the end.    However, if you use generics, i.e.
+
+ArrayList<Particle> plist = new ArrayList<Particle>();
+
+you can write something called an “enhanced for loop.”  It looks like this:
+
+for (Particle p: particles) {
+  p.run();
+}
+
+Let’s translate that.  Say “for each” instead of “for” and say “in” instead of “:”.  Now you have:
+
+“For each Particle p in particles, run that Particle p!”
+
+I know.  You cannot contain your excitement.  I can’t.  I know it’s not necessary, but I just have to type that again.
+
+for (Particle p: particles) {
+  p.run();
+}
+
+Simple, elegant, concise, lovely.   Take a moment.   Breathe.   I have some bad news.  Yes, we love that enhanced loop and we will get to use it.  But not right now.  Our Particle System examples will require a feature that makes using that loop impossible.  Let’s continue.
+
+The code we’ve written above doesn’t take advantage of the ArrayList’s resizability, and it uses a fixed size of 10.   We need to design an example that fits with our Particle System scenario, where we emit a continuous stream of Particle objects, adding one new particle with each cycle through draw().   We’ll skip rehashing the Particle class code here, as it doesn’t need to change.
+
+Example 4.x: ArrayList of particles￼
+ArrayList particles;
+
+void setup() {
+  size(200,200);
+  particles = new ArrayList();
+}
+
+void draw() {
+  background(255);
+
+  particles.add(new Particle(new PVector(width/2,50)));
+
+  for (int i = 0; i < particles.size(); i++) {
+    Particle p = (Particle) particles.get(i);
+    p.run();
+  }
+}
+
+
+Run the above code for a few minutes and you’ll start to see the frame rate slow down and down and down until the program grinds to a halt (my tests yielded horrific performance after 15 minutes.)  The issue of course is that we are creating more and more and more particles without removing any.   
+
+Fortunately, the ArrayList class has a convenient remove() function that allows us to delete a Particle (by referencing its index).    This is why we cannot use the new enhanced for loop we just learned; the enhanced loop provides no means for deleting elements while iterating.  Here, we want to call remove() when the Particle’s isDead() function returns true.
+
+  for (int i = 0; i < particles.size(); i++) {
+    Particle p = particles.get(i);
+    p.run();
+    if (p.isDead()) {		$$ If the Particle is “dead” we can go ahead and delete it from
+      particles.remove(i); 	   the list.
+    }
+  }
+
+Although the above code will run just fine (and the program will never grind to a halt), we have opened up a medium-sized can of worms.  Whenever we manipulate the contents of a list while iterating through that very list we those worms pop out.    Take, for example, the following code.
+
+  for (int i = 0; i < particles.size(); i++) {
+    Particle p = particles.get(i);
+    p.run();
+    particles.add(new Particle(new PVector(width/2,50)));  $$ Adding a new Particle to the list
+  }								  while iterating?
+
+This is a somewhat extreme example (with flawed logic), but it proves the point.  In the above case, for each Particle in the list, we add a new Particle to the list (manipulating the size() of the ArrayList).  This will result in an infinite loop as i can never increment past the size of the ArrayList.  
+
+While removing elements from the ArrayList during a loop doesn’t cause the program to crash (as it does with adding), the problem is almost more insidious in that it leaves no evidence.  To discover the problem we must first establish an important fact.  When an object is removed from the ArrayList, all elements are shifted one spot to the left.  Note the diagram below where Particle “C” (index 2) is removed.  Particles A and B keep the same index, while Particles D and E shift from 3 and 4 respectively to 2 and 3.
+
+￼
+
+
+Let’s pretend we are i  looping through the ArrayList.
+
+when i = 0	--> Check Particle A --> Do not delete
+when i = 1 	--> Check Particle B --> Do not delete
+when i = 2 	--> Check Particle C --> Delete!  Slide Particles D and E back from slots 3,4 to 2,3
+when i = 3 	--> Check Particle E --> Do not delete
+
+Notice the problem?  We never checked Particle D!  When C was deleted from slot #2, D moved into slot #2, but i already moved on to equal 3.  This is not a disaster given that the next time around, Particle D will get checked. Still, the expectation is that we are writing code to iterate through every single element of the ArrayList.   Skipping an element is unacceptable.
+
+There are two solutions to this problem.   The first solution is to simply iterate through the ArrayList backwards.  If you are sliding elements from right to left as elements are removed, it’s impossible to skip an element by accident.  Here’s how the code would look:
+
+ for (int i = particles.size()-1; i >= 0; i--) {
+    Particle p = (Particle) particles.get(i);
+    p.run();
+    if (p.isDead()) {
+      particles.remove(i); 
+    }
+  }
+
+This is a perfectly fine solution in 99 cases out of 100.  But sometimes, the order that the elements are drawn could be important and you may not want to iterate backwards.  Java provides a special class—Iterator—that takes care of all of the details of iteration for you.  You get to say:
+
+Hey, I’d like to iterate through this ArrayList.  Could you continue to give me the next element in the list one at a time until we get to the end?  And if I remove elements or move them around in the list while we’re iterating, will you make sure I don’t look at any elements twice or skip any by accident?  
+
+An ArrayList can produce an Iterator object for you.
+
+Iterator<Particle> it = particles.iterator();	$$ Note that with the Iterator object, we can also
+								   use the new <ClassName> generics syntax and
+ 								   specify the type that the Iterator will
+								   reference
+
+Once you’ve got the Iterator, the hasNext() function will tell us whether there is a Particle for us to run and the next() function will grab that Particle object itself.  
+
+  while (it.hasNext()) {
+    Particle p = it.next();
+    p.run();
+  }
+
+And if you call the remove() function on the Iterator object during the loop, it will delete the current Particle object (and not skip ahead past the next one as we saw with counting forward through the ArrayList).
+
+   if (p.isDead()) {
+     it.remove();  
+   }
+
+Putting it all together, we have:
+
+Example 4.x: ArrayList of Particles with Iterator￼
+ArrayList particles;
+
+void setup() {
+  size(200,200);
+  particles = new ArrayList();
+}
+
+void draw() {
+  background(255);
+
+  particles.add(new Particle(new PVector(width/2,50)));
+ 
+  Iterator it = particles.iterator();		
+  while (it.hasNext()) {			$$ Using an Iterator object
+    Particle p = it.next();			   instead of counting with int i
+    p.run();
+    if (p.isDead()) {
+       it.remove();  
+    }
+  }
+}
