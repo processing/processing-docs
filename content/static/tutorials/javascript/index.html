@@ -19,13 +19,13 @@
 	<h3>Why JavaScript Mode?</a></h3>
 
 	<p>
-	Since 2001, when the Processing project first began, every single line of code anyone has ever written in Processing has been a line of Java code.  When you deploy your Processing sketch as an application, it runs as a Java application.  When you export your Processing sketch to applet form, it runs as a Java web applet.  Even if you've used the recent Android mode to run a Processing sketch on an Android device (see Android tutorial: _________), you're really just running a Java application.  After all, just like Processing, Android is built on top of Java.   If you are looking to build a desktop or mobile application with Processing, you are covered by Java (the default) and Android modes.  But what if you are looking to deploy your Processing sketch to the web?</p>
+	Since 2001, when the Processing project first began, every single line of code anyone has ever written in Processing has been a line of Java code.  When you deploy your Processing sketch as an application, it runs as a Java application.  When you export your Processing sketch to applet form, it runs as a Java web applet.  Even if you've used the recent Android mode to run a Processing sketch on an Android device (see <a href="./android">Android tutorial</a>), you're really just running a Java application.  After all, just like Processing, Android is built on top of Java.   If you are looking to build a desktop or mobile application with Processing, you are covered by Java (the default) and Android modes.  But what if you are looking to deploy your Processing sketch to the web?</p>
 	
 	<p>
 	Today, most web browsers still support Java Applets by means of a plugin. However, few web developers deploy Java-based web applications now, due to long load and startup times and difficulties relying on Java (or compatible Java versions) being installed. This trend is not isolated to Java, but is happening to all browser plugins (e.g., Flash), which are becoming less popular as issues of security, installation, deployment, etc. make them inconvenient or risky.</p>
 			
 	<p>
-	In 2010 (??), John Resig developed <a href="http://processingjs.org">Processing.js</a> which is currently being developed and maintained by [INSERT NAME LINK HERE?]. For Processing 2.0, Processing.js has been integrated directly into the core and can be accessed via <b><i>JavaScript mode</b></i> (more about this in a moment) developed by Florian Jenett and Chris Lonnen.  Processing.js is really two things: a Processing-to-JavaScript translator; and an implementation of the Processing API (e.g., functions like line(), stroke(), etc.) written in JavaScript instead of Java. It might seem odd at first to imagine your Processing sketches running in a browser without modification. But this is exactly what Processing.js enables.</p>
+	In 2010, John Resig developed <a href="http://processingjs.org">Processing.js</a> which is currently being developed and maintained by [DAVID HUMPHRIES TO PROVIDE INFO]. For Processing 2.0, Processing.js has been integrated directly into the core and can be accessed via <b><i>JavaScript mode</b></i> (more about this in a moment) developed by Florian Jenett and Chris Lonnen.  Processing.js is really two things: a Processing-to-JavaScript translator; and an implementation of the Processing API (e.g., functions like line(), stroke(), etc.) written in JavaScript instead of Java. It might seem odd at first to imagine your Processing sketches running in a browser without modification. But this is exactly what Processing.js enables.</p>
 	
 	<p>
 	Processing.js automatically converts your Processing code to JavaScript. This means that you don't have to learn JavaScript in order to run your code in a browser.  You can, quite literally, write your code using the Processing IDE like you always have, and using the new JavaScript mode (described in more detail below) get it running on the web. There's nothing new to learn, beyond getting a simple web page created.</p>
@@ -34,7 +34,7 @@
 	Under the hood, JavaScript mode uses the new HTML5 canvas element to create your sketch's graphics. The canvas element is a new feature of the web, and is either implemented or will be implemented by all major web browsers. All Processing drawing features have been reimplemented in Processing.js to use canvas, so any browser that supports canvas will also support Processing.js.</p>
 	
 	<p>
-	It is important to note, however, that JavaScript mode does not currently support libraries.  All Processing libraries are written with Java and would require a JavaScript translation for each and every library to work in JavaScript mode.  Because JavaScript mode is brand new for Processing 2.0, no one has had the chance to reimplement their libraries in JavaScript.  If you are a library creator and are interested in creating a JavaScript compatible library, please see [INSERT SOME LINK TO LIBRARY MAKING TUTORIAL THAT I AM GOING TO WRITE]
+	It is important to note, however, that JavaScript mode does not currently support libraries.  All Processing libraries are written with Java and would require a JavaScript translation for each and every library to work in JavaScript mode.  Because JavaScript mode is brand new for Processing 2.0, no one has had the chance to implement their libraries in JavaScript.  If you are a library creator and are interested in creating a JavaScript compatible library, stay tuned as we are developing standards and methods for doing so.
 	</p>
 
 	<p>
@@ -69,11 +69,7 @@
 	<h3>Creating a Processing.js Web Page</a></h3>
 	
 	<p>
-	Once you have finished writing your sketch, you will likely want to publish it to the web.  After all this is the primary reason for using JavaScript mode in the first place!  JavaScript mode will automatically generate the HTML and javascript code required to publish your sketch for you.  Just take a look in your sketch directory for a folder named "applet_js." This folder is generated each time you run your sketch (you can also force its generation by running FILE --> EXPORT which works similarly to Standard mode's "Export" that generates an HTML page and JAR file for an embedded Java applet.)
-			
-	<p><img src="imgs/export.png"></p>
-		
-	<p>Exporting will generate three files in a folder named "applet_js" (see below).</p>
+	Once you have finished writing your sketch, you will likely want to publish it to the web.  After all this is the primary reason for using JavaScript mode in the first place!  JavaScript mode will automatically generate the HTML and javascript code required to publish your sketch for you.  Just take a look in your sketch directory for a folder named "applet_js." This folder is generated each time you run your sketch (you can also force its generation by running FILE --> EXPORT which works similarly to Standard mode's "Export" that generates an HTML page and JAR file for an embedded Java applet.)  Whenever you run or export, Processing will generate three files in a folder named "applet_js" (see below).</p>
 		
 	<p><img src="imgs/appletjs.png"></p>
 			
