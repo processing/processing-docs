@@ -116,7 +116,7 @@ x Fixed PGraphics link to developers reference  --SM
 x text() change at least one example to not require loadFont() and describe  --SM
 x add two examples for color() to show gray and with colorMode(HSB) --SM
 x review "implements" description --SM
-x enhanced descriptions affected by rectMode(), added new examples for each MODE to rectMode() --SM
+x Enhanced descriptions affected by rectMode(), added new examples for each MODE to rectMode() --SM
 
 Key:
 - To do

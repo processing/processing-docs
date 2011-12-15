@@ -18,6 +18,13 @@ rect(30, 20, 55, 55);
 <example>
 <image>rect_1.png</image>
 <code><![CDATA[
+rect(30, 20, 55, 55, 7);
+]]></code>
+</example>
+
+<example>
+<image>rect_2.png</image>
+<code><![CDATA[
 rect(30, 20, 55, 55, 3, 6, 12, 18);
 ]]></code>
 </example>
