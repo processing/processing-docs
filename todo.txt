@@ -157,12 +157,13 @@ x Done
 - New XML/JSON  --DS, JT
 - New Regex  --DS
 - New PVector  --DS
-- Analyize PVector in examples  --DS
+- Analyze PVector in examples  --DS
 - New PShape  --DS
 - PTable  --DS,JT
 - add stringIntPair to Hashmap  --DS
 - thread() example  --DS
 - New P3D  --CR,DS,AC
+- new saveFrame() for recording example --DS
 
   NICE
 $ 2 David Muth examples  --CR
@@ -200,9 +201,11 @@ x Done
 
   NEED
 $ New P3D  --DS (CR to help with links and images)
-- Update Eclipse  --DS
+x Update Eclipse  --DS
 $ New Android  --DS, JT
 $ Processing.js  --DS,FJ
+- new PShape --DS
+- update Strings and Text re: createFont() --DS
 
 $ Update Getting Started for 2.0  --CR
 -   New PDE drawing / image
@@ -210,7 +213,12 @@ $ Update Getting Started for 2.0  --CR
 
   NICE
 - New Generics  --DS
-- Typography (or merge into Strings and Drawing Text?)  --CR,DS
+- New Regex --DS
+
+  WIKI TUTORIALS
+- update thread tutorial with thread() function --DS
+- fix exception tutorial with loadStrings() --DS
+- common errors --DS
 
 Key:
 - To do
