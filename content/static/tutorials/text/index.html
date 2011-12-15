@@ -114,23 +114,20 @@ println("We got here and we're printing out the mouse location!!!");
 <p>
 While this is valuable for debugging, it's not going to help our goal of displaying text for a user.  To place text on screen, we have to follow a series of simple steps.
 </p><p>
-1.  Choose a font by selecting "Tools" --> "Create Font."  This will create and place the font file in your data directory.  Make note of the font filename for Step 3.   Processing uses a special font format, "vlw," that uses images to display each letter.  Because of this, you should create the font at the size you intend to display.
-</p><p>
-<img src="imgs/createfont.jpg">
-</p><p>
-2.  Declare an object of type <a href="http://processing.org/reference/PFont.html">PFont</a>.
+1.  Declare an object of type <a href="http://processing.org/reference/PFont.html">PFont</a>.
 </p>
 <pre>
 PFont f;
 </pre>
 <p>
-3.  Load the font by referencing the font file name and the function <a href="http://processing.org/reference/loadFont_.html">loadFont()</a>.  This should be done only once, usually in <a href="http://processing.org/reference/setup_.html">setup()</a>.  Just as with loading an image, the process of loading a font into memory is slow and would seriously affect the sketch's performance if placed inside <a href="http://processing.org/reference/draw_.html">draw()</a>.
+3.  Create the font by referencing the font  name and the function <a href="http://processing.org/reference/createFont_.html">createFont_()</a>.  This should be done only once, usually in <a href="http://processing.org/reference/setup_.html">setup()</a>.  Just as with loading an image, the process of loading a font into memory is slow and would seriously affect the sketch's performance if placed inside <a href="http://processing.org/reference/draw_.html">draw()</a>.  You can see a list of your available system fonts by via <a href="http://processing.org/reference/PFont_list_.html">PFont.list()</a>.   Because of limitations in Java, not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.  In addition to the name of the font, you can specify the size as well as whether the font should be antialiased or not.
+
 </p>
 <pre>
-f = loadFont("Serif-48.vlw");  
+f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
 </pre>
 <p>
-4. Specify the font using <a href="http://processing.org/reference/textFont_.html">textFont()</a>. textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   Specifying a font size that is different from the font size loaded can also result in pixelated or poor quality text.
+4. Specify the font using <a href="http://processing.org/reference/textFont_.html">textFont()</a>. textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically.  When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
 </p>
 <pre>
 textFont(f,36);
@@ -156,7 +153,7 @@ PFont f;                          // STEP 2 Declare PFont variable
   
 void setup() {
   size(200,200);
-  f = loadFont("ArialMT-16.vlw"); // STEP 3  Load Font
+  f = createFont("Arial",16,true); // STEP 3 Create Font
 }
 
 void draw() {
@@ -167,16 +164,10 @@ void draw() {
 }
 </pre>
 <p>
-Fonts can also be created using the function <a href="http://processing.org/reference/createFont_.html">createFont()</a>.
+Fonts can also be created using "Tools" --> "Create Font."  This will create and place a VLW font file in your data directory which you can load into a PFont object using <a href="http://processing.org/reference/loadFont_.html">loadFont()</a>.
 </p>
 <pre>
-f = createFont("Georgia", 24, true);
-</pre>
-<p>
-createFont() allows you to use a font that may be installed on your local machine, but not available as part of Processing's font options.   In addition, createFont() allows the font to be scaled to any size without it looking pixelated or smushed.   You can see all the available fonts with <a href="http://processing.org/reference/PFont_list_.html">PFont.list()</a>.
-</p>
-<pre>
-println(PFont.list());
+f = loadFont("ArialMT-16.vlw");
 </pre>
 
 <h3>Animating Text</h3>
