@@ -55,27 +55,27 @@ void keyPressed()
 
 sketch.html:
 
-<html>
-<head>
-  <script type="text/javascript" src="processing.js"></script>
-  <script type="text/javascript">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;processing.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
   // bind javascript to all Processing instances
   function bindJavascript() {
-    canvaslist = document.getElementsByTagName("canvas");
-    for(c=0; c<canvaslist.length; c++) { 
+    canvaslist = document.getElementsByTagName(&quot;canvas&quot;);
+    for(c=0; c&lt;canvaslist.length; c++) { 
       pjs = Processing.getInstanceById(canvaslist[c]);
       try { pjs.bindJavascript(this); }
       catch(e) { setTimeout(bindJavascript, 250); }
     }
   }
   bindJavascript();
-  </script>
-</head>
-<body>
-  <canvas id="first" data-processing-sources="sketch.pde"></canvas>
-  <canvas id="second" data-processing-sources="bypass.pde sketch.pde"></canvas>
-</body>
-</html>
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;canvas id=&quot;first&quot; data-processing-sources=&quot;sketch.pde&quot;&gt;&lt;/canvas&gt;
+  &lt;canvas id=&quot;second&quot; data-processing-sources=&quot;bypass.pde sketch.pde&quot;&gt;&lt;/canvas&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 ]]></code>
 </example>
 

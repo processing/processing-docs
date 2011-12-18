@@ -20,6 +20,14 @@ text("word", 10, 50);
 ]]></code>
 </example>
 
+<js_mode>
+	<description><![CDATA[
+Font support for the Canvas element varies across browsers. FireFox currently has the best support, but still uses a pre-defined set of fonts. (Documentation to follow soon.) Good alternatives to the browser's Canvas-font functions are available: such as the <a href="http://bocoup.com/processing-js/docs/index.php?page=Cross-Browser%20Canvas%20Fonts">Glyph method</a>. See also: <a href="http://jim.studt.net/canvastext/">Canvas Text</a>, <a href="http://canvas.burnttoys.net/bauhaus.html">BurntToys Bauhaus</a>.
+<br /><br />
+<p><b>Please use the follwoing demos to learn how fonts can be rendered in Firefox with Processing.js: <a href="http://processingjs.org/learning/basic/letters">Letters</a>, <a href="http://processingjs.org/learning/basic/words">Words</a>, <a href="http://processingjs.org/source/text-width/text-width.html">width()</a></b></p>
+]]></description>
+</js_mode>
+
 <description><![CDATA[
 Sets the current font that will be drawn with the <b>text()</b> function. Fonts must be loaded with <b>loadFont()</b> before it can be used. This font will be used in all subsequent calls to the <b>text()</b> function. If no <b>size</b> parameter is input, the font will appear at its original size (the size it was created at with the "Create Font..." tool) until it is changed with <b>textSize()</b>. <br /> <br /> Because fonts are usually bitmaped, you should create fonts at the sizes that will be used most commonly. Using <b>textFont()</b> without the size parameter will result in the cleanest-looking text. <br /><br /> With the default (JAVA2D) and PDF renderers, it's also possible to enable the use of native fonts via the command <b>hint(ENABLE_NATIVE_FONTS)</b>. This will produce vector text in JAVA2D sketches and PDF output in cases where the vector data is available: when the font is still installed, or the font is created via the <b>createFont()</b> function (rather than the Create Font tool).
 ]]></description>
