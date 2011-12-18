@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>/* @pjs pauseOnBlur */ directive</name>
+
+<category>Javascript</category>
+<subcategory>Directives</subcategory>
+
+<usage>Web</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+/* @pjs pauseOnBlur="true"; */
+
+void setup()
+{
+  size(200,200);
+  background(255);
+  frameRate(45);
+}
+
+float value = 0;
+boolean forward = true;
+
+/**
+ * This animation draws a sinewave, but only when the page this sketch
+ * is loaded on has focus. If the user alt-tabs to some other program,
+ * or they look at a different browser instance or tab, this sketch will
+ * be paused until the page it is loaded on regains focus.
+ */
+void draw()
+{
+    value += forward ? 2*PI/25 : -2*PI/25;
+    if (forward && value>=2*PI) { forward=false; }
+    else if(!forward && value<=0) { forward=true; }
+
+    noStroke();
+    fill(255,75);
+    rect(0,0,width,height);
+
+    stroke(100,100,200);
+    noFill();
+  float c = value - PI;
+  bezier(0,100, 33,100+(50*c*PI/6), 66,100+(50*c*PI/6), 100,100);
+  bezier(100,100, 133,100+(50*-c*PI/6), 166,100+(50*-c*PI/6), 200,100);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+<p>Animated sketches that are loaded with Processing.js will always be running, irrespective of whether the user is looking at the page that the sketch is running on. Using this directive makes an animated sketch pause when the user is not looking at the page that the sketch is loaded on, to free up resources. The sketch is resumed only when the user focusses on the page again.</p>
+]]></description>
+
+<syntax>
+<![CDATA[       
+/* @pjs pauseOnBlur="true"; */
+]]></syntax>
+
+<returns></returns>
+
+<parameter>
+	<label>pauseOnBlur</label>
+	<description>"true" (implicitly false for any other value)</description>
+</parameter>
+
+<related>
+directives
+</related>
+
+<availability>2.0</availability>
+
+<type>Operator</type>
+
+<partof>PDE</partof>
+
+</root>

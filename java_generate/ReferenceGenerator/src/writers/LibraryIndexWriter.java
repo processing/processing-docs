@@ -111,11 +111,11 @@ public class LibraryIndexWriter extends IndexWriter {
 		return ret;
 	}
 	
-	public void write(String path) throws IOException{
+	public void write (String path) throws IOException {
 		templateWriter.write("library.index.template.html", sections, path+"index.html");
 	}
 	
-	public void addItem(ClassDoc doc){
+	public void addItem (ClassDoc doc) {
 		ArrayList<HashMap<String, String>> methods = new ArrayList<HashMap<String,String>>();
 		HashMap<String, String> cmap = new HashMap<String, String>();
 		

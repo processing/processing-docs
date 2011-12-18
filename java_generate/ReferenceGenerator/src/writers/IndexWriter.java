@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
-import com.sun.javadoc.Doc;
+import com.sun.javadoc.ProgramElementDoc;
 import com.sun.javadoc.Tag;
 
 public class IndexWriter extends BaseWriter {
@@ -59,17 +59,18 @@ public class IndexWriter extends BaseWriter {
 //		System.out.println("Alphabetical:\n" + getAlphabetical().get("c2"));
 	}
 	
-	private HashMap<String, String> getCompressedSections(){
+	private HashMap<String, String> getCompressedSections () {
 		HashMap<String, String> ret = new HashMap<String, String>();
 		
-		for(String key : sections.keySet()){
+		for (String key : sections.keySet()) {
+			
 			String value = "";
 			//make things alphabetical in their sections
 			Collections.sort( sections.get(key), new Alphabetizer() );
 			
-			for(String s : sections.get(key))
+			for (String s : sections.get(key))
 			{
-				if( ! value.contains(s) )
+				if ( !value.contains(s) )
 				{					
 					value = value.concat("\n").concat(s);
 				}
@@ -135,19 +136,23 @@ public class IndexWriter extends BaseWriter {
 		return ret;
 	}
 	
-	public void addItem(Doc doc, Tag webref) throws IOException{
+	public void addItem ( ProgramElementDoc doc, Tag webref ) throws IOException {
+		
 		String name = getName(doc);
 		String anchor = getAnchorFromName(name);
 		String category = getCategory(webref);
 		String subcategory = getSubcategory(webref);
-		addItem(category, subcategory, name, anchor);
+		String classes = isModeSupported(doc, MODE_JAVASCRIPT) ? "" : "no-js";
+		
+		addItem(category, subcategory, name, anchor, classes);
 	}
 	
-	public void addItem(String category, String subcategory, String name, String anchor) throws IOException{
+	public void addItem (String category, String subcategory, String name, String anchor, String classes ) throws IOException{
 		String key = getKey(category, subcategory);
 		HashMap<String, String> vars = new HashMap<String, String>();
 		vars.put("anchor", anchor);
 		vars.put("name", name);
+		vars.put("classes", classes);
 		
 		String value = templateWriter.writePartial("index.entry.partial.html", vars);
 		if( sections.containsKey(key))

@@ -383,6 +383,9 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 .ref-item { margin-bottom: 60px; }
 .ref-item th { width: 100px; font-weight: normal; text-align: left; vertical-align: top; }
 .ref-item td { vertical-align: top; padding-bottom: 2em; }
+.ref-item td p {
+	max-width: 520px;
+}
 .ref-item td h3 { margin: 0; }
 pre { margin: 0; }
 tr.name-row { height: 80px; }
@@ -415,6 +418,10 @@ div.ref-col { width: 30%;
 }
 .ref-col h3+h5 { margin-top: 0; }
 .category { margin-bottom: 30px; }
+
+.ref-col a.ref-link { /* reference index page item */
+	display: block;
+}
 
 .ref-col p { margin-top: -.5em; margin-bottom: 2em; }
 

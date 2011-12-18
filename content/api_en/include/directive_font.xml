@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>/* @pjs font */ directive</name>
+
+<category>Javascript</category>
+<subcategory>Directives</subcategory>
+
+<usage>Web</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+/* @pjs font="Arial.ttf"; */
+
+void setup()
+{
+  size(200,200);
+  noLoop();
+  textFont(createFont("Arial",32));
+}
+
+void draw()
+{
+  background(255);
+  String t = "P.js";
+  float tw = textWidth(t);
+  fill(0);
+  text(t, (width-tw)/2, (height+32)/2);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+<p>If you wish to use custom fonts in your sketch, these must be preloaded using the font @pjs directive. Preloading fonts uses its own command, rather than the standard <a href="../reference/preload">preload</a> command, because unlike images a font must not just be cached, but must also be loaded into memory for the browser to make use of. Processing.js does this by relying on the browser to load the font via a CSS @font-face rule. While most browsers support a large number 
+of font formats for use with @font-face (woff, svg, eot, ttf and otf), relying on "truetype" (ttf) and "opentype" (otf) font formats offer the greatest 
+interoperability between Processing and Processing.js.</p>
+<p>Fonts can be preloaded from URL, such as "Arial.ttf" or from data URI, such as "data:font/truetype,base64, {base 64 encoded data block}". 
+Fonts that are preloaded can be loaded without their extension in your sketch using the createFont function: if you preload "Arial.ttf" you can use 
+this font in your sketch by loading it as a Processing font using <b>PFont myfont = createFont("Arial",12); </b>and then using as text font by calling 
+<b>textFont(myfont);</b> If you place your fonts in a separate directory, such as the "data" directory used by Processing, you only need to 
+indicate the font location in the preload command. The preload command will be /* @pjs font="data/Arial.ttf"; */ but the call in your sketch 
+remains <b>createFont("Arial",12)</b>.</p>
+<p><b>NOTE:</b> The "VLW" format used by Processing is not supported, as this is a custom bitmap image file with an index that indicates sections of the
+image that map to a letter.</p>
+<p><b>WARNING:</b> only use this directive for fonts that are used exclusively by your sketch; if your sketch relies on a font that you have also included for use 
+on your page with an @font-face CSS rule, this directive may overwrite your rule with a far simpler one.</p>
+]]></description>
+
+<syntax>
+<![CDATA[       
+/* @pjs font="fontURL"; */
+ 
+/* @pjs font="data:font/truetype,base64, {base 64 encoded data block}"; */
+]]></syntax>
+
+<returns></returns>
+
+<parameter>
+	<label>font</label>
+	<description>comma separated list of URLs or data-URIs (may be mixed), all inside a single set of double quotes</description>
+</parameter>
+
+<related>
+directives
+createFont()
+</related>
+
+<availability>2.0</availability>
+
+<type>Operator</type>
+
+<partof>PDE</partof>
+
+</root>

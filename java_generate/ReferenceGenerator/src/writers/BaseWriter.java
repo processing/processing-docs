@@ -21,6 +21,7 @@ import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 import com.sun.javadoc.ClassDoc;
@@ -37,6 +38,8 @@ import com.sun.javadoc.Tag;
 
 public class BaseWriter {
 	// Some utilities
+	
+	public final static String MODE_JAVASCRIPT = "js";
 	
 	public BaseWriter()
 	{
@@ -160,7 +163,7 @@ public class BaseWriter {
 			//strip off the array indicators for the name
 			name = name.replaceAll("\\[\\]", "");
 		}
-		return name.replace(" ", "").concat(".html");
+		return name.replace(" ", "_").concat(".html");
 	}
 	
 	//
@@ -592,6 +595,41 @@ public class BaseWriter {
 			ret.add(map);
 		}
 		return ret;
+	}
+	
+	/**
+	 *	Modes should support all API, so if XML not explicitly states "not supported", then assume it does.
+	 */
+	protected static boolean isModeSupported ( ProgramElementDoc doc, String mode ) {
+		
+		Document xmlDoc = null;
+		try {
+			String xmlPath = getXMLPath( doc );
+			//System.out.println(xmlPath);
+			xmlDoc = getXMLDocument( xmlPath );
+		} catch ( IOException ioe ) {
+			ioe.printStackTrace();
+			return true;
+		}
+		
+		XPathFactory xpathFactory = XPathFactory.newInstance();
+		XPath xpath = xpathFactory.newXPath();
+			
+		try {
+			
+			String umraw = xpath.evaluate("//unsupported_modes", xmlDoc, XPathConstants.STRING).toString();
+			String[] ums = umraw.split(",");
+			for ( String s : ums ) {
+				if ( s.trim().toLowerCase().equals(mode) )
+					return false;
+			}
+			
+		} catch ( XPathExpressionException e ) {
+			
+			e.printStackTrace();
+		}
+		
+		return true;
 	}
 	
 	protected static String getRelated( ProgramElementDoc doc ) throws IOException

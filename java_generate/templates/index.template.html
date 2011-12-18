@@ -17,6 +17,8 @@
 		<meta name="Copyright" content="All contents copyright Ben Fry, Casey Reas, MIT Media Laboratory" />
 	
 		<link href="<!-- webcontentpath -->css/style.css" rel="stylesheet" type="text/css" />
+		<script src="<!-- webcontentpath -->javascript/jquery-1.2.6.min.js" type="text/javascript">
+		</script>
 	</head>
 	<body id="Language" onload="" >
 		
@@ -44,8 +46,36 @@
 			<div class="content">
 			
 			 <h1 class="ref-header"><img src="<!-- webcontentpath -->img/header.gif" alt="Language (API). The Processing Language has been designed to facilitate the creation of sophisticated visual and conceptual structures." /></h1>
+			
+			<p class="ref-top" style="display:none; margin-bottom: 20px">
+				Show API for mode: <a href="#" mode="java" style="color:red">Standard</a> / <a href="#" mode="js">JavaScript</a>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.ref-top').show();
+		$('.ref-top a').each(function(i,e){
+			var mode = $(e).attr('mode');
+			$(e).bind('click',function(evt){
+				$('.ref-top a').css('color','');
+				$('.no-'+mode).hide();
+				$('.'+mode+'-only').show();
+				$(this).css('color','red');
+			},false);
+		});
+		var showMode = "java";
+		if ( document.location.href.indexOf('mode=') >= 0 )
+			showMode = document.location.href.replace(/.+\?.*mode=([a-z]+)&?.*/,"$1");
+		$('.ref-top a[mode='+showMode+']').click();
+	});
+</script></p>
 
 <div class="ref-col">
+	
+	<div class="category js-only no-java">
+		<b>Javascript Mode</b>
+		<h5>Directives</h5>
+		<!-- javascript:directives -->
+	</div>
+	
 <div class="category">
 <b>Structure</b>
 

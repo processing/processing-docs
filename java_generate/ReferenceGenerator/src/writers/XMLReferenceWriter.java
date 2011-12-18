@@ -63,7 +63,18 @@ public class XMLReferenceWriter extends BaseWriter {
 				String classname = (String) xpath.evaluate("//classname", doc, XPathConstants.STRING);
 				String classAnchor = "";
 				
-				if( subcategory.equals("Method") )
+				String um_raw = (String) xpath.evaluate("//unsupported_modes", doc, XPathConstants.STRING);
+				String[] unsupported_modes = new String[0];
+				String link_classes = "";
+				if ( um_raw != null && !um_raw.equals("") ) {
+					unsupported_modes = um_raw.trim().split(",");
+					for ( String umode : unsupported_modes ) {
+						if ( umode.equals("") ) continue;
+						link_classes += " no-" + umode.trim();
+					}
+				}
+				
+				if ( subcategory.equals("Method") )
 				{
 					classname = category;
 					classAnchor = getAnchorFromName( classname );
@@ -74,22 +85,26 @@ public class XMLReferenceWriter extends BaseWriter {
 				// get anchor from original filename
 				String path = f.getAbsolutePath();
 				String anchorBase = path.substring( path.lastIndexOf("/")+1, path.indexOf(".xml"));
-				if( name.endsWith("()") )
+				
+				if ( name.endsWith("()") )
 				{
-					if( !anchorBase.endsWith("_" ) )
+					if ( !anchorBase.endsWith("_") )
 					{
 						anchorBase += "_";
 					}
 				}
+				
 				String anchor = anchorBase + ".html";
 				String usage = (String) xpath.evaluate("//usage", doc, XPathConstants.STRING);
-				if(indexWriter instanceof LibraryIndexWriter )
+				
+				if ( indexWriter instanceof LibraryIndexWriter )
 				{				
 					((LibraryIndexWriter) indexWriter).addEvent(name, anchor);
 					vars.put("csspath", "../../");
-				} else if( ! subcategory.equals("Method") )
-				{				
-					indexWriter.addItem(category, subcategory, name, anchor);
+				} 
+				else if ( !subcategory.equals("Method") )
+				{
+					indexWriter.addItem(category, subcategory, name, anchor, link_classes);
 				}
 				
 				vars.put("examples", getExamples(doc));

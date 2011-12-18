@@ -32,6 +32,7 @@ javadoc -doclet ProcessingWeblet \
 
 # manage web reference
 cp -R ../../css	 ../../reference/
+cp -R ../../javascript	 ../../reference/
 mkdir -p ../../reference/images
 cp -R ../../content/api_media/*.jpg ../../reference/images/
 cp -R ../../content/api_media/*.gif ../../reference/images/
@@ -39,6 +40,7 @@ cp -R ../../content/api_media/*.png ../../reference/images/
 
 # manage local reference
 cp -R ../../css	 ../../distribution/
+cp -R ../../javascript	 ../../distribution/
 mkdir -p ../../distribution/images
 cp -R ../../content/api_media/*.jpg ../../distribution/images/
 cp -R ../../content/api_media/*.gif ../../distribution/images/

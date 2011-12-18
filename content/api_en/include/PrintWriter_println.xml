@@ -3,6 +3,8 @@
 
 <name>println()</name>
 
+<unsupported_modes>js</unsupported_modes>
+
 <category>PrintWriter</category>
 
 <subcategory>Method</subcategory>

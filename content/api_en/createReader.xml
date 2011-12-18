@@ -2,6 +2,8 @@
 <root>
 <name>createReader()</name>
 
+<unsupported_modes>js</unsupported_modes>
+
 <category>Input</category>
 
 <subcategory>Files</subcategory>
