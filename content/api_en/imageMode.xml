@@ -9,27 +9,73 @@
 <type></type>
 
 <example>
-<image>imageMode_.png</image>
+<image>imageMode_0.png</image>
 <code><![CDATA[
 PImage img;
 
 void setup() {
   img = loadImage("laDefense.jpg");
-  imageMode(CORNERS);
 }
 
 void draw() {
-  image(img, 10, 10, 60, 60);
   imageMode(CORNER);
-  image(img, 40, 40, 50, 50);
+  image(img, 10, 10, 50, 50);  // Draw image using CORNER mode
+}
+]]></code>
+</example>
+
+<example>
+<image>imageMode_1.png</image>
+<code><![CDATA[
+PImage img;
+
+void setup() {
+  img = loadImage("laDefense.jpg");
+}
+
+void draw() {
+  imageMode(CORNERS);
+  image(img, 10, 10, 90, 40);  // Draw image using CORNERS mode
+}
+]]></code>
+</example>
+
+<example>
+<image>imageMode_2.png</image>
+<code><![CDATA[
+PImage img;
+
+void setup() {
+  img = loadImage("laDefense.jpg");
+}
+
+void draw() {
+  imageMode(CENTER);
+  image(img, 50, 50, 80, 80);  // Draw image using CENTER mode
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Modifies the location from which images draw. The default mode is <b>imageMode(CORNER)</b>, which specifies the location to be the upper left corner and uses the fourth and fifth parameters of <b>image()</b> to set the image's width and height. The syntax <b>imageMode(CORNERS)</b> uses the second and third parameters of <b>image()</b> to set the location of one corner of the image and uses the fourth and fifth parameters to set the opposite corner. Use <b>imageMode(CENTER)</b> to draw images centered at the given x and y position.<br />
-<br />
-The parameter to <b>imageMode()</b> must be written in ALL CAPS because Processing is a case-sensitive language.
+
+
+
+
+
+
+Modifies the location from which images are drawn by changing the way in which parameters given to <b>image()</b> are intepreted.<br/>
+<br/>
+The default mode is <b>imageMode(CORNER)</b>, which interprets the second and third parameters of <b>image()</b> as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.<br/>
+<br/>
+<b>imageMode(CORNERS)</b> interprets the second and third parameters of <b>image()</b> as the  location of one corner, and the fourth and fifth parameters as the opposite corner.<br/>
+<br/>
+<b>imageMode(CENTER)</b> interprets the second and third parameters of <b>image()</b> as the image's center point. If two additional parameters are specified, they are used to set the image's width and height.<br/>
+<br/>
+The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
+
+
+
+
 ]]></description>
 
 </root>

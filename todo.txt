@@ -16,8 +16,8 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
-- enhance descriptions affected by modes: imageMode()  --SM,CR
 - add examples for each MODE for imageMode(), textureMode()  --SM
+- enhance descriptions affected by modes: imageMode()  --SM,CR
 
 - create examples for all of the following:  --SM
 	normal()
