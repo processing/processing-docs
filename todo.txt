@@ -16,8 +16,6 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
-- add examples of each MODE to textureMode()  --SM
-
 - create examples for all of the following:  --SM
 	normal()
 	lightFalloff()
@@ -119,6 +117,8 @@ x review "implements" description --SM
 x Enhanced descriptions affected by rectMode(), added new examples for each MODE to rectMode() --SM
 x Enhanced descriptions affected by ellipseMode(), added new examples for each MODE to ellipseMode() --SM
 x Enhanced descriptions affected by imageMode(), added new examples for each MODE to imageMode() --SM
+x Didn't add examples of each MODE to textureMode() (they were already there!), but clarified the description  --SM
+
 
 Key:
 - To do
