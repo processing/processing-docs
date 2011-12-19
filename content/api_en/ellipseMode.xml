@@ -9,18 +9,43 @@
 <type></type>
 
 <example>
-<image>ellipseMode_.png</image>
+<image>ellipseMode_0.png</image>
 <code><![CDATA[
-ellipseMode(CENTER);
-ellipse(35, 35, 50, 50);
-ellipseMode(CORNER);
-fill(102);
-ellipse(35, 35, 50, 50);
+ellipseMode(RADIUS);  // Set ellipseMode to RADIUS
+fill(255);  // Set fill to white
+ellipse(50, 50, 30, 30);  // Draw white ellipse using RADIUS mode
+
+ellipseMode(CENTER);  // Set ellipseMode to CENTER
+fill(100);  // Set fill to gray
+ellipse(50, 50, 30, 30);  // Draw gray ellipse using CENTER mode
+]]></code>
+</example>
+
+<example>
+<image>ellipseMode_1.png</image>
+<code><![CDATA[
+ellipseMode(CORNER);  // Set ellipseMode is CORNER
+fill(255);  // Set fill to white
+ellipse(25, 25, 50, 50);  // Draw white ellipse using CORNER mode
+
+ellipseMode(CORNERS);  // Set ellipseMode to CORNERS
+fill(100);  // Set fill to gray
+ellipse(25, 25, 50, 50);  // Draw gray ellipse using CORNERS mode
 ]]></code>
 </example>
 
 <description><![CDATA[
-The origin of the ellipse is modified by the <b>ellipseMode()</b> function. The default configuration is <b>ellipseMode(CENTER)</b>, which specifies the location of the ellipse as the center of the shape. The <b>RADIUS</b> mode is the same, but the width and height parameters to <b>ellipse()</b> specify the radius of the ellipse, rather than the diameter. The <b>CORNER</b> mode draws the shape from the upper-left corner of its bounding box. The <b>CORNERS</b> mode uses the four parameters to <b>ellipse()</b> to set two opposing corners of the ellipse's bounding box. The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
+Modifies the location from which ellipses are drawn by changing the way in which parameters given to <b>ellipse()</b> are intepreted.<br/>
+<br/>
+The default mode is <b>ellipseMode(CENTER)</b>, which interprets the first two parameters of <b>ellipse()</b> as the shape's center point, while the third and fourth parameters are its width and height.<br/>
+<br/>
+<b>ellipseMode(RADIUS)</b> also uses the first two parameters of <b>ellipse()</b> as the shape's center point, but uses the third and fourth parameters to specify half of the shapes's width and height.<br />
+<br/>
+<b>ellipseMode(CORNER)</b> interprets the first two parameters of <b>ellipse()</b> as the upper-left corner of the shape, while the third and fourth parameters are its width and height.<br/>
+<br/>
+<b>ellipseMode(CORNERS)</b> interprets the first two parameters of <b>ellipse()</b> as the location of one corner of the ellipse's bounding box, and the third and fourth parameters as the location of the opposite corner.<br/>
+<br/>
+The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
 ]]></description>
 
 </root>

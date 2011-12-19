@@ -30,7 +30,7 @@ for (int i = 0; i <= steps; i++) {
 </example>
 
 <description><![CDATA[
-Evalutes the curve at point t for points a, b, c, d. The parameter t varies between 0 and 1, a and d are points on the curve, and b and c are the control points. This can be done once with the x coordinates and a second time with the y coordinates to get the location of a curve at t.
+Evaluates the curve at point <b>t</b> for points <b>a</b>, <b>b</b>, <b>c</b>, <b>d</b>. The parameter <b>t</b> may range from 0 (the start of the curve) and 1 (the end of the curve). <b>a</b> and <b>d</b> are points on the curve, and <b>b</b> and <b>c</b> are the control points. This can be used once with the <b>x</b> coordinates and a second time with the <b>y</b> coordinates to get the location of a curve at <b>t</b>.
 ]]></description>
 
 </root>

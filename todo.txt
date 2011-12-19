@@ -17,7 +17,6 @@ $ Prepare MODE images for JavaScript, Android  --CR
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 - enhance descriptions affected by modes: ellipseMode(), imageMode()  --SM,CR
-
 - add examples for each MODE for ellipseMode(), imageMode(), textureMode()  --SM
 
 - create examples for all of the following:  --SM
@@ -30,10 +29,11 @@ $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 	println values are put in double quotes
 
 
-RELATED LINKS WITHIN THE REFERENCE (the engine is in place, work to be done following through)
+RELATED LINKS WITHIN THE REFERENCE
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
 - Add as related to each other: specular() and lightSpecular() --SM
+- Add as related to each other: ellipse() and arc() --SM
 - Add ">>" as related to each of these: red(), blue(), green() --SM
 - Add redraw() and frameRate() as related to draw() --SM
 - Add "implements" as related to "extends" --SM

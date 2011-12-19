@@ -16,7 +16,7 @@ ellipse(56, 46, 55, 55);
 </example>
 
 <description><![CDATA[
-Draws an ellipse (oval) in the display window. An ellipse with an equal <b>width</b> and <b>height</b> is a circle. The first two parameters set the location, the third sets the width, and the fourth sets the height. The origin may be changed with the <b>ellipseMode()</b> function. 
+Draws an ellipse (oval) to the screen. An ellipse with equal <b>width</b> and <b>height</b> is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the <b>ellipseMode()</b> function.
 ]]></description>
 
 
