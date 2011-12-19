@@ -36,7 +36,9 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Crops the frame coming in from the camera. It seems common for cameras add lines to the top or bottom of an image and this can be useful for removing them. The parameters are affected by the current <b>imageMode()</b> from the parent applet. The <b>imageMode()</b> function changes the way the parameters work. For example, <b>imageMode(CENTER)</b> will change <b>x</b> and <b>y</b> to define the center of the image. A call to <b>imageMode(CORNERS)</b> will change the width and height parameters to define the <b>x</b> and <b>y</b> values of the opposite corner of the image.
+Crops the frame coming in from the camera. It is common for cameras add lines to the top or bottom of an image, and this function can be useful for removing them.<br/>
+<br/>
+The parameters are intepreted differently, based on the current <b>imageMode()</b>. For example, <b>imageMode(CENTER)</b> will change <b>x</b> and <b>y</b> to define the center of the image. Using <b>imageMode(CORNERS)</b> will intepret the <b>width</b> and <b>height</b> parameters as the <b>x</b> and <b>y</b> values of the opposite corner of the image.
 ]]></description>
 
 <syntax>

@@ -16,8 +16,7 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
-- add examples for each MODE for imageMode(), textureMode()  --SM
-- enhance descriptions affected by modes: imageMode()  --SM,CR
+- add examples of each MODE to textureMode()  --SM
 
 - create examples for all of the following:  --SM
 	normal()
@@ -37,6 +36,7 @@ RELATED LINKS WITHIN THE REFERENCE
 - Add ">>" as related to each of these: red(), blue(), green() --SM
 - Add redraw() and frameRate() as related to draw() --SM
 - Add "implements" as related to "extends" --SM
+- Add imageMode() as related to Video library > Capture > crop --SM
 - Add concat() as related to arrayCopy() and vice versa --SM
 - To text(), add as related: rectMode() and fill() --SM
 
@@ -117,6 +117,8 @@ x text() change at least one example to not require loadFont() and describe  --S
 x add two examples for color() to show gray and with colorMode(HSB) --SM
 x review "implements" description --SM
 x Enhanced descriptions affected by rectMode(), added new examples for each MODE to rectMode() --SM
+x Enhanced descriptions affected by ellipseMode(), added new examples for each MODE to ellipseMode() --SM
+x Enhanced descriptions affected by imageMode(), added new examples for each MODE to imageMode() --SM
 
 Key:
 - To do

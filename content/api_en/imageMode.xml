@@ -57,12 +57,6 @@ void draw() {
 </example>
 
 <description><![CDATA[
-
-
-
-
-
-
 Modifies the location from which images are drawn by changing the way in which parameters given to <b>image()</b> are intepreted.<br/>
 <br/>
 The default mode is <b>imageMode(CORNER)</b>, which interprets the second and third parameters of <b>image()</b> as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.<br/>
@@ -72,10 +66,6 @@ The default mode is <b>imageMode(CORNER)</b>, which interprets the second and th
 <b>imageMode(CENTER)</b> interprets the second and third parameters of <b>image()</b> as the image's center point. If two additional parameters are specified, they are used to set the image's width and height.<br/>
 <br/>
 The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
-
-
-
-
 ]]></description>
 
 </root>
