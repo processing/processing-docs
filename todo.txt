@@ -16,11 +16,6 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
-- create examples for all of the following:  --SM
-	normal()
-	lightFalloff()
-	createInput()
-
 - General writing and style clean-up: check the comments in all examples to make sure:  --SM
 	variable names are put in single quotes (not double quotes!)
 	println values are put in double quotes
@@ -33,6 +28,7 @@ RELATED LINKS WITHIN THE REFERENCE
 - Add as related to each other: ellipse() and arc() --SM
 - Add ">>" as related to each of these: red(), blue(), green() --SM
 - Add redraw() and frameRate() as related to draw() --SM
+- Make sure hex(), unhex(), binary() and unbinary() are all related --SM
 - Add "implements" as related to "extends" --SM
 - Add imageMode() as related to Video library > Capture > crop --SM
 - Add concat() as related to arrayCopy() and vice versa --SM
@@ -118,6 +114,7 @@ x Enhanced descriptions affected by rectMode(), added new examples for each MODE
 x Enhanced descriptions affected by ellipseMode(), added new examples for each MODE to ellipseMode() --SM
 x Enhanced descriptions affected by imageMode(), added new examples for each MODE to imageMode() --SM
 x Didn't add examples of each MODE to textureMode() (they were already there!), but clarified the description  --SM
+x Created examples for normal(), lightFalloff(), and createInput()  --SM
 
 
 Key:

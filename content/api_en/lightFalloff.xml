@@ -9,15 +9,29 @@
 <type></type>
 
 <example>
-<image></image>
+<image>lightFalloff_.png</image>
 <code><![CDATA[
-Coming soon...
-
+size(100, 100, P3D);
+noStroke();
+background(0);
+lightFalloff(1.0, 0.001, 0.0);
+pointLight(150, 250, 150, 50, 50, 50);
+beginShape();
+vertex(0, 0, 0);
+vertex(100, 0, -100);
+vertex(100, 100, -100);
+vertex(0, 100, 0);
+endShape(CLOSE);
 ]]></code>
 </example>
 
 <description><![CDATA[
-Sets the falloff rates for point lights, spot lights, and ambient lights. The parameters are used to determine the falloff with the following equation:<br /><br />d = distance from light position to vertex position<br />falloff = 1 / (CONSTANT + d * LINEAR + (d*d) * QUADRATIC)<br /><br />Like <b>fill()</b>, it affects only the elements which are created after it in the code. The default value if <b>LightFalloff(1.0, 0.0, 0.0)</b>. Thinking about an ambient light with a falloff can be tricky. It is used, for example, if you wanted a region of your scene to be lit ambiently one color and another region to be lit ambiently by another color, you would use an ambient light with location and falloff. You can think of it as a point light that doesn't care which direction a surface is facing.
+Sets the falloff rates for point lights, spot lights, and ambient lights. Like <b>fill()</b>, it affects only the elements which are created after it in the code. The default value is <b>lightFalloff(1.0, 0.0, 0.0)</b>, and the parameters are used to calculate the falloff with the following equation:<br/>
+<br/>
+d = distance from light position to vertex position<br/>
+falloff = 1 / (CONSTANT + d * LINEAR + (d*d) * QUADRATIC)<br/>
+<br/>
+Thinking about an ambient light with a falloff can be tricky. If you want a region of your scene to be lit ambiently with one color and another region to be lit ambiently with another color, you could use an ambient light with location and falloff. You can think of it as a point light that doesn't care which direction a surface is facing.
 ]]></description>
 
 </root>
