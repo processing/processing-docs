@@ -56,6 +56,7 @@ Note that in Java, and therefore also Processing, you cannot extend a class more
 <related>
 class
 super
+implements
 </related>
 
 <availability>1.0</availability>

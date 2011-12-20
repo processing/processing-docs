@@ -19,37 +19,8 @@ $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 RELATED LINKS WITHIN THE REFERENCE
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
-- Add as related to each other: specular() and lightSpecular() --SM
-- Add as related to each other: ellipse() and arc() --SM
-- Add ">>" as related to each of these: red(), blue(), green() --SM
-- Add redraw() and frameRate() as related to draw() --SM
-- Make sure hex(), unhex(), binary() and unbinary() are all related --SM
-- Add "implements" as related to "extends" --SM
 - Add imageMode() as related to Video library > Capture > crop --SM
-- Add concat() as related to arrayCopy() and vice versa --SM
-- To text(), add as related: rectMode() and fill() --SM
-
-- Add @see_external links where appropriate  --SM
-    note: use is with the file naming convention for simplicity
-	also helps clarify that these links are to files
-	will search in both the base and include/ directories
-	for libraries @see_external LIB_serial/serialEvent
-    e.g.
-	@see_external String
-	@see_external String_charAt
-	etc.
-	See PGraphics#text() and net.Client for examples of use
-	
-- Correct all Related" links  --SM
-	Requires additional editing work in the .java files:
-	$ For the functions inside PGraphics and PImage, the Related links aren't working, 
-	they are linking to the full link including the class name. For example see 
-	web/distribution/arc_.html and see the links in Related this needs to be fixed on a 
-	per-function basis by including the correct @see tags
-	@see PApplet#imageMode( int ) will reference the core function
-	@see PGraphics#imageMode( int ) will reference the PGraphics method
-	I corrected this for PImage.html by editing the comments in PImage.java
-
+	How can I reference this? Couldn't find it in Capture.java.
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
@@ -113,6 +84,33 @@ x Created examples for normal(), lightFalloff(), and createInput()  --SM
 x General writing and style clean-up: check the comments in all examples to make sure:  --SM
 x	variable names are put in single quotes (not double quotes!)
 x	println values are put in double quotes
+x Add as related to each other: specular() and lightSpecular() --SM
+x Add as related to each other: ellipse() and arc() --SM
+x Add ">>" as related to each of these: red(), blue(), green() --SM
+x Add redraw() and frameRate() as related to draw() --SM
+x Make sure hex(), unhex(), binary() and unbinary() are all related --SM
+x Add "implements" as related to "extends" --SM
+x Add concat() as related to arrayCopy() and vice versa --SM
+x To text(), add as related: rectMode() and fill() --SM
+o Correct all "Related" links  --SM
+	Requires additional editing work in the .java files:
+	$ For the functions inside PGraphics and PImage, the Related links aren't working, 
+	they are linking to the full link including the class name. For example see 
+	web/distribution/arc_.html and see the links in Related this needs to be fixed on a 
+	per-function basis by including the correct @see tags
+	@see PApplet#imageMode( int ) will reference the core function
+	@see PGraphics#imageMode( int ) will reference the PGraphics method
+	I corrected this for PImage.html by editing the comments in PImage.java
+x Add @see_external links where appropriate  --SM
+    note: use is with the file naming convention for simplicity
+	also helps clarify that these links are to files
+	will search in both the base and include/ directories
+	for libraries @see_external LIB_serial/serialEvent
+    e.g.
+	@see_external String
+	@see_external String_charAt
+	etc.
+	See PGraphics#text() and net.Client for examples of use
 
 Key:
 - To do
