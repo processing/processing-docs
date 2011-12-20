@@ -18,9 +18,9 @@ String s = "end";
 println(s);
 
 // The above code prints the following lines:
-// begin
-// f is equal to 0.3 and i is equal to 1024
-// end
+// "begin"
+// "f is equal to 0.3 and i is equal to 1024"
+// "end"
 ]]></code>
 </example>
 

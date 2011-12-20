@@ -16,9 +16,9 @@
 
 import processing.serial.*;
 
-Serial myPort;    // The serial port:
-PFont myFont;     // The display font:
-String inString;  // Input string from serial port:
+Serial myPort;    // The serial port
+PFont myFont;     // The display font
+String inString;  // Input string from serial port
 int lf = 10;      // ASCII linefeed
 
 void setup() {

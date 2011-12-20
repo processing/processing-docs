@@ -16,7 +16,7 @@
 PShape s;
 s = loadShape("bot.svg");
 shape(s);
-println(s.width);  // Prints 281.0, the width of the shape
+println(s.width);  // Prints "281.0", the width of the shape
 ]]></code>
 </example>
 

@@ -34,8 +34,8 @@ for (int i = 0; i < 100; i++) {
 <code><![CDATA[
 // Get a random element from an array
 String[] words = { "apple", "bear", "cat", "dog" };
-int index = int(random(words.length));  // same as int(random(4))
-println(words[index]);  // prints one of the four words
+int index = int(random(words.length));  // Same as int(random(4))
+println(words[index]);  // Prints one of the four words
 ]]></code>
 </example>
 

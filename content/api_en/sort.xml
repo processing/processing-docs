@@ -14,6 +14,12 @@
 float[] a = { 3.4, 3.6, 2, 0, 7.1 };
 a = sort(a);
 println(a);
+// Prints the contents of the sorted array:
+// [0] 0.0
+// [1] 2.0
+// [2] 3.4
+// [3] 3.6
+// [4] 7.1
 ]]></code>
 </example>
 
@@ -22,7 +28,13 @@ println(a);
 <code><![CDATA[
 String[] s = { "deer", "elephant", "bear", "aardvark", "cat" };
 s = sort(s);
-println(s);  // Prints aardvark, bear, cat, deer, elephant on separate lines
+println(s);
+// Prints the contents of the sorted array:
+// [0] "aardvark"
+// [1] "bear"
+// [2] "cat"
+// [3] "deer"
+// [4] "elephant"
 ]]></code>
 </example>
 
@@ -31,7 +43,13 @@ println(s);  // Prints aardvark, bear, cat, deer, elephant on separate lines
 <code><![CDATA[
 String[] s = { "deer", "elephant", "bear", "aardvark", "cat" };
 s = sort(s, 3);
-println(s);  // Prints bear, deer, elephant, aardvark, cat on separate lines
+println(s);
+// Prints the contents of the array, with the first 3 elements sorted:
+// [0] "bear"
+// [1] "deer"
+// [2] "elephant"
+// [3] "aardvark"
+// [4] "cat"
 ]]></code>
 </example>
 

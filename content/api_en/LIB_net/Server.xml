@@ -22,7 +22,7 @@ void setup() {
 }
 
 void draw() {
-  val = (val + 1)%255;
+  val = (val + 1) % 255;
   background(val);
   myServer.write(val);
 }

@@ -29,7 +29,7 @@ void setup() {
 void draw() {
   while (myPort.available() > 0) {
     int lf = 10;
-    //Expand array size to the number of bytes you expect:
+    // Expand array size to the number of bytes you expect:
     byte[] inBuffer = new byte[7];
     myPort.readBytesUntil(lf, inBuffer);
     if (inBuffer != null) {

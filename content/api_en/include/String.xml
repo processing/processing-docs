@@ -25,7 +25,7 @@ println(str2);  // Prints "CCCP" to the console
 // Comparing String objects, see reference below.
 String p = "potato";
 if (p == "potato") {
-  println("p == potato, yep.");  // this will not print
+  println("p == potato, yep.");  // This will not print
 } 
 // The correct way to compare two Strings
 if (p.equals("potato")) {

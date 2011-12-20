@@ -11,7 +11,7 @@
 <example>
 <image>popStyle_0.png</image>
 <code><![CDATA[
-ellipse(0, 50, 33, 33);    // Left circle
+ellipse(0, 50, 33, 33);  // Left circle
 
 pushStyle();  // Start a new style
 strokeWeight(10);

@@ -16,7 +16,7 @@ fill(c);  // Use color variable 'c' as fill color
 rect(15, 20, 35, 60);  // Draw left rectangle
 
 float blueValue = blue(c);  // Get blue in 'c'
-println(blueValue);  // Print "220.0"
+println(blueValue);  // Prints "220.0"
 fill(0, 0, blueValue);  // Use 'blueValue' in new fill
 rect(50, 20, 35, 60);  // Draw right rectangle
 ]]></code>

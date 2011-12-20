@@ -19,7 +19,7 @@ String s = " -end";
 println(s);
 
 // The above code prints:
-// begin- f is 0.3 and i is 1024 -end
+// "begin- f is 0.3 and i is 1024 -end"
 ]]></code>
 </example>
 

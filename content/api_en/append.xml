@@ -11,15 +11,20 @@
 <example>
 <image></image>
 <code><![CDATA[
-String[] sa1 = { "OH ", "NY ", "CA "}; 
-String[] sa2 = append(sa1, "MA "); 
-println(sa2);  // Prints OH, NY, CA, MA
+String[] sa1 = { "OH", "NY", "CA"}; 
+String[] sa2 = append(sa1, "MA"); 
+println(sa2);
+// Prints updated array contents to the console:
+// [0] "OH"
+// [1] "NY"
+// [2] "CA"
+// [3] "MA"
 ]]></code>
 </example>
 
 <description><![CDATA[
-Expands an array by one element and adds data to the new position. The datatype of the <b>element</b> parameter must be the same as the datatype of the array.
-<br/> <br/>
+Expands an array by one element and adds data to the new position. The datatype of the <b>element</b> parameter must be the same as the datatype of the array.<br/>
+<br/>
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) append(originalArray, element)</em>.
 ]]></description>
 

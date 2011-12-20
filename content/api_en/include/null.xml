@@ -21,9 +21,9 @@ results = match(content, "orange");
 // it will return a null value to 'results'.
 
 if (results == null) {
-  println("Value of 'results' is null.");  // This line prints
+  println("Value of 'results' is null.");  // This line is printed
 } else {
-  println("Value of 'results' is not null!");
+  println("Value of 'results' is not null!");  // This line is not printed
 }
 ]]></code>
 </example>

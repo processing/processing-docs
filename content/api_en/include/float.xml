@@ -11,10 +11,10 @@
 <example>
 <image></image>
 <code><![CDATA[
-float a;           // Declare variable "a" of type float
-a = 1.5387;        // Assign "a" the value 1.5387
-float b = -2.984;  // Declare variable "b" and assign it the value -2.984
-float c = a + b;   // Declare variable "c" and assign it the sum of "a" and "b"
+float a;           // Declare variable 'a' of type float
+a = 1.5387;        // Assign 'a' the value 1.5387
+float b = -2.984;  // Declare variable 'b' and assign it the value -2.984
+float c = a + b;   // Declare variable 'c' and assign it the sum of 'a' and 'b'
 ]]></code>
 </example>
 
@@ -23,13 +23,13 @@ float c = a + b;   // Declare variable "c" and assign it the sum of "a" and "b"
 <code><![CDATA[
 float f = 0;
 for (int i = 0 ; i < 100000; i++) {  
-  f = f + 0.0001;  // Bad idea! see below.
+  f = f + 0.0001;  // Bad idea! See below.
 }
 
 int count = 0;
 for (int i = 0; i < 100000; i++) {
-  // The variable "f" will work better here, less affected by rounding
-  float f = i / 1000.0;  // count by thousandths
+  // The variable 'f' will work better here, less affected by rounding
+  float f = i / 1000.0;  // Count by thousandths
 }
 ]]></code>
 </example>

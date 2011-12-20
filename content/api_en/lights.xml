@@ -34,7 +34,7 @@ void setup() {
 }
 
 void draw() {
-  // Add lights at the beginning
+  // Include lights() at the beginning
   // of draw() to keep them persistent 
   lights();
   translate(20, 50, 0);

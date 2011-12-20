@@ -28,7 +28,7 @@ for (int i = 0; i <= steps; i++) {
   a += PI;
   stroke(255, 102, 0);
   line(x, y, cos(a)*30 + x, sin(a)*30 + y);
-  // This follwing line of code makes a line 
+  // The following line of code makes a line 
   // inverse of the above line
   //line(x, y, cos(a)*-30 + x, sin(a)*-30 + y);
   stroke(0);

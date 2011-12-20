@@ -12,7 +12,7 @@
 <image></image>
 <code><![CDATA[
 float x = 8.22;  
-int a = ceil(x);  // Set "a" to 9
+int a = ceil(x);  // Sets 'a' to 9
 ]]></code>
 </example>
 

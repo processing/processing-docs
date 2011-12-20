@@ -11,10 +11,10 @@
 <example>
 <image></image>
 <code><![CDATA[ 
-byte a;         // Declare variable "a" of type byte
-a = 23;         // Assign "a" the value 23
-byte b = -128;  // Declare variable "b" and assign it the value -128
-byte c = a + b; // Declare variable "c" and assign it the sum of "a" and "b"
+byte a;         // Declare variable 'a' of type byte
+a = 23;         // Assign 'a' the value 23
+byte b = -128;  // Declare variable 'b' and assign it the value -128
+byte c = a + b; // Declare variable 'c' and assign it the sum of 'a' and 'b'
 ]]></code>
 </example>
 

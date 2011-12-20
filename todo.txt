@@ -16,11 +16,6 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 $ Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
-- General writing and style clean-up: check the comments in all examples to make sure:  --SM
-	variable names are put in single quotes (not double quotes!)
-	println values are put in double quotes
-
-
 RELATED LINKS WITHIN THE REFERENCE
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
@@ -115,7 +110,9 @@ x Enhanced descriptions affected by ellipseMode(), added new examples for each M
 x Enhanced descriptions affected by imageMode(), added new examples for each MODE to imageMode() --SM
 x Didn't add examples of each MODE to textureMode() (they were already there!), but clarified the description  --SM
 x Created examples for normal(), lightFalloff(), and createInput()  --SM
-
+x General writing and style clean-up: check the comments in all examples to make sure:  --SM
+x	variable names are put in single quotes (not double quotes!)
+x	println values are put in double quotes
 
 Key:
 - To do

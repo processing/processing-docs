@@ -15,7 +15,7 @@
 <code><![CDATA[
 float value = 20;
 float n = norm(value, 0, 50);
-println(n);  // prints "0.4"
+println(n);  // Prints "0.4"
 ]]></code>
 </example>
 

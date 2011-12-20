@@ -11,13 +11,13 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Click on the image to give it focus
-// and press any key
+// Click on the image to give it focus,
+// and then press any key.
 
-// Note: the rectangle in this example may 
+// Note: The rectangle in this example may 
 // flicker as the operating system may 
 // register a long key press as a repetition
-// of key presses
+// of key presses.
 
 void draw() {
   if (keyPressed == true) {

@@ -17,7 +17,7 @@ PShape s;
 s = loadShape("bot.svg");
 shape(s, 10, 10, 80, 80);  // Draw shape
 s.setVisible(false);
-if (s.isVisible() == false) {  // Or use: if (!s.isVisible) {
+if (s.isVisible() == false) {  // Or use: "if (!s.isVisible)"
   noFill();
   rect(5, 5, 90, 90); 
 }

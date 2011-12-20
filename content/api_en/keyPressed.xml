@@ -12,7 +12,7 @@
 <image></image>
 <code><![CDATA[
 // Click on the image to give it focus,
-// and then press any key
+// and then press any key.
 
 int value = 0;
 

@@ -11,8 +11,8 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Click on the window to give it focus
-// and press the 'B' key
+// Click on the window to give it focus,
+// and press the 'B' key.
 
 void draw() {
   if (keyPressed) {
