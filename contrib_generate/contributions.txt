@@ -215,6 +215,18 @@ download=http://www.shiffman.net/p5/libraries/pbox2d/pbox2d.zip
 id=014
 
 library
+category=Simulation
+authorList=[RSG](http://r-s-g.org)
+name=Carnivore
+sentence=Surveillance tool for data networks.
+url=http://r-s-g.org/carnivore
+prettyVersion=4
+paragraph=
+version=4
+download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
+id=041
+
+library
 category=Hardware
 authorList=[Daniel Shiffman](http://www.shiffman.net/) and [ITP](http://itp.nyu.edu)
 name=Most Pixels Ever
@@ -369,6 +381,30 @@ paragraph=
 version=1
 download=http://www.shiffman.net/p5/libraries/pqrcode/pqrcode.zip
 id=012
+
+library
+category=Data
+authorList=[RSG](http://r-s-g.org)
+name=Carnivore
+sentence=Surveillance tool for data networks.
+url=http://r-s-g.org/carnivore
+prettyVersion=4
+paragraph=
+version=4
+download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
+id=040
+
+library
+category=Data
+authorList=[Bruno Nadeau](http://wyldco.com)
+name=romefeeder
+sentence=A wrapper around the ROME library that provides the tools for parsing, generating and publishing RSS and Atom feeds.
+url=http://wyldco.com/project/romefeeder
+prettyVersion=1.0.0
+paragraph=
+version=1
+download=http://wyldco.com/romefeeder/download/romefeeder.zip
+id=042
 
 library
 category=Math
