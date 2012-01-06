@@ -292,9 +292,9 @@ authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
 sentence=A lightweight library for creating animations and transitions.
 url=http://www.looksgood.de/libraries/Ani/
-prettyVersion=2.0
+prettyVersion=2.1
 paragraph=
-version=2
+version=3
 download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
 id=003
 
@@ -497,4 +497,16 @@ url=http://mrfeinberg.com/patchy/
 version=100
 download=http://mrfeinberg.com/patchy/patchy.zip
 id=037
+
+library
+category=3D
+authorList=[Tatsuya Saito](http://saito-tatsuya.net/) and [Matt Ditton](http://thequietvoid.com/)
+name=OBJLoader
+sentence=.OBJ 3D model file loader
+url=http://code.google.com/p/saitoobjloader/
+prettyVersion=0.99
+paragraph=
+version=23
+download=http://saitoobjloader.googlecode.com/files/OBJLoader.zip
+id=043
 
