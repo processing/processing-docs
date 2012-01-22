@@ -380,8 +380,8 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 
 .ref-top {
 	display:none; 
-	margin-top: 40px;
-	margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .ref-notice { margin: 1.5em 0 2.5em 0; color: #CC6600; clear: both; margin-right: 40px;}
@@ -394,30 +394,51 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 }
 
 #ref-mode-switch {
-	float:left;
-	width: 30%;
-	margin-right:2%;
+	clear: both;
+	overflow: auto;
+	margin-bottom: -1px;
 }
-#ref-mode-switch ul, #ref-mode-switch ul li {
-	padding: 0px; margin: 0px; list-style: none;
+
+#ref-mode-switch ul
+{
+	list-style: none;
+	padding: 0px; margin: 0px;
+	width: 100%;
 }
-#ref-mode-switch ul li a {
-	padding-left: 15px;
+
+#ref-mode-switch ul li
+{
+	float: left;
+	padding: 0px; margin: 0px;
+	margin-left: 0.75em;
+}
+
+#ref-mode-switch ul li.right
+{
+	float: right;
+}
+
+#ref-mode-switch ul li a
+{
 	display: block;
-	color: #39C;
-	background-image: none;
-	padding-bottom: 1em;
+	padding: 0.5em 0.75em;
+	border: 1px solid #ccc;
+	border-bottom: 0px solid transparent;
+	color: #ccc;
+	text-decoration: none;
 }
+
 #ref-mode-switch ul li a.is-selected {
-	color: #333;
-	background-image: url("../images/select_arrow.gif");
-	background-position: 0px 2px;
-	background-repeat: no-repeat;
+	background-color: white;
+	color: #39C;
+	border-color: #333;
 }
-#ref-mode-text {
-	padding-left:32%; 
-	width: 60%;
+
+#ref-mode-switch-bottom {
+	clear:both;
+	border-top: 1px solid green;
 }
+
 .ref-col .is-disabled, .ref-col .is-disabled a, .ref-col .is-disabled h5 {color: #dddddd;}
 
 .ref-item td h3 { margin: 0; }

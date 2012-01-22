@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>/* @pjs crisp */ directive</name>
+<name>/* @pjs crisp */</name>
+
+<unsupported_modes>java</unsupported_modes>
 
 <category>Javascript</category>
 <subcategory>Directives</subcategory>

@@ -42,48 +42,20 @@
 			<div class="content">
 			
 			 <h1 class="ref-header"><img src="<!-- webcontentpath -->img/header.gif" alt="Language (API). The Processing Language has been designed to facilitate the creation of sophisticated visual and conceptual structures." /></h1>
-			
+				
+			<script src="<!-- webcontentpath -->javascript/mode-select.js" type="text/javascript"></script>
 			<div class="ref-top">
-				<div id="ref-mode-switch"> 
-					<ul><li><a href="#" mode="java" style="color:red">Standard Processing</a></li>
-						<li><a href="#" mode="js">JavaScript (Processing.js)</a></li></ul>
-				</div>
-				<div id="ref-mode-text">
+				<div id="ref-mode-text" style="display: none">
 					Processing code can be run in <a href="<!-- webcontentpath -->environment/index.html#Programming_modes">different modes</a>. This reference unites the standard and Javascript flavours. Use the links to the left to highlight any differences.
 				</div>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.ref-top').show();
-		$('.ref-top a').each(function(i,e){
-			var mode = $(e).attr('mode');
-			$(e).bind('click',function(evt){
-				activateItems($('a.ref-link'));
-				disableItems( $('.no-'+mode) );
-				activateItems( $('.'+mode+'-only').show() );
-				$('.ref-top a').css('color','');
-				$(this).css('color','#333');
-				$('.ref-top .is-selected').removeClass('is-selected');
-				$(this).addClass('is-selected');
-			},false);
-		});
-		var showMode = "java";
-		if ( document.location.href.indexOf('mode=') >= 0 )
-			showMode = document.location.href.replace(/.+\?.*mode=([a-z]+)&?.*/,"$1");
-		$('.ref-top a[mode='+showMode+']').click();
-	});
-	function disableItems ( items ) {
-		items.addClass("is-disabled");
-		items.bind('click',function(){return false;},false);
-		items.attr('title','These items are not available in the current mode.');
-	}
-	function activateItems ( items ) {
-		items.removeClass("is-disabled");
-		items.unbind('click');
-		items.attr('title','');
-	}
-</script>	
-<div style="clear:both"></div></div>
-
+				<div id="ref-mode-switch"> 
+					<ul><li><a href="#" mode="java">Standard Processing</a></li>
+						<li><a href="#" mode="js">JavaScript (Processing.js)</a></li>
+					</ul>
+				</div>
+				<div id="ref-mode-switch-bottom"></div>
+			</div>
+			
 <div class="ref-col">
 	
 	<div class="category js-only no-java">
