@@ -422,8 +422,7 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 {
 	display: block;
 	padding: 0.5em 0.75em;
-	border: 1px solid #ccc;
-	border-bottom: 0px solid transparent;
+	border: 1px solid #CCC;
 	color: #ccc;
 	text-decoration: none;
 }
@@ -431,12 +430,12 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 #ref-mode-switch ul li a.is-selected {
 	background-color: white;
 	color: #39C;
-	border-color: #333;
+	border-bottom: 1px solid transparent;
 }
 
 #ref-mode-switch-bottom {
 	clear:both;
-	border-top: 1px solid green;
+	border-top: 1px solid #CCC;
 }
 
 .ref-col .is-disabled, .ref-col .is-disabled a, .ref-col .is-disabled h5 {color: #dddddd;}
