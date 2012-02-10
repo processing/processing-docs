@@ -23,7 +23,7 @@ public class TemplateWriter extends BaseWriter {
 			if( ! vars.containsKey(s)){
 				vars.put(s, "");
 			}
-		}		
+		}
 		
 		int unsetNavCount = 0;
 		for(String s : navFields){
@@ -124,7 +124,6 @@ public class TemplateWriter extends BaseWriter {
 		if(ret.endsWith(separator)){
 			ret = ret.substring(0, ret.lastIndexOf(separator));
 		}
-//		if( varSet.size() == 0 ) {System.out.println("Sending back after empty map: " + ret);}
 		return ret;
 	}
 	

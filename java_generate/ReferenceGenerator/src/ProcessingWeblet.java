@@ -132,7 +132,6 @@ public class ProcessingWeblet extends Standard {
 						Tag[] tags = fn.tags(Shared.i().getWebrefTagName());
 						if (tags.length != 0) {
 							// add to the index under the @webref category:sub_category
-//							System.out.println("\nAdding " + fn.name() + " to webref\n");
 							indexWriter.addItem(fn, tags[0]);
 						}
 					}
@@ -154,8 +153,10 @@ public class ProcessingWeblet extends Standard {
 					}
 				}
 			} else {
-				// Document the library passed in				
-				System.out.println("Loaded class: " + classDoc.name());
+				// Document the library passed in
+				if(Shared.i().isNoisy()) {
+					System.out.println("Loaded class: " + classDoc.name());					
+				}
 				LibraryWriter writer = new LibraryWriter();
 				writer.write(classDoc.containingPackage());
 			}

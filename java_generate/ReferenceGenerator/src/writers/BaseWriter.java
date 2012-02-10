@@ -604,7 +604,6 @@ public class BaseWriter {
 		Document xmlDoc = null;
 		try {
 			String xmlPath = getXMLPath( doc );
-			//System.out.println(xmlPath);
 			xmlDoc = getXMLDocument( xmlPath );
 		} catch ( IOException ioe ) {
 			ioe.printStackTrace();

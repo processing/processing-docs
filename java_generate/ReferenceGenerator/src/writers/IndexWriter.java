@@ -13,7 +13,6 @@ public class IndexWriter extends BaseWriter {
 	
 	class Alphabetizer implements Comparator<String>
 	{
-
 		public int compare(String o1, String o2) {
 			// TODO Auto-generated method stub
 			int tagEnd = o1.indexOf(">");
@@ -56,7 +55,6 @@ public class IndexWriter extends BaseWriter {
 	public void write() throws IOException{
 		templateWriter.write("index.template.html", getCompressedSections(), "index.html");
 		templateWriter.write("index.alphabetical.template.html", getAlphabetical(), "alpha.html");
-//		System.out.println("Alphabetical:\n" + getAlphabetical().get("c2"));
 	}
 	
 	private HashMap<String, String> getCompressedSections () {
