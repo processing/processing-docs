@@ -239,7 +239,7 @@ public class XMLReferenceWriter extends BaseWriter {
 				String name = related[i];
 				if(!name.equals("")){
 					map.put("name", name);
-					map.put("anchor", getAnchorFromName(name));				
+					map.put("anchor", getAnchorFromName(name) );
 					vars.add(map);					
 				}
 			}

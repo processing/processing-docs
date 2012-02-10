@@ -150,27 +150,29 @@ public class BaseWriter {
 	}
 
 	protected static String getAnchorFromName(String name){
-		if( name.endsWith("()") ){
-			//functions look like functionName_.html
-			name = name.replace("()", "_");
-		} else if( name.contains("(") && name.contains(")") ){
-			//get the name in parentheses
+		// change functionName() to functionName_
+		if( name.contains("()") ){
+			name = name.replaceAll("()", "_");
+		}
+		// change "(some thing)" to something
+		if( name.contains("(") && name.contains(")") ){
 			int start = name.indexOf("(") + 1;
 			int end = name.indexOf(")");
 			name = name.substring(start, end);
-		} else if( name.endsWith("[]")){
-			//strip off the array indicators for the name
+			name = name.replace(" ", "");
+		}
+		// change thing[] to thing
+		if( name.contains("[]")){
 			name = name.replaceAll("\\[\\]", "");
 		}
+		// change "some thing" to "some_thing.html"
 		return name.replace(" ", "_").concat(".html");
 	}
-	
-	//
 
 	static protected String getBasicDescriptionFromSource(ProgramElementDoc doc) {
 		return getBasicDescriptionFromSource(longestText(doc));
 	}
-	
+
 	static protected String getBriefDescriptionFromSource(ProgramElementDoc doc) {
 		Tag[] sta = doc.tags("brief");
 		if(sta.length > 0){
