@@ -21,7 +21,6 @@ import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 import com.sun.javadoc.ClassDoc;
