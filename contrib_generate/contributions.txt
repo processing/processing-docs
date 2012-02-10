@@ -352,9 +352,9 @@ authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
 name=GML4U
 sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
 url=https://github.com/01010101/GML4U/wiki
-prettyVersion=0.1.6
+prettyVersion=0.1.7
 paragraph=GML is an open file format designed to store graffiti motion data.
-version=6
+version=7
 download=http://www.saint-clair.net/download/gml4u/GML4U.zip
 id=008
 
@@ -405,6 +405,18 @@ paragraph=
 version=1
 download=http://wyldco.com/romefeeder/download/romefeeder.zip
 id=042
+
+library
+category=Data
+authorList=[Jon Reades](http://www.ucl.ac.uk/bartlett/people/?school=casa&upi=JREAD63)
+name=MapThing
+sentence=A collection of classes for reading ESRI-compliant Shape files (a.k.a. shapefiles) and displaying them as part of a sketch.
+url=http://www.reades.com/MapThing
+prettyVersion=1.1
+paragraph=
+version=2
+download=http://www.reades.com/MapThing.zip
+id=044
 
 library
 category=Math
