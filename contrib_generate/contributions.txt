@@ -179,6 +179,29 @@ download=http://keystonep5.sourceforge.net/download/keystone.zip
 id=034
 
 library
+category=Utilities
+authorList=[Adila Faruk](http://holypapayaresearch.com)
+name=papaya
+sentence=A collection of utilities for performing some statistical and matrix-related manipulations.
+url=http://holypapayaresearch/papayaStatistics.com
+prettyVersion=0.1.1
+version=1
+download=http://dl.dropbox.com/u/6990683/papaya.zip
+id=046
+
+library
+category=Utilities
+authorList=[Eric Socolofsky](http://transmote.com/)
+name=Nest
+sentence=Scenegraph and mouse event handling system based loosely on ActionScript3.
+url=http://transmote.com/nest/
+prettyVersion=0.4
+paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
+version=4
+download=http://transmote.com/nest/download/Nest.zip
+id=047
+
+library
 category=Simulation
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Fisica
@@ -429,6 +452,17 @@ paragraph=We have developped the library to create simple scientific simulations
 version=43
 download=http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
 id=021
+
+library
+category=Math
+authorList=[Adila Faruk](http://holypapayaresearch.com)
+name=papaya
+sentence=A collection of utilities for performing some statistical and matrix-related manipulations.
+url=http://holypapayaresearch/papayaStatistics.com
+prettyVersion=0.1.1
+version=1
+download=http://dl.dropbox.com/u/6990683/papaya.zip
+id=045
 
 library
 category=3D
