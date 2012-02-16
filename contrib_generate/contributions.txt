@@ -183,7 +183,7 @@ category=Utilities
 authorList=[Adila Faruk](http://holypapayaresearch.com)
 name=papaya
 sentence=A collection of utilities for performing some statistical and matrix-related manipulations.
-url=http://holypapayaresearch/papayaStatistics.com
+url=http://holypapayaresearch/papayastatistics.html
 prettyVersion=0.1.1
 version=1
 download=http://dl.dropbox.com/u/6990683/papaya.zip
@@ -195,9 +195,9 @@ authorList=[Eric Socolofsky](http://transmote.com/)
 name=Nest
 sentence=Scenegraph and mouse event handling system based loosely on ActionScript3.
 url=http://transmote.com/nest/
-prettyVersion=0.4
+prettyVersion=0.41
 paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
-version=4
+version=5
 download=http://transmote.com/nest/download/Nest.zip
 id=047
 
@@ -458,11 +458,23 @@ category=Math
 authorList=[Adila Faruk](http://holypapayaresearch.com)
 name=papaya
 sentence=A collection of utilities for performing some statistical and matrix-related manipulations.
-url=http://holypapayaresearch/papayaStatistics.com
+url=http://holypapayaresearch/papayastatistics.html
 prettyVersion=0.1.1
 version=1
 download=http://dl.dropbox.com/u/6990683/papaya.zip
 id=045
+
+library
+category=Math
+authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2010/08/lsystemutilities-for-processing.html)
+name=LSystems
+sentence=Utilities for exploring lsystems.
+url=http://kenai.com/projects/l-system-utilities
+prettyVersion=0.7.4
+paragraph=Supports simple, stochastic and context-sensitive grammars.
+version=2
+download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
+id=048
 
 library
 category=3D
