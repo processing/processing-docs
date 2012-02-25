@@ -11,27 +11,31 @@
 <example>
 <image></image>
 <code><![CDATA[
-int a = 20%100;         // Sets 'a' to 20
-int b = 20%100;         // Sets 'b' to 20
-float c = 75.0%100.0;   // Sets 'c' to 75.0
-float d = 275.0%100.0;  // Sets 'd' to 75.0
+int a = 5 % 4;            // Sets 'a' to 1
+int b = 125 % 100;        // Sets 'b' to 25
+float c = 285.5 % 140.0;  // Sets 'c' to 5.5 
+float d = 30.0 % 33.0;    // Sets 'd' to 30.0
 ]]></code>
 </example>
 
 <example>
 <image></image>
 <code><![CDATA[
-float a = 0.0;
+int a = 0;
 void draw() {
-  background(204);
-  a = (a + 0.5) % width;
+  background(200);
+  a = (a + 1) % width;  // 'a' increases between 0 and width 
   line(a, 0, a, height);
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Calculates the remainder when one number is divided by another. It is extremely useful for keeping numbers within a boundary such as keeping a shape on the screen.
+Calculates the remainder when one number is divided by another. For example, when 52.1 is divided by 10, the divisor (10) goes into the dividend (52.1) five times (5 * 10 == 50), and there is a remainder of 2.1 (52.1 - 50 == 2.1). Thus, <strong>52.1 % 10</strong> produces <strong>2.1</strong>.<br/>
+<br/>
+Note that when the divisor is greater than the dividend, the remainder constitutes the value of the entire dividend. That is, a number cannot be divided by any number larger than itself. For example, when 9 is divided by 10, the result is zero with a remainder of 9. Thus, <strong>9 % 10</strong> produces <strong>9</strong>.<br/>
+<br/>
+Modulo is extremely useful for keeping numbers within a boundary such as keeping a shape on the screen. (See the second example above.)
 ]]></description>
 
 <syntax>
