@@ -17,7 +17,7 @@ int h = g / 5;   // Assigns 2 to 'h'
 </example>
 
 <description><![CDATA[
-Divides the value of the second parameter by the value of the first parameter. The answer to the equation  20 / 4 is 5. The number 20 is the sum of 4 of the number 5. As an equation we see that 4 + 4 + 4 + 4 + 4 = 20.
+Divides the value of the first parameter by the value of the second parameter. The answer to the equation 20 / 4 is 5. The number 20 is the sum of four occurences of the number 5. As an equation we see that 5 + 5 + 5 + 5 = 20.
 ]]></description>
 
 <syntax>
