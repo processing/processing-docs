@@ -151,8 +151,8 @@ public class BaseWriter {
 
 	protected static String getAnchorFromName(String name){
 		// change functionName() to functionName_
-		if( name.contains("()") ){
-			name = name.replaceAll("()", "_");
+		if( name.endsWith("()") ){
+			name = name.replace("()", "_");
 		}
 		// change "(some thing)" to something
 		if( name.contains("(") && name.contains(")") ){
@@ -166,7 +166,8 @@ public class BaseWriter {
 			name = name.replaceAll("\\[\\]", "");
 		}
 		// change "some thing" to "some_thing.html"
-		return name.replace(" ", "_").concat(".html");
+		name = name.replace(" ", "_").concat(".html");
+		return name;
 	}
 
 	static protected String getBasicDescriptionFromSource(ProgramElementDoc doc) {
