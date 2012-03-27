@@ -2,6 +2,16 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="unnamed soundsculpture" by="Daniel Franke & Cedric Kiefer" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/unnamed.jpg</image>
+		  <description>
+			  Produced by onformative and chopchop the “unnamed soundsculpture” is a project by Daniel Franke & Cedric Kiefer, building from the simple idea of creating a moving sand sculpture from the recorded motion data of a real person. Point cloud capture from Kinect was recorded in Processing then processed and rendered 3D Studio Max.
+		  </description>
+		  <location>http://wearechopchop.com/%E2%80%9Cunnamed-soundsculpture%E2%80%9D/</location>
+		 <link href="http://www.the-product.org">We Are Chopchop</link>
+		<link href="http://www.creativeapplications.net/processing/soundmachines-objects-sound/">CreativeApplications.Net</link>
+	</software>
+	
 	<software name="Soundmachines" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/soundmachines.jpg</image>
 		  <description>
