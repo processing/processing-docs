@@ -94,6 +94,18 @@ version=1
 download=http://thomasdiewald.com/processing/tools/TabManager/download/TabManager.zip
 id=049
 
+tool
+category=
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=G4PTool
+sentence=Graphic design tool for creating user interfaces with G4P.
+url=http://www.lagers.org.uk/g4ptool/index.html
+prettyVersion=1.1.1
+paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the G4P library. It generates all the source code necessary for the creation of the components and skeleton event handlers for user to complete. The G4P library will need to be installed to run the completed sketch.
+version=1
+download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
+id=052
+
 library
 category=Geometry
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
@@ -241,11 +253,11 @@ library
 category=Simulation
 authorList=[Daniel Shiffman](http://www.shiffman.net/)
 name=PBox2D
-sentence=A library for 2D physics simulation wrapping some aspects of [JBox2D](http://www.jbox2d.org/), a Java implementation of [Box2D](http://box2d.org/).
+sentence=A library and set of examples for 2D physics simulation wrapping some aspects of [JBox2D](http://www.jbox2d.org/), a Java implementation of [Box2D](http://box2d.org/).
 url=http://www.shiffman.net/teaching/nature/box2d-processing/
-prettyVersion=0.1a
+prettyVersion=0.2a
 paragraph=
-version=1
+version=2
 download=http://www.shiffman.net/p5/libraries/pbox2d/pbox2d.zip
 id=014
 
@@ -454,6 +466,18 @@ download=http://www.reades.com/MapThing.zip
 id=044
 
 library
+category=GUI
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=guicomponents
+sentence=Provides a set of 2D GUI controls and multiple window support.
+url=http://www.lagers.org.uk/g4p
+prettyVersion=1.7.6
+paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
+version=1
+download=http://www.lagers.org.uk/processing/g4p/guicomponents.zip
+id=051
+
+library
 category=Math
 authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/)
 name=gwoptics
@@ -503,12 +527,12 @@ id=001
 library
 category=3D
 authorList=[Frederik Vanhoutte](http://www.wblut.com/)
-name=HE-Mesh
+name=HE_Mesh
 sentence=He-Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
 url=http://hemesh.wblut.com/
-prettyVersion=1.50a
+prettyVersion=1.75gx3
 paragraph=
-version=6
+version=7
 download=http://hemesh.wblut.com/hemesh-latest.zip
 id=009
 
@@ -579,4 +603,16 @@ paragraph=
 version=23
 download=http://saitoobjloader.googlecode.com/files/OBJLoader.zip
 id=043
+
+library
+category=3D
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=shapes3d
+sentence=3D Shape creation and display made easy.
+url=http://www.lagers.org.uk/s3d4p/index.html
+prettyVersion=1.9.3
+paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. All of these shapes can be seen at [Shapes3D examples](http://www.lagers.org.uk/s3d4p/applets/s3d4p_showcase/index.html).
+version=2
+download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
+id=050
 
