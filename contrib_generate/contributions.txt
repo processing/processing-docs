@@ -101,7 +101,7 @@ name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
 prettyVersion=1.1.1
-paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the G4P library. It generates all the source code necessary for the creation of the components and skeleton event handlers for user to complete. The G4P library will need to be installed to run the completed sketch.
+paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
 version=1
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
@@ -466,6 +466,18 @@ download=http://www.reades.com/MapThing.zip
 id=044
 
 library
+category=Data
+authorList=Marcel Schwittlick
+name=GoogleWeather
+sentence=Framework for including weather data into Processing.
+url=http://www.onformative.com/lab/google-weather-library-for-processing/
+prettyVersion=0.8a
+paragraph=
+version=1
+download=http://www.schwittlick-computers.de/GoogleWeather.zip
+id=053
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=guicomponents
@@ -611,7 +623,7 @@ name=shapes3d
 sentence=3D Shape creation and display made easy.
 url=http://www.lagers.org.uk/s3d4p/index.html
 prettyVersion=1.9.3
-paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. All of these shapes can be seen at [Shapes3D examples](http://www.lagers.org.uk/s3d4p/applets/s3d4p_showcase/index.html).
+paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
 version=2
 download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
 id=050
