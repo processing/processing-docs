@@ -376,6 +376,8 @@ public class BaseWriter {
 			try{
 				XPathExpression expr = xpath.compile(component);
 				String result = (String) expr.evaluate(doc, XPathConstants.STRING);
+				if ( !desc.equals("") )
+					desc += "<br /><br />\n";
 				desc += result;
 			} catch ( XPathExpressionException e){
 				System.out.println("Error getting description from xml with expression: //" + component);

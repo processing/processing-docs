@@ -54,6 +54,7 @@ public class XMLReferenceWriter extends BaseWriter {
 				String category = (String) xpath.evaluate("//category", doc, XPathConstants.STRING);
 				String subcategory = (String) xpath.evaluate("//subcategory", doc, XPathConstants.STRING);
 				String name = (String) xpath.evaluate("//name", doc, XPathConstants.STRING);
+				// TODO: js mode descriptions?
 				String description = (String) xpath.evaluate("//description", doc, XPathConstants.STRING);
 				String syntax = (String) xpath.evaluate("//syntax", doc, XPathConstants.STRING);
 				String classname = (String) xpath.evaluate("//classname", doc, XPathConstants.STRING);

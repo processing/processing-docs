@@ -88,7 +88,8 @@ public class Shared {
 	
 	public void addDescriptionTag(String s) {
 		System.out.println( "Added description tag: " + s );
-		descriptionSets.add("//"+s);
+		descriptionSets.add( "/root/"+s );
+		descriptionSets.add( "/root/js_mode/"+s );
 	}
 	
 	public ArrayList<String> getDescriptionSets() {
