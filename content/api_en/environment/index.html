@@ -524,6 +524,20 @@ void draw() {
 }
 </pre>
 
+	<p>
+	To change the renderer, add a third parameter to size(). For example:
+	</p>
+
+<pre>void setup() {
+  size(200, 200, P2D);
+}
+
+void draw() {
+  background(204);
+  line(width/2, height/2, mouseX, mouseY);
+}
+</pre>
+
     <p>
       A large effort has been made to make the Processing renderers behave similarly across 
       the different renderers, but there are currently some inconsistencies that are explained 
