@@ -12,8 +12,8 @@
       <a href="#Renderers">Renderers</a><br />
       <a href="#Coordinates">Coordinates</a><br />
       <a href="#Tabs">Tabs, Multiple Files, and Classes</a><br />
-      <a href="#Extensions">Adding Libraries, Tools, and Modes</a><br />
       <a href="#Programming_modes">Programming Modes</a><br />
+      <a href="#Extensions">Adding Libraries, Tools, and Modes</a><br />
       <a href="#Export">Export</a><br />
 
       <!-- Removed by CR 19 Sep 2011, folded into new Export sections
@@ -501,35 +501,21 @@ Big-picture keywords / concepts for getting into Processing
     </h5>
       
     <p>
-      Processing has two built-in rendering modes. <em>P2D</em> is for drawing two-dimensional 
-      shapes and <em>P3D</em> is for drawing both two- and three-dimensional geometry, which 
-      includes controlling the camera, lighting, and materials. The P2D renderer is slower and more 
-      accurate for two-dimensional shapes, while the P3D renderer is accelerated if your computer 
-      has an OpenGL compatible graphics card.
+      Processing has three built-in renderers. The default renderer is for drawing two-dimensional
+      shapes. <em>P2D</em> is a faster, but less accurate renderer for drawing two-dimensional 
+      shapes. <em>P3D</em> is for three-dimensional geometry, it can also control
+      the camera, lighting, and materials. The P2D and P3D renderers are accelerated if 
+      your computer has an OpenGL compatible graphics card.
     </p>
     
     <p>  
       The renderer used for each sketch is specified through the size() function. 
-      P2D is the default renderer. It's used if a renderer is not explicity defined in size().
+      If a renderer is not explicity defined in size(), it uses the default renderer.
       For example, the following program:
     </p>
     
 <pre>void setup() {
   size(200, 200);
-}
-
-void draw() {
-  background(204);
-  line(width/2, height/2, mouseX, mouseY);
-}
-</pre>
-
-	<p>
-		Is equivalent to this program:
-	</p>
- 
- <pre>void setup() {
-  size(200, 200, P2D);
 }
 
 void draw() {
@@ -619,40 +605,6 @@ void draw() {
 			</tr>
 		</table>
 	</p>
-
-
-
-    <!-- Tabs, Multiples Files, and Classes -->
-
-    <h5 id="Extensions">
-    	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Adding Libraries, Tools, and Modes
-    </h5>
-    
-    <p>
-    	Processing 2.0 includes a set of new features to make it easier to install, update, and
-    	remove Libraries, Tools, and Modes.
-    </p>
-    
-    <p>
-    	Add contributed libraries by selecting "Add Library..." from the "Import Library..." 
-    	submenu within the Sketch menu. Not all available libraries have been converted to 
-    	show up in "Add Library...". If a library isn't there, it will need to be installed 
-    	manually. Follow the <a href="http://wiki.processing.org/w/How_to_Install_a_Contributed_Library">
-    	How to Install a Contributed Library</a> instructions on the Processing 
-    	Wiki for more information.  
-    </p>
-    
-    <p>
-    	Add contributed tools by selecting "Add Tool..." from the Tools menu to select a Tool 
-    	to download. 
-    </p>
-    
-    <p>
-    	Add contributed modes by selecting "Add Mode..." from the Mode menu in the upper-right
-    	corner of the PDE.
-	</p>
-	
-	
 	
 	
 	<!-- Programming Modes -->
@@ -892,6 +844,40 @@ void draw() {
 	
     -->
  
+ 
+
+
+    <!-- Tabs, Multiples Files, and Classes -->
+
+    <h5 id="Extensions">
+    	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Adding Libraries, Tools, and Modes
+    </h5>
+    
+    <p>
+    	Processing 2.0 includes a set of new features to make it easier to install, update, and
+    	remove Libraries, Tools, and Modes.
+    </p>
+    
+    <p>
+    	Add contributed libraries by selecting "Add Library..." from the "Import Library..." 
+    	submenu within the Sketch menu. Not all available libraries have been converted to 
+    	show up in "Add Library...". If a library isn't there, it will need to be installed 
+    	manually. Follow the <a href="http://wiki.processing.org/w/How_to_Install_a_Contributed_Library">
+    	How to Install a Contributed Library</a> instructions on the Processing 
+    	Wiki for more information.  
+    </p>
+    
+    <p>
+    	Add contributed tools by selecting "Add Tool..." from the Tools menu to select a Tool 
+    	to download. 
+    </p>
+    
+    <p>
+    	Add contributed modes by selecting "Add Mode..." from the Mode menu in the upper-right
+    	corner of the PDE.
+	</p>
+	
+	
  
     <!-- Export -->
  
