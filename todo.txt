@@ -8,13 +8,13 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 2.0 REFERENCE
 
-- Parameter decisions  --BF,CR,SM
+x Parameter decisions  --BF,CR,SM
 - Parameter alignment (after above decisions)  --SM
 	- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 	- PVector: 'z' parameter is incorrectly listed as 'the y coordinate'
 		http://code.google.com/p/processing/issues/detail?id=935
 
-$ Contributed Libraries and Tools are not appearing on the site  --CR,BF
+- Contributed Libraries and Tools are not appearing on the site  --CR,BF
 
 RELATED LINKS WITHIN THE REFERENCE
 
@@ -25,9 +25,12 @@ RELATED LINKS WITHIN THE REFERENCE
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
-- JSON  --SM
-- PTABLE  --SM
+  . loadXML() 
+- TABLE  --SM
+o JSON  --SM  // This has been removed for 2.0
+- loadTable(), loadXML() -- SM
 x quadraticVertex()  --CR
+- clear()  --CR  New method for PGraphics
 - new arc()  --CR
 - blendMode()  --CR
 - createShape()  --CR
@@ -42,10 +45,9 @@ THE FOLLOWING IS FROM DB AND PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AN
 - PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts)
 -   figure out why font naming not working correctly
-o "Find in Reference" for copy() goes to PVector
-
 
   DONE
+o "Find in Reference" for copy() goes to PVector
 o XMLElement is not linked for find in ref
 x 085 Constants in PConstants not syntax highlighting  --CR
 x 250 Details regarding keywords.txt  --CR
@@ -147,12 +149,13 @@ x Done
 
 2.0 EXAMPLE  --XXX
 
+- Remove super.stop() and stop() from examples -- CR, MINIM
 - Move "Directory List" to File IO category  --CR
-- new JSON? -- DS,JT
+o new JSON? -- DS,JT
 - New PVector  --DS
 - New PShape  --DS
 - PTable  --DS,JT
-- add stringIntPair to Hashmap  --DS
+- add stringIntPair to Hashmap  --DS  // Ben is still sorting out this API
 - New P3D  --CR,DS,AC
 x New Regex  --DS
 x Analyze PVector in examples  --DS
