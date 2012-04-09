@@ -106,6 +106,18 @@ version=1
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
+tool
+category=
+authorList=[Manindra Moharana](http://quarkninja.blogspot.in/)
+name=Sketch Outline
+sentence=Provides an outline view of the member variables, functions and classes within a sketch and allows easy navigation between them. Similar to the outline view in Eclipse.
+url=http://code.google.com/p/sketch-outline/
+prettyVersion=0.1.5
+paragraph=The list of member variables, functions and inner classes are shown in a tree view. Clicking on any node scrolls and moves the cursor to its definition in the code. Makes navigation within code fast and easy.
+version=1
+download=http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.zip
+id=057
+
 library
 category=Geometry
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
@@ -272,6 +284,18 @@ paragraph=
 version=4
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=041
+
+library
+category=Simulation
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.8
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3005
+download=http://cloud.github.com/downloads/fjenett/combinatorics/Combinatorics.zip
+id=055
 
 library
 category=Hardware
@@ -490,6 +514,30 @@ download=http://www.lagers.org.uk/processing/g4p/guicomponents.zip
 id=051
 
 library
+category=GUI
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Guido
+sentence=A simple cross mode GUI library
+url=https://github.com/fjenett/Guido
+prettyVersion=0.0.1
+paragraph=Guido is a small GUI library that is compatible with both Java (standard) and JavaScript modes.
+version=13
+download=http://cloud.github.com/downloads/fjenett/Guido/Guido.zip
+id=054
+
+library
+category=GUI
+authorList=[Andreas Schlegel](http://www.sojamo.de/)
+name=ControlP5
+sentence=A range of controllers to build custom graphical user interfaces inside a sketch or separate windows.
+url=http://www.sojamo.de/libraries/controlp5
+prettyVersion=0.7.2
+paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
+version=72
+download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
+id=058
+
+library
 category=Math
 authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/)
 name=gwoptics
@@ -523,6 +571,18 @@ paragraph=Supports simple, stochastic and context-sensitive grammars.
 version=2
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
+
+library
+category=Math
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.8
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3005
+download=http://cloud.github.com/downloads/fjenett/combinatorics/Combinatorics.zip
+id=056
 
 library
 category=3D
