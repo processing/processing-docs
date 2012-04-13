@@ -491,14 +491,14 @@ id=044
 
 library
 category=Data
-authorList=Marcel Schwittlick
+authorList=[onformative](http://www.onformative.com/)
 name=GoogleWeather
 sentence=Framework for including weather data into Processing.
 url=http://www.onformative.com/lab/google-weather-library-for-processing/
 prettyVersion=0.8a
 paragraph=
 version=1
-download=http://www.schwittlick-computers.de/GoogleWeather.zip
+download=http://www.onformative.com/uploads/googleWeather/GoogleWeather.zip
 id=053
 
 library
@@ -590,9 +590,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
 sentence=Highly customizable and full featured yet simple to use camera library.
 url=http://code.google.com/p/proscene/
-prettyVersion=1.1.0
+prettyVersion=1.1.90
 paragraph=Main features include: 1. Default interactivity through the mouse and
-version=5
+version=6
 download=http://otrolado.info/proscene.zip
 id=001
 
