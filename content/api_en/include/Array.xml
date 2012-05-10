@@ -59,7 +59,7 @@ Another common source of confusion is the difference between using <b>length</b>
 
 <parameter>
 <label>datatype</label>
-<description><![CDATA[any primitive or compound datatype, including user defined classes]]></description>
+<description><![CDATA[any primitive or compound datatype, including user-defined classes]]></description>
 </parameter>
 
 <parameter>

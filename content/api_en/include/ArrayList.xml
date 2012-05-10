@@ -68,7 +68,7 @@ ArrayList(<c>initialCapacity</c>)
 
 <cparameter>
 <clabel>initialCapacity</clabel>
-<cdescription>int: defines the initial capacity of the list, it's empty by default</cdescription>
+<cdescription>int: defines the initial capacity of the list; it's empty by default</cdescription>
 </cparameter>
 
 <returns></returns>

@@ -53,12 +53,12 @@ try {
 
 <parameter>
 <label>tryStatements</label>
-<description><![CDATA[if this code throws an exception, then the code in catch is run]]></description>
+<description><![CDATA[if this code throws an exception, then the code in "catch" is run]]></description>
 </parameter>
 
 <parameter>
 <label>exception</label>
-<description><![CDATA[a Java exception]]></description>
+<description><![CDATA[the Java exception that was thrown]]></description>
 </parameter>
 
 <parameter>

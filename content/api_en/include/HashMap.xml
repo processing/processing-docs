@@ -46,12 +46,12 @@ HashMap(<c>m</c>)
 
 <parameter>
 <label>initialCapacity</label>
-<description>int: defines the initial capacity of the map, it's 16 by default</description>
+<description>int: defines the initial capacity of the map; the default is 16</description>
 </parameter>
 
 <parameter>
 <label>loadFactor</label>
-<description>float: the load factor for the map, the default is 0.75</description>
+<description>float: the load factor for the map; the default is 0.75</description>
 </parameter>
 
 <parameter>

@@ -35,7 +35,7 @@ Grouping and containing expressions and parameters. Parentheses have multiple fu
 </parameter>
 
 <parameter>
-<label>p1...pN</label>
+<label>p1, ..., pN</label>
 <description><![CDATA[list of parameters specific to the function]]></description>
 </parameter>
 

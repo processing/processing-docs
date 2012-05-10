@@ -40,7 +40,7 @@ Define the beginning and end of functions blocks and statement blocks such as th
 </parameter>
 
 <parameter>
-<label>ele0 ... eleN</label>
+<label>ele0, ..., eleN</label>
 <description><![CDATA[list of elements separated by commas]]></description>
 </parameter>
 

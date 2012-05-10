@@ -76,12 +76,12 @@ The keyword <b>return</b> may also be used to break out of a function, thus not 
 
 <parameter>
 <label>type</label>
-<description><![CDATA[boolean, byte, char, int, float, String, boolean[], byte[], char[], int[], float[], String[]]]></description>
+<description><![CDATA[boolean, byte, char, int, float, String, boolean[], byte[], char[], int[], float[], or String[]]]></description>
 </parameter>
 
 <parameter>
 <label>function</label>
-<description><![CDATA[a function that is being defined]]></description>
+<description><![CDATA[the function that is being defined]]></description>
 </parameter>
 
 <parameter>
@@ -91,7 +91,7 @@ The keyword <b>return</b> may also be used to break out of a function, thus not 
 
 <parameter>
 <label>value</label>
-<description><![CDATA[must be the same datatype as the type parameter]]></description>
+<description><![CDATA[must be the same datatype as the "type" parameter]]></description>
 </parameter>
 
 <returns></returns>

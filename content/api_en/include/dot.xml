@@ -55,17 +55,17 @@ Provides access to an object's methods and data. An object is one instance of a 
 
 <parameter>
 <label>object</label>
-<description><![CDATA[the object you want to access]]></description>
+<description><![CDATA[the object to be accessed]]></description>
 </parameter>
 
 <parameter>
 <label>method()</label>
-<description><![CDATA[method encapsulated in the object]]></description>
+<description><![CDATA[a method encapsulated in the object]]></description>
 </parameter>
 
 <parameter>
 <label>data</label>
-<description><![CDATA[variable or constant encapsulated in the object]]></description>
+<description><![CDATA[a variable or constant encapsulated in the object]]></description>
 </parameter>
 
 <returns></returns>
