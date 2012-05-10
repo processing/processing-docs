@@ -21,7 +21,7 @@ sphere(30);
 </example>
 
 <description><![CDATA[
-Adds a point light. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The affect of the <b>v1</b>, <b>v2</b>, and <b>v3</b> parameters is determined by the current color mode. The <b>x</b>, <b>y</b>, and <b>z</b> parameters set the position of the light.
+Adds a point light. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The effect of the <b>v1</b>, <b>v2</b>, and <b>v3</b> parameters is determined by the current color mode. The <b>x</b>, <b>y</b>, and <b>z</b> parameters set the position of the light.
 ]]></description>
 
 </root>
