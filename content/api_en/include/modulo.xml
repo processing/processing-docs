@@ -39,7 +39,7 @@ Modulo is extremely useful for keeping numbers within a boundary such as keeping
 ]]></description>
 
 <syntax>
-<c>value1</c>%<c>value2</c>
+<c>value1</c> % <c>value2</c>
 </syntax>
 
 <parameter>
