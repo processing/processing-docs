@@ -29,7 +29,7 @@ Sets the color used to draw lines and borders around shapes. This color is eithe
 <br/> <br/>
 When using hexadecimal notation to specify a color, use "#" or "0x" before the values (e.g. #CCFFAA, 0xFFCCFFAA). The # syntax uses six digits to specify a color (the way colors are specified in HTML and CSS). When using the hexadecimal notation starting with "0x", the hexadecimal value must be specified with eight characters; the first two characters define the alpha component and the remainder the red, green, and blue components. 
 <br/> <br/>
-The value for the parameter "gray" must be less than or equal to the current maximum value as specified by <b>colorMode()</b>. The default maximum value is 255.
+The value for the gray parameter must be less than or equal to the current maximum value as specified by <b>colorMode()</b>. The default maximum value is 255.
 ]]></description>
 
 </root>
