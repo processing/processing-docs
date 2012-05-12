@@ -31,11 +31,11 @@ rect(25, 25, 50, 50);
 </example>
 
 <description><![CDATA[
-Reads the color of any pixel or grabs a section of an image. If no parameters are specified, the entire image is returned. Use the <b>x</b> and <b>y</b> parameters to get the value of one pixel. Get a section of the display window by specifying an additional <b>width</b> and <b>height</b> parameter. When getting an image, the <b>x</b> and <b>y</b> parameters define the coordinates for the upper-left corner of the image, regardless of the current <b>imageMode()</b>.<br />
+Reads the color of any pixel or grabs a section of an image. If no parameters are specified, the entire image is returned. Use the <b>x</b> and <b>y</b> parameters to get the value of one pixel. Get a section of the display window by specifying additional <b>w</b> and <b>h</b> parameters. When getting an image, the <b>x</b> and <b>y</b> parameters define the coordinates for the upper-left corner of the image, regardless of the current <b>imageMode()</b>.<br />
 <br />
 If the pixel requested is outside of the image window, black is returned. The numbers returned are scaled according to the current color ranges, but only RGB values are returned by this function. For example, even though you may have drawn a shape with <b>colorMode(HSB)</b>, the numbers returned will be in RGB format.
 <br /><br />
-Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fast as grabbing the data directly from <b>pixels[]</b>. The equivalent statement to <b>get(x, y)</b> using <b>pixels[]</b> is <b>pixels[y*width+x]</b>. See the reference for <b>pixels[]</b> for more information.
+Getting the color of a single pixel with <b>get(x, y)</b> is easy, but not as fast as grabbing the data directly from <b>pixels[]</b>. The equivalent statement to <b>get(x, y)</b> using <b>pixels[]</b> is <b>pixels[y*width+x]</b>. See the reference for <a href="pixels.html">pixels[]</a> for more information.
 ]]></description>
 
 </root>

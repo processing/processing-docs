@@ -31,7 +31,7 @@ box(40, 20, 50);
 </example>
 
 <description><![CDATA[
-A box is an extruded rectangle. A box with equal dimension on all sides is a cube.
+A box is an extruded rectangle. A box with equal dimensions on all sides is a cube.
 ]]></description>
 
 </root>
