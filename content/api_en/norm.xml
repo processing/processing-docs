@@ -19,13 +19,19 @@ println(n);  // Prints "0.4"
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+float value = -10;
+float n = norm(value, 0, 100);
+println(n);  // Prints "-0.1"
+]]></code>
+</example>
+
 <description><![CDATA[
-Normalizes a number from another range into a value between 0 and 1. 
-<br/> <br/>
-Identical to map(value, low, high, 0, 1);
-<br/> <br/>
-Numbers outside the range are not clamped to 0 and 1, because
-out-of-range values are often intentional and useful.
+Normalizes a number from another range into a value between 0 and 1. Identical to <b>map(value, low, high, 0, 1)</b>.<br/>
+<br/>
+Numbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful.  (See the second example above.)
 ]]></description>
 
 </root>

@@ -20,14 +20,19 @@ ellipse(m, 200, 10, 10);
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+float value = 110;
+float m = map(value, 0, 100, -20, -10);
+println(m);  // Prints "-9.0"
+]]></code>
+</example>
+
 <description><![CDATA[
-Re-maps a number from one range to another. In the example above, 
-the number '25' is converted from a value in the range 0..100 into
-a value that ranges from the left edge (0) to the right edge (width) 
-of the screen.
-<br/> <br/>
-Numbers outside the range are not clamped to 0 and 1, because
-out-of-range values are often intentional and useful.
+Re-maps a number from one range to another. In the first example above, the number 25 is converted from a value in the range of 0 to 100 into a value that ranges from the left edge of the window (0) to the right edge (width).<br/>
+<br/>
+Numbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful.  (See the second example above.)
 ]]></description>
 
 </root>
