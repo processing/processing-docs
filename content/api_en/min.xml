@@ -20,13 +20,13 @@ float f = min(12.3, 230.24);  // Sets 'f' to 12.3
 <example>
 <image></image>
 <code><![CDATA[
-int[] list = { 5, 1, 2, -3 };
-int h = min(list);            // Sets 'h' to -3
+int[] values = { 5, 1, 2, -3 };  // Create an array of ints
+int h = min(values);             // Sets 'h' to -3
 ]]></code>
 </example>
 
 <description><![CDATA[
-Determines the smallest value in a sequence of numbers.
+Determines the smallest value in a sequence of numbers, and then returns that value. <b>min()</b> accepts either two or three <b>float</b> or <b>int</b> values as parameters, or an array of any length.
 ]]></description>
 
 </root>

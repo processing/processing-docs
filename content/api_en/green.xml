@@ -25,7 +25,7 @@ rect(50, 20, 35, 60);  // Draw right rectangle
 <description><![CDATA[
 Extracts the green value from a color, scaled to match current <b>colorMode()</b>. The value is always returned as a float, so be careful not to assign it to an int value.<br />
 <br />
-The <b>green()</b> function is easy to use and understand, but it is slower than a technique called bit shifting. When working in <b>colorMode(RGB, 255)</b>, you can acheive the same results as <b>green()</b> but with greater speed by using the right shift operator (<b>>></b>) with a bit mask. For example, the following two lines of code are equivalent means of getting the green value of the color value c:<br />
+The <b>green()</b> function is easy to use and understand, but it is slower than a technique called bit shifting. When working in <b>colorMode(RGB, 255)</b>, you can acheive the same results as <b>green()</b> but with greater speed by using the right shift operator (<b>>></b>) with a bit mask. For example, the following two lines of code are equivalent means of getting the green value of the color value <b>c</b>:<br />
 <br />
 <pre>float r1 = green(c);  // Simpler, but slower to calculate
 float r2 = c >> 8 & 0xFF;  // Very fast to calculate</pre>

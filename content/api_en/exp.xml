@@ -18,7 +18,7 @@ println(v1);  // Prints "2.7182817"
 </example>
 
 <description><![CDATA[
-Returns Euler's number <i>e</i> (2.71828...) raised to the power of the <b>value</b> parameter.
+Returns Euler's number <i>e</i> (2.71828...) raised to the power of the <b>n</b> parameter.
 ]]></description>
 
 </root>
