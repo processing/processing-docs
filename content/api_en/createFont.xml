@@ -28,9 +28,9 @@ void setup() {
 
 <js_mode>
 	<description><![CDATA[
-Font support for the Canvas element varies across browsers. FireFox currently has the best support, but still uses a pre-defined set of fonts. (Documentation to follow soon.) Good alternatives to the browser's Canvas-font functions are available: such as the <a href="http://bocoup.com/processing-js/docs/index.php?page=Cross-Browser%20Canvas%20Fonts">Glyph method</a>. See also: <a href="http://jim.studt.net/canvastext/">Canvas Text</a>, <a href="http://canvas.burnttoys.net/bauhaus.html">BurntToys Bauhaus</a>.
+Font support for the canvas element varies across browsers. Firefox currently has the best support, but still uses a pre-defined set of fonts. Good alternatives to the browser's canvas-font functions are available: such as the <a href="http://bocoup.com/processing-js/docs/index.php?page=Cross-Browser%20Canvas%20Fonts">Glyph method</a>. See also: <a href="http://jim.studt.net/canvastext/">Canvas Text</a>, <a href="http://canvas.burnttoys.net/bauhaus.html">BurntToys Bauhaus</a>.
 <br /><br />
-<p><b>Please use the follwoing demos to learn how fonts can be rendered in Firefox with Processing.js: <a href="http://processingjs.org/learning/basic/letters">Letters</a>, <a href="http://processingjs.org/learning/basic/words">Words</a>, <a href="http://processingjs.org/source/text-width/text-width.html">width()</a></b></p>
+<p><b>Please use the following demos to learn how fonts can be rendered in Firefox with Processing.js: <a href="http://processingjs.org/learning/basic/letters">Letters</a>, <a href="http://processingjs.org/learning/basic/words">Words</a>, <a href="http://processingjs.org/source/text-width/text-width.html">width()</a></b></p>
 ]]></description>
 </js_mode>
 	
