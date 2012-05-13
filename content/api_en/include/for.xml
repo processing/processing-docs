@@ -53,7 +53,7 @@ for (int i = 30; i < 80; i = i+5) {
 </example>
 
 <description><![CDATA[
-Controls a sequence of repetitions. A <b>for</b> structure has three parts: <b>init</b>, <b>test</b>, and <b>update</b>. Each part must be separated by a semicolon (;). The loop continues until the test evaluates to <b>false</b>. When a <b>for</b> structure is executed, the following sequence of events occurs:<br/>
+Controls a sequence of repetitions. A <b>for</b> structure has three parts: <b>init</b>, <b>test</b>, and <b>update</b>. Each part must be separated by a semicolon (;). The loop continues until the <b>test</b> evaluates to <b>false</b>. When a <b>for</b> structure is executed, the following sequence of events occurs:<br/>
 <br/>
 1. The init statement is executed.<br/>
 2. The test is evaluated to be true or false.<br/>

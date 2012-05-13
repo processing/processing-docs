@@ -21,7 +21,7 @@ saveBytes("numbers.dat", nums);
 </example>
 
 <description><![CDATA[
-Opposite of <b>loadBytes()</b>, will write an entire array of bytes to a file. The data is saved in binary format. This file is saved to the sketch's folder, which is opened by selecting "Show sketch folder" from the "Sketch" menu.<br />
+Opposite of <b>loadBytes()</b>, will write an entire array of bytes to a file. The data is saved in binary format. This file is saved to the sketch's folder, which is opened by selecting "Show Sketch Folder" from the "Sketch" menu.<br />
 <br />
 It is not possible to use saveXxxxx() functions inside a web browser unless the sketch is <a href="http://wiki.processing.org/w/Sign_an_Applet">signed applet</A>. To save a file back to a server, see the <a href="http://wiki.processing.org/w/Saving_files_to_a_web-server">save to web</A> code snippet on the Processing Wiki.
 ]]></description>

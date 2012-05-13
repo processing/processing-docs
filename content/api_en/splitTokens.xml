@@ -36,9 +36,9 @@ println(q[3]);  // Prints "d"
 </example>
 
 <description><![CDATA[
-The <b>splitTokens()</b> function splits a String at one or many character "tokens." The <b>tokens</b> parameter specifies the character or characters to be used as a boundary.<br/>
+The <b>splitTokens()</b> function splits a String at one or many character delimiters or "tokens." The <b>delim</b> parameter specifies the character or characters to be used as a boundary.<br/>
 <br/>
-If no <b>tokens</b> character is specified, any whitespace character is used to split. Whitespace characters include tab (\\t), line feed (\\n), carriage return (\\r), form feed (\\f), and space.<br/>
+If no <b>delim</b> characters are specified, any whitespace character is used to split. Whitespace characters include tab (&#92;t), line feed (&#92;n), carriage return (&#92;r), form feed (&#92;f), and space.<br/>
 <br/>
 After using this function to parse incoming data, it is common to convert the data from Strings to integers or floats by using the datatype conversion functions <b>int()</b> and <b>float()</b>.
 ]]></description>
