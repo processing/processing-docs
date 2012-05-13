@@ -28,7 +28,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Reads the value of a param. Values are always read as a String so if you want them to be an integer or other datatype they must be converted. The <b>param()</b> function will only work in a web browser. The function should be called inside <b>setup()</b>, otherwise the applet may not yet be initialized and connected to its parent web browser.
+Reads the value of an HTML param element. Values are always read as Strings, so if you want them to be an integer or other datatype, they must be converted. The <b>param()</b> function will only work in a web browser. The function should be called inside <b>setup()</b>; otherwise, the applet may not yet be initialized and connected to its parent web browser.
 ]]></description>
 
 </root>

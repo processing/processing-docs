@@ -34,7 +34,7 @@ println(imgs.length);  // Prints "64"
 <description><![CDATA[
 Increases the size of an array. By default, this function doubles the size of the array, but the optional <b>newSize</b> parameter provides precise control over the increase in size. 
 <br/> <br/>
-When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) expand(originalArray)</em>.
+When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) expand(originalArray)</em>
 ]]></description>
 
 </root>

@@ -31,7 +31,7 @@ println(joinedNumbers);  // Prints "8, 67, 5"
 </example>
 
 <description><![CDATA[
-Combines an array of Strings into one String, each separated by the character(s) used for the <b>separator</b> parameter. To join arrays of ints or floats, it's necessary to first convert them to strings using <b>nf()</b> or <b>nfs()</b>.
+Combines an array of Strings into one String, each separated by the character(s) used for the <b>separator</b> parameter. To join arrays of ints or floats, it's necessary to first convert them to Strings using <b>nf()</b> or <b>nfs()</b>.
 ]]></description>
 
 </root>

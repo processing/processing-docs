@@ -24,7 +24,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Displays message in the browser's status area. This is the text area in the lower left corner of the browser. The <b>status()</b> function will only work when the Processing program is running in a web browser.
+Displays a message in the browser's status area. This is typically the text area in the lower left corner of the browser. The <b>status()</b> function will only work when the Processing program is running in a web browser.
 ]]></description>
 
 </root>
