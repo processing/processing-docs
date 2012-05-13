@@ -9,9 +9,9 @@ $ Prepare MODE images for JavaScript, Android  --CR
 2.0 REFERENCE
 
 x Parameter decisions  --BF,CR,SM
-- Parameter alignment (after above decisions)  --SM
-	- size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
-	- PVector: 'z' parameter is incorrectly listed as 'the y coordinate'
+x Parameter alignment (after above decisions)  --SM
+	x size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
+	x PVector: 'z' parameter is incorrectly listed as 'the y coordinate'
 		http://code.google.com/p/processing/issues/detail?id=935
 
 - Contributed Libraries and Tools are not appearing on the site  --CR,BF
