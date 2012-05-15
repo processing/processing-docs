@@ -44,7 +44,9 @@ void draw() {
 
 
 <description><![CDATA[
-Draws images to the display window. Images must be in the sketch's "data" directory to load correctly. Select "Add file..." from the "Sketch" menu to add the image to the data directory, or just drag the image file onto the sketch window. Processing currently works with GIF, JPEG, and Targa images. The <b>img</b> parameter specifies the image to display and the <b>x</b> and <b>y</b> parameters define the location of the image from its upper-left corner. The image is displayed at its original size unless the <b>c</b> and <b>d</b> parameters specify a different size. The <b>imageMode()</b> function can be used to change the way these parameters are interpreted.<br/>
+The <b>image()</b> function draws an image to the display window. Images must be in the sketch's "data" directory to load correctly. Select "Add file..." from the "Sketch" menu to add the image to the data directory, or just drag the image file onto the sketch window. Processing currently works with GIF, JPEG, and PNG images. <br />
+<br />
+The <b>img</b> parameter specifies the image to display and by default the <b>a</b> and <b>b</b> parameters define the location of its upper-left corner. The image is displayed at its original size unless the <b>c</b> and <b>d</b> parameters specify a different size. The <b>imageMode()</b> function can be used to change the way these parameters draw the image.<br/>
 <br/>
 The color of an image may be modified with the <b>tint()</b> function. This function will maintain transparency for GIF and PNG images.
 ]]></description>
