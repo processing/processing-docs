@@ -70,6 +70,18 @@ version=1
 download=http://jorgecardoso.eu/processing/MindSetProcessing/MindSetProcessing.zip
 id=026
 
+library
+category=I/O
+authorList=[Michael Heuer](https://github.com/heuermh) and [Iain Lobb](http://blog.iainlobb.com)
+name=Gamepad library for Processing
+sentence=A port of the Gamepad ActionScript library for Flash.
+url=https://github.com/heuermh/gamepad-processing
+prettyVersion=1.0
+paragraph=
+version=1
+download=http://cloud.github.com/downloads/heuermh/gamepad-processing/gamepad.zip
+id=060
+
 tool
 category=
 authorList=Manindra Moharana
@@ -548,6 +560,18 @@ paragraph=Includes interface elements such as slider, button, knob, toggle, text
 version=73
 download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
 id=058
+
+library
+category=GUI
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Piccolo2D library for Processing
+sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
+url=https://github.com/heuermh/piccolo2d-processing
+prettyVersion=1.0
+paragraph=
+version=1
+download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
+id=061
 
 library
 category=Math
