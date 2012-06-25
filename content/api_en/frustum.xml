@@ -11,17 +11,25 @@
 <example>
 <image>frustum_.png</image>
 <code><![CDATA[
-size(100, 100, P3D);
+size(100, 100, P3D);  
 noFill();
 background(204);
-frustum(-width/2, width, 0, height, -100, 200.0);
+frustum(-10, 0, 0, 10, 10, 200);
 rotateY(PI/6);
 box(45);
 ]]></code>
 </example>
 
 <description><![CDATA[
-Sets a perspective matrix defined through the parameters. Works like glFrustum, except it wipes out the current perspective matrix rather than muliplying itself with it.
+Sets a perspective matrix as defined by the parameters.<br/>
+<br/>
+A frustum is a geometric form: a pyramid with its top cut off.  With the viewer's eye at the imaginary top of the pyramid, the six planes of the frustum act as clipping planes when rendering a 3D view.  Thus, any form inside the clipping planes is rendered and visible; anything outside those planes is not visible.<br/>
+<br/>
+Setting the frustum has the effect of changing the <em>perspective</em> with which the scene is rendered.  This can be acheived more simply in many cases by using <strong>perspective()</strong>.<br/>
+<br/>
+Note that the near value must be greater than zero (as the point of the frustum "pyramid" cannot converge "behind" the viewer).  Similarly, the far value must be greater than the near value (as the "far" plane of the frustum must be "farther away" from the viewer than the near plane).<br/>
+<br/>
+Works like glFrustum, except it wipes out the current perspective matrix rather than multiplying itself with it.
 ]]></description>
 
 </root>
