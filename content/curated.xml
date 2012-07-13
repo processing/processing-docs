@@ -2,6 +2,16 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="City Symphonies" by="Mark McKeague" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/citysymphonies.jpg</image>
+		  <description>
+			  Mark McKeague explores an alternative of the traffic in the city where the sound that cars generate changes according to their relationship to other road users and the environment. Using Processing in combination with MaxMSP, a traffic simulation is used to power the movement of vehicles through different sections of road networks in London.
+		  </description>
+		  <location>http://markmckeague.com/work/city-symphonies/</location>
+		 <link href="http://markmckeague.com/work/city-symphonies/">Mark McKeague</link>
+		<link href="http://www.creativeapplications.net/maxmsp/city-symphonies-the-future-sound-of-traffic-by-mark-mckeague-di-rca-2012/">More on CreativeApplications.Net</link>
+	</software>
+	
 	<software name="Silenc" by="Manas Karambelkar, Momo Miyazaki and Kenneth A. Robertsen" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/silenc2.png</image>
 		  <description>
