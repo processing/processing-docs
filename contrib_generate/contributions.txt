@@ -112,9 +112,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=1.1.1
+prettyVersion=2.0.1
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=1
+version=3
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -241,11 +241,11 @@ library
 category=Utilities
 authorList=[Eric Socolofsky](http://transmote.com/)
 name=Nest
-sentence=Scenegraph and mouse event handling system based loosely on ActionScript3.
+sentence=Scenegraph and mouse event handling system based loosely on ActionScript 3.
 url=http://transmote.com/nest/
-prettyVersion=0.41
+prettyVersion=0.5
 paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
-version=5
+version=6
 download=http://transmote.com/nest/download/Nest.zip
 id=047
 
@@ -406,6 +406,18 @@ download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zi
 id=033
 
 library
+category=Animation
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=sprites
+sentence=Sprite control and animation for games and graphic applications.
+url=http://www.lagers.oerg.uk/s4p
+prettyVersion=2.0.2
+paragraph=Provides complete control over sprite image animation, sprite movement and collision detection. Examples can be seen [here](http://www.lagers.org.uk/s4p/applets/s4p_showcase)
+version=4
+download=http://www.lagers.org.uk/processing/sprites/sprites.zip
+id=062
+
+library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://www.shiffman.net)
 name=Open Kinect
@@ -447,9 +459,9 @@ authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
 name=GML4U
 sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
 url=https://github.com/01010101/GML4U/wiki
-prettyVersion=0.1.7
+prettyVersion=0.1.8
 paragraph=GML is an open file format designed to store graffiti motion data.
-version=7
+version=8
 download=http://www.saint-clair.net/download/gml4u/GML4U.zip
 id=008
 
@@ -531,9 +543,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=guicomponents
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=1.7.6
+prettyVersion=2.0.1
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=1
+version=3
 download=http://www.lagers.org.uk/processing/g4p/guicomponents.zip
 id=051
 
@@ -555,9 +567,9 @@ authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=ControlP5
 sentence=A range of controllers to build custom graphical user interfaces inside a sketch or separate windows.
 url=http://www.sojamo.de/libraries/controlp5
-prettyVersion=0.7.3
+prettyVersion=0.7.5
 paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
-version=73
+version=75
 download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
 id=058
 
@@ -602,9 +614,9 @@ authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2
 name=LSystems
 sentence=Utilities for exploring lsystems.
 url=http://kenai.com/projects/l-system-utilities
-prettyVersion=0.7.4
+prettyVersion=0.8.0
 paragraph=Supports simple, stochastic and context-sensitive grammars.
-version=2
+version=3
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
 
@@ -718,9 +730,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=shapes3d
 sentence=3D Shape creation and display made easy.
 url=http://www.lagers.org.uk/s3d4p/index.html
-prettyVersion=1.9.3
+prettyVersion=2.0.1
 paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
-version=2
+version=4
 download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
 id=050
 
