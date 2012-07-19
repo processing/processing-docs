@@ -106,6 +106,13 @@
   </tutorial>
 
   <tutorial> 
+  	<title>PShape</title> 
+  	<directory>pshape</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial>
+
+  <tutorial> 
   	<title>P3D</title> 
   	<directory>p3d</directory> 
   	<imgs>true</imgs> 
