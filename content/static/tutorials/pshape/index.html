@@ -348,7 +348,7 @@ PShape s = createShape(QUAD_STRIP);
   path.end();
 </pre>
 
-<p>See Example: PathPShape</p>
+<p>See Example "PathPShape" for the full implementation.</p>
 
 <p>PShapes also include the methods <a href="http://processing.org/reference/PShape_beginContour_.html">beginContour()</a> and <a href="http://processing.org/reference/PShape_endContour_.html">endContour()</a>.  These methods allow you to cut a shape out of another.  Think of drawing the outline of a letter, like P (for Processing).  The outline of the P can be drawn as a series of vertices, but to get the counter shape knocked out of the middle of the P, you need begin/endContour and draw the path of the interior.  Here's a simple example that draws an interior square inside of an exterior one.</p>
 
@@ -380,7 +380,7 @@ s.endContour();
 s.end();
 </pre>
 
-<p>See Example: BeginEndContour</p>
+<p>See Example "BeginEndContour" for the full implementation.</p>
 
 <h3>PShape Groups</h3>
 
@@ -414,7 +414,7 @@ translate(width/2, height/2);
 shape(alien);
 </pre>
 
-<p>For a full example that demonstrates a PShape that groups together a primitive shape, custom polygon, and path, take a look at: GroupPShape.</p>
+<p>For a full example that demonstrates a PShape that groups together a primitive shape, custom polygon, and path, see "GroupPShape".</p>
 
 <h3>Loading External Shapes</h3>
 
@@ -464,7 +464,7 @@ for (int i = 0; i < s.getVertexCount(); i++) {
 }
 </pre>
 
-<p>For an example that wiggles a polygon's vertices using Perlin noise, look at: WigglePShape.</p>
+<p>For an example that wiggles a polygon's vertices using Perlin noise, see "WigglePShape".</p>
 
 	<p>&nbsp;</p>
 
