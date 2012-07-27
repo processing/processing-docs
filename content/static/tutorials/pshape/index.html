@@ -12,7 +12,7 @@
 
 <h3>What is a PShape?</h3>
 
-<p>If you've used Processing even just for five minutes, you become quickly aware that it's easy to draw a shape to the screen.  There are functions for "primitive shapes", like rectangles, ellipses, lines, and triangles.</p>
+<p>One of the very first things you learn when programming with Processing is how to draw "primitive" shapes to the screen: rectangles, ellipses, lines, triangles, and more.</p>
 
 <pre>
 rect(x,y,w,h);
@@ -21,7 +21,7 @@ line(x1,y1,x2,y2);
 triangle(x1,y1,x2,y2,x3,y3);
 </pre>
 
-<p>You can even use beginShape() and endShape() to specify the vertices of a custom polygon:</p>
+<p>A more advanced drawing option is to use beginShape() and endShape() to specify the vertices of a custom polygon:</p>
 
 <pre>
 beginShape();
@@ -92,7 +92,7 @@ void draw() {
 PShape rectangle;
 </pre>
 
-<p>To initialize a PShape, use the <a href="http://processing.org/reference/createShape_.html">createShape()</a> method.  The first argument for createShape() is a constant, and this constant specifies the type of PShape you intend to make.  As we'll see throughout this tutorial there are a number of options: ELLIPSE, RECT, ARC, TRIANGLE, SPHERE, BOX, LINE, GROUP, and more.  Here we are making a primitive shape, a rectangle, so we use the constant "RECT."  The arguments that follow are the (x,y) location for the shape as well as its dimensions (width,height).  So now, our setup() should look something like:</p>
+<p>To initialize a PShape, use the <a href="http://processing.org/reference/createShape_.html">createShape()</a> method.  The first argument for createShape() is a constant, and this constant specifies the type of PShape you intend to make.  As we'll see throughout this tutorial there are a number of options: ELLIPSE, RECT, ARC, TRIANGLE, SPHERE, BOX, LINE, GROUP, and more.  Here we are making a primitive shape, a rectangle, so we use the constant "RECT."  The arguments that follow are the (x,y) location for the shape as well as its dimensions (width,height).  So now our setup() should look like:</p>
 
 <pre>
 PShape rectangle;
@@ -202,9 +202,9 @@ void draw() {
 PShape star;
 
 void setup() {
-  star = createShape();  // what use to be beginShape();
+  star = createShape();  // What used to be beginShape();
 
-  // all the vertex information goes here
+  // All the vertex information goes here.
 
   star.end(CLOSE);       // What used to be endShape(CLOSE);
 }
@@ -314,15 +314,76 @@ class Star {
   }
 </pre>
 
-<p>This method makes sense if each object itself has its own geometry, generated via an algorithm.  However, if each object is displaying the identical PShape, it likely makes more sense to pass in a reference to a PShape in the constructor itself.  For example:</p>
+<p>This method makes sense if each object itself has its own geometry, generated via an algorithm.  However, if each object is displaying the identical PShape, it likely makes more sense to pass in a reference to a PShape in the constructor itself.  Let's take a look at how this might work.  Let's say we create a generic class called "Polygon" which has a reference to a PShape (which is draws in a display method).</p>
 
 <pre>
-  Star(PShape s_) {
+class Polygon {
+  PShape s;
+  
+  void display() {
+    shape(s);
+  }
+}
+</pre>
+
+<p>TIn the previous example, the shape was created right there in the object's constructor.  Here we are going to demonstrate a different way to write the constructor where the shape is set via an argument.</p>
+
+<pre>
+  Polygon(PShape s_) {
     s = s_;
   }
 </pre>
 
-<p>See Examples "PolygonPShapeOOP" and "PolygonPShapeOOP2" for two examples that demonstrates the above techniques.  It should also be noted that the rendering speed optimization of retained mode is only relevant to P2D and P3D drawing modes, as it requires hardware acceleration.</p>
+<p>For this to work, however, a PShape must be passed into when the object is created.  Here is how this would look in the main tab with setup():</p>
+
+<pre>
+Polygon poly;                   // An object of type Polygon
+
+void setup() {
+  PShape star = createShape();  // First we make the PShape
+  star.fill(0,127);
+  star.stroke(0);
+  star.vertex(0, -50);
+  star.vertex(14, -20);
+  star.vertex(47, -15);
+  star.vertex(23, 7);
+  star.vertex(29, 40);
+  star.vertex(0, 25);
+  star.vertex(-29, 40);
+  star.vertex(-23, 7);
+  star.vertex(-47, -15);
+  star.vertex(-14, -20);
+  star.end(CLOSE);
+  
+  poly = new Polygon(star);     // Then we make the Polygon object by passing in the reference to the PShape
+
+}
+
+<p>This is a very flexible approach.  For example if you had an array of PShape objects, you could create new Polygon objects each one with a random PShape.  Here is a simple implementation.</p>
+
+<p><img src="imgs/pshape4a.png"></p>
+
+<pre>
+ArrayList<Polygon> polygons;
+PShape[] shapes = new PShape[2];                       // An array of PShapes
+
+void setup() {
+  size(640, 360, P2D);
+  smooth();
+  shapes[0] = createShape(ELLIPSE,0,0,100,100);        // Two PShapes
+  shapes[1] = createShape(RECT,0,0,100,100);
+
+  polygons = new ArrayList<Polygon>();
+  
+  for (int i = 0; i < 25; i++) {
+    int selection = int(random(shapes.length));        // Pick a random index
+    Polygon p = new Polygon(shapes[selection]);        // Use corresponding PShape to create Polygon
+    polygons.add(p);
+  }
+}
+</pre>
+
+<p>For the full examples, take a look at "PolygonPShapeOOP1", "PolygonPShapeOOP2", and "PolygonPShapeOOP3".  It should also be noted that the rendering speed optimization of retained mode is only relevant to P2D and P3D drawing modes, as it requires hardware acceleration.</p>
 
 <h3>More Custom PShapes</h3>
 
@@ -350,7 +411,7 @@ PShape s = createShape(QUAD_STRIP);
 
 <p>See Example "PathPShape" for the full implementation.</p>
 
-<p>PShapes also include the methods <a href="http://processing.org/reference/PShape_beginContour_.html">beginContour()</a> and <a href="http://processing.org/reference/PShape_endContour_.html">endContour()</a>.  These methods allow you to cut a shape out of another.  Think of drawing the outline of a letter, like P (for Processing).  The outline of the P can be drawn as a series of vertices, but to get the counter shape knocked out of the middle of the P, you need begin/endContour and draw the path of the interior.  Here's a simple example that draws an interior square inside of an exterior one.</p>
+<p>PShapes also include the methods <a href="http://processing.org/reference/PShape_beginContour_.html">beginContour()</a> and <a href="http://processing.org/reference/PShape_endContour_.html">endContour()</a>.  These methods allow you to cut a shape out of another and make shapes with holes in them.  Think of drawing the outline of a letter, like P (for Processing).  The outline of the P can be drawn as a series of vertices, but to get the counter shape knocked out of the middle of the P, you need begin/endContour and draw the path of the interior.  Here's a simple example that draws an interior square inside of an exterior one.</p>
 
 <p><img src="imgs/pshape6.png"></p>
 
@@ -415,6 +476,10 @@ shape(alien);
 </pre>
 
 <p>For a full example that demonstrates a PShape that groups together a primitive shape, custom polygon, and path, see "GroupPShape".</p>
+
+PShape groups allow you build a sophisticated hierarchy of shapes.  This in turn allows you to set the color and attributes of the child shapes by calling the corresponding method at the parent level. Similarly, by calling the transformation functions at a given level of the hierarchy, you only affect the shapes below. 
+
+[ADD A DEMONSTRATION / EXAMPLE]
 
 <h3>Loading External Shapes</h3>
 
