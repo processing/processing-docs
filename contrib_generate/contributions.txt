@@ -131,6 +131,18 @@ download=http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.zip
 id=057
 
 library
+category=Language
+authorList=[Daniel Howe](http://mrl.nyu.edu/~dhowe)
+name=RiTa
+sentence=A collection of tools for natural language processing and generative writing.
+url=http://rednoise.org/rita/
+prettyVersion=1.0.14
+paragraph=
+version=1014
+download=http://www.rednoise.org/rita/RiTa.zip
+id=063
+
+library
 category=Geometry
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -614,9 +626,9 @@ authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2
 name=LSystems
 sentence=Utilities for exploring lsystems.
 url=http://kenai.com/projects/l-system-utilities
-prettyVersion=0.8.0
+prettyVersion=0.8.1
 paragraph=Supports simple, stochastic and context-sensitive grammars.
-version=3
+version=4
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
 
