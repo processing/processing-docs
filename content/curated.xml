@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="Stone Spray" by="Petr Novikov, Inder Shergill and Anna Kulik" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/stonespray.jpg</image>
+		  <description>
+			  Stone Spray is a construction method which uses soil as the base material and a liquid binder to solidify the soil granules. The device uses an Arduino UNO, Processing application and a custom built jet spray system to deposit the mix of soil and binder, for constructing architectural shapes.
+		  </description>
+		  <location>http://www.stonespray.com</location>
+		 <link href="http://www.stonespray.com/"> Petr Novikov, Inder Shergill and Anna Kulik</link>
+	</software>
+	
 	<software name="City Symphonies" by="Mark McKeague" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/citysymphonies.jpg</image>
 		  <description>
