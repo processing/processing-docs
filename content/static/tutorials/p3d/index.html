@@ -226,9 +226,7 @@ void draw() {
 	<p>
 	Once we have specified the texture itself, we have to then define the mapping of the image to the shape itself.  This is a simple problem when the shape is rectangular (four corners of a shape map to four corners of an image), but grows more complex when you have many more vertices in a shape (such as in the globe example above).   To define the mapping, two more arguments (usually referred to as <b><i>u</i></b> and <b><i>v</i></b> are added to each call to vertex().  By default, the coordinates used for <b><i>u</i></b> and <b><i>v</i></b> are specified in relation to the image's size in pixels, but this relation can be changed with <a href="http://processing.org/reference/textureMode_.html">textureMode()</a>.  	In addition, when textures are in use, the fill color is ignored. Instead, use <a href="http://processing.org/reference/tint_.html">tint()</a> to specify the color of the texture as it is applied to the shape.
 	</p>
-	
-	[THIS COULD MAYBE USE A NICE DIAGRAM HERE]
-	
+		
 	<p><img src="imgs/texture2.png"><br/>
 		<a href="http://processing.org/learning/3d/texture1.html">Example: Texture1</a></p>
 	
