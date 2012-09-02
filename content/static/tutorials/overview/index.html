@@ -9,7 +9,7 @@
 	
 	<p>&nbsp;</p>
 	
-<p>Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to &ldquo;sketch&rdquo; ideas in code. As its capabilities have expanded over the past six years,  Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization.<br />
+<p>Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to &ldquo;sketch&rdquo; ideas in code. As its capabilities have expanded over the past decade, Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization.<br />
   <br />
   Processing is based on Java, but because program elements in Processing are fairly simple, you can learn to use it even if you don't know any Java. If you're familiar with Java, it's best to forget that Processing has anything to do with Java for a while, until you get the hang of how the API works.<br />
 <br />
@@ -129,10 +129,7 @@ Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More adv
 		<h3>Exporting and distributing your work</h3>
 		
 		
-		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an application or applet with just one click. Select File &rarr; Export to package your current sketch as an application. This will to bundle your sketch as an application for Windows, Mac OS X, and Linux. Similarly, you can use File &rarr; Export Applet to create a Java Applet from your code. This will create a folder named applet inside your sketch folder. Opening the <em>index.html</em> file inside that folder will open your sketch in a browser. The applet folder can be copied to a web site intact, and will be viewable by anyone who has Java installed on their system. <br />
-
-	  <br />
-	  The application and applet folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the <em>index.html</em> file or the contents of the folder. Alternatively, you can turn off the automatic file erasure in the Preferences.<br />
+		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an application with just one click. Select File &rarr; Export Application to package your current sketch as an application. This will to bundle your sketch as an application for Windows, Mac OS X, and Linux. The application folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the contents of the folder. Alternatively, you can turn off the automatic file erasure in the Preferences.<br />
 	  <br />
         More about the export features can be found in the reference at <a href="http://processing.org/reference/environment/#Export"><em>http://processing.org/reference/environment/#Export</em></a><br />
       </p>
@@ -175,22 +172,22 @@ Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More adv
      // Always the middle, no matter how the size() line changes
      ellipse(width/2, height/2, 50, 50);</pre>
         <br />
-        In the earlier examples, the <tt>size()</tt> function specified only a width and height for the window to be created. An optional parameter to the <tt>size()</tt> function specifies how graphics are rendered. A renderer handles how the Processing API is implemented for a particular output function (whether the screen, or a screen driven by a high-end graphics card, or a PDF file). Several renderers are included with Processing, each having a unique function. At the risk of getting too far into the specifics, here's a description of the possible drawing modes to use with Processing. <br />
+        In the earlier examples, the <tt>size()</tt> function specified only a width and height for the window to be created. An optional parameter to the <tt>size()</tt> function specifies how graphics are rendered. A renderer handles how the Processing API is implemented for a particular output function (whether the screen, or a screen driven by a high-end graphics card, or a PDF file). The default renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels directly is slow. Several other renderers are included with Processing, each having a unique function. At the risk of getting too far into the specifics, here's a description of the other possible drawing modes to use with Processing. <br />
 
         <br />
 <pre>     size(400, 400, P2D);</pre>
 <br />
-        The P2D renderer is used by default, so this statement is identical to size(400, 400). The P2D renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels directly is slow.<br />
+        The P2D renderer uses OpenGL for faster rendering of two-dimensional graphics, while using Processing's simpler graphics APIs and the Processing development environment's easy application export.<br />
 <br />
 
 <pre>     size(400, 400, P3D);</pre>
 <br />
-        The P3D renderer uses Sun's JOGL (Java for OpenGL) library for faster rendering, while using Processing's simpler graphics APIs and the Processing development environment's easy application export. <!--OpenGL applets also run within a web browser without additional modification, but a dialog box will appear asking the user whether they trust &ldquo;Sun Microsystems, Inc.&rdquo; to run Java for OpenGL on their computer.--><br />
+        The P3D renderer also uses OpenGL for faster rendering. It can draw three-dimensional objects and two-dimensional object in space as well as lighting, texture, and materials.<br />
         <br />
         
 <pre>     size(400, 400, PDF, &quot;output.pdf&quot;);</pre>
 <br />
-        The PDF renderer draws all geometry to a file instead of the screen. To use PDF, in addition to altering your size() function, you must select Import Library, then PDF from the Sketch menu. This is a cousin of the Java2D renderer, but instead writes directly to PDF files. <br />
+        The PDF renderer draws all geometry to a file instead of the screen. To use PDF, in addition to altering your size() function, you must select Import Library, then PDF from the Sketch menu. This is a cousin of the default renderer, but instead writes directly to PDF files. <br />
         <br />
       </p>
       
