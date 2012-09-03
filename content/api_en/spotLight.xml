@@ -36,7 +36,7 @@ sphere(30);
 </example>
 
 <description><![CDATA[
-Adds a spot light. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The <b>red</b>, <b>green</b>, and <b>blue</b> parameters are interpreted as RGB values even if the current color mode is set to HSB. The <b>x</b>, <b>y</b>, and <b>z</b> parameters specify the position of the light and <b>nx</b>, <b>ny</b>, <b>nz</b> specify the direction of light. The <b>angle</b> parameter affects angle of the spotlight cone, while <b>concentration</b> sets the bias of light focusing toward the center of that cone.
+Adds a spot light. Lights need to be included in the <b>draw()</b> to remain persistent in a looping program. Placing them in the <b>setup()</b> of a looping program will cause them to only have an effect the first time through the loop. The <b>v1</b>, <b>v2</b>, and <b>v3</b> parameters are interpreted as either RGB or HSB values, depending on the current color mode. The <b>x</b>, <b>y</b>, and <b>z</b> parameters specify the position of the light and <b>nx</b>, <b>ny</b>, <b>nz</b> specify the direction of light. The <b>angle</b> parameter affects angle of the spotlight cone, while <b>concentration</b> sets the bias of light focusing toward the center of that cone.
 ]]></description>
 
 </root>
