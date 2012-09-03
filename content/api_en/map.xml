@@ -13,7 +13,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-size(400, 400);
+size(200, 200);
 float value = 25;
 float m = map(value, 0, 100, 0, width);
 ellipse(m, 200, 10, 10);
@@ -29,10 +29,30 @@ println(m);  // Prints "-9.0"
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(200, 200);
+  noStroke();
+}
+
+void draw() {
+  background(204);
+  float  x1 = map(mouseX, 0, width, 50, 150);
+  ellipse(x1, 75, 50, 50);  
+  float x2 = map(mouseX, 0, width, 0, 200);
+  ellipse(x2, 125, 50, 50);  
+}
+]]></code>
+</example>
+
 <description><![CDATA[
-Re-maps a number from one range to another. In the first example above, the number 25 is converted from a value in the range of 0 to 100 into a value that ranges from the left edge of the window (0) to the right edge (width).<br/>
+Re-maps a number from one range to another.<br/>
 <br/>
-Numbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful.  (See the second example above.)
+In the first example above, the number 25 is converted from a value in the range of 0 to 100 into a value that ranges from the left edge of the window (0) to the right edge (width).<br/>
+<br/>
+As shown in the second example, numbers outside of the range are not clamped to the minimum and maximum parameters values, because out-of-range values are often intentional and useful.
 ]]></description>
 
 </root>

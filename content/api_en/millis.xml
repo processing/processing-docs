@@ -12,7 +12,8 @@
 <image></image>
 <code><![CDATA[
 void draw() {
-  float m = millis();
+  int m = millis();
+  noStroke();
   fill(m % 255);
   rect(25, 25, 50, 50);
 }
@@ -20,7 +21,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns the number of milliseconds (thousandths of a second) since starting an applet. This information is often used for timing animation sequences. 
+Returns the number of milliseconds (thousandths of a second) since starting the program. This information is often used for timing events and animation sequences. 
 ]]></description>
 
 </root>

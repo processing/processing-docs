@@ -42,7 +42,7 @@ Font support for the canvas element varies across browsers. Firefox currently ha
 </js_mode>
 
 <description><![CDATA[
-Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function.
+Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function, but the leading is reset by <b>textSize()</b>. For example, if the leading is set to 20 prior, when <b>textSize(48)</b> is run, the leading is reset to the default for the text size 48.
 ]]></description>
 
 </root>
