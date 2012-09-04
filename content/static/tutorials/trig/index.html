@@ -65,7 +65,7 @@ Lastly, I include a Processing sketch that clearly demonstrates how the unit cir
 
 <span style="color: #CC6600;">float</span> px, py, px2, py2;
 <span style="color: #CC6600;">float</span> angle, angle2;
-<span style="color: #CC6600;">float</span> radius = 100;
+<span style="color: #CC6600;">float</span> radius = 50;
 <span style="color: #CC6600;">float</span> frequency = 2;
 <span style="color: #CC6600;">float</span> frequency2 = 2;
 <span style="color: #CC6600;">float</span> x, x2;
@@ -85,10 +85,10 @@ Lastly, I include a Processing sketch that clearly demonstrates how the unit cir
 &nbsp;&nbsp;<span style="color: #CC6600;">background</span> (127);
 &nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
 &nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
-&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8, 75, radius, radius);
+&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8, 75, radius*2, radius*2);
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// rotates rectangle around circle</span>
-&nbsp;&nbsp;px&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius/2);
-&nbsp;&nbsp;py&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius/2);
+&nbsp;&nbsp;px&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius);
+&nbsp;&nbsp;py&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius);
 &nbsp;&nbsp;<span style="color: #CC6600;">rectMode</span>(<span style="color: #006699;">CENTER</span>);
 &nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(0);
 &nbsp;&nbsp;<span style="color: #7E7E7E;">//draw rectangle</span>
@@ -103,16 +103,16 @@ Lastly, I include a Processing sketch that clearly demonstrates how the unit cir
 
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// draw static curve - y = sin(x)</span>
 &nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i< <span style="color: #006699;">width</span>; i++){
-&nbsp;&nbsp;&nbsp;&nbsp;px2&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius/2);
-&nbsp;&nbsp;&nbsp;&nbsp;py2&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius/2);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">point</span>(<span style="color: #006699;">width</span>/8+radius/2+i, py2);
+&nbsp;&nbsp;&nbsp;&nbsp;px2&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius);
+&nbsp;&nbsp;&nbsp;&nbsp;py2&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">point</span>(<span style="color: #006699;">width</span>/8+radius+i, py2);
 &nbsp;&nbsp;&nbsp;&nbsp;angle2&nbsp;-=&nbsp;frequency2;
 &nbsp;&nbsp;}
 
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// send small ellipse along sine curve</span>
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// to illustrate relationship of circle to wave</span>
 &nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
-&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8+radius/2+x, py, 5, 5);
+&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8+radius+x, py, 5, 5);
 &nbsp;&nbsp;angle&nbsp;-=&nbsp;frequency;
 &nbsp;&nbsp;x+=1;
 
@@ -126,7 +126,7 @@ Lastly, I include a Processing sketch that clearly demonstrates how the unit cir
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// draw dynamic line connecting circular</span>
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// path with wave</span>
 &nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(50);
-&nbsp;&nbsp;<span style="color: #CC6600;">line</span>(px, py, <span style="color: #006699;">width</span>/8+radius/2+x, py);
+&nbsp;&nbsp;<span style="color: #CC6600;">line</span>(px, py, <span style="color: #006699;">width</span>/8+radius+x, py);
 
 &nbsp;&nbsp;<span style="color: #7E7E7E;">// output some calculations</span>
 &nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"y = sin x"</span>, 35, 185);
