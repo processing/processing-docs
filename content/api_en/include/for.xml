@@ -10,7 +10,6 @@
 
 <example>
 <image>for_0.png</image>
-<applet></applet>
 <code><![CDATA[
 for (int i = 0; i < 40; i = i+1) {
   line(30, i, 80, i);
@@ -20,7 +19,6 @@ for (int i = 0; i < 40; i = i+1) {
 
 <example>
 <image>for_1.png</image>
-<applet></applet>
 <code><![CDATA[
 for (int i = 0; i < 80; i = i+5) {
   line(30, i, 80, i);
@@ -30,7 +28,6 @@ for (int i = 0; i < 80; i = i+5) {
 
 <example>
 <image>for_2.png</image>
-<applet></applet>
 <code><![CDATA[
 for (int i = 40; i < 80; i = i+5) {
   line(30, i, 80, i);
@@ -40,7 +37,6 @@ for (int i = 40; i < 80; i = i+5) {
 
 <example>
 <image>for_3.png</image>
-<applet></applet>
 <code><![CDATA[
 // Nested for() loops can be used to
 // generate two-dimensional patterns

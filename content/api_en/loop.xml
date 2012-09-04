@@ -10,7 +10,6 @@
 
 <example>
 <image></image>
-<applet></applet>
 <code><![CDATA[
 void setup() {
   size(200, 200);

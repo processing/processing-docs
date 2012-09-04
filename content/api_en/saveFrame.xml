@@ -51,8 +51,6 @@ Saves a numbered sequence of images, one image each time the function is run. To
 <br/>
 If <b>saveFrame()</b> is called without parameters, it will save files as screen-0000.tif, screen-0001.tif, and so on.  You can specify the name of the sequence with the <b>filename</b> parameter, including hash marks (####), which will be replaced by the saved frame count value. (The number of hash marks is used to determine how many digits to include in the file names.)  Also append a file extension, to indicate the file format to be used: either TIFF (.tif), TARGA (.tga), JPEG (.jpg), or PNG (.png).  Image files are saved to the sketch's folder, which may be opened by selecting "Show Sketch Folder" from the "Sketch" menu.<br/>
 <br/>
-It is not possible to use saveXxxxx() functions inside a web browser unless the sketch is <a href="http://wiki.processing.org/w/Sign_an_Applet">signed applet</A>. To save a file back to a server, see the <a href="http://wiki.processing.org/w/Saving_files_to_a_web-server">save to web</A> code snippet on the Processing Wiki.<br/>
-<br/ >
 All images saved from the main drawing window will be opaque. To save images without a background, use <b>createGraphics()</b>.
 ]]></description>
 

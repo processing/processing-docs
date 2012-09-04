@@ -36,7 +36,7 @@ see the examples.
 </example>
 
 <description><![CDATA[
-<p>As Processing.js offers a tighter integration between Processing sketches and webpages than the traditional applet approach, certain 
+<p>As Processing.js offers a tighter integration between Processing sketches and webpages than the former applet approach, certain 
 functions that are normally regulated by Processing are left to be handled by the browser. This approach means that certain behaviour that is 
 expected from a sketch may not work without additional "outside the sketch" instructions, for which /* @pjs */ directives must be used. There 
 are two types of directives: directives that tell Processing.js to buffer data that must be available to a sketch when it is run (<a href="../reference/preload">preload</a>, 

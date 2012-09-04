@@ -21,7 +21,7 @@ if (focused) {  // or "if (focused == true)"
 </example>
 
 <description><![CDATA[
-Confirms if a Processing program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is "true" if it is focused and "false" if not. It is often used to indicate that an applet needs to be clicked on or moused over before it will work.
+Confirms if a Processing program is "focused," meaning that it is active and will accept mouse or keyboard input. This variable is "true" if it is focused and "false" if not.
 ]]></description>
 
 </root>

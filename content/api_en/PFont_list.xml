@@ -27,7 +27,7 @@ Font support for the canvas element varies across browsers. Firefox currently ha
 </js_mode>
 
 <description><![CDATA[
-Gets a list of the fonts installed on the system. The data is returned as a String array. This list provides the names of each font for input into <b>createFont()</b>, which allows Processing to dynamically format fonts. This function is meant as a tool for programming local applications and is not recommended for use in applets.
+Gets a list of the fonts installed on the system. The data is returned as a String array. This list provides the names of each font for input into <b>createFont()</b>, which allows Processing to dynamically format fonts.
 ]]></description>
 
 </root>

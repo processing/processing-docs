@@ -17,11 +17,11 @@ hint(DISABLE_DEPTH_TEST) - Disable the zbuffer, allowing you to draw on top of e
 <br/><br/>
 hint(ENABLE_DEPTH_SORT) - Enable primitive z-sorting of triangles and lines in P3D. This can slow performance considerably, and the algorithm is not yet perfect.
 <br/> <br/>
-hint(DISABLE_OPENGL_ERRORS) - Speeds up the P3D renderer setting by not checking for errors while running. Undo with hint(ENABLE_OPENGL_ERROR_REPORT).
+hint(DISABLE_OPENGL_ERRORS) - Speeds up the P3D renderer setting by not checking for errors while running. Undo with hint(ENABLE_OPENGL_ERRORS).
 <br/><br/>
 hint(ENABLE_ACCURATE_TEXTURES) - Enables better texture accuracy for the P3D renderer. This option will do a better job of dealing with textures in perspective. hint(DISABLE_ACCURATE_TEXTURES) returns to the default. This hint is not likely to last long.
 <br/><br/>
-hint(DISABLE_DEPTH_MASKS) - Description to come...
+hint(DISABLE_DEPTH_MASK) - Description to come...
 <br/> <br/>
 hint(ENABLE_ACCURATE_2D) - Description to come...
 <br/><br/>

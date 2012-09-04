@@ -16,12 +16,6 @@
       <a href="#Extensions">Adding Libraries, Tools, and Modes</a><br />
       <a href="#Export">Export</a><br />
 
-      <!-- Removed by CR 19 Sep 2011, folded into new Export sections
-      <a href="#applet">Applet Export</a><br />
-      <a href="#application">Application Export</a><br />
-      <a href="#security">Applet Security Restrictions</a><br />
-      <a href="#present">"Present" Features</a><br />
-      -->
     </p>
     
     
@@ -60,8 +54,8 @@
     <p>
 		Processing has different <em>programming modes</em> to make it possible to deploy sketches
 		on different platforms. The three current programming modes are <em>Java</em>, 
-		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications and 
-		Java Applets, the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
+		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications, 
+		the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
 		and the Android mode makes sketches that run on Android phones and tablets.
     </p>
 
@@ -169,8 +163,7 @@ Big-picture keywords / concepts for getting into Processing
         <td>&nbsp;</td>
         <td valign="top"><em>Export</em><br />
 			In Java mode, it exports the current sketch as a Java application and
-          	the folder containing the files is opened. Hold down shift to export an applet 
-          	instead of an application. In JavaScript mode, this button exports the current sketch 
+          	the folder containing the files is opened. In JavaScript mode, this button exports the current sketch 
           	as JavaScript and HTML files and the folder containing the files is opened.
           	(Note: Exporting a sketch will delete the previous contents of the export folder,
           	unless this preference is unchecked in the Preferences.) 
@@ -193,6 +186,8 @@ Big-picture keywords / concepts for getting into Processing
       Open a sketch in a new window.
     <li><em>Sketchbook</em><br />
       Open a sketch from the sketchbook folder.</li>
+    <li><em>Recent</em><br />
+      Open a recently closed sketch.</li>
     <li><em>Examples</em><br />
       Open one of the examples included with Processing.</li>
     <li><em>Close (Ctrl+W)</em><br />
@@ -210,10 +205,6 @@ Big-picture keywords / concepts for getting into Processing
       to run the sketch in a browser and opens the folder containing the exported files. 
       Note that exporting a sketch will delete the previous contents of the "application.xxxxx" 
       or "[JAVASCRIPT EXPORT FOLDER]" folders.</li>
-    <li><em>Export Applet (Shift+Ctrl+E)</em><br />     
-      Exports a Java Applet and creates and embeds it into an HTML file. After the files are 
-      exported, the folder containing the exported files is opened. Note that exporting a sketch 
-      will delete the previous contents of the "applet" folder.</li>
     <li><em>Page Setup (Shift+Ctrl+P)</em><br />
       Define page settings for printing.</li>
     <li><em>Print (Ctrl+P)</em><br />
@@ -435,14 +426,6 @@ Big-picture keywords / concepts for getting into Processing
       	if a sketch is throwing Out of Memory Errors. 
     </li>
     <li>
-    	<em>Use multiple .jar files when exporting applets</em><br />
-      	When not checked (default behavior), the entire sketch is packaged into one .jar file
-      	that has the same name as the sketch. For example, the sketch "Flocking" will compile
-      	itself and all of its dependencies into "Flocking.jar". When checked, exports a .jar 
-      	file for the sketch as well as a separate core.jar file to store the guts of Processing. 
-      	This preference is ignored when a sketch uses libraries.
-    </li>
-    <li>
     	<em>Delete previous folder on export</em><br />
       	When checked (default behavior), Processing deletes the complete export folder 
       	before re-creating it and adding the new media. 
@@ -630,8 +613,8 @@ void draw() {
     <p>
     	Processing has different <em>programming modes</em> to make it possible to deploy 
     	sketches on different platforms. The three current programming modes are <em>Java</em>, 
-		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications and 
-		Java Applets, the JavaScript mode makes sketches that run through HTML5 Canvas and
+		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications, 
+		the JavaScript mode makes sketches that run through HTML5 Canvas and
 		WebGL, and the Android mode makes sketches that run on Android phones and tablets. 
 		Each mode has unique menu items, examples, and a distinct visual theme for the PDE.
     </p>
@@ -652,7 +635,7 @@ void draw() {
     	enables complex Java programs as well. It's can be used simply by beginners, but 
     	it scales to professional Java software development. Sketches written in this mode can
     	be exported as Java Applications to run on Linux, Mac OS X, and Windows operating 
-    	systems and as Java Applets to run through web browsers. 
+    	systems. 
     </p>
     
     <p>
@@ -914,29 +897,3 @@ void draw() {
     	<a href="http://wiki.processing.org/w/Android">Android</a> page of the Processing Wiki.
     </p>
     
-    
-    
-    <!-- These old links to the Wiki removed and folded into the new Export section
-
-    <h5 id="applet"><a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a>
-      Applet Export</h5>
-    <p><a href="http://wiki.processing.org/w/Export_Info_and_Tips#Applet_Export">This topic</a> 
-    is now discussed on the Processing wiki.</p>
-    
-    <h5 id="application"><a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> 
-      Application Export</h5>
-    <p><a href="http://wiki.processing.org/w/Export_Info_and_Tips#Application_Export">This topic</a> 
-    is now discussed on the Processing wiki.</p>
-       
-    <h5 id="security"><a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> 
-      Applet Security Restrictions</h5>
-    <p><a href="http://wiki.processing.org/w/Export_Info_and_Tips#Applet_Security_Restrictions">This topic</a> 
-    is now discussed on the Processing wiki.</p>
-      
-
-    <h5 id="present"><a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> 
-      "Present" Features</h5>
-    <p><a href="http://wiki.processing.org/w/Export_Info_and_Tips#.22Present.22_Features">This topic</a> 
-    is now discussed on the Processing wiki.</p>
-
-    -->

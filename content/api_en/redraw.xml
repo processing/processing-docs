@@ -10,7 +10,6 @@
 
 <example>
 <image></image>
-<applet></applet>
 <code><![CDATA[
 float x = 0;
 
