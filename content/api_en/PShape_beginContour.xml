@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>resetShader()</name>
+<name>beginContour()</name>
 
-<unsupported_modes>js</unsupported_modes>
+<category>PShape</category>
 
-<category>Rendering</category>
-
-<subcategory>Shaders</subcategory>
+<subcategory>Method</subcategory>
 
 <type></type>
 
 <example>
 <image></image>
 <code><![CDATA[
+Example to come...
 ]]></code>
 </example>
 
