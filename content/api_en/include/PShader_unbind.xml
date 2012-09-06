@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>unbind()</name>
+
+<category>PShader</category>
+
+<subcategory>Method</subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example to come
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a new reference entry for Processing 2.0. It will be updated shortly.
+]]></description>
+
+<syntax>
+<c>shader</c>.unbind()
+</syntax>
+
+<parameter>
+<label></label>
+<description></description>
+</parameter>
+
+<returns>None</returns>
+
+<related>
+</related>
+
+<availability>2.0</availability>
+
+<type>Method</type>
+
+<partof>OpenGL</partof>
+
+
+</root>

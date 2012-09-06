@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>displayWidth</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<type>variable</type>
+
+<type>variable</type>
+
+<example>
+<code><![CDATA[
+size(displayWidth, displayHeight);
+line(0, 0, width, height);
+]]></code>
+</example>
+
+<description><![CDATA[
+System variable that stores the width of the entire screen display. This is used to run a full-screen program on any display size.
+]]></description>
+
+</root>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>PShader</name>
+
+<category>Rendering</category>
+
+<subcategory>Shaders</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Example to come
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a new reference entry for Processing 2.0. It will be updated shortly.
+]]></description>
+
+<syntax></syntax>
+
+<method>
+<mname>bind()</mname>
+<mdescription>To come...</mdescription>
+</method>
+
+<method>
+<mname>unbind()</mname>
+<mdescription>To come...</mdescription>
+</method>
+
+
+<constructor>
+</constructor>
+
+<cparameter>
+<clabel></clabel>
+<cdescription></cdescription>
+</cparameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>PDE</partof>
+
+
+
+</root>

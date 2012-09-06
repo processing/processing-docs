@@ -23,8 +23,7 @@ x Parameter alignment (after above decisions)  --SM
 x size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
 x PVector: 'z' parameter is incorrectly listed as 'the y coordinate'
 		http://code.google.com/p/processing/issues/detail?id=935
-
-- Contributed Libraries and Tools are not appearing on the site  --CR,BF
+		
 
 RELATED LINKS WITHIN THE REFERENCE
 
@@ -32,25 +31,8 @@ RELATED LINKS WITHIN THE REFERENCE
 - Add imageMode() as related to Video library > Capture > crop --SM
 	How can I reference this? Couldn't find it in Capture.java.
 
-NEW EXAMPLES BASED ON THE OPENGL FOLDER
-
-NEW
-
-x Basics > Camera > NearFar
-x Basics > Camera > OrthoVSPerspective
-x Basics > Shape > LoadDisplayOBJ
-
-CHANGES
-
-- Check all video library examples
-x Topics > File IO > SavingFrames renamed to "SaveFrames"
-x Topics > Image Processing > Blending
-x Basics > Shape > LoadDisplayShape renamed "LoadDisplaySVG"
-
 
 REMOVE
-
-x Topics > Create Shapes > SVGPShape (Not needed, PShape examples in Basics)
 
 Functions removed from Processing reference after removing Applets. Should they stay
 for JS or are they used by JS?
@@ -69,22 +51,25 @@ o JSON  --SM  // This has been removed for 2.0
 
 Master 2.0 Beta List for CR
 
-- XML page isn't being created or showing up in the Index. Check it.
+o XML page isn't being created or showing up in the Index. Check it.
+  . Update: Changes to how source is organized; ref engine needs to be modified
 
 - PShape --CR
-- createShape()
-- s.beginContour()
-- s.endContour()
-- s.end()
-- s.addChild()
-- s.getChild()
+- s.beginContour() -- temp to "include"
+- s.endContour() -- temp to "include"
+- s.end() -- ??????
+- s.addChild() -- temp to "include"
+- s.getChild() [Modify?????]
+- createShape() -- temp to "include"
 - shape(x, y, z, w, h, d) ??????
+- loadShape() changes for OBJ ??????
 
 - PShader --CR
-  . loadShader()
-  . resetShader()
-  . PShader.bind()
-  . shader()
+  $ loadShader()
+  $ resetShader()
+  $ shader()
+  $ PShader.bind()
+  $ PShader.bind()
   
   //
   loadShader("fragment.glsl")
@@ -100,20 +85,25 @@ Master 2.0 Beta List for CR
   resetShader(TRIANGLES); (the default: same as no param, not really advertised)
   //
 
-- loadImage() with callback
-- textWrap(REPEAT) --CR or textureWrap() ??????
-- blendMode()  --CR
-- beginPGL(), endPGL()
-- filter() now accepts shaders?
-- selectInput(), selectOutput(), and selectFolder() --CR
+$ blendMode()
+$ beginPGL()
+$ endPGL()
 - saveType(), loadType()
-- clear()  --CR  New method for PGraphics
-- new arc()  --CR
+- new arc()
+- filter() now accepts shaders ??????
+- clear()  New method for PGraphics ??????
+- loadImage() with callback ??????
+- textureWrap(REPEAT) ??????
+- clip()/noClip()
+? thread()
+- fix PGraphics beginDraw() and endDraw() @brief in source
+
+x selectInput()
+x selectOutput()
+x selectFolder() 
 
 - Closely review all Video API --CR
-
-- clip()/noClip()  --CR
-? thread()  --CR
+- new Capture List syntax
 
 x quadraticVertex()  --CR
 x displayWidth, displayHeight --CR
