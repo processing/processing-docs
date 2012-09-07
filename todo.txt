@@ -55,11 +55,12 @@ o XML page isn't being created or showing up in the Index. Check it.
   . Update: Changes to how source is organized; ref engine needs to be modified
 
 - PShape --CR
-- s.beginContour() -- temp to "include"
-- s.endContour() -- temp to "include"
-- s.end() -- ??????
-- s.addChild() -- temp to "include"
+$ s.beginContour()
+$ s.endContour()
+$ s.end()
+$ s.addChild()
 - s.getChild() [Modify?????]
+
 - createShape() -- temp to "include"
 - shape(x, y, z, w, h, d) ??????
 - loadShape() changes for OBJ ??????
