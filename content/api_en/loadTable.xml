@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>loadTable()</name>
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+//Example coming soon...]]></code>
+</example>
+
+<description><![CDATA[
+Reads the contents of a file or url and creates a Table object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online.<br />
+<br />
+All files loaded and saved by the Processing API use UTF-8 encoding.
+]]></description>
+
+</root>
