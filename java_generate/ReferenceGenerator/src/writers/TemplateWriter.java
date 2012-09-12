@@ -47,6 +47,18 @@ public class TemplateWriter extends BaseWriter {
 		}
 	}
 	
+	// returns a relative path to root (e.g. "../../" from "path/to/File.ext", or "" for "File.txt")
+	public String getRelativePathToRoot( String path )
+	{
+		String[] parts = path.split("/");
+		String ret = "";
+		for( int i = parts.length - 1; i > 0; --i )
+		{
+			ret += "../";
+		}
+		return ret;
+	}
+	
 	private Boolean write( String templateName, HashMap<String, String> vars, String outputName, Boolean isLocal ) throws IOException
 	{
 		String[] templateFile = FileUtils.loadStrings(Shared.i().TEMPLATE_DIRECTORY() + templateName);
@@ -55,7 +67,7 @@ public class TemplateWriter extends BaseWriter {
 		if(isLocal)
 		{ //add local nav
 			vars.put("navigation", writePartial("nav.local.template.html", vars));
-			vars.put( "webcontentpath",  "" );
+			vars.put( "webcontentpath",  getRelativePathToRoot( outputName ) );
 		} else
 		{
 			vars.put("navigation", writePartial("nav.web.template.html", vars));
