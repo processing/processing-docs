@@ -66,12 +66,12 @@ public class TemplateWriter extends BaseWriter {
 		vars.put("timestamp", getTimestamp());
 		if(isLocal)
 		{ //add local nav
-			vars.put("navigation", writePartial("nav.local.template.html", vars));
 			vars.put( "webcontentpath",  getRelativePathToRoot( outputName ) );
+			vars.put("navigation", writePartial("nav.local.template.html", vars));
 		} else
 		{
-			vars.put("navigation", writePartial("nav.web.template.html", vars));
 			vars.put( "webcontentpath",  "/" );
+			vars.put("navigation", writePartial("nav.web.template.html", vars));
 		}
 		
 		File f = new File( getWriterPath( outputName, isLocal ) );
