@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>addChild()</name>
+<name>resetShader()</name>
 
-<category>PShape</category>
+<unsupported_modes>js</unsupported_modes>
 
-<subcategory>Method</subcategory>
+<category>Rendering</category>
+
+<subcategory>Shaders</subcategory>
 
 <type></type>
 
 <example>
 <image></image>
 <code><![CDATA[
-Example to come...
 ]]></code>
 </example>
 

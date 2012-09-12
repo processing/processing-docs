@@ -259,6 +259,7 @@ breakShape	KEYWORD2
 createPath	KEYWORD2
 float	KEYWORD2	floatconvert_
 int	KEYWORD2	intconvert_
+str	KEYWORD2	strconvert_
 loadMatrix	KEYWORD2
 noHint	KEYWORD2
 parseBoolean	KEYWORD2

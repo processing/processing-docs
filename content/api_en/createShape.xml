@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>addChild()</name>
+<name>createShape()</name>
 
-<category>PShape</category>
+<category>Shape</category>
 
-<subcategory>Method</subcategory>
+<subcategory></subcategory>
 
 <type></type>
 
 <example>
 <image></image>
 <code><![CDATA[
-Example to come...
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
 ]]></code>
 </example>
 

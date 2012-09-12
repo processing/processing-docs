@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>start()</name>
+
+<category>Capture</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.video.*; 
+Capture cam; 
+ 
+void setup() { 
+  size(200, 200); 
+  cam = new Capture(this);
+  cam.start(); 
+} 
+ 
+void draw() { 
+  if (cam.available()) { 
+    // Reads the new frame
+    cam.read(); 
+  } 
+  image(cam, 0, 0); 
+} 
+
+void mousePressed() {
+  cam.stop();
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Starts capturing frames from an attached device.
+]]></description>
+
+<syntax>
+<c>cam</c>.start()
+</syntax>
+
+<parameter>
+<label>cam</label>
+<description><![CDATA[any variable of type Capture]]></description>
+</parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

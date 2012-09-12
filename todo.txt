@@ -62,8 +62,6 @@ $ s.addChild()
 - s.getChild() [Modify?????]
 
 - createShape() -- temp to "include"
-- shape(x, y, z, w, h, d) ??????
-- loadShape() changes for OBJ ??????
 
 - PShader --CR
   $ loadShader()
@@ -89,23 +87,28 @@ $ s.addChild()
 $ blendMode()
 $ beginPGL()
 $ endPGL()
+$ textureWrap(REPEAT)
+
+// These are incorrect!
+- selectInput()
+- selectOutput()
+- selectFolder() 
+
+TO COME
+- clip()/noClip()
 - saveType(), loadType()
-- new arc()
+- arc() with different options
+? thread()
+
+OPEN QUESTIONS
 - filter() now accepts shaders ??????
 - clear()  New method for PGraphics ??????
 - loadImage() with callback ??????
-- textureWrap(REPEAT) ??????
-- clip()/noClip()
-? thread()
-- fix PGraphics beginDraw() and endDraw() @brief in source
+- shape(x, y, z, w, h, d) ??????
+- loadShape() changes for OBJ ??????
+- callbacks for images or use requestImage() ??????
 
-x selectInput()
-x selectOutput()
-x selectFolder() 
-
-- Closely review all Video API --CR
-- new Capture List syntax
-
+x fix PGraphics beginDraw() and endDraw() @brief in source
 x quadraticVertex()  --CR
 x displayWidth, displayHeight --CR
 
