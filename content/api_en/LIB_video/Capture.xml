@@ -13,32 +13,38 @@
 <image></image>
 <code><![CDATA[
 import processing.video.*;
-Capture myCapture;
 
-void setup() 
-{
-  size(200, 200);
+Capture cam;
 
-  // The name of the capture device is dependent on
-  // the cameras that are currently attached to your 
-  // computer. To get a list of the 
-  // choices, uncomment the following line 
-  // println(Capture.list());
+void setup() {
+  size(640, 480);
+
+  String[] cameras = Capture.list();
   
-  // To select the camera, replace "Camera Name" 
-  // in the next line with one from Capture.list()
-  // myCapture = new Capture(this, width, height, "Camera Name", 30);
-  
-  // This code will try to use the camera last used
-  myCapture = new Capture(this, width, height, 30);
-}
-
-void captureEvent(Capture myCapture) {
-  myCapture.read();
+  if (cameras.length == 0) {
+    println("There are no cameras available for capture.");
+    exit();
+  } else {
+    println("Available cameras:");
+    for (int i = 0; i < cameras.length; i++) {
+      println(cameras[i]);
+    }
+    
+    // The camera can be initialized directly using an 
+    // element from the array returned by list():
+    cam = new Capture(this, cameras[0]);
+    cam.start();     
+  }      
 }
 
 void draw() {
-  image(myCapture, 0, 0);
+  if (cam.available() == true) {
+    cam.read();
+  }
+  image(cam, 0, 0);
+  // The following does the same, and is faster when just drawing the image
+  // without any additional resizing, transformations, or tint.
+  //set(0, 0, cam);
 }
 
 ]]></code>

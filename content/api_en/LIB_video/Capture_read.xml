@@ -13,20 +13,21 @@
 <image></image>
 <code><![CDATA[
 import processing.video.*; 
-Capture myCapture; 
+Capture cam; 
  
 void setup() { 
   size(200, 200); 
-  String s = "Logitech QuickCam Messenger-WDM"; 
-  myCapture = new Capture(this, s, width, height, 30);
+  cam = new Capture(this);
+  Capture.source();
+  cam.start(); 
 } 
  
 void draw() { 
-  if (myCapture.available()) { 
+  if (cam.available()) { 
     // Reads the new frame
-    myCapture.read(); 
+    cam.read(); 
   } 
-  image(myCapture, 0, 0); 
+  image(cam, 0, 0); 
 } 
  
 ]]></code>

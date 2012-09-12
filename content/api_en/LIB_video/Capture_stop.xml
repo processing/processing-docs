@@ -12,25 +12,25 @@
 <example>
 <image></image>
 <code><![CDATA[
-import processing.video.*;
-Capture myCapture;
-
-void setup() 
-{
-  size(200, 200);
-  String s = "Logitech QuickCam Messenger-WDM";
-  myCapture = new Capture(this, s, width, height, 30);
-}
-
-void draw() {
-  if (myCapture.available()) {
-    myCapture.read();
-  }
-  image(myCapture, 0, 0);
-}
+import processing.video.*; 
+Capture cam; 
+ 
+void setup() { 
+  size(200, 200); 
+  cam = new Capture(this);
+  cam.start(); 
+} 
+ 
+void draw() { 
+  if (cam.available()) { 
+    // Reads the new frame
+    cam.read(); 
+  } 
+  image(cam, 0, 0); 
+} 
 
 void mousePressed() {
-  myCapture.stop();
+  cam.stop();
 }
 
 ]]></code>

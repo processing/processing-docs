@@ -11,21 +11,21 @@
 <example>
 <image></image>
 <code><![CDATA[
-import processing.video.*;
-Capture myCapture;
+import processing.video.*; 
+Capture cam; 
+ 
+void setup() { 
+  size(200, 200); 
+  cam = new Capture(this);
+  cam.start(); 
+} 
+ 
+void draw() { 
+  image(cam, 0, 0); 
+} 
 
-void setup() 
-{
-  size(200, 200);
-  myCapture = new Capture(this, width, height, 30);
-}
-
-void draw() {
-  image(myCapture, 0, 0);
-}
-
-void captureEvent(Capture myCapture) {
-  myCapture.read();
+void captureEvent(Capture c) {
+  c.read();
 }
 ]]></code>
 </example>
