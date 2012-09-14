@@ -11,7 +11,7 @@
 	<h3>What is P3D?</h3>
 
 	<p>
-	In Processing 2.0, there are three render modes: JAVA2D, P2D, and P3D.   By default Processing will use JAVA2D, however, you can specify P2D or P3D via the <a href="http://processing.org/reference/size_.html">size()</a> function.
+	In Processing 2.0, there are four render modes: the default renderer, P2D, P3D, and PDF   To use a non-default renderer, you can specify via the <a href="http://processing.org/reference/size_.html">size()</a> function.
 		
 <pre>
 void setup() {
@@ -19,7 +19,7 @@ void setup() {
 }
 </pre><br/>
 
-	Now, you may be wondering: "Which render mode should I choose and why?"   The mode itself tells Processing what to do behind the scenes when drawing the display window.   For example, JAVA2D employs existing Java 2D libraries to draw shapes, set colors, display text, etc.  When deciding which renderer to use, you are balancing a number of factors: speed, accuracy, and general usefulness of the available features.  In most cases, particularly when you are first learning Processing, you will want to use the default (JAVA2D) renderer setting.   It provides the most elegant and accurate results when drawing in 2D.
+	Now, you may be wondering: "Which render mode should I choose and why?"   The mode itself tells Processing what to do behind the scenes when drawing the display window.   For example, the default renderer employs existing Java 2D libraries to draw shapes, set colors, display text, etc.  When deciding which renderer to use, you are balancing a number of factors: speed, accuracy, and general usefulness of the available features.  In most cases, particularly when you are first learning Processing, you will want to use the default renderer setting.   It provides the most elegant and accurate results when drawing in 2D.
 	</p>
 	
 	<p>
@@ -28,7 +28,7 @@ void setup() {
 	<ul>
 		<li><strong>You are drawing in 3D!</strong>  In three-dimensional space, a third axis (the z-axis) refers to the depth of any given point.   How far in front or behind the window does a pixel live?   Now, we all know there are no actual pixels floating in the air in front of or behind your screen!   What we're talking about here is how to use the theoretical z-axis to create the illusion of three-dimensional space in your Processing window.  P3D is required for this.</li>
 		<li><strong>You want your sketch to run faster!</strong>  P2D and P3D make use of OpenGL-compatible graphics hardware.  In other words, some of the work required to draw all the pixels in the window can happen on your computer's graphics card which is often more effecient. Keep in mind that OpenGL is not magic pixie dust that makes any sketch faster (though it's close), you will also need to carefully consider the techniques you are using to do the drawing as well.  In particular, using the new "shape recording" functionality available in PShape (see PShape tutorial [LINK]) can greatly increase speed in P3D mode.</li>
-		<li><strong>You are drawing in 2D but want to use a particular graphic effect not available in JAVA2D!</strong>  Some graphics functions are only available in P2D such as textures and lighting (see below).</li>
+		<li><strong>You are drawing in 2D but want to use a particular graphic effect not available in default renderer!</strong>  Some graphics functions are only available in P2D such as textures and lighting (see below).</li>
 	</ul>
 	
 	</p>
