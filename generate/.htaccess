@@ -1,4 +1,4 @@
-AuthUserFile /var/www/processing/generate/.htpasswd
+AuthUserFile /var/www/processing/web/.htpasswd
 AuthGroupFile /dev/null
 AuthName "You can't handle the generate"
 AuthType Basic
