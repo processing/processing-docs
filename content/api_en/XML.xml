@@ -17,9 +17,9 @@
 //
 // &lt;?xml version=&quot;1.0&quot;?&gt;
 // &lt;mammals&gt;
-//   &lt;animal id=&quot;0&quot; coloring=&quot;white&quot;&gt;Goat&lt;/animal&gt;
-//   &lt;animal id=&quot;1&quot; coloring=&quot;brown&quot;&gt;Manx&lt;/animal&gt;
-//   &lt;animal id=&quot;2&quot; coloring=&quot;striped&quot;&gt;Zebra&lt;/animal&gt;
+//   &lt;animal id=&quot;0&quot; species=&quot;Capra hircus&quot;&gt;Goat&lt;/animal&gt;
+//   &lt;animal id=&quot;1&quot; species=&quot;Panthera pardus&quot;&gt;Manx&lt;/animal&gt;
+//   &lt;animal id=&quot;2&quot; species=&quot;Equus zebra&quot;&gt;Zebra&lt;/animal&gt;
 // &lt;/mammals&gt;
 
 XML xml;
@@ -30,16 +30,16 @@ void setup() {
 
   for (int i = 0; i < children.length; i++) {
     int id = children[i].getInt("id");
-    String coloring = children[i].getString("coloring");
+    String coloring = children[i].getString("species");
     String name = children[i].getContent();
-    println(id + " " + coloring + " " + name);
+    println(id + ", " + coloring + ", " + name);
   }
 }
 
 // Sketch prints:
-// 0 white Goat
-// 1 brown Manx
-// 2 striped Zebra
+// 0, Capra hircus, Goat
+// 1, Panthera pardus, Leopard
+// 2, Equus zebra, Zebra
 ]]></code>
 </example>
 
