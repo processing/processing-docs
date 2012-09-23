@@ -262,6 +262,18 @@ download=http://transmote.com/nest/download/Nest.zip
 id=047
 
 library
+category=Utilities
+authorList=[Philippe Lhoste](http://Phi.Lho.free.fr/)
+name=PGraphicsSVG
+sentence=Allows Processing to export the drawings of a sketch in SVG format.
+url=http://Phi.Lho.free.fr/programming/Processing/PGraphicsSVG/
+prettyVersion=1.2
+paragraph=It is used in a way similar to PGraphicsPDF, as a renderer / recorder. It uses the Apache Batik library.
+version=102
+download=http://phi.lho.free.fr/programming/Processing/PGraphicsSVG/PGraphicsSVG.zip
+id=064
+
+library
 category=Simulation
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Fisica
@@ -370,6 +382,18 @@ download=http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSe
 id=028
 
 library
+category=Hardware
+authorList=[James Caska](http://www.muvium.com)
+name=Frappuccino
+sentence=Processing Library with Arduino Java port and toolkit for deploying Apps to Muvium Java Micros.
+url=http://www.muvium.com
+prettyVersion=1.0
+paragraph=Develop 'Arduino' applications directly from Processing using the full power of the Java language and cross-platform driverless USB HID deployment to V18'O development boards.
+version=1
+download=http://www.muvium.com/frappuccino/frappuccino.zip
+id=065
+
+library
 category=Typography
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -409,11 +433,11 @@ library
 category=Animation
 authorList=[Ekene Ijeoma](http://ekeneijeoma.com)
 name=ijeomamotion
-sentence=Creates fast and easy time/frame based animations using tweens.
-url=http://ekeneijeoma.com/processing/ijeomamotion
-prettyVersion=3.9.6
-paragraph=
-version=25
+sentence=A library for sketching animations with numbers, colors vectors, beziers, curves and more!
+url=http://ekeneijeoma.com/processing/ijeomamotion/
+prettyVersion=4
+paragraph=A library for sketching animations with numbers, colors vectors, beziers, curves and more! It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too! You can also use all of aforementioed to call functions!.
+version=26
 download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
 id=033
 
@@ -555,9 +579,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=guicomponents
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=2.0.1
+prettyVersion=2.0.3
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=3
+version=5
 download=http://www.lagers.org.uk/processing/g4p/guicomponents.zip
 id=051
 
@@ -577,11 +601,11 @@ library
 category=GUI
 authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=ControlP5
-sentence=A range of controllers to build custom graphical user interfaces inside a sketch or separate windows.
+sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
 url=http://www.sojamo.de/libraries/controlp5
-prettyVersion=0.7.5
+prettyVersion=2.0.1
 paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
-version=75
+version=77
 download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
 id=058
 
@@ -626,9 +650,9 @@ authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2
 name=LSystems
 sentence=Utilities for exploring lsystems.
 url=http://kenai.com/projects/l-system-utilities
-prettyVersion=0.8.1
+prettyVersion=0.9.2
 paragraph=Supports simple, stochastic and context-sensitive grammars.
-version=4
+version=7
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
 
@@ -650,9 +674,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
 sentence=Highly customizable and full featured yet simple to use camera library.
 url=http://code.google.com/p/proscene/
-prettyVersion=1.1.90
+prettyVersion=1.1.92
 paragraph=Main features include: 1. Default interactivity through the mouse and
-version=7
+version=9
 download=http://otrolado.info/proscene.zip
 id=001
 
@@ -742,9 +766,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=shapes3d
 sentence=3D Shape creation and display made easy.
 url=http://www.lagers.org.uk/s3d4p/index.html
-prettyVersion=2.0.1
+prettyVersion=2.1.1
 paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
-version=4
+version=6
 download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
 id=050
 
