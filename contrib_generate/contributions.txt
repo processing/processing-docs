@@ -394,6 +394,18 @@ download=http://www.muvium.com/frappuccino/frappuccino.zip
 id=065
 
 library
+category=Hardware
+authorList=[Daniel Sauter](http://daniel-sauter.com/) and j.duran
+name=Ketai
+sentence=Android library for working with sensors, cameras, multi-touch, networking, Bluetooth, WiFi Direct, Near Field Communication, and SQLite
+url=http://ketaiProject.com/
+prettyVersion=v7
+paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
+version=7
+download=http://ketaiproject.org/ketai.zip
+id=067
+
+library
 category=Typography
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -437,7 +449,7 @@ sentence=A library for sketching animations with numbers, colors vectors, bezier
 url=http://ekeneijeoma.com/processing/ijeomamotion/
 prettyVersion=4
 paragraph=A library for sketching animations with numbers, colors vectors, beziers, curves and more! It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too! You can also use all of aforementioed to call functions!.
-version=26
+version=40
 download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
 id=033
 
@@ -574,6 +586,18 @@ download=http://www.onformative.com/uploads/googleWeather/GoogleWeather.zip
 id=053
 
 library
+category=Data
+authorList=[Maxime Walzberg (Nucky)](http://www.nucky.io/)
+name=Share
+sentence=Classes to create a poll in a Processing sketch, and to read/send string messages to a server from a sketch.
+url=http://sharelib.nucky.io/
+prettyVersion=1
+paragraph=
+version=1
+download=http://www.nucky.io/public/share.zip
+id=066
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=guicomponents
@@ -615,9 +639,9 @@ authorList=[Michael Heuer](https://github.com/heuermh)
 name=Piccolo2D library for Processing
 sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
 url=https://github.com/heuermh/piccolo2d-processing
-prettyVersion=1.0
+prettyVersion=2.0
 paragraph=
-version=1
+version=2
 download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
 id=061
 
@@ -650,9 +674,9 @@ authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2
 name=LSystems
 sentence=Utilities for exploring lsystems.
 url=http://kenai.com/projects/l-system-utilities
-prettyVersion=0.9.2
+prettyVersion=0.9.3
 paragraph=Supports simple, stochastic and context-sensitive grammars.
-version=7
+version=8
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
 
@@ -674,9 +698,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
 sentence=Highly customizable and full featured yet simple to use camera library.
 url=http://code.google.com/p/proscene/
-prettyVersion=1.1.92
-paragraph=Main features include: 1. Default interactivity through the mouse and
-version=9
+prettyVersion=1.1.93
+paragraph=Main features include: 1. Default interactivity through the mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
+version=10
 download=http://otrolado.info/proscene.zip
 id=001
 
