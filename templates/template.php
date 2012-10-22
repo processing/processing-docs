@@ -3,8 +3,8 @@
 require(TEMPLATEDIR.'template.nav.php');
 
 define('HEADER', '<img src="/img/processing_cover.gif" alt="Processing cover" />');
-define('REL_HEADER', '<a href="/"><img src="../../img/processing.gif" alt="Processing" title="Back to the Procesing cover." /></a>');
-define('HEADER_LINK', '<a href="/"><img src="/img/processing.gif" alt="Processing" title="Back to the Procesing cover." /></a>');
+define('REL_HEADER', '<a href="/"><img src="../../img/processing.gif" alt="Processing" title="Back to the Processing cover." /></a>');
+define('HEADER_LINK', '<a href="/"><img src="/img/processing.gif" alt="Processing" title="Back to the Processing cover." /></a>');
 
 class Page
 {
