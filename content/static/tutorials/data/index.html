@@ -1,0 +1,406 @@
+<h1>Data</h1>
+	
+<p>
+<table width="656">
+   	<tr>
+   	
+	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
+   	   		
+	<p>&nbsp;</p>
+
+<p>This tutorial picks up where the <a href="http://processing.org/learning/text/">Strings and Drawing Text</a> tutorial leaves off and examines how to use String objects as the basis for reading and writing data. We'll start by learning more sophisticated methods for manipulating Strings, searching in them, chopping them up, and joining them together.  Afterwards, we'll see how these skills allow us to use input from data sources, such as text files, web pages, xml feeds, and 3rd party APIs and take a step into the world of data visualization.</p>
+
+<h3>Manipulating Strings</h3>
+
+<p>In <a href="http://processing.org/learning/text/">Strings and Drawing Text</a>, we touched on a few of the basic functions available in the Java String class, such as charAt(), toUpperCase(), equals(), and length().  These functions are documented on the Processing reference page for Strings.  Nevertheless, in order to perform some more advanced data parsing techniques, we'll need to explore some additional String manipulation functions <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html">documented in the Java API</a>.</p>
+
+<p>Let's take a closer look at the following two String functions:  indexOf() and substring(). indexOf() locates a sequence of characters within a String.   It takes one argument, a search String, and returns a numeric value that corresponds to first occurrence of the search string inside of the string being searched.  </p>
+
+<pre>
+String search = "def";
+String toBeSearched = "abcdefghi";
+int index = toBeSearched.indexOf(search);  // The value of index in this example is 3.
+</pre>
+
+<p>Strings are just like arrays, in that the first character is index number zero and the last character is the length of the string minus one.  If the search string cannot be found, indexOf() returns -1.   This is a good choice because -1 is not a legitimate index value and therefore can indicate "not found." After finding a search phrase within a String, we might want to separate out part of the string, saving it in a different variable.  A part of a string is known as "substring."  The substring() function which takes two arguments, a start index and an end index and returns the substring in between the two indices.</p>
+
+<pre>
+String alphabet = "abcdefghi";
+String sub = alphabet.substring(3,6);  // The String sub is now "def".
+</pre>
+
+<p>Note that the substring begins at the specified start index (the first argument) and extends to the character at end index (the second argument) minus one.    I know.  I know.  Wouldn't it have been easier to just take the substring from the start index all the way to the end index?   While this might initially seem true, it's actually quite convenient to stop at end index minus one.   For example, if you ever want to make a substring that extends to the end of a string, you can simply go all the way to thestring.length().   In addition, with end index minus one marking the end, the length of the substring is easily calculated as end index minus begin index.</p>
+
+<h3>Splitting and Joining Strings</h3>
+
+<p>In <a href="http://processing.org/learning/text/">Strings and Drawing Text</a>, we saw how strings can be joined together (referred to as "concatenation") using the "+" operator.     Let's review with a example that uses concatenation to get user input from a keyboard.  Processing has two additional functions that make joining strings (or the reverse, splitting them up) easy.    In sketches that involve parsing data from a file or the web, we will often be presented that data in the form of an array of strings or as one long string.  Depending on what we want to accomplish, it's useful to know how to switch between these two modes of storage.  This is where these two new functions, split() and join(), will come in handy. </p>
+
+<strong><em>"one long string or array of strings" ←→ {"one", "long", "string", "or" ,"array", "of", "strings"}</strong></em>
+
+<p>Let's take a look at the split() function.  split() separates a longer string into an array of strings, based on a split character known as the delimiter.  It takes two arguments, the string to be split and the delimiter.  (The delimiter can be a single character or a string.  Note that in the code below the period is not set as a delimiter and therefore will be included in the last string in the array: "dog."</p>
+  
+<pre>
+// Splitting a String based on spaces
+String spaceswords = "The quick brown fox jumps over the lazy dog.";
+String[] list = split(spaceswords, " ");
+for (int i = 0; i &lt; list.length; i++) {
+  println(list[i] + " " + i);
+}
+</pre>
+
+<p>If you want to use more than one delimiter to split up a text, you must use the Processing function splitTokens().  splitTokens() works identically to split() with one exception: any character that appears in the String qualifies as a delimiter.	  In the code below, the period is set as a delimiter and therefore will not be included in the last spot in the array: "dog"</p>
+
+<pre>
+// Splitting a String based on a multiple delimiters
+String stuff = "hats & apples, cars + phones % elephants dog.";
+String[] list = splitTokens(stuff, " &,+.");
+for (int i = 0; i &lt; list.length; i++) {
+  println(list[i] + " " + i);
+}
+</pre>
+
+<p>If we are splitting numbers in a String the resulting array can be converted into an integer array with Processing's int() function.  Numbers in a string are not numbers and cannot be used in mathematical operations unless we convert them first.</p>
+
+<pre>
+// Calculate sum of a list of numbers in a String
+String numbers = "8,67,5,309";
+// Converting the String array to an int array
+int[] list = int(split(numbers, ',')); 
+int sum = 0;
+for (int i = 0; i &lt; list.length; i++) {
+  sum = sum + list[i];
+}
+println(sum); 
+</pre>
+
+<p>The reverse of split() is join().  join() takes an array of Strings and joins them together into one long string.  The join() function also takes two arguments, the array to be joined and a separator.  The separator can either be a single character or a String of characters.</p>
+
+<p>Consider the following array:</p>
+
+<pre>
+String[] lines = {"It", "was", "a", "dark", "and", "stormy", "night."};
+</pre>
+
+<p>Using the + operator along with a for loop, we can join an array of strings together as follows:</p> 
+
+<pre>
+// Manual Concatenation
+String onelongstring = "";
+for (int i = 0; i &lt; lines.length; i++) {
+  onelongstring = onelongstring + lines[i] + " ";
+}
+</pre>
+
+<p>The join() function, however, allows us to bypass this process achieving the same result in only one line of code.</p>
+
+<pre>
+// Using Processing's join()
+String onelongstring = join(lines," ");
+</pre>
+
+<h3>Reading and Writing Text Files</h3>
+
+<p>Data can come from many different places: web sites, news feeds, databases, etc.   To start, we'll demonstrate how to work with the simplest means of data retrieval data: reading from a text file.Text files can be used as a very simple database (we could store settings for a program, a list of high scores, numbers for a graph, etc.) or to simulate a more complex data source. </p>
+
+<p>In order to create a text file, you can use any simple text editor.  Windows Notepad or Mac OSX TextEdit will do, just make sure you format the file as "plain text."    It is also advisable to name the text files with the ".txt" extension, just to avoid any confusion.  And just as with image files, these text files should be placed in the sketch's "data" directory in order for them to be recognized by the Processing sketch.</p>
+
+<p>Once the text file is in place, Processing's loadStrings() function is used to read the content of the file into an String array.   The individual lines of text in the file each become an individual element in the array.</p>
+
+<img src="imgs/txt.png" border=1>
+
+<pre>
+// This code will print all the lines from the source text file.
+String[] lines = loadStrings("file.txt");
+println("there are " + lines.length + " lines");
+for (int i=0; i &lt; lines.length; i++) {
+  println(lines[i]);
+}
+</pre>
+
+<p>Text from a file can be used to generate a simple visualization.  Take the following data file.</p>
+
+<img src="imgs/data.png" border=1>
+
+<p>Here, we can load the numbers separated by commas and split them into an array of ints used to set color and height of rectangles. </p>
+
+<pre>
+int[] data;
+
+void setup() {
+  size(200,200);
+  // Load text file as a string
+  String[] stuff = loadStrings("data.txt");
+  // Convert string into an array of integers using ',' as a delimiter
+  data = int(split(stuff[0],','));
+}
+
+void draw() {
+  background(255);
+  stroke(0);
+  for (int i = 0; i &lt; data.length; i++) {
+    fill(data[i]);
+    rect(i*20,0,20,data[i]);
+  }
+}
+</pre>
+
+<p>Text can also be written back to a data file with saveStrings().  saveStrings() writes an array of strings to a file, one line per string.</p>
+
+<pre>
+String words = "apple bear cat dog";
+String[] list = split(words, ' ');
+
+// Writes the strings to a file, each on a separate line
+saveStrings("nouns.txt", list);
+</pre>
+
+<p>There are cases, however, where you don't want to write a text file all at once.  Rather, you want to continuously append to a file over time.  This can be achieved with the PrintWriter class.  Take the following example which writes saves mouseX and mouseY to a text file for each cycle through draw(), quitting when you press a key.</p>
+
+<pre>
+PrintWriter output;
+
+void setup() {
+  // Create a new file in the sketch directory
+  output = createWriter("positions.txt"); 
+}
+
+void draw() {
+  point(mouseX, mouseY);
+  output.println(mouseX);  // Write the coordinate to the file
+}
+
+void keyPressed() {
+  output.flush();  // Writes the remaining data to the file
+  output.close();  // Finishes the file
+  exit();  // Stops the program
+}
+</pre>
+
+<h3>Tabular Data</h3>
+
+<p>You may have noticed that the graphing example above loads a text file with numbers separated by commas.  Processing includes a Table class which will load a comma-separated (CSV) or tab-separated (TSV) file and automatically parse the data into columns and rows for you.  This is a great deal more convenient than struggling to manually parse large data files with split().  It works as follows.  Let's say you have a data file that looks like:</p>
+
+<img src="imgs/table.png" border=1>
+
+<p>Instead of saying:</p>
+
+<pre>
+String[] stuff = loadStrings("data.csv");
+</pre>
+
+<p>We can now say:
+
+<pre>
+Table table = loadTable("data.csv");
+</pre>
+
+<p>Once the table is loaded, you can access the elements by their column and row number.  Let's look at how excel interprets the CSV file.</p>
+
+<img src="imgs/excel.png" border=1>
+
+<p>We can see that the data lives on a grid with columns and rows.  The most convenient way to access the data would be to therefore request a value by its column and row location.  The Table class makes this all possible via getRowCol().</p>
+ 
+<pre>
+int val1 = table.getInt(1,2);      // val now has the value 235
+float val2 = table.getFloat(2,3);  // val2 now has the value 44.758068
+String s = table.getString(3,0);   // s now has the value "Happy"
+</pre>
+
+<p>Note how you can specify the type of data you expect to get from the table.  If you ask for an integer when the data is really a string, Processing will make its best guess (which in that case would mean you get a '0').</p>
+
+<p>By accessing the number of rows in the table via getRowCount(), you can loop through the entire table.</p>
+
+<pre>
+for (int i = 0; i &lt; table.getRowCount(); i++ ) {
+  float x  = table.getFloat(i,0);
+  float y  = table.getFloat(i,1);
+  float d  = table.getFloat(i,2);
+  String n = table.getString(i,3);
+}
+</pre>
+
+<p>You can also add to a Table object with the addRow() method.  Unlike with retrieving data from the Table, all data must be inserted as a String.  If a row requires four fields, you can simply build a String array of four elements to add.  </p>
+
+<pre>
+// One row is an array of four strings
+String[] data = new String[4];
+data[0] = "" + mouseX;  // Even though an integer is in the table, we have to make it a String to insert
+data[1] = "" + mouseY;
+data[2] = "" + random(40, 80); 
+data[3] = "Processing";
+// Adding the row
+table.addRow(data); 
+</pre>
+
+<p>For an example that creates and saves objects from a Table, take a look at LoadSaveCSVTable.</p>
+
+<h3>XML Data</h3>
+
+<p>For grabbing data from the web, an <a href="http://en.wikipedia.org/wiki/XML">XML (Extensible Markup Language) feed</a> is an excellent option (if available).  Unlike HTML (which is designed to make content vieweable by a human's eyes) XML is designed to make content viewable by a computer and facilitate the sharing of data across different systems.</p>
+
+<p>XML organizes information in a tree structure.  Let's imagine a list of students.  Each student has an id number, name, address, e-mail, and telephone number.  Each student's address has a city, state, and zip code.  An XML tree for this dataset might look like the following:</p>
+
+<p><img src="http://www.learningprocessing.com/php/xml.jpg"></p>
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;students&gt;
+  &lt;student&gt;
+    &lt;id&gt;001&lt;/id&gt;
+    &lt;name&gt;Daniel Shiffman&lt;/name&gt;
+    &lt;phone&gt;555-555-5555&lt;/phone&gt;
+    &lt;email&gt;daniel@shiffman.net&lt;/email&gt;
+    &lt;address&gt;
+      &lt;street&gt;123 Processing Way&lt;/street&gt;
+      &lt;city&gt;Loops&lt;/city&gt;
+      &lt;state&gt;New York&lt;/state&gt;
+      &lt;zip&gt;01234&lt;/zip&gt;
+    &lt;/address&gt;
+  &lt;/student&gt;
+  &lt;student&gt;
+    &lt;id&gt;002&lt;/id&gt;
+    &lt;name&gt;Zoog&lt;/name&gt;
+    &lt;phone&gt;555-555-5555&lt;/phone&gt;
+    &lt;email&gt;zoog@planetzoron.uni&lt;/email&gt;
+    &lt;address&gt;
+      &lt;street&gt;45.3 Nebula 5&lt;/street&gt;
+      &lt;city&gt;Boolean City&lt;/city&gt;
+      &lt;state&tt;Booles&lt;/state&gt;
+      &lt;zip&gt;12358&lt;/zip&gt;
+    &lt;/address&gt;
+  &lt;/student&gt;
+&lt;/students&gt;
+</pre>
+
+<p>Note the similarities to object-oriented programming.  We could think of the XML tree in the following terms.  The XML document represents an array of student objects.  Each student object has multiple pieces of information, an id, a name, a phone number, an e-mail address, and a mailing address.  The mailing address is also an object that also has multiple pieces of data, such as street, city, state, and zip.</p>
+
+<p>Let's look at Yahoo's XML feed for weather data.  Here is the raw XML source (Note I have edited it for simplification purposes).</p>
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes" ?&gt;
+&lt;rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0"&gt;
+  &lt;channel&gt;
+    &lt;item&gt;
+      &lt;title&gt;Conditions for New York, NY at 3:51 pm EST&lt;/title&gt;
+      &lt;geo:lat&gt;40.67&lt;/geo:lat&gt;
+      &lt;geo:long&gt;-73.94&lt;/geo:long&gt;
+      &lt;link&gt;http://xml.weather.yahoo.com/forecast/USNY0996_f.html&lt;/link&gt;
+      &lt;pubDate&gt;Mon, 20 Feb 2006 3:51 pm EST&lt;/pubDate&gt;
+      &lt;yweather:condition text="Fair" code="34" temp="35" date="Mon, 20 Feb 2006 3:51 pm EST"/&gt;
+      &lt;yweather:forecast day="Mon" date="20 Feb 2006" low="25" high="37" text="Clear" code="31"/&gt;
+    &lt;/item&gt;
+  &lt;/channel&gt;
+&lt;/rss&gt;
+</pre>
+
+<p>And here is the data mapped in the tree structure.</p>
+
+<p><img src="imgs/weatherxml.png"></p>
+
+<p>You may be wondering what the top level "RSS" is all about.   Yahoo's XML weather data is provided in <a href="http://en.wikipedia.org/wiki/RSS">RSS format</a>.  RSS stands for "Really Simple Syndication" and is a standardized XML format for syndicating web content (such as news articles, etc.)</p>
+
+<p>Now that we have a handle on the tree structure, we should look at the specifics inside that structure.  With the exception of the first line (which simply indicates that this page is XML formatted), this XML document contains a nested list of elements, each with a start tag, i.e. &lt;channel&gt; and an end tag, i.e. &lt;/channel&gt;. Some of these elements have content between the tags:</p>
+
+<pre>
+&lt;title&gt;Conditions for New York, NY at 3:51 pm EST&lt;/title&gt;
+</pre>
+
+<p>and some have attributes (formatted by <em>attribute name</em> equals <em>attribute value</em> in quotes):</p>
+
+<pre>
+&lt;yweather:forecast day="Mon" date="20 Feb 2006" low="25" high="37" text="Clear" code="31"/&gt;
+</pre>
+
+<p>Knowing this format, we could certainly be clever with our use of split(), indexOf(), and substring() to find the pieces we want in the raw XML.  The point here, however, is that because XML is a standard format, we don't have to do this.  Rather, we can use an XML parser.  In Processing, the XML parser is called just that: XML.</p>
+
+<pre>
+XML xml = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);
+</pre>
+
+<p>Here, instead of loadStrings() or loadTable(), we're now calling loadXML() and passing in the address (URL or local file) of our XML document.   An XML object represents one element of an XML tree.  When a document is first loaded, that XML object is always the root element.  Referring back to XML tree diagram, we see that we can find the current temperature via the following path:</p>
+
+<ol>
+<li>The root  of the tree is <strong>RSS</strong>.</li>
+<li><strong>RSS</strong> has a child  named <strong>channel</strong>.</li>
+<li><strong>Channel</strong> has a child named <strong>item</strong>.</li>
+<li><strong>Item</strong> has a child named <strong>yweather:condition</strong>.</li>
+<li>The temperature is stored in <strong>yweather:condition</strong> as the attribute <strong>temp</strong>.</li>
+</ol>
+
+<p>We could translate the above into code as follows:</p>
+
+<pre>
+XML root        = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003); // Step 1
+XML channel     = root.getChild("channel");                                  // Step 2
+XML item        = root.getChild("item");                                     // Step 3
+XML yweather    = root.getChild("yweather:condition");                      // Step 4
+int temperature = yweather.getInt("high");                                   // Step 5
+</pre>
+
+<p>This is a bit long-winded, however, and so can be compressed down into one (or three as below) lines of code.</p>
+
+<pre>
+XML root        = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);                // Step 1
+XML forecast    = root.getChild("channel").getChild("item").getChild("yweather:forecast");  // Steps 2-4
+int temperature = forecast.getInt("high");                                                  // Step 5
+</pre>
+
+<p>It should also be noted that we're accessing the child nodes by their name (i.e. "channel", "item", etc.), but they can also be accessed numerically via an index (starting at zero, same as an array).  This is convenient when looping over a list of children.  In LoadSaveCSVTable, we used a series of comma separated values in a text file to store information related to Bubble objects.  An XML document can also be used in the same manner.  Consider the following XML document:</p>
+
+<pre>
+&lt;?xml version="1.0"?&gt;
+&lt;bubbles&gt;
+  &lt;bubble&gt;
+    &lt;diameter&gt;40&lt;/diameter&gt;
+    &lt;color red="75" green="255"/&gt;
+  &lt;/bubble&gt;
+  &lt;bubble&gt;
+    &lt;diameter&gt;20&lt;/diameter&gt;
+    &lt;color red="255" green="75"/&gt;
+  &lt;/bubble&gt;
+  &lt;bubble&gt;
+    &lt;diameter&gt;80&lt;/diameter&gt;
+    &lt;color red="100" green="150"/&gt;
+  &lt;/bubble&gt;
+&lt;/bubbles&gt;
+</pre>
+
+<p>In the above XML, the root element is "bubbles" which has three children.  Each child "bubble" has 2 children, "diameter" and "color."  The "color" element has two attributes, "red" and "green."  To access the list of all XML nodes "bubble" we can use the getChildren() method, passing in the name "bubble"</p>
+
+<pre>
+// Load an XML document
+XML xml = loadXML("bubbles.xml");
+
+// Get all the child elements
+XML[] children = xml.getChildren("bubble");
+</pre>
+
+<p>Once we have the array of XML objects, we can iterate over them, accessing the diameter and color data for each "bubble".</p>
+
+<pre>
+for (int i = 0; &lt; children.length; i ++ ) {
+    
+  // The diameter is the content of the child named "Diamater"
+  XML diameterElement = children[i].getChild("diameter");
+  int diameter = int(diameterElement.getContent());
+
+  // The color element has three attributes
+  XML colorElement = children[i].getChild("color");
+  // An int for r g and b
+  int r = colorElement.getInt("red");
+  int g = colorElement.getInt("green");
+  int b = colorElement.getInt("blue");
+
+}
+</pre>
+
+<p>The full code which generates Bubble objects can be found in: LoadingXMLObjects</p>
+
+<p>&nbsp;</p>
+
+	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
+
+</td>
+	</tr>
+  </table>
+</p>
