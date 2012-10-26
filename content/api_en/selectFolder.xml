@@ -13,20 +13,23 @@
 <example>
 <image></image>
 <code><![CDATA[
-String folderPath = selectFolder();  // Opens file chooser
-if (folderPath == null) {
-  // If a folder was not selected
-  println("No folder was selected...");
-} else {
-  // If a folder was selected, print path to folder
-  println(folderPath);
+void setup() {
+  selectFolder("Select a folder to process:", "folderSelected");
+}
+
+void folderSelected(File selection) {
+  if (selection == null) {
+    println("Window was closed or the user hit cancel.");
+  } else {
+    println("User selected " + selection.getAbsolutePath());
+  }
 }
 ]]></code>
 </example>
 
 
 <description><![CDATA[
-Opens a platform-specific file chooser dialog to select a folder for input. This function returns the full path to the selected folder as a <b>String</b>, or <b>null</b> if no selection.
+Opens a platform-specific file chooser dialog to select a folder. After the selection is made, the selection will be passed to the 'callback' function. If the dialog is closed or canceled, null will be sent to the function, so that the program is not waiting for additional input. The callback is necessary because of how threading works.
 ]]></description>
 
 </root>

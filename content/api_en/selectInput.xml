@@ -13,20 +13,23 @@
 <example>
 <image></image>
 <code><![CDATA[
-String loadPath = selectInput();  // Opens file chooser
-if (loadPath == null) {
-  // If a file was not selected
-  println("No file was selected...");
-} else {
-  // If a file was selected, print path to file
-  println(loadPath);
+void setup() {
+  selectInput("Select a file to process:", "fileSelected");
+}
+
+void fileSelected(File selection) {
+  if (selection == null) {
+    println("Window was closed or the user hit cancel.");
+  } else {
+    println("User selected " + selection.getAbsolutePath());
+  }
 }
 ]]></code>
 </example>
 
 
 <description><![CDATA[
-Opens a platform-specific file chooser dialog to select a file for input. This function returns the full path to the selected file as a <b>String</b>, or <b>null</b> if no selection.
+Opens a platform-specific file chooser dialog to select a file for input. After the selection is made, the selected File will be passed to the 'callback' function. If the dialog is closed or canceled, null will be sent to the function, so that the program is not waiting for additional input. The callback is necessary because of how threading works.
 ]]></description>
 
 </root>
