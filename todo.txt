@@ -51,6 +51,10 @@ o JSON  --SM  // This has been removed for 2.0
 
 Master 2.0 Beta List for CR
 
+- Add link to hint() within stroke() to let people know about it
+  . hint(ENABLE_STROKE_PURE)
+  . hint(ENABLE_STROKE_PURE)
+
 o XML page isn't being created or showing up in the Index. Check it.
   . Update: Changes to how source is organized; ref engine needs to be modified
 

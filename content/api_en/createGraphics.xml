@@ -32,7 +32,7 @@ void draw() {
 <description><![CDATA[
 Creates and returns a new <b>PGraphics</b> object. Use this class if you need to draw into an off-screen graphics buffer. The first two parameters define the width and height in pixels. The third, optional parameter specifies the renderer. It can be defined as P2D, P3D, or PDF. If the third parameter isn't used, the default renderer is set. The PDF renderer requires the filename parameter.<br /> 
 <br />
-It's important to match the renderer used with <b>createGraphics()</b> to the main renderer specified in <b>size()</b>. If the default renderer is used in <b>size()</b>, then only the default or PDF can be used with <b>createGraphics()</b>. If P2D or P3D are used as the renderer in <b>size()</b>, then any of the options can be used with <b>createGraphics()</b>.<br />
+It's important to consider the renderer used with <b>createGraphics()</b> in relation to the main renderer specified in <b>size()</b>. For example, it's only possible to use P2D or P3D with <b>createGraphics()</b> when one of them is defined in <b>size()</b>. Unlike Processing 1.0, P2D and P3D use OpenGL for drawing, and when using an OpenGL renderer it's necessary for the main drawing surface to be OpenGL-based. If P2D or P3D are used as the renderer in <b>size()</b>, then any of the options can be used with <b>createGraphics()</b>. If the default renderer is used in <b>size()</b>, then only the default or PDF can be used with <b>createGraphics()</b>.<br />
 <br />
 It's important to call any drawing functions between <b>beginDraw()</b> and <b>endDraw()</b> statements. This is also true for any functions that affect drawing, such as <b>smooth()</b> or <b>colorMode()</b>.<br/> 
 <br/>
