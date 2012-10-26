@@ -18,7 +18,6 @@ Capture cam;
 void setup() { 
   size(200, 200); 
   cam = new Capture(this);
-  Capture.source();
   cam.start(); 
 } 
  
