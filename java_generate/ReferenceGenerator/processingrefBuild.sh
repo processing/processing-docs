@@ -83,3 +83,8 @@ php tools_local.php
 php libraries_local.php
 php environment_local.php
 
+# add the links to load in the libraries and tools lists online
+cd ../reference/libraries/
+ln -s index.html index.shtml
+cd ../tools/
+ln -s index.html index.shtml
