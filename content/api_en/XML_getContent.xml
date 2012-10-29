@@ -20,18 +20,16 @@
 //   &#60;site id="1" url="mobile.processing.org"&#62;Processing Mobile&#60;/site&#62;
 // &#60;/websites&#62;
 
-XMLElement xml;
+XML xml;
 
 void setup() {
-  size(200, 200);
-  xml = new XMLElement(this, "sites.xml");
-  int numSites = xml.getChildCount();
-  for (int i = 0; i &lt; numSites; i++) {
-    XMLElement kid = xml.getChild(i);
-    String site = kid.getContent();
-    println(site);    
-  }
+  xml = loadXML("mammals.xml");
+  XML firstChild = xml.getChild("animal");
+  println(firstChild.getContent());
 }
+
+// Sketch prints:
+// Goat
 ]]></code>
 </example>
 

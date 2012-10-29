@@ -41,9 +41,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Returns all of the element's children as an array of XML objects.<br/>
-<br/>
-When the <b>path</b> parameter is specified, then it will return all children that match that path. The path is a series of elements and sub-elements, separated by slashes.
+Returns all of the element's children as an array of XML objects. When the <b>name</b> parameter is specified, then it will return all children that match that name or path. The path is a series of elements and sub-elements, separated by slashes.
 ]]></description>
 
 </root>
