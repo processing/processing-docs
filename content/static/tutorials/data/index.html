@@ -259,7 +259,7 @@ for (TableRow row : table) {
 <p>Table objects can be altered through the course of a sketch.  Cell values can be adjusted, rows can be removed, and new rows can be added.  For example, to new values in a cell there are functions setInt(), setFloat(), setString(), etc.  
 
 <pre>
-// Update the value of cell (1,2) to mouseX. </p>
+// Update the value of cell (1,2) to mouseX.
 table.setInt(1,2,mouseX);
 </pre>
 
@@ -273,7 +273,7 @@ table.setFloat(newRow, "diameter", random(40, 80));
 table.setString(newRow, "name", "Blah");
 </pre>
 
-<p>For an example that creates objects from and saves objects to a Table, take a look at LoadSaveCSVTable.</p>
+<p>For an example that creates objects from and saves objects to a Table, take a look at LoadSaveCSVTable under Topics --> Advanced Data.</p>
 
 <h3>XML Data</h3>
 
@@ -470,13 +470,18 @@ boolean loading = false;
 <pre>
 void loadData() {
   loading = true;
-  // All of the data retrival code
+
+  ///////////////////////////////////
+  // All of the data retrival code //
+  ///////////////////////////////////
+  
   loading = false;
 }
 </pre>
 
 <p>In draw(), you can choose to display something to indicate the thread is running (when loading equals true).</p>
 
+<pre>
 void draw() {
   if (loading) {
     // Draw something to indicate loading
