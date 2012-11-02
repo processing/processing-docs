@@ -236,7 +236,7 @@ for (TableRow row : table) {
 
 <p>Now, the above code demonstrates how each column can be accessed via its numeric index.  Tabular data, however, can have a header row which names each column.</p>
 
-<img src="imgs/header.png" border=1>
+<img src="imgs/headers.png" border=1>
 
 <p>Using a header row can make your code much more readable (and shorter) as well as less error-prone to getting the wrong column, or having column indices change.  If you have a header row, calling removeTitleRow() will tell Processing to use the first row as a header and ignore it during iteration.</p>
 
@@ -256,13 +256,14 @@ for (TableRow row : table) {
 }
 </pre>
  
-<p>You can also set new values in a cell via setInt(), setFloat(), setString(), etc.  For example, this would update the value of cell (1,2) to mouseX. </p>
+<p>Table objects can be altered through the course of a sketch.  Cell values can be adjusted, rows can be removed, and new rows can be added.  For example, to new values in a cell there are functions setInt(), setFloat(), setString(), etc.  
 
 <pre>
+// Update the value of cell (1,2) to mouseX. </p>
 table.setInt(1,2,mouseX);
 </pre>
 
-<p>You can also add a new row to the Table by setting the values for a new row, one past the end of the Table.  For example, if a Table has four rows (indices 0-3) you would set the values for row index #4.  In the example below, note the use of column names instead of indices.</p>
+<p>To add a new row to a Table, you can set the values for a new row with an index equal to the final row plus one.  For example, if a Table has four rows (indices 0-3) you would set the values for row index #4.  In the example below, note the use of column names instead of numeric indices.</p>
 
 <pre>
 int newRow = table.getRowCount();
@@ -438,15 +439,63 @@ for (int i = 0; &lt; children.length; i ++ ) {
 
 <h3>Threads</h3>
 
-<h3>Some misc pointers</h3>
+<p>You are likely familiar with the idea of writing a program that follows a specific sequence of steps -- setup() first then draw() over and over and over again! A Thread is also a series of steps with a beginning, a middle, and an end. A Processing sketch is a single thread, often referred to as the "Animation" thread. Other threads sequences, however, can run independently of the main Processing sketch. In fact, you can launch any number of threads at one time and they will all run concurrently.</p>
+
+<p>Processing does this all the time, whenever you write an event callback, such as serialEvent(), or captureEvent(), etc. these functions are triggered by a different thread running behind the scenes, and they alert Processing whenever they have something to report. This is useful whenever you need to perform a task that takes too long and would slow down the main animation's frame rate, such as grabbing data from the network (XML, database, etc.) If a separate thread gets stuck or has an error, the entire program won't grind to a halt, since the error only stops that individual thread. To create independent, asynchronous threads, you can use the thread() function built into Processing.</p>
+
+<pre>
+void setup() {
+  size(200,200);
+  thread("someFunction");
+}
+ 
+void draw() {
+ 
+}
+ 
+void someFunction() {
+  // This function will run as a thread when called via
+  // thread("someFunction") as it was in setup!
+}
+</pre>
+
+<p>The thread() function receives a String as an argument. The String should match the name of the function you want to run as a thread.  This is especially useful in sketches that grab data for the web.  Rather than have the animation freeze while the sketch is waiting to retrieve data, the sketch can continue to loop through draw() updating the data when the thread is completed.  In these cases, a boolean variable can be useful to track the status of the thread.</p>
+
+<pre>
+boolean loading = false;
+</pre>
+
+<p>The function that loads the data can then set loading equal to true at the start and false at the end.</p>
+
+<pre>
+void loadData() {
+  loading = true;
+  // All of the data retrival code
+  loading = false;
+}
+</pre>
+
+<p>In draw(), you can choose to display something to indicate the thread is running (when loading equals true).</p>
+
+void draw() {
+  if (loading) {
+    // Draw something to indicate loading
+  }
+}
+</pre>
+
+
+<p>Two examples that follow this methodology can be found under Topics --> Advanced Data in the Processing examples.</p>
+
+<p>While using the thread() function is a very simple way of getting an independent thread, it should be noted that it is somewhat limited. Being able to make a thread object is a great deal more powerful, and this can be done by extending the Java <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Thread.html">Thread</a> class.</p>
+
+<h3>Other Topics?</h3>
 
 HashMap
 
 JSON
 
 Other APIs
-
-
 
 <p>&nbsp;</p>
 
