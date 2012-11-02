@@ -238,14 +238,14 @@ for (TableRow row : table) {
 
 <img src="imgs/header.png" border=1>
 
-Using a header row can make your code much more readable (and shorter) as well as less error-prone to getting the wrong column, or having column indices change.  If you have a header row, calling removeTitleRow() will tell Processing to use the first row as a header and ignore it during iteration.
+<p>Using a header row can make your code much more readable (and shorter) as well as less error-prone to getting the wrong column, or having column indices change.  If you have a header row, calling removeTitleRow() will tell Processing to use the first row as a header and ignore it during iteration.</p>
 
 <pre>
 table = loadTable("data.csv");
 table.removeTitleRow(); // Set first row as header row
 </pre>
 
-Now when we iterate, we can access the columns via their name.
+<p>Now when we iterate, we can access the columns via their name.</p>
 
 <pre>
 for (TableRow row : table) {
@@ -256,7 +256,7 @@ for (TableRow row : table) {
 }
 </pre>
  
-<p>You can also set new values in a cell via setInt(), setFloat(), setString(), etc.  For example, this would update the value of cell (1,2) to mouseX. 
+<p>You can also set new values in a cell via setInt(), setFloat(), setString(), etc.  For example, this would update the value of cell (1,2) to mouseX. </p>
 
 <pre>
 table.setInt(1,2,mouseX);
