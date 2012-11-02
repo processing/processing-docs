@@ -112,9 +112,7 @@ String onelongstring = join(lines," ");
 // This code will print all the lines from the source text file.
 String[] lines = loadStrings("file.txt");
 println("there are " + lines.length + " lines");
-for (int i=0; i &lt; lines.length; i++) {
-  println(lines[i]);
-}
+println(lines);
 </pre>
 
 <p>Text from a file can be used to generate a simple visualization.  Take the following data file.</p>
@@ -208,7 +206,7 @@ String s = table.getString(3,0);   // s now has the value "Happy"
 
 <p>Note how you can specify the type of data you expect to get from the table.  If you ask for an integer when the data is really a string, Processing will make its best guess (which in that case would mean you get a '0').</p>
 
-<p>By accessing the number of rows in the table via getRowCount(), you can loop through the entire table.</p>
+<p>By accessing the number of rows in the table via getRowCount(), you can loop through the entire table looking at each cell via its column and row.</p>
 
 <pre>
 for (int i = 0; i &lt; table.getRowCount(); i++ ) {
@@ -219,20 +217,62 @@ for (int i = 0; i &lt; table.getRowCount(); i++ ) {
 }
 </pre>
 
-<p>You can also add to a Table object with the addRow() method.  Unlike with retrieving data from the Table, all data must be inserted as a String.  If a row requires four fields, you can simply build a String array of four elements to add.  </p>
+<p>Another, perhaps preferable, methodology for iterating over the table however, is to access each row as an object: TableRow.  You can do this with the new Java enhanced loop syntax, saying: </p>
 
 <pre>
-// One row is an array of four strings
-String[] data = new String[4];
-data[0] = "" + mouseX;  // Even though an integer is in the table, we have to make it a String to insert
-data[1] = "" + mouseY;
-data[2] = "" + random(40, 80); 
-data[3] = "Processing";
-// Adding the row
-table.addRow(data); 
+for (TableRow row : table) {
 </pre>
 
-<p>For an example that creates and saves objects from a Table, take a look at LoadSaveCSVTable.</p>
+<p>This can be read as "For each TableRow row in the Table table."</p>
+
+<pre>
+for (TableRow row : table) {
+  float x = row.getFloat(0);
+  float y = row.getFloat(1);
+  float d = row.getFloat(2);
+  String n = row.getString(3);
+}  
+</pre>
+
+<p>Now, the above code demonstrates how each column can be accessed via its numeric index.  Tabular data, however, can have a header row which names each column.</p>
+
+<img src="imgs/header.png" border=1>
+
+Using a header row can make your code much more readable (and shorter) as well as less error-prone to getting the wrong column, or having column indices change.  If you have a header row, calling removeTitleRow() will tell Processing to use the first row as a header and ignore it during iteration.
+
+<pre>
+table = loadTable("data.csv");
+table.removeTitleRow(); // Set first row as header row
+</pre>
+
+Now when we iterate, we can access the columns via their name.
+
+<pre>
+for (TableRow row : table) {
+  float x = row.getFloat("x");
+  float y = row.getFloat("y");
+  float d = row.getFloat("diameter");
+  String n = row.getString("name");
+}
+</pre>
+ 
+<p>You can also set new values in a cell via setInt(), setFloat(), setString(), etc.  For example, this would update the value of cell (1,2) to mouseX. 
+
+<pre>
+table.setInt(1,2,mouseX);
+</pre>
+
+<p>You can also add a new row to the Table by setting the values for a new row, one past the end of the Table.  For example, if a Table has four rows (indices 0-3) you would set the values for row index #4.  In the example below, note the use of column names instead of indices.</p>
+
+<pre>
+int newRow = table.getRowCount();
+table.setFloat(newRow, "x", mouseX);
+table.setFloat(newRow, "y", mouseY);
+table.setFloat(newRow, "diameter", random(40, 80));
+table.setString(newRow, "name", "Blah");
+</pre>
+
+<p>For an example that creates objects from and saves objects to a Table, take a look at LoadSaveCSVTable.</p>
 
 <h3>XML Data</h3>
 
