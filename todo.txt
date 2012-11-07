@@ -1,9 +1,9 @@
-2.0 Release
+2.0 Press Release Ideas - CR, BF
 - Arduino
 - /js
 - Khan
 - Sketchpad
-- Processing 1 was downloaded over one million times
+- Processing 1+ was downloaded over one million times
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -15,15 +15,7 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 2.0 REFERENCE
 
-! Updates the keywords file
-
-
-x Parameter decisions  --BF,CR,SM
-x Parameter alignment (after above decisions)  --SM
-x size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
-x PVector: 'z' parameter is incorrectly listed as 'the y coordinate'
-		http://code.google.com/p/processing/issues/detail?id=935
-		
+$ Updates the keywords file
 
 RELATED LINKS WITHIN THE REFERENCE
 
@@ -32,31 +24,16 @@ RELATED LINKS WITHIN THE REFERENCE
 	How can I reference this? Couldn't find it in Capture.java.
 
 
-REMOVE
-
-Functions removed from Processing reference after removing Applets. Should they stay
-for JS or are they used by JS?
-- link()
-- status()
-- param()
-
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
   . loadXML() 
 - TABLE  --SM
-o JSON  --SM  // This has been removed for 2.0
 - loadTable(), loadXML()  --SM
 - PVector changes --SM
 
-Master 2.0 Beta List for CR
-
 - Add link to hint() within stroke() to let people know about it
-  . hint(ENABLE_STROKE_PURE)
-  . hint(ENABLE_STROKE_PURE)
-
-o XML page isn't being created or showing up in the Index. Check it.
-  . Update: Changes to how source is organized; ref engine needs to be modified
+  . hint(ENABLE_STROKE_PURE) ??????
 
 - PShape --CR
 $ s.beginContour()
@@ -71,7 +48,6 @@ $ s.addChild()
   $ loadShader()
   $ resetShader()
   $ shader()
-  $ PShader.bind()
   $ PShader.bind()
   
   //
@@ -93,40 +69,43 @@ $ beginPGL()
 $ endPGL()
 $ textureWrap(REPEAT)
 
-// These are incorrect!
-- selectInput()
-- selectOutput()
-- selectFolder() 
-
 TO COME
 - clip()/noClip()
 - saveType(), loadType()
 - arc() with different options
-? thread()
 
 OPEN QUESTIONS
+- thread() ??????
 - filter() now accepts shaders ??????
 - clear()  New method for PGraphics ??????
 - loadImage() with callback ??????
+- callbacks for images or use requestImage() ??????
 - shape(x, y, z, w, h, d) ??????
 - loadShape() changes for OBJ ??????
-- callbacks for images or use requestImage() ??????
-
-x fix PGraphics beginDraw() and endDraw() @brief in source
-x quadraticVertex()  --CR
-x displayWidth, displayHeight --CR
-
 - Disambiguation pages for things like "copy" in PImage and PVector
 - Is there a way to catch for keywords like "run" and "init" in the parser?
 
-THE FOLLOWING IS FROM DB AND PROCESSING/TODO.TXT AND PROCESSING/CORE/TODO.TXT AND IS ALL FOR CR:
-
 - 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --CR
 - PDF fonts
--   rewrite documentation about pdf fonts (errors with non-native fonts)
--   figure out why font naming not working correctly
+-   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
+-   figure out why font naming not working correctly -- CR
 
-  DONE
+
+DONE
+o JSON  --SM  // This has been removed for 2.0
+x XML page isn't being created or showing up in the Index. Check it.
+  . Update: Changes to how source is organized; ref engine needs to be modified
+x fix PGraphics beginDraw() and endDraw() @brief in source
+x quadraticVertex()  --CR
+x displayWidth, displayHeight --CR
+x selectInput()
+x selectOutput()
+x selectFolder() 
+x Parameter decisions  --BF,CR,SM
+x Parameter alignment (after above decisions)  --SM
+x size(): renderer parameters shown are P2D and P3D, but this should also list PDF --SM
+x PVector: 'z' parameter is incorrectly listed as 'the y coordinate'
+		http://code.google.com/p/processing/issues/detail?id=935
 o "Find in Reference" for copy() goes to PVector
 o XMLElement is not linked for find in ref
 x 085 Constants in PConstants not syntax highlighting  --CR
@@ -203,7 +182,8 @@ x Done
 
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 DOCUMENTATION
+2.0 DOCUMENTATION 
+
 
 $ Syntax highlighting (see major Issues above)  --CR
 - New IDE image for About page and Environment page  --CR
@@ -227,7 +207,7 @@ x Done
 
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 EXAMPLE  --XXX
+2.0 EXAMPLES
 
 - New Minim Examples --CR
 - Remove super.stop() and stop() from examples -- CR, MINIM
@@ -281,17 +261,9 @@ x Done
 2.0 TUTORIAL  --XXX
 
   NEED
-- Shaders --DS
+$ Data --DS
 $ Processing.js  --DS,FJ (need info for processing's credits from Dave Humphries)
-x new PShape --DS
-x New P3D  --DS (CR to help with links and images, needs one diagram)
-x update Strings and Text re: createFont() --DS
-x Update Eclipse  --DS
-x New Android  --DS, JT
-
-x Update Getting Started for 2.0  --CR
-x   New PDE drawing / image
-x   Antialiased circle
+- Shaders --DS
 
   NICE
 - New Generics  --DS
@@ -309,19 +281,28 @@ o N/A anymore
 x Done
 
   DONE
+x new PShape --DS
+x New P3D  --DS (CR to help with links and images, needs one diagram)
+x update Strings and Text re: createFont() --DS
+x Update Eclipse  --DS
+x New Android  --DS, JT
+x Update Getting Started for 2.0  --CR
+x   New PDE drawing / image
+x   Antialiased circle
 x Tutorial CSS  --CR
 x Update Processing Overview for 2.0  --CR
 
 
 // // // // // // // // // // // // // // // // // // // // //
 
-POST 2.0
+MORE
 
-- JavaScript reference integration on Processing.org  --FJ,CR
-- JavaScript example integration on Processing.org  --FJ,CR
-- Hire freelance to enhance tutorial figures  --CR
 - Look through 404 issues on the site  --FJ
 
+DONE
+x JavaScript reference integration on Processing.org  --FJ,CR
+x JavaScript example integration on Processing.org  --FJ,CR
+x Hire freelance to enhance tutorial figures  --CR
 
 // // // // // // // // // // // // // // // // // // // // //
 
