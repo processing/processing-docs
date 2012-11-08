@@ -24,7 +24,7 @@ RELATED LINKS WITHIN THE REFERENCE
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
-  x loadXML()
+  mostly done, pending email thread on how to handle whitespace and counting children
 - PVector changes  --SM
 - TABLE  --SM
   . loadTable()
@@ -90,6 +90,7 @@ OPEN QUESTIONS
 
 DONE
 o JSON  --SM  // This has been removed for 2.0
+x loadXML()  --SM
 x XML page isn't being created or showing up in the Index. Check it.
   . Update: Changes to how source is organized; ref engine needs to be modified
 x fix PGraphics beginDraw() and endDraw() @brief in source
