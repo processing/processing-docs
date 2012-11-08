@@ -20,17 +20,14 @@ $ Updates the keywords file
 RELATED LINKS WITHIN THE REFERENCE
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
-- Add imageMode() as related to Video library > Capture > crop --SM
-	How can I reference this? Couldn't find it in Capture.java.
-
 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
-  . loadXML() 
+  x loadXML()
+- PVector changes  --SM
 - TABLE  --SM
-- loadTable(), loadXML()  --SM
-- PVector changes --SM
+  . loadTable()
 
 - Add link to hint() within stroke() to let people know about it
   . hint(ENABLE_STROKE_PURE) ??????
