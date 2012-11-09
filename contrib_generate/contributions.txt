@@ -82,6 +82,18 @@ version=1
 download=http://cloud.github.com/downloads/heuermh/gamepad-processing/gamepad.zip
 id=060
 
+library
+category=I/O
+authorList=[Hauke Altmann](http://graffitiresearchlab.de)
+name=proJMS
+sentence=Publish and consume text messages to create peer-to-peer communication between processing applications.
+url=http://sourceforge.net/projects/projms/
+prettyVersion=0.1
+paragraph=Implementing JMS messaging the library allows to send and receive messages to/from any other application using JMS.
+version=1
+download=http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.zip
+id=067
+
 tool
 category=
 authorList=Manindra Moharana
