@@ -150,7 +150,7 @@ sentence=Extends 2D geometry operations to facilitate generative geometry. Inclu
 url=http://www.ricardmarxer.com/geomerative
 prettyVersion=
 paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
-version=35
+version=36
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=039
 
@@ -172,9 +172,9 @@ authorList=Hartmut Bohnacker and Benedikt Gross
 name=GenerativeDesign
 sentence=Compilation of various functions belonging to the book GENERATIVE GESTALTUNG (german version) and DESIGN GENERATIF (french version).
 url=http://www.generative-gestaltung.de/
-prettyVersion=1.03
+prettyVersion=1.04
 paragraph=It supplies classes and functions for 3d-surfaces, simple physics (nodes, springs, attractors), graphic tablets, ASE-export or asynchronous loading of xml, html and images.
-version=4
+version=5
 download=http://www.generative-gestaltung.de/downloads/generativedesign.zip
 id=007
 
@@ -229,12 +229,12 @@ id=031
 library
 category=Utilities
 authorList=[David Bouchard](http://www.deadpixel.ca)
-name=Keystone
+name=keystone
 sentence=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
 url=http://keystonep5.sourceforge.net/
-prettyVersion=002
+prettyVersion=003
 paragraph=
-version=2
+version=3
 download=http://keystonep5.sourceforge.net/download/keystone.zip
 id=034
 
@@ -260,18 +260,6 @@ paragraph=Nest also includes an event-based communication system, built on the O
 version=6
 download=http://transmote.com/nest/download/Nest.zip
 id=047
-
-library
-category=Utilities
-authorList=[Philippe Lhoste](http://Phi.Lho.free.fr/)
-name=PGraphicsSVG
-sentence=Allows Processing to export the drawings of a sketch in SVG format.
-url=http://Phi.Lho.free.fr/programming/Processing/PGraphicsSVG/
-prettyVersion=1.2
-paragraph=It is used in a way similar to PGraphicsPDF, as a renderer / recorder. It uses the Apache Batik library.
-version=102
-download=http://phi.lho.free.fr/programming/Processing/PGraphicsSVG/PGraphicsSVG.zip
-id=064
 
 library
 category=Simulation
@@ -391,7 +379,7 @@ prettyVersion=1.0
 paragraph=Develop 'Arduino' applications directly from Processing using the full power of the Java language and cross-platform driverless USB HID deployment to V18'O development boards.
 version=1
 download=http://www.muvium.com/frappuccino/frappuccino.zip
-id=065
+id=064
 
 library
 category=Hardware
@@ -403,7 +391,7 @@ prettyVersion=v7
 paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
 version=7
 download=http://ketaiproject.org/ketai.zip
-id=067
+id=066
 
 library
 category=Typography
@@ -413,7 +401,7 @@ sentence=Extends 2D geometry operations to facilitate generative geometry. Inclu
 url=http://www.ricardmarxer.com/geomerative
 prettyVersion=
 paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
-version=35
+version=36
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=038
 
@@ -423,9 +411,9 @@ authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
 sentence=A lightweight library for creating animations and transitions.
 url=http://www.looksgood.de/libraries/Ani/
-prettyVersion=2.2
+prettyVersion=2.4
 paragraph=
-version=4
+version=6
 download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
 id=003
 
@@ -445,11 +433,11 @@ library
 category=Animation
 authorList=[Ekene Ijeoma](http://ekeneijeoma.com)
 name=ijeomamotion
-sentence=A library for sketching animations with numbers, colors vectors, beziers, curves and more!
-url=http://ekeneijeoma.com/processing/ijeomamotion/
-prettyVersion=4
-paragraph=A library for sketching animations with numbers, colors vectors, beziers, curves and more! It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too! You can also use all of aforementioed to call functions!.
-version=40
+sentence=A cross-mode Processing library for sketching animations with numbers, colors vectors, beziers, curves and more.
+url=https://github.com/ekeneijeoma/ijeomamotion
+prettyVersion=4.4
+paragraph=Cross-mode means that it will run and export in both Processing IDE's Java and Javascript modes. It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too. You can also use all of aforementioed to call functions! You can also use it in Javascript with or without Processing. However as of now the javascript port ijeomamotion.js doesnt include the ijeomamotion.tween.Callback class or ijeomamotion.geom and ijeomamotion.math packages but it will soon! Please post issues on Github or Processing's forums under "Contributed Libraries".
+version=44
 download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
 id=033
 
@@ -595,7 +583,7 @@ prettyVersion=1
 paragraph=
 version=1
 download=http://www.nucky.io/public/share.zip
-id=066
+id=065
 
 library
 category=GUI
@@ -627,9 +615,9 @@ authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=ControlP5
 sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
 url=http://www.sojamo.de/libraries/controlp5
-prettyVersion=2.0.1
+prettyVersion=2.0.3
 paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
-version=77
+version=79
 download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
 id=058
 
@@ -790,9 +778,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=shapes3d
 sentence=3D Shape creation and display made easy.
 url=http://www.lagers.org.uk/s3d4p/index.html
-prettyVersion=2.1.1
+prettyVersion=2.1.2
 paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
-version=6
+version=7
 download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
 id=050
 
