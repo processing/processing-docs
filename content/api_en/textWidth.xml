@@ -11,9 +11,7 @@
 <example>
 <image>textWidth_.png</image>
 <code><![CDATA[
-PFont font;
-font = loadFont("Sabon-Roman-32.vlw");
-textFont(font, 32);
+textSize(28);
 
 char c = 'T';
 float cw = textWidth(c);

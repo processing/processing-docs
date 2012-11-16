@@ -11,23 +11,17 @@
 <example>
 <image>textLeading_.png</image>
 <code><![CDATA[
-PFont font;
-// The font must be located in the sketch's 
-// "data" directory to load successfully
-font = loadFont("LetterGothicStd-Bold-12.vlw");
 // Text to display. The "\n" is a "new line" character
-String lines = "LIN1\nLIN2\nLIN3";
-textFont(font, 12);
-
-fill(255);  // Set fill to white
-textLeading(10);  // Set leading to 10
-text(lines, 0, 25);
-
-fill(150);  // Set fill to gray
-textLeading(20);  // Set leading to 20
-text(lines, 35, 25);
-
+String lines = "L1\nL2\nL3";
+textSize(12);
 fill(0);  // Set fill to black
+
+textLeading(10);  // Set leading to 10
+text(lines, 10, 25);
+
+textLeading(20);  // Set leading to 20
+text(lines, 40, 25);
+
 textLeading(30);  // Set leading to 30
 text(lines, 70, 25);
 ]]></code>

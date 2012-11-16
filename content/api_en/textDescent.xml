@@ -11,20 +11,17 @@
 <example>
 <image>textDescent_.png</image>
 <code><![CDATA[
-PFont font;
-font = loadFont("Sabon-Roman-32.vlw");
-textFont(font);
-
 float base = height * 0.75;
+float scalar = 0.8; // Different for each font
 
 textSize(32);  // Set initial text size
-float d = textDescent();  // Calc descent
-line(0, base+d, width, base+d);
+float a = textDescent() * scalar;  // Calc ascent
+line(0, base+a, width, base+a);
 text("dp", 0, base);  // Draw text on baseline
 
-textSize(60);  // Increase text size
-d = textDescent();  // Recalc descent
-line(40, base+d, width, base+d);
+textSize(64);  // Increase text size
+a = textDescent() * scalar;  // Recalc ascent
+line(40, base+a, width, base+a);
 text("dp", 40, base);  // Draw text on baseline
 ]]></code>
 </example>

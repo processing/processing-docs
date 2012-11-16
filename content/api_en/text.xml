@@ -11,11 +11,7 @@
 <example>
 <image>text_0.png</image>
 <code><![CDATA[
-PFont font;
-// The font must be located in the sketch's 
-// "data" directory to load successfully
-font = loadFont("LetterGothicStd-32.vlw");
-textFont(font);
+textSize(32);
 text("word", 10, 30); 
 fill(0, 102, 153);
 text("word", 10, 60);
@@ -28,12 +24,10 @@ text("word", 10, 90);
 <image>text_1.png</image>
 <code><![CDATA[
 size(100, 100, P3D);
-PFont font;
-font = loadFont("LetterGothicStd-32.vlw"); 
-textFont(font); 
-text("word", 15, 60, -30);  // Specify a z-axis value
-fill(0, 102, 153);
-text("word", 15, 60);  // Default depth, no z-value specified
+textSize(32);
+fill(0, 102, 153, 204);
+text("word", 12, 45, -30);  // Specify a z-axis value
+text("word", 12, 60);  // Default depth, no z-value specified
 ]]></code>
 </example>
 
@@ -55,7 +49,7 @@ Font support for the canvas element varies across browsers. Firefox currently ha
 </js_mode>
 
 <description><![CDATA[
-Draws text to the screen. Displays the information specified in the <b>data</b> or <b>stringdata</b> parameters on the screen in the position specified by the <b>x</b> and <b>y</b> parameters and the optional <b>z</b> parameter. A default font will be used unless a font is set with the <b>textFont()</b> function. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates.<br/>
+Draws text to the screen. Displays the information specified in the first parameter on the screen in the position specified by the additional parameters. A default font will be used unless a font is set with the <b>textFont()</b> function and a default size will be used unless a font is set with <b>textSize()</b>. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates.<br/>
 <br/>
 The <b>x2</b> and <b>y2</b> parameters define a rectangular area to display within and may only be used with string data. When these parameters are specified, they are interpreted based on the current <b>rectMode()</b> setting. Text that does not fit completely within the rectangle specified will not be drawn to the screen.<br/>
 <br/>
