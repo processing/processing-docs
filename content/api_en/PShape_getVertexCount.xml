@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>getVertexCount()</name>
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShape s;
+
+void setup() {
+  size(100, 100, P2D);
+  s = createShape();
+  s.vertex(0, 0);
+  s.vertex(60, 0);
+  s.vertex(60, 60);
+  s.vertex(0, 60);
+  s.end(CLOSE);
+}
+
+void draw() {
+  translate(20, 20);
+  for (int i = 0; i < s.getVertexCount(); i++) {
+    PVector v = s.getVertex(i);
+    v.x += random(-1, 1);
+    v.y += random(-1, 1);
+    s.setVertex(i, v);
+  }
+  shape(s);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>getVertexCount()</b> method returns the number of vertices that make up a PShape. In the above example, the value 4 is returned by the <b>getVertexCount()</b> method because 4 vertices are defined in <b>setup()</b>.
+]]></description>
+
+</root>

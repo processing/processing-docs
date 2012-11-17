@@ -30,7 +30,7 @@ void mousePressed() {
 </example>
 
 <description><![CDATA[
-Increases or decreases the size of a shape by expanding and contracting vertices. Shapes always scale from the relative origin of their bounding box. Scale values are specified as decimal percentages. For example, the method call <b>scale(2.0)</b> increases the dimension of a shape by 200%. Subsequent calls to the method multiply the effect. For example, calling <b>scale(2.0)</b> and then <b>scale(1.5)</b> is the same as <b>scale(3.0)</b>. This transformation is applied directly to the shape, it's not refreshed each time <b>draw()</b> is run. 
+Increases or decreases the size of a shape by expanding and contracting vertices. Shapes always scale from the relative origin of their bounding box. Scale values are specified as decimal percentages. For example, the method call <b>scale(2.0)</b> increases the dimension of a shape by 200%. Subsequent calls to the method multiply the effect. For example, calling <b>scale(2.0)</b> and then <b>scale(1.5)</b> is the same as <b>scale(3.0)</b>. This transformation is applied directly to the shape; it's not refreshed each time <b>draw()</b> is run. 
 <br /><br />
 Using this method with the <b>z</b> parameter requires using the P3D parameter in combination with size. 
 ]]></description>

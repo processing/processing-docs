@@ -11,12 +11,29 @@
 <example>
 <image></image>
 <code><![CDATA[
-Example to come...
+PShape s;  // The PShape object
+
+void setup() {  
+  size(100, 100, P2D);
+  // Creating the PShape as a square. The corner 
+  // is 0,0 so that the center is at 40,40 
+  s = createShape();
+  s.fill(0, 0, 255);
+  s.noStroke();
+  s.vertex(0, 0);
+  s.vertex(0, 50);
+  s.vertex(50, 0);
+  s.end();
+}
+
+void draw() {
+  shape(s, 25, 25);
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+This method is used to complete a custom shape created with the <b>createShape()</b> function. It's always and only used with <b>createShape()</b>. 
 ]]></description>
 
 </root>

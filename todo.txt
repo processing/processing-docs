@@ -33,10 +33,13 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   . hint(ENABLE_STROKE_PURE) ??????
 
 - PShape --CR
-$ s.beginContour()
-$ s.endContour()
-$ s.end()
+x s.beginContour()
+x s.endContour()
+x s.end()
 $ s.addChild()
+- s.setVertex()
+- s.getVertex();
+- s.getVertexCount()
 - s.getChild() [Modify?????]
 
 - createShape() -- temp to "include"
@@ -66,6 +69,8 @@ $ beginPGL()
 $ endPGL()
 $ textureWrap(REPEAT)
 
+- example for textMode() --CR
+
 TO COME
 - clip()/noClip()
 - saveType(), loadType()
@@ -78,7 +83,7 @@ OPEN QUESTIONS
 - loadImage() with callback ??????
 - callbacks for images or use requestImage() ??????
 - shape(x, y, z, w, h, d) ??????
-- loadShape() changes for OBJ ??????
+x loadShape() changes for OBJ ??????
 - Disambiguation pages for things like "copy" in PImage and PVector
 - Is there a way to catch for keywords like "run" and "init" in the parser?
 

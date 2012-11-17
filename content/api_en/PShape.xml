@@ -9,16 +9,45 @@
 <type></type>
 
 <example>
-<image>PShape.png</image>
+<image></image>
 <code><![CDATA[
 PShape s;
-s = loadShape("bot.svg");
-shape(s, 10, 10, 80, 80);
+
+void setup() {
+  size(100, 100);
+  // The file "bot.svg" must be in the data folder
+  // of the current sketch to load successfully
+  s = loadShape("bot.svg");
+}
+
+void draw() {
+  shape(s, 10, 10, 80, 80);
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShape s;
+
+void setup() {
+  size(100, 100, P3D);
+  // The file "bot.obj" must be in the data folder
+  // of the current sketch to load successfully
+  s = loadShape("bot.obj");
+}
+
+void draw() {
+  background(204);
+  translate(width/2, height/2);
+  shape(s, 0, 0);
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-Datatype for storing shapes. Processing can currently load and display SVG (Scalable Vector Graphics) shapes. Before a shape is used, it must be loaded with the <b>loadShape()</b> function. The <b>shape()</b> function is used to draw the shape to the display window. The <b>PShape</b> object contain a group of methods, linked below, that can operate on the shape data. 
+Datatype for storing shapes. Processing can currently load and display SVG (Scalable Vector Graphics)  and OBJ shapes. Before a shape is used, it must be loaded with the <b>loadShape()</b> function. The <b>shape()</b> function is used to draw the shape to the display window. The <b>PShape</b> object contains a group of methods, linked below, that can operate on the shape data. OBJ files can only be opened using the P3D renderer. 
 <br /><br />
 The <b>loadShape()</b> function supports SVG files created with Inkscape and Adobe Illustrator. It is not a full SVG implementation, but offers some straightforward support for handling vector data.
 ]]></description>

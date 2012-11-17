@@ -9,25 +9,32 @@
 <type></type>
 
 <example>
-<image>PShape_setVisible_.png</image>
+<image></image>
 <code><![CDATA[
-// The file "bot.svg" must be in the data folder
-// of the current sketch to load successfully
 PShape s;
-s = loadShape("bot.svg");
-shape(s, 10, 10, 80, 80);  // Draw shape
-s.setVisible(false);
-if (s.isVisible() == false) {  // Or use: "if (!s.isVisible)"
-  noFill();
-  rect(5, 5, 90, 90); 
+
+void setup() {
+  size(100, 100);
+  // The file "bot.svg" must be in the data folder
+  // of the current sketch to load successfully 
+  s = loadShape("bot.svg");
+}
+void draw() {
+  background(204);
+  shape(s, 10, 10, 80, 80);  // Draw shape
+  s.setVisible(mousePressed);
+  if (s.isVisible() == false) {  // Or use: "if (!s.isVisible)"
+    noFill();
+    rect(10, 10, 80, 80); 
+  }
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Sets the shape to be visible or invisible. This is determined by the value of the <b>visible</b> parameter.
-<br/> <br/>
-The visibility of a shape is usually controlled by whatever program created the SVG file. For instance, this parameter is controlled by showing or hiding the shape in the layers palette in Adobe Illustrator.
+Sets the shape to be visible or invisible. This is determined by the value of the <b>visible</b> parameter.<br/>
+<br/>
+The default visibility of a shape is usually controlled by whatever program created the SVG file. For instance, this parameter is controlled by showing or hiding the shape in the layers palette in Adobe Illustrator.
 ]]></description>
 
 </root>

@@ -11,12 +11,42 @@
 <example>
 <image></image>
 <code><![CDATA[
-Example to come...
+PShape s;
+
+void setup() {
+  size(100, 100, P2D);
+  // Make a shape
+  s = createShape();
+  s.noStroke();
+  // Exterior part of shape
+  s.beginContour();
+  s.vertex(-50,-50);
+  s.vertex(50,-50);
+  s.vertex(50,50);
+  s.vertex(-50,50);
+  s.endContour();
+  // Interior part of shape
+  s.beginContour();
+  s.vertex(-20,-20);
+  s.vertex(20,-20);
+  s.vertex(20,20);
+  s.vertex(-20,20);
+  s.endContour();
+  // Finish off shape
+  s.end();
+}
+
+void draw() {
+  background(52);
+  translate(width/2, height/2);
+  s.rotate(0.01);
+  shape(s);
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+The <b>beginContour()</b> and <b>endContour()</b> methods make it possible to define shapes with other shapes cut out of them. For example, the inside of a letter 'O'. These two functions are always used together, you'll never use one without the other. Between them, define the geometry you want to create. As you'll see when you run the example above, the second smaller shape is cut out of the first larger shape.
 ]]></description>
 
 </root>
