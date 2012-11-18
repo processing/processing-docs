@@ -37,7 +37,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-The <b>getVertex()</b> method returns a PVector that has the coordinates of the vertex point located at the position defined by the <b>index</b> parameter. 
+The <b>getVertex()</b> method returns a PVector with the coordinates of the vertex point located at the position defined by the <b>index</b> parameter. 
 ]]></description>
 
 </root>

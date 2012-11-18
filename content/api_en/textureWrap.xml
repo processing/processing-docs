@@ -11,11 +11,36 @@
 <example>
 <image></image>
 <code><![CDATA[
+PImage img;
+
+void setup() {
+  size(300, 300, P2D);
+  img = loadImage("berlin-1.jpg");
+  textureMode(NORMAL);
+}
+
+void draw() {
+  background(0);
+  translate(width/2, height/2);
+  rotate(map(mouseX, 0, width, -PI, PI));
+  if (mousePressed) {
+    textureWrap(REPEAT); 
+  } else {
+    textureWrap(CLAMP);
+  }
+  beginShape();
+  texture(img);
+  vertex(-100, -100, 0, 0);
+  vertex(100, -100, 2, 0);
+  vertex(100, 100, 2, 2);
+  vertex(-100, 100, 0, 2);
+  endShape();
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly.
+Defines if textures repeat or draw once within a texture map. The two parameters are CLAMP (the default behavior) and REPEAT. This function only works with the P2D and P3D renderers.
 ]]></description>
 
 </root>

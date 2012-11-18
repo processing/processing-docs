@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>blend()</name>
+<name>blendMode()</name>
 
 <category>Rendering</category>
 
@@ -12,12 +12,52 @@
 <example>
 <image></image>
 <code><![CDATA[
-Example to come...
+size(100, 100, P2D);
+background(0);
+blendMode(ADD);
+stroke(102);
+strokeWeight(30);
+line(25, 25, 75, 75);
+line(75, 25, 25, 75);
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+size(100, 100, P2D);
+blendMode(MULTIPLY);
+stroke(51);
+strokeWeight(30);
+line(25, 25, 75, 75);
+line(75, 25, 25, 75);
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+Blends the pixels in the display window according to the defined mode. The <b>blendMode()</b> function is faster than the <b>blend()</b> function and it only works with the P2D and P3D renderers. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B):<br />
+<br />
+BLEND - linear interpolation of colours: C = A*factor + B<br />
+<br />
+ADD - additive blending with white clip: C = min(A*factor + B, 255)<br />
+<br />
+SUBTRACT - subtractive blending with black clip: C = max(B - A*factor, 0)<br />
+<br />
+DARKEST - only the darkest colour succeeds: C = min(A*factor, B)<br />
+<br />
+LIGHTEST - only the lightest colour succeeds: C = max(A*factor, B)<br />
+<br />
+DIFFERENCE - subtract colors from underlying image.<br />
+<br />
+EXCLUSION - similar to DIFFERENCE, but less extreme.<br />
+<br />
+MULTIPLY - multiply the colors, result will always be darker.<br />
+<br />
+SCREEN - opposite multiply, uses inverse values of the colors.<br />
+<br />
+REPLACE - default mode, the pixels entirely replace the others.<br />
+<br />
+Unlike <b>blend()</b>, the <b>blendMode()</b> function does not support the following: HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN.
 ]]></description>
 
 </root>

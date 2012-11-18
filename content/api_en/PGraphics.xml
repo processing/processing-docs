@@ -15,16 +15,17 @@ PGraphics pg;
 
 void setup() {
   size(100, 100);
-  pg = createGraphics(80, 80, P2D);
+  pg = createGraphics(40, 40);
 }
 
 void draw() {
   pg.beginDraw();
   pg.background(100);
   pg.stroke(255);
-  pg.line(40, 40, mouseX, mouseY);
+  pg.line(20, 20, mouseX, mouseY);
   pg.endDraw();
-  image(pg, 10, 10); 
+  image(pg, 9, 30); 
+  image(pg, 51, 30);
 }
 ]]></code>
 </example>

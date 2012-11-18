@@ -29,26 +29,17 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 - TABLE  --SM
   . loadTable()
 
-- Add link to hint() within stroke() to let people know about it
-  . hint(ENABLE_STROKE_PURE) ??????
-
 - PShape --CR
-x s.beginContour()
-x s.endContour()
-x s.end()
-$ s.addChild()
-- s.setVertex()
-- s.getVertex();
-- s.getVertexCount()
-- s.getChild() [Modify?????]
-
-- createShape() -- temp to "include"
+  - s.getChild() [Modify?????]
+  
+- add REPEAT and CLAMP to keywords base file (for textureWrap())
 
 - PShader --CR
   $ loadShader()
+  $ PShader
+  $ PShader.set()
   $ resetShader()
   $ shader()
-  $ PShader.bind()
   
   //
   loadShader("fragment.glsl")
@@ -64,12 +55,12 @@ $ s.addChild()
   resetShader(TRIANGLES); (the default: same as no param, not really advertised)
   //
 
-$ blendMode()
-$ beginPGL()
-$ endPGL()
 $ textureWrap(REPEAT)
 
-- example for textMode() --CR
+- Add link to hint() within stroke() to let people know about it
+  . hint(ENABLE_STROKE_PURE) ??????
+  
+- Or, should the reference change because it doesn't work in P3D, P2D?
 
 TO COME
 - clip()/noClip()
@@ -94,6 +85,19 @@ x loadShape() changes for OBJ ??????
 
 
 DONE
+x blendMode()
+x example for textMode() --CR
+o beginPGL() --on hold for post 2.0
+o endPGL() --on hold for post 2.0
+x PShape --CR
+x s.beginContour()
+x s.endContour()
+x s.end()
+$ s.addChild()
+x s.setVertex()
+x s.getVertex();
+x s.getVertexCount()
+x createShape() -- temp to "include"
 o JSON  --SM  // This has been removed for 2.0
 x loadXML()  --SM
 x XML page isn't being created or showing up in the Index. Check it.

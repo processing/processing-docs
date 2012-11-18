@@ -25,8 +25,8 @@ endShape();
 </example>
 
 <description><![CDATA[
-Sets a texture to be applied to vertex points. The <b>texture()</b> function must be called between <b>beginShape()</b> and <b>endShape()</b> and before any calls to <b>vertex()</b>.
-<br/><br/>
+Sets a texture to be applied to vertex points. The <b>texture()</b> function must be called between <b>beginShape()</b> and <b>endShape()</b> and before any calls to <b>vertex()</b>. This function only works with the P2D and P3D renderers.<br/>
+<br/>
 When textures are in use, the fill color is ignored. Instead, use <b>tint()</b> to specify the color of the texture as it is applied to the shape.
 ]]></description>
 
