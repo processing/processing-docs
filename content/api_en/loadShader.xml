@@ -13,6 +13,20 @@
 <example>
 <image></image>
 <code><![CDATA[
+PShader blur;
+
+void setup() {
+  size(640, 360, P2D);
+  blur = loadShader("blur.glsl"); 
+  stroke(0, 102, 153);
+  rectMode(CENTER);
+}
+
+void draw() {
+  filter(blur);  
+  rect(mouseX-75, mouseY, 150, 150); 
+  ellipse(mouseX+75, mouseY, 150, 150);
+}
 ]]></code>
 </example>
 

@@ -29,12 +29,13 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 - TABLE  --SM
   . loadTable()
 
-- PShape --CR
-  - s.getChild() [Modify?????]
-  
-- add REPEAT and CLAMP to keywords base file (for textureWrap())
+- Add to keywords.base
+  ENABLE_STROKE_PURE
+  DISABLE_DEPTH_MASK
+  REPEAT
+  CLAMP
 
-- PShader --CR
+$ PShader --CR
   $ loadShader()
   $ PShader
   $ PShader.set()
@@ -55,26 +56,33 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   resetShader(TRIANGLES); (the default: same as no param, not really advertised)
   //
 
-$ textureWrap(REPEAT)
+- Request
+  . request.setCallback()
+- createRequest()
+
+- hide the "source" parameter from the Reference for createShape()
 
 - Add link to hint() within stroke() to let people know about it
-  . hint(ENABLE_STROKE_PURE) ??????
-  
-- Or, should the reference change because it doesn't work in P3D, P2D?
+  . hint(ENABLE_STROKE_PURE)
 
-TO COME
-- clip()/noClip()
-- saveType(), loadType()
-- arc() with different options
+- filter() now accepts shaders, make the change. It's far more efficient, fast
+
+- add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
+
+- add shape(x, y, z)
+
+- change "shape" parameter to shape() to "shp" to match "img" in image()
+
+- clarify that getVertex() and setVertex() only work on shapes made manually with the long form of createShape()
+  and not the versions these createShape(RECT, 10, 10, 60, 60)
+
 
 OPEN QUESTIONS
-- thread() ??????
-- filter() now accepts shaders ??????
-- clear()  New method for PGraphics ??????
-- loadImage() with callback ??????
-- callbacks for images or use requestImage() ??????
-- shape(x, y, z, w, h, d) ??????
-x loadShape() changes for OBJ ??????
+- will getChild() work for OBJ
+- need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
+- thread() ???
+- loadImage() with callback ???
+- callbacks for images or use requestImage() ???
 - Disambiguation pages for things like "copy" in PImage and PVector
 - Is there a way to catch for keywords like "run" and "init" in the parser?
 
@@ -83,8 +91,15 @@ x loadShape() changes for OBJ ??????
 -   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
 -   figure out why font naming not working correctly -- CR
 
+TO COME ???
+- clip()/noClip()
+- saveType(), loadType()
+- arc() with different options
 
 DONE
+o shape(x, y, z, w, h, d) ???
+x loadShape() changes for OBJ ???
+x textureWrap(REPEAT)
 x blendMode()
 x example for textMode() --CR
 o beginPGL() --on hold for post 2.0

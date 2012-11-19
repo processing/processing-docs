@@ -13,13 +13,20 @@
 <code><![CDATA[
 PShape states;
 PShape ohio;
-states = loadShape("tristate.svg");
-ohio = states.getChild("OH");
-background(0);
-shape(states, -48, 5);
-ohio.disableStyle();
-fill(102, 0, 0);
-shape(ohio, -48, 5);
+
+void setup() {
+  size(100, 100);
+  states = loadShape("tristate.svg");
+  ohio = states.getChild("OH");
+  ohio.disableStyle();
+}
+
+void draw() {
+  background(0);
+  shape(states, -48, 5);
+  fill(102, 0, 0);
+  shape(ohio, -48, 5);
+}
 ]]></code>
 </example>
 

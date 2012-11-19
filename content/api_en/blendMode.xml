@@ -35,9 +35,9 @@ line(75, 25, 25, 75);
 </example>
 
 <description><![CDATA[
-Blends the pixels in the display window according to the defined mode. The <b>blendMode()</b> function is faster than the <b>blend()</b> function and it only works with the P2D and P3D renderers. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B):<br />
+Blends the pixels in the display window according to the defined mode. The <b>blendMode()</b> function is much faster than the <b>blend()</b> function and it only works with the P2D and P3D renderers. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B):<br />
 <br />
-BLEND - linear interpolation of colours: C = A*factor + B<br />
+BLEND - linear interpolation of colours: C = A*factor + B. This is the default blending mode.<br />
 <br />
 ADD - additive blending with white clip: C = min(A*factor + B, 255)<br />
 <br />
@@ -55,9 +55,9 @@ MULTIPLY - multiply the colors, result will always be darker.<br />
 <br />
 SCREEN - opposite multiply, uses inverse values of the colors.<br />
 <br />
-REPLACE - default mode, the pixels entirely replace the others.<br />
+REPLACE - the pixels entirely replace the others and don't utilize alpha (transparency) values<br />
 <br />
-Unlike <b>blend()</b>, the <b>blendMode()</b> function does not support the following: HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN.
+Unlike <b>blend()</b>, the <b>blendMode()</b> function does not support the following: HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN. 
 ]]></description>
 
 </root>

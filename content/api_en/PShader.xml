@@ -13,26 +13,33 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example to come
+PShader blur;
+
+void setup() {
+  size(640, 360, P2D);
+  blur = loadShader("blur.glsl"); 
+  stroke(0, 102, 153);
+  rectMode(CENTER);
+}
+
+void draw() {
+  filter(blur);  
+  rect(mouseX-75, mouseY, 150, 150); 
+  ellipse(mouseX+75, mouseY, 150, 150);
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer. 
 ]]></description>
 
 <syntax></syntax>
 
 <method>
-<mname>bind()</mname>
+<mname>set()</mname>
 <mdescription>To come...</mdescription>
 </method>
-
-<method>
-<mname>unbind()</mname>
-<mdescription>To come...</mdescription>
-</method>
-
 
 <constructor>
 </constructor>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>PShader</name>
+
+<category>Rendering</category>
+
+<subcategory>Shaders</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<unsupported_modes>js</unsupported_modes>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShader blur;
+
+void setup() {
+  size(640, 360, P2D);
+  blur = loadShader("blur.glsl"); 
+  stroke(0, 102, 153);
+  rectMode(CENTER);
+}
+
+void draw() {
+  filter(blur);  
+  rect(mouseX-75, mouseY, 150, 150); 
+  ellipse(mouseX+75, mouseY, 150, 150);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer. 
+]]></description>
+
+<syntax></syntax>
+
+<method>
+<mname>set()</mname>
+<mdescription>To come...</mdescription>
+</method>
+
+<constructor>
+</constructor>
+
+<cparameter>
+<clabel></clabel>
+<cdescription></cdescription>
+</cparameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>PDE</partof>
+
+
+
+</root>
