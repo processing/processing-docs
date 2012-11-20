@@ -31,7 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Sets the variables inside the shader to modify the effect while the program is running.
+Sets the uniform variables inside the shader to modify the effect while the program is running.
 ]]></description>
 
 

@@ -32,7 +32,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer.
+This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer. Use the <b>loadShader()</b> function to load your shader code. [Note: It's strongly encouraged to use <b>loadShader()</b> to create a PShader object, rather than calling the PShader constructor manually.]
 ]]></description>
 
 <returns></returns>

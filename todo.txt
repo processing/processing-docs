@@ -28,61 +28,63 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 - PVector changes  --SM
 - TABLE  --SM
   . loadTable()
+  - loadTable("somethingorother", "csv");
+  - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
 
 - Add to keywords.base
   ENABLE_STROKE_PURE
   DISABLE_DEPTH_MASK
   REPEAT
   CLAMP
-
-- PShader --CR
-  x loadShader()
-  x PShader
-  x PShader.set()
-  $ resetShader()
-  x shader()
   
-  //
-  loadShader("fragment.glsl")
-  loadShader("fragment.glsl", "vertex.glsl")
-  loadShader(null, "vertex.glsl")
-  shader(awesome);
-  shader(awesome, POINTS);
-  shader(awesome, LINES);
-  shader(awesome, TRIANGLES); (the default: same as no param, not really advertised)
-  resetShader();
-  resetShader(POINTS);
-  resetShader(LINES);
-  resetShader(TRIANGLES); (the default: same as no param, not really advertised)
-  //
+- blendMode() 
+  
+  "
+  So for the reference, we can say that these modes are not available:
+  HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN
+  which will produce: "blendMode(%1$s) is not supported by this renderer"
+
+  And that in some cases (on older/limited hardware, bad drivers, etc), these are unavailable:
+  LIGHTEST, DARKEST, and DIFFERENCE
+  which makes it say: "blendMode(%1$s) is not supported by this hardware (or driver)";
+
+  with %1$s replaced by the actual name of the mode.
+  "
+  
+- add beginContour() / endContour() !!!!!
 
 - Request
-  . request.setCallback()
 - createRequest()
+- request.getBytes() 
+- request.getFont() 
+- request.getImage()  
+- request.getShader()  
+- request.getShape()  
+- request.getStrings()  
+- request.getTable() 
+- request.getXML() 
+
+loadXXX with second parameter for file type:
+- loadImage("blahthing", "jpg");
+- loadTable("somethingorother", "csv");
+- loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
 
 - hide the "source" parameter from the Reference for createShape()
 
 - Add link to hint() within stroke() to let people know about it
   . hint(ENABLE_STROKE_PURE)
 
-- filter() now accepts shaders, make the change. It's far more efficient, fast
-
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
-
-- add shape(x, y, z)
 
 - change "shape" parameter to shape() to "shp" to match "img" in image()
 
-- clarify that getVertex() and setVertex() only work on shapes made manually with the long form of createShape()
-  and not the versions these createShape(RECT, 10, 10, 60, 60)
+- clarify that getVertex() and setVertex() only work on shapes made manually with the long form of createShape() and not the versions these createShape(RECT, 10, 10, 60, 60)
 
 
 OPEN QUESTIONS
-- will getChild() work for OBJ
+- will getChild() work for OBJ?
 - need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
 - thread() ???
-- loadImage() with callback ???
-- callbacks for images or use requestImage() ???
 - Disambiguation pages for things like "copy" in PImage and PVector
 - Is there a way to catch for keywords like "run" and "init" in the parser?
 
@@ -92,11 +94,52 @@ OPEN QUESTIONS
 -   figure out why font naming not working correctly -- CR
 
 TO COME ???
+- add shape(x, y, z)
 - clip()/noClip()
 - saveType(), loadType()
 - arc() with different options
 
-DONE
+// // // // // // // // // // // // // // // // // // // // //
+
+3.0 REFERENCE
+
+attrib() // or attribute()
+
+//
+
+beginShape();
+
+fill(203, 100, 44);
+attrib("fuzziness", 0.5);
+vertex(40, 30, 20);
+
+fill(200, 141, 100);
+attrib("fuzziness", 0.4);
+vertex(30, 20 30);
+
+// .. and so on
+
+endShape();
+
+Explained another way, it's as if we didn't have things like fill or stroke or whatever, and had to write them like:
+
+attrib("fill", 203, 100, 44);
+
+Anyhow… something to dream about for the future. Andres had brought it up since you have two setters with a shader: uniforms and attributes. We make uniforms available via PShader.set(), but we don't need/include a PShader.setAttribute() because it has to be collected by the renderer, then passed to the shader as a big array before rendering (i.e. there'd be a hidden PShader.setAttributeData("fuzziness", fuzzyArray) that's used by PGraphicsOpenGL).
+
+//
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+DONE FOR 2.0 REFERENCE
+x filter() now accepts shaders, make the change. It's far more efficient, fast
+x PShader --CR
+  x loadShader()
+  x PShader
+  x PShader.set()
+  x resetShader()
+  x shader()
 o shape(x, y, z, w, h, d) ???
 x loadShape() changes for OBJ ???
 x textureWrap(REPEAT)

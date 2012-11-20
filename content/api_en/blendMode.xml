@@ -35,7 +35,7 @@ line(75, 25, 25, 75);
 </example>
 
 <description><![CDATA[
-Blends the pixels in the display window according to the defined mode. The <b>blendMode()</b> function is much faster than the <b>blend()</b> function and it only works with the P2D and P3D renderers. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B):<br />
+Blends the pixels in the display window according to the defined mode. The <b>blendMode()</b> function is much faster than the <b>blend()</b> function, but it only works with the P2D and P3D renderers. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B):<br />
 <br />
 BLEND - linear interpolation of colours: C = A*factor + B. This is the default blending mode.<br />
 <br />
