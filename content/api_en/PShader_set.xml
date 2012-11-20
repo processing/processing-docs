@@ -2,64 +2,37 @@
 <root>
 <name>PShader</name>
 
-<category>Rendering</category>
+<category>PShader</category>
 
-<subcategory>Shaders</subcategory>
-
-<usage>Web &amp; Application</usage>
+<subcategory>Method</subcategory>
 
 <unsupported_modes>js</unsupported_modes>
 
 <example>
 <image></image>
 <code><![CDATA[
-PShader blur;
+PImage tex;
+PShader deform;
 
 void setup() {
   size(640, 360, P2D);
-  blur = loadShader("blur.glsl"); 
-  stroke(0, 102, 153);
-  rectMode(CENTER);
+  tex = loadImage("tex1.jpg");
+  deform = loadShader("deform.glsl");
+  deform.set("resolution", float(width), float(height));
 }
 
 void draw() {
-  filter(blur);  
-  rect(mouseX-75, mouseY, 150, 150); 
-  ellipse(mouseX+75, mouseY, 150, 150);
+  deform.set("time", millis() / 1000.0);
+  deform.set("mouse", float(mouseX), float(mouseY));
+  shader(deform);
+  image(tex, 0, 0, width, height);
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer. 
+Sets the variables inside the shader to modify the effect while the program is running.
 ]]></description>
-
-<syntax></syntax>
-
-<method>
-<mname>set()</mname>
-<mdescription>To come...</mdescription>
-</method>
-
-<constructor>
-</constructor>
-
-<cparameter>
-<clabel></clabel>
-<cdescription></cdescription>
-</cparameter>
-
-<returns></returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>PDE</partof>
-
 
 
 </root>

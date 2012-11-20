@@ -13,11 +13,24 @@
 <example>
 <image></image>
 <code><![CDATA[
+PShader edges;  
+PImage img;
+    
+void setup() {
+  size(640, 360, P2D);
+  img = loadImage("leaves.jpg");      
+  edges = loadShader("edges.glsl");
+}
+
+void draw() {
+  shader(edges);
+  image(img, 0, 0);
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+Applies the shader specified by the parameters. It's compatible with the P2D and P3D renderers, but not with the default renderer.
 ]]></description>
 
 </root>

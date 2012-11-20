@@ -79,8 +79,29 @@ filter(DILATE);
 ]]></code>
 </example>
 
+<example>
+<image>filter_4_blur.png</image>
+<code><![CDATA[
+PShader blur;
+PImage img;
+
+void setup() {
+  size(100, 100, P2D);
+  blur = loadShader("blur.glsl");
+  img = loadImage("apples.jpg");
+  image(img, 0, 0); 
+}
+
+void draw() {
+  filter(blur); // Blurs more each time through draw()
+}
+]]></code>
+</example>
+
 <description><![CDATA[
-Filters the display window as defined by one of the following modes:<br />
+Filters the display window using a preset filter or with a custom shader. Using a shader with <b>filter()</b> is much faster than without. Shaders require the P2D or P3D renderer in size().<br />
+<br />
+The presets options are:<br />
 <br />
 THRESHOLD<br />
 Converts the image to black and white pixels depending if they are above or below the threshold defined by the level parameter. The parameter must be between 0.0 (black) and 1.0 (white). If no level is specified, 0.5 is used.<br />

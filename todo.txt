@@ -35,12 +35,12 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   REPEAT
   CLAMP
 
-$ PShader --CR
-  $ loadShader()
-  $ PShader
-  $ PShader.set()
+- PShader --CR
+  x loadShader()
+  x PShader
+  x PShader.set()
   $ resetShader()
-  $ shader()
+  x shader()
   
   //
   loadShader("fragment.glsl")

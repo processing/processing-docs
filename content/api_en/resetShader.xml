@@ -13,12 +13,26 @@
 <example>
 <image></image>
 <code><![CDATA[
-Example to come...
+PShader edges;  
+PImage img;
+    
+void setup() {
+  size(640, 360, P2D);
+  img = loadImage("leaves.jpg");      
+  edges = loadShader("edges.glsl");
+}
+
+void draw() {
+  shader(edges);
+  image(img, 0, 0);
+  resetShader();
+  image(img, width/2, 0);
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+Restores the default shaders. Code that runs after <b>resetShader()</b> will not be affected by previously defined shaders.
 ]]></description>
 
 </root>

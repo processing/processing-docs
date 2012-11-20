@@ -17,6 +17,7 @@ PShader blur;
 
 void setup() {
   size(640, 360, P2D);
+  // Shaders files must be in the "data" folder to load correctly
   blur = loadShader("blur.glsl"); 
   stroke(0, 102, 153);
   rectMode(CENTER);
@@ -31,23 +32,8 @@ void draw() {
 </example>
 
 <description><![CDATA[
-This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer. 
+This class encapsulates a GLSL shader program, including a vertex and a fragment shader. It's compatible with the P2D and P3D renderers, but not with the default renderer.
 ]]></description>
-
-<syntax></syntax>
-
-<method>
-<mname>set()</mname>
-<mdescription>To come...</mdescription>
-</method>
-
-<constructor>
-</constructor>
-
-<cparameter>
-<clabel></clabel>
-<cdescription></cdescription>
-</cparameter>
 
 <returns></returns>
 
