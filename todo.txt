@@ -80,6 +80,13 @@ loadXXX with second parameter for file type:
 
 - clarify that getVertex() and setVertex() only work on shapes made manually with the long form of createShape() and not the versions these createShape(RECT, 10, 10, 60, 60)
 
+- clip()/noClip()
+  if (mousePressed) {
+    noClip();
+  } else {
+    clip(mouseX, mouseY, 50, 50);
+  }
+
 
 OPEN QUESTIONS
 - will getChild() work for OBJ?
@@ -95,8 +102,6 @@ OPEN QUESTIONS
 
 TO COME ???
 - add shape(x, y, z)
-- clip()/noClip()
-- saveType(), loadType()
 - arc() with different options
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -133,6 +138,7 @@ Anyhow… something to dream about for the future. Andres had brought it up sinc
 // // // // // // // // // // // // // // // // // // // // //
 
 DONE FOR 2.0 REFERENCE
+o saveType(), loadType()
 x filter() now accepts shaders, make the change. It's far more efficient, fast
 x PShader --CR
   x loadShader()
