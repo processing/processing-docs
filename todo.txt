@@ -37,20 +37,6 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   REPEAT
   CLAMP
   
-- blendMode() 
-  
-  "
-  So for the reference, we can say that these modes are not available:
-  HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN
-  which will produce: "blendMode(%1$s) is not supported by this renderer"
-
-  And that in some cases (on older/limited hardware, bad drivers, etc), these are unavailable:
-  LIGHTEST, DARKEST, and DIFFERENCE
-  which makes it say: "blendMode(%1$s) is not supported by this hardware (or driver)";
-
-  with %1$s replaced by the actual name of the mode.
-  "
-  
 - add beginContour() / endContour() !!!!!
 
 - Request
@@ -71,14 +57,13 @@ loadXXX with second parameter for file type:
 
 - hide the "source" parameter from the Reference for createShape()
 
-- Add link to hint() within stroke() to let people know about it
-  . hint(ENABLE_STROKE_PURE)
+- hint() descriptions need to be completed
 
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
 
-- change "shape" parameter to shape() to "shp" to match "img" in image()
+- change "shape" parameter in shape() to "shp" to match "img" in image()
 
-- clarify that getVertex() and setVertex() only work on shapes made manually with the long form of createShape() and not the versions these createShape(RECT, 10, 10, 60, 60)
+- clarify in reference that getVertex() and setVertex() only work on shapes made manually with the long form of createShape() and not the versions these createShape(RECT, 10, 10, 60, 60)
 
 - clip()/noClip()
   if (mousePressed) {
@@ -87,20 +72,18 @@ loadXXX with second parameter for file type:
     clip(mouseX, mouseY, 50, 50);
   }
 
+- write reference for getChild() re: OBJ
 
 OPEN QUESTIONS
-- will getChild() work for OBJ?
 - need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
 - thread() ???
-- Disambiguation pages for things like "copy" in PImage and PVector
-- Is there a way to catch for keywords like "run" and "init" in the parser?
 
 - 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --CR
 - PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
 -   figure out why font naming not working correctly -- CR
 
-TO COME ???
+To add as they are programmed:
 - add shape(x, y, z)
 - arc() with different options
 
@@ -108,7 +91,9 @@ TO COME ???
 
 3.0 REFERENCE
 
-attrib() // or attribute()
+- attrib() // or attribute()
+- Disambiguation pages for things like "copy" in PImage and PVector
+- Is there a way to catch for keywords like "run" and "init" in the parser?
 
 //
 

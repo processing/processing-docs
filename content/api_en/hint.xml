@@ -11,31 +11,25 @@
 <description><![CDATA[
 Set various hints and hacks for the renderer. This is used to handle obscure rendering features that cannot be implemented in a consistent manner across renderers. Each hint is enabled with the "ENABLE" syntax and disabled with "DISABLE." Some are enabled by default and other are disabled. For example, to turn on native fonts, use <b>hint(ENABLE_NATIVE_FONTS)</b> and later use <b>hint(DISABLE_NATIVE_FONTS)</b> to stop using the feature. Some options might graduate to standard features instead of hints over time.
 <br/><br/>
-hint(ENABLE_NATIVE_FONTS) - Use the native version fonts when they are installed, rather than the bitmapped version from a .vlw file. This is useful with the default renderer setting, as it will improve font rendering speed. This is not enabled by default, because it can be misleading while testing because the type will look great on your machine (because you have the font installed) but lousy on others' machines if the identical font is unavailable. This option can only be set per-sketch, and must be called before any use of textFont().
+hint(ENABLE_NATIVE_FONTS) - Use the native version fonts when they are installed, rather than the bitmapped version from a .vlw file. This is useful with the default renderer setting, as it will improve font rendering speed. This is not enabled by default, because it can be misleading while testing because the type will look great on your machine (because you have the font installed) but lousy on others' machines if the identical font is unavailable. This option can only be set per-sketch, and must be called before any use of <b>textFont()</b>.
 <br/><br/>
-hint(DISABLE_DEPTH_TEST) - Disable the zbuffer, allowing you to draw on top of everything at will. When depth testing is disabled, items will be drawn to the screen sequentially, like a painting. This hint is most often used to draw in 3D, then draw in 2D on top of it (for instance, to draw GUI controls in 2D on top of a 3D interface). Starting in release 0149, this will also clear the depth buffer. Restore the default with hint(ENABLE_DEPTH_TEST), but note that with the depth buffer cleared, any 3D drawing that happens later in draw() will ignore existing shapes on the screen.
+hint(DISABLE_DEPTH_TEST) - Disable the zbuffer, allowing you to draw on top of everything at will. When depth testing is disabled, items will be drawn to the screen sequentially, like a painting. This hint is most often used to draw in 3D, then draw in 2D on top of it (for instance, to draw GUI controls in 2D on top of a 3D interface). Starting in release 0149, this will also clear the depth buffer. Restore the default with hint(ENABLE_DEPTH_TEST), but note that with the depth buffer cleared, any 3D drawing that happens later in <b>draw()</b> will ignore existing shapes on the screen.
 <br/><br/>
 hint(ENABLE_DEPTH_SORT) - Enable primitive z-sorting of triangles and lines in P3D. This can slow performance considerably, and the algorithm is not yet perfect.
-<br/> <br/>
-hint(DISABLE_OPENGL_ERRORS) - Speeds up the P3D renderer setting by not checking for errors while running. Undo with hint(ENABLE_OPENGL_ERRORS).
 <br/><br/>
-hint(ENABLE_ACCURATE_TEXTURES) - Enables better texture accuracy for the P3D renderer. This option will do a better job of dealing with textures in perspective. hint(DISABLE_ACCURATE_TEXTURES) returns to the default. This hint is not likely to last long.
+hint(DISABLE_OPENGL_ERRORS) - Speeds up the P3D renderer setting by not checking for errors while running.
 <br/><br/>
-hint(DISABLE_DEPTH_MASK) - Description to come...
-<br/> <br/>
-hint(ENABLE_ACCURATE_2D) - Description to come...
+hint(DISABLE_DEPTH_MASK) - Disables writing into the depth buffer. This means that a shape drawn with this hint can be hidden by another shape drawn later, irrespective of their distances to the camera. Note that this is different from disabling the depth test. The depth test is still applied, as long as the DISABLE_DEPTH_TEST hint is not called, but the depth values of the objects are not recorded. This is useful when drawing a semi-transparent 3D object without depth sorting, in order to avoid visual glitches due the faces of the object being at different distances from the camera, but still having the object properly occluded by the rest of the objects in the scene.
 <br/><br/>
-hint(DISABLE_TEXTURE_CACHE) - Description to come...
-<br/> <br/>
-hint(DISABLE_TRANSFORM_CACHE) - Description to come...
+hint(ENABLE_ACCURATE_2D) - It forces the P3D renderer to draw each shape (including its strokes) separately, instead of batching them into larger groups for better performance. One consequence of this is that 2D items drawn with P3D are correctly stacked on the screen, depending on the order in which they were drawn. Otherwise, glitches such as the stroke lines being drawn on top of the interior of all the shapes will occur. However, this hint could make rendering substantially slower, so it is recommended to use it only when drawing a small amount of shapes. For drawing entirely two-dimensional scenes, it is advised to use the P2D renderer instead, which doesn't need the hint to properly stack shapes and their strokes.
 <br/><br/>
-hint(ENABLE_STROKE_PERSPECTIVE) - Description to come...
-<br/> <br/>
-hint(DISABLE_TEXTURE_MIPMAPS) - Description to come...
-<br/> <br/>
+hint(ENABLE_STROKE_PERSPECTIVE) - It makes the stroke geometry (lines and points) to be affected by the perspective, meaning that they will look smaller as they move away from the camera.
+<br/><br/>
+hint(DISABLE_TEXTURE_MIPMAPS) - Disable generation of texture mipmaps in P2D or P3D. This results in lower quality - but faster - rendering of texture images when they appear smaller than their native resolutions (the mipmaps are scaled-down versions of a texture that make it look better when drawing it at a small size). However, the difference in performance is fairly minor on recent desktop video cards.
+<br/><br/>
 hint(ENABLE_STROKE_PURE) - Improves rendering glitches with <b>vertex()</b> in the default renderer
 <br/><br/>
-As of release 0149, unhint() has been removed in favor of adding additional ENABLE/DISABLE constants to reset the default behavior. This prevents the double negatives, and also reinforces which hints can be enabled or disabled.
+As of release 0149, <b>unhint()</b> has been removed in favor of adding additional ENABLE/DISABLE constants to reset the default behavior. This prevents the double negatives, and also reinforces which hints can be enabled or disabled.
 ]]></description>
 
 </root>
