@@ -35,7 +35,7 @@ Executes the code within <b>draw()</b> one time. This functions allows the progr
 <br/><br/>
 In structuring a program, it only makes sense to call redraw() within events such as <b>mousePressed()</b>. This is because <b>redraw()</b> does not run <b>draw()</b> immediately (it only sets a flag that indicates an update is needed). 
 <br/><br/>
-Calling <b>redraw()</b> within <b>draw()</b> has no effect because <b>draw()</b> is continuously called anyway.
+The <b>redraw()</b> function does not work properly when called inside <b>draw()</b>. To enable/disable animations, use <b>loop()</b> and <b>noLoop()</b>.
 ]]></description>
 
 </root>
