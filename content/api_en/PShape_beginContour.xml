@@ -15,16 +15,17 @@ PShape s;
 
 void setup() {
   size(100, 100, P2D);
+
   // Make a shape
   s = createShape();
   s.noStroke();
+
   // Exterior part of shape
-  s.beginContour();
   s.vertex(-50,-50);
   s.vertex(50,-50);
   s.vertex(50,50);
   s.vertex(-50,50);
-  s.endContour();
+
   // Interior part of shape
   s.beginContour();
   s.vertex(-20,-20);
@@ -32,6 +33,7 @@ void setup() {
   s.vertex(20,20);
   s.vertex(-20,20);
   s.endContour();
+
   // Finish off shape
   s.end();
 }
