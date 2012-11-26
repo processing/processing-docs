@@ -35,8 +35,8 @@ foreach $temp (@tempfiles) {
     get_data("$temp");
     $tempname = strip_name($name);
     #$namelength = length($tempname);
-    #if ($tempname ne "x" && $tempname ne "y" && $tempname ne "z" && $tempname ne "") {
-    if ($tempname ne "") {
+    if ($tempname ne "x" && $tempname ne "y" && $tempname ne "z" && $tempname ne "") {
+    #if ($tempname ne "") {
       push(@modfiles, strip_name($name) . "\t" . set_category() . "\t" . file_name_convert($temp));
     }
   }

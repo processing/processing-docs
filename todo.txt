@@ -30,13 +30,12 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   . loadTable()
   - loadTable("somethingorother", "csv");
   - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
-
-- Add to keywords.base
-  ENABLE_STROKE_PURE
-  DISABLE_DEPTH_MASK
-  REPEAT
-  CLAMP
   
+- add Server.ip()
+  http://code.google.com/p/processing/issues/detail?id=1411
+
+- add 
+
 - add beginContour() / endContour() !!!!!
 
 - Request
@@ -57,8 +56,6 @@ loadXXX with second parameter for file type:
 
 - hide the "source" parameter from the Reference for createShape()
 
-- hint() descriptions need to be completed
-
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
 
 - change "shape" parameter in shape() to "shp" to match "img" in image()
@@ -71,6 +68,11 @@ loadXXX with second parameter for file type:
   } else {
     clip(mouseX, mouseY, 50, 50);
   }
+
+- arc() with different options
+
+- blendMode() for default renderer
+
 
 - write reference for getChild() re: OBJ
 
@@ -85,7 +87,7 @@ OPEN QUESTIONS
 
 To add as they are programmed:
 - add shape(x, y, z)
-- arc() with different options
+
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -123,6 +125,13 @@ Anyhow… something to dream about for the future. Andres had brought it up sinc
 // // // // // // // // // // // // // // // // // // // // //
 
 DONE FOR 2.0 REFERENCE
+
+x Add to keywords.base
+x ENABLE_STROKE_PURE
+x DISABLE_DEPTH_MASK
+x REPEAT
+x CLAMP
+x hint() descriptions need to be completed
 o saveType(), loadType()
 x filter() now accepts shaders, make the change. It's far more efficient, fast
 x PShader --CR

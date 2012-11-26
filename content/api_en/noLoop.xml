@@ -50,6 +50,28 @@ void mouseReleased() {
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+boolean someMode = false;
+
+void setup() {
+  noLoop();
+}
+
+void draw() {
+  if (someMode) {
+    // do something
+  }
+}
+
+void mousePressed() {
+  someMode = true;
+  redraw();  // or loop()
+}
+]]></code>
+</example>
+
 <description><![CDATA[
 Stops Processing from continuously executing the code within <b>draw()</b>. If <b>loop()</b> is called, the code in <b>draw()</b> begins to run continuously again. If using <b>noLoop()</b> in <b>setup()</b>, it should be the last line inside the block.<br/>
 <br/>
