@@ -12,7 +12,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-size(100, 100, P2D);
+size(100, 100);
 background(0);
 blendMode(ADD);
 stroke(102);

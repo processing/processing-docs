@@ -169,11 +169,12 @@ sub set_category
 		$category = "KEYWORD3";
     } elsif($subcat =~ s/field/field/i) {
 		#The category KEYWORD4 was invented 27 Nov 2011 for fields  -- CR
-		$category = "KEYWORD4";
+		#$category = "KEYWORD4";
+		$category = "KEYWORD3";
     } elsif($cat =~ s/constants/constants/i) {
     	$category = "LITERAL2";
     } elsif ($type eq "variable") {
-        $category = "KEYWORD5";
+        $category = "LITERAL2";
     }
     
     return $category;

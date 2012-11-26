@@ -34,8 +34,6 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 - add Server.ip()
   http://code.google.com/p/processing/issues/detail?id=1411
 
-- add 
-
 - add beginContour() / endContour() !!!!!
 
 - Request
@@ -54,25 +52,9 @@ loadXXX with second parameter for file type:
 - loadTable("somethingorother", "csv");
 - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
 
-- hide the "source" parameter from the Reference for createShape()
-
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
 
-- change "shape" parameter in shape() to "shp" to match "img" in image()
-
-- clarify in reference that getVertex() and setVertex() only work on shapes made manually with the long form of createShape() and not the versions these createShape(RECT, 10, 10, 60, 60)
-
-- clip()/noClip()
-  if (mousePressed) {
-    noClip();
-  } else {
-    clip(mouseX, mouseY, 50, 50);
-  }
-
 - arc() with different options
-
-- blendMode() for default renderer
-
 
 - write reference for getChild() re: OBJ
 
@@ -80,7 +62,7 @@ OPEN QUESTIONS
 - need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
 - thread() ???
 
-- 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --CR
+
 - PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
 -   figure out why font naming not working correctly -- CR
@@ -126,6 +108,11 @@ Anyhow… something to dream about for the future. Andres had brought it up sinc
 
 DONE FOR 2.0 REFERENCE
 
+o change "shape" parameter in shape() to "shp" to match "img" in image()
+x hide the "source" parameter from the Reference for createShape()
+x 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --BF
+x clarify in reference that getVertex() and setVertex() only work on shapes made manually with the long form of createShape() and not the versions these createShape(RECT, 10, 10, 60, 60)
+x clip()/noClip()
 x Add to keywords.base
 x ENABLE_STROKE_PURE
 x DISABLE_DEPTH_MASK
