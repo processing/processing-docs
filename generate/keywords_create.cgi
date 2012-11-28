@@ -3,10 +3,13 @@
 #require 'globals.pl';
 
 
-# CURRENT BUGS
-# Making a line with \t\tblank
-# fixed: [] array access symbols are not appearing
-# ??? there are overlaps when methods are included (blend() and image.blend())
+# KEY 2.0b7+
+# LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
+# KEYWORD1 - Java datatypes and keywords (void, int, boolean, etc.)
+# KEYWORD2 - Fields [variables within a class]
+# KEYWORD3 - Processing variables (width, height, focused, etc.)
+# FUNCTION1 - Functions
+# FUNCTION2 - Methods (functions inside a class)
 
 
 $dir = "../content/api_en/";
@@ -141,39 +144,31 @@ sub strip_name
 
 sub set_category
 {
-	
-    #if($type =~ s/constant/constant/i) {
-    #    $category = "LITERAL2";
-    #} elsif ($type =~ s/variable/variable/i || $type =~ s/field/field/i ) {
-    #    $category = "LITERAL2";
-    #} elsif ($type =~ s/datatype/datatype/i || $type =~ s/structure/structure/i ||
-    #         $type =~ s/keyword/keyword/i || $type =~ s/object/object/i ) {
-    #    $category = "KEYWORD1";
-    #} elsif ($type =~ s/function/method/i || $type =~ s/method/method/i ) {
-    #    $category = "KEYWORD2";
-    #} else {
-    #    $category = "";
-    #}
-
-    #if($type =~ s/processing//i) {
-    #  $category = "KEYWORD3";
-    #}
     
     # Set the default
-	$category = "KEYWORD2";
+	$category = "FUNCTION1";
 	
-    # Find methods and fields and modify
-    if ($name eq $subcat) {
-    	$category = "KEYWORD1";
-    } elsif($subcat =~ s/method/method/i) {
-		$category = "KEYWORD3";
+    #if ($name eq $subcat) {
+    #	$category = "KEYWORD1";
+    #} elsif($subcat =~ s/method/method/i) {
+	#	$category = "FUNCTION2";
+    #} elsif($subcat =~ s/field/field/i) {
+	#	$category = "KEYWORD2";
+    #} elsif($cat =~ s/constants/constants/i) {
+    #	$category = "LITERAL2";
+    #} elsif ($type eq "variable") {
+    #    $category = "KEYWORD3";
+    #}
+    
+    if ($subcat =~ s/method/method/i) {
+    	$category = "FUNCTION2";
+    } elsif($name eq $subcat) {
+		$category = "KEYWORD1";
     } elsif($subcat =~ s/field/field/i) {
-		#The category KEYWORD4 was invented 27 Nov 2011 for fields  -- CR
-		#$category = "KEYWORD4";
-		$category = "KEYWORD3";
-    } elsif($cat =~ s/constants/constants/i) {
-    	$category = "LITERAL2";
-    } elsif ($type eq "variable") {
+		$category = "KEYWORD2";
+    } elsif($type eq "variable") {
+    	$category = "KEYWORD3";
+    } elsif ($cat =~ s/constants/constants/i) {
         $category = "LITERAL2";
     }
     

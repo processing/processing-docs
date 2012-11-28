@@ -1,15 +1,15 @@
-# KEY
+# KEY 2.0b7+
 
-# LITERAL2 - constants
-# KEYWORD1 - Java datatypes and keywords
-# KEYWORD2 - functions
-# KEYWORD3 - methods (functions inside a class)
-# KEYWORD4 - fields (variables inside a class)
-# KEYWORD5 - Processing variables (width, height, focused, etc.)
+# LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
+# KEYWORD1 - Java datatypes and keywords (void, int, boolean, etc.)
+# KEYWORD2 - Fields [variables within a class]
+# KEYWORD3 - Processing variables (width, height, focused, etc.)
+# FUNCTION1 - Functions
+# FUNCTION2 - Methods (functions inside a class)
 
 #
 
-# LITERAL2 specifies constants
+# LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
 
 ADD	LITERAL2	blend_
 ALIGN_CENTER	LITERAL2	
@@ -31,6 +31,7 @@ BOTTOM	LITERAL2	textAlign_
 BURN	LITERAL2	blend_
 CENTER	LITERAL2	
 CHATTER	LITERAL2
+CHORD	LITERAL2
 CLAMP LITERAL2
 CLICK	LITERAL2
 CLOSE	LITERAL2
@@ -125,6 +126,7 @@ P2D	LITERAL2	size_
 P3D	LITERAL2	size_
 PERSPECTIVE	LITERAL2
 PI	LITERAL2	PI
+PIE	LITERAL2	
 PIXEL_CENTER	LITERAL2
 POINT	LITERAL2
 POINTS	LITERAL2	
@@ -173,7 +175,7 @@ WAIT	LITERAL2	cursor_
 WHITESPACE	LITERAL2		
 
 
-# KEYWORD1 specifies datatypes and keywords
+# KEYWORD1 - Java datatypes and keywords (void, int, boolean, etc.)
 
 Array	KEYWORD1	Array
 ArrayList	KEYWORD1	ArrayList
@@ -231,7 +233,6 @@ static	KEYWORD1	static
 strictfp	KEYWORD1
 super	KEYWORD1	super
 switch	KEYWORD1	switch
-synchronized	KEYWORD1
 this	KEYWORD1	this
 throw	KEYWORD1	
 throws	KEYWORD1	
@@ -240,67 +241,64 @@ true	KEYWORD1	true
 try	KEYWORD1	try
 void	KEYWORD1	void
 volatile	KEYWORD1
-while	KEYWORD1	while
 
-# Deprecated API
+# Special cases for color coding
 
-arraycopy	KEYWORD2	arrayCopy_
-openStream	KEYWORD2	openStream_
-OPENGL	LITERAL2	size_
-JAVA2D	LITERAL2	size_
+for	FUNCTION1	for
+if	FUNCTION1	if
+switch	FUNCTION1	switch
+synchronized	FUNCTION1
+while	FUNCTION1	while
 
 
-# KEYWORD2 specifies functions and KEYWORD3 specifies methods
 # These items are a part of Processing but are not included in the reference
 
-boolean	KEYWORD2	booleanconvert_
-byte	KEYWORD2	byteconvert_
-cache	KEYWORD2
-char	KEYWORD2	charconvert_
 color KEYWORD1	color_datatype
-start	KEYWORD2
-stop	KEYWORD2
-breakShape	KEYWORD2
-createPath	KEYWORD2
-float	KEYWORD2	floatconvert_
-int	KEYWORD2	intconvert_
-str	KEYWORD2	strconvert_
-loadMatrix	KEYWORD2
-noHint	KEYWORD2
-parseBoolean	KEYWORD2
-parseByte	KEYWORD2
-parseChar	KEYWORD2
-parseFloat	KEYWORD2
-parseInt	KEYWORD2
-saveFile	KEYWORD2
-savePath	KEYWORD2
-sketchFile	KEYWORD2
-sketchPath	KEYWORD2
+
+boolean	FUNCTION1	booleanconvert_
+byte	FUNCTION1	byteconvert_
+cache	FUNCTION2
+char	FUNCTION1	charconvert_
+start	FUNCTION1
+stop	FUNCTION1
+breakShape	FUNCTION1
+createPath	FUNCTION1
+float	FUNCTION1	floatconvert_
+int	FUNCTION1	intconvert_
+str	FUNCTION1	strconvert_
+loadMatrix	FUNCTION1
+parseBoolean	FUNCTION1
+parseByte	FUNCTION1
+parseChar	FUNCTION1
+parseFloat	FUNCTION1
+parseInt	FUNCTION1
+saveFile	FUNCTION1
+savePath	FUNCTION1
+sketchFile	FUNCTION1
+sketchPath	FUNCTION1
 string	KEYWORD2	strconvert_
 
-#KEYWORD3 is an experimental designation for methods
-readLine	KEYWORD3	BufferedReader_readLine_
-close	KEYWORD3	PrintWriter_close_
-flush	KEYWORD3	PrintWriter_flush_
-print	KEYWORD3	PrintWriter_print_
-println	KEYWORD3	PrintWriter_println_
-charAt	KEYWORD3	String_charAt_
-equals	KEYWORD3	String_equals_
-indexOf	KEYWORD3	String_indexOf_
-length	KEYWORD3	String_length_
-substring	KEYWORD3	String_substring_
-toLowerCase	KEYWORD3	String_toLowerCase_
-toUpperCase	KEYWORD3	String_toUpperCase_
+
+readLine	FUNCTION2	BufferedReader_readLine_
+close	FUNCTION2	PrintWriter_close_
+flush	FUNCTION2	PrintWriter_flush_
+print	FUNCTION2	PrintWriter_print_
+println	FUNCTION2	PrintWriter_println_
+charAt	FUNCTION2	String_charAt_
+equals	FUNCTION2	String_equals_
+indexOf	FUNCTION2	String_indexOf_
+length	FUNCTION2	String_length_
+substring	FUNCTION2	String_substring_
+toLowerCase	FUNCTION2	String_toLowerCase_
+toUpperCase	FUNCTION2	String_toUpperCase_
+
 
 # Temporary additions 3 September 2012 as the reference is getting updated
 
-beginContour	KEYWORD2
-endContour	KEYWORD2
-end	KEYWORD2
-addChild	KEYWORD2
-
-clip	KEYWORD2
-noClip	KEYWORD2
+beginContour	FUNCTION1
+endContour	FUNCTION1
+end	FUNCTION1
+addChild	FUNCTION1
 
 
 # Operators are without KEYWORDS

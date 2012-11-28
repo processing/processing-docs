@@ -15,8 +15,6 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 2.0 REFERENCE
 
-$ Updates the keywords file
-
 RELATED LINKS WITHIN THE REFERENCE
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
@@ -53,8 +51,6 @@ loadXXX with second parameter for file type:
 - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
 
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
-
-- arc() with different options
 
 - write reference for getChild() re: OBJ
 
@@ -108,6 +104,8 @@ Anyhow… something to dream about for the future. Andres had brought it up sinc
 
 DONE FOR 2.0 REFERENCE
 
+x Updates the keywords file
+x arc() with different options
 o change "shape" parameter in shape() to "shp" to match "img" in image()
 x hide the "source" parameter from the Reference for createShape()
 x 835 Improve mouseX, mouseY, pmouseX, pmouseY documentation  --BF
@@ -261,6 +259,7 @@ x Done
 
 2.0 EXAMPLES
 
+- Table  --DS,JT
 - New Minim Examples --CR
 - Remove super.stop() and stop() from examples -- CR, MINIM
 - Modify Capture examples to use new setup API
@@ -269,7 +268,6 @@ o PGL
 o new JSON? -- DS,JT
 x New PVector  --DS
 x New PShape  --DS
-- Table  --DS,JT
 o add stringIntPair to Hashmap  --DS  // Ben is still sorting out this API
 x New P3D  --CR,DS,AC
 x New Regex  --DS
@@ -446,3 +444,35 @@ Key:
 $ In progress
 o N/A anymore
 x Done
+
+// // // // // // // // // // // // // // // // // // // // //
+
+New site navigation
+
+COVER
+DOWNLOAD
+EXHIBITION
+(REFERENCE)
+  Category
+  A-Z
+  Libraries
+  Tools
+  Environment
+(LEARNING)
+  Tutorials
+  Basics
+  Topics
+  Books
+SHOP
+(ABOUT)
+  Overview
+  *Foundation
+  People
+  Patrons
+
+LINKS
+  *Forum <http://forum.processing.org>
+  Wiki
+  *Bugs <http://code.google.com/p/processing/issues/list>
+  Source <https://github.com/processing/>
+  Feed
