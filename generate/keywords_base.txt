@@ -1,5 +1,6 @@
 # KEY 2.0b7+
 
+# LITERAL1 - Strings in quotes
 # LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
 # KEYWORD1 - Datatypes and keywords (void, int, boolean, etc.)
 # KEYWORD2 - Fields [variables within a class]
@@ -343,6 +344,8 @@ addChild	FUNCTION1
 
 width	KEYWORD3	width_
 height	KEYWORD3	height_
+
+PVector	FUNCTION1	PVector
 
 
 # THE TEXT ABOVE IS HAND-WRITTEN AND FOUND IN THE FILE "keywords_base.txt"
