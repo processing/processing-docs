@@ -37,9 +37,11 @@ foreach $temp (@tempfiles) {
   if($temp =~ ".xml" && !($temp =~ "~")) {
     get_data("$temp");
     $tempname = strip_name($name);
-    #$namelength = length($tempname);
-    if ($tempname ne "x" && $tempname ne "y" && $tempname ne "z" && $tempname ne "") {
-    #if ($tempname ne "") {
+    
+    # 29 Nov. Because the PDE can't differentiate between variables inside a class
+    # or the main Processing variables, we leave these out of the generated reference
+    if ($tempname ne "x" && $tempname ne "y" && $tempname ne "z" && 
+        $tempname ne "width" && $tempname ne "height" && $tempname ne "") {
       push(@modfiles, strip_name($name) . "\t" . set_category() . "\t" . file_name_convert($temp));
     }
   }

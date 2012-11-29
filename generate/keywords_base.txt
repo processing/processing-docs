@@ -1,7 +1,7 @@
 # KEY 2.0b7+
 
 # LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
-# KEYWORD1 - Java datatypes and keywords (void, int, boolean, etc.)
+# KEYWORD1 - Datatypes and keywords (void, int, boolean, etc.)
 # KEYWORD2 - Fields [variables within a class]
 # KEYWORD3 - Processing variables (width, height, focused, etc.)
 # FUNCTION1 - Functions
@@ -338,6 +338,11 @@ addChild	FUNCTION1
 >>		rightshift
 ;		semicolon
 -=		subtractassign
+
+# Suppressed from Generate to avoid conflicts with variables inside methods
+
+width	KEYWORD3	width_
+height	KEYWORD3	height_
 
 
 # THE TEXT ABOVE IS HAND-WRITTEN AND FOUND IN THE FILE "keywords_base.txt"
