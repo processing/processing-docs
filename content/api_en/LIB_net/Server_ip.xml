@@ -24,8 +24,7 @@ int port = 10002;
 boolean myServerRunning;
 Server myServer;
 
-void setup()
-{
+void setup() {
   size(400, 400);
   background(0);
   myServerRunning = false;
@@ -36,12 +35,11 @@ void draw() {
   // Nothing happening here, everything happens in mousePressed()
 }
 
-void mousePressed()
-{
+void mousePressed() {
   // If the mouse clicked the myServer changes status
   println("click");
   if (myServerRunning) {
-    // N.B. This produces an error which kills the applet.
+    // N.B. This produces an error which kills the sketch.
     myServerRunning = false;
     myServer.stop();
     myServer = null;
@@ -59,7 +57,9 @@ void mousePressed()
 </example>
 
 <description><![CDATA[
-Returns the IP address of the server. This method is static, so it's run with the code <b>Server.ip()</b>, rather can calling the <b>ip()</b> method of an object created from the Server class.
+Returns the IP address of the server. This method is static, so it's run with the code <b>Server.ip()</b>, rather can calling the <b>ip()</b> method of an object created from the Server class. 
+<p/>
+Note that the address may be part of a <a href="http://en.wikipedia.org/wiki/Private_network">private network</a> and only accessible to other machines within the same network. In other cases, a publicly accessible address may be returned (though additional router configuration work may be needed to route connections to your machine). In either case, it depends on how the network you connect to is configured and (more rarely) on the network settings of your machine.
 ]]></description>
 
 
