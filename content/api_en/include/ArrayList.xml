@@ -30,7 +30,7 @@ void draw() {
   // we say balls.size(). The length of an ArrayList is dynamic. 
   // Notice how we are looping through the ArrayList backwards.
   // This is because we are deleting elements from the list.
-  for (int i = balls.size()-1; i > 0; i--) { 
+  for (int i = balls.size()-1; i >= 0; i--) { 
     // An ArrayList doesn't know what it is storing,
     // so we have to cast the object coming out.
     Ball ball = (Ball) balls.get(i);

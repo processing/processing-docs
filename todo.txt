@@ -29,6 +29,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   - loadTable("somethingorother", "csv");
   - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
   
+- Will we add PShape.save to save out SVG and OBJ shapes created with the new syntax?
+  
 - add Server.ip()
   http://code.google.com/p/processing/issues/detail?id=1411
 
@@ -49,6 +51,11 @@ loadXXX with second parameter for file type:
 - loadImage("blahthing", "jpg");
 - loadTable("somethingorother", "csv");
 - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
+
+- for functions that load/write a file, make sure this is consistent:
+  1) a file in the data folder (or a relative path to it)
+  2) an absolute path (something that starts with / on Linux or a drive letter on Windows)
+  3) a URL (input only)
 
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
 
