@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>clear()</name>
+
+<category>Rendering</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PGraphics pg;
+
+void setup() {
+  size(200, 200);
+  pg = createGraphics(100, 100);
+}
+
+void draw() {
+  background(204);
+  pg.beginDraw();
+  pg.stroke(0, 102, 153);
+  pg.line(0, 0, mouseX, mouseY);
+  pg.endDraw();
+  image(pg, 50, 50); 
+}
+
+// Click to clear the PGraphics object
+void mousePressed() {
+  pg.clear();
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Clears the pixels within a buffer. This function only works on PGraphics objects created with the <b>createGraphics()</b> function; it won't work with the main display window. Unlike the main graphics context (the display window), pixels in additional graphics areas created with <b>createGraphics()</b> can be entirely or partially transparent. This function clears everything to make all of the pixels 100% transparent. 
+]]></description>
+
+</root>

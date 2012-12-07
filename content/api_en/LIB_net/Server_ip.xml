@@ -57,8 +57,8 @@ void mousePressed() {
 </example>
 
 <description><![CDATA[
-Returns the IP address of the server. This method is static, so it's run with the code <b>Server.ip()</b>, rather can calling the <b>ip()</b> method of an object created from the Server class. 
-<p/>
+Returns the IP address of the server. This method is static, so it's run with the code <b>Server.ip()</b>, rather can calling the <b>ip()</b> method of an object created from the Server class.<br />
+<br />
 Note that the address may be part of a <a href="http://en.wikipedia.org/wiki/Private_network">private network</a> and only accessible to other machines within the same network. In other cases, a publicly accessible address may be returned (though additional router configuration work may be needed to route connections to your machine). In either case, it depends on how the network you connect to is configured and (more rarely) on the network settings of your machine.
 ]]></description>
 

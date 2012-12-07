@@ -11,6 +11,23 @@
 
 $ Prepare MODE images for JavaScript, Android  --CR
 
+- New IDE graphics for three main modes
+- New header graphic
+- New 2.0 icons
+
+- Add Nature of Code to site
+
+- New template for Tumblr
+- Feed new Twitter into Tumblr
+- New menu design on left (page width to 960)
+- New download page with slider, goes to page w/links
+- Add Google analytics to Processing homepage
+- Clean up CSS and HTML
+- New font for site?
+- New CSS for tutorials
+- Add Twitter and Tumblr links to homepage
+- Clean out the JavaScript
+
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 REFERENCE
@@ -19,6 +36,7 @@ RELATED LINKS WITHIN THE REFERENCE
 
 - Add @see in the source where appropriate, PShape methods need obvious help  --SM
 
+ 
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
@@ -28,13 +46,11 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   . loadTable()
   - loadTable("somethingorother", "csv");
   - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
-  
-- Will we add PShape.save to save out SVG and OBJ shapes created with the new syntax?
-  
-- add Server.ip()
-  http://code.google.com/p/processing/issues/detail?id=1411
 
-- add beginContour() / endContour() !!!!!
+//
+
+- hint(DISABLE_OPTIMIZED_STROKE)
+  "is this all that ENABLE_ACCURATE_2D does? Should it just be renamed?"
 
 - Request
 - createRequest()
@@ -49,29 +65,21 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 loadXXX with second parameter for file type:
 - loadImage("blahthing", "jpg");
-- loadTable("somethingorother", "csv");
-- loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
-
-- for functions that load/write a file, make sure this is consistent:
-  1) a file in the data folder (or a relative path to it)
-  2) an absolute path (something that starts with / on Linux or a drive letter on Windows)
-  3) a URL (input only)
-
-- add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
 
 - write reference for getChild() re: OBJ
-
-OPEN QUESTIONS
-- need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
-- thread() ???
-
 
 - PDF fonts
 -   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
 -   figure out why font naming not working correctly -- CR
 
-To add as they are programmed:
+Open items:
+- add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
+  . XML file made, waiting for implementation
+- check on native fonts in default renderer by default
+- potential changes for the PShape methods (endShape(), beginShape())?
 - add shape(x, y, z)
+- need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
+- thread() ???
 
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -111,6 +119,14 @@ Anyhow… something to dream about for the future. Andres had brought it up sinc
 
 DONE FOR 2.0 REFERENCE
 
+x for functions that load/write a file, make sure this is consistent:
+  1) a file in the data folder (or a relative path to it)
+  2) an absolute path (something that starts with / on Linux or a drive letter on Windows)
+  3) a URL (input only)
+x add Server.ip()
+  http://code.google.com/p/processing/issues/detail?id=1411
+x add beginContour() / endContour() !!!!!
+o Will we add PShape.save to save out SVG and OBJ shapes created with the new syntax?
 x Updates the keywords file
 x arc() with different options
 o change "shape" parameter in shape() to "shp" to match "img" in image()
@@ -241,12 +257,12 @@ x Done
 
 2.0 DOCUMENTATION 
 
-
-$ Syntax highlighting (see major Issues above)  --CR
 - New IDE image for About page and Environment page  --CR
 - Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
+- Page about Foundation
 
   DONE
+x Syntax highlighting (see major Issues above)  --CR
 x Documentation for "Add Library..." / "Add Tool..." / "Add Mode..."  --CR
 x Environment  --CR
 o   New IDE Image
@@ -267,9 +283,19 @@ x Done
 2.0 EXAMPLES
 
 - Table  --DS,JT
-- New Minim Examples --CR
-- Remove super.stop() and stop() from examples -- CR, MINIM
+- New Minim Examples --CR, Damien
 - Modify Capture examples to use new setup API
+
+  NICE
+$ 2 David Muth examples  --CR
+- Interaction examples need to improve
+- More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
+- Custom font examples using loadFont()  --CR
+- New JavaScript Examples  --FJ,CR
+- New PDF w/ typography  --CR,BF
+- Syntax highlighting for Example code online --FJ
+
+  DONE
 x Move "Directory List" to File IO category  --CR
 o PGL
 o new JSON? -- DS,JT
@@ -282,16 +308,7 @@ x Analyze PVector in examples  --DS
 x thread() example  --DS
 x new saveFrame() for recording example --DS (oops there is already a SavingManyImages example)
 x New XML --DS (where should these go?  File IO?)
-
-  NICE
-$ 2 David Muth examples  --CR
-- More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
-- Custom font examples using loadFont()  --CR
-- New JavaScript Examples  --FJ,CR
-- New PDF w/ typography  --CR,BF
-- Syntax highlighting for Example code online --FJ
-
-  DONE
+x Remove super.stop() and stop() from examples -- CR, MINIM
 o New GUI  --DS
 x Scrollbar example needs new images that fit the new size and the @pjs directive  --CR
 x Mention examples are running with Processing.js  --CR

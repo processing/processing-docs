@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>beginContour()</name>
+
+<category>Shape</category>
+
+<subcategory>Vertex</subcategory>
+
+<type></type>
+
+<example>
+<image>beginContour_0.png</image>
+<code><![CDATA[
+size(100, 100, P2D);
+translate(50, 50);
+stroke(255, 0, 0);
+beginShape();
+// Exterior part of shape
+vertex(-40, -40);
+vertex(40, -40);
+vertex(40, 40);
+vertex(-40, 40);
+// Interior part of shape
+beginContour();
+vertex(-20, -20);
+vertex(20, -20);
+vertex(20, 20);
+vertex(-20, 20);
+endContour();
+endShape(CLOSE);
+]]></code>
+</example>
+
+<description><![CDATA[
+Use the <b>beginContour()</b> and <b>endContour()</b> function to create negative shapes within shapes. For instance, the center of the letter 'O'. <b>beginContour()</b> begins recording vertices for the shape and <b>endContour()</b> stops recording. These functions can only be within a <b>beginShape()</b>/<b>endShape()</b> pair and they only work with the P2D and P3D renderers. <br />
+<br/>
+Transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> do not work within a <b>beginContour()</b>/<b>endContour()</b> pair. It is also not possible to use other shapes, such as <b>ellipse()</b> or <b>rect()</b> within.
+]]></description>
+
+</root>

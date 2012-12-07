@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>noClip()</name>
+
+<category>Rendering</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(200, 200);
+  noFill();
+  imageMode(CENTER);
+}
+
+void draw() {
+  background(204);
+  if (mousePressed) {
+    clip(mouseX, mouseY, 50, 50);
+  } else {
+    noClip();
+  }
+  line(0, 0, width, height);
+  line(0, height, width, 0);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Disables the clipping previously started by the <b>clip()</b> function.
+]]></description>
+
+</root>

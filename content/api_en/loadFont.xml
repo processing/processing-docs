@@ -29,9 +29,11 @@ Font support for the canvas element varies across browsers. Firefox currently ha
 </js_mode>
 
 <description><![CDATA[
-Loads a font into a variable of type <b>PFont</b>. To load correctly, fonts must be located in the data directory of the current sketch. To create a font to use with Processing, select "Create Font..." from the Tools menu. This will create a font in the format Processing requires and also adds it to the current sketch's data directory.<br /> 
+Loads a font into a variable of type <b>PFont</b>. To load correctly, fonts must be located in the data directory of the current sketch. To create a font to use with Processing, select "Create Font..." from the Tools menu. This will create a font in the format Processing requires and also adds it to the current sketch's data directory. Like <b>loadImage()</b> and other functions that load data, the <b>loadFont()</b> function should not be used inside <b>draw()</b>, because it will slow down the sketch considerably, as the font will be re-loaded from the disk (or network) on each frame.<br />
 <br />
-Like <b>loadImage()</b> and other functions that load data, the <b>loadFont()</b> function should not be used inside <b>draw()</b>, because it will slow down the sketch considerably, as the font will be re-loaded from the disk (or network) on each frame.<br />
+Alternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.<br />
+<br />
+If the file is not available or an error occurs, <b>null</b> will be returned and an error message will be printed to the console. The error message does not halt the program, however the null value may cause a NullPointerException if your code does not check whether the value returned is null.<br/>
 <br />
 For most renderers, Processing displays fonts using the .vlw font format, which uses images for each letter, rather than defining them through vector data. When <b>hint(ENABLE_NATIVE_FONTS)</b> is used with the default renderer, the native version of a font will be used if it is installed on the user's machine.<br /> 
 <br />
