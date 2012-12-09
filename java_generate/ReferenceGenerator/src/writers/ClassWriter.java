@@ -34,7 +34,10 @@ public class ClassWriter extends BaseWriter {
 			vars.put("classname", classname);
 			vars.put("classanchor", anchor);
 			String desc = getXMLDescription(classDoc);
-			if( desc != "" ){ vars.put("description", desc); }
+			if ( desc != "" ) 
+			{
+				vars.put( "description", desc );
+			}
 			if( !Shared.i().isCore(classDoc))
 			{	// documenting a library
 				vars.put("isLibrary", "true" );

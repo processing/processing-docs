@@ -364,7 +364,7 @@ public class BaseWriter {
 			return "";
 		}
 	}
-	
+
 	/**
 	 *	Based upon Shared.addDescriptionTag().
 	 *
@@ -374,6 +374,8 @@ public class BaseWriter {
 	{
 		XPathFactory xpathFactory = XPathFactory.newInstance();
 		XPath xpath = xpathFactory.newXPath();
+
+		TemplateWriter templateWriter = new TemplateWriter();
 		
 		String desc = "";
 		
@@ -383,8 +385,15 @@ public class BaseWriter {
 			{
 				XPathExpression expr = xpath.compile(component);
 				String result = (String) expr.evaluate(doc, XPathConstants.STRING);
-				if ( !desc.equals("") )
-					desc += "<br /><br />\n";
+				HashMap<String, String> vars = getDefaultDescriptionVars();
+				if ( component.indexOf("js_mode") != -1 ) {
+					vars.put( "description title", "JavaScript" );
+				}
+				if ( !result.equals("") )
+				{
+					vars.put( "description text", result );
+					result = templateWriter.writePartial( "description.partial.html", vars );
+				}
 				desc += result;
 			} 
 			catch ( XPathExpressionException e)
@@ -395,6 +404,14 @@ public class BaseWriter {
 		}
 		
 		return desc;
+	}
+
+	protected static HashMap<String, String> getDefaultDescriptionVars ()
+	{
+		HashMap<String,String> vars = new HashMap();
+		vars.put("description title", "Description");
+		vars.put("description text", "");
+		return vars;
 	}
 
 	protected static String getTimestamp() {
