@@ -23,6 +23,12 @@ text("word", 10, 50);
 <js_mode>
 	<description><![CDATA[
 Currently JavaScript mode does not support .vlw font files and will just call <a href="createFont_.html">createFont()</a> instead.
+
+Use a "@pjs font" directive to preload font files before your sketch starts:
+/* @pjs font="Arial.ttf"; */
+
+Please see this page for details on font handling in JavaScript mode:
+http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
 </js_mode>
 

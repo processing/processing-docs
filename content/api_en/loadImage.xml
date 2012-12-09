@@ -51,6 +51,10 @@ void draw() {
 ]]></code>
 </example>
 
+<js_mode><description><![CDATA[
+Use a "@pjs preload" directive to preload images before your sketch starts. You can easily add one with the "Playback Settings" tool in the "JavaScript" menu.
+]]></description></js_mode>
+
 
 <description><![CDATA[
 Loads an image into a variable of type <b>PImage</b>. Four types of images ( <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, <b>.png</b>) images may be loaded. To load correctly, images must be located in the data directory of the current sketch. In most cases, load all images in <b>setup()</b> to preload them at the start of the program. Loading images inside <b>draw()</b> will reduce the speed of a program.

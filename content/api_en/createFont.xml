@@ -36,9 +36,11 @@ If you have a @font-face rule in your CSS, you can use it by passing the @font-f
 
 All "smooth" and "charset" parameters are ignored in JavaScript mode.
 
-Font support for the canvas element varies across browsers. Firefox currently has the best support, but still uses a pre-defined set of fonts. Good alternatives to the browser's canvas-font functions are available: such as the <a href="http://bocoup.com/processing-js/docs/index.php?page=Cross-Browser%20Canvas%20Fonts">Glyph method</a>. See also: <a href="http://jim.studt.net/canvastext/">Canvas Text</a>, <a href="http://canvas.burnttoys.net/bauhaus.html">BurntToys Bauhaus</a>.
-<br /><br />
-<p><b>Please use the following demos to learn how fonts can be rendered in Firefox with Processing.js: <a href="http://processingjs.org/learning/basic/letters">Letters</a>, <a href="http://processingjs.org/learning/basic/words">Words</a>, <a href="http://processingjs.org/source/text-width/text-width.html">width()</a></b></p>
+Use a "@pjs font" directive to preload font files before your sketch starts:
+/* @pjs font="Arial.ttf"; */
+
+Please see this page for more details on font handling in JavaScript mode:
+http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
 </js_mode>
 	
