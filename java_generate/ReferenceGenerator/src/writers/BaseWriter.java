@@ -387,7 +387,7 @@ public class BaseWriter {
 				String result = (String) expr.evaluate(doc, XPathConstants.STRING);
 				HashMap<String, String> vars = getDefaultDescriptionVars();
 				if ( component.indexOf("js_mode") != -1 ) {
-					vars.put( "description title", "JavaScript" );
+					vars.put( "description title", "JavaScript<br>\nNotes" );
 				}
 				if ( !result.equals("") )
 				{
