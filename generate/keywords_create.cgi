@@ -171,7 +171,7 @@ sub set_category
     } elsif($subcat =~ s/field/field/i) {
 		$category = "KEYWORD2";
     } elsif($type eq "variable") {
-    	$category = "KEYWORD3";
+    	$category = "KEYWORD4";
     } elsif(($lc_type eq "object") || ($lc_type eq "class")) {
     	$category = "KEYWORD5";
     } elsif ($cat =~ s/constants/constants/i) {
