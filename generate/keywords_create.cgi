@@ -162,15 +162,17 @@ sub set_category
     #    $category = "KEYWORD3";
     #}
     
+    $lc_type = lc($type);
+    
     if ($subcat =~ s/method/method/i) {
     	$category = "FUNCTION2";
     } elsif($name eq $subcat) {
-		$category = "KEYWORD1";
+		$category = "KEYWORD5";
     } elsif($subcat =~ s/field/field/i) {
 		$category = "KEYWORD2";
     } elsif($type eq "variable") {
     	$category = "KEYWORD3";
-    } elsif(($type eq "object") || ($type eq "class")) {
+    } elsif(($lc_type eq "object") || ($lc_type eq "class")) {
     	$category = "KEYWORD5";
     } elsif ($cat =~ s/constants/constants/i) {
         $category = "LITERAL2";

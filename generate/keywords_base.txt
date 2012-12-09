@@ -170,7 +170,6 @@ WHITESPACE	LITERAL2
 		
 abstract	KEYWORD1
 assert	KEYWORD1
-boolean	KEYWORD1	boolean
 break	KEYWORD1	break
 case	KEYWORD1	case
 class	KEYWORD1	class
@@ -222,6 +221,7 @@ PrintWriter	KEYWORD5	PrintWriter
 String	KEYWORD5	String
 StringBuffer	KEYWORD5	
 Thread	KEYWORD5
+boolean	KEYWORD5	boolean
 byte	KEYWORD5	byte
 char	KEYWORD5	char
 double	KEYWORD5	double

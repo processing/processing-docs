@@ -52,4 +52,6 @@ Datatype for storing shapes. Processing can currently load and display SVG (Scal
 The <b>loadShape()</b> function supports SVG files created with Inkscape and Adobe Illustrator. It is not a full SVG implementation, but offers some straightforward support for handling vector data.
 ]]></description>
 
+<type>class</type>
+
 </root>
