@@ -365,7 +365,13 @@ public class BaseWriter {
 		}
 	}
 	
-	protected static String getXMLDescription(Document doc) {
+	/**
+	 *	Based upon Shared.addDescriptionTag().
+	 *
+	 *	Hint: this loads and adds js_mode/description as well
+	 */
+	protected static String getXMLDescription(Document doc) 
+	{
 		XPathFactory xpathFactory = XPathFactory.newInstance();
 		XPath xpath = xpathFactory.newXPath();
 		
@@ -373,13 +379,16 @@ public class BaseWriter {
 		
 		for( String component : Shared.i().getDescriptionSets() )
 		{
-			try{
+			try
+			{
 				XPathExpression expr = xpath.compile(component);
 				String result = (String) expr.evaluate(doc, XPathConstants.STRING);
 				if ( !desc.equals("") )
 					desc += "<br /><br />\n";
 				desc += result;
-			} catch ( XPathExpressionException e){
+			} 
+			catch ( XPathExpressionException e)
+			{
 				System.out.println("Error getting description from xml with expression: //" + component);
 				e.printStackTrace();
 			}

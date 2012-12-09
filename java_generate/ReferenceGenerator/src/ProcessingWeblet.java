@@ -41,32 +41,44 @@ public class ProcessingWeblet extends Standard {
 	private static String xmlDescriptionFlag = "-includeXMLTag";
 	private static IndexWriter indexWriter;
 
-	public static boolean start(RootDoc root) {
+	public static boolean start(RootDoc root) 
+	{
 		setConfig(root.options());
 		Shared.i().createBaseDirectories();
-		
+
 		indexWriter = new IndexWriter();
 		
-		try {			
+		try 
+		{
+			// write out everything in the .java files:
+			// Classes, Methods, Fields ... see specific XxxWriters
+
 			System.out.println("\n===Writing .javadoc sourced reference.===");
-			// write out everything in the .java files
+
 			writeContents(root);
 			
+			// write out everything in the include directory:
+			// see: /api_en/include
+
 			System.out.println("===Source code @webref files written.===");
 			
 			if (!Shared.i().getIncludeDirectory().equals(""))
-			{   // need to get something back from
-				// this to create index
+			{
 				System.out.println("\n===Writing XML-sourced reference.===");
 				XMLReferenceWriter.write( Shared.i().getIncludeDirectory(), indexWriter);
 				System.out.println("===Include directory files written.===");
 			}
+
+			// write out the index file
+
 			System.out.println("\n===Telling the index to write itself.===");
 			indexWriter.write();
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		System.out.println("===All finished in the weblet.===");
 		return true;
 	}
