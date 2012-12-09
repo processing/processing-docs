@@ -49,4 +49,7 @@ void setup() {
 Only files encoded as UTF-8 (or plain ASCII) are parsed properly; the encoding parameter inside XML files is ignored.
 ]]></description>
 
+
+<type>class</type>
+
 </root>

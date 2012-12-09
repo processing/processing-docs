@@ -247,7 +247,7 @@ catch	FUNCTION3	catch
 do	FUNCTION3
 for	FUNCTION3	for
 if	FUNCTION3	if
-#else	FUNCTION3	else
+else	FUNCTION3	else
 switch	FUNCTION3	switch
 synchronized	FUNCTION3
 while	FUNCTION3	while
