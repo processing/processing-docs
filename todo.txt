@@ -18,22 +18,25 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 - Add Nature of Code to site
 
-- New template for Tumblr
-- Center page within browser
-- Build libraries from the contributions.txt file web/
-- Feed new Twitter into Tumblr
-- New menu design on left (page width to 960)
-- New download page with slider, goes to page w/links
-- Add Google analytics to Processing homepage
-- Clean up CSS and HTML
-- New font for site?
-- New CSS for tutorials
-- Add Twitter and Tumblr links to homepage
-- Clean out the JavaScript includes
-- Remove all GIF bitmapped type and replace
-- Foundation page
-- Code copyright forms and page
-
+- 2.0 Site Design
+  - New template for Tumblr (or remove?)
+  - Build libraries page from the contributions.txt file web/
+  - Feed new Twitter into Tumblr
+  - New menu design on left (page width to 850 or 960)
+  - Center page within browser
+  - New download page with slider, goes to page w/links
+  - Get financial setup for transactions
+  - Add Google analytics to Processing homepage
+  - Clean up CSS and HTML
+  - New font for site?
+  - New CSS for tutorials
+  - Add Twitter [and Tumblr link?] to homepage
+  - Clean out the JavaScript includes
+  - Remove all GIF bitmapped type and replace
+  - Foundation page, mixed with patrons
+  - Merging (or building interface) for Basic / Topic examples differentiation
+  
+  - Code copyright forms and page [Goes on the developer site, Git or Google]
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -61,6 +64,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   "is this all that ENABLE_ACCURATE_2D does? Should it just be renamed?"
   
 - additional color coding for datatypes vs. keywords, structures vs. functions
+
+- ??createFont page lists PGraphics as related ... shouldn't that be PFont ?
 
 - Request
 - createRequest()
