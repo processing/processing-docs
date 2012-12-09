@@ -22,7 +22,7 @@ text("word", 10, 50);
 
 <js_mode>
 	<description><![CDATA[
-Currently JavaScript mode does not support .plw font files and will just call <a href="createFont_.html">createFont()</a> instead.
+Currently JavaScript mode does not support .vlw font files and will just call <a href="createFont_.html">createFont()</a> instead.
 ]]></description>
 </js_mode>
 
