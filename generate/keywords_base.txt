@@ -1,16 +1,5 @@
-# KEY 2.0b7+
-
-# LITERAL1 - Strings in quotes
-# LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
-# KEYWORD1 - Datatypes and keywords (void, int, boolean, etc.)
-# KEYWORD2 - Fields [variables within a class]
-# KEYWORD3 - Processing variables (width, height, focused, etc.)
-# FUNCTION1 - Functions
-# FUNCTION2 - Methods (functions inside a class)
-
-#
-
-# LITERAL2 - Constants (QUARTER_PI, CORNERS, etc.)
+# For an explanation of these tags, see Token.java 
+# trunk/processing/app/src/processing/app/syntax/Token.java
 
 ADD	LITERAL2	blend_
 ALIGN_CENTER	LITERAL2	
@@ -177,49 +166,25 @@ WAIT	LITERAL2	cursor_
 WHITESPACE	LITERAL2		
 
 
-# KEYWORD1 - Java datatypes and keywords (void, int, boolean, etc.)
-
-Array	KEYWORD1	Array
-ArrayList	KEYWORD1	ArrayList
-Boolean	KEYWORD1	
-Byte	KEYWORD1	
-BufferedReader	KEYWORD1	BufferedReader
-Character	KEYWORD1	
-Class	KEYWORD1	class
-Double	KEYWORD1	
-Float	KEYWORD1	
-Integer	KEYWORD1	
-HashMap	KEYWORD1	HashMap
-PrintWriter	KEYWORD1	PrintWriter
-String	KEYWORD1	String
-StringBuffer	KEYWORD1	
-Thread	KEYWORD1		
+# Java keywords (void, import, , etc.)
+		
 abstract	KEYWORD1
 assert	KEYWORD1
 boolean	KEYWORD1	boolean
 break	KEYWORD1	break
-byte	KEYWORD1	byte
 case	KEYWORD1	case
-catch	KEYWORD1	catch
-char	KEYWORD1	char
 class	KEYWORD1	class
 continue	KEYWORD1	continue
-default	KEYWORD1	default
-do	KEYWORD1	
-double	KEYWORD1	double
-else	KEYWORD1	else
+default	KEYWORD1	default	
 enum	KEYWORD1	
 extends	KEYWORD1	extends
 false	KEYWORD1	false
 final	KEYWORD1	final
 finally	KEYWORD1
-float 	KEYWORD1	float
 implements	KEYWORD1	implements
 import	KEYWORD1	import
 instanceof	KEYWORD1
-int	KEYWORD1	int
 interface	KEYWORD1	
-long	KEYWORD1	long
 native	KEYWORD1
 new	KEYWORD1	new
 null	KEYWORD1	null
@@ -227,8 +192,7 @@ package	KEYWORD1
 private	KEYWORD1	private
 protected	KEYWORD1	
 public	KEYWORD1	public
-return	KEYWORD1	return
-short	KEYWORD1	
+return	KEYWORD1	return	
 static	KEYWORD1	static
 strictfp	KEYWORD1
 super	KEYWORD1	super
@@ -237,20 +201,50 @@ throw	KEYWORD1
 throws	KEYWORD1	
 transient	KEYWORD1
 true	KEYWORD1	true
-try	KEYWORD1	try
 void	KEYWORD1	void
 volatile	KEYWORD1
 
-# Special cases for color coding
 
-for	FUNCTION1	for
-if	FUNCTION1	if
-switch	FUNCTION1	switch
-synchronized	FUNCTION1
-while	FUNCTION1	while
+# Datatypes
+
+Array	KEYWORD5	Array
+ArrayList	KEYWORD5	ArrayList
+Boolean	KEYWORD5	
+Byte	KEYWORD5	
+BufferedReader	KEYWORD5	BufferedReader
+Character	KEYWORD5	
+Class	KEYWORD5	class
+Double	KEYWORD5	
+Float	KEYWORD5	
+Integer	KEYWORD5	
+HashMap	KEYWORD5	HashMap
+PrintWriter	KEYWORD5	PrintWriter
+String	KEYWORD5	String
+StringBuffer	KEYWORD5	
+Thread	KEYWORD5
+byte	KEYWORD5	byte
+char	KEYWORD5	char
+double	KEYWORD5	double
+float 	KEYWORD5	float
+int	KEYWORD5	int
+long	KEYWORD5	long
+short	KEYWORD5
 
 
-# These items are a part of Processing but are not included in the reference
+# Flow structures
+
+catch	KEYWORD4	catch
+do	KEYWORD4
+for	KEYWORD4	for
+if	KEYWORD4	if
+else	KEYWORD4	else
+switch	KEYWORD4	switch
+synchronized	KEYWORD4
+while	KEYWORD4	while
+try	KEYWORD4	try
+
+
+# These items are a part of Processing but, but pages don't generate
 
 color	KEYWORD1	color_datatype
 
@@ -277,7 +271,6 @@ sketchFile	FUNCTION1
 sketchPath	FUNCTION1
 string	KEYWORD2	strconvert_
 
-
 readLine	FUNCTION2	BufferedReader_readLine_
 close	FUNCTION2	PrintWriter_close_
 flush	FUNCTION2	PrintWriter_flush_
@@ -294,11 +287,8 @@ toUpperCase	FUNCTION2	String_toUpperCase_
 
 # Temporary additions 3 September 2012 as the reference is getting updated
 
-beginContour	FUNCTION1
-endContour	FUNCTION1
 end	FUNCTION1
 addChild	FUNCTION1
-
 
 # Operators are without KEYWORDS
 
@@ -350,3 +340,6 @@ HashMap	FUNCTION1	HashMap
 
 # THE TEXT ABOVE IS HAND-WRITTEN AND FOUND IN THE FILE "keywords_base.txt"
 # THE TEXT BELOW IS AUTO-GENERATED
+#
+# SO DON'T 
+# TOUCH IT

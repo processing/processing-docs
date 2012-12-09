@@ -13,11 +13,14 @@ $ Prepare MODE images for JavaScript, Android  --CR
 
 - New IDE graphics for three main modes
 - New header graphic
+- New splash page / loader graphic
 - New 2.0 icons
 
 - Add Nature of Code to site
 
 - New template for Tumblr
+- Center page within browser
+- Build libraries from the contributions.txt file web/
 - Feed new Twitter into Tumblr
 - New menu design on left (page width to 960)
 - New download page with slider, goes to page w/links
@@ -26,7 +29,11 @@ $ Prepare MODE images for JavaScript, Android  --CR
 - New font for site?
 - New CSS for tutorials
 - Add Twitter and Tumblr links to homepage
-- Clean out the JavaScript
+- Clean out the JavaScript includes
+- Remove all GIF bitmapped type and replace
+- Foundation page
+- Code copyright forms and page
+
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -41,6 +48,7 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
   mostly done, pending email thread on how to handle whitespace and counting children
+  - did angle2D() get changed to heading2D()???  --SM
 - PVector changes  --SM
 - TABLE  --SM
   . loadTable()
@@ -51,6 +59,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - hint(DISABLE_OPTIMIZED_STROKE)
   "is this all that ENABLE_ACCURATE_2D does? Should it just be renamed?"
+  
+- additional color coding for datatypes vs. keywords, structures vs. functions
 
 - Request
 - createRequest()

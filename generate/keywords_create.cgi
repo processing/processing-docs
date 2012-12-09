@@ -170,6 +170,8 @@ sub set_category
 		$category = "KEYWORD2";
     } elsif($type eq "variable") {
     	$category = "KEYWORD3";
+    } elsif(($type eq "object") || ($type eq "class")) {
+    	$category = "KEYWORD5";
     } elsif ($cat =~ s/constants/constants/i) {
         $category = "LITERAL2";
     }
@@ -196,7 +198,7 @@ sub file_name_convert
     #  $thisfile = $thisfile . "_";
     #}
     
-    if(($category =~ /KEYWORD2/i) || ($category =~ /KEYWORD3/i)) {
+    if(($category =~ /FUNCTION1/i) || ($category =~ /FUNCTION2/i)) {
     	$thisfile = $thisfile . "_";
     }
 
