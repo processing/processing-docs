@@ -41,11 +41,6 @@ $ Prepare MODE images for JavaScript, Android  --CR
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 REFERENCE
-
-RELATED LINKS WITHIN THE REFERENCE
-
-- Add @see in the source where appropriate, PShape methods need obvious help  --SM
-
  
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
@@ -134,6 +129,7 @@ Anyhow… something to dream about for the future. Andres had brought it up sinc
 
 DONE FOR 2.0 REFERENCE
 
+x Add @see in the source where appropriate, PShape methods need obvious help  --SM
 x for functions that load/write a file, make sure this is consistent:
   1) a file in the data folder (or a relative path to it)
   2) an absolute path (something that starts with / on Linux or a drive letter on Windows)
