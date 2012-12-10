@@ -1,42 +1,10 @@
-2.0 Press Release Ideas - CR, BF
-- Arduino
-- /js
-- Khan
-- Sketchpad
-- Processing 1+ was downloaded over one million times
-
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 DESIGN
 
-$ Prepare MODE images for JavaScript, Android  --CR
-
-- New IDE graphics for three main modes
-- New header graphic
-- New splash page / loader graphic
-- New 2.0 icons
-
-- Add Nature of Code to site
-
-- 2.0 Site Design
-  - New template for Tumblr (or remove?)
-  - Build libraries page from the contributions.txt file web/
-  - Feed new Twitter into Tumblr
-  - New menu design on left (page width to 850 or 960)
-  - Center page within browser
-  - New download page with slider, goes to page w/links
-  - Get financial setup for transactions
-  - Add Google analytics to Processing homepage
-  - Clean up CSS and HTML
-  - New font for site?
-  - New CSS for tutorials
-  - Add Twitter [and Tumblr link?] to homepage
-  - Clean out the JavaScript includes
-  - Remove all GIF bitmapped type and replace
-  - Foundation page, mixed with patrons
-  - Merging (or building interface) for Basic / Topic examples differentiation
-  
-  - Code copyright forms and page [Goes on the developer site, Git or Google]
+$ New header graphic
+$ New splash page / loader graphic
+$ New 2.0 icons
 
 // // // // // // // // // // // // // // // // // // // // //
 
@@ -46,23 +14,15 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
   mostly done, pending email thread on how to handle whitespace and counting children
-  - did angle2D() get changed to heading2D()???  --SM
+  - did angle2D() get changed to heading2D()???
 - PVector changes  --SM
 - TABLE  --SM
   . loadTable()
   - loadTable("somethingorother", "csv");
   - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
+- saveTable() --NEW
 
-//
-
-- hint(DISABLE_OPTIMIZED_STROKE)
-  "is this all that ENABLE_ACCURATE_2D does? Should it just be renamed?"
-  
-- additional color coding for datatypes vs. keywords, structures vs. functions
-
-- ??createFont page lists PGraphics as related ... shouldn't that be PFont ?
-
-- Request
+- Request  --CR
 - createRequest()
 - request.getBytes() 
 - request.getFont() 
@@ -73,62 +33,38 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 - request.getTable() 
 - request.getXML() 
 
-loadXXX with second parameter for file type:
+- operator reference pages aren't working for the distributed reference
+
+loadXXX with second parameter for file type:  --CR
 - loadImage("blahthing", "jpg");
 
-- write reference for getChild() re: OBJ
+- write reference for getChild() re: OBJ  --CR
 
-- PDF fonts
--   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
--   figure out why font naming not working correctly -- CR
+- get rid of NATIVE_FONT hints
+- update loadFont() and createFont() to work with NATIVE_FONT decision
 
 Open items:
 - add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
   . XML file made, waiting for implementation
-- check on native fonts in default renderer by default
+$ check on native fonts in default renderer by default
 - potential changes for the PShape methods (endShape(), beginShape())?
 - add shape(x, y, z)
 - need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
 - thread() ???
 
 
-// // // // // // // // // // // // // // // // // // // // //
-
-3.0 REFERENCE
-
-- attrib() // or attribute()
-- Disambiguation pages for things like "copy" in PImage and PVector
-- Is there a way to catch for keywords like "run" and "init" in the parser?
-
-//
-
-beginShape();
-
-fill(203, 100, 44);
-attrib("fuzziness", 0.5);
-vertex(40, 30, 20);
-
-fill(200, 141, 100);
-attrib("fuzziness", 0.4);
-vertex(30, 20 30);
-
-// .. and so on
-
-endShape();
-
-Explained another way, it's as if we didn't have things like fill or stroke or whatever, and had to write them like:
-
-attrib("fill", 203, 100, 44);
-
-Anyhow… something to dream about for the future. Andres had brought it up since you have two setters with a shader: uniforms and attributes. We make uniforms available via PShader.set(), but we don't need/include a PShader.setAttribute() because it has to be collected by the renderer, then passed to the shader as a big array before rendering (i.e. there'd be a hidden PShader.setAttributeData("fuzziness", fuzzyArray) that's used by PGraphicsOpenGL).
-
-//
+NICE
+- PDF fonts  --CR
+-   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
+-   figure out why font naming not working correctly -- CR
 
 
 // // // // // // // // // // // // // // // // // // // // //
 
 DONE FOR 2.0 REFERENCE
 
+x hint(DISABLE_OPTIMIZED_STROKE) --CR
+  "is this all that ENABLE_ACCURATE_2D does? Should it just be renamed?"
 x Add @see in the source where appropriate, PShape methods need obvious help  --SM
 x for functions that load/write a file, make sure this is consistent:
   1) a file in the data folder (or a relative path to it)
@@ -270,7 +206,7 @@ x Done
 
 - New IDE image for About page and Environment page  --CR
 - Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
-- Page about Foundation
+- Page about Foundation, including Patrons
 
   DONE
 x Syntax highlighting (see major Issues above)  --CR
@@ -298,7 +234,6 @@ x Done
 - Modify Capture examples to use new setup API
 
   NICE
-$ 2 David Muth examples  --CR
 - Interaction examples need to improve
 - More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
 - Custom font examples using loadFont()  --CR
@@ -307,6 +242,7 @@ $ 2 David Muth examples  --CR
 - Syntax highlighting for Example code online --FJ
 
   DONE
+x 2 David Muth examples  --CR
 x Move "Directory List" to File IO category  --CR
 o PGL
 o new JSON? -- DS,JT
@@ -354,10 +290,7 @@ $ Processing.js  --DS,FJ (need info for processing's credits from Dave Humphries
 - New Generics  --DS
 - New Regex --DS
 
-  WIKI TUTORIALS
-x update thread tutorial with thread() function --DS
-x fix exception tutorial with loadStrings() --DS
-x common errors --DS
+
 
 Key:
 - To do
@@ -376,6 +309,10 @@ x   New PDE drawing / image
 x   Antialiased circle
 x Tutorial CSS  --CR
 x Update Processing Overview for 2.0  --CR
+  WIKI TUTORIALS
+  x update thread tutorial with thread() function --DS
+  x fix exception tutorial with loadStrings() --DS
+  x common errors --DS
 
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -482,32 +419,105 @@ x Done
 
 // // // // // // // // // // // // // // // // // // // // //
 
-New site navigation
+2.0 SITE NAVIGATION
 
-COVER
-DOWNLOAD
-EXHIBITION
-(REFERENCE)
-  Category
-  A-Z
-  Libraries
-  Tools
-  Environment
-(LEARNING)
-  Tutorials
-  Basics
-  Topics
-  Books
-SHOP
-(ABOUT)
-  Overview
-  *Foundation
-  People
-  Patrons
+Cover
 
-LINKS
-  *Forum <http://forum.processing.org>
-  Wiki
-  *Bugs <http://code.google.com/p/processing/issues/list>
-  Source <https://github.com/processing/>
-  Feed
+Download
+
+Exhibition
+
+Reference
+Libraries
+Tools
+Environment
+  
+Tutorials
+*Examples
+Topics
+Books
+  
+*About
+People
+*Foundation
+  
+Shop
+
+> Forum <http://forum.processing.org>
+> Wiki
+> Bugs <http://code.google.com/p/processing/issues/list>
+> Source <https://github.com/processing/>
+> Tumblr
+> Twitter
+
+2.0 WEBSITE
+
+  - Add Nature of Code to site  -- CR
+  - New template for Tumblr (or remove?)
+  - Build libraries page from the contributions.txt file web/
+  - Feed new Twitter into Tumblr
+  - New menu design on left (page width to 850 or 960)
+  - Center page within browser
+  - New download page with slider, goes to page w/links
+  - Get financial setup for transactions
+  - Clean up CSS and HTML
+  - New font for site?
+  - New CSS for tutorials
+  - Clean out the JavaScript includes
+  - Remove all GIF bitmapped type and replace
+  - Foundation page, mixed with patrons
+  - Merging (or building interface) for Basic / Topic examples differentiation
+  - Homepage
+    . Promo Fathom, UCLA Arts Software Studio, NYU ITP
+    . Add Twitter [and Tumblr link?] to homepage
+    . Add Google analytics
+  
+  - Code copyright forms and page [Goes on the developer site, Git or Google]
+  
+DONE
+x Prepare MODE images for JavaScript, Android  --CR
+X New IDE graphics for three main modes
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 Press Release Ideas - CR, BF
+- /js
+- Arduino
+- Khan
+- Sketchpad
+- Processing 1+ was downloaded over one million times
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+3.0 REFERENCE
+
+- attrib() // or attribute()
+- Disambiguation pages for things like "copy" in PImage and PVector
+- Is there a way to catch for keywords like "run" and "init" in the parser?
+
+//
+
+beginShape();
+
+fill(203, 100, 44);
+attrib("fuzziness", 0.5);
+vertex(40, 30, 20);
+
+fill(200, 141, 100);
+attrib("fuzziness", 0.4);
+vertex(30, 20 30);
+
+// .. and so on
+
+endShape();
+
+Explained another way, it's as if we didn't have things like fill or stroke or whatever, and had to write them like:
+
+attrib("fill", 203, 100, 44);
+
+Anyhow… something to dream about for the future. Andres had brought it up since you have two setters with a shader: uniforms and attributes. We make uniforms available via PShader.set(), but we don't need/include a PShader.setAttribute() because it has to be collected by the renderer, then passed to the shader as a big array before rendering (i.e. there'd be a hidden PShader.setAttributeData("fuzziness", fuzzyArray) that's used by PGraphicsOpenGL).
+
+//
+
