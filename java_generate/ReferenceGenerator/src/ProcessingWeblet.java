@@ -65,7 +65,9 @@ public class ProcessingWeblet extends Standard {
 			if (!Shared.i().getIncludeDirectory().equals(""))
 			{
 				System.out.println("\n===Writing XML-sourced reference.===");
+
 				XMLReferenceWriter.write( Shared.i().getIncludeDirectory(), indexWriter);
+				
 				System.out.println("===Include directory files written.===");
 			}
 
