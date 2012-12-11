@@ -142,6 +142,18 @@ version=1
 download=http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.zip
 id=057
 
+mode
+category=
+authorList=[Florian Jenett](http://bezier.de/)
+name=CoffeeScript Mode
+sentence=Adds a CoffeeScript Mode based on Processing.js
+url=https://github.com/fjenett/coffeescript-mode-processing
+prettyVersion=0.0.2
+paragraph=CoffeeScript Mode is based on JavaScript Mode and runs on top of Processing.js. It runs through a server and inherits the template system from JavaScript mode. CoffeeScript is a functional language that compiles to JavaScript and was created by (Jeremy Ashkenas)[https://github.com/jashkenas/coffee-script].
+version=130
+download=https://raw.github.com/fjenett/coffeescript-mode-processing/master/release/CoffeeScriptMode.zip
+id=070
+
 library
 category=Language
 authorList=[Daniel Howe](http://mrl.nyu.edu/~dhowe)
@@ -471,9 +483,9 @@ authorList=[Ekene Ijeoma](http://ekeneijeoma.com)
 name=ijeomamotion
 sentence=A cross-mode Processing library for sketching animations with numbers, colors vectors, beziers, curves and more.
 url=https://github.com/ekeneijeoma/ijeomamotion
-prettyVersion=4.4
+prettyVersion=4.5
 paragraph=Cross-mode means that it will run and export in both Processing IDE's Java and Javascript modes. It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too. You can also use all of aforementioed to call functions! You can also use it in Javascript with or without Processing. However as of now the javascript port ijeomamotion.js doesnt include the ijeomamotion.tween.Callback class or ijeomamotion.geom and ijeomamotion.math packages but it will soon! Please post issues on Github or Processing's forums under "Contributed Libraries".
-version=44
+version=45
 download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
 id=033
 
@@ -722,9 +734,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
 sentence=Highly customizable and full featured yet simple to use camera library.
 url=http://code.google.com/p/proscene/
-prettyVersion=1.1.94
+prettyVersion=1.1.95
 paragraph=Main features include: 1. Default interactivity through the mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
-version=11
+version=12
 download=http://otrolado.info/proscene.zip
 id=001
 
