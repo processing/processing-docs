@@ -18,7 +18,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   mostly done, pending email thread on how to handle whitespace and counting children
   
 - PVector changes  --SM
-  - did angle2D() get changed to heading2D()???
+  x heading2D() changed to heading()
+  - The PVector docs are almost done; just a few questions out to Dan --SM
   
 - TABLE  --SM
   . loadTable()
