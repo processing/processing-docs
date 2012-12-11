@@ -18,9 +18,10 @@ void setup() {
   // Uncomment the following two lines to see the available fonts 
   //String[] fontList = PFont.list();
   //println(fontList);
-  myFont = createFont("FFScala", 32);
+  myFont = createFont("Georgia", 32);
   textFont(myFont);
-  text("!@#$%", 10, 50);
+  textAlign(CENTER, CENTER);
+  text("!@#$%", width/2, height/2);
 }
 
 ]]></code>
@@ -28,30 +29,22 @@ void setup() {
 
 <js_mode>
 	<description><![CDATA[
-Font support in JavaScript mode is limited and different from the default Java mode.
-
-Use a font that's installed on the computer, or from a .ttf or .otf file inside current folder.
-
-If you have a @font-face rule in your CSS, you can use it by passing the @font-face name into the name parameter.
-
-All "smooth" and "charset" parameters are ignored in JavaScript mode.
-
-Use a "@pjs font" directive to preload font files before your sketch starts:
-/* @pjs font="Arial.ttf"; */
-
-Please see this page for more details on font handling in JavaScript mode:
-http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
+Font support in JavaScript mode is limited and different from the default Java mode. Use a font that's installed on the computer, or from a .ttf or .otf file inside current folder. If you have a @font-face rule in your CSS, you can use it by passing the @font-face name into the name parameter. All "smooth" and "charset" parameters are ignored in JavaScript mode.<br />
+<br />
+Use a "@pjs font" directive to preload font files before your sketch starts:<br />
+/* @pjs font="Arial.ttf"; */<br />
+<br />
+Please see this page for more details on font handling in JavaScript mode:<br />
+http://wiki.processing.org/w/Font_handling_in_JavaScript_mode<br />
 ]]></description>
 </js_mode>
 	
 <description><![CDATA[
-Dynamically converts a font to the format used by Processing from either a font name that's installed on the computer, or from a .ttf or .otf file inside the sketches "data" folder. This function is an advanced feature for precise control. On most occasions you should create fonts through selecting "Create Font..." from the Tools menu.
-<br /><br />
-Use the <b>PFont.list()</b> method to first determine the names for the fonts recognized by the computer and are compatible with this function. Because of limitations in Java, not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch. 
-<br /><br />
-The <b>size</b> parameter states the font size you want to generate. The <b>smooth</b> parameter specifies if the font should be antialiased or not, and the <b>charset</b> parameter is an array of chars that specifies the characters to generate. 
-<br /><br />
-This function creates a bitmapped version of a font in the same manner as the Create Font tool. It loads a font by name, and converts it to a series of images based on the size of the font. When possible, the <b>text()</b> function will use a native font rather than the bitmapped version created behind the scenes with <b>createFont()</b>. For instance, when using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used. While this can drastically improve speed and appearance, results are poor when exporting if the sketch does not include the .otf or .ttf file, and the requested font is not available on the machine running the sketch. 
+Dynamically converts a font to the format used by Processing from a .ttf or .otf file inside the sketch's "data" folder or a font that's installed elsewhere on the computer. If you want to use a font installed on your computer, use the <b>PFont.list()</b> method to first determine the names for the fonts recognized by the computer and are compatible with this function. Not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.<br />
+<br />
+The <b>size</b> parameter states the font size you want to generate. The <b>smooth</b> parameter specifies if the font should be antialiased or not. The <b>charset</b> parameter is an array of chars that specifies the characters to generate.<br />
+<br />
+This function allows Processing to work with the font natively in the default renderer, so the letters are defined by vector geometry and are rendered quickly. In the <b>P2D</b> and <b>P3D</b> renderers, the function sets the project to render the font as a series of small textures. For instance, when using the default renderer, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the <b>P2D</b> and <b>P3D</b> renderers, the bitmapped version will be used to improve speed and appearance, but the results are poor when exporting if the sketch does not include the .otf or .ttf file, and the requested font is not available on the machine running the sketch. 
 ]]></description>
 
 </root>

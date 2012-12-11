@@ -9,47 +9,46 @@ $ New 2.0 icons
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 REFERENCE
+
+Note: Don't edit PApplet below ~10400 [10 DEC 2012]
  
 NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
   mostly done, pending email thread on how to handle whitespace and counting children
-  - did angle2D() get changed to heading2D()???
+  
 - PVector changes  --SM
+  - did angle2D() get changed to heading2D()???
+  
 - TABLE  --SM
   . loadTable()
-  - loadTable("somethingorother", "csv");
-  - loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
-- saveTable() --NEW
+    . loadTable("somethingorother", "csv");
+    . loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
+  - saveTable() --SM
+  - createTable() --SM
+
+
+- update loadFont() and createFont() to work with NATIVE_FONT decision
 
 - Request  --CR
-- createRequest()
-- request.getBytes() 
-- request.getFont() 
-- request.getImage()  
-- request.getShader()  
-- request.getShape()  
-- request.getStrings()  
-- request.getTable() 
-- request.getXML() 
-
-- operator reference pages aren't working for the distributed reference
-
-loadXXX with second parameter for file type:  --CR
-- loadImage("blahthing", "jpg");
+  - createRequest()
+  - request.getBytes() 
+  - request.getFont() 
+  - request.getImage()  
+  - request.getShader()  
+  - request.getShape()  
+  - request.getStrings()  
+  - request.getTable() 
+  - request.getXML() 
 
 - write reference for getChild() re: OBJ  --CR
 
-- get rid of NATIVE_FONT hints
-- update loadFont() and createFont() to work with NATIVE_FONT decision
-
-Open items:
-- add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
-  . XML file made, waiting for implementation
-$ check on native fonts in default renderer by default
 - potential changes for the PShape methods (endShape(), beginShape())?
+
 - add shape(x, y, z)
+
 - need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
+
 - thread() ???
 
 
@@ -63,6 +62,9 @@ NICE
 
 DONE FOR 2.0 REFERENCE
 
+x add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
+x get rid of NATIVE_FONT hints
+x loadImage("blahthing", "jpg");
 x hint(DISABLE_OPTIMIZED_STROKE) --CR
   "is this all that ENABLE_ACCURATE_2D does? Should it just be renamed?"
 x Add @see in the source where appropriate, PShape methods need obvious help  --SM
@@ -416,67 +418,6 @@ Key:
 $ In progress
 o N/A anymore
 x Done
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 SITE NAVIGATION
-
-Cover
-
-Download
-
-Exhibition
-
-Reference
-Libraries
-Tools
-Environment
-  
-Tutorials
-*Examples
-Topics
-Books
-  
-*About
-People
-*Foundation
-  
-Shop
-
-> Forum <http://forum.processing.org>
-> Wiki
-> Bugs <http://code.google.com/p/processing/issues/list>
-> Source <https://github.com/processing/>
-> Tumblr
-> Twitter
-
-2.0 WEBSITE
-
-  - Add Nature of Code to site  -- CR
-  - New template for Tumblr (or remove?)
-  - Build libraries page from the contributions.txt file web/
-  - Feed new Twitter into Tumblr
-  - New menu design on left (page width to 850 or 960)
-  - Center page within browser
-  - New download page with slider, goes to page w/links
-  - Get financial setup for transactions
-  - Clean up CSS and HTML
-  - New font for site?
-  - New CSS for tutorials
-  - Clean out the JavaScript includes
-  - Remove all GIF bitmapped type and replace
-  - Foundation page, mixed with patrons
-  - Merging (or building interface) for Basic / Topic examples differentiation
-  - Homepage
-    . Promo Fathom, UCLA Arts Software Studio, NYU ITP
-    . Add Twitter [and Tumblr link?] to homepage
-    . Add Google analytics
-  
-  - Code copyright forms and page [Goes on the developer site, Git or Google]
-  
-DONE
-x Prepare MODE images for JavaScript, Android  --CR
-X New IDE graphics for three main modes
 
 
 // // // // // // // // // // // // // // // // // // // // //
