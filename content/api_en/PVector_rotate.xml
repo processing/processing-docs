@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>rotate()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v;
+
+void setup() {
+  v = new PVector(10.0, 20.0);
+  println(v);  // Prints "[ 10.0, 20.0, 0.0 ]"
+  v.rotate(HALF_PI);
+  println(v);  // Prints "[ -20.0, 9.999999, 0.0 ]"
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Rotates a vector by the specified angle (2D vectors only), while maintaining the same magnitude.
+]]></description>
+
+</root>

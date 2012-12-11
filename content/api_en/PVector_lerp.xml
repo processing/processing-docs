@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>lerp()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector start;
+PVector end;
+PVector middle;
+
+void setup() {
+  start = new PVector(0.0, 0.0);
+  end = new PVector(100.0, 100.0);
+  middle = middle.lerp(start, end, 0.5);
+  println(middle);  // Prints "[ 50.0, 50.0, 0.0 ]"
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates linear interpolatation from one vector to another vector.  (Just like regular <b>lerp()</b>, but for vectors.)
+]]></description>
+
+</root>

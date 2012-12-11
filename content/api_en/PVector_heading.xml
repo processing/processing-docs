@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>heading()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v;
+
+void setup() {
+  v = new PVector(10.0, 20.0);
+  println(v.heading());  // Prints "1.1071488"
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates the angle of rotation for a vector (2D vectors only).
+]]></description>
+
+</root>

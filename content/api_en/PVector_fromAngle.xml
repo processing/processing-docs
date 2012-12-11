@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>fromAngle()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v;
+
+void setup() {
+  v = PVector.fromAngle(0.01);
+  println(v);  // Prints "[ 0.99995, 0.009999833, 0.0 ]"
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Calculates and returns a new 2D unit vector from the specified angle value.
+]]></description>
+
+</root>

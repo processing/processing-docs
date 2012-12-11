@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>random3D()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v;
+
+void setup() {
+  v = PVector.random3D();
+  println(v);
+  // May print something like:
+  // [ 0.61554617, -0.51195765, 0.599168 ] or 
+  // [ -0.4695841, -0.14366731, -0.8711202 ] or 
+  // [ 0.6091097, -0.22805278, -0.7595902 ]
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a new 3D unit vector with a random direction.  If you pass in <b>this</b> as an argument, it will use the PApplet's random number generator.
+]]></description>
+
+</root>

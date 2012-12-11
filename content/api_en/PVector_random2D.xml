@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>random2D()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v;
+
+void setup() {
+  v = PVector.random2D();
+  println(v);
+  // May print something like:
+  // [ -0.75006354, -0.6613658, 0.0 ] or 
+  // [ 0.13742635, 0.990512, 0.0 ] or 
+  // [ -0.9456181, -0.32527903, 0.0 ]
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a new 2D unit vector with a random direction.  If you pass in <b>this</b> as an argument, it will use the PApplet's random number generator.
+]]></description>
+
+</root>
