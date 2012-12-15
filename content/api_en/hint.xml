@@ -9,7 +9,7 @@
 <type></type>
 
 <description><![CDATA[
-Set various hints and hacks for the renderer. This is used to handle obscure rendering features that cannot be implemented in a consistent manner across renderers. Each hint is enabled with the "ENABLE" syntax and disabled with "DISABLE." Some are enabled by default and other are disabled. For example, to turn on native fonts, use <b>hint(ENABLE_NATIVE_FONTS)</b> and later use <b>hint(DISABLE_NATIVE_FONTS)</b> to stop using the feature. Some options might graduate to standard features instead of hints over time.
+Set various hints and hacks for the renderer. This is used to handle obscure rendering features that cannot be implemented in a consistent manner across renderers. Each hint is enabled with the "ENABLE" syntax and disabled with "DISABLE." Some are enabled by default and other are disabled. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
 <br/><br/>
 <b>hint(DISABLE_DEPTH_TEST)</b> - Disable the zbuffer, allowing you to draw on top of everything at will. When depth testing is disabled, items will be drawn to the screen sequentially, like a painting. This hint is most often used to draw in 3D, then draw in 2D on top of it (for instance, to draw GUI controls in 2D on top of a 3D interface). Starting in release 0149, this will also clear the depth buffer. Restore the default with <b>hint(ENABLE_DEPTH_TEST)</b>, but note that with the depth buffer cleared, any 3D drawing that happens later in <b>draw()</b> will ignore existing shapes on the screen.
 <br/><br/>
