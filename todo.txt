@@ -428,6 +428,13 @@ x Done
 - Sketchpad
 - Processing 1+ was downloaded over one million times
 
+// // // // // // // // // // // // // // // // // // // // //
+
+3.0 GUI
+
+The idea would be to replace what's covered by showMessageDialog and showOptionDialog here: http://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
+It could also cover the rename things, which would be showInputDialog, though that wasn't the intent. File stuff would definitely be out. Something to replace Base.showWarning() and Base.showMessage(). And an optional “[ ] Don't show this warning again” to boot.
+
 
 // // // // // // // // // // // // // // // // // // // // //
 
