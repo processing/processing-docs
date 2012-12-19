@@ -18,8 +18,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   mostly done, pending email thread on how to handle whitespace and counting children
 - New XML from BenFry email (cc to SM)  
   x added parseXML() and saveXML() to PApplet, and "new XML()" and "XML.parse()" will be for advanced users who want to deal with exceptions
-  - new XML(name) throws an ex, use createXML() or appendChild("name")
   x remove XML.parse() from the reference (it throws an ex), use parseXML() instead
+  x new XML(name) throws an ex, use createXML() or appendChild("name")
   - add .toString(), which is the same as format(2)
   - add .format() with the possible parameters to format -1, 0, 2, 4, etc. to define the spacing
   
