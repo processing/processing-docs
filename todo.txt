@@ -20,6 +20,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   - added parseXML() and saveXML() to PApplet, and "new XML()" and "XML.parse()" will be for advanced users who want to deal with exceptions
   - new XML(name) throws an ex, use createXML() or appendChild("name")
   - remove XML.parse() from the reference (it throws an ex), use parseXML() instead
+  - add .toString(), which is the same as format(2)
+  - add .format() with the possible parameters to format -1, 0, 2, 4, etc. to define the spacing
   
 - TABLE  --SM
   . loadTable()
@@ -28,6 +30,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   - saveTable() --SM
   - createTable() --SM
 
+- JSON  --SM
+  
 
 - update loadFont() and createFont() to work with NATIVE_FONT decision
 
