@@ -124,21 +124,21 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.0.1
+prettyVersion=2.1.0
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=3
+version=4
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
 tool
 category=
-authorList=[Manindra Moharana](http://quarkninja.blogspot.in/)
+authorList=[Manindra Moharana](http://www.mkmoharana.com/)
 name=Sketch Outline
 sentence=Provides an outline view of the member variables, functions and classes within a sketch and allows easy navigation between them. Similar to the outline view in Eclipse.
-url=http://code.google.com/p/sketch-outline/
-prettyVersion=0.1.5
+url=https://github.com/Manindra29/Sketch-Outline
+prettyVersion=0.1.7
 paragraph=The list of member variables, functions and inner classes are shown in a tree view. Clicking on any node scrolls and moves the cursor to its definition in the code. Makes navigation within code fast and easy.
-version=1
+version=2
 download=http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.zip
 id=057
 
@@ -302,10 +302,10 @@ category=Utilities
 authorList=[Darius Morawiec](http://voidplus.de)
 name=$1 Unistroke Recognizer
 sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a template based gesture recognition.
-url=https://github.com/DariusMorawiec/OneDollar-Unistroke-Recognizer
+url=https://github.com/voidplus/OneDollar-Unistroke-Recognizer
 prettyVersion=0.1
 paragraph=
-version=1
+version=2
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
 
@@ -440,6 +440,18 @@ paragraph=The Ketai library simplifies working hardware devices and sensors buil
 version=7
 download=http://ketaiproject.org/ketai.zip
 id=066
+
+library
+category=Hardware
+authorList=Henri DAVID
+name=dmxP512
+sentence=DMX output for enttec DMX USB PRO and lanbox LCE.
+url=http://motscousus.com/stuff/2011-01_dmxP512/
+prettyVersion=1.1
+paragraph=
+version=2
+download=http://cloud.github.com/downloads/hdavid/dmxP512/dmxP512.zip
+id=071
 
 library
 category=Typography
@@ -639,9 +651,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=3.0.0
+prettyVersion=3.1.0
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=6
+version=7
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
 
@@ -734,9 +746,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
 sentence=Highly customizable and full featured yet simple to use camera library.
 url=http://code.google.com/p/proscene/
-prettyVersion=1.1.95
+prettyVersion=1.1.96
 paragraph=Main features include: 1. Default interactivity through the mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
-version=12
+version=13
 download=http://otrolado.info/proscene.zip
 id=001
 
