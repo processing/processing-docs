@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>parseXML()</name>
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String data = "&lt;mammals&gt;&lt;animal&gt;Goat&lt;/animal&gt;&lt;/mammals&gt;";
+
+void setup() {
+  XML xml = parseXML(data);
+  if (xml == null) {
+    println("XML could not be parsed.");
+  } else {
+    XML firstChild = xml.getChild("animal");
+    println(firstChild.getContent());
+  }
+}
+
+// Sketch prints:
+// Goat
+]]></code>
+</example>
+
+<description><![CDATA[
+Takes a String, parses its contents, and returns an XML object.  If the String does not contain XML data or cannot be parsed, a null value is returned.<br/>
+<br/>
+<b>parseXML()</b> is most useful when pulling data dynamically, such as from third-party APIs.  Normally, API results would be saved to a String, and then can be converted to a structured XML object using <b>parseXML()</b>.  Be sure to check if null is returned before performing operations on the new XML object, in case the String content could not be parsed.<br/>
+<br/>
+If your data already exists as an XML file in the data folder, it is simpler to use <b>loadXML()</b>.
+]]></description>
+
+</root>
