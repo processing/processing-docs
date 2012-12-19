@@ -16,6 +16,10 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 - XML  --SM
   mostly done, pending email thread on how to handle whitespace and counting children
+- New XML from BenFry email (cc to SM)  
+  - added parseXML() and saveXML() to PApplet, and "new XML()" and "XML.parse()" will be for advanced users who want to deal with exceptions
+  - new XML(name) throws an ex, use createXML() or appendChild("name")
+  - remove XML.parse() from the reference (it throws an ex), use parseXML() instead
   
 - TABLE  --SM
   . loadTable()
@@ -26,6 +30,8 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
 
 
 - update loadFont() and createFont() to work with NATIVE_FONT decision
+
+- if, for, and catch color coding not working in current build
 
 - Request  --CR
   - createRequest()
