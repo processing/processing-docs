@@ -23,7 +23,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Calculates the magnitude (length) of the vector, squared.
+Calculates the magnitude (length) of the vector, squared.  This method is often used to improve performance since, unlike <b>mag()</b>, it does not require a <b>sqrt()</b> operation.
 ]]></description>
 
 </root>
