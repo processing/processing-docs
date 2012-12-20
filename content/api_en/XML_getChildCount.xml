@@ -35,7 +35,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Gets the total number of children, which is returned as an int.
+Gets the total number of children, which is returned as an int.  Note that this number includes the total number of <em>nodes</em>, so the total in the example above is 7.
 ]]></description>
 
 </root>
