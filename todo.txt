@@ -13,15 +13,6 @@ $ New 2.0 icons
 Note: Don't edit PApplet below ~10400 [10 DEC 2012]
  
 NEW LANGUAGE ELEMENTS IN REFERENCE
-
-- XML  --SM
-  mostly done, pending email thread on how to handle whitespace and counting children
-- New XML from BenFry email (cc to SM)  
-  x added parseXML() and saveXML() to PApplet, and "new XML()" and "XML.parse()" will be for advanced users who want to deal with exceptions
-  x remove XML.parse() from the reference (it throws an ex), use parseXML() instead
-  x new XML(name) throws an ex, use createXML() or appendChild("name")
-  - add .toString(), which is the same as format(2)
-  - add .format() with the possible parameters to format -1, 0, 2, 4, etc. to define the spacing
   
 - TABLE  --SM
   . loadTable()
@@ -69,6 +60,13 @@ NICE
 
 DONE FOR 2.0 REFERENCE
 
+x XML  --SM
+x New XML from BenFry email (cc to SM)  
+  x added parseXML() and saveXML() to PApplet, and "new XML()" and "XML.parse()" will be for advanced users who want to deal with exceptions
+  x remove XML.parse() from the reference (it throws an ex), use parseXML() instead
+  x new XML(name) throws an ex, use createXML() or appendChild("name")
+  x add .format() with the possible parameters to format -1, 0, 2, 4, etc. to define the spacing
+  x add .toString(), which is the same as format(2)
 x PVector changes  --SM
   x heading2D() changed to heading()
 x add clear() in place of background(0, 0, 0, 0), this clears the background, only applicable to off-screen buffers
