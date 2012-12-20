@@ -445,6 +445,9 @@ x Done
 The idea would be to replace what's covered by showMessageDialog and showOptionDialog here: http://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
 It could also cover the rename things, which would be showInputDialog, though that wasn't the intent. File stuff would definitely be out. Something to replace Base.showWarning() and Base.showMessage(). And an optional “[ ] Don't show this warning again” to boot.
 
+Apple GUI Guidelines:
+http://developer.apple.com/library/mac/#documentation/UserExperience/Conceptual/AppleHIGuidelines/Windows/Windows.html
+
 
 // // // // // // // // // // // // // // // // // // // // //
 
