@@ -44,8 +44,8 @@ void setup() {
 
 
 <description><![CDATA[
-Reads the contents of a file or URL and creates an XML object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online.<br />
-<br />
+Reads the contents of a file or URL and creates an XML object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online.<br/>
+<br/>
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 

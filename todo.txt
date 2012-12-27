@@ -15,11 +15,12 @@ Note: Don't edit PApplet below ~10400 [10 DEC 2012]
 NEW LANGUAGE ELEMENTS IN REFERENCE
   
 - TABLE  --SM
-  . loadTable()
-    . loadTable("somethingorother", "csv");
-    . loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
-  - saveTable() --SM
-  - createTable() --SM
+  x loadTable()
+    x loadTable("somethingorother", "csv");
+    x loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
+  x saveTable() --SM
+  x createTable() --SM
+  - other new Table methods
 
 - JSON  --SM
   

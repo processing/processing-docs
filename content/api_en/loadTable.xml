@@ -11,12 +11,48 @@
 <example>
 <image></image>
 <code><![CDATA[
-//Example coming soon...]]></code>
+// The following short CSV file called "mammals.csv" is parsed 
+// in the code below. It must be in the project's "data" folder.
+//
+// id,species,name
+// 0,Capra hircus,Goat
+// 1,Panthera pardus,Leopard
+// 2,Equus zebra,Zebra
+
+Table table;
+
+void setup() {
+  
+  table = loadTable("mammals.csv", "header");
+
+  println(table.getRowCount() + " total rows in table"); 
+
+  for (TableRow row : table.rows()) {
+    
+    int id = row.getInt("id");
+    String species = row.getString("species");
+    String name = row.getString("name");
+    
+    println(name + " (" + species + ") has an ID of " + id);
+  }
+  
+}
+
+// Sketch prints:
+// 3 total rows in table
+// Goat (Capra hircus) has an ID of 0
+// Leopard (Panthera pardus) has an ID of 1
+// Zebra (Equus zebra) has an ID of 2
+]]></code>
 </example>
 
 <description><![CDATA[
-Reads the contents of a file or url and creates a Table object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online.<br />
-<br />
+Reads the contents of a file or URL and creates an Table object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online.  By default, the file is assumed to be comma-separated (in CSV format).  To use tab-separated data, include "tsv" in the options parameter.<br/>
+<br/>
+If the file contains a header row, include "header" in the options parameter.  If the file does not have a header row, then simply omit the "header" option.<br/>
+<br/>
+When specifying both a header and the file type, separate the options with commas, as in: <b>loadTable("data.csv", "header, tsv")</b><br/>
+<br/>
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
