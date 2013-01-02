@@ -126,7 +126,7 @@ sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
 prettyVersion=2.1.0
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=4
+version=5
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -279,9 +279,9 @@ authorList=[Eric Socolofsky](http://transmote.com/)
 name=Nest
 sentence=Scenegraph and mouse event handling system based loosely on ActionScript 3.
 url=http://transmote.com/nest/
-prettyVersion=0.5
+prettyVersion=0.51
 paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
-version=6
+version=7
 download=http://transmote.com/nest/download/Nest.zip
 id=047
 
@@ -301,11 +301,11 @@ library
 category=Utilities
 authorList=[Darius Morawiec](http://voidplus.de)
 name=$1 Unistroke Recognizer
-sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a template based gesture recognition.
+sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a two-dimensional template based gesture recognition.
 url=https://github.com/voidplus/OneDollar-Unistroke-Recognizer
-prettyVersion=0.1
+prettyVersion=0.2
 paragraph=
-version=2
+version=3
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
 
@@ -646,6 +646,18 @@ download=http://www.nucky.io/public/share.zip
 id=065
 
 library
+category=Data
+authorList=[Andreas Schlegel](http://www.sojamo.de/)
+name=oscP5
+sentence=An Open Sound Control (OSC) implementation.
+url=http://www.sojamo.de/libraries/oscp5
+prettyVersion=0.9.9
+paragraph=The UDP, TCP, Multicast protocols are supported and can be used for client/server communication independently from OSC as well.
+version=99
+download=http://sojamo.de/libraries/oscp5/oscP5.zip
+id=072
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
@@ -675,9 +687,9 @@ authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=ControlP5
 sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
 url=http://www.sojamo.de/libraries/controlp5
-prettyVersion=2.0.3
+prettyVersion=2.0.4
 paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
-version=79
+version=80
 download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
 id=058
 
