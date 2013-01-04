@@ -134,7 +134,7 @@ stroke(255);
 sphere(280);
 popMatrix();
 </pre><br/>
-<p>See also: <a href="http://processing.org/learning/3d/primitives3d.html">Primitives3D</a></p>
+<p>See also: <a href="http://processing.org/learning/basics/primitives3d.html">Primitives3D</a></p>
 	
 	<p>
 	In the above example, note that the functions box() and sphere() each only take one argument: size. These 3D shapes cannot be positioned via arguments, rather you should use the translate() and rotate() methods described previously.
@@ -169,7 +169,7 @@ popMatrix();
   endShape();
 </pre><br/>
 
-Note above how it's often simpler to specify vertex locations using a standardized unit of measure (i.e. 1 pixel) and relative to a point of origin (0,0,0).   The size and position of the shape is then set using matrix transformations: translate(), rotate(), and scale().   For some examples of more sophisticated custom shapes built in 3D, take a look at these examples: <a href="http://processing.org/learning/3d/rgbcube.html">RGB Cube</a>, <a href="http://processing.org/learning/3d/vertices.html">Vertices</a>, <a href="http://processing.org/learning/3d/toroid.html">Toroid</a>, <a href="http://processing.org/learning/3d/icosahedra.html">Isocahedra</a>, <a href="http://processing.org/learning/3d/bricktower.html">Brick Tower</a>.
+Note above how it's often simpler to specify vertex locations using a standardized unit of measure (i.e. 1 pixel) and relative to a point of origin (0,0,0).   The size and position of the shape is then set using matrix transformations: translate(), rotate(), and scale().   For some examples of more sophisticated custom shapes built in 3D, take a look at these examples: <a href="http://processing.org/learning/topics/rgbcube.html">RGB Cube</a>, <a href="http://processing.org/learning/topics/vertices.html">Vertices</a>, <a href="http://processing.org/learning/topics/toroid.html">Toroid</a>, <a href="http://processing.org/learning/topics/icosahedra.html">Isocahedra</a>.
 
 	<h3>Textures</h3>
 	
@@ -228,7 +228,7 @@ void draw() {
 	</p>
 		
 	<p><img src="imgs/texture2.png"><br/>
-		<a href="http://processing.org/learning/3d/texture1.html">Example: Texture1</a></p>
+		<a href="http://processing.org/learning/topics/texturequad.html">Example: Texture Quad</a></p>
 	
 <pre>
 void draw() {
@@ -245,7 +245,7 @@ void draw() {
 </pre><br/>
 
 <p>
-	If the above seems like a trivial example, that's because it is.  After all, if we're just going to texture a square, we can just draw the image using image().  Nevertheless, understanding the above process opens up a world of possibilities as we can now apply image textures to arbitrary 2D and 3D shapes.  For some examples of more sophisticated mappings, check out <a href="http://processing.org/learning/3d/texture2.html">Texture2</a>, <a href="http://processing.org/learning/3d/texture3.html">Texture3</a>, and <a href="http://processing.org/learning/3d/texturecube.html">TextureCube</a>.		
+	If the above seems like a trivial example, that's because it is.  After all, if we're just going to texture a square, we can just draw the image using image().  Nevertheless, understanding the above process opens up a world of possibilities as we can now apply image textures to arbitrary 2D and 3D shapes.  For some examples of more sophisticated mappings, check out <a href="http://processing.org/learning/topics/texturetriangle.html">Texture Triangle</a>, <a href="http://processing.org/learning/topics/texturecylinder.html">Texture Cylinder</a>, and <a href="http://processing.org/learning/topics/texturecube.html">Texture Cube</a>.		
 </p>
 
 	<h3>Lighting</h3>
@@ -312,7 +312,7 @@ pointLight(255, 0, 0, width/2, height/2, 400);
 </pre><br/>
 </ul>
 
-	<p>For additional examples of lighting in Processing, take a look at: <a href="http://processing.org/learning/3d/lights1.html">Lights1</a>, <a href="http://processing.org/learning/3d/lights2.html">Lights2</a>, <a href="http://processing.org/learning/3d/spot.html">Spot</a>, <a href="http://processing.org/learning/3d/directional.html">Directional</a>, <a href="http://processing.org/learning/library/lightsgl.html">LightsGL</a>.
+	<p>For additional examples of lighting in Processing, take a look at: <a href="http://processing.org/learning/basics/onoff.html">Lights on off</a>, <a href="http://processing.org/learning/basics/spot.html">Spot</a>, <a href="http://processing.org/learning/3d/directional.html">Directional</a>, <a href="http://processing.org/learning/basics/reflection.html">Reflection</a>.
 	
 	<h3>Perspective</h3>
 	
@@ -326,7 +326,7 @@ perspective(fov, float(width)/float(height), cameraZ/10.0, cameraZ*10.0);
 </pre><br/>
 	</p>
 	<p>
-It's not too often you'll need to change these parameters, but if you do, altering the field of view ("fov") tends to have the effect of zooming objects in and out (as the viewing volume grows and shrinks) and changing the aspect ratio can skew the rendering of objects making the appear fatter or skinnier.  For an example of this, take a look at: <a href="http://processing.org/learning/3d/perspective.html">Perspective</a>.		
+It's not too often you'll need to change these parameters, but if you do, altering the field of view ("fov") tends to have the effect of zooming objects in and out (as the viewing volume grows and shrinks) and changing the aspect ratio can skew the rendering of objects making the appear fatter or skinnier.  For an example of this, take a look at: <a href="http://processing.org/learning/basics/perspective.html">Perspective</a>.		
 	</p>
 	
 	<p>
@@ -335,7 +335,6 @@ It's not too often you'll need to change these parameters, but if you do, alteri
 
 
 <p><img src="imgs/ortho.png"><br/>
-Example: <a href="http://processing.org/learning/3d/orthovsperspective.html">OrthoVsPerspective</a><br/>
 (left image is perspective and right image is orthographic)
 </p>
 
@@ -418,7 +417,7 @@ void draw() {
   box(200);
 }</pre><br/>
 </p>
-For other examples that make use of the camera() function, take a look at: <a href="http://processing.org/learning/3d/moveeye.html">Move Eye</a>.
+For other examples that make use of the camera() function, take a look at: <a href="http://processing.org/learning/basics/moveeye.html">Move Eye</a>.
 </p>	
 
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="http://code.google.com/p/processing/issues/list">let us know</a>.</em></p>
