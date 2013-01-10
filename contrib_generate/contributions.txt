@@ -160,9 +160,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=0.9.01
+prettyVersion=0.9.20
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free and open-source (via a GPL license).
-version=0901
+version=1020
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -370,6 +370,54 @@ download=http://cloud.github.com/downloads/fjenett/combinatorics/Combinatorics.z
 id=055
 
 library
+category=Simulation
+authorList=[Andre Sier](http://s373.net/)
+name=cellularautomata
+sentence=Cellular automata in 1,2,3 dimensions.
+url=http://s373.net/code/cellularautomata
+prettyVersion=0.0.5
+paragraph=
+version=5
+download=http://s373.net/code/cellularautomata/download/cellularautomata.zip
+id=074
+
+library
+category=Simulation
+authorList=[Andre Sier](http://s373.net)
+name=dna
+sentence=Simple dna library with mutation and crossovers from Karl Sims' paper.
+url=http://s373.net/code/dna
+prettyVersion=005
+paragraph=
+version=5
+download=http://s373.net/code/dna/download/dna.zip
+id=075
+
+library
+category=Simulation
+authorList=[Andre Sier](http://s373.net)
+name=boids
+sentence=Simulation of autonomous agent behaviors in 2D, 3D.
+url=http://s373.net/code/boids
+prettyVersion=0.0.7
+paragraph=
+version=7
+download=http://s373.net/code/boids/download/boids.zip
+id=076
+
+library
+category=Simulation
+authorList=[Andre Sier](http://s373.net)
+name=marchingcubes
+sentence=Marching cubes implementation after Paul Bourke polygonize voxel.
+url=http://s373.net/code/marchingcubes
+prettyVersion=0.1.0
+paragraph=
+version=10
+download=http://s373.net/code/marchingcubes/download/marchingcubes.zip
+id=079
+
+library
 category=Hardware
 authorList=[Daniel Shiffman](http://www.shiffman.net/) and [ITP](http://itp.nyu.edu)
 name=Most Pixels Ever
@@ -514,6 +562,54 @@ download=http://www.lagers.org.uk/processing/sprites/sprites.zip
 id=062
 
 library
+category=GUI
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=G4P
+sentence=Provides a set of 2D GUI controls and multiple window support.
+url=http://www.lagers.org.uk/g4p
+prettyVersion=3.1.1
+paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
+version=8
+download=http://www.lagers.org.uk/processing/g4p/G4P.zip
+id=051
+
+library
+category=GUI
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Guido
+sentence=A simple cross mode GUI library
+url=https://github.com/fjenett/Guido
+prettyVersion=0.0.1
+paragraph=Guido is a small GUI library that is compatible with both Java (standard) and JavaScript modes.
+version=13
+download=http://cloud.github.com/downloads/fjenett/Guido/Guido.zip
+id=054
+
+library
+category=GUI
+authorList=[Andreas Schlegel](http://www.sojamo.de/)
+name=ControlP5
+sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
+url=http://www.sojamo.de/libraries/controlp5
+prettyVersion=2.0.4
+paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
+version=80
+download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
+id=058
+
+library
+category=GUI
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Piccolo2D library for Processing
+sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
+url=https://github.com/heuermh/piccolo2d-processing
+prettyVersion=2.0
+paragraph=
+version=2
+download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
+id=061
+
+library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://www.shiffman.net)
 name=Open Kinect
@@ -548,6 +644,18 @@ paragraph=
 version=12
 download=http://thomasdiewald.at/processing/libraries/dLibs_freenect/download/dLibs_freenect.zip
 id=059
+
+library
+category=Video & Vision
+authorList=[Andre Sier](http://s373.net)
+name=flob
+sentence=Fast multi-blob detector and simple skeleton tracker using flood-fill algorithms.
+url=http://s373.net/code/flob
+prettyVersion=021x
+paragraph=
+version=21
+download=http://s373.net/code/flob/download/flob.zip
+id=077
 
 library
 category=Data
@@ -670,52 +778,16 @@ download=http://ubaa.net/shared/processing/udp/udp.zip
 id=073
 
 library
-category=GUI
-authorList=[Peter Lager](http://www.lagers.org.uk)
-name=G4P
-sentence=Provides a set of 2D GUI controls and multiple window support.
-url=http://www.lagers.org.uk/g4p
-prettyVersion=3.1.1
-paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=8
-download=http://www.lagers.org.uk/processing/g4p/G4P.zip
-id=051
-
-library
-category=GUI
-authorList=[Florian Jenett](http://www.bezier.de/)
-name=Guido
-sentence=A simple cross mode GUI library
-url=https://github.com/fjenett/Guido
-prettyVersion=0.0.1
-paragraph=Guido is a small GUI library that is compatible with both Java (standard) and JavaScript modes.
-version=13
-download=http://cloud.github.com/downloads/fjenett/Guido/Guido.zip
-id=054
-
-library
-category=GUI
-authorList=[Andreas Schlegel](http://www.sojamo.de/)
-name=ControlP5
-sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
-url=http://www.sojamo.de/libraries/controlp5
-prettyVersion=2.0.4
-paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
-version=80
-download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
-id=058
-
-library
-category=GUI
-authorList=[Michael Heuer](https://github.com/heuermh)
-name=Piccolo2D library for Processing
-sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
-url=https://github.com/heuermh/piccolo2d-processing
-prettyVersion=2.0
+category=Fabrication
+authorList=[Andre Sier](http://s373.net)
+name=marchingcubes
+sentence=Marching cubes implementation after Paul Bourke polygonize voxel.
+url=http://s373.net/code/marchingcubes
+prettyVersion=0.1.0
 paragraph=
-version=2
-download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
-id=061
+version=10
+download=http://s373.net/code/marchingcubes/download/marchingcubes.zip
+id=080
 
 library
 category=Math
@@ -867,4 +939,16 @@ paragraph=Choose from a wide range of shapes including the sphere, box, cylinder
 version=7
 download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
 id=050
+
+library
+category=3D
+authorList=[Andre Sier](http://s373.net)
+name=marchingcubes
+sentence=Marching cubes implementation after Paul Bourke polygonize voxel.
+url=http://s373.net/code/marchingcubes
+prettyVersion=0.1.0
+paragraph=
+version=10
+download=http://s373.net/code/marchingcubes/download/marchingcubes.zip
+id=078
 
