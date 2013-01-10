@@ -156,13 +156,13 @@ id=070
 
 library
 category=Language
-authorList=[Daniel Howe](http://mrl.nyu.edu/~dhowe)
+authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
-sentence=A collection of tools for natural language processing and generative writing.
+sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.14
-paragraph=
-version=1014
+prettyVersion=0.9.01
+paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free and open-source (via a GPL license).
+version=0901
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
