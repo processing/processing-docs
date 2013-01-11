@@ -658,6 +658,18 @@ download=http://s373.net/code/flob/download/flob.zip
 id=077
 
 library
+category=Video & Vision
+authorList=[Stephane Cousot](http://ubaa.net/) and [Douglas Edric Stanley](http://abstractmachine.net/biography/)
+name=OpenCV
+sentence=An OpenCV implementation for processing including blob detection, face recognition and more.
+url=http://ubaa.net/shared/processing/opencv/
+prettyVersion=0.1
+paragraph=
+version=1
+download=http://ubaa.net/shared/processing/opencv/download/opencv.zip
+id=081
+
+library
 category=Data
 authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
 name=GML4U
