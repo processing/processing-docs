@@ -124,9 +124,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.1.0
+prettyVersion=2.1.1
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=5
+version=6
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -160,9 +160,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=0.9.20
+prettyVersion=0.9.22
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free and open-source (via a GPL license).
-version=1020
+version=1022
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -279,9 +279,9 @@ authorList=[Eric Socolofsky](http://transmote.com/)
 name=Nest
 sentence=Scenegraph and mouse event handling system based loosely on ActionScript 3.
 url=http://transmote.com/nest/
-prettyVersion=0.51
+prettyVersion=0.6
 paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
-version=7
+version=8
 download=http://transmote.com/nest/download/Nest.zip
 id=047
 
@@ -308,6 +308,18 @@ paragraph=
 version=3
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
+
+library
+category=Utilities
+authorList=[Jason Gessner](http://multiply.org/)
+name=TimedEvents
+sentence=A couple of classes for firing off timed events at regular or random intervals.
+url=http://multiply.org/processing/
+prettyVersion=1.0
+paragraph=TimedEvents provides 2 main functions: events fired periodically with a regular period or a random delay within a range you specify.
+version=1
+download=http://www.multiply.org/processing/TimedEvents.zip
+id=082
 
 library
 category=Simulation
@@ -755,18 +767,6 @@ id=053
 
 library
 category=Data
-authorList=[Maxime Walzberg (Nucky)](http://www.nucky.io/)
-name=Share
-sentence=Classes to create a poll in a Processing sketch, and to read/send string messages to a server from a sketch.
-url=http://sharelib.nucky.io/
-prettyVersion=2
-paragraph=
-version=2
-download=http://www.nucky.io/public/share.zip
-id=065
-
-library
-category=Data
 authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=oscP5
 sentence=An Open Sound Control (OSC) implementation.
@@ -863,12 +863,12 @@ id=001
 library
 category=3D
 authorList=[Frederik Vanhoutte](http://www.wblut.com/)
-name=HE_Mesh
+name=HE-Mesh
 sentence=He-Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
 url=http://hemesh.wblut.com/
-prettyVersion=1.75gx3
+prettyVersion=1.80
 paragraph=
-version=7
+version=8
 download=http://hemesh.wblut.com/hemesh-latest.zip
 id=009
 
@@ -939,18 +939,6 @@ paragraph=
 version=23
 download=http://saitoobjloader.googlecode.com/files/OBJLoader.zip
 id=043
-
-library
-category=3D
-authorList=[Peter Lager](http://www.lagers.org.uk)
-name=shapes3d
-sentence=3D Shape creation and display made easy.
-url=http://www.lagers.org.uk/s3d4p/index.html
-prettyVersion=2.1.2
-paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
-version=7
-download=http://www.lagers.org.uk/processing/shapes3d/shapes3d.zip
-id=050
 
 library
 category=3D
