@@ -179,6 +179,18 @@ download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=039
 
 library
+category=Geometry
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.1
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=3
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=085
+
+library
 category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
 name=gicentreUtils
@@ -201,6 +213,18 @@ paragraph=It supplies classes and functions for 3d-surfaces, simple physics (nod
 version=5
 download=http://www.generative-gestaltung.de/downloads/generativedesign.zip
 id=007
+
+library
+category=Compilation
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.1
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=3
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=084
 
 library
 category=Utilities
@@ -430,6 +454,18 @@ download=http://s373.net/code/marchingcubes/download/marchingcubes.zip
 id=079
 
 library
+category=Simulation
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.1
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=3
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=086
+
+library
 category=Hardware
 authorList=[Daniel Shiffman](http://www.shiffman.net/) and [ITP](http://itp.nyu.edu)
 name=Most Pixels Ever
@@ -574,6 +610,18 @@ download=http://www.lagers.org.uk/processing/sprites/sprites.zip
 id=062
 
 library
+category=Animation
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.1
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=3
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=083
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
@@ -675,9 +723,9 @@ authorList=[Stephane Cousot](http://ubaa.net/) and [Douglas Edric Stanley](http:
 name=OpenCV
 sentence=An OpenCV implementation for processing including blob detection, face recognition and more.
 url=http://ubaa.net/shared/processing/opencv/
-prettyVersion=0.1
+prettyVersion=0.1.1
 paragraph=
-version=1
+version=11
 download=http://ubaa.net/shared/processing/opencv/download/opencv.zip
 id=081
 
