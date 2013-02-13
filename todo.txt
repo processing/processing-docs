@@ -21,17 +21,10 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   x saveTable() --SM
   x createTable() --SM
   - other new Table methods
-
 - JSON  --SM
-
-- potential changes for the PShape methods (endShape(), beginShape())?
-
-- add shape(x, y, z)
-
-- need to add addChild() to PShape reference, how does it work. On both OBJ and SVG?
-
-- thread() ???
-
+- add new methods for PShape e.g. setStroke(), addChild(), etc.  --CR
+- add shape(x, y, z)  --CR
+- thread() ??? --CR
 
 NICE
 - PDF fonts  --CR
@@ -43,6 +36,7 @@ NICE
 
 DONE FOR 2.0 REFERENCE
 
+x potential changes for the PShape methods (endShape(), beginShape())?
 x XML  --SM
 x New XML from BenFry email (cc to SM)  
   x added parseXML() and saveXML() to PApplet, and "new XML()" and "XML.parse()" will be for advanced users who want to deal with exceptions
