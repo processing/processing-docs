@@ -21,6 +21,7 @@ void setup() {
 
   // Make a shape
   s = createShape();
+  s.beginShape();
   s.noStroke();
 
   // Exterior part of shape
@@ -38,7 +39,7 @@ void setup() {
   s.endContour();
 
   // Finish off shape
-  s.end();
+  s.endShape();
 }
 
 void draw() {

@@ -2,8 +2,8 @@
 
 2.0 DESIGN
 
-$ New header graphic
-$ New splash page / loader graphic
+x New header graphic
+x New splash page / loader graphic
 $ New 2.0 icons
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -23,24 +23,6 @@ NEW LANGUAGE ELEMENTS IN REFERENCE
   - other new Table methods
 
 - JSON  --SM
-  
-
-- update loadFont() and createFont() to work with NATIVE_FONT decision
-
-- if, for, and catch color coding not working in current build
-
-- Request  --CR
-  - createRequest()
-  - request.getBytes() 
-  - request.getFont() 
-  - request.getImage()  
-  - request.getShader()  
-  - request.getShape()  
-  - request.getStrings()  
-  - request.getTable() 
-  - request.getXML() 
-
-- write reference for getChild() re: OBJ  --CR
 
 - potential changes for the PShape methods (endShape(), beginShape())?
 
@@ -455,6 +437,17 @@ http://developer.apple.com/library/mac/#documentation/UserExperience/Conceptual/
 - attrib() // or attribute()
 - Disambiguation pages for things like "copy" in PImage and PVector
 - Is there a way to catch for keywords like "run" and "init" in the parser?
+
+- Request  --CR
+  - createRequest()
+  - request.getBytes() 
+  - request.getFont() 
+  - request.getImage()  
+  - request.getShader()  
+  - request.getShape()  
+  - request.getStrings()  
+  - request.getTable() 
+  - request.getXML() 
 
 //
 

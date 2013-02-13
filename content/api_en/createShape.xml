@@ -105,7 +105,7 @@ void draw() {
 
 
 <description><![CDATA[
-The <b>createShape()</b> function is used to define a new shape. Once created, this shape can be drawn with the <b>shape()</b> function. The basic way to use the function defines new primitive shapes. One of the following parameters are used as the first parameter: <b>ELLIPSE</b>, <b>RECT</b>, <b>ARC</b>, <b>TRIANGLE</b>, <b>SPHERE</b>, <b>BOX</b>, <b>LINE</b>. The parameters for each of these different shapes are the same as their corrsponding functions: <b>ellipse()</b>, <b>rect()</b>, <b>arc()</b>, <b>triangle()</b>, <b>sphere()</b>, <b>box()</b>, and <b>line()</b>. The first example above clarifies how this works.<br />
+The <b>createShape()</b> function is used to define a new shape. Once created, this shape can be drawn with the <b>shape()</b> function. The basic way to use the function defines new primitive shapes. One of the following parameters are used as the first parameter: <b>ELLIPSE</b>, <b>RECT</b>, <b>ARC</b>, <b>TRIANGLE</b>, <b>SPHERE</b>, <b>BOX</b>, <b>QUAD</b>, <b>LINE</b>. The parameters for each of these different shapes are the same as their corrsponding functions: <b>ellipse()</b>, <b>rect()</b>, <b>arc()</b>, <b>triangle()</b>, <b>sphere()</b>, <b>box()</b>, and <b>line()</b>. The first example above clarifies how this works.<br />
 <br />
 Custom, unique shapes can be made by using <b>createShape()</b> without a parameter. After the shape is started, the drawing attributes and geometry can be set directly to the shape. See the second example above for specifics.<br />
 <br />
