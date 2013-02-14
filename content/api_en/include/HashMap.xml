@@ -12,6 +12,9 @@
 <example>
 <image></image>
 <code><![CDATA[
+import java.util.Iterator;
+import java.util.Map;
+
 HashMap hm = new HashMap();
 
 hm.put("Ava", 1);
