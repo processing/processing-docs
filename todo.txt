@@ -13,23 +13,25 @@ $ New 2.0 icons
 Note: Don't edit PApplet below ~10400 [10 DEC 2012]
  
 NEW LANGUAGE ELEMENTS IN REFERENCE
+
+THIS SECTION MOVED INTO THE GITHUB ISSUES
   
-- TABLE  --SM
+o TABLE  --SM
   x loadTable()
     x loadTable("somethingorother", "csv");
     x loadTable("somethingorother.csv", "tsv");  // override the .csv extension since the contents are tab delimited
   x saveTable() --SM
   x createTable() --SM
   - other new Table methods
-- JSON  --SM
-- add new methods for PShape e.g. setStroke(), addChild(), etc.  --CR
-- add shape(x, y, z)  --CR
-- thread() ??? --CR
+o JSON  --SM
+o add new methods for PShape e.g. setStroke(), addChild(), etc.  --CR
+o add shape(x, y, z)  --CR
+o thread() ??? --CR
 
 NICE
-- PDF fonts  --CR
--   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
--   figure out why font naming not working correctly -- CR
+o PDF fonts  --CR
+o   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
+o   figure out why font naming not working correctly -- CR
 
 
 // // // // // // // // // // // // // // // // // // // // //
@@ -215,17 +217,19 @@ x Done
 
 2.0 EXAMPLES
 
-- Table  --DS,JT
-- New Minim Examples --CR, Damien
-- Modify Capture examples to use new setup API
+THIS SECTION MOVED INTO THE GITHUB ISSUES
+
+o Table  --DS,JT
+o New Minim Examples --CR, Damien
+o Modify Capture examples to use new setup API
 
   NICE
-- Interaction examples need to improve
-- More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
-- Custom font examples using loadFont()  --CR
-- New JavaScript Examples  --FJ,CR
-- New PDF w/ typography  --CR,BF
-- Syntax highlighting for Example code online --FJ
+o Interaction examples need to improve
+o More with proper typography in OpenGL, meaning textMode(SHAPE) in OpenGL  --CR
+o Custom font examples using loadFont()  --CR
+o New JavaScript Examples  --FJ,CR
+o New PDF w/ typography  --CR,BF
+o Syntax highlighting for Example code online --FJ
 
   DONE
 x 2 David Muth examples  --CR
@@ -275,7 +279,6 @@ $ Processing.js  --DS,FJ (need info for processing's credits from Dave Humphries
   NICE
 - New Generics  --DS
 - New Regex --DS
-
 
 
 Key:
