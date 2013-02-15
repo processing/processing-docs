@@ -22,7 +22,10 @@ putenv('HOME=' . CONTENTDIR);
 // do the initial checkout
 //`cd /var/www/processing && /usr/bin/svn checkout http://processing.googlecode.com/svn/trunk/web/content/`;
 
-`cd $where && /usr/bin/svn update`;
+//`cd $where && /usr/bin/svn update`;
+
+// Switch from SVN to GIT, 14 FEB 2013
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
 
 // Copy over the images for the tutorials index
 if (!is_dir($path.'learning/imgs')) {

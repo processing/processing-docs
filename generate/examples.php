@@ -6,28 +6,19 @@ $benchmark_start = microtime_float();
 
 $local = false;
 
-// Redefine location on local machine for examples in processing trunk
-//if ($local) {
-  //define('BASEDIR',    '/Users/REAS/Documents/reas@processing.org/trunk/');
-  //define('EXAMPLESOURCEDIR', '/Users/REAS/Documents/reas@processing.org/trunk/processing/java/examples/');
-//} else {
-  define('EXAMPLESOURCEDIR', '../../processing/java/examples/');
-//}
-//define('CONTENTDIR', BASEDIR.'processing/java/');
-//define('EXAMPLESDIR',	BASEDIR.'learning/');
+define('EXAMPLESOURCEDIR', '../../processing/java/examples/');
 
-$where = EXAMPLESOURCEDIR; //CONTENTDIR . 'examples';
+$path = BASEDIR;
+$where = EXAMPLESOURCEDIR;
 $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
 
-// do the initial checkout
-//`cd /var/www/processing && /usr/local/bin/svn co svn://processing.org/trunk/web/content/`;
+//`cd $there && /usr/bin/svn update examples_basics.xml`;
+//`cd $there && /usr/bin/svn update examples_topics.xml`;
+//`cd $where && /usr/bin/svn update`;
 
-//if (!$local) {
-`cd $there && /usr/bin/svn update examples_basics.xml`;
-`cd $there && /usr/bin/svn update examples_topics.xml`;
-`cd $where && /usr/bin/svn update`;
-//}
+// Switch from SVN to GIT, 14 FEB 2013
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
 
 
 # --------------------------------- Basics
