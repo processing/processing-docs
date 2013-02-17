@@ -132,18 +132,18 @@ void draw() {
 }
 </pre>
 
-<p>One of the nice things about the PShape object is that it can also store color information in addition to geometry.  fill(), stroke(), strokeWeight() and other color related methods of the drawing API are also available in PShape.</p>
+<p>One of the nice things about the PShape object is that it can also store color information in addition to geometry.  Once a shape has been created in order to alter its fill or stroke, use the methods setFill(), setStroke(), setStrokeWeight(), etc.</p>
 
 <pre>
 void setup() {  
   rectangle = createShape(RECT,-50,-25,100,50);
-  rectangle.stroke(255);  
-  rectangle.strokeWeight(4);
-  rectangle.fill(127);
+  rectangle.setStroke(color(255));  
+  rectangle.setStrokeWeight(4);
+  rectangle.setFill(color(127);
 }
 </pre>
 
-<p>Finally, these methods can be called during draw() as well if you want to change the color of the shape dynamically.</p>
+<p>These methods can be called during draw() as well if you want to change the color of the shape dynamically.</p>
 
 <p><img src="imgs/pshape2.png"></p>
 
@@ -151,10 +151,12 @@ void setup() {
 void draw() {
   background(51);
   translate(mouseX, mouseY);
-  rectangle.fill(map(mouseX, 0, width, 0, 255));
+  rectangle.setFill(color(map(mouseX, 0, width, 0, 255));
   shape(rectangle);
 }
 </pre>
+
+<p>It should be noted that unlike with fill() and stroke() you must pass a full color as an argument.  i.e. instead of saying "setFill(255,0,0)" for a red fill, you'll need to say "setFill(color(255,0,0))".  In addition, setFill() and setStroke() can take a boolean argument (e.g. setFill(false)) to turn the fill or stroke on or off for a given vertex as well as an integer (e.g. setFill(i,color(255,0,0))) to set the fill or stroke for a specific vertex.
 
 <p>See Example "PrimitivePShape" for an example that demonstrates all of the above code.</p>
 
@@ -196,31 +198,31 @@ void draw() {
 }
 </pre>
 
-<p>To make a PShape with custom vertices, createShape() replaces beginShape() and end() replaces endShape().</p>
+<p>To make a PShape with custom vertices, you must first call createShape() to make the shape object and then call beginShape() and endShape() on that object</p>
 
 <pre>
 PShape star;
 
 void setup() {
-  star = createShape();  // What used to be beginShape();
+  star = createShape();       // First create the shape
+  star.beginShape();          // now call beginShape();
 
   // All the vertex information goes here.
 
-  star.end(CLOSE);       // What used to be endShape(CLOSE);
+  star.endShape(CLOSE);       // now call endShape(CLOSE);
 }
 </pre>
 
-<p>Then all the vertices (and colors) can be specified by calling the functions on the new PShape object "star."</p>
+<p>Then all the vertices (and colors) can be specified by calling the functions on the new PShape object "star."  Note that setFill() and setStroke() are not required here, only if you choose to alter the colors after the shape has been initially created.</p>
 
 <pre>void setup() {
   // First create the shape
   star = createShape();
-
+  star.beginShape();
   // You can set fill and stroke
   star.fill(102);
   star.stroke(255);
   star.strokeWeight(2);
-
   // Here, we are hardcoding a series of vertices
   star.vertex(0, -50);
   star.vertex(14, -20);
@@ -232,9 +234,7 @@ void setup() {
   star.vertex(-23, 7);
   star.vertex(-47, -15);
   star.vertex(-14, -20);
-
-  // We are done with the shape
-  star.end(CLOSE);
+  star.endShape(CLOSE);
 }
 </pre>
 
@@ -294,23 +294,23 @@ class Star {
   Star() {
     // First create the shape
     s = createShape();
+    star.beginShape();
     // You can set fill and stroke
-    s.fill(102);
-    s.stroke(255);
-    s.strokeWeight(2);
+    star.fill(102);
+    star.stroke(255);
+    star.strokeWeight(2);
     // Here, we are hardcoding a series of vertices
-    s.vertex(0, -50);
-    s.vertex(14, -20);
-    s.vertex(47, -15);
-    s.vertex(23, 7);
-    s.vertex(29, 40);
-    s.vertex(0, 25);
-    s.vertex(-29, 40);
-    s.vertex(-23, 7);
-    s.vertex(-47, -15);
-    s.vertex(-14, -20);
-    // The shape is complete
-    s.end(CLOSE);
+    star.vertex(0, -50);
+    star.vertex(14, -20);
+    star.vertex(47, -15);
+    star.vertex(23, 7);
+    star.vertex(29, 40);
+    star.vertex(0, 25);
+    star.vertex(-29, 40);
+    star.vertex(-23, 7);
+    star.vertex(-47, -15);
+    star.vertex(-14, -20);
+    star.endShape(CLOSE);
   }
 </pre>
 
@@ -341,8 +341,9 @@ Polygon poly;                   // An object of type Polygon
 
 void setup() {
   PShape star = createShape();  // First we make the PShape
-  star.fill(0,127);
-  star.stroke(0);
+  star.beginShape();
+  star.noStroke();
+  star.fill(0, 127);
   star.vertex(0, -50);
   star.vertex(14, -20);
   star.vertex(47, -15);
@@ -353,7 +354,7 @@ void setup() {
   star.vertex(-23, 7);
   star.vertex(-47, -15);
   star.vertex(-14, -20);
-  star.end(CLOSE);
+  star.endShape(CLOSE);
   
   poly = new Polygon(star);     // Then we make the Polygon object by passing in the reference to the PShape
 
@@ -400,6 +401,7 @@ PShape s = createShape(QUAD_STRIP);
 
 <pre>
   PShape path = createShape();
+  path.beginShape();
   float x = 0;
   // Calculate the path as a sine wave
   for (float a = 0; a < TWO_PI; a += 0.1) {
@@ -407,7 +409,7 @@ PShape s = createShape(QUAD_STRIP);
     x+= 5;
   }
   // Don't "CLOSE" a shape if you want it to be a path
-  path.end();
+  path.endShape();
 </pre>
 
 <p>See Example "PathPShape" for the full implementation.</p>
@@ -419,6 +421,7 @@ PShape s = createShape(QUAD_STRIP);
 <pre>
 // Make a shape
 PShape s = createShape();
+s.beginShape();
 
 // Exterior part of shape
 s.beginContour();
@@ -439,7 +442,7 @@ s.vertex(-10,-10);
 s.endContour();
 
 // Finishing off shape
-s.end();
+s.endShape();
 </pre>
 
 <p>See Example "BeginEndContour" for the full implementation.</p>
@@ -461,7 +464,7 @@ shape(body);
 
 <pre>
 // Make the parent shape
-PShape alien = createShape(GROUP);;
+PShape alien = createShape(GROUP);
 
 // Make two shapes
 PShape head = createShape(ELLIPSE, 0, 0, 50, 50);
