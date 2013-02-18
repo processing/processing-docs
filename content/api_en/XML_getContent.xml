@@ -12,13 +12,15 @@
 <example>
 <image></image>
 <code><![CDATA[
-// The following short XML file called "sites.xml" is parsed 
-// in the code below. It must be in the project's "data" directory
-// &#60;?xml version="1.0"?&#62;
-// &#60;websites&#62;
-//   &#60;site id="0" url="processing.org"&#62;Processing&#60;/site&#62;
-//   &#60;site id="1" url="mobile.processing.org"&#62;Processing Mobile&#60;/site&#62;
-// &#60;/websites&#62;
+// The following short XML file called "mammals.xml" is parsed
+// in the code below. It must be in the project's "data" folder.
+//
+// &lt;?xml version=&quot;1.0&quot;?&gt;
+// &lt;mammals&gt;
+//   &lt;animal id=&quot;0&quot; species=&quot;Capra hircus&quot;&gt;Goat&lt;/animal&gt;
+//   &lt;animal id=&quot;1&quot; species=&quot;Panthera pardus&quot;&gt;Leopard&lt;/animal&gt;
+//   &lt;animal id=&quot;2&quot; species=&quot;Equus zebra&quot;&gt;Zebra&lt;/animal&gt;
+// &lt;/mammals&gt;
 
 XML xml;
 
