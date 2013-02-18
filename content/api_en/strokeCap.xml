@@ -23,8 +23,6 @@ line(20, 70, 80, 70);
 
 <description><![CDATA[
 Sets the style for rendering line endings. These ends are either squared, extended, or rounded, each of which specified with the corresponding parameters: SQUARE, PROJECT, and ROUND. The default cap is ROUND.
-<br/><br/>
-This function is not available with the P3D renderer (<a href="http://code.google.com/p/processing/issues/detail?id=123">see Issue 123</a>). More information about the renderers can be found in the <b>size()</b> reference.
 ]]></description>
 
 </root>

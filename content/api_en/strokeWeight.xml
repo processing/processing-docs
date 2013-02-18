@@ -22,8 +22,6 @@ line(20, 70, 80, 70);
 
 <description><![CDATA[
 Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.
-<br/><br/>
-When drawing with P3D, series of connected lines (such as the stroke around a polygon, triangle, or ellipse) produce unattractive results when a thick stroke weight is set (<a href="http://code.google.com/p/processing/issues/detail?id=123">see Issue 123</a>). With P3D, the minimum and maximum values for <b>strokeWeight()</b> are controlled by the graphics card and the operating system's OpenGL implementation. For instance, the thickness may not go higher than 10 pixels.
 ]]></description>
 
 </root>

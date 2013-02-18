@@ -69,7 +69,6 @@ The <b>renderer</b> parameter selects which rendering engine to use. For example
 <br/>
 <b>PDF</b>: The PDF renderer draws 2D graphics directly to an Acrobat PDF file. This produces excellent results when you need vector shapes for high-resolution output or printing. You must first use Import Library &rarr; PDF to make use of the library. More information can be found in the PDF library reference.<br/>
 <br/>
-Note that each renderer may support different drawing methods, or support them differently.  For example, the P3D renderer doesn't support <b>strokeCap()</b> or <b>strokeJoin()</b>, which can lead to ugly results when using <b>strokeWeight()</b>. (<a href="http://code.google.com/p/processing/issues/detail?id=123">Issue 123</a>) <br/>
 ]]></description>
 
 </root>

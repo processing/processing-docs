@@ -52,8 +52,6 @@ endShape();
 
 <description><![CDATA[
 Sets the style of the joints which connect line segments. These joints are either mitered, beveled, or rounded and specified with the corresponding parameters MITER, BEVEL, and ROUND. The default joint is MITER. 
-<br/> <br/>
-This function is not available with the P3D renderer, (<a href="http://code.google.com/p/processing/issues/detail?id=123">see Issue 123</a>). More information about the renderers can be found in the <b>size()</b> reference.
 ]]></description>
 
 </root>
