@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>TAU (6.28318...)</name>
+
+<category>Constants</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image>TWO_PI.png</image>
+<code><![CDATA[
+float x = width/2;
+float y = height/2;
+float d = width * 0.8;
+arc(x, y, d, d, 0, QUARTER_PI);
+arc(x, y, d-20, d-20, 0, HALF_PI);
+arc(x, y, d-40, d-40, 0, PI);
+arc(x, y, d-60, d-60, 0, TAU);
+]]></code>
+</example>
+
+<description><![CDATA[
+TAU is an alias for TWO_PI, a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <b>sin()</b> and <b>cos()</b>.
+]]></description>
+
+</root>
