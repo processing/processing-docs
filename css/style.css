@@ -4,59 +4,46 @@ By Lenny Burdette
 Derived from code by Kevin Cannon, http://www.multiblah.com and
 Florian Jenett, mail@florianjenett.de
 Reworked by CR, 23 Sep 2011
-Reworked by Jon Gacnik, 19 Feb 2013
 
 Created: 2005.08.29 04:28PM
 x Last Modified: 2005.08.30 06:23PM
 
 */
 
-
-/* ================ GOOGLE FONT ================== */
-@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);
-
-
-
-/* ================ GLOBAL ================== */
-
 body {
 	margin				: 0;
 	padding				: 0;
 	
-	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
+	background-color	: #E2E2E2;  /* #FFFFFF; */  /* #333322 */
 	
-	font-family			: 'PT Serif', georgia, times, serif; 
+	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-size			: 100%; 
-    font-size           : 0.78em;
+    font-size           : 0.7em;
 	font-weight			: normal;
-	line-height			: 1.4em;
-	color				: #252525;
+	line-height			: normal;
+	color				: #333333;
 }
 
 img { border: 0px solid #000000; }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
 	font-weight: normal;
-	color: #2c7bb5;
+	color: #3399CC;
 }
-p a, li a, span a { border-bottom: 1px solid #A6BCCF; }
-a.large-link {
-	position: relative;
-	margin-left: 18px;
+
+a:hover, 
+a:active {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #3399CC;
 }
-a.large-link:before {
-	display: block;
-	position: absolute;
-	left: -18px;
-	top: 12px;
-	width: 11px;
-	height: 9px;
-	background: transparent url(../img/raquo.png) center center no-repeat;
-	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/raquo.svg);
-	background-image: -moz-linear-gradient(transparent, transparent), url(../img/raquo.svg);
-	background-image: linear-gradient(transparent, transparent), url(../img/raquo.svg);
-	content: '';
+
+a:visited,
+a:link:visited {
+	text-decoration: underline;
+	font-weight: normal;
+	color: #3399CC;
 }
 
 /* ================ COVER SLIDESHOW ================== */
@@ -88,42 +75,18 @@ a.large-link:before {
 /* ================ LAYOUT ================== */
 
 #container {
-	width: 900px;
-	margin: 0 auto;
+	width: 750px;
+	margin-left: 0px;
 	background-color: white;
 }
 
 /* ================ HEADER ================== */
 #header {
-	width: 900px;
-	height: 106px;
-	margin-bottom: 30px;
+	width: 750px;
+	height: 80px;
 	overflow: hidden;
-	background: #0c2033 url(../img/processing-black.png) center center no-repeat;
+	background-color: #000000;
 	position:relative;
-}
-
-#header .processing-logo {
-	width: 206px;
-	height: 38px;
-	margin: 20px 0 0 30px;
-	background: transparent url(../img/processing-logo.png) center center no-repeat;
-	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
-	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
-	background-image: linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
-}
-#header .processing-logo.no-cover:before {
-	position: relative;
-	top: 3px;
-	left: -18px;
-	font-size: 24px;
-	content: '\2039';
-}
-#header a { 
-	font-family: 'Enriqueta', georgia, times, sans-serif;
-	text-decoration: none;
-	border: none;
-	color: white;
 }
 
 #header h1 {
@@ -135,59 +98,77 @@ a.large-link:before {
 	position: absolute;
 	top: 20px;
 	right: 5px;
-	width: 176px;
-	color: #959595;
+	width: 220px;
+	color: #ccc;
 }
 
-#header form input {
-	float: left;
-	border: 1px solid #136796;
-	outline: none;
-	height: 18px;
-	background: #fff;
-	font-family: 'PT Serif', georgia, times, serif; 
-	font-size: 1em;
-	color: #959595;
+#header form input.text {
+	width: 130px;
+	margin-right: 2px;
 }
-#header form input[type="text"]{
-	padding-left: 3px;
-	width: 127px;
-	border-right: none;
-}
-#header form input[type="submit"]{
-	height: 22px;
-	width: 22px;
-	border-left: none;
-	background: white url(../img/search.png) center center no-repeat;
-	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/search.svg);
-	background-image: -moz-linear-gradient(transparent, transparent), url(../img/search.svg);
-	background-image: linear-gradient(transparent, transparent), url(../img/search.svg);
-	cursor: pointer;
-}
+
 #header form p { margin: 0; }
+#header form input {
+	/* border: 1px solid black; */
+	background: #CCCCCC;
+	float: left;
+	margin-top: 1px;
+}
 
 /* ================ NAVBAR ================== */
 
 #navigation {
-	float: left;
-	width: 170px;
-	margin-right: 20px;
-	color: #2c7bb5;
+	font-size: 0.7em;
+	color: #CCCCCC;
 }
-.navBar { padding: 0 20px 0 30px; }
 
-.navBar a { text-decoration: none; border: none; }
+.navBar { font-size: 11px; 
+	height: 20px; 
+	padding: 5px 0 0 55px; 
+}
 
-.navBar a.active { color: #252525; }
-.outward span {color: #252525; margin-right: 2px;}
+.navBar a { color: #fff; }
+.navBar a:visited {color: #fff; }
 
+#mainnav { background: #333333; }
+#mainnav_noSub { background: #333333; margin-bottom: 40px; }
+#mainnav, #mainnav_noSub { position: relative; color: #cccccc !important; }
+
+#subNav { margin-left: 157px;   /* 264  Is this for the reference??? */
+	background: #5a5a5a url(../img/nav_bottomarrow.gif) no-repeat; 
+	padding-left: 33px;
+	margin-bottom: 30px;
+}
+
+#subNav.libraries { margin-left: 157px;   /* 264  Is this for the reference??? */
+	background: #5a5a5a url(../img/nav_bottomarrow.gif) no-repeat; 
+	padding-left: 33px;
+	margin-bottom: 0px;
+}
+
+.faq { position: absolute; right: 30px; color: #cccccc }
+.wiki { position: absolute; right: 77px; color: #cccccc }
+.forum { position: absolute; right: 119px; color: #cccccc }
+.feed { position: absolute; right: 174px; color: #cccccc }
+
+
+#subNav.learning { margin-left: 225px; }
+.active { color: #cccccc !important; }
+.activeSub { color: #000000 !important; }
+
+#subNav.exhib { margin-left: 90px; }
+.active { color: #cccccc !important; }
+//.faq { position: absolute; right: 10px; color: #cccccc }
+
+#subNav.abo { margin-left: 390px; }
+.active { color: #cccccc !important; }
+//.faq { position: absolute; right: 10px; color: #cccccc }
 
 /* ================ CONTENT ================== */
 
 .content {
-	width: 710px;
-	float: left;
-	overflow: hidden;
+	margin-left    : 55px;
+	margin-right   : 50px;
 	position: relative;
 }
 
@@ -195,22 +176,34 @@ a.large-link:before {
 
 #footer {
 	clear: both;
-	padding: 100px 30px 20px 30px;
-	line-height: 23px;
-	color: #959595;
+	padding-top: 100px;
+	color: white;
 }
+
 #footer a {
-	color: #959595;
-	border-bottom: 1px solid #CECECE;
+	color: white;
 }
+
 #footer #copyright,
 #footer #colophon {
-
-} 
-#footer #copyright {
-	border-top: 1px solid #A6BCCF;
-	padding-top: 10px;
+	padding: 5px 0 5px 50px;
+	color: white;
 }
+
+#footer #copyright {
+	background-color: #5A5A5A;
+}
+
+#footer #colophon {
+	background-color: #000000;
+}
+
+#footer #colophon a {
+	text-decoration: underline;
+	color: white;
+}
+
+#footer #colophon span { color: #fff; }
 
 /* ================ TYPOGRAPHY ================== */
 
@@ -218,8 +211,7 @@ h1, h2, h3, h4, h5, h6
 	{
 	/*margin-bottom 		: 5px;*/
 	color				: #5A5A5A; 
-	font-family			: 'Enriqueta', georgia, times, serif;
-	-webkit-font-smoothing: antialiased; 
+	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-weight			: normal;
 	line-height			: 1.6em;
 	}
@@ -232,10 +224,6 @@ h1, h2, h3, h4
 h4, h5, h6
 {
 	font-weight			: bold; 
-}
-.large-link { 
-	font-family: 'Enriqueta', georgia, times, serif;
-	-webkit-font-smoothing: antialiased;
 }
 
 /* Font Sizes */
@@ -269,15 +257,7 @@ code {
 
 li {margin-bottom: 1em; }
 
-.large-link { 
-	font-size: 1.4rem; 
-	line-height: 30px;
-}
 .error { color: #f00; margin: 0; }
-
-/* ================ UI Elements ================== */
-
-
 
 /* ================== RANDOM CLASSES =============== */
 .clear { clear: both; }
@@ -286,15 +266,12 @@ li {margin-bottom: 1em; }
 
 /**************************************************************** Cover ***/
 
-#Cover .leftcol { 
-    float: left;
-    width: 400px;
-    margin-right: 57px;
-}
 #Cover .rightcol { 
-	float: left;
-	width: 250px; 
+    float: right;
+    width: 380px;
+    margin-right: 20px;
 }
+#Cover .leftcol { width: 250px; }
 
 
 #Cover ul {
@@ -305,7 +282,13 @@ li {margin-bottom: 1em; }
 }
 
 
-#Cover h3 { margin: 40px 0 15px 0; }
+#Cover .content {
+	margin-left    : 55px;
+	margin-right   : 0px;
+	position: relative;
+}
+
+#Cover h3 { margin: 40px 0 0 0; }
 .exhibition-small { padding: 0; margin: 0; }
 .exhibition-small h3 { margin-top: 0px !important; }
 
@@ -336,7 +319,11 @@ td img { margin: 0; display: block; }
 #Exhibition .onecol { clear: both; }
 #Exhibition td { vertical-align: top; }
 
-
+#Exhibition #Index .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 
 #Index .colone { width: 224px; float: left; margin-right: 35px; }
@@ -348,6 +335,11 @@ td img { margin: 0; display: block; }
 #Index .onecol { clear: both; }
 #Index td { vertical-align: top; }
 
+#Index .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 .curated-item { margin-bottom: 25px; }
 .curated-item h5 { margin-top: 1em; color: #666; font-size: 1em; }
@@ -371,7 +363,11 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 
 #Language h5 a { float: left; margin-left: -30px; }
 
-
+#Language .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 .skinny {
         margin-left    : 0px;
@@ -504,7 +500,11 @@ div.ref-col { width: 30%;
 #Contribute .threecol { float: left; width: 210px; margin-right: 20px; }
 #Contribute .threecol p { margin-bottom: 2em; }
 
-
+#Contribute .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 /************************************************************** learning ***/
 
@@ -520,7 +520,11 @@ div.ref-col { width: 30%;
 
 .doc-float { margin-right: 40px;}
 
-
+#Learning .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 h2 { margin-bottom: 0; margin-top: 0;}
 
@@ -590,7 +594,17 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	margin-top: 30px;
 }
 
+#Tools .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
+#Tools-index .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 
 #Tools-index h5 { margin-bottom: 0; font-size: 1em; }
@@ -669,7 +683,17 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	margin-bottom: 2px;
 }
 
+#Libraries .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
+#Libraries .content {
+        margin-left    : 55px;
+        margin-right   : 0px;
+        position: relative;
+}
 
 #Libraries .lib-nav { display: block; 
 	margin-bottom: 10px; 
@@ -702,7 +726,11 @@ h2 { margin-bottom: 0; margin-top: 0;}
 ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 #Environment td { padding-bottom: 1em; }
 
-
+#Environment .content {
+        margin-left    : 55px;
+        margin-right   : 50px;
+        position: relative;
+}
 
 /************************************************************** examples ***/
 

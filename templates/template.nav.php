@@ -52,34 +52,53 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="'.$id.'">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Cover', $section == 'Cover') . "<br><br>\n";
-
-	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br><br>\n";
-
-	    $html .= "\t\t\t\t\t" . l('Exhibition', $section == 'Exhibition') . "<br><br>\n";
-
-	    $html .= "\t\t\t\t\t" . l('Reference', $section == 'Reference') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Libraries', $section == 'Libraries') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Tools', $section == 'Tools') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Environment', $section == 'Environment') . "<br><br>\n";
-
-	    $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Basics', $section == 'Basics') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Topics', $section == 'Topics') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . "<br><br>\n";
-	    
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'About') . "<br> \n";
-	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br><br>\n";
-
-	    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . "<br><br>\n";
-	       
-	    $html .= "\t\t\t\t\t" . "<a href=\"https://twitter.com/processingOrg\"" . 'class="outward"' . "><span>&raquo;</span>Twitter</a><br> \n";
-	    $html .= "\t\t\t\t\t" . "<a href=\"http://forum.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Forum</a><br> \n";
-	    $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Wiki</a><br> \n";
-	    $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing/processing-web/issues?state=open\"" . 'class="outward"' . "><span>&raquo;</span>Issues</a><br> \n";
-	    $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing\"" . 'class="outward"' . "><span>&raquo;</span>Source</a><br> \n";
-    
+    $html .= "\t\t\t\t\t" . l('Cover', $section == 'Cover') . " \\\n";
+    $html .= "\t\t\t\t\t" . l('Exhibition', $section == 'Exhibition') . " \\\n";
+    $html .= "\t\t\t\t\t" . l('Reference', in_array($section, $ref)) . " \\\n";
+    $html .= "\t\t\t\t\t" . l('Learning', in_array($section, $learn)) . " \\\n";
+    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . " \\\n";
+    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . " \\\n";
+    $html .= "\t\t\t\t\t" . l('About', in_array($section, $abo)) . " \n";
+       
+    $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing/processing\"" . 'class="faq"' . ">&raquo;Code</a>\n";
+    $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org\"" . 'class="wiki"' . ">&raquo;Wiki</a>\n";
+    $html .= "\t\t\t\t\t" . "<a href=\"http://forum.processing.org\"" . 'class="forum"' . ">&raquo;Forum</a>\n";
+    $html .= "\t\t\t\t\t" . "<a href=\"http://feed.processing.org\"" . 'class="feed"' . ">&raquo;Feed</a>\n";
+       
     $html .= "\t\t\t\t</div>\n";
+    
+    if (in_array($section, $abo)) {
+        $html .= "\t\t\t\t" . '<div class="navBar abo" id="subNav">' . "\n";
+    
+        $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . " \\\n";
+        $html .= "\t\t\t\t\t" . l('People', $section == 'People') . " \\\n";
+        $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . " \n";
+        $html .= "\t\t\t\t</div>\n";      
+   
+     } else if (in_array($section, $ref)) {
+        $html .= "\t\t\t\t" . '<div class="navBar" id="subNav">' . "\n";
+    
+        //if ($lang == 'en') {
+          $html .= "\t\t\t\t\t" . l('Language', $section == 'Language') . " (";
+          $html .= l('A-Z', $section == 'A-Z') . ") \\\n";
+          $html .= "\t\t\t\t\t" . l('Libraries', $section == 'Libraries') . " \\\n";
+          $html .= "\t\t\t\t\t" . l('Tools', $section == 'Tools') . " \\\n";
+          $html .= "\t\t\t\t\t" . l('Environment', $section == 'Environment') . " \n";
+        //}
+    
+        $html .= "\t\t\t\t</div>\n";
+        
+    } else if (in_array($section, $learn)) {
+        $html .= "\t\t\t\t" . '<div class="navBar learning" id="subNav">' . "\n";
+        
+        $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . " \\\n Examples: ";
+        $html .= "\t\t\t\t\t" . l('Basics', $section == 'Basics') . ", \n";
+        $html .= "\t\t\t\t\t" . l('Topics', $section == 'Topics') . " \\\n";
+        #$html .= "\t\t\t\t\t" . l('3D', $section == '3D') . ",  \n";
+        #$html .= "\t\t\t\t\t" . l('Library', $section == 'Library') . " \\\n";
+        $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . " \n";
+        $html .= "\t\t\t\t</div>\n";
+    }
 
     return $html . "\t\t\t</div>\n";
 }
