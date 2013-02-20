@@ -78,7 +78,7 @@ function get_curated_three($curated, $start = 0, $num = 12)
 {
   // output html
 
-  $html = '<table width="672" cellspacing="0" cellpadding="0" border="0">';
+  $html = '<table width="687" cellspacing="0" cellpadding="0" border="0">';
   $j = 0;
 
   for ($i = $start; $i < $start+$num; $i++) {
