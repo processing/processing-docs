@@ -2,62 +2,38 @@
 
 2.0 WEBSITE
   
-  NEED for 2.0
+  NEED 100% FOR 2.0
   
   - Clean up CSS and HTML
   - Clean out the JavaScript includes
-	
-  - Donations
-    - Complete donation sequence
-    - Integrate mailman for email after financial transaction
-    x New download page with radio buttons, goes to page w/links
-    x Get financial setup for transactions
-  
-  - Write Foundation copy  --CR
-  o Write 2.0 press copy  --CR
-  
   - Change the name of patrons.html to foundation.html
- 
   - Remove all GIF bitmapped type and replace  
-  
-  x New menu design on left (page width to 850 or 960)
-  
-  x Center page within browser
-  
-  
-  NEED
+  - Integrate mailman for email after financial transaction
+  - Merge Basic / Topic examples
+  - Add Partners to Cover
+    - Fathom
+    - UCLA Arts Software Studio
+    - NYU ITP
+  - Add Twitter and GitHub status to homepage
+  - Add Google analytics
+  - Build libraries page from the contributions.txt file web/contrib_generate
+  - Build tools pages from the contributions.txt file web/contrib_generate
+  - Legacy libraries and tools linked from the bottom of the page
 
-  - Merging (or building interface) for Basic / Topic examples differentiation
-  
+  NEED POST 2.0
+
   - Foundation page, mixed with patrons
-    . How do the patrons get added w/donations?
-      
-  - Build libraries page from the contributions.txt file web/
-  - Build tools page
-  
-  - Homepage additions
-    . Add Partners
-      - Fathom
-      - UCLA Arts Software Studio
-      - NYU ITP
-    . Add Twitter and GitHub to homepage
-    . Add Google analytics
-  
-  - Code copyright forms and page [Goes on the developer site, Git or Google]
-      
+    . How do the patrons get added w/donations?      
+  - New CSS for tutorials
+  - Code copyright forms and page [Goes on the developer site @ GitHub]  --CR
+    
       
   NICE   
 
   - Download page auto detects OS
-  
-  - New CSS for tutorials
-
   - Add contact to Homepage and About!
-  
-  - Color code for the Tutorials and Examples and Reference
-
+  - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
-
   
   
 // // // // // // // // // // // // // // // // // // // // //
@@ -110,3 +86,16 @@ DONE
 	x Example page
 	x Tutorial index
 	x Tutorial page
+
+  
+  x Write Foundation copy  --CR
+  x Write 2.0 press copy  --CR
+  
+  x New menu design on left (page width to 850 or 960)
+  x Center page within browser
+  
+        	
+  x Donations
+    x Complete donation sequence
+    x New download page with radio buttons, goes to page w/links
+    x Get financial setup for transactions
