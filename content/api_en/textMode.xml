@@ -26,12 +26,12 @@ void draw() {
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Please see this page for details on font handling in JavaScript mode:
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Sets the way text draws to the screen, either as texture maps or as vector geometry. The default <b>textMode(MODEL)</b>, uses textures to render the fonts. The <b>textMode(SHAPE)</b> mode draws text using the glyph outlines of individual characters rather than as textures. This mode is only supported with the <b>PDF</b> and <b>P3D</b> renderer settings. With the <b>PDF</b> renderer, you must call <b>textMode(SHAPE)</b> before any other drawing occurs. If the outlines are not available, then <b>textMode(SHAPE)</b> will be ignored and <b>textMode(MODEL)</b> will be used instead.<br />

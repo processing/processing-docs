@@ -51,9 +51,9 @@ void draw() {
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!-- js_mode><description><![CDATA[
 Use a "@pjs preload" directive to preload images before your sketch starts. You can easily add one with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode -->
 
 
 <description><![CDATA[

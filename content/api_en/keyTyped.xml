@@ -31,9 +31,9 @@ void keyReleased() {
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!-- js_mode><description><![CDATA[
 With the "@pjs globalKeyEvents" directive you can catch all key events on the window your sketch is running in. You can set it with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode -->
 
 <description><![CDATA[
 The <b>keyTyped()</b> function is called once every time a key is pressed, but action keys such as Ctrl, Shift, and Alt are ignored. Because of how operating systems handle key repeats, holding down a key will cause multiple calls to <b>keyTyped()</b>, the rate is set by the operating system and how each computer is configured. 

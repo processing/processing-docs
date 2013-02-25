@@ -2,12 +2,12 @@
 <root>
 <name>open()</name>
 
-<unsupported_modes>js</unsupported_modes>
+<!-- unsupported_modes>js</unsupported_modes -->
 
 <category>Input</category>
 
 <subcategory>Files</subcategory>
-<js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode>
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
 
 <type></type>
 

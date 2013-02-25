@@ -43,12 +43,12 @@ text("WORD", 50, 70);
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Please see this page for details on font handling in JavaScript mode:
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Sets the current alignment for drawing text. The parameters LEFT, CENTER, and RIGHT set the display characteristics of the letters in relation to the values for the <b>x</b> and <b>y</b> parameters of the <b>text()</b> function.

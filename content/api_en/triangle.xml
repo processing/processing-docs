@@ -15,9 +15,9 @@ triangle(30, 75, 58, 20, 86, 75);
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!--js_mode><description><![CDATA[
 The "@pjs crisp" directive affects how lines are rendered. You can set it with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode-->
 
 <description><![CDATA[
 A triangle is a plane created by connecting three points. The first two arguments specify the first point, the middle two arguments specify the second point, and the last two arguments specify the third point. 

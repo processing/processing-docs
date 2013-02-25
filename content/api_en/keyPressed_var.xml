@@ -30,9 +30,9 @@ void draw() {
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!-- js_mode><description><![CDATA[
 With the "@pjs globalKeyEvents" directive you can catch all key events on the window your sketch is running in. You can set it with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode -->
 
 <description><![CDATA[
 The boolean system variable <b>keyPressed</b> is <b>true</b> if any key is pressed and <b>false</b> if no keys are pressed.

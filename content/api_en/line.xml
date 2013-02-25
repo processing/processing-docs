@@ -40,9 +40,9 @@ line(85, 75, 0, 30, 75, -50);
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!-- js_mode><description><![CDATA[
 The "@pjs crisp" directive affects how lines are rendered. You can set it with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode -->
 
 <description><![CDATA[
 Draws a line (a direct path between two points) to the screen. The version of <b>line()</b> with four parameters draws the line in 2D.  To color a line, use the <b>stroke()</b> function. A line cannot be filled, therefore the <b>fill()</b> function will not affect the color of a line. 2D lines are drawn with a width of one pixel by default, but this can be changed with the <b>strokeWeight()</b> function. The version with six parameters allows the line to be placed anywhere within XYZ space. Drawing this shape in 3D with the <b>z</b> parameter requires the P3D parameter in combination with <b>size()</b> as shown in the above example.

@@ -25,9 +25,9 @@ void draw() {
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!-- js_mode><description><![CDATA[
 Use a "@pjs preload" directive to preload images before your sketch starts. You can easily add one with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode -->
 
 <description><![CDATA[
 Datatype for storing images. Processing can display <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, and <b>.png</b> images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the <b>loadImage()</b> function. The <b>PImage</b> class contains fields for the <b>width</b> and <b>height</b> of the image, as well as an array called <b>pixels[]</b> that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.<br/>
