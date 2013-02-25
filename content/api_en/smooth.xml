@@ -20,9 +20,9 @@ ellipse(70, 48, 36, 36);
 ]]></code>
 </example>
 
-<js_mode><description><![CDATA[
+<!-- js_mode><description><![CDATA[
 The "@pjs crisp" directive affects how lines are rendered. You can set it with the "Playback Settings" tool in the "JavaScript" menu.
-]]></description></js_mode>
+]]></description></js_mode -->
 
 <description><![CDATA[
 Draws all geometry with smooth (anti-aliased) edges. <b>smooth()</b> will also improve image quality of resized images. Note that <b>smooth()</b> is active by default; <b>noSmooth()</b> can be used to disable smoothing of geometry, images, and fonts.<br />

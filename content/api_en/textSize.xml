@@ -20,12 +20,12 @@ text("WORD", 10, 70);
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Please see this page for details on font handling in JavaScript mode:
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Sets the current font size. This size will be used in all subsequent calls to the <b>text()</b> function. Font size is measured in units of pixels.

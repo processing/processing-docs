@@ -27,7 +27,7 @@ void setup() {
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Font support in JavaScript mode is limited and different from the default Java mode. Use a font that's installed on the computer, or from a .ttf or .otf file inside current folder. If you have a @font-face rule in your CSS, you can use it by passing the @font-face name into the name parameter. All "smooth" and "charset" parameters are ignored in JavaScript mode.<br />
 <br />
@@ -37,7 +37,7 @@ Use a "@pjs font" directive to preload font files before your sketch starts:<br 
 Please see this page for more details on font handling in JavaScript mode:<br />
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode<br />
 ]]></description>
-</js_mode>
+</js_mode -->
 	
 <description><![CDATA[
 Dynamically converts a font to the format used by Processing from a .ttf or .otf file inside the sketch's "data" folder or a font that's installed elsewhere on the computer. If you want to use a font installed on your computer, use the <b>PFont.list()</b> method to first determine the names for the fonts recognized by the computer and are compatible with this function. Not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.<br />

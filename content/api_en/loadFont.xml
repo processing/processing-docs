@@ -20,7 +20,7 @@ text("word", 10, 50);
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Currently JavaScript mode does not support .vlw font files and will just call <a href="createFont_.html">createFont()</a> instead.<br />
 <br />
@@ -30,7 +30,7 @@ Use a "@pjs font" directive to preload font files before your sketch starts:<br 
 Please see this page for details on font handling in JavaScript mode:
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Loads a .vlw formatted font into a <b>PFont</b> object. Create a .vlw font by selecting "Create Font..." from the Tools menu. This tool creates a texture for each alphanumeric character and then adds them as a .vlw file to the current sketch's data folder. Because the letters are defined as textures (and not vector data) the size at which the fonts are created must be considered in relation to the size at which they are drawn. For example, load a 32pt font if the sketch displays the font at 32 pixels or smaller. Conversely, if a 12pt font is loaded and displayed at 48pts, the letters will be distorted because the program will be stretching a small graphic to a large size.<br />

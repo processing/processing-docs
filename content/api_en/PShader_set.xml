@@ -6,8 +6,8 @@
 
 <subcategory>Method</subcategory>
 
-<unsupported_modes>js</unsupported_modes>
-<js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode>
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
 
 <example>
 <image></image>

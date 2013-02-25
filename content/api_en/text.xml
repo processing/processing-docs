@@ -40,12 +40,12 @@ text(s, 10, 10, 70, 80);  // Text wraps within text box
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Please see this page for details on font handling in JavaScript mode:
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Draws text to the screen. Displays the information specified in the first parameter on the screen in the position specified by the additional parameters. A default font will be used unless a font is set with the <b>textFont()</b> function and a default size will be used unless a font is set with <b>textSize()</b>. Change the color of the text with the <b>fill()</b> function. The text displays in relation to the <b>textAlign()</b> function, which gives the option to draw to the left, right, and center of the coordinates.<br/>

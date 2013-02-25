@@ -21,7 +21,7 @@ text("word", 12, 60);
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Currently JavaScript mode does not support .vlw font files and will just call <a href="createFont_.html">createFont()</a> instead.<br />
 <br />
@@ -31,7 +31,7 @@ Use a "@pjs font" directive to preload font files before your sketch starts:<br 
 Please see this page for details on font handling in JavaScript mode:<br />
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Sets the current font that will be drawn with the <b>text()</b> function. Fonts must be created for Processing with <b>createFont()</b> or loaded with <b>loadFont()</b> before they can be used. The font set through <b>textFont()</b> will be used in all subsequent calls to the <b>text()</b> function. If no <b>size</b> parameter is input, the font will appear at its original size (the size in which it was created with the "Create Font..." tool) until it is changed with <b>textSize()</b>.<br />

@@ -27,12 +27,12 @@ text(lines, 70, 25);
 ]]></code>
 </example>
 
-<js_mode>
+<!-- js_mode>
 	<description><![CDATA[
 Please see this page for details on font handling in JavaScript mode:
 http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 ]]></description>
-</js_mode>
+</js_mode -->
 
 <description><![CDATA[
 Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function, but the leading is reset by <b>textSize()</b>. For example, if the leading is set to 20 prior, when <b>textSize(48)</b> is run, the leading is reset to the default for the text size 48.
