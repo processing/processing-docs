@@ -184,6 +184,10 @@ if __name__ == "__main__":
       except IOError as inst:
         print 'Error reading', prop_url
         print inst
+        
+      except UnicodeDecodeError as inst:
+        print 'Error decoding', prop_url
+        print inst
   
   f.close()
   shutil.move(tmpfile, fileout)
