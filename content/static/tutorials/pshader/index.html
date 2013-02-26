@@ -1,4 +1,4 @@
-<h1>PShader</h1>
+<h1>Shaders in Processing</h1>
 	
 <p>
 <table width="656">
@@ -10,12 +10,50 @@
 	
 	<p>&nbsp;</p>
 
-<h3>Blah blah</h3>
+<h3>What is a (P)shader?</h3>
 
-<p>blah blah</p>
+<p>A brand new feature in Processing 2.0 is the inclusion of GLSL shaders. In fact, everything that Processing draws on the screen with the <a href="http://processing.org/reference/size_.html">P2D and P3D renderers</a> is the output of an appropriate "default shader" running behind the scenes. Processing handles these default shaders transparently so that the user doesn't need to worry about them, and she or he can continue to use the well-known <a href="http://processing.org/reference/">drawing API</a> and expect the same visual results as with  previous versions of Processing. However, Processing 2.0 incorporates a new set of API functions and variables that allows advanced users to replace the default shaders with her or his own. This opens-up many exciting possibilities: rendering 3D scenes using more sophisticated lighting and texturing algorithms, applying image post-processing effects in real-time, creating complex procedural objects that would be very hard or impossible to generate with other techniques, and sharing shader effects between desktop, mobile and web platforms with minimal code changes.</p>
+
+<p>In order to understand how this new shader API works and how can be used to extend the drawing capabilities of Processing, it is necessary to have an overview of the key concepts of shader programming, first in general and then from the "point of view" of a Processing sketch (so get ready and grab a beverage of your preference, because this is going to be a very long tutorial).</p>
+
+<p>Answering the question alluded by the title of this section: a shader is basically a program that runs on the Graphics Processing Unit (GPU) of the computer, and generates the visual output we see on the screen given the information that defines a 2D or 3D scene: vertices, colors, textures, lights, etc. The term "shader" itself might be slightly misleading, since the word shading in the context of drawing implies the process of representing different levels of darkness on the surface of an object due to the surrounding lights in order to create the illusion of depth. The <a href="http://renderman.pixar.com/view/brief-introduction-to-renderman">first computer shaders</a> were mainly concerned with the synthetic calculation of these shading levels given the mathematical representation of a tridimensional scene and the material properties of the objects in it, and attempted to create photorealistic renderings of such scenes. Nowadays, the shaders are not only used to calculate the shading or lighting levels in a virtual scene, but they are responsible of all the rendering stages, starting with camera transformations that are applied on the raw geometry, and ending at the evaluation of the final color of each visible pixel in the screen.
+</p>
+
+<p>There are several languages that can be used to write shaders, such as <a href="https://developer.nvidia.com/cg-toolkit">Cg</a>, <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561(v=vs.85).aspx">HLSL</a> and <a href="http://www.opengl.org/documentation/glsl/">GLSL</a>. The latter is the shader language included in <a href="http://www.opengl.org/">OpenGL</a>, the standard rendering library and API used across a wide variety of computing devices, ranging from high-end desktop computers to smartphones. GLSL simply stands for OpenGL Shading Language. Since Processing uses OpenGL as the basis for its P2D and P3D renderers, GLSL is the shader language that one has to use to write custom shaders to include in Processing sketches.</p>
+
+<p>Writing shaders requires an understanding of the individual stages involved in the rendering a scene with the GPU, and how we can use GLSL to program them. The sequence of these stages is called the "graphical pipeline" in the technical parlance of Computer Graphics, and we will now take a look at the main stages in the pipeline from the perspective of a Processing sketch.</p>
+
+<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and <a href="http://glsl.heroku.com/">coding sandboxes</a>, that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.
+Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. The code is show below. This sketch draws a quad with lights and some geometric transformations applied to it:
 
 <pre>
-blah blah
+float angle;
+void setup() {
+  size(400, 400, P3D);
+  noStroke();  
+}
+
+void draw() {
+  background(0);
+  
+  camera(width/2, height/2, 300, width/2, height/2, 0, 0, 1, 0);
+  pointLight(200, 200, 200, width/2, height/2, 200);
+  
+  translate(width/2, height/2);
+  rotateY(angle);
+  
+  beginShape(QUADS);
+  normal(0, 0, 1);
+  fill(50, 50, 200);
+  vertex(-100, +100);
+  vertex(+100, +100);
+  fill(200, 50, 50);
+  vertex(+100, -100);
+  vertex(-100, -100);
+  endShape();  
+  
+  angle += 0.01;
+}
 </pre>
 
 	<p>&nbsp;</p>
