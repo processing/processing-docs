@@ -24,8 +24,10 @@
 <p>Writing shaders requires an understanding of the individual stages involved in the rendering a scene with the GPU, and how we can use GLSL to program them. The sequence of these stages is called the "graphical pipeline" in the technical parlance of Computer Graphics, and we will now take a look at the main stages in the pipeline from the perspective of a Processing sketch.</p>
 
 <p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and <a href="http://glsl.heroku.com/">coding sandboxes</a>, that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.
-Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. The code is show below. This sketch draws a quad with lights and some geometric transformations applied to it:
+Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. This sketch draws a quad with lights and some geometric transformations applied to it:
 
+<table>
+<tr><td>
 <pre>
 float angle;
 void setup() {
@@ -55,13 +57,353 @@ void draw() {
   angle += 0.01;
 }
 </pre>
+</td></tr>
+<caption><b>Code listing 1:</b> Simple 3D sketch that draws a lit rotating rectangle</caption>
+</table>
 
 <p>
-Figure 1 depicts a diagram of the graphics pipeline, and how the input of the pipeline is related to the function calls in the sketch. There are several additional stages in a typical pipeline, but we don't show them here in the sake of clarity. Furthermore, Processing follows the specification set by <a href="http://www.khronos.org/opengles/">OpenGL ES</a>, which is the version of OpenGL used in mobile devices and, through <a href="<a href="http://www.khronos.org/opengles/">">WebGL</a>, also in browsers. The programming model in OpenGL ES is simpler and doesn't include all the stages that are present in desktop OpenGL. On the desktop, OpenGL ES is in fact subset of OpenGL, so this choice ensures that GLSL shaders written to work with Processing can be used across different platforms with minimal changes. As a downside, advanced features of OpenGL desktop are not (directly) accessible through the Processing API, however there are several other toolkits that can be used for more 
+The image below depicts a diagram of the graphics pipeline, and how the input of the pipeline is related to the function calls in the sketch. There are several additional stages in a typical pipeline, but we don't show them here in the sake of clarity. Furthermore, Processing follows the specification set by <a href="http://www.khronos.org/opengles/">OpenGL ES</a>, which is the version of OpenGL used in mobile devices and, through <a href="<a href="http://www.khronos.org/opengles/">">WebGL</a>, also in browsers. The programming model in OpenGL ES is simpler and doesn't include all the stages that are present in desktop OpenGL. On the desktop, OpenGL ES is in fact subset of OpenGL, so this choice ensures that GLSL shaders written to work with Processing can be used across different platforms with minimal changes. As a downside, advanced features of OpenGL desktop are not (directly) accessible through the Processing API, however there are several other toolkits that can be used for more sophisticated graphics programming.
 </p>
 
 <p><img src="imgs/pipeline.png"></p>
 
+<p>
+The camera, light, transformation and vertex data defined in the sketch result in two types of input for the pipeline: uniform and attribute variables. Uniform variables are those that remain constant for each vertex in the scene. The projection and modelview matrices computed from the camera and transformation setup fall in this category, since each vertex in the scene is affected by the same projection/modelview matrices. The lighting parameters (source position, color, etc) are also passed to the pipeline as uniform variables for the same reason. On the other hand, the variables that change from vertex to vertex are called attributes, and in this example we have three different type of attributes per vertex: the xyz position itself, set with the <em>vertex()</em> function, the color specified with <em>fill()</em> and the normal vector. Note that even though there is only one call to the <em>normal()</em> function, each vertex will have its own normal vector, which in this case will be the same across the four vertices.
+</p>
+
+<p>
+The first stage in the pipeline is the vertex shader. It uses the vertex attributes (in this case positions, colors and normals), projection and modelview matrices, and light parameters in order to compute, for each vertex, what its position and color on the screen turns out to be. We can think of the vertex shader operating on one vertex at the time, and carrying out all the mathematical operations to project the vertex on the screen plane and to determine its color given the particular projection/modelview matrices and the arrangement of light sources.
+</p>
+
+<p>
+The vertex shader doesn't know how the vertices are connected to each other forming a shape since it receives each vertex independently of the others. Therefore, the immediate output of the vertex stage is just the list of vertices projected onto the screen plane. In Processing we set how the vertices of a shape are connected with each other by passing an argument to <em>beginShape()</em>. This argument, which in the case of this example is <em>QUADS</em>, determines how the next stage in the pipeline, called primitive assembly, builds geometric primitives out of the individual vertices that come out of the vertex shader. 
+</p>
+
+<p>
+Once the primitives are determined, the next stage consists in calculating which pixels in the screen are covered by the faces of the primitives being drawn. But one problem is that the screen is a discrete grid of pixels, while the geometric data up to this point is represented as continuous numeric values. The process called "rasterization" is in charge of discretizing the vertex coordinates so they can be accurately represented on the screen at the given resolution. Another problem is that the output color has been calculated only at the input vertices so far, and it needs to be determined at the rest of the pixels that lie inside the primitives. This is solved by interpolation: the color at the center of triangle is interpolated from the colors of the three corner vertices. There are several ways of carrying out this interpolation, and the distortion introduced by the perspective <a href="http://en.wikibooks.org/wiki/GLSL_Programming/Rasterization">needs to be accounted for</a> as well.
+<p>
+
+<p>
+The output of the rasterization and interpolation stage are the pixel positions (x,y), together with their color (and optionally other variables that can be defined in the shader, we will cover this a few paragraphs later). This information (position, color, and other per-pixel variables) is called a fragment. The fragments are processed in the next stage, called the fragment shader. In this particular example, the fragment shader doesn't  do much, it only writes the color to the screen position (x, y). At this point it is useful to think, in the same way we think of the vertex shader as operating on each input vertex at the time, of the fragment shader as operating on each fragment coming down the pipeline at the time, and then outputting the color of the fragment to the screen. As a way to see this more clearly, we could imagine the vertex shader as a "function" that is called inside the loop that runs over all the input vertices. We could write in pseudo-code:
+</p>
+
+<pre>
+for (int i = 0; i < vertexCount; i++) {
+  output = vertexShader(vertex[i]);
+}
+</pre>
+
+<p>where the <em>vertexShader</em> function is defined as:</p>
+
+<pre>
+function vertexShader(vertex) {
+  projPos = projection * modelview * vertex.position;
+  litColor = lightColor * dot(vertex.normal, lightDirection);    
+  return (projPos, litColor);
+}
+</pre>
+
+<p>
+While for the fragment shader, we would have a loop over the visible, interpolated fragments:
+</p>
+
+<pre>
+for (int i = 0; i < fragmentCount; i++) {
+  screenBuffer[fragment[i].xy] = fragmentShader(fragment[i]);
+}
+
+function fragmentShader(fragment) {
+  return fragment.litColor;
+}
+</pre>
+
+<p>
+Note that the <em>litColor</em> variable is calculated in the vertex shader, and then accessed in the fragment shader. These kind of variables that are exchanged between the vertex and the fragment shaders are called "varying". As we discussed before, the values of the varying variables are interpolated (perspective-corrected) over the fragments spanned by the vertices by the GPU hardware, so we don't need to worry about that. We can define additional varying variables, depending on the type of effect we are trying to achieve with our shaders.
+</p>
+
+<p>
+The fragment shader can perform additional operations on each fragment, and in fact these could be potentially very complex. It is possible to implement a ray-tracer entirely in the fragment shader, and we will touch on this topic briefly with some more advanced examples. One important limitation of the fragment shader to keep in mind is that it cannot access fragments other than the one is currently processing (same as the vertex shader cannot access a vertex other than the one is currently operating on).
+</p>
+
+<p>
+From all the stages described in our simplified pipeline, only the vertex and fragment shaders can be modified to run our own custom code. The other stages are all hard-coded in the GPU. With this picture in mind, we can move forward and start working through the actual shader API in Processing. 
+</p>
+
+<h3>2. The PShader class</h3>
+
+<p>
+In the previous section we saw that the two programmable stages in the GPU pipeline are the vertex and fragment shaders (in recent versions of OpenGL desktop there are additional programmable stages, but they are not covered by the shader API in Processing). Both are needed in order to specify a complete, working pipeline. In Processing we have to write the GLSL code for the fragment and vertex shaders in separate files, which then are combined to form a single "shader program" than can be executed in the GPU. The word "program" is often omitted, with the implicit assumption that when we just say shader we are referring to a complete shader program involving a fragment and vertex shaders.
+<p>
+
+<p>
+A shader (program) is encapsulated by the <em>PShader</em> class. A <em>PShader</em> object is created with the <em>loadShader()</em> function which takes the filenames of the vertex and fragment files as the arguments. If only one filename is specified, then Processing will assume that the filename corresponds to the fragment shader, and will use a default vertex shader. Code listing 2 shows a sketch loading and using a shader that renders lights using discrete shading levels.
+</p>
+
+<table>
+<caption>Code listing 2: Sketch that uses a toon effect shader to render a sphere.</caption>
+<tr><td>
+<pre>
+PShader toon;
+
+void setup() {
+  size(640, 360, P3D);
+  noStroke();
+  fill(204);
+  toon = loadShader("ToonFrag.glsl", "ToonVert.glsl");
+  toon.set("fraction", 1.0);
+}
+
+void draw() {
+  shader(toon);
+  background(0); 
+  float dirY = (mouseY / float(height) - 0.5) * 2;
+  float dirX = (mouseX / float(width) - 0.5) * 2;
+  directionalLight(204, 204, 204, -dirX, -dirY, -1);
+  translate(width/2, height/2);
+  sphere(120);
+}
+</pre>
+</td></tr>
+<tr><td>
+<pre>
+uniform mat4 transform;
+uniform mat3 normalMatrix;
+uniform vec3 lightNormal;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec3 normal;
+
+varying vec4 vertColor;
+varying vec3 vertNormal;
+varying vec3 vertLightDir;
+
+void main() {
+  gl_Position = transform * vertex;  
+  vertColor = color;
+  vertNormal = normalize(normalMatrix * normal);
+  vertLightDir = -lightNormal;
+}
+</pre>
+</td></tr>
+
+
+<tr><td>
+<pre>
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+#define PROCESSING_LIGHT_SHADER
+
+uniform float fraction;
+
+varying vec4 vertColor;
+varying vec3 vertNormal;
+varying vec3 vertLightDir;
+
+void main() {  
+  float intensity;
+  vec4 color;
+  intensity = max(0.0, dot(vertLightDir, vertNormal));
+
+  if (intensity > pow(0.95, fraction)) {
+    color = vec4(vec3(1.0), 1.0);
+  } else if (intensity > pow(0.5, fraction)) {
+    color = vec4(vec3(0.6), 1.0);
+  } else if (intensity > pow(0.25, fraction)) {
+    color = vec4(vec3(0.4), 1.0);
+  } else {
+    color = vec4(vec3(0.2), 1.0);
+  }
+
+  gl_FragColor = color * vertColor;  
+}
+</pre>
+</td></tr>
+
+</table>
+
+<p>
+The ifdef section in the fragment shader is required to make the shader compatible with OpenGL ES and WebGL. It sets the precision of the float and integer numbers to medium, which should be fine for most devices. These precision statements are optional on the desktop. There is also a #define line declaring the PROCESSING_LIGHT_SHADER symbol. This define is used by Processing to determine the type of shader, and whether or not it is valid to render the geometry in the sketch. This topic will be explain in detail in the next section. 
+</p>
+
+<p>
+There are three varying variables shared between the fragment and vertex shaders, vertColor, vertNormal and vertLightDir, which are used to do the lighting calculation per-pixel, instead of per-vertex, which is the default. We will see an detailed example about per-pixel lighting later on in this tutorial. The gl_Position variable in the vertex shader is a GLSL built-in variable used to store the output vertex position, while gl_FragColor is the corresponding built-in variable to store the color output for each fragment. The value of gl_FragColor continues down the pipeline through the (non-programmable) stages of alpha blending and depth occlusion in order to compute the final color on the screen.
+</p>
+
+<p>
+The PShader class includes the set() function to pass values from the sketch to the uniform variables in the fragment or vertex shaders. As discussed earlier, the uniform variables remain constant for each vertex in the scene, so they need to be set only once for the whole shape or shapes being rendered. Some uniform variables are automatically set by Processing, such as transform, normalMatrix and lightNormal. The next section describes in detail the names of uniform and attribute variables that are automatically set by the Processing renderers.
+</p>
+
+
+<h3>3. Types of shaders in Processing</h3>
+
+<p>
+From the code and pseudo-code examples presented in the previous sections, it can be appreciated that different shaders have different uniform and attribute variables. Clearly, a shader that does not compute lighting does not need uniforms holding the light source's position and color, for example. If we work with a low-level toolkit in C or C++ with direct access to the OpenGL API, we are free to name the uniforms and attributes of a shader in any way we like, since we have absolute control on the way the geometry is stored in our application, and how and when it is passed over to the GPU pipeline using the OpenGL functions. This is different when working in Processing, since the shaders are handled automatically by the renderers and should be able to handle the geometry that is described with the drawing API of Processing. This doesn't imply that custom shaders must render things in the same way as Processing does by default, quite in the contrary, the use of custom shaders opens up the possibility of greatly altering the rendering pipeline in Processing. However, custom shaders meant to be used in conjunction with the standard drawing API have to follow certain naming conventions, and are bound by some limitations. 
+</p>
+
+<p>
+Depending on whether a scene has strokes (lines or points), or it uses textures and/or lights, then the shader to be used under those circumstances must present a specific set of uniform and attribute variables that will allow Processing to interface with the shader and send the appropriate data to it.
+</p>
+
+<p>
+Based on this uniform and attribute requirements, shaders in Processing must belong to one of 6 different types. These 6 types can be grouped in 3 classes:
+</p>
+
+<ul>
+<li>POINT shaders: used to render stroke points.</li> 
+<li>LINE shaders: used to render stroke lines.</li> 
+<li>TRIANGLE shaders: used to render anything else, which means that they will handle (lit/unlit, textured/non-textured) shapes. Because all shapes in Processing are ultimately made out of triangles, they are can be called TRIANGLE shaders.</li> 
+</ul>
+
+<p>
+When setting a shader with the shader() function, if no type argument is specified then the shader will be assumed to be a triangle shader:
+</p>
+
+<pre>
+draw() {
+  shader(pointShader, POINTS);
+  shader(lineShader, LINES);
+  shader(polyShader); // same as shader(polyShader, TRIANGLE);
+
+  stroke(255);
+  beginShape(POLYGON);
+  ...
+}
+</pre>
+
+<p>
+This code will result in Processing using pointShader to render stroke points, lineShader to render lines, and polyShader to render triangles (anything else). 
+</p>
+
+<p>
+The point and line shaders are relevant only when using the P3D renderer. The rendering of points and lines in three dimensions is very different from that of regular geometry because they need to be always facing the screen. This requires a different transformation math in the vertex shader. By contrast, all geometry in two dimensions, including lines and points, are rendered as regular triangles since it is contained in a single plane parallel to the screen.
+</p>
+
+<p>
+However, there are different types of triangle shaders because of the use of lights and textures. There are in fact 4 different situations when rendering regular, non-stroked geometry:
+</p>
+
+<ul>
+<li>there are no lights and no textures</li>
+<li>there are lights but no textures</li>
+<li>there are textures but no lights</li>
+<li>there are both textures and lights</li>
+</ul>
+
+<p>
+As mentioned earlier, a shader for rendering lit geometry requires additional attributes and uniform variables to be sent from Processing that are not needed by a shader that only renders flat-colored geometry without lights or textures. Similarly, a shader for rendering textured polygons needs its own uniforms and attributes (texture sampler and texture coordinates) that would not be required otherwise. Although it could have been possible to have a generic shader in Processing that takes care of all different rendering scenarios, this would be very inefficient because of all the branching that should take place inside the shaders to choose the appropriate rendering path. In general, GPUs are not very efficient at handling branches in their shaders, particularly those available on mobile devices.
+</p>
+
+<p>In consequence, the triangle shaders are further discriminated in 4 types:</p>
+
+<ul>
+<li>COLOR: render geometry with no lights and no textures</li>
+<li>LIGHT: render geometry with lights but no textures</li>
+<li>TEXTURE: render geometry with textures but no lights</li>
+<li>TEXLIGHT: render geometry with textures and lights</li>
+</ul>
+
+<p>
+Together with the POINT and LINE shaders mentioned earlier, we end up having 6 different types of shaders in Processing.
+</p>
+
+<p>
+Processing needs to use the right type of shader when drawing a piece of geometry, and by default it picks the correct shader by checking whether the geometry about to be rendered has lights or textures associated to it and then enabling the appropriate shader. When we set our own custom shader, we need to make sure that it belongs to the correct type to handle the subsequent drawing calls. For example, if simpleShader below is of type COLOR, then the following code will run without problems:
+</p>
+
+<pre>
+shader(simpleShader);
+noLights();
+fill(180);
+rect(0, 0, 100, 100);
+</pre>
+
+<p>However, if we try to do:</p>
+
+<pre>
+shader(simpleShader);
+lights();
+fill(180);
+rect(0, 0, 100, 100);
+</pre>
+
+<p>
+then Processing will print the warning “Your shader cannot be used to render lit geometry, using default shader instead.”, but will still render the lit geometry by using its own default LIGHT shader instead the one provided in the shader() call.
+</p>
+
+<p>
+The type of a shader must be specified inside the GLSL code, either in the vertex shader or the fragment shader (or both), by using a #define line, which are the following:
+</p>
+
+<ul>
+<li>#define PROCESSING_POINT_SHADER for POINT shaders</li>
+<li>#define PROCESSING_LINE_SHADER for LINE shaders</li>
+<li>#define PROCESSING_COLOR_SHADER for COLOR shaders</li>
+<li>#define PROCESSING_LIGHT_SHADER for LIGHT shaders</li>
+<li>#define PROCESSING_TEXTURE_SHADER for TEXTURE shaders</li>
+<li>#define PROCESSING_TEXLIGHT_SHADER for TEXLIGHT shaders</li>
+</ul>
+
+<p>In the next sections we will describe each type of shader in detail.</p>
+
+<h3>4. Color shaders</h3>
+
+<p>
+We will go through the different types of shaders available in Processing and examine examples for each one. For the color, light, texture and texlight shaders we will use the same base geometry, a cylinder, throughout all the examples. So let's start by writing the base sketch that puts a cylinder inside a PShape object:
+</p>
+
+<table>
+<caption>Code listing 3: Base cylinder</caption>
+<tr><td>
+<pre>
+PImage label;
+PShape can;
+float angle;
+PShader colorShader;
+
+void setup() {
+  size(640, 360, P3D);
+  can = createCan(100, 200, 32);
+}
+
+void draw() {    
+  background(0);  
+  translate(width/2, height/2);
+  rotateY(angle);  
+  shape(can);  
+  angle += 0.01;
+}
+
+PShape createCan(float r, float h, int detail) {
+  textureMode(NORMAL);
+  PShape sh = createShape();
+  sh.beginShape(QUAD_STRIP);
+  sh.noStroke();
+  for (int i = 0; i <= detail; i++) {
+    float angle = TWO_PI / detail;
+    float x = sin(i * angle);
+    float z = cos(i * angle);
+    float u = float(i) / detail;
+    sh.normal(x, 0, z);
+    sh.vertex(x * r, -h/2, z * r, u, 0);
+    sh.vertex(x * r, +h/2, z * r, u, 1);    
+  }
+  sh.endShape(); 
+  return sh;
+}
+</td></tr>
+</pre>
+
+<p>
+The output should be a just flat-colored white cylinder rotating around the Y axis. So let's write our first shader to render this cylinder in more interesting ways!
+</p>
+
+<p>
+First, save the code in listing 3 and add the following two files in the data folder:
+</p>
 
 	<p>&nbsp;</p>
 
