@@ -738,7 +738,165 @@ The output of the per-vertex and per-pixel lighting algorithms can be compared i
 
 <p><img src="imgs/pixlight.png"></p>
 
+<h3>7. Texture-light shaders</h3>
 
+<p>
+The final type of triangle shaders is the texture-light (texlight) shader. This type of shader incorporates the uniforms from both the light and texture types.
+</p>
+
+<p>
+We can integrate the examples from the previous sections in the following sketch:
+</p>
+
+
+<table>
+<caption><b>Code listing 7.1:</b> Sketch combining texturing and per-vertex lighting. The implementation of the <em>createCan()</em> function in the sketch code is omitted since it is identical to that of listing 5.1.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PImage</span> label;
+<span style="color: #CC6633;">PShape</span> can;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">PShader</span> texlightShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
+&nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
+&nbsp;&nbsp;texlightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texlightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texlightvert.glsl&quot;</span>);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(texlightShader);
+
+&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>, 200);  
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
+}
+
+<b>texlightvert.glsl:</b>
+
+#define PROCESSING_TEXLIGHT_SHADER
+
+uniform mat4 modelview;
+uniform mat4 transform;
+uniform mat3 normalMatrix;
+uniform mat4 texMatrix;
+
+uniform vec4 lightPosition;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec3 normal;
+attribute vec2 texCoord;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+void main() {
+  gl_Position = transform * vertex;    
+  vec3 ecVertex = vec3(modelview * vertex);  
+  vec3 ecNormal = normalize(normalMatrix * normal);
+
+  vec3 direction = normalize(lightPosition.xyz - ecVertex);    
+  float intensity = max(0.0, dot(direction, ecNormal));
+  vertColor = vec4(intensity, intensity, intensity, 1) * color;     
+  
+  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
+}
+
+<b>texlightfrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+uniform sampler2D texture;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+void main() {
+  gl_FragColor = texture2D(texture, vertTexCoord.st) * vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+The lighting can be also done on a per-pixel basis, in which case we need to use the following shaders:
+</p>
+
+<table>
+<caption><b>Code listing 7.2:</b> Shaders for texturing and per-pixel lighting.</caption>
+<tr><td>
+<pre>
+<b>pixlightxvert.glsl:</b>
+
+#define PROCESSING_TEXLIGHT_SHADER
+
+uniform mat4 modelview;
+uniform mat4 transform;
+uniform mat3 normalMatrix;
+uniform mat4 texMatrix;
+
+uniform vec4 lightPosition;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec3 normal;
+attribute vec2 texCoord;
+
+varying vec4 vertColor;
+varying vec3 ecNormal;
+varying vec3 lightDir;
+varying vec4 vertTexCoord;
+
+void main() {
+  gl_Position = transform * vertex;    
+  vec3 ecVertex = vec3(modelview * vertex);  
+  
+  ecNormal = normalize(normalMatrix * normal);    
+  lightDir = normalize(lightPosition.xyz - ecVertex);  
+  vertColor = color;  
+  
+  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
+}
+
+<b>pixlightxfrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+uniform sampler2D textureSampler;
+
+varying vec4 vertColor;
+varying vec3 ecNormal;
+varying vec3 lightDir;
+varying vec4 vertTexcoord;
+
+void main() {
+  vec3 direction = normalize(lightDir);
+  vec3 normal = normalize(ecNormal);
+  float intensity = max(0.0, dot(direction, normal));
+  vec4 tintColor = vec4(intensity, intensity, intensity, 1) * vertColor;
+  gl_FragColor = texture2D(textureSampler, vertTexcoord.st) * tintColor;
+}  
+</pre>
+</tr></td>
+</table>
+
+<p>
+Note that a texlight cannot be used to render a scene only with textures or only with lights, in those cases either a texture of light shader will be needed.
+</p>
 
 
 
