@@ -1076,6 +1076,200 @@ The output of these post-processing effects are displayed in the following image
 
 <p>In all of the examples we have seen so far, only one shader is used throughout the execution of the entire sketch. However, we can load and use as many shaders as we need. At each given time, one shader will be selected and running, but we can change the selected shader using the <em>shader()</em> function, and restore the default shaders with <em>resetShader()</em>. The following example combines all the shaders from the previous sections, so the can be enabled/disabled using the keyboard:</p>
 
+<table>
+<caption><b>Code listing 9.1:</b> All the shaders we have seen so far.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">float</span> canSize = 60;
+<span style="color: #CC6633;">PImage</span> label;
+<span style="color: #CC6633;">PShape</span> can;
+<span style="color: #CC6633;">PShape</span> cap;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">PShader</span> selShader;
+<span style="color: #CC6633;">boolean</span> useLight;
+<span style="color: #CC6633;">boolean</span> useTexture;
+
+<span style="color: #CC6633;">PShader</span> colorShader;
+<span style="color: #CC6633;">PShader</span> lightShader;
+<span style="color: #CC6633;">PShader</span> texShader;
+<span style="color: #CC6633;">PShader</span> texlightShader;
+<span style="color: #CC6633;">PShader</span> pixlightShader;
+<span style="color: #CC6633;">PShader</span> texlightxShader;
+<span style="color: #CC6633;">PShader</span> bwShader;
+<span style="color: #CC6633;">PShader</span> edgesShader;
+<span style="color: #CC6633;">PShader</span> embossShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(480, 480, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
+&nbsp;&nbsp;can&nbsp;=&nbsp;createCan(canSize,&nbsp;2&nbsp;*&nbsp;canSize,&nbsp;32,&nbsp;label);
+&nbsp;&nbsp;cap&nbsp;=&nbsp;createCap(canSize,&nbsp;32);
+&nbsp;&nbsp;
+&nbsp;&nbsp;colorShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;colorfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;colorvert.glsl&quot;</span>);
+&nbsp;&nbsp;lightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;lightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;lightvert.glsl&quot;</span>);  
+&nbsp;&nbsp;texShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texvert.glsl&quot;</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;texlightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texlightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texlightvert.glsl&quot;</span>);
+&nbsp;&nbsp;pixlightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pixlightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pixlightvert.glsl&quot;</span>);
+&nbsp;&nbsp;texlightxShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pixlightxfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pixlightxvert.glsl&quot;</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;bwShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;bwfrag.glsl&quot;</span>);
+&nbsp;&nbsp;edgesShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;edgesfrag.glsl&quot;</span>);
+&nbsp;&nbsp;embossShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;embossfrag.glsl&quot;</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;selShader&nbsp;=&nbsp;texlightShader;
+&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
+&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
+&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, texture shading&quot;</span>);  
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #CC6633;">float</span> x = 1.88 * canSize;
+&nbsp;&nbsp;<span style="color: #CC6633;">float</span> y = 2 * canSize;
+&nbsp;&nbsp;<span style="color: #CC6633;">int</span> n = 0;
+&nbsp;&nbsp;<span style="color: #669933;">for</span> (<span style="color: #CC6633;">int</span> i = 0; i &lt; 3; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669933;">for</span> (<span style="color: #CC6633;">int</span> j = 0; j &lt; 3; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drawCan(x,&nbsp;y,&nbsp;angle);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;+=&nbsp;2&nbsp;*&nbsp;canSize&nbsp;+&nbsp;8;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n++;
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;1.88&nbsp;*&nbsp;canSize;
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;+=&nbsp;2&nbsp;*&nbsp;canSize&nbsp;+&nbsp;5;&nbsp;
+&nbsp;&nbsp;}&nbsp;
+
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
+}
+
+<span style="color: #996633;">void</span> drawCan( <span style="color: #CC6633;">float</span> centerx, <span style="color: #CC6633;">float</span> centery, <span style="color: #CC6633;">float</span> rotAngle) {
+&nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (useLight) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, centerx, centery, 200);
+&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(selShader);  
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(centerx, centery, 65);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(rotAngle);
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (useTexture) {
+&nbsp;&nbsp;&nbsp;&nbsp;can.setTexture(label);
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;can.setTexture(<span style="color: #996633;">null</span>);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
+&nbsp;&nbsp;<span style="color: #006699;">noLights</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">resetShader</span>();  
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(0, canSize - 5, 0);  
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(cap);
+&nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
+
+&nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(0, -canSize + 5, 0);  
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(cap);
+&nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
+}
+
+<span style="color: #CC6633;">PShape</span> createCan(<span style="color: #CC6633;">float</span> r, <span style="color: #CC6633;">float</span> h, <span style="color: #CC6633;">int</span> detail, <span style="color: #CC6633;">PImage</span> tex) {
+&nbsp;&nbsp;<span style="color: #006699;">textureMode</span>(<span style="color: #666666;">NORMAL</span>);
+&nbsp;&nbsp;<span style="color: #CC6633;">PShape</span> sh = <span style="color: #006699;">createShape</span>();
+&nbsp;&nbsp;sh.<span style="color: #006699;">beginShape</span>(<span style="color: #666666;">QUAD_STRIP</span>);
+&nbsp;&nbsp;sh.<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;sh.<span style="color: #006699;">texture</span>(tex);
+&nbsp;&nbsp;<span style="color: #669933;">for</span> (<span style="color: #CC6633;">int</span> i = 0; i &lt;= detail; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> angle = <span style="color: #666666;">TWO_PI</span> / detail;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> x = <span style="color: #006699;">sin</span>(i * angle);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> z = <span style="color: #006699;">cos</span>(i * angle);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> u = <span style="color: #006699;">float</span>(i) / detail;
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">normal</span>(x, 0, z);
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, -h/2, z * r, u, 0);
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);    
+&nbsp;&nbsp;}
+&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>(); 
+&nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
+}
+
+<span style="color: #CC6633;">PShape</span> createCap(<span style="color: #CC6633;">float</span> r, <span style="color: #CC6633;">int</span> detail) {
+&nbsp;&nbsp;<span style="color: #CC6633;">PShape</span> sh = <span style="color: #006699;">createShape</span>();
+&nbsp;&nbsp;sh.<span style="color: #006699;">beginShape</span>(<span style="color: #666666;">TRIANGLE_FAN</span>);
+&nbsp;&nbsp;sh.<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;sh.<span style="color: #006699;">fill</span>(128);
+&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(0, 0, 0);
+&nbsp;&nbsp;<span style="color: #669933;">for</span> (<span style="color: #CC6633;">int</span> i = 0; i &lt;= detail; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> angle = <span style="color: #666666;">TWO_PI</span> / detail;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> x = <span style="color: #006699;">sin</span>(i * angle);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> z = <span style="color: #006699;">cos</span>(i * angle);
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, 0, z * r);
+&nbsp;&nbsp;}&nbsp;&nbsp;
+&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>();
+&nbsp;&nbsp;<span style="color: #996633;">return</span> sh;  
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>keyPressed</b></span>() {
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;1&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;No lights, no texture shading&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;colorShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;        
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;2&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, no texture shading&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;lightShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;    
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;3&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;No lights, texture shading&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;texShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;     
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;4&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, texture shading&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;texlightShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;    
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;5&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Pixel lights, no texture shading&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;pixlightShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>; 
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;6&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Pixel lights, texture shading&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;texlightxShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;      
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;7&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Black&amp;white texture filtering&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;bwShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;    
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;8&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Edge detection filtering&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;edgesShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;    
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;9&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Emboss filtering&quot;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;embossShader;
+&nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;     
+&nbsp;&nbsp;}
+}
+</pre>
+</tr></td>
+</table>
+
+<p>And one of its possible outputs:</p>
+
+<p><img src="imgs/allshaders.png"></p>
+
+<p>
+Note that the caps of the can cylinders are not affected by any of the custom shaders, since they are drawn after the <em>resetShader()</em> call. The cap model is not textured, and the lights are also disabled, this means that Processing will use its default color shader to render the caps.
+</p>
 
 	<p>&nbsp;</p>
 
