@@ -1271,6 +1271,500 @@ The output of these post-processing effects are displayed in the following image
 Note that the caps of the can cylinders are not affected by any of the custom shaders, since they are drawn after the <em>resetShader()</em> call. The cap model is not textured, and the lights are also disabled, this means that Processing will use its default color shader to render the caps.
 </p>
 
+<h3>10. Point and line shaders</h3>
+
+<p>
+The point and line shaders are only used by the P3D renderer in order to draw stroke geometry. The reason is that the stroke geometry is always screen-facing in 3D, so it needs a different projection calculation in the vertex stage. In P2D, all the geometry is contained in the same plane, so there is no need of special handling for stroke lines and points (everything is just rendered as triangles with an orthographic projection).
+</p>
+
+<p>
+The technique of rendering screen-facing polygons is called <a href="http://www.lighthouse3d.com/opengl/billboarding/">"billboarding"</a> and has been widely used in games to create the illusion of a 3D objects by using 2D images that always face the camera (image from the <a href="http://www.lighthouse3d.com/opengl/billboarding/">lighthouse3D tutorial</a> on billboarding):
+</p>
+
+<p><img src="imgs/billboarding.png"></p>
+
+<p>In terms of GLSL code, the basic idea of (screen-facing) billboards can be seen in the following line:</p>
+
+<pre>gl_Position = transform * center + projection * vec4(offset, 0, 0);</pre>
+
+<p>The variable <em>center</em> represents the central position of the billboard, and <em>offset</em> is the (2D) displacement from the center point to the edge vertices. Because the offset is not transformed with the modelview matrix (geometric transformations and camera placement), it results in the translations applied along the screen plane because of the projection transformation.
+</p>
+
+<p>
+Let's start with point rendering. P3D represents points as either rectangles (when the stroke cap is set to SQUARE) or regular polygons of n sides (stroke cap set to ROUND). The number of sides is adjusted dynamically depending on the size of the point, in order to ensure that looks similar enough to a true circle. The following sketch demonstrates a simple point rendering shader:
+</p>
+
+<table>
+<caption><b>Code listing 10.1:</b> Simple point rendering sketch with associated shaders.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PShader</span> pointShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pointfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pointvert.glsl&quot;</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(50);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {  
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {   
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
+&nbsp;&nbsp;}&nbsp;&nbsp;
+}
+
+<b>pointfrag.glsl:</b>
+
+#define PROCESSING_POINT_SHADER
+
+uniform mat4 projection;
+uniform mat4 modelview;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec2 offset;
+
+varying vec4 vertColor;
+
+void main() {
+  vec4 pos = modelview * vertex;
+  vec4 clip = projection * pos;
+  
+  gl_Position = clip + projection * vec4(offset, 0, 0);
+ 
+  vertColor = color;
+}
+
+<b>pointvert.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+varying vec4 vertColor;
+
+void main() {  
+  gl_FragColor = vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+The attribute <em>offset</em> contains the displacement that needs to be applied from the center of the point to generate all the boundary vertices. For a square point, the P3D renderer sends 5 vertices to the vertex shader, all of them coincident with the center of the point. The first vertex has (0, 0) in its <em>offset</em> attribute, so it remains at the center of the point, while the other vertices have the appropriate offset to move them to the corners of the square, as indicated in the figure below:
+</p>
+
+<p><img src="imgs/point.png"></p>
+
+<p>The default point shader doesn't allow to apply any texturing to the points, but this limitation can be circumvented with a custom shader with an additional uniform for the texture sampler. Let's see in the next example how we can use this trick to create a shader that renders textured point sprites.</p>
+
+<table>
+<caption><b>Code listing 10.2:</b> Sketch that renders sprites using a custom point shader.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PShader</span> pointShader;
+<span style="color: #CC6633;">PImage</span> cloud1;
+<span style="color: #CC6633;">PImage</span> cloud2;
+<span style="color: #CC6633;">PImage</span> cloud3;
+
+<span style="color: #CC6633;">float</span> weight = 100;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;spritefrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;spritevert.glsl&quot;</span>);
+&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;weight&quot;</span>, weight);
+&nbsp;&nbsp;cloud1&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud1.png&quot;</span>);
+&nbsp;&nbsp;cloud2&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud2.png&quot;</span>);
+&nbsp;&nbsp;cloud3&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud3.png&quot;</span>);  
+&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sprite&quot;</span>, cloud1);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(weight);
+&nbsp;&nbsp;<span style="color: #006699;">strokeCap</span>(<span style="color: #666666;">SQUARE</span>);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255, 70);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {  
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {   
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
+&nbsp;&nbsp;}&nbsp;&nbsp;
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>mousePressed</b></span>() {
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;1&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sprite&quot;</span>, cloud1);
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;2&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sprite&quot;</span>, cloud2);
+&nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;3&apos;</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sprite&quot;</span>, cloud3);
+&nbsp;&nbsp;}
+}
+
+<b>spritevert.glsl:</b>
+
+#define PROCESSING_POINT_SHADER
+
+uniform mat4 projection;
+uniform mat4 modelview;
+
+uniform float weight;
+ 
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec2 offset;
+
+varying vec4 vertColor;
+varying vec2 texCoord;
+
+void main() {
+  vec4 pos = modelview * vertex;
+  vec4 clip = projection * pos;
+  
+  gl_Position = clip + projection * vec4(offset, 0, 0);
+  
+  texCoord = (vec2(0.5) + offset / weight);
+  
+  vertColor = color;
+}
+
+<b>spritefrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+uniform sampler2D sprite;
+
+varying vec4 vertColor;
+varying vec2 texCoord;
+
+void main() {  
+  gl_FragColor = texture2D(sprite, texCoord) * vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+In this example, we explicitly set the texture sampler from the sketch using <em>PShader.set()</em> function, which simply takes the <em>PImage</em> object encapsulating the texture as the argument. The use of this sampler in the fragment shader is identical to what we saw earlier in the texture shaders. However, texture sampling requires texture coordinates, and Processing doesn't send any to the shader because the default points are never textured. Therefore, we need to calculate the texture coordinates manually in the vertex shader. Given the displacement values contained in the <em>offset</em> attribute, the texture coordinates for each corner can be computed easily by noting that the offsets range from -weight/2 to +weight/2 along each direction. So the equation:
+<p>
+
+<pre>texCoord = (vec2(0.5) + offset / weight);</pre>
+
+<p>
+maps the offset range onto the (0, 1) interval needed for texturing. The variable <em>texCoord</em> is varying, this means that it will be interpolated over all the fragments in the square. In addition, we send the stroke weight directly to the shader via another custom uniform. This is slightly redundant since offset already contains the weight value (since it is the magnitude of the displacement), but for the purpose of this example we use the weight uniform instead of extracting from <em>offset</em> in order to keep the shader code simpler.
+</p>
+
+<p><img src="imgs/pointsprite.png"></p>
+
+<p>
+Another limitation of the default point rendering in Processing that we can overcome with a custom point shader is the use of many vertices to represent a single point. We saw that in the case of square points, actually 5 vertices are sent to the GPU per point. In the case of rounds points, this number could be significantly higher since the point circles are approximated with regular polygons of n sides. The number n grows as the point is larger on the screen. 
+</p>
+
+<p>
+One alternative solution is to generate the points procedurally in the fragment shader. Let's see how to do that in the following example: the points are still sent to the GPU as 5-vertices squares, but then the fragment shader computes which pixels are within the stroke weight distance from the center of the square, making the rest of the pixels transparent, so that the result consists of high-quality round points.
+</p>
+
+<table>
+<caption><b>Code listing 10.3:</b> Sketch that draws procedurally-generated round points.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PShader</span> pointShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pointfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pointvert.glsl&quot;</span>);  
+&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sharpness&quot;</span>, 0.9);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">strokeCap</span>(<span style="color: #666666;">SQUARE</span>);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);  
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> w = <span style="color: #006699;">random</span>(5, 50);
+&nbsp;&nbsp;&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;weight&quot;</span>, w);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(w);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(<span style="color: #006699;">random</span>(255), <span style="color: #006699;">random</span>(255), <span style="color: #006699;">random</span>(255));  
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
+&nbsp;&nbsp;}
+}
+
+<b>pointvert.glsl:</b>
+
+#define PROCESSING_POINT_SHADER
+
+uniform mat4 projection;
+uniform mat4 transform;
+ 
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec2 offset;
+
+varying vec4 vertColor;
+varying vec2 center;
+varying vec2 pos;
+
+void main() {
+  vec4 clip = transform * vertex;
+  gl_Position = clip + projection * vec4(offset, 0, 0);
+  
+  vertColor = color;
+  center = clip.xy;
+  pos = offset;
+}
+
+<b>pointfrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+uniform float weight;
+uniform float sharpness;
+
+varying vec4 vertColor;
+varying vec2 center;
+varying vec2 pos;
+
+void main() {  
+  float len = weight/2.0 - length(pos);
+  vec4 color = vec4(1.0, 1.0, 1.0, len);
+  color = mix(vec4(0.0), color, sharpness);		  
+  color = clamp(color, 0.0, 1.0);		
+  gl_FragColor = color * vertColor; 
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+We will now look at the line shaders. Lines are drawn by the P3D renderer as a sequence of quads, but these quads need to screen-facing. The method applied to make the quads screen-facing is similar to the one used for points: each line vertex has an associated attribute variable called <em>direction</em> that contains the vector connecting the current point to the opposite point along the quad, as well as the thickness of the line, calculated from the stroke weight. The tangent vector is simply the direction vector normalized, and it is used to compute the offset along the normal direction:
+<p>
+
+<p><img src="imgs/line.png"></p>
+
+<p>
+The following sketch simply draws the edges of a box using a simplified version of the default line shader:
+</p>
+
+<table>
+<caption><b>Code listing 10.4:</b> Simple line shader.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PShape</span> cube;
+<span style="color: #CC6633;">PShader</span> lineShader;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">float</span> weight = 10;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;lineShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;linefrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;linevert.glsl&quot;</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;cube&nbsp;=&nbsp;<span style="color: #006699;">createShape</span>(<span style="color: #666666;">BOX</span>, 150);
+&nbsp;&nbsp;cube.setFill(<span style="color: #996633;">false</span>);
+&nbsp;&nbsp;cube.setStroke(<span style="color: #006699;">color</span>(255));
+&nbsp;&nbsp;cube.setStrokeWeight(weight);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
+&nbsp;&nbsp;<span style="color: #006699;">rotateX</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(lineShader, <span style="color: #666666;">LINES</span>);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(cube);
+&nbsp;&nbsp;
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;&nbsp;&nbsp;
+}
+
+<b>linevert.glsl:</b>
+
+#define PROCESSING_LINE_SHADER
+
+uniform mat4 transform;
+uniform vec4 viewport;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec4 direction;
+
+varying vec4 vertColor;
+  
+vec3 clipToWindow(vec4 clip, vec4 viewport) {
+  vec3 dclip = clip.xyz / clip.w;
+  vec2 xypos = (dclip.xy + vec2(1.0, 1.0)) * 0.5 * viewport.zw;
+  return vec3(xypos, dclip.z * 0.5 + 0.5);
+}
+  
+void main() {
+  vec4 clip0 = transform * vertex;
+  vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
+  float thickness = direction.w;
+  
+  vec3 win0 = clipToWindow(clip0, viewport); 
+  vec3 win1 = clipToWindow(clip1, viewport); 
+  vec2 tangent = win1.xy - win0.xy;
+    
+  vec2 normal = normalize(vec2(-tangent.y, tangent.x));
+  vec2 offset = normal * thickness;
+  gl_Position.xy = clip0.xy + offset.xy;
+  gl_Position.zw = clip0.zw;
+  vertColor = color;  
+}
+
+<b>linefrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+varying vec4 vertColor;
+
+void main() {
+  gl_FragColor = vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+The <em>clipToWindow()</em> function in the vertex shader converts the clip argument to viewport coordinates in pixel units, to make sure that the tangent vector is effectively contained inside the screen. Also note how the position of the opposite point in the line quad is calculated from the current point and the direction vector as:
+</p>
+
+<pre>
+vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
+</pre>
+
+<p>
+A final example in this section modifies the simple line shader to incorporate transparency to the strokes, in such a way that the alpha value decreases progressively as the pixels move away from the center spine of the stroke:
+</p>
+
+<p><img src="imgs/alphalines.png"></p>
+
+<table>
+<caption><b>Code listing 10.5:</b> Line shader with transparency effect on the edges of the strokes.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PShape</span> cube;
+<span style="color: #CC6633;">PShader</span> lineShader;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">float</span> weight = 20;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
+&nbsp;&nbsp;
+&nbsp;&nbsp;lineShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;linefrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;linevert.glsl&quot;</span>);
+&nbsp;&nbsp;lineShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;weight&quot;</span>, weight);
+&nbsp;&nbsp;
+&nbsp;&nbsp;cube&nbsp;=&nbsp;<span style="color: #006699;">createShape</span>(<span style="color: #666666;">BOX</span>, 150);
+&nbsp;&nbsp;cube.setFill(<span style="color: #996633;">false</span>);
+&nbsp;&nbsp;cube.setStroke(<span style="color: #006699;">color</span>(255));
+&nbsp;&nbsp;cube.setStrokeWeight(weight);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">hint</span>(<span style="color: #666666;">DISABLE_DEPTH_MASK</span>);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
+&nbsp;&nbsp;<span style="color: #006699;">rotateX</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(lineShader, <span style="color: #666666;">LINES</span>);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(cube);
+&nbsp;&nbsp;
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;&nbsp;&nbsp;
+}
+
+<b>linevert.glsl:</b>
+
+#define PROCESSING_LINE_SHADER
+
+uniform mat4 transform;
+uniform vec4 viewport;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec4 direction;
+
+varying vec2 center;
+varying vec2 normal;
+varying vec4 vertColor;
+  
+vec3 clipToWindow(vec4 clip, vec4 viewport) {
+  vec3 dclip = clip.xyz / clip.w;
+  vec2 xypos = (dclip.xy + vec2(1.0, 1.0)) * 0.5 * viewport.zw;
+  return vec3(xypos, dclip.z * 0.5 + 0.5);
+}
+  
+void main() {
+  vec4 clip0 = transform * vertex;
+  vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
+  float thickness = direction.w;
+  
+  vec3 win0 = clipToWindow(clip0, viewport); 
+  vec3 win1 = clipToWindow(clip1, viewport); 
+  vec2 tangent = win1.xy - win0.xy;
+    
+  normal = normalize(vec2(-tangent.y, tangent.x));
+  vec2 offset = normal * thickness;
+  gl_Position.xy = clip0.xy + offset.xy;
+  gl_Position.zw = clip0.zw;
+  vertColor = color;  
+  
+  center = (win0.xy + win1.xy) / 2.0;
+}
+
+<b>linefrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+uniform float weight;
+
+varying vec2 center;
+varying vec2 normal;
+varying vec4 vertColor;
+
+void main() {
+  vec2 v = gl_FragCoord.xy - center;
+  float alpha = 1.0 - abs(2.0 * dot(normalize(normal), v) / weight);  
+  gl_FragColor = vec4(vertColor.rgb, alpha);
+}
+</pre>
+</tr></td>
+</table>
+
+<p>The key calculation here is the dot product between the normal vector and the vector from the center of the stroke quad and the current fragment position, dot(normalize(normal), v), which will be exactly 0 along the spine of the quad, and so, giving alpha equal to 1.  
+</p>
+
+<p>The DISABLE_DEPTH_MASK hint in the sketch code is a simple (but not perfect) trick to avoid obvious visual artifacts due to the use of <a href="http://blogs.msdn.com/b/shawnhar/archive/2009/02/18/depth-sorting-alpha-blended-objects.aspx">semi-transparent geometry together with alpha blending</a>.</p>
+
 	<p>&nbsp;</p>
 
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-web/issues?state=open">let us know</a>.</em></p>
