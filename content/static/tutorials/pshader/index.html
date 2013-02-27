@@ -898,6 +898,183 @@ void main() {
 Note that a texlight cannot be used to render a scene only with textures or only with lights, in those cases either a texture of light shader will be needed.
 </p>
 
+<h3>8. Image post-processing effects</h3>
+
+<p>
+The fragment shader can be used to run image post-processing effects very efficiently, by taking advantage of the parallel nature of the GPUs. For example, let's imagine that we want to render a texture using only black and white: black if the luminance at a given pixel in the image is below a certain threshold, and white if it is above. This can be implemented easily in the fragment shader with the following code:
+</p>
+
+<pre>
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+#define PROCESSING_TEXTURE_SHADER
+
+uniform sampler2D texture;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+const vec4 lumcoeff = vec4(0.299, 0.587, 0.114, 0);
+
+void main() {
+  vec4 col = texture2D(texture, vertTexCoord.st);
+  float lum = dot(col, lumcoeff);
+  if (0.5 < lum) {
+    gl_FragColor = vertColor;
+  } else {
+    gl_FragColor = vec4(0, 0, 0, 1);
+  }     
+}
+</pre>
+
+<p>
+The fragment shader samples the texture at position <em>vertTexCoord.st</em> and uses the color value to compute the luminance and then the two alternative outputs based on the threshold, which in this case is 0.5. We can use this shader with the textured object from the earlier examples:
+</p>
+
+<table>
+<caption><b>Code listing 8.1:</b> Sketch using the black&white shader.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PImage</span> label;
+<span style="color: #CC6633;">PShape</span> can;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">PShader</span> bwShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
+&nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
+&nbsp;&nbsp;bwShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;bwfrag.glsl&quot;</span>);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(bwShader);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+You will notice that this time the <em>loadShader()</em> function only receives the filename of the fragment shader. Because the GLSL code contains the #define PROCESSING_TEXTURE_SHADER line, Processing will know that we are providing the fragment stage of a texture shader. How does it complete the entire shader program? The answer is that it uses the default vertex stage for texture shaders. As a consequence of this, and since the varying variables are first declared in the vertex stage, the fragment shader has to follow the varying names adopted in the default shader. In this case, the varying variables for the fragment color and texture coordinate must be named <em>vertColor</em> and <em>vertTexCoord</em>, respectively.
+</p>
+
+<p>
+<a href="http://lodev.org/cgtutor/filtering.html">Convolution filters</a> are also possible to implement in the fragment shader. Given the  texture coordinates of a fragment, <em>vertTexCoord</em>, the neighboring pixels in the texture (also called "texels") can be sampled using the <em>texOffset</em> uniform. This uniform is set automatically by Processing and contains the vector (1/width, 1/height), with width and height being the resolution of the texture. These values are precisely the offsets along the horizontal and vertical directions needed to sample the color from the texels around vertTexCoord.st. For example, <em>vertTexCoord.st + vec2(texOffset.s, 0)</em> is the texel exactly one position to the right. The following GLSL codes shows the implementation of a standard edge detection and emboss filters:
+</p>
+
+<table>
+<caption><b>Code listing 8.2:</b> Edge-detection shader.</caption>
+<tr><td>
+<pre>
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+#define PROCESSING_TEXTURE_SHADER
+
+uniform sampler2D texture;
+uniform vec2 texOffset;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+const vec4 lumcoeff = vec4(0.299, 0.587, 0.114, 0);
+
+void main() {
+  vec2 tc0 = vertTexCoord.st + vec2(-texOffset.s, -texOffset.t);
+  vec2 tc1 = vertTexCoord.st + vec2(         0.0, -texOffset.t);
+  vec2 tc2 = vertTexCoord.st + vec2(+texOffset.s, -texOffset.t);
+  vec2 tc3 = vertTexCoord.st + vec2(-texOffset.s,          0.0);
+  vec2 tc4 = vertTexCoord.st + vec2(         0.0,          0.0);
+  vec2 tc5 = vertTexCoord.st + vec2(+texOffset.s,          0.0);
+  vec2 tc6 = vertTexCoord.st + vec2(-texOffset.s, +texOffset.t);
+  vec2 tc7 = vertTexCoord.st + vec2(         0.0, +texOffset.t);
+  vec2 tc8 = vertTexCoord.st + vec2(+texOffset.s, +texOffset.t);
+  
+  vec4 col0 = texture2D(texture, tc0);
+  vec4 col1 = texture2D(texture, tc1);
+  vec4 col2 = texture2D(texture, tc2);
+  vec4 col3 = texture2D(texture, tc3);
+  vec4 col4 = texture2D(texture, tc4);
+  vec4 col5 = texture2D(texture, tc5);
+  vec4 col6 = texture2D(texture, tc6);
+  vec4 col7 = texture2D(texture, tc7);
+  vec4 col8 = texture2D(texture, tc8);
+
+  vec4 sum = 8.0 * col4 - (col0 + col1 + col2 + col3 + col5 + col6 + col7 + col8); 
+  gl_FragColor = vec4(sum.rgb, 1.0) * vertColor; 
+}
+</pre>
+</tr></td>
+</table>
+
+<table>
+<caption><b>Code listing 8.3:</b> Emboss shader.</caption>
+<tr><td>
+<pre>
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+#define PROCESSING_TEXTURE_SHADER
+
+uniform sampler2D texture;
+uniform vec2 texOffset;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+const vec4 lumcoeff = vec4(0.299, 0.587, 0.114, 0);
+
+void main() {
+  vec2 tc0 = vertTexCoord.st + vec2(-texOffset.s, -texOffset.t);
+  vec2 tc1 = vertTexCoord.st + vec2(         0.0, -texOffset.t);
+  vec2 tc2 = vertTexCoord.st + vec2(-texOffset.s,          0.0);
+  vec2 tc3 = vertTexCoord.st + vec2(+texOffset.s,          0.0);
+  vec2 tc4 = vertTexCoord.st + vec2(         0.0, +texOffset.t);
+  vec2 tc5 = vertTexCoord.st + vec2(+texOffset.s, +texOffset.t);
+  
+  vec4 col0 = texture2D(texture, tc0);
+  vec4 col1 = texture2D(texture, tc1);
+  vec4 col2 = texture2D(texture, tc2);
+  vec4 col3 = texture2D(texture, tc3);
+  vec4 col4 = texture2D(texture, tc4);
+  vec4 col5 = texture2D(texture, tc5);
+
+  vec4 sum = vec4(0.5) + (col0 + col1 + col2) - (col3 + col4 + col5);
+  float lum = dot(sum, lumcoeff);
+  gl_FragColor = vec4(lum, lum, lum, 1.0) * vertColor;  
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+The output of these post-processing effects are displayed in the following images (b&w, edge and emboss from top to bottom):
+</p>
+
+<p><img src="imgs/bw.png"></p>
+
+<p><img src="imgs/edges.png"></p>
+
+<p><img src="imgs/emboss.png"></p>
+
+<h3>9. Putting all together</h3>
+
+<p>In all of the examples we have seen so far, only one shader is used throughout the execution of the entire sketch. However, we can load and use as many shaders as we need. At each given time, one shader will be selected and running, but we can change the selected shader using the <em>shader()</em> function, and restore the default shaders with <em>resetShader()</em>. The following example combines all the shaders from the previous sections, so the can be enabled/disabled using the keyboard:</p>
 
 
 	<p>&nbsp;</p>
