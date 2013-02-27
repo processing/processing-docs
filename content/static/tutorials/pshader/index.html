@@ -567,6 +567,178 @@ void main() {
 A final note about texture shaders is that they are used to render text as well. The reason for this is that the P2D/P3D renderers in Processing draw text as textured quads, which are handled by the texture shaders.
 </p>
 
+<h3>6. Light shaders</h3>
+
+<p>
+Lighting a 3D scene involves placing one or more light sources in the space, and defining their <a href="http://www.learnopengles.com/android-lesson-two-ambient-and-diffuse-lighting/">parameters</a>, such as type (point, spotlight) and color (diffuse, ambient, specular) . We won't go into the details of lighting in OpenGL, but something important to mention here is that all the mathematical models we use to generate lights with GLSL shaders are very simple approximations to lighting in the real world. The model we will use in the following example is probably one of the simplest, and evaluates the light intensity at each vertex of the object, and then uses the built-in interpolation of the graphic pipeline to get a continuous gradient of color across the object faces. The light intensity at each vertex is computed as the dot product between the vertex normal and the direction vector between the vertex and light positions. This model represents a point light source that emits light equally in all directions:
+</p>
+
+<p><img src="imgs/lightmodel.png"></p>
+
+<p>
+Using the same geometry from the previous examples, we can now write a simple shader to render the scene with a single point light. In order to do so, we need some extra uniform variables in the vertex shader: <em>lightPosition</em>, which holds the position of the light source, and <em>normalMatrix</em>, which is a 4x4 matrix to convert the normal vector to the appropriate coordinates to perform the <a href="http://www.lighthouse3d.com/tutorials/glsl-tutorial/the-normal-matrix/">lighting calculations</a>.
+</p>
+
+<table>
+<caption><b>Code listing 6.1:</b> Sketch for simple (per-vertex) lighting. The implementation of the <em>createCan()</em> function in the sketch code is omitted since it is identical to that of listing 3.</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PShape</span> can;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">PShader</span> lightShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
+&nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32);
+&nbsp;&nbsp;lightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;lightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;lightvert.glsl&quot;</span>);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(lightShader);
+
+&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>, 200);
+
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
+}
+
+<b>lightvert.glsl:</b>
+
+#define PROCESSING_LIGHT_SHADER
+
+uniform mat4 modelview;
+uniform mat4 transform;
+uniform mat3 normalMatrix;
+
+uniform vec4 lightPosition;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec3 normal;
+
+varying vec4 vertColor;
+
+void main() {
+  gl_Position = transform * vertex;    
+  vec3 ecVertex = vec3(modelview * vertex);  
+  vec3 ecNormal = normalize(normalMatrix * normal);
+
+  vec3 direction = normalize(lightPosition.xyz - ecVertex);    
+  float intensity = max(0.0, dot(direction, ecNormal));
+  vertColor = vec4(intensity, intensity, intensity, 1) * color;             
+}
+
+<b>lightfrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+varying vec4 vertColor;
+
+void main() {
+  gl_FragColor = vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+In the vertex shader, the <em>ecVertex</em> variable is the position of the input vertex expressed in eye-coordinates, since it is obtained by multiplying vertex by the <em>modelview</em> matrix. Similarly, multiplying the input normal vector by the <em>normalMatrix</em> yields its coordinates in the eye-system. Once all the vectors are expressed in the same coordinate system, they can be used to calculate the intensity of the incident light at the current vector. From the formula used in the shader, the intensity is directly proportional to the angle between the normal and the vector between the vertex and the light source.
+</p>
+
+<p>
+In this example, there is a single point light, but Processing can send to the shader up to 8 different lights and their associated parameters. The full list of light uniforms that can be used to get this information in the shader are the following:
+</p>
+
+<ul>
+<li>uniform int lightCount: number of active lights</li>
+<li>uniform vec4 lightPosition[8]: position of each light</li>
+<li>uniform vec3 lightNormal[8]:  direction of each light (only relevant for directional and spot lights)</li>
+<li>uniform vec3 lightAmbient[8]: ambient component of light color</li>
+<li>uniform vec3 lightDiffuse[8]: diffuse component of light color</li>
+<li>uniform vec3 lightSpecular[8]: specular component of light color</li>
+<li>uniform vec3 lightFalloff[8]: light falloff coefficients</li>
+<li>uniform vec2 lightSpot[8]: light spot parameters (cosine of light spot angle and concentration)</li>
+</ul>
+
+<p>
+The values in this uniforms completely specify any lighting configuration set in the sketch using the <a href="http://processing.org/reference/ambientLight_.html"><em>ambientLight()</em></a>, <a href="http://processing.org/reference/pointLight_.html"><em>pointLight()</em></a>, <a href="http://processing.org/reference/directionalLight_.html"><em>directionalLight()</em></a> and <a href="http://processing.org/reference/spotLight_.html"><em>spotLight()</em></a> functions in Processing. To see how all these uniforms are used in the default light shader, which covers all the possible lighting combinations, take a look at <a href="https://github.com/processing/processing/blob/master/core/src/processing/opengl/LightVert.glsl">its source code</a> from the Processing core. However, a valid light shader doesn't need to declare all of these uniforms, for example in the previous example we only needed the lightPosition uniform. 
+</p>
+
+<p>
+As it was discussed at the beginning, the possibility of setting custom shaders allow us to change the default rendering algorithms for ones that are more sophisticated or generate specific visual styles. For example, we can make lights look better by replacing the above model, which is vertex-based, by a more accurate per-pixel lighting calculation. The idea is to interpolate the normal and direction vectors instead of the final color of the vertex, and then calculate the intensity value at each fragment by using the normal and direction passed from the vertex shader with varying variables.
+</p>
+
+<table>
+<caption><b>Code listing 6.2:</b> Vertex and fragment shaders for simple per-pixel lighting.</caption>
+<tr><td>
+<pre>
+<b>pixlightvert.glsl:</b>
+
+#define PROCESSING_LIGHT_SHADER
+
+uniform mat4 modelview;
+uniform mat4 transform;
+uniform mat3 normalMatrix;
+
+uniform vec4 lightPosition;
+uniform vec3 lightNormal;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec3 normal;
+
+varying vec4 vertColor;
+varying vec3 ecNormal;
+varying vec3 lightDir;
+
+void main() {
+  gl_Position = transform * vertex;    
+  vec3 ecVertex = vec3(modelview * vertex);  
+  
+  ecNormal = normalize(normalMatrix * normal);
+  lightDir = normalize(lightPosition.xyz - ecVertex);  
+  vertColor = color;
+}
+
+<b>pixlightfrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+varying vec4 vertColor;
+varying vec3 ecNormal;
+varying vec3 lightDir;
+
+void main() {  
+  vec3 direction = normalize(lightDir);
+  vec3 normal = normalize(ecNormal);
+  float intensity = max(0.0, dot(direction, normal));
+  gl_FragColor = vec4(intensity, intensity, intensity, 1) * vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+The output of the per-vertex and per-pixel lighting algorithms can be compared in the two next figures, where the first corresponds to per-vertex lighting, and the second to per-pixel. The (linear) interpolation of the color values across the vertices of each face of the object result in noticeable changes in light levels across the faces edges. By interpolating the vectors instead, the changes are much more smoother.
+</p>
+
+
+<p><img src="imgs/vertlight.png"></p>
+
+<p><img src="imgs/pixlight.png"></p>
+
+
 
 
 
