@@ -61,12 +61,6 @@ Let's start with a simple 3D sketch as the model to understand the relationship 
 </td></tr>
 </table>
 
-
-
-
-
-
-
 <p>
 The image below depicts a diagram of the graphics pipeline, and how the input of the pipeline is related to the function calls in the sketch. There are several additional stages in a typical pipeline, but we don't show them here in the sake of clarity. Furthermore, Processing follows the specification set by <a href="http://www.khronos.org/opengles/">OpenGL ES</a>, which is the version of OpenGL used in mobile devices and, through <a href="<a href="http://www.khronos.org/opengles/">">WebGL</a>, also in browsers. The programming model in OpenGL ES is simpler and doesn't include all the stages that are present in desktop OpenGL. On the desktop, OpenGL ES is in fact subset of OpenGL, so this choice ensures that GLSL shaders written to work with Processing can be used across different platforms with minimal changes. As a downside, advanced features of OpenGL desktop are not (directly) accessible through the Processing API, however there are several other toolkits that can be used for more sophisticated graphics programming.
 </p>
@@ -457,6 +451,122 @@ This will show on the screen the invert of the input color. So for instance, if 
 </p>
 
 <h3>5. Texture shaders</h3>
+
+<p>
+Rendering textured geometry requires additional uniforms and attributes in the shader. Let's look at the following sketch together with the accompanying fragment and vertex shaders:
+</p>
+
+<table>
+<caption><b>Code listing 5.1:</b> Sketch for textured rendering (no lights).</caption>
+<tr><td>
+<pre>
+<span style="color: #CC6633;">PImage</span> label;
+<span style="color: #CC6633;">PShape</span> can;
+<span style="color: #CC6633;">float</span> angle;
+
+<span style="color: #CC6633;">PShader</span> texShader;
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
+&nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
+&nbsp;&nbsp;texShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texvert.glsl&quot;</span>);
+}
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(texShader);  
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
+}
+
+<span style="color: #CC6633;">PShape</span> createCan(<span style="color: #CC6633;">float</span> r, <span style="color: #CC6633;">float</span> h, <span style="color: #CC6633;">int</span> detail, <span style="color: #CC6633;">PImage</span> tex) {
+&nbsp;&nbsp;<span style="color: #006699;">textureMode</span>(<span style="color: #666666;">NORMAL</span>);
+&nbsp;&nbsp;<span style="color: #CC6633;">PShape</span> sh = <span style="color: #006699;">createShape</span>();
+&nbsp;&nbsp;sh.<span style="color: #006699;">beginShape</span>(<span style="color: #666666;">QUAD_STRIP</span>);
+&nbsp;&nbsp;sh.<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;sh.<span style="color: #006699;">texture</span>(tex);
+&nbsp;&nbsp;<span style="color: #669933;">for</span> (<span style="color: #CC6633;">int</span> i = 0; i &lt;= detail; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> angle = <span style="color: #666666;">TWO_PI</span> / detail;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> x = <span style="color: #006699;">sin</span>(i * angle);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> z = <span style="color: #006699;">cos</span>(i * angle);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> u = <span style="color: #006699;">float</span>(i) / detail;
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">normal</span>(x, 0, z);
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, -h/2, z * r, u, 0);
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);    
+&nbsp;&nbsp;}
+&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>(); 
+&nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
+}
+
+<b>texvert.glsl:</b>
+
+#define PROCESSING_TEXTURE_SHADER
+
+uniform mat4 transform;
+uniform mat4 texMatrix;
+
+attribute vec4 vertex;
+attribute vec4 color;
+attribute vec2 texCoord;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+void main() {
+  gl_Position = transform * vertex;
+    
+  vertColor = color;
+  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
+}
+
+<b>texfrag.glsl:</b>
+
+#ifdef GL_ES
+precision mediump float;
+precision mediump int;
+#endif
+
+uniform sampler2D texture;
+
+varying vec4 vertColor;
+varying vec4 vertTexCoord;
+
+void main() {
+  gl_FragColor = texture2D(texture, vertTexCoord.st) * vertColor;
+}
+</pre>
+</tr></td>
+</table>
+
+<p>
+There is a new uniform in the vertex shader called <em>texMatrix</em>, which rescales the texture coordinates for each vertex (passed in the additional attribute <em>texCoord</em>), to take into account texture inversion along the Y-axis (as Processing's vertical axis is inverted with respect to OpenGL's), and non-power-of-two textures (a texture coordinate value of 1.0 for a npot texture will be rescaled to a smaller value that covers the npot range). In the fragment shader, we have a new uniform variable of type sampler2D, <em>texture</em>, which basically represents a pointer to the texture data,with the added capacity of sampling it at arbitrary texture coordinates (i.e: not necessarily at the center of a texel). Depending on the sampling configuration of the texture (linear, bilinear, etc.), a different interpolation algorithm will be used by the GPU. The result of this sketch is shown in the next figure:
+</p>
+
+<p><img src="imgs/texture.png"></p>
+
+<p>
+Implementing a pixelate effect becomes very easy at the level of the fragment shader. All we need to do is to modify the texture coordinate values, <em>vertTexCoord.st</em>, so that they are binned within a given number of cells, in this case 50:
+</p>
+
+<pre>
+void main() {
+  int si = int(vertTexCoord.s * 50.0);
+  int sj = int(vertTexCoord.t * 50.0);  
+  gl_FragColor = texture2D(texture, vec2(float(si) / 50.0, float(sj) / 50.0)) * vertColor;
+}
+</pre>
+
+<p><img src="imgs/bintex.png"></p>
+
+<p>
+A final note about texture shaders is that they are used to render text as well. The reason for this is that the P2D/P3D renderers in Processing draw text as textured quads, which are handled by the texture shaders.
+</p>
+
 
 
 
