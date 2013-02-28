@@ -6,25 +6,26 @@
    	
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-web/issues?state=open">let us know</a>.</em></p>
    	   		
-	<p>The source code contained in this tutorial is also available at <a href="https://github.com/codeanticode/pshader-tutorials">https://github.com/codeanticode/pshader-tutorials</a></p>
+	<p>The code for this tutorial is <a href="https://github.com/codeanticode/pshader-tutorials">available here.</a></p>
 	
 	<p>&nbsp;</p>
 
-<h3>1. What is a (P)shader?</h3>
+<h3>What is a Shader?</h3>
 
-<p>A brand new feature in Processing 2.0 is the inclusion of GLSL shaders. In fact, everything that Processing draws on the screen with the <a href="http://processing.org/reference/size_.html">P2D and P3D renderers</a> is the output of an appropriate "default shader" running behind the scenes. Processing handles these default shaders transparently so that the user doesn't need to worry about them, and she or he can continue to use the well-known <a href="http://processing.org/reference/">drawing API</a> and expect the same visual results as with  previous versions of Processing. However, Processing 2.0 incorporates a new set of API functions and variables that allows advanced users to replace the default shaders with her or his own. This opens-up many exciting possibilities: rendering 3D scenes using more sophisticated lighting and texturing algorithms, applying image post-processing effects in real-time, creating complex procedural objects that would be very hard or impossible to generate with other techniques, and sharing shader effects between desktop, mobile and web platforms with minimal code changes.</p>
+<p>A new feature in Processing 2 is the inclusion of GLSL shaders. In fact, everything that Processing draws on the screen with the <a href="http://processing.org/reference/size_.html">P2D and P3D renderers</a> is the output of an appropriate "default shader" running behind the scenes. Processing handles these default shaders transparently so that the user doesn't need to worry about them, and she or he can continue to use the well-known <a href="http://processing.org/reference/">drawing functions</a> and expect the same visual results as with previous versions of Processing. However, Processing 2 incorporates a new set of functions and variables that allows advanced users to replace the default shaders with her or his own. This opens up many exciting possibilities: rendering 3D scenes using more sophisticated lighting and texturing algorithms, applying image post-processing effects in real-time, creating complex procedural objects that would be very hard or impossible to generate with other techniques, and sharing shader effects between desktop, mobile, and web platforms with minimal code changes.</p>
 
-<p>In order to understand how this new shader API works and how can be used to extend the drawing capabilities of Processing, it is necessary to have an overview of the key concepts of shader programming, first in general and then from the "point of view" of a Processing sketch (so get ready and grab a beverage of your preference, because this is going to be a very long tutorial).</p>
+<p>In order to understand how shaders work and how they can be used to extend the drawing capabilities of Processing, it is necessary to have an overview of the key concepts of shader programming, first in general and then from the "point of view" of a Processing sketch. So, get ready and grab a beverage of your preference, because this is going to be a very long tutorial.</p>
 
-<p>Answering the question alluded by the title of this section: a shader is basically a program that runs on the Graphics Processing Unit (GPU) of the computer, and generates the visual output we see on the screen given the information that defines a 2D or 3D scene: vertices, colors, textures, lights, etc. The term "shader" itself might be slightly misleading, since the word shading in the context of drawing implies the process of representing different levels of darkness on the surface of an object due to the surrounding lights in order to create the illusion of depth. The <a href="http://renderman.pixar.com/view/brief-introduction-to-renderman">first computer shaders</a> were mainly concerned with the synthetic calculation of these shading levels given the mathematical representation of a tridimensional scene and the material properties of the objects in it, and attempted to create photorealistic renderings of such scenes. Nowadays, the shaders are not only used to calculate the shading or lighting levels in a virtual scene, but they are responsible of all the rendering stages, starting with camera transformations that are applied on the raw geometry, and ending at the evaluation of the final color of each visible pixel in the screen.
+<p>Answering the question alluded by the title of this section, a shader is basically a program that runs on the Graphics Processing Unit (GPU) of the computer, and generates the visual output we see on the screen given the information that defines a 2D or 3D scene: vertices, colors, textures, lights, etc. The term "shader" itself might be slightly misleading, since the word <em>shading</em> in the context of drawing implies the process of representing different levels of darkness on the surface of an object due to the surrounding lights in order to create the illusion of depth. The <a href="http://renderman.pixar.com/view/brief-introduction-to-renderman">first computer shaders</a> were mainly concerned with the synthetic calculation of these shading levels given the mathematical representation of a three-dimensional scene and the material properties of the objects in it, and attempted to create photorealistic renderings of such scenes. Nowadays, the shaders are not only used to calculate the shading or lighting levels in a virtual scene, but they are responsible of all the rendering stages, starting with camera transformations that are applied on the raw geometry, and ending at the evaluation of the final color of each visible pixel in the screen.
 </p>
 
 <p>There are several languages that can be used to write shaders, such as <a href="https://developer.nvidia.com/cg-toolkit">Cg</a>, <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb509561(v=vs.85).aspx">HLSL</a> and <a href="http://www.opengl.org/documentation/glsl/">GLSL</a>. The latter is the shader language included in <a href="http://www.opengl.org/">OpenGL</a>, the standard rendering library and API used across a wide variety of computing devices, ranging from high-end desktop computers to smartphones. GLSL simply stands for OpenGL Shading Language. Since Processing uses OpenGL as the basis for its P2D and P3D renderers, GLSL is the shader language that one has to use to write custom shaders to include in Processing sketches.</p>
 
-<p>Writing shaders requires an understanding of the individual stages involved in the rendering a scene with the GPU, and how we can use GLSL to program them. The sequence of these stages is called the "graphical pipeline" in the technical parlance of Computer Graphics, and we will now take a look at the main stages in the pipeline from the perspective of a Processing sketch.</p>
+<p>Writing shaders requires an understanding of the individual stages involved in the rendering a scene with the GPU, and how we can use GLSL to program them. The sequence of these stages is called the "graphical pipeline" in the technical parlance of computer graphics, and we will now take a look at the main stages in the pipeline from the perspective of a Processing sketch.</p>
 
-<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and <a href="http://glsl.heroku.com/">coding sandboxes</a>, that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.
-Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. This sketch draws a quad with lights and some geometric transformations applied to it:
+<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and <a href="http://glsl.heroku.com/">coding sandboxes</a>, that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, Cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.<p>
+
+<p>Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. This sketch draws a quad with lights and some geometric transformations applied to it:
 
 <table>
 <caption><b>Code listing 1.1:</b> Simple 3D sketch that draws a lit rotating rectangle</caption>
@@ -60,6 +61,8 @@ Let's start with a simple 3D sketch as the model to understand the relationship 
 </pre>
 </td></tr>
 </table>
+
+<!-- END CR EDITING, 28 FEB 2013 -->
 
 <p>
 The image below depicts a diagram of the graphics pipeline, and how the input of the pipeline is related to the function calls in the sketch. There are several additional stages in a typical pipeline, but we don't show them here in the sake of clarity. Furthermore, Processing follows the specification set by <a href="http://www.khronos.org/opengles/">OpenGL ES</a>, which is the version of OpenGL used in mobile devices and, through <a href="<a href="http://www.khronos.org/opengles/">">WebGL</a>, also in browsers. The programming model in OpenGL ES is simpler and doesn't include all the stages that are present in desktop OpenGL. On the desktop, OpenGL ES is in fact subset of OpenGL, so this choice ensures that GLSL shaders written to work with Processing can be used across different platforms with minimal changes. As a downside, advanced features of OpenGL desktop are not (directly) accessible through the Processing API, however there are several other toolkits that can be used for more sophisticated graphics programming.
@@ -129,7 +132,7 @@ The fragment shader can perform additional operations on each fragment, and in f
 From all the stages described in our simplified pipeline, only the vertex and fragment shaders can be modified to run our own custom code. The other stages are all hard-coded in the GPU. With this picture in mind, we can move forward and start working through the actual shader API in Processing. 
 </p>
 
-<h3>2. The PShader class</h3>
+<h3>The PShader class</h3>
 
 <p>
 In the previous section we saw that the two programmable stages in the GPU pipeline are the vertex and fragment shaders (in recent versions of OpenGL desktop there are additional programmable stages, but they are not covered by the shader API in Processing). Both are needed in order to specify a complete, working pipeline. In Processing we have to write the GLSL code for the fragment and vertex shaders in separate files, which then are combined to form a single "shader program" than can be executed in the GPU. The word "program" is often omitted, with the implicit assumption that when we just say shader we are referring to a complete shader program involving a fragment and vertex shaders.
@@ -233,7 +236,7 @@ The PShader class includes the set() function to pass values from the sketch to 
 </p>
 
 
-<h3>3. Types of shaders in Processing</h3>
+<h3>Types of shaders in Processing</h3>
 
 <p>
 From the code and pseudo-code examples presented in the previous sections, it can be appreciated that different shaders have different uniform and attribute variables. Clearly, a shader that does not compute lighting does not need uniforms holding the light source's position and color, for example. If we work with a low-level toolkit in C or C++ with direct access to the OpenGL API, we are free to name the uniforms and attributes of a shader in any way we like, since we have absolute control on the way the geometry is stored in our application, and how and when it is passed over to the GPU pipeline using the OpenGL functions. This is different when working in Processing, since the shaders are handled automatically by the renderers and should be able to handle the geometry that is described with the drawing API of Processing. This doesn't imply that custom shaders must render things in the same way as Processing does by default, quite in the contrary, the use of custom shaders opens up the possibility of greatly altering the rendering pipeline in Processing. However, custom shaders meant to be used in conjunction with the standard drawing API have to follow certain naming conventions, and are bound by some limitations. 
@@ -344,7 +347,7 @@ The type of a shader must be specified inside the GLSL code, either in the verte
 
 <p>In the next sections we will describe each type of shader in detail.</p>
 
-<h3>4. Color shaders</h3>
+<h3>Color shaders</h3>
 
 <p>
 We will go through the different types of shaders available in Processing and examine examples for each one. For the color, light, texture and texlight shaders we will use the same base geometry, a cylinder, throughout all the examples. The next code will serve as the basis for all the subsequent sketches:
@@ -450,7 +453,7 @@ We can do some simple color manipulation by doing the following change in the fr
 This will show on the screen the invert of the input color. So for instance, if we add <em>can.fill(255, 255, 0)</em> right after <em>can.beginShape(QUAD_STRIP)></em> then the cylinder should be painted blue.
 </p>
 
-<h3>5. Texture shaders</h3>
+<h3>Texture shaders</h3>
 
 <p>
 Rendering textured geometry requires additional uniforms and attributes in the shader. Let's look at the following sketch together with the accompanying fragment and vertex shaders:
@@ -567,7 +570,7 @@ void main() {
 A final note about texture shaders is that they are used to render text as well. The reason for this is that the P2D/P3D renderers in Processing draw text as textured quads, which are handled by the texture shaders.
 </p>
 
-<h3>6. Light shaders</h3>
+<h3>Light shaders</h3>
 
 <p>
 Lighting a 3D scene involves placing one or more light sources in the space, and defining their <a href="http://www.learnopengles.com/android-lesson-two-ambient-and-diffuse-lighting/">parameters</a>, such as type (point, spotlight) and color (diffuse, ambient, specular) . We won't go into the details of lighting in OpenGL, but something important to mention here is that all the mathematical models we use to generate lights with GLSL shaders are very simple approximations to lighting in the real world. The model we will use in the following example is probably one of the simplest, and evaluates the light intensity at each vertex of the object, and then uses the built-in interpolation of the graphic pipeline to get a continuous gradient of color across the object faces. The light intensity at each vertex is computed as the dot product between the vertex normal and the direction vector between the vertex and light positions. This model represents a point light source that emits light equally in all directions:
@@ -738,7 +741,7 @@ The output of the per-vertex and per-pixel lighting algorithms can be compared i
 
 <p><img src="imgs/pixlight.png"></p>
 
-<h3>7. Texture-light shaders</h3>
+<h3>Texture-light shaders</h3>
 
 <p>
 The final type of triangle shaders is the texture-light (texlight) shader. This type of shader incorporates the uniforms from both the light and texture types.
@@ -898,7 +901,7 @@ void main() {
 Note that a texlight cannot be used to render a scene only with textures or only with lights, in those cases either a texture of light shader will be needed.
 </p>
 
-<h3>8. Image post-processing effects</h3>
+<h3>Image post-processing effects</h3>
 
 <p>
 The fragment shader can be used to run image post-processing effects very efficiently, by taking advantage of the parallel nature of the GPUs. For example, let's imagine that we want to render a texture using only black and white: black if the luminance at a given pixel in the image is below a certain threshold, and white if it is above. This can be implemented easily in the fragment shader with the following code:
@@ -1072,7 +1075,7 @@ The output of these post-processing effects are displayed in the following image
 
 <p><img src="imgs/emboss.png"></p>
 
-<h3>9. Putting all together</h3>
+<h3>Putting all together</h3>
 
 <p>In all of the examples we have seen so far, only one shader is used throughout the execution of the entire sketch. However, we can load and use as many shaders as we need. At each given time, one shader will be selected and running, but we can change the selected shader using the <em>shader()</em> function, and restore the default shaders with <em>resetShader()</em>. The following example combines all the shaders from the previous sections, so the can be enabled/disabled using the keyboard:</p>
 
