@@ -4,25 +4,11 @@ require('../config.php');
 
 $benchmark_start = microtime_float();
 
-
-// make troubleshooting page
 $source = CONTENTDIR."static/tutorials/";
 $path = BASEDIR;
 
-// update the files on the server via SVN
-
-// look for the .subversion folder somewhere else
-// otherwise will go looking for /home/root/.subversion or some other user
 $where = CONTENTDIR . 'static/tutorials';
 putenv('HOME=' . CONTENTDIR);
-
-// From: http://code.google.com/p/processing/source/checkout 
-// # Non-members may check out a read-only working copy anonymously over HTTP.
-// svn checkout http://processing.googlecode.com/svn/trunk/ processing-read-only 
-// do the initial checkout
-//`cd /var/www/processing && /usr/bin/svn checkout http://processing.googlecode.com/svn/trunk/web/content/`;
-
-//`cd $where && /usr/bin/svn update`;
 
 // Switch from SVN to GIT, 14 FEB 2013
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
@@ -42,9 +28,6 @@ $page->content(file_get_contents($source."index.html"));
 writeFile('learning/index.html', $page->out());
 
 // Start making the individual tutorial pages
-
-// NOW WE WILL HAVE A LOOP TO DO INDIVIDUAL TUTORIALS
-// BASED ON AN XML FILE TO READ
 
 if( ! $xml = simplexml_load_file($source.'tutorials.xml') ) 
 {
