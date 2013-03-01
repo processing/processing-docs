@@ -40,7 +40,7 @@ a {
 	font-weight: normal;
 	color: #2c7bb5;
 }
-p a, li a, span a { border-bottom: 1px solid #A6BCCF; }
+/*p a, li a, span a { border-bottom: 1px solid #A6BCCF; }*/
 a.large-link {
 	position: relative;
 	margin-left: 18px;
@@ -185,7 +185,7 @@ a.large-link:before {
 /* ================ CONTENT ================== */
 
 .content {
-	width: 710px;
+	width: 680px;
 	float: left;
 	overflow: hidden;
 	position: relative;
@@ -231,7 +231,7 @@ h1, h2, h3, h4
 
 h4, h5, h6
 {
-	font-weight			: bold; 
+	/*font-weight			: bold;*/ 
 }
 .large-link { 
 	font-family: 'Enriqueta', georgia, times, serif;
@@ -250,19 +250,19 @@ h6 { font-size			: 1em; 		}
 p { font-size			: 1em; 		}
 
 pre {  
-	font-family			: "Courier New", Courier, monospace; 
+	font-family			: monaco, "Courier New", Courier, monospace; 
 	font-size			: 11px; 
 	line-height			: normal; color: #000000;
 }
 
 tt {  
-	font-family			: "Courier New", Courier, monospace; 
+	font-family			: monaco, "Courier New", Courier, monospace; 
 	font-size			: 11px; 
 	line-height			: normal; color: #000000;
 }
 
 code {  
-	font-family			: "Courier New", Courier, monospace; 
+	font-family			: monaco, "Courier New", Courier, monospace; 
 	font-size			: 11px; 
 	line-height			: normal; color: #000000;
 }
@@ -273,6 +273,12 @@ li {margin-bottom: 1em; }
 	font-size: 1.4rem; 
 	line-height: 30px;
 }
+.large-header { 
+	font-size: 1.3rem; 
+	line-height: 26px;
+	margin: 0 0 26px 0;
+}
+.large-header .black { color: #000; }
 .error { color: #f00; margin: 0; }
 
 /* ================ UI Elements ================== */
@@ -289,11 +295,11 @@ li {margin-bottom: 1em; }
 #Cover .leftcol { 
     float: left;
     width: 400px;
-    margin-right: 57px;
+    margin-right: 55px;
 }
 #Cover .rightcol { 
 	float: left;
-	width: 250px; 
+	width: 225px; 
 }
 
 
@@ -327,14 +333,25 @@ td img { margin: 0; display: block; }
 
 //#Exhibition .colone { width: 224px; float: left; margin-right: 35px; }
 
-#Exhibition .colone { width: 675px; float: left; margin-right: 35px; }
+#Exhibition .colone { width: 680px; float: left; margin-right: 35px; }
 #Exhibition .coltwo { width: 165px; float: left; margin-right: 25px; }
 
 #Exhibition .colthree { width: 224px; float: left; margin-right: 20px; }
 #Exhibition h2 { margin: 0 0 20px 0; font-size: 1em; }
 #Exhibition h2.with-nav { margin-bottom: 0; }
 #Exhibition .onecol { clear: both; }
-#Exhibition td { vertical-align: top; }
+#Exhibition table { 
+	width: 687px; 
+	margin-top: 35px; 
+	border-collapse:collapse;
+}
+#Exhibition td { 
+	width: 224px; 
+	padding-right: 5px; 
+	vertical-align: top; 
+	/*border: 1px solid #ececec;*/
+}
+#Exhibition .curated-item p { padding-right: 14px; }
 
 
 
@@ -352,7 +369,7 @@ td img { margin: 0; display: block; }
 .curated-item { margin-bottom: 25px; }
 .curated-item h5 { margin-top: 1em; color: #666; font-size: 1em; }
 .curated-item h5 a { font-weight: bold; }
-.curated-item p {  padding-right: 2em; }
+/*.curated-item p {  padding-right: 2em; }*/
 
 #Network h2 { position: relative; }
 #Network h2 a.addalink { position: absolute; left: 455px;}
@@ -445,7 +462,20 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 .ref-col .is-disabled, .ref-col .is-disabled a, .ref-col .is-disabled h5 {color: #dddddd;}
 
 .ref-item td h3 { margin: 0; }
-pre { margin: 0; }
+.ref-item td b {
+	font-weight: normal;
+	font-family			: monaco, "Courier New", Courier, monospace; 
+	font-size			: 11px; 
+	line-height			: normal; 
+	/*color: #CC6600;*/
+}
+pre { 
+	/*padding: 20px; */
+	/*background-color: #f1f1f1;*/
+	margin-bottom: 30px;
+	margin-top: 0;
+
+}
 tr.name-row { height: 80px; }
 
 td p { margin-top: 0; }
@@ -453,7 +483,8 @@ td p { margin-top: 0; }
 .example img { float: left; margin-right: 15px; margin-bottom: 15px; }
 .example { clear: both; margin-bottom: 15px; }
 .example pre.margin { margin-left: 115px; }
-hr.noShade { height: 0px; color: #ccc; background: #ccc; margin-bottom: 15px; clear: both; width: 60%; text-align: left; float: left; }
+hr.noshade { height: 0px; color: #f1f1f1; border-color: #e0e0e0; margin: 30px 0 30px 0; clear: both; }
+/*hr.noshade { display: none; }*/
 
 /*** ref index ***/
 .abridged-notice { margin: 0 50px 30px 0; }
@@ -499,7 +530,7 @@ div.ref-col { width: 30%;
 
 /************************************************************** contribute ***/
 
-#Contribute h1 { margin-bottom: 0; }
+/*#Contribute h1 { margin-bottom: 0; }*/
 #Contribute .message { margin-top: 0; margin-right: 40px; }
 #Contribute .threecol { float: left; width: 210px; margin-right: 20px; }
 #Contribute .threecol p { margin-bottom: 2em; }
@@ -508,7 +539,7 @@ div.ref-col { width: 30%;
 
 /************************************************************** learning ***/
 
-#Learning  h1 { margin-bottom: 0; margin-top: 0;}
+/*#Learning  h1 { margin-bottom: 0; margin-top: 0;}*/
 #Learning .message { margin-top: 0; margin-right: 40px; }
 #Learning .threecol { float: left; width: 200px; margin-right: 30px; margin-top: 0px;}
 #Learning .threecol p { margin-bottom: 2em; }
@@ -537,7 +568,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
 #Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
 
-#Tutorials h3 { 
+/*#Tutorials h3 { 
 	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-size			: 1.3em;
 	font-weight			: bold;
@@ -551,22 +582,33 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	font-size			: 1.0em;
 	margin-bottom		: 0.4em; 
 	margin-top			: 1.4em;
-}
+}*/
 
-#Tutorials h1 { 
+/*#Tutorials h1 { 
 	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-size			: 2.0em; 
 	font-weight			: normal;
 	font-style			: normal;
-}
+}*/
 
 #Tutorials h2.with-nav { margin-bottom: 0; }
 #Tutorials .onecol { clear: both; }
-#Tutorials td { vertical-align: top; }
+#Tutorials table { 
+	width: 687px; 
+	margin-top: 35px; 
+	border-collapse:collapse;
+}
+#Tutorials td { 
+	width: 224px; 
+	padding-right: 5px; 
+	vertical-align: top; 
+	/*border: 1px solid #ececec;*/
+}
+#Tutorials .curated-item p { padding-right: 14px; }
 
 /************************************************************** Books ***/
 
-#Books h1 { margin-bottom: 0; margin-top: 0;}
+/*#Books h1 { margin-bottom: 0; margin-top: 0;}*/
 #Books td { vertical-align: top; font-size: 1.0em}
 
 
@@ -612,8 +654,13 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tools h4 a {float:left; margin-left:-30px; martin-top:-5px; }
 
 
-#Tools .threecol { float: left; width: 210px; margin-right: 20px; }
+#Tools .threecol { 
+	float: left; 
+	width: 210px; 
+	margin-right: 21px; 
+}
 #Tools .threecol p { margin-top: 0; margin-bottom: 2em; }
+.threecol:nth-child(5) { margin: 0 !important; }
 
 
 
@@ -681,7 +728,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Libraries pre { margin-left: 30px; margin-bottom: 30px; }
 
 #Libraries h2 { margin-top: 2em; }
-//#Libraries h3 { clear: both; margin-bottom: 0; }
+/*#Libraries h3 { clear: both; margin-bottom: 0; }*/
 
 #Libraries h3 { margin-top: 0; margin-bottom: 0;}
 
@@ -690,12 +737,16 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Libraries h4 { font-size: 1em; margin-bottom: .5em; }
 #Libraries h4 a {float:left; margin-left:-30px; martin-top:-5px; }
 
-#Libraries .threecol { float: left; width: 210px; margin-right: 20px; }
+#Libraries .threecol { 
+	float: left; 
+	width: 210px; 
+	margin-right: 21px; 
+}
 #Libraries .threecol p { margin-top: 0; margin-bottom: 2em; }
 
 
 /************************************************************** environment ***/
-#Environment h1 { margin-top: 2em; }
+/*#Environment h1 { margin-top: 2em; }*/
 #Environment h5 { margin-top: 3em; }
 #Environment h6 { margin-bottom: 0em; }
 #Environment h5 a { float: left; margin-left: -30px; }
@@ -718,7 +769,7 @@ pre.code { clear: both; margin-top: 10px; }
 
 #examples-nav img { display: absolute; top: 15px; left: 100px; }
 
-#Examples h1 { margin-bottom: 0; }
+/*#Examples h1 { margin-bottom: 0; }*/
 
 
 div.updateRequired {
