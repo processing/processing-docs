@@ -16,6 +16,8 @@
   - Build tools pages from the contributions.txt file web/contrib_generate
   - Legacy libraries and tools linked from the bottom of the page
   - Decrease text block width on pages with large text block
+  - Fix 3 column layout for Libraries & Tools pages
+  - Double check new language for the header text
 
   NEED POST 2.0
 
