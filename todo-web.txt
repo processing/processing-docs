@@ -4,10 +4,6 @@
   
   NEED 100% FOR 2.0
   
-  - Clean up CSS and HTML
-  - Clean out the JavaScript includes
-  - Change the name of patrons.html to foundation.html
-  - Remove all GIF bitmapped type and replace  
   - Integrate mailman for email after financial transaction
   - Merge Basic / Topic examples
   - Add Partners to Cover
@@ -19,6 +15,7 @@
   - Build libraries page from the contributions.txt file web/contrib_generate
   - Build tools pages from the contributions.txt file web/contrib_generate
   - Legacy libraries and tools linked from the bottom of the page
+  - Decrease text block width on pages with large text block
 
   NEED POST 2.0
 
@@ -34,6 +31,7 @@
   - Add contact to Homepage and About!
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
+  - Adjust grid on Exhibition & Tutorial pages
   
   
 // // // // // // // // // // // // // // // // // // // // //
@@ -55,9 +53,9 @@ Tutorials
 *Examples
 Books
   
-*Overview
+Overview
 People
-*Foundation
+Foundation
   
 Shop
 
@@ -99,3 +97,8 @@ DONE
     x Complete donation sequence
     x New download page with radio buttons, goes to page w/links
     x Get financial setup for transactions
+
+  X Clean up CSS and HTML
+  X Clean out the JavaScript includes
+  X Change the name of patrons.html to foundation.html
+  X Remove all GIF bitmapped type and replace  
