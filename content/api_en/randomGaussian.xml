@@ -9,22 +9,11 @@
 <type></type>
 
 <example>
-<image></image>
-<code><![CDATA[
-for (int i = 0; i < 100; i++) {
-  float r = randomGaussian();
-  println(r);
-}
-]]></code>
-</example>
-
-<example>
 <image>randomGaussian_0.png</image>
 <code><![CDATA[
-for (int i = 0; i < 100; i++) {
-  float length = randomGaussian() * 15;
-  length = constrain(length, -50, 50);
-  line(50, i, 50 + length, i);
+for (int y = 0; y < 100; i++) {
+  float x = randomGaussian() * 15;
+  line(50, y, 50 + x, y);
 }
 ]]></code>
 </example>
@@ -33,29 +22,32 @@ for (int i = 0; i < 100; i++) {
 <example>
 <image>randomGaussian_1.png</image>
 <code><![CDATA[
-int[] distribution = new int[100];
+float[] distribution = new float[360];
 
-for (int i = 0; i < 100; ++i) {
-  distribution[i] = int(randomGaussian() * 15) + 10;
+void setup() {
+  size(100, 100);
+  for (int i = 0; i < distribution.length; i++) {
+    distribution[i] = int(randomGaussian() * 15);
+  }
 }
 
-translate(width / 2, width / 2);
+void draw() {
+  background(204);
+  
+  translate(width/2, width/2);
 
-for (int i = 0; i < 60; ++i) {
-  rotate(radians(i));
-  if (abs(distribution[i]) < 25) {
-    stroke(255);
-  } else {
+  for (int i = 0; i < distribution.length; i++) {
+    rotate(TWO_PI/distribution.length);
     stroke(0);
+    float dist = abs(distribution[i]);
+    line(0, 0, dist, 0);
   }
-  line(0, 0, distribution[i], 0);
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Returns a float from a random series of numbers having a mean of 0 and standard deviation of 1. Each time the <b>randomGaussian()</b> function is called, it returns a number fitting a Gaussian, or normal, distribution.<br/>
-There is theoretically no minimum or maximum value that <b>randomGaussian()</b> might return. Rather, there is just a very low probability that values far from the mean will be returned; and a higher probability that numbers near the mean will be returned.
+Returns a float from a random series of numbers having a mean of 0 and standard deviation of 1. Each time the <b>randomGaussian()</b> function is called, it returns a number fitting a Gaussian, or normal, distribution. There is theoretically no minimum or maximum value that <b>randomGaussian()</b> might return. Rather, there is just a very low probability that values far from the mean will be returned; and a higher probability that numbers near the mean will be returned.
 ]]></description>
 
 </root>
