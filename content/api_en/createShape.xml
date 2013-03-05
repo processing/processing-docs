@@ -16,10 +16,10 @@
 <code><![CDATA[
 PShape square;  // The PShape object
 
-void setup() {  
+void setup() {
   size(100, 100, P2D);
-  // Creating the PShape as a square. The corner 
-  // is 0,0 so that the center is at 40,40 
+  // Creating the PShape as a square. The
+  // numeric arguments are similar to rect().
   square = createShape(RECT, 0, 0, 80, 80);
 }
 
@@ -34,17 +34,19 @@ void draw() {
 <code><![CDATA[
 PShape s;  // The PShape object
 
-void setup() {  
+void setup() {
   size(100, 100, P2D);
-  // Creating the PShape as a square. The corner 
-  // is 0,0 so that the center is at 40,40 
+  // Creating a custom PShape as a square, by
+  // specifying a series of vertices.
   s = createShape();
+  s.beginShape();
   s.fill(0, 0, 255);
   s.noStroke();
   s.vertex(0, 0);
   s.vertex(0, 50);
+  s.vertex(50, 50);
   s.vertex(50, 0);
-  s.end();
+  s.endShape(CLOSE);
 }
 
 void draw() {
@@ -60,7 +62,8 @@ PShape s;
 
 void setup() {
   size(100, 100, P2D);
-  s = createShape(TRIANGLE_STRIP);
+  s = createShape();
+  s.beginShape(TRIANGLE_STRIP);
   s.vertex(30, 75);
   s.vertex(40, 20);
   s.vertex(50, 75);
@@ -68,11 +71,11 @@ void setup() {
   s.vertex(70, 75);
   s.vertex(80, 20);
   s.vertex(90, 75);
-  s.end();
+  s.endShape();
 }
 
 void draw() {
-  shape(s, 0, 0); 
+  shape(s, 0, 0);
 }
 ]]></code>
 </example>
@@ -85,19 +88,19 @@ PShape alien, head, body;
 
 void setup() {
   size(100, 100, P2D);
-  alien = createShape(GROUP);
-  // Make two shapes  
-  head = createShape(ELLIPSE, 0, 0, 50, 50);
+  head = createShape(ELLIPSE, 20, 25, 50, 50);
   head.noStroke();
-  body = createShape(RECT, 0, 45, 50, 40);
+  body = createShape(RECT, 0, 50, 40, 40);
   body.fill(0);
   // Add the two "child" shapes to the parent group
+  alien = createShape(GROUP);
+  // Make two shapes
   alien.addChild(body);
   alien.addChild(head);
 }
 
 void draw() {
-  translate(25, 10);
+  translate(20, 10);
   shape(alien);  // Draw the group
 }
 ]]></code>
