@@ -51,10 +51,12 @@
        
     <p>
 		Processing has different <em>programming modes</em> to make it possible to deploy sketches
-		on different platforms. The three current programming modes are <em>Java</em>, 
-		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications, 
+		on different platforms and program in different ways. The current default programming modes 
+		are <em>Java</em> and <em>Experimental</em>. Other programming modes, such as <em>JavaScript</em> and 
+		<em>Android</em>, are added by selecting "Add Mode..." from the menu in the upper-right
+		corner of the PDE. <!--The Java mode makes Java Applications, 
 		the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
-		and the Android mode makes sketches that run on Android phones and tablets.
+		and the Android mode makes sketches that run on Android phones and tablets.-->
     </p>
 
 <!--
@@ -83,15 +85,17 @@ Big-picture keywords / concepts for getting into Processing
 		The Processing Development Environment (PDE) consists of a simple text 
 		editor for writing code, a message area, a text console, tabs for managing 
 		files, a toolbar with buttons for common actions, and a series of menus. 
+		The menus options change from mode to mode. The default Java mode is documented here.
 	</p>
 	
+	<!--
 	<p>
 		There are three variations of the PDE, one for each programming mode. The menus
 		change a little depending if it currently in Java, JavaScript, or Android mode.
 		The Java and JavaScript modes are documented here. For more information about
 		Android mode, please visit the <a href="http://wiki.processing.org/w/Android">Processing 
 		for Android reference</a>.
-	</p>
+	</p>-->
 
 	<p>
 		<br />
@@ -119,7 +123,7 @@ Big-picture keywords / concepts for getting into Processing
         <td width="15">&nbsp;</td>
         <td valign="top" width="480"><em>Run</em><br />
 			Runs the sketch. In Java mode, it compiles the code and opens a new display window.
-			In JavaScript mode, it starts a new server and opens the sketch in a web browser.
+			<!--In JavaScript mode, it starts a new server and opens the sketch in a web browser.-->
 		</td>
       </tr>
       <tr> 
@@ -161,8 +165,8 @@ Big-picture keywords / concepts for getting into Processing
         <td>&nbsp;</td>
         <td valign="top"><em>Export</em><br />
 			In Java mode, it exports the current sketch as a Java application and
-          	the folder containing the files is opened. In JavaScript mode, this button exports the current sketch 
-          	as JavaScript and HTML files and the folder containing the files is opened.
+          	the folder containing the files is opened. <!--In JavaScript mode, this button exports the current sketch 
+          	as JavaScript and HTML files and the folder containing the files is opened.-->
           	(Note: Exporting a sketch will delete the previous contents of the export folder,
           	unless this preference is unchecked in the Preferences.) 
           </td>
@@ -199,10 +203,10 @@ Big-picture keywords / concepts for getting into Processing
       name. Does not replace the previous version of the sketch.</li>
     <li><em>Export (Ctrl+E)</em><br />
       In Java mode, exports a Java application as an executable file and opens the folder 
-      containing the exported files. In JavaScript mode, exports the JavaScript and HTML needed 
+      containing the exported files. <!--In JavaScript mode, exports the JavaScript and HTML needed 
       to run the sketch in a browser and opens the folder containing the exported files. 
       Note that exporting a sketch will delete the previous contents of the "application.xxxxx" 
-      or "[JAVASCRIPT EXPORT FOLDER]" folders.</li>
+      or "[JAVASCRIPT EXPORT FOLDER]" folders.--></li>
     <li><em>Page Setup (Shift+Ctrl+P)</em><br />
       Define page settings for printing.</li>
     <li><em>Print (Ctrl+P)</em><br />
@@ -260,7 +264,8 @@ Big-picture keywords / concepts for getting into Processing
 	</ul>
 
 	
-	<h6>Sketch (Java Mode)</h6>
+	<!--<h6>Sketch (Java Mode)</h6>-->
+	<h6>Sketch</h6>
 	<ul>
     <li><em>Run (Ctrl+R)</em><br />
       Runs the code (compiles the code, opens the display window, and runs the 
@@ -283,7 +288,7 @@ Big-picture keywords / concepts for getting into Processing
       it to the sketch's "data" folder. </li>
 	</ul>
 	
-	
+	<!--
     <h6>Sketch (JavaScript Mode)</h6>
 	<ul>
     <li><em>Start Server (Ctrl+R)</em><br />
@@ -305,7 +310,7 @@ Big-picture keywords / concepts for getting into Processing
     <li><em>Add File</em><br />
       Opens a file navigator. Select an image, font, or other media files to add 
       it to the sketch's "data" folder. </li>
-	</ul>
+	</ul>-->
 	
 
     <h6>Tools</h6>
@@ -336,7 +341,7 @@ Big-picture keywords / concepts for getting into Processing
 	</li>
 	</ul>
 	  
-	<h6>JavaScript (JavaScript Mode only)</h6>
+	<!--<h6>JavaScript (JavaScript Mode only)</h6>
 	<ul>
     <li><em>Playback Settings (Directives)</em><br />
       JavaScript mode uses directives to preload images and fonts and to better  
@@ -351,9 +356,10 @@ Big-picture keywords / concepts for getting into Processing
     <li><em>Show Custom Template</em><br />
       Opens the folder for the current sketch's custom template.</li>
 	</li>
-	</ul>
+	</ul>-->
 	
-    <h6>Help (Java Mode)</h6>
+    <!--<h6>Help (Java Mode)</h6>-->
+    <h6>Help</h6>
     <ul>
 
     <li><em>About Processing</em><br />
@@ -380,9 +386,9 @@ Big-picture keywords / concepts for getting into Processing
 
 	</ul>
 	
-	<h6>Help (JavaScript)</h6>
+	<!--<h6>Help (JavaScript)</h6>
     
-	<ul><li><em>This menu is currently in flux.</em></li></ul>
+	<ul><li><em>This menu is currently in flux.</em></li></ul>-->
 	
 	
 	
@@ -603,6 +609,17 @@ void draw() {
     </h5>
     
     <p>
+		Processing has different <em>programming modes</em> to make it possible to deploy sketches
+		on different platforms and program in different ways. The current default programming modes 
+		are <em>Java</em> and <em>Experimental</em>. Other programming modes, such as <em>JavaScript</em> and 
+		<em>Android</em>, are added by selecting "Add Mode..." from the menu in the upper-right
+		corner of the PDE. <!--The Java mode makes Java Applications, 
+		the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
+		and the Android mode makes sketches that run on Android phones and tablets.-->
+    </p>
+    
+    <!--
+    <p>
     	Processing has different <em>programming modes</em> to make it possible to deploy 
     	sketches on different platforms. The three current programming modes are <em>Java</em>, 
 		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications, 
@@ -610,14 +627,17 @@ void draw() {
 		WebGL, and the Android mode makes sketches that run on Android phones and tablets. 
 		Each mode has unique menu items, examples, and a distinct visual theme for the PDE.
     </p>
+    -->
     
+    <!--
     <p>
     	While each mode has some custom language elements, the core Processing syntax works 
     	identically regardless of the mode and export platform. Additionally, now that the 
     	software architecture for modes is in place, it's possible to create many other
     	compatible modes based on other programming and scripting languages such as Python, 
-    	Ruby, CoffeeScript, etc.
+    	and Ruby, etc.
     </p>
+    -->
       
       
     <h6>Java Mode</h6>
@@ -661,7 +681,7 @@ public class MyDemo extends PApplet {
 	</p>
 
     
-    
+    <!--
     <h6>JavaScript Mode</h6>
     
     <p>
@@ -706,8 +726,15 @@ public class MyDemo extends PApplet {
     	JavaScript Mode is new for Processing 2.0. There's more information about this mode
     	on the emerging <a href="http://wiki.processing.org/w/JavaScript">JavaScript Mode</a> 
     	page on the Processing Wiki.
-    </p>
+    </p>-->
     
+    <h6>JavaScript Mode</h6>
+    
+    <p>
+		Sketches written in this mode can be exported to run inside web browsers using
+		HTML5 and WebGL. This mode is documented on the <a href="http://wiki.processing.org/w/JavaScript">
+		JavaScript</a> page of the Processing Wiki.
+    </p>
     
     <h6>Android Mode</h6>
     
