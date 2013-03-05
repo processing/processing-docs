@@ -89,9 +89,7 @@ PShape alien, head, body;
 void setup() {
   size(100, 100, P2D);
   head = createShape(ELLIPSE, 20, 25, 50, 50);
-  head.noStroke();
   body = createShape(RECT, 0, 50, 40, 40);
-  body.fill(0);
   // Add the two "child" shapes to the parent group
   alien = createShape(GROUP);
   // Make two shapes

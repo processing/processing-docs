@@ -29,27 +29,25 @@ void draw() {
 <example>
 <image></image>
 <code><![CDATA[
-PShape s;
+PShape square;  // The PShape object
 
-void setup() {
-  size(100, 100, P3D);
-  // The file "bot.obj" must be in the data folder
-  // of the current sketch to load successfully
-  s = loadShape("bot.obj");
+void setup() {  
+  size(100, 100, P2D);
+  // Creating the PShape as a square. The corner 
+  // is 0,0 so that the center is at 40,40 
+  square = createShape(RECT, 0, 0, 80, 80);
 }
 
 void draw() {
-  background(204);
-  translate(width/2, height/2);
-  shape(s, 0, 0);
+  shape(square, 10, 10);
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Datatype for storing shapes. Processing can currently load and display SVG (Scalable Vector Graphics)  and OBJ shapes. Before a shape is used, it must be loaded with the <b>loadShape()</b> function. The <b>shape()</b> function is used to draw the shape to the display window. The <b>PShape</b> object contains a group of methods, linked below, that can operate on the shape data. OBJ files can only be opened using the P3D renderer. 
-<br /><br />
-The <b>loadShape()</b> function supports SVG files created with Inkscape and Adobe Illustrator. It is not a full SVG implementation, but offers some straightforward support for handling vector data.
+Datatype for storing shapes. Before a shape is used, it must be loaded with the <b>loadShape()</b> or created with the <b>createShape()</b>. The <b>shape()</b> function is used to draw the shape to the display window. Processing can currently load and display SVG (Scalable Vector Graphics) and OBJ shapes. OBJ files can only be opened using the <b>P3D</b> renderer and <b>createShape()</b> is only available with the <b>P2D</b> and <b>P3D</b> renderers. The <b>loadShape()</b> function supports SVG files created with Inkscape and Adobe Illustrator. It is not a full SVG implementation, but offers some straightforward support for handling vector data.
+<br /><br>
+The <b>PShape</b> object contains a group of methods that can operate on the shape data. Some of the methods are listed below, but the full list used for creating and modifying shapes is <a href="http://www.processing.org/reference/javadoc/core/processing/core/PShape.html">available here in the Processing Javadoc</a>.
 ]]></description>
 
 <type>class</type>
