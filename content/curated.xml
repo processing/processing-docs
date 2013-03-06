@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="3D Printed Record" by="Amanda Ghassaei" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/3dprintedrecord.jpg</image>
+		  <description>
+			  Created using Processing, ModelBuilder Library by Marius Watz and a 3D printer, Amanda Ghassaei at instructables managed to print a 33rpm music record that actually doesn’t sound too bad considering the limitations of currently available 3d printing technologies.
+		  </description>
+		  <location>http://www.instructables.com/id/3D-Printed-Record/</location>
+		 <link href="http://www.stonespray.com/">Instructables</link>
+	</software>
+	
 	<software name="Digital Natives and Glitched Realities" by="Matthew Plummer-Fernandez" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/digitalnatives.jpg</image>
 		  <description>
