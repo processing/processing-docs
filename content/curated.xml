@@ -2,6 +2,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name=".fluid" by="Hannes Jung" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/fluid.jpg</image>
+		  <description>
+			  Created by Hannes Jung, .fluid is a concept study of an interacting, changing surface that uses non-newtonian fluid, an Arduino board, a speaker and Processing to allow surface to change from liquid to solid, from plain to three-dimensional symmetric patterns.
+		  </description>
+		  <location>http://cargocollective.com/hnx/fluid</location>
+		 <link href="http://www.stonespray.com/">Hannes Jung</link>
+	</software>
+	
 	<software name="3D Printed Record" by="Amanda Ghassaei" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/3dprintedrecord.jpg</image>
 		  <description>
