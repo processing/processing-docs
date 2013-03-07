@@ -6,7 +6,7 @@
    	
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-web/issues?state=open">let us know</a>.</em></p>
    	   		
-	<p>The source code contained in this tutorial is also available under Examples --> Topics --> Create Shape.</p>
+	<p>The source code contained in this tutorial can be found by selecting File > Examples in the Processing IDE. Then select Topics > Create Shapes.</p>
 	
 	<p>&nbsp;</p>
 
@@ -158,7 +158,7 @@ void draw() {
 
 <p>It should be noted that unlike with fill() and stroke() you must pass a full color as an argument.  i.e. instead of saying "setFill(255,0,0)" for a red fill, you'll need to say "setFill(color(255,0,0))".  In addition, setFill() and setStroke() can take a boolean argument (e.g. setFill(false)) to turn the fill or stroke on or off for a given vertex as well as an integer (e.g. setFill(i,color(255,0,0))) to set the fill or stroke for a specific vertex.
 
-<p>See Example "PrimitivePShape" for an example that demonstrates all of the above code.</p>
+<p>See Example "PrimitivePShape" (under File > Examples > Topics > Create Shapes) for an example that demonstrates all of the above code.</p>
 
 <h3>Custom PShapes</h3>
 
@@ -238,7 +238,7 @@ void setup() {
 }
 </pre>
 
-<p>See Example "PolygonPShape" for an example that demonstrates all of the above code.</p>
+<p>See Example "PolygonPShape" (under File > Examples > Topics > Create Shapes) for an example that demonstrates all of the above code.</p>
 
 <h3>Many PShapes</h3>
 
@@ -385,7 +385,7 @@ void setup() {
 }
 </pre>
 
-<p>For the full examples, take a look at "PolygonPShapeOOP1", "PolygonPShapeOOP2", and "PolygonPShapeOOP3".  It should also be noted that the rendering speed optimization of retained mode is only relevant to P2D and P3D drawing modes, as it requires hardware acceleration.</p>
+<p>For the full examples, take a look at "PolygonPShapeOOP1", "PolygonPShapeOOP2", and "PolygonPShapeOOP3" (Under File > Examples > Topics > Create Shapes).  It should also be noted that the rendering speed optimization of retained mode is only relevant to P2D and P3D drawing modes, as it requires hardware acceleration.</p>
 
 <h3>More Custom PShapes</h3>
 
@@ -445,7 +445,7 @@ s.endContour();
 s.endShape();
 </pre>
 
-<p>See Example "BeginEndContour" for the full implementation.</p>
+<p>See Example "BeginEndContour" (under File > Examples > Topics > Create Shapes) for the full implementation.</p>
 
 <h3>PShape Groups</h3>
 
@@ -479,7 +479,7 @@ translate(width/2, height/2);
 shape(alien);
 </pre>
 
-<p>For a full example that demonstrates a PShape that groups together a primitive shape, custom polygon, and path, see "GroupPShape".
+<p>For a full example that demonstrates a PShape that groups together a primitive shape, custom polygon, and path, see "GroupPShape" (under File > Examples > Topics > Create Shapes).
 
 PShape groups allow you build a sophisticated hierarchy of shapes.  This in turn allows you to set the color and attributes of the child shapes by calling the corresponding method at the parent level. Similarly, by calling the transformation functions at a given level of the hierarchy, you only affect the shapes below. 
 </p>
@@ -532,7 +532,7 @@ for (int i = 0; i < s.getVertexCount(); i++) {
 }
 </pre>
 
-<p>For an example that wiggles a polygon's vertices using Perlin noise, see "WigglePShape".</p>
+<p>For an example that wiggles a polygon's vertices using Perlin noise, see "WigglePShape" (under File > Examples > Topics > Create Shapes).</p>
 
 	<p>&nbsp;</p>
 
