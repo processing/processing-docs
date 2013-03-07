@@ -394,7 +394,8 @@ void setup() {
 <p>PShapes support all the same types of shapes you can draw in immediate mode.  These include: POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, and QUAD_STRIP.  For example, if you want to create a quad strip, you would say:</p>
 
 <pre>
-PShape s = createShape(QUAD_STRIP);
+PShape s = createShape();
+s.beginShape(QUAD_STRIP);
 </pre>
 
 <p>If no mode is specified, the shape can be any irregular polygon as we saw in the previous star example.  A PShape can also be a path by not closing the shape.  Here is an example of a path that follows a sine wave as a PShape object.</p>
