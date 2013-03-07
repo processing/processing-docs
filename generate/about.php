@@ -27,9 +27,9 @@ $page->content(file_get_contents($source."overview.html"));
 writeFile('about/index.html', $page->out());
 #copydirr($source.'/images', $path.'/images');
 
-$page = new Page("Patrons", "Patrons");
-$page->content(file_get_contents($source."patrons.html"));
-writeFile('about/patrons/index.html', $page->out());
+$page = new Page("Foundation", "Foundation");
+$page->content(file_get_contents($source."foundation.html"));
+writeFile('about/foundation/index.html', $page->out());
 
 $page = new Page("People", "People");
 $page->content(file_get_contents($source."people.html"));

@@ -28,7 +28,7 @@ $pages = array(
     'About'           => array('/about/', 1),
         'Overview'    => array('/about/', 2),
         'People'      => array('/about/people/', 2),
-        'Patrons'     => array('/about/patrons/', 2),
+        'Foundation'     => array('/about/foundation/', 2),
     
     'FAQ'             => array('http://wiki.processing.org/w/FAQ', 1),
     
@@ -41,7 +41,7 @@ function navigation($section = '')
     global $translation;
     //$tr = $translation->navigation;  // Removed 22 Sep 2011  --CR
 
-    $abo = array('About', 'Overview', 'People', 'Patrons');
+    $abo = array('About', 'Overview', 'People', 'Foundation');
     $ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
     $learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books');
 
@@ -69,7 +69,8 @@ function navigation($section = '')
 	    $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . "<br><br>\n";
 	    
 	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'About') . "<br> \n";
-	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Foundation', $section == 'Foundation') . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . "<br><br>\n";
 	       

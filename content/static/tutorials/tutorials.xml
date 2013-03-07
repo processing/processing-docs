@@ -132,5 +132,12 @@
   	<imgs>true</imgs> 
   	<code>false</code> 
   </tutorial>
+  
+  <tutorial> 
+  	<title>Shaders</title> 
+  	<directory>pshader</directory> 
+  	<imgs>true</imgs> 
+  	<code>false</code> 
+  </tutorial>
 
 </tutorials> 

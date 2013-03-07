@@ -74,6 +74,29 @@ function get_curated_one($curated, $start = 0, $num = 12)
    return $html . '</table>';
 }
 
+// function get_curated_three($curated, $start = 0, $num = 12)
+// {
+//   // output html
+
+//   $html = '<table width="687" cellspacing="0" cellpadding="0" border="0">';
+//   $j = 0;
+
+//   for ($i = $start; $i < $start+$num; $i++) {
+//     if ($curated[$i]) {
+//       if ($j % 3 == 0) $html .= '<tr>';
+//       $html .= '<td>' . $curated[$i]->display() . '</td>';
+//       if ($j % 3 == 2) $html .= '</tr>';
+//       $j++;
+//     }
+//   }
+
+//   if ($j % 3 == 1) $html .= '<td>&nbsp;</td></tr>';
+
+//   if ($j % 3 == 2) $html .= '<td>&nbsp;</td><td>&nbsp;</td></tr>';
+
+//   return $html . '</table>';
+// }
+
 function get_curated_three($curated, $start = 0, $num = 12)
 {
   // output html
