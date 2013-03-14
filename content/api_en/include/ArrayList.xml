@@ -15,11 +15,13 @@
 // This is a code fragment that shows how to use an ArrayList.
 // It won't compile because it's missing the Ball class.
 
-ArrayList balls;
+// Declaring the ArrayList, note the use of the syntax "<Ball>" to indicate
+// our intention to fill this ArrayList with Ball objects
+ArrayList<Ball> balls;
 
 void setup() {
   size(200, 200);
-  balls = new ArrayList();  // Create an empty ArrayList
+  balls = new ArrayList<Ball>();  // Create an empty ArrayList
   balls.add(new Ball(width/2, 0, 48));  // Start by adding one element
 }
 
@@ -31,9 +33,7 @@ void draw() {
   // Notice how we are looping through the ArrayList backwards.
   // This is because we are deleting elements from the list.
   for (int i = balls.size()-1; i >= 0; i--) { 
-    // An ArrayList doesn't know what it is storing,
-    // so we have to cast the object coming out.
-    Ball ball = (Ball) balls.get(i);
+    Ball ball = balls.get(i);
     ball.move();
     ball.display();
     if (ball.finished()) {

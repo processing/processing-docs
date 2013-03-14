@@ -25,9 +25,7 @@ void draw() {
 
 
 <description><![CDATA[
-Draws shapes to the display window. Shapes must be in the sketch's "data" directory to load correctly. Select "Add file..." from the "Sketch" menu to add the shape. Processing currently works with SVG shapes only. The <b>shape</b> parameter specifies the shape to display and the <b>x</b> and <b>y</b> parameters define the location of the shape from its upper-left corner. The shape is displayed at its original size unless the <b>c</b> and <b>d</b> parameters specify a different size. The <b>shapeMode()</b> function can be used to change the way these parameters are interpreted.
-<br /><br />
-Note complex shapes may draw awkwardly with P3D. This renderer does not yet support shapes that have holes or complicated breaks. 
+Draws shapes to the display window. Shapes must be in the sketch's "data" directory to load correctly. Select "Add file..." from the "Sketch" menu to add the shape. Processing currently works with SVG, OBJ, and custom-created shapes. The <b>shape</b> parameter specifies the shape to display and the coordinate parameters define the location of the shape from its upper-left corner. The shape is displayed at its original size unless the <b>c</b> and <b>d</b> parameters specify a different size. The <b>shapeMode()</b> function can be used to change the way these parameters are interpreted.
 ]]></description>
 
 </root>

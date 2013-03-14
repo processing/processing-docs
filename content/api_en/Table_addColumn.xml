@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>addColumn()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>Table</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = createTable();
+  
+  table.addColumn("id");
+  table.addColumn("species");
+  table.addColumn("name");
+  
+  TableRow newRow = table.addRow();
+  newRow.setInt("id", table.getRowCount() - 1);
+  newRow.setString("species", "Panthera leo");
+  newRow.setString("name", "Lion");
+  
+  saveTable(table, "data/new.csv");
+}
+
+// Sketch saves the following to a file called "new.csv":
+// id,species,name
+// 0,Panthera leo,Lion
+]]></code>
+</example>
+
+<description><![CDATA[
+TBD
+]]></description>
+
+</root>

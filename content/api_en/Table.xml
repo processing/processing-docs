@@ -15,13 +15,34 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example code TBD
+Table table;
+
+void setup() {
+
+  table = createTable();
+  
+  table.addColumn("id");
+  table.addColumn("species");
+  table.addColumn("name");
+  
+  TableRow newRow = table.addRow();
+  newRow.setInt("id", table.getRowCount() - 1);
+  newRow.setString("species", "Panthera leo");
+  newRow.setString("name", "Lion");
+  
+  saveTable(table, "data/new.csv");
+}
+
+// Sketch saves the following to a file called "new.csv":
+// id,species,name
+// 0,Panthera leo,Lion
 ]]></code>
 </example>
 
 <description><![CDATA[
-<b>Table</b> is...  TBD.
+<b>Table</b> objects store data with multiple rows and columns, much like in a traditional spreadsheet.  Tables can be generated from scratch, dynamically, or using data from an existing file.  Tables can also be output and saved to disk, as in the example above.
 ]]></description>
+
 
 <type>class</type>
 
