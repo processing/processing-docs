@@ -336,18 +336,6 @@ id=041
 
 library
 category=Simulation
-authorList=[Florian Jenett](http://www.bezier.de/)
-name=Combinatorics
-sentence=Generate combinations, variations and permutations
-url=https://github.com/fjenett/combinatorics
-prettyVersion=0.0.8
-paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
-version=3005
-download=http://cloud.github.com/downloads/fjenett/combinatorics/Combinatorics.zip
-id=055
-
-library
-category=Simulation
 authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
 name=Hermes
 sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
@@ -479,30 +467,6 @@ download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=083
 
 library
-category=GUI
-authorList=[Andreas Schlegel](http://www.sojamo.de/)
-name=ControlP5
-sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
-url=http://www.sojamo.de/libraries/controlp5
-prettyVersion=2.0.4
-paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
-version=80
-download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
-id=058
-
-library
-category=GUI
-authorList=[Michael Heuer](https://github.com/heuermh)
-name=Piccolo2D library for Processing
-sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
-url=https://github.com/heuermh/piccolo2d-processing
-prettyVersion=2.0
-paragraph=
-version=2
-download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
-id=061
-
-library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://www.shiffman.net)
 name=Open Kinect
@@ -599,16 +563,28 @@ download=http://ubaa.net/shared/processing/udp/udp.zip
 id=073
 
 library
-category=Fabrication
-authorList=[Andre Sier](http://s373.net)
-name=marchingcubes
-sentence=Marching cubes implementation after Paul Bourke polygonize voxel.
-url=http://s373.net/code/marchingcubes
-prettyVersion=0.1.0
+category=GUI
+authorList=[Andreas Schlegel](http://www.sojamo.de/)
+name=ControlP5
+sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
+url=http://www.sojamo.de/libraries/controlp5
+prettyVersion=2.0.4
+paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
+version=80
+download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
+id=058
+
+library
+category=GUI
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Piccolo2D library for Processing
+sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
+url=https://github.com/heuermh/piccolo2d-processing
+prettyVersion=2.0
 paragraph=
-version=10
-download=http://s373.net/code/marchingcubes/download/marchingcubes.zip
-id=080
+version=2
+download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
+id=061
 
 library
 category=Math
@@ -669,16 +645,4 @@ paragraph=
 version=23
 download=http://saitoobjloader.googlecode.com/files/OBJLoader.zip
 id=043
-
-library
-category=3D
-authorList=[Andre Sier](http://s373.net)
-name=marchingcubes
-sentence=Marching cubes implementation after Paul Bourke polygonize voxel.
-url=http://s373.net/code/marchingcubes
-prettyVersion=0.1.0
-paragraph=
-version=10
-download=http://s373.net/code/marchingcubes/download/marchingcubes.zip
-id=078
 
