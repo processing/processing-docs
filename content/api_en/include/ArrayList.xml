@@ -62,9 +62,14 @@ For a list of the numerous <b>ArrayList</b> features, please read the <a href="h
 <syntax></syntax>
 
 <constructor>
-ArrayList()
-ArrayList(<c>initialCapacity</c>)
+ArrayList&gt;Type&lt;()
+ArrayList&gt;Type&lt;(<c>initialCapacity</c>)
 </constructor>
+
+<cparameter>
+<clabel>Type</clabel>
+<cdescription>Class Name: the data type for the objects to be placed in the ArrayList.</cdescription>
+</cparameter>
 
 <cparameter>
 <clabel>initialCapacity</clabel>

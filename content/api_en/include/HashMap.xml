@@ -45,11 +45,22 @@ For a list of the numerous <b>HashMap</b> features, please read the <a href="htt
 <syntax></syntax>
 
 <constructor>
-HashMap()
-HashMap(<c>initialCapacity</c>)
-HashMap(<c>initialCapacity</c>, <c>loadFactor</c>)
-HashMap(<c>m</c>)
+HashMap&gt;Key, Value&lt;()
+HashMap&gt;Key, Value&lt;(<c>initialCapacity</c>)
+HashMap&gt;Key, Value&lt;(<c>initialCapacity</c>, <c>loadFactor</c>)
+HashMap&gt;Key, Value&lt;(<c>m</c>)
 </constructor>
+
+<cparameter>
+<clabel>Key</clabel>
+<cdescription>Class Name: the data type for the HashMap's keys</cdescription>
+</cparameter>
+
+<cparameter>
+<clabel>Value</clabel>
+<cdescription>Class Name: the data type for the HashMap's values</cdescription>
+</cparameter>
+
 
 <parameter>
 <label>initialCapacity</label>
