@@ -83,6 +83,18 @@ id=026
 
 library
 category=I/O
+authorList=[Michael Heuer](https://github.com/heuermh) and [Iain Lobb](http://blog.iainlobb.com)
+name=Gamepad
+sentence=A port of the Gamepad ActionScript library for Flash.
+url=https://github.com/heuermh/gamepad-processing
+prettyVersion=2.0
+paragraph=Requires Processing 2.0b7 or later.
+version=3
+download=https://dl.dropbox.com/u/87680069/gamepad.zip
+id=060
+
+library
+category=I/O
 authorList=[Hauke Altmann](http://graffitiresearchlab.de)
 name=proJMS
 sentence=Publish and consume text messages to create peer-to-peer communication between processing applications.
@@ -286,6 +298,18 @@ download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/d
 id=069
 
 library
+category=Utilities
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Executor
+sentence=Scheduled executor service for Processing.
+url=https://github.com/heuermh/executor-processing
+prettyVersion=1.0.2
+paragraph=Run tasks (reflective method calls to your PApplet) later, repeat tasks at intervals, and schedule tasks to happen after other scheduled tasks.
+version=3
+download=https://dl.dropbox.com/u/87680069/executor.zip
+id=094
+
+library
 category=Simulation
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Fisica
@@ -479,6 +503,18 @@ id=033
 
 library
 category=Animation
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=Sprites
+sentence=Sprite control and animation for games and graphic applications.
+url=http://www.lagers.org.uk/s4p
+prettyVersion=2.0.4
+paragraph=Provides complete control over sprite image animation, sprite movement and collision detection. Examples can be seen [here](http://www.lagers.org.uk/s4p/applets/s4p_showcase)
+version=6
+download=http://www.lagers.org.uk/processing/sprites/Sprites.zip
+id=062
+
+library
+category=Animation
 authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
 name=Hermes
 sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
@@ -488,6 +524,18 @@ paragraph=Leverges the strengths of Object-Oriented Design and the ease of Proce
 version=3
 download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=083
+
+library
+category=Animation
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Frames
+sentence=Sprite sheet and frame animation support in Processing.
+url=https://github.com/heuermh/frames-processing
+prettyVersion=1.0
+paragraph=
+version=1
+download=https://dl.dropbox.com/u/87680069/frames.zip
+id=095
 
 library
 category=Video & Vision
@@ -526,6 +574,18 @@ download=http://ubaa.net/shared/processing/opencv/download/opencv.zip
 id=081
 
 library
+category=Other
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=Path_Finder
+sentence=Find paths through 2D/3D navigation graphs.
+url=http://www.lagers.org.uk/pfind/index.html
+prettyVersion=0.1.2
+paragraph=Define a graph in terms of nodes and edges. Then use BFS, DFS, Dijkstra or A* to find possible paths through the graph.
+version=2
+download=http://www.lagers.org.uk/processing/pathfinder/Path_Finder.zip
+id=093
+
+library
 category=Data
 authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
 name=GML4U
@@ -548,6 +608,18 @@ paragraph=Includes ls and get, needs to be updated with put
 version=1
 download=http://www.shiffman.net/p5/libraries/sftp/sftp.zip
 id=011
+
+library
+category=Data
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=QRCode
+sentence=Reads QR Code images, a two-dimensional barcode format.
+url=http://www.shiffman.net/p5/qrcode-processing/
+prettyVersion=0.2a
+paragraph=
+version=2
+download=http://www.shiffman.net/p5/libraries/qrcode/qrcodeprocessing.zip
+id=012
 
 library
 category=Data
@@ -599,6 +671,18 @@ id=089
 
 library
 category=GUI
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=G4P
+sentence=Provides a set of 2D GUI controls and multiple window support.
+url=http://www.lagers.org.uk/g4p
+prettyVersion=3.2.3
+paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
+version=12
+download=http://www.lagers.org.uk/processing/g4p/G4P.zip
+id=051
+
+library
+category=GUI
 authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=ControlP5
 sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
@@ -612,13 +696,13 @@ id=058
 library
 category=GUI
 authorList=[Michael Heuer](https://github.com/heuermh)
-name=Piccolo2D library for Processing
+name=Piccolo2D
 sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
 url=https://github.com/heuermh/piccolo2d-processing
-prettyVersion=2.0
-paragraph=
-version=2
-download=http://cloud.github.com/downloads/heuermh/piccolo2d-processing/piccolo2d.zip
+prettyVersion=3.0
+paragraph=Requires Processing 2.0b7 or later.
+version=3
+download=https://dl.dropbox.com/u/87680069/piccolo2d.zip
 id=061
 
 library
