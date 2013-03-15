@@ -694,18 +694,6 @@ download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
 id=058
 
 library
-category=GUI
-authorList=[Michael Heuer](https://github.com/heuermh)
-name=Piccolo2D
-sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
-url=https://github.com/heuermh/piccolo2d-processing
-prettyVersion=3.0
-paragraph=Requires Processing 2.0b7 or later.
-version=3
-download=https://dl.dropbox.com/u/87680069/piccolo2d.zip
-id=061
-
-library
 category=Math
 authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/)
 name=gwoptics
