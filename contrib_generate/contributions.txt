@@ -72,18 +72,6 @@ id=026
 
 library
 category=I/O
-authorList=[Michael Heuer](https://github.com/heuermh) and [Iain Lobb](http://blog.iainlobb.com)
-name=Gamepad library for Processing
-sentence=A port of the Gamepad ActionScript library for Flash.
-url=https://github.com/heuermh/gamepad-processing
-prettyVersion=1.0
-paragraph=
-version=1
-download=http://cloud.github.com/downloads/heuermh/gamepad-processing/gamepad.zip
-id=060
-
-library
-category=I/O
 authorList=[Hauke Altmann](http://graffitiresearchlab.de)
 name=proJMS
 sentence=Publish and consume text messages to create peer-to-peer communication between processing applications.
@@ -237,18 +225,6 @@ paragraph=Allows you read the ID3v1.1 tags from MP3 files. If you want to know m
 version=1
 download=http://jorgecardoso.eu/processing/ID3/ID3.zip
 id=027
-
-library
-category=Utilities
-authorList=[Yonas Sandbaek](http://www.seltar.org/)
-name=UnZipIt
-sentence=Reading Bytes, Strings, PFonts or PImages from a Zip-File.
-url=http://libraries.seltar.org/unzipit/
-prettyVersion=1.1
-paragraph=
-version=2
-download=http://libraries.seltar.org/unzipit/unzipit.zip
-id=029
 
 library
 category=Utilities
