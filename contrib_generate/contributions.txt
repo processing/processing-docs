@@ -23,6 +23,17 @@ download=http://www.erase.net/projects/processing-sc/files/processing-sc.zip
 id=035
 
 library
+category=Sound
+authorList=[Nikolaus Gradwohl](http://www.local-guru.net)
+name=ttslib
+sentence=ttslib makes your sketches speak with the help of freetts.
+url=http://www.local-guru.net/blog/pages/ttslib
+prettyVersion=0.4
+version=4
+download=http://www.local-guru.net/projects/ttslib/ttslib.zip
+id=092
+
+library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
 name=Collada Loader for Google Sketchup
@@ -82,6 +93,18 @@ version=2
 download=http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.zip
 id=067
 
+library
+category=I/O
+authorList=[Jesse Louis-Rosenberg](http://n-e-r-v-o-u-s.com)
+name=OBJExport
+sentence=This is a simple library to export surfaces from processing as OBJ files. It is used the same way the PDF library is used.
+url=http://n-e-r-v-o-u-s.com/tools/obj
+prettyVersion=0.2.2
+paragraph=
+version=4
+download=http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.zip
+id=091
+
 tool
 category=
 authorList=Manindra Moharana
@@ -112,9 +135,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.2.0
+prettyVersion=2.2.1
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=7
+version=8
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -566,7 +589,7 @@ library
 category=Data
 authorList=[Darius Morawiec](http://voidplus.de)
 name=SoundCloud
-sentence=Inofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
+sentence=Unofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
 url=https://github.com/voidplus/soundcloud-java-library
 prettyVersion=0.1
 paragraph=
@@ -633,6 +656,18 @@ paragraph=Main features include: 1. Default interactivity through the mouse and 
 version=13
 download=http://otrolado.info/proscene.zip
 id=001
+
+library
+category=3D
+authorList=[Frederik Vanhoutte](http://www.wblut.com/)
+name=HE-Mesh
+sentence=He-Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
+url=http://hemesh.wblut.com/
+prettyVersion=1.80
+paragraph=
+version=8
+download=http://hemesh.wblut.com/hemesh-latest.zip
+id=009
 
 library
 category=3D
