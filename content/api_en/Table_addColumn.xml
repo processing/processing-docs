@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>Table</name>
+<name>addColumn()</name>
 
 <!-- unsupported_modes>js</unsupported_modes -->
 <!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
 
-<category>Data</category>
+<category>Table</category>
 
-<subcategory>Composite</subcategory>
+<subcategory>Method</subcategory>
 
-<type></type>
+<type>method</type>
 
 <example>
 <image></image>
@@ -40,10 +40,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-<b>Table</b> objects store data with multiple rows and columns, much like in a traditional spreadsheet.  Tables can be generated from scratch, dynamically, or using data from an existing file.  Tables can also be output and saved to disk, as in the example above.
+TBD
 ]]></description>
-
-
-<type>class</type>
 
 </root>
