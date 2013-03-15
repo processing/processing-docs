@@ -140,4 +140,11 @@
   	<code>false</code> 
   </tutorial>
 
+  <tutorial> 
+    <title>Data</title> 
+    <directory>data</directory> 
+    <imgs>true</imgs> 
+    <code>false</code> 
+  </tutorial>
+
 </tutorials> 
