@@ -383,6 +383,18 @@ download=http://cloud.github.com/downloads/hdavid/dmxP512/dmxP512.zip
 id=071
 
 library
+category=Hardware
+authorList=[Michael Heuer](https://github.com/heuermh), [Leap Motion, Inc.](http://leapmotion.com)
+name=LeapMotion
+sentence=Forwards Leap Motion controller events to a Processing sketch.
+url=https://github.com/heuermh/leap-motion-processing
+prettyVersion=1.4
+paragraph=
+version=5
+download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
+id=090
+
+library
 category=Typography
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -393,6 +405,18 @@ paragraph=This library exposes the shapes (such as vector drawings or typographi
 version=38
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=038
+
+library
+category=Typography
+authorList=[Andreas Koller](http://andreaskoller.com)
+name=Fontastic
+sentence=A font file writer for Processing.
+url=http://code.andreaskoller.com/libraries/fontastic
+prettyVersion=0.3
+paragraph=Easily create and export TTF and WOFF (Webfonts).
+version=3
+download=https://raw.github.com/andreaskoller/Fontastic/master/download/Fontastic.zip
+id=088
 
 library
 category=Animation
@@ -537,6 +561,18 @@ paragraph=
 version=1
 download=http://ubaa.net/shared/processing/udp/udp.zip
 id=073
+
+library
+category=Data
+authorList=[Darius Morawiec](http://voidplus.de)
+name=SoundCloud
+sentence=Inofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
+url=https://github.com/voidplus/soundcloud-java-library
+prettyVersion=0.1
+paragraph=
+version=1
+download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
+id=089
 
 library
 category=GUI
