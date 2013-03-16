@@ -165,6 +165,18 @@ version=2
 download=http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.zip
 id=057
 
+tool
+category=
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=AppletMaker
+sentence=Applet exporter and signer.
+url=http://www.lagers.org.uk/appletutil/
+prettyVersion=0.1.2
+paragraph=Simple wizard style interface to export and sign (optional) applets from Processing 2.0
+version=2
+download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
+id=096
+
 mode
 category=
 authorList=[Florian Jenett](http://bezier.de/)
@@ -764,4 +776,16 @@ paragraph=
 version=23
 download=http://saitoobjloader.googlecode.com/files/OBJLoader.zip
 id=043
+
+library
+category=3D
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=Shapes3d
+sentence=3D Shape creation and display made easy.
+url=http://www.lagers.org.uk/s3d4p/index.html
+prettyVersion=2.1.4
+paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
+version=9
+download=http://www.lagers.org.uk/processing/shapes3d/Shapes3d.zip
+id=050
 
