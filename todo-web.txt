@@ -4,7 +4,6 @@
   
   NEED 100% FOR 2.0
   
-  - Integrate mailman for email after financial transaction
   - Merge Basic / Topic examples
   - Add Partners to Cover
     - Fathom
@@ -19,6 +18,8 @@
   - Fix 3 column layout for Libraries & Tools pages
   - Double check new language for the header text
   - Replace drop down menu with “Back to list” button. Do this on Examples as well.
+  - Update css for distribution
+  - Redesign Download Page
 
   NEED POST 2.0
 
@@ -35,6 +36,7 @@
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
   - Adjust grid on Exhibition & Tutorial pages
+  - Make the URLs make sense (Overview, People, Foundation)
   
   
 // // // // // // // // // // // // // // // // // // // // //
@@ -105,3 +107,5 @@ DONE
   X Clean out the JavaScript includes
   X Change the name of patrons.html to foundation.html
   X Remove all GIF bitmapped type and replace  
+  X Integrate Stripe/PayPal
+  X Integrate mailman for email after financial transaction
