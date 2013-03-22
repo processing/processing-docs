@@ -111,9 +111,9 @@ authorList=[Jesse Louis-Rosenberg](http://n-e-r-v-o-u-s.com)
 name=OBJExport
 sentence=This is a simple library to export surfaces from processing as OBJ files. It is used the same way the PDF library is used.
 url=http://n-e-r-v-o-u-s.com/tools/obj
-prettyVersion=0.2.2
+prettyVersion=0.2.3
 paragraph=
-version=4
+version=5
 download=http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.zip
 id=091
 
@@ -183,9 +183,9 @@ authorList=[Florian Jenett](http://bezier.de/)
 name=CoffeeScript Mode
 sentence=Adds a CoffeeScript Mode based on Processing.js
 url=https://github.com/fjenett/coffeescript-mode-processing
-prettyVersion=0.0.3
+prettyVersion=0.0.4
 paragraph=CoffeeScript Mode is based on JavaScript Mode and runs on top of Processing.js. It runs through a server and inherits the template system from JavaScript mode. CoffeeScript is a functional language that compiles to JavaScript and was created by (Jeremy Ashkenas)[https://github.com/jashkenas/coffee-script].
-version=222
+version=224
 download=https://raw.github.com/fjenett/coffeescript-mode-processing/master/release/CoffeeScriptMode.zip
 id=070
 
@@ -647,6 +647,18 @@ id=040
 
 library
 category=Data
+authorList=Marcel Schwittlick / onformative
+name=YahooWeather
+sentence=Framework for including weather data into Processing.
+url=http://www.onformative.com/lab/google-weather-library-for-processing/
+prettyVersion=0.91
+paragraph=
+version=2
+download=http://www.onformative.com/uploads/googleWeather/YahooWeather.zip
+id=053
+
+library
+category=Data
 authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=oscP5
 sentence=An Open Sound Control (OSC) implementation.
@@ -677,7 +689,7 @@ sentence=Unofficial Java library, which simplifies the use of the official [Soun
 url=https://github.com/voidplus/soundcloud-java-library
 prettyVersion=0.1
 paragraph=
-version=1
+version=2
 download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
 id=089
 
