@@ -299,6 +299,30 @@ id=031
 
 library
 category=Utilities
+authorList=[David Bouchard](http://www.deadpixel.ca)
+name=keystone
+sentence=A collection of utilities for solving this and that problem.
+url=http://keystonep5.sourceforge.net/
+prettyVersion=004
+paragraph=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
+version=4
+download=http://keystonep5.sourceforge.net/download/keystone.zip
+id=034
+
+library
+category=Utilities
+authorList=[Eric Socolofsky](http://transmote.com/)
+name=Nest
+sentence=Scenegraph and mouse event handling system based loosely on ActionScript 3.0.
+url=http://transmote.com/nest/
+prettyVersion=0.6.0
+paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
+version=8
+download=http://transmote.com/nest/download/Nest.zip
+id=047
+
+library
+category=Utilities
 authorList=[Philippe Lhoste](http://Phi.Lho.free.fr/)
 name=P8gGraphicsSVG
 sentence=Allows Processing to export the drawings of a sketch in SVG format.
