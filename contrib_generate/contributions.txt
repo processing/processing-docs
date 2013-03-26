@@ -117,6 +117,18 @@ version=5
 download=http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.zip
 id=091
 
+library
+category=I/O
+authorList=[Ostap Andrusiv](http://andrusiv.com)
+name=SelectFile
+sentence=Android library which provides Dialogs for selectInput(), selectFolder() and selectOutput() methods.
+url=https://github.com/pif/android-select-file/tree/dlg
+prettyVersion=0.0.1
+paragraph=Android misses open&save file dialogs. SelectFile library adds these dialogs to the Processing for Android. It is specifically designed for Android mode in Processing 2.0. All interaction with the library is done through FileLibrary class.
+version=1
+download=http://pif.github.com/android-select-file/download/SelectFile.zip
+id=097
+
 tool
 category=
 authorList=Manindra Moharana
@@ -443,13 +455,13 @@ id=071
 
 library
 category=Hardware
-authorList=[Michael Heuer](https://github.com/heuermh), [Leap Motion, Inc.](http://leapmotion.com)
+authorList=[Michael Heuer](https://github.com/heuermh) and [Leap Motion, Inc.](http://leapmotion.com)
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.4
+prettyVersion=1.4.1
 paragraph=
-version=5
+version=6
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -659,6 +671,18 @@ id=053
 
 library
 category=Data
+authorList=[Maxime Walzberg (Nucky)](http://blog.stainpixels.com/)
+name=Share
+sentence=Classes to create a poll in a Processing sketch, and to read/send string messages to a server from a sketch.
+url=http://sharelib.stainpixels.com/
+prettyVersion=2
+paragraph=
+version=2
+download=http://blog.stainpixels.com/public/share.zip
+id=065
+
+library
+category=Data
 authorList=[Andreas Schlegel](http://www.sojamo.de/)
 name=oscP5
 sentence=An Open Sound Control (OSC) implementation.
@@ -756,12 +780,12 @@ id=001
 library
 category=3D
 authorList=[Frederik Vanhoutte](http://www.wblut.com/)
-name=HE-Mesh
-sentence=He-Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
+name=HE_Mesh
+sentence=HE_Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
 url=http://hemesh.wblut.com/
-prettyVersion=1.80
+prettyVersion=1.81
 paragraph=
-version=8
+version=9
 download=http://hemesh.wblut.com/hemesh-latest.zip
 id=009
 
