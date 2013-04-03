@@ -9,5 +9,14 @@ code. If you clone both Processing and Processing-Web to the same directory,
 you should be good to go.
 
 In other words, these two repositories should live side-by-side:
-processing/
-processing-web/
+
+- processing/
+- processing-web/
+
+### Tips & Tricks
+
+When a method is overloaded, but you don't want one of the variants to appear in the reference, add a `@nowebref` comment to the source above that variant.  For example:
+
+	/**
+	  * @nowebref
+	  */
