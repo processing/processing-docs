@@ -99,7 +99,8 @@ a.large-link:before {
 	height: 106px;
 	margin-bottom: 30px;
 	overflow: hidden;
-	background: #0c2033 url(../img/processing-black.png) center center no-repeat;
+	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
+	background-size: 900px 106px;	
 	position:relative;
 }
 
