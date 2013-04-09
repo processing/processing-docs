@@ -106,7 +106,7 @@ String onelongstring = join(lines," ");
 
 <p>Once the text file is in place, Processing's loadStrings() function is used to read the content of the file into an String array.   The individual lines of text in the file each become an individual element in the array.</p>
 
-<img src="imgs/data_01_txt.png" border=1>
+<img src="imgs/data_01_text.jpg" border=1>
 
 <pre>
 // This code will print all the lines from the source text file.
@@ -117,7 +117,7 @@ println(lines);
 
 <p>Text from a file can be used to generate a simple visualization.  Take the following data file.</p>
 
-<img src="imgs/data_02_numbers.png" border=1>
+<img src="imgs/data_02_numbers.jpg" border=1>
 
 <p>Here, we can load the numbers separated by commas and split them into an array of ints used to set color and height of rectangles. </p>
 
@@ -178,7 +178,7 @@ void keyPressed() {
 
 <p>You may have noticed that the graphing example above loads a text file with numbers separated by commas.  Processing includes a Table class which will load a comma-separated (CSV) or tab-separated (TSV) file and automatically parse the data into columns and rows for you.  This is a great deal more convenient than struggling to manually parse large data files with split().  It works as follows.  Let's say you have a data file that looks like:</p>
 
-<img src="imgs/data_03_table.png" border=1>
+<img src="imgs/data_03_table.jpg" border=1>
 
 <p>Instead of saying:</p>
 
@@ -194,7 +194,7 @@ Table table = loadTable("data.csv");
 
 <p>Once the table is loaded, you can access the elements by their column and row number.  Let's look at how excel interprets the CSV file.</p>
 
-<img src="imgs/data_04_excel.png" border=1>
+<img src="imgs/data_04_excel.jpg" border=1>
 
 <p>We can see that the data lives on a grid with columns and rows.  The most convenient way to access the data would be to therefore request a value by its column and row location.  The Table class makes this all possible via getRowCol().</p>
  
@@ -236,7 +236,7 @@ for (TableRow row : table) {
 
 <p>Now, the above code demonstrates how each column can be accessed via its numeric index.  Tabular data, however, can have a header row which names each column.</p>
 
-<img src="imgs/data_05_headers.png" border=1>
+<img src="imgs/data_05_headers.jpg" border=1>
 
 <p>Using a header row can make your code much more readable (and shorter) as well as less error-prone to getting the wrong column, or having column indices change.  If you have a header row, calling removeTitleRow() will tell Processing to use the first row as a header and ignore it during iteration.</p>
 
@@ -281,7 +281,7 @@ table.setString(newRow, "name", "Blah");
 
 <p>XML organizes information in a tree structure.  Let's imagine a list of students.  Each student has an id number, name, address, e-mail, and telephone number.  Each student's address has a city, state, and zip code.  An XML tree for this dataset might look like the following:</p>
 
-<p><img src="imgs/data_06_xml.png"></p>
+<p><img src="imgs/data_06_xml.jpg"></p>
 
 <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -336,7 +336,7 @@ table.setString(newRow, "name", "Blah");
 
 <p>And here is the data mapped in the tree structure.</p>
 
-<p><img src="imgs/data_07_weatherxml.png"></p>
+<p><img src="imgs/data_07_weatherxml.jpg"></p>
 
 <p>You may be wondering what the top level "RSS" is all about.   Yahoo's XML weather data is provided in <a href="http://en.wikipedia.org/wiki/RSS">RSS format</a>.  RSS stands for "Really Simple Syndication" and is a standardized XML format for syndicating web content (such as news articles, etc.)</p>
 
