@@ -852,6 +852,19 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Environment h5 a { float: left; margin-left: -30px; }
 ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 #Environment td { padding-bottom: 1em; }
+#Environment .content p,
+#Environment .content ul,
+#Environment .content table {
+	width: 560px;
+}
+
+
+/************************************************************** overview ***/
+#Overview .content p,
+#Overview .content ul,
+#Overview .content table {
+	width: 560px;
+}
 
 
 

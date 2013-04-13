@@ -29,6 +29,11 @@ $(function(){
 			return false
 		}
 
+		if($('input[name=selectAmount]:checked').val() == 'other' && $('#otra').val() == ''){
+			$('.messages').html('Please enter a donation amount')
+			return false
+		}
+
 		if($('input[name=selectAmount]:checked').val() == 0){
 			window.location = '/download/?processing'
 			return false
