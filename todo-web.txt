@@ -5,21 +5,26 @@
   NEED 100% FOR 2.0
   
   - Merge Basic / Topic examples
-  - Add Partners to Cover
-    - Fathom
-    - UCLA Arts Software Studio
-    - NYU ITP
-  - Add Twitter and GitHub status to homepage
-  - Add Google analytics
+  - Redesign Download Page
+  - Update css for distribution
+
+
   - Build libraries page from the contributions.txt file web/contrib_generate
   - Build tools pages from the contributions.txt file web/contrib_generate
   - Legacy libraries and tools linked from the bottom of the page
+
+  - Make the URLs make sense (Overview, People, Foundation)
+  - Design Edits
+    - Add Partners to Cover
+      - Fathom
+      - UCLA Arts Software Studio
+      - NYU ITP
+    - Add Twitter and GitHub status to homepage
   - Decrease text block width on pages with large text block
   - Fix 3 column layout for Libraries & Tools pages
   - Double check new language for the header text
   - Replace drop down menu with “Back to list” button. Do this on Examples as well.
-  - Update css for distribution
-  - Redesign Download Page
+
 
   NEED POST 2.0
 
@@ -36,7 +41,7 @@
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
   - Adjust grid on Exhibition & Tutorial pages
-  - Make the URLs make sense (Overview, People, Foundation)
+
   
   
 // // // // // // // // // // // // // // // // // // // // //
@@ -109,3 +114,6 @@ DONE
   X Remove all GIF bitmapped type and replace  
   X Integrate Stripe/PayPal
   X Integrate mailman for email after financial transaction
+  X Added proper header image
+  X Add Google analytics
+  X Purchase $0 bug
