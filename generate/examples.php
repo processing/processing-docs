@@ -20,26 +20,29 @@ putenv('HOME=' . CONTENTDIR);
 // Switch from SVN to GIT, 14 FEB 2013
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
 
+# --------------------------------- Examples
 
-# --------------------------------- Basics
+$subdir = 'Examples';
 
-$categories = get_examples_list('examples_basics.xml');
-$break_after = array('Control', 'Math');
-$subdir = 'Basics';
-$dir = EXAMPLESOURCEDIR . $subdir.'/';
+$catBasics = get_examples_list('examples_basics.xml');
+$dirBasics = EXAMPLESOURCEDIR .'Basics/';
+// $break_after = array('Control', 'Math');
 
+$catTopics = get_examples_list('examples_topics.xml');
+$dirTopics = EXAMPLESOURCEDIR .'Topics/';
+// $break_after = array('GUI', 'Textures');
+
+//Create Basics files
 $count = 0;
-foreach ($categories as $cat => $array) {
-	echo $cat;
-    if ($dp = opendir($dir.$cat)) {
+foreach ($catBasics as $cat => $array) {
+    if ($dp = opendir($dirBasics.$cat)) {
         while ($fp = readdir($dp)) {
             if (substr($fp, 0, 1) != '.') {
-                $ex = new Example($fp, $subdir."/".$cat, $subdir);
-                //$ex = new Example($fp, $cat);
+                $ex = new Example($fp, "Basics/".$cat, $subdir);
                 if (!$local) {
-                  $ex->output_file($categories);
+                  $ex->output_file($catBasics);
                 } else {
-                  $ex->output_file($categories, "../../");
+                  $ex->output_file($catBasics, "../../");
                 }
                 $count++;
             }
@@ -47,48 +50,17 @@ foreach ($categories as $cat => $array) {
     }
 }
 
-$page = new Page('Basics', 'Basics', "", "../../");
-$page->subtemplate('template.examples-basics.html');
-
-$html = "<div class=\"ref-col\">\n";
-foreach ($categories as $cat => $array) {
-    
-    $html .= "<p><br /><b>$cat</b><br /><br />";
-    foreach ($array as $file => $name) {
-        $thisfile = strtolower($file);
-        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
-    }
-    #echo '</p>';
-    $html .= '</p>';
-    
-    if (in_array($cat, $break_after)) {
-        $html .= "</div><div class=\"ref-col\">";
-    }
-}
-$html .= "</div>";
-
-$page->content($html);
-writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
-
-
-# --------------------------------- Topics
-
-$categories = get_examples_list('examples_topics.xml');
-$break_after = array('GUI', 'Textures');
-$subdir = 'Topics';
-$dir = EXAMPLESOURCEDIR .$subdir.'/';
-
+//Create Topics files
 $count = 0;
-foreach ($categories as $cat => $array) {
-    if ($dp = opendir($dir.$cat)) {
+foreach ($catTopics as $cat => $array) {
+    if ($dp = opendir($dirTopics.$cat)) {
         while ($fp = readdir($dp)) {
             if (substr($fp, 0, 1) != '.') {
-                $ex = new Example($fp, $subdir."/".$cat, $subdir);
-                //$ex = new Example($fp, $cat);
+                $ex = new Example($fp, "Topics/".$cat, $subdir);
                 if (!$local) {
-                  $ex->output_file($categories);
+                  $ex->output_file($catTopics);
                 } else {
-                  $ex->output_file($categories, "../../");
+                  $ex->output_file($catTopics, "../../");
                 }
                 $count++;
             }
@@ -96,28 +68,38 @@ foreach ($categories as $cat => $array) {
     }
 }
 
-$page = new Page('Topics', 'Topics', "", "../../");
-$page->subtemplate('template.examples-topics.html');
+//Create Examples page
+$page = new Page('Examples', 'Examples', "", "../../");
+$page->subtemplate('template.examples-main.html');
 
-$html = "<div class=\"ref-col\">\n";
-foreach ($categories as $cat => $array) {
-    $html .= "<p><br /><b>$cat</b><br /><br />";
+//Create Basics html
+$html  = "<b>Basic Examples</b>. <i>Short prototypical programs exploring the basics of programming with Processing.</i><br /><br /><br />";
+$html .= "<ul class=\"examples\">\n";
+foreach ($catBasics as $cat => $array) {
+    $html .= "<li><ul><li><b>$cat</b></li><br />";
     foreach ($array as $file => $name) {
         $thisfile = strtolower($file);
-        $html .= "\t<a href=\"$thisfile\">$name</a><br />\n";
+        $html .= "\t<li><a href=\"$thisfile\">$name</a></li>\n";
     }
-    #echo '</p>';
-    $html .= '</p>';
-    
-    if (in_array($cat, $break_after)) {
-        $html .= "</div><div class=\"ref-col\">";
-    }
+    $html .= '</ul></li>';
 }
-$html .= "</div>";
+$html .= "</ul>";
+
+//Create Topics html
+$html .= "<b>Topic Examples</b>. <i>Short programs related to animation, drawing, interaction, motion, simulation, and more...</i><br /><br /><br />";
+$html .= "<ul class=\"examples\">\n";
+foreach ($catTopics as $cat => $array) {
+    $html .= "<li><ul><li><b>$cat</b></li><br />";
+    foreach ($array as $file => $name) {
+        $thisfile = strtolower($file);
+        $html .= "\t<li><a href=\"$thisfile\">$name</a></li>\n";
+    }
+    $html .= '</ul></li>';
+}
+$html .= "</ul>";
 
 $page->content($html);
 writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
-
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
@@ -131,8 +113,7 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 
 <?
 
-function get_examples_list($exstr)
-{
+function get_examples_list($exstr){
     $xml = openXML($exstr);
     $my_cats = array();
     foreach ($xml->childNodes as $c) {
@@ -149,8 +130,7 @@ function get_examples_list($exstr)
     return $my_cats;
 }
 
-function removesymbols($str)
-{
+function removesymbols($str){
     return preg_replace("/\W/", "", $str);
 }
 

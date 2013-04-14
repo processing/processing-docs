@@ -79,7 +79,7 @@
 	</cat>
 		<cat label="Cellular Automata">
 		<ex file="Wolfram.html">Wolframs's 1D CA</ex>
-		<ex file="Conway.html">Conway's Game of Life</ex>
+		<ex file="GameOfLife.html">Conway's Game of Life</ex>
 		<ex file="Spore1.html">Spore 1</ex>
 		<ex file="Spore2.html">Spore 2</ex>
 	</cat>
