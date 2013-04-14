@@ -91,8 +91,7 @@ if(isset($_POST['form'])){
 					<a href="/reference/tools/">Tools</a><br>
 					<a href="/reference/environment/">Environment</a><br><br>
 					<a href="/learning/">Tutorials</a><br>
-					<a href="/learning/basics/">Basics</a><br>
-					<a href="/learning/topics/">Topics</a><br>
+					<a href="/learning/examples/">Examples</a><br>
 					<a href="/learning/books/">Books</a><br><br>
 					<a href="/about/">Overview</a><br> 
 					<a href="/about/people/">People</a><br>

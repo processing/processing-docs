@@ -22,6 +22,7 @@ x Last Modified: 2005.08.30 06:23PM
 body {
 	margin				: 0;
 	padding				: 0;
+	overflow-y			: scroll;
 	
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
@@ -188,7 +189,7 @@ a.large-link:before {
 .content {
 	width: 680px;
 	float: left;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	position: relative;
 }
 
@@ -891,6 +892,32 @@ div.updateRequired {
 div.updateRequired a {
 	color:#999;
 }
+
+ul.examples {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+ul.examples li { margin: 0; padding: 0; }
+ul.examples ul {
+	list-style: none;
+	padding: 0;
+	display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
+        margin-bottom: 17px;
+        width: 100%;
+}
+ul.examples ul li {
+	margin: 0;
+}
+div.examples-nav {
+	margin-left: -41px;
+	margin-bottom: 17px;
+	position: relative;
+}
+div.examples-nav img { position: relative; top: 11px; }
 
 
 /**************************************************************** updates, courses, happenings ***/

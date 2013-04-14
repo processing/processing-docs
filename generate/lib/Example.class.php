@@ -197,11 +197,18 @@ class Example
         $page = new Page($this->name . ' \ Learning', $this->sub, "", "../../");
         $page->subtemplate('template.example.html');
         $page->content($this->display());
-        $page->set('examples_nav', $this->make_nav($menu_array, $rel_path));
+        $page->set('examples_nav', $this->back_to_list());
         writeFile("learning/".strtolower($this->sub)."/".strtolower($this->name).".html", $page->out());
         $this->copy_media();
         echo $this->name . '<br />';
         #echo "learning/examples/".strtolower($this->sub)."/".strtolower($this->name).".html\n";
+    }
+
+    function back_to_list(){
+    	$nav = "\n<div class=\"examples-nav\">";
+    	$nav .= '<a href="/learning/examples"><img src="/img/back_off.gif" alt="Back to List" /> <span class="back-to">Back To List</span></a>';
+    	$nav .= "\n</div>";
+    	return $nav;
     }
     
     function make_nav(&$array, $rel_path = '/') {
