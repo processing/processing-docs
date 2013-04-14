@@ -5,7 +5,6 @@
   NEED 100% FOR 2.0
   
   - Redesign Download Page
-
   - Build libraries page from the contributions.txt file web/contrib_generate
   - Build tools pages from the contributions.txt file web/contrib_generate
   - Legacy libraries and tools linked from the bottom of the page
@@ -117,3 +116,4 @@ DONE
   X Merge Basic / Topic examples
   X Update nav (download + reference)
   X Update css for distribution
+  X Sticky nav
