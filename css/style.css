@@ -173,10 +173,12 @@ a.large-link:before {
 #navigation {
 	float: left;
 	width: 170px;
+	min-height: 20px;
 	margin-right: 20px;
 	color: #2c7bb5;
 }
 .navBar { padding: 0 20px 0 30px; }
+.navBar.stuck { position: fixed; top: 20px;}
 
 .navBar a { text-decoration: none; border: none; }
 

@@ -1,9 +1,9 @@
-// $(function(){
-// 	$(window).scroll(function(){
-// 		if($(this).scrollTop() > 130){
-// 			$('.navBar').addClass('stuck')
-// 		} else {
-// 			$('.navBar').removeClass('stuck')
-// 		}
-// 	})
-// })
+$(function(){
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 114){
+			$('.navBar').addClass('stuck')
+		} else {
+			$('.navBar').removeClass('stuck')
+		}
+	})
+})
