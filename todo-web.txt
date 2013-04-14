@@ -4,10 +4,8 @@
   
   NEED 100% FOR 2.0
   
-  - Merge Basic / Topic examples
   - Redesign Download Page
   - Update css for distribution
-
 
   - Build libraries page from the contributions.txt file web/contrib_generate
   - Build tools pages from the contributions.txt file web/contrib_generate
@@ -117,3 +115,5 @@ DONE
   X Added proper header image
   X Add Google analytics
   X Purchase $0 bug
+  X Merge Basic / Topic examples
+  X Update nav (download + reference)
