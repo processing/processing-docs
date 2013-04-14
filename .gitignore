@@ -1,0 +1,4 @@
+# Ignore this stuff
+.DS_Store
+reference/**/* 
+distribution/**/* 
