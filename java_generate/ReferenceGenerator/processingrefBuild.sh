@@ -61,7 +61,11 @@ mkdir -p ../../distribution/img
 chmod 755 ../../distribution/img
 mkdir -p ../../distribution/img/about/
 cp ../../favicon.ico ../../distribution/img/
-cp ../../img/processing.gif ../../distribution/img/
+cp ../../img/processing-web.png ../../distribution/img/
+cp ../../img/processing-logo.svg ../../distribution/img/
+cp ../../img/processing-logo.png ../../distribution/img/
+cp ../../img/search.png ../../distribution/img/
+cp ../../img/search.svg ../../distribution/img/
 cp ../../img/about/people-header.gif ../../distribution/img/about/
 cp ../../content/api_en/images/header.gif ../../distribution/img/
 
