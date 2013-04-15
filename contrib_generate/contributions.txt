@@ -351,9 +351,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=$1 Unistroke Recognizer
 sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a two-dimensional template based gesture recognition.
 url=https://github.com/voidplus/onedollar-unistroke-recognizer
-prettyVersion=0.2.1
+prettyVersion=0.2.2
 paragraph=
-version=4
+version=5
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
 
@@ -692,6 +692,18 @@ paragraph=
 version=4
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=040
+
+library
+category=Data
+authorList=[Jon Reades](http://www.reades.com/)
+name=MapThing
+sentence=A collection of classes for reading and displaying Shape files (a.k.a. ESRI shapefiles), CSV, and GPX data in a map-based sketch.
+url=http://www.reades.com/MapThing
+prettyVersion=1.4
+paragraph=There are four main classes with which you should be familiar: 1) BoundingBox defines the sketch's geographic 'envelope' by mapping a shapefile's geographic coordinates on to the viewable space of the sketch; 2) Lines is used to read and display single-part and multi-part line data; 3) Points is used to read and display point data; and 4) Polygons is used to read and display single and multi-part polygon data (this only works with shapefiles for now). GPX display needs work.
+version=5
+download=http://www.reades.com/MapThing/MapThing.zip
+id=044
 
 library
 category=Data
