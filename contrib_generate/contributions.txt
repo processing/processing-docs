@@ -201,6 +201,30 @@ version=2
 download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 id=096
 
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Templater
+sentence=Save your current sketch as a template for later use.
+url=http://poifox.com/templater/
+prettyVersion=1.01
+paragraph=Templater was made to be used along with the [Bootstrap Tool](http://poifox.com/bootstrap/). Tested with Processing 2.0b8+, on Mac OS X 10.6.8 and Ubuntu 12.10.
+version=2
+download=http://poifox.com/templater/download/Templater.zip
+id=099
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Bootstrap
+sentence=Quickly initialize your new sketch with a predefined template.
+url=http://poifox.com/bootstrap/
+prettyVersion=1.01
+paragraph=Bootstrap was made to be used along with the [Templater Tool](http://poifox.com/templater/). Tested with Processing 2.0b8+, on Mac OS X 10.6.8 and Ubuntu 12.10.
+version=2
+download=http://poifox.com/bootstrap/download/Bootstrap.zip
+id=100
+
 mode
 category=
 authorList=[Florian Jenett](http://bezier.de/)
@@ -416,6 +440,18 @@ paragraph=
 version=4
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=041
+
+library
+category=Simulation
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.11
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3018
+download=https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
+id=055
 
 library
 category=Simulation
@@ -776,6 +812,18 @@ paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, 
 version=12
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
+
+library
+category=GUI
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Guido
+sentence=A simple cross mode GUI library
+url=https://github.com/fjenett/Guido
+prettyVersion=0.0.4
+paragraph=Guido is a small GUI library that is compatible with both Java (standard) and JavaScript modes.
+version=143
+download=https://raw.github.com/fjenett/Guido/latest/releases/Guido.zip
+id=054
 
 library
 category=GUI
