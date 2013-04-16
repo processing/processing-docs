@@ -155,18 +155,6 @@ id=020
 
 tool
 category=
-authorList=[Thomas Diewald](http://thomasdiewald.com/)
-name=TabManager
-sentence=TabManager is a processing tool, that lists the tabs (sketchcodes) vertically in a separate window.
-url=http://thomasdiewald.com/processing/tools/TabManager/
-prettyVersion=01.20
-paragraph=the tabs order/position/color/height is customizable ( some simple style-settings in the tab itself ).this tool can be docked to the processing-ide on all four sides.
-version=1
-download=http://thomasdiewald.com/processing/tools/TabManager/download/TabManager.zip
-id=049
-
-tool
-category=
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
