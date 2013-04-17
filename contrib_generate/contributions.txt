@@ -129,6 +129,18 @@ version=1
 download=http://pif.github.com/android-select-file/download/SelectFile.zip
 id=097
 
+library
+category=I/O
+authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Erik Paluka](http://www.erikpaluka.com/), [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins), and [Dr. Mark Hancock](markhancock.ca)
+name=SimpleMultiTouch (SMT)
+sentence=A toolkit for making multi-touch easy to use for non-programmers.
+url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
+prettyVersion=3.4-pre
+paragraph=It provides back-end device support for Tuio, WM_Touch*, Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
+version=1
+download=http://vialab.science.uoit.ca/smt/SMT.zip
+id=098
+
 tool
 category=
 authorList=Manindra Moharana
@@ -140,18 +152,6 @@ paragraph=Color Selector Plus is the Processing's default Color Selector tool on
 version=5
 download=http://color-selector-plus.googlecode.com/files/ColorSelectorPlusTool-latest.zip
 id=020
-
-tool
-category=
-authorList=[Thomas Diewald](http://thomasdiewald.com/)
-name=TabManager
-sentence=TabManager is a processing tool, that lists the tabs (sketchcodes) vertically in a separate window.
-url=http://thomasdiewald.com/processing/tools/TabManager/
-prettyVersion=01.20
-paragraph=the tabs order/position/color/height is customizable ( some simple style-settings in the tab itself ).this tool can be docked to the processing-ide on all four sides.
-version=1
-download=http://thomasdiewald.com/processing/tools/TabManager/download/TabManager.zip
-id=049
 
 tool
 category=
@@ -188,6 +188,30 @@ paragraph=Simple wizard style interface to export and sign (optional) applets fr
 version=2
 download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 id=096
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Templater
+sentence=Save your current sketch as a template for later use.
+url=http://poifox.com/templater/
+prettyVersion=1.01
+paragraph=Templater was made to be used along with the [Bootstrap Tool](http://poifox.com/bootstrap/). Tested with Processing 2.0b8+, on Mac OS X 10.6.8 and Ubuntu 12.10.
+version=2
+download=http://poifox.com/templater/download/Templater.zip
+id=099
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Bootstrap
+sentence=Quickly initialize your new sketch with a predefined template.
+url=http://poifox.com/bootstrap/
+prettyVersion=1.01
+paragraph=Bootstrap was made to be used along with the [Templater Tool](http://poifox.com/templater/). Tested with Processing 2.0b8+, on Mac OS X 10.6.8 and Ubuntu 12.10.
+version=2
+download=http://poifox.com/bootstrap/download/Bootstrap.zip
+id=100
 
 mode
 category=
@@ -255,9 +279,9 @@ authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.
 name=gicentreUtils
 sentence=Assists creation of data visualization sketches.
 url=http://www.gicentre.org/utils/
-prettyVersion=3.2.0
+prettyVersion=3.3.0
 paragraph=Includes color utilities, statistical graphics, morphing classes, spatial utilities and map projections, text input/output and multi-sketch tools. Together these make the task of creating data visualization sketches much faster by providing code for commonly repeated tasks such as zooming in and out of a sketch, setting up color tables etc. For documentation and examples, see the [gicentreUtils pages](http://www.gicentre.org/utils/).
-version=12
+version=13
 download=http://www.gicentre.org/utils/gicentreUtils.zip
 id=004
 
@@ -301,10 +325,10 @@ library
 category=Utilities
 authorList=[David Bouchard](http://www.deadpixel.ca)
 name=keystone
-sentence=A collection of utilities for solving this and that problem.
+sentence=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
 url=http://keystonep5.sourceforge.net/
 prettyVersion=004
-paragraph=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
+paragraph=
 version=4
 download=http://keystonep5.sourceforge.net/download/keystone.zip
 id=034
@@ -339,9 +363,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=$1 Unistroke Recognizer
 sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a two-dimensional template based gesture recognition.
 url=https://github.com/voidplus/onedollar-unistroke-recognizer
-prettyVersion=0.2.1
+prettyVersion=0.2.2
 paragraph=
-version=4
+version=5
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
 
@@ -404,6 +428,18 @@ paragraph=
 version=4
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=041
+
+library
+category=Simulation
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.11
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3018
+download=https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
+id=055
 
 library
 category=Simulation
@@ -483,9 +519,9 @@ authorList=[Michael Heuer](https://github.com/heuermh) and [Leap Motion, Inc.](h
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.4.1
+prettyVersion=1.6
 paragraph=
-version=6
+version=8
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -639,9 +675,9 @@ authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
 name=GML4U
 sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
 url=https://github.com/01010101/GML4U/wiki
-prettyVersion=0.1.8
+prettyVersion=0.1.9
 paragraph=GML is an open file format designed to store graffiti motion data.
-version=8
+version=9
 download=http://www.saint-clair.net/download/gml4u/GML4U.zip
 id=008
 
@@ -680,6 +716,18 @@ paragraph=
 version=4
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=040
+
+library
+category=Data
+authorList=[Jon Reades](http://www.reades.com/)
+name=MapThing
+sentence=A collection of classes for reading and displaying Shape files (a.k.a. ESRI shapefiles), CSV, and GPX data in a map-based sketch.
+url=http://www.reades.com/MapThing
+prettyVersion=1.4
+paragraph=There are four main classes with which you should be familiar: 1) BoundingBox defines the sketch's geographic 'envelope' by mapping a shapefile's geographic coordinates on to the viewable space of the sketch; 2) Lines is used to read and display single-part and multi-part line data; 3) Points is used to read and display point data; and 4) Polygons is used to read and display single and multi-part polygon data (this only works with shapefiles for now). GPX display needs work.
+version=5
+download=http://www.reades.com/MapThing/MapThing.zip
+id=044
 
 library
 category=Data
@@ -752,6 +800,18 @@ paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, 
 version=12
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
+
+library
+category=GUI
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Guido
+sentence=A simple cross mode GUI library
+url=https://github.com/fjenett/Guido
+prettyVersion=0.0.4
+paragraph=Guido is a small GUI library that is compatible with both Java (standard) and JavaScript modes.
+version=143
+download=https://raw.github.com/fjenett/Guido/latest/releases/Guido.zip
+id=054
 
 library
 category=GUI
