@@ -565,3 +565,38 @@ name=EEML Library
 url=http://www.eeml.org/library/
 authorList=[Usman Haque](http://www.haque.co.uk/)
 sentence=Extended Environments Markup Language (EEML) is a protocol for sharing sensor data between remote responsive environments, both physical and virtual.
+
+tool
+category=Legacy
+name=Bezier Editor
+url=http://www.drifkin.net/beziereditor/beziereditor-latest.zip
+authorList=[Devon Rifkin](http://www.drifkin.net/)
+sentence=Visually create Bézier splines and then generate code that represents the splines.
+  
+tool
+category=Legacy
+name=Timeline
+url=http://www.drifkin.net/timeline/
+authorList=[Devon Rifkin](http://www.drifkin.net/)
+sentence=Graphical tool that allows you to draw curves representing variables over time. The Timeline Library allows you to use these variables in your sketches.
+  
+tool
+category=Legacy
+name=Oblique Strategies
+url=http://github.com/sansumbrella/Processing-ObliqueStrategies
+authorList=[David Wicks](http://sansumbrella.com/)
+sentence=Creates useful dilemmas for your work. Run it whenever you hit a slow spot to give yourself something new to think about.
+
+tool
+category=Legacy
+name=Doodle
+url=http://github.com/fjenett/doodle
+authorList=[Florian Jenett](http://bezier.de)
+sentence=Simplistic inline vector editor. Code can be parsed to vector objects to be edited and converted back to code.
+
+tool
+category=Legacy
+name=Simple Live Coding
+url=http://github.com/fjenett/simplelivecoding
+authorList=[Florian Jenett](http://bezier.de)
+sentence=Sketches written in basic mode can be run and watched live in the PDE allowing for a sort of live-coding workflow.
