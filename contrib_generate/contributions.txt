@@ -132,12 +132,12 @@ id=097
 library
 category=I/O
 authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Erik Paluka](http://www.erikpaluka.com/), [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins), and [Dr. Mark Hancock](markhancock.ca)
-name=SimpleMultiTouch (SMT)
+name=Simple Multi-Touch (SMT)
 sentence=A toolkit for making multi-touch easy to use for non-programmers.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.4-pre
+prettyVersion=3.4
 paragraph=It provides back-end device support for Tuio, WM_Touch*, Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=1
+version=2
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
 
@@ -236,6 +236,18 @@ paragraph=JavaScript Mode is based on Processing.js. It runs through a server an
 version=13
 download=https://github.com/fjenett/javascript-mode-processing/raw/master/release/JavaScriptMode.zip
 id=087
+
+mode
+category=
+authorList=[The Processing Foundation](http://android.processing.org/)
+name=Android Mode
+sentence=Create projects with Processing for Android devices
+url=https://github.com/processing/processing-android
+prettyVersion=217
+paragraph=Android Mode has been around since Processing 1.5, but we have moved it to a separate download so that it can be developed indepdendently of the PDE and the core.
+version=217
+download=http://android.processing.org/AndroidMode.zip
+id=101
 
 library
 category=Language
