@@ -22,6 +22,7 @@ x Last Modified: 2005.08.30 06:23PM
 body {
 	margin				: 0;
 	padding				: 0;
+	overflow-y			: scroll;
 	
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
@@ -99,7 +100,8 @@ a.large-link:before {
 	height: 106px;
 	margin-bottom: 30px;
 	overflow: hidden;
-	background: #0c2033 url(../img/processing-black.png) center center no-repeat;
+	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
+	background-size: 900px 106px;	
 	position:relative;
 }
 
@@ -171,10 +173,12 @@ a.large-link:before {
 #navigation {
 	float: left;
 	width: 170px;
+	min-height: 20px;
 	margin-right: 20px;
 	color: #2c7bb5;
 }
 .navBar { padding: 0 20px 0 30px; }
+.navBar.stuck { position: fixed; top: 20px;}
 
 .navBar a { text-decoration: none; border: none; }
 
@@ -187,7 +191,7 @@ a.large-link:before {
 .content {
 	width: 680px;
 	float: left;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	position: relative;
 }
 
@@ -511,16 +515,121 @@ div.ref-col {
 
 /**************************************************************** download ***/
 
-#Download .leftcol { margin-right: 250px; }
-.download-ver { color: black; font-size: 1em; font-weight: bold; margin-top: 2em; }
-.download-ver span { color: #5a5a46; }
+/* download */
 
-#Download .rightcol { position: absolute; 
-    top: 55px; 
-    right: 10px; 
+#Download .leftcol { width: 430px; float: left; }
+	.download-ver { color: black; font-size: 1em; font-weight: bold; margin-top: 2em; }
+	.download-ver span { color: #5a5a46; }
+
+#Download .rightcol { 
+	float: left;
+	margin-left: 75px;
+	margin-top: 4px;
     width: 175px; 
 }
-#Download .rightcol h5 { font-size: 1em; margin-bottom: 1em; }
+	#Download .rightcol h5 { font-size: 1em; margin-bottom: 1em; }
+#Download .releases { width: 100%; float: left; }
+
+#Download .donate-box input[type="text"],
+#Download .donate-box input[type="email"]{
+	border: 1px solid #959595;
+	background-color: white;
+	outline: none;
+	height: 16px;
+	padding-left: 4px;
+}
+#Download .donate-box input[type="text"]:focus,
+#Download .donate-box input[type="email"]:focus {
+  border: 1px solid #2c7bb5;
+}
+
+/* select */
+
+#Download .donate-box {
+	border: 1px solid #CBCBCB;
+	background: #FAFAFA;
+	padding: 20px 34px 24px 34px;
+	text-align: center;
+}
+	/*#Download .donate-box h1 { margin-top: 0; }*/
+	#Download .donate-box p {
+		text-align: left;
+	}
+	#Download #selectForm form {
+		line-height: 24px;
+	}
+	#Download #selectForm .select-amount {
+		text-align: left;
+		margin: 22px 0 42px 40px;
+	}
+	#Download #selectForm .select-amount label {
+		margin-right: 50px;
+	}
+	#Download .donate-box input[type="submit"]{
+		font-family: 'Enriqueta', georgia, times, serif;
+		-webkit-font-smoothing: antialiased;
+		font-size: 1.7em;
+		color: #2c7bb5;
+		border: none;
+		background: none;
+		cursor: pointer;
+		text-align: center;
+	}
+	#Download #selectForm input#otra{
+		width: 55px;
+	}
+
+/* donate */
+#Download .messages {
+	text-align: center;
+	color: red;
+	margin-bottom: 22px;
+}
+#Download #donateForm {
+	text-align: left;
+}
+	#donateForm label {
+		display: inline-block;
+		width: 120px;
+		margin-right: 16px;
+		line-height: 26px;
+		text-align: right; 
+	}
+	#donateForm input[type="text"],
+	#donateForm input[type="email"] {
+		width: 380px;
+	}
+	#donateForm input.card-number  {
+		width: 120px;
+	}
+	#donateForm input.card-cvc {
+		width: 30px;
+	}
+	#donateForm .payType {
+		padding-left: 136px;
+		margin: 16px 0 16px 0;
+	}
+		#donateForm .payType label, #donateForm .payType input {
+			width: auto;
+		}
+		#donateForm .payType .or {
+			display: inline-block;
+			font-style: italic;
+			margin: 0 30px 0 20px;
+		}
+	#donateForm .ccInfo {
+		margin-bottom: 22px;
+	}
+	#Download .content #donateForm input[type="submit"] {
+		width: 188px;
+		text-align: center;
+		margin-left: 210px;
+	}
+	#donateForm p {
+		color: #959595;
+		margin-left: -20px;
+		text-align: center !important;
+	}
 
 /************************************************************** contribute ***/
 
@@ -746,6 +855,19 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Environment h5 a { float: left; margin-left: -30px; }
 ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 #Environment td { padding-bottom: 1em; }
+#Environment .content p,
+#Environment .content ul,
+#Environment .content table {
+	width: 560px;
+}
+
+
+/************************************************************** overview ***/
+#Overview .content p,
+#Overview .content ul,
+#Overview .content table {
+	width: 560px;
+}
 
 
 
@@ -772,6 +894,32 @@ div.updateRequired {
 div.updateRequired a {
 	color:#999;
 }
+
+ul.examples {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+ul.examples li { margin: 0; padding: 0; }
+ul.examples ul {
+	list-style: none;
+	padding: 0;
+	display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
+        margin-bottom: 17px;
+        width: 100%;
+}
+ul.examples ul li {
+	margin: 0;
+}
+div.examples-nav {
+	margin-left: -41px;
+	margin-bottom: 17px;
+	position: relative;
+}
+div.examples-nav img { position: relative; top: 11px; }
 
 
 /**************************************************************** updates, courses, happenings ***/

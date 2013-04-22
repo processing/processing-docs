@@ -1,0 +1,602 @@
+library
+category=Legacy
+name=Tactu5
+url=http://www.abstract-codex.net/tactu5/index.html
+authorList=[Alessandro Capozzo](http://www.abstract-codex.net)
+sentence=Aids the creation of algorithmic music in real time. Consists of a set of classes focused in defining musical elements, utility classes, and an aggregator.	
+	
+library
+category=Legacy
+name=Beads
+url=http://www.beadsproject.net/
+authorList=[Ollie Bown](http://www.olliebown.com/)
+sentence=A realtime audio library for computer music and sonic art in realtime performance, installation artworks, web content and more.
+
+library
+category=Legacy
+name=jm-Etude
+url=http://jmetude.dihardja.de/
+authorList=Daniel Dihardja
+sentence=Provides functions to communicate with [jMusic](http://jmusic.ci.qut.edu.au) for easier music composition programming.
+	
+library
+category=Legacy
+name=Ess
+url=http://www.tree-axis.com/Ess/
+authorList=[Krister Olsson](http://www.tree-axis.com/)
+sentence=Sound library that allows sound sample data to be loaded or streamed, generated in real-time, manipulated, saved, analyzed or simply played back.
+	
+library
+category=Legacy
+name=Sonia
+url=http://sonia.pitaru.com/
+authorList=[Amit Pitaru](http://www.pitaru.com/)
+sentence=Audio library for sound playback and synthesis. Integrates [Jsyn](http://www.softsynth.com/jsyn/) 	and requires a browser plugin for playback.
+	
+library
+category=Legacy
+name=SoundCipher
+url=http://soundcipher.com/
+authorList=[Andrew R. Brown](http://www.explodingart.com/arb/)
+sentence=SoundCipher provides an easy interface for playing 'notes' on the JavaSound synthesizer and for playback of audio files.
+	
+library
+category=Legacy
+name=Echonestp5
+url=http://code.google.com/p/echonestp5/
+authorList=[melka](http://melka.one.free.fr/blog/)
+sentence=A wrapper to simplify the use of the Echo Nest API.
+	      
+library
+category=Legacy
+name=supercad
+url=http://labelle.spacekit.ca/supercad/
+authorList=[Guillaume Labelle](http://labelle.spacekit.ca/supercad/)
+sentence=Lets you export code to many 3d formats such as AutoCAD, Rhino, or SketchUP.
+
+library
+category=Legacy
+name=blinkenlights exporter
+url=http://robinsenior.com/blinkenlights/
+authorList=[ruin & wesen](http://ruinwesen.com/)
+sentence=This Processing library is designed to export sketches to the Blinkenlights BML file format
+		
+library
+category=Legacy
+name=IgnoCodeLib
+url=http://ignotus.com/ignocodelib/index.html
+authorList=[Paul Hertz](http://ignotus.com/)
+sentence=A library for exporting B&eacute;zier geometry to Adobe Illustrator.
+	
+library
+category=Legacy
+name=sDrop
+url=http://www.sojamo.de/libraries/drop/
+authorList=[Andreas Schlegel](http://www.sojamo.de)
+sentence=Use large numbers of points and/or triangles in an OpenGL sketch.
+		
+library
+category=Legacy
+name=povwriter
+url=http://java.net/projects/povwriter/pages/Home
+authorList=Martin Prout
+sentence=Export Processing Sketches to Povray.
+
+library
+category=Legacy
+name=MRI3DS
+url=http://www.pixelnerve.com/processing/libraries/mri3ds/
+authorList=[Victor Martins](http://www.pixelnerve.com/v/)
+sentence=Load 3d studio .3ds files into your processing sketches.
+		    
+library
+category=Legacy
+name=ObjImport
+url=http://www.pixelnerve.com/processing/libraries/objimport/
+authorList=[Victor Martins](http://www.pixelnerve.com/v/)
+sentence=This library imports .obj files and supports groups, material references, vertex-, normal-, and texture-coordinates.
+		
+library
+category=Legacy
+name=proDOC
+url=http://creativecomputing.cc/p5libs/prodoc/
+authorList=[Christian Riekoff](http://www.texone.org/)
+sentence=Generates documentation for Processing libraries from the source code. Requires inserting tags in the comments of the classes, fields, and methods.
+	
+library
+category=Legacy
+name=fullscreen api
+url=http://www.superduper.org/processing/fullscreen_api/
+authorList=[Hansi Raber](http://www.superduper.org)
+sentence=A library for fullscreen support, including dual screen.
+	
+library
+category=Legacy
+name=Timeline
+url=http://www.drifkin.net/timeline/
+authorList=[D. Rifkin](http://www.drifkin.net/)
+sentence=The timeline tool is a graphical tool that allows you to draw curves representing variables over time.
+	
+library
+category=Legacy
+name=Unfolding
+url=http://unfoldingmaps.org/
+authorList=[Till Nagel](http://tillnagel.com/), Felix Lange, et al.
+sentence=A tile-based map library enabling you to rapidly create interactive maps. Basic interactions such as Zoom &amp; Pan are included. Other functionality such as Overview+Detail, or multitouch gestures can be easily added.
+
+library
+category=Legacy
+name=Proclipsing + P5Exporter
+url=http://code.google.com/p/proclipsing/
+authorList=[Brian Ballantine](http://brianballantine.com/), [Daniel C. Howe](http://www.rednoise.org) and [Matt Parker](http://www.madparker.com/)
+sentence=Development tools to facilitate using the Eclipse IDE to write Processing applications. Proclipsing allows you to easily create and maintain a Processing project in Eclipse. P5Exporter mimics Processing's PDE export code in an Eclipse plugin for simple export of applications and applets.
+		
+library
+category=Legacy
+name=napplet
+url=http://wiki.github.com/acsmith/napplet/
+authorList=Adam Smith
+sentence=A library for creating and managing sketches that can be embedded in other sketches and share their display space.
+	
+library
+category=Legacy
+name=Mother
+url=http://www.onar3d.com/mother/
+authorList=[ Ilias Bergstrom](http://www.onar3d.com)
+sentence=A program that allows VJing with Processing sketches.
+	
+library
+category=Legacy
+name=terrapin
+url=http://terrapin.sourceforge.net/
+authorList=[George Bashi](http://georgebashi.com/) and [Ollie Glass](http://ollieglass.com/)
+sentence=Designed with LOGO's educational principles in mind, terrapin provides a turtle drawing object for Processing.	
+
+library
+category=Legacy
+name=proCONTROLL
+url=http://creativecomputing.cc/p5libs/procontroll/
+authorList=[Christian Riekoff](http://www.texone.org/)
+sentence=Allows Processing to communicate with control devices like joysticks and joypads.
+     
+library
+category=Legacy
+name=Apple Light Sensor
+url=http://projects.formatlos.de/ambientlightsensor/
+authorList=[Martin R&auml;dlinger](http://blog.formatlos.de/)
+sentence=Interface to the Light Sensor in MacBook Pro computers.
+
+library
+category=Legacy
+name=novation launchpad
+url=http://rngtng.github.com/launchpad/
+authorList=[Tobias Bielohlawek](http://www.rngtng.com/)
+sentence=This library provides an interface to access novation's launchpad programmatically.
+
+library
+category=Legacy
+name=touchatag
+url=http://code.google.com/p/touchatag-processing/
+authorList=[Augusto Esteves](http://www.mysecondplace.org/)
+sentence=A library to read from touchatag RFID readers.	
+		
+library
+category=Legacy
+name=JTablet
+url=http://www.cellosoft.com/sketchstudio/
+authorList=[Cellosoft](http://www.cellosoft.com/)
+sentence=Graphics tablet access for Java applets (while this is not strictly a Processing library, it's extremely useful and easy to interface.)
+	
+library
+category=Legacy
+name=ProTablet
+url=http://protablet.sourceforge.net/
+authorList=[Andres Colubri](http://codeanticode.wordpress.com/)
+sentence=A library that encapsulates the JPen package to access graphic tablets in Java.
+	
+library
+category=Legacy
+name=codethread
+url=http://blog.diatom.cc/codethread/codethread-making-gcode-for-makerbot-with-processing
+authorList=[Diatom Studio](http://diatom.cc)
+sentence=Make GCode for the MakerBot with this Processing library.
+    
+library
+category=Legacy
+name=Shapetween
+url=http://www.leebyron.com/else/shapetween/
+authorList=[Lee Byron](http://www.leebyron.com/) and [Golan Levin](http://www.flong.com)
+sentence=An easy way to animate elements in a variety of ways.
+     
+library
+category=Legacy
+name=gifAnimation
+url=http://www.extrapixel.ch/processing/gifAnimation/
+authorList=[Patrick Meister](http://www.extrapixel.ch/processing/gifAnimation/)
+sentence=Plays and exports GIF animations.
+     
+library
+category=Legacy
+name=NextText
+url=http://www.nexttext.net/
+authorList=[Elie Zananiri](http://silentlycrashing.net/blog/portfolio/nexttext-for-processing/) and [Obx Labs](http://www.obxlabs.net/)
+sentence=Assists in making dynamic and interactive text-based applications.
+	
+library
+category=Legacy
+name=Vertext
+url=http://www.ghost-hack.com/p5/vertext/
+authorList=[Michael Chang](http://www.ghost-hack.com/)
+sentence=Enables drawing giant, detailed typography at high frame rates.
+     
+library
+category=Legacy
+name=point2line
+url=http://sixthsensor.dk/p5/point2line/ 
+authorList=[Carl Emil Carlsen](http://sixthsensor.dk)
+sentence=Basic tools for calculating geometry in two dimensions.		
+	
+library
+category=Legacy
+name=MovingLetters
+url=http://www.foobarquarium.de/blog/processing/MovingLetters/
+authorList=Ilu
+sentence=Typeface of moving, jittering letters.
+    
+library
+category=Legacy
+name=wordookie
+url=http://code.google.com/p/wordookie/
+authorList=[Michael Ogawa](http://vis.cs.ucdavis.edu/~ogawa/)
+sentence=A library to create wordle like word clouds.
+
+library
+category=Legacy
+name=GSVideo
+url=http://gsvideo.sourceforge.net/
+authorList=[Andres Colubri](http://codeanticode.wordpress.com/)
+sentence=Uses GStreamer as an alternative to QuickTime for movie playback and camera capture.
+    
+library
+category=Legacy
+name=integralhistogram
+url=http://inthistogram.altervista.org/
+authorList=[Giovanni Tarducci and Alessio Barducci](http://bitbucket.org/giova/integralhistogram/wiki/Home)
+sentence=The integral histogram method allows to obtain the color or intensity histogram of all possible target regions in a Cartesian data space.
+    
+library
+category=Legacy
+name=blobscanner
+url=http://code.google.com/p/blobscanner/
+authorList=[Antonio Molinaro](http://sites.google.com/site/blobscanner/blog)
+sentence=A library for blob detection and analysis in image and video streams.
+
+library
+category=Legacy
+name=jmcvideo
+url=http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo/jmcvideo.html
+authorList=[Angus Forbes](http://www.mat.ucsb.edu/~a.forbes)
+sentence=A simple wrapper for playing videos and grabbing video data for any of the formats that the JMC library supports.
+
+library
+category=Legacy
+name=Face Detect (PC)
+url=http://www.bryanchung.net/?page_id=251
+authorList=[Bryan Chung](http://www.bryanchung.net)
+sentence=Face detection library made with WebCamXtra and the openCV framework. PC only.
+
+library
+category=Legacy
+name=TUIO Client
+url=http://www.tuio.org/?processing
+authorList=[Martin Kaltenbrunner](http://modin.yuri.at/)
+sentence=Client library for the simple creation of tangible interactive surfaces, receiving [TUIO](http://www.tuio.org/) data from object and multi-touch trackers such as [reacTIVision](http://reactivision.sourceforge.net).
+
+library
+category=Legacy
+name=P-SURF
+url=http://processingsurf.altervista.org/
+authorList=[Claudio Fantacci and Alessandro Martini](http://bitbucket.org/surfprojectppm/processing-surf/)
+sentence=An implementation of the SURF (Speeded Up Robust Features) feature detector to search for discrete image correspondences.
+	
+library
+category=Legacy
+name=simple-openni
+url=http://code.google.com/p/simple-openni/
+authorList=Max Rheiner
+sentence=A simple OpenNI and NITE wrapper for Processing.
+
+library
+category=Legacy
+name=JMyron (WebCamXtra)
+url=http://webcamxtra.sourceforge.net/
+authorList=[Josh Nimoy](http://www.jtnimoy.net) et al.
+sentence=Camera library for motion detection, color tracking, glob distinction, and pixel addressing. Does not require QuickTime or WinVDIG for Windows machines.
+
+library
+category=Legacy
+name=LibCV
+url=http://toxi.co.uk/p5/libcv/
+authorList=[toxi](http://toxi.co.uk/)
+sentence=Grabs video frames from a camera using the Java Media Framework (JMF). Does not require QuickTime or WinVDIG for Windows machines.
+	 
+library
+category=Legacy
+name=tuioZones
+url=http://jlyst.com/tz/
+authorList=[jLyst](http://jlyst.com/)
+sentence=tuioZones provides a way to set zones within a multi-touch screen to respond to TUIO messages sent from a tracking application.
+    
+library
+category=Legacy
+name=CbModel
+url=http://code.google.com/p/cbmodel
+authorList=Federico Bartoli
+sentence=CbModel is a library for motion detection based on background modeling and subtraction.
+	
+library
+category=Legacy
+name=SuperPoint
+url=http://www.hardcorepawn.com/SuperPoint
+authorList=[JohnG](http://www.hardcorepawn.com/)
+sentence=Use large numbers of points and/or triangles in an OpenGL sketch.
+        
+library
+category=Legacy
+name=UnwrappingLib
+url=http://www.deffekt.ch/?cat=65
+authorList=[Martin Fuchs](http://www.deffekt.ch)
+sentence=Unwrap low polygon models for reconstruction and digital production.     
+	
+library
+category=Legacy
+name=surfaceLib
+url=http://code.google.com/p/surfacelib/
+authorList=[Andreas K&ouml;berle](http://virb.com/eskimoblood) and [Christian Riekoff](http://www.texone.org/)
+sentence=An easy way to create different 3D surfaces. Contains a library of surfaces and a class to extend.
+				
+library
+category=Legacy
+name=Gestalt
+url=http://www.the-product.org/gestalt/
+authorList=[Patrick Kochlik and Dennis Paul](http://www.the-product.org/)
+sentence=Gestalt is an open structured environment, designed to prototype and develop OpenGL- and Java-based sketches and applications.
+	
+library
+category=Legacy
+name=anar
+url=http://anar.ch/
+authorList=LaBelle and Nembrini
+sentence=A set of libraries for parametric modeling including simple a 3D scenegraph, geometric datastructures, export to various CAD formats, particle physics system and more.
+	
+library
+category=Legacy
+name=VolTron
+url=http://dm.ncl.ac.uk/joescully/voltronlib/
+authorList=[Joseph Scully](http://dm.ncl.ac.uk/joescully/blog)
+sentence=VolTron allows you to plot 3D volumetric forms from .img and .raw.gz data sets as voxels or pixelclouds.  	
+	 	 
+library
+category=Legacy
+name=GLGraphics
+url=http://glgraphics.sourceforge.net/
+authorList=[Andres Colubri](http://codeanticode.wordpress.com/)
+sentence=GLGraphics is a library intended to extend the capabilities of the OPENGL renderer in Processing. It includes classes to handle opengl textures, image post-processing filters, 3D Models, and shaders in GLSL, Cg and CgFX.  	
+    
+library
+category=Legacy
+name=Physics
+url=http://murderandcreate.com/physics
+authorList=Jeffrey Traer Bernstein
+sentence=Simple particle system physics engine. No collisions, just particles, springs, gravity &amp; drag.
+	
+	
+library
+category=Legacy
+name=MSAFluid
+url=http://www.memo.tv/msafluid_for_processing
+authorList=[Memo Akten](http://www.memo.tv/)
+sentence=A library for solving real-time fluid dynamics simulations.
+
+library
+category=Legacy
+name=AI Libraries
+url=http://www.robotacid.com/PBeta/AILibrary/
+authorList=[Aaron Steed](http://robotacid.com/)
+sentence=A set of libraries to assist with artificial programming tasks such as genetic algorithms and the AStar algorithm.
+
+library
+category=Legacy
+name=Eliza
+url=http://codeanticode.wordpress.com/2007/11/12/eliza-library-for-processing/
+authorList=[Andres Colubri](http://codeanticode.wordpress.com/)
+sentence=Implementation of the classes A.I. bot, Eliza.
+		
+library
+category=Legacy
+name=MatrixMath
+url=http://matrixmath.fadarch.com/
+authorList=[Francis Bitonti](http://www.fadarch.com/)
+sentence=Helpful code for matrix operations.
+     
+library
+category=Legacy
+name=Cellular Automata
+url=http://cellularautomata.fadarch.com/
+authorList=[Francis Bitonti](http://www.fadarch.com/)
+sentence=Simplifies making cellular automata calculations.
+		
+library
+category=Legacy
+name=BoxWrap2D
+url=http://jbox2d.nfshost.com/processing/
+authorList=ewjordan
+sentence=BoxWrap2D runs on top of JBox2D enabling simple integration of JBox2D with Processing.
+	
+library
+category=Legacy
+name=Interfascia
+url=http://interfascia.plusminusfive.com/
+authorList=[Brendan Berg](http://www.superstable.net/)
+sentence=Provides a toolkit of standard interface widgets like text fields, buttons, 	  checkboxes, sliders, etc.
+
+library
+category=Legacy
+name=ModelBuilder
+url=http://workshop.evolutionzone.com/2011/04/06/code-modelbuilder-library-public-release/
+authorList=[Marius Watz](http://www.unlekker.net/)
+sentence=ModelBuilder focuses on computational 3D modelling for digital fabrication. Once a model is built ModelBuilder provides convenient methods to centering it around origin, scaling to given dimensions and outputting to STL format.
+	
+library
+category=Legacy
+name=toxiclibs
+url=http://toxiclibs.org/
+authorList=[toxi](http://toxi.co.uk/)
+sentence=Code for audio (JOAL), working with geometry, image filters, optimized math functions, and more.
+		
+library
+category=Legacy
+name=victamin
+url=http://code.google.com/p/victamin/
+authorList=[Victor Martins](http://www.pixelnerve.com/v/)
+sentence=Code for using GLSL/Cg/CgFX shaders, FBOs, import 3DS and OBJ files, sending and receiving SMS message.
+	
+library
+category=Legacy
+name=iGeo
+url=http://igeo.jp/
+authorList=[Satoru Sugihara](http://sghr.jp/)
+sentence=A 3D modeling software library for computational design in architecture, product design, interaction design and more. It includes libraries of vector math operations, NURBS curve and surface geometries, polygon meshes and 3D model file I/O.
+
+library
+category=Legacy
+name=bluetoothDesktop
+url=http://www.extrapixel.ch/processing/bluetoothDesktop/
+authorList=[Patrick Meister](http://www.extrapixel.ch/)
+sentence=Send and receive data via Bluetooth wireless networks.
+    
+library
+category=Legacy
+name=Yahoo! Search Library
+url=http://www.shiffman.net/2007/08/05/processing-yahoo-search-library/
+authorList=[Daniel Shiffman](http://www.shiffman.net/)
+sentence=Access the Yahoo! Search API directly in Processing.
+
+library
+category=Legacy
+name=XBee
+url=http://blog.faludi.com/code/xbee-api-library-for-processing/
+authorList=[Rob Faludi](http://www.faludi.com/) and [Dan Shiffman](http://www.shiffman.net/)
+sentence=Interfaces with Digi's XBee radios.
+	
+library
+category=Legacy
+name=proMidi
+url=http://creativecomputing.cc/p5libs/promidi/
+authorList=[Christian Riekoff](http://www.texone.org/)
+sentence=Allows Processing to send and receive midi information.
+    
+library
+category=Legacy
+name=proHTML
+url=http://creativecomputing.cc/p5libs/prohtml/
+authorList=[Christian Riekoff](http://www.texone.org/)
+sentence=Allows Processing to take an HTML document and change it from a linear string to a tree structure.
+
+library
+category=Legacy
+name=proXML
+url=http://creativecomputing.cc/p5libs/proxml/
+authorList=[Christian Riekoff](http://www.texone.org/)
+sentence=Allows Processing to read and write XML files.
+    
+library
+category=Legacy
+name=SQLibrary
+url=http://bezier.de/processing/libs/sql/
+authorList=[Florian Jenett](http://www.bezier.de/)
+sentence=A library to facilitate communication with MySQL or SQLite databases.
+    	      
+library
+category=Legacy
+name=Monomic
+url=http://jklabs.net/monomic/
+authorList=[Jesse Kriss](http://jklabs.net/)
+sentence=Enables communication between Processing and the monome 40h device.
+	
+library
+category=Legacy
+name=XlsReader
+url=http://bezier.de/processing/libs/xls/
+authorList=[Florian Jenett](http://www.bezier.de/)
+sentence=Lets you read data from xls (Excel) files.
+
+library
+category=Legacy
+name=ical4p
+url=http://www.local-guru.net/blog/pages/ical4p
+authorList=[Nikolaus Gradwohl](http://www.local-guru.net/blog/)
+sentence=This library allows the simple access of calendar events stored in a ical file.
+      
+library
+category=Legacy
+name=colorlib
+url=http://code.google.com/p/colorlib/
+authorList=[Andreas Koeberle](http://eskimoblood.de/) and [Jan Vantomme](http://www.pixelplayground.eu/)
+sentence=Makes it easy to import color palettes from different files like .act and .cs or webservices like colr, kuler and colourLovers.
+	
+library
+category=Legacy
+name=Tweet Stream
+url=http://mccv.github.com/processing-tweet-stream/
+authorList=[Mark McBride](http://github.com/mccv)
+sentence=The Tweet Stream library provides a simple way to access the Twitter streaming API from within Processing.
+	
+library
+category=Legacy
+name=xmlrpclib
+url=http://plw.media.mit.edu/people/arikan/xmlrpclib/
+authorList=[Burak Arikan](http://plw.media.mit.edu/people/arikan/index.html)
+sentence=An XML-RPC library for Processing. XML-RPC is a widely adopted Remote Procedure     Calling protocol that works over the Internet.
+
+library
+category=Legacy
+name=EEML Library
+url=http://www.eeml.org/library/
+authorList=[Usman Haque](http://www.haque.co.uk/)
+sentence=Extended Environments Markup Language (EEML) is a protocol for sharing sensor data between remote responsive environments, both physical and virtual.
+
+tool
+category=Legacy
+name=Bezier Editor
+url=http://www.drifkin.net/beziereditor/beziereditor-latest.zip
+authorList=[Devon Rifkin](http://www.drifkin.net/)
+sentence=Visually create Bézier splines and then generate code that represents the splines.
+  
+tool
+category=Legacy
+name=Timeline
+url=http://www.drifkin.net/timeline/
+authorList=[Devon Rifkin](http://www.drifkin.net/)
+sentence=Graphical tool that allows you to draw curves representing variables over time. The Timeline Library allows you to use these variables in your sketches.
+  
+tool
+category=Legacy
+name=Oblique Strategies
+url=http://github.com/sansumbrella/Processing-ObliqueStrategies
+authorList=[David Wicks](http://sansumbrella.com/)
+sentence=Creates useful dilemmas for your work. Run it whenever you hit a slow spot to give yourself something new to think about.
+
+tool
+category=Legacy
+name=Doodle
+url=http://github.com/fjenett/doodle
+authorList=[Florian Jenett](http://bezier.de)
+sentence=Simplistic inline vector editor. Code can be parsed to vector objects to be edited and converted back to code.
+
+tool
+category=Legacy
+name=Simple Live Coding
+url=http://github.com/fjenett/simplelivecoding
+authorList=[Florian Jenett](http://bezier.de)
+sentence=Sketches written in basic mode can be run and watched live in the PDE allowing for a sort of live-coding workflow.

@@ -8,8 +8,7 @@ $pages = array(
     
     'Learning'        => array('/learning/', 1), 
     	'Tutorials'   => array('/learning/', 2),  
-    	'Basics'      => array('/learning/basics/', 2),  
-    	'Topics'      => array('/learning/topics/', 2), 
+    	'Examples'      => array('/learning/examples/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
     'Books'       	  => array('/learning/books/', 2),
@@ -64,8 +63,7 @@ function navigation($section = '')
 	    $html .= "\t\t\t\t\t" . l('Environment', $section == 'Environment') . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Basics', $section == 'Basics') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Topics', $section == 'Topics') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Examples', $section == 'Examples') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . "<br><br>\n";
 	    
 	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'About') . "<br> \n";
@@ -111,12 +109,12 @@ function short_nav($section)
 function local_nav($section, $rel_path='')
 {
     $html  = "\t\t\t".'<div id="navigation">'."\n";
-    $html .= "\t\t\t\t".'<div class="navBar" id="mainnav_noSub">'."\n";
+    $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
 
     $html .= "\t\t\t\t\t<a href=\"{$rel_path}index.html\"" . ($section == 'Language' ? ' class="active"' : '') . ">Language</a> (";
-    $html .= "<a href=\"{$rel_path}alpha.html\"" . ($section == 'A-Z' ? ' class="active"' : '') . ">A-Z</a>) \\ \n";
-    $html .= "\t\t\t\t\t<a href=\"{$rel_path}libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a> \\ \n";
-    $html .= "\t\t\t\t\t<a href=\"{$rel_path}tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a> \\ \n";
+    $html .= "<a href=\"{$rel_path}alpha.html\"" . ($section == 'A-Z' ? ' class="active"' : '') . ">A-Z</a>)<br> \n";
+    $html .= "\t\t\t\t\t<a href=\"{$rel_path}libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a><br> \n";
+    $html .= "\t\t\t\t\t<a href=\"{$rel_path}tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a><br> \n";
     $html .= "\t\t\t\t\t<a href=\"{$rel_path}environment/index.html\"" . ($section == 'Environment' ? ' class="active"' : '') . ">Environment</a>\n";
     
     $html .= "\t\t\t\t</div>\n";

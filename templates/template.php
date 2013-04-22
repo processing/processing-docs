@@ -196,7 +196,7 @@ class LocalPage extends Page
     function LocalPage($title = '', $section = '', $bodyid = '', $rel_path = '')
     {
         $this->xhtml = new xhtml_page(TEMPLATEDIR.'template.local.html');
-        $this->xhtml->set('header', '<a href="http://processing.org/"><img src="'.$rel_path.'img/processing.gif" alt="Processing" title="Processing.org" /></a>');
+        $this->xhtml->set('header', '<a href="http://processing.org/" title="Processing.org"><div class="processing-logo" alt="Processing cover"></div></a>');
         $title = ($title == '') ? 'Processing 2+' : $title . ' \ Processing 2+';
         $this->xhtml->set('title', $title);
         $this->xhtml->set('navigation', local_nav($section, $rel_path));
@@ -218,7 +218,7 @@ class LocalReferencePage extends ReferencePage
         $title = $ref->title() .' \ Language (API) \ Processing 2+';
         
         $xhtml = new xhtml_page(TEMPLATEDIR.'template.local.html');
-        $xhtml->set('header', '<a href="http://processing.org/"><img src="img/processing.gif" alt="Processing" title="Processing.org" /></a>');
+        $xhtml->set('header', '<a href="http://processing.org/" title="Processing.org"><div class="processing-logo" alt="Processing cover"></div></a>');
         $xhtml->set('title', $title);
         $xhtml->set('bodyid', 'Langauge');
         $xhtml->set('navigation', local_nav('Language'));
@@ -258,7 +258,7 @@ class LocalLibReferencePage extends ReferencePage
         $title = $ref->title() . "\\ $lib \\ Language (API) \\ Processing 2+";
         
         $xhtml = new xhtml_page(TEMPLATEDIR.'template.local.html');
-        $xhtml->set('header', '<a href="http://processing.org/"><img src="'.$rel_path.'img/processing.gif" alt="Processing.org" title="Processing.org" /></a>');
+        $xhtml->set('header', '<a href="http://processing.org/" title="Processing.org"><div class="processing-logo" alt="Processing cover"></div></a>');
         $xhtml->set('title', $title);
         $xhtml->set('bodyid', 'Library-ref');
         
