@@ -83,23 +83,27 @@ void draw() {
 <example>
 <image></image>
 <code><![CDATA[
-// Define the individual shapes and the group
-PShape alien, head, body;
-
 void setup() {
   size(100, 100, P2D);
-  head = createShape(ELLIPSE, 20, 25, 50, 50);
-  body = createShape(RECT, 0, 50, 40, 40);
-  // Add the two "child" shapes to the parent group
+
+  // Create the shape group
   alien = createShape(GROUP);
+
   // Make two shapes
+  head = createShape(ELLIPSE, 0, 25, 50, 50);
+  head.setFill(color(255));
+  body = createShape(RECT, -25, 45, 50, 40);
+  body.setFill(color(0));
+
+  // Add the two "child" shapes to the parent group
   alien.addChild(body);
   alien.addChild(head);
 }
 
 void draw() {
-  translate(20, 10);
-  shape(alien);  // Draw the group
+  background(204);
+  translate(50, 15);
+  shape(alien); // Draw the group
 }
 ]]></code>
 </example>

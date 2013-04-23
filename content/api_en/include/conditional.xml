@@ -21,12 +21,12 @@ for (int i = 5; i < 100; i += 5) {
 </example>
 
 <description><![CDATA[
-A shortcut for writing an <b>if</b> and <b>else</b> structure. If the <b>condition</b> evaluates to <b>true</b>, <b>expression1</b> is evaluated and returned. If the <b>condition</b> evaluates to <b>false</b>, <b>expression2</b> is evaluated and returned.
+A shortcut for writing an <b>if</b> and <b>else</b> structure. The conditional operator, <b>?:</b> is sometimes called the ternary operator, an operator that takes three arguments. If the <b>test</b> evaluates to <b>true</b>, <b>expression1</b> is evaluated and returned. If the <b>condition</b> evaluates to <b>false</b>, <b>expression2</b> is evaluated and returned.
 <br /><br />
-The following conditional: <br />
-<pre>result = condition ? expression1 : expression2</pre><br />
+The following conditional expression: <br />
+<pre>result = test ? expression1 : expression2</pre><br />
 is equivalent to this structure: <br />
-<pre>if (condition) {<br />
+<pre>if (test) {<br />
   result = expression1 <br />
 } else { <br />
   result = expression2 <br />
@@ -34,11 +34,11 @@ is equivalent to this structure: <br />
 ]]></description>
 
 <syntax>
-<c>condition</c> ? <c>expression1</c> : <c>expression2</c>
+<c>test</c> ? <c>expression1</c> : <c>expression2</c>
 </syntax>
 
 <parameter>
-<label>condition</label>
+<label>test</label>
 <description><![CDATA[any valid expression which evaluates to true or false]]></description>
 </parameter>
 

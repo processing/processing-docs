@@ -50,7 +50,7 @@
 		<ex file="Pointillism.html">Pointillism</ex>
 	</cat>
 	<cat label="Shape">
-		<ex file="LoadDisplayShape.html">Load and Display Shape</ex>
+		<ex file="LoadDisplaySVG.html">Load and Display SVG</ex>
 		<ex file="DisableStyle.html">Disable Style</ex>
 		<ex file="ScaleShape.html">Scale Shape</ex>
 		<ex file="GetChild.html">Get Child</ex>
