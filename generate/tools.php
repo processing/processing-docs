@@ -2,7 +2,6 @@
 
 require_once('../config.php');
 require_once('lib/Translation.class.php');
-require_once('./contributions.php');
 $benchmark_start = microtime_float();
 
 
@@ -20,6 +19,7 @@ if (!is_dir(BASEDIR.$tools_dir.'/images')) {
 copydirr(CONTENTDIR."api_en/tools/images", BASEDIR.$tools_dir.'/images');
 
 // copy over the files for the contributed libraries
+require_once('./contributions.php');
 copy(CONTENTDIR."static/tools.html", BASEDIR.$tools_dir.'/tools.html');
 	
 $benchmark_end = microtime_float();
