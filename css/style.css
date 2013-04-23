@@ -512,9 +512,15 @@ hr.noshade { height: 0px; color: #f1f1f1; border-color: #e0e0e0; margin: 30px 0 
 	-moz-column-count:3;
 	-webkit-column-count:3;
 	column-count:3;
+	column-gap:20px;
+	-moz-column-gap:20px;
+	-webkit-column-gap:20px;
 }
 .contributions ul li {
 	display: inline-block;
+}
+.contributions ul li h5:before {
+	content: '\00BB ';
 }
 .contributions ul li p {
 	margin: 0;
