@@ -151,7 +151,7 @@ foreach($clean['tool'] as $tool){
 		$legacy .= "\t</li>\n";
 	}
 }
-$toolsHTML .= "</ul>\n\n".$legacy."</ul>\n</div>";
+$toolsHTML .= "</ul>\n\n".$legacy."</ul>\n</div>\n</div>";
 
 //Write toolsHTML to tools.html file
 $file_name 	= strip_tags('tools.html');
