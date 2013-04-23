@@ -3,6 +3,7 @@
 require_once('../config.php');
 require_once('lib/Ref.class.php');
 require_once('lib/Translation.class.php');
+require_once('./contributions.php');
 
 $benchmark_start = microtime_float();
 
