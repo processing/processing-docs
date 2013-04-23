@@ -113,7 +113,6 @@ foreach($legacy as $lib){
 	$librariesHTML .= "\t\t<li>\n";
 	$librariesHTML .= "\t\t\t".'<h5><a href="'.$lib['url'].'">'.$lib['name'].'</a></h5>'."\n";
 	$librariesHTML .= "\t\t\t".'<span>by '.linkParse($lib['authorList']).'</span>'."\n";
-	$librariesHTML .= strlen(trim($lib['sentence'])) ? "\t\t\t".'<p>'.linkParse($lib['sentence']).'</p>'."\n" : "\n";
 	$librariesHTML .= "\t\t</li>\n";
 }
 $librariesHTML .= "</ul></div></div>";
@@ -147,7 +146,6 @@ foreach($clean['tool'] as $tool){
 		$legacy .= "\t<li>\n";
 		$legacy .= "\t\t".'<h5><a href="'.$tool['url'].'">'.$tool['name'].'</a></h5>'."\n";
 		$legacy .= "\t\t".'<span>by '.linkParse($tool['authorList']).'</span>'."\n";
-		$legacy .= strlen(trim($tool['sentence'])) ? "\t\t".'<p>'.linkParse($tool['sentence']).'</p>'."\n" : "\n";
 		$legacy .= "\t</li>\n";
 	}
 }
