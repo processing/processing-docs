@@ -25,9 +25,9 @@ function showloading()
     <style type="text/css">
     body { margin: 0; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; }
 
-h1 { margin: 0; width: 750px; background: #000; }
+h1 { margin: 0; width: 900px; background: #000; }
 
-#body { margin-left: 60px; width: 690px; }
+#body { margin-left: 60px; width: 900px; }
 
 ul, li { margin: 0; padding: 0; list-style: none; }
 li { margin-bottom: 1em; }
@@ -41,7 +41,7 @@ li { margin-bottom: 1em; }
 </head>
 
 <body>
-<h1><img src="../img/processing_cover.gif" alt="Processing" /></h1>
+<h1><img src="../img/processing-web.png" alt="Processing" /></h1>
 
 <div id="body">
 
