@@ -27,6 +27,26 @@ function showloading()
 
 h1 { margin: 0; width: 900px; background: #000; }
 
+#header {
+	width: 900px;
+	height: 106px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
+	background-size: 900px 106px;	
+	position:relative;
+}
+
+#header .processing-logo {
+	width: 206px;
+	height: 38px;
+	margin: 20px 0 0 30px;
+	background: transparent url(../img/processing-logo.png) center center no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
+	background-image: linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
+}
+
 #body { margin-left: 60px; width: 900px; }
 
 ul, li { margin: 0; padding: 0; list-style: none; }
@@ -41,7 +61,9 @@ li { margin-bottom: 1em; }
 </head>
 
 <body>
-<h1><img src="../img/processing-web.png" alt="Processing" /></h1>
+	<div id="header">
+		<div class="processing-logo" alt="Processing cover"></div>
+	</div>
 
 <div id="body">
 
