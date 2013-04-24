@@ -81,7 +81,7 @@ sort($categories);
 $librariesHTML = '<div class="contributions">'."\n".'<div class="categories">'."\n";
 foreach($categories as $category){ 
 	if($category != 'Legacy'){
-		$librariesHTML .= "\t".'<a href="#'.anchorSafe($category).'">'.$category.'</a>'."\n";
+		$librariesHTML .= "\t".'<a href="#'.anchorSafe($category).'">'.$category.'</a><br>'."\n";
 	}
 }
 $librariesHTML .= '</div>'."\n";
