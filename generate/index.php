@@ -52,7 +52,7 @@ h1 { margin: 0; width: 900px; background: #000; }
 ul, li { margin: 0; padding: 0; list-style: none; }
 li { margin-bottom: 1em; }
 
-#status-container { display: none; background: #efefff; border: 1px solid #c8c8ff; padding: 5px; width: 95%; overflow-x: hidden; }
+#status-container { display: none; background: #efefff; border: 1px solid #c8c8ff; padding: 5px; width: 830px; overflow-x: hidden; }
 #status-container h3 { margin: 0; }
 #status { font-size: 12px; }
 
