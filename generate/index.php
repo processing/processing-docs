@@ -30,7 +30,7 @@ h1 { margin: 0; width: 900px; background: #000; }
 #header {
 	width: 900px;
 	height: 106px;
-	margin-bottom: 30px;
+	margin-bottom: 7px;
 	overflow: hidden;
 	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
 	background-size: 900px 106px;	
@@ -47,7 +47,7 @@ h1 { margin: 0; width: 900px; background: #000; }
 	background-image: linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
 }
 
-#body { margin-left: 60px; width: 900px; }
+#body { margin-left: 34px; width: 900px; }
 
 ul, li { margin: 0; padding: 0; list-style: none; }
 li { margin-bottom: 1em; }
