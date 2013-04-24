@@ -90,7 +90,7 @@ $librariesHTML .= '</div>'."\n";
 foreach($categories as $category){
 	if($category != 'Legacy'){
 		$librariesHTML .= '<div id="'.anchorSafe($category).'">'."\n\t";
-		$librariesHTML .= '<h1>'.$category.'</h1>'."\n";
+		$librariesHTML .= '<h4>'.$category.'</h4>'."\n";
 		$librariesHTML .= "\t<ul>\n";
 		$libs = array_filter($clean['library'], function($obj) use($category){ return $obj['category'] == $category; });
 		
@@ -108,7 +108,7 @@ foreach($categories as $category){
 
 //List out the Legacy Libraries
 $legacy = array_filter($clean['library'], function($obj) { return $obj['category'] == 'Legacy'; });
-$librariesHTML .= "<div class='legacy'>\n\t<h1>Legacy</h1>\n\t<ul>\n";
+$librariesHTML .= "<div class='legacy'>\n\t<h4>Legacy</h4>\n\t<ul>\n";
 foreach($legacy as $lib){
 	$librariesHTML .= "\t\t<li>\n";
 	$librariesHTML .= "\t\t\t".'<h5><a href="'.$lib['url'].'">'.$lib['name'].'</a></h5>'."\n";
@@ -133,7 +133,7 @@ fclose($create_file);
 ///////////////
 
 $toolsHTML 	= "<div class='contributions'>\n<ul>\n";
-$legacy 	= "<div class='legacy'>\n<h1>Legacy</h1>\n<ul>\n";
+$legacy 	= "<div class='legacy'>\n<h4>Legacy</h4>\n<ul>\n";
 
 foreach($clean['tool'] as $tool){
 	if($tool['category'] != 'Legacy'){
