@@ -12,7 +12,6 @@
 		<ex file="ContinuousLines.html">Continuous Lines</ex>
 		<ex file="Pattern.html">Pattern</ex>
 		<ex file="Pulses.html">Pulses</ex>
-		<ex file="ScribblePlotter.html">Scribble Plotter</ex>
 	</cat>
 	<cat label="Animation">
 		<ex file="Sequential.html">Sequential</ex>
@@ -31,7 +30,6 @@
 		<ex file="CircleCollision.html">Circle Collision</ex>
 		<ex file="MovingOnCurves.html">Moving On Curves</ex>
 		<ex file="Brownian.html">Brownian</ex>
-		<ex file="Puff.html">Puff</ex>
 		<ex file="Reflection1.html">Reflection 1</ex>
 		<ex file="Reflection2.html">Reflection 2</ex>
 		<ex file="CubesWithinCube.html">Cubes Within Cube</ex>
