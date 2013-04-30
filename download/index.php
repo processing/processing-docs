@@ -94,9 +94,9 @@ if(isset($_POST['form'])){
 					<a href="/learning/">Tutorials</a><br>
 					<a href="/learning/examples/">Examples</a><br>
 					<a href="/learning/books/">Books</a><br><br>
-					<a href="/about/">Overview</a><br> 
-					<a href="/about/people/">People</a><br>
-					<a href="/about/foundation/">Foundation</a><br><br>
+					<a href="/overview/">Overview</a><br> 
+					<a href="/people/">People</a><br>
+					<a href="/foundation/">Foundation</a><br><br>
 					<a href="/shop/">Shop</a><br><br>
 					<a href="https://twitter.com/processingOrg"class="outward"><span>&raquo;</span>Twitter</a><br> 
 					<a href="http://forum.processing.org"class="outward"><span>&raquo;</span>Forum</a><br> 

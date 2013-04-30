@@ -24,10 +24,10 @@ $pages = array(
     
     'Shop'            => array('/shop/', 1),
         
-    'About'           => array('/about/', 1),
-        'Overview'    => array('/about/', 2),
-        'People'      => array('/about/people/', 2),
-        'Foundation'     => array('/about/foundation/', 2),
+    'About'           => array('/overview/', 1),
+        'Overview'    => array('/overview/', 2),
+        'People'      => array('/people/', 2),
+        'Foundation'     => array('/foundation/', 2),
     
     'FAQ'             => array('http://wiki.processing.org/w/FAQ', 1),
     
