@@ -12,8 +12,21 @@ x Last Modified: 2005.08.30 06:23PM
 */
 
 
-/* ================ GOOGLE FONT ================== */
-@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);
+/* ================ FONTS ================== */
+/*@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);*/
+@font-face {
+	font-family: theSerif;
+	src: url(fonts/TheSerif_B4_Bold_.eot),
+		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: theSerif;
+	src: url(fonts/TheSerif_B4_Plain_.eot),
+		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
+	font-weight: 400;
+}
 
 
 
@@ -26,11 +39,12 @@ body {
 	
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
-	font-family			: 'PT Serif', georgia, times, serif; 
+	font-family			: 'theSerif', georgia, times, serif; 
+	-webkit-font-smoothing: antialiased; 
 	font-size			: 100%; 
-    font-size           : 0.78em;
+    font-size           : 0.79em;
 	font-weight			: normal;
-	line-height			: 1.4em;
+	line-height			: 1.5em;
 	color				: #252525;
 }
 
@@ -122,7 +136,7 @@ a.large-link:before {
 	content: '\2039';
 }
 #header a { 
-	font-family: 'Enriqueta', georgia, times, sans-serif;
+	font-family: 'theSerif', georgia, times, sans-serif;
 	text-decoration: none;
 	border: none;
 	color: white;
@@ -147,7 +161,7 @@ a.large-link:before {
 	outline: none;
 	height: 18px;
 	background: #fff;
-	font-family: 'PT Serif', georgia, times, serif; 
+	font-family: 'theSerif', georgia, times, serif; 
 	font-size: 1em;
 	color: #959595;
 }
@@ -222,9 +236,9 @@ h1, h2, h3, h4, h5, h6
 	{
 	/*margin-bottom 		: 5px;*/
 	color				: #5A5A5A; 
-	font-family			: 'Enriqueta', georgia, times, serif;
+	font-family			: 'theSerif', georgia, times, serif;
 	-webkit-font-smoothing: antialiased; 
-	font-weight			: normal;
+	font-weight			: 400;
 	line-height			: 1.6em;
 	}
 
@@ -238,7 +252,7 @@ h4, h5, h6
 	/*font-weight			: bold;*/ 
 }
 .large-link { 
-	font-family: 'Enriqueta', georgia, times, serif;
+	font-family: 'theSerif', georgia, times, serif;
 	-webkit-font-smoothing: antialiased;
 }
 a.code { color: #2c7bb5; }
@@ -307,7 +321,7 @@ li {margin-bottom: 1em; }
 	width: 225px; 
 }
 
-
+#Cover p { margin-top: 1.5em; }
 #Cover ul {
 	list-style: none;
 	margin-left: 0;
@@ -317,7 +331,8 @@ li {margin-bottom: 1em; }
 
 
 #Cover h3 { margin: 40px 0 15px 0; }
-.exhibition-small { padding: 0; margin: 0; }
+#Cover h5 { font-size: 1em;  }
+.exhibition-small { padding: 0; margin: 0 0 3em 0; }
 .exhibition-small h3 { margin-top: 0px !important; }
 
 dl { margin: 0; }
@@ -331,6 +346,13 @@ dd { margin: 0 0 1em 0; }
 .courses-small dd { margin: 0; }
 
 td img { margin: 0; display: block; }
+
+#Cover .video,
+#Cover .twitter,
+#Cover .commits,
+#Cover .partners { margin-top: 3em; }
+#Cover .video .video-caption { font-style: italic; }
+#Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
 
 
 
@@ -618,13 +640,13 @@ div.ref-col {
 	}
 	#Download #selectForm .select-amount {
 		text-align: left;
-		margin: 22px 0 42px 40px;
+		margin: 22px 0 42px 30px;
 	}
 	#Download #selectForm .select-amount label {
 		margin-right: 50px;
 	}
 	#Download .donate-box input[type="submit"]{
-		font-family: 'Enriqueta', georgia, times, serif;
+		font-family: 'theSerif', georgia, times, serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 1.7em;
 		color: #2c7bb5;
