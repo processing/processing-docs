@@ -52,7 +52,7 @@ if(isset($_POST['form'])){
 		<meta name="Copyright" content="All contents copyright Ben Fry, Casey Reas, MIT Media Laboratory" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="/javascript/stickyNav.js" type="text/javascript"></script>
+		<script src="/javascript/site.js" type="text/javascript"></script>
 		<? if($showDonationForm): ?>
 			<script type="text/javascript" src="_js/select.js"></script>
 		<? endif; ?>
