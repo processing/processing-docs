@@ -95,6 +95,8 @@ foreach ($catTopics as $cat => $array) {
 $html .= "</ul>";
 
 $page->content($html);
+
+// Change 2 May 2013
 //writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 writeFile('examples/index.html', $page->out());
 

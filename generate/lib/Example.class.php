@@ -19,26 +19,12 @@ class Example
         $this->name = $name;
         $this->cat = $cat;
         $this->sub = $sub;
-
-        #$this->file = file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$name.'.pde');
-        
-		# use the .pde from the applet folder
-		#$applet_dir = CONTENTDIR . 'examples/' . $cat . '/' . $name . '/applet/';
 		
 		$pde_dir = EXAMPLESOURCEDIR . $cat . '/' . $name . '/';
-		#$applet_dir = $pde_dir . '/applet/';
 		
 		$this->data_dir = $pde_dir . 'data/';
 	
-		$this->file = file_get_contents($pde_dir . $name.'.pde');
-    	#$this->applet = $applet_dir . $name . '.jar';
-
-#		$this->file = file_get_contents(CONTENTDIR . 'examples/' . $cat . '/' .
-#		$name . '/applet/' . $name.'.pde');
-#    	$this->applet = (CONTENTDIR . 'examples/' . $cat . '/' . 
-#		$name . '/applet/' . $name . '.jar';
-        
-#      	if ($handle = opendir(CONTENTDIR.'examples/'.$cat.'/'.$name)) {
+		$this->file = file_get_contents($pde_dir . $name .'.pde');
 
         if ($handle = opendir($pde_dir)) {
           while (false !== ($newfile = readdir($handle))) {
@@ -135,50 +121,6 @@ class Example
 		$html .= '</script><canvas width="640" height="360"></canvas>';
         
 
-      #if (file_exists($this->applet)) {
-	    #$html .= "\n<div class=\"applet\">\n\t";
-
-	    # for newer browsers, use the deployment script 
-	    # which will let us use loading.gif instead of the coffee cup
-	    #$html .= '<script type="text/javascript" src="http://www.java.com/js/deployJava.js"></script>';
-	    #$html .= '<script type="text/javascript">' . "\n";
-	    #$html .= '/* <![CDATA[ */' . "\n";
-	    #$html .= "var attributes = {\n";
-	    #$html .= "  code: '" . $this->name . ".class',\n";
-	    #$html .= "  archive: 'media/" . $this->name . ".jar,media/core.jar',\n";
-	    #$html .= "  width: '" . $this->width . "',\n";
-	    #$html .= "  height: '" . $this->height . "',\n";
-	    #$html .= "};\n";
-	    #$html .= "var parameters = {\n";
-	    #$html .= "  image: 'media/loading.gif',\n";
-	    #$html .= "  centerimage: 'true'\n";
-	    #$html .= "};\n";
-	    #$html .= "deployJava.runApplet(attributes, parameters, '1.5');\n";
-	    #$html .= "/* ]]> */\n";
-	    #$html .= "</script>\n\n";
-
-	    # fallback for the oldschool folks
-	    #$html .= "<noscript>\n";
-        #    $html .= '<applet code="' . $this->name . '"' .
-	    #  ' archive="media/' . $this->name.'.jar,media/core.jar"' .
-	    #  ' width="' . $this->width.'"' .
-	    #  ' height="' . $this->height.'"' .
-	    #  '></applet>';
-        #    $html .= "\n";
-	    #$html .= "</noscript>\n";
-	    #$html .= "</div>\n";
-		#
-        #    if ($this->width > 200) {                
-        #      $html .= "\n<p class=\"doc\">";
-        #    
-        #    } else {
-        #      $html .= "\n<p class=\"doc-float\">";
-        #    }
-		#
-        #} else {
-        #    $html .= "\n<p class=\"doc\">";
-        #}
-
 		$html .= "\n<p class=\"doc\">";
       	$html .= nl2br($this->doc);
       	#$html .= $this->doc;
@@ -194,7 +136,7 @@ class Example
     
     function output_file(&$menu_array, $rel_path = '/')
     {
-        $page = new Page($this->name . ' \ Learning', $this->sub, "", "../../");
+        $page = new Page($this->name . ' \ Examples', $this->sub, "", "../");
         $page->subtemplate('template.example.html');
         $page->content($this->display());
         $page->set('examples_nav', $this->back_to_list());
@@ -266,28 +208,9 @@ class Example
     
     function copy_media()
     {
-        /**
-        if (file_exists($this->applet)) {
-            make_necessary_directories(EXAMPLESDIR.strtolower($this->sub).'/media/include');
-            if (!copy($this->applet, EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar')) {
-                echo "Could not copy {$this->applet} to . <br/>";
-            }
-	    	#echo EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar';
-        	#} else {
-	  		#echo " | ";
-        }
-        */
-        /**
-        if (file_exists($this->applet)) {
-            #make_necessary_directories(EXAMPLESDIR.strtolower($this->sub).'/media/include');
-            if (!copy($this->applet, EXAMPLESDIR.strtolower($this->sub).'/media/'.$this->name.'.jar')) {
-                echo "Could not copy {$this->applet} to . <br/>";
-            }
-        }
-        */
         if (file_exists($this->data_dir)) {
-            if (!copydirr($this->data_dir, EXAMPLESDIR.strtolower($this->sub).'/')) {
-                echo "Could not copy" . EXAMPLESDIR.strtolower($this->sub).'/' . "<br />";
+            if (!copydirr($this->data_dir, EXAMPLESDIR.'/')) {
+                echo "Could not copy" . EXAMPLESDIR.'/' . "<br />";
             }
         } else {
           //echo "No data here: " . $this->data_dir . "<br />";
