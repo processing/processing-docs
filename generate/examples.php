@@ -99,7 +99,8 @@ foreach ($catTopics as $cat => $array) {
 $html .= "</ul>";
 
 $page->content($html);
-writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+//writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
+writeFile('examples/index.html', $page->out());
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);

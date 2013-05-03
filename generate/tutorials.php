@@ -25,7 +25,7 @@ if (is_dir($path.'learning/imgs')) {
 // Index page
 $page = new Page("Tutorials", "Tutorials", "Tutorials", "../");
 $page->content(file_get_contents($source."index.html"));
-writeFile('learning/index.html', $page->out());
+writeFile('tutorials/index.html', $page->out());
 
 // Start making the individual tutorial pages
 
