@@ -24,7 +24,7 @@ $pages = array(
     
     'Shop'            => array('/shop/', 1),
         
-    'About'           => array('/overview/', 1),
+    'About'           => array('/about/', 1),
         'Overview'    => array('/overview/', 2),
         'People'      => array('/people/', 2),
         'Foundation'     => array('/foundation/', 2),
