@@ -13,10 +13,6 @@ $where = EXAMPLESOURCEDIR;
 $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
 
-//`cd $there && /usr/bin/svn update examples_basics.xml`;
-//`cd $there && /usr/bin/svn update examples_topics.xml`;
-//`cd $where && /usr/bin/svn update`;
-
 // Switch from SVN to GIT, 14 FEB 2013
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
 
@@ -73,7 +69,7 @@ $page = new Page('Examples', 'Examples', "", "../../");
 $page->subtemplate('template.examples-main.html');
 
 //Create Basics html
-$html  = "<b>Basic Examples</b>. <i>Short prototypical programs exploring the basics of programming with Processing.</i><br /><br /><br />";
+$html  = "<b>Basic Examples</b>. <i>Programs about form, data, images, color, typography, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
 foreach ($catBasics as $cat => $array) {
     $html .= "<li><ul><li><b>$cat</b></li><br />";
@@ -86,7 +82,7 @@ foreach ($catBasics as $cat => $array) {
 $html .= "</ul>";
 
 //Create Topics html
-$html .= "<b>Topic Examples</b>. <i>Short programs related to animation, drawing, interaction, motion, simulation, and more...</i><br /><br /><br />";
+$html .= "<b>Topic Examples</b>. <i>Programs about to animation, interaction, motion, simulation, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
 foreach ($catTopics as $cat => $array) {
     $html .= "<li><ul><li><b>$cat</b></li><br />";
