@@ -296,6 +296,7 @@ li {margin-bottom: 1em; }
 	font-size: 1.3rem; 
 	line-height: 26px;
 	margin: 0 0 26px 0;
+	color: #616161;
 }
 .large-header .black { color: #000; }
 .error { color: #f00; margin: 0; }
@@ -598,18 +599,77 @@ div.ref-col {
 
 /* download */
 
-#Download .leftcol { width: 430px; float: left; }
-	.download-ver { color: black; font-size: 1em; font-weight: bold; margin-top: 2em; }
-	.download-ver span { color: #5a5a46; }
-
-#Download .rightcol { 
-	float: left;
-	margin-left: 75px;
-	margin-top: 4px;
-    width: 175px; 
+#Download .download ul { list-style: none; margin: 0; padding: 0; }
+#Download span.version-date { color: #959595; }
+#Download h5 {
+	text-align: center;
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #D8D8D8;
+	padding: 24px;
 }
-	#Download .rightcol h5 { font-size: 1em; margin-bottom: 1em; }
-#Download .releases { width: 100%; float: left; }
+.current-version .download-logo {
+	width: 130px;
+	height: auto;
+	display: block;
+	float: left;
+	margin-left: 24px;
+	margin-bottom: 30px;
+	margin-right: 36px;
+}
+.current-version .downloads {
+	padding-top: 20px;
+	width: 490px;
+	float: left;
+}
+.current-version .downloads a {
+	font-size: 21px;
+	line-height: 28px;
+}
+.current-version .downloads li {
+	color: #959595;
+	display: block;
+	float: left;
+	margin-top: 14px;
+}
+.current-version .downloads li:not(:last-child) {
+	margin-right: 42px;
+}
+.current-version .meta {
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #D8D8D8;
+	float: left;
+	padding: 24px;
+}
+.current-version .meta .links {
+	width: 130px;
+	float: left;
+}
+.current-version .meta .revisions {
+	float: left;
+	width: 462px;
+	margin-left: 36px;
+}
+#Download .releases {
+	margin-top: 24px;
+	float: left;
+}
+#Download .releases li a:not(:last-child):after {
+	content: ' /';
+	pointer-events:none;
+	color: #959595;
+}
+#Download .releases span.version,
+#Download .releases span.version-date {
+	margin-right: 14px;
+}
+
+#Download .disclaimer {
+	margin-top: 72px;
+	float: left;
+	padding-top: 14px;
+	border-top: 1px solid #D8D8D8;
+	color: #959595;
+}
 
 #Download .donate-box input[type="text"],
 #Download .donate-box input[type="email"]{
