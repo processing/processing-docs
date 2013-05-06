@@ -33,12 +33,12 @@ function extract_relative_time(date) {
   };
 }
 function format_relative_time(time_ago) {
-  if ( time_ago.days > 2 )     return 'about ' + time_ago.days + ' days ago';
-  if ( time_ago.hours > 24 )   return 'about a day ago';
-  if ( time_ago.hours > 2 )    return 'about ' + time_ago.hours + ' hours ago';
-  if ( time_ago.minutes > 45 ) return 'about an hour ago';
-  if ( time_ago.minutes > 2 )  return 'about ' + time_ago.minutes + ' minutes ago';
-  if ( time_ago.seconds > 1 )  return 'about ' + time_ago.seconds + ' seconds ago';
+  if ( time_ago.days > 2 )     return ' ' + time_ago.days + ' days ago';
+  if ( time_ago.hours > 24 )   return ' a day ago';
+  if ( time_ago.hours > 2 )    return ' ' + time_ago.hours + ' hours ago';
+  if ( time_ago.minutes > 45 ) return ' an hour ago';
+  if ( time_ago.minutes > 2 )  return ' ' + time_ago.minutes + ' minutes ago';
+  if ( time_ago.seconds > 1 )  return ' ' + time_ago.seconds + ' seconds ago';
   return 'just now';
 }
 
@@ -186,10 +186,9 @@ $(function(){
 			var time 	   = parse_date(tweet.created_at);
 			var timeText   = format_relative_time(extract_relative_time(time));
 
-			var tweet_html = '<li><a class="perma" href="https://www.twitter.com/processingOrg/status/' + tweet.id_str + '">&infin;<\/a>';
-			tweet_html 	  += '<div>'+tweet.text.parseURL().parseUsername().parseHashtag();
-			tweet_html    += ' ';
-			tweet_html    += timeText;
+			var tweet_html = '<li><div>'+tweet.text.parseURL().parseUsername().parseHashtag();
+			tweet_html    += ' about';
+			tweet_html    += '<a href="https://www.twitter.com/processingOrg/status/' + tweet.id_str + '">' + timeText + '<\/a>';
 			tweet_html    += '<\/div><\/li>';
 
 			$('.latest-tweets').append(tweet_html)

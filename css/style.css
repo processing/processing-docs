@@ -375,24 +375,18 @@ td img { margin: 0; display: block; }
 	float: left;
 	margin-bottom: 14px;
 }
-.latest-tweets .perma {
-	display: block;
-	width: 20px;
-	float: left;
-}
-.github-avatar,
-.twitter-avatar {
+.github-avatar {
 	display: block;
 	float: left;
 	width: 20px;
 	height: 20px;
 }
-.github-commits-list li div,
-.latest-tweets li div {
+.github-commits-list li div {
 	width: 370px;
 	float: left;
 	margin-left: 10px;
 }
+.latest-tweets li div { margin: 0; }
 
 
 /**************************************************************** Exhibition ***/
