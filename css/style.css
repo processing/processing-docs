@@ -309,6 +309,7 @@ li {margin-bottom: 1em; }
 	line-height: 26px;
 	margin: 0 0 26px 0;
 	color: #616161;
+	word-spacing: 1px;
 }
 .large-header .black { color: #000; }
 .error { color: #f00; margin: 0; }
