@@ -25,7 +25,7 @@ putenv('HOME=' . CONTENTDIR);
 $source = CONTENTDIR."static/";
 $page = new Page("Books", "Books");
 $page->content(file_get_contents($source."books.html"));
-writeFile('learning/books/index.html', $page->out());
+writeFile('books/index.html', $page->out());
 
 // copy over the errata file for Processing: A Programming Handbook...
 //copy($source.'processing-errata.txt', $path.'learning/books/processing-errata.txt');

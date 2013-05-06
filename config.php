@@ -12,7 +12,7 @@ define('DOMITDIR',      GENERATEDIR.'domit/');
 define('GENLIBDIR',     GENERATEDIR.'lib/');
 define('REFERENCEDIR',  BASEDIR.'reference/');
 define('DISTDIR',       BASEDIR.'distribution/');
-define('EXAMPLESDIR',	BASEDIR.'learning/');
+define('EXAMPLESDIR',	BASEDIR.'examples/');
 
 require_once(DOMITDIR.'xml_domit_include.php');
 require_once(GENLIBDIR.'xhtml.class.php');

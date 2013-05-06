@@ -7,11 +7,11 @@ $pages = array(
     'Exhibition'      => array('/exhibition/', 1), 
     
     'Learning'        => array('/learning/', 1), 
-    	'Tutorials'   => array('/learning/', 2),  
-    	'Examples'      => array('/learning/examples/', 2),  
+    	'Tutorials'   => array('/tutorials/', 2),  
+    	'Examples'      => array('/examples/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
-    'Books'       	  => array('/learning/books/', 2),
+    'Books'       	  => array('/books/', 2),
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
@@ -24,7 +24,7 @@ $pages = array(
     
     'Shop'            => array('/shop/', 1),
         
-    'About'           => array('/overview/', 1),
+    'About'           => array('/about/', 1),
         'Overview'    => array('/overview/', 2),
         'People'      => array('/people/', 2),
         'Foundation'     => array('/foundation/', 2),
@@ -124,30 +124,6 @@ function local_nav($section, $rel_path='')
 }
 
 
-// Removed 22 Sep 2011  --CR
-
-/**
-
-function reference_nav($current = '')
-{
-    global $lang;
-    global $translation;
-    global $LANGUAGES;
-    $tr = $translation->navigation;
-    
-    $html = "<a href=\"index.html\">$tr[abridged]</a>";
-    if ($LANGUAGES[$lang][2]) {
-        $html .= " (<a href=\"index_alpha.html\">$tr[az]</a>)";
-    }
-    $html .= " \ <a href=\"index_ext.html\">$tr[complete]</a>";
-    if ($LANGUAGES[$lang][2]) {
-        $html .= " (<a href=\"index_alpha_ext.html\">$tr[az]</a>)";
-    }
-    $html .= " \ <a href=\"changes.html\">$tr[changes]</a>";
-    return $html;
-}
-
-*/
 
 function language_nav($current)
 {

@@ -450,7 +450,7 @@ We can do some simple color manipulation by doing the following change in the fr
 <pre>gl_FragColor = vec4(vec3(1) - vertColor.xyz, 1);</pre>
 
 <p>
-This will show on the screen the invert of the input color. So for instance, if we add <em>sh.fill(255, 255, 0)</em> right after <em>sh.beginShape(QUAD_STRIP)></em> then the cylinder should be painted blue.
+This will show on the screen the invert of the input color. So for instance, if we add <em>sh.fill(255, 255, 0)</em> right after <em>sh.beginShape(QUAD_STRIP)</em> then the cylinder should be painted blue.
 </p>
 
 <h3>Texture shaders</h3>
@@ -579,7 +579,7 @@ Lighting a 3D scene involves placing one or more light sources in the space, and
 <p><img src="imgs/lightmodel.png"></p>
 
 <p>
-Using the same geometry from the previous examples, we can now write a simple shader to render the scene with a single point light. In order to do so, we need some extra uniform variables in the vertex shader: <em>lightPosition</em>, which holds the position of the light source, and <em>normalMatrix</em>, which is a 4x4 matrix to convert the normal vector to the appropriate coordinates to perform the <a href="http://www.lighthouse3d.com/tutorials/glsl-tutorial/the-normal-matrix/">lighting calculations</a>.
+Using the same geometry from the previous examples, we can now write a simple shader to render the scene with a single point light. In order to do so, we need some extra uniform variables in the vertex shader: <em>lightPosition</em>, which holds the position of the light source, and <em>normalMatrix</em>, which is a 3x3 matrix to convert the normal vector to the appropriate coordinates to perform the <a href="http://www.lighthouse3d.com/tutorials/glsl-tutorial/the-normal-matrix/">lighting calculations</a>.
 </p>
 
 <table>
@@ -898,7 +898,7 @@ void main() {
 </table>
 
 <p>
-Note that a texlight cannot be used to render a scene only with textures or only with lights, in those cases either a texture of light shader will be needed.
+Note that a texlight cannot be used to render a scene only with textures or only with lights, in those cases either a texture or light shader will be needed.
 </p>
 
 <h3>Image post-processing effects</h3>
