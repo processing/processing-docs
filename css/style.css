@@ -15,18 +15,27 @@ x Last Modified: 2005.08.30 06:23PM
 /* ================ FONTS ================== */
 /*@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);*/
 @font-face {
-	font-family: theSerif;
+	font-family: 'theSerif';
+	src: url(fonts/TheSerif_B4_Plain_.eot),
+		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'theSerif';
 	src: url(fonts/TheSerif_B4_Bold_.eot),
 		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
 	font-weight: 800;
 }
 
 @font-face {
-	font-family: theSerif;
-	src: url(fonts/TheSerif_B4_Plain_.eot),
-		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
+	font-family: 'theSerif';
+	src: url(fonts/TheSerif_B4_Italic_.eot),
+		 url(fonts/TheSerif_B4_Italic_.woff) format("woff");
 	font-weight: 400;
+	font-style: italic, oblique;
 }
+
 
 
 
