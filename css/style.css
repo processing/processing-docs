@@ -950,6 +950,19 @@ ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 	width: 560px;
 }
 
+#Foundation .content p,
+#Foundation .content ul,
+#Foundation .content table {
+	width: 560px;
+}
+
+
+#People .content p,
+#People .content ul,
+#People .content table {
+	width: 560px;
+}
+
 
 
 /************************************************************** examples ***/
