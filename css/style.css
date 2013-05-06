@@ -14,11 +14,22 @@ x Last Modified: 2005.08.30 06:23PM
 
 /* ================ FONTS ================== */
 /*@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);*/
+
+
+@font-face {
+	font-family: 'theSerif';
+	src: url(fonts/TheSerif_B4_Italic.eot),
+		 url(fonts/TheSerif_B4_Italic.woff) format("woff");
+	font-weight: 400;
+	font-style: italic, oblique;
+}
+
 @font-face {
 	font-family: 'theSerif';
 	src: url(fonts/TheSerif_B4_Plain_.eot),
 		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
 	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
@@ -26,16 +37,8 @@ x Last Modified: 2005.08.30 06:23PM
 	src: url(fonts/TheSerif_B4_Bold_.eot),
 		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
 	font-weight: 800;
+	font-style: normal;
 }
-
-@font-face {
-	font-family: 'theSerif';
-	src: url(fonts/TheSerif_B4_Italic_.eot),
-		 url(fonts/TheSerif_B4_Italic_.woff) format("woff");
-	font-weight: 400;
-	font-style: italic, oblique;
-}
-
 
 
 
@@ -335,8 +338,8 @@ li {margin-bottom: 1em; }
 #Cover ul {
 	list-style: none;
 	margin-left: 0;
-	padding-left: 1em;
-	text-indent: -1em;
+	padding-left: 0;
+	/*text-indent: -1em;*/
 }
 
 
@@ -364,6 +367,32 @@ td img { margin: 0; display: block; }
 #Cover .video .video-caption { font-style: italic; }
 #Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
 
+#Cover .commits,
+#Cover .twitter { float: left; margin-top: 14px; }
+.github-commits-list li,
+.latest-tweets li {
+	display: block;
+	float: left;
+	margin-bottom: 14px;
+}
+.latest-tweets .perma {
+	display: block;
+	width: 20px;
+	float: left;
+}
+.github-avatar,
+.twitter-avatar {
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+.github-commits-list li div,
+.latest-tweets li div {
+	width: 370px;
+	float: left;
+	margin-left: 10px;
+}
 
 
 /**************************************************************** Exhibition ***/
