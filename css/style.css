@@ -344,7 +344,7 @@ li {margin-bottom: 1em; }
 
 
 #Cover h3 { margin: 40px 0 15px 0; }
-#Cover h5 { font-size: 1em;  }
+#Cover h5 { font-size: 1em; color: #252525;  }
 .exhibition-small { padding: 0; margin: 0 0 3em 0; }
 .exhibition-small h3 { margin-top: 0px !important; }
 
@@ -363,9 +363,34 @@ td img { margin: 0; display: block; }
 #Cover .video,
 #Cover .twitter,
 #Cover .commits,
-#Cover .partners { margin-top: 3em; }
+#Cover .partners,
+#Cover .mailing-list { margin-top: 3em; }
 #Cover .video .video-caption { font-style: italic; }
 #Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
+
+#Cover .mailing-list input[type="email"],
+#Cover .mailing-list input[type="submit"]{
+	border: 1px solid #959595;
+	background-color: white;
+	outline: none;
+	height: 20px;
+	padding-left: 4px;
+	font-family: 'theSerif', georgia, times, serif; 
+	font-size: 1em;
+	color: #252525;
+}
+#Cover .mailing-list input[type="email"] {
+	width: 160px;
+}
+#Cover .mailing-list input[type="submit"]{
+	border: none;
+	cursor: pointer;
+	height: 24px;
+	color: #2c7bb5;
+}
+#Cover .mailing-list input[type="email"]:focus {
+  border: 1px solid #2c7bb5;
+}
 
 #Cover .commits,
 #Cover .twitter { float: left; margin-top: 14px; }
