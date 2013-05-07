@@ -3,8 +3,6 @@
 //cache the json file and only call again if interval exceeded
 error_reporting(0);
 
-phpinfo();
-
 function get_json($url){
   $base = "https://api.github.com/";
   $curl = curl_init();
