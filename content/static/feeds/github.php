@@ -4,8 +4,8 @@
 error_reporting(0);
 
 $version = curl_version();
-    $ssl_supported= ($version['features'] & CURL_VERSION_SSL);
-    echo $ssl_supported == CURL_VERSION_SSL;
+    //$ssl_supported= ($version['features'] & CURL_VERSION_SSL);
+    //echo $ssl_supported == CURL_VERSION_SSL;
 
 function get_json($url){
   $base = "https://api.github.com/";
