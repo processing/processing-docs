@@ -3,29 +3,27 @@
 //cache the json file and only call again if interval exceeded
 error_reporting(0);
 
-$feed = "https://api.github.com/repos/processing/processing/commits?sha=master";
-function getSslPage($url) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-    curl_setopt($ch, CURLOPT_HEADER, false);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_REFERER, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    return $result;
-}
-echo getSslPage($feed);
- 
+function get_json($url){
+  $base = "https://api.github.com/";
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+  curl_setopt($curl, CURLOPT_URL, $base . $url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
+  $content = curl_exec($curl);
+  curl_close($curl);
+  return $content;
+}
+
+$feed = "repos/processing/processing/commits";
 $cache_file = dirname(__FILE__).'/cache/'.'github-cache';
 $modified = filemtime( $cache_file );
 $now = time();
 $interval = 600; // ten minutes
  
 if ( !$modified || ( ( $now - $modified ) > $interval ) ) {
-  $json = file_get_contents( $feed );
+  $json = get_json($feed);
   
   if ( $json ) {
     $cache_static = fopen( $cache_file, 'w' );

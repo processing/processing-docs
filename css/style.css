@@ -400,7 +400,7 @@ font-family: 'theSerifItalic'; }
 
 #Cover .commits,
 #Cover .twitter { float: left; margin-top: 14px; }
-.github-commits-list li,
+.latest-commits li,
 .latest-tweets li {
 	display: block;
 	float: left;
@@ -412,7 +412,7 @@ font-family: 'theSerifItalic'; }
 	width: 20px;
 	height: 20px;
 }
-.github-commits-list li div {
+.latest-commits li div {
 	width: 370px;
 	float: left;
 	margin-left: 10px;
