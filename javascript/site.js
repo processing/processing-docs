@@ -2,10 +2,10 @@ $(function(){
 
 	// sticky scroll
 	$(window).scroll(function(){
-		if($(this).scrollTop() > 114){
-			$('.navBar').addClass('stuck')
-		} else {
+		if($(this).scrollTop() < 114){
 			$('.navBar').removeClass('stuck')
+		} else {
+			$('.navBar').addClass('stuck')
 		}
 	})
 
