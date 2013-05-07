@@ -23,7 +23,7 @@ $now = time();
 $interval = 600; // ten minutes
  
 if ( !$modified || ( ( $now - $modified ) > $interval ) ) {
-  //$json = get_json($feed);
+  $json = get_json($feed);
   
   if ( $json ) {
     $cache_static = fopen( $cache_file, 'w' );
