@@ -646,6 +646,7 @@ div.ref-col {
 	margin: 1.5em 0 0 0; 
 	font-size: 1em; 
 	font-weight: normal; 
+	color: #252525;
 }
 .ref-col h3+h5 { margin-top: 0; }
 .category { margin-bottom: 30px; }
