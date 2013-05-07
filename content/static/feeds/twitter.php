@@ -1,6 +1,7 @@
 <?php
  
-error_reporting( 0 ); // don't let any php errors ruin the feed
+//cache the json file and only call again if interval exceeded
+error_reporting( 0 );
  
 $username = 'processingOrg';
 $number_tweets = 4;
@@ -10,7 +11,6 @@ $modified = filemtime( $cache_file );
 $now = time();
 $interval = 600; // ten minutes
  
-// check the cache file
 if ( !$modified || ( ( $now - $modified ) > $interval ) ) {
   $json = file_get_contents( $feed );
   

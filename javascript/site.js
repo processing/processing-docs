@@ -55,6 +55,7 @@ function format_relative_time(time_ago) {
         function getCommits(user, repo, branch, callback) {
             $.ajax({
                 url: "https://api.github.com/repos/" + user + "/" + repo + "/commits?sha=" + branch,
+                //url: "/content/static/feeds/github.php",
                 dataType: 'jsonp',
                 success: callback
             });
@@ -181,7 +182,7 @@ $(function(){
 		}
 	})
 
-	$.getJSON('/content/static/twitter/', function(data) {
+	$.getJSON('/content/static/feeds/twitter.php', function(data) {
 		$.each(data, function(i, tweet) {
 			var time 	   = parse_date(tweet.created_at);
 			var timeText   = format_relative_time(extract_relative_time(time));
