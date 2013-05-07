@@ -17,11 +17,11 @@ x Last Modified: 2005.08.30 06:23PM
 
 
 @font-face {
-	font-family: 'theSerif';
+	font-family: 'theSerifItalic';
 	src: url(fonts/TheSerif_B4_Italic.eot),
 		 url(fonts/TheSerif_B4_Italic.woff) format("woff");
 	font-weight: 400;
-	font-style: italic, oblique;
+	font-style: normal;
 }
 
 @font-face {
@@ -67,7 +67,7 @@ a {
 	font-weight: normal;
 	color: #2c7bb5;
 }
-/*p a, li a, span a { border-bottom: 1px solid #A6BCCF; }*/
+
 a.large-link {
 	position: relative;
 	margin-left: 18px;
@@ -249,7 +249,6 @@ h1, h2, h3, h4, h5, h6
 	/*margin-bottom 		: 5px;*/
 	color				: #5A5A5A; 
 	font-family			: 'theSerif', georgia, times, serif;
-	-webkit-font-smoothing: antialiased; 
 	font-weight			: 400;
 	line-height			: 1.6em;
 	}
@@ -265,9 +264,13 @@ h4, h5, h6
 }
 .large-link { 
 	font-family: 'theSerif', georgia, times, serif;
-	-webkit-font-smoothing: antialiased;
 }
 a.code { color: #2c7bb5; }
+/* dirty italic fix */
+i, em, .italic { 
+	font-family: 'theSerifItalic' !important; 
+	font-weight: normal !important; 
+}
 
 /* Font Sizes */
 
@@ -350,7 +353,8 @@ li {margin-bottom: 1em; }
 .exhibition-small h3 { margin-top: 0px !important; }
 
 dl { margin: 0; }
-dt { font-style: italic; }
+dt { /*font-style: italic;*/
+font-family			: 'theSerifItalic'; }
 dd { margin: 0 0 1em 0; }
 
 .happenings { margin-bottom: 30px; }
@@ -366,7 +370,8 @@ td img { margin: 0; display: block; }
 #Cover .commits,
 #Cover .partners,
 #Cover .mailing-list { margin-top: 3em; }
-#Cover .video .video-caption { font-style: italic; }
+#Cover .video .video-caption { /*font-style: italic;*/
+font-family: 'theSerifItalic'; }
 #Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
 
 #Cover .mailing-list input[type="email"],
@@ -641,7 +646,8 @@ div.ref-col {
 	margin: 1.5em 0 0 0; 
 	font-size: 1em; 
 	font-weight: normal; 
-	font-style: italic; 
+	font-style: normal;
+	font-family: 'theSerifItalic'; 
 }
 .ref-col h3+h5 { margin-top: 0; }
 .category { margin-bottom: 30px; }
@@ -813,7 +819,8 @@ div.ref-col {
 		}
 		#donateForm .payType .or {
 			display: inline-block;
-			font-style: italic;
+			/*font-style: italic;*/
+			font-family			: 'theSerifItalic';
 			margin: 0 30px 0 20px;
 		}
 	#donateForm .ccInfo {
