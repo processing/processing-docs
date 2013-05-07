@@ -269,7 +269,7 @@ a.code { color: #2c7bb5; }
 /* dirty italic fix */
 i, em, .italic { 
 	font-family: 'theSerifItalic' !important; 
-	font-weight: normal !important; 
+	font-style: normal !important; 
 }
 
 /* Font Sizes */
