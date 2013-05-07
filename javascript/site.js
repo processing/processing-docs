@@ -1,3 +1,56 @@
+$(function(){
+
+	// sticky scroll
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 114){
+			$('.navBar').addClass('stuck')
+		} else {
+			$('.navBar').removeClass('stuck')
+		}
+	})
+
+	// if on the homepage, gather recent tweets/commits
+	if($('body').attr('id')=='Cover'){
+
+		// recent tweets
+		$.getJSON('/content/static/feeds/twitter.php', function(data) {
+			$.each(data, function(i, tweet) {
+				var time 	   = parse_date(tweet.created_at);
+				var timeText   = format_relative_time(extract_relative_time(time));
+
+				var tweet_html = '<li><div>'+tweet.text.parseURL().parseUsername().parseHashtag();
+				tweet_html    += ' about';
+				tweet_html    += '<a href="https://www.twitter.com/processingOrg/status/' + tweet.id_str + '">' + timeText + '<\/a>';
+				tweet_html    += '<\/div><\/li>';
+
+				$('.latest-tweets').append(tweet_html)
+			})
+		})
+
+		// recent commits
+		$.getJSON('/content/static/feeds/github.php', function(data) {
+			$.each(data, function(i, commit) {
+				if(i<=3){
+					var time 	   = parse_date(commit.commit.committer.date);
+					var timeText   = format_relative_time(extract_relative_time(time));
+
+					var commit_html = '<li><img class="github-avatar" src="http://www.gravatar.com/avatar/' + commit.author.gravatar_id + '?s=20"/>';
+					commit_html    += '<div><a href="' + commit.author.html_url + '">' + commit.author.login + '<\/a> commited';
+					commit_html    += ' <a href="https://github.com/processing/processing/commit/' + commit.sha + '">"' + commit.commit.message + '"<\/a>';
+					commit_html    += ' about ' + timeText + '<\/div>';
+
+					$('.latest-commits').append(commit_html)
+				}
+			})
+		})
+
+	}
+  
+});
+
+
+// Functions
+
 /* Twitter Parsing Functions */
 String.prototype.parseUsername = function() {
 	return this.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
@@ -42,46 +95,3 @@ function format_relative_time(time_ago) {
 	if ( time_ago.seconds > 1 )  return ' ' + time_ago.seconds + ' seconds ago';
 	return 'just now';
 }
-
-$(function(){
-	$(window).scroll(function(){
-		if($(this).scrollTop() > 114){
-			$('.navBar').addClass('stuck')
-		} else {
-			$('.navBar').removeClass('stuck')
-		}
-	})
-
-	// recent tweets
-	$.getJSON('/content/static/feeds/twitter.php', function(data) {
-		$.each(data, function(i, tweet) {
-			var time 	   = parse_date(tweet.created_at);
-			var timeText   = format_relative_time(extract_relative_time(time));
-
-			var tweet_html = '<li><div>'+tweet.text.parseURL().parseUsername().parseHashtag();
-			tweet_html    += ' about';
-			tweet_html    += '<a href="https://www.twitter.com/processingOrg/status/' + tweet.id_str + '">' + timeText + '<\/a>';
-			tweet_html    += '<\/div><\/li>';
-
-			$('.latest-tweets').append(tweet_html)
-		})
-	})
-
-	// recent commits
-	$.getJSON('/content/static/feeds/github.php', function(data) {
-		$.each(data, function(i, commit) {
-			if(i<=3){
-				var time 	   = parse_date(commit.commit.committer.date);
-				var timeText   = format_relative_time(extract_relative_time(time));
-
-				var commit_html = '<li><img class="github-avatar" src="http://www.gravatar.com/avatar/' + commit.author.gravatar_id + '?s=20"/>';
-				commit_html    += '<div><a href="' + commit.author.html_url + '">' + commit.author.login + '<\/a> commited';
-				commit_html    += ' <a href="https://github.com/processing/processing/commit/' + commit.sha + '">"' + commit.commit.message + '"<\/a>';
-				commit_html    += ' about ' + timeText + '<\/div>';
-
-				$('.latest-commits').append(commit_html)
-			}
-		})
-	})
-  
-});
