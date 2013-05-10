@@ -1,3 +1,8 @@
 #redirect /index.html http://test.processing.org/index.php
 #redirect /learning/courses/index.html http://test.processing.org/courses.html
 #redirect /processing_beta.css http://test.processing.org/css/processing_beta.css
+
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80 
+RewriteCond %{REQUEST_URI} secure 
+RewriteRule ^(.*)$ https://trunk.processing.org/download/$1 [R,L]
