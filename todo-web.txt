@@ -2,10 +2,14 @@
 
 2.0 WEBSITE
 
+  NEED TO DO ON LAUNCH
+
+  - Update nav bar to point to https:// download page (main template, reference template, download static)
+  - Update credential file to redirect users to main site, rather than trunk
+
+
   NEED 100% FOR 2.0
-  
-  - Send test/live credentials
-  - Add caching solution for github feed
+    
 
   NEED POST 2.0
 
@@ -120,3 +124,5 @@ DONE
   X Add Mailing List to Hompage
   X Dynamic Feeds (twitter / github)
   X Italics
+  X Send test/live credentials
+  X Add caching solution for github feed
