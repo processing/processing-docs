@@ -5,9 +5,6 @@
   NEED TO DO ON LAUNCH
 
   - Update credential file to redirect users to main site, rather than trunk
-
-
-  NEED 100% FOR 2.0
     
 
   NEED POST 2.0
@@ -17,14 +14,18 @@
   - New CSS for tutorials
   - Code copyright forms and page [Goes on the developer site @ GitHub]  --CR
     
-      
-  NICE   
+    
+  NICE
 
   - Adjust favicon to match future black icon
-  - Add contact to Homepage and About!
+
+
+  ROUND 2.0   
+
+  - Adjust grid on Reference/Examples/Exhibition/Tutorial pages
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
-  - Adjust grid on Exhibition & Tutorial pages
+  
 
   
   
@@ -125,4 +126,4 @@ DONE
   X Italics
   X Send test/live credentials
   X Add caching solution for github feed
-  X Download page auto detects OS
+  X Add contact to Homepage and About!

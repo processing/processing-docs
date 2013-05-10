@@ -372,7 +372,8 @@ td img { margin: 0; display: block; }
 #Cover .twitter,
 #Cover .commits,
 #Cover .partners,
-#Cover .mailing-list { margin-top: 3em; }
+#Cover .mailing-list,
+#Cover .contact { margin-top: 3em; }
 #Cover .video .video-caption { /*font-style: italic;*/
 font-family: 'theSerifItalic'; }
 #Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
