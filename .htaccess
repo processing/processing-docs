@@ -4,9 +4,14 @@
 
 RewriteEngine On
 
+# force https for all URLs in /checkout
 RewriteCond %{HTTPS} =off
-RewriteCond %{REQUEST_URI} /(download)
-RewriteRule ^(.*)$ https://trunk.processing.org/$1 [R,L]
+RewriteRule ^download https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
+# don't do anything for images/css/js
+RewriteRule \.(gif|jpe?g|png|css|js)$ - [NC,L]
+
+# force http for all other URLs that are not in /download
 RewriteCond %{HTTPS} =on
-RewriteRule ^(.*)$ http://trunk.processing.org/$1 [R,L]
+RewriteCond %{REQUEST_URI} !^/(download|index.php/download)
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
