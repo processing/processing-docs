@@ -3,5 +3,10 @@
 #redirect /processing_beta.css http://test.processing.org/css/processing_beta.css
 
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(download/.*)$ https://trunk.processing.org/$1 [R=301,L]
+
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_URI} /(download)
+RewriteRule ^(.*)$ https://trunk.processing.org/$1 [R,L]
+
+RewriteCond %{HTTPS} =on
+RewriteRule ^(.*)$ http://trunk.processing.org/$1 [R,L]
