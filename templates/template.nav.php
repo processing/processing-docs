@@ -53,7 +53,7 @@ function navigation($section = '')
     
 	    $html .= "\t\t\t\t\t" . l('Cover', $section == 'Cover') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . "<a href=\"https://trunk.processing.org/download/\">Download</a>" . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Exhibition', $section == 'Exhibition') . "<br><br>\n";
 

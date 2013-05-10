@@ -85,7 +85,7 @@ if(isset($_POST['form'])){
 			<div id="navigation">
 				<div class="navBar" id="mainnav_noSub">
 					<a href="/">Cover</a><br><br>
-					<a href="/download/" class="active">Download</a><br><br>
+					<a href="https://trunk.processing.org/download/" class="active">Download</a><br><br>
 					<a href="/exhibition/">Exhibition</a><br><br>
 					<a href="/reference/">Reference</a><br>
 					<a href="/reference/libraries/">Libraries</a><br>
