@@ -4,4 +4,4 @@
 
 RewriteEngine On
 RewriteCond %{HTTPS} off
-RewriteRule ^(download/.*)$ https://trunk.processing.org/download/$1 [R=301,L]
+RewriteRule ^(download/.*)$ https://trunk.processing.org/$1 [R=301,L]
