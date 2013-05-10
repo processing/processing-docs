@@ -9,7 +9,6 @@
 
   NEED 100% FOR 2.0
     
-  - New favicon
 
   NEED POST 2.0
 
@@ -21,7 +20,7 @@
       
   NICE   
 
-  - Download page auto detects OS
+  - Adjust favicon to match future black icon
   - Add contact to Homepage and About!
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
@@ -126,3 +125,4 @@ DONE
   X Italics
   X Send test/live credentials
   X Add caching solution for github feed
+  X Download page auto detects OS
