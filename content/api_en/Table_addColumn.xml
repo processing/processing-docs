@@ -19,7 +19,7 @@ Table table;
 
 void setup() {
 
-  table = createTable();
+  table = new Table();
   
   table.addColumn("id");
   table.addColumn("species");
