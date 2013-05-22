@@ -1,13 +1,5 @@
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 DESIGN
-
-x New header graphic
-x New splash page / loader graphic
-$ New 2.0 icons
-
-// // // // // // // // // // // // // // // // // // // // //
-
 2.0 REFERENCE
 
 Note: Don't edit PApplet below ~10400 [10 DEC 2012]
@@ -32,6 +24,15 @@ NICE
 o PDF fonts  --CR
 o   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
 o   figure out why font naming not working correctly -- CR
+
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 DESIGN
+
+x New header graphic
+x New splash page / loader graphic
+x New 2.0 icons
 
 
 // // // // // // // // // // // // // // // // // // // // //

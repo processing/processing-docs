@@ -25,6 +25,15 @@
   - Adjust grid on Reference/Examples/Exhibition/Tutorial pages
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
+
+
+  EYE ON THE FUTURE
+
+  - Add Examples back to web that weren't compatible with Processing.js
+    . Reflection1 (PVector.random2D())
+    . Cubes within cube (PVector.random3D())
+    . Koch (PVector.rotate())
+    . Flocking (PVector.random2D())
   
 
   

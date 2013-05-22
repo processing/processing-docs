@@ -101,7 +101,7 @@ if(isset($_POST['form'])){
 					<a href="https://twitter.com/processingOrg"class="outward"><span>&raquo;</span>Twitter</a><br> 
 					<a href="http://forum.processing.org"class="outward"><span>&raquo;</span>Forum</a><br> 
 					<a href="http://wiki.processing.org"class="outward"><span>&raquo;</span>Wiki</a><br> 
-					<a href="https://github.com/processing/processing-web/issues?state=open"class="outward"><span>&raquo;</span>Issues</a><br> 
+					<a href="https://github.com/processing/processing/issues?state=open"class="outward"><span>&raquo;</span>Issues</a><br> 
 					<a href="https://github.com/processing"class="outward"><span>&raquo;</span>Source</a><br> 
 				</div>
 			</div>
