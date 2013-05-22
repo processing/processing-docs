@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>getChildCount()</name>
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShape states;
+
+void setup() {
+  size(100, 100);
+  states = loadShape("tristate.svg");
+  int count = states.getChildCount();
+  println(count);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the number of children within the PShape.
+]]></description>
+
+</root>
