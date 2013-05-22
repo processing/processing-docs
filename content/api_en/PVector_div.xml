@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>div()</name>
+
+<category>PVector</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PVector v;
+
+void setup() {
+  noLoop();
+  v = new PVector(30, 60, 0);
+}
+
+void draw() {
+  ellipse(v.x, v.y, 12, 12);
+  v.div(6);
+  ellipse(v.x, v.y, 24, 24);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Divides a vector by a scalar.
+]]></description>
+
+</root>
