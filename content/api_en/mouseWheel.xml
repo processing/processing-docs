@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>mousePressed()</name>
+<name>mouseWheel()</name>
 
 <category>Input</category>
 
@@ -11,28 +11,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Click within the image to change 
-// the value of the rectangle
-
-int value = 0;
-
-void draw() {
-  fill(value);
-  rect(25, 25, 50, 50);
+void setup() {
+  size(100, 100);
 }
 
-void mousePressed() {
-  if (value == 0) {
-    value = 255;
-  } else {
-    value = 0;
-  }
+void draw() {} 
+
+void mouseWheel(MouseEvent event) {
+  float e = event.getAmount();
+  println(e);
 }
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-The <b>mousePressed()</b> function is called once after every time a mouse button is pressed. The <b>mouseButton</b> variable (see the related reference entry) can be used to determine which button has been pressed.
+The event.getAmount() method returns negative values if the mouse wheel if rotated up or away from the user and positive in the other direction. On OS X with "natural" scrolling enabled, the values are opposite.
 ]]></description>
 
 </root>
