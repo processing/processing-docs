@@ -13,14 +13,14 @@
 
 		<!-- Downloads -->
 		<div class="downloads">
-			<span class="version">2.0 Beta 8</span>
-			<span class="version-date">(24 February 2013)</span>
+			<span class="version">2.0 Beta 9</span>
+			<span class="version-date">(18 May 2013)</span>
 			<ul class="current-downloads">
-				<li><a href="http://processing.googlecode.com/files/processing-2.0b8-windows64.zip">Windows</a> 64-bit<br>
-				<a href="http://processing.googlecode.com/files/processing-2.0b8-windows32.zip">Windows</a> 32-bit</li>
-				<li><a href="http://processing.googlecode.com/files/processing-2.0b8-linux64.tgz">Linux</a> 64-bit<br>
-				<a href="http://processing.googlecode.com/files/processing-2.0b8-linux32.tgz">Linux</a> 32-bit</li>
-				<li><a href="http://processing.googlecode.com/files/processing-2.0b8-macosx.zip">Mac OS X</a></li>
+				<li><a href="http://processing.googlecode.com/files/processing-2.0b9-windows64.zip">Windows</a> 64-bit<br>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-windows32.zip">Windows</a> 32-bit</li>
+				<li><a href="http://processing.googlecode.com/files/processing-2.0b9-linux64.tgz">Linux</a> 64-bit<br>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-linux32.tgz">Linux</a> 32-bit</li>
+				<li><a href="http://processing.googlecode.com/files/processing-2.0b9-macosx.zip">Mac OS X</a></li>
 			</ul>
 		</div>
 
@@ -28,7 +28,7 @@
 		<div class="meta">
 			<div class="links">
 				&raquo; <a href="https://github.com/processing">Github</a><br>
-				&raquo; <a href="https://github.com/processing/processing-web/issues?state=open">Report Bugs</a><br>
+				&raquo; <a href="https://github.com/processing/processing/issues?state=open">Report Bugs</a><br>
 				&raquo; <a href="http://wiki.processing.org/">Wiki</a>
 			</div>
 			<div class="revisions">
@@ -41,6 +41,15 @@
 	<div class="releases">
 		<h3>Pre-Releases</h3>
 		<ul>
+			<li>
+				<span class="version">2.0b9</span>
+				<span class="version-date">(18 May 2013)</span>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-windows64.zip">Win 64</a>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-windows32.zip">Win 32</a>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-linux64.tgz">Linux 64</a>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-linux32.tgz">Linux 32</a>
+				<a href="http://processing.googlecode.com/files/processing-2.0b9-macosx.zip">Mac OS X</a>
+			</li>
 			<li>
 				<span class="version">2.0b8</span>
 				<span class="version-date">(24 February 2013)</span>
