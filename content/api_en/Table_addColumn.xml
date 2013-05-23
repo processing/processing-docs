@@ -21,26 +21,26 @@ void setup() {
 
   table = new Table();
   
-  table.addColumn("id");
-  table.addColumn("species");
   table.addColumn("name");
+  table.addColumn("age", Table.INT);
+  table.addColumn("height", Table.FLOAT);
   
   TableRow newRow = table.addRow();
-  newRow.setInt("id", table.getRowCount() - 1);
-  newRow.setString("species", "Panthera leo");
-  newRow.setString("name", "Lion");
+  newRow.setString("name", "Jermaine");
+  newRow.setInt("age", 15);
+  newRow.setFloat("height", 4.567);
   
   saveTable(table, "data/new.csv");
 }
 
 // Sketch saves the following to a file called "new.csv":
-// id,species,name
-// 0,Panthera leo,Lion
+// name,age,height
+// Jermaine,15,4.567
 ]]></code>
 </example>
 
 <description><![CDATA[
-Use <b>addColumn()</b> to add a new column to a <b>Table</b> object.  Typically, you will want to specify a title, so the column may be easily referenced later by name.  (If no title is specified, the new column's title will be null.)  A column type may also be specified, in which case all values stored in this column must be of the same type (e.g., INT or FLOAT).  If no type is specified, the default type of STRING is used.
+Use <b>addColumn()</b> to add a new column to a <b>Table</b> object.  Typically, you will want to specify a title, so the column may be easily referenced later by name.  (If no title is specified, the new column's title will be null.)  A column type may also be specified, in which case all values stored in this column must be of the same type (e.g., Table.INT or Table.FLOAT).  If no type is specified, the default type of STRING is used.
 ]]></description>
 
 </root>

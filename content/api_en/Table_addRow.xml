@@ -12,12 +12,31 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  table.addColumn("name");
+  table.addColumn("type");
+  
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+  println(table.getRowCount());  // Prints 1
+  
+  table.addRow();  // Creates a new blank row
+  println(table.getRowCount());  // Prints 2
+  
+  table.addRow(newRow);  // Duplicates newRow
+  println(table.getRowCount());  // Prints 3
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Use <b>addRow()</b> to add a new row of data to a <b>Table</b> object.  By default, an empty row is created.  Typically, you would store a reference to the new row in a <b>TableRow</b> object (see <b>newRow</b> in the example above), and then set individual values using <b>setInt()</b>, <b>setFloat()</b>, or <b>setString()</b>.  If a <b>TableRow</b> object is included as a parameter, then that row is duplicated and added to the table.
 ]]></description>
 
 </root>
