@@ -12,12 +12,37 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+
+  println(table.getRowCount());  // Prints 3
+  
+  table.clearRows();
+  println(table.getRowCount());  // Prints 0
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Removes all rows from a <b>Table</b>.  While all rows are removed, columns and column titles are maintained.
 ]]></description>
 
 </root>

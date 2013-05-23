@@ -12,12 +12,37 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+  
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+  
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+  
+  TableRow row = table.getRow(2);
+  println(row.getString("name"));  // Prints "Mosquito"
+  row.setString("name", "Ladybug");
+  println(row.getString("name"));  // Prints "Ladybug"
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Returns a reference to the specified <b>TableRow</b>.  The reference can then be used to get and set values of the selected row, as illustrated in the example above.
 ]]></description>
 
 </root>
