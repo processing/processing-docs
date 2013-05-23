@@ -27,8 +27,30 @@ void draw() {
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+PVector v1;
+
+void setup() {
+  noLoop();
+  v1 = new PVector(30, 60, 0);
+}
+
+void draw() {
+  ellipse(v1.x, v1.y, 12, 12);
+  PVector v2 = PVector.div(v1, 6);
+  ellipse(v2.x, v2.y, 24, 24);
+}
+]]></code>
+</example>
+
 <description><![CDATA[
-Divides a vector by a scalar.
+Divides a vector by a scalar or another PVector.  The version of the method that uses a float acts directly on the vector upon which it is called (as in the first example above), and therefore has no return value.  The versions that receive both a PVector and a float as arugments are static methods, and each returns a new PVector that is the result of the division operation.  Both examples above produce the same visual output.
 ]]></description>
+
+
+
+
 
 </root>
