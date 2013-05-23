@@ -40,7 +40,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-TBD
+Use <b>addColumn()</b> to add a new column to a <b>Table</b> object.  Typically, you will want to specify a title, so the column may be easily referenced later by name.  (If no title is specified, the new column's title will be null.)  A column type may also be specified, in which case all values stored in this column must be of the same type (e.g., INT or FLOAT).  If no type is specified, the default type of STRING is used.
 ]]></description>
 
 </root>

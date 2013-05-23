@@ -12,12 +12,45 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  table.addColumn("id");
+  table.addColumn("species");
+  table.addColumn("name");
+  println(table.getColumnCount());  //Prints 3
+  
+  table.removeColumn("id");         //Reference by title
+  println(table.getColumnCount());  //Prints 2
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  table.addColumn("id");
+  table.addColumn("species");
+  table.addColumn("name");
+  println(table.getColumnCount());  //Prints 3
+  
+  table.removeColumn(0);            //Reference by ID
+  println(table.getColumnCount());  //Prints 2
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Use <b>removeColumn()</b> to remove an existing column from a <b>Table</b> object.  The column to be removed may be identified by either its title (a String) or its index value (an int).   <b>removeColumn(0)</b> would remove the first column, <b>removeColumn(1)</b> would remove the second column, and so on.
 ]]></description>
 
 </root>
