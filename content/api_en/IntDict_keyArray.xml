@@ -12,12 +12,25 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory); 
+  String[] theKeys = inventory.keyArray();
+  println(theKeys);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Return a copy of the internal keys array. In contrast to the <b>keys()</b> 
+method, this array can be modified.
 ]]></description>
 
 </root>

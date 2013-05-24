@@ -12,12 +12,25 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory);
+  inventory.sortKeysReverse();
+  println(inventory);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Sort the keys alphabetically in reverse (ignoring case). Uses the value 
+as a tie-breaker (only really possible with a key that has a case change).
 ]]></description>
 
 </root>

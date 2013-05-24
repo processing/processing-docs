@@ -12,12 +12,30 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+String[] amounts = { "black", "white", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  String s = inventory.get("tea");
+  text(s, width/2, height/2);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+A simple class to use a String as a lookup for an String value. String "keys" are associated with String values.
 ]]></description>
 
 
