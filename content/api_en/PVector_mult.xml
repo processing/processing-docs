@@ -46,7 +46,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Multiplies a vector by a scalar or another PVector.  The version of the method that uses a float acts directly on the vector upon which it is called (as in the first example above), and therefore has no return value.  The versions that receive both a PVector and a float as arugments are static methods, and each returns a new PVector that is the result of the multiplication operation.  Both examples above produce the same visual output.
+Multiplies a vector by a scalar.  The version of the method that uses a float acts directly on the vector upon which it is called (as in the first example above), and therefore has no return value.  The versions that receive both a PVector and a float as arugments are static methods, and each returns a new PVector that is the result of the multiplication operation.  Both examples above produce the same visual output.
 ]]></description>
 
 </root>
