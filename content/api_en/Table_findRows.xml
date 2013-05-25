@@ -12,12 +12,12 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Coming soon...
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Finds the rows in the <b>Table</b> that contain the value provided, and returns references to those rows.  Returns an iterator, so <b>for</b> must be used to iterate through all the rows, as shown in the example above.
 ]]></description>
 
 </root>

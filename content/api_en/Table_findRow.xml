@@ -12,12 +12,36 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+
+  TableRow result = table.findRow("Reptile", "type");
+  println(result.getString("name"));  // Prints "Snake"
+
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-Finds the first row in the <b>Table</b> that matches the criteria provided, and returns a reference to that row.  If multiple rows are possible matches, only the first matching row is returned.  
+Finds the first row in the <b>Table</b> that contains the value provided, and returns a reference to that row.  Even if multiple rows are possible matches, only the first matching row is returned.
 ]]></description>
 
 </root>
