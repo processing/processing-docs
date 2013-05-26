@@ -12,12 +12,48 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "   $Lion  ,");
+  newRow.setString("type", ",,,Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "$Snake  ");
+  newRow.setString("type", ",,,Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "  $Mosquito , ");
+  newRow.setString("type", ",,,Insect");
+  
+  println(table.getStringColumn("name"));
+  
+  table.removeTokens(",$ ");
+  
+  println(table.getStringColumn("name"));
+}
+
+// Sketch prints:
+// [0] "   $Lion  ,"
+// [1] "$Snake  "
+// [2] "  $Mosquito , "
+// [0] "Lion"
+// [1] "Snake"
+// [2] "Mosquito"
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Removes any of the specified characters (or "tokens").  The example above removes all commas, dollar signs, and spaces from the table.<br>
+<br>
+If no column is specified, then the values in all columns and rows are processed.  A specific column may be referenced by either its ID or title.
 ]]></description>
 
 </root>
