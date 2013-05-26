@@ -12,12 +12,30 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  table.addColumn("number", Table.INT);
+  table.addColumn("mass", Table.FLOAT);
+  table.addColumn("name", Table.STRING);
+  
+  TableRow row = table.addRow();
+  row.setInt("number", 8);
+  row.setFloat("mass", 15.9994);
+  row.setString("name", "Oxygen");
+  
+  println(row.getInt("number"));   // Prints 8
+  println(row.getFloat("mass"));   // Prints 15.9994
+  println(row.getString("name"));  // Prints "Oxygen
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Retrieves a float value from the <b>TableRow</b>'s specified column. The column may be specified by either its ID or title.
 ]]></description>
 
 </root>
