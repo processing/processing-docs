@@ -12,12 +12,24 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "flour", "coffee", "tea"};
+String[] amounts = { "white","black", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  String[] colors = inventory.valueArray();
+  println(colors);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Create a new array and copy each of the values into it.
 ]]></description>
 
 </root>

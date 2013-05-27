@@ -12,12 +12,29 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+float[] amounts = { 108.6, 5.8, 8.2 };
+
+FloatDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new FloatDict(goods, amounts);
+  println(inventory);
+  float[] amounts = inventory.valueArray();
+  println(amounts);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+The version of this method without a parameter creates a new 
+array and copies each of the values into it. The version with
+the <b>float[]</b> parameters fills an already-allocated array with the 
+values (more efficient than creating a new array each time). 
+If 'array' is null, or not the same size as the number of values, 
+a new array will be allocated and returned.
 ]]></description>
 
 </root>

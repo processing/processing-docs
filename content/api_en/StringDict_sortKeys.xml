@@ -12,12 +12,24 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "flour", "coffee", "tea"};
+String[] amounts = { "white","black", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  inventory.sortKeys();
+  println(inventory);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Sort the keys alphabetically.
 ]]></description>
 
 </root>

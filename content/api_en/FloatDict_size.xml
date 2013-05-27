@@ -12,12 +12,24 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+float[] amounts = { 108.6, 5.8, 8.2 };
+
+FloatDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new FloatDict(goods, amounts);
+  println(inventory);
+  int s = inventory.size();
+  println(s);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Returns the number of key/value pairs.
 ]]></description>
 
 </root>

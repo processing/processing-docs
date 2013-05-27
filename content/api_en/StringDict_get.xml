@@ -12,12 +12,30 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+String[] amounts = { "black", "white", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  String teaColor = inventory.get("tea");
+  text(teaColor, width/2, height/2);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Return a value for the specified key.
 ]]></description>
 
 </root>

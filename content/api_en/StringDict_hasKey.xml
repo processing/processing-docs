@@ -12,12 +12,27 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+String[] amounts = { "black", "white", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);noLoop();
+  if (inventory.hasKey("tea") == true) {
+    println("Yes, we have tea."); 
+  } else {
+    println("Sorry, no tea.");
+  }
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Check if a key is a part of the data structure.
 ]]></description>
 
 </root>

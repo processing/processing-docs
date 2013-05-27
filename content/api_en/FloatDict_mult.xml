@@ -12,12 +12,24 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+float[] amounts = { 108.6, 5.8, 8.2 };
+
+FloatDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new FloatDict(goods, amounts);
+  println(inventory);  // There is 8.2 of tea
+  inventory.mult("tea", 4);
+  println(inventory);  // There is 32.8 of tea
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Multiply a value.
 ]]></description>
 
 </root>
