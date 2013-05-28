@@ -12,12 +12,25 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory); 
+  for (int i : inventory.values()) {
+    println(i);
+  }
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Return the internal array being used to store the values.
 ]]></description>
 
 </root>

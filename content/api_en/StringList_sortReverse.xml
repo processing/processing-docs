@@ -27,7 +27,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Reverse sort, orders values from highest to lowest.
+A sort in reverse. It's equivalent to running <b>sort()</b> and then <b>reverse()</b>, but is more efficient than running each separately.
 ]]></description>
 
 </root>

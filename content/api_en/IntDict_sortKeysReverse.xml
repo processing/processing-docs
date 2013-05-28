@@ -29,8 +29,8 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Sort the keys alphabetically in reverse (ignoring case). Uses the value 
-as a tie-breaker (only really possible with a key that has a case change).
+Sort the keys alphabetically in reverse (ignoring case). Uses the value as 
+a tie-breaker (only really possible with a key that has a case change).
 ]]></description>
 
 </root>
