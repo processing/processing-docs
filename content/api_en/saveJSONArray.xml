@@ -11,12 +11,56 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] species = { "Capra hircus", "Panthera pardus", "Equus zebra" };
+String[] names = { "Goat", "Leopard", "Zebra" };
+
+JSONArray values;
+
+void setup() {
+
+  values = new JSONArray();
+
+  for (int i = 0; i < species.length; i++) {
+
+    JSONObject animal = new JSONObject();
+
+    animal.setInt("id", i);
+    animal.setString("species", species[i]);
+    animal.setString("name", names[i]);
+
+    values.setJSONObject(i, animal);
+  }
+
+  saveJSONArray(values, "data/new.json");
+}
+
+// Sketch saves the following to a file called "new.json":
+// [
+//   {
+//     "id": 0,
+//     "species": "Capra hircus",
+//     "name": "Goat"
+//   },
+//   {
+//     "id": 1,
+//     "species": "Panthera pardus",
+//     "name": "Leopard"
+//   },
+//   {
+//     "id": 2,
+//     "species": "Equus zebra",
+//     "name": "Zebra"
+//   }
+// ]
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Writes the contents of a <b>JSONArray</b> object to a file. By default, this file is saved to the sketch's folder. This folder is opened by selecting "Show Sketch Folder" from the "Sketch" menu.<br>
+<br>
+Alternatively, the file can be saved to any location on the computer by using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows).<br>
+<br>
+All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
 </root>

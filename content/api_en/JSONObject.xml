@@ -12,12 +12,32 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+JSONObject json;
+
+void setup() {
+
+  json = new JSONObject();
+
+  json.setInt("id", 0);
+  json.setString("species", "Panthera leo");
+  json.setString("name", "Lion");
+
+  saveJSONObject(json, "data/new.json");
+}
+
+// Sketch saves the following to a file called "new.json":
+// {
+//   "id": 0,
+//   "species": "Panthera leo",
+//   "name": "Lion"
+// }
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+A <b>JSONObject</b> stores JSON data with multiple name/value pairs.  Values can be numeric, Strings, booleans, other <b>JSONObject</b>s or <b>JSONArray</b>s, or null.  <b>JSONObject</b> and <b>JSONArray</b> objects are quite similar and share most of the same methods; the primary difference is that the latter stores an array of JSON objects, while the former represents a single JSON object.<br>
+<br>
+JSON can be generated from scratch, dynamically, or using data from an existing file.  JSON can also be output and saved to disk, as in the example above.
 ]]></description>
 
 

@@ -11,12 +11,34 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+JSONObject json;
+
+void setup() {
+
+  json = new JSONObject();
+
+  json.setInt("id", 0);
+  json.setString("species", "Panthera leo");
+  json.setString("name", "Lion");
+
+  saveJSONObject(json, "data/new.json");
+}
+
+// Sketch saves the following to a file called "new.json":
+// {
+//   "id": 0,
+//   "species": "Panthera leo",
+//   "name": "Lion"
+// }
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Writes the contents of a <b>JSONObject</b> object to a file. By default, this file is saved to the sketch's folder. This folder is opened by selecting "Show Sketch Folder" from the "Sketch" menu.<br>
+<br>
+Alternatively, the file can be saved to any location on the computer by using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows).<br>
+<br>
+All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 
 </root>
