@@ -12,12 +12,24 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "tea", "flour" };
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  inventory.sort();
+  String[] sortedInventory = inventory.array();
+  println(sortedInventory);
+}
+
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Create a new array with a copy of all the values.
 ]]></description>
 
 </root>

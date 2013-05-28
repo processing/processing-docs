@@ -33,7 +33,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Helper class for a list of Floats. By design (for efficiency), functions like <b>sort()</b> and <b>shuffle()</b> always act on the list itself. To get a sorted copy, use list.copy().sort().
+Helper class for a list of Floats. By design (for efficiency), functions like <b>sort()</b> and <b>shuffle()</b> always act on the list itself. To get a sorted copy, use list.copy().sort(). There are more methods listed in the Processing JavaDoc.
 ]]></description>
 
 

@@ -12,12 +12,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "tea", "flour" };
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  inventory.sortReverse();
+  println(inventory);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Reverse sort, orders values from highest to lowest.
 ]]></description>
 
 </root>

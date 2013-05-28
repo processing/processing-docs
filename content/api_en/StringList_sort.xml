@@ -12,12 +12,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "tea", "flour" };
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  inventory.sort();
+  println(inventory);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Sorts the array in place.
 ]]></description>
 
 </root>

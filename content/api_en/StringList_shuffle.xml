@@ -12,12 +12,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+String[] goods = { "coffee", "flour", "tea"};
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  inventory.shuffle();
+  println(inventory);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Randomize the order of the list elements
 ]]></description>
 
 </root>
