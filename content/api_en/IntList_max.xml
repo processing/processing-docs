@@ -12,12 +12,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  int largest = inventory.max();
+  println(largest);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Return the largest value.
 ]]></description>
 
 </root>

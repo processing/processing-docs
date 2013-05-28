@@ -12,12 +12,28 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  int nums = inventory.get(2);
+  text(nums, width/2, height/2);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Get an entry at a particular index.
 ]]></description>
 
 </root>

@@ -12,12 +12,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  int s = inventory.size();
+  println(s);  
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Get the length of the list.
 ]]></description>
 
 </root>

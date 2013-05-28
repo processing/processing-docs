@@ -12,12 +12,22 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  inventory.sort();  // Orders to 15, 84, 102
+  println(inventory);  
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Sorts the array, lowest to highest
 ]]></description>
 
 </root>
