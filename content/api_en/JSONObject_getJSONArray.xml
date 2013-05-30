@@ -12,12 +12,56 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+// The following short JSON file called "data.json" is parsed 
+// in the code below. It must be in the project's "data" folder.
+//
+// { "animals": [
+//   {
+//     "id": 0,
+//     "species": "Capra hircus",
+//     "name": "Goat"
+//   },
+//   {
+//     "id": 1,
+//     "species": "Panthera pardus",
+//     "name": "Leopard"
+//   },
+//   {
+//     "id": 2,
+//     "species": "Equus zebra",
+//     "name": "Zebra"
+//   } ]
+// }
+
+JSONObject json;
+
+void setup() {
+
+  json = loadJSONObject("data.json");
+
+  JSONArray values = json.getJSONArray("animals");
+  
+  for (int i = 0; i < values.size(); i++) {
+    
+    JSONObject animal = values.getJSONObject(i); 
+
+    int id = animal.getInt("id");
+    String species = animal.getString("species");
+    String name = animal.getString("name");
+
+    println(id + ", " + species + ", " + name);
+  }
+}
+
+// Sketch prints:
+// 0, Capra hircus, Goat
+// 1, Panthera pardus, Leopard
+// 2, Equus zebra, Zebra
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Retrieves the <b>JSONArray</b> with the associated key.
 ]]></description>
 
 </root>
