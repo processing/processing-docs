@@ -227,7 +227,7 @@ float d = r.getFloat("diameter");  // d has the value 61.14072
 String s = r.getString("name");    // s has the value "Joyous"
 </pre>
 
-The method <a href="">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="">getRows()</a>.
+The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_getRows_.html">getRows()</a>.
 
 <pre>
 for (TableRow row : table.getRows()) {
@@ -239,7 +239,7 @@ for (TableRow row : table.getRows()) {
 }
 </pre>
 
-If you want to search for a select number of rows within the table, you can do so with <a href="">findRows()</a> and <a href="">matchRows()</a>.
+If you want to search for a select number of rows within the table, you can do so with <a href="http://processing.org/reference/Table_findRows_.html">findRows()</a> and <a href="http://processing.org/reference/Table_matchRows_.html">matchRows()</a>.
  
 <p>In addition to being read, Table objects can be altered or created on the fly while a sketch is running.  Cell values can be adjusted, rows can be removed, and new rows can be added.  For example, to set new values in a cell there are functions setInt(), setFloat(), and setString().
 
@@ -248,7 +248,7 @@ If you want to search for a select number of rows within the table, you can do s
 row.setInt("x",mouseX);
 </pre>
 
-<p>To add a new row to a Table, simply call the method <a href="">addRow()</a> and set the values of each column.</p>
+<p>To add a new row to a Table, simply call the method <a href="http://processing.org/reference/Table_addRow_.html">addRow()</a> and set the values of each column.</p>
 
 <pre>
 // Create a new row
@@ -260,7 +260,7 @@ row.setFloat("diameter", random(40, 80));
 row.setString("name", "new label");
 </pre>
 
-<p>To delete a row to a Table, simply call the method <a href="">removeRow()</a> and pass in the numeric index of the row you would like removed.  The following code for example, removes the first row whenever the size of the table is greater than ten rows.</p>
+<p>To delete a row to a Table, simply call the method <a href="http://processing.org/reference/Table_removeRow_.html">removeRow()</a> and pass in the numeric index of the row you would like removed.  The following code for example, removes the first row whenever the size of the table is greater than ten rows.</p>
 
 <pre>
 // If the table has more than 10 rows

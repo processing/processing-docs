@@ -61,7 +61,6 @@ HashMap&lt;Key, Value&gt;(<c>m</c>)
 <cdescription>Class Name: the data type for the HashMap's values</cdescription>
 </cparameter>
 
-
 <parameter>
 <label>initialCapacity</label>
 <description>int: defines the initial capacity of the map; the default is 16</description>
