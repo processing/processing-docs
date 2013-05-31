@@ -15,7 +15,7 @@
 import java.util.Map;
 
 // Note the HashMap's "key" is a String and "value" is an Integer
-HashMap<String,Integer> hm = new HashMap<String,Integer>();
+HashMap&lt;String,Integer&gt; hm = new HashMap&lt;String,Integer&gt;();
 
 // Putting key-value pairs in the HashMap
 hm.put("Ava", 1);
@@ -45,10 +45,10 @@ For a list of the numerous <b>HashMap</b> features, please read the <a href="htt
 <syntax></syntax>
 
 <constructor>
-HashMap&gt;Key, Value&lt;()
-HashMap&gt;Key, Value&lt;(<c>initialCapacity</c>)
-HashMap&gt;Key, Value&lt;(<c>initialCapacity</c>, <c>loadFactor</c>)
-HashMap&gt;Key, Value&lt;(<c>m</c>)
+HashMap&lt;Key, Value&gt;()
+HashMap&lt;Key, Value&gt;(<c>initialCapacity</c>)
+HashMap&lt;Key, Value&gt;(<c>initialCapacity</c>, <c>loadFactor</c>)
+HashMap&lt;Key, Value&gt;(<c>m</c>)
 </constructor>
 
 <cparameter>
