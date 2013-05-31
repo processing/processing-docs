@@ -17,11 +17,11 @@
 
 // Declaring the ArrayList, note the use of the syntax "<Ball>" to indicate
 // our intention to fill this ArrayList with Ball objects
-ArrayList<Ball> balls;
+ArrayList&lt;Ball&gt; balls;
 
 void setup() {
   size(200, 200);
-  balls = new ArrayList<Ball>();  // Create an empty ArrayList
+  balls = new ArrayList&lt;Ball&gt;();  // Create an empty ArrayList
   balls.add(new Ball(width/2, 0, 48));  // Start by adding one element
 }
 
@@ -62,8 +62,8 @@ For a list of the numerous <b>ArrayList</b> features, please read the <a href="h
 <syntax></syntax>
 
 <constructor>
-ArrayList&gt;Type&lt;()
-ArrayList&gt;Type&lt;(<c>initialCapacity</c>)
+ArrayList&lt;Type&gt;()
+ArrayList&lt;Type&gt;(<c>initialCapacity</c>)
 </constructor>
 
 <cparameter>
