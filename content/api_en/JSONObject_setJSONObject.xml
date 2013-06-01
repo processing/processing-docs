@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>getJSONObject()</name>
+<name>setJSONObject()</name>
 
 <category>JSONObject</category>
 
@@ -17,7 +17,7 @@ To come...
 </example>
 
 <description><![CDATA[
-To come...
+Sets the value of the <b>JSONObject</b> with the associated key.
 ]]></description>
 
 </root>
