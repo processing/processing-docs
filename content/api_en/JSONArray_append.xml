@@ -12,12 +12,48 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+JSONArray json;
+
+void setup() {
+
+  json = new JSONArray();
+
+  json.append(32);
+  json.append(1.13);
+  json.append("grape");
+  json.append(true);
+
+  JSONObject obj = new JSONObject();
+  obj.setFloat("persistence", 0.95);
+  json.append(obj);
+
+  JSONArray arr = new JSONArray();
+  arr.append("red");
+  arr.append("green");
+  arr.append("blue");
+  json.append(arr);
+
+  println(json);
+}
+
+// Sketch prints:
+// [
+//   32,
+//   1.1299999952316284,
+//   "grape",
+//   true,
+//   {"persistence": 0.949999988079071},
+//   [
+//     "red",
+//     "green",
+//     "blue"
+//   ]
+// ]
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Appends a new value to the <b>JSONArray</b>, increasing the array's length by one. New values may be of the following types: int, float, String, boolean, <b>JSONObject</b>, or <b>JSONArray</b>.
 ]]></description>
 
 </root>
