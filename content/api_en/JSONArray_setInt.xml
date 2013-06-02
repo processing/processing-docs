@@ -19,7 +19,7 @@ void setup() {
   json = new JSONArray();
 
   json.setInt(0, 32);
-  json.setFloat(1, 1.13);
+  json.setFloat(1, 1.5);
   json.setString(2, "grape");
   json.setBoolean(3, true);
 
@@ -29,7 +29,7 @@ void setup() {
 // Sketch prints:
 // [
 //   32,
-//   1.1299999952316284,
+//   1.5,
 //   "grape",
 //   true
 // ]
