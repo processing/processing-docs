@@ -62,8 +62,8 @@ For a list of the numerous <b>ArrayList</b> features, please read the <a href="h
 <syntax></syntax>
 
 <constructor>
-ArrayList&lt;Type&gt;()
-ArrayList&lt;Type&gt;(<c>initialCapacity</c>)
+ArrayList&amp;lt;Type&amp;gt;()
+ArrayList&amp;lt;Type&amp;gt;(<c>initialCapacity</c>)
 </constructor>
 
 <cparameter>

@@ -45,10 +45,10 @@ For a list of the numerous <b>HashMap</b> features, please read the <a href="htt
 <syntax></syntax>
 
 <constructor>
-HashMap&lt;Key, Value&gt;()
-HashMap&lt;Key, Value&gt;(<c>initialCapacity</c>)
-HashMap&lt;Key, Value&gt;(<c>initialCapacity</c>, <c>loadFactor</c>)
-HashMap&lt;Key, Value&gt;(<c>m</c>)
+HashMap&amp;lt;Key, Value&amp;gt;()
+HashMap&amp;lt;Key, Value&amp;gt;(<c>initialCapacity</c>)
+HashMap&amp;lt;Key, Value&amp;gt;(<c>initialCapacity</c>, <c>loadFactor</c>)
+HashMap&amp;lt;Key, Value&amp;gt;(<c>m</c>)
 </constructor>
 
 <cparameter>
