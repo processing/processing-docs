@@ -12,12 +12,33 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+// The following short JSON file called "data.json" is parsed 
+// in the code below. It must be in the project's "data" folder.
+//
+// [ "sasquatch", "yeti", "jackalope", "unicorn", "centaur" ]
+
+JSONArray json;
+
+void setup() {
+
+  json = loadJSONArray("data.json");
+
+  String[] values = json.getStringArray();
+
+  println(values);
+}
+
+// Sketch prints:
+// [0] "sasquatch"
+// [1] "yeti"
+// [2] "jackalope"
+// [3] "unicorn"
+// [4] "centaur"
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Returns the entire <b>JSONArray</b> as an array of Strings.  (All values in the array must be of the String type.)
 ]]></description>
 
 </root>

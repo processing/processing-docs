@@ -12,12 +12,32 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+JSONArray json;
+
+void setup() {
+
+  json = new JSONArray();
+
+  json.setInt(0, 32);
+  json.setFloat(1, 1.13);
+  json.setString(2, "grape");
+  json.setBoolean(3, true);
+
+  println(json);
+}
+
+// Sketch prints:
+// [
+//   32,
+//   1.1299999952316284,
+//   "grape",
+//   true
+// ]
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Inserts a new value into the <b>JSONArray</b> at the specified index position. If a value already exists in the specified position, the new value overwrites the old value. If the given index is greater than the length of the <b>JSONArray</b>, then null elements will be added as necessary to pad it out.
 ]]></description>
 
 </root>
