@@ -31,7 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Main graphics and rendering context, as well as the base API implementation for processing "core". Use this class if you need to draw into an off-screen graphics buffer. A PGraphics object can be constructed with the <b>createGraphics()</b> function. The <b>beginDraw()</b> and <b>endDraw()</b> methods (see above example) are necessary to set up the buffer and to finalize it. The fields and methods for this class are extensive. For a complete list, visit the <a href="http://processing.googlecode.com/svn/trunk/processing/build/javadoc/core/index.html">developer's reference.</a>
+Main graphics and rendering context, as well as the base API implementation for processing "core". Use this class if you need to draw into an off-screen graphics buffer. A PGraphics object can be constructed with the <b>createGraphics()</b> function. The <b>beginDraw()</b> and <b>endDraw()</b> methods (see above example) are necessary to set up the buffer and to finalize it. The fields and methods for this class are extensive. For a complete list, visit the <a href="http://processing.org/reference/javadoc/core/">developer's reference.</a>
 ]]></description>
 
 </root>

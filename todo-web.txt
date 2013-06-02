@@ -5,7 +5,10 @@
   NEED TO DO ON LAUNCH
 
   - Update credential file to redirect users to main site, rather than trunk
-    
+  - Check .htaccess for references to trunk
+  - Make sure fonts are on the server
+  - Add more redirects
+    . 
 
   NEED POST 2.0
 
