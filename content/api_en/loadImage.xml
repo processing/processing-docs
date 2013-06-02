@@ -57,9 +57,9 @@ Use a "@pjs preload" directive to preload images before your sketch starts. You 
 
 
 <description><![CDATA[
-Loads an image into a variable of type <b>PImage</b>. Four types of images ( <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, <b>.png</b>) images may be loaded. To load correctly, images must be located in the data directory of the current sketch. 
+Loads an image into a variable of type <b>PImage</b>. Four types of images ( <b>.gif</b>, <b>.jpg</b>, <b>.tga</b>, <b>.png</b>) images may be loaded. To load correctly, images must be located in the data directory of the current sketch.<br>
 <br />
-In most cases, load all images in <b>setup()</b> to preload them at the start of the program. Loading images inside <b>draw()</b> will reduce the speed of a program. Images cannot be loaded outside <b>setup()</b> unless they're inside a function that's called after <b>setup()</b> has already run.
+In most cases, load all images in <b>setup()</b> to preload them at the start of the program. Loading images inside <b>draw()</b> will reduce the speed of a program. Images cannot be loaded outside <b>setup()</b> unless they're inside a function that's called after <b>setup()</b> has already run.<br>
 <br/>
 Alternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.<br />
 <br />
