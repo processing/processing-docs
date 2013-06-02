@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sortReverse()</name>
+
+<category>IntList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  inventory.sortReverse();  // Orders to 102, 84, 15
+  println(inventory);  
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+A sort in reverse. It's equivalent to running <b>sort()</b> and then 
+<b>reverse()</b>, but is more efficient than running each separately.
+]]></description>
+
+</root>

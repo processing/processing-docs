@@ -178,7 +178,7 @@ void keyPressed() {
 
 <p>You may have noticed that the graphing example above loads a text file with numbers separated by commas.  Processing includes a Table class which will load a comma-separated (CSV) or tab-separated (TSV) file and automatically parse the data into columns and rows for you.  This is a great deal more convenient than struggling to manually parse large data files with split().  It works as follows.  Let's say you have a data file that looks like:</p>
 
-<img src="imgs/data_03_table.jpg" border=1>
+<img src="imgs/data_03_table.png" width=333px border=1>
 
 <p>Instead of saying:</p>
 
@@ -192,11 +192,17 @@ String[] stuff = loadStrings("data.csv");
 Table table = loadTable("data.csv");
 </pre>
 
-<p>Once the table is loaded, you can access the elements by their column and row number.  Let's look at how excel interprets the CSV file.</p>
+<p>Now we've missed on important detail.  Take a look at the data.csv text file above.  Notice how the first line of text is not the data itself, but rather a "header row."  This row includes labels that describe the data included in each subsequent row.  The good news is that Processing can automatically interpret and store the headers for you, if you pass in the option "header" when loading the table.  (In addition to "header" there are other options you can specify.  For example if your file is called data.txt but is comma separated data you can pass in the option "csv".  If it also has a header row, then you can specifiy both options like so: "header,csv").  A full list of options can be found on the <a href="http://processing.org/reference/loadTable_.html">loadTable() documentation page</a>.</p>
 
-<img src="imgs/data_04_excel.jpg" border=1>
+<pre>
+Table table = loadTable("data.csv","header");
+</pre>
 
-<p>We can see that the data lives on a grid with columns and rows.  The most convenient way to access the data would be to therefore request a value by its column and row location.  The Table class makes this all possible via getRowCol().</p>
+<p>Now that the table is loaded, we can look at how we grab individual pieces of data or iterate over the entire table.  Let's look at the data visualized as a grid.</p>
+
+<img src="imgs/data_05_headers.jpg" border=0>
+
+<p>In the above grid we can see that the data is organized in terms of columns and rows.  One way to access the data would be to therefore request a value by its numeric column and row location (with zero being the first row or first column).  This is similar to accessing a pixel color at a given (x,y) location.  Here we are getting a piece of data at a given (column,row) location.</p>
  
 <pre>
 int val1 = table.getInt(1,2);      // val now has the value 235
@@ -204,76 +210,67 @@ float val2 = table.getFloat(2,3);  // val2 now has the value 44.758068
 String s = table.getString(3,0);   // s now has the value "Happy"
 </pre>
 
-<p>Note how you can specify the type of data you expect to get from the table.  If you ask for an integer when the data is really a string, Processing will make its best guess (which in that case would mean you get a '0').</p>
-
-<p>By accessing the number of rows in the table via getRowCount(), you can loop through the entire table looking at each cell via its column and row.</p>
+<p>While the numeric index is sometimes useful, it's generally going to be more convenient to access each piece of data by the column name.  For example, we could pull out a specific row from the Table.</p>  
 
 <pre>
-for (int i = 0; i &lt; table.getRowCount(); i++ ) {
-  float x  = table.getFloat(i,0);
-  float y  = table.getFloat(i,1);
-  float d  = table.getFloat(i,2);
-  String n = table.getString(i,3);
-}
+TableRow row = table.getRow(2);  // Gets the third row (index 2)
 </pre>
 
-<p>Another, perhaps preferable, methodology for iterating over the table however, is to access each row as an object: TableRow.  You can do this with the new Java enhanced loop syntax, saying: </p>
+Note in the above line of code that a Table object refers to the entire table of data while a <a href="http://processing.org/reference/TableRow.html">TableRow</a> object handles an individual row of data within the Table.
+
+Once we have the TableRow object, we can ask for data from some or all of the columns.
 
 <pre>
-for (TableRow row : table) {
+int x = r.getInt("x");             // x has the value 273
+int y = r.getInt("y");             // y has the value 235
+float d = r.getFloat("diameter");  // d has the value 61.14072
+String s = r.getString("name");    // s has the value "Joyous"
 </pre>
 
-<p>This can be read as "For each TableRow row in the Table table."</p>
+The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_getRows_.html">getRows()</a>.
 
 <pre>
-for (TableRow row : table) {
-  float x = row.getFloat(0);
-  float y = row.getFloat(1);
-  float d = row.getFloat(2);
-  String n = row.getString(3);
-}  
-</pre>
-
-<p>Now, the above code demonstrates how each column can be accessed via its numeric index.  Tabular data, however, can have a header row which names each column.</p>
-
-<img src="imgs/data_05_headers.jpg" border=1>
-
-<p>Using a header row can make your code much more readable (and shorter) as well as less error-prone to getting the wrong column, or having column indices change.  If you have a header row, calling removeTitleRow() will tell Processing to use the first row as a header and ignore it during iteration.</p>
-
-<pre>
-table = loadTable("data.csv");
-table.removeTitleRow(); // Set first row as header row
-</pre>
-
-<p>Now when we iterate, we can access the columns via their name.</p>
-
-<pre>
-for (TableRow row : table) {
+for (TableRow row : table.getRows()) {
   float x = row.getFloat("x");
   float y = row.getFloat("y");
   float d = row.getFloat("diameter");
   String n = row.getString("name");
+  // Do something with the data of each row
 }
 </pre>
+
+If you want to search for a select number of rows within the table, you can do so with <a href="http://processing.org/reference/Table_findRows_.html">findRows()</a> and <a href="http://processing.org/reference/Table_matchRows_.html">matchRows()</a>.
  
-<p>Table objects can be altered through the course of a sketch.  Cell values can be adjusted, rows can be removed, and new rows can be added.  For example, to new values in a cell there are functions setInt(), setFloat(), setString(), etc.  
+<p>In addition to being read, Table objects can be altered or created on the fly while a sketch is running.  Cell values can be adjusted, rows can be removed, and new rows can be added.  For example, to set new values in a cell there are functions setInt(), setFloat(), and setString().
 
 <pre>
-// Update the value of cell (1,2) to mouseX.
-table.setInt(1,2,mouseX);
+// Update the value of column "x" to mouseX in a given TableRow.
+row.setInt("x",mouseX);
 </pre>
 
-<p>To add a new row to a Table, you can set the values for a new row with an index equal to the final row plus one.  For example, if a Table has four rows (indices 0-3) you would set the values for row index #4.  In the example below, note the use of column names instead of numeric indices.</p>
+<p>To add a new row to a Table, simply call the method <a href="http://processing.org/reference/Table_addRow_.html">addRow()</a> and set the values of each column.</p>
 
 <pre>
-int newRow = table.getRowCount();
-table.setFloat(newRow, "x", mouseX);
-table.setFloat(newRow, "y", mouseY);
-table.setFloat(newRow, "diameter", random(40, 80));
-table.setString(newRow, "name", "Blah");
+// Create a new row
+TableRow row = table.addRow();
+// Set the values of that row
+row.setFloat("x", mouseX);
+row.setFloat("y", mouseY);
+row.setFloat("diameter", random(40, 80));
+row.setString("name", "new label");
 </pre>
 
-<p>For an example that creates objects from and saves objects to a Table, take a look at LoadSaveCSVTable under Topics --> Advanced Data.</p>
+<p>To delete a row to a Table, simply call the method <a href="http://processing.org/reference/Table_removeRow_.html">removeRow()</a> and pass in the numeric index of the row you would like removed.  The following code for example, removes the first row whenever the size of the table is greater than ten rows.</p>
+
+<pre>
+// If the table has more than 10 rows
+if (table.getRowCount() > 10) {
+  // Delete the first row
+  table.removeRow(0);
+}
+</pre>
+
+<p>For an example that creates objects from and saves objects to a Table, take a look at LoadSaveTable under Topics --> Advanced Data.</p>
 
 <h3>XML Data</h3>
 
@@ -374,7 +371,7 @@ XML xml = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);
 XML root        = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003); // Step 1
 XML channel     = root.getChild("channel");                                  // Step 2
 XML item        = root.getChild("item");                                     // Step 3
-XML yweather    = root.getChild("yweather:condition");                      // Step 4
+XML yweather    = root.getChild("yweather:condition");                       // Step 4
 int temperature = yweather.getInt("high");                                   // Step 5
 </pre>
 
@@ -386,27 +383,35 @@ XML forecast    = root.getChild("channel").getChild("item").getChild("yweather:f
 int temperature = forecast.getInt("high");                                                  // Step 5
 </pre>
 
-<p>It should also be noted that we're accessing the child nodes by their name (i.e. "channel", "item", etc.), but they can also be accessed numerically via an index (starting at zero, same as an array).  This is convenient when looping over a list of children.  In LoadSaveCSVTable, we used a series of comma separated values in a text file to store information related to Bubble objects.  An XML document can also be used in the same manner.  Consider the following XML document:</p>
+<p>It should also be noted that we're accessing the child nodes by their name (i.e. "channel", "item", etc.), but they can also be accessed numerically via an index (starting at zero, same as an array).  This is convenient when looping over a list of children.  In LoadSaveTable, we used a series of comma separated values in a text file to store information related to Bubble objects.  An XML document can also be used in the same manner.  Consider the following XML document:</p>
 
 <pre>
-&lt;?xml version="1.0"?&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;bubbles&gt;
   &lt;bubble&gt;
-    &lt;diameter&gt;40&lt;/diameter&gt;
-    &lt;color red="75" green="255"/&gt;
+    &lt;position x="160" y="103"/&gt;
+    &lt;diameter&gt;43.19838&lt;/diameter&gt;
+    &lt;label&gt;Happy&lt;/label&gt;
   &lt;/bubble&gt;
   &lt;bubble&gt;
-    &lt;diameter&gt;20&lt;/diameter&gt;
-    &lt;color red="255" green="75"/&gt;
+    &lt;position x="372" y="137"/&gt;
+    &lt;diameter&gt;52.42526&lt;/diameter&gt;
+    &lt;label&gt;Sad&lt;/label&gt;
   &lt;/bubble&gt;
   &lt;bubble&gt;
-    &lt;diameter&gt;80&lt;/diameter&gt;
-    &lt;color red="100" green="150"/&gt;
+    &lt;position x="273" y="235"/&gt;
+    &lt;diameter&gt;61.14072&lt;/diameter&gt;
+    &lt;label&gt;Joyous&lt;/label&gt;
+  &lt;/bubble&gt;
+  &lt;bubble&gt;
+    &lt;position x="121" y="179"/&gt;
+    &lt;diameter&gt;44.758068&lt;/diameter&gt;
+    &lt;label&gt;Melancholy&lt;/label&gt;
   &lt;/bubble&gt;
 &lt;/bubbles&gt;
 </pre>
 
-<p>In the above XML, the root element is "bubbles" which has three children.  Each child "bubble" has 2 children, "diameter" and "color."  The "color" element has two attributes, "red" and "green."  To access the list of all XML nodes "bubble" we can use the getChildren() method, passing in the name "bubble"</p>
+<p>In the above XML, the root element is "bubbles" which has four children.  Each child "bubble" has 3 children, "position", "diameter", and "label."  The "position" element has two attributes, "x" and "y."  To access the list of all XML nodes "bubble" we can use the getChildren() method, passing in the name "bubble"</p>
 
 <pre>
 // Load an XML document
@@ -416,26 +421,31 @@ XML xml = loadXML("bubbles.xml");
 XML[] children = xml.getChildren("bubble");
 </pre>
 
-<p>Once we have the array of XML objects, we can iterate over them, accessing the diameter and color data for each "bubble".</p>
+<p>Once we have the array of XML objects, we can iterate over them, accessing the individual pieces of data for each "bubble".  Notice how the syntax for getting XML attributes (in this case, "x" and "y" of the position element is slightly different than pulling content directly from an element (in this case, "diameter" and "label").</p>
 
 <pre>
-for (int i = 0; &lt; children.length; i ++ ) {
+for (int i = 0; i &lt; bubbles.length; i++) {
     
-  // The diameter is the content of the child named "Diamater"
+  // The position element has two attributes: x and y
+  XML positionElement = children[i].getChild("position");
+  // Note how with attributes we can get an integer or float via getInt() and getFloat()
+  float x = positionElement.getInt("x");
+  float y = positionElement.getInt("y");
+    
+  // The diameter is the content of the child named "diamater"
   XML diameterElement = children[i].getChild("diameter");
-  int diameter = int(diameterElement.getContent());
+  // Note how with the content of an XML node, we retrieve via getIntContent() and getFloatContent()
+  float diameter = diameterElement.getFloatContent();
 
-  // The color element has three attributes
-  XML colorElement = children[i].getChild("color");
-  // An int for r g and b
-  int r = colorElement.getInt("red");
-  int g = colorElement.getInt("green");
-  int b = colorElement.getInt("blue");
-
-}
+  // The label is the content of the child named "label"
+  XML labelElement = children[i].getChild("label");
+  String label = labelElement.getContent();
+} 
 </pre>
 
-<p>The full code which generates Bubble objects can be found in: LoadingXMLObjects</p>
+<p>XML elements can be added and removed from the XML tree with the <a href="http://processing.org/reference/XML_addChild_.html">addChild()</a> and <a href="http://processing.org/reference/XML_removeChild_.html">removeChild()</a> methods.</p>
+
+<p>For the full example that creates objects from and saves objects to an XML document, take a look at LoadSaveXML under Topics --> Advanced Data.</p>
 
 <h3>Threads</h3>
 
@@ -493,14 +503,6 @@ void draw() {
 <p>Two examples that follow this methodology can be found under Topics --> Advanced Data in the Processing examples.</p>
 
 <p>While using the thread() function is a very simple way of getting an independent thread, it should be noted that it is somewhat limited. Being able to make a thread object is a great deal more powerful, and this can be done by extending the Java <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Thread.html">Thread</a> class.</p>
-
-<h3>Other Topics?</h3>
-
-HashMap
-
-JSON
-
-Other APIs
 
 <p>&nbsp;</p>
 

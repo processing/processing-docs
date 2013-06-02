@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getStringColumn()</name>
+
+<category>Table</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+  
+  println(table.getStringColumn("name"));
+}
+
+// Sketch prints:
+// [0] "Lion"
+// [1] "Snake"
+// [2] "Mosquito"
+]]></code>
+</example>
+
+<description><![CDATA[
+Retrieves all values in the specified column, and returns them as a String array.  The column may be specified by either its ID or title.
+]]></description>
+
+</root>

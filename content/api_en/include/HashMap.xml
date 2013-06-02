@@ -15,7 +15,7 @@
 import java.util.Map;
 
 // Note the HashMap's "key" is a String and "value" is an Integer
-HashMap<String,Integer> hm = new HashMap<String,Integer>();
+HashMap&lt;String,Integer&gt; hm = new HashMap&lt;String,Integer&gt;();
 
 // Putting key-value pairs in the HashMap
 hm.put("Ava", 1);
@@ -37,7 +37,7 @@ println("Casey is " + val);
 
 
 <description><![CDATA[
-A <b>HashMap</b> stores a collection of objects, each referenced by a key. This is similar to an <b>Array</b>, only instead of accessing elements with a numeric index, a <b>String</b> is used. (If you are familiar with associative arrays from other languages, this is the same idea.) The above example covers basic use, but there's a more extensive example included with the Processing examples.<br />
+A <b>HashMap</b> stores a collection of objects, each referenced by a key. This is similar to an <b>Array</b>, only instead of accessing elements with a numeric index, a <b>String</b> is used. (If you are familiar with associative arrays from other languages, this is the same idea.) The above example covers basic use, but there's a more extensive example included with the Processing examples.  In addition, for simple pairings of Strings and integers, Strings and floats, or Strings and Strings, you can now use the simpler IntDict, FloatDict, and StringDict classes.<br />
 <br />
 For a list of the numerous <b>HashMap</b> features, please read the <a href="http://download.oracle.com/javase/6/docs/api/java/util/HashMap.html">Java reference description</a>.
 ]]></description>
@@ -45,10 +45,10 @@ For a list of the numerous <b>HashMap</b> features, please read the <a href="htt
 <syntax></syntax>
 
 <constructor>
-HashMap&gt;Key, Value&lt;()
-HashMap&gt;Key, Value&lt;(<c>initialCapacity</c>)
-HashMap&gt;Key, Value&lt;(<c>initialCapacity</c>, <c>loadFactor</c>)
-HashMap&gt;Key, Value&lt;(<c>m</c>)
+HashMap&amp;lt;Key, Value&amp;gt;()
+HashMap&amp;lt;Key, Value&amp;gt;(<c>initialCapacity</c>)
+HashMap&amp;lt;Key, Value&amp;gt;(<c>initialCapacity</c>, <c>loadFactor</c>)
+HashMap&amp;lt;Key, Value&amp;gt;(<c>m</c>)
 </constructor>
 
 <cparameter>
@@ -60,7 +60,6 @@ HashMap&gt;Key, Value&lt;(<c>m</c>)
 <clabel>Value</clabel>
 <cdescription>Class Name: the data type for the HashMap's values</cdescription>
 </cparameter>
-
 
 <parameter>
 <label>initialCapacity</label>
@@ -79,7 +78,7 @@ HashMap&gt;Key, Value&lt;(<c>m</c>)
 
 <returns></returns>
 
-<related></related>
+<related>IntDict</related>
 
 <availability>1.0</availability>
 

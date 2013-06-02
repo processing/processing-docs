@@ -30,63 +30,23 @@ void draw() {
 <example>
 <image></image>
 <code><![CDATA[
-PVector v1, v2;
-
-void setup() {
-  noLoop();
-  v1 = new PVector(5, 10, 0);
-  v2 = new PVector(15, 8, 0); 
-}
-
-void draw() {
-  ellipse(v1.x, v1.y, 12, 12);
-  ellipse(v2.x, v2.y, 12, 12);
-  v1.mult(v2);
-  ellipse(v1.x, v1.y, 24, 24);
-}
-]]></code>
-</example>
-
-<example>
-<image></image>
-<code><![CDATA[
 PVector v1;
 
 void setup() {
   noLoop();
-  v1 = new PVector(5, 10, 0);
+  v1 = new PVector(30, 60, 0);
 }
 
 void draw() {
   ellipse(v1.x, v1.y, 12, 12);
-  PVector v2 = PVector.mult(v1, 6);
+  PVector v2 = PVector.div(v1, 6);
   ellipse(v2.x, v2.y, 24, 24);
 }
 ]]></code>
 </example>
 
-<example>
-<image></image>
-<code><![CDATA[
-PVector v1, v2;
-
-void setup() {
-  noLoop();
-  v1 = new PVector(5, 10, 0);
-  v2 = new PVector(15, 8, 0); 
-}
-
-void draw() {
-  ellipse(v1.x, v1.y, 12, 12);
-  ellipse(v2.x, v2.y, 12, 12);
-  PVector v3 = PVector.mult(v1, v2);
-  ellipse(v3.x, v3.y, 24, 24);
-}
-]]></code>
-</example>
-
 <description><![CDATA[
-Multiplies a vector by a scalar or multiplies one vector by another.
+Multiplies a vector by a scalar.  The version of the method that uses a float acts directly on the vector upon which it is called (as in the first example above), and therefore has no return value.  The versions that receive both a PVector and a float as arugments are static methods, and each returns a new PVector that is the result of the multiplication operation.  Both examples above produce the same visual output.
 ]]></description>
 
 </root>

@@ -55,10 +55,6 @@
 		<ex file="ScaleShape.html">Scale Shape</ex>
 		<ex file="GetChild.html">Get Child</ex>
 	</cat>
-	<cat label="Typography">
-		<ex file="Letters.html">Letters</ex>
-		<ex file="Words.html">Words</ex>
-	</cat>
 	<cat label="Color">
 		<ex file="Hue.html">Hue</ex>
 		<ex file="Saturation.html">Saturation</ex>

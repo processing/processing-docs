@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getColumnCount()</name>
+
+<category>Table</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  println(table.getColumnCount());  // Prints 0
+  
+  table.addColumn("name");
+  println(table.getColumnCount());  // Prints 1
+  
+  table.addColumn("type");
+  println(table.getColumnCount());  // Prints 2
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the total number of columns in a table.
+]]></description>
+
+</root>

@@ -14,18 +14,18 @@ putenv('HOME=' . CONTENTDIR);
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
 
 // Copy over the images for the tutorials index
-if (!is_dir($path.'learning/imgs')) {
-	mkdir($path.'learning/imgs', 0757); 
+if (!is_dir($path.'tutorials/imgs')) {
+	mkdir($path.'tutorials/imgs', 0757); 
 }
 
-if (is_dir($path.'learning/imgs')) { 
-	copydirr($source.'imgs', $path.'learning/imgs', null, 0757, true);
+if (is_dir($path.'tutorials/imgs')) { 
+	copydirr($source.'imgs', $path.'tutorials/imgs', null, 0757, true);
 }
 
 // Index page
 $page = new Page("Tutorials", "Tutorials", "Tutorials", "../");
 $page->content(file_get_contents($source."index.html"));
-writeFile('learning/index.html', $page->out());
+writeFile('tutorials/index.html', $page->out());
 
 // Start making the individual tutorial pages
 
@@ -43,12 +43,12 @@ else
 		$imgs = $tutorial->imgs;
 		$code = $tutorial->code;
 		echo 'About to generate tutorial '.$title.' in directory '.$directory.', imgs dir = '.$imgs.', code dir = '.$code.'<br \>';
-		echo 'Copying '.$source.$directory.'/index.html to ' . 'learning/'.$directory.'/index.html<br \>';
+		echo 'Copying '.$source.$directory.'/index.html to ' . 'tutorials/'.$directory.'/index.html<br \>';
 		$page = new Page($title, "Tutorials", "Tutorials", "../../");
 		$page->content(file_get_contents($source.$directory.'/index.html'));
-		writeFile('learning/'.$directory.'/index.html', $page->out());
+		writeFile('tutorials/'.$directory.'/index.html', $page->out());
 		if ($imgs == 'true') {
-			$newpath = $path.'learning/'.$directory.'/imgs';
+			$newpath = $path.'tutorials/'.$directory.'/imgs';
 			if (!is_dir($newpath)) {
 				mkdir($newpath, 0757);
 			}
@@ -57,7 +57,7 @@ else
 			}
 		}
 		if ($code == 'true') {
-			$newpath = $path.'learning/'.$directory.'/code';
+			$newpath = $path.'tutorials/'.$directory.'/code';
 			if (!is_dir($newpath)) {
 				mkdir($newpath, 0757);
 			}

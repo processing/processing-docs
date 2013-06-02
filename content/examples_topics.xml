@@ -30,9 +30,6 @@
 		<ex file="CircleCollision.html">Circle Collision</ex>
 		<ex file="MovingOnCurves.html">Moving On Curves</ex>
 		<ex file="Brownian.html">Brownian</ex>
-		<ex file="Reflection1.html">Reflection 1</ex>
-		<ex file="Reflection2.html">Reflection 2</ex>
-		<ex file="CubesWithinCube.html">Cubes Within Cube</ex>
 	</cat>
 	<cat label="Interaction">
 		<ex file="Tickle.html">Tickle</ex>
@@ -45,7 +42,6 @@
 	</cat>
 	<cat label="Image Processing">
 		<ex file="PixelArray.html">Pixel Array</ex>
-		<ex file="Histogram.html">Histogram</ex>
 		<ex file="Brightness.html">Brightness</ex>
 		<ex file="Blur.html">Blur</ex>
 		<ex file="EdgeDetection.html">Edge Detection</ex>
@@ -70,7 +66,6 @@
 		<ex file="SmokeParticleSystem.html">Smoke Particle System</ex>
 	</cat>
 	<cat label="Fractals and L-Systems">
-		<ex file="Koch.html">Koch</ex>
 		<ex file="Mandelbrot.html">Mandelbrot</ex>
 		<ex file="Tree.html">Tree</ex>
 	</cat>

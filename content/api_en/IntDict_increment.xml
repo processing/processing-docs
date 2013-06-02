@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>increment()</name>
+
+<category>IntDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory);  // There are 15 tapes
+  inventory.increment("tapes");
+  println(inventory);  // There are now 16 tapes
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Increase the value of a specific key value by 1
+]]></description>
+
+</root>

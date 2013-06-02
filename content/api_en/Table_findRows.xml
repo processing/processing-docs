@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>findRows()</name>
+
+<category>Table</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Lizard");
+  newRow.setString("type", "Reptile");
+
+  for (TableRow row : table.findRows("Reptile", "type")) {
+    println(row.getString("name") + ": " + row.getString("type"));
+  }
+}
+
+// Sketch prints:
+// Snake: Reptile
+// Lizard: Reptile
+]]></code>
+</example>
+
+<description><![CDATA[
+Finds the rows in the <b>Table</b> that contain the value provided, and returns references to those rows.  Returns an iterator, so <b>for</b> must be used to iterate through all the rows, as shown in the example above. The column to search may be specified by either its ID or title.
+]]></description>
+
+</root>

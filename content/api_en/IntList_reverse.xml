@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>reverse()</name>
+
+<category>IntList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  inventory.reverse();  // Orders to 102, 15, 84
+  println(inventory);  
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Reverse sort, orders values by first digit. This is in constrast to the <b>sortReverse()</b> method, which orders by numeric value.
+]]></description>
+
+</root>

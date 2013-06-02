@@ -24,16 +24,16 @@ $source = CONTENTDIR."static/";
 
 $page = new Page("Overview", "Overview");
 $page->content(file_get_contents($source."overview.html"));
-writeFile('about/index.html', $page->out());
+writeFile('overview/index.html', $page->out());
 #copydirr($source.'/images', $path.'/images');
 
 $page = new Page("Foundation", "Foundation");
 $page->content(file_get_contents($source."foundation.html"));
-writeFile('about/foundation/index.html', $page->out());
+writeFile('foundation/index.html', $page->out());
 
 $page = new Page("People", "People");
 $page->content(file_get_contents($source."people.html"));
-writeFile('about/people/index.html', $page->out());
+writeFile('people/index.html', $page->out());
 
 
 $benchmark_end = microtime_float();

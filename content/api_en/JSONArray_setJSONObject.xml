@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getJSONObject()</name>
+
+<category>JSONArray</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+JSONArray json;
+
+void setup() {
+
+  json = new JSONArray();
+
+  JSONObject lion = new JSONObject();
+  lion.setInt("id", 0);
+  lion.setString("species", "Panthera leo");
+  
+  json.setJSONObject(0, lion);
+
+  JSONObject zebra = new JSONObject();
+  zebra.setInt("id", 1);
+  zebra.setString("species", "Equus zebra");
+  
+  json.setJSONObject(1, zebra);
+
+  println(json);
+}
+
+// Sketch prints:
+// [
+//   {
+//     "id": 0,
+//     "species": "Panthera leo"
+//   },
+//   {
+//     "id": 1,
+//     "species": "Equus zebra"
+//   }
+// ]
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the value of the <b>JSONObject</b> with the index value.
+]]></description>
+
+</root>

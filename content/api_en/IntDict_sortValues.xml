@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sortValues()</name>
+
+<category>IntDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory);
+  inventory.sortValues();
+  println(inventory);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sort by values in ascending order. The smallest value will be at [0].
+]]></description>
+
+</root>

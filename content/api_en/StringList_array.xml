@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>array()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "tea", "flour" };
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  inventory.sort();
+  String[] sortedInventory = inventory.array();
+  println(sortedInventory);
+}
+
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Create a new array with a copy of all the values.
+]]></description>
+
+</root>

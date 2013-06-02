@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>keyArray()</name>
+
+<category>IntDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory); 
+  String[] theKeys = inventory.keyArray();
+  println(theKeys);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Return a copy of the internal keys array. In contrast to the <b>keys()</b> 
+method, this array can be modified.
+]]></description>
+
+</root>

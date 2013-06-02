@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "flour", "tea"};
+String[] amounts = { "black", "white", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  inventory.set("flour", "unbleached");
+  inventory.set("cinnamon", "brown");
+  println(inventory);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Create a new key/value pair or change the value of one.
+]]></description>
+
+</root>

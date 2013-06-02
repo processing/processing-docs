@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getInt()</name>
+
+<category>JSONArray</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+// The following short JSON file called "data.json" is parsed 
+// in the code below. It must be in the project's "data" folder.
+//
+// [ 32, 1.13, "grape", true ]
+
+JSONArray json;
+
+void setup() {
+
+  json = loadJSONArray("data.json");
+
+  int count = json.getInt(0);
+  float weight = json.getFloat(1);
+  String name = json.getString(2);
+  boolean isFruit = json.getBoolean(3);
+
+  println(count + ", " + weight + ", " + name + ", " + isFruit);
+}
+
+// Sketch prints:
+// 32, 1.13, grape, true
+]]></code>
+</example>
+
+<description><![CDATA[
+Gets the int value associated with the specified index.
+]]></description>
+
+</root>

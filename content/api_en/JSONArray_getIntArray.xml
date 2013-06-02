@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getIntArray()</name>
+
+<category>JSONArray</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+// The following short JSON file called "data.json" is parsed 
+// in the code below. It must be in the project's "data" folder.
+//
+// [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ]
+
+JSONArray json;
+
+void setup() {
+
+  json = loadJSONArray("data.json");
+
+  int[] values = json.getIntArray();
+
+  println(values);
+}
+
+// Sketch prints:
+// [0] 0
+// [1] 1
+// [2] 1
+// [3] 2
+// [4] 3
+// [5] 5
+// [6] 8
+// [7] 13
+// [8] 21
+// [9] 34
+// [10] 55
+// [11] 89
+// [12] 144
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the entire <b>JSONArray</b> as an array of ints.  (All values in the array must be of the int type.)
+]]></description>
+
+</root>

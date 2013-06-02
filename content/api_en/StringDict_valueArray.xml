@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>valueArray()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "flour", "coffee", "tea"};
+String[] amounts = { "white","black", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  String[] colors = inventory.valueArray();
+  println(colors);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Create a new array and copy each of the values into it.
+]]></description>
+
+</root>

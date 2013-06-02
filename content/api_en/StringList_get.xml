@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>get()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "flour", "tea"};
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  String item = inventory.get(2);
+  text(item, width/2, height/2);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Get an entry at a particular index.
+]]></description>
+
+</root>

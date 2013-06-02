@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>get()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "flour", "tea"};
+String[] amounts = { "black", "white", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  String teaColor = inventory.get("tea");
+  text(teaColor, width/2, height/2);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Return a value for the specified key.
+]]></description>
+
+</root>

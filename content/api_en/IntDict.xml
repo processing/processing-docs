@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>IntDict</name>
+
+<category>Data</category>
+
+<subcategory>Composite</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  int numRecords = inventory.get("records");
+  text(numRecords, width/2, height/2);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+A simple class to use a String as a lookup for an int value. String "keys" are associated with integer values.
+]]></description>
+
+
+<type>class</type>
+
+</root>

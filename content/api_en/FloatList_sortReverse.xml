@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sortReverse()</name>
+
+<category>FloatList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+To come...
+]]></code>
+</example>
+
+<description><![CDATA[
+A sort in reverse. It's equivalent to running <b>sort()</b> and then <b>reverse()</b>, but is more efficient than running each separately.
+]]></description>
+
+</root>

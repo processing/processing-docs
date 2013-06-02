@@ -108,7 +108,8 @@ foreach($categories as $category){
 
 //List out the Legacy Libraries
 $legacy = array_filter($clean['library'], function($obj) { return $obj['category'] == 'Legacy'; });
-$librariesHTML .= "<div class='legacy'>\n\t<h4>Legacy</h4>\n\t<ul>\n";
+$librariesHTML .= "<div class='legacy'>\n\t<h4>Legacy Libraries</h4>\n";
+$librariesHTML .= "\t<p>The libraries in this category haven't been updated by their creators to be compatible with the Processing 2 library manager and/or updated to work with Processing 2. We hope to have all libraries working with Processing 2; if one of your favorite libraries hasn't been updated, we encourage you to contact the library creator or to update it yourself and share it. Instructions for creating a Processing 2 library <a href='https://github.com/processing/processing/wiki'>are on the Processing GitHub site.</a>.</p>\n\t<ul>\n";
 foreach($legacy as $lib){
 	$librariesHTML .= "\t\t<li>\n";
 	$librariesHTML .= "\t\t\t".'<h5><a href="'.$lib['url'].'">'.$lib['name'].'</a></h5>'."\n";
@@ -133,7 +134,7 @@ fclose($create_file);
 ///////////////
 
 $toolsHTML 	= "<div class='contributions'>\n<ul>\n";
-$legacy 	= "<div class='legacy'>\n<h4>Legacy</h4>\n<ul>\n";
+$legacy 	= "<div class='legacy'>\n<h4>Legacy Tools</h4>\n<p>The tools in this category haven't been updated by their creators to be compatible with the Processing 2 library manager and/or updated to work with Processing 2. We hope to have all tools working with Processing 2; if one of your favorite tools hasn't been updated, we encourage you to contact the tool creator or to update it yourself and share it. Instructions for creating a Processing 2 library <a href='https://github.com/processing/processing/wiki'>are on the Processing GitHub site.</a>.</p>\n<ul>\n";
 
 foreach($clean['tool'] as $tool){
 	if($tool['category'] != 'Legacy'){

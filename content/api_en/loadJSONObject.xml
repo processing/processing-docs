@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>loadJSONObject()</name>
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+// The following short JSON file called "data.json" is parsed 
+// in the code below. It must be in the project's "data" folder.
+//
+// {
+//   "id": 0,
+//   "species": "Panthera leo",
+//   "name": "Lion"
+// }
+
+JSONObject json;
+
+void setup() {
+
+  json = loadJSONObject("data.json");
+
+  int id = json.getInt("id");
+  String species = json.getString("species");
+  String name = json.getString("name");
+
+  println(id + ", " + species + ", " + name);
+}
+
+// Sketch prints:
+// 0, Panthera leo, Lion
+]]></code>
+</example>
+
+<description><![CDATA[
+Loads a JSON from the data folder or a URL, and returns a <b>JSONObject</b>.<br>
+<br>
+All files loaded and saved by the Processing API use UTF-8 encoding.
+]]></description>
+
+</root>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getRow()</name>
+
+<category>Table</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+  
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+  
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+  
+  TableRow row = table.getRow(2);
+  println(row.getString("name"));  // Prints "Mosquito"
+  row.setString("name", "Ladybug");
+  println(row.getString("name"));  // Prints "Ladybug"
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns a reference to the specified <b>TableRow</b>.  The reference can then be used to get and set values of the selected row, as illustrated in the example above.
+]]></description>
+
+</root>

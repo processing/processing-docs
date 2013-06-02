@@ -1,3 +1,17 @@
 #redirect /index.html http://test.processing.org/index.php
 #redirect /learning/courses/index.html http://test.processing.org/courses.html
 #redirect /processing_beta.css http://test.processing.org/css/processing_beta.css
+
+RewriteEngine On
+
+# force https for all URLs in /checkout
+RewriteCond %{HTTPS} =off
+RewriteRule ^download https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# don't do anything for images/css/js
+RewriteRule \.(gif|jpe?g|png|css|js)$ - [NC,L]
+
+# force http for all other URLs that are not in /download
+RewriteCond %{HTTPS} =on
+RewriteCond %{REQUEST_URI} !^/(download|index.php/download)
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sortKeysReverse()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "flour", "coffee", "tea"};
+String[] amounts = { "white","black", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  inventory.sortKeysReverse();
+  println(inventory);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sort the keys alphabetially in reverse.
+]]></description>
+
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>remove()</name>
+
+<category>FloatDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "flour", "tea"};
+float[] amounts = { 108.6, 5.8, 8.2 };
+
+FloatDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new FloatDict(goods, amounts);
+  println(inventory);  // Full inventory
+  inventory.remove("flour");
+  println(inventory);  // Flour is removed from list
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Remove a key/value pair.
+]]></description>
+
+</root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getContent()</name>
+
+<category>XMLElement</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+// The following short XML file called "positions.xml" is parsed
+// in the code below. It must be in the project's "data" folder.
+//
+// &lt;?xml version=&quot;1.0&quot;?&gt;
+// &lt;positions&gt;
+//   &lt;position id="0"&gt;128&lt;/position&gt;
+//   &lt;position id="1"&gt;256&lt;/position&gt;
+//   &lt;position id="2"&gt;512&lt;/position&gt;
+// &lt;/positions&gt;
+
+XML xml;
+
+void setup() {
+  xml = loadXML("positions.xml");
+  XML firstChild = xml.getChild("position");
+  println(firstChild.getIntContent());
+}
+
+// Sketch prints:
+// 128
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the content of an element as an int. If there is no such content, either <b>null</b> or the provided default value is returned.
+]]></description>
+
+</root>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>max()</name>
+
+<category>FloatList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+float[] numbers = { 108.6, 5.8, 8.2 };
+FloatList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new FloatList(numbers);
+  println(inventory);
+  float largest = inventory.max();
+  println(largest);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Return the largest value.
+]]></description>
+
+</root>

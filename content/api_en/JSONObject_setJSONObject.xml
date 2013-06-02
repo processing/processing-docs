@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>setJSONObject()</name>
+
+<category>JSONObject</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+JSONObject json;
+
+void setup() {
+
+  json = new JSONObject();
+
+  JSONObject lion = new JSONObject();
+  lion.setInt("id", 0);
+  lion.setString("species", "Panthera leo");
+
+  json.setJSONObject("lion", lion);
+
+  println(json);
+}
+
+// Sketch prints:
+// {"lion": {
+//   "id": 0,
+//   "species": "Panthera leo"
+// }}
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the value of the <b>JSONObject</b> with the associated key.
+]]></description>
+
+</root>

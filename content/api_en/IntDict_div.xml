@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>div()</name>
+
+<category>IntDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "cds", "tapes", "records"};
+int[] amounts = { 84, 15, 102 };
+
+IntDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntDict(goods, amounts);
+  println(inventory);  // There are 84 cds
+  inventory.div("cds", 2);
+  println(inventory);  // There are 42 cds
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Divide a value.
+]]></description>
+
+</root>

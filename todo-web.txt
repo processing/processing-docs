@@ -1,26 +1,11 @@
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 WEBSITE
-  
-  NEED 100% FOR 2.0
-  
-  - Redesign Download Page
-  - Build libraries page from the contributions.txt file web/contrib_generate
-  - Build tools pages from the contributions.txt file web/contrib_generate
-  - Legacy libraries and tools linked from the bottom of the page
 
-  - Make the URLs make sense (Overview, People, Foundation)
-  - Design Edits
-    - Add Partners to Cover
-      - Fathom
-      - UCLA Arts Software Studio
-      - NYU ITP
-    - Add Twitter and GitHub status to homepage
-  - Decrease text block width on pages with large text block
-  - Fix 3 column layout for Libraries & Tools pages
-  - Double check new language for the header text
-  - Replace drop down menu with “Back to list” button. Do this on Examples as well.
+  NEED TO DO ON LAUNCH
 
+  - Update credential file to redirect users to main site, rather than trunk
+    
 
   NEED POST 2.0
 
@@ -29,14 +14,27 @@
   - New CSS for tutorials
   - Code copyright forms and page [Goes on the developer site @ GitHub]  --CR
     
-      
-  NICE   
+    
+  NICE
 
-  - Download page auto detects OS
-  - Add contact to Homepage and About!
+  - Adjust favicon to match future black icon
+
+
+  ROUND 2.0   
+
+  - Adjust grid on Reference/Examples/Exhibition/Tutorial pages
   - Color code the code for the Tutorials, Examples, Reference
   - Retinafy all images
-  - Adjust grid on Exhibition & Tutorial pages
+
+
+  EYE ON THE FUTURE
+
+  - Add Examples back to web that weren't compatible with Processing.js
+    . Reflection1 (PVector.random2D())
+    . Cubes within cube (PVector.random3D())
+    . Koch (PVector.rotate())
+    . Flocking (PVector.random2D())
+  
 
   
   
@@ -117,3 +115,24 @@ DONE
   X Update nav (download + reference)
   X Update css for distribution
   X Sticky nav
+  X Replace drop down menu with “Back to list” button. Do this on Examples as well.
+  X Build libraries page from the contributions.txt file web/contrib_generate
+  X Build tools pages from the contributions.txt file web/contrib_generate
+  X Legacy libraries and tools linked from the bottom of the page
+  X Double check new language for the header text
+  X Fix 3 column layout for Libraries & Tools pages
+  X Make the URLs make sense (Overview, People, Foundation)
+  X Legacy text
+  X Home Page
+  X Decrease text block width on pages with large text block
+  X Integrate Download Page
+  X Where did the Shop go?
+  X Integrate italics
+  X Pretty Urls
+  X remove twitter cache
+  X Add Mailing List to Hompage
+  X Dynamic Feeds (twitter / github)
+  X Italics
+  X Send test/live credentials
+  X Add caching solution for github feed
+  X Add contact to Homepage and About!

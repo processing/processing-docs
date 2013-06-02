@@ -52,7 +52,7 @@ if(isset($_POST['form'])){
 		<meta name="Copyright" content="All contents copyright Ben Fry, Casey Reas, MIT Media Laboratory" />
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="/javascript/stickyNav.js" type="text/javascript"></script>
+		<script src="/javascript/site.js" type="text/javascript"></script>
 		<? if($showDonationForm): ?>
 			<script type="text/javascript" src="_js/select.js"></script>
 		<? endif; ?>
@@ -91,17 +91,17 @@ if(isset($_POST['form'])){
 					<a href="/reference/libraries/">Libraries</a><br>
 					<a href="/reference/tools/">Tools</a><br>
 					<a href="/reference/environment/">Environment</a><br><br>
-					<a href="/learning/">Tutorials</a><br>
-					<a href="/learning/examples/">Examples</a><br>
-					<a href="/learning/books/">Books</a><br><br>
-					<a href="/about/">Overview</a><br> 
-					<a href="/about/people/">People</a><br>
-					<a href="/about/foundation/">Foundation</a><br><br>
+					<a href="/tutorials/">Tutorials</a><br>
+					<a href="/examples/">Examples</a><br>
+					<a href="/books/">Books</a><br><br>
+					<a href="/overview/">Overview</a><br> 
+					<a href="/people/">People</a><br>
+					<a href="/foundation/">Foundation</a><br><br>
 					<a href="/shop/">Shop</a><br><br>
 					<a href="https://twitter.com/processingOrg"class="outward"><span>&raquo;</span>Twitter</a><br> 
 					<a href="http://forum.processing.org"class="outward"><span>&raquo;</span>Forum</a><br> 
 					<a href="http://wiki.processing.org"class="outward"><span>&raquo;</span>Wiki</a><br> 
-					<a href="https://github.com/processing/processing-web/issues?state=open"class="outward"><span>&raquo;</span>Issues</a><br> 
+					<a href="https://github.com/processing/processing/issues?state=open"class="outward"><span>&raquo;</span>Issues</a><br> 
 					<a href="https://github.com/processing"class="outward"><span>&raquo;</span>Source</a><br> 
 				</div>
 			</div>

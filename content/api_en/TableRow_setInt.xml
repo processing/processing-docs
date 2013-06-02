@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>setInt()</name>
+
+<category>TableRow</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  table.addColumn("number", Table.INT);
+  table.addColumn("mass", Table.FLOAT);
+  table.addColumn("name", Table.STRING);
+  
+  TableRow row = table.addRow();
+  row.setInt("number", 8);
+  row.setFloat("mass", 15.9994);
+  row.setString("name", "Oxygen");
+  
+  println(row.getInt("number"));   // Prints 8
+  println(row.getFloat("mass"));   // Prints 15.9994
+  println(row.getString("name"));  // Prints "Oxygen
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Stores an integer value in the <b>TableRow</b>'s specified column. The column may be specified by either its ID or title.
+]]></description>
+
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sortKeys()</name>
+
+<category>FloatDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "tea", "flour"};
+float[] amounts = { 108.6, 8.2, 5.8,  };
+
+FloatDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new FloatDict(goods, amounts);
+  println(inventory);
+  inventory.sortKeys();
+  println(inventory);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sort the keys alphabetically (ignoring case). Uses the value as 
+a tie-breaker (only really possible with a key that has a case change).
+]]></description>
+
+</root>

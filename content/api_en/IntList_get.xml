@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>get()</name>
+
+<category>IntList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+int[] numbers = { 84, 15, 102 };
+IntList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new IntList(numbers);
+  println(inventory);
+  noLoop();
+  fill(0);
+  textAlign(CENTER);
+}
+
+void draw() {
+  int nums = inventory.get(2);
+  text(nums, width/2, height/2);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Get an entry at a particular index.
+]]></description>
+
+</root>

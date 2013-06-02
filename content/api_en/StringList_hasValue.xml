@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>hasValue()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "flour", "tea"};
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  if (inventory.hasValue("tea") == true) {
+    println("Yes, we have a tea"); 
+  } else {
+    println("Sorry, no tea");
+  }
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Check if a value is a part of the list.
+]]></description>
+
+</root>

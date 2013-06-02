@@ -12,8 +12,33 @@ x Last Modified: 2005.08.30 06:23PM
 */
 
 
-/* ================ GOOGLE FONT ================== */
-@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);
+/* ================ FONTS ================== */
+/*@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);*/
+
+
+@font-face {
+	font-family: 'theSerifItalic';
+	src: url(fonts/TheSerif_B4_Italic.eot),
+		 url(fonts/TheSerif_B4_Italic.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'theSerif';
+	src: url(fonts/TheSerif_B4_Plain_.eot),
+		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'theSerif';
+	src: url(fonts/TheSerif_B4_Bold_.eot),
+		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
 
 
 
@@ -26,11 +51,12 @@ body {
 	
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
-	font-family			: 'PT Serif', georgia, times, serif; 
+	font-family			: 'theSerif', georgia, times, serif; 
+	-webkit-font-smoothing: antialiased; 
 	font-size			: 100%; 
-    font-size           : 0.78em;
+    font-size           : 0.79em;
 	font-weight			: normal;
-	line-height			: 1.4em;
+	line-height			: 1.5em;
 	color				: #252525;
 }
 
@@ -41,7 +67,7 @@ a {
 	font-weight: normal;
 	color: #2c7bb5;
 }
-/*p a, li a, span a { border-bottom: 1px solid #A6BCCF; }*/
+
 a.large-link {
 	position: relative;
 	margin-left: 18px;
@@ -122,7 +148,7 @@ a.large-link:before {
 	content: '\2039';
 }
 #header a { 
-	font-family: 'Enriqueta', georgia, times, sans-serif;
+	font-family: 'theSerif', georgia, times, sans-serif;
 	text-decoration: none;
 	border: none;
 	color: white;
@@ -147,7 +173,7 @@ a.large-link:before {
 	outline: none;
 	height: 18px;
 	background: #fff;
-	font-family: 'PT Serif', georgia, times, serif; 
+	font-family: 'theSerif', georgia, times, serif; 
 	font-size: 1em;
 	color: #959595;
 }
@@ -178,7 +204,10 @@ a.large-link:before {
 	color: #2c7bb5;
 }
 .navBar { padding: 0 20px 0 30px; }
-.navBar.stuck { position: fixed; top: 20px;}
+.navBar.stuck { position: fixed; top: 20px; }
+@media only screen and (max-height: 590px) {
+	.navBar.stuck { position: static; top: 0;}
+}
 
 .navBar a { text-decoration: none; border: none; }
 
@@ -222,9 +251,8 @@ h1, h2, h3, h4, h5, h6
 	{
 	/*margin-bottom 		: 5px;*/
 	color				: #5A5A5A; 
-	font-family			: 'Enriqueta', georgia, times, serif;
-	-webkit-font-smoothing: antialiased; 
-	font-weight			: normal;
+	font-family			: 'theSerif', georgia, times, serif;
+	font-weight			: 400;
 	line-height			: 1.6em;
 	}
 
@@ -238,10 +266,14 @@ h4, h5, h6
 	/*font-weight			: bold;*/ 
 }
 .large-link { 
-	font-family: 'Enriqueta', georgia, times, serif;
-	-webkit-font-smoothing: antialiased;
+	font-family: 'theSerif', georgia, times, serif;
 }
 a.code { color: #2c7bb5; }
+/* dirty italic fix */
+i, em, .italic { 
+	font-family: 'theSerifItalic' !important; 
+	font-style: normal !important; 
+}
 
 /* Font Sizes */
 
@@ -282,6 +314,8 @@ li {margin-bottom: 1em; }
 	font-size: 1.3rem; 
 	line-height: 26px;
 	margin: 0 0 26px 0;
+	color: #616161;
+	word-spacing: 1px;
 }
 .large-header .black { color: #000; }
 .error { color: #f00; margin: 0; }
@@ -307,21 +341,23 @@ li {margin-bottom: 1em; }
 	width: 225px; 
 }
 
-
+#Cover p { margin-top: 1.5em; }
 #Cover ul {
 	list-style: none;
 	margin-left: 0;
-	padding-left: 1em;
-	text-indent: -1em;
+	padding-left: 0;
+	/*text-indent: -1em;*/
 }
 
 
 #Cover h3 { margin: 40px 0 15px 0; }
-.exhibition-small { padding: 0; margin: 0; }
+#Cover h5 { font-size: 1em; color: #252525;  }
+.exhibition-small { padding: 0; margin: 0 0 3em 0; }
 .exhibition-small h3 { margin-top: 0px !important; }
 
 dl { margin: 0; }
-dt { font-style: italic; }
+dt { /*font-style: italic;*/
+font-family			: 'theSerifItalic'; }
 dd { margin: 0 0 1em 0; }
 
 .happenings { margin-bottom: 30px; }
@@ -332,6 +368,60 @@ dd { margin: 0 0 1em 0; }
 
 td img { margin: 0; display: block; }
 
+#Cover .video,
+#Cover .twitter,
+#Cover .commits,
+#Cover .partners,
+#Cover .mailing-list,
+#Cover .contact { margin-top: 3em; }
+#Cover .video .video-caption { /*font-style: italic;*/
+font-family: 'theSerifItalic'; }
+#Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
+
+#Cover .mailing-list input[type="email"],
+#Cover .mailing-list input[type="submit"]{
+	border: 1px solid #959595;
+	background-color: white;
+	outline: none;
+	height: 20px;
+	padding-left: 4px;
+	font-family: 'theSerif', georgia, times, serif; 
+	font-size: 1em;
+	color: #252525;
+}
+#Cover .mailing-list input[type="email"] {
+	width: 160px;
+}
+#Cover .mailing-list input[type="submit"]{
+	border: none;
+	cursor: pointer;
+	height: 24px;
+	color: #2c7bb5;
+}
+#Cover .mailing-list input[type="email"]:focus {
+  border: 1px solid #2c7bb5;
+}
+
+#Cover .commits,
+#Cover .twitter { float: left; margin-top: 14px; }
+.latest-commits li,
+.latest-tweets li {
+	display: block;
+	float: left;
+	margin-bottom: 14px;
+}
+.github-avatar {
+	display: block;
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+.latest-commits li div {
+	width: 370px;
+	float: left;
+	margin-left: 10px;
+}
+.latest-tweets li div { margin: 0; }
 
 
 /**************************************************************** Exhibition ***/
@@ -410,7 +500,7 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 	margin-bottom: 20px;
 }
 
-.ref-notice { margin: 0 0 2.5em 0; color: #CC6600; clear: both; margin-right: 40px;}
+.ref-notice { margin: 0 0 2.5em 0; color: #FF3399; clear: both; margin-right: 40px;}
 
 .ref-item { margin-bottom: 60px; }
 .ref-item th { width: 100px; font-weight: bold; text-align: left; vertical-align: top; }
@@ -531,6 +621,7 @@ hr.noshade { height: 0px; color: #f1f1f1; border-color: #e0e0e0; margin: 30px 0 
 .contributions h4 {
 	font-size: 1em;
 	font-weight: bold;
+	color: #252525;
 }
 .contributions ul li {
 	display: inline-block;
@@ -559,7 +650,7 @@ div.ref-col {
 	margin: 1.5em 0 0 0; 
 	font-size: 1em; 
 	font-weight: normal; 
-	font-style: italic; 
+	color: #252525;
 }
 .ref-col h3+h5 { margin-top: 0; }
 .category { margin-bottom: 30px; }
@@ -575,18 +666,77 @@ div.ref-col {
 
 /* download */
 
-#Download .leftcol { width: 430px; float: left; }
-	.download-ver { color: black; font-size: 1em; font-weight: bold; margin-top: 2em; }
-	.download-ver span { color: #5a5a46; }
-
-#Download .rightcol { 
-	float: left;
-	margin-left: 75px;
-	margin-top: 4px;
-    width: 175px; 
+#Download .download ul { list-style: none; margin: 0; padding: 0; }
+#Download span.version-date { color: #959595; }
+#Download h5 {
+	text-align: center;
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #D8D8D8;
+	padding: 24px;
 }
-	#Download .rightcol h5 { font-size: 1em; margin-bottom: 1em; }
-#Download .releases { width: 100%; float: left; }
+.current-version .download-logo {
+	width: 130px;
+	height: auto;
+	display: block;
+	float: left;
+	margin-left: 24px;
+	margin-bottom: 30px;
+	margin-right: 36px;
+}
+.current-version .downloads {
+	padding-top: 20px;
+	width: 490px;
+	float: left;
+}
+.current-version .downloads a {
+	font-size: 21px;
+	line-height: 28px;
+}
+.current-version .downloads li {
+	color: #959595;
+	display: block;
+	float: left;
+	margin-top: 14px;
+}
+.current-version .downloads li:not(:last-child) {
+	margin-right: 42px;
+}
+.current-version .meta {
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #D8D8D8;
+	float: left;
+	padding: 24px;
+}
+.current-version .meta .links {
+	width: 130px;
+	float: left;
+}
+.current-version .meta .revisions {
+	float: left;
+	width: 462px;
+	margin-left: 36px;
+}
+#Download .releases {
+	margin-top: 24px;
+	float: left;
+}
+#Download .releases li a:not(:last-child):after {
+	content: ' /';
+	pointer-events:none;
+	color: #959595;
+}
+#Download .releases span.version,
+#Download .releases span.version-date {
+	margin-right: 14px;
+}
+
+#Download .disclaimer {
+	margin-top: 72px;
+	float: left;
+	padding-top: 14px;
+	border-top: 1px solid #D8D8D8;
+	color: #959595;
+}
 
 #Download .donate-box input[type="text"],
 #Download .donate-box input[type="email"]{
@@ -618,13 +768,13 @@ div.ref-col {
 	}
 	#Download #selectForm .select-amount {
 		text-align: left;
-		margin: 22px 0 42px 40px;
+		margin: 22px 0 42px 30px;
 	}
 	#Download #selectForm .select-amount label {
 		margin-right: 50px;
 	}
 	#Download .donate-box input[type="submit"]{
-		font-family: 'Enriqueta', georgia, times, serif;
+		font-family: 'theSerif', georgia, times, serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 1.7em;
 		color: #2c7bb5;
@@ -672,7 +822,8 @@ div.ref-col {
 		}
 		#donateForm .payType .or {
 			display: inline-block;
-			font-style: italic;
+			/*font-style: italic;*/
+			font-family			: 'theSerifItalic';
 			margin: 0 30px 0 20px;
 		}
 	#donateForm .ccInfo {
@@ -716,7 +867,7 @@ div.ref-col {
 
 h2 { margin-bottom: 0; margin-top: 0;}
 
-.example-notice { margin: -1.0em 0 2.5em 0; color: #CC6600; clear: both; margin-right: 40px;}
+.example-notice { margin: -1.0em 0 2.5em 0; color: #FF3399; clear: both; margin-right: 40px;}
 
 
 #Copyright p { margin-right: 20px; }
@@ -924,6 +1075,19 @@ ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 #Overview .content p,
 #Overview .content ul,
 #Overview .content table {
+	width: 560px;
+}
+
+#Foundation .content p,
+#Foundation .content ul,
+#Foundation .content table {
+	width: 560px;
+}
+
+
+#People .content p,
+#People .content ul,
+#People .content table {
 	width: 560px;
 }
 

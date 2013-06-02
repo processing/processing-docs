@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sort()</name>
+
+<category>StringList</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "tea", "flour" };
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList(goods);
+  println(inventory);
+  inventory.sort();
+  println(inventory);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sorts the array in place.
+]]></description>
+
+</root>

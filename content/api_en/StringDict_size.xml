@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>size()</name>
+
+<category>StringDict</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String[] goods = { "coffee", "flour", "tea"};
+String[] amounts = { "black", "white", "green" };
+
+StringDict inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringDict(goods, amounts);
+  println(inventory);
+  int s = inventory.size();
+  println(s);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the number of key/value pairs.
+]]></description>
+
+</root>
