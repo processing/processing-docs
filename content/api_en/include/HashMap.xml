@@ -51,15 +51,15 @@ HashMap&amp;lt;Key, Value&amp;gt;(<c>initialCapacity</c>, <c>loadFactor</c>)
 HashMap&amp;lt;Key, Value&amp;gt;(<c>m</c>)
 </constructor>
 
-<cparameter>
-<clabel>Key</clabel>
-<cdescription>Class Name: the data type for the HashMap's keys</cdescription>
-</cparameter>
+<parameter>
+<label>Key</label>
+<description>Class Name: the data type for the HashMap's keys</description>
+</parameter>
 
-<cparameter>
-<clabel>Value</clabel>
-<cdescription>Class Name: the data type for the HashMap's values</cdescription>
-</cparameter>
+<parameter>
+<label>Value</label>
+<description>Class Name: the data type for the HashMap's values</description>
+</parameter>
 
 <parameter>
 <label>initialCapacity</label>
