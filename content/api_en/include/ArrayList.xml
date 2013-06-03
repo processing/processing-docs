@@ -66,19 +66,21 @@ ArrayList&amp;lt;Type&amp;gt;()
 ArrayList&amp;lt;Type&amp;gt;(<c>initialCapacity</c>)
 </constructor>
 
-<cparameter>
-<clabel>Type</clabel>
-<cdescription>Class Name: the data type for the objects to be placed in the ArrayList.</cdescription>
-</cparameter>
+<parameter>
+<label>Type</label>
+<cdescription>Class Name: the data type for the objects to be placed in the ArrayList.</description>
+</parameter>
 
-<cparameter>
-<clabel>initialCapacity</clabel>
-<cdescription>int: defines the initial capacity of the list; it's empty by default</cdescription>
-</cparameter>
+<parameter>
+<label>initialCapacity</label>
+<description>int: defines the initial capacity of the list; it's empty by default</description>
+</parameter>
 
 <returns></returns>
 
 <related>IntList</related>
+<related>FloatList</related>
+<related>StringList</related>
 
 <availability>1.0</availability>
 
