@@ -12,12 +12,24 @@
 <example>
 <image></image>
 <code><![CDATA[
-To come...
+StringList inventory;
+
+void setup() {
+  size(200, 200);
+  inventory = new StringList();
+  inventory.append("coffee");
+  inventory.append("flour");
+  inventory.append("tea");
+  println(inventory);
+  inventory.reverse();
+  println(inventory);
+}
+
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+Reverses the order of the list.
 ]]></description>
 
 </root>

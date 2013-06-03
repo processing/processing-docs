@@ -12,12 +12,14 @@
 <example>
 <image></image>
 <code><![CDATA[
-String[] goods = { "coffee", "flour", "tea"};
 StringList inventory;
 
 void setup() {
   size(200, 200);
-  inventory = new StringList(goods);
+  inventory = new StringList();
+  inventory.append("coffee");
+  inventory.append("tea");
+  inventory.append("flour");
   println(inventory);
   inventory.upper();
   println(inventory);
