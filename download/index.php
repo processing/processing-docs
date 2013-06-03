@@ -1,4 +1,4 @@
-<? 
+<?php
 
 //Let's get this payparty started
 $showDonationForm = false;
