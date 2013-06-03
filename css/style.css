@@ -12,30 +12,26 @@ x Last Modified: 2005.08.30 06:23PM
 */
 
 
-/* ================ FONTS ================== */
-/*@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Enriqueta);*/
-
-
 @font-face {
 	font-family: 'theSerifItalic';
-	src: url(fonts/TheSerif_B4_Italic.eot),
-		 url(fonts/TheSerif_B4_Italic.woff) format("woff");
+	src: url(http://trunk.processing.org/css/fonts/TheSerif_B4_Italic.eot),
+		 url(http://trunk.processing.org/css/fonts/TheSerif_B4_Italic.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'theSerif';
-	src: url(fonts/TheSerif_B4_Plain_.eot),
-		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
+	src: url(http://trunk.processing.org/css/fonts/TheSerif_B4_Plain_.eot),
+		 url(http://trunk.processing.org/css/fonts/TheSerif_B4_Plain_.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'theSerif';
-	src: url(fonts/TheSerif_B4_Bold_.eot),
-		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
+	src: url(http://trunk.processing.org/css/fonts/TheSerif_B4_Bold_.eot),
+		 url(http://trunk.processing.org/css/fonts/TheSerif_B4_Bold_.woff) format("woff");
 	font-weight: 800;
 	font-style: normal;
 }
