@@ -12,12 +12,14 @@
 <example>
 <image></image>
 <code><![CDATA[
-int[] numbers = { 84, 15, 102 };
 IntList inventory;
 
 void setup() {
   size(200, 200);
-  inventory = new IntList(numbers);
+  inventory = new IntList();
+  inventory.append(84);
+  inventory.append(15);
+  inventory.append(102);
   println(inventory);
   inventory.append(-16);
   println(inventory);

@@ -12,12 +12,14 @@
 <example>
 <image></image>
 <code><![CDATA[
-int[] numbers = { 84, 15, 102 };
 IntList inventory;
 
 void setup() {
   size(200, 200);
-  inventory = new IntList(numbers);
+  inventory = new IntList();
+  inventory.append(84);
+  inventory.append(15);
+  inventory.append(102);
   println(inventory);
   inventory.reverse();  // Orders to 102, 15, 84
   println(inventory);  
@@ -27,7 +29,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Reverse sort, orders values by first digit. This is in constrast to the <b>sortReverse()</b> method, which orders by numeric value.
+Reverse the order of the list.
 ]]></description>
 
 </root>
