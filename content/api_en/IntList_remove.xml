@@ -21,8 +21,9 @@ void setup() {
   inventory.append(15);
   inventory.append(102);
   println(inventory);
-  inventory.remove(0);
+  int val = inventory.remove(0);
   println(inventory);
+  println("The value " + val + " was removed.");
 }
 
 ]]></code>
