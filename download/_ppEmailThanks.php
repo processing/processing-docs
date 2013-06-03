@@ -6,10 +6,10 @@ require_once('./paypal/httprequest.php');
 require_once('phpmailer/class.phpmailer.php');
 
 //Use this form for production server 
-//$r = new PayPal(true);
+$r = new PayPal(true);
 
 //Use this form for sandbox tests
-$r = new PayPal();
+// $r = new PayPal();
 
 $final = $r->doPayment();
 
