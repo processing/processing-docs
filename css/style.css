@@ -12,6 +12,7 @@ x Last Modified: 2005.08.30 06:23PM
 */
 
 
+
 @font-face {
 	font-family: 'theSerifItalic';
 	src: url(http://trunk.processing.org/css/fonts/TheSerif_B4_Italic.eot),
@@ -36,6 +37,22 @@ x Last Modified: 2005.08.30 06:23PM
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Enriqueta';
+	src: url(/css/fonts/Enriqueta-Regular-webfont.eot),
+		 url(/css/fonts/Enriqueta-Regular-webfont.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Enriqueta';
+	src: url(/css/fonts/Enriqueta-Bold-webfont.eot),
+		 url(/css/fonts/Enriqueta-Bold-webfont.woff) format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
 
 
 /* ================ GLOBAL ================== */
@@ -47,7 +64,7 @@ body {
 	
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
-	font-family			: 'theSerif', georgia, times, serif; 
+	font-family			: 'theSerif', 'Enriqueta', georgia, times, serif; 
 	-webkit-font-smoothing: antialiased; 
 	font-size			: 100%; 
     font-size           : 0.79em;
@@ -144,7 +161,7 @@ a.large-link:before {
 	content: '\2039';
 }
 #header a { 
-	font-family: 'theSerif', georgia, times, sans-serif;
+	font-family: 'theSerif', 'Enriqueta', georgia, times, sans-serif;
 	text-decoration: none;
 	border: none;
 	color: white;
@@ -169,7 +186,7 @@ a.large-link:before {
 	outline: none;
 	height: 18px;
 	background: #fff;
-	font-family: 'theSerif', georgia, times, serif; 
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif; 
 	font-size: 1em;
 	color: #959595;
 }
@@ -247,7 +264,7 @@ h1, h2, h3, h4, h5, h6
 	{
 	/*margin-bottom 		: 5px;*/
 	color				: #5A5A5A; 
-	font-family			: 'theSerif', georgia, times, serif;
+	font-family			: 'theSerif', 'Enriqueta', georgia, times, serif;
 	font-weight			: 400;
 	line-height			: 1.6em;
 	}
@@ -262,12 +279,12 @@ h4, h5, h6
 	/*font-weight			: bold;*/ 
 }
 .large-link { 
-	font-family: 'theSerif', georgia, times, serif;
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
 }
 a.code { color: #2c7bb5; }
 /* dirty italic fix */
 i, em, .italic { 
-	font-family: 'theSerifItalic' !important; 
+	font-family: 'theSerifItalic', 'Enriqueta' !important; 
 	font-style: normal !important; 
 }
 
@@ -353,7 +370,7 @@ li {margin-bottom: 1em; }
 
 dl { margin: 0; }
 dt { /*font-style: italic;*/
-font-family			: 'theSerifItalic'; }
+font-family			: 'theSerifItalic', 'Enriqueta'; }
 dd { margin: 0 0 1em 0; }
 
 .happenings { margin-bottom: 30px; }
@@ -371,7 +388,7 @@ td img { margin: 0; display: block; }
 #Cover .mailing-list,
 #Cover .contact { margin-top: 3em; }
 #Cover .video .video-caption { /*font-style: italic;*/
-font-family: 'theSerifItalic'; }
+font-family: 'theSerifItalic', 'Enriqueta'; }
 #Cover .video .video-caption:first-child { display: inline-block; margin-bottom: 1.5em; }
 
 #Cover .mailing-list input[type="email"],
@@ -381,7 +398,7 @@ font-family: 'theSerifItalic'; }
 	outline: none;
 	height: 20px;
 	padding-left: 4px;
-	font-family: 'theSerif', georgia, times, serif; 
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif; 
 	font-size: 1em;
 	color: #252525;
 }
@@ -770,7 +787,7 @@ div.ref-col {
 		margin-right: 50px;
 	}
 	#Download .donate-box input[type="submit"]{
-		font-family: 'theSerif', georgia, times, serif;
+		font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
 		-webkit-font-smoothing: antialiased;
 		font-size: 1.7em;
 		color: #2c7bb5;
@@ -819,7 +836,7 @@ div.ref-col {
 		#donateForm .payType .or {
 			display: inline-block;
 			/*font-style: italic;*/
-			font-family			: 'theSerifItalic';
+			font-family			: 'theSerifItalic', 'Enriqueta';
 			margin: 0 30px 0 20px;
 		}
 	#donateForm .ccInfo {

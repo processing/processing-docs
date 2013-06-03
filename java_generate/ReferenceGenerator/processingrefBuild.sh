@@ -46,6 +46,12 @@ cp -R ../../content/api_media/*.png ../../reference/images/
 # manage local reference
 cp -R ../../css	 ../../distribution/
 cp -R ../../javascript	 ../../distribution/
+rm -rf ../../distribution/css/fonts/TheSerif_B4_Bold_.eot
+rm -rf ../../distribution/css/fonts/TheSerif_B4_Bold_.woff
+rm -rf ../../distribution/css/fonts/TheSerif_B4_Italic.eot
+rm -rf ../../distribution/css/fonts/TheSerif_B4_Italic.woff
+rm -rf ../../distribution/css/fonts/TheSerif_B4_Plain_.eot
+rm -rf ../../distribution/css/fonts/TheSerif_B4_Plain_.woff
 mkdir -p ../../distribution/images
 cp -R ../../content/api_media/*.jpg ../../distribution/images/
 cp -R ../../content/api_media/*.gif ../../distribution/images/
