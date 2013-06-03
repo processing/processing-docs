@@ -46,8 +46,8 @@ if ($final['ACK'] == 'Success') {
 	$message = str_replace('%name%', $name , $config['email-message']) . "\n\n";
 	$message .= "Amount: $" . $amount . "<br />\n";
 	$message .= "Email: " . $email . "<br />\n";
-	$message .= "Date: " . date('M j, Y', $date) . "<br />\n";
-	$message .= "Best regards, and thanks again,<br>Ben Fry, Casey Reas, and Dan Shiffman";
+	$message .= "Date: " . date('M j, Y', $date) . "<br /><br />\n";
+	$message .= "Best regards, and thanks again,<br />Ben Fry, Casey Reas, and Dan Shiffman";
 
 	$mail->Subject = $config['email-subject'];
 	$mail->MsgHTML($message);
