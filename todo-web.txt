@@ -8,7 +8,14 @@
   - Check .htaccess for references to trunk
   - Make sure fonts are on the server
   - Add more redirects
-    . 
+    . http://processing.org/reference/alpha.html > http://trunk.processing.org/reference/
+    . http://processing.org/learning/ > http://trunk.processing.org/tutorials/
+    . http://processing.org/learning/basics/ > http://trunk.processing.org/examples/
+    . http://processing.org/learning/topics/ > http://trunk.processing.org/examples/
+    . http://processing.org/learning/books/ > http://trunk.processing.org/books/
+    . http://processing.org/about/ > http://trunk.processing.org/overview/
+    . http://processing.org/about/people/ > http://trunk.processing.org/people/
+    . http://processing.org/about/patrons/ > http://trunk.processing.org/foundation/
 
   NEED POST 2.0
 
