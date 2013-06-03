@@ -59,7 +59,7 @@ if ($_POST) {
 		$message .= "Email: " . $email . "<br />\n";
 		$message .= "Date: " . date('M j, Y', $donation['created']) . "<br />\n";
 		$message .= "Transaction ID: " . $donation['id'] . "<br /><br />\n\n\n";
-		$message .= "Regards,<br>Ben Fry, Casey Reas, Dan Shiffman";
+		$message .= "Best regards, and thanks again,<br>Ben Fry, Casey Reas, and Dan Shiffman";
 
 		$mail->Subject = $config['email-subject'];
 		$mail->MsgHTML($message);
