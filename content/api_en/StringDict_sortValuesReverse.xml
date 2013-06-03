@@ -12,14 +12,14 @@
 <example>
 <image></image>
 <code><![CDATA[
-String[] goods = { "flour", "coffee", "tea"};
-String[] amounts = { "white","black", "green" };
-
 StringDict inventory;
 
 void setup() {
   size(200, 200);
-  inventory = new StringDict(goods, amounts);
+  inventory = new StringDict();
+  inventory.set("coffee","black");
+  inventory.set("flour","white");
+  inventory.set("tea","green");
   println(inventory);
   inventory.sortValuesReverse();
   println(inventory);
