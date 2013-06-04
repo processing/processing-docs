@@ -1,12 +1,19 @@
 <h1 class="large-header"><span class="black">Download Processing.</span> Please consider making a donation to the Processing Foundation before downloading the software.</h1>
 
+<noscript>
+	<p>JavaScript is required for the donation process. Please click <a href="/download/?processing">here</a> to go directly to Downloads...</p>
+	<style type="text/css">
+		.donate-box { display: none; }
+	</style>
+</noscript>
+
 <div class="donate-box">
 
 	<p>Processing is open source, free software. All donations fund the <a href="/about/foundation/">Processing Foundation</a>, a nonprofit organization devoted to advancing the role of programming within the visual arts through developing Processing.</p>
 
 	<div class="messages"></div>
 
-	<noscript><p>JavaScript is required for the donation process. Please click here to go directly to Downloads ...</p></noscript>
+	
 	<form method="post" action="/download/" id="selectForm">
 		<input type="hidden" name="form" value="1" />
 		<input type="hidden" name="radioChecked" value="0" />
