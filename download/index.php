@@ -50,6 +50,7 @@ if(isset($_POST['form'])){
 		<meta name="Description" content="Processing is an electronic sketchbook for developing ideas. It is a context for learning fundamentals of computer programming within the context of the electronic arts." />
 		<meta name="Copyright" content="All contents copyright Ben Fry, Casey Reas, MIT Media Laboratory" />
 
+		<script src="/javascript/modernizr-2.6.2.touch.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/javascript/jquery-1.9.1.min.js"><\/script>')</script>
 		<script src="/javascript/site.js" type="text/javascript"></script>

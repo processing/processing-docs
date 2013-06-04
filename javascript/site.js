@@ -1,13 +1,15 @@
 $(function(){
 
 	// sticky scroll
-	$(window).scroll(function(){
-		if($(this).scrollTop() < 114){
-			$('.navBar').removeClass('stuck')
-		} else {
-			$('.navBar').addClass('stuck')
-		}
-	})
+	if(!Modernizr.touch){
+		$(window).scroll(function(){
+			if($(this).scrollTop() < 114){
+				$('.navBar').removeClass('stuck')
+			} else {
+				$('.navBar').addClass('stuck')
+			}
+		})
+	}
 
 	// if on the homepage, gather recent tweets/commits
 	if($('body').attr('id')=='Cover'){
