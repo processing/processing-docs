@@ -35,7 +35,7 @@ $(function(){
 					var timeText   = format_relative_time(extract_relative_time(time));
 
 					var commit_html = '<li><img class="github-avatar" src="http://www.gravatar.com/avatar/' + commit.author.gravatar_id + '?s=20"/>';
-					commit_html    += '<div><a href="' + commit.author.html_url + '">' + commit.author.login + '<\/a> commited';
+					commit_html    += '<div><a href="' + commit.author.html_url + '">' + commit.author.login + '<\/a> committed';
 					commit_html    += ' <a href="https://github.com/processing/processing/commit/' + commit.sha + '">"' + commit.commit.message + '"<\/a>';
 					commit_html    += ' about ' + timeText + '<\/div>';
 
