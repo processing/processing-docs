@@ -65,7 +65,10 @@ body {
 	background-color	: #ddd;  /* #FFFFFF; */  /* #333322 */
 	
 	font-family			: 'theSerif', 'Enriqueta', georgia, times, serif; 
+	
 	-webkit-font-smoothing: antialiased; 
+	-webkit-text-size-adjust: none;
+	
 	font-size			: 100%; 
     font-size           : 0.79em;
 	font-weight			: normal;
