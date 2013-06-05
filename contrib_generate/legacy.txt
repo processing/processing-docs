@@ -566,6 +566,132 @@ url=http://www.eeml.org/library/
 authorList=[Usman Haque](http://www.haque.co.uk/)
 sentence=Extended Environments Markup Language (EEML) is a protocol for sharing sensor data between remote responsive environments, both physical and virtual.
 
+library
+category=Legacy
+name=flob
+url=http://s373.net/code/flob
+authorList=[André Sier](http://s373.net)
+sentence=Fast multi-blob detector and simple skeleton tracker using flood-fill algorithms.
+
+library
+category=Legacy
+name=marchingcubes
+url=http://s373.net/code/marchingcubes
+authorList=[André Sier](http://s373.net)
+sentence=Marching cubes implementation after Paul Bourke polygonize voxel.
+
+library
+category=Legacy
+name=cellularautomata
+url=http://s373.net/code/cellularautomata
+authorList=[André Sier](http://s373.net)
+sentence=Cellular automata in 1,2,3 dimensions.
+
+library
+category=Legacy
+name=dna
+url=http://s373.net/code/dna
+authorList=[André Sier](http://s373.net)
+sentence=Simple dna library with mutation and crossovers from Karl Sims' paper.
+
+library
+category=Legacy
+name=boids
+url=http://s373.net/code/boids
+authorList=[André Sier](http://s373.net)
+sentence=Simulation of autonomous agent behaviors in 2D, 3D.
+
+library
+category=Legacy
+name=dLibs_freenect
+url=http://thomasdiewald.com/processing/libraries/dLibs_freenect/
+authorList=[Thomas Diewald](http://thomasdiewald.com/)
+sentence=A kinect library based on the libfreenect software.
+
+library
+category=Legacy
+name=papaya
+url=http://holypapayaresearch/papayastatistics.html
+authorList=[Adila Faruk](http://holypapayaresearch.com)
+sentence=A collection of utilities for performing some statistical and matrix-related manipulations.
+
+library
+category=Legacy
+name=UnZipIt
+url=http://libraries.seltar.org/unzipit/
+authorList=[Yonas Sandbaek](http://www.seltar.org/)
+sentence=Reading Bytes, Strings, PFonts or PImages from a Zip-File.
+
+library
+category=Legacy
+name=Layers
+url=http://nootropicdesign.com/processing-layers/
+authorList=[Michael Krumpus](http://nootropicdesign.com/)
+sentence=Create sketches with multiple layers that are drawn independently of one another.
+
+library
+category=Legacy
+name=Frappuccino
+url=http://www.muvium.com
+authorList=[James Caska](http://www.muvium.com)
+sentence=Processing Library with Arduino Java port and toolkit for deploying Apps to Muvium Java Micros.
+
+library
+category=Legacy
+name=Arduino (Firmata)
+url=http://playground.arduino.cc/Interfacing/Processing
+authorList=[David A. Mellis](http://dam.mellis.org/)
+sentence=Controls Arduino boards running the Firmata firmware.
+
+library
+category=Legacy
+name=Piccolo2D
+url=https://github.com/heuermh/piccolo2d-processing
+authorList=[Michael Heuer](https://github.com/heuermh)
+sentence=Processing integration for Piccolo2D, a structured 2.5D graphics API for building ZUIs.
+
+library
+category=Legacy
+name=romefeeder
+url=http://wyldco.com/project/romefeeder
+authorList=[Bruno Nadeau](http://wyldco.com)
+sentence=A wrapper around the ROME library that provides the tools for parsing, generating and publishing RSS and Atom feeds.
+
+library
+category=Legacy
+name=GenerativeDesign
+url=http://www.generative-gestaltung.de/
+authorList=Hartmut Bohnacker and Benedikt Gross
+sentence=Compilation of various functions belonging to the book GENERATIVE GESTALTUNG (german version) and DESIGN GENERATIF (french version).
+
+library
+category=Legacy
+name=Patchy
+url=http://mrfeinberg.com/patchy/
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
+
+library
+category=Legacy
+name=PeasyCam
+url=http://mrfeinberg.com/peasycam/
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+sentence=A mouse driven camera-control library for 3D sketches.
+
+library
+category=Legacy
+name=FluidFormsLibs
+url=http://fluidforms.eu/processing/fluid-forms-libs/
+authorList=[Stephen Williams](http://www.onato.com/)
+sentence=Provides 3D mouse navigation, parameter management and STL export.
+
+library
+category=Legacy
+name=Picking
+url=http://n.clavaud.free.fr/processing/library/picking/
+authorList=[Nicolas Clavaud](mailto:antiplastik@gmail.com)
+sentence=A simple toolkit to enable 3D picking in Processing sketches.
+
 tool
 category=Legacy
 name=Bezier Editor
@@ -600,3 +726,10 @@ name=Simple Live Coding
 url=http://github.com/fjenett/simplelivecoding
 authorList=[Florian Jenett](http://bezier.de)
 sentence=Sketches written in basic mode can be run and watched live in the PDE allowing for a sort of live-coding workflow.
+
+tool
+category=Legacy
+name=TabManager
+url=http://thomasdiewald.com/processing/tools/TabManager/
+authorList=[Thomas Diewald](http://thomasdiewald.com/)
+sentence=TabManager is a processing tool, that lists the tabs (sketchcodes) vertically in a separate window.
