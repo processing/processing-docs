@@ -37,12 +37,12 @@ library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
 name=Collada Loader for Google Sketchup
-sentence=imports into Processing kmz or dae files that is created by Google Sketchup 8
+sentence=Importer for kmz and dae files created by Google Sketchup 8.0.16846 (latest Version) into Processing 2.0
 url=http://www.die-seite.ch/
-prettyVersion=1.1
-paragraph=For error free working take a look to the [instructions](http://die-seite.ch/?colladaloader) or [forum](http://die-seite.ch/?guest&thema=colladaloader)
-version=11
-download=http://www.die-seite.ch/colladaLoader11.zip
+prettyVersion=1.3
+paragraph=The library is tested for Sketchup 8.0.16846. Dae or kmz files created by other versions may contain anomalous structures hence the importer will crash. Note: sketchup files must be prepared referred to the tutorial page. (see to the [tutorial page](http://die-seite.ch/?colladaloader) and [trouble forum](http://die-seite.ch/?guest&thema=colladaloader).)
+version=14
+download=http://www.die-seite.ch/colladaLoader.zip
 id=006
 
 library
@@ -111,9 +111,9 @@ authorList=[Jesse Louis-Rosenberg](http://n-e-r-v-o-u-s.com)
 name=OBJExport
 sentence=This is a simple library to export surfaces from processing as OBJ files. It is used the same way the PDF library is used.
 url=http://n-e-r-v-o-u-s.com/tools/obj
-prettyVersion=0.2.3
+prettyVersion=0.2.4
 paragraph=
-version=5
+version=6
 download=http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.zip
 id=091
 
@@ -131,13 +131,13 @@ id=097
 
 library
 category=I/O
-authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Erik Paluka](http://www.erikpaluka.com/), [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins), and [Dr. Mark Hancock](markhancock.ca)
+authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Erik Paluka](http://www.erikpaluka.com/), [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins), and [Dr. Mark Hancock](http://markhancock.ca/)
 name=Simple Multi-Touch (SMT)
-sentence=A toolkit for making multi-touch easy to use for non-programmers.
+sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.4
-paragraph=It provides back-end device support for Tuio, WM_Touch*, Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=2
+prettyVersion=3.5.1
+paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
+version=7
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
 
@@ -159,9 +159,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.2.1
+prettyVersion=2.2.2
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=8
+version=9
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -219,9 +219,9 @@ authorList=[Florian Jenett](http://bezier.de/)
 name=CoffeeScript Mode
 sentence=Adds a CoffeeScript Mode based on Processing.js
 url=https://github.com/fjenett/coffeescript-mode-processing
-prettyVersion=0.0.4
+prettyVersion=0.0.7
 paragraph=CoffeeScript Mode is based on JavaScript Mode and runs on top of Processing.js. It runs through a server and inherits the template system from JavaScript mode. CoffeeScript is a functional language that compiles to JavaScript and was created by (Jeremy Ashkenas)[https://github.com/jashkenas/coffee-script].
-version=224
+version=267
 download=https://raw.github.com/fjenett/coffeescript-mode-processing/master/release/CoffeeScriptMode.zip
 id=070
 
@@ -233,7 +233,7 @@ sentence=Adds a JavaScript Mode based on Processing.js
 url=https://github.com/fjenett/javascript-mode-processing
 prettyVersion=0.3.1
 paragraph=JavaScript Mode is based on Processing.js. It runs through a server and contains a simple template system.
-version=13
+version=20
 download=https://github.com/fjenett/javascript-mode-processing/raw/master/release/JavaScriptMode.zip
 id=087
 
@@ -269,7 +269,7 @@ sentence=Extends 2D geometry operations to facilitate generative geometry. Inclu
 url=http://www.ricardmarxer.com/geomerative
 prettyVersion=
 paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
-version=38
+version=39
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=039
 
@@ -375,11 +375,23 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=$1 Unistroke Recognizer
 sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a two-dimensional template based gesture recognition.
 url=https://github.com/voidplus/onedollar-unistroke-recognizer
-prettyVersion=0.2.2
+prettyVersion=0.2.4
 paragraph=
-version=5
+version=7
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
+
+library
+category=Utilities
+authorList=[Jason Gessner](http://multiply.org/)
+name=TimedEvents
+sentence=A couple of classes for firing off timed events at regular or random intervals.
+url=http://multiply.org/processing/
+prettyVersion=1.0.1
+paragraph=TimedEvents provides 2 main functions: events fired periodically with a regular period or a random delay within a range you specify.
+version=2
+download=http://www.multiply.org/processing/TimedEvents.zip
+id=082
 
 library
 category=Utilities
@@ -531,9 +543,9 @@ authorList=[Michael Heuer](https://github.com/heuermh) and [Leap Motion, Inc.](h
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.6
+prettyVersion=1.8
 paragraph=
-version=8
+version=10
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -545,7 +557,7 @@ sentence=Extends 2D geometry operations to facilitate generative geometry. Inclu
 url=http://www.ricardmarxer.com/geomerative
 prettyVersion=
 paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
-version=38
+version=39
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=038
 
@@ -590,10 +602,10 @@ category=Animation
 authorList=[Ekene Ijeoma](http://ekeneijeoma.com)
 name=ijeomamotion
 sentence=A cross-mode Processing library for sketching animations with numbers, colors vectors, beziers, curves and more.
-url=https://github.com/ekeneijeoma/ijeomamotion
-prettyVersion=4.5
+url=http://ekeneijeoma.com/processing/ijeomamotion
+prettyVersion=5.5
 paragraph=Cross-mode means that it will run and export in both Processing IDE's Java and Javascript modes. It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too. You can also use all of aforementioed to call functions! You can also use it in Javascript with or without Processing. However as of now the javascript port ijeomamotion.js doesnt include the ijeomamotion.tween.Callback class or ijeomamotion.geom and ijeomamotion.math packages but it will soon! Please post issues on Github or Processing's forums under "Contributed Libraries".
-version=45
+version=55
 download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
 id=033
 
@@ -795,9 +807,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=SoundCloud
 sentence=Unofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
 url=https://github.com/voidplus/soundcloud-java-library
-prettyVersion=0.1
+prettyVersion=0.1.2
 paragraph=
-version=2
+version=4
 download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
 id=089
 
@@ -807,9 +819,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=3.2.3
+prettyVersion=3.2.4
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=12
+version=13
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
 
@@ -855,9 +867,9 @@ authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2
 name=LSystems
 sentence=Utilities for exploring lsystems.
 url=http://kenai.com/projects/l-system-utilities
-prettyVersion=0.9.4
+prettyVersion=0.9.6
 paragraph=Supports simple, stochastic and context-sensitive grammars.
-version=9
+version=11
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
 
@@ -867,9 +879,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info/)
 name=ProScene
 sentence=Highly customizable and full featured yet simple to use camera library.
 url=http://code.google.com/p/proscene/
-prettyVersion=1.1.96
+prettyVersion=1.1.97
 paragraph=Main features include: 1. Default interactivity through the mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
-version=13
+version=14
 download=http://otrolado.info/proscene.zip
 id=001
 
