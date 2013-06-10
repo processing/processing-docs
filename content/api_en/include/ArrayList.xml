@@ -78,9 +78,11 @@ ArrayList&amp;lt;Type&amp;gt;(<c>initialCapacity</c>)
 
 <returns></returns>
 
-<related>IntList</related>
-<related>FloatList</related>
-<related>StringList</related>
+<related>
+IntList
+FloatList
+StringList
+</related>
 
 <availability>1.0</availability>
 

@@ -78,9 +78,11 @@ HashMap&amp;lt;Key, Value&amp;gt;(<c>m</c>)
 
 <returns></returns>
 
-<related>IntDict</related>
-<related>FloatDict</related>
-<related>StringDict</related>
+<related>
+IntDict
+FloatDict
+StringDict
+</related>
 
 <availability>1.0</availability>
 
