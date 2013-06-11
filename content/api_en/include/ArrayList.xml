@@ -28,11 +28,11 @@ void setup() {
 void draw() {
   background(255);
 
-  // With an array, we say balls.length. With an ArrayList, 
-  // we say balls.size(). The length of an ArrayList is dynamic. 
+  // With an array, we say balls.length. With an ArrayList,
+  // we say balls.size(). The length of an ArrayList is dynamic.
   // Notice how we are looping through the ArrayList backwards.
   // This is because we are deleting elements from the list.
-  for (int i = balls.size()-1; i >= 0; i--) { 
+  for (int i = balls.size()-1; i >= 0; i--) {
     Ball ball = balls.get(i);
     ball.move();
     ball.display();
@@ -40,7 +40,7 @@ void draw() {
       // Items can be deleted with remove().
       balls.remove(i);
     }
-  }  
+  }
 }
 
 void mousePressed() {
@@ -68,7 +68,7 @@ ArrayList&amp;lt;Type&amp;gt;(<c>initialCapacity</c>)
 
 <parameter>
 <label>Type</label>
-<cdescription>Class Name: the data type for the objects to be placed in the ArrayList.</description>
+<description>Class Name: the data type for the objects to be placed in the ArrayList.</description>
 </parameter>
 
 <parameter>

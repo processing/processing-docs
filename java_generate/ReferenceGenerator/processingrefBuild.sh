@@ -23,14 +23,14 @@ javadoc -doclet ProcessingWeblet \
 	-corepackage processing.event \
 	-corepackage processing.opengl \
 	-rootclass PConstants \
-	-noisy \
 	../../../processing/java/libraries/net/src/processing/net/*.java \
 	../../../processing/java/libraries/serial/src/processing/serial/*.java \
 	../../../processing/java/libraries/video/src/processing/video/*.java \
 	../../../processing/core/src/processing/core/*.java \
 	../../../processing/core/src/processing/data/*.java \
 	../../../processing/core/src/processing/event/*.java \
-	../../../processing/core/src/processing/opengl/*.java
+	../../../processing/core/src/processing/opengl/*.java \
+	-noisy
 
 
 # COPY IMAGES FROM CONTENT FOLDER TO CORRECT FOLDERS
