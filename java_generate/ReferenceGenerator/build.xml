@@ -13,10 +13,10 @@
     <mkdir dir="${build}"/>
   </target>
 
-  <target name="compile" depends="init"
+  <target name="compile" depends="clean,init"
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}"/>
+    <javac srcdir="${src}" destdir="${build}" includeantruntime="false"/>
   </target>
 
   <target name="clean"
