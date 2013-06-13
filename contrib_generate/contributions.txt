@@ -4,9 +4,9 @@ authorList=[Severin Smith](http://www.smallbutdigital.com/)
 name=The MidiBus
 sentence=The MidiBus is a minimal MIDI library for Processing, no frills, no limitations.
 url=http://www.smallbutdigital.com/themidibus.php
-prettyVersion=005
+prettyVersion=5
 paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. currently no built in sequencer, file read/write, MIDI recording/playback).
-version=006
+version=6
 download=http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
 id=019
 
@@ -135,9 +135,9 @@ authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook),
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.5.1
+prettyVersion=3.5.2
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=7
+version=8
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
 
@@ -255,9 +255,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=0.9.22
-paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free and open-source (via a GPL license).
-version=1022
+prettyVersion=1.0.30
+paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
+version=1030
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -543,11 +543,23 @@ authorList=[Michael Heuer](https://github.com/heuermh) and [Leap Motion, Inc.](h
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.8
+prettyVersion=1.9
 paragraph=
-version=10
+version=11
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
+
+library
+category=Hardware
+authorList=[Raphael de Courville](https://vimeo.com/sableraf/)
+name=MoveLib
+sentence=Add support for the PS Move Motion Controller in Processing. MoveLib is based on Thomas Perl's PSMove API.
+url=https://github.com/SableRaf/movelib
+prettyVersion=0.1b1
+paragraph=The lib was tested on OSX and should also run on Linux. On Windows, bluetooth pairing is still an issue so the OS is considered unsupported until a workaround is found.
+version=1
+download=http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.zip
+id=102
 
 library
 category=Typography
@@ -872,6 +884,18 @@ paragraph=Supports simple, stochastic and context-sensitive grammars.
 version=11
 download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
 id=048
+
+library
+category=Math
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.11
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3018
+download=https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
+id=056
 
 library
 category=3D
