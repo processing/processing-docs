@@ -352,7 +352,7 @@ if (table.getRowCount() > 10) {
 <p>Knowing this format, we could certainly be clever with our use of split(), indexOf(), and substring() to find the pieces we want in the raw XML.  The point here, however, is that because XML is a standard format, we don't have to do this.  Rather, we can use an XML parser.  In Processing, the XML parser is called just that: XML.</p>
 
 <pre>
-XML xml = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);
+XML xml = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003");
 </pre>
 
 <p>Here, instead of loadStrings() or loadTable(), we're now calling loadXML() and passing in the address (URL or local file) of our XML document.   An XML object represents one element of an XML tree.  When a document is first loaded, that XML object is always the root element.  Referring back to XML tree diagram, we see that we can find the current temperature via the following path:</p>
@@ -368,11 +368,11 @@ XML xml = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);
 <p>We could translate the above into code as follows:</p>
 
 <pre>
-XML root        = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003); // Step 1
-XML channel     = root.getChild("channel");                                  // Step 2
-XML item        = root.getChild("item");                                     // Step 3
-XML yweather    = root.getChild("yweather:condition");                       // Step 4
-int temperature = yweather.getInt("high");                                   // Step 5
+XML root        = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003"); // Step 1
+XML channel     = root.getChild("channel");                                    // Step 2
+XML item        = root.getChild("item");                                       // Step 3
+XML yweather    = root.getChild("yweather:condition");                         // Step 4
+int temperature = yweather.getInt("high");                                     // Step 5
 </pre>
 
 <p>This is a bit long-winded, however, and so can be compressed down into one (or three as below) lines of code.</p>
@@ -381,6 +381,12 @@ int temperature = yweather.getInt("high");                                   // 
 XML root        = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);                // Step 1
 XML forecast    = root.getChild("channel").getChild("item").getChild("yweather:forecast");  // Steps 2-4
 int temperature = forecast.getInt("high");                                                  // Step 5
+</pre>
+
+Finally, the second line of code above can be further condensed to:
+
+<pre>
+XML forecast = xml.getChild("channel/item/yweather:forecast"); // Steps 2-4
 </pre>
 
 <p>It should also be noted that we're accessing the child nodes by their name (i.e. "channel", "item", etc.), but they can also be accessed numerically via an index (starting at zero, same as an array).  This is convenient when looping over a list of children.  In LoadSaveTable, we used a series of comma separated values in a text file to store information related to Bubble objects.  An XML document can also be used in the same manner.  Consider the following XML document:</p>
