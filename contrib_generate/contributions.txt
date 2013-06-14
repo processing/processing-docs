@@ -550,18 +550,6 @@ download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
 library
-category=Hardware
-authorList=[Raphael de Courville](https://vimeo.com/sableraf/)
-name=MoveLib
-sentence=Add support for the PS Move Motion Controller in Processing. MoveLib is based on Thomas Perl's PSMove API.
-url=https://github.com/SableRaf/movelib
-prettyVersion=0.1b1
-paragraph=The lib was tested on OSX and should also run on Linux. On Windows, bluetooth pairing is still an issue so the OS is considered unsupported until a workaround is found.
-version=1
-download=http://s176381904.onlinehome.fr/processing/MoveLib/download/MoveLib.zip
-id=102
-
-library
 category=Typography
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -824,6 +812,18 @@ paragraph=
 version=4
 download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
 id=089
+
+library
+category=Data
+authorList=[Hamzeen. H.](http://www.hamzeen.com)
+name=ShortMessage
+sentence=A library to send/receive short messages (SMS) from Processing.
+url=http://hamzeen.github.io/smsP5
+prettyVersion=1.0.2
+paragraph=This library wraps around SMSLib to provide a simple API for Processing users, examples included.
+version=1
+download=http://hamzeen.github.io/ShortMessage/ShortMessage.zip
+id=103
 
 library
 category=GUI
