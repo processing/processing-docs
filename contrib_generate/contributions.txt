@@ -135,9 +135,9 @@ authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook),
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.5.2
+prettyVersion=3.5.3
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=8
+version=9
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
 
@@ -351,9 +351,9 @@ authorList=[Eric Socolofsky](http://transmote.com/)
 name=Nest
 sentence=Scenegraph and mouse event handling system based loosely on ActionScript 3.0.
 url=http://transmote.com/nest/
-prettyVersion=0.6.0
-paragraph=Nest also includes an event-based communication system, built on the Observer pattern as implemented by Java's Observer interface.
-version=8
+prettyVersion=0.7.0
+paragraph=In addition to the scenegraph, Nest also includes an event-based communication system (built on the Observer pattern as implemented by Java's Observer interface), and some minimal UI components.
+version=9
 download=http://transmote.com/nest/download/Nest.zip
 id=047
 
@@ -550,6 +550,18 @@ download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
 library
+category=Hardware
+authorList=[Arvydas Juskevicius](http://www.blinkstick.com)
+name=BlinkStick
+sentence=Interface BlinkStick - smart USB RGB LED.
+url=http://arvydas.github.io/blinkstick-processing/
+prettyVersion=0.1.0
+paragraph=This library provides an ablity to control any number of BlinkStick devices from Processing.
+version=1
+download=http://arvydas.github.io/blinkstick-processing/download/BlinkStick.zip
+id=104
+
+library
 category=Typography
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -565,11 +577,11 @@ library
 category=Typography
 authorList=[Andreas Koller](http://andreaskoller.com)
 name=Fontastic
-sentence=A font file writer for Processing.
+sentence=A font file writer to create TTF and WOFF (Webfonts).
 url=http://code.andreaskoller.com/libraries/fontastic
-prettyVersion=0.3
-paragraph=Easily create and export TTF and WOFF (Webfonts).
-version=3
+prettyVersion=0.4
+paragraph=
+version=4
 download=https://raw.github.com/andreaskoller/Fontastic/master/download/Fontastic.zip
 id=088
 
@@ -920,6 +932,16 @@ paragraph=
 version=9
 download=http://hemesh.wblut.com/hemesh-latest.zip
 id=009
+
+library
+category=3D
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+name=PeasyCam
+sentence=A mouse driven camera-control library for 3D sketches.
+url=http://mrfeinberg.com/peasycam/
+version=200
+download=http://mrfeinberg.com/peasycam/peasycam.zip
+id=017
 
 library
 category=3D
