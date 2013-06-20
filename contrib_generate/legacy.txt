@@ -673,13 +673,6 @@ sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches
 
 library
 category=Legacy
-name=PeasyCam
-url=http://mrfeinberg.com/peasycam/
-authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
-sentence=A mouse driven camera-control library for 3D sketches.
-
-library
-category=Legacy
 name=FluidFormsLibs
 url=http://fluidforms.eu/processing/fluid-forms-libs/
 authorList=[Stephen Williams](http://www.onato.com/)
