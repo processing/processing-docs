@@ -11,8 +11,8 @@
 <example>
 <image>textLeading_.png</image>
 <code><![CDATA[
-// Text to display. The "\n" is a "new line" character
-String lines = "L1\nL2\nL3";
+// Text to display. The "&#92;n" is a "new line" character
+String lines = "L1&#92;nL2&#92;nL3";
 textSize(12);
 fill(0);  // Set fill to black
 
@@ -35,7 +35,7 @@ http://wiki.processing.org/w/Font_handling_in_JavaScript_mode
 </js_mode -->
 
 <description><![CDATA[
-Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function, but the leading is reset by <b>textSize()</b>. For example, if the leading is set to 20 prior, when <b>textSize(48)</b> is run, the leading is reset to the default for the text size 48.
+Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the <b>text()</b> function.  Note, however, that the leading is reset by <b>textSize()</b>. For example, if the leading is set to 20 with <b>textLeading(20)</b>, then if <b>textSize(48)</b> is run at a later point, the leading will be reset to the default for the text size of 48.
 ]]></description>
 
 </root>
