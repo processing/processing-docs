@@ -99,13 +99,6 @@
   </tutorial> 	
 
   <tutorial> 
-  	<title>Javascript Mode</title> 
-  	<directory>javascript</directory> 
-  	<imgs>true</imgs> 
-  	<code>true</code> 
-  </tutorial>
-
-  <tutorial> 
   	<title>PShape</title> 
   	<directory>pshape</directory> 
   	<imgs>true</imgs> 
