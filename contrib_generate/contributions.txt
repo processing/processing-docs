@@ -135,9 +135,9 @@ authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook),
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.5.3
+prettyVersion=3.6
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=9
+version=11
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
 
@@ -255,9 +255,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.30
+prettyVersion=1.0.32
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1030
+version=1032
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 

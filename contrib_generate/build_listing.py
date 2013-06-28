@@ -2,7 +2,7 @@
 
 # Part of the Processing project - http://processing.org
 # 
-#   Copyright (c) 2004-11 Ben Fry and Casey Reas
+#   Copyright (c) 2004-13 Ben Fry and Casey Reas
 #   Copyright (c) 2001-04 Massachusetts Institute of Technology
 # 
 #   This program is free software; you can redistribute it and/or modify
@@ -142,11 +142,18 @@ def missing_key(exports):
   return None
 
 if __name__ == "__main__":
-  if len(argv) != 3:
+  if len(argv) == 1:
+    #print "Usage is [Input Configuration File] [Output file]"
+    #exit()
+    script = argv
+    conf = 'sources.conf'
+    fileout = 'contributions.txt'
+  elif len(argv) == 3:
+    script, conf, fileout = argv
+  else:
     print "Usage is [Input Configuration File] [Output file]"
-    exit()
-
-  script, conf, fileout = argv
+    exit()  
+  
   f = open(conf)
   urls_by_category = get_lib_locations(f);
   f.close()
