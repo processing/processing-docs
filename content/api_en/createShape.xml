@@ -20,11 +20,13 @@ void setup() {
   size(100, 100, P2D);
   // Creating the PShape as a square. The
   // numeric arguments are similar to rect().
-  square = createShape(RECT, 0, 0, 80, 80);
+  square = createShape(RECT, 0, 0, 50, 50);
+  square.setFill(color(0, 0, 255));
+  square.setStroke(false);
 }
 
 void draw() {
-  shape(square, 10, 10);
+  shape(square, 25, 25);
 }
 ]]></code>
 </example>
@@ -83,6 +85,8 @@ void draw() {
 <example>
 <image></image>
 <code><![CDATA[
+PShape alien, head, body;
+
 void setup() {
   size(100, 100, P2D);
 
@@ -90,7 +94,7 @@ void setup() {
   alien = createShape(GROUP);
 
   // Make two shapes
-  head = createShape(ELLIPSE, 0, 25, 50, 50);
+  head = createShape(ELLIPSE, -25, 0, 50, 50);
   head.setFill(color(255));
   body = createShape(RECT, -25, 45, 50, 40);
   body.setFill(color(0));
@@ -112,11 +116,13 @@ void draw() {
 <description><![CDATA[
 The <b>createShape()</b> function is used to define a new shape. Once created, this shape can be drawn with the <b>shape()</b> function. The basic way to use the function defines new primitive shapes. One of the following parameters are used as the first parameter: <b>ELLIPSE</b>, <b>RECT</b>, <b>ARC</b>, <b>TRIANGLE</b>, <b>SPHERE</b>, <b>BOX</b>, <b>QUAD</b>, <b>LINE</b>. The parameters for each of these different shapes are the same as their corrsponding functions: <b>ellipse()</b>, <b>rect()</b>, <b>arc()</b>, <b>triangle()</b>, <b>sphere()</b>, <b>box()</b>, and <b>line()</b>. The first example above clarifies how this works.<br />
 <br />
-Custom, unique shapes can be made by using <b>createShape()</b> without a parameter. After the shape is started, the drawing attributes and geometry can be set directly to the shape. See the second example above for specifics.<br />
+Custom, unique shapes can be made by using <b>createShape()</b> without a parameter. After the shape is started, the drawing attributes and geometry can be set directly to the shape within the <b>beginShape()</b> and <b>endShape()</b> methods. See the second example above for specifics.<br />
 <br />
-Geometry that groups vertices to build larger forms such as group of triangles can be created with <b>createShape()</b> using the same parameters as <b>beginShape()</b>. These options are <b>POINTS</b>, <b>LINES</b>, <b>TRIANGLES</b>, <b>TRIANGLE_FAN</b>, <b>TRIANGLE_STRIP</b>, <b>QUADS</b>, and <b>QUAD_STRIP</b>. See the third example above.<br />
+Geometry that groups vertices to build larger forms, such as group of triangles, can be created with parameters to <b>beginShape()</b>. These options are <b>POINTS</b>, <b>LINES</b>, <b>TRIANGLES</b>, <b>TRIANGLE_FAN</b>, <b>TRIANGLE_STRIP</b>, <b>QUADS</b>, and <b>QUAD_STRIP</b>. See the third example above.<br />
 <br />
-The  <b>createShape()</b> function can also be used to make a complex shape made of other shapes. This is called a "group" and it's created by using the parameter <b>GROUP</b> as the first parameter. See the fourth example above to see how it works.
+The  <b>createShape()</b> function can also be used to make a complex shape made of other shapes. This is called a "group" and it's created by using the parameter <b>GROUP</b> as the first parameter. See the fourth example above to see how it works.<br />
+<br />
+When a shape is first created inside the <b>beingShape()</b> and <b>endShape()</b> methods, the normal Processing style functions like <b>fill()</b> and <b>stroke()</b> are used to define the drawing attributes. However, after a shape is created, a different set of functions needs to be used. These include the setFill() and setStroke() functions shown in the examples above. The complete list of methods and fields for the PShape class are in the <a href="http://processing.org/reference/javadoc/core/">Processing Javadoc</a>.
 ]]></description>
 
 </root>

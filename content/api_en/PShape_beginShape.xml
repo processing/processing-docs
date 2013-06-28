@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>beginShape()</name>
+
+<!-- unsupported_modes>js</unsupported_modes -->
+<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShape s;  // The PShape object
+
+void setup() {  
+  size(100, 100, P2D);
+  // Creating the PShape as a square. The corner 
+  // is 0,0 so that the center is at 40,40 
+  s = createShape();
+  s.beginShape();
+  s.fill(0, 0, 255);
+  s.noStroke();
+  s.vertex(0, 0);
+  s.vertex(0, 50);
+  s.vertex(50, 0);
+  s.endShape();
+}
+
+void draw() {
+  shape(s, 25, 25);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This method is used to start a custom shape created with the <b>createShape()</b> function. It's always and only used with <b>createShape()</b>. 
+]]></description>
+
+</root>
