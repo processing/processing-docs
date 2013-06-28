@@ -99,11 +99,13 @@ if(isset($_POST['form'])){
 					<a href="/people/">People</a><br>
 					<a href="/foundation/">Foundation</a><br><br>
 					<a href="/shop/">Shop</a><br><br>
-					<a href="https://twitter.com/processingOrg"class="outward"><span>&raquo;</span>Twitter</a><br> 
-					<a href="http://forum.processing.org"class="outward"><span>&raquo;</span>Forum</a><br> 
-					<a href="http://wiki.processing.org"class="outward"><span>&raquo;</span>Wiki</a><br> 
-					<a href="https://github.com/processing/processing/issues?state=open"class="outward"><span>&raquo;</span>Issues</a><br> 
-					<a href="https://github.com/processing"class="outward"><span>&raquo;</span>Source</a><br> 
+					<a href="http://forum.processing.org" class="outward"><span>&raquo;</span>Forum</a><br>
+    				<a href="https://github.com/processing" class="outward"><span>&raquo;</span>GitHub</a><br>
+    				<a href="https://github.com/processing/processing/issues?state=open" class="outward"><span>&raquo;</span>Issues</a><br>
+    				<a href="http://wiki.processing.org" class="outward"><span>&raquo;</span>Wiki</a><br>
+    				<a href="http://wiki.processing.org/w/FAQ" class="outward"><span>&raquo;</span>FAQ</a><br>
+    				<a href="https://twitter.com/processingOrg" class="outward"><span>&raquo;</span>Twitter</a><br>
+					<a href="https://www.facebook.com/page.processing" class="outward"><span>&raquo;</span>Facebook</a>
 				</div>
 			</div>
 

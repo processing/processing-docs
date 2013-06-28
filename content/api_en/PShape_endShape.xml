@@ -18,8 +18,6 @@ PShape s;  // The PShape object
 
 void setup() {  
   size(100, 100, P2D);
-  // Creating the PShape as a square. The corner 
-  // is 0,0 so that the center is at 40,40 
   s = createShape();
   s.beginShape();
   s.fill(0, 0, 255);
