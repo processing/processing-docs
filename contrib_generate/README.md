@@ -6,7 +6,7 @@
 	1. Increment the value of _Next ID_ at the top.
 
 ###`build_listing.py`
-* Reads `sources.conf` and writes `contribtions.txt`
+* Reads `sources.conf` and writes `contributions.txt`
 * Use it by running the following in the command line: `python build_listing.py sources.conf contributions.txt`
 
 ###`contributions.txt`
