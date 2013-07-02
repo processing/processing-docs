@@ -7,7 +7,8 @@
 
 ###`build_listing.py`
 * Reads `sources.conf` and writes `contributions.txt`
-* Use it by running the following in the command line: `python build_listing.py sources.conf contributions.txt`
+* Use it by running the following in the command line: `python build_listing.py`
+* You can also pass in arguments for the input and output files: `python build_listing.py sources.conf contributions.txt`
 
 ###`contributions.txt`
 * Contains all the data for all the contributions.
