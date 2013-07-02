@@ -135,11 +135,23 @@ authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook),
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.5.3
+prettyVersion=3.6
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=9
+version=11
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
+
+library
+category=I/O
+authorList=[Paul Hertz](http://paulhertz.net/)
+name=IgnoCodeLib
+sentence=Hierarchical display list for graphics and text with export to Adobe Illustrator 7.0 file format.
+url=http://paulhertz.net/ignocodelib/index.html
+prettyVersion=0.3
+paragraph=Supports display and output of complex objects composed of lines and cubic Bezier curves, simple text, RGB and CMYK color, and geometric transforms.
+version=1
+download=http://paulhertz.net/ignocodelib/download/IgnoCodeLib.zip
+id=105
 
 tool
 category=
@@ -255,9 +267,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.30
+prettyVersion=1.0.33
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1030
+version=1033
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -286,6 +298,18 @@ download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=085
 
 library
+category=Geometry
+authorList=[Mark Collins & Toru Hasegawa](http://proxyarch.com)
+name=ComputationalGeometry
+sentence=A simple, lightweight library for generating isometric contours and surfaces.
+url=http://thecloudlab.org/processing/library.html
+prettyVersion=1.0
+paragraph=The library supports direct manipulation of the underlying grid data as well as simple meta-ball modeling of isometric contours and surfaces.
+version=1
+download=http://www.thecloudlab.org/processing/download/ComputationalGeometry.zip
+id=106
+
+library
 category=Compilation
 authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
 name=gicentreUtils
@@ -296,6 +320,18 @@ paragraph=Includes color utilities, statistical graphics, morphing classes, spat
 version=13
 download=http://www.gicentre.org/utils/gicentreUtils.zip
 id=004
+
+library
+category=Compilation
+authorList=Hartmut Bohnacker and Benedikt Gross
+name=GenerativeDesign
+sentence=Compilation of various functions belonging to the book GENERATIVE DESIGN (english), GENERATIVE GESTALTUNG (german) and DESIGN GENERATIF (french).
+url=http://www.generative-gestaltung.de/
+prettyVersion=1.0.5
+paragraph=It supplies classes and functions for 3d-surfaces, simple physics (nodes, springs, attractors), graphic tablets, ASE-export or asynchronous loading of xml, html and images.
+version=6
+download=http://www.generative-gestaltung.de/downloads/GenerativeDesign.zip
+id=007
 
 library
 category=Compilation
@@ -447,9 +483,9 @@ authorList=[RSG](http://r-s-g.org)
 name=Carnivore
 sentence=Surveillance tool for data networks.
 url=http://r-s-g.org/carnivore
-prettyVersion=4
+prettyVersion=5
 paragraph=
-version=4
+version=5
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=041
 
@@ -747,9 +783,9 @@ authorList=[RSG](http://r-s-g.org)
 name=Carnivore
 sentence=Surveillance tool for data networks.
 url=http://r-s-g.org/carnivore
-prettyVersion=4
+prettyVersion=5
 paragraph=
-version=4
+version=5
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=040
 

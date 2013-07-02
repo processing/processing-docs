@@ -63,13 +63,6 @@ sentence=This Processing library is designed to export sketches to the Blinkenli
 		
 library
 category=Legacy
-name=IgnoCodeLib
-url=http://ignotus.com/ignocodelib/index.html
-authorList=[Paul Hertz](http://ignotus.com/)
-sentence=A library for exporting B&eacute;zier geometry to Adobe Illustrator.
-	
-library
-category=Legacy
 name=sDrop
 url=http://www.sojamo.de/libraries/drop/
 authorList=[Andreas Schlegel](http://www.sojamo.de)
@@ -656,13 +649,6 @@ name=romefeeder
 url=http://wyldco.com/project/romefeeder
 authorList=[Bruno Nadeau](http://wyldco.com)
 sentence=A wrapper around the ROME library that provides the tools for parsing, generating and publishing RSS and Atom feeds.
-
-library
-category=Legacy
-name=GenerativeDesign
-url=http://www.generative-gestaltung.de/
-authorList=Hartmut Bohnacker and Benedikt Gross
-sentence=Compilation of various functions belonging to the book GENERATIVE GESTALTUNG (german version) and DESIGN GENERATIF (french version).
 
 library
 category=Legacy
