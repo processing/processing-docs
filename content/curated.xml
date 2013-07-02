@@ -1,6 +1,15 @@
 
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
+
+	<software name="Kinograph" by="Matthew Epler" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/kinograph.jpg</image>
+		  <description>
+			  Kinograph is an open source project that makes film digitisation affordable and scaleable. It uses components available on the internet, a few 3D printed parts, and a consumer level camera and it produces high quality video with sound.
+		  </description>
+		  <location>http://mepler.com/Kinograph</location>
+		 <link href="http://kinograph.cc">Kinograph</link>
+	</software>
 	
 	<software name=".fluid" by="Hannes Jung" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/fluid.jpg</image>
