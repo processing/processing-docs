@@ -13,14 +13,14 @@
 <example>
 <image>PImage.png</image>
 <code><![CDATA[
-PImage img;
+PImage photo;
 
 void setup() {
-  img = loadImage("laDefense.jpg");
+  photo = loadImage("laDefense.jpg");
 }
 
 void draw() {
-  image(img, 0, 0);
+  image(photo, 0, 0);
 }
 ]]></code>
 </example>

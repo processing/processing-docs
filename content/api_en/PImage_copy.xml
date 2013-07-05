@@ -12,16 +12,16 @@
 <example>
 <image>PImage_copy_.png</image>
 <code><![CDATA[
-PImage img;
+PImage apples;
 
 void setup() {
-  img = loadImage("apples.jpg");
+  apples = loadImage("apples.jpg");
   int x = width/2;
-  img.copy(x, 0, x, height, 0, 0, x, height);
+  apples.copy(x, 0, x, height, 0, 0, x, height);
 }
 
 void draw() {
-  image(img, 0, 0);
+  image(apples, 0, 0);
 }
 ]]></code>
 </example>
