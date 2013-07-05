@@ -16,6 +16,7 @@ PImage myImage;
 int halfImage;
 
 void setup() {
+  size(100, 100);
   halfImage = width * height/2;
   myImage = loadImage("apples.jpg");
   myImage.loadPixels();

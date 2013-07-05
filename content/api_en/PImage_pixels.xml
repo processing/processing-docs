@@ -14,6 +14,7 @@
 PImage tower;
 
 void setup() {
+  size(100, 100);
   tower = loadImage("tower.jpg");
   int dimension = tower.width * tower.height;
   tower.loadPixels();
