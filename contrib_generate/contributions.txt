@@ -134,10 +134,10 @@ category=I/O
 authorList=[Erik Paluka](http://www.erikpaluka.com/), [Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Dr. Mark Hancock](http://markhancock.ca/), and [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins)
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
-url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
-prettyVersion=3.6
+url=http://vialab.science.uoit.ca/SMT/
+prettyVersion=3.6.1
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=11
+version=12
 download=http://vialab.science.uoit.ca/smt/SMT.zip
 id=098
 
