@@ -12,17 +12,18 @@
 <example>
 <image>PImage_mask_.png</image>
 <code><![CDATA[
-PImage img, maskImg;
+PImage photo, maskImage;
 
 void setup() {
-  img = loadImage("test.jpg");
-  maskImg = loadImage("mask.jpg");
-  img.mask(maskImg);
+  size(100, 100);
+  photo = loadImage("test.jpg");
+  maskImage = loadImage("mask.jpg");
+  photo.mask(maskImage);
 }
 
 void draw() {
-  image(img, 0, 0);
-  image(img, width/4, 0);
+  image(photo, 0, 0);
+  image(photo, width/4, 0);
 }
 ]]></code>
 </example>

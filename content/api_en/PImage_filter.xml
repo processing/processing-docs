@@ -15,6 +15,7 @@
 PImage img1, img2;
 
 void setup() {
+  size(100, 100);
   img1 = loadImage("apples.jpg");
   img2 = loadImage("apples.jpg");
   img1.filter(THRESHOLD, 0.3);

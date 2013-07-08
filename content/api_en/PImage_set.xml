@@ -11,19 +11,20 @@
 <example>
 <image>PImage_set_.png</image>
 <code><![CDATA[
-PImage img;
+PImage tower;
 
 void setup() {
-  img = loadImage("tower.jpg");
+  size(100, 100);
+  tower = loadImage("tower.jpg");
   color black = color(0);
-  img.set(30, 20, black); 
-  img.set(85, 20, black); 
-  img.set(85, 75, black); 
-  img.set(30, 75, black); 
+  tower.set(30, 20, black); 
+  tower.set(85, 20, black); 
+  tower.set(85, 75, black); 
+  tower.set(30, 75, black); 
 }
 
 void draw() {
-  image(img, 0, 0);
+  image(tower, 0, 0);
 }
 ]]></code>
 </example>

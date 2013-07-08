@@ -11,20 +11,21 @@
 <example>
 <image>PImage_pixels.png</image>
 <code><![CDATA[
-PImage img;
+PImage tower;
 
 void setup() {
-  img = loadImage("tower.jpg");
-  int dimension = img.width*img.height;
-  img.loadPixels();
+  size(100, 100);
+  tower = loadImage("tower.jpg");
+  int dimension = tower.width * tower.height;
+  tower.loadPixels();
   for (int i = 0; i < dimension; i += 2) { 
-    img.pixels[i] = color(0, 0, 0); 
+    tower.pixels[i] = color(0, 0, 0); 
   } 
-  img.updatePixels();
+  tower.updatePixels();
 }
 
 void draw() {
-  image(img, 0, 0);
+  image(tower, 0, 0);
 }
 ]]></code>
 </example>

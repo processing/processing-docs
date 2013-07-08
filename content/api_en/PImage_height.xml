@@ -11,9 +11,9 @@
 <example>
 <image>PImage_height.png</image>
 <code><![CDATA[
-PImage img = loadImage("tiles.jpg");
-image(img, 20, 10);
-rect(55, 10, img.width, img.height);
+PImage tiles = loadImage("tiles.jpg");
+image(tiles, 20, 10);
+rect(55, 10, tiles.width, tiles.height);
 ]]></code>
 </example>
 

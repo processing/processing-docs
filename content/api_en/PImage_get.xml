@@ -11,10 +11,10 @@
 <example>
 <image>PImage_get_0.png</image>
 <code><![CDATA[
-PImage img = loadImage("rockies.jpg");
-background(img);
+PImage mountains = loadImage("rockies.jpg");
+background(mountains);
 noStroke();
-color c = img.get(60, 90);
+color c = mountains.get(60, 90);
 fill(c);
 rect(25, 25, 50, 50);
 ]]></code>
@@ -23,10 +23,10 @@ rect(25, 25, 50, 50);
 <example>
 <image>PImage_get_1.png</image>
 <code><![CDATA[
-PImage img = loadImage("rockies.jpg");
-background(img);
-PImage img2 = img.get(50, 0, 50, 100); 
-image(img2, 0, 0); 
+PImage mountains = loadImage("rockies.jpg");
+background(mountains);
+PImage newMountains = mountains.get(50, 0, 50, 100); 
+image(newMountains, 0, 0); 
 ]]></code>
 </example>
 

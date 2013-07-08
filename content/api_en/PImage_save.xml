@@ -11,8 +11,8 @@
 <example>
 <image></image>
 <code><![CDATA[
-PImage img = loadImage("tower.jpg");
-img.save("img.jpg");
+PImage tower = loadImage("tower.jpg");
+tower.save("outputImage.jpg");
 
 ]]></code>
 </example>
@@ -21,10 +21,10 @@ img.save("img.jpg");
 <image></image>
 <code><![CDATA[
 size(100, 100);
-PImage img = loadImage("tower.jpg");
-PImage newImg = createImage(100, 100, RGB);
-newImg = img.get();
-newImg.save("newImg.jpg");
+PImage tower = loadImage("tower.jpg");
+PImage newImage = createImage(100, 100, RGB);
+newImage = tower.get();
+newImage.save("outputImage.jpg");
 ]]></code>
 </example>
 

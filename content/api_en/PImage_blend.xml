@@ -12,44 +12,44 @@
 <example>
 <image>PImage_blend_0_add.png</image>
 <code><![CDATA[
-PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("bricks.jpg"); 
-img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, ADD); 
-image(img, 0, 0);
-image(img2, 0, 0);
+PImage mountains = loadImage("rockies.jpg");
+PImage bricks = loadImage("bricks.jpg"); 
+mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, ADD); 
+image(mountains, 0, 0);
+image(bricks, 0, 0);
 ]]></code>
 </example>
 
 <example>
 <image>PImage_blend_1_subtract.png</image>
 <code><![CDATA[
-PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("bricks.jpg"); 
-img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, SUBTRACT); 
-image(img, 0, 0);
-image(img2, 0, 0);
+PImage mountains = loadImage("rockies.jpg");
+PImage bricks = loadImage("bricks.jpg"); 
+mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, SUBTRACT); 
+image(mountains, 0, 0);
+image(bricks, 0, 0);
 ]]></code>
 </example>
 
 <example>
 <image>PImage_blend_2_darkest.png</image>
 <code><![CDATA[
-PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("bricks.jpg"); 
-img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST); 
-image(img, 0, 0);
-image(img2, 0, 0);
+PImage mountains = loadImage("rockies.jpg");
+PImage bricks = loadImage("bricks.jpg"); 
+mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST); 
+image(mountains, 0, 0);
+image(bricks, 0, 0);
 ]]></code>
 </example>
 
 <example>
 <image>PImage_blend_3_lightest.png</image>
 <code><![CDATA[
-PImage img = loadImage("rockies.jpg");
-PImage img2 = loadImage("bricks.jpg"); 
-img.blend(img2, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST); 
-image(img, 0, 0);
-image(img2, 0, 0);
+PImage mountains = loadImage("rockies.jpg");
+PImage bricks = loadImage("bricks.jpg"); 
+mountains.blend(bricks, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST); 
+image(mountains, 0, 0);
+image(bricks, 0, 0);
 ]]></code>
 </example>
 
