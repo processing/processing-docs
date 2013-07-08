@@ -131,7 +131,7 @@ id=097
 
 library
 category=I/O
-authorList=[Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Erik Paluka](http://www.erikpaluka.com/), [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins), and [Dr. Mark Hancock](http://markhancock.ca/)
+authorList=[Erik Paluka](http://www.erikpaluka.com/), [Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Dr. Mark Hancock](http://markhancock.ca/), and [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins)
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/portfolio/smt-toolkit
@@ -171,9 +171,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.2.2
+prettyVersion=2.2.3
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=9
+version=10
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -512,6 +512,30 @@ paragraph=Leverges the strengths of Object-Oriented Design and the ease of Proce
 version=3
 download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=086
+
+library
+category=Simulation
+authorList=[Daniel Koehler](http://www.lab-eds.org)
+name=punktiert
+sentence=particle engine for local particle behaviors
+url=http://www.lab-eds.org/punktiert
+prettyVersion=1.0
+paragraph=Punktiert is a particle engine based and thought as an extension of Karsten Schmidt's toxiclibs.physics code. This library is optimized for the local negotiation between particles. And it allows hierarchies between multiple particle groups. The access and methods are simplified, no more difference between 2D/3D, extended behaviors. This library is developed through and for an architectural context. Based on my teaching experiences over the past couple years.
+version=1
+download=https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.zip
+id=107
+
+library
+category=Simulation
+authorList=[Daniel Koehler](http://www.lab-eds.org)
+name=bRigid
+sentence=bRigid provides classes for an easier handling of jBullet (rigid body engine) in Processing
+url=http://www.lab-eds.org/brigid
+prettyVersion=1.1
+paragraph=bRigid is thought as a kind of Processing port for the bullet physics simulation library written in C++. This library allows the interaction of rigid bodies in 3D. Geometry/ Shapes are build with Processing PShape Class, for convinient display and export(dxf) jBullet is a Java port of Bullet (c) 2008 Martin Dvorak http://jbullet.advel.cz/; Bullet Continuous Collision Detection and Physics Library (c) 2003-2013 Erwin Coumans http://www.bulletphysics.com/ and many thanks to the jBullet/processing examples of Giulio Piacentino and Richard Brauer
+version=2
+download=https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.zip
+id=108
 
 library
 category=Hardware
@@ -879,9 +903,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=3.2.4
+prettyVersion=3.2.5
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=13
+version=14
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
 
