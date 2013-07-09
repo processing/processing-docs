@@ -622,6 +622,18 @@ download=http://arvydas.github.io/blinkstick-processing/download/BlinkStick.zip
 id=104
 
 library
+category=Hardware
+authorList=[Darius Morawiec](http://voidplus.de)
+name=Leap Motion for Processing
+sentence=Simple library to use the complete [Leap Motion](https://leapmotion.com/) [API](https://developer.leapmotion.com/documentation/api/annotated) in [Processing](http://processing.org/).
+url=https://github.com/voidplus/leap-motion-processing
+prettyVersion=1.0.0
+paragraph=
+version=1
+download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
+id=109
+
+library
 category=Typography
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
