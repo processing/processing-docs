@@ -787,7 +787,7 @@ div.ref-col {
 		margin: 22px 0 42px 30px;
 	}
 	#Download #selectForm .select-amount label {
-		margin-right: 50px;
+		margin-right: 45px;
 	}
 	#Download .donate-box input[type="submit"]{
 		font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
@@ -801,6 +801,7 @@ div.ref-col {
 	}
 	#Download #selectForm input#otra{
 		width: 55px;
+		display: inline;
 	}
 
 /* donate */
