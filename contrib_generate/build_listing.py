@@ -45,6 +45,10 @@ This script takes two arguments
   Arg 1: The name of a config file to read from
   Arg 2: The name of an file to write to. This file will be overwritten if it
          already exists
+         
+If no arguments are passed, it uses the following defaults
+  Arg 1: sources.conf
+  Arg 2: contributions.txt
 """
 
 from sys import argv
