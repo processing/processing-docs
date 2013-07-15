@@ -9,7 +9,7 @@
 
 <div class="donate-box">
 
-	<p>Processing is open source, free software. All donations fund the <a href="/about/foundation/">Processing Foundation</a>, a nonprofit organization devoted to advancing the role of programming within the visual arts through developing Processing.</p>
+	<p>Processing is open source, free software. All donations fund the <a href="/foundation/">Processing Foundation</a>, a nonprofit organization devoted to advancing the role of programming within the visual arts through developing Processing.</p>
 
 	<div class="messages"></div>
 
