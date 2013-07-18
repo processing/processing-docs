@@ -225,6 +225,18 @@ version=2
 download=http://poifox.com/bootstrap/download/Bootstrap.zip
 id=100
 
+tool
+category=
+authorList=[Lars Kaltenbach](http://larskaltenbach.de)
+name=SpeedTool
+sentence=Adding features for faster code editing to the PDE.
+url=http://larskaltenbach.de/code/speedTool
+prettyVersion=0.2
+paragraph=Brackets and Quotes get closed automatically.
+version=2
+download=http://larskaltenbach.de/code/speedTool/download/SpeedTool.zip
+id=112
+
 mode
 category=
 authorList=[Florian Jenett](http://bezier.de/)
@@ -267,9 +279,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.33
+prettyVersion=1.0.35
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1033
+version=1035
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -516,8 +528,8 @@ id=086
 library
 category=Simulation
 authorList=[Daniel Koehler](http://www.lab-eds.org)
-name=punktiert
-sentence=particle engine for local particle behaviors
+name=Punktiert
+sentence=Particle engine for local particle behaviors.
 url=http://www.lab-eds.org/punktiert
 prettyVersion=1.0
 paragraph=Punktiert is a particle engine based and thought as an extension of Karsten Schmidt's toxiclibs.physics code. This library is optimized for the local negotiation between particles. And it allows hierarchies between multiple particle groups. The access and methods are simplified, no more difference between 2D/3D, extended behaviors. This library is developed through and for an architectural context. Based on my teaching experiences over the past couple years.
@@ -528,8 +540,8 @@ id=107
 library
 category=Simulation
 authorList=[Daniel Koehler](http://www.lab-eds.org)
-name=bRigid
-sentence=bRigid provides classes for an easier handling of jBullet (rigid body engine) in Processing
+name=BRigid
+sentence=BRigid provides classes for an easier handling of [jBullet] (http://jbullet.advel.cz/) in Processing
 url=http://www.lab-eds.org/brigid
 prettyVersion=1.1
 paragraph=bRigid is thought as a kind of Processing port for the bullet physics simulation library written in C++. This library allows the interaction of rigid bodies in 3D. Geometry/ Shapes are build with Processing PShape Class, for convinient display and export(dxf) jBullet is a Java port of Bullet (c) 2008 Martin Dvorak http://jbullet.advel.cz/; Bullet Continuous Collision Detection and Physics Library (c) 2003-2013 Erwin Coumans http://www.bulletphysics.com/ and many thanks to the jBullet/processing examples of Giulio Piacentino and Richard Brauer
@@ -603,9 +615,9 @@ authorList=[Michael Heuer](https://github.com/heuermh) and [Leap Motion, Inc.](h
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.9
+prettyVersion=1.10
 paragraph=
-version=11
+version=12
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -910,6 +922,30 @@ download=http://hamzeen.github.io/ShortMessage/ShortMessage.zip
 id=103
 
 library
+category=Data
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=XlsReader
+sentence=A library to read from XLS (Excel) files
+url=https://github.com/fjenett/xlsreader-library-processing
+prettyVersion=0.1.1
+paragraph=XlsReader allows to read from .xls files as if they were a database
+version=504
+download=https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.zip
+id=110
+
+library
+category=Data
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=BezierSQLib
+sentence=A library to facilitate communication with SQL-based databases
+url=https://github.com/fjenett/sql-library-processing
+prettyVersion=0.2.0
+paragraph=SQLibrary is an interface to MySQL, SQLite and PostgreSQL databases
+version=1158
+download=https://raw.github.com/fjenett/sql-library-processing/latest/release/BezierSQLib.zip
+id=111
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
@@ -956,6 +992,17 @@ paragraph=We have developped the library to create simple scientific simulations
 version=43
 download=http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
 id=021
+
+library
+category=Math
+authorList=[Adila Faruk](http://adilapapaya.com)
+name=papaya
+sentence=A collection of utilities for Statistics and Matrix-related manipulations
+url=http://adilapapaya.com/papayastatistics.html
+prettyVersion=0.1.1
+version=1
+download=https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.zip
+id=045
 
 library
 category=Math

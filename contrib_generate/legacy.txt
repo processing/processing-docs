@@ -154,13 +154,6 @@ sentence=Allows Processing to communicate with control devices like joysticks an
      
 library
 category=Legacy
-name=Apple Light Sensor
-url=http://projects.formatlos.de/ambientlightsensor/
-authorList=[Martin R&auml;dlinger](http://blog.formatlos.de/)
-sentence=Interface to the Light Sensor in MacBook Pro computers.
-
-library
-category=Legacy
 name=novation launchpad
 url=http://rngtng.github.com/launchpad/
 authorList=[Tobias Bielohlawek](http://www.rngtng.com/)
@@ -505,25 +498,11 @@ sentence=Allows Processing to read and write XML files.
     
 library
 category=Legacy
-name=SQLibrary
-url=http://bezier.de/processing/libs/sql/
-authorList=[Florian Jenett](http://www.bezier.de/)
-sentence=A library to facilitate communication with MySQL or SQLite databases.
-    	      
-library
-category=Legacy
 name=Monomic
 url=http://jklabs.net/monomic/
 authorList=[Jesse Kriss](http://jklabs.net/)
 sentence=Enables communication between Processing and the monome 40h device.
 	
-library
-category=Legacy
-name=XlsReader
-url=http://bezier.de/processing/libs/xls/
-authorList=[Florian Jenett](http://www.bezier.de/)
-sentence=Lets you read data from xls (Excel) files.
-
 library
 category=Legacy
 name=ical4p
@@ -600,13 +579,6 @@ name=dLibs_freenect
 url=http://thomasdiewald.com/processing/libraries/dLibs_freenect/
 authorList=[Thomas Diewald](http://thomasdiewald.com/)
 sentence=A kinect library based on the libfreenect software.
-
-library
-category=Legacy
-name=papaya
-url=http://holypapayaresearch/papayastatistics.html
-authorList=[Adila Faruk](http://holypapayaresearch.com)
-sentence=A collection of utilities for performing some statistical and matrix-related manipulations.
 
 library
 category=Legacy
