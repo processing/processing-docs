@@ -279,9 +279,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.35
+prettyVersion=1.0.37
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1035
+version=1037
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -1073,6 +1073,16 @@ paragraph=With OCD, it is easy set up several cameras and switch between them. I
 version=5
 download=http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.zip
 id=036
+
+library
+category=3D
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+name=Patchy
+sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
+url=http://mrfeinberg.com/patchy/
+version=200
+download=http://mrfeinberg.com/patchy/patchy.zip
+id=037
 
 library
 category=3D

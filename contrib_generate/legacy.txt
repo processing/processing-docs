@@ -624,13 +624,6 @@ sentence=A wrapper around the ROME library that provides the tools for parsing, 
 
 library
 category=Legacy
-name=Patchy
-url=http://mrfeinberg.com/patchy/
-authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
-sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
-
-library
-category=Legacy
 name=FluidFormsLibs
 url=http://fluidforms.eu/processing/fluid-forms-libs/
 authorList=[Stephen Williams](http://www.onato.com/)
