@@ -16,9 +16,10 @@
 		<ex file="PointsLines.html">Points and Lines</ex>
 		<ex file="ShapePrimitives.html">Shape Primitives</ex>
 		<ex file="PieChart.html">Pie Chart</ex>
+		<ex file="RegularPolygon.html">Regular Polygon</ex>
+		<ex file="Star.html">Star</ex>
 		<ex file="TriangleStrip.html">Triangle Strip</ex>
 		<ex file="Bezier.html">Bezier</ex>
-		<ex file="BezierEllipse.html">Bezier Ellipse</ex>
 		<ex file="Primitives3D.html">3D Primitives</ex>
 	</cat>
 	<cat label="Data">
