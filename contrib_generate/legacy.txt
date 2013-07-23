@@ -217,13 +217,6 @@ sentence=Enables drawing giant, detailed typography at high frame rates.
      
 library
 category=Legacy
-name=point2line
-url=http://sixthsensor.dk/p5/point2line/ 
-authorList=[Carl Emil Carlsen](http://sixthsensor.dk)
-sentence=Basic tools for calculating geometry in two dimensions.		
-	
-library
-category=Legacy
 name=MovingLetters
 url=http://www.foobarquarium.de/blog/processing/MovingLetters/
 authorList=Ilu
