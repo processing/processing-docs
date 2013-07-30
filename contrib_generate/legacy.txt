@@ -631,13 +631,6 @@ sentence=A simple toolkit to enable 3D picking in Processing sketches.
 
 tool
 category=Legacy
-name=Bezier Editor
-url=http://www.drifkin.net/beziereditor/beziereditor-latest.zip
-authorList=[Devon Rifkin](http://www.drifkin.net/)
-sentence=Visually create Bézier splines and then generate code that represents the splines.
-  
-tool
-category=Legacy
 name=Timeline
 url=http://www.drifkin.net/timeline/
 authorList=[Devon Rifkin](http://www.drifkin.net/)
