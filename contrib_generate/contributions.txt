@@ -970,6 +970,18 @@ download=https://raw.github.com/fjenett/sql-library-processing/latest/release/Be
 id=111
 
 library
+category=Data
+authorList=[Raphael de Courville](https://vimeo.com/sableraf/)
+name=Signal Filter
+sentence=Filter noisy and jittery signals.
+url=https://github.com/SableRaf/signalfilter
+prettyVersion=1.0.0
+paragraph=OneEuroFilter for Processing based on the Java implementation by StŽphane Conversy.
+version=1
+download=http://s176381904.onlinehome.fr/processing/SignalFilter/download/signalFilter.zip
+id=115
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
