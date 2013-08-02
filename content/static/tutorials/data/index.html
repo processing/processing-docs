@@ -227,10 +227,10 @@ float d = r.getFloat("diameter");  // d has the value 61.14072
 String s = r.getString("name");    // s has the value "Joyous"
 </pre>
 
-The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_getRows_.html">getRows()</a>.
+The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_rows_.html">rows()</a>.
 
 <pre>
-for (TableRow row : table.getRows()) {
+for (TableRow row : table.rows()) {
   float x = row.getFloat("x");
   float y = row.getFloat("y");
   float d = row.getFloat("diameter");
