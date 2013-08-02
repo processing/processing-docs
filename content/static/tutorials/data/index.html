@@ -370,8 +370,8 @@ XML xml = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003");
 <pre>
 XML root        = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003"); // Step 1
 XML channel     = root.getChild("channel");                                    // Step 2
-XML item        = root.getChild("item");                                       // Step 3
-XML yweather    = root.getChild("yweather:condition");                         // Step 4
+XML item        = channel.getChild("item");                                    // Step 3
+XML yweather    = item.getChild("yweather:condition");                         // Step 4
 int temperature = yweather.getInt("high");                                     // Step 5
 </pre>
 
