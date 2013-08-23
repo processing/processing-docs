@@ -599,18 +599,6 @@ id=015
 
 library
 category=Hardware
-authorList=[David A. Mellis](http://dam.mellis.org/)
-name=Arduino (Firmata)
-sentence=Controls Arduino boards running the Firmata firmware.
-url=http://playground.arduino.cc/Interfacing/Processing
-prettyVersion=2.2
-paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
-version=1
-download=http://arduino.cc/playground/uploads/Interfacing/processing-arduino.zip
-id=024
-
-library
-category=Hardware
 authorList=[Martin Raedlinger](http://www.formatlos.de/)
 name=Apple Light Sensor
 sentence=Interface to the Light Sensor in MacBook Pro computers.
