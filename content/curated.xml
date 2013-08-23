@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
+	
+	<software name="Avena+ Test Bed" by="Benedikt Groß" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/avena.jpg</image>
+		  <description>
+			  Avena+ Test Bed is a project that explores the relationship between landscape, agriculture and digital fabrication by intercepting the process of precision farming by generative design.
+		  </description>
+		  <location>http://benedikt-gross.de/log/2013/06/avena-test-bed_agricultural-printing-and-altered-landscapes/</location>
+		 <link href="http://benedikt-gross.de/">Benedikt Groß</link>
+	</software>	
 
 	<software name="Kinograph" by="Matthew Epler" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/kinograph.jpg</image>
@@ -16,7 +25,7 @@
 			  Created by Hannes Jung, .fluid is a concept study of an interacting, changing surface that uses non-newtonian fluid, an Arduino board, a speaker and Processing to allow surface to change from liquid to solid, from plain to three-dimensional symmetric patterns.
 		  </description>
 		  <location>http://cargocollective.com/hnx/fluid</location>
-		 <link href="http://www.stonespray.com/">Hannes Jung</link>
+		 <link href="http://cargocollective.com/hnx/">Hannes Jung</link>
 	</software>
 	
 	<software name="3D Printed Record" by="Amanda Ghassaei" scroll="yes" resize="yes" width="1024" height="700">
@@ -25,7 +34,7 @@
 			  Created using Processing, ModelBuilder Library by Marius Watz and a 3D printer, Amanda Ghassaei at instructables managed to print a 33rpm music record that actually doesn’t sound too bad considering the limitations of currently available 3d printing technologies.
 		  </description>
 		  <location>http://www.instructables.com/id/3D-Printed-Record/</location>
-		 <link href="http://www.stonespray.com/">Instructables</link>
+		 <link href="http://www.instructables.com/id/3D-Printed-Record/">Instructables</link>
 	</software>
 	
 	<software name="Digital Natives and Glitched Realities" by="Matthew Plummer-Fernandez" scroll="yes" resize="yes" width="1024" height="700">
@@ -34,7 +43,7 @@
 			  Digital Natives are everyday items such as toys and detergent bottles that are 3D scanned using a digital camera, subjected to algorithms that distort and finally 3D printed in colour resin/sandstone.
 		  </description>
 		  <location>http://www.plummerfernandez.com/Digital-Natives</location>
-		 <link href="http://www.stonespray.com/"> Matthew Plummer-Fernandez</link>
+		 <link href="http://www.plummerfernandez.com"> Matthew Plummer-Fernandez</link>
 	</software>
 	
 	<software name="Stone Spray" by="Petr Novikov, Inder Shergill and Anna Kulik" scroll="yes" resize="yes" width="1024" height="700">

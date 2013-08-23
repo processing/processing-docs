@@ -117,7 +117,7 @@ println(lines);
 
 <p>Text from a file can be used to generate a simple visualization.  Take the following data file.</p>
 
-<img src="imgs/data_02_numbers.jpg" border=1>
+<img src="imgs/data_02_numbers.png" border=1>
 
 <p>Here, we can load the numbers separated by commas and split them into an array of ints used to set color and height of rectangles. </p>
 
@@ -227,10 +227,10 @@ float d = r.getFloat("diameter");  // d has the value 61.14072
 String s = r.getString("name");    // s has the value "Joyous"
 </pre>
 
-The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_getRows_.html">getRows()</a>.
+The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_rows_.html">rows()</a>.
 
 <pre>
-for (TableRow row : table.getRows()) {
+for (TableRow row : table.rows()) {
   float x = row.getFloat("x");
   float y = row.getFloat("y");
   float d = row.getFloat("diameter");
@@ -370,8 +370,8 @@ XML xml = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003");
 <pre>
 XML root        = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003"); // Step 1
 XML channel     = root.getChild("channel");                                    // Step 2
-XML item        = root.getChild("item");                                       // Step 3
-XML yweather    = root.getChild("yweather:condition");                         // Step 4
+XML item        = channel.getChild("item");                                    // Step 3
+XML yweather    = item.getChild("yweather:condition");                         // Step 4
 int temperature = yweather.getInt("high");                                     // Step 5
 </pre>
 
