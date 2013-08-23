@@ -291,9 +291,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.37
+prettyVersion=1.0.39
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1037
+version=1039
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -599,6 +599,18 @@ id=015
 
 library
 category=Hardware
+authorList=[David A. Mellis](http://dam.mellis.org/)
+name=Arduino (Firmata)
+sentence=Controls Arduino boards running the Firmata firmware.
+url=http://playground.arduino.cc/Interfacing/Processing
+prettyVersion=2.2
+paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
+version=1
+download=http://arduino.cc/playground/uploads/Interfacing/processing-arduino.zip
+id=024
+
+library
+category=Hardware
 authorList=[Martin Raedlinger](http://www.formatlos.de/)
 name=Apple Light Sensor
 sentence=Interface to the Light Sensor in MacBook Pro computers.
@@ -639,9 +651,9 @@ authorList=[Michael Heuer](https://github.com/heuermh)
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.11
+prettyVersion=1.12
 paragraph=
-version=13
+version=14
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -843,9 +855,9 @@ authorList=[Daniel Shiffman](http://www.shiffman.net)
 name=QRCode
 sentence=Reads QR Code images, a two-dimensional barcode format.
 url=http://www.shiffman.net/p5/qrcode-processing/
-prettyVersion=0.2a
+prettyVersion=0.3a
 paragraph=
-version=2
+version=3
 download=http://www.shiffman.net/p5/libraries/qrcode/qrcodeprocessing.zip
 id=012
 
@@ -927,9 +939,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=SoundCloud
 sentence=Unofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
 url=https://github.com/voidplus/soundcloud-java-library
-prettyVersion=0.1.2
+prettyVersion=0.1.3
 paragraph=
-version=4
+version=5
 download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
 id=089
 
@@ -1082,9 +1094,9 @@ authorList=[Frederik Vanhoutte](http://www.wblut.com/)
 name=HE_Mesh
 sentence=HE_Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
 url=http://hemesh.wblut.com/
-prettyVersion=1.81
+prettyVersion=1.8.2 "Alexander"
 paragraph=
-version=9
+version=10
 download=http://hemesh.wblut.com/hemesh-latest.zip
 id=009
 
