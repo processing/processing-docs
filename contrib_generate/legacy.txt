@@ -1,12 +1,5 @@
 library
 category=Legacy
-name=Tactu5
-url=http://www.abstract-codex.net/tactu5/index.html
-authorList=[Alessandro Capozzo](http://www.abstract-codex.net)
-sentence=Aids the creation of algorithmic music in real time. Consists of a set of classes focused in defining musical elements, utility classes, and an aggregator.	
-	
-library
-category=Legacy
 name=Beads
 url=http://www.beadsproject.net/
 authorList=[Ollie Bown](http://www.olliebown.com/)
@@ -621,13 +614,6 @@ name=FluidFormsLibs
 url=http://fluidforms.eu/processing/fluid-forms-libs/
 authorList=[Stephen Williams](http://www.onato.com/)
 sentence=Provides 3D mouse navigation, parameter management and STL export.
-
-library
-category=Legacy
-name=Picking
-url=http://n.clavaud.free.fr/processing/library/picking/
-authorList=[Nicolas Clavaud](mailto:antiplastik@gmail.com)
-sentence=A simple toolkit to enable 3D picking in Processing sketches.
 
 tool
 category=Legacy

@@ -34,6 +34,18 @@ download=http://www.local-guru.net/projects/ttslib/ttslib.zip
 id=092
 
 library
+category=Sound
+authorList=[Alessandro Capozzo](http://www.abstract-codex.net)
+name=tactu5
+sentence=Tactu5 aids in the creation of algorithmic music in real time. It consists of a set of classes focused on defining musical elements, utility classes and an aggregator.
+url=http://www.abstract-codex.net/tactu5
+prettyVersion=1.0.2
+paragraph=Tactu5 does not include a built-in synthesis system and is not focused on a specific communication protocol. Tactu5 has been designed to be quite easily integrated with existing software synthesis systems (Csound, PureData, SuperCollider etc.) through network communication (for instance, [oscP5](http://www.sojamo.de/libraries/oscP5/)) or by directly using some Java binding.
+version=4
+download=http://www.abstract-codex.net/tactu5/download/tactu5.zip
+id=118
+
+library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
 name=Collada Loader for Google Sketchup
@@ -701,7 +713,7 @@ sentence=Assists in making dynamic and interactive text-based applications.
 url=http://nexttext.net/
 prettyVersion=2.0.0
 paragraph=The library uses TrueType fonts to render text which moves and changes shape according to a set of rules. The programmer has full control over the text and the rules defining its behaviour.
-version=143
+version=145
 download=https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.zip
 id=116
 
@@ -1112,6 +1124,18 @@ id=017
 
 library
 category=3D
+authorList=[Nicolas Clavaud](http://n.clavaud.free.fr/)
+name=Picking
+sentence=Pick an object in a 3D scene easily.
+url=http://n.clavaud.free.fr/processing/library/picking/
+prettyVersion=0.2.0
+paragraph=
+version=5
+download=http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
+id=032
+
+library
+category=3D
 authorList=[Kristian Damkjer](http://www.gdsstudios.com/)
 name=OCD: Obsessive Camera Direction
 sentence=The Obsessive Camera Direction (OCD) library allows intuitive control and creation of Processing viewport Cameras.
@@ -1155,4 +1179,16 @@ paragraph=Choose from a wide range of shapes including the sphere, box, cylinder
 version=9
 download=http://www.lagers.org.uk/processing/shapes3d/Shapes3d.zip
 id=050
+
+library
+category=3D
+authorList=[Angus Forbes](http://www.creativecodinglab.com/) and [Charlie Roberts](http://www.charlie-roberts.com/)
+name=Stereo
+sentence=Library for anaglyph, passive stereo, or active stereo rendering.
+url=https://github.com/CreativeCodingLab/stereo
+prettyVersion=2.0
+paragraph=
+version=2
+download=http://ccl.angusforbes.com/stereo.zip
+id=117
 
