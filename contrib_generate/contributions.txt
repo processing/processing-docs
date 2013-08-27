@@ -694,6 +694,18 @@ download=https://raw.github.com/andreaskoller/Fontastic/master/download/Fontasti
 id=088
 
 library
+category=Typography
+authorList=[Obx Labs](http://www.obxlabs.net/)
+name=NextText
+sentence=Assists in making dynamic and interactive text-based applications.
+url=http://nexttext.net/
+prettyVersion=2.0.0
+paragraph=The library uses TrueType fonts to render text which moves and changes shape according to a set of rules. The programmer has full control over the text and the rules defining its behaviour.
+version=143
+download=https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.zip
+id=116
+
+library
 category=Animation
 authorList=[Benedikt Gross](http://www.looksgood.de/)
 name=Ani
