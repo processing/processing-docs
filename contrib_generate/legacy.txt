@@ -196,13 +196,6 @@ sentence=Plays and exports GIF animations.
      
 library
 category=Legacy
-name=NextText
-url=http://www.nexttext.net/
-authorList=[Elie Zananiri](http://silentlycrashing.net/blog/portfolio/nexttext-for-processing/) and [Obx Labs](http://www.obxlabs.net/)
-sentence=Assists in making dynamic and interactive text-based applications.
-	
-library
-category=Legacy
 name=Vertext
 url=http://www.ghost-hack.com/p5/vertext/
 authorList=[Michael Chang](http://www.ghost-hack.com/)
