@@ -266,13 +266,6 @@ sentence=An implementation of the SURF (Speeded Up Robust Features) feature dete
 	
 library
 category=Legacy
-name=simple-openni
-url=http://code.google.com/p/simple-openni/
-authorList=Max Rheiner
-sentence=A simple OpenNI and NITE wrapper for Processing.
-
-library
-category=Legacy
 name=JMyron (WebCamXtra)
 url=http://webcamxtra.sourceforge.net/
 authorList=[Josh Nimoy](http://www.jtnimoy.net) et al.
@@ -370,13 +363,6 @@ url=http://www.robotacid.com/PBeta/AILibrary/
 authorList=[Aaron Steed](http://robotacid.com/)
 sentence=A set of libraries to assist with artificial programming tasks such as genetic algorithms and the AStar algorithm.
 
-library
-category=Legacy
-name=Eliza
-url=http://codeanticode.wordpress.com/2007/11/12/eliza-library-for-processing/
-authorList=[Andres Colubri](http://codeanticode.wordpress.com/)
-sentence=Implementation of the classes A.I. bot, Eliza.
-		
 library
 category=Legacy
 name=MatrixMath

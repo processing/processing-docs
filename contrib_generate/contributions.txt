@@ -310,6 +310,18 @@ download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
 library
+category=Language
+authorList=[Andres Colubri](http://interfaze.info/)
+name=Eliza
+sentence=The classic Eliza psychologist program.
+url=http://interfaze.info/libraries/eliza/
+prettyVersion=1.0.0
+paragraph=Based on the <a href="http://chayden.net/eliza/Eliza.html">Java implementation by Charles Hayden</a>, faithful to the original 1966 version.
+version=1
+download=http://interfaze.info/libraries/eliza/download/Eliza.zip
+id=119
+
+library
 category=Geometry
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Geomerative
@@ -1128,9 +1140,9 @@ authorList=[Nicolas Clavaud](http://n.clavaud.free.fr/)
 name=Picking
 sentence=Pick an object in a 3D scene easily.
 url=http://n.clavaud.free.fr/processing/library/picking/
-prettyVersion=0.2.0
+prettyVersion=0.2.1
 paragraph=
-version=5
+version=6
 download=http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
 id=032
 
@@ -1191,4 +1203,16 @@ paragraph=
 version=2
 download=http://ccl.angusforbes.com/stereo.zip
 id=117
+
+library
+category=3D
+authorList=[Max Rheiner](http://code.google.com/p/simple-openni/)
+name=SimpleOpenNI
+sentence=A simple wrapper for OpenNI(Kinect-Library). Before you can use SimpleOpenNI you have to [install](http://code.google.com/p/simple-openni/wiki/Installation) OpenNI.
+url=http://code.google.com/p/simple-openni/
+prettyVersion=1.96
+paragraph=
+version=196
+download=https://simple-openni.googlecode.com/svn/trunk/SimpleOpenNI-2.0/dist/all/SimpleOpenNI.zip
+id=120
 
