@@ -165,6 +165,18 @@ version=1
 download=http://paulhertz.net/ignocodelib/download/IgnoCodeLib.zip
 id=105
 
+library
+category=I/O
+authorList=[Andres Colubri](http://interfaze.info/)
+name=Tablet
+sentence=Tablet is a library for using pen tablets from Processing.
+url=http://interfaze.info/libraries/tablet/
+prettyVersion=1.0.0
+paragraph=It provides simplified access to the pen's pressure, tilt, etc. It is based on <a href="https://sourceforge.net/projects/jpen/">JPen</a>, the Java Pen Tablet Access Library.
+version=1
+download=http://interfaze.info/libraries/tablet/download/Tablet.zip
+id=121
+
 tool
 category=
 authorList=Manindra Moharana

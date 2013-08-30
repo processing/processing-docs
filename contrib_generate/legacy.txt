@@ -168,13 +168,6 @@ sentence=Graphics tablet access for Java applets (while this is not strictly a P
 	
 library
 category=Legacy
-name=ProTablet
-url=http://protablet.sourceforge.net/
-authorList=[Andres Colubri](http://codeanticode.wordpress.com/)
-sentence=A library that encapsulates the JPen package to access graphic tablets in Java.
-	
-library
-category=Legacy
 name=codethread
 url=http://blog.diatom.cc/codethread/codethread-making-gcode-for-makerbot-with-processing
 authorList=[Diatom Studio](http://diatom.cc)
