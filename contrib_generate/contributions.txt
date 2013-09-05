@@ -171,7 +171,7 @@ authorList=[Andres Colubri](http://interfaze.info/)
 name=Tablet
 sentence=Tablet is a library for using pen tablets from Processing.
 url=http://interfaze.info/libraries/tablet/
-prettyVersion=1.0.0
+prettyVersion=1.0
 paragraph=It provides simplified access to the pen's pressure, tilt, etc. It is based on <a href="https://sourceforge.net/projects/jpen/">JPen</a>, the Java Pen Tablet Access Library.
 version=1
 download=http://interfaze.info/libraries/tablet/download/Tablet.zip
@@ -327,7 +327,7 @@ authorList=[Andres Colubri](http://interfaze.info/)
 name=Eliza
 sentence=The classic Eliza psychologist program.
 url=http://interfaze.info/libraries/eliza/
-prettyVersion=1.0.0
+prettyVersion=1.0
 paragraph=Based on the <a href="http://chayden.net/eliza/Eliza.html">Java implementation by Charles Hayden</a>, faithful to the original 1966 version.
 version=1
 download=http://interfaze.info/libraries/eliza/download/Eliza.zip
@@ -1067,13 +1067,13 @@ id=058
 
 library
 category=Math
-authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/)
+authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/processing/gwoptics_p5lib/)
 name=gwoptics
 sentence=Tools for drawing graphs in 2D and 3D.
 url=http://www.gwoptics.org/processing/gwoptics_p5lib/
-prettyVersion=0.4.3
+prettyVersion=0.5.0
 paragraph=We have developped the library to create simple scientific simulations and data displays, as shown on our [projects page](http://www.gwoptics.org/processing/).
-version=43
+version=50
 download=http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
 id=021
 
