@@ -2,23 +2,11 @@
 
 2.0 WEBSITE
 
-  NEED TO DO ON LAUNCH
-
-  - Update credential file to redirect users to main site, rather than trunk
-  - Check .htaccess for references to trunk
-  - Make sure fonts are on the server
-  - Add more redirects
-    . http://processing.org/reference/alpha.html > http://trunk.processing.org/reference/
-    . http://processing.org/learning/ > http://trunk.processing.org/tutorials/
-    . http://processing.org/learning/basics/ > http://trunk.processing.org/examples/
-    . http://processing.org/learning/topics/ > http://trunk.processing.org/examples/
-    . http://processing.org/learning/books/ > http://trunk.processing.org/books/
-    . http://processing.org/about/ > http://trunk.processing.org/overview/
-    . http://processing.org/about/people/ > http://trunk.processing.org/people/
-    . http://processing.org/about/patrons/ > http://trunk.processing.org/foundation/
 
   NEED POST 2.0
 
+  - Note about Red on Foundation page.
+  - Download amounts to "None" add "25.00" and fill the right box with "other"
   - Foundation page, mixed with patrons
     . How do the patrons get added w/donations?      
   - New CSS for tutorials
@@ -44,10 +32,25 @@
     . Cubes within cube (PVector.random3D())
     . Koch (PVector.rotate())
     . Flocking (PVector.random2D())
-  
 
   
-  
+// // // // // // // // // // // // // // // // // // // // //
+
+  NEED TO DO ON LAUNCH
+
+  x Update credential file to redirect users to main site, rather than trunk
+  x Check .htaccess for references to trunk
+  x Make sure fonts are on the server
+  x Add more redirects
+    . http://processing.org/reference/alpha.html > http://trunk.processing.org/reference/
+    . http://processing.org/learning/ > http://trunk.processing.org/tutorials/
+    . http://processing.org/learning/basics/ > http://trunk.processing.org/examples/
+    . http://processing.org/learning/topics/ > http://trunk.processing.org/examples/
+    . http://processing.org/learning/books/ > http://trunk.processing.org/books/
+    . http://processing.org/about/ > http://trunk.processing.org/overview/
+    . http://processing.org/about/people/ > http://trunk.processing.org/people/
+    . http://processing.org/about/patrons/ > http://trunk.processing.org/foundation/
+
 // // // // // // // // // // // // // // // // // // // // //
 
 2.0 SITE NAVIGATION
