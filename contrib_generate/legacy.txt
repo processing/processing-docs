@@ -404,13 +404,6 @@ name=victamin
 url=http://code.google.com/p/victamin/
 authorList=[Victor Martins](http://www.pixelnerve.com/v/)
 sentence=Code for using GLSL/Cg/CgFX shaders, FBOs, import 3DS and OBJ files, sending and receiving SMS message.
-	
-library
-category=Legacy
-name=iGeo
-url=http://igeo.jp/
-authorList=[Satoru Sugihara](http://sghr.jp/)
-sentence=A 3D modeling software library for computational design in architecture, product design, interaction design and more. It includes libraries of vector math operations, NURBS curve and surface geometries, polygon meshes and 3D model file I/O.
 
 library
 category=Legacy

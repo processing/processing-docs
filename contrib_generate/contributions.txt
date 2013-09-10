@@ -309,6 +309,18 @@ version=217
 download=http://android.processing.org/AndroidMode.zip
 id=101
 
+mode
+category=
+authorList=[Gal Sasson](http://galsasson.com)
+name=Tweak Mode
+sentence=Tweak hard-coded numbers in your code and see the result in real-time.
+url=http://galsasson.com/tweakmode/
+prettyVersion=1.0.0
+paragraph=When a sketch is being executed in tweak mode, all hard-coded numbers become interactive and can be modified by clicking and dragging to the left or right. When a value change, the PDE will update the running sketch with the new value and the result will be visible immediately. This mode is useful if you want to refine a certain feature/color/behaviour in your sketch, if you want to experiment freely with numbers, or if you try to understand someone else's code. other uses are welcome.
+version=890
+download=http://galsasson.com/tweakmode/tweakmode.zip
+id=122
+
 library
 category=Language
 authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
@@ -1227,4 +1239,16 @@ paragraph=
 version=196
 download=https://simple-openni.googlecode.com/svn/trunk/SimpleOpenNI-2.0/dist/all/SimpleOpenNI.zip
 id=120
+
+library
+category=3D
+authorList=[Satoru Sugihara](http://atlv.org/)
+name=iGeo
+sentence=3D geometry library with packages of NURBS geometry, polygon mesh geometry, vector math, 3D display and navigation, 3D data file I/O and agent-based 3D geometry modeling.
+url=http://igeo.jp/
+prettyVersion=0.9.0.1
+paragraph=
+version=901
+download=http://igeo.jp/igeo.zip
+id=123
 
