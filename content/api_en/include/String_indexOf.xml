@@ -21,7 +21,7 @@ println(p1 + ":" + p2 + ":" + p3);  // Prints "0:3:2"
 </example>
 
 <description><![CDATA[
-Tests to see if a substring is embedded in a string and returns the index position of the first occurance of the substring defined in the <b>str</b> parameter. If the <b>str</b> parameter is not found in the string, -1 is returned.
+Tests to see if a substring is embedded in a String, and returns the index position of the first occurrence of the substring defined in the <b>str</b> parameter. If the <b>str</b> substring is not found within the String, <b>-1</b> is returned.
 ]]></description>
 
 <syntax>

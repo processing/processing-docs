@@ -44,13 +44,13 @@ println(quoted);  // This one has "quotes"
 </example>
 
 <description><![CDATA[
-A string is a sequence of characters. The class <b>String</b> includes methods for examining individual characters, comparing strings, searching strings, extracting parts of strings, and for converting an entire string uppercase and lowercase. Strings are always defined inside double quotes ("Abc"), and characters are always defined inside single quotes ('A').<br/>
+A string is a sequence of characters. The class <b>String</b> includes methods for examining individual characters, comparing strings, searching strings, extracting parts of strings, and for converting an entire string uppercase and lowercase. Strings are always defined inside double quotes (<b>"Abc"</b>), and characters are always defined inside single quotes (<b>'A'</b>).<br/>
 <br/>
-To compare the contents of two Strings, use the <b>equals()</b> method, as in "if (a.equals(b))", instead of "if (a == b)". A String is an Object, so comparing them with the == operator only compares whether both Strings are stored in the same memory location. Using the <b>equals()</b> method will ensure that the actual contents are compared. (The <a href="http://wiki.processing.org/w/Troubleshooting#Why_don.27t_these_Strings_equal.3F">troubleshooting</a> reference has a longer explanation.)<br /> 
+To compare the contents of two Strings, use the <b>equals()</b> method, as in <b>if (a.equals(b))</b>, instead of <b>if (a == b)</b>. A String is an Object, so comparing them with the <b>==</b> operator only compares whether both Strings are stored in the same memory location. Using the <b>equals()</b> method will ensure that the actual contents are compared. (The <a href="http://wiki.processing.org/w/Troubleshooting#Why_don.27t_these_Strings_equal.3F">troubleshooting</a> reference has a longer explanation.)<br /> 
 <br />
-Because a String is defined between quotation marks, to include such marks within the String itself you must use the &#92; (backslash) character.  (See the third example above.)  This is known as an <em>escape sequence</em>. Other escape sequences include &#92;t for the tab character and &#92;n for new line. Because backslash is the escape character, to include a single backslash within a String, you must use two consecutive backslashes, as in: &#92;&#92;<br/>
+Because a String is defined between double quotation marks, to include such marks within the String itself you must use the <b>&#92;</b> (backslash) character.  (See the third example above.)  This is known as an <em>escape sequence</em>. Other escape sequences include <b>&#92;t</b> for the tab character and <b>&#92;n</b> for new line. Because backslash is the escape character, to include a single backslash within a String, you must use two consecutive backslashes, as in: <b>&#92;&#92;</b><br/>
 <br/>
-There are more string methods than those linked from this page. Additional documentation is located online in the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html">official Java documentation.</a>.
+There are more string methods than those linked from this page. Additional documentation is located online in the <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html">official Java documentation</a>.
 ]]></description>
 
 <syntax></syntax>
@@ -67,7 +67,7 @@ There are more string methods than those linked from this page. Additional docum
 
 <method>
 <mname>indexOf()</mname>
-<mdescription>Returns the index value of the first occurance of a character within the input string</mdescription>
+<mdescription>Returns the index value of the first occurrence of a substring within the input string</mdescription>
 </method>
 
 <method>
