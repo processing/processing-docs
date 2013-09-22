@@ -91,7 +91,7 @@
 		<p>Earlier releases have been removed because we can only support the current versions of the software. To update old code, read the <a href="http://wiki.processing.org/w/Changes">changes</a> page. Per-release changes can be found in <a href="https://raw.github.com/processing/processing/master/build/shared/revisions.txt">revisions.txt</a>. If you have problems with the current release, please <a href="https://github.com/processing/processing/issues?state=open">file a bug</a> so that we can fix it. Older releases can also be <a href="https://github.com/processing/processing">built from the source</a>. <a href="http://wiki.processing.org/w/FAQ#What.27s_with_the_version_numbers.3F">Read More</a> about the releases and their numbering. Note that <a href="http://wiki.processing.org/w/Android">Android mode</a> no longer works in Processing 1.5, you'll need to use a 2.0 release to do Android development.</p>
 	</div>
 
-	<!-- Pre Releases -->
+<!--
 	<div class="releases">
 		<h3>Pre-Releases</h3>
 		<ul>
@@ -125,6 +125,7 @@
 		</ul>
 		<p>The 2.0 pre-releases contain significant changes, be sure to <a href="http://wiki.processing.org/w/Changes">read about them</a>. </p>
 	</div>
+-->
 
 	<!-- Disclaimer -->
 	<div class="disclaimer">
