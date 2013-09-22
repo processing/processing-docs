@@ -4,9 +4,9 @@ authorList=[Severin Smith](http://www.smallbutdigital.com/)
 name=The MidiBus
 sentence=The MidiBus is a minimal MIDI library for Processing, no frills, no limitations.
 url=http://www.smallbutdigital.com/themidibus.php
-prettyVersion=5
-paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. currently no built in sequencer, file read/write, MIDI recording/playback).
-version=6
+prettyVersion=7
+paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. no built in sequencer, file read/write, MIDI recording/playback).
+version=7
 download=http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
 id=019
 
@@ -321,6 +321,18 @@ version=890
 download=http://galsasson.com/tweakmode/tweakmode.zip
 id=122
 
+mode
+category=
+authorList=[The Processing Foundation](http://processing.org)
+name=PDE X
+sentence=The next generation of PDE
+url=https://github.com/processing/processing-experimental
+prettyVersion=1.0.0b
+paragraph=Intelligent Code Completion, Live Error Checker, Debugger, Auto Refactor, etc.
+version=3
+download=http://download.processing.org/pdeX.zip
+id=124
+
 library
 category=Language
 authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
@@ -459,9 +471,9 @@ authorList=[David Bouchard](http://www.deadpixel.ca)
 name=keystone
 sentence=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
 url=http://keystonep5.sourceforge.net/
-prettyVersion=004
-paragraph=
-version=4
+prettyVersion=005
+paragraph=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
+version=5
 download=http://keystonep5.sourceforge.net/download/keystone.zip
 id=034
 
