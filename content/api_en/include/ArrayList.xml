@@ -15,7 +15,7 @@
 // This is a code fragment that shows how to use an ArrayList.
 // It won't compile because it's missing the Ball class.
 
-// Declaring the ArrayList, note the use of the syntax "<Ball>" to indicate
+// Declaring the ArrayList, note the use of the syntax "&lt;Ball&gt;" to indicate
 // our intention to fill this ArrayList with Ball objects
 ArrayList&lt;Ball&gt; balls;
 
