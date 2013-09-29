@@ -327,9 +327,9 @@ authorList=[The Processing Foundation](http://processing.org)
 name=PDE X
 sentence=The next generation of PDE
 url=https://github.com/processing/processing-experimental
-prettyVersion=1.0.0b
+prettyVersion=1.0.1b
 paragraph=Intelligent Code Completion, Live Error Checker, Debugger, Auto Refactor, etc.
-version=3
+version=4
 download=http://download.processing.org/pdeX.zip
 id=124
 
@@ -615,9 +615,9 @@ authorList=[Daniel Koehler](http://www.lab-eds.org)
 name=Punktiert
 sentence=Particle engine for local particle behaviors.
 url=http://www.lab-eds.org/punktiert
-prettyVersion=1.0
+prettyVersion=2.0
 paragraph=Punktiert is a particle engine based and thought as an extension of Karsten Schmidt's toxiclibs.physics code. This library is optimized for the local negotiation between particles. And it allows hierarchies between multiple particle groups. The access and methods are simplified, no more difference between 2D/3D, extended behaviors. This library is developed through and for an architectural context. Based on my teaching experiences over the past couple years.
-version=1
+version=2
 download=https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.zip
 id=107
 
@@ -872,6 +872,18 @@ paragraph=
 version=11
 download=http://ubaa.net/shared/processing/opencv/download/opencv.zip
 id=081
+
+library
+category=Video & Vision
+authorList=[Daniel Shiffman](http://shiffman.net)
+name=Rekognition for Processing
+sentence=Face detection and recognition using Rekognition
+url=https://github.com/shiffman/RekognitionProcessing/
+prettyVersion=0.1
+paragraph=This library wraps the functionality of the [Rekognition](http://www.rekognition.com)
+version=1
+download=http://shiffman.net/p5/libraries/RekognitionProcessing/RekognitionProcessing.zip
+id=125
 
 library
 category=Other
