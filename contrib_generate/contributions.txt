@@ -634,6 +634,18 @@ download=https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.zip
 id=108
 
 library
+category=Simulation
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=AI_for_2D_Games
+sentence=An AI framework suitable for 2D games and simulations.
+url=http://www.lagers.org.uk/ai4g/index.html
+prettyVersion=1.0.0
+paragraph=This supports the creation of sketches that require state driven autonomous agents.  Everything is here to get you started, including many examples demonstrating the library features. The [website] (http://www.lagers.org.uk/ai4g/index.html) has many articles and programming examples explaining this sophisticated library.
+version=1
+download=http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.zip
+id=127
+
+library
 category=Hardware
 authorList=[Daniel Shiffman](http://www.shiffman.net/) and [ITP](http://itp.nyu.edu)
 name=Most Pixels Ever
@@ -1147,6 +1159,18 @@ paragraph=This library provides an easy way to generate combinations, variations
 version=3018
 download=https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
 id=056
+
+library
+category=Math
+authorList=[Javier Gracia Carpio](http://www.openprocessing.org/user/16300)
+name=grafica
+sentence=Create simple and configurable 2D plots with Processing.
+url=https://github.com/jagracar/grafica
+prettyVersion=1.0.0
+paragraph=
+version=1
+download=https://raw.github.com/jagracar/grafica/master/releases/grafica.zip
+id=126
 
 library
 category=3D
