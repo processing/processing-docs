@@ -1078,6 +1078,18 @@ download=http://s176381904.onlinehome.fr/processing/SignalFilter/download/signal
 id=115
 
 library
+category=Data
+authorList=[Douglas Adam Smith II](http://www.dasmithii.info)
+name=GNet
+sentence=A general purpose machine learning library packaged for Processing.
+url=https://github.com/dasmithii/GNet
+prettyVersion=1.0.0
+paragraph=GNet encompasses a wide variety of classes including the MLP (Multi-layered Perceptron), the GP (Genetic Program), and the Population, which facilitates evolutionary computing. GNet originated in hopes of creating imaginative, "Generative" agents, but in the process has developed many conventional tools as well.
+version=1
+download=http://dasmithii.com/GNet.zip
+id=128
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
