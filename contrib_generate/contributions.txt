@@ -683,18 +683,6 @@ id=028
 
 library
 category=Hardware
-authorList=[Daniel Sauter](http://daniel-sauter.com/) and j.duran
-name=Ketai
-sentence=Android library for working with sensors, cameras, multi-touch, networking, Bluetooth, WiFi Direct, Near Field Communication, and SQLite
-url=http://ketaiProject.com/
-prettyVersion=v9
-paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
-version=9
-download=http://ketaiproject.org/ketai.zip
-id=066
-
-library
-category=Hardware
 authorList=Henri DAVID
 name=dmxP512
 sentence=DMX output for enttec DMX USB PRO and lanbox LCE.
@@ -1082,7 +1070,7 @@ category=Data
 authorList=[Douglas Adam Smith II](http://www.dasmithii.info)
 name=GNet
 sentence=A general purpose machine learning library packaged for Processing.
-url=https://github.com/dasmithii/GNet
+url=https://github.com/dasmithii/GNet-P5
 prettyVersion=1.0.0
 paragraph=GNet encompasses a wide variety of classes including the MLP (Multi-layered Perceptron), the GP (Genetic Program), and the Population, which facilitates evolutionary computing. GNet originated in hopes of creating imaginative, "Generative" agents, but in the process has developed many conventional tools as well.
 version=1
