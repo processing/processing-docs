@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
+
+	<software name="Fragmented Memory" by="Phillip Stearns" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/fragmented.jpg</image>
+		  <description>
+			  Fragmented Memory are portraits of raw binary data extracted from computer memory and rendered as an image. These images are then imported into software used by textile designers and finally fed to computerised looms use to weave the designs.
+		  </description>
+		  <location>http://glitchtextiles.com/</location>
+		 <link href="http://benedikt-gross.de/">Phillip Stearns</link>
+	</software>	
 	
 	<software name="Avena+ Test Bed" by="Benedikt Groß" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/avena.jpg</image>
