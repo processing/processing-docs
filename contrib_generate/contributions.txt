@@ -195,9 +195,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.3
+prettyVersion=2.3.1
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=11
+version=12
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -224,30 +224,6 @@ paragraph=Simple wizard style interface to export and sign (optional) applets fr
 version=2
 download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 id=096
-
-tool
-category=
-authorList=[Jonathan Acosta](http://poifox.com)
-name=Templater
-sentence=Save your current sketch as a template for later use.
-url=http://poifox.com/templater/
-prettyVersion=1.01
-paragraph=Templater was made to be used along with the [Bootstrap Tool](http://poifox.com/bootstrap/). Tested with Processing 2.0b8+, on Mac OS X 10.6.8 and Ubuntu 12.10.
-version=2
-download=http://poifox.com/templater/download/Templater.zip
-id=099
-
-tool
-category=
-authorList=[Jonathan Acosta](http://poifox.com)
-name=Bootstrap
-sentence=Quickly initialize your new sketch with a predefined template.
-url=http://poifox.com/bootstrap/
-prettyVersion=1.01
-paragraph=Bootstrap was made to be used along with the [Templater Tool](http://poifox.com/templater/). Tested with Processing 2.0b8+, on Mac OS X 10.6.8 and Ubuntu 12.10.
-version=2
-download=http://poifox.com/bootstrap/download/Bootstrap.zip
-id=100
 
 tool
 category=
@@ -339,9 +315,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing.
 url=http://rednoise.org/rita/
-prettyVersion=1.0.39
+prettyVersion=1.0.40
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1039
+version=1040
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -579,9 +555,9 @@ authorList=[RSG](http://r-s-g.org)
 name=Carnivore
 sentence=Surveillance tool for data networks.
 url=http://r-s-g.org/carnivore
-prettyVersion=5
+prettyVersion=6
 paragraph=
-version=5
+version=6
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=041
 
@@ -636,12 +612,12 @@ id=108
 library
 category=Simulation
 authorList=[Peter Lager](http://www.lagers.org.uk)
-name=AI_for_2D_Games
+name=AI for 2D Games
 sentence=An AI framework suitable for 2D games and simulations.
 url=http://www.lagers.org.uk/ai4g/index.html
-prettyVersion=1.0.0
+prettyVersion=1.0.3
 paragraph=This supports the creation of sketches that require state driven autonomous agents.  Everything is here to get you started, including many examples demonstrating the library features. The [website] (http://www.lagers.org.uk/ai4g/index.html) has many articles and programming examples explaining this sophisticated library.
-version=1
+version=3
 download=http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.zip
 id=127
 
@@ -680,6 +656,18 @@ paragraph=
 version=1
 download=http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.zip
 id=028
+
+library
+category=Hardware
+authorList=[Daniel Sauter](http://daniel-sauter.com/) and j.duran
+name=Ketai
+sentence=Android library for working with sensors, cameras, multi-touch, networking, Bluetooth, WiFi Direct, Near Field Communication, and SQLite
+url=http://ketaiProject.com/
+prettyVersion=v9
+paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
+version=9
+download=http://ketailibrary.org/ketai.zip
+id=066
 
 library
 category=Hardware
@@ -939,9 +927,9 @@ authorList=[RSG](http://r-s-g.org)
 name=Carnivore
 sentence=Surveillance tool for data networks.
 url=http://r-s-g.org/carnivore
-prettyVersion=5
+prettyVersion=6
 paragraph=
-version=5
+version=6
 download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
 id=040
 
@@ -1083,9 +1071,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=3.3
+prettyVersion=3.3.1
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=15
+version=16
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
 
