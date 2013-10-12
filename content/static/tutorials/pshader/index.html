@@ -309,7 +309,7 @@ Together with the POINT and LINE shaders mentioned earlier, we end up having 6 d
 </p>
 
 <p>
-Processing needs to use the right type of shader when drawing a piece of geometry, and by default it picks the correct shader by checking whether the geometry about to be rendered has lights or textures associated to it and then enabling the appropriate shader. When we set our own custom shader, we need to make sure that it belongs to the correct type to handle the subsequent drawing calls. For example, if simpleShader below is of type COLOR, then the following code will run without problems:
+Processing needs to use the right type of shader when drawing a piece of geometry, and by default it picks the correct shader by checking whether the geometry about to be rendered has lights or textures associated to it and then enabling the appropriate shader. When we set our own custom shader, we need to make sure that it belongs to the correct type to handle the subsequent drawing calls. For example, if simpleShader below is of type COLOR, then in the following code the rectangle will be renderer using simpleShader:
 </p>
 
 <pre>
@@ -319,7 +319,7 @@ Processing needs to use the right type of shader when drawing a piece of geometr
 <span style="color: #006699;">rect</span>(0, 0, 100, 100);
 </pre>
 
-<p>However, if we try to do:</p>
+<p>However, if we do:</p>
 
 <pre>
 <span style="color: #006699;">shader</span>(simpleShader);
@@ -329,11 +329,11 @@ Processing needs to use the right type of shader when drawing a piece of geometr
 </pre>
 
 <p>
-then Processing will print the warning <em>"Your shader cannot be used to render lit geometry, using default shader instead."</em>, but will still render the lit geometry by using its own default LIGHT shader instead the one provided in the <em>shader()</em> call.
+then Processing will simply ignore simpleShader and will render the lit rectangle with its own default LIGHT shader.
 </p>
 
 <p>
-The type of a shader must be specified inside the GLSL code, either in the vertex shader or the fragment shader (or both), by using a #define line, which are the following:
+The type of a shader can be specified inside the GLSL code, either in the vertex shader or the fragment shader (or both), by using a #define line, which are the following:
 </p>
 
 <ul>
@@ -344,6 +344,10 @@ The type of a shader must be specified inside the GLSL code, either in the verte
 <li>#define PROCESSING_TEXTURE_SHADER for TEXTURE shaders</li>
 <li>#define PROCESSING_TEXLIGHT_SHADER for TEXLIGHT shaders</li>
 </ul>
+
+<p>
+These defines are in fact hints for the renderer, and could be absent from the shader code altogether. This is convenient for more advanced applications where the data used by the shader is not necessarily determined by the texture/lighting state of the scene, but we will leave the discussion of this functionality for a future tutorial.
+</p>
 
 <p>In the next sections we will describe each type of shader in detail.</p>
 
