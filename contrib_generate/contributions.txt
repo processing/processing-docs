@@ -514,6 +514,18 @@ download=https://dl.dropbox.com/u/87680069/executor.zip
 id=094
 
 library
+category=Utilities
+authorList=[Ilias Bergstrom](http://www.onar3d.com)
+name=Mother
+sentence=A library for live visuals performance with Processing sketches
+url=http://www.onar3d.com/mother
+prettyVersion=1.0.0
+paragraph=
+version=1
+download=http://processing-mother.googlecode.com/files/Mother.zip
+id=129
+
+library
 category=Simulation
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
 name=Fisica
