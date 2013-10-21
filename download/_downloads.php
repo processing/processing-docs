@@ -97,7 +97,7 @@
 	<div class="releases">
 		<h3>Pre-Releases</h3>
 		<ul>
-			<!-- These links are broken, linking directly to Google
+
 			<li>
 				<span class="version">2.1b1</span>
 				<span class="version-date">(20 October 2013)</span>
@@ -106,8 +106,8 @@
 				<a href="http://download.processing.org/processing-2.1b1-linux32.tgz">Linux 32</a> 
 				<a href="http://download.processing.org/processing-2.1b1-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-2.1b1-macosx.zip">Mac OS X</a> 
-			</li>-->
-
+			</li>
+			<!-- Temp fix, now commented out
 			<li>
 				<span class="version">2.1b1</span>
 				<span class="version-date">(20 October 2013)</span>
@@ -116,7 +116,7 @@
 				<a href="http://processing.googlecode.com/files/processing-2.1b1-linux32.tgz">Linux 32</a> 
 				<a href="http://processing.googlecode.com/files/processing-2.1b1-linux64.tgz">Linux 64</a>
 				<a href="http://processing.googlecode.com/files/processing-2.1b1-macosx.zip">Mac OS X</a> 
-			</li>
+			</li>-->
 <!--
 			<li>
 				<span class="version">2.0b9</span>
