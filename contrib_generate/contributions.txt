@@ -147,10 +147,10 @@ authorList=[Erik Paluka](http://www.erikpaluka.com/), [Zachary Cook](http://vial
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/SMT/
-prettyVersion=3.7
+prettyVersion=3.7.1
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=13
-download=http://vialab.science.uoit.ca/smt/SMT.zip
+version=14
+download=http://vialab.science.uoit.ca/smt/dl/SMT.zip
 id=098
 
 library
@@ -224,6 +224,30 @@ paragraph=Simple wizard style interface to export and sign (optional) applets fr
 version=2
 download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 id=096
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Templater
+sentence=Save your current sketch as a template to use a base for coding later on.
+url=http://poifox.com/templater/
+prettyVersion=1.02
+paragraph=The Templater tool for Processing 2.0+ is the perfect companion for Bootstrap. It allows the coder to save the currently visible sketch as a template in the templates folder, which can then be used by Bootstrap to initialize sketches with different templates. Templater superceedes the old SaveTemplate tool, and builds upon the original code with better coding style and encapsulation.
+version=3
+download=http://poifox.com/templater/download/Templater.zip
+id=099
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Bootstrap
+sentence=Quickly load custom sketch templates created with the Templater tool.
+url=http://poifox.com/bootstrap/
+prettyVersion=1.02
+paragraph=The Bootstrap tool for Processing 2.0+ lets coders load a predefined template to their current Processing sketch as a base for further coding, removing the tedious process of writing base Procesing style code like setup(), draw() and more. Bootstrap superceedes the old InitSketch tool, and build upon the original code with better coding style and encapsulation.
+version=3
+download=http://poifox.com/bootstrap/download/Bootstrap.zip
+id=100
 
 tool
 category=
@@ -303,9 +327,9 @@ authorList=[The Processing Foundation](http://processing.org)
 name=PDE X
 sentence=The next generation of PDE
 url=https://github.com/processing/processing-experimental
-prettyVersion=1.0.1b
+prettyVersion=1.0.2b
 paragraph=Intelligent Code Completion, Live Error Checker, Debugger, Auto Refactor, etc.
-version=4
+version=5
 download=http://download.processing.org/pdeX.zip
 id=124
 
@@ -1299,4 +1323,16 @@ paragraph=
 version=901
 download=http://igeo.jp/igeo.zip
 id=123
+
+library
+category=3D
+authorList=[Andres Colubri](http://interfaze.info)
+name=planetarium
+sentence=This library provides a renderer to project 3D scenes on a full dome.
+url=https://github.com/codeanticode/planetarium
+prettyVersion=0.2
+paragraph=It works by rendering the scene 5 times (one from each direction: top, right, etc) and then assembling the output of these renderings into a single environmental map that covers the entire dome.
+version=2
+download=http://interfaze.info/libraries/planetarium/download/planetarium.zip
+id=130
 
