@@ -7,7 +7,7 @@ Reworked by CR, 23 Sep 2011
 Reworked by Jon Gacnik, 19 Feb 2013
 
 Created: 2005.08.29 04:28PM
-x Last Modified: 2005.08.30 06:23PM
+x Last Modified: 2013.10.16 09:28AM
 
 */
 
@@ -789,6 +789,7 @@ div.ref-col {
 	#Download #selectForm .select-amount label {
 		margin-right: 45px;
 	}
+	#Download #selectForm .select-amount label.last { margin-right: 2px; }
 	#Download .donate-box input[type="submit"]{
 		font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
 		-webkit-font-smoothing: antialiased;
