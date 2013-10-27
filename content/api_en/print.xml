@@ -11,6 +11,20 @@
 <example>
 <image></image>
 <code><![CDATA[
+String s = "The size is ";
+int w = 1920;
+int h = 1080;
+print(s);
+print(w, "x", h);
+
+// This program writes to the console:
+// The size is 1920 x 1080
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
 print("begin- ");
 float f = 0.3;
 int i = 1024;
@@ -18,16 +32,13 @@ print("f is " + f + " and i is " + 1024);
 String s = " -end";
 println(s);
 
-// The above code prints:
+// This program writes to the console:
 // "begin- f is 0.3 and i is 1024 -end"
 ]]></code>
 </example>
 
 <description><![CDATA[
-Writes to the console area of the Processing environment. This is often helpful for looking at the data a program is producing. The companion function <b>println()</b> works like <b>print()</b>, but creates a new line of text for each call to the function. Individual elements can be separated with quotes ("") and joined with the addition operator (+).<br />
-<br />
-Beginning with release 0125, to print the contents of an array, use println(). There's no sensible way to do a <b>print()</b> of an array, 
-because there are too many possibilities for how to separate the data (spaces, commas, etc). If you want to print an array as a single line, use <b>join()</b>. With <b>join()</b>, you can choose any delimiter you like and <b>print()</b> the result.<br />
+The <b>print()</b> function writes to the console area, the black rectangle at the bottom of the Processing environment. This function is often helpful for looking at the data a program is producing. The companion function <b>println()</b> works like <b>print()</b>, but creates a new line of text for each call to the function. More than one parameter can be passed into the function by separating them with commas. Alternatively, individual elements can be separated with quotes ("") and joined with the addition operator (+).<br />
 <br />
 Using <b>print()</b> on an object will output <b>null</b>, a memory location that may look like "@10be08," or the result of the <b>toString()</b> method from the object that's being printed. Advanced users who want more useful output when calling <b>print()</b> on their own classes can add a <b>toString()</b> method to the class that returns a String.
 ]]></description>
