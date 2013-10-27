@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>printArray()</name>
+
+<category>Output</category>
+
+<subcategory>Text Area</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+float[] f = { 0.3, 0.4, 0.5 };
+printArray(f);
+
+// The above code prints:
+// [0] 0.3
+// [1] 0.4
+// [2] 0.5
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>printArray()</b> function writes array data to the text area of the Processing environment's console. A new line is put between each element of the array. This function can only print one dimensional arrays.
+]]></description>
+
+</root>
