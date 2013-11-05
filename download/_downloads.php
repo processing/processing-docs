@@ -13,14 +13,14 @@
 
 		<!-- Downloads -->
 		<div class="downloads">
-			<span class="version">2.0.3</span>
-			<span class="version-date">(5 September 2013)</span>
+			<span class="version">2.1</span>
+			<span class="version-date">(27 October 2013)</span>
 			<ul class="current-downloads">
-				<li><a href="http://download.processing.org/processing-2.0.3-windows64.zip">Windows</a> 64-bit<br>
-				<a href="http://download.processing.org/processing-2.0.3-windows32.zip">Windows</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-2.0.3-linux64.tgz">Linux</a> 64-bit<br>
-				<a href="http://download.processing.org/processing-2.0.3-linux32.tgz">Linux</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-2.0.3-macosx.zip">Mac OS X</a></li>
+				<li><a href="http://download.processing.org/processing-2.1-windows64.zip">Windows</a> 64-bit<br>
+				<a href="http://download.processing.org/processing-2.1-windows32.zip">Windows</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-2.1-linux64.tgz">Linux</a> 64-bit<br>
+				<a href="http://download.processing.org/processing-2.1-linux32.tgz">Linux</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-2.1-macosx.zip">Mac OS X</a></li>
 			</ul>
 		</div>
 
@@ -41,6 +41,16 @@
 	<div class="releases">
 		<h3>Stable Releases</h3>
 		<ul>
+			<li>
+				<span class="version">2.1</span>
+				<span class="version-date">(27 October 2013)</span>
+				<a href="http://download.processing.org/processing-2.1-windows32.zip">Win 32</a>
+				<a href="http://download.processing.org/processing-2.1-windows64.zip">Win 64</a> 
+				<a href="http://download.processing.org/processing-2.1-linux32.tgz">Linux 32</a> 
+				<a href="http://download.processing.org/processing-2.1-linux64.tgz">Linux 64</a>
+				<a href="http://download.processing.org/processing-2.1-macosx.zip">Mac OS X</a> 
+			</li>
+
 			<li>
 				<span class="version">2.0.3</span>
 				<span class="version-date">(5 September 2013)</span>
@@ -90,14 +100,16 @@
 				<a href="http://processing.googlecode.com/files/processing-1.5.1-macosx.zip">Mac OS X</a> 
 			</li>
 		</ul>
-		<p>Earlier releases have been removed because we can only support the current versions of the software. To update old code, read the <a href="http://wiki.processing.org/w/Changes">changes</a> page. Per-release changes can be found in <a href="https://raw.github.com/processing/processing/master/build/shared/revisions.txt">revisions.txt</a>. If you have problems with the current release, please <a href="https://github.com/processing/processing/issues?state=open">file a bug</a> so that we can fix it. Older releases can also be <a href="https://github.com/processing/processing">built from the source</a>. <a href="http://wiki.processing.org/w/FAQ#What.27s_with_the_version_numbers.3F">Read More</a> about the releases and their numbering. Note that <a href="http://wiki.processing.org/w/Android">Android mode</a> no longer works in Processing 1.5, you'll need to use a 2.0 release to do Android development.</p>
+		<p>Earlier releases have been removed because we can only support the current versions of the software. To update old code, read the <a href="http://wiki.processing.org/w/Changes">changes</a> page. Per-release changes can be found in <a href="https://raw.github.com/processing/processing/master/build/shared/revisions.txt">revisions.txt</a>. If you have problems with the current release, please <a href="https://github.com/processing/processing/issues?state=open">file a bug</a> so that we can fix it. Older releases can also be <a href="https://github.com/processing/processing">built from the source</a>. <a href="http://wiki.processing.org/w/FAQ#What.27s_with_the_version_numbers.3F">Read More</a> about the releases and their numbering. Note that <a href="http://wiki.processing.org/w/Android">Android mode</a> no longer works in Processing 1.5, you'll need to use a Processing 2 release to do Android development.</p>
 	</div>
 
 
 	<div class="releases">
 		<h3>Pre-Releases</h3>
 		<ul>
+		  <li>No pre-release versions are currently available.</li>
 
+			<!-- Temp fix, now commented out
 			<li>
 				<span class="version">2.1b1</span>
 				<span class="version-date">(20 October 2013)</span>
@@ -107,7 +119,6 @@
 				<a href="http://download.processing.org/processing-2.1b1-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-2.1b1-macosx.zip">Mac OS X</a> 
 			</li>
-			<!-- Temp fix, now commented out
 			<li>
 				<span class="version">2.1b1</span>
 				<span class="version-date">(20 October 2013)</span>
