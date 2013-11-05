@@ -192,7 +192,7 @@ String[] stuff = loadStrings("data.csv");
 Table table = loadTable("data.csv");
 </pre>
 
-<p>Now we've missed on important detail.  Take a look at the data.csv text file above.  Notice how the first line of text is not the data itself, but rather a "header row."  This row includes labels that describe the data included in each subsequent row.  The good news is that Processing can automatically interpret and store the headers for you, if you pass in the option "header" when loading the table.  (In addition to "header" there are other options you can specify.  For example if your file is called data.txt but is comma separated data you can pass in the option "csv".  If it also has a header row, then you can specifiy both options like so: "header,csv").  A full list of options can be found on the <a href="http://processing.org/reference/loadTable_.html">loadTable() documentation page</a>.</p>
+<p>Now we've missed an important detail.  Take a look at the data.csv text file above.  Notice how the first line of text is not the data itself, but rather a "header row."  This row includes labels that describe the data included in each subsequent row.  The good news is that Processing can automatically interpret and store the headers for you, if you pass in the option "header" when loading the table.  (In addition to "header" there are other options you can specify.  For example if your file is called data.txt but is comma separated data you can pass in the option "csv".  If it also has a header row, then you can specifiy both options like so: "header,csv").  A full list of options can be found on the <a href="http://processing.org/reference/loadTable_.html">loadTable() documentation page</a>.</p>
 
 <pre>
 Table table = loadTable("data.csv","header");

@@ -221,7 +221,7 @@ a.large-link:before {
 }
 .navBar { padding: 0 20px 0 30px; }
 .navBar.stuck { position: fixed; top: 20px; }
-@media only screen and (max-height: 590px) {
+@media only screen and (max-height: 610px) {
 	.navBar.stuck { position: static; top: 0;}
 }
 

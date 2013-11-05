@@ -39,7 +39,7 @@ arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);
 <description><![CDATA[
 Draws an arc to the screen. Arcs are drawn along the outer edge of an ellipse defined by the <b>a</b>, <b>b</b>, <b>c</b>, and <b>d</b> parameters. The origin of the arc's ellipse may be changed with the <b>ellipseMode()</b> function. Use the <b>start</b> and <b>stop</b> parameters to specify the angles (in radians) at which to draw the arc.<br />
 <br />
-There are three ways to draw an arc; the rendering technique used is defined by the optional seventh paramter. The default mode is OPEN, and the other options are CHORD and PIE. Each is shown in the above examples.
+There are three ways to draw an arc; the rendering technique used is defined by the optional seventh paramter. The three options, depicted in the above examples, are PIE, OPEN, and CHORD. The default mode is the OPEN stroke with a PIE fill.
 ]]></description>
 
 </root>

@@ -12,8 +12,7 @@
 <image></image>
 <code><![CDATA[
 int x = 0;
-void draw()
-{
+void draw() {
   background(204);
   if (x < 100) {
     line(x, 0, x, 100);
@@ -21,7 +20,7 @@ void draw()
   } else {
     noLoop();
   }
-  // Saves each frame as screen-0000.tif, screen-0001.tif, etc.
+  // Saves each frame as screen-0001.tif, screen-0002.tif, etc.
   saveFrame(); 
 }
 ]]></code>
@@ -31,8 +30,7 @@ void draw()
 <image></image>
 <code><![CDATA[
 int x = 0;
-void draw()
-{
+void draw() {
   background(204);
   if (x < 100) {
     line(x, 0, x, 100);
@@ -40,7 +38,7 @@ void draw()
   } else {
     noLoop();
   }
-  // Saves each frame as line-000000.png, line-000001.png, etc.
+  // Saves each frame as line-000001.png, line-000002.png, etc.
   saveFrame("line-######.png");
 }
 ]]></code>
