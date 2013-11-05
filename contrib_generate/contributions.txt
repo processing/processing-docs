@@ -337,11 +337,12 @@ library
 category=Language
 authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
-sentence=A library for experiments in natural language and generative writing.
+sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.40
-paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing, and are free, libre, and open-source (via a GPL license).
-version=1040
+prettyVersion=1.0.42
+paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
+version=1042
+imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
 
@@ -699,9 +700,9 @@ authorList=[Daniel Sauter](http://daniel-sauter.com/) and j.duran
 name=Ketai
 sentence=Android library for working with sensors, cameras, multi-touch, networking, Bluetooth, WiFi Direct, Near Field Communication, and SQLite
 url=http://ketaiProject.com/
-prettyVersion=v9
+prettyVersion=v10
 paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
-version=9
+version=10
 download=http://ketailibrary.org/ketai.zip
 id=066
 
@@ -752,6 +753,18 @@ paragraph=
 version=3
 download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
 id=109
+
+library
+category=Hardware
+authorList=[David A. Mellis](http://dam.mellis.org/)
+name=Arduino (Firmata)
+sentence=Controls Arduino boards running the Firmata firmware.
+url=http://arduino.cc/playground/Interfacing/Processing
+prettyVersion=
+paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
+version=6
+download=http://playground.arduino.cc/uploads/Interfacing/processing2-arduino.zip
+id=132
 
 library
 category=Typography
@@ -1195,6 +1208,18 @@ paragraph=
 version=1
 download=https://raw.github.com/jagracar/grafica/master/releases/grafica.zip
 id=126
+
+library
+category=Math
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=QScript
+sentence=Algorithm and Expression evaluator.
+url=http://www.lagers.org.uk
+prettyVersion=1.0.0
+paragraph=Not only will it evaluate mathematical expressions, it can execute a simple algorithm created from multiple expressions. Simple selection and iteration statements can be used in the algorithm to control execution flow. The more advanced user can easily extend the evaluator by adding their own methods.
+version=1
+download=http://www.lagers.org.uk/processing/qscript/QScript.zip
+id=131
 
 library
 category=3D
