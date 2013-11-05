@@ -684,6 +684,18 @@ id=015
 
 library
 category=Hardware
+authorList=[David A. Mellis](http://dam.mellis.org/)
+name=Arduino (Firmata)
+sentence=Controls Arduino boards running the Firmata firmware.
+url=http://arduino.cc/playground/Interfacing/Processing
+prettyVersion=
+paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
+version=6
+download=http://playground.arduino.cc/uploads/Interfacing/processing2-arduino.zip
+id=024
+
+library
+category=Hardware
 authorList=[Martin Raedlinger](http://www.formatlos.de/)
 name=Apple Light Sensor
 sentence=Interface to the Light Sensor in MacBook Pro computers.
@@ -753,18 +765,6 @@ paragraph=
 version=3
 download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
 id=109
-
-library
-category=Hardware
-authorList=[David A. Mellis](http://dam.mellis.org/)
-name=Arduino (Firmata)
-sentence=Controls Arduino boards running the Firmata firmware.
-url=http://arduino.cc/playground/Interfacing/Processing
-prettyVersion=
-paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
-version=6
-download=http://playground.arduino.cc/uploads/Interfacing/processing2-arduino.zip
-id=132
 
 library
 category=Typography
