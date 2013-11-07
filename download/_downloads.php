@@ -30,6 +30,7 @@
 				&raquo; <a href="https://github.com/processing">Github</a><br>
 				&raquo; <a href="https://github.com/processing/processing/issues?state=open">Report Bugs</a><br>
 				&raquo; <a href="http://wiki.processing.org/">Wiki</a>
+				&raquo; <a href="http://wiki.processing.org/w/Supported_Platforms">Supported Platforms</a>
 			</div>
 			<div class="revisions">
 				The <a href="https://raw.github.com/processing/processing/master/build/shared/revisions.txt">list of revisions</a> covers the differences between releases in detail. Please read the <a href="http://wiki.processing.org/w/Changes">changes</a> if you're new to the 2.0 series. <!--Also check the <a href="http://wiki.processing.org/w/Troubleshooting#Known_Issues">known problems</a> for this release.-->
