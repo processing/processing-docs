@@ -29,7 +29,7 @@
 			<div class="links">
 				&raquo; <a href="https://github.com/processing">Github</a><br>
 				&raquo; <a href="https://github.com/processing/processing/issues?state=open">Report Bugs</a><br>
-				&raquo; <a href="http://wiki.processing.org/">Wiki</a>
+				&raquo; <a href="http://wiki.processing.org/">Wiki</a><br>
 				&raquo; <a href="http://wiki.processing.org/w/Supported_Platforms">Supported Platforms</a>
 			</div>
 			<div class="revisions">
