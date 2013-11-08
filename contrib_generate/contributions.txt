@@ -690,7 +690,7 @@ sentence=Controls Arduino boards running the Firmata firmware.
 url=http://arduino.cc/playground/Interfacing/Processing
 prettyVersion=
 paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
-version=6
+version=7
 download=http://playground.arduino.cc/uploads/Interfacing/processing2-arduino.zip
 id=024
 
@@ -711,7 +711,7 @@ category=Hardware
 authorList=[Daniel Sauter](http://daniel-sauter.com/) and j.duran
 name=Ketai
 sentence=Android library for working with sensors, cameras, multi-touch, networking, Bluetooth, WiFi Direct, Near Field Communication, and SQLite
-url=http://ketaiProject.com/
+url=http://ketaiLibrary.com/
 prettyVersion=v10
 paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
 version=10
@@ -736,9 +736,9 @@ authorList=[Michael Heuer](https://github.com/heuermh)
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.12
+prettyVersion=1.13
 paragraph=
-version=14
+version=15
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -792,7 +792,7 @@ id=088
 
 library
 category=Typography
-authorList=[Obx Labs](http://www.obxlabs.net/)
+authorList=[Elie Zananiri](http://www.silentlycrashing.net) / [Obx Labs](http://www.obxlabs.net/)
 name=NextText
 sentence=Assists in making dynamic and interactive text-based applications.
 url=http://nexttext.net/
@@ -921,6 +921,18 @@ paragraph=This library wraps the functionality of the [Rekognition](http://www.r
 version=1
 download=http://shiffman.net/p5/libraries/RekognitionProcessing/RekognitionProcessing.zip
 id=125
+
+library
+category=Video & Vision
+authorList=[Greg Borenstein](http://gregborenstein.com)
+name=OpenCV for Processing
+sentence=Computer vision with OpenCV.
+url=https://github.com/atduskgreg/opencv-processing
+prettyVersion=0.4.2
+paragraph=Based on the official OpenCV Java API. A nice Processing-style API for common tasks and access to the full power of the OpenCV API for the advanced stuff.
+version=7
+download=https://github.com/atduskgreg/opencv-processing/releases/download/latest/opencv_processing.zip
+id=132
 
 library
 category=Other
