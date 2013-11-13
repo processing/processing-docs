@@ -86,7 +86,7 @@ category=I/O
 authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
 name=MindSet Processing
 sentence=The MindSetProcessing library allows you to use the NeuroSky Mindset brainwave sensing headset with Processing.
-url=http://jorgecardoso.eu/processing/ID3/
+url=http://jorgecardoso.eu/processing/MindSetProcessing/
 prettyVersion=0.1.1
 paragraph=It gives you access to the raw wave values, to the eSense meters (Attention and Meditation) and to the EEG values. It does not provide blink data. This library was implemented using the Think Gear Communications driver J2ME implementation provided in the Mindset Development Tools 2.1.
 version=1
@@ -149,7 +149,7 @@ sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/SMT/
 prettyVersion=3.7.1
 paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=14
+version=15
 download=http://vialab.science.uoit.ca/smt/dl/SMT.zip
 id=098
 
@@ -495,7 +495,7 @@ category=Utilities
 authorList=[Philippe Lhoste](http://Phi.Lho.free.fr/)
 name=P8gGraphicsSVG
 sentence=Allows Processing to export the drawings of a sketch in SVG format.
-url=http://Phi.Lho.free.fr/Programming/Processing/P8gGraphicsSVG/
+url=http://Phi.Lho.free.fr/programming/Processing/P8gGraphicsSVG/
 prettyVersion=2.0
 paragraph=It is used in a way similar to PGraphicsPDF, as a renderer / recorder. It uses the Apache Batik library.
 version=200
