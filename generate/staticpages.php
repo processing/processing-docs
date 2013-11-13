@@ -27,8 +27,10 @@ $page = new Page("Books", "Books");
 $page->content(file_get_contents($source."books.html"));
 writeFile('books/index.html', $page->out());
 
-// copy over the errata file for Processing: A Programming Handbook...
-//copy($source.'processing-errata.txt', $path.'learning/books/processing-errata.txt');
+// Copy over the errata file for Processing: A Programming Handbook...
+copy($source.'processing-errata.txt', $path.'books/processing-errata.txt');
+// Copy over the media.zip file for Getting Started with Processing...
+copy($source.'media.zip', $path.'books/media.zip');
 
 $page = new Page("Copyright", "Copyright");
 $page->content(file_get_contents($source."copyright.html"));
