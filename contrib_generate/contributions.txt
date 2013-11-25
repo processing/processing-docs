@@ -339,9 +339,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.42
+prettyVersion=1.0.43
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1042
+version=1043
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -366,7 +366,7 @@ sentence=Extends 2D geometry operations to facilitate generative geometry. Inclu
 url=http://www.ricardmarxer.com/geomerative
 prettyVersion=
 paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
-version=39
+version=40
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=039
 
@@ -579,7 +579,7 @@ category=Simulation
 authorList=[Daniel Shiffman](http://www.shiffman.net/)
 name=PBox2D
 sentence=A library and set of examples for 2D physics simulation wrapping some aspects of [JBox2D](http://www.jbox2d.org/), a Java implementation of [Box2D](http://box2d.org/).
-url=http://www.shiffman.net/teaching/nature/box2d-processing/
+url=https://github.com/shiffman/PBox2D
 prettyVersion=0.2a
 paragraph=
 version=2
@@ -660,13 +660,13 @@ id=127
 
 library
 category=Hardware
-authorList=[Daniel Shiffman](http://www.shiffman.net/) and [ITP](http://itp.nyu.edu)
+authorList=[Daniel Shiffman](http://shiffman.net)
 name=Most Pixels Ever
 sentence=Framework for spanning Processing sketches across multiple screens.
-url=http://www.mostpixelsever.com/
-prettyVersion=0.1a
+url=https://github.com/shiffman/Most-Pixels-Ever-Processing
+prettyVersion=2.0.2
 paragraph=Through server / client communication multiple sketches can be run on separate machines and synced.
-version=1
+version=3
 download=http://www.shiffman.net/p5/libraries/mpe/mpe.zip
 id=010
 
@@ -774,7 +774,7 @@ sentence=Extends 2D geometry operations to facilitate generative geometry. Inclu
 url=http://www.ricardmarxer.com/geomerative
 prettyVersion=
 paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
-version=39
+version=40
 download=http://www.ricardmarxer.com/geomerative/geomerative.zip
 id=038
 
