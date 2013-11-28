@@ -105,14 +105,14 @@ public class BaseWriter {
 
 	protected static String getReturnTypes(MethodDoc doc)
 	{
-		String ret = importedName(doc.returnType().toString());
+		String ret = nameInPDE(doc.returnType().toString());
 		if(doc.containingClass() != null)
 		{
 			for(MethodDoc m : doc.containingClass().methods())
 			{
 				if( m.name().equals(doc.name()) && m.returnType() != doc.returnType() )
 				{
-					String name = getSimplifiedType( importedName(m.returnType().toString()) );
+					String name = getSimplifiedType( nameInPDE(m.returnType().toString()) );
 					if( ! ret.contains( name ) )
 					{ // add return type name if it's not already included
 						ret += ", " + name;
@@ -479,18 +479,24 @@ public class BaseWriter {
 		return ret;
 	}
 
-	protected static String importedName(String fullName)
+	private static String removePackage(String name)
+	{ // keep everything after the last dot
+		if( name.contains(".") )
+		{ return name.substring( name.lastIndexOf(".") + 1 ); }
+		return name;
+	}
+
+	private static String nameInPDE(String fullName)
 	{
-		// keep everything after the last dot
-		// note that this doesn't properly handle generic types
-		if( fullName.contains(".") )
-		{ fullName = fullName.substring( fullName.lastIndexOf(".") + 1 ); }
-		// for the moment, just strip angle brackets from names
-		if( fullName.charAt(0) == '<' )
-		{ fullName = fullName.substring( 1 ); }
-		if( fullName.endsWith(">") )
-		{ fullName = fullName.substring( 0, fullName.length() - 1 ); }
-		return fullName;
+		if( fullName.contains("<") && fullName.endsWith(">") )
+		{	// if this type uses Java generics
+			String parts[] = fullName.split("<");
+			String generic = removePackage( parts[0] );
+			String specialization = removePackage( parts[1] );
+			specialization = specialization.substring( 0, specialization.length() - 1 );
+			return generic + "&lt;" + specialization + "&gt;";
+		}
+		return removePackage( fullName );
 	}
 
 	protected static String getUsage(ProgramElementDoc doc){
@@ -619,7 +625,7 @@ public class BaseWriter {
 	protected static ArrayList<HashMap<String, String>> parseParameters(ExecutableMemberDoc doc){
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
 		for( Parameter param : doc.parameters()){
-			String type = getSimplifiedType( importedName(param.type().toString()) ).concat(": ");
+			String type = getSimplifiedType( nameInPDE(param.type().toString()) ).concat(": ");
 			String name = param.name();
 			String desc = "";
 
