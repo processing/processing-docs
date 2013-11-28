@@ -479,11 +479,17 @@ public class BaseWriter {
 		return ret;
 	}
 
-	protected static String importedName(String fullName){
-		if(fullName.contains("."))
-		{
-			return fullName.substring( fullName.lastIndexOf(".") + 1 );
-		}
+	protected static String importedName(String fullName)
+	{
+		// keep everything after the last dot
+		// note that this doesn't properly handle generic types
+		if( fullName.contains(".") )
+		{ fullName = fullName.substring( fullName.lastIndexOf(".") + 1 ); }
+		// for the moment, just strip angle brackets from names
+		if( fullName.charAt(0) == '<' )
+		{ fullName = fullName.substring( 1 ); }
+		if( fullName.endsWith(">") )
+		{ fullName = fullName.substring( 0, fullName.length() - 1 ); }
 		return fullName;
 	}
 
