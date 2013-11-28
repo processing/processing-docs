@@ -103,15 +103,18 @@ public class BaseWriter {
 		return ret;
 	}
 
-	protected static String getReturnTypes(MethodDoc doc){
+	protected static String getReturnTypes(MethodDoc doc)
+	{
 		String ret = importedName(doc.returnType().toString());
-		if(doc.containingClass() != null){
-			for(MethodDoc m : doc.containingClass().methods()){
-				if(m.name().equals(doc.name()) && m.returnType() != doc.returnType()){
+		if(doc.containingClass() != null)
+		{
+			for(MethodDoc m : doc.containingClass().methods())
+			{
+				if( m.name().equals(doc.name()) && m.returnType() != doc.returnType() )
+				{
 					String name = getSimplifiedType( importedName(m.returnType().toString()) );
-
-					if( ! ret.contains( name ))
-					{
+					if( ! ret.contains( name ) )
+					{ // add return type name if it's not already included
 						ret += ", " + name;
 					}
 				}
@@ -477,8 +480,9 @@ public class BaseWriter {
 	}
 
 	protected static String importedName(String fullName){
-		if(fullName.contains(".")){
-			return fullName.substring(fullName.lastIndexOf(".")+1);
+		if(fullName.contains("."))
+		{
+			return fullName.substring( fullName.lastIndexOf(".") + 1 );
 		}
 		return fullName;
 	}
