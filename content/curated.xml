@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Petting Zoo" by="Minimaforms" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/petting.jpg</image>
+		  <description>
+			  Created by London based experimental architecture and design studio Minimaforms, this project is speculative life-like robotic environment that raises questions of how future environments could actively enable new forms of communication with the everyday.
+		  </description>
+		  <location>http://minimaforms.com/#item=petting-zoo-frac-2</location>
+		 <link href="http://minimaforms.com/#item=petting-zoo-frac-2">Minimaforms</link>
+	</software>	
+
 	<software name="Fragmented Memory" by="Phillip Stearns" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/fragmented.jpg</image>
 		  <description>
