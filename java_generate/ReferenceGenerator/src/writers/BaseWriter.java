@@ -37,14 +37,14 @@ import com.sun.javadoc.Tag;
 
 public class BaseWriter {
 	// Some utilities
-	
+
 	public final static String MODE_JAVASCRIPT = "js";
-	
+
 	public BaseWriter()
 	{
-		
+
 	}
-	
+
 	protected static boolean needsWriting(ProgramElementDoc doc){
 		if( Shared.i().isWebref(doc) )
 		{
@@ -52,90 +52,90 @@ public class BaseWriter {
 		}
 		return false;
 	}
-	
+
 	protected static BufferedWriter makeWriter(String anchor) throws IOException
 	{
 		return makeWriter(anchor, false);
 	}
-	
+
 	protected static String getWriterPath( String anchor, Boolean isLocal )
 	{
 		if (!isLocal) {
 			return Shared.i().getOutputDirectory() + "/" + anchor;
-		} else 
+		} else
 		{
 			return Shared.i().getLocalOutputDirectory() + anchor;
 		}
 	}
-	
+
 	protected static BufferedWriter makeWriter(String anchor, Boolean isLocal) throws IOException {
 		FileWriter fw = new FileWriter( getWriterPath( anchor, isLocal ) );
-		
+
 		return new BufferedWriter(fw);
 	}
-	
+
 	protected static String getAnchor(ProgramElementDoc doc)
 	{
 		String ret = getAnchorFromName(getName(doc));
-		
+
 		if(doc.containingClass() != null && !Shared.i().isRootLevel(doc.containingClass()))
 		{
 			ret = doc.containingClass().name() + "_" + ret;
 		}
-		
+
 		if(!Shared.i().isCore(doc)){
 			//add package name to anchor
-			String[] parts = doc.containingPackage().name().split("\\."); 
+			String[] parts = doc.containingPackage().name().split("\\.");
 			String pkg = parts[parts.length-1] + "/";
 			ret = "libraries/" + pkg + ret;
-		}		
-		
+		}
+
 		return ret;
 	}
-	
+
 	protected static String getLocalAnchor(ProgramElementDoc doc)
 	{
 		String ret = getAnchorFromName(getName(doc));
 		if(doc.containingClass() != null){
 			ret = doc.containingClass().name() + "_" + ret;
 		}
-		
+
 		return ret;
 	}
-	
+
 	protected static String getReturnTypes(MethodDoc doc){
 		String ret = importedName(doc.returnType().toString());
 		if(doc.containingClass() != null){
 			for(MethodDoc m : doc.containingClass().methods()){
 				if(m.name().equals(doc.name()) && m.returnType() != doc.returnType()){
 					String name = getSimplifiedType( importedName(m.returnType().toString()) );
-					
+
 					if( ! ret.contains( name ))
-					{						
+					{
 						ret += ", " + name;
 					}
 				}
 			}
-		} 
-		
+		}
+
 		// add "or" (split first to make sure we don't mess up the written description)
 		ret = ret.replaceFirst( ",([^,]+)$", ", or$1" );
 		if( ! ret.matches(".+,.+,.+") )
 		{
 			ret = ret.replace( ",", "" );
 		}
-		
+
 		return ret;
 	}
-	
+
 	protected static String getSimplifiedType( String str )
 	{
 		if( str.equals("long") ){ return "int"; }
 		if( str.equals("double") ){ return "float"; }
-		
+
 		return str;
 	}
-	
+
 	protected static String getName(Doc doc) { // handle
 		String ret = doc.name();
 		if(doc instanceof MethodDoc)
@@ -181,13 +181,13 @@ public class BaseWriter {
 		}
 		return getBasicDescriptionFromSource(doc);
 	}
-	
+
 	static protected String longestText(ProgramElementDoc doc){
 		if(Shared.i().isWebref(doc)){
 			//override longest rule if the element has an @webref tag
 			return doc.commentText();
 		}
-		
+
 		String s = doc.commentText();
 		if( doc.isMethod() ){
 			for(ProgramElementDoc d : doc.containingClass().methods()){
@@ -196,8 +196,8 @@ public class BaseWriter {
 						s = d.commentText();
 					}
 				}
-			}			
-		} else if(doc.isField()){			
+			}
+		} else if(doc.isField()){
 			for(ProgramElementDoc d : doc.containingClass().fields()){
 				if(d.name().equals(doc.name() ) ){
 					if(d.commentText().length() > s.length()){
@@ -208,14 +208,14 @@ public class BaseWriter {
 		}
 		return s;
 	}
-	
+
 	static protected String getBasicDescriptionFromSource(String s){
 		String[] sa = s.split("(?i)(<h\\d>Advanced:?</h\\d>)|(=advanced)");
 		if (sa.length != 0)
 			s = sa[0];
 		return s;
 	}
-	
+
 	static protected String getAdvancedDescriptionFromSource(ProgramElementDoc doc) {
 		return getAdvancedDescriptionFromString(longestText(doc));
 	}
@@ -225,11 +225,11 @@ public class BaseWriter {
 			s = sa[1];
 		return s;
 	}
-	
-	
-	
+
+
+
 	//
-	
+
 	protected static String getXMLPath(ProgramElementDoc doc) {
 		String path = Shared.i().getXMLDirectory();
 		String name = doc.name();
@@ -247,24 +247,24 @@ public class BaseWriter {
 					}
 				}
 			} else {
-				name = doc.containingClass().name() + "_" + name;				
+				name = doc.containingClass().name() + "_" + name;
 			}
 		}
-		
+
 		if( !Shared.i().isCore(doc)){
 			//if documentation is for a library element
 			String[] pkg = doc.containingPackage().name().split("\\.");
 			path = path + "LIB_" + pkg[pkg.length-1] + "/";
 		}
-		
-		
+
+
 		return path + name + suffix;
 	}
-	
+
 	static protected String getExamples(ProgramElementDoc doc) throws IOException{
 		return getExamples(getXMLPath(doc));
 	}
-	
+
 	static private Document getXMLDocument(String path) throws IOException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setNamespaceAware(true);
@@ -275,7 +275,7 @@ public class BaseWriter {
 		} catch (ParserConfigurationException e) {
 			System.out.println( "Failed to load XML: " + e.getMessage());
 		}
-		
+
 		if( builder != null )
 		{
 			try {
@@ -286,11 +286,11 @@ public class BaseWriter {
 				System.out.println( "Failed to parse XML: " + e.getMessage() );
 			}
 		}
-		
-		
+
+
 		return doc;
 	}
-	
+
 	private static boolean hasXMLDocument( ProgramElementDoc doc )
 	{
 		String path = getXMLPath( doc );
@@ -301,8 +301,8 @@ public class BaseWriter {
 		}
 		return false;
 	}
-	
-	static protected String getExamples(String path) throws IOException {				
+
+	static protected String getExamples(String path) throws IOException {
 		Document doc = getXMLDocument(path);
 		if( doc != null )
 			return getExamples(doc);
@@ -312,7 +312,7 @@ public class BaseWriter {
 			return "";
 		}
 	}
-	
+
 	protected static String getExamples(Document doc) throws IOException{
 		//Parse the examples from an XML document
 		TemplateWriter templateWriter = new TemplateWriter();
@@ -333,7 +333,7 @@ public class BaseWriter {
 				expr = xpath.compile("code");
 				String code = (String) expr.evaluate(examples.item(i),
 						XPathConstants.STRING);
-				
+
 				example.put("image", Shared.i().getImageDirectory()
 						+ img);
 				if(img.equals(""))
@@ -354,7 +354,7 @@ public class BaseWriter {
 		map.put("examples", exampleInner);
 		return templateWriter.writePartial("examples.partial.html", map);
 	}
-	
+
 	protected static String getXMLDescription(ProgramElementDoc doc) throws IOException {
 		Document xmlDoc = getXMLDocument(getXMLPath(doc));
 		if( xmlDoc != null )
@@ -370,15 +370,15 @@ public class BaseWriter {
 	 *
 	 *	Hint: this loads and adds js_mode/description as well
 	 */
-	protected static String getXMLDescription(Document doc) 
+	protected static String getXMLDescription(Document doc)
 	{
 		XPathFactory xpathFactory = XPathFactory.newInstance();
 		XPath xpath = xpathFactory.newXPath();
 
 		TemplateWriter templateWriter = new TemplateWriter();
-		
+
 		String desc = "";
-		
+
 		for( String component : Shared.i().getDescriptionSets() )
 		{
 			try
@@ -395,14 +395,14 @@ public class BaseWriter {
 					result = templateWriter.writePartial( "description.partial.html", vars );
 				}
 				desc += result;
-			} 
+			}
 			catch ( XPathExpressionException e)
 			{
 				System.out.println("Error getting description from xml with expression: //" + component);
 				e.printStackTrace();
 			}
 		}
-		
+
 		return desc;
 	}
 
@@ -417,7 +417,7 @@ public class BaseWriter {
 	protected static String getTimestamp() {
 		Calendar now = Calendar.getInstance();
 		Locale us = new Locale("en");
-		
+
 		return now.getDisplayName(Calendar.MONTH, Calendar.LONG, us)
 				+ " "
 				+ now.get(Calendar.DAY_OF_MONTH)
@@ -436,7 +436,7 @@ public class BaseWriter {
 						TimeZone.getDefault().inDaylightTime(now.getTime()),
 						TimeZone.SHORT, us);
 	}
-	
+
 	/*
 	 * Get all the syntax possibilities for a method
 	 */
@@ -444,18 +444,18 @@ public class BaseWriter {
 	{
 		TemplateWriter templateWriter = new TemplateWriter();
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
-		
+
 		for( MethodDoc methodDoc : doc.containingClass().methods() )
 		{
 			if(Shared.i().shouldOmit(methodDoc)){
 				continue;
 			}
 			if( methodDoc.name().equals(doc.name() ))
-			{	
+			{
 				HashMap<String, String> map = new HashMap<String, String>();
 				map.put("name", methodDoc.name());
 				map.put("object", instanceName);
-				
+
 				ArrayList<HashMap<String, String>> parameters = new ArrayList<HashMap<String,String>>();
 				for( Parameter p : methodDoc.parameters() )
 				{
@@ -464,25 +464,25 @@ public class BaseWriter {
 					parameters.add(paramMap);
 				}
 				String params = templateWriter.writeLoop("method.parameter.partial.html", parameters, ", ");
-				
+
 				map.put("parameters", params);
 				if( ! ret.contains(map) )
 				{
 					//don't put in duplicate function syntax
-					ret.add(map);					
+					ret.add(map);
 				}
 			}
 		}
 		return ret;
 	}
-	
+
 	protected static String importedName(String fullName){
 		if(fullName.contains(".")){
 			return fullName.substring(fullName.lastIndexOf(".")+1);
 		}
 		return fullName;
 	}
-	
+
 	protected static String getUsage(ProgramElementDoc doc){
 		Tag[] tags = doc.tags("usage");
 		if(tags.length != 0){
@@ -495,7 +495,7 @@ public class BaseWriter {
 		// return empty string if no usage is found
 		return "";
 	}
-	
+
 	protected static String getInstanceName(ProgramElementDoc doc){
 		Tag[] tags = doc.containingClass().tags("instanceName");
 		if(tags.length != 0){
@@ -503,7 +503,7 @@ public class BaseWriter {
 		}
 		return "";
 	}
-	
+
 	protected static String getInstanceDescription(ProgramElementDoc doc){
 		Tag[] tags = doc.containingClass().tags("instanceName");
 		if(tags.length != 0){
@@ -512,20 +512,20 @@ public class BaseWriter {
 		}
 		return "";
 	}
-	
-	protected static String getParameters(MethodDoc doc) throws IOException{		
+
+	protected static String getParameters(MethodDoc doc) throws IOException{
 		//get parent
 		ClassDoc cd = doc.containingClass();
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
-		
+
 		if(!Shared.i().isRootLevel(cd)){
 			//add the parent parameter if this isn't a function of PApplet
 			HashMap<String, String> parent = new HashMap<String, String>();
 			parent.put("name", getInstanceName(doc));
 			parent.put("description", cd.name() + ": " + getInstanceDescription(doc));
-			ret.add(parent);			
+			ret.add(parent);
 		}
-		
+
 		//get parameters from this and all other declarations of method
 		for( MethodDoc m : cd.methods() ){
 			if(Shared.i().shouldOmit(m)){
@@ -535,28 +535,28 @@ public class BaseWriter {
 				ret.addAll(parseParameters(m));
 			}
 		}
-		
+
 		removeDuplicateParameters(ret);
-		
-		
+
+
 		TemplateWriter templateWriter = new TemplateWriter();
 		return templateWriter.writeLoop("parameter.partial.html", ret);
 	}
-	
+
 	protected static String getParameters(ClassDoc doc) throws IOException{
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
 		for( ConstructorDoc m : doc.constructors() ){
 			if(Shared.i().shouldOmit(m)){
 				continue;
 			}
-			ret.addAll(parseParameters(m));			
+			ret.addAll(parseParameters(m));
 		}
 		removeDuplicateParameters(ret);
-		
+
 		TemplateWriter templateWriter = new TemplateWriter();
 		return templateWriter.writeLoop("parameter.partial.html", ret);
 	}
-	
+
 	protected static void removeDuplicateParameters(ArrayList<HashMap<String, String>> ret){
 		// combine duplicate parameter names with differing types
 		for(HashMap<String, String> parameter : ret)
@@ -569,16 +569,16 @@ public class BaseWriter {
 				for(HashMap<String, String> parameter2 : ret)
 				{
 					String desc2 = parameter2.get("description");
-					
+
 					if( desc2.endsWith(": ") && parameter2.get("name").equals( parameter.get("name") ) )
 					{
 						// freshen up our variable with the latest description
 						desc = parameter.get("description");
-						
+
 						if( ! desc.contains( desc2.substring( 0, desc2.indexOf(": ") ) ) )
 						{
 							// if the similar item doesn't have actual text
-							// e.g. Boolean: 
+							// e.g. Boolean:
 							String newDescription = desc2.replace(":", ",").concat( desc );
 							parameter.put("description", newDescription);
 						}
@@ -594,31 +594,31 @@ public class BaseWriter {
 				ret.remove(i);
 			}
 		}
-		
+
 		// add "or" (split first to make sure we don't mess up the written description)
 		for( HashMap<String, String> param : ret )
 		{
 			String desc = param.get("description");
 			String start = desc.substring( 0, desc.indexOf(":")+1 ).replaceFirst( ",([^,]+:)", ", or$1" );
 			String end = desc.substring( desc.indexOf(":")+1, desc.length() );
-			
+
 			param.put( "description", start.concat( end ) );
 		}
 	}
-	
+
 	protected static ArrayList<HashMap<String, String>> parseParameters(ExecutableMemberDoc doc){
 		ArrayList<HashMap<String, String>> ret = new ArrayList<HashMap<String,String>>();
 		for( Parameter param : doc.parameters()){
-			String type = getSimplifiedType( importedName(param.type().toString()) ).concat(": "); 
+			String type = getSimplifiedType( importedName(param.type().toString()) ).concat(": ");
 			String name = param.name();
 			String desc = "";
 
 			for( ParamTag tag : doc.paramTags() ){
-				if(tag.parameterName().equals(name)){			
+				if(tag.parameterName().equals(name)){
 					desc = desc.concat( tag.parameterComment() );
 				}
 			}
-			
+
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put("name", name);
 			map.put("description", type + desc);
@@ -626,12 +626,12 @@ public class BaseWriter {
 		}
 		return ret;
 	}
-	
+
 	/**
 	 *	Modes should support all API, so if XML not explicitly states "not supported", then assume it does.
 	 */
 	protected static boolean isModeSupported ( ProgramElementDoc doc, String mode ) {
-		
+
 		Document xmlDoc = null;
 		try {
 			String xmlPath = getXMLPath( doc );
@@ -640,34 +640,64 @@ public class BaseWriter {
 			ioe.printStackTrace();
 			return true;
 		}
-		
+
 		XPathFactory xpathFactory = XPathFactory.newInstance();
 		XPath xpath = xpathFactory.newXPath();
-			
+
 		try {
-			
+
 			String umraw = xpath.evaluate("//unsupported_modes", xmlDoc, XPathConstants.STRING).toString();
 			String[] ums = umraw.split(",");
 			for ( String s : ums ) {
 				if ( s.trim().toLowerCase().equals(mode) )
 					return false;
 			}
-			
+
 		} catch ( XPathExpressionException e ) {
-			
+
 			e.printStackTrace();
 		}
-		
+
 		return true;
 	}
-	
+
+	protected static ArrayList<SeeTag> getAllSeeTags( ProgramElementDoc doc )
+	{
+		ArrayList<SeeTag> ret = new ArrayList<SeeTag>();
+		ClassDoc cd = doc.containingClass();
+		if( cd != null )
+		{	// if there is a containing class, get @see tags for all
+			// methods with the same name as this one
+			// Fixes gh issue 293
+			for( MethodDoc m : cd.methods() )
+			{
+				if(m.name().equals(doc.name()))
+				{
+					for( SeeTag tag : m.seeTags() )
+					{
+						ret.add( tag );
+					}
+				}
+			}
+		}
+		else
+		{	// if no containing class (e.g. doc is a class)
+			// just grab the see tags in the class doc comment
+			for( SeeTag tag : doc.seeTags() )
+			{
+				ret.add( tag );
+			}
+		}
+		return ret;
+	}
+
 	protected static String getRelated( ProgramElementDoc doc ) throws IOException
 	{
 		TemplateWriter templateWriter = new TemplateWriter();
 		ArrayList<HashMap<String, String>> vars = new ArrayList<HashMap<String,String>>();
-		
+
 		HashMap<String, ProgramElementDoc> classMembers = new HashMap<String, ProgramElementDoc>();
-		
+
 		if( doc.isMethod() || doc.isField() )
 		{
 			ClassDoc containingClass = doc.containingClass();
@@ -691,30 +721,30 @@ public class BaseWriter {
 				}
 			}
 		}
-		
+
 		// add link to each @see item
-		for( SeeTag tag : doc.seeTags() ){
+		for( SeeTag tag : getAllSeeTags( doc ) ){
 			HashMap<String, String> map = new HashMap<String, String>();
-			
+
 			ProgramElementDoc ref = tag.referencedClass();
 			if( tag.referencedMember() != null )
-			{ 
+			{
 				ref = tag.referencedMember();
 				if( classMembers.containsKey( ref.name() ) )
 				{
 					ref = classMembers.get( ref.name() );
 				}
 			}
-			
+
 			if( needsWriting( ref ) )
-			{		
+			{
 				// add links to things that are actually written
 				map.put("name", getName( ref ));
-				map.put("anchor", getAnchor( ref ));				
+				map.put("anchor", getAnchor( ref ));
 				vars.add(map);
 			}
 		}
-		
+
 		// add link to each @see_external item
 		for( Tag tag : doc.tags( Shared.i().getSeeAlsoTagName() ) )
 		{
@@ -722,19 +752,19 @@ public class BaseWriter {
 			String filename = tag.text() + ".xml";
 			String basePath = Shared.i().getXMLDirectory();
 			File f = new File( basePath + filename );
-			
+
 			if( ! f.exists() )
 			{
 				basePath = Shared.i().getIncludeDirectory();
 				f = new File( basePath + filename );
 			}
-			
+
 			if( f.exists() )
-			{				
+			{
 				Document xmlDoc = Shared.loadXmlDocument( f.getPath() );
 				XPathFactory xpathFactory = XPathFactory.newInstance();
 				XPath xpath = xpathFactory.newXPath();
-					
+
 				try
 				{
 					String name = (String) xpath.evaluate("//name", xmlDoc, XPathConstants.STRING);
@@ -749,7 +779,7 @@ public class BaseWriter {
 						}
 					}
 					String anchor = anchorBase + ".html";
-					
+
 					// get method name from xml
 					// get anchor from method name
 					HashMap<String, String> map = new HashMap<String, String>();
@@ -760,16 +790,16 @@ public class BaseWriter {
 				{
 					e.printStackTrace();
 				}
-				
+
 			}
-			
+
 		}
-		
+
 		return templateWriter.writeLoop("related.partial.html", vars);
 	}
-	
+
 	protected static String getEvents(ProgramElementDoc doc){
 		return "";
 	}
-	
+
 }
