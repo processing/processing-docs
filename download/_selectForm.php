@@ -11,6 +11,8 @@
 
 	<p>Processing is open source, free software. All donations fund the <a href="/foundation/">Processing Foundation</a>, a nonprofit organization devoted to advancing the role of programming within the visual arts through developing Processing.</p>
 
+	<p>To celebrate the launch of the new Processing <a href="https://github.com/atduskgreg/opencv-processing">OpenCV library</a>, <a href="http://www.oreilly.com/">O'Reilly Media</a> is matching donations to the Processing Foundation up to $3000 for the remainder of 2013.</p>
+
 	<div class="messages"></div>
 
 	
