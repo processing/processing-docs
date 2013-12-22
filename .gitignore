@@ -2,6 +2,8 @@
 .DS_Store
 reference/**/* 
 distribution/**/* 
+learning/**/*
+css/**/*
 content/static/libraries.html
 content/static/tools.html
 books
@@ -9,3 +11,11 @@ copyright.html
 distribution
 reference
 shop
+overview
+people
+robots.txt
+tutorials
+foundation
+exhibition
+examples
+about
