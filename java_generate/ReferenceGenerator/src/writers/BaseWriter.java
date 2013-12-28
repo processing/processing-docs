@@ -159,8 +159,8 @@ public class BaseWriter {
 		}
 		// change "(some thing)" to something
 		if( name.contains("(") && name.contains(")") ){
-			int start = name.indexOf("(") + 1;
-			int end = name.indexOf(")");
+			int start = name.lastIndexOf("(") + 1;
+			int end = name.lastIndexOf(")");
 			name = name.substring(start, end);
 			name = name.replace(" ", "");
 		}
