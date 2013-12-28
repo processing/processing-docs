@@ -411,7 +411,7 @@ public class BaseWriter {
 
 	protected static HashMap<String, String> getDefaultDescriptionVars ()
 	{
-		HashMap<String,String> vars = new HashMap();
+		HashMap<String, String> vars = new HashMap<String, String>();
 		vars.put("description title", "Description");
 		vars.put("description text", "");
 		return vars;
