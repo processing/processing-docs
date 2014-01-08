@@ -6,6 +6,8 @@ RewriteEngine On
 
 # force https for all URLs in /checkout
 RewriteCond %{HTTPS} =off
+# don't force it for latest.txt (not necessary, and will break older releases)
+RewriteCond %{REQUEST_URI} !^/download/latest.txt
 RewriteRule ^download https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # don't do anything for images/css/js

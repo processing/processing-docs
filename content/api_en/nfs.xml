@@ -23,7 +23,7 @@ float d = -200.94, e = 40.2, f = -9.012;
 String sd = nfs(d, 10, 4); 
 println(sd);  // Prints "-0000000200.9400" 
 String se = nfs(e, 5, 3); 
-println(se);  // Prints "00040.200" 
+println(se);  // Prints " 00040.200" 
 String sf = nfs(f, 3, 5); 
 println(sf);  // Prints "-009.01200" 
 ]]></code>

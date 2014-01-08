@@ -27,6 +27,8 @@ void mouseWheel(MouseEvent event) {
 
 <description><![CDATA[
 The event.getAmount() method returns negative values if the mouse wheel if rotated up or away from the user and positive in the other direction. On OS X with "natural" scrolling enabled, the values are opposite.
+<br/><br/>
+Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
 </root>

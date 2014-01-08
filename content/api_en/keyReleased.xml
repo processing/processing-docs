@@ -37,6 +37,8 @@ With the "@pjs globalKeyEvents" directive you can catch all key events on the wi
 
 <description><![CDATA[
 The <b>keyReleased()</b> function is called once every time a key is released. The key that was released will be stored in the <b>key</b> variable. See <b>key</b> and <b>keyReleased</b> for more information.
+<br/><br/>
+Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
 </root>

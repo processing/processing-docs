@@ -29,7 +29,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Add to a value.
+Add to a value. If the key does not exist, an new pair is initialized with the value supplied.
 ]]></description>
 
 </root>

@@ -48,7 +48,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Writes data to a server specified when constructing the client.
+Writes data to a server specified when constructing the client, or writes data to the specific client obtained from the Server <b>available()</b> method.
 ]]></description>
 
 
