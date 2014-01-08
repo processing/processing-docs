@@ -3,7 +3,7 @@ Processing Book Errata
 This is a list compiled for MIT Press to make corrections to future
 printings of Processing: A Programming Handbook for Visual Designers 
 and Artists by Casey Reas and Ben Fry. We put tremendous energy into 
-producing an error-free book, but we didn't succeed. We're trying to 
+producing an error-free book, but some errors remained. We're trying to 
 remove more with each printing of the book. If you find errors, please 
 let us know. (There are instructions at the bottom of this file.)
 
@@ -285,6 +285,65 @@ In Casey's bio line, "an associate professor" should be "a professor"
 and "Design | Media Arts" should be "Design Media Arts"
 
 
+// // // // // // // // // // // // // // // // // // // // // //
+
+
+Compiled 8 January 2013
+
+- p. 76
+Two of the Bezier figures need to be updated, from left to right and top to bottom, they are the 6th and 7th. 
+" 
+On the 6th diagram the control line from (V1, C1) to C2 should not be
+present, there should be a line from (C3, V2) to C2 instead. Also the line
+from (C3, V2) to C4 should be replaced with a line from V3 to C4.
+On the 7th diagram the line from (C3, V2) to C4 should not be present,
+there should be a line from (C1, V1, V3) to C4 instead.
+"
+
+- p. 117
+The first line of the third paragraph has two "be", one should be removed:
+"The numerical value of PI is a constant thought to be be infinitely long...
+
+- p. 135
+In code 16-06, the comment "// Draws at (20, 30)" should be:
+// Draws at (20, 10)
+
+- p. 139
+In the first line on the page the "transform()" should be changed to "translate()"
+
+- p. 191
+In the inset, smaller type that defines the variables, the two "float" declarations should be "int"... in the top group, it should be "int size" and in the bottom group it should be "int leafSize"
+
+- p. 203
+The line of code in the draw() of 22-10 should read:
+  drawCircle(x, y, n);
+
+- p. 322
+The last 2 lines of code 35-03 should change to:
+image(slice, 18, 0);
+image(slice, 50, 0);
+
+- p. 344
+Line 13 in Code 38-13 should read:
+    imageColors[y*img.width + x] = img.get(x, y);
+
+- p. 467
+Comment in code 49-02 should be "Southeast", currently missing "h"
+
+- p. 501
+"Mark Hansen", not "Marc Hansen"
+
+- p. 670
+In line 3 of the exponents demonstration at the top, the exponents should be 
+4, 3, 2, 1, 0. They are currently 5, 4, 2, 1, 0
+
+- p. 675
+Line 5 in code E-05 should read:
+    pixels[y*width + x] = color(102);
+Line 1 in code E-06 (the comment) should read:
+// Replaces the multiplication y*width with an addition 
+
+
  
 // // // // // // // // // // // // // // // // // // // // // //
 
@@ -294,10 +353,12 @@ and "Design | Media Arts" should be "Design Media Arts"
 If you find a bug (error) in Processing: A Programming Handbook for Visual 
 Designers and Artists by Casey Reas and Ben Fry, please let us know so we 
 can fix it! We worked extremely hard to get rid of them, but we know 
-they are there.
+some are still there.
  
 Please report all bugs to the Issues database:
 https://github.com/processing/processing/issues?state=open
+
+Please title the issue report with "Handbook p. 123", so we can find them.
 
 
 
