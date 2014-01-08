@@ -195,9 +195,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.3.1
+prettyVersion=2.4.1
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=12
+version=14
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -219,9 +219,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=AppletMaker
 sentence=Applet exporter and signer.
 url=http://www.lagers.org.uk/appletutil/
-prettyVersion=0.1.2
+prettyVersion=0.1.3
 paragraph=Simple wizard style interface to export and sign (optional) applets from Processing 2.0
-version=2
+version=3
 download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
 id=096
 
@@ -760,9 +760,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=Leap Motion for Processing
 sentence=Simple library to use the complete [Leap Motion](https://leapmotion.com/) [API](https://developer.leapmotion.com/documentation/api/annotated) in [Processing](http://processing.org/).
 url=https://github.com/voidplus/leap-motion-processing
-prettyVersion=1.1.2
+prettyVersion=1.1.3
 paragraph=
-version=3
+version=4
 download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
 id=109
 
@@ -1060,9 +1060,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=SoundCloud
 sentence=Unofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
 url=https://github.com/voidplus/soundcloud-java-library
-prettyVersion=0.1.3
+prettyVersion=0.1.4
 paragraph=
-version=5
+version=6
 download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
 id=089
 
@@ -1116,15 +1116,15 @@ id=115
 
 library
 category=Data
-authorList=[Douglas Adam Smith II](http://www.dasmithii.info)
-name=GNet
-sentence=A general purpose machine learning library packaged for Processing.
-url=https://github.com/dasmithii/GNet-P5
-prettyVersion=1.0.0
-paragraph=GNet encompasses a wide variety of classes including the MLP (Multi-layered Perceptron), the GP (Genetic Program), and the Population, which facilitates evolutionary computing. GNet originated in hopes of creating imaginative, "Generative" agents, but in the process has developed many conventional tools as well.
+authorList=[Darius Morawiec](http://voidplus.de)
+name=Redis
+sentence=Wrapper to use [Redis](http://redis.io/) in [Processing](http://processing.org/). It's based on [Jedis](https://github.com/xetorthio/jedis), a small Java client by [Jonathan Leibiusky](https://github.com/xetorthio).
+url=https://github.com/voidplus/redis-processing
+prettyVersion=1.0
+paragraph=
 version=1
-download=http://dasmithii.com/GNet.zip
-id=128
+download=https://raw.github.com/voidplus/redis-processing/master/download/Redis.zip
+id=133
 
 library
 category=GUI
@@ -1132,9 +1132,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=3.3.1
+prettyVersion=3.4
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=16
+version=17
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
 
@@ -1215,9 +1215,9 @@ authorList=[Javier Gracia Carpio](http://www.openprocessing.org/user/16300)
 name=grafica
 sentence=Create simple and configurable 2D plots with Processing.
 url=https://github.com/jagracar/grafica
-prettyVersion=1.0.0
+prettyVersion=1.1.0
 paragraph=
-version=1
+version=2
 download=https://raw.github.com/jagracar/grafica/master/releases/grafica.zip
 id=126
 
