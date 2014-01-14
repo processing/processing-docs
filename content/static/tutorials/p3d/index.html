@@ -174,7 +174,7 @@ Note above how it's often simpler to specify vertex locations using a standardiz
 	<h3>Textures</h3>
 	
 	<p>	
-	In P3D mode, you can load and display images just like you do in 2D (see: <a href="http://processing.org/learning/pixels/">Images and Pixels Tutorial</a>).  Everything we covered under transformations can be applied to images; they can be translated, rotated, and scaled in a virtual 3D space.   In addition to drawing an image the old-fashioned way, however, images can be made into "textures" and applied to a shape.  This is particularly useful when you want a 3D shape to resemble a real-world object.  For example, applying a an image of earth as a texture on a sphere will result in a globe.</p>  
+	In P3D mode, you can load and display images just like you do in 2D (see: <a href="http://processing.org/learning/pixels/">Images and Pixels Tutorial</a>).  Everything we covered under transformations can be applied to images; they can be translated, rotated, and scaled in a virtual 3D space.   In addition to drawing an image the old-fashioned way, however, images can be made into "textures" and applied to a shape.  This is particularly useful when you want a 3D shape to resemble a real-world object.  For example, applying an image of earth as a texture on a sphere will result in a globe.</p>  
 	
 	<p><img src="imgs/globe.png"><br/>
 	<a href="http://processing.org/learning/topics/texturesphere.html">Example: Textured Sphere</a></p>
@@ -278,14 +278,14 @@ void draw() {
 	<p>In order to set custom lighting for your scene there are four different kinds of lights.</p>
 	
 	<ul>
-		<li><a href="http://processing.org/reference/ambientLight_.html">ambientLight()</a> -- Ambient light doesn't come from a specific direction, the rays have light have bounced around so much that objects are evenly lit from all sides. Ambient lights are almost always used in combination with other types of lights.  An ambient light is specified with an RGB color and, optionally, an xyz location for the light.  For example, a blue ambient light can be added to a scene as follows:
+		<li><a href="http://processing.org/reference/ambientLight_.html">ambientLight()</a> -- Ambient light doesn't come from a specific direction, the rays of light have bounced around so much that objects are evenly lit from all sides. Ambient lights are almost always used in combination with other types of lights.  An ambient light is specified with an RGB color and, optionally, an xyz location for the light.  For example, a blue ambient light can be added to a scene as follows:
 			
 			<br/><br/><img src="imgs/ambientlights.png"><br/></li>
 
 <pre>
 ambientLight(0,0,255);
 </pre><br/>	
-	<li><a href="http://processing.org/reference/directionalLight_.html">directionalLight()</a> -- Directional light comes from one direction and is stronger when hitting a surface squarely and weaker if it hits at a a gentle angle. After hitting a surface, a directional lights scatters in all directions.  A directional light is specified with an RGB color and an xyz vector that defines a direction for the light.  For example, a green light that comes from below the scene can be added to a scene as follows:
+	<li><a href="http://processing.org/reference/directionalLight_.html">directionalLight()</a> -- Directional light comes from one direction and is stronger when hitting a surface squarely and weaker if it hits at a gentle angle. After hitting a surface, a directional lights scatters in all directions.  A directional light is specified with an RGB color and an xyz vector that defines a direction for the light.  For example, a green light that comes from below the scene can be added to a scene as follows:
 		<br/><br/><img src="imgs/directionallight.png"><br/></li>
 <pre>
 directionalLight(0, 255, 0, 0, -1, 0);
