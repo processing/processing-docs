@@ -11,7 +11,7 @@
 <description><![CDATA[
 This command is used to enable or disable special features that control how graphics are drawn. In the course of developing Processing, we have to make many decisions about tradeoffs between performance and visual quality. We put significant effort into determining what makes most sense for the largest number of users, and then use functions like the hint() command to allow people to tune the settings for their particular sketch. 
 <br/><br/>
-Implementing a hint() is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
+Implementing a <b>hint()</b> is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
 <br/><br/>
 Hints that are used by the default (Java2D) renderer:
 <br/><br/>
