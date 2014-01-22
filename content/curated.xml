@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Keyflies" by="Miles Peyton" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/keyflies.jpg</image>
+		  <description>
+			  Created by Miles Peyton, first year student at the Carnegie Mellon University, Keyfleas is an experiment in interactive augmented projection. Miles used Processing and Box2D to create an augmented projection on the keyboard. As the user types, the “fleas” swarm around the pressed key, avoiding the letters.
+		  </description>
+		  <location>http://cmuems.com/2013/a/miles/10/17/keyfleas/</location>
+		 <link href="http://cmuems.com/2013/a/miles/10/17/keyfleas/">CMU / Electronic Media Studio 2</link>
+	</software>	
+
 	<software name="Petting Zoo" by="Minimaforms" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/petting.jpg</image>
 		  <description>
