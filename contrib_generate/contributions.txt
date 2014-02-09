@@ -74,7 +74,7 @@ category=I/O
 authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
 name=NXTComm Processing
 sentence=The NXTComm Processing library allows you to control the Lego Mindstorms NXT robots.
-url=http://jorgecardoso.eu/processing/ID3/
+url=http://jorgecardoso.eu/processing/NXTComm/
 prettyVersion=0.91
 paragraph=
 version=4
@@ -171,9 +171,9 @@ authorList=[Andres Colubri](http://interfaze.info/)
 name=Tablet
 sentence=Tablet is a library for using pen tablets from Processing.
 url=http://interfaze.info/libraries/tablet/
-prettyVersion=1.0
+prettyVersion=1.2.1
 paragraph=It provides simplified access to the pen's pressure, tilt, etc. It is based on <a href="https://sourceforge.net/projects/jpen/">JPen</a>, the Java Pen Tablet Access Library.
-version=1
+version=4
 download=http://interfaze.info/libraries/tablet/download/Tablet.zip
 id=121
 
@@ -327,9 +327,9 @@ authorList=[The Processing Foundation](http://processing.org)
 name=PDE X
 sentence=The next generation of PDE
 url=https://github.com/processing/processing-experimental
-prettyVersion=1.0.2b
+prettyVersion=1.0.3b
 paragraph=Intelligent Code Completion, Live Error Checker, Debugger, Auto Refactor, etc.
-version=5
+version=6
 download=http://download.processing.org/pdeX.zip
 id=124
 
@@ -339,9 +339,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.43
+prettyVersion=1.0.46
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1043
+version=1046
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -652,9 +652,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=AI for 2D Games
 sentence=An AI framework suitable for 2D games and simulations.
 url=http://www.lagers.org.uk/ai4g/index.html
-prettyVersion=1.0.3
+prettyVersion=1.1
 paragraph=This supports the creation of sketches that require state driven autonomous agents.  Everything is here to get you started, including many examples demonstrating the library features. The [website] (http://www.lagers.org.uk/ai4g/index.html) has many articles and programming examples explaining this sophisticated library.
-version=3
+version=4
 download=http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.zip
 id=127
 
@@ -760,9 +760,9 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=Leap Motion for Processing
 sentence=Simple library to use the complete [Leap Motion](https://leapmotion.com/) [API](https://developer.leapmotion.com/documentation/api/annotated) in [Processing](http://processing.org/).
 url=https://github.com/voidplus/leap-motion-processing
-prettyVersion=1.1.3
+prettyVersion=1.1.3.1
 paragraph=
-version=4
+version=5
 download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
 id=109
 
@@ -928,11 +928,23 @@ authorList=[Greg Borenstein](http://gregborenstein.com)
 name=OpenCV for Processing
 sentence=Computer vision with OpenCV.
 url=https://github.com/atduskgreg/opencv-processing
-prettyVersion=0.4.2
+prettyVersion=0.4.4
 paragraph=Based on the official OpenCV Java API. A nice Processing-style API for common tasks and access to the full power of the OpenCV API for the advanced stuff.
-version=7
+version=9
 download=https://github.com/atduskgreg/opencv-processing/releases/download/latest/opencv_processing.zip
 id=132
+
+library
+category=Video & Vision
+authorList=[Antonio Molinaro](https://sites.google.com/site/blobscanner/home/)
+name=Blobscanner
+sentence=Adds blob detection and analysis capabilities to Processing.
+url=https://sites.google.com/site/blobscanner/home/
+prettyVersion=0.1-a
+paragraph=Searches images or videos for blobs of a requested brightness, size, or quantity. From the objects found it returns all the main features, like center of mass, weight, bounding box, contours, perimeter size and more... Lightweight and easy to extend, this plugin is also very easy to use.
+version=7
+download=https://sites.google.com/site/blobscanner/Download/blobscanner.zip
+id=134
 
 library
 category=Other
@@ -1184,18 +1196,6 @@ prettyVersion=0.1.1
 version=1
 download=https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.zip
 id=045
-
-library
-category=Math
-authorList=[Martin Prout](http://martinpblogformasswritingproject.blogspot.com/2010/08/lsystemutilities-for-processing.html)
-name=LSystems
-sentence=Utilities for exploring lsystems.
-url=http://kenai.com/projects/l-system-utilities
-prettyVersion=0.9.6
-paragraph=Supports simple, stochastic and context-sensitive grammars.
-version=11
-download=http://kenai.com/downloads/l-system-utilities/lsystem.zip
-id=048
 
 library
 category=Math
