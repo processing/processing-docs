@@ -221,10 +221,10 @@ Note in the above line of code that a Table object refers to the entire table of
 Once we have the TableRow object, we can ask for data from some or all of the columns.
 
 <pre>
-int x = r.getInt("x");             // x has the value 273
-int y = r.getInt("y");             // y has the value 235
-float d = r.getFloat("diameter");  // d has the value 61.14072
-String s = r.getString("name");    // s has the value "Joyous"
+int x = row.getInt("x");             // x has the value 273
+int y = row.getInt("y");             // y has the value 235
+float d = row.getFloat("diameter");  // d has the value 61.14072
+String s = row.getString("name");    // s has the value "Joyous"
 </pre>
 
 The method <a href="http://processing.org/reference/Table_getRow_.html">getRow()</a> returns a single row from the table.  If you want to grab all the rows and iterate over them you can do so with the method <a href="http://processing.org/reference/Table_rows_.html">rows()</a>.

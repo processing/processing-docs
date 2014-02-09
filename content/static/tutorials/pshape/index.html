@@ -1,13 +1,13 @@
 <h1>PShape</h1>
-	
+
 <p>
 <table width="656">
    	<tr>
-   	
+
 	<p><em>This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-web/issues?state=open">let us know</a>.</em></p>
-   	   		
+
 	<p>The source code contained in this tutorial can be found by selecting File > Examples in the Processing IDE. Then select Topics > Create Shapes.</p>
-	
+
 	<p>&nbsp;</p>
 
   <p>Before we should begin, it should also be noted that the features of this tutorial (i.e. the use of createShape()) are currently only supported by the P2D and P3D drawing modes.</p>
@@ -40,7 +40,7 @@ endShape();
 <pre>
 class MyWackyShape {
   // Some variables
-  
+
   // A constructor
 
   // Some functions
@@ -99,7 +99,7 @@ PShape rectangle;
 <pre>
 PShape rectangle;
 
-void setup() {  
+void setup() {
   size(640,360,P2D);
   rectangle = createShape(RECT,mouseX,mouseY,100,50);
 }
@@ -110,7 +110,7 @@ void setup() {
 <pre>
 PShape rectangle;
 
-void setup() {  
+void setup() {
   size(640,360,P2D);
   rectangle = createShape(RECT,0,0,100,50);
 }
@@ -121,7 +121,7 @@ void setup() {
 <pre>
 PShape rectangle;
 
-void setup() {  
+void setup() {
   size(640,360,P2D);
   rectangle = createShape(RECT,-50,-25,100,50);
 }
@@ -140,10 +140,10 @@ void draw() {
 <p>One of the nice things about the PShape object is that it can also store color information in addition to geometry.  Once a shape has been created in order to alter its fill or stroke, use the methods setFill(), setStroke(), setStrokeWeight(), etc.</p>
 
 <pre>
-void setup() { 
+void setup() {
   size(640,360,P2D);
   rectangle = createShape(RECT,-50,-25,100,50);
-  rectangle.setStroke(color(255));  
+  rectangle.setStroke(color(255));
   rectangle.setStrokeWeight(4);
   rectangle.setFill(color(127));
 }
@@ -284,7 +284,7 @@ void display() {
 void draw() {
   background(51);
   for (int i = 0; i < stars.length; i++) {
-    stars[i].display(); 
+    stars[i].display();
   }
 }
 </pre>
@@ -303,23 +303,23 @@ class Star {
   Star() {
     // First create the shape
     s = createShape();
-    star.beginShape();
+    s.beginShape();
     // You can set fill and stroke
-    star.fill(102);
-    star.stroke(255);
-    star.strokeWeight(2);
+    s.fill(102);
+    s.stroke(255);
+    s.strokeWeight(2);
     // Here, we are hardcoding a series of vertices
-    star.vertex(0, -50);
-    star.vertex(14, -20);
-    star.vertex(47, -15);
-    star.vertex(23, 7);
-    star.vertex(29, 40);
-    star.vertex(0, 25);
-    star.vertex(-29, 40);
-    star.vertex(-23, 7);
-    star.vertex(-47, -15);
-    star.vertex(-14, -20);
-    star.endShape(CLOSE);
+    s.vertex(0, -50);
+    s.vertex(14, -20);
+    s.vertex(47, -15);
+    s.vertex(23, 7);
+    s.vertex(29, 40);
+    s.vertex(0, 25);
+    s.vertex(-29, 40);
+    s.vertex(-23, 7);
+    s.vertex(-47, -15);
+    s.vertex(-14, -20);
+    s.endShape(CLOSE);
   }
 </pre>
 
@@ -328,7 +328,7 @@ class Star {
 <pre>
 class Polygon {
   PShape s;
-  
+
   void display() {
     shape(s);
   }
@@ -366,7 +366,7 @@ void setup() {
   star.vertex(-47, -15);
   star.vertex(-14, -20);
   star.endShape(CLOSE);
-  
+
   poly = new Polygon(star);     // Then we make the Polygon object by passing in the reference to the PShape
 
 }
@@ -387,7 +387,7 @@ void setup() {
   shapes[1] = createShape(RECT,0,0,100,100);
 
   polygons = new ArrayList<Polygon>();
-  
+
   for (int i = 0; i < 25; i++) {
     int selection = int(random(shapes.length));        // Pick a random index
     Polygon p = new Polygon(shapes[selection]);        // Use corresponding PShape to create Polygon
@@ -493,7 +493,7 @@ shape(alien);
 
 <p>For a full example that demonstrates a PShape that groups together a primitive shape, custom polygon, and path, see "GroupPShape" (under File > Examples > Topics > Create Shapes).
 
-PShape groups allow you build a sophisticated hierarchy of shapes.  This in turn allows you to set the color and attributes of the child shapes by calling the corresponding method at the parent level. Similarly, by calling the transformation functions at a given level of the hierarchy, you only affect the shapes below. 
+PShape groups allow you build a sophisticated hierarchy of shapes.  This in turn allows you to set the color and attributes of the child shapes by calling the corresponding method at the parent level. Similarly, by calling the transformation functions at a given level of the hierarchy, you only affect the shapes below.
 </p>
 
 <h3>Loading External Shapes</h3>

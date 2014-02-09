@@ -37,7 +37,7 @@ for (int i = 5; i < 95; i += 5) {
 </example>
 
 <description><![CDATA[
-Extends the <b>if</b> structure allowing the program to choose between two or more block of code. It specifies a block of code to execute when the expression in <b>if</b> is <b>false</b>.
+Extends the <b>if</b> structure allowing the program to choose between two or more blocks of code. It specifies a block of code to execute when the expression in <b>if</b> is <b>false</b>.
 ]]></description>
 
 <syntax>
