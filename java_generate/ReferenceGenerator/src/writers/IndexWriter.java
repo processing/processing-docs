@@ -30,7 +30,7 @@ public class IndexWriter extends BaseWriter {
 			else if( inside2.matches( "[a-zA-Z0-9 ]+" ) && ! inside1.matches("[a-zA-Z0-9 ]+") )
 			{
 				// if only the first is a symbol
-				return 0;
+				return -1;
 			}
 			
 			// compare whole strings, starting with words
