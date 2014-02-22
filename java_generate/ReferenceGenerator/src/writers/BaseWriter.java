@@ -159,8 +159,8 @@ public class BaseWriter {
 		}
 		// change "(some thing)" to something
 		if( name.contains("(") && name.contains(")") ){
-			int start = name.indexOf("(") + 1;
-			int end = name.indexOf(")");
+			int start = name.lastIndexOf("(") + 1;
+			int end = name.lastIndexOf(")");
 			name = name.substring(start, end);
 			name = name.replace(" ", "");
 		}
@@ -411,7 +411,7 @@ public class BaseWriter {
 
 	protected static HashMap<String, String> getDefaultDescriptionVars ()
 	{
-		HashMap<String,String> vars = new HashMap();
+		HashMap<String, String> vars = new HashMap<String, String>();
 		vars.put("description title", "Description");
 		vars.put("description text", "");
 		return vars;
