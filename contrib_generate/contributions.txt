@@ -339,9 +339,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.46
+prettyVersion=1.0.47
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1046
+version=1047
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -1132,11 +1132,23 @@ authorList=[Darius Morawiec](http://voidplus.de)
 name=Redis
 sentence=Wrapper to use [Redis](http://redis.io/) in [Processing](http://processing.org/). It's based on [Jedis](https://github.com/xetorthio/jedis), a small Java client by [Jonathan Leibiusky](https://github.com/xetorthio).
 url=https://github.com/voidplus/redis-processing
-prettyVersion=1.0
+prettyVersion=1.1
 paragraph=
-version=1
+version=2
 download=https://raw.github.com/voidplus/redis-processing/master/download/Redis.zip
 id=133
+
+library
+category=Data
+authorList=[Temboo](http://temboo.com/)
+name=Temboo
+sentence=Generate code to connect to 100+ APIs, code utilities, and databases in Processing.
+url=http://www.temboo.com/processing
+prettyVersion=1.86
+paragraph=Explore [temboo.com](http://temboo.com/) and auto-generate Processing sketches for your favorite web services and resources.
+version=186
+download=https://temboo.com/files/temboo-processing.zip
+id=135
 
 library
 category=GUI
