@@ -120,26 +120,26 @@ While this is valuable for debugging, it's not going to help our goal of display
 PFont f;
 </pre>
 <p>
-3.  Create the font by referencing the font  name and the function <a href="http://processing.org/reference/createFont_.html">createFont_()</a>.  This should be done only once, usually in <a href="http://processing.org/reference/setup_.html">setup()</a>.  Just as with loading an image, the process of loading a font into memory is slow and would seriously affect the sketch's performance if placed inside <a href="http://processing.org/reference/draw_.html">draw()</a>.  You can see a list of your available system fonts by via <a href="http://processing.org/reference/PFont_list_.html">PFont.list()</a>.   Because of limitations in Java, not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.  In addition to the name of the font, you can specify the size as well as whether the font should be antialiased or not.
+2.  Create the font by referencing the font  name and the function <a href="http://processing.org/reference/createFont_.html">createFont_()</a>.  This should be done only once, usually in <a href="http://processing.org/reference/setup_.html">setup()</a>.  Just as with loading an image, the process of loading a font into memory is slow and would seriously affect the sketch's performance if placed inside <a href="http://processing.org/reference/draw_.html">draw()</a>.  You can see a list of your available system fonts by via <a href="http://processing.org/reference/PFont_list_.html">PFont.list()</a>.   Because of limitations in Java, not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.  In addition to the name of the font, you can specify the size as well as whether the font should be antialiased or not.
 
 </p>
 <pre>
 f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
 </pre>
 <p>
-4. Specify the font using <a href="http://processing.org/reference/textFont_.html">textFont()</a>. textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically.  When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
+3. Specify the font using <a href="http://processing.org/reference/textFont_.html">textFont()</a>. textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically.  When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
 </p>
 <pre>
 textFont(f,36);
 </pre>
 <p>
-5. Specify a color using <a href="http://processing.org/reference/fill_.html">fill()</a>.
+4. Specify a color using <a href="http://processing.org/reference/fill_.html">fill()</a>.
 </p>
 <pre>
 fill(255);
 </pre>
 <p>
-6.  Call the <a href="http://processing.org/reference/text_.html">text()</a> function to display text.  (This function is just like shape or image drawing, it takes 3 arguments -- the text to be displayed, and the x & y coordinate to display that text.)
+5.  Call the <a href="http://processing.org/reference/text_.html">text()</a> function to display text.  (This function is just like shape or image drawing, it takes 3 arguments -- the text to be displayed, and the x & y coordinate to display that text.)
 </p>
 <pre>
 text("Hello Strings!",10,100);
