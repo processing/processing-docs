@@ -21,7 +21,7 @@ shade of gray ranging from black to white.
 <tr><td><em>Does 0-255 seem arbitary to you?</em><br />
 Color for a given shape needs to be stored in the computer's memory. This memory is just a long sequence of 0's and 1's (a whole bunch of on or off switches.) 
 Each one of these switches is a bit, eight of them together is a byte. Imagine if we had eight bits (one byte) in sequence - how many ways can we 
-configure these switches? The answer is (and doing a little research into binary numbers will prove this point) 256 possibilities, or a range 
+configure these switches? The answer is (and doing a little <a href="http://en.wikipedia.org/wiki/Binary_number">research into binary numbers</a> will prove this point) 256 possibilities, or a range 
 of numbers between 0 and 255. We will use eight bit color for our grayscale range and 24 bit for full color (eight bits for each of the red, green, and blue color components).      
 </td></tr></table>
 <br /><br />
@@ -157,12 +157,12 @@ Without getting into too much detail, HSB color works as follows:
 <img src="imgs/hsv.png" width=200>
 <br />
 <ul>
-<li><strong>Hue</strong> - The color type, ranges from 0 to 360 by default (think of 360 degrees on a color "wheel").</li>  
-<li><strong>Saturation</strong> - The vibrancy of the color, 0 to 100 by default.</li>
-<li><strong>Brightness</strong> - The, well, brightness of the color, 0 to 100 by default.</li>
+<li><strong>Hue</strong> - The color type, ranges from 0 to 255 by default.</li>  
+<li><strong>Saturation</strong> - The vibrancy of the color, 0 to 255 by default.</li>
+<li><strong>Brightness</strong> - The, well, brightness of the color, 0 to 255 by default.</li>
 </ul>
 <br />
-With <a href="http://processing.org/reference/colorMode_.html"><strong>colorMode()</strong></a> you can set your own color range. 
+With <a href="http://processing.org/reference/colorMode_.html"><strong>colorMode()</strong></a> you can set your own ranges for these values.  Some prefer a range of 0-360 for hue (think of 360 degrees on a color wheel) and 0-100 for saturation and brightness (think of 0-100%).
 </p>
 
 	<p>&nbsp;</p>
