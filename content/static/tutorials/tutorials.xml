@@ -9,7 +9,7 @@
   <tutorial> 
   	<title>Overview</title> 
   	<directory>overview</directory> 
-  	<imgs>true</imgs> 
+  	<imgs>false</imgs> 
   	<code>false</code> 
   </tutorial> 
   
@@ -17,7 +17,7 @@
   	<title>Processing in Eclipse</title> 
   	<directory>eclipse</directory> 
   	<imgs>true</imgs> 
-  	<code>true</code> 
+  	<code>false</code> 
   </tutorial>  
  
   <tutorial> 
