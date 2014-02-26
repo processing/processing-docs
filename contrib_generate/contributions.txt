@@ -177,6 +177,17 @@ version=4
 download=http://interfaze.info/libraries/tablet/download/Tablet.zip
 id=121
 
+library
+category=I/O
+authorList=[Patrick Meister (extrapixel)](http://www.extrapixel.ch)
+name=GifAnimation
+sentence=Play, import and export gif animations. Render to GIF!
+url=http://extrapixel.github.io/gif-animation/
+prettyVersion=2.3.1
+version=4
+download=http://www.extrapixel.ch/processing/gifAnimation/gifAnimation.zip
+id=136
+
 tool
 category=
 authorList=Manindra Moharana
@@ -339,9 +350,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.47
+prettyVersion=1.0.49
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1047
+version=1049
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
