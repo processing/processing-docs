@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
-	<software name="Fall in Love - Phantogram" by="Timothy Saccenti" scroll="yes" resize="yes" width="1024" height="700">
+	<software name="Fall in Love - Phantogram" by="Timothy Saccenti and Joshua Davis" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/Phantogram.jpg</image>
 		  <description>
-			  Music video for Phantogram's "Voices" album campaign including the "Fall In Love" music video directed by Timothy Saccenti with elements created using Processing.
+			  Music video for Phantogram's Voices album campaign including the "Fall In Love" music video directed by Timothy Saccenti and Joshua Davis with video elements created using the HYPE framework in Processing.
 		  </description>
-		  <location>http://timothysaccenti.com</location>
+		  <location>https://www.behance.net/gallery/Phantogram/14442795</location>
 		 <link href="http://timothysaccenti.com/category/work/motion/#/phantogram-fall-in-love-video">Timothy Saccenti</link>
+		 <link href="http://www.joshuadavis.com">Joshua Davis</link>
 		 <link href="http://www.vevo.com/watch/phantogram/fall-in-love/USUV71302973">Watch Video</link>
 	</software>	
 
