@@ -555,10 +555,10 @@ authorList=[Ilias Bergstrom](http://www.onar3d.com)
 name=Mother
 sentence=A library for live visuals performance with Processing sketches
 url=http://www.onar3d.com/mother
-prettyVersion=1.0.0
+prettyVersion=1.5.0
 paragraph=
-version=1
-download=http://processing-mother.googlecode.com/files/Mother.zip
+version=2
+download=https://github.com/onar3d/processing-mother/releases/download/latest/Mother.zip
 id=129
 
 library
@@ -588,13 +588,13 @@ id=002
 library
 category=Simulation
 authorList=[Daniel Shiffman](http://www.shiffman.net/)
-name=PBox2D
+name=Box2D for Processing
 sentence=A library and set of examples for 2D physics simulation wrapping some aspects of [JBox2D](http://www.jbox2d.org/), a Java implementation of [Box2D](http://box2d.org/).
-url=https://github.com/shiffman/PBox2D
-prettyVersion=0.2a
+url=https://github.com/shiffman/Box2D-for-Processing
+prettyVersion=0.3
 paragraph=
-version=2
-download=http://www.shiffman.net/p5/libraries/pbox2d/pbox2d.zip
+version=3
+download=http://shiffman.net/p5/libraries/box2d_processing/box2d_processing.zip
 id=014
 
 library
