@@ -65,12 +65,14 @@ public class TemplateWriter extends BaseWriter {
 		ArrayList<String> output = new ArrayList<String>();
 		vars.put("timestamp", getTimestamp());
 		if(isLocal)
-		{ //add local nav
+		{
 			vars.put( "webcontentpath",  getRelativePathToRoot( outputName ) );
+			vars.put("jquery", writePartial("jquery.local.partial.html", vars));
 			vars.put("navigation", writePartial("nav.local.template.html", vars));
 		} else
 		{
 			vars.put( "webcontentpath",  "/" );
+			vars.put("jquery", writePartial("jquery.web.partial.html", vars));
 			vars.put("navigation", writePartial("nav.web.template.html", vars));
 		}
 
