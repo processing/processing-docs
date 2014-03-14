@@ -118,13 +118,6 @@
     <imgs>true</imgs> 
     <code>false</code> 
   </tutorial>
-
-  <tutorial> 
-  	<title>Android</title> 
-  	<directory>android</directory> 
-  	<imgs>true</imgs> 
-  	<code>false</code> 
-  </tutorial>
   
   <tutorial> 
   	<title>Shaders</title> 

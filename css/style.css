@@ -15,24 +15,24 @@ x Last Modified: 2013.10.16 09:28AM
 
 @font-face {
 	font-family: 'theSerifItalic';
-	src: url(http://processing.org/css/fonts/TheSerif_B4_Italic.eot),
-		 url(http://processing.org/css/fonts/TheSerif_B4_Italic.woff) format("woff");
+	src: url(fonts/TheSerif_B4_Italic.eot),
+		 url(fonts/TheSerif_B4_Italic.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'theSerif';
-	src: url(http://processing.org/css/fonts/TheSerif_B4_Plain_.eot),
-		 url(http://processing.org/css/fonts/TheSerif_B4_Plain_.woff) format("woff");
+	src: url(fonts/TheSerif_B4_Plain_.eot),
+		 url(fonts/TheSerif_B4_Plain_.woff) format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'theSerif';
-	src: url(http://processing.org/css/fonts/TheSerif_B4_Bold_.eot),
-		 url(http://processing.org/css/fonts/TheSerif_B4_Bold_.woff) format("woff");
+	src: url(fonts/TheSerif_B4_Bold_.eot),
+		 url(fonts/TheSerif_B4_Bold_.woff) format("woff");
 	font-weight: 800;
 	font-style: normal;
 }
