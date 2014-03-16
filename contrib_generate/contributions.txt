@@ -928,7 +928,7 @@ name=Rekognition for Processing
 sentence=A library to interface with Rekognition[https://rekognition.com/], an cloud-based visual recognition solution.
 url=https://github.com/shiffman/Rekognition-for-Processing
 prettyVersion=0.3
-paragraph=
+paragraph=This library requires [HTTP Requests for Processing](https://github.com/runemadsen/HTTP-Requests-for-Processing).
 version=1
 download=http://shiffman.net/p5/libraries/rekognition_processing/rekognition_processing.zip
 id=125
@@ -1163,7 +1163,7 @@ id=135
 
 library
 category=Data
-authorList=[Rune Madsen](http://www.runemadsen.com), [Daniel Shiffman](http://shiffman.net])
+authorList=[Rune Madsen](http://www.runemadsen.com), [Daniel Shiffman](http://shiffman.net)
 name=HTTP Requests for Processing
 sentence=HTTP Requests for Processing is a small library that takes the pain out of doing HTTP requests in Processing.
 url=https://github.com/runemadsen/HTTP-Requests-for-Processing
