@@ -64,9 +64,19 @@ rect(x,y,w,h);
 	</p>
 	
 <pre>
+float x,y,z;
+
+void setup() {
+  size(200,200,P3D);
+  x = width/2;
+  y = height/2;
+  z = 0;
+}
+
 void draw() {
   translate(x,y,z);
-  rect(0,0,w,h);
+  rectMode(CENTER);
+  rect(0,0,100,100);
 
   z++; // The rectangle moves forward as z increments.
 }
@@ -78,33 +88,39 @@ void draw() {
 	
 <p><img src="imgs/rotateZ.png"></p>
 <pre>
-translate(x,y,z);
-rotateZ(angle);
+size(200, 200, P3D);
+background(100);
 rectMode(CENTER);
-rect(0,0,w,h);
+fill(51);
+stroke(255);
+
+translate(100, 100, 0);
+rotateZ(PI/8);
+rect(0, 0, 100, 100);
+
 </pre><br/>
 
 <p>We can also rotate around the x and y axes.</p>
 
 <p><img src="imgs/rotateX.png"></p>
 <pre>
-rotateX(angle);
+rotateX(PI/8);
 </pre><br/>
 
 <p><img src="imgs/rotateY.png"></p>
 <pre>
-rotateY(angle);
+rotateY(PI/8);
 </pre><br/>
 
 <p>As well as multiple axes at a time.</p>
 
 <p><img src="imgs/rotateXYZ.png"></p>
 <pre>
-translate(x,y,z);
-rotateX(angle1);
-rotateY(angle2);
-rotateZ(angle3);
-rect(0,0,w,h);
+translate(100, 100, 0);
+rotateX(PI/8);
+rotateY(PI/8);
+rotateZ(PI/8);
+rect(0, 0, 100, 100);
 </pre><br/>
 
 	<h3>3D Shapes</h3>
@@ -119,6 +135,10 @@ rect(0,0,w,h);
 	
 	<p><img src="imgs/primitives3D.png"></p>
 <pre>
+size(640,360,P3D);
+background(0);
+lights();
+
 pushMatrix();
 translate(130, height/2, 0);
 rotateY(1.25);
@@ -146,27 +166,33 @@ popMatrix();
 	
 	<p><img src="imgs/pyramid3D.png"></p>
 <pre>
-  translate(width/2, height/2, 0);
-  rotateX(angle1);
-  rotateY(angle2);
-  scale(100);
-  beginShape();
-  vertex(-1, -1, -1);
-  vertex( 1, -1, -1);
-  vertex( 0,  0,  1);
+size(640, 360, P3D);
+background(0);
 
-  vertex( 1, -1, -1);
-  vertex( 1,  1, -1);
-  vertex( 0,  0,  1);
+translate(width/2, height/2, 0);
+stroke(255);
+rotateX(PI/2);
+rotateZ(-PI/6);
+noFill();
 
-  vertex( 1, 1, -1);
-  vertex(-1, 1, -1);
-  vertex( 0, 0,  1);
+beginShape();
+vertex(-100, -100, -100);
+vertex( 100, -100, -100);
+vertex(   0,    0,  100);
 
-  vertex(-1,  1, -1);
-  vertex(-1, -1, -1);
-  vertex( 0,  0,  1);
-  endShape();
+vertex( 100, -100, -100);
+vertex( 100,  100, -100);
+vertex(   0,    0,  100);
+
+vertex( 100, 100, -100);
+vertex(-100, 100, -100);
+vertex(   0,   0,  100);
+
+vertex(-100,  100, -100);
+vertex(-100, -100, -100);
+vertex(   0,    0,  100);
+endShape();
+
 </pre><br/>
 
 Note above how it's often simpler to specify vertex locations using a standardized unit of measure (i.e. 1 pixel) and relative to a point of origin (0,0,0).   The size and position of the shape is then set using matrix transformations: translate(), rotate(), and scale().   For some examples of more sophisticated custom shapes built in 3D, take a look at these examples: <a href="http://processing.org/learning/topics/rgbcube.html">RGB Cube</a>, <a href="http://processing.org/learning/topics/vertices.html">Vertices</a>, <a href="http://processing.org/learning/topics/toroid.html">Toroid</a>, <a href="http://processing.org/learning/topics/icosahedra.html">Isocahedra</a>.
@@ -183,15 +209,18 @@ Note above how it's often simpler to specify vertex locations using a standardiz
 	
 	<p><img src="imgs/texture1.png"><br/>
 <pre>
-  translate(width / 2, height / 2);
-  stroke(255);
-  fill(127);
-  beginShape();
-  vertex(-100, -100, 0);
-  vertex(100, -100, 0);
-  vertex(100, 100, 0);
-  vertex(-100, 100, 0);
-  endShape(CLOSE);
+size(640, 360,P3D);
+background(0);
+translate(width/2, height/2);
+stroke(255);
+fill(127);
+beginShape();
+vertex(-100, -100, 0);
+vertex( 100, -100, 0);
+vertex( 100,  100, 0);
+vertex(-100,  100, 0);
+endShape(CLOSE);
+
 </pre><br/>
 	</p>
 	
