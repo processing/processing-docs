@@ -46,6 +46,18 @@ download=http://www.abstract-codex.net/tactu5/download/tactu5.zip
 id=118
 
 library
+category=Sound
+authorList=[Ollie Bown](http://www.olliebown.com) and [Benito](http://benitomedia.com) and [Ben Porter](http://bp.io) and [Aengus Martin](http://www.am-process.org)
+name=Beads
+sentence=A library for adding flexible realtime audio to Processing sketches.
+url=http://www.beadsproject.net/
+prettyVersion=1.0
+paragraph=Beads offers powerful tools for performing realtime audio manipulation for music, sound installations and offline music generation, including a metronome, musical event messaging, varispeed sample playback and granular synthesis, and analysis tools. It is a little more involved than Minim.
+version=1
+download=http://beadsproject.net/library/beads.zip
+id=138
+
+library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
 name=Collada Loader for Google Sketchup
@@ -888,13 +900,13 @@ id=095
 library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://www.shiffman.net)
-name=Open Kinect
+name=Open Kinect for Processing
 sentence=A Kinect implementation for Processing using open source drivers (libfreenect)
 url=http://www.shiffman.net/p5/kinect/
-prettyVersion=0.1a
+prettyVersion=0.2
 paragraph=
-version=1
-download=http://www.shiffman.net/p5/libraries/openkinect/openkinect.zip
+version=2
+download=http://shiffman.net/p5/libraries/openkinect_processing/openkinect_processing.zip
 id=013
 
 library
@@ -925,7 +937,7 @@ library
 category=Video & Vision
 authorList=[Daniel Shiffman](http://shiffman.net])
 name=Rekognition for Processing
-sentence=A library to interface with Rekognition[https://rekognition.com/], an cloud-based visual recognition solution.
+sentence=A library to interface with [Rekognition](https://rekognition.com/), an cloud-based visual recognition solution.
 url=https://github.com/shiffman/Rekognition-for-Processing
 prettyVersion=0.3
 paragraph=This library requires [HTTP Requests for Processing](https://github.com/runemadsen/HTTP-Requests-for-Processing).
@@ -1145,7 +1157,7 @@ sentence=Wrapper to use [Redis](http://redis.io/) in [Processing](http://process
 url=https://github.com/voidplus/redis-processing
 prettyVersion=1.1
 paragraph=
-version=2
+version=3
 download=https://raw.github.com/voidplus/redis-processing/master/download/Redis.zip
 id=133
 
@@ -1279,18 +1291,6 @@ paragraph=Main features include: 1. Default interactivity through the mouse and 
 version=15
 download=http://otrolado.info/proscene.zip
 id=001
-
-library
-category=3D
-authorList=[Frederik Vanhoutte](http://www.wblut.com/)
-name=HE_Mesh
-sentence=HE_Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
-url=http://hemesh.wblut.com/
-prettyVersion=1.8.2 "Alexander"
-paragraph=
-version=10
-download=http://hemesh.wblut.com/hemesh-latest.zip
-id=009
 
 library
 category=3D
