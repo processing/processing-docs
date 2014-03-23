@@ -293,7 +293,7 @@ url=https://github.com/fjenett/coffeescript-mode-processing
 prettyVersion=0.0.7
 paragraph=CoffeeScript Mode is based on JavaScript Mode and runs on top of Processing.js. It runs through a server and inherits the template system from JavaScript mode. CoffeeScript is a functional language that compiles to JavaScript and was created by (Jeremy Ashkenas)[https://github.com/jashkenas/coffee-script].
 version=267
-download=http://github.com/fjenett/coffeescript-mode-processing/raw/latest/release/CoffeeScriptMode.zip
+download=http://bezier.de/processing/modes/CoffeeScriptMode.zip
 id=070
 
 mode
@@ -305,7 +305,7 @@ url=https://github.com/fjenett/javascript-mode-processing
 prettyVersion=0.3.1
 paragraph=JavaScript Mode is based on Processing.js. It runs through a server and contains a simple template system.
 version=20
-download=http://github.com/fjenett/javascript-mode-processing/raw/latest/release/JavaScriptMode.zip
+download=http://bezier.de/processing/modes/JavaScriptMode.zip
 id=087
 
 mode
