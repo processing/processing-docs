@@ -46,6 +46,18 @@ download=http://www.abstract-codex.net/tactu5/download/tactu5.zip
 id=118
 
 library
+category=Sound
+authorList=[Ollie Bown](http://www.olliebown.com), [Benito Crawford](http://benitomedia.com), [Ben Porter](http://bp.io) and [Aengus Martin](http://www.am-process.org)
+name=Beads
+sentence=A library for adding flexible realtime audio to Processing sketches.
+url=http://www.beadsproject.net/
+prettyVersion=1.0
+paragraph=Beads offers powerful tools for performing realtime audio manipulation for music, sound installations and offline music generation, including a metronome, musical event messaging, varispeed sample playback and granular synthesis, and analysis tools. It is a little more involved than Minim.
+version=1
+download=http://beadsproject.net/library/beads.zip
+id=138
+
+library
 category=I/O
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
 name=Collada Loader for Google Sketchup
