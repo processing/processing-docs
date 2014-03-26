@@ -1,4 +1,4 @@
-<project name="Procesing Web Reference Genetator" default="compile" basedir=".">
+<project name="Procesing Web Reference Generator" default="compile" basedir=".">
     <description>
         simple example build file
     </description>
@@ -16,7 +16,8 @@
   <target name="compile" depends="clean,init"
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}" includeantruntime="false"/>
+    <!-- Note that your environment JAVA_HOME now matters for building -->
+    <javac srcdir="${src}" destdir="${build}" includeantruntime="true"/>
   </target>
 
   <target name="clean"
