@@ -1,7 +1,6 @@
 <?
 
 require('../config.php');
-
 $benchmark_start = microtime_float();
 
 // make troubleshooting page
@@ -13,7 +12,6 @@ $path = BASEDIR;
 // otherwise will go looking for /home/root/.subversion or some other user
 
 $where = CONTENTDIR . 'static';
-
 putenv('HOME=' . CONTENTDIR);
 
 //`cd $where && /usr/bin/svn update`;
@@ -23,6 +21,20 @@ putenv('HOME=' . CONTENTDIR);
 
 // make troubleshooting page
 $source = CONTENTDIR."static/";
+
+$page = new Page("Overview", "Overview");
+$page->content(file_get_contents($source."overview.html"));
+writeFile('overview/index.html', $page->out());
+#copydirr($source.'/images', $path.'/images');
+
+$page = new Page("Foundation", "Foundation");
+$page->content(file_get_contents($source."foundation.html"));
+writeFile('foundation/index.html', $page->out());
+
+$page = new Page("People", "People");
+$page->content(file_get_contents($source."people.html"));
+writeFile('people/index.html', $page->out());
+
 $page = new Page("Books", "Books");
 $page->content(file_get_contents($source."books.html"));
 writeFile('books/index.html', $page->out());
@@ -34,7 +46,6 @@ copy($source.'media.zip', $path.'books/media.zip');
 
 $page = new Page("Copyright", "Copyright");
 $page->content(file_get_contents($source."copyright.html"));
-
 writeFile('copyright.html', $page->out());
 
 // Copy over the images for the shop index

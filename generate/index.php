@@ -78,8 +78,9 @@ li { margin-bottom: 1em; }
 	<br />
 	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ <a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a><br />
 	<br />
-	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ <a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
-	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ <a href="#" onclick="remote_link('about.php');return false;">About</a> \ 
+	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
+	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
+	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
 	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages (Copyright, Books, Shop)</a>
 </p>
 	

@@ -13,7 +13,7 @@ writeFile('distribution/copyright.html', $page->out());
 
 $page = new LocalPage('People', "People", "People", '../');
 $page->content(file_get_contents($source."people.html"));
-writeFile('distribution/about/people.html', $page->out());
+writeFile('distribution/people/index.html', $page->out());
 
 
 $benchmark_end = microtime_float();
