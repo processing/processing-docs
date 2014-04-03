@@ -155,13 +155,13 @@ id=097
 
 library
 category=I/O
-authorList=[Erik Paluka](http://www.erikpaluka.com/), [Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Dr. Mark Hancock](http://markhancock.ca/), and [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins)
+authorList=[Erik Paluka](http://www.erikpaluka.com/), [Kalev Kalda Sikes](http://vialab.science.uoit.ca/portfolio/kalev-kalda-sikes), [Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Dr. Mark Hancock](http://markhancock.ca/), and [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins)
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/SMT/
-prettyVersion=3.7.1
-paragraph=It provides back-end device support for Tuio, WM_Touch* - requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), Smart_SDK*, Android, Leap Motion*, and emulated MOUSE. *Windows-Only
-version=15
+prettyVersion=3.8
+paragraph=It provides back-end device support for Tuio, Windows Touch ( requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), SmartSDK*, Leap Motion*, and Mouse Emulation. *Windows-Only
+version=17
 download=http://vialab.science.uoit.ca/smt/dl/SMT.zip
 id=098
 
@@ -199,6 +199,18 @@ prettyVersion=2.3.1
 version=4
 download=http://www.extrapixel.ch/processing/gifAnimation/gifAnimation.zip
 id=136
+
+library
+category=I/O
+authorList=Maximilian Ernestus
+name=VSync for Processing
+sentence=Will magically synchronize variables among Arduinos and your Processing sketch.
+url=http://erniejunior.github.io/VSync-for-Processing/
+prettyVersion=v0.1
+paragraph=Use serial or XBee to easily keep variables in sync between different devices.
+version=1
+download=http://erniejunior.github.io/VSync-for-Processing/download/VSync.zip
+id=139
 
 tool
 category=
@@ -296,6 +308,18 @@ version=1
 download=http://drifkin.net/processing/beziereditor/download/BezierEditorTool.zip
 id=114
 
+tool
+category=
+authorList=[Kevin Workman](http://StaticVoidGames.com)
+name=SvgExe
+sentence=A utility that creates a self-extracting jar that runs on any platform.
+url=http://StaticVoidGames.com/SvgExe/
+prettyVersion=1
+paragraph=This is a workaround for Processing only exporting applications for the current system.
+version=1
+download=http://s3.staticvoidgames.com/SvgExe/SvgExeProcessingTool.zip
+id=141
+
 mode
 category=
 authorList=[Florian Jenett](http://bezier.de/)
@@ -362,9 +386,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.52
+prettyVersion=1.0.53
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1052
+version=1053
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -572,6 +596,18 @@ paragraph=
 version=2
 download=https://github.com/onar3d/processing-mother/releases/download/latest/Mother.zip
 id=129
+
+library
+category=Utilities
+authorList=[Dong Hyun Choi](dhchoi.com)
+name=CountdownTimer
+sentence=A countdown timer which triggers callback events for each user-defined tick interval during the timer's duration.
+url=https://github.com/dhchoi/processing-countdowntimer
+prettyVersion=0.9.0
+paragraph=The timer will trigger onTickEvents after each interval and finish with an onFinishEvent. Multiple timers can be created inside the program, in which case each timer will have its own unique id.
+version=1
+download=https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.zip
+id=140
 
 library
 category=Simulation
@@ -923,18 +959,6 @@ id=023
 
 library
 category=Video & Vision
-authorList=[Stephane Cousot](http://ubaa.net/) and [Douglas Edric Stanley](http://abstractmachine.net/biography/)
-name=OpenCV
-sentence=An OpenCV implementation for processing including blob detection, face recognition and more.
-url=http://ubaa.net/shared/processing/opencv/
-prettyVersion=0.1.1
-paragraph=
-version=11
-download=http://ubaa.net/shared/processing/opencv/download/opencv.zip
-id=081
-
-library
-category=Video & Vision
 authorList=[Daniel Shiffman](http://shiffman.net])
 name=Rekognition for Processing
 sentence=A library to interface with [Rekognition](https://rekognition.com/), an cloud-based visual recognition solution.
@@ -980,18 +1004,6 @@ paragraph=Define a graph in terms of nodes and edges. Then use BFS, DFS, Dijkstr
 version=2
 download=http://www.lagers.org.uk/processing/pathfinder/Path_Finder.zip
 id=093
-
-library
-category=Data
-authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
-name=GML4U
-sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
-url=https://github.com/01010101/GML4U/wiki
-prettyVersion=0.1.9
-paragraph=GML is an open file format designed to store graffiti motion data.
-version=9
-download=http://www.saint-clair.net/download/gml4u/GML4U.zip
-id=008
 
 library
 category=Data
@@ -1294,6 +1306,18 @@ id=001
 
 library
 category=3D
+authorList=[Frederik Vanhoutte](http://www.wblut.com/)
+name=HE_Mesh
+sentence=HE_Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
+url=http://hemesh.wblut.com/
+prettyVersion=1.81
+paragraph=
+version=9
+download=http://hemesh.wblut.com/hemesh-latest.zip
+id=009
+
+library
+category=3D
 authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
 name=PeasyCam
 sentence=A mouse driven camera-control library for 3D sketches.
@@ -1402,9 +1426,9 @@ authorList=[Andres Colubri](http://interfaze.info)
 name=planetarium
 sentence=This library provides a renderer to project 3D scenes on a full dome.
 url=https://github.com/codeanticode/planetarium
-prettyVersion=0.3
+prettyVersion=0.4
 paragraph=It works by rendering the scene 5 times (one from each direction: top, right, etc) and then assembling the output of these renderings into a single environmental map that covers the entire dome.
-version=3
+version=4
 download=http://interfaze.info/libraries/planetarium/download/planetarium.zip
 id=130
 
