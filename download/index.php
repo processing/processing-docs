@@ -124,7 +124,7 @@ if(isset($_POST['form'])){
 
 			<!-- ==================================== FOOTER ============================ --> 
   			<div id="footer">
-    			<div id="copyright">Processing was initiated by <a href="http://benfry.com/">Ben Fry</a> and <a href="http://reas.com">Casey Reas</a>. It is developed by a <a href="/about/people/">small team of volunteers</a>.</div> 
+    			<div id="copyright">Processing was initiated by <a href="http://benfry.com/">Ben Fry</a> and <a href="http://reas.com">Casey Reas</a>. It is developed by a <a href="/people/">small team of volunteers</a>.</div> 
     			<div id="colophon">
                     <a href="/copyright.html">&copy; Info</a> \ <span>Site hosted by <a href="http://www.mediatemple.net">Media Temple!</a></span>
                 </div>
