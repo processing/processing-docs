@@ -1,6 +1,8 @@
 #!/bin/sh
 
-
+# PROCESSING_SRC_PATH=./test
+PROCESSING_SRC_PATH=../../../processing/core/src
+PROCESSING_LIB_PATH=../../../processing/java/libraries
 # GENERATE REFERENCE ENTRIES AND INDEX THROUGH JAVADOC - BY DAVID WICKS
 
 #remove everything old
@@ -23,14 +25,15 @@ javadoc -doclet ProcessingWeblet \
 	-corepackage processing.event \
 	-corepackage processing.opengl \
 	-rootclass PConstants \
-	../../../processing/java/libraries/net/src/processing/net/*.java \
-	../../../processing/java/libraries/serial/src/processing/serial/*.java \
-	../../../processing/java/libraries/video/src/processing/video/*.java \
-	../../../processing/core/src/processing/core/*.java \
-	../../../processing/core/src/processing/data/*.java \
-	../../../processing/core/src/processing/event/*.java \
-	../../../processing/core/src/processing/opengl/*.java \
+	$PROCESSING_SRC_PATH/processing/core/*.java \
+	$PROCESSING_SRC_PATH/processing/data/*.java \
+	$PROCESSING_SRC_PATH/processing/event/*.java \
+	$PROCESSING_SRC_PATH/processing/opengl/*.java \
+	$PROCESSING_LIB_PATH/net/src/processing/net/*.java \
+	$PROCESSING_LIB_PATH/serial/src/processing/serial/*.java \
+	$PROCESSING_LIB_PATH/video/src/processing/video/*.java \
 	-noisy
+	# ./test/seetags.java \
 
 
 # COPY IMAGES FROM CONTENT FOLDER TO CORRECT FOLDERS

@@ -46,7 +46,7 @@ public class BaseWriter {
 	}
 
 	protected static boolean needsWriting(ProgramElementDoc doc){
-		if( Shared.i().isWebref(doc) )
+		if( (doc != null) && Shared.i().isWebref(doc) )
 		{
 			return hasXMLDocument( doc );
 		}
@@ -681,7 +681,7 @@ public class BaseWriter {
 	{
 		ArrayList<SeeTag> ret = new ArrayList<SeeTag>();
 		ClassDoc cd = doc.containingClass();
-		if( cd != null )
+		if( cd != null && doc.isMethod() )
 		{	// if there is a containing class, get @see tags for all
 			// methods with the same name as this one
 			// Fixes gh issue 293
@@ -712,8 +712,13 @@ public class BaseWriter {
 		TemplateWriter templateWriter = new TemplateWriter();
 		ArrayList<HashMap<String, String>> vars = new ArrayList<HashMap<String,String>>();
 
+		// it is no longer clear to me what purpose this classMembers mapping serves
+		// It's left in source for now in case it proves important. However, building the
+		// entire reference only turned up cases where it overwrites method @see tags
+		// with field @see tags, which is not something we want.
+		// Eliminating this fixes github issue 137
+		/*
 		HashMap<String, ProgramElementDoc> classMembers = new HashMap<String, ProgramElementDoc>();
-
 		if( doc.isMethod() || doc.isField() )
 		{
 			ClassDoc containingClass = doc.containingClass();
@@ -737,21 +742,35 @@ public class BaseWriter {
 				}
 			}
 		}
+		//*/
 
 		// add link to each @see item
-		for( SeeTag tag : getAllSeeTags( doc ) ){
+		for( SeeTag tag : getAllSeeTags( doc ) )
+		{
 			HashMap<String, String> map = new HashMap<String, String>();
-
 			ProgramElementDoc ref = tag.referencedClass();
 			if( tag.referencedMember() != null )
 			{
 				ref = tag.referencedMember();
+/*
 				if( classMembers.containsKey( ref.name() ) )
 				{
-					ref = classMembers.get( ref.name() );
+					ProgramElementDoc prior = classMembers.get( ref.name() );
+					String refType = (ref.isMethod() ? " Method()" : " Field");
+					String priorType = (prior.isMethod() ? " Method()" : " Field");
+					if( !priorType.equals( refType ) )
+					{
+						System.out.println( "\n++++++++++++++++++++++++++++++++++++++++++" );
+						System.out.println( "Would collapse " + ref.name() + refType );
+						System.out.println( "into " + prior.name() + priorType );
+						System.out.println( "++++++++++++++++++++++++++++++++++++++++++\n" );
+					}
+					// previously, we replaced references this way
+					// doesn't seem to be helpful
+					ref = prior;
 				}
+*/
 			}
-
 			if( needsWriting( ref ) )
 			{
 				// add links to things that are actually written
