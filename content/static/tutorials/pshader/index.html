@@ -1325,7 +1325,7 @@ Let's start with point rendering. P3D represents points as either rectangles (wh
 &nbsp;&nbsp;}&nbsp;&nbsp;
 }
 
-<b>pointfrag.glsl:</b>
+<b>pointvert.glsl:</b>
 
 #define PROCESSING_POINT_SHADER
 
@@ -1347,7 +1347,7 @@ void main() {
   vertColor = color;
 }
 
-<b>pointvert.glsl:</b>
+<b>pointfrag.glsl:</b>
 
 #ifdef GL_ES
 precision mediump float;
