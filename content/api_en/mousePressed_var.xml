@@ -25,7 +25,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Variable storing if a mouse button is pressed. The value of the system variable <b>mousePressed</b> is true if a mouse button is pressed and false if a button is not pressed.
+The <b>mousePressed</b> variable stores whether or not a mouse button is currently being pressed. The value is true when <i>any</i> mouse button is pressed, and false if no button is pressed. The <b>mouseButton</b> variable (see the related reference entry) can be used to determine which button has been pressed.
 ]]></description>
 
 </root>

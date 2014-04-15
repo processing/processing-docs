@@ -31,7 +31,7 @@ void mouseMoved() {
 </example>
 
 <description><![CDATA[
-The <b>mouseMoved()</b> function is called every time the mouse moves and a mouse button is not pressed.
+The <b>mouseMoved()</b> function is called every time the mouse moves and a mouse button is not pressed. (If a button <i>is</i> being pressed, <b>mouseDragged()</b> is called instead.)
 <br/><br/>
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
