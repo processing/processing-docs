@@ -368,14 +368,10 @@ We will go through the different types of shaders available in Processing and ex
 <span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32);
-&nbsp;&nbsp;colorShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;colorfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;colorvert.glsl&quot;</span>);
 }
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
-
-&nbsp;&nbsp;<span style="color: #006699;">shader</span>(colorShader);
-
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
 &nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
 &nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
@@ -446,6 +442,22 @@ void main() {
 </pre>
 </tr></td>
 </table>
+
+<p>
+Now, we need to make two changes to our main program to make use of our new shader. At the end of our setup function we need to add
+</p>
+
+<pre>&nbsp;&nbsp;colorShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;colorfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;colorvert.glsl&quot;</span>);</pre> 
+
+<p>
+to load the shader files. Then, right after background(), add
+</p>
+
+<pre>&nbsp;&nbsp;<span style="color: #006699;">shader</span>(colorShader);</pre>
+
+<p>
+to draw the can using our shader.
+</p>
 
 <p>
 The type of shader is indicated here with the define in the vertex shader, but it could also be in the fragment shader. In this example, there is only one uniform variable, <em>transform,</em> which is a 4x4 matrix holding the product of the projection and the modelview matrices. The multiplication of a vertex in world coordinates by the <em>transform</em> matrix gives the <a href="http://www.songho.ca/opengl/gl_transform.html">clip coordinates</a>. The <em>vertex</em> and <em>color</em> attributes hold the position and color of the input vertex, respectively. The input color is copied without any modification to the <em>vertColor</em> varying, which passes the value down to the fragment shader. The fragment shader is nothing more than a pass-through shader since the color is sent to the output without any further modifications. The uniform <em>transform</em> and the attributes <em>vertex</em> and <em>color</em> are automatically set by Processing.
