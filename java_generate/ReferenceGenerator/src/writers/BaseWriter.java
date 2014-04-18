@@ -46,7 +46,7 @@ public class BaseWriter {
 	}
 
 	protected static boolean needsWriting(ProgramElementDoc doc){
-		if( Shared.i().isWebref(doc) )
+		if( (doc != null) && Shared.i().isWebref(doc) )
 		{
 			return hasXMLDocument( doc );
 		}
@@ -681,7 +681,7 @@ public class BaseWriter {
 	{
 		ArrayList<SeeTag> ret = new ArrayList<SeeTag>();
 		ClassDoc cd = doc.containingClass();
-		if( cd != null )
+		if( cd != null && doc.isMethod() )
 		{	// if there is a containing class, get @see tags for all
 			// methods with the same name as this one
 			// Fixes gh issue 293
@@ -712,49 +712,46 @@ public class BaseWriter {
 		TemplateWriter templateWriter = new TemplateWriter();
 		ArrayList<HashMap<String, String>> vars = new ArrayList<HashMap<String,String>>();
 
-		HashMap<String, ProgramElementDoc> classMembers = new HashMap<String, ProgramElementDoc>();
-
+		// keep track of class members so that links to methods in e.g. PGraphics
+		// that are copied into PApplet are correctly linked.
+		HashMap<String, ProgramElementDoc> classMethods = new HashMap<String, ProgramElementDoc>();
+		HashMap<String, ProgramElementDoc> classFields = new HashMap<String, ProgramElementDoc>();
 		if( doc.isMethod() || doc.isField() )
-		{
+		{	// fill our maps
 			ClassDoc containingClass = doc.containingClass();
-			// consider only doing this if we aren't in the core
-			// doing this in the core protects against errant references to PGraphics
-			// if( !containingClass.name().equalsIgnoreCase("PApplet") )
-			{
-				for( MethodDoc m : containingClass.methods() )
-				{
-					if( needsWriting( m ) )
-					{
-						classMembers.put( m.name(), m );
-					}
+			for( MethodDoc m : containingClass.methods() ) {
+				if( needsWriting( m ) ) {
+					classMethods.put( m.name(), m );
 				}
-				for( FieldDoc f : containingClass.fields() )
-				{
-					if( needsWriting( f ) )
-					{
-						classMembers.put( f.name(), f );
-					}
+			}
+			for( FieldDoc f : containingClass.fields() ) {
+				if( needsWriting( f ) ) {
+					classFields.put( f.name(), f );
 				}
 			}
 		}
 
 		// add link to each @see item
-		for( SeeTag tag : getAllSeeTags( doc ) ){
+		for( SeeTag tag : getAllSeeTags( doc ) )
+		{
 			HashMap<String, String> map = new HashMap<String, String>();
-
 			ProgramElementDoc ref = tag.referencedClass();
 			if( tag.referencedMember() != null )
 			{
 				ref = tag.referencedMember();
-				if( classMembers.containsKey( ref.name() ) )
-				{
-					ref = classMembers.get( ref.name() );
+				if( ref.isMethod() && classMethods.containsKey( ref.name() ) ) {
+					// link to the member as it is in this class, instead of
+					// as it is in another class
+					ProgramElementDoc prior = classMethods.get( ref.name() );
+					ref = prior;
+				}
+				else if ( ref.isField() && classFields.containsKey( ref.name() ) ) {
+					ProgramElementDoc prior = classFields.get( ref.name() );
+					ref = prior;
 				}
 			}
-
 			if( needsWriting( ref ) )
-			{
-				// add links to things that are actually written
+			{ // add links to things that are actually written
 				map.put("name", getName( ref ));
 				map.put("anchor", getAnchor( ref ));
 				vars.add(map);
@@ -806,9 +803,7 @@ public class BaseWriter {
 				{
 					e.printStackTrace();
 				}
-
 			}
-
 		}
 
 		return templateWriter.writeLoop("related.partial.html", vars);

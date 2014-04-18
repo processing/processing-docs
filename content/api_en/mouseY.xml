@@ -21,6 +21,8 @@ void draw()
 
 <description><![CDATA[
 The system variable <b>mouseY</b> always contains the current vertical coordinate of the mouse.
+<br><br>
+Note that Processing can only track the mouse position when the pointer is over the current window. The default value of <b>mouseY</b> is <b>0</b>, so <b>0</b> will be returned until the mouse moves in front of the sketch window. (This typically happens when a sketch is first run.)  Once the mouse moves away from the window, <b>mouseY</b> will continue to report its most recent position.
 ]]></description>
 
 </root>

@@ -33,7 +33,7 @@ void mouseClicked() {
 </example>
 
 <description><![CDATA[
-The <b>mouseClicked()</b> function is called once after a mouse button has been pressed and then released.
+The <b>mouseClicked()</b> function is called <i>after</i> a mouse button has been pressed and then released.
 <br/><br/>
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>

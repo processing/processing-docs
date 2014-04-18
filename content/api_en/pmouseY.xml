@@ -22,7 +22,9 @@ void draw() {
 </example>
 
 <description><![CDATA[
-The system variable <b>pmouseY</b> always contains the vertical position of the mouse in the frame previous to the current frame. More detailed information about how <b>pmouseY</b> is updated inside of <b>draw()</b> and mouse events is explained in the reference for <b>pmouseX</b>.
+The system variable <b>pmouseY</b> always contains the vertical position of the mouse in the frame previous to the current frame.
+<br><br>
+For more detail on how <b>pmouseY</b> is updated inside of mouse events and <b>draw()</b>, see the reference for <b>pmouseX</b>.
 ]]></description>
 
 </root>
