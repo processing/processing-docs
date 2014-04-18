@@ -51,7 +51,7 @@ authorList=[Ollie Bown](http://www.olliebown.com), [Benito Crawford](http://beni
 name=Beads
 sentence=A library for adding flexible realtime audio to Processing sketches.
 url=http://www.beadsproject.net/
-prettyVersion=1.0
+prettyVersion=1.01
 paragraph=Beads offers powerful tools for performing realtime audio manipulation for music, sound installations and offline music generation, including a metronome, musical event messaging, varispeed sample playback and granular synthesis, and analysis tools. It is a little more involved than Minim.
 version=1
 download=http://beadsproject.net/library/beads.zip
@@ -159,9 +159,9 @@ authorList=[Erik Paluka](http://www.erikpaluka.com/), [Kalev Kalda Sikes](http:/
 name=Simple Multi-Touch (SMT)
 sentence=Multi-touch prototyping and development made simple.
 url=http://vialab.science.uoit.ca/SMT/
-prettyVersion=3.8
-paragraph=It provides back-end device support for Tuio, Windows Touch ( requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679), SmartSDK*, Leap Motion*, and Mouse Emulation. *Windows-Only
-version=17
+prettyVersion=4.0
+paragraph=SMT provides back-end device support for Tuio, Windows Touch* ( requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679) ), SmartSDK*, Leap Motion*, and Mouse Emulation. *Windows-Only
+version=18
 download=http://vialab.science.uoit.ca/smt/dl/SMT.zip
 id=098
 
@@ -362,9 +362,9 @@ authorList=[Gal Sasson](http://galsasson.com)
 name=Tweak Mode
 sentence=Tweak hard-coded numbers in your code and see the result in real-time.
 url=http://galsasson.com/tweakmode/
-prettyVersion=1.0.0
+prettyVersion=1.0.1
 paragraph=When a sketch is being executed in tweak mode, all hard-coded numbers become interactive and can be modified by clicking and dragging to the left or right. When a value change, the PDE will update the running sketch with the new value and the result will be visible immediately. This mode is useful if you want to refine a certain feature/color/behaviour in your sketch, if you want to experiment freely with numbers, or if you try to understand someone else's code. other uses are welcome.
-version=890
+version=893
 download=http://galsasson.com/tweakmode/tweakmode.zip
 id=122
 
@@ -380,15 +380,27 @@ version=6
 download=http://download.processing.org/pdeX.zip
 id=124
 
+mode
+category=
+authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
+name=Python
+sentence=Write Processing sketches in Python.
+url=https://github.com/jdf/processing.py
+prettyVersion=Build 0305, built 2014/04/18 09:56
+paragraph=
+version=0305
+download=http://py.processing.org/PythonMode.zip
+id=142
+
 library
 category=Language
 authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.53
+prettyVersion=1.0.56
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1053
+version=1056
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -599,7 +611,7 @@ id=129
 
 library
 category=Utilities
-authorList=[Dong Hyun Choi](dhchoi.com)
+authorList=[Dong Hyun Choi](http://dhchoi.com)
 name=CountdownTimer
 sentence=A countdown timer which triggers callback events for each user-defined tick interval during the timer's duration.
 url=https://github.com/dhchoi/processing-countdowntimer
@@ -975,9 +987,9 @@ authorList=[Greg Borenstein](http://gregborenstein.com)
 name=OpenCV for Processing
 sentence=Computer vision with OpenCV.
 url=https://github.com/atduskgreg/opencv-processing
-prettyVersion=0.4.4
+prettyVersion=0.4.5
 paragraph=Based on the official OpenCV Java API. A nice Processing-style API for common tasks and access to the full power of the OpenCV API for the advanced stuff.
-version=9
+version=10
 download=https://github.com/atduskgreg/opencv-processing/releases/download/latest/opencv_processing.zip
 id=132
 
@@ -1004,6 +1016,18 @@ paragraph=Define a graph in terms of nodes and edges. Then use BFS, DFS, Dijkstr
 version=2
 download=http://www.lagers.org.uk/processing/pathfinder/Path_Finder.zip
 id=093
+
+library
+category=Data
+authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
+name=GML4U
+sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
+url=https://github.com/01010101/GML4U/wiki
+prettyVersion=0.1.9
+paragraph=GML is an open file format designed to store graffiti motion data.
+version=9
+download=http://www.saint-clair.net/download/gml4u/GML4U.zip
+id=008
 
 library
 category=Data
@@ -1274,9 +1298,9 @@ authorList=[Javier Gracia Carpio](http://www.openprocessing.org/user/16300)
 name=grafica
 sentence=Create simple and configurable 2D plots with Processing.
 url=https://github.com/jagracar/grafica
-prettyVersion=1.1.0
+prettyVersion=1.2.0
 paragraph=
-version=2
+version=3
 download=https://raw.github.com/jagracar/grafica/master/releases/grafica.zip
 id=126
 
@@ -1322,7 +1346,7 @@ authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
 name=PeasyCam
 sentence=A mouse driven camera-control library for 3D sketches.
 url=http://mrfeinberg.com/peasycam/
-version=200
+version=201
 download=http://mrfeinberg.com/peasycam/peasycam.zip
 id=017
 
