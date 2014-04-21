@@ -1,6 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Filament Sculptures" by="Lia" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/filament.jpg</image>
+		  <description>
+			  For about a year now generative artist Lia has been exploring 3d printing by analysing filament and the movements of the printhead. Rather than just having 3d models printed out, Lia has been interested in the possibilities of the process by defining the location of the printhead, the speed of the movement and the amount of filament that should be extruded.
+		  </description>
+		  <location>http://www.liaworks.com/theprojects/filament-sculptures/</location>
+		 <link href="http://www.liaworks.com/theprojects/filament-sculptures/">Lia</link>
+		 <link href="http://http://liasomething.tumblr.com/">liasomething.tumblr.com</link>
+	</software>	
+
 	<software name="Fall in Love - Phantogram" by="Timothy Saccenti and Joshua Davis" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/Phantogram.jpg</image>
 		  <description>
