@@ -19,9 +19,9 @@ void setup() {
   size(200, 200);
   frameRate(30);
   myMovie = new Movie(this, "totoro.mov");
+  myMovie.play();
   // Prints the duration of the movie
   println(myMovie.duration());
-  myMovie.play();
 }
 
 void draw() {
