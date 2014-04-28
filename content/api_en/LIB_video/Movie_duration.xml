@@ -35,7 +35,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns the length of the movie in seconds. If the movie is 1 minute and 20 seconds long the value returned will be 80.0.
+Returns the length of the movie in seconds. If the movie is 1 minute and 20 seconds long, then 80.0 will be returned. Must be called after <b>play()</b> in order to report accurately.
 ]]></description>
 
 <syntax>
