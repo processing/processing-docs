@@ -22,7 +22,7 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Calculates and returns a new 2D unit vector from the specified angle value. This function expects the values of the angle parameter to be provided in radians (values from 0 to PI*2).
+Calculates and returns a new 2D unit vector from the specified angle value (in radians).
 ]]></description>
 
 </root>
