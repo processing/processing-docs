@@ -11,17 +11,14 @@
 <example>
 <image>textAlign_0.png</image>
 <code><![CDATA[
-PFont font;
-// The font must be located in the current sketch's
-// "data" directory to load successfully
-font = loadFont("LetterGothicStd-32.vlw");
-textFont(font, 20);
+background(0);
+textSize(16);
 textAlign(RIGHT);
-text("WORD", 50, 30);
+text("ABCD", 50, 30);
 textAlign(CENTER);
-text("WORD", 50, 50);
+text("EFGH", 50, 50);
 textAlign(LEFT);
-text("WORD", 50, 70);
+text("IJKL", 50, 70);
 ]]></code>
 </example>
 
@@ -30,16 +27,16 @@ text("WORD", 50, 70);
 <code><![CDATA[
 background(0);
 stroke(153);
-textSize(16);
+textSize(11);
 textAlign(CENTER, BOTTOM);
 line(0, 30, width, 30);
-text("WORD", 50, 30);
+text("CENTER,BOTTOM", 50, 30);
 textAlign(CENTER, CENTER);
 line(0, 50, width, 50);
-text("WORD", 50, 50);
+text("CENTER,CENTER", 50, 50);
 textAlign(CENTER, TOP);
 line(0, 70, width, 70);
-text("WORD", 50, 70);
+text("CENTER,TOP", 50, 70);
 ]]></code>
 </example>
 
