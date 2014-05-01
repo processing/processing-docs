@@ -45,7 +45,7 @@ Using this function is far more efficient for copying array data than iterating 
 <br/>
 This function only copies references, which means that for most purposes it only copies one-dimensional arrays (a single set of brackets). If used with a two (or three or more) dimensional array, it will only copy the references at the first level, because a two dimensional array is simply an "array of arrays". This does not produce an error, however, because this is often the desired behavior. 
 <br/>
-Internally, this function calls Java's <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/System.html#arraycopy(java.lang.Object, int, java.lang.Object, int, int)">System.arraycopy()</a> method, so most things that apply there are inherited.
+Internally, this function calls Java's <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#arraycopy(java.lang.Object, int, java.lang.Object, int, int)">System.arraycopy()</a> method, so most things that apply there are inherited.
 ]]></description>
 
 </root>
