@@ -39,7 +39,7 @@ void draw() {
 }
 
 void serialEvent(Serial p) {
-  inString = (myPort.readString());
+  inString = p.readString();
 }
 
 ]]></code>
