@@ -18,7 +18,7 @@ void setup() {
 void draw() {} 
 
 void mouseWheel(MouseEvent event) {
-  float e = event.getAmount();
+  float e = event.getCount();
   println(e);
 }
 
