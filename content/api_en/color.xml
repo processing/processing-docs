@@ -54,11 +54,11 @@ rect(55, 10, 45, 80);  // Draw right rect
 </example>
 
 <description><![CDATA[
-Creates colors for storing in variables of the <b>color</b> datatype. The parameters are interpreted as RGB or HSB values depending on the current <b>colorMode()</b>. The default mode is RGB values from 0 to 255 and, therefore, the function call <b>color(255, 204, 0)</b> will return a bright yellow color (see the first example above).<br/>
+Creates colors for storing in variables of the <b>color</b> datatype. The parameters are interpreted as RGB or HSB values depending on the current <b>colorMode()</b>. The default mode is RGB values from 0 to 255 and, therefore, <b>color(255, 204, 0)</b> will return a bright yellow color (see the first example above).<br/>
 <br/>
 Note that if only one value is provided to <b>color()</b>, it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either RGB or HSB values. Adding a fourth value applies alpha transparency.<br/>
 <br/>
-Note that the <b>color()</b> function is not necessary when using hexadecimal notation, as in: <b>color c = #006699</b><br/>
+Note that when using hexadecimal notation, it is not necessary to use <b>color()</b>, as in: <b>color c = #006699</b><br/>
 <br/>
 More about how colors are stored can be found in the reference for the <a href="color_datatype.html">color</a> datatype.
 ]]></description>
