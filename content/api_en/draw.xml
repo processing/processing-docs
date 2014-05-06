@@ -50,11 +50,13 @@ void mousePressed() {
 <description><![CDATA[
 Called directly after <b>setup()</b>, the <b>draw()</b> function continuously executes the lines of code contained inside its block until the program is stopped or <b>noLoop()</b> is called. <b>draw()</b> is called automatically and should never be called explicitly.<br/>
 <br/>
-It should always be controlled with <b>noLoop()</b>, <b>redraw()</b> and <b>loop()</b>. After <b>noLoop()</b> stops the code in <b>draw()</b> from executing, <b>redraw()</b> causes the code inside <b>draw()</b> to execute once, and <b>loop()</b> will cause the code inside <b>draw()</b> to resume executing continuously.<br/>
+It should always be controlled with <b>noLoop()</b>, <b>redraw()</b> and <b>loop()</b>. If <b>noLoop()</b> is used to stop the code in <b>draw()</b> from executing, then <b>redraw()</b> will cause the code inside <b>draw()</b> to be executed a single time, and <b>loop()</b> will cause the code inside <b>draw()</b> to resume executing continuously.<br/>
 <br/>
 The number of times <b>draw()</b> executes in each second may be controlled with the <b>frameRate()</b> function.<br/>
 <br/>
-There can only be one <b>draw()</b> function for each sketch, and <b>draw()</b> must exist if you want the code to run continuously, or to process events such as <b>mousePressed()</b>. Sometimes, you might have an empty call to <b>draw()</b> in your program, as shown in the above example. 
+It is common to call <b>background()</b> near the beginning of the <b>draw()</b> loop to clear the contents of the window, as shown in the first example above.  Since pixels drawn to the window are cumulative, omitting <b>background()</b> may result in unintended results, especially when drawing anti-aliased shapes or text.
+<br/><br/>
+There can only be one <b>draw()</b> function for each sketch, and <b>draw()</b> must exist if you want the code to run continuously, or to process events such as <b>mousePressed()</b>. Sometimes, you might have an empty call to <b>draw()</b> in your program, as shown in the second example above. 
 ]]></description>
 
 </root>
