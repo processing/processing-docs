@@ -212,6 +212,18 @@ version=1
 download=http://erniejunior.github.io/VSync-for-Processing/download/VSync.zip
 id=139
 
+library
+category=I/O
+authorList=[Peter Lager](http://lagers.org.uk)
+name=Game Control Plus
+sentence=Use joysticks, gamepads and other control devices in your sketch.
+url=http://lagers.org.uk/gameocontrol
+prettyVersion=1.0
+paragraph=Create sketches that use joysticks, gamepads etc. that can be easily configured to work on different platforms and with different control devices without having to change the source code.
+version=1
+download=http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.zip
+id=143
+
 tool
 category=
 authorList=Manindra Moharana
@@ -230,9 +242,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.4.1
+prettyVersion=2.4.2
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=14
+version=15
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -374,9 +386,9 @@ authorList=[The Processing Foundation](http://processing.org)
 name=PDE X
 sentence=The next generation of PDE
 url=https://github.com/processing/processing-experimental
-prettyVersion=1.0.3b
+prettyVersion=1.0.4b
 paragraph=Intelligent Code Completion, Live Error Checker, Debugger, Auto Refactor, etc.
-version=6
+version=7
 download=http://download.processing.org/pdeX.zip
 id=124
 
@@ -384,11 +396,11 @@ mode
 category=
 authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
-sentence=Write Processing sketches in Python.
+sentence=Write Processing sketches in Python (build 0336).
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0305, built 2014/04/18 09:56
+prettyVersion=Build 0336, built 2014/05/17 14:48
 paragraph=
-version=0305
+version=0336
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -398,9 +410,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.56
+prettyVersion=1.0.61
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1056
+version=1061
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -435,9 +447,9 @@ authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
 name=Hermes
 sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
 url=http://rdlester.github.com/hermes
-prettyVersion=1.1
+prettyVersion=1.2
 paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
-version=3
+version=4
 download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=085
 
@@ -495,9 +507,9 @@ authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
 name=Hermes
 sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
 url=http://rdlester.github.com/hermes
-prettyVersion=1.1
+prettyVersion=1.2
 paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
-version=3
+version=4
 download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=084
 
@@ -629,21 +641,9 @@ sentence=A wrapper for JBox2D, a 2D physics engine.
 url=http://www.ricardmarxer.com/fisica
 prettyVersion=
 paragraph=It is simply a wrapper around [JBox2D](http://www.jbox2d.org/). It tries to make it much easier to create physical models by exposing an object oriented API similar to [PPhys2D](http://pphys2d.jmcouillard.com/) physics library for Processing.
-version=14
+version=15
 download=http://www.ricardmarxer.com/fisica/download/fisica.zip
 id=018
-
-library
-category=Simulation
-authorList=[Carl-Johan Rosén](http://www.carljohanrosen.com)
-name=Cell Noise
-sentence=Algorithm for generating cell/worley noise.
-url=http://www.carljohanrosen.com/processing/
-prettyVersion=1.0
-paragraph=These patterns are useful in animation and more.
-version=1
-download=http://www.carljohanrosen.com/processing/images/cellnoise-latest.zip
-id=002
 
 library
 category=Simulation
@@ -687,9 +687,9 @@ authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
 name=Hermes
 sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
 url=http://rdlester.github.com/hermes
-prettyVersion=1.1
+prettyVersion=1.2
 paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
-version=3
+version=4
 download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=086
 
@@ -915,9 +915,9 @@ authorList=[Peter Lager](http://www.lagers.org.uk)
 name=Sprites
 sentence=Sprite control and animation for games and graphic applications.
 url=http://www.lagers.org.uk/s4p
-prettyVersion=2.0.4
+prettyVersion=2.0.5
 paragraph=Provides complete control over sprite image animation, sprite movement and collision detection. Examples can be seen [here](http://www.lagers.org.uk/s4p/applets/s4p_showcase)
-version=6
+version=7
 download=http://www.lagers.org.uk/processing/sprites/Sprites.zip
 id=062
 
@@ -927,9 +927,9 @@ authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
 name=Hermes
 sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
 url=http://rdlester.github.com/hermes
-prettyVersion=1.1
+prettyVersion=1.2
 paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
-version=3
+version=4
 download=http://rdlester.github.com/hermes/downloads/hermes.zip
 id=083
 
@@ -1274,8 +1274,8 @@ category=Math
 authorList=[Adila Faruk](http://adilapapaya.com)
 name=papaya
 sentence=A collection of utilities for Statistics and Matrix-related manipulations
-url=http://adilapapaya.com/papayastatistics.html
-prettyVersion=0.1.1
+url=http://adilapapaya.com/papayastatistics/
+prettyVersion=1.0.0
 version=1
 download=https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.zip
 id=045
