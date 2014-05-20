@@ -13,14 +13,14 @@
 
 		<!-- Downloads -->
 		<div class="downloads">
-			<span class="version">2.2</span>
-			<span class="version-date">(12 May 2014)</span>
+			<span class="version">2.2.1</span>
+			<span class="version-date">(19 May 2014)</span>
 			<ul class="current-downloads">
-				<li><a href="http://download.processing.org/processing-2.2-windows64.zip">Windows</a> 64-bit<br>
-				<a href="http://download.processing.org/processing-2.2-windows32.zip">Windows</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-2.2-linux64.tgz">Linux</a> 64-bit<br>
-				<a href="http://download.processing.org/processing-2.2-linux32.tgz">Linux</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-2.2-macosx.zip">Mac OS X</a></li>
+				<li><a href="http://download.processing.org/processing-2.2.1-windows64.zip">Windows</a> 64-bit<br>
+				<a href="http://download.processing.org/processing-2.2.1-windows32.zip">Windows</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-2.2.1-linux64.tgz">Linux</a> 64-bit<br>
+				<a href="http://download.processing.org/processing-2.2.1-linux32.tgz">Linux</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-2.2.1-macosx.zip">Mac OS X</a></li>
 			</ul>
 		</div>
 
@@ -42,6 +42,16 @@
 	<div class="releases">
 		<h3>Stable Releases</h3>
 		<ul>
+			<li>
+				<span class="version">2.2.1</span>
+				<span class="version-date">(19 May 2014)</span>
+				<a href="http://download.processing.org/processing-2.2.1-windows32.zip">Win 32</a>
+				<a href="http://download.processing.org/processing-2.2.1-windows64.zip">Win 64</a> 
+				<a href="http://download.processing.org/processing-2.2.1-linux32.tgz">Linux 32</a> 
+				<a href="http://download.processing.org/processing-2.2.1-linux64.tgz">Linux 64</a>
+				<a href="http://download.processing.org/processing-2.2.1-macosx.zip">Mac OS X</a> 
+			</li>
+
 			<li>
 				<span class="version">2.2</span>
 				<span class="version-date">(12 May 2014)</span>
@@ -82,7 +92,6 @@
 				<a href="http://download.processing.org/processing-2.1-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-2.1-macosx.zip">Mac OS X</a> 
 			</li>
--->
 
 			<li>
 				<span class="version">2.0.3</span>
@@ -94,7 +103,6 @@
 				<a href="http://download.processing.org/processing-2.0.3-macosx.zip">Mac OS X</a> 
 			</li>
 
-<!--
 			<li>
 				<span class="version">2.0.2</span>
 				<span class="version-date">(14 August 2013)</span>
