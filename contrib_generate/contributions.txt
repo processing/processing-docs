@@ -217,10 +217,10 @@ category=I/O
 authorList=[Peter Lager](http://lagers.org.uk)
 name=Game Control Plus
 sentence=Use joysticks, gamepads and other control devices in your sketch.
-url=http://lagers.org.uk/gameocontrol
-prettyVersion=1.0
+url=http://lagers.org.uk/gamecontrol
+prettyVersion=1.0.1
 paragraph=Create sketches that use joysticks, gamepads etc. that can be easily configured to work on different platforms and with different control devices without having to change the source code.
-version=1
+version=2
 download=http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.zip
 id=143
 
@@ -396,11 +396,11 @@ mode
 category=
 authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
-sentence=Write Processing sketches in Python (build 0336).
+sentence=Write Processing sketches in Python (build 0337).
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0336, built 2014/05/17 14:48
+prettyVersion=Build 0337, built 2014/05/20 20:43
 paragraph=
-version=0336
+version=0337
 download=http://py.processing.org/PythonMode.zip
 id=142
 
