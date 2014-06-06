@@ -57,8 +57,8 @@ if ($final['ACK'] == 'Success') {
 	$mail->Send();
 
 	$log = __DIR__.$fPath.'purchases.log';
-	//$data = $email."\t".$name."\t$".$amount."\n";
-	$data = date('Y-m-d', $date)."\t".$amount."\t".'paypal'."\t".$name."\t".$email."\t".get_client_ip()."\n";
+	$cleanDate = date('Y-m-d', $date);
+	$data = $cleanDate."\t".$amount."\t".'paypal'."\t".$name."\t".$email."\t".get_client_ip()."\n";
 	file_put_contents($log, $data, FILE_APPEND | LOCK_EX);
 	
 	
