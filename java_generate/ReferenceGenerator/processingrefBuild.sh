@@ -31,7 +31,7 @@ javadoc -doclet ProcessingWeblet \
 	$PROCESSING_SRC_PATH/processing/opengl/*.java \
 	$PROCESSING_LIB_PATH/net/src/processing/net/*.java \
 	$PROCESSING_LIB_PATH/serial/src/processing/serial/*.java \
-	$PROCESSING_LIB_PATH/video/src/processing/video/*.java \
+	#$PROCESSING_LIB_PATH/video/src/processing/video/*.java \  #commented out, now that video is an external library -SM
 	-noisy
 	# ./test/seetags.java \
 
