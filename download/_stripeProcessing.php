@@ -69,7 +69,7 @@ if ($_POST) {
 		$mail->Send();
 
 		$log = __DIR__.$fPath.'purchases.log';
-		$data = date('M j, Y', $donation['created'])."\t".$amount."\t".'stripe'."\t".$name."\t".$email."\t".get_client_ip()."\n";
+		$data = date('Y-m-d', $donation['created'])."\t".$amount."\t".'stripe'."\t".$name."\t".$email."\t".get_client_ip()."\n";
 		file_put_contents($log, $data, FILE_APPEND | LOCK_EX);
 
 
