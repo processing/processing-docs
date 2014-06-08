@@ -396,11 +396,11 @@ mode
 category=
 authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
-sentence=Write Processing sketches in Python (build 0337).
+sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0337, built 2014/05/20 20:43
+prettyVersion=Build 0349, built 2014/06/08 09:55
 paragraph=
-version=0337
+version=0349
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -410,9 +410,9 @@ authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
 name=RiTa
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.61
+prettyVersion=1.0.63
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1061
+version=1063
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -807,9 +807,9 @@ authorList=[Michael Heuer](https://github.com/heuermh)
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.13
+prettyVersion=1.14
 paragraph=
-version=15
+version=16
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -1318,13 +1318,13 @@ id=131
 
 library
 category=3D
-authorList=[Jean Pierre Charalambos](http://otrolado.info/)
-name=ProScene
-sentence=Highly customizable and full featured yet simple to use camera library.
-url=http://code.google.com/p/proscene/
-prettyVersion=1.2.0
-paragraph=Main features include: 1. Default interactivity through the mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
-version=15
+authorList=[Jean Pierre Charalambos](http://otrolado.info)
+name=proscene
+sentence=Library that eases the creation of interactive scenes.
+url=http://otrolado.info
+prettyVersion=2.0.0
+paragraph=Main features include: 1. Default interactivity throughthe mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
+version=16
 download=http://otrolado.info/proscene.zip
 id=001
 
