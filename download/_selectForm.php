@@ -23,6 +23,7 @@
 		<div class="select-amount">
 			<label><input type="radio" name="selectAmount" value="0"> No Donation</label>
 			<label><input type="radio" name="selectAmount" value="10"> $10</label>
+			<label><input type="radio" name="selectAmount" value="25"> $25</label>
 			<label><input type="radio" name="selectAmount" value="50"> $50</label>
 			<label><input type="radio" name="selectAmount" value="100"> $100</label>
 			<label class="last"><input type="radio" name="selectAmount" value="other" id="wildcard"></label><span>$ <input type="text" value="" id="otra" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"></span>
