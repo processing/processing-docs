@@ -6,7 +6,7 @@ $benchmark_start = microtime_float();
 
 $local = false;
 
-define('EXAMPLESOURCEDIR', '../../processing/java/examples/');
+define('EXAMPLESOURCEDIR', '../content/examples/');
 
 $path = BASEDIR;
 $where = EXAMPLESOURCEDIR;
