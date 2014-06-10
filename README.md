@@ -1,4 +1,4 @@
-Processing web site, Examples, and Reference
+Processing reference, examples, tutorials, and web site
 ==========
 
 This is the official source code for the [processing.org](http://processing.org) web site, plus the examples and the reference.
