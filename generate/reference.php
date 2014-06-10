@@ -9,8 +9,10 @@ $path = BASEDIR;  //define('BASEDIR',       dirname(__FILE__).'/');
 // Pull from GitHub
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
+$referencepath = $path . "java_generate/ReferenceGenerator/";
+
 // 
-`cd java_generate/ReferenceGenerator && ./processingrefBuild.sh`;
+`cd $referencepath && ./processingrefBuild.sh`;
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
