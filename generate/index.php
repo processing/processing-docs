@@ -76,20 +76,18 @@ li { margin-bottom: 1em; }
 	<br />
 	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
 	<br />
-	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ <a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a><br />
+	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
+		  <a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
+		  Modes (to come...)<br />
 	<br />
-	Casey: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
+	Scott: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
 	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
 	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
-	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages (Copyright, Books, Shop)</a>
+	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages</a> \ 
+	<a href="#" onclick="remote_link('reference.php');return false;">Reference</a> (REFERENCE!!!)
 </p>
 	
 <p>&nbsp;</p>
-
-	
-<p>Experimental! Please don't click for now.</p>
-
-<p><a href="#" onclick="remote_link('reference.php');return false;">Reference</a></p>
 
 
 <div id="status-container">
