@@ -6,16 +6,16 @@ learning/**/*
 css/**/*
 content/static/libraries.html
 content/static/tools.html
-books
+books/
 copyright.html
-distribution
-reference
-shop
-overview
-people
+distribution/
+reference/
+shop/
+overview/
+people/
 robots.txt
-tutorials
-foundation
-exhibition
-examples
-about
+tutorials/
+foundation/
+exhibition/
+/examples/ # Ignore the examples folder at the root, but not inside "content"
+about/
