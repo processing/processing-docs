@@ -15,7 +15,7 @@ $where = CONTENTDIR . 'static/';
 //`cd $where && /usr/bin/svn update libraries.html`;
 
 // Switch from SVN to GIT, 14 FEB 2013
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 
 $libraries = array('net', 'serial', 'video', 'dxf', 'pdf');

@@ -14,7 +14,7 @@ $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
 
 // Switch from SVN to GIT, 14 FEB 2013
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 # --------------------------------- Examples
 

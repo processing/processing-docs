@@ -11,7 +11,7 @@ $where = CONTENTDIR . 'static/tutorials';
 putenv('HOME=' . CONTENTDIR);
 
 // Switch from SVN to GIT, 14 FEB 2013
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 // Copy over the images for the tutorials index
 if (!is_dir($path.'tutorials/imgs')) {

@@ -17,7 +17,7 @@ putenv('HOME=' . CONTENTDIR);
 //`cd $where && /usr/bin/svn update`;
 
 // Switch from SVN to GIT, 14 FEB 2013
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-web/`;
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 // make troubleshooting page
 $source = CONTENTDIR."static/";
