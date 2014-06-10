@@ -1,0 +1,1458 @@
+library
+category=Sound
+authorList=[Severin Smith](http://www.smallbutdigital.com/)
+name=The MidiBus
+sentence=The MidiBus is a minimal MIDI library for Processing, no frills, no limitations.
+url=http://www.smallbutdigital.com/themidibus.php
+prettyVersion=7
+paragraph=The MidiBus is a MIDI library for Processing. It provides a quick and simple way to access and interact with installed MIDI system resources. The MidiBus is aimed primarily at real time MIDI applications. The focus is on strong MIDI I/O capabilities and keeping frills to a minimum (e.g. no built in sequencer, file read/write, MIDI recording/playback).
+version=7
+download=http://www.smallbutdigital.com/releases/themidibus/themidibus-latest.zip
+id=019
+
+library
+category=Sound
+authorList=[Daniel Jones](http://www.erase.net/)
+name=SuperCollider client for Processing
+sentence=Framework to interface with the SuperCollider synthesis engine.
+url=http://www.erase.net/projects/processing-sc/
+prettyVersion=0.3.0
+paragraph=This library provides a simple approach to interfacing with the powerful [SuperCollider](http://supercollider.sourceforge.net) sound synthesis engine. It provides objects to encapsulate common functions such as creating and manipulating Synth, Buffer and Bus objects.
+version=1
+download=http://www.erase.net/projects/processing-sc/files/processing-sc.zip
+id=035
+
+library
+category=Sound
+authorList=[Nikolaus Gradwohl](http://www.local-guru.net)
+name=ttslib
+sentence=ttslib makes your sketches speak with the help of freetts.
+url=http://www.local-guru.net/blog/pages/ttslib
+prettyVersion=0.4
+version=4
+download=http://www.local-guru.net/projects/ttslib/ttslib.zip
+id=092
+
+library
+category=Sound
+authorList=[Alessandro Capozzo](http://www.abstract-codex.net)
+name=tactu5
+sentence=Tactu5 aids in the creation of algorithmic music in real time. It consists of a set of classes focused on defining musical elements, utility classes and an aggregator.
+url=http://www.abstract-codex.net/tactu5
+prettyVersion=1.0.2
+paragraph=Tactu5 does not include a built-in synthesis system and is not focused on a specific communication protocol. Tactu5 has been designed to be quite easily integrated with existing software synthesis systems (Csound, PureData, SuperCollider etc.) through network communication (for instance, [oscP5](http://www.sojamo.de/libraries/oscP5/)) or by directly using some Java binding.
+version=4
+download=http://www.abstract-codex.net/tactu5/download/tactu5.zip
+id=118
+
+library
+category=Sound
+authorList=[Ollie Bown](http://www.olliebown.com), [Benito Crawford](http://benitomedia.com), [Ben Porter](http://bp.io) and [Aengus Martin](http://www.am-process.org)
+name=Beads
+sentence=A library for adding flexible realtime audio to Processing sketches.
+url=http://www.beadsproject.net/
+prettyVersion=1.01
+paragraph=Beads offers powerful tools for performing realtime audio manipulation for music, sound installations and offline music generation, including a metronome, musical event messaging, varispeed sample playback and granular synthesis, and analysis tools. It is a little more involved than Minim.
+version=1
+download=http://beadsproject.net/library/beads.zip
+id=138
+
+library
+category=I/O
+authorList=[Markus Zimmermann](http://www.die-seite.ch/)
+name=Collada Loader for Google Sketchup
+sentence=Importer for kmz and dae files created by Google Sketchup 8.0.16846 (latest Version) into Processing 2.0
+url=http://www.die-seite.ch/
+prettyVersion=1.3
+paragraph=The library is tested for Sketchup 8.0.16846. Dae or kmz files created by other versions may contain anomalous structures hence the importer will crash. Note: sketchup files must be prepared referred to the tutorial page. (see to the [tutorial page](http://die-seite.ch/?colladaloader) and [trouble forum](http://die-seite.ch/?guest&thema=colladaloader).)
+version=14
+download=http://www.die-seite.ch/colladaLoader.zip
+id=006
+
+library
+category=I/O
+authorList=[Elie Zananiri](http://www.silentlycrashing.net)
+name=ezGestures
+sentence=A modular gesture recognition library.
+url=http://www.silentlycrashing.net/ezgestures/
+prettyVersion=1.0
+paragraph=It works by analyzing mouse or Wiimote movements while dragging, and comparing the motion against a regular expression to find a match.
+version=1
+download=http://www.silentlycrashing.net/ezgestures/files/ezgestures.zip
+id=016
+
+library
+category=I/O
+authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
+name=NXTComm Processing
+sentence=The NXTComm Processing library allows you to control the Lego Mindstorms NXT robots.
+url=http://jorgecardoso.eu/processing/NXTComm/
+prettyVersion=0.91
+paragraph=
+version=4
+download=http://jorgecardoso.eu/processing/NXTComm/NXTComm.zip
+id=025
+
+library
+category=I/O
+authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
+name=MindSet Processing
+sentence=The MindSetProcessing library allows you to use the NeuroSky Mindset brainwave sensing headset with Processing.
+url=http://jorgecardoso.eu/processing/MindSetProcessing/
+prettyVersion=0.1.1
+paragraph=It gives you access to the raw wave values, to the eSense meters (Attention and Meditation) and to the EEG values. It does not provide blink data. This library was implemented using the Think Gear Communications driver J2ME implementation provided in the Mindset Development Tools 2.1.
+version=1
+download=http://jorgecardoso.eu/processing/MindSetProcessing/MindSetProcessing.zip
+id=026
+
+library
+category=I/O
+authorList=[Michael Heuer](https://github.com/heuermh) and [Iain Lobb](http://blog.iainlobb.com)
+name=Gamepad
+sentence=A port of the Gamepad ActionScript library for Flash.
+url=https://github.com/heuermh/gamepad-processing
+prettyVersion=2.0
+paragraph=Requires Processing 2.0b7 or later.
+version=3
+download=https://dl.dropbox.com/u/87680069/gamepad.zip
+id=060
+
+library
+category=I/O
+authorList=[Hauke Altmann](http://graffitiresearchlab.de)
+name=proJMS
+sentence=Publish and consume text messages to create peer-to-peer communication between processing applications.
+url=http://sourceforge.net/projects/projms/
+prettyVersion=0.2
+paragraph=Implementing JMS messaging the library allows to send and receive messages to/from any other application using JMS.
+version=2
+download=http://www.graffitiresearchlab.de/wp-content/uploads/proJMS.zip
+id=067
+
+library
+category=I/O
+authorList=[Jesse Louis-Rosenberg](http://n-e-r-v-o-u-s.com)
+name=OBJExport
+sentence=This is a simple library to export surfaces from processing as OBJ files. It is used the same way the PDF library is used.
+url=http://n-e-r-v-o-u-s.com/tools/obj
+prettyVersion=0.2.4
+paragraph=
+version=6
+download=http://n-e-r-v-o-u-s.com/tools/obj/OBJExport.zip
+id=091
+
+library
+category=I/O
+authorList=[Ostap Andrusiv](http://andrusiv.com)
+name=SelectFile
+sentence=Android library which provides Dialogs for selectInput(), selectFolder() and selectOutput() methods.
+url=https://github.com/pif/android-select-file/tree/dlg
+prettyVersion=0.0.1
+paragraph=Android misses open&save file dialogs. SelectFile library adds these dialogs to the Processing for Android. It is specifically designed for Android mode in Processing 2.0. All interaction with the library is done through FileLibrary class.
+version=1
+download=http://pif.github.com/android-select-file/download/SelectFile.zip
+id=097
+
+library
+category=I/O
+authorList=[Erik Paluka](http://www.erikpaluka.com/), [Kalev Kalda Sikes](http://vialab.science.uoit.ca/portfolio/kalev-kalda-sikes), [Zachary Cook](http://vialab.science.uoit.ca/portfolio/zachary-cook), [Dr. Mark Hancock](http://markhancock.ca/), and [Dr. Christopher Collins](http://vialab.science.uoit.ca/portfolio/christopher-m-collins)
+name=Simple Multi-Touch (SMT)
+sentence=Multi-touch prototyping and development made simple.
+url=http://vialab.science.uoit.ca/SMT/
+prettyVersion=4.0
+paragraph=SMT provides back-end device support for Tuio, Windows Touch* ( requires [VC2012 Redistributable](http://www.microsoft.com/en-au/download/details.aspx?id=30679) ), SmartSDK*, Leap Motion*, and Mouse Emulation. *Windows-Only
+version=18
+download=http://vialab.science.uoit.ca/smt/dl/SMT.zip
+id=098
+
+library
+category=I/O
+authorList=[Paul Hertz](http://paulhertz.net/)
+name=IgnoCodeLib
+sentence=Hierarchical display list for graphics and text with export to Adobe Illustrator 7.0 file format.
+url=http://paulhertz.net/ignocodelib/index.html
+prettyVersion=0.3
+paragraph=Supports display and output of complex objects composed of lines and cubic Bezier curves, simple text, RGB and CMYK color, and geometric transforms.
+version=1
+download=http://paulhertz.net/ignocodelib/download/IgnoCodeLib.zip
+id=105
+
+library
+category=I/O
+authorList=[Andres Colubri](http://interfaze.info/)
+name=Tablet
+sentence=Tablet is a library for using pen tablets from Processing.
+url=http://interfaze.info/libraries/tablet/
+prettyVersion=1.2.1
+paragraph=It provides simplified access to the pen's pressure, tilt, etc. It is based on <a href="https://sourceforge.net/projects/jpen/">JPen</a>, the Java Pen Tablet Access Library.
+version=4
+download=http://interfaze.info/libraries/tablet/download/Tablet.zip
+id=121
+
+library
+category=I/O
+authorList=[Patrick Meister (extrapixel)](http://www.extrapixel.ch)
+name=GifAnimation
+sentence=Play, import and export gif animations. Render to GIF!
+url=http://extrapixel.github.io/gif-animation/
+prettyVersion=2.3.1
+version=4
+download=http://www.extrapixel.ch/processing/gifAnimation/gifAnimation.zip
+id=136
+
+library
+category=I/O
+authorList=Maximilian Ernestus
+name=VSync for Processing
+sentence=Will magically synchronize variables among Arduinos and your Processing sketch.
+url=http://erniejunior.github.io/VSync-for-Processing/
+prettyVersion=v0.1
+paragraph=Use serial or XBee to easily keep variables in sync between different devices.
+version=1
+download=http://erniejunior.github.io/VSync-for-Processing/download/VSync.zip
+id=139
+
+library
+category=I/O
+authorList=[Peter Lager](http://lagers.org.uk)
+name=Game Control Plus
+sentence=Use joysticks, gamepads and other control devices in your sketch.
+url=http://lagers.org.uk/gamecontrol
+prettyVersion=1.0.1
+paragraph=Create sketches that use joysticks, gamepads etc. that can be easily configured to work on different platforms and with different control devices without having to change the source code.
+version=2
+download=http://www.lagers.org.uk/processing/gamecontrol/GameControlPlus.zip
+id=143
+
+tool
+category=
+authorList=Manindra Moharana
+name=Color Selector Plus
+sentence=Advanced color selector and screen color picker.
+url=http://code.google.com/p/color-selector-plus/
+prettyVersion=2.0.1
+paragraph=Color Selector Plus is the Processing's default Color Selector tool on steroids. Multiple colors can be saved in palettes. Also, grab any color from the screen using the screen color picker.
+version=5
+download=http://color-selector-plus.googlecode.com/files/ColorSelectorPlusTool-latest.zip
+id=020
+
+tool
+category=
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=G4PTool
+sentence=Graphic design tool for creating user interfaces with G4P.
+url=http://www.lagers.org.uk/g4ptool/index.html
+prettyVersion=2.4.2
+paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
+version=15
+download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
+id=052
+
+tool
+category=
+authorList=[Manindra Moharana](http://www.mkmoharana.com/)
+name=Sketch Outline
+sentence=Provides an outline view of the member variables, functions and classes within a sketch and allows easy navigation between them. Similar to the outline view in Eclipse.
+url=https://github.com/Manindra29/Sketch-Outline
+prettyVersion=0.1.7
+paragraph=The list of member variables, functions and inner classes are shown in a tree view. Clicking on any node scrolls and moves the cursor to its definition in the code. Makes navigation within code fast and easy.
+version=2
+download=http://dl.dropbox.com/u/69944346/SketchOutline/SketchOutline.zip
+id=057
+
+tool
+category=
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=AppletMaker
+sentence=Applet exporter and signer.
+url=http://www.lagers.org.uk/appletutil/
+prettyVersion=0.1.3
+paragraph=Simple wizard style interface to export and sign (optional) applets from Processing 2.0
+version=3
+download=http://www.lagers.org.uk/processing/appletmaker/AppletMaker.zip
+id=096
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Templater
+sentence=Save your current sketch as a template to use a base for coding later on.
+url=http://poifox.com/templater/
+prettyVersion=1.02
+paragraph=The Templater tool for Processing 2.0+ is the perfect companion for Bootstrap. It allows the coder to save the currently visible sketch as a template in the templates folder, which can then be used by Bootstrap to initialize sketches with different templates. Templater superceedes the old SaveTemplate tool, and builds upon the original code with better coding style and encapsulation.
+version=3
+download=http://poifox.com/templater/download/Templater.zip
+id=099
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Bootstrap
+sentence=Quickly load custom sketch templates created with the Templater tool.
+url=http://poifox.com/bootstrap/
+prettyVersion=1.02
+paragraph=The Bootstrap tool for Processing 2.0+ lets coders load a predefined template to their current Processing sketch as a base for further coding, removing the tedious process of writing base Procesing style code like setup(), draw() and more. Bootstrap superceedes the old InitSketch tool, and build upon the original code with better coding style and encapsulation.
+version=3
+download=http://poifox.com/bootstrap/download/Bootstrap.zip
+id=100
+
+tool
+category=
+authorList=[Lars Kaltenbach](http://larskaltenbach.de)
+name=SpeedTool
+sentence=Adding features for faster code editing to the PDE.
+url=http://larskaltenbach.de/code/speedTool
+prettyVersion=0.2
+paragraph=Brackets and Quotes get closed automatically.
+version=2
+download=http://larskaltenbach.de/code/speedTool/download/SpeedTool.zip
+id=112
+
+tool
+category=
+authorList=[Devon Rifkin](http://drifkin.net)
+name=Bézier Editor
+sentence=Draw Bézier curves visually and then automatically generate Processing code to include in your sketches.
+url=http://drifkin.net/processing/beziereditor
+prettyVersion=1.0.0
+paragraph=
+version=1
+download=http://drifkin.net/processing/beziereditor/download/BezierEditorTool.zip
+id=114
+
+tool
+category=
+authorList=[Kevin Workman](http://StaticVoidGames.com)
+name=SvgExe
+sentence=A utility that creates a self-extracting jar that runs on any platform.
+url=http://StaticVoidGames.com/SvgExe/
+prettyVersion=1
+paragraph=This is a workaround for Processing only exporting applications for the current system.
+version=1
+download=http://s3.staticvoidgames.com/SvgExe/SvgExeProcessingTool.zip
+id=141
+
+mode
+category=
+authorList=[Florian Jenett](http://bezier.de/)
+name=CoffeeScript Mode
+sentence=Adds a CoffeeScript Mode based on Processing.js
+url=https://github.com/fjenett/coffeescript-mode-processing
+prettyVersion=0.0.7
+paragraph=CoffeeScript Mode is based on JavaScript Mode and runs on top of Processing.js. It runs through a server and inherits the template system from JavaScript mode. CoffeeScript is a functional language that compiles to JavaScript and was created by (Jeremy Ashkenas)[https://github.com/jashkenas/coffee-script].
+version=267
+download=http://bezier.de/processing/modes/CoffeeScriptMode.zip
+id=070
+
+mode
+category=
+authorList=[Florian Jenett](http://bezier.de/)
+name=JavaScript Mode
+sentence=Adds a JavaScript Mode based on Processing.js
+url=https://github.com/fjenett/javascript-mode-processing
+prettyVersion=0.3.1
+paragraph=JavaScript Mode is based on Processing.js. It runs through a server and contains a simple template system.
+version=20
+download=http://bezier.de/processing/modes/JavaScriptMode.zip
+id=087
+
+mode
+category=
+authorList=[The Processing Foundation](http://android.processing.org/)
+name=Android Mode
+sentence=Create projects with Processing for Android devices
+url=https://github.com/processing/processing-android
+prettyVersion=217
+paragraph=Android Mode has been around since Processing 1.5, but we have moved it to a separate download so that it can be developed indepdendently of the PDE and the core.
+version=217
+download=http://android.processing.org/AndroidMode.zip
+id=101
+
+mode
+category=
+authorList=[Gal Sasson](http://galsasson.com)
+name=Tweak Mode
+sentence=Tweak hard-coded numbers in your code and see the result in real-time.
+url=http://galsasson.com/tweakmode/
+prettyVersion=1.0.1
+paragraph=When a sketch is being executed in tweak mode, all hard-coded numbers become interactive and can be modified by clicking and dragging to the left or right. When a value change, the PDE will update the running sketch with the new value and the result will be visible immediately. This mode is useful if you want to refine a certain feature/color/behaviour in your sketch, if you want to experiment freely with numbers, or if you try to understand someone else's code. other uses are welcome.
+version=893
+download=http://galsasson.com/tweakmode/tweakmode.zip
+id=122
+
+mode
+category=
+authorList=[The Processing Foundation](http://processing.org)
+name=PDE X
+sentence=The next generation of PDE
+url=https://github.com/processing/processing-experimental
+prettyVersion=1.0.4b
+paragraph=Intelligent Code Completion, Live Error Checker, Debugger, Auto Refactor, etc.
+version=7
+download=http://download.processing.org/pdeX.zip
+id=124
+
+mode
+category=
+authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
+name=Python
+sentence=Write Processing sketches in Python.
+url=https://github.com/jdf/processing.py
+prettyVersion=Build 0349, built 2014/06/08 09:55
+paragraph=
+version=0349
+download=http://py.processing.org/PythonMode.zip
+id=142
+
+library
+category=Language
+authorList=[Daniel C. Howe](http://rednoise.org/~dhowe)
+name=RiTa
+sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
+url=http://rednoise.org/rita/
+prettyVersion=1.0.63
+paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
+version=1063
+imports=rita
+download=http://www.rednoise.org/rita/RiTa.zip
+id=063
+
+library
+category=Language
+authorList=[Andres Colubri](http://interfaze.info/)
+name=Eliza
+sentence=The classic Eliza psychologist program.
+url=http://interfaze.info/libraries/eliza/
+prettyVersion=1.0
+paragraph=Based on the <a href="http://chayden.net/eliza/Eliza.html">Java implementation by Charles Hayden</a>, faithful to the original 1966 version.
+version=1
+download=http://interfaze.info/libraries/eliza/download/Eliza.zip
+id=119
+
+library
+category=Geometry
+authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
+name=Geomerative
+sentence=Extends 2D geometry operations to facilitate generative geometry. Includes a TrueType font interpreter.
+url=http://www.ricardmarxer.com/geomerative
+prettyVersion=
+paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
+version=40
+download=http://www.ricardmarxer.com/geomerative/geomerative.zip
+id=039
+
+library
+category=Geometry
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.2
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=4
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=085
+
+library
+category=Geometry
+authorList=[Mark Collins & Toru Hasegawa](http://proxyarch.com)
+name=ComputationalGeometry
+sentence=A simple, lightweight library for generating meshes such as isometric surfaces, boundary hulls and skeletons.
+url=http://thecloudlab.org/processing/library.html
+prettyVersion=2
+paragraph=Meshes are generated by specifying points and edges that inform the generation of the target output. In isometric surfacing, the library supports direct manipulation of the underlying grid data as well as simple meta-ball modeling.
+version=2
+download=http://www.thecloudlab.org/processing/download/ComputationalGeometry.zip
+id=106
+
+library
+category=Geometry
+authorList=[Carl Emil Carlsen](http://sixthsensor.dk/) and [Daniel Høier Øhrgaard](http://stimulacrum.com)
+name=point2line
+sentence=Basic tools for calculating geometry in two dimensions.
+url=http://sixthsensor.dk/code/p5/point2line
+prettyVersion=06
+paragraph=
+version=6
+download=http://sixthsensor.dk/code/p5/point2line/download/point2line.zip
+id=113
+
+library
+category=Compilation
+authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
+name=gicentreUtils
+sentence=Assists creation of data visualization sketches.
+url=http://www.gicentre.org/utils/
+prettyVersion=3.3.0
+paragraph=Includes color utilities, statistical graphics, morphing classes, spatial utilities and map projections, text input/output and multi-sketch tools. Together these make the task of creating data visualization sketches much faster by providing code for commonly repeated tasks such as zooming in and out of a sketch, setting up color tables etc. For documentation and examples, see the [gicentreUtils pages](http://www.gicentre.org/utils/).
+version=13
+download=http://www.gicentre.org/utils/gicentreUtils.zip
+id=004
+
+library
+category=Compilation
+authorList=Hartmut Bohnacker and Benedikt Gross
+name=GenerativeDesign
+sentence=Compilation of various functions belonging to the book GENERATIVE DESIGN (english), GENERATIVE GESTALTUNG (german) and DESIGN GENERATIF (french).
+url=http://www.generative-gestaltung.de/
+prettyVersion=1.0.5
+paragraph=It supplies classes and functions for 3d-surfaces, simple physics (nodes, springs, attractors), graphic tablets, ASE-export or asynchronous loading of xml, html and images.
+version=6
+download=http://www.generative-gestaltung.de/downloads/GenerativeDesign.zip
+id=007
+
+library
+category=Compilation
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.2
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=4
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=084
+
+library
+category=Utilities
+authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
+name=ID3
+sentence=Extracts ID3 tags from Mp3 files.
+url=http://jorgecardoso.eu/processing/ID3/
+prettyVersion=0.9
+paragraph=Allows you read the ID3v1.1 tags from MP3 files. If you want to know more about ID3 tags check the [id3.org](http://id3.org) page.
+version=1
+download=http://jorgecardoso.eu/processing/ID3/ID3.zip
+id=027
+
+library
+category=Utilities
+authorList=[Yonas Sandbaek](http://www.seltar.org/)
+name=Post To Web
+sentence=Upload files to a web server, supported formats are pdf, png, jpeg, gif and tiff.
+url=http://libraries.seltar.org/postToWeb/
+prettyVersion=0.7
+paragraph=
+version=11
+download=http://libraries.seltar.org/postToWeb/postToWeb.zip
+id=031
+
+library
+category=Utilities
+authorList=[David Bouchard](http://www.deadpixel.ca)
+name=keystone
+sentence=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
+url=http://keystonep5.sourceforge.net/
+prettyVersion=005
+paragraph=A video projection mapping library which allows to warp sketches onto any flat surface by using corner pin keystoning.
+version=5
+download=http://keystonep5.sourceforge.net/download/keystone.zip
+id=034
+
+library
+category=Utilities
+authorList=[Eric Socolofsky](http://transmote.com/)
+name=Nest
+sentence=Scenegraph and mouse event handling system based loosely on ActionScript 3.0.
+url=http://transmote.com/nest/
+prettyVersion=0.7.0
+paragraph=In addition to the scenegraph, Nest also includes an event-based communication system (built on the Observer pattern as implemented by Java's Observer interface), and some minimal UI components.
+version=9
+download=http://transmote.com/nest/download/Nest.zip
+id=047
+
+library
+category=Utilities
+authorList=[Philippe Lhoste](http://Phi.Lho.free.fr/)
+name=P8gGraphicsSVG
+sentence=Allows Processing to export the drawings of a sketch in SVG format.
+url=http://Phi.Lho.free.fr/programming/Processing/P8gGraphicsSVG/
+prettyVersion=2.0
+paragraph=It is used in a way similar to PGraphicsPDF, as a renderer / recorder. It uses the Apache Batik library.
+version=200
+download=http://phi.lho.free.fr/programming/Processing/P8gGraphicsSVG/P8gGraphicsSVG.zip
+id=068
+
+library
+category=Utilities
+authorList=[Darius Morawiec](http://voidplus.de)
+name=$1 Unistroke Recognizer
+sentence=Implementation of the [$1 Gesture Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/), a two-dimensional template based gesture recognition.
+url=https://github.com/voidplus/onedollar-unistroke-recognizer
+prettyVersion=0.2.4
+paragraph=
+version=7
+download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
+id=069
+
+library
+category=Utilities
+authorList=[Jason Gessner](http://multiply.org/)
+name=TimedEvents
+sentence=A couple of classes for firing off timed events at regular or random intervals.
+url=http://multiply.org/processing/
+prettyVersion=1.0.1
+paragraph=TimedEvents provides 2 main functions: events fired periodically with a regular period or a random delay within a range you specify.
+version=2
+download=http://www.multiply.org/processing/TimedEvents.zip
+id=082
+
+library
+category=Utilities
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Executor
+sentence=Scheduled executor service for Processing.
+url=https://github.com/heuermh/executor-processing
+prettyVersion=1.0.2
+paragraph=Run tasks (reflective method calls to your PApplet) later, repeat tasks at intervals, and schedule tasks to happen after other scheduled tasks.
+version=3
+download=https://dl.dropbox.com/u/87680069/executor.zip
+id=094
+
+library
+category=Utilities
+authorList=[Ilias Bergstrom](http://www.onar3d.com)
+name=Mother
+sentence=A library for live visuals performance with Processing sketches
+url=http://www.onar3d.com/mother
+prettyVersion=1.5.0
+paragraph=
+version=2
+download=https://github.com/onar3d/processing-mother/releases/download/latest/Mother.zip
+id=129
+
+library
+category=Utilities
+authorList=[Dong Hyun Choi](http://dhchoi.com)
+name=CountdownTimer
+sentence=A countdown timer which triggers callback events for each user-defined tick interval during the timer's duration.
+url=https://github.com/dhchoi/processing-countdowntimer
+prettyVersion=0.9.0
+paragraph=The timer will trigger onTickEvents after each interval and finish with an onFinishEvent. Multiple timers can be created inside the program, in which case each timer will have its own unique id.
+version=1
+download=https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.zip
+id=140
+
+library
+category=Simulation
+authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
+name=Fisica
+sentence=A wrapper for JBox2D, a 2D physics engine.
+url=http://www.ricardmarxer.com/fisica
+prettyVersion=
+paragraph=It is simply a wrapper around [JBox2D](http://www.jbox2d.org/). It tries to make it much easier to create physical models by exposing an object oriented API similar to [PPhys2D](http://pphys2d.jmcouillard.com/) physics library for Processing.
+version=15
+download=http://www.ricardmarxer.com/fisica/download/fisica.zip
+id=018
+
+library
+category=Simulation
+authorList=[Daniel Shiffman](http://www.shiffman.net/)
+name=Box2D for Processing
+sentence=A library and set of examples for 2D physics simulation wrapping some aspects of [JBox2D](http://www.jbox2d.org/), a Java implementation of [Box2D](http://box2d.org/).
+url=https://github.com/shiffman/Box2D-for-Processing
+prettyVersion=0.4
+paragraph=
+version=4
+download=http://shiffman.net/p5/libraries/box2d_processing/box2d_processing.zip
+id=014
+
+library
+category=Simulation
+authorList=[RSG](http://r-s-g.org)
+name=Carnivore
+sentence=Surveillance tool for data networks.
+url=http://r-s-g.org/carnivore
+prettyVersion=6
+paragraph=
+version=6
+download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
+id=041
+
+library
+category=Simulation
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.11
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3018
+download=https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
+id=055
+
+library
+category=Simulation
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.2
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=4
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=086
+
+library
+category=Simulation
+authorList=[Daniel Koehler](http://www.lab-eds.org)
+name=Punktiert
+sentence=Particle engine for local particle behaviors.
+url=http://www.lab-eds.org/punktiert
+prettyVersion=2.0
+paragraph=Punktiert is a particle engine based and thought as an extension of Karsten Schmidt's toxiclibs.physics code. This library is optimized for the local negotiation between particles. And it allows hierarchies between multiple particle groups. The access and methods are simplified, no more difference between 2D/3D, extended behaviors. This library is developed through and for an architectural context. Based on my teaching experiences over the past couple years.
+version=2
+download=https://dl.dropboxusercontent.com/u/6030446/punktiert/punktiert.zip
+id=107
+
+library
+category=Simulation
+authorList=[Daniel Koehler](http://www.lab-eds.org)
+name=BRigid
+sentence=BRigid provides classes for an easier handling of [jBullet] (http://jbullet.advel.cz/) in Processing
+url=http://www.lab-eds.org/brigid
+prettyVersion=1.1
+paragraph=bRigid is thought as a kind of Processing port for the bullet physics simulation library written in C++. This library allows the interaction of rigid bodies in 3D. Geometry/ Shapes are build with Processing PShape Class, for convinient display and export(dxf) jBullet is a Java port of Bullet (c) 2008 Martin Dvorak http://jbullet.advel.cz/; Bullet Continuous Collision Detection and Physics Library (c) 2003-2013 Erwin Coumans http://www.bulletphysics.com/ and many thanks to the jBullet/processing examples of Giulio Piacentino and Richard Brauer
+version=2
+download=https://dl.dropboxusercontent.com/u/6030446/bRigid/bRigid.zip
+id=108
+
+library
+category=Simulation
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=AI for 2D Games
+sentence=An AI framework suitable for 2D games and simulations.
+url=http://www.lagers.org.uk/ai4g/index.html
+prettyVersion=1.1
+paragraph=This supports the creation of sketches that require state driven autonomous agents.  Everything is here to get you started, including many examples demonstrating the library features. The [website] (http://www.lagers.org.uk/ai4g/index.html) has many articles and programming examples explaining this sophisticated library.
+version=4
+download=http://www.lagers.org.uk/processing/ai4g/AI_for_2D_Games.zip
+id=127
+
+library
+category=Hardware
+authorList=[Daniel Shiffman](http://shiffman.net)
+name=Most Pixels Ever
+sentence=Framework for spanning Processing sketches across multiple screens.
+url=https://github.com/shiffman/Most-Pixels-Ever-Processing
+prettyVersion=2.0.2
+paragraph=Through server / client communication multiple sketches can be run on separate machines and synced.
+version=3
+download=http://www.shiffman.net/p5/libraries/mpe/mpe.zip
+id=010
+
+library
+category=Hardware
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=Sudden Motion Sensor
+sentence=Interface to the Apple Sudden Motion Sensor in MacBooks.
+url=http://www.shiffman.net/p5/sms/
+prettyVersion=0.1a
+paragraph=
+version=1
+download=http://www.shiffman.net/p5/libraries/sms/sms.zip
+id=015
+
+library
+category=Hardware
+authorList=[David A. Mellis](http://dam.mellis.org/)
+name=Arduino (Firmata)
+sentence=Controls Arduino boards running the Firmata firmware.
+url=http://arduino.cc/playground/Interfacing/Processing
+prettyVersion=
+paragraph=Works with the StandardFirmata example included in the Arduino software distribution.  To use Firmata with other software, see [the Firmata homepage](http://firmata.org/)
+version=7
+download=http://playground.arduino.cc/uploads/Interfacing/processing2-arduino.zip
+id=024
+
+library
+category=Hardware
+authorList=[Martin Raedlinger](http://www.formatlos.de/)
+name=Apple Light Sensor
+sentence=Interface to the Light Sensor in MacBook Pro computers.
+url=http://projects.formatlos.de/ambientlightsensor/
+prettyVersion=1.0
+paragraph=
+version=1
+download=http://projects.formatlos.de/ambientlightsensor/download/AmbientLightSensor.zip
+id=028
+
+library
+category=Hardware
+authorList=[Daniel Sauter](http://daniel-sauter.com/) and j.duran
+name=Ketai
+sentence=Android library for working with sensors, cameras, multi-touch, networking, Bluetooth, WiFi Direct, Near Field Communication, and SQLite
+url=http://ketaiLibrary.com/
+prettyVersion=v10
+paragraph=The Ketai library simplifies working hardware devices and sensors built into Android phones and tablets. It is designed specifically for the Android mode in Processing 2.0+, and includes the following classes: KetaiSensor, KetaiGesture, KetaiCamera, KetaiSimpleFace, KetaiList, KetaiKeyboard, KetaiLocation, KetaiBluetooth, KetaiWiFiDirect, KetaiNFC, and KetaiSQLite.
+version=10
+download=http://ketailibrary.org/ketai.zip
+id=066
+
+library
+category=Hardware
+authorList=Henri DAVID
+name=dmxP512
+sentence=DMX output for enttec DMX USB PRO and lanbox LCE.
+url=http://motscousus.com/stuff/2011-01_dmxP512/
+prettyVersion=1.1
+paragraph=
+version=2
+download=http://cloud.github.com/downloads/hdavid/dmxP512/dmxP512.zip
+id=071
+
+library
+category=Hardware
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=LeapMotion
+sentence=Forwards Leap Motion controller events to a Processing sketch.
+url=https://github.com/heuermh/leap-motion-processing
+prettyVersion=1.14
+paragraph=
+version=16
+download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
+id=090
+
+library
+category=Hardware
+authorList=[Arvydas Juskevicius](http://www.blinkstick.com)
+name=BlinkStick
+sentence=Interface BlinkStick - smart USB RGB LED.
+url=http://arvydas.github.io/blinkstick-processing/
+prettyVersion=0.1.0
+paragraph=This library provides an ablity to control any number of BlinkStick devices from Processing.
+version=1
+download=http://arvydas.github.io/blinkstick-processing/download/BlinkStick.zip
+id=104
+
+library
+category=Hardware
+authorList=[Darius Morawiec](http://voidplus.de)
+name=Leap Motion for Processing
+sentence=Simple library to use the complete [Leap Motion](https://leapmotion.com/) [API](https://developer.leapmotion.com/documentation/api/annotated) in [Processing](http://processing.org/).
+url=https://github.com/voidplus/leap-motion-processing
+prettyVersion=1.1.3.1
+paragraph=
+version=5
+download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
+id=109
+
+library
+category=Typography
+authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
+name=Geomerative
+sentence=Extends 2D geometry operations to facilitate generative geometry. Includes a TrueType font interpreter.
+url=http://www.ricardmarxer.com/geomerative
+prettyVersion=
+paragraph=This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
+version=40
+download=http://www.ricardmarxer.com/geomerative/geomerative.zip
+id=038
+
+library
+category=Typography
+authorList=[Andreas Koller](http://andreaskoller.com)
+name=Fontastic
+sentence=A font file writer to create TTF and WOFF (Webfonts).
+url=http://code.andreaskoller.com/libraries/fontastic
+prettyVersion=0.4
+paragraph=
+version=4
+download=https://raw.github.com/andreaskoller/Fontastic/master/download/Fontastic.zip
+id=088
+
+library
+category=Typography
+authorList=[Elie Zananiri](http://www.silentlycrashing.net) / [Obx Labs](http://www.obxlabs.net/)
+name=NextText
+sentence=Assists in making dynamic and interactive text-based applications.
+url=http://nexttext.net/
+prettyVersion=2.0.0
+paragraph=The library uses TrueType fonts to render text which moves and changes shape according to a set of rules. The programmer has full control over the text and the rules defining its behaviour.
+version=145
+download=https://github.com/prisonerjohn/NextText/releases/download/latest/NextText.zip
+id=116
+
+library
+category=Animation
+authorList=[Benedikt Gross](http://www.looksgood.de/)
+name=Ani
+sentence=A lightweight library for creating animations and transitions.
+url=http://www.looksgood.de/libraries/Ani/
+prettyVersion=2.5
+paragraph=
+version=7
+download=http://www.looksgood.de/libraries/Ani/Ani-latest.zip
+id=003
+
+library
+category=Animation
+authorList=[Yonas Sandbaek](http://www.seltar.org/)
+name=Motion
+sentence=Motion simplified.
+url=http://libraries.seltar.org/motion/
+prettyVersion=1.3
+paragraph=
+version=3
+download=http://libraries.seltar.org/motion/motion.zip
+id=030
+
+library
+category=Animation
+authorList=[Ekene Ijeoma](http://ekeneijeoma.com)
+name=ijeomamotion
+sentence=A cross-mode Processing library for sketching animations with numbers, colors vectors, beziers, curves and more.
+url=http://ekeneijeoma.com/processing/ijeomamotion
+prettyVersion=5.5
+paragraph=Cross-mode means that it will run and export in both Processing IDE's Java and Javascript modes. It can play tweens in parallel, in a sequence or in a timeline/keyframes. Parallels can playback Sequences and vice versa. Timelines can also playback Parallels and Sequences too. You can also use all of aforementioed to call functions! You can also use it in Javascript with or without Processing. However as of now the javascript port ijeomamotion.js doesnt include the ijeomamotion.tween.Callback class or ijeomamotion.geom and ijeomamotion.math packages but it will soon! Please post issues on Github or Processing's forums under "Contributed Libraries".
+version=55
+download=http://ekeneijeoma.com/processing/ijeomamotion/download/ijeomamotion.zip
+id=033
+
+library
+category=Animation
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=Sprites
+sentence=Sprite control and animation for games and graphic applications.
+url=http://www.lagers.org.uk/s4p
+prettyVersion=2.0.5
+paragraph=Provides complete control over sprite image animation, sprite movement and collision detection. Examples can be seen [here](http://www.lagers.org.uk/s4p/applets/s4p_showcase)
+version=7
+download=http://www.lagers.org.uk/processing/sprites/Sprites.zip
+id=062
+
+library
+category=Animation
+authorList=Ryan Lester, Chris Novello, Sam Eilertsen, and Jen Kovnats
+name=Hermes
+sentence=Experimental game framework and engine for rapid prototyping of games and simulations.
+url=http://rdlester.github.com/hermes
+prettyVersion=1.2
+paragraph=Leverges the strengths of Object-Oriented Design and the ease of Processing to make it easy to bring game mechanics to life. Built-in OSC support makes it easy to enable communication between your games and external data sources. Also includes animation/sprite and physics libraries that can be used outside the framework.
+version=4
+download=http://rdlester.github.com/hermes/downloads/hermes.zip
+id=083
+
+library
+category=Animation
+authorList=[Michael Heuer](https://github.com/heuermh)
+name=Frames
+sentence=Sprite sheet and frame animation support in Processing.
+url=https://github.com/heuermh/frames-processing
+prettyVersion=1.0
+paragraph=
+version=1
+download=https://dl.dropbox.com/u/87680069/frames.zip
+id=095
+
+library
+category=Video & Vision
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=Open Kinect for Processing
+sentence=A Kinect implementation for Processing using open source drivers (libfreenect)
+url=http://www.shiffman.net/p5/kinect/
+prettyVersion=0.2
+paragraph=
+version=2
+download=http://shiffman.net/p5/libraries/openkinect_processing/openkinect_processing.zip
+id=013
+
+library
+category=Video & Vision
+authorList=[Julien 'v3ga' Gachadoat](http://www.v3ga.net)
+name=BlobDetection
+sentence=Computer vision library for finding blobs in an image
+url=http://www.v3ga.net/processing/BlobDetection/
+prettyVersion=1.00
+paragraph=
+version=1
+download=http://www.v3ga.net/processing/BlobDetection/blobDetection.zip
+id=023
+
+library
+category=Video & Vision
+authorList=[Daniel Shiffman](http://shiffman.net])
+name=Rekognition for Processing
+sentence=A library to interface with [Rekognition](https://rekognition.com/), an cloud-based visual recognition solution.
+url=https://github.com/shiffman/Rekognition-for-Processing
+prettyVersion=0.3
+paragraph=This library requires [HTTP Requests for Processing](https://github.com/runemadsen/HTTP-Requests-for-Processing).
+version=1
+download=http://shiffman.net/p5/libraries/rekognition_processing/rekognition_processing.zip
+id=125
+
+library
+category=Video & Vision
+authorList=[Greg Borenstein](http://gregborenstein.com)
+name=OpenCV for Processing
+sentence=Computer vision with OpenCV.
+url=https://github.com/atduskgreg/opencv-processing
+prettyVersion=0.4.5
+paragraph=Based on the official OpenCV Java API. A nice Processing-style API for common tasks and access to the full power of the OpenCV API for the advanced stuff.
+version=10
+download=https://github.com/atduskgreg/opencv-processing/releases/download/latest/opencv_processing.zip
+id=132
+
+library
+category=Video & Vision
+authorList=[Antonio Molinaro](https://sites.google.com/site/blobscanner/home/)
+name=Blobscanner
+sentence=Adds blob detection and analysis capabilities to Processing.
+url=https://sites.google.com/site/blobscanner/home/
+prettyVersion=0.1-a
+paragraph=Searches images or videos for blobs of a requested brightness, size, or quantity. From the objects found it returns all the main features, like center of mass, weight, bounding box, contours, perimeter size and more... Lightweight and easy to extend, this plugin is also very easy to use.
+version=7
+download=https://sites.google.com/site/blobscanner/Download/blobscanner.zip
+id=134
+
+library
+category=Other
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=Path_Finder
+sentence=Find paths through 2D/3D navigation graphs.
+url=http://www.lagers.org.uk/pfind/index.html
+prettyVersion=0.1.2
+paragraph=Define a graph in terms of nodes and edges. Then use BFS, DFS, Dijkstra or A* to find possible paths through the graph.
+version=2
+download=http://www.lagers.org.uk/processing/pathfinder/Path_Finder.zip
+id=093
+
+library
+category=Data
+authorList=[Jerome Saint-Clair](http://www.saint-clair.net/)
+name=GML4U
+sentence=A [Graffiti Markup Language](http://graffitimarkuplanguage.com/) library for Processing.
+url=https://github.com/01010101/GML4U/wiki
+prettyVersion=0.1.9
+paragraph=GML is an open file format designed to store graffiti motion data.
+version=9
+download=http://www.saint-clair.net/download/gml4u/GML4U.zip
+id=008
+
+library
+category=Data
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=SFTP
+sentence=SFTP direct from Processing (using JSch)
+url=http://www.shiffman.net/2007/06/04/sftp-with-java-processing/
+prettyVersion=0.1a
+paragraph=Includes ls and get, needs to be updated with put
+version=1
+download=http://www.shiffman.net/p5/libraries/sftp/sftp.zip
+id=011
+
+library
+category=Data
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=QRCode
+sentence=Reads QR Code images, a two-dimensional barcode format.
+url=http://www.shiffman.net/p5/qrcode-processing/
+prettyVersion=0.3a
+paragraph=
+version=3
+download=http://www.shiffman.net/p5/libraries/qrcode/qrcodeprocessing.zip
+id=012
+
+library
+category=Data
+authorList=[RSG](http://r-s-g.org)
+name=Carnivore
+sentence=Surveillance tool for data networks.
+url=http://r-s-g.org/carnivore
+prettyVersion=6
+paragraph=
+version=6
+download=http://r-s-g.org/carnivore/download/carnivore_p5lib.zip
+id=040
+
+library
+category=Data
+authorList=[Jon Reades](http://www.reades.com/)
+name=MapThing
+sentence=A collection of classes for reading and displaying Shape files (a.k.a. ESRI shapefiles), CSV, and GPX data in a map-based sketch.
+url=http://www.reades.com/MapThing
+prettyVersion=1.4
+paragraph=There are four main classes with which you should be familiar: 1) BoundingBox defines the sketch's geographic 'envelope' by mapping a shapefile's geographic coordinates on to the viewable space of the sketch; 2) Lines is used to read and display single-part and multi-part line data; 3) Points is used to read and display point data; and 4) Polygons is used to read and display single and multi-part polygon data (this only works with shapefiles for now). GPX display needs work.
+version=5
+download=http://www.reades.com/MapThing/MapThing.zip
+id=044
+
+library
+category=Data
+authorList=Marcel Schwittlick / onformative
+name=YahooWeather
+sentence=Framework for including weather data into Processing.
+url=http://www.onformative.com/lab/google-weather-library-for-processing/
+prettyVersion=0.91
+paragraph=
+version=2
+download=http://www.onformative.com/uploads/googleWeather/YahooWeather.zip
+id=053
+
+library
+category=Data
+authorList=[Maxime Walzberg (Nucky)](http://blog.stainpixels.com/)
+name=Share
+sentence=Classes to create a poll in a Processing sketch, and to read/send string messages to a server from a sketch.
+url=http://sharelib.stainpixels.com/
+prettyVersion=2
+paragraph=
+version=2
+download=http://blog.stainpixels.com/public/share.zip
+id=065
+
+library
+category=Data
+authorList=[Andreas Schlegel](http://www.sojamo.de/)
+name=oscP5
+sentence=An Open Sound Control (OSC) implementation.
+url=http://www.sojamo.de/libraries/oscp5
+prettyVersion=0.9.9
+paragraph=The UDP, TCP, Multicast protocols are supported and can be used for client/server communication independently from OSC as well.
+version=99
+download=http://sojamo.de/libraries/oscp5/oscP5.zip
+id=072
+
+library
+category=Data
+authorList=[Stephane Cousot](http://ubaa.net/)
+name=UDP
+sentence=Enables simple UDP communication, as well as multicast support.
+url=http://ubaa.net/shared/processing/udp/
+prettyVersion=0.1
+paragraph=
+version=1
+download=http://ubaa.net/shared/processing/udp/udp.zip
+id=073
+
+library
+category=Data
+authorList=[Darius Morawiec](http://voidplus.de)
+name=SoundCloud
+sentence=Unofficial Java library, which simplifies the use of the official [SoundCloud Java API wrapper](https://github.com/soundcloud/java-api-wrapper).
+url=https://github.com/voidplus/soundcloud-java-library
+prettyVersion=0.1.4
+paragraph=
+version=6
+download=https://raw.github.com/voidplus/soundcloud-java-library/master/processing/SoundCloud.zip
+id=089
+
+library
+category=Data
+authorList=[Hamzeen. H.](http://www.hamzeen.com)
+name=ShortMessage
+sentence=A library to send/receive short messages (SMS) from Processing.
+url=http://hamzeen.github.io/smsP5
+prettyVersion=1.0.2
+paragraph=This library wraps around SMSLib to provide a simple API for Processing users, examples included.
+version=1
+download=http://hamzeen.github.io/ShortMessage/ShortMessage.zip
+id=103
+
+library
+category=Data
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=XlsReader
+sentence=A library to read from XLS (Excel) files
+url=https://github.com/fjenett/xlsreader-library-processing
+prettyVersion=0.1.1
+paragraph=XlsReader allows to read from .xls files as if they were a database
+version=504
+download=https://raw.github.com/fjenett/xlsreader-library-processing/latest/release/XlsReader.zip
+id=110
+
+library
+category=Data
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=BezierSQLib
+sentence=A library to facilitate communication with SQL-based databases
+url=https://github.com/fjenett/sql-library-processing
+prettyVersion=0.2.0
+paragraph=SQLibrary is an interface to MySQL, SQLite and PostgreSQL databases
+version=1158
+download=https://raw.github.com/fjenett/sql-library-processing/latest/release/BezierSQLib.zip
+id=111
+
+library
+category=Data
+authorList=[Raphael de Courville](https://vimeo.com/sableraf/)
+name=Signal Filter
+sentence=Filter noisy and jittery signals.
+url=https://github.com/SableRaf/signalfilter
+prettyVersion=1.0.0
+paragraph=OneEuroFilter for Processing based on the Java implementation by StŽphane Conversy.
+version=1
+download=http://s176381904.onlinehome.fr/processing/SignalFilter/download/signalFilter.zip
+id=115
+
+library
+category=Data
+authorList=[Darius Morawiec](http://voidplus.de)
+name=Redis
+sentence=Wrapper to use [Redis](http://redis.io/) in [Processing](http://processing.org/). It's based on [Jedis](https://github.com/xetorthio/jedis), a small Java client by [Jonathan Leibiusky](https://github.com/xetorthio).
+url=https://github.com/voidplus/redis-processing
+prettyVersion=1.1
+paragraph=
+version=3
+download=https://raw.github.com/voidplus/redis-processing/master/download/Redis.zip
+id=133
+
+library
+category=Data
+authorList=[Temboo](http://temboo.com/)
+name=Temboo
+sentence=Generate code to connect to 100+ APIs, code utilities, and databases in Processing.
+url=http://www.temboo.com/processing
+prettyVersion=1.86
+paragraph=Explore [temboo.com](http://temboo.com/) and auto-generate Processing sketches for your favorite web services and resources.
+version=186
+download=https://temboo.com/files/temboo-processing.zip
+id=135
+
+library
+category=Data
+authorList=[Rune Madsen](http://www.runemadsen.com), [Daniel Shiffman](http://shiffman.net)
+name=HTTP Requests for Processing
+sentence=HTTP Requests for Processing is a small library that takes the pain out of doing HTTP requests in Processing.
+url=https://github.com/runemadsen/HTTP-Requests-for-Processing
+prettyVersion=0.1.1
+paragraph=
+version=1
+download=http://shiffman.net/p5/libraries/httprequests_processing/httprequests_processing.zip
+id=137
+
+library
+category=GUI
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=G4P
+sentence=Provides a set of 2D GUI controls and multiple window support.
+url=http://www.lagers.org.uk/g4p
+prettyVersion=3.4
+paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
+version=17
+download=http://www.lagers.org.uk/processing/g4p/G4P.zip
+id=051
+
+library
+category=GUI
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Guido
+sentence=A simple cross mode GUI library
+url=https://github.com/fjenett/Guido
+prettyVersion=0.0.4
+paragraph=Guido is a small GUI library that is compatible with both Java (standard) and JavaScript modes.
+version=143
+download=https://raw.github.com/fjenett/Guido/latest/releases/Guido.zip
+id=054
+
+library
+category=GUI
+authorList=[Andreas Schlegel](http://www.sojamo.de/)
+name=ControlP5
+sentence=A range of controllers to build custom graphical user interfaces for desktop and android apps.
+url=http://www.sojamo.de/libraries/controlp5
+prettyVersion=2.0.4
+paragraph=Includes interface elements such as slider, button, knob, toggle, textfield, dropdown menu, listbox, tabs, charts and more.
+version=80
+download=http://www.sojamo.de/libraries/controlP5/controlP5.zip
+id=058
+
+library
+category=Math
+authorList=[Daniel Brown and Andreas Freise](http://www.gwoptics.org/processing/gwoptics_p5lib/)
+name=gwoptics
+sentence=Tools for drawing graphs in 2D and 3D.
+url=http://www.gwoptics.org/processing/gwoptics_p5lib/
+prettyVersion=0.5.0
+paragraph=We have developped the library to create simple scientific simulations and data displays, as shown on our [projects page](http://www.gwoptics.org/processing/).
+version=50
+download=http://www.gwoptics.org/processing/gwoptics_p5lib/download/gwoptics.zip
+id=021
+
+library
+category=Math
+authorList=[Adila Faruk](http://adilapapaya.com)
+name=papaya
+sentence=A collection of utilities for Statistics and Matrix-related manipulations
+url=http://adilapapaya.com/papayastatistics/
+prettyVersion=1.0.0
+version=1
+download=https://dl.dropboxusercontent.com/u/6990683/Processing/papaya.zip
+id=045
+
+library
+category=Math
+authorList=[Florian Jenett](http://www.bezier.de/)
+name=Combinatorics
+sentence=Generate combinations, variations and permutations
+url=https://github.com/fjenett/combinatorics
+prettyVersion=0.0.11
+paragraph=This library provides an easy way to generate combinations, variations and permutations from a given set of values.
+version=3018
+download=https://raw.github.com/fjenett/combinatorics/latest/releases/Combinatorics.zip
+id=056
+
+library
+category=Math
+authorList=[Javier Gracia Carpio](http://www.openprocessing.org/user/16300)
+name=grafica
+sentence=Create simple and configurable 2D plots with Processing.
+url=https://github.com/jagracar/grafica
+prettyVersion=1.2.0
+paragraph=
+version=3
+download=https://raw.github.com/jagracar/grafica/master/releases/grafica.zip
+id=126
+
+library
+category=Math
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=QScript
+sentence=Algorithm and Expression evaluator.
+url=http://www.lagers.org.uk
+prettyVersion=1.0.0
+paragraph=Not only will it evaluate mathematical expressions, it can execute a simple algorithm created from multiple expressions. Simple selection and iteration statements can be used in the algorithm to control execution flow. The more advanced user can easily extend the evaluator by adding their own methods.
+version=1
+download=http://www.lagers.org.uk/processing/qscript/QScript.zip
+id=131
+
+library
+category=3D
+authorList=[Jean Pierre Charalambos](http://otrolado.info)
+name=proscene
+sentence=Library that eases the creation of interactive scenes.
+url=http://otrolado.info
+prettyVersion=2.0.0
+paragraph=Main features include: 1. Default interactivity throughthe mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
+version=16
+download=http://otrolado.info/proscene.zip
+id=001
+
+library
+category=3D
+authorList=[Frederik Vanhoutte](http://www.wblut.com/)
+name=HE_Mesh
+sentence=HE_Mesh is an implementation of a half-edge datastructure for manipulating 3D meshes.
+url=http://hemesh.wblut.com/
+prettyVersion=1.81
+paragraph=
+version=9
+download=http://hemesh.wblut.com/hemesh-latest.zip
+id=009
+
+library
+category=3D
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+name=PeasyCam
+sentence=A mouse driven camera-control library for 3D sketches.
+url=http://mrfeinberg.com/peasycam/
+version=201
+download=http://mrfeinberg.com/peasycam/peasycam.zip
+id=017
+
+library
+category=3D
+authorList=[Nicolas Clavaud](http://n.clavaud.free.fr/)
+name=Picking
+sentence=Pick an object in a 3D scene easily.
+url=http://n.clavaud.free.fr/processing/library/picking/
+prettyVersion=0.2.1
+paragraph=
+version=6
+download=http://n.clavaud.free.fr/processing/library/picking/download/Picking.zip
+id=032
+
+library
+category=3D
+authorList=[Kristian Damkjer](http://www.gdsstudios.com/)
+name=OCD: Obsessive Camera Direction
+sentence=The Obsessive Camera Direction (OCD) library allows intuitive control and creation of Processing viewport Cameras.
+url=http://www.gdsstudios.com/processing/libraries/ocd/
+prettyVersion=1.5
+paragraph=With OCD, it is easy set up several cameras and switch between them. It is also easy to manipulate individual cameras using standard camera movement commands.
+version=5
+download=http://www.gdsstudios.com/processing/libraries/ocd/download/ocd.zip
+id=036
+
+library
+category=3D
+authorList=[Jonathan Feinberg](http://mrfeinberg.com/)
+name=Patchy
+sentence=Patchy provides an easy-to-use bicubic patch for 3D Processing sketches.
+url=http://mrfeinberg.com/patchy/
+version=200
+download=http://mrfeinberg.com/patchy/patchy.zip
+id=037
+
+library
+category=3D
+authorList=[Tatsuya Saito](http://saito-tatsuya.net/) and [Matt Ditton](http://thequietvoid.com/)
+name=OBJLoader
+sentence=.OBJ 3D model file loader
+url=http://code.google.com/p/saitoobjloader/
+prettyVersion=0.99
+paragraph=
+version=23
+download=http://saitoobjloader.googlecode.com/files/OBJLoader.zip
+id=043
+
+library
+category=3D
+authorList=[Peter Lager](http://www.lagers.org.uk)
+name=Shapes3d
+sentence=3D Shape creation and display made easy.
+url=http://www.lagers.org.uk/s3d4p/index.html
+prettyVersion=2.1.4
+paragraph=Choose from a wide range of shapes including the sphere, box, cylinder, torus, helix, bezier shapes and various tubes. All of the shapes can be shown in wireframe, colour or textured with your own images. Many of library examples need the [PeasyCam](http://http://www.processing.org/reference/libraries/
+version=9
+download=http://www.lagers.org.uk/processing/shapes3d/Shapes3d.zip
+id=050
+
+library
+category=3D
+authorList=[Angus Forbes](http://www.creativecodinglab.com/) and [Charlie Roberts](http://www.charlie-roberts.com/)
+name=Stereo
+sentence=Library for anaglyph, passive stereo, or active stereo rendering.
+url=https://github.com/CreativeCodingLab/stereo
+prettyVersion=2.0
+paragraph=
+version=2
+download=http://ccl.angusforbes.com/stereo.zip
+id=117
+
+library
+category=3D
+authorList=[Max Rheiner](http://code.google.com/p/simple-openni/)
+name=SimpleOpenNI
+sentence=A simple wrapper for OpenNI(Kinect-Library). Before you can use SimpleOpenNI you have to [install](http://code.google.com/p/simple-openni/wiki/Installation) OpenNI.
+url=http://code.google.com/p/simple-openni/
+prettyVersion=1.96
+paragraph=
+version=196
+download=https://simple-openni.googlecode.com/svn/trunk/SimpleOpenNI-2.0/dist/all/SimpleOpenNI.zip
+id=120
+
+library
+category=3D
+authorList=[Satoru Sugihara](http://atlv.org/)
+name=iGeo
+sentence=3D geometry library with packages of NURBS geometry, polygon mesh geometry, vector math, 3D display and navigation, 3D data file I/O and agent-based 3D geometry modeling.
+url=http://igeo.jp/
+prettyVersion=0.9.0.1
+paragraph=
+version=901
+download=http://igeo.jp/igeo.zip
+id=123
+
+library
+category=3D
+authorList=[Andres Colubri](http://interfaze.info)
+name=planetarium
+sentence=This library provides a renderer to project 3D scenes on a full dome.
+url=https://github.com/codeanticode/planetarium
+prettyVersion=0.4
+paragraph=It works by rendering the scene 5 times (one from each direction: top, right, etc) and then assembling the output of these renderings into a single environmental map that covers the entire dome.
+version=4
+download=http://interfaze.info/libraries/planetarium/download/planetarium.zip
+id=130
+

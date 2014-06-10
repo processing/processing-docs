@@ -14,8 +14,8 @@ shop/
 overview/
 people/
 robots.txt
-tutorials/
+/tutorials/ # Ignore the folder at the root, but not inside "content"
 foundation/
 exhibition/
-/examples/ # Ignore the examples folder at the root, but not inside "content"
+/examples/ # Ignore the folder at the root, but not inside "content"
 about/

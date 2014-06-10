@@ -14,12 +14,12 @@ putenv('HOME=' . CONTENTDIR);
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 // Copy over the images for the tutorials index
-if (!is_dir($path.'tutorials/imgs')) {
-	mkdir($path.'tutorials/imgs', 0757); 
+$tpath = $path.'tutorials/imgs';
+if (!is_dir($tpath)) {
+	mkdir($tpath, 0757); 
 }
-
-if (is_dir($path.'tutorials/imgs')) { 
-	copydirr($source.'imgs', $path.'tutorials/imgs', null, 0757, true);
+if (is_dir($tpath)) { 
+	copydirr($source.'imgs', $tpath, null, 0757, true);
 }
 
 // Index page
