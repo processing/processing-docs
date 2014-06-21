@@ -274,6 +274,30 @@ id=096
 
 tool
 category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Templater
+sentence=Save your current sketch as a template to use a base for coding later on.
+url=http://poifox.com/templater/
+prettyVersion=1.02
+paragraph=The Templater tool for Processing 2.0+ is the perfect companion for Bootstrap. It allows the coder to save the currently visible sketch as a template in the templates folder, which can then be used by Bootstrap to initialize sketches with different templates. Templater superceedes the old SaveTemplate tool, and builds upon the original code with better coding style and encapsulation.
+version=3
+download=http://poifox.com/templater/download/Templater.zip
+id=099
+
+tool
+category=
+authorList=[Jonathan Acosta](http://poifox.com)
+name=Bootstrap
+sentence=Quickly load custom sketch templates created with the Templater tool.
+url=http://poifox.com/bootstrap/
+prettyVersion=1.02
+paragraph=The Bootstrap tool for Processing 2.0+ lets coders load a predefined template to their current Processing sketch as a base for further coding, removing the tedious process of writing base Procesing style code like setup(), draw() and more. Bootstrap superceedes the old InitSketch tool, and build upon the original code with better coding style and encapsulation.
+version=3
+download=http://poifox.com/bootstrap/download/Bootstrap.zip
+id=100
+
+tool
+category=
 authorList=[Lars Kaltenbach](http://larskaltenbach.de)
 name=SpeedTool
 sentence=Adding features for faster code editing to the PDE.
@@ -295,6 +319,18 @@ paragraph=
 version=1
 download=http://drifkin.net/processing/beziereditor/download/BezierEditorTool.zip
 id=114
+
+tool
+category=
+authorList=[Kevin Workman](http://StaticVoidGames.com)
+name=SvgExe
+sentence=A utility that creates a self-extracting jar that runs on any platform.
+url=http://StaticVoidGames.com/SvgExe/
+prettyVersion=1
+paragraph=This is a workaround for Processing only exporting applications for the current system.
+version=1
+download=http://s3.staticvoidgames.com/SvgExe/SvgExeProcessingTool.zip
+id=141
 
 mode
 category=
@@ -362,9 +398,9 @@ authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
 sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0358, built 2014/06/16 21:44
+prettyVersion=Build 0361, built 2014/06/20 09:40
 paragraph=
-version=0358
+version=0361
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -755,18 +791,6 @@ id=066
 
 library
 category=Hardware
-authorList=Henri DAVID
-name=dmxP512
-sentence=DMX output for enttec DMX USB PRO and lanbox LCE.
-url=http://motscousus.com/stuff/2011-01_dmxP512/
-prettyVersion=1.1
-paragraph=
-version=2
-download=http://cloud.github.com/downloads/hdavid/dmxP512/dmxP512.zip
-id=071
-
-library
-category=Hardware
 authorList=[Michael Heuer](https://github.com/heuermh)
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
@@ -980,6 +1004,18 @@ paragraph=Searches images or videos for blobs of a requested brightness, size, o
 version=7
 download=https://sites.google.com/site/blobscanner/Download/blobscanner.zip
 id=134
+
+library
+category=Video & Vision
+authorList=Peter Abeles
+name=BoofCV for Processing
+sentence=Processing interface for BoofCV.
+url=http://boofcv.org/index.php?title=Tutorial_Processing
+prettyVersion=0.17
+paragraph=Processing interface for [BoofCV](http://boofcv.org). BoofCV is a general purpose computer vision library written in Java.
+version=1
+download=http://boofcv.org/processing/boofcv_processing.zip
+id=146
 
 library
 category=Other
