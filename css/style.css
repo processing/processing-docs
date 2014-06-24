@@ -940,6 +940,9 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	border-left: solid 1px #ccc;
 	padding: 10px;
 	background-color: #eee;
+}
+
+#Tutorials em {
 	font-style: italic;
 }
 
