@@ -936,6 +936,13 @@ h2 { margin-bottom: 0; margin-top: 0;}
 }
 #Tutorials .curated-item p { padding-right: 14px; }
 
+#Tutorials p.license {
+	border-left: solid 1px #ccc;
+	padding: 10px;
+	background-color: #eee;
+	font-style: italic;
+}
+
 /************************************************************** Books ***/
 
 /*#Books h1 { margin-bottom: 0; margin-top: 0;}*/
