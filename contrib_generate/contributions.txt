@@ -398,9 +398,9 @@ authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
 sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0349, built 2014/06/08 09:55
+prettyVersion=Build 0362, built 2014/06/21 23:39
 paragraph=
-version=0349
+version=0362
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -791,25 +791,13 @@ id=066
 
 library
 category=Hardware
-authorList=Henri DAVID
-name=dmxP512
-sentence=DMX output for enttec DMX USB PRO and lanbox LCE.
-url=http://motscousus.com/stuff/2011-01_dmxP512/
-prettyVersion=1.1
-paragraph=
-version=2
-download=http://cloud.github.com/downloads/hdavid/dmxP512/dmxP512.zip
-id=071
-
-library
-category=Hardware
 authorList=[Michael Heuer](https://github.com/heuermh)
 name=LeapMotion
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.14
+prettyVersion=1.16
 paragraph=
-version=16
+version=18
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -836,6 +824,18 @@ paragraph=
 version=5
 download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
 id=109
+
+library
+category=Hardware
+authorList=[Jas Strong and Matt Stone](http://www.heroicrobotics.com/)
+name=PixelPusher
+sentence=System for controlling an unlimited number of LEDs.
+url=http://www.heroicrobotics.com/
+prettyVersion=20140624
+paragraph=A pure Java implementation of the PixelPusher protocol, a dynamically timed, infinitely scalable, plesiochronous system for running LED fabrics of any size, and with any organization.  The PixelPusher library is intended for controlling PixelPusher hardware, which you can buy from Heroic Robotics.
+version=103
+download=http://www.heroicrobotics.com/software/PixelPusher.zip
+id=145
 
 library
 category=Typography
@@ -1004,6 +1004,30 @@ paragraph=Searches images or videos for blobs of a requested brightness, size, o
 version=7
 download=https://sites.google.com/site/blobscanner/Download/blobscanner.zip
 id=134
+
+library
+category=Video & Vision
+authorList=Peter Abeles
+name=BoofCV for Processing
+sentence=Processing interface for BoofCV.
+url=http://boofcv.org/index.php?title=Tutorial_Processing
+prettyVersion=0.17
+paragraph=Processing interface for [BoofCV](http://boofcv.org). BoofCV is a general purpose computer vision library written in Java.
+version=1
+download=http://boofcv.org/processing/boofcv_processing.zip
+id=146
+
+library
+category=Video & Vision
+authorList=[Andres Colubri](http://interfaze.info/)
+name=Syphon
+sentence=This library allows to share frames between applications in OSX using the Syphon framework.
+url=https://github.com/Syphon/Processing
+prettyVersion=1.0-RC3
+paragraph=Syphon is an open source Mac OS X technology that allows applications to share frames - full frame rate video or stills - with one another in realtime. This library wraps Syphon using Java and provides a simple interface for frame sharing in Processing.
+version=3
+download=https://github.com/Syphon/Processing/releases/download/latest/Syphon.zip
+id=148
 
 library
 category=Other
@@ -1222,6 +1246,18 @@ download=http://shiffman.net/p5/libraries/httprequests_processing/httprequests_p
 id=137
 
 library
+category=Data
+authorList=[Till Nagel](http://tillnagel.com/) and others
+name=Unfolding Maps
+sentence=Create interactive maps and geovisualizations.
+url=http://www.unfoldingmaps.org/
+prettyVersion=0.9.6
+paragraph=
+version=96
+download=http://unfoldingmaps.org/Unfolding.zip
+id=144
+
+library
 category=GUI
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4P
@@ -1322,9 +1358,9 @@ authorList=[Jean Pierre Charalambos](http://otrolado.info)
 name=proscene
 sentence=Library that eases the creation of interactive scenes.
 url=http://otrolado.info
-prettyVersion=2.0.0
+prettyVersion=2.0.1
 paragraph=Main features include: 1. Default interactivity throughthe mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
-version=16
+version=17
 download=http://otrolado.info/proscene.zip
 id=001
 
