@@ -98,7 +98,8 @@ foreach($categories as $category){
 		foreach($libs as $lib) {
 			$librariesHTML .= "\t\t<tr><td style="width:34%">\n";
 			$librariesHTML .= "\t\t\t".'<h5><a href="'.$lib['url'].'">'.$lib['name'].'</a></h5>'."\n";
-			$librariesHTML .= "\t\t\t".'<span>by '.linkParse($lib['authorList']).'</span></td><td style='width:66%'>'."\n";
+			$piece = "<td style="width:66%">";
+			$librariesHTML .= "\t\t\t".'<span>by '.linkParse($lib['authorList']).'</span></td>'.$piece."\n";
 			$librariesHTML .= strlen(trim($lib['sentence'])) ? "\t\t\t".'<p>'.linkParse($lib['sentence']).'</p>'."\n" : "\n";
 			$librariesHTML .= "\t\t</td></tr>\n";
 		}
