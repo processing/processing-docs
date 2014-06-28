@@ -91,21 +91,18 @@ foreach($categories as $category){
 	if($category != 'Legacy'){
 		$librariesHTML .= '<div id="'.anchorSafe($category).'">'."\n\t";
 		$librariesHTML .= '<h4>'.$category.'</h4>'."\n";
-		#$librariesHTML .= "\t<ul>\n";
-		$librariesHTML .= "\t<table>\n";
+		$librariesHTML .= "\t<ul>\n";
 		$libs = array_filter($clean['library'], function($obj) use($category){ return $obj['category'] == $category; });
 		
 		foreach($libs as $lib) {
-			$librariesHTML .= "\t\t<tr><td style="width:34%">\n";
+			$librariesHTML .= "\t\t<li>\n";
 			$librariesHTML .= "\t\t\t".'<h5><a href="'.$lib['url'].'">'.$lib['name'].'</a></h5>'."\n";
-			$piece = "<td style="width:66%">";
-			$librariesHTML .= "\t\t\t".'<span>by '.linkParse($lib['authorList']).'</span></td>'.$piece."\n";
+			$librariesHTML .= "\t\t\t".'<span>by '.linkParse($lib['authorList']).'</span>'."\n";
 			$librariesHTML .= strlen(trim($lib['sentence'])) ? "\t\t\t".'<p>'.linkParse($lib['sentence']).'</p>'."\n" : "\n";
-			$librariesHTML .= "\t\t</td></tr>\n";
+			$librariesHTML .= "\t\t</li>\n";
 		}
 
-		#$librariesHTML .= "\t</ul>\n";
-		$librariesHTML .= "\t</table>\n";
+		$librariesHTML .= "\t</ul>\n";
 		$librariesHTML .= '</div>'."\n\n";
 	}
 }
