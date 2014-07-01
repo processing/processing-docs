@@ -1,12 +1,16 @@
 // // // // // // // // // // // // // // // // // // // // //
 
-2.0 REFERENCE
+3.0 REFERENCE
 
 Note: Don't edit PApplet below ~10400 [10 DEC 2012]
  
-NEW LANGUAGE ELEMENTS IN REFERENCE
+All reference issues for 3.0 are going through GitHub:
+https://github.com/processing/processing-docs/
 
-THIS SECTION MOVED INTO THE GITHUB ISSUES
+
+// // // // // // // // // // // // // // // // // // // // //
+
+2.0 REFERENCE
   
 o TABLE  --SM
   x loadTable()
@@ -19,26 +23,9 @@ o JSON  --SM
 o add new methods for PShape e.g. setStroke(), addChild(), etc.  --CR
 o add shape(x, y, z)  --CR
 o thread() ??? --CR
-
-NICE
-o PDF fonts  --CR
-o   rewrite documentation about pdf fonts (errors with non-native fonts) -- CR
-o   figure out why font naming not working correctly -- CR
-
-
-// // // // // // // // // // // // // // // // // // // // //
-
-2.0 DESIGN
-
 x New header graphic
 x New splash page / loader graphic
 x New 2.0 icons
-
-
-// // // // // // // // // // // // // // // // // // // // //
-
-DONE FOR 2.0 REFERENCE
-
 x potential changes for the PShape methods (endShape(), beginShape())?
 x XML  --SM
 x New XML from BenFry email (cc to SM)  
@@ -193,9 +180,9 @@ x Done
 
 2.0 DOCUMENTATION 
 
-- New IDE image for About page and Environment page  --CR
-- Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
-- Page about Foundation, including Patrons
+x New IDE image for About page and Environment page  --CR
+o Prepare one-page document explaining Processing, 2.0 changes for new About page  --CR
+x Page about Foundation, including Patrons
 
   DONE
 x Syntax highlighting (see major Issues above)  --CR
@@ -275,7 +262,7 @@ x Done
   NEED
 $ Data --DS
 $ Processing.js  --DS,FJ (need info for processing's credits from Dave Humphries)
-- Shaders --DS
+x Shaders --AC/DS
 
   NICE
 - New Generics  --DS

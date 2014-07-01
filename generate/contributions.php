@@ -94,13 +94,14 @@ foreach($categories as $category){
 		$librariesHTML .= "\t<ul>\n";
 		$libs = array_filter($clean['library'], function($obj) use($category){ return $obj['category'] == $category; });
 		
-		foreach($libs as $lib){
+		foreach($libs as $lib) {
 			$librariesHTML .= "\t\t<li>\n";
 			$librariesHTML .= "\t\t\t".'<h5><a href="'.$lib['url'].'">'.$lib['name'].'</a></h5>'."\n";
 			$librariesHTML .= "\t\t\t".'<span>by '.linkParse($lib['authorList']).'</span>'."\n";
 			$librariesHTML .= strlen(trim($lib['sentence'])) ? "\t\t\t".'<p>'.linkParse($lib['sentence']).'</p>'."\n" : "\n";
 			$librariesHTML .= "\t\t</li>\n";
 		}
+
 		$librariesHTML .= "\t</ul>\n";
 		$librariesHTML .= '</div>'."\n\n";
 	}
