@@ -238,6 +238,18 @@ id=020
 
 tool
 category=
+authorList=[Thomas Diewald](http://thomasdiewald.com)
+name=TabManager
+sentence=PDE-Tabs are listed vertically in a separate window.
+url=http://thomasdiewald.com/processing/tools/TabManager/
+prettyVersion=2.0.0
+paragraph=TabManager is a processing tool, that lists the PDE-Tabs (sketchcodes) vertically in a separate window.
+version=2
+download=http://thomasdiewald.com/processing/tools/TabManager/download/TabManager.zip
+id=049
+
+tool
+category=
 authorList=[Peter Lager](http://www.lagers.org.uk)
 name=G4PTool
 sentence=Graphic design tool for creating user interfaces with G4P.
@@ -398,9 +410,9 @@ authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
 sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0362, built 2014/06/21 23:39
+prettyVersion=Build 0363, built 2014/06/27 09:54
 paragraph=
-version=0362
+version=0363
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -584,18 +596,6 @@ paragraph=
 version=7
 download=https://raw.github.com/voidplus/OneDollar-Unistroke-Recognizer/master/download/OneDollarUnistrokeRecognizer.zip
 id=069
-
-library
-category=Utilities
-authorList=[Jason Gessner](http://multiply.org/)
-name=TimedEvents
-sentence=A couple of classes for firing off timed events at regular or random intervals.
-url=http://multiply.org/processing/
-prettyVersion=1.0.1
-paragraph=TimedEvents provides 2 main functions: events fired periodically with a regular period or a random delay within a range you specify.
-version=2
-download=http://www.multiply.org/processing/TimedEvents.zip
-id=082
 
 library
 category=Utilities
@@ -831,9 +831,9 @@ authorList=[Jas Strong and Matt Stone](http://www.heroicrobotics.com/)
 name=PixelPusher
 sentence=System for controlling an unlimited number of LEDs.
 url=http://www.heroicrobotics.com/
-prettyVersion=20140624
+prettyVersion=20140628
 paragraph=A pure Java implementation of the PixelPusher protocol, a dynamically timed, infinitely scalable, plesiochronous system for running LED fabrics of any size, and with any organization.  The PixelPusher library is intended for controlling PixelPusher hardware, which you can buy from Heroic Robotics.
-version=103
+version=104
 download=http://www.heroicrobotics.com/software/PixelPusher.zip
 id=145
 
@@ -1443,18 +1443,6 @@ paragraph=Choose from a wide range of shapes including the sphere, box, cylinder
 version=9
 download=http://www.lagers.org.uk/processing/shapes3d/Shapes3d.zip
 id=050
-
-library
-category=3D
-authorList=[Angus Forbes](http://www.creativecodinglab.com/) and [Charlie Roberts](http://www.charlie-roberts.com/)
-name=Stereo
-sentence=Library for anaglyph, passive stereo, or active stereo rendering.
-url=https://github.com/CreativeCodingLab/stereo
-prettyVersion=2.0
-paragraph=
-version=2
-download=http://ccl.angusforbes.com/stereo.zip
-id=117
 
 library
 category=3D
