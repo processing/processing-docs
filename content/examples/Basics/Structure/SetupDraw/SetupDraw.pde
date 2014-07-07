@@ -19,7 +19,7 @@ void setup() {
 // sequence and after the last line is read, the first 
 // line is executed again.
 void draw() { 
-  background(0);   // Clear the screen using the black background
+  background(0); // Clear the screen using the black background
   
   // ?: (conditional) expression
   y = y < 0 ? height : y - 1; // Start over
