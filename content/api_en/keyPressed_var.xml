@@ -36,6 +36,8 @@ With the "@pjs globalKeyEvents" directive you can catch all key events on the wi
 
 <description><![CDATA[
 The boolean system variable <b>keyPressed</b> is <b>true</b> if any key is pressed and <b>false</b> if no keys are pressed.
+<br/><br/>
+Note that there is a similarly named function called <b>keyPressed()</b>.  See its reference page for more information.
 ]]></description>
 
 </root>
