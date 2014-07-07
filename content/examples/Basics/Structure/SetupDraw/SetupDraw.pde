@@ -5,7 +5,7 @@
  * from top to bottom until the program is stopped.  
  */
 
-float y = 100;
+int y = 100;
 
 // The statements in the setup() function 
 // execute once when the program begins
@@ -19,11 +19,10 @@ void setup() {
 // sequence and after the last line is read, the first 
 // line is executed again.
 void draw() { 
-  background(0);   // Set the background to black
-  y = y - 1; 
-  if (y < 0) { 
-    y = height; 
-  } 
+  background(0); // Clear the screen using the black background
+  
+  // ?: (conditional) expression
+  y = y < 0 ? height : y - 1; // Start over
   line(0, y, width, y);  
 } 
 
