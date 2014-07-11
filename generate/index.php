@@ -78,13 +78,14 @@ li { margin-bottom: 1em; }
 	<br />
 	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
 		  <a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
+		  <a href="#" onclick="remote_link('contributions_data.php', 'lang=en'); return false;">Contributions Data</a> \ 
 		  Modes (to come...)<br />
 	<br />
 	Scott: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
-	<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
-	<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
-	<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages</a> \ 
-	<a href="#" onclick="remote_link('reference.php');return false;">Reference</a> (REFERENCE!!!)
+		<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
+		<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
+		<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages</a> \ 
+		<a href="#" onclick="remote_link('reference.php');return false;">Reference</a> (REFERENCE!!!)
 </p>
 	
 <p>&nbsp;</p>
