@@ -7,19 +7,23 @@
 <tr>
 <td>
 <br />
-    <p>This tutorial is Extension 5 from the second edition of <em>Processing: A Programming Handbook for Visual Designers and Artists</em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
+    <p class="license">This tutorial is Extension 5 from the second edition of <em>Processing: A Programming Handbook for Visual Designers and Artists</em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 
 <p>
 Software is not limited to running on desktop computers, laptops, tablets, and phones. Contemporary cameras, copiers, elevators, toys, washing machines, and artworks found in galleries and museums are controlled with software. Programs written to control these objects use the same concepts discussed earlier in this book (variables, control structures, arrays, etc.), but building the physical parts requires learning about electronics. This text introduces the potential of electronics with examples from art and design and discusses basic terminology and components. Examples written with Wiring and Arduino (two electronics toolkits related to Processing) are presented and explained.
 </p>
+<br /> 
 <p>   
 <h3>Electronics in the arts</h3>
 <p>
 Electronics emerged as a popular material for artists during the 1960s. Artists such as Naum Gabo and Marcel Duchamp used electrical motors in prior decades, but the wide interest in kinetic sculpture and the foundation of organizations such as Experiments in Art and Technology (E.A.T.) are evidence of a significant new emphasis. For instance, in <em>The Machine</em> exhibition at The Museum of Modern Art in 1968, Wen-Ying Tsai exhibited <em>Cybernetic Sculpture</em>, a structure made of vibrating steel rods illuminated by strobe lights flashing at high frequencies. Variations in the vibration frequency and the light flashes produced changes in the perception of the sculpture. The sculpture responded to sound in the surrounding environment by changing the frequency of the strobe lights. Peter Vogel, another kinetic sculpture pioneer, created sculptures that generate sound. The sculptures have light sensors (photocells) that detect and respond to a person’s shadow when she approaches the sculpture. The sculptures are built almost entirely with electrical components. The organization of these components forms both the shape of the sculpture and its behavior. Other pioneers during the 1960s include Nam June Paik, Nicolas Schöffer, James Seawright, and Takis.
 <br />
+<br />
 	The range of electronic sculpture created by contemporary artists is impressive. Tim Hawkinson produces sprawling kinetic installations made of cardboard, plastic, tape, and electrical components. His <em>Überorgan</em> (2000) uses mechanical principles inspired by a player piano to control the flow of air through balloons the size of whales. The air is pushed through vibrating reeds to create tonal rumbles and squawks. This physical energy contrasts with the psychological tension conveyed through Ken Feingold’s sculptures. His <em>If/Then</em> (2001) is two identical, bald heads protruding from a cardboard box filled with packing material. These electromechanical talking heads debate their existence and whether they are the same person. Each head listens to the other and forms a response from what it understands. Speech synthesis and recognition software are used in tandem with mechanisms to animate the faces—the result is uncanny. 
 <br />
+<br />
 	The works of Maywa Denki and Crispin Jones are prototypical of a fascinating area of work between art and product design. Maywa Denki is a Japanese art unit that develops series of products (artworks) that are shown in product demonstrations (live performances). Over the years, they have developed a progeny of creatures, instruments, fashion devices, robots, toys, and tools—all animated by motors and electricity. Devices from the <em>Edelweiss Series</em> include <em>Marmica</em>, a self-playing marimba that opens like a flower, and <em>Mustang</em>, a gasoline-burning aroma machine for people who love exhaust fumes. Crispin Jones creates fully functioning prototypes for objects that are critical reflections of consumer technologies. <em>Social Mobiles (SoMo)</em>, developed in collaboration with IDEO, is a set of mobile phones that address the frustration and anger caused by mobile phones in public places. The project humorously explores ways mobile phone calls in public places could be made less disruptive. The <em>SoMo 1</em> phone delivers a variable electrical shock to the caller depending on how loud the person at the other end of the conversation is speaking. The ringtone for <em>SoMo 4</em> is created by the caller knocking on their phone. As with a knock on a door, the attitude or identity of the caller is revealed through the sound. Related artists include the Bureau of Inverse Technology, Ryota Kuwakubo, and the team of Tony Dunne and Fiona Raby.
+<br />
 <br /> 
 	As electronic devices proliferate, it becomes increasingly important for designers to consider new ways to interact with these machines. Working with electronics is an essential component of the emerging interaction design community. The Tangible Media Group (TMG) at the MIT Media Laboratory, led by Hiroshi Ishii, pioneered research into tangible user interfaces to take advantage of human senses and dexterity beyond screen GUIs and clicking a mouse. <em>Curlybot</em> is a toy that can record and play back physical movement. It remembers how it was moved and can replay the motion including pauses, changes in speed, and direction. <em>MusicBottles</em> are physical glass bottles that trigger sounds when they are opened. To the person who opens the bottles, the sounds appear to be stored within the bottles, but technically, custom-designed electromagnetic tags allow a special table to know when a bottle has been opened, and the sound is played through nearby speakers. These and other projects from the TMG were instrumental in moving research in interface design away from the screen and into physical space. Research labs at companies like Sony and Philips are other centers for research and innovation into physical interaction design. Academic programs such as New York University’s Interactive Telecommunication Program, the Design Interactions course at the Royal College of Art, and the former Interaction Design Institute Ivrea have pioneered educational strategies within in this area. 
 </p>
@@ -28,6 +32,7 @@ Electronics emerged as a popular material for artists during the 1960s. Artists 
 <p>
 <h3>Electricity</h3>
 Electricity is something we use daily, but it is difficult to understand. Its effect is experienced in many ways, from observing a light turn on to noticing the battery charge deplete on a laptop computer. 
+<br />
 <br />
 	Electrical current is a stream of moving electrons. They flow from one point to another through a <em>conductor</em>. Some materials are better conductors than others. Sticking a fork in a light socket is dangerous because metal is a good conductor and so is your body. The best conductors are copper, silver, and gold. A resistor is the opposite of a conductor. Resistance is the capability of a material to resist the flow of electrons. A substance with a very high resistance is an <em>insulator</em>. Plastic and rubber are excellent insulators, and for this reason they are used as the protective covering around wires. Electrical energy, the difference of electrical potential between two points, is called <em>voltage</em>. The amount of electrical energy that flows through a point is the <em>current</em>. Resistance is measured in units called ohms, voltage is measured in volts, and current is measured in amperes (amps). The relation between the three is easiest to understand through an analogy of water flowing through a hose. As explained by the educators Dan O’Sullivan and Tom Igoe:
 <br />
@@ -93,6 +98,7 @@ An electrical circuit is a configuration of components, typically designed to pr
 <img src="imgs/fg39-7.jpg">
 This simple electric circuit is a closed loop with an energy source (battery), a load (lightbulb) that offers a resistance to the flow of electrons and transforms the electric energy into another form of energy (light), wires that carry the electricity, and a switch to connect and disconnect the wires. The electrons move from one end of the battery, through the load, and to the other end.
 <br />
+<br />
 	Circuits are usually represented with diagrams. A circuit diagram uses standardized symbols to represent specific electrical components. It is easier to read the connections on a diagram than on photographs of the components. A diagram of the simple circuit above could look like this:
 <br />
 <br />
@@ -106,6 +112,7 @@ Circuits are often prototyped on a "breadboard,” a rectangular piece of plasti
 <br />
 <br />
 Circuits are tested with a multimeter, an instrument to measure volts, current, resistance, and other electrical properties. A multimeter allows the electrical properties of the circuit to be read as numbers and is necessary for debugging. Analog multimeters have a small needle that moves from left to right, and digital multimeters have a screen that displays numbers. Most multimeters have two metal prongs to probe the circuit and a central dial to select between different modes. 
+<br />
 <br />
 	Commonly used circuits are often condensed into small packages. These integrated circuits (ICs, or chips) contain dense arrangements of miniaturized components. They are typically small, black plastic rectangles with little metal pins sticking out of the sides. Like objects in software, these devices are used as building blocks for creating more complicated projects. ICs are produced to generate signals, amplify signals, control motors, and perform hundreds of other functions. They fit neatly into a breadboard by straddling the gap in the middle.
 </p>
@@ -122,29 +129,27 @@ Apple Macintosh (1984)
 Atmel ATmega128-8AC Microcontroller
 Apple Mac Mini (2006)
 </pre>
-<br /> 
 <em>Speed</em>
 <pre>
 8MHz
 8MHz
 1500 MHz
-</pre>
-<br /> 
+</pre> 
 <em>Memory</em>
 <pre>
 128 Kb
 128 Kb
 512,000 Kb
 </pre>
-<br /> 
 <em>Cost</em>
 <pre>
 $2500
 $15
 $600
 </pre>
-<br />
 Small metal pins poking out from a microcontroller’s edges allow access to the circuits inside. Each pin has its own role. Some are used to supply power, some are for communication, some are inputs, and others can be set to either input or output. The relative voltage at each input pin can be read through software, and the voltage can be set at each output pin. Some pins are reserved for communication. They allow a microcontroller to communicate with computers and other microcontrollers through established communication protocols such as RS-232 serial.
+<br /> 
+<br /> 
 	Microcontrollers can be used to build projects directly, but they are often packaged with other components onto a printed circuit board (PCB) to make them easier to use for beginners and for rapid prototyping. We call these boards I/O boards (input/output boards) because they are used to get data in and out of a microcontroller. They are also called microcontroller modules. We’ve created three informal groups—bare microcontrollers, programmable I/O boards, and tethered I/O boards—to discuss different ways to utilize microcontrollers in a project.
 <br />
 <br />
@@ -157,6 +162,7 @@ Working directly with a bare microcontroller is the most flexible but most diffi
 <em>Programmable I/O boards</em>
 <br />
 A programmable I/O board is a microcontroller situated on a PCB with other components to make it easier to program, attach/detach components, and turn on and off. These boards typically have components to regulate power to protect the microcontroller and a USB or RS-232 serial port to make it easy to attach cables. The small pins on the microcontroller are wired to larger pins called headers, which make it easy to insert and remove sensors and motors. Small wires embedded within the PCB connect pins to a corresponding header. Small reset switches make it easy to restart the power without having to physically detach the power supply or battery.
+<br /> 
 <br /> 
 	Within the context of this book, the most relevant I/O boards are Wiring and Arduino. Both were created as tools for designers and artists to build prototypes and to learn about electronics. Both boards use the Wiring language to program their microcontrollers and use a development environment built from the Processing environment. In comparison to the Processing language, the Wiring language provides a similar level of control and ease of use within its domain. They share common language elements when possible, but Wiring has some functions specific to programming microcontrollers and omits the graphics programming functions within Processing. Like Processing programs, Wiring programs are translated into another language before they are run. When a program written with the Wiring language is compiled, it’s first translated into the C/C++ language and then compiled using a C/C++ compiler.
 <br />
@@ -215,9 +221,12 @@ A thermistor is a device that changes its resistance with temperature. These sen
 <br />
 Analog voltage signals from sensors can’t be directly interpreted by a computer, so they must be converted to a digital value. Some microcontrollers provide analog-to-digital converters (ADC or A/D) that measure variations in voltage at an input pin and convert it to a digital value. The range of values depends on the resolution of the ADC; common resolutions are 8 and 10 bits. At 8-bit resolution, an ADC can represent 28 (256) different values, where 0 volts corresponds to the value 0 and 5 volts corresponds to 255. A 10-bit ADC provides 1024 different values, where 5 volts corresponds to the value 1023. 
 <br />
+<br />
 	Data is sent and received between microcontrollers and computers according to established data protocols such as RS-232 serial, USB, MIDI, TPC/IP, Bluetooth, and other proprietary formats like I2C or SPI. Most electronics prototyping kits and microcontrollers include an RS-232 serial port, and this is therefore a convenient way to communicate. This standard has been around for a long time (it was developed in the late 1960s) and it defines signal levels, timing, physical plugs, and information exchange protocols. The physical RS-232 serial port has largely been replaced in computers by the faster and more flexible (but more complex) universal serial bus (USB), but the protocol is still widely used when combining the USB port with software emulation.
 <br />
+<br />
 	Because a device can have several serial ports, a user must specify which serial port to use for data transmission. On most Windows computers, serial port names are <code>COMx</code>, where <code>x</code> can be 1, 2, 3, etc. On UNIX-based systems (Mac OS X and Linux), serial devices are accessed through files in the <em>/dev/</em> directory. After the serial port is selected, the user must specify the settings for the port. Communication speed will vary with devices, but typical values are 9600, 19,200, and 115,200 bits per second. Once the ports are open for communication on both devices, it is possible to send and receive data.
+<br />
 <br />
 	The following examples connect sensors and actuators to a Wiring or Arduino board and communicate the data between the I/O board and a Processing application. When the Wiring and Arduino boards are plugged into a computer’s USB port, it appears on the computer as a serial port, making it possible to send/receive data on it. The Wiring board has two serial ports called <em>Serial</em> and <em>Serial1</em>; the Arduino board has one called Serial. Serial is directly available on the USB connector located on the board surface. <em>Serial1</em> is available through the Wiring board digital pin numbers 2(Rx) and 3(Tx) for the user’s applications.
 <br />
@@ -323,9 +332,12 @@ To run these examples, unlike the other examples in this book, you will need add
 <br /> 
 This equipment can be purchased from an electronics store such as Radio Shack or from an online vendor.
 <br />
+<br />
 	Each example presents two programs: code for the I/O board and code for Processing. Diagrams and breadboard illustrations for the examples are presented side by side in this tutorial to reinforce the connections between the two representations. Learning to translate a circuit diagram into a physical circuit is one of the most difficult challenges when starting to work with electronics. 
 <br />
+<br />
 	The Wiring or Arduino software environment is necessary to program each board. These environments are built on top of the Processing environment, but they have special features for uploading code to the board and monitoring serial communication. Both can be downloaded at no cost from their respective websites and both are available for Linux, Macintosh, and Windows. 
+<br />
 <br />
 	The examples that follow assume the I/O board is connected to your computer and serial communication is working. Before working with these examples, get one of the simple Serial library examples included with Processing to work. For the most up-to-date information and troubleshooting tips, read the Serial reference on the Processing website: www.processing.org/reference/libraries. The Wiring and Arduino websites have additional information.
 <br />

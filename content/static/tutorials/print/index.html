@@ -79,8 +79,10 @@ Images saved directly from screen are created at the screen’s resolution, typi
 <br />
 The difference is illustrated with this diagram:
 <br />
+<br />
 <img src="imgs/fg40-1.jpg">
 <br /> 
+<br />
 Use the vector technique to export line art, type, or shapes that can be printed professionally, published, or printed at very large sizes. It’s also helpful to create a file that can be edited further with a program like Inkscape or Adobe Illustrator. Raster images are useful when exporting an image from a program that does not refresh its background each frame. If the image accumulates by adding each new frame to the display window, it may not be possible for vector data to achieve the same effect, or it may be too much geometry to store in a single file. A raster file does not represent each visual element separately (it saves it as a series of pixels), so it is editable only by programs like GIMP and Photoshop. A raster file can be printed with as much resolution as a vector file if it is output with a large enough width and height setting to give the file a high resolution when scaled for print. For example, to print a four-inch image at 600 dpi would require size(2400,2400) inside setup(). Vector files are eventually rasterized during the printing process, so it’s simply a matter of when the rasterizing takes place—whether directly from the program, or inside a professional raster image processor (RIP). The following examples clarify the strengths and weaknesses of each technique.
 <br /> 
 <br /> 
@@ -104,7 +106,6 @@ This example saves multiple frames drawn to the screen within a single PDF file.
 <br />
 <br />
 <em>Example 5: Save a TIFF image from a high-resolution off-screen buffer</em>
-<br />
 <br />
 This example creates a TIFF file larger than the screen and draws into it directly, rather than drawing to the screen. The <code>createGraphics()</code> function creates an object from the <code>PGraphics</code> class (<code>PGraphics</code> is the main graphics and rendering context for Processing). The <code>beginDraw()</code> method is necessary to prepare for drawing, then each subsequent drawing function is written into the large raster object. The <code>endDraw()</code> and <code>save()</code> methods are necessary to complete the file and then save it to the machine so that it can later be viewed in a different program such as GIMP or Photoshop. 
 <br />
@@ -209,7 +210,6 @@ Notes
 <p>
 <h3>Code</h3>
 <em>Example 1: Render to PDF</em>
-<br />
 <pre>
 
 import processing.pdf.*;          // Import PDF code
@@ -238,7 +238,6 @@ endRecord();                      // Stop writing to PDF
 </pre>
 <br />
 <em>Example 3:  Save one frame from a continuous program</em>
-
 <pre>
 import processing.pdf.*;  // Import PDF code
 
