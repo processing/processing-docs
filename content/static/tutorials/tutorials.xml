@@ -125,5 +125,12 @@
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+    
+    <tutorial>
+		<title>Electronics</title>
+		<directory>electronics</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
 
 </tutorials>
