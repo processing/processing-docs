@@ -132,5 +132,12 @@
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+    
+    <tutorial>
+		<title>Network</title>
+		<directory>network</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
 
 </tutorials>
