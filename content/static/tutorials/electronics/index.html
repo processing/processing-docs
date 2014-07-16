@@ -38,7 +38,7 @@ The flow of water through a hose is like the flow of electricity through a circu
 Electrical current flows in two ways: direct current (DC) and alternating current (AC). A DC signal always flows in the same direction and an AC signal reverses the direction of flow at regular intervals. Batteries and solar cells produce DC signals, and the power that comes from wall sockets is an AC signal:
 <br />
 <br /> 
-<img src="fg39-1.jpg">
+<img src="imgs/fg39-1.jpg">
 <br />
 <br /> 
 Depending on your country, the AC power coming into your home is between 100 and 240 volts. Most home appliances use AC current to operate, but some use a transformer to convert the higher-potential AC energy into DC current at smaller voltages. The black plastic boxes (a k a power bricks, power adapters, wall warts) that are used to power laptops or mobile phones are transformers. Most desktop computers have an internal power supply with a transformer to convert the AC signal to the 12-volt and 5-volt DC signals necessary to run the internal electronics. Low voltages are generally safer than high voltages, but it’s the amount of current (amps) that makes electricity dangerous.
@@ -59,7 +59,7 @@ Electronic components are used to affect the flow of electricity and to convert 
 A resistor limits (provides resistance to) the flow of electricity. Resistors are measured in units called ohms. The value 10 ohms is less resistance than 10,000 (10K) ohms. The value of each resistor is marked on the component with a series of colored bands. A variable resistor that changes its resistance when a slider, knob, or dial attached to it is turned is called a potentiometer or trimmer. Variable resistors are designed to change in response to different environmental phenomena. For example, one that changes in response to light is called a photoresistor or photocell, and one that changes in response to heat is called a thermistor. Resistors can be used to limit current, reduce voltage, and perform many other essential tasks. 
 <br />
 <br />
-<img src="fg39-2.jpg">
+<img src="imgs/fg39-2.jpg">
 <br />
 <br />
 <em>Capicitor</em>
@@ -67,7 +67,7 @@ A resistor limits (provides resistance to) the flow of electricity. Resistors ar
 A capacitor stores electrons; it stores electrical charge when current is applied, and it releases charge (discharges) when the current is removed. This can smooth out the dips and spikes in a current signal. Capacitors are combined with resistors to create filters, integrators, differentiators, and oscillators. A simple capacitor is two parallel sheets of conductive materials, separated by an insulator. Capacitors are measured in units called farads. A farad is a large measurement, so most capacitors you will use will be measured in microfarads (µF), picofarads (pF), or nanofarads (nF). 
 <br />
 <br />
-<img src="fg39-4.jpg">
+<img src="imgs/fg39-4.jpg">
 <br />
 <br />
 <em>Diode</em>
@@ -75,7 +75,7 @@ A capacitor stores electrons; it stores electrical charge when current is applie
 Current flows only in one direction through a diode. One side is called the cathode (marked on the device with a line) and the other is the anode. Current flows when the anode is more positive than the cathode. Diodes are commonly used to block or invert the negative part of an AC signal. A light-emitting diode (LED) is used to produce light. The longer wire coming out of the LED is the anode and the other is the cathode. LEDs come in many sizes, forms, colors, and brightness levels. 
 <br />
 <br />
-<img src="fg39-5.jpg">
+<img src="imgs/fg39-5.jpg">
 <br />
 <br />
 <em>Transistor</em>
@@ -83,26 +83,26 @@ Current flows only in one direction through a diode. One side is called the cath
 A transistor can be used as an electrical switch or an amplifier. A bipolar transistor has three leads (wires) called the base, collector, and emitter. Depending on the type of transistor, applying current to the base either allows current to flow or stops it from flowing through the device from the collector to the emitter. Transistors make it possible for the low current from a microcontroller to control the much higher currents necessary for motors and other power-hungry devices, and thus to turn them on and off.
 <br />
 <br />
-<img src="fg39-6.jpg">
+<img src="imgs/fg39-6.jpg">
 </p>
 <p>
 <h3>Circuits</h3>
 An electrical circuit is a configuration of components, typically designed to produce a desired behavior such as decreasing the current, filtering a signal, or turning on an LED. The following simple circuit can be used to turn a light on and off:
 <br />
 <br />
-<img src="fg39-7.jpg">
+<img src="imgs/fg39-7.jpg">
 This simple electric circuit is a closed loop with an energy source (battery), a load (lightbulb) that offers a resistance to the flow of electrons and transforms the electric energy into another form of energy (light), wires that carry the electricity, and a switch to connect and disconnect the wires. The electrons move from one end of the battery, through the load, and to the other end.
 <br />
 	Circuits are usually represented with diagrams. A circuit diagram uses standardized symbols to represent specific electrical components. It is easier to read the connections on a diagram than on photographs of the components. A diagram of the simple circuit above could look like this:
 <br />
 <br />
-<img src="fg39-8.jpg">
+<img src="imgs/fg39-8.jpg">
 <br />
 <br />
 Circuits are often prototyped on a "breadboard,” a rectangular piece of plastic with holes for inserting wires. A breadboard makes it easy to quickly make variations on a circuit without soldering (fusing components together with a soft metal). Conductive strips underneath the surface connect the long horizontal rows at the top and bottom of the board and the short vertical rows within the middle: 
 <br />
 <br />
-<img src="fg39-9.jpg">
+<img src="imgs/fg39-9.jpg">
 <br />
 <br />
 Circuits are tested with a multimeter, an instrument to measure volts, current, resistance, and other electrical properties. A multimeter allows the electrical properties of the circuit to be read as numbers and is necessary for debugging. Analog multimeters have a small needle that moves from left to right, and digital multimeters have a screen that displays numbers. Most multimeters have two metal prongs to probe the circuit and a central dial to select between different modes. 
@@ -161,7 +161,7 @@ A programmable I/O board is a microcontroller situated on a PCB with other compo
 	Within the context of this book, the most relevant I/O boards are Wiring and Arduino. Both were created as tools for designers and artists to build prototypes and to learn about electronics. Both boards use the Wiring language to program their microcontrollers and use a development environment built from the Processing environment. In comparison to the Processing language, the Wiring language provides a similar level of control and ease of use within its domain. They share common language elements when possible, but Wiring has some functions specific to programming microcontrollers and omits the graphics programming functions within Processing. Like Processing programs, Wiring programs are translated into another language before they are run. When a program written with the Wiring language is compiled, it’s first translated into the C/C++ language and then compiled using a C/C++ compiler.
 <br />
 <br />
-<img src="fg39-10.jpg">
+<img src="imgs/fg39-10.jpg">
 <br />
 <br />
 
@@ -176,7 +176,7 @@ A tethered I/O board is used to get sensor data into a computer and to control p
 Physical phenomena are measured by electronic devices called sensors. Different sensors have been invented to acquire data related to touch, force, proximity, light, orientation, sound, temperature, and much more. Sensors can be classified into groups according to the type of signals they produce (analog or digital) and the type of phenomena they measure. Analog signals are continuous, but digital signals are discrete and are constrained to a range of values (e.g., 0 to 255): 
 <br />
 <br />
-<img src="fg39-11.jpg">
+<img src="imgs/fg39-11.jpg">
 <br />
 <br />
 Most basic analog sensors utilize resistance. Changes in a physical phenomenon modify the resistance of the sensor, therefore varying the voltage output through the sensor. An analog-to-digital converter can continuously measure this changing voltage and convert it to a number that can be used by software. Sensors that produce digital signals send data as binary values to an attached device or computer. These sensors use a voltage (typically between 3.5 and 5 volts) as ON (binary digit 1 or TRUE) and no voltage as a OFF (binary digit 0 or FALSE). More complex sensors include their own microcontrollers to convert the data to digital signals and to use established communication protocols for transmitting these signals to another computer.
@@ -238,7 +238,7 @@ This example brings data from a light sensor (photoresistor) connected to the Wi
 Actuators are devices that act on the physical world. Different types of actuators can create light, motion, heat, and magnetic fields. The digital output pin on a microcontroller can set a voltage of 0 or 5 volts. This value can be used to turn a light or motor on or off, but finer control over brightness and speed requires using a technique called pulse-width modulation (PWM). This is turning a digital output ON and OFF very quickly to simulate values between 0 and 5 volts. If the output is 0 volts for 90% of the time and 5 volts for 10%, this is called a 10% duty cycle. It emulates an analog voltage of 0.5 volts. An 80% duty cycle emulates a 4-volt signal:
 <br />
 <br />
-<img src="fg39-12.jpg">
+<img src="imgs/fg39-12.jpg">
 <br /> 
 <br /> 
 The PWM technique can be used to dim a light, run a motor at a slow speed, and control the frequency of a tone through a speaker.
@@ -332,274 +332,274 @@ This equipment can be purchased from an electronics store such as Radio Shack or
 <br />
 <em>Example 1A:  Switch (Wiring/Arduino)</em>
 <pre>
-<em>// Code for sensing a switch status and writing the value to the serial port</em>
+// Code for sensing a switch status and writing the value to the serial port
 
-int switchPin = 4;  		       <em>// Switch connected to pin 4</em> 
+int switchPin = 4;  		       // Switch connected to pin 4 
  
 void setup() { 
-  pinMode(switchPin, INPUT);  	       <em>// Set pin 0 as an input</em> 
-  Serial.begin(9600);         	       <em>// Start serial</em> communication at 9600 bps 
+  pinMode(switchPin, INPUT);  	       // Set pin 0 as an input 
+  Serial.begin(9600);         	       // Start serial communication at 9600 bps 
 } 
  
 void loop() { 
-  if (digitalRead(switchPin) == HIGH) {  <em>// If switch is ON,</em> 
-    Serial.print(1, BYTE);               <em>// send 1 to Processing</em> 
-  } else {                               <em>// If the switch is not ON,</em>
-    Serial.print(0, BYTE);               <em>// send 0 to Processing</em> 
+  if (digitalRead(switchPin) == HIGH) {  // If switch is ON, 
+    Serial.print(1, BYTE);               // send 1 to Processing
+  } else {                               // If the switch is not ON,
+    Serial.print(0, BYTE);               // send 0 to Processing 
   } 
-  delay(100);                            <em>// Wait 100 milliseconds</em> 
+  delay(100);                            // Wait 100 milliseconds 
 } 
 </pre>
 <br /> 
 <br />
 <em>Example 1B:  Switch (Processing)</em>
 <pre>
-<em>// Read data from the serial port and change the color of a rectangle 
-// when a switch connected to the board is pressed and released</em>
+// Read data from the serial port and change the color of a rectangle 
+// when a switch connected to the board is pressed and released
  
 import processing.serial.*; 
  
-Serial port;                             <em>// Create object from Serial class</em> 
-int val;                                 <em>// Data received from the serial port </em>
+Serial port;                             // Create object from Serial class 
+int val;                                 // Data received from the serial port 
  
 void setup() { 
   size(200, 200); 
   frameRate(10); 
-  <em>// Open the port that the board is connected to and use the same speed (9600 bps)</em> 
+  // Open the port that the board is connected to and use the same speed (9600 bps) 
   port = new Serial(this, 9600); 
 } 
 
 void draw() { 
-  if (0 < port.available()) {            <em>// If data is available,</em> 
-    val = port.read();                   <em>// read it and store it in val </em>
+  if (0 < port.available()) {            // If data is available,
+    val = port.read();                   // read it and store it in val
   } 
-  background(255);                       <em>// Set background to white</em>
-  if (val == 0)  {                      <em> // If the serial value is 0,</em>
-    fill(0);                             <em>// set fill to black</em>
-  } else {                               <em>// If the serial value is not 0,</em>
-    fill(204);                           <em>// set fill to light gray</em>
+  background(255);                       // Set background to white
+  if (val == 0)  {                       // If the serial value is 0,
+    fill(0);                             // set fill to black
+  } else {                               // If the serial value is not 0,
+    fill(204);                           // set fill to light gray
   } 
   rect(50, 50, 100, 100);
 } 
 </pre>
-<img src="fg39-13.jpg">
+<img src="imgs/fg39-13.jpg">
 <br />
 <em>Example 2A:  Light sensor (Wiring/Arduino)</em>
 <pre>
-<em>// Code to read an analog value and write it to the serial port</em>
+// Code to read an analog value and write it to the serial port
 
 int val; 
-int inputPin = 0;                <em>// Set the input to analog in pin 0</em>
+int inputPin = 0;                // Set the input to analog in pin 0
  
 void setup() { 
-  Serial.begin(9600);            <em>// Start serial communication at 9600 bps </em>
+  Serial.begin(9600);            // Start serial communication at 9600 bps 
 } 
  
 void loop() { 
-  val = analogRead(inputPin)/4;  <em>// Read analog input pin, put in range 0 to 255</em>
-  Serial.print(val, BYTE);       <em>// Send the value</em>
-  delay(100);                    <em>// Wait 100ms for next reading</em> 
+  val = analogRead(inputPin)/4;  // Read analog input pin, put in range 0 to 255
+  Serial.print(val, BYTE);       // Send the value
+  delay(100);                    // Wait 100ms for next reading 
 }
 </pre>
 <br /> 
 <br /> 
 <em>Example 2B:  Light sensor (Processing)</em>
 <pre>
-<em>// Read data from the serial port and assign it to a variable. Set the fill a 
+// Read data from the serial port and assign it to a variable. Set the fill a 
 // rectangle on the screen using the value read from a light sensor connected 
-// to the Wiring or Arduino board </em>
+// to the Wiring or Arduino board 
  
 import processing.serial.*; 
  
-Serial port;  			      <em> // Create object from Serial class</em> 
-int val;      			      <em> // Data received from the serial port </em>
+Serial port;  			       // Create object from Serial class
+int val;      			       // Data received from the serial port 
  
 void setup() { 
   size(200, 200); 
   noStroke(); 
-  frameRate(10);                 <em>// Run 10 frames per second
-  // Open the port that the board is connected to and use the same speed (9600 bps) </em>
+  frameRate(10);                // Run 10 frames per second
+  // Open the port that the board is connected to and use the same speed (9600 bps) 
   port = new Serial(this, 9600); 
 } 
 
 void draw() { 
-  if (0 < port.available()) {    <em>// If data is available to read,</em> 
-    val = port.read();           <em>// read it and store it in val</em> 
+  if (0 < port.available()) {    // If data is available to read,
+    val = port.read();           // read it and store it in val
   } 
-  background(204);              <em>// Clear background</em>
-  fill(val);                     <em>// Set fill color with the value read</em>
-  rect(50, 50, 100, 100);        <em>// Draw square</em>
+  background(204);               // Clear background
+  fill(val);                     // Set fill color with the value read
+  rect(50, 50, 100, 100);        // Draw square
 } 
 </pre>
-<img src="fg39-14.jpg">
+<img src="imgs/fg39-14.jpg">
 <br />
 <br />
 <em>Example 3A: Turning a light on and off</em>
 <pre>
 <em>// Read data from the serial and turn ON or OFF a light depending on the value</em>
  
-char val;                          <em>// Data received from the serial port</em> 
-int ledPin = 4;                    <em>// Set the pin to digital I/O 4</em>
+char val;                          // Data received from the serial port 
+int ledPin = 4;                    // Set the pin to digital I/O 4
 
 void setup() { 
-  pinMode(ledPin, OUTPUT);         <em>// Set pin as OUTPUT </em>
-  Serial.begin(9600);              <em>// Start serial communication at 9600 bps</em>  
+  pinMode(ledPin, OUTPUT);         // Set pin as OUTPUT 
+  Serial.begin(9600);              // Start serial communication at 9600 bps 
 } 
  
 void loop() { 
-  if (Serial.available()) {        <em>// If data is available to read, </em>
-    val = Serial.read();           <em>// read it and store it in val</em> 
+  if (Serial.available()) {        // If data is available to read, 
+    val = Serial.read();           // read it and store it in val 
   } 
-  if (val == 'H') {                <em>// If H was received</em>  
-    digitalWrite(ledPin, HIGH);    <em>// turn the LED on </em>
+  if (val == 'H') {                // If H was received
+    digitalWrite(ledPin, HIGH);    // turn the LED on 
   } else { 
-    digitalWrite(ledPin, LOW);     <em>// Otherwise turn it OFF</em>
+    digitalWrite(ledPin, LOW);     // Otherwise turn it OFF
   } 
-  delay(100);                      <em>// Wait 100 milliseconds for next reading </em>
+  delay(100);                      // Wait 100 milliseconds for next reading 
 } 
 </pre>
 <br /> 
 <br /> 
 <em>Example 3B: Turning a light on and off (Processing)</em>
 <pre>
-<em>// Check if the mouse is over a rectangle and write the status to the serial port</em>
+// Check if the mouse is over a rectangle and write the status to the serial port
 
 import processing.serial.*; 
  
-Serial port;                       <em>// Create object from Serial class</em> 
+Serial port;                       // Create object from Serial class
  
 void setup() { 
   size(200, 200); 
   noStroke(); 
   frameRate(10); 
- <em> // Open the port that the board is connected to and use the same speed (9600 bps)</em> 
+  // Open the port that the board is connected to and use the same speed (9600 bps)
   port = new Serial(this, 9600); 
 } 
  
 void draw() { 
   background(255); 
-  if (mouseOverRect() == true)  {  <em>// If mouse is over square,</em>
-    fill(204);                     <em>// change color and</em>  
-    port.write('H');               <em>// send an H to indicate mouse is over square</em> 
-  } else {                         <em>// If mouse is not over square,</em>
-    fill(0);                        <em>// change color and</em> 
-    port.write('L');               <em>// send an L otherwise</em>
+  if (mouseOverRect() == true)  {  // If mouse is over square,
+    fill(204);                     // change color and  
+    port.write('H');               // send an H to indicate mouse is over square 
+  } else {                         // If mouse is not over square,
+    fill(0);                       // change color and
+    port.write('L');               // send an L otherwise
   } 
-  rect(50, 50, 100, 100);          <em>// Draw a square </em>
+  rect(50, 50, 100, 100);          // Draw a square 
 } 
 
 
-boolean mouseOverRect() {        <em>// Test if mouse is over square</em> 
+boolean mouseOverRect() {        // Test if mouse is over square 
   return ((mouseX >= 50) &amp;&amp; (mouseX <= 150) && (mouseY >= 50) &amp;&amp; (mouseY <= 150)); 
 } 
 </pre>
-<img src="fg39-15.jpg">
+<img src="imgs/fg39-15.jpg">
 <br /> 
 <br /> 
 <em>Example 4A: Controlling a servomotor(Wiring/Arduino)</em>
 <pre>
-<em>// Read data from the serial port and set the position of a servomotor 
-// according to the value</em>
+// Read data from the serial port and set the position of a servomotor 
+// according to the value
 
-Servo myservo;                   <em>// Create servo object to control a servo</em>
-int servoPin = 4;                <em>// Connect yellow servo wire to digital I/O pin 4 </em>
-int val = 0;                     <em>// Data received from the serial port</em>
+Servo myservo;                   // Create servo object to control a servo
+int servoPin = 4;                // Connect yellow servo wire to digital I/O pin 4 
+int val = 0;                     // Data received from the serial port
 
 void setup() {
-  myservo.attach(servoPin);      <em>// Attach the servo to the PWM pin</em>
-  Serial.begin(9600);    	       <em>// Start serial communication at 9600 bps</em>
+  myservo.attach(servoPin);      // Attach the servo to the PWM pin
+  Serial.begin(9600);    	       // Start serial communication at 9600 bps
 }
 
 void loop() {
-  if (Serial.available()) {      <em>// If data is available to read,</em>
-    val = Serial.read();         <em>// read it and store it in val</em> 
+  if (Serial.available()) {      // If data is available to read,
+    val = Serial.read();         // read it and store it in val 
   } 
-  myservo.write(val);            <em>// Set the servo position</em>
-  delay(15);                     <em>// Wait for the servo to get there</em>
+  myservo.write(val);            // Set the servo position
+  delay(15);                     // Wait for the servo to get there
 }
 </pre>
 <br /> 
 <br /> 
 <em>Example 4B: Controlling a servomotor (Processing)</em>
 <pre>
-<em>// Write data to the serial port according to the mouseX value</em>
+// Write data to the serial port according to the mouseX value
 
 import processing.serial.*;
  
-Serial port;                          <em>// Create object from Serial class</em>
+Serial port;                          // Create object from Serial class
 float mx = 0.0;
 
 void setup() { 
   size(200, 200); 
   noStroke(); 
   frameRate(10); 
-  <em>// Open the port that the board is connected to and use the same speed (9600 bps)</em> 
+  // Open the port that the board is connected to and use the same speed (9600 bps) 
   port = new Serial(this, 9600); 
 } 
 
 void draw() {   
-  background(0);			    <em>// Clear background</em> 
-  fill(204);				    <em>// Set fill color</em> 
-  rect(40, height/2-15, 120, 25);	    <em>// Draw square</em>
+  background(0);			    // Clear background 
+  fill(204);				    // Set fill color 
+  rect(40, height/2-15, 120, 25);	    // Draw square
 
   float dif = mouseX - mx;
   if (abs(dif) > 1.0) {
     mx += dif/4.0;
   }
-  mx = constrain(mx, 50, 149);                <em>// Keeps marker on the screen</em>
+  mx = constrain(mx, 50, 149);                // Keeps marker on the screen
   noStroke();
   fill(255);
   rect(50, (height/2)-5, 100, 5);  
   fill(204, 102, 0);
   
-  rect(mx-2, height/2-5, 4, 5);               <em>// Draw the position marker</em>
-  int angle = int(map(mx, 50, 149, 0, 180));  <em>// Scale the value to the range 0-180</em>
-  //print(angle + " ");	                    <em>// Print the current angle (debug)</em>
-  port.write(angle);	                    <em>// Write the angle to the serial port</em>
+  rect(mx-2, height/2-5, 4, 5);               // Draw the position marker
+  int angle = int(map(mx, 50, 149, 0, 180));  // Scale the value to the range 0-180
+  //print(angle + " ");	                    // Print the current angle (debug)
+  port.write(angle);	                    // Write the angle to the serial port
 }
 </pre>
-<img src="fg39-16.jpg">
+<img src="imgs/fg39-16.jpg">
 <br />
 <br /> 
 <em>Example 5A: Turning a DC Motor on and off (Wiring/Arduino)</em>
 <pre>
-<em>// Read data from the serial and turn a DC motor on or off according to the value</em>
+// Read data from the serial and turn a DC motor on or off according to the value
 
-char val;                              <em>// Data received from the serial port</em>
-int motorpin = 0;     <em>// Wiring: Connect L293D Pin En1 connected to Pin PWM 0</em>           
-// int motorpin = 9;  <em>// Arduino: Connect L293D Pin En1 to Pin PWM 9</em>
+char val;                              // Data received from the serial port
+int motorpin = 0;     // Wiring: Connect L293D Pin En1 connected to Pin PWM 0          
+// int motorpin = 9;  // Arduino: Connect L293D Pin En1 to Pin PWM 9
  
 void setup() { 
-  Serial.begin(9600);                  <em>// Start serial communication at 9600 bps</em> 
+  Serial.begin(9600);                  // Start serial communication at 9600 bps 
 } 
  
 void loop() { 
-  if (Serial.available()) {            <em>// If data is available,</em>  
-    val = Serial.read();               <em>// read it and store it in val</em> 
+  if (Serial.available()) {            // If data is available,  
+    val = Serial.read();               // read it and store it in val</em> 
   } 
-  if (val == 'H') {                    <em>// If 'H' was received,</em> 
-    analogWrite(motorpin, 125);        <em>// turn the motor on at medium speed </em>
-  } else { 			             <em>// If 'H' was not received</em>
-    analogWrite(motorpin, 0);          <em>// turn the motor off </em>
+  if (val == 'H') {                    // If 'H' was received, 
+    analogWrite(motorpin, 125);        // turn the motor on at medium speed 
+  } else { 			             // If 'H' was not received
+    analogWrite(motorpin, 0);          // turn the motor off 
   } 
-  delay(100);                          <em>// Wait 100 milliseconds for next reading</em>
+  delay(100);                          // Wait 100 milliseconds for next reading
 }
 </pre>
 <br /> 
 <br /> 
 <em>Example 5B: Turning a DC motor on and off (Processing)</em>
 <pre>
-<em>// Write data to the serial port according to the status of a button controlled 
-// by the mouse </em>
+// Write data to the serial port according to the status of a button controlled 
+// by the mouse 
 
 import processing.serial.*;
 
-Serial port;                          <em> // Create serial port object </em>
+Serial port;                           // Create serial port object 
 boolean rectOver = false;      	
-int rectX, rectY;                      <em>// Position of square button</em>
-int rectSize = 100;                    <em>// Diameter of rect</em>
+int rectX, rectY;                      // Position of square button
+int rectSize = 100;                    // Diameter of rect
 color rectColor;
-boolean buttonOn = false;              <em>// Status of the button</em>
+boolean buttonOn = false;              // Status of the button
 void setup() {
   size(200, 200); 
   noStroke(); 
@@ -613,7 +613,7 @@ void setup() {
 
 void draw() {   
   update(mouseX, mouseY);
-  background(0);                 <em>// Clear background to black</em>
+  background(0);                 // Clear background to black
   fill(rectColor);            	         
   rect(rectX, rectY, rectSize, rectSize);  
 } 
@@ -631,11 +631,11 @@ void mouseReleased() {
     if (buttonOn == true) {
       rectColor = color(100);
       buttonOn = false;
-      port.write('L');           <em>// Send an L to indicate button is OFF</em>
+      port.write('L');           // Send an L to indicate button is OFF
     } else {
       rectColor = color(180);
       buttonOn = true;
-      port.write('H');           <em>// Send an H to indicate button is ON</em> 
+      port.write('H');           // Send an H to indicate button is ON 
     }
   }
 }
@@ -649,7 +649,7 @@ boolean overRect(int x, int y, int width, int height) {
   }
 }
 </pre>
-<img src="fg39-17.jpg">
+<img src="imgs/fg39-17.jpg">
 </p>
 <br />
 <br />
@@ -740,9 +740,9 @@ Scherz, Paul. <em>Practical Electronics for Inventors</em>. McGraw-Hill, 2000.
 <br />
 Dunne, Anthony, and Fiona Raby. <em>Design Noir</em>. Birkhäuser, 2001.
 <br /> 
-<a href="http://bureauit.org">Bureau of Inverse Technology</a>. 
+<a href="http://bureauit.org">Bureau of Inverse Technology</a>
 <br />
-<a href="http://www.kenfeingold.com">Feingold, Ken</a>. 
+<a href="http://www.kenfeingold.com">Feingold, Ken</a> 
 <br />
 Hawkinson, Tim. <em>Tim Hawkinson</em>. Harry N. Abrams, 2004.
 <br /> 
@@ -752,17 +752,17 @@ Hawkinson, Tim. <em>Tim Hawkinson</em>. Harry N. Abrams, 2004.
 <br />
 <a href="http://itp.nyu.edu/itp">Interactive Telecommunication Program</a>. New York University. MFA program. 
 <br />
-<a href="http://www.mr-jones.org">Jones, Crispin</a>.
+<a href="http://www.mr-jones.org">Jones, Crispin</a>
 <br />
-<a href="http://www.vector-scan.com">Kuwakubo, Ryota</a>.
+<a href="http://www.vector-scan.com">Kuwakubo, Ryota</a>
 <br /> 
-<a href="http://www.maywadenki.com">Maywa Denki</a>.
+<a href="http://www.maywadenki.com">Maywa Denki</a>
 <br />
 Paik, Nam June. <em>The Worlds of Nam June Paik</em>. Solomon R. Guggenheim Foundation, 2000.
 <br /> 
 <a href="http://tangible.media.mit.edu">Tangible Media Group</a>, MIT Media Lab.
 <br />
-<a href="http://www.bitforms.com/artist_vogel.html">Vogel, Peter</a>.
+<a href="http://www.bitforms.com/artist_vogel.html">Vogel, Peter</a>
 </p>
 </p>
 
