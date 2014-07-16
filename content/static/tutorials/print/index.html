@@ -7,7 +7,7 @@
 <tr>
 <td>
 <br />
-    <p>This tutorial is Extension 5 from the second edition of <em>Processing: A Programming Handbook for Visual Designers and Artists</em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
+    <p class="license">This tutorial is Extension 5 from the second edition of <em>Processing: A Programming Handbook for Visual Designers and Artists</em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 
 <p>
 Digital technologies have spawned many changes to printing within the arts. The introduction of laser printers and personal computers into design offices in the mid-1980s was a catalyst for years of experimentation and innovation in typeface design, layout, and printing. Artists have produced prints from software since the 1960s, but these techniques have surged since 1990. Innovations have given digitally made prints a longer estimated life than color photographs printed from film. The recent deluge of digital cameras provided another change. Amateurs and professionals are skipping the lab and printing their images in the studio and at home. 
@@ -17,6 +17,7 @@ Digital technologies have spawned many changes to printing within the arts. The 
 <!--<img src="fg.40-1">
 <img src="fg.40-2">-->
 </p>
+<br />
 <p>   
 <h3>Print and computers</h3>
 When they originated in the 1960s, computer graphics were more often seen printed on paper than on screens. Computers of this time were enormous, expensive machines that were accessible only at research centers and universities, but prints found their way into galleries, journals, and newspapers. In 1963, the <em>Computers and Automation</em> journal announced the first competition for computer graphics to be judged using aesthetic criteria.1 The U.S. Army Ballistic Missile Research Laboratories won the first two competitions, but A. Michael Noll and Frieder Nake won the following two. In 1965 in Stuttgart, Georg Nees and Frieder Nake were the first individuals to exhibit their computer-generated images in a gallery. The same year, the work of A. Michael Noll and Bela Julesz was exhibited at the Howard Wise Gallery in New York.2 These shows presented drawings defined by code and output using a plotter. A plotter is a machine that controls the position of a physical pen on a drawing surface. Nake described his plotter in an essay for the Cybernetic Serendipity exhibition catalog: “I used the Graphomat Zuse Z 64 drawing machine controlled by punch tape. The machine has a drawing head guiding four pens, fed by Indian ink of different colours with nibs of varying thicknesses.”3 Because of mechanical and software limitations, the drawings exhibited in these shows were sparse, mostly geometric, black-and-white images. The plotter remained one of the most common output devices into the 1980s and is still in use today. Over the years, artists have explored many drawing surfaces and have attached brushes, pencils, and other marking instruments to the plotter’s head. 
@@ -26,6 +27,7 @@ When they originated in the 1960s, computer graphics were more often seen printe
 <br />
 <br />
 	During the 1980s, the cost of computers and printing technology fell to levels within reach of individual artists and designers. Mark Wilson started to work with personal computers and plotters in 1980. He utilized the resolution and precision of the plotter to produce dense, geometric textures. He has continued to explore new printing techniques and has produced work using the plotter to deposit acrylic onto linen and to draw with ink on mylar. In his 1985 book <em>Drawing with Computers</em>, Wilson explained how to use a personal computer and the BASIC programming language to control a plotter. The following program from the book draws a line from coordinate (100, 100) to (200, 200). The text following each apostrophe is a comment explaining the purpose of each line:
+<br />
 <br />
 <pre>
 100 OPEN "COM1,1200,0,7,1" AS #1               'Serial communications opened
@@ -37,11 +39,11 @@ When they originated in the 1960s, computer graphics were more often seen printe
 160 PRINT #1,"!AX"+STR$(STARTX)+STR$(STARTY);  'Move pen head to coordinate (100,100)
 170 PRINT #1,"!AY"+STR$(ENDX)+STR$(ENDY);      'Draw line to coordinate (200,200)
 </pre>
-<br />
 Each plotter manufacturer (e.g., Hewlett-Packard, Tektronix, IBM) had its own commands, but they all provided the ability to move the pen up and down and from one location to another. The above example was written for a Tektronix plotter. 
 <br />
 <br />
 	The LaserWriter printer, introduced for Apple’s Macintosh computer in 1985, was an important innovation in printing technology. Combined with page-layout software and the Mac’s GUI interface, this early laser printer was the catalyst for the desktop publishing revolution. The LaserWriter printed at 300 dots per inch (dpi), while the more common dot matrix printers at that time printed at 72 dpi. The PostScript programming language was the essential software component of the LaserWriter. Each printer had a processor that ran the PostScript interpreter to rasterize the data for printing. Forms in a PostScript file are defined by coordinates and shape commands. This makes it possible to transform elements within a composition without losing resolution. The PostScript equivalent of the BASIC program presented above is:
+<br />
 <br />
 <pre>
 /startX 100 def             % Create and assign startX variable
@@ -51,7 +53,6 @@ Each plotter manufacturer (e.g., Hewlett-Packard, Tektronix, IBM) had its own co
 startX startY moveto        % Move to coordinate (100,100)
 endX endY lineto stroke     % Draw line to coordinate (200,200)
 </pre>
-<br />
 Over time, the PostScript language became the de facto standard for printed output, and it served as a basis for ambitious visual experimentation. Rather than programming PostScript files directly, most people used software like Aldus PageMaker to design pages. Graphic designers started to use this technology to assert more personal control over typographic layout and to explore new visual possibilities.
 <br />
 <br />
@@ -77,7 +78,7 @@ Images saved directly from screen are created at the screen’s resolution, typi
 <br />
 The difference is illustrated with this diagram:
 <br />
-<img src="imgs/fg.40-1">
+<img src="imgs/fg40-1.jpg">
 <br /> 
 Use the vector technique to export line art, type, or shapes that can be printed professionally, published, or printed at very large sizes. It’s also helpful to create a file that can be edited further with a program like Inkscape or Adobe Illustrator. Raster images are useful when exporting an image from a program that does not refresh its background each frame. If the image accumulates by adding each new frame to the display window, it may not be possible for vector data to achieve the same effect, or it may be too much geometry to store in a single file. A raster file does not represent each visual element separately (it saves it as a series of pixels), so it is editable only by programs like GIMP and Photoshop. A raster file can be printed with as much resolution as a vector file if it is output with a large enough width and height setting to give the file a high resolution when scaled for print. For example, to print a four-inch image at 600 dpi would require size(2400,2400) inside setup(). Vector files are eventually rasterized during the printing process, so it’s simply a matter of when the rasterizing takes place—whether directly from the program, or inside a professional raster image processor (RIP). The following examples clarify the strengths and weaknesses of each technique.
 <br /> 
@@ -344,7 +345,6 @@ void setOffset() {
 }
 </pre>
 </p>
-<br />
 <br />
 <p>
 <h3>Resources</h3>
