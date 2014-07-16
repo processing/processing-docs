@@ -139,5 +139,12 @@
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+    
+     <tutorial>
+		<title>Print</title>
+		<directory>print</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
 
 </tutorials>
