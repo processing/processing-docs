@@ -40,7 +40,7 @@ Floats are not precise, so avoid adding small values (such as 0.0001) may not al
 <br />
 Floating-point numbers can be as large as 3.40282347E+38 and as low as -3.40282347E+38. They are stored as 32 bits (4 bytes) of information. The float data type is inherited from Java, and you can read more about the technical details <a href="http://download.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a> or <a href="http://java.sun.com/docs/books/jls/third_edition/html/typesValues.html#4.2.3">here</a>.<br />
 <br />
-Processing supports the 'double' datatype from Java as well, however it is not documented because none of the Processing functions use double values, which are overkill for nearly all work created in Processing and use more memory. We do not plan to support doubles, as it would require increasing the number of API functions significantly.
+Processing supports the 'double' datatype from Java as well. However, none of the Processing functions use double values, which are overkill for nearly all work created in Processing and use more memory. We do not plan to support doubles, as it would require increasing the number of API functions significantly.
 ]]></description>
 
 <syntax>
@@ -62,6 +62,7 @@ float <c>var</c> = <c>value</c>
 
 <related>
 int
+double
 </related>
 
 <availability>1.0</availability>
