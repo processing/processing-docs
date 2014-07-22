@@ -53,11 +53,24 @@ If no arguments are passed, it uses the following defaults
 
 from sys import argv
 from urllib2 import *
+from time import localtime, gmtime, strftime
 import re
 import shutil
 import httplib
+import sys
 
 ENCODING = 'UTF-8'
+
+class Logger(object):
+    def __init__(self):
+        self.terminal = sys.stdout
+        self.log = open("build.log", "a")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)  
+
+sys.stdout = Logger()
 
 def read_exports(f):
   """
@@ -158,6 +171,8 @@ if __name__ == "__main__":
     print "Usage is [Input Configuration File] [Output file]"
     exit()  
   
+  print "----- " + strftime("%a %d %b %Y %H:%M:%S", localtime()) + " -----"
+
   f = open(conf)
   urls_by_category = get_lib_locations(f);
   f.close()
