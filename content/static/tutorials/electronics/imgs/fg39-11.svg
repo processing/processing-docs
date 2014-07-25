@@ -3,52 +3,52 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 687 100" enable-background="new 0 0 687 100" xml:space="preserve">
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="385.3" y1="7.5" x2="385.3" y2="68.2"/>
-<path fill="none" stroke="#020202" stroke-width="0.1172" d="M623.2,101"/>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="385.5" y1="67.9" x2="622.5" y2="67.9"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="372.8" y1="5.5" x2="372.8" y2="66.8"/>
+<path fill="none" stroke="#010101" stroke-width="0.1172" d="M613.2,100"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="372.9" y1="66.5" x2="612.5" y2="66.5"/>
 <g>
-	<text transform="matrix(1 0 0 1 598.7822 79.2314)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.928">Time</text>
+	<text transform="matrix(1 0 0 1 588.5214 77.9991)" font-family="'TheSansMono-W3Light'" font-size="10.0339">Time</text>
 </g>
 <g>
-	<text transform="matrix(0 -1 1 0 379.8145 37.6709)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.928">Volts</text>
+	<text transform="matrix(0 -1 1 0 367.2178 35.9948)" font-family="'TheSansMono-W3Light'" font-size="10.0339">Volts</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 385.3291 90.2637)" fill="#020202" font-family="'TheSerif-HP5Plain'" font-size="11.5827">Digital signal</text>
+	<text transform="matrix(1 0 0 1 372.791 89.1485)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="11.7062">Digital signal</text>
 </g>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="385.3" y1="7.5" x2="385.3" y2="68.2"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="372.8" y1="5.5" x2="372.8" y2="66.8"/>
 <g>
-	<path fill="none" stroke="#020202" stroke-width="0.5" stroke-linecap="round" d="M74.7,34.4c17.2,14.9,26.4,14.9,29.7,14.9"/>
-	<path fill="none" stroke="#020202" stroke-width="0.5" stroke-linecap="round" d="M104.4,49.3c2.1,0,12.5,0.3,30-15
-		c17.2-14.9,26.4-14.9,29.7-14.9"/>
-	<path fill="none" stroke="#020202" stroke-width="0.5" stroke-linecap="round" d="M283.5,19.5c-2.1,0-12.5-0.3-30,15
-		c-17.2,14.9-26.4,14.9-29.7,14.9"/>
-	<path fill="none" stroke="#020202" stroke-width="0.5" stroke-linecap="round" d="M223.8,49.3c-2.1,0-12.5,0.3-30-15
-		c-17.2-14.9-26.4-14.9-29.7-14.9"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M58.8,32.7c17.3,15.1,26.7,15.1,30,15.1"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M88.8,47.8c2.2,0,12.6,0.3,30.3-15.2
+		c17.3-15.1,26.7-15.1,30-15.1"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M269.9,17.6c-2.2,0-12.6-0.3-30.3,15.2
+		c-17.3,15.1-26.7,15.1-30,15.1"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M209.6,47.8c-2.2,0-12.6,0.3-30.3-15.2
+		c-17.3-15.1-26.7-15.1-30-15.1"/>
 </g>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="74.7" y1="7.5" x2="74.7" y2="68.2"/>
-<path fill="#020202" d="M312.6,101"/>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="74.8" y1="67.9" x2="313.4" y2="67.9"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="58.8" y1="5.5" x2="58.8" y2="66.8"/>
+<path fill="#010101" d="M299.2,100"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="58.9" y1="66.5" x2="300.1" y2="66.5"/>
 <g>
-	<text transform="matrix(1 0 0 1 289.7549 79.2314)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.928">Time</text>
-</g>
-<g>
-	<text transform="matrix(0 -1 1 0 69.1328 37.6709)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.928">Volts</text>
+	<text transform="matrix(1 0 0 1 276.1968 77.9991)" font-family="'TheSansMono-W3Light'" font-size="10.0339">Time</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 74.6475 90.2637)" fill="#020202" font-family="'TheSerif-HP5Plain'" font-size="11.5827">Analog signal</text>
+	<text transform="matrix(0 -1 1 0 53.2212 35.9948)" font-family="'TheSansMono-W3Light'" font-size="10.0339">Volts</text>
 </g>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="74.7" y1="7.5" x2="74.7" y2="68.2"/>
 <g>
-	<path fill="none" stroke="#020202" stroke-width="0.5" d="M283.6,19.5c2.1,0,12.5-0.3,30,15"/>
+	<text transform="matrix(1 0 0 1 58.7944 89.1485)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="11.7062">Analog signal</text>
 </g>
-<polyline fill="none" stroke="#020202" stroke-width="0.5" points="385.3,35.4 390.8,35.4 390.9,39 396.3,39 396.3,42.7 401.9,42.7 
-	401.9,46 407.4,46 407.4,48.1 412.9,48.1 412.9,49.3 418.4,49.3 418.4,49.1 424,49.1 424,47.7 429.5,47.7 429.5,45.2 435,45.2 
-	435,42 440.5,42 440.5,37.9 446,37.9 446,33.5 451.5,33.5 451.5,29 457,29 457,25.3 462.5,25.3 462.5,22.4 468.1,22.4 468.1,20.3 
-	473.6,20.3 473.6,19.5 479.1,19.5 479.1,19.8 484.6,19.8 484.6,21.4 490.1,21.4 490.1,24 495.6,24 495.6,27.4 501.1,27.4 
-	501.1,31.4 506.7,31.4 506.7,35.4 "/>
-<polyline fill="none" stroke="#020202" stroke-width="0.5" points="506.7,35.4 512.2,35.4 512.2,39 517.7,39 517.7,42.7 523.2,42.7 
-	523.2,46 528.8,46 528.8,48.1 534.3,48.1 534.3,49.3 539.8,49.3 539.7,49.1 545.2,49.1 545.2,47.7 550.8,47.7 550.8,45.2 
-	556.3,45.2 556.3,42 561.8,42 561.8,37.9 567.3,37.9 567.3,33.5 572.9,33.5 572.9,29 578.4,29 578.4,25.3 583.9,25.3 583.9,22.4 
-	589.4,22.4 589.4,20.3 594.9,20.3 594.9,19.5 600.4,19.5 600.4,19.8 605.9,19.8 605.9,21.4 611.5,21.4 611.5,24 617,24 617,27.4 
-	622.5,27.4 622.5,31.4 "/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="58.8" y1="5.5" x2="58.8" y2="66.8"/>
+<g>
+	<path fill="none" stroke="#010101" stroke-width="0.5" d="M270,17.6c2.2,0,12.6-0.3,30.3,15.2"/>
+</g>
+<polyline fill="none" stroke="#010101" stroke-width="0.5" points="372.8,33.7 378.3,33.7 378.4,37.3 383.9,37.3 383.9,41.1 
+	389.5,41.1 389.5,44.4 395.1,44.4 395.1,46.5 400.7,46.5 400.7,47.8 406.2,47.8 406.2,47.5 411.8,47.5 411.8,46.1 417.4,46.1 
+	417.4,43.6 423,43.6 423,40.4 428.6,40.4 428.5,36.2 434.1,36.2 434.1,31.7 439.7,31.7 439.7,27.2 445.2,27.2 445.2,23.5 
+	450.8,23.5 450.8,20.6 456.4,20.6 456.4,18.4 462,18.4 462,17.6 467.6,17.6 467.6,17.9 473.2,17.9 473.2,19.6 478.7,19.6 
+	478.7,22.2 484.2,22.2 484.2,25.6 489.8,25.6 489.8,29.7 495.4,29.7 495.4,33.7 "/>
+<polyline fill="none" stroke="#010101" stroke-width="0.5" points="495.4,33.7 501,33.7 501,37.3 506.6,37.3 506.6,41.1 512.2,41.1 
+	512.2,44.4 517.8,44.4 517.8,46.5 523.3,46.5 523.3,47.8 528.9,47.8 528.8,47.5 534.4,47.5 534.4,46.1 540,46.1 540,43.6 
+	545.6,43.6 545.6,40.4 551.2,40.4 551.2,36.2 556.8,36.2 556.8,31.7 562.3,31.7 562.3,27.2 567.9,27.2 567.9,23.5 573.5,23.5 
+	573.5,20.6 579.1,20.6 579.1,18.4 584.6,18.4 584.6,17.6 590.2,17.6 590.2,17.9 595.8,17.9 595.8,19.6 601.3,19.6 601.3,22.2 
+	606.9,22.2 606.9,25.6 612.5,25.6 612.5,29.7 "/>
 </svg>
