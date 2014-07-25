@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 687 120" enable-background="new 0 0 687 120" xml:space="preserve">
+<line fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" x1="30" y1="28.6" x2="314.7" y2="28.6"/>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="30" y1="14.5" x2="30" y2="50.4"/>
+<path fill="none" stroke="#010101" stroke-width="0.1172" d="M314.6,86.1"/>
+<path fill="none" stroke="#010101" stroke-width="0.1172" d="M314.6,14.5"/>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="30.1" y1="50" x2="314.6" y2="50"/>
+<g>
+	<text transform="matrix(1 0 0 1 283.6445 65.541)" font-family="'TheSansMono-Light'" font-size="11.8321">Time</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 27.9688 104.0645)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="13.8041">Direct Current (DC)</text>
+</g>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="30" y1="14.5" x2="30" y2="50.4"/>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="30" y1="49.3" x2="30" y2="85.3"/>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="401.4" y1="14.5" x2="401.4" y2="50.4"/>
+<path fill="none" stroke="#010101" stroke-width="0.1172" d="M686,86.1"/>
+<path fill="none" stroke="#010101" stroke-width="0.1172" d="M686,14.5"/>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="401.5" y1="50" x2="686" y2="50"/>
+<g>
+	<path fill="none" stroke="#010101" stroke-width="0.5" d="M650.5,14.5c2.6,0,14.8-0.8,35.8,35.7"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 655.041 65.541)" font-family="'TheSansMono-Light'" font-size="11.8321">Time</text>
+</g>
+<g>
+	<text transform="matrix(0 -1 1 0 382.2842 69.168)" font-family="'TheSansMono-W3Light'" font-size="11.8321">Volts</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 399.3652 104.0645)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="13.8041">Alternating Current (AC)</text>
+</g>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="401.4" y1="14.5" x2="401.4" y2="50.4"/>
+<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="401.4" y1="50" x2="401.4" y2="85.9"/>
+<g>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M401.5,50.2c20.5,35.6,31.4,35.5,35.4,35.5"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M436.8,85.6c2.6,0,14.8,0.8,35.8-35.7
+		c20.5-35.6,31.4-35.5,35.4-35.5"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M650.4,14.5c-2.6,0-14.8-0.8-35.8,35.7
+		c-20.5,35.6-31.4,35.5-35.4,35.5"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M579.2,85.6c-2.6,0-14.8,0.8-35.8-35.7
+		C522.9,14.3,512,14.5,508,14.5"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 389.3027 53.9526)" font-family="'TheSansMono-Light'" font-size="11.8321">0</text>
+</g>
+<g>
+	<text transform="matrix(0 -1 1 0 10.5615 69.168)" font-family="'TheSansMono-W3Light'" font-size="11.8321">Volts</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 17.5776 53.9526)" font-family="'TheSansMono-Light'" font-size="11.8321">0</text>
+</g>
+</svg>
