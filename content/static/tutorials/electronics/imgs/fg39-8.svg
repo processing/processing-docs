@@ -3,25 +3,26 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 687 220" enable-background="new 0 0 687 220" xml:space="preserve">
-<circle fill="#FFFFFF" stroke="#010101" stroke-width="0.5" cx="462.1" cy="119" r="18.4"/>
-<line fill="none" stroke="#010101" stroke-width="0.5" x1="305.4" y1="71.6" x2="358.1" y2="57.4"/>
+<circle fill="#FFFFFF" stroke="#010101" stroke-width="0.5" cx="563.8" cy="128.9" r="33.7"/>
+<line fill="none" stroke="#010101" stroke-width="0.5" x1="276.5" y1="42" x2="373.1" y2="16"/>
 <g>
-	<text transform="matrix(1 0 0 1 477.0523 147.5726)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="11.9354">Light</text>
+	<text transform="matrix(1 0 0 1 591.2227 181.3136)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="21.8828">Light</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 272.3307 60.1605)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="11.9354">Switch</text>
+	<text transform="matrix(1 0 0 1 215.8785 21.0479)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="21.8828">Switch</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 180.4849 101.307)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="11.9354">Battery</text>
+	<text transform="matrix(1 0 0 1 47.4844 96.4884)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="21.8828">Battery</text>
 </g>
-<path fill="none" stroke="#010101" stroke-width="0.5" d="M359.9,71.1h51.8c9,0,16.4,7.3,16.4,16.7V112h27.3c3.8,0,6.8,3.1,6.8,6.8
-	c0,3.8-3.1,6.8-6.8,6.8h-27.3v24.6c0,9-7.3,16.4-16.4,16.4H253.6c-9,0-16.4-7.3-16.4-16.4V87.4c0-9,7.3-16.4,16.4-16.4h51.8"/>
-<circle fill="#FFFFFF" stroke="#010101" stroke-width="0.5" cx="305.4" cy="71.1" r="3.4"/>
-<circle fill="#FFFFFF" stroke="#010101" stroke-width="0.5" cx="359.9" cy="71.1" r="3.4"/>
-<rect x="234.9" y="105.2" fill="#FFFFFF" width="5.4" height="20.4"/>
-<line fill="none" stroke="#010101" stroke-width="0.5" x1="223.5" y1="105.2" x2="250.8" y2="105.2"/>
-<line fill="none" stroke="#010101" stroke-width="0.5" x1="223.5" y1="118.8" x2="250.8" y2="118.8"/>
-<line fill="none" stroke="#010101" stroke-width="0.5" x1="230.4" y1="112" x2="244" y2="112"/>
-<line fill="none" stroke="#010101" stroke-width="0.5" x1="230.4" y1="125.6" x2="244" y2="125.6"/>
-<text transform="matrix(1 0 0 1 227.6334 101.4291)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="13.6405">+</text>
+<path fill="none" stroke="#010101" stroke-width="0.5" d="M376.4,41.1h95c16.5,0,30.1,13.4,30.1,30.6v44.4h50.1
+	c7,0,12.5,5.7,12.5,12.5c0,7-5.7,12.5-12.5,12.5h-50.1v45.1c0,16.5-13.4,30.1-30.1,30.1H181.5c-16.5,0-30.1-13.4-30.1-30.1V71
+	c0-16.5,13.4-30.1,30.1-30.1h95"/>
+<circle fill="#FFFFFF" stroke="#010101" stroke-width="0.5" cx="276.5" cy="41.1" r="6.2"/>
+<circle fill="#FFFFFF" stroke="#010101" stroke-width="0.5" cx="376.4" cy="41.1" r="6.2"/>
+<rect x="147.3" y="103.6" fill="#FFFFFF" width="9.9" height="37.4"/>
+<line fill="none" stroke="#010101" stroke-width="0.5" x1="126.4" y1="103.6" x2="176.4" y2="103.6"/>
+<line fill="none" stroke="#010101" stroke-width="0.5" x1="126.4" y1="128.6" x2="176.4" y2="128.6"/>
+<line fill="none" stroke="#010101" stroke-width="0.5" x1="139" y1="116.1" x2="163.9" y2="116.1"/>
+<line fill="none" stroke="#010101" stroke-width="0.5" x1="139" y1="141" x2="163.9" y2="141"/>
+<text transform="matrix(1 0 0 1 133.9277 96.711)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="25.009">+</text>
 </svg>
