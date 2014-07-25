@@ -2,47 +2,47 @@
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 687 120" enable-background="new 0 0 687 120" xml:space="preserve">
-<line fill="none" stroke="#CDCCCC" stroke-width="2" x1="401.9" y1="23.2" x2="685.5" y2="23.2"/>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="401.9" y1="9.3" x2="401.9" y2="81.8"/>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="402" y1="81.8" x2="685.5" y2="81.8"/>
+	 viewBox="0 0 687 100" enable-background="new 0 0 687 100" xml:space="preserve">
+<line fill="none" stroke="#CECCCC" stroke-width="2" x1="367.6" y1="19.5" x2="602.9" y2="19.5"/>
+<line fill="none" stroke="#CECCCC" stroke-width="0.5" x1="367.6" y1="8" x2="367.6" y2="68.1"/>
+<line fill="none" stroke="#CECCCC" stroke-width="0.5" x1="367.6" y1="68.1" x2="602.9" y2="68.1"/>
 <g>
-	<text transform="matrix(1 0 0 1 657.1748 97.3701)" font-family="'TheSansMono-W3Light'" font-size="11.8726">Time</text>
+	<text transform="matrix(1 0 0 1 579.4028 81.0697)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">Time</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 390.7012 13.252)" font-family="'TheSansMono-W3Light'" font-size="11.8726">5</text>
+	<text transform="matrix(1 0 0 1 358.2632 11.263)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">5</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 390.7012 85.8066)" font-family="'TheSansMono-W3Light'" font-size="11.8726">0</text>
+	<text transform="matrix(1 0 0 1 358.2632 71.473)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">0</text>
 </g>
 <g>
-	<text transform="matrix(0 -1 1 0 382.127 45.3403)" font-family="'TheSansMono-W3Light'" font-size="11.8726">Volts</text>
+	<text transform="matrix(0 -1 1 0 351.1489 37.8919)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">Volts</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 401.9121 110.5635)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="13.8514">80% duty cycle emulates 4 volts</text>
+	<text transform="matrix(1 0 0 1 367.5678 92.0169)" fill="#020202" font-family="'TheSerif-HP5Plain'" font-size="11.4949">80% duty cycle emulates 4 volts</text>
 </g>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="401.9" y1="9.3" x2="401.9" y2="81.8"/>
+<line fill="none" stroke="#CECCCC" stroke-width="0.5" x1="367.6" y1="8" x2="367.6" y2="68.1"/>
 <g>
-	<text transform="matrix(1 0 0 1 32.3564 110.5635)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="13.8514">10% duty cycle emulates 0.5 volts</text>
+	<text transform="matrix(1 0 0 1 60.8823 92.0169)" fill="#020202" font-family="'TheSerif-HP5Plain'" font-size="11.4949">10% duty cycle emulates 0.5 volts</text>
 </g>
-<polyline fill="none" stroke="#010101" stroke-width="0.5" points="401.9,9.3 458.6,9.3 458.6,81.8 472.8,81.8 472.8,9.3 529.6,9.3 
-	529.6,81.8 543.7,81.8 543.7,9.3 600.5,9.3 600.5,81.8 614.6,81.8 614.6,9.3 671.4,9.3 671.4,81.8 685.6,81.8 "/>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="32.5" y1="9.3" x2="32.5" y2="81.8"/>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="32.6" y1="81.8" x2="316.2" y2="81.8"/>
+<polyline fill="none" stroke="#020202" stroke-width="0.5" points="367.6,8 414.6,8 414.6,68.1 426.4,68.1 426.4,8 473.5,8 
+	473.5,68.1 485.2,68.1 485.2,8 532.4,8 532.4,68.1 544.1,68.1 544.1,8 591.2,8 591.2,68.1 603,68.1 "/>
+<line fill="none" stroke="#CECCCC" stroke-width="0.5" x1="61" y1="8" x2="61" y2="68.1"/>
+<line fill="none" stroke="#CECCCC" stroke-width="0.5" x1="61.1" y1="68.1" x2="296.4" y2="68.1"/>
 <g>
-	<text transform="matrix(1 0 0 1 287.7866 97.3701)" font-family="'TheSansMono-W3Light'" font-size="11.8726">Time</text>
-</g>
-<g>
-	<text transform="matrix(1 0 0 1 21.6611 13.252)" font-family="'TheSansMono-W3Light'" font-size="11.8726">5</text>
+	<text transform="matrix(1 0 0 1 272.8574 81.0697)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">Time</text>
 </g>
 <g>
-	<text transform="matrix(1 0 0 1 21.6611 85.8066)" font-family="'TheSansMono-W3Light'" font-size="11.8726">0</text>
+	<text transform="matrix(1 0 0 1 52.0068 11.263)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">5</text>
 </g>
 <g>
-	<text transform="matrix(0 -1 1 0 13.0854 45.3403)" font-family="'TheSansMono-W3Light'" font-size="11.8726">Volts</text>
+	<text transform="matrix(1 0 0 1 52.0068 71.473)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">0</text>
 </g>
-<line fill="none" stroke="#CDCCCC" stroke-width="0.5" x1="32.5" y1="9.3" x2="32.5" y2="81.8"/>
-<line fill="none" stroke="#CDCCCC" stroke-width="2" x1="32.5" y1="73.3" x2="316.2" y2="73.3"/>
-<polyline fill="none" stroke="#010101" stroke-width="0.5" points="316.2,81.8 252.4,81.8 252.4,9.3 245.3,9.3 245.3,81.8 
-	181.5,81.8 181.5,9.3 174.4,9.3 174.4,81.8 110.5,81.8 110.5,9.3 103.5,9.3 103.4,81.8 39.6,81.8 39.6,9.3 32.5,9.3 "/>
+<g>
+	<text transform="matrix(0 -1 1 0 44.8896 37.8919)" fill="#010101" font-family="'TheSansMono-W3Light'" font-size="9.8528">Volts</text>
+</g>
+<line fill="none" stroke="#CECCCC" stroke-width="0.5" x1="61" y1="8" x2="61" y2="68.1"/>
+<line fill="none" stroke="#CECCCC" stroke-width="2" x1="61" y1="61.1" x2="296.4" y2="61.1"/>
+<polyline fill="none" stroke="#020202" stroke-width="0.5" points="296.4,68.1 243.5,68.1 243.5,8 237.6,8 237.6,68.1 184.7,68.1 
+	184.7,8 178.8,8 178.8,68.1 125.7,68.1 125.7,8 119.9,8 119.8,68.1 66.9,68.1 66.9,8 61,8 "/>
 </svg>
