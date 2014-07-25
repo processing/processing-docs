@@ -579,6 +579,10 @@ pre {
 	margin-bottom: 30px;
 	margin-top: 0;
 }
+table pre { 
+	margin-bottom: 0;
+	margin-top: 0;
+}
 tr.name-row { height: 60px; }
 td p { margin-top: 0; }
 
