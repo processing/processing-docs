@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 687 120" enable-background="new 0 0 687 120" xml:space="preserve">
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="395.4" y1="6.6" x2="395.4" y2="80.2"/>
+<path fill="none" stroke="#010101" stroke-width="0.1172" d="M684,120"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="395.6" y1="79.8" x2="683.1" y2="79.8"/>
+<g>
+	<text transform="matrix(1 0 0 1 654.3262 93.5986)" font-family="'TheSansMono-W3Light'" font-size="12.0407">Time</text>
+</g>
+<g>
+	<text transform="matrix(0 -1 1 0 388.7617 43.1938)" font-family="'TheSansMono-W3Light'" font-size="12.0407">Volts</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 395.4492 106.9784)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="14.0475">Digital signal</text>
+</g>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="395.4" y1="6.6" x2="395.4" y2="80.2"/>
+<g>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M18.7,39.2c20.8,18.1,32,18.1,36,18.1"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M54.7,57.3c2.6,0,15.1,0.4,36.4-18.2
+		c20.8-18.1,32-18.1,36-18.1"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M272,21.1c-2.6,0-15.1-0.4-36.4,18.2
+		c-20.8,18.1-32,18.1-36,18.1"/>
+	<path fill="none" stroke="#010101" stroke-width="0.5" stroke-linecap="round" d="M199.6,57.3c-2.6,0-15.1,0.4-36.4-18.2
+		c-20.8-18.1-32-18.1-36-18.1"/>
+</g>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="18.7" y1="6.6" x2="18.7" y2="80.2"/>
+<path fill="#010101" d="M307.2,120"/>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="18.8" y1="79.8" x2="308.2" y2="79.8"/>
+<g>
+	<text transform="matrix(1 0 0 1 279.5361 93.5986)" font-family="'TheSansMono-W3Light'" font-size="12.0407">Time</text>
+</g>
+<g>
+	<text transform="matrix(0 -1 1 0 11.9658 43.1938)" font-family="'TheSansMono-W3Light'" font-size="12.0407">Volts</text>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 18.6533 106.9784)" fill="#010101" font-family="'TheSerif-HP5Plain'" font-size="14.0475">Analog signal</text>
+</g>
+<line fill="none" stroke="#CCCCCC" stroke-width="0.5" x1="18.7" y1="6.6" x2="18.7" y2="80.2"/>
+<g>
+	<path fill="none" stroke="#010101" stroke-width="0.5" d="M272.1,21.1c2.6,0,15.1-0.4,36.4,18.2"/>
+</g>
+<polyline fill="none" stroke="#010101" stroke-width="0.5" points="395.4,40.4 402.1,40.4 402.2,44.8 408.8,44.8 408.8,49.3 
+	415.5,49.3 415.5,53.3 422.2,53.3 422.2,55.8 428.9,55.8 428.9,57.3 435.6,57.3 435.6,57 442.3,57 442.3,55.3 449,55.3 449,52.3 
+	455.7,52.3 455.7,48.5 462.4,48.5 462.3,43.5 469,43.5 469,38.1 475.7,38.1 475.7,32.7 482.4,32.7 482.4,28.2 489.1,28.2 
+	489.1,24.7 495.8,24.7 495.8,22.1 502.5,22.1 502.5,21.1 509.2,21.1 509.2,21.5 515.9,21.5 515.9,23.5 522.5,23.5 522.5,26.6 
+	529.2,26.6 529.2,30.7 535.9,30.7 535.9,35.6 542.6,35.6 542.6,40.4 "/>
+<polyline fill="none" stroke="#010101" stroke-width="0.5" points="542.6,40.4 549.3,40.4 549.3,44.8 556,44.8 556,49.3 562.7,49.3 
+	562.7,53.3 569.4,53.3 569.4,55.8 576.1,55.8 576.1,57.3 582.8,57.3 582.7,57 589.4,57 589.4,55.3 596.1,55.3 596.1,52.3 
+	602.8,52.3 602.8,48.5 609.5,48.5 609.5,43.5 616.2,43.5 616.2,38.1 622.9,38.1 622.9,32.7 629.6,32.7 629.6,28.2 636.3,28.2 
+	636.3,24.7 643,24.7 643,22.1 649.6,22.1 649.6,21.1 656.3,21.1 656.3,21.5 663,21.5 663,23.5 669.7,23.5 669.7,26.6 676.4,26.6 
+	676.4,30.7 683.1,30.7 683.1,35.6 "/>
+</svg>
