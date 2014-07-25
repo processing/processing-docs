@@ -41,7 +41,7 @@ The flow of water through a hose is like the flow of electricity through a circu
 Electrical current flows in two ways: direct current (DC) and alternating current (AC). A DC signal always flows in the same direction and an AC signal reverses the direction of flow at regular intervals. Batteries and solar cells produce DC signals, and the power that comes from wall sockets is an AC signal:
 <br />
 <br /> 
-<img src="imgs/39-1(ACDC).svg" style= "width: 687px; height: 120px">
+<img src="imgs/39-1(ACDC).svg" style= "width: 687px; height: 100px">
 <br />
 Depending on your country, the AC power coming into your home is between 100 and 240 volts. Most home appliances use AC current to operate, but some use a transformer to convert the higher-potential AC energy into DC current at smaller voltages. The black plastic boxes (a k a power bricks, power adapters, wall warts) that are used to power laptops or mobile phones are transformers. Most desktop computers have an internal power supply with a transformer to convert the AC signal to the 12-volt and 5-volt DC signals necessary to run the internal electronics. Low voltages are generally safer than high voltages, but it’s the amount of current (amps) that makes electricity dangerous.
 </p>
@@ -173,7 +173,7 @@ A tethered I/O board is used to get sensor data into a computer and to control p
 Physical phenomena are measured by electronic devices called sensors. Different sensors have been invented to acquire data related to touch, force, proximity, light, orientation, sound, temperature, and much more. Sensors can be classified into groups according to the type of signals they produce (analog or digital) and the type of phenomena they measure. Analog signals are continuous, but digital signals are discrete and are constrained to a range of values (e.g., 0 to 255): 
 <br />
 <br />
-<img src="imgs/fg39-11.svg" style= "width: 687px; height: 120px" />
+<img src="imgs/fg39-11.svg" style= "width: 687px; height: 100px" />
 <br />
 Most basic analog sensors utilize resistance. Changes in a physical phenomenon modify the resistance of the sensor, therefore varying the voltage output through the sensor. An analog-to-digital converter can continuously measure this changing voltage and convert it to a number that can be used by software. Sensors that produce digital signals send data as binary values to an attached device or computer. These sensors use a voltage (typically between 3.5 and 5 volts) as ON (binary digit 1 or TRUE) and no voltage as a OFF (binary digit 0 or FALSE). More complex sensors include their own microcontrollers to convert the data to digital signals and to use established communication protocols for transmitting these signals to another computer.
 <br />
@@ -332,6 +332,7 @@ This equipment can be purchased from an electronics store such as Radio Shack or
 <br />
 <br />
 <em>Example 1A:  Switch (Wiring/Arduino)</em>
+<img src="imgs/fg39-13.svg" style= "width: 687px; height: 220px">
 <pre>
 // Code for sensing a switch status and writing the value to the serial port
 
@@ -383,11 +384,11 @@ void draw() {
   rect(50, 50, 100, 100);
 } 
 </pre>
-<img src="imgs/fg39-13.svg" style= "width: 687px; height: 220px">
 <br />
 <hr />
 <br />
 <em>Example 2A:  Light sensor (Wiring/Arduino)</em>
+<img src="imgs/fg39-14.svg" style= "width: 687px; height: 220px">
 <pre>
 // Code to read an analog value and write it to the serial port
 
@@ -434,11 +435,11 @@ void draw() {
   rect(50, 50, 100, 100);        // Draw square
 } 
 </pre>
-<img src="imgs/fg39-14.svg" style= "width: 687px; height: 220px">
 <br />
 <hr />
 <br />
 <em>Example 3A: Turning a light on and off</em>
+<img src="imgs/fg39-15.svg" style= "width: 687px; height: 220px">
 <pre>
 // Read data from the serial and turn ON or OFF a light depending on the value
  
@@ -497,11 +498,11 @@ boolean mouseOverRect() {        // Test if mouse is over square
   return ((mouseX >= 50) &amp;&amp; (mouseX <= 150) && (mouseY >= 50) &amp;&amp; (mouseY <= 150)); 
 } 
 </pre>
-<img src="imgs/fg39-15.svg" style= "width: 687px; height: 220px">
 <br />
 <hr />
 <br />
 <em>Example 4A: Controlling a servomotor(Wiring/Arduino)</em>
+<img src="imgs/fg39-16.svg" style= "width: 687px; height: 297px">
 <pre>
 // Read data from the serial port and set the position of a servomotor 
 // according to the value
@@ -563,11 +564,11 @@ void draw() {
   port.write(angle);	                    // Write the angle to the serial port
 }
 </pre>
-<img src="imgs/fg39-16.svg" style= "width: 687px; height: 297px">
 <br />
 <hr />
 <br />
 <em>Example 5A: Turning a DC Motor on and off (Wiring/Arduino)</em>
+<img src="imgs/fg39-17.svg" style= "width: 687px; height: 369px">
 <pre>
 // Read data from the serial and turn a DC motor on or off according to the value
 
@@ -655,7 +656,6 @@ boolean overRect(int x, int y, int width, int height) {
   }
 }
 </pre>
-<img src="imgs/fg39-17.svg" style= "width: 687px; height: 369px">
 </p>
 <br />
 <br />
