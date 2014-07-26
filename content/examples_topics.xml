@@ -52,7 +52,6 @@
 		<ex file="TextureTriangle.html">Texture Triangle</ex>
 		<ex file="TextureCylinder.html">Texture Cylinder</ex>
 		<ex file="TextureCube.html">Texture Cube</ex>
-		<ex file="TextureSphere.html">Texture Sphere</ex>
 	</cat>
 	<cat label="Simulate">
 		<ex file="Spring.html">Spring</ex>
