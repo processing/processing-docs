@@ -114,7 +114,7 @@ void draw() {
 
 
 <description><![CDATA[
-The <b>createShape()</b> function is used to define a new shape. Once created, this shape can be drawn with the <b>shape()</b> function. The basic way to use the function defines new primitive shapes. One of the following parameters are used as the first parameter: <b>ELLIPSE</b>, <b>RECT</b>, <b>ARC</b>, <b>TRIANGLE</b>, <b>SPHERE</b>, <b>BOX</b>, <b>QUAD</b>, <b>LINE</b>. The parameters for each of these different shapes are the same as their corrsponding functions: <b>ellipse()</b>, <b>rect()</b>, <b>arc()</b>, <b>triangle()</b>, <b>sphere()</b>, <b>box()</b>, and <b>line()</b>. The first example above clarifies how this works.<br />
+The <b>createShape()</b> function is used to define a new shape. Once created, this shape can be drawn with the <b>shape()</b> function. The basic way to use the function defines new primitive shapes. One of the following parameters are used as the first parameter: <b>ELLIPSE</b>, <b>RECT</b>, <b>ARC</b>, <b>TRIANGLE</b>, <b>SPHERE</b>, <b>BOX</b>, <b>QUAD</b>, or <b>LINE</b>. The parameters for each of these different shapes are the same as their corresponding functions: <b>ellipse()</b>, <b>rect()</b>, <b>arc()</b>, <b>triangle()</b>, <b>sphere()</b>, <b>box()</b>, and <b>line()</b>. The first example above clarifies how this works.<br />
 <br />
 Custom, unique shapes can be made by using <b>createShape()</b> without a parameter. After the shape is started, the drawing attributes and geometry can be set directly to the shape within the <b>beginShape()</b> and <b>endShape()</b> methods. See the second example above for specifics.<br />
 <br />
@@ -122,7 +122,7 @@ Geometry that groups vertices to build larger forms, such as group of triangles,
 <br />
 The  <b>createShape()</b> function can also be used to make a complex shape made of other shapes. This is called a "group" and it's created by using the parameter <b>GROUP</b> as the first parameter. See the fourth example above to see how it works.<br />
 <br />
-When a shape is first created inside the <b>beginShape()</b> and <b>endShape()</b> methods, the normal Processing style functions like <b>fill()</b> and <b>stroke()</b> are used to define the drawing attributes. However, after a shape is created, a different set of functions needs to be used. These include the setFill() and setStroke() functions shown in the examples above. The complete list of methods and fields for the PShape class are in the <a href="http://processing.org/reference/javadoc/core/">Processing Javadoc</a>.
+When a shape is first created inside the <b>beginShape()</b> and <b>endShape()</b> methods, the normal Processing style functions like <b>fill()</b> and <b>stroke()</b> are used to define the drawing attributes. However, after a shape is created, a different set of functions needs to be used. These include the <b>setFill()</b> and <b>setStroke()</b> functions shown in the examples above. The complete list of methods and fields for the PShape class are in the <a href="http://processing.org/reference/javadoc/core/">Processing Javadoc</a>.
 ]]></description>
 
 </root>
