@@ -164,7 +164,7 @@ Using the <b>beginShape()</b> and <b>endShape()</b> functions allow creating mor
 <br/><br/>
 Transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> do not work within <b>beginShape()</b>. It is also not possible to use other shapes, such as <b>ellipse()</b> or <b>rect()</b> within <b>beginShape()</b>. 
 <br/><br/>
-The P3D renderer settings allow <b>stroke()</b> and <b>fill()</b> settings to be altered per-vertex, but P2D and the default renderer do not. Settings such as <b>strokeWeight()</b>, <b>strokeCap()</b>, and <b>strokeJoin()</b> cannot be changed while inside a <b>beginShape()</b>/<b>endShape()</b> block with any renderer.
+The P2D and P3D renderers allow <b>stroke()</b> and <b>fill()</b> to be altered on a per-vertex basis, but the default renderer does not. Settings such as <b>strokeWeight()</b>, <b>strokeCap()</b>, and <b>strokeJoin()</b> cannot be changed while inside a <b>beginShape()</b>/<b>endShape()</b> block with any renderer.
 ]]></description>
 
 </root>
