@@ -38,7 +38,7 @@ line(75, 25, 25, 75);
 </example>
 
 <description><![CDATA[
-Blends the pixels in the display window according to the defined mode. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B):<br />
+Blends the pixels in the display window according to a defined mode. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels already in the display window (B). A pixel's final color is the result of applying one of the above blend modes with each channel of (A) and (B) independently. For example, red is compared with red, green with green, and blue with blue.<br />
 <br />
 BLEND - linear interpolation of colours: C = A*factor + B. This is the default blending mode.<br />
 <br />
