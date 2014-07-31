@@ -52,6 +52,7 @@
 				<a href="http://download.processing.org/processing-2.2.1-macosx.zip">Mac OS X</a> 
 			</li>
 
+<!--
 			<li>
 				<span class="version">2.2</span>
 				<span class="version-date">(12 May 2014)</span>
@@ -72,7 +73,6 @@
 				<a href="http://download.processing.org/processing-2.1.2-macosx.zip">Mac OS X</a> 
 			</li>
 
-<!--
 			<li>
 				<span class="version">2.1.1</span>
 				<span class="version-date">(21 January 2014)</span>
