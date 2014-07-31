@@ -152,6 +152,16 @@
 		  <li>No pre-release versions are currently available.</li>
 -->
 			<li>
+				<span class="version">3.0a2</span>
+				<span class="version-date">(31 July 2014)</span>
+				<a href="http://download.processing.org/processing-3.0a2-windows32.zip">Win 32</a>
+				<a href="http://download.processing.org/processing-3.0a2-windows64.zip">Win 64</a> 
+				<a href="http://download.processing.org/processing-3.0a2-linux32.tgz">Linux 32</a> 
+				<a href="http://download.processing.org/processing-3.0a2-linux64.tgz">Linux 64</a>
+				<a href="http://download.processing.org/processing-3.0a2-macosx.zip">Mac OS X</a> 
+			</li>
+
+			<li>
 				<span class="version">3.0a1</span>
 				<span class="version-date">(26 July 2014)</span>
 				<a href="http://download.processing.org/processing-3.0a1-windows32.zip">Win 32</a>
