@@ -925,7 +925,8 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	font-style			: normal;
 }*/
 
-.Tutorials h1 { line-height: 1em } 
+<!--------------------TUTORIAL HEADER SPACING------------------>
+.Tutorials h1 { line-height: 0.5em; } 
 
 #Tutorials h2.with-nav { margin-bottom: 0; }
 #Tutorials .onecol { clear: both; }
