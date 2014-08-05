@@ -27,4 +27,5 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 ?>
 
 <h2>Log Deletion Successful</h2>
+<p><?=$path . 'build.log'?> no longer exists.</p>
 <p>Complete in <?=$execution_time?> seconds.</p>
