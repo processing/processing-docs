@@ -76,10 +76,9 @@ li { margin-bottom: 1em; }
 	<br />
 	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
 	<br />
-	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> 
-			(<a href="/contrib_generate/build.log">view log</a> | <a href="#" onclick="remote_link('libraries_log_delete.php', 'lang=en'); return false;">delete log</a>) \ 
+	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
 		  <a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
-		  <a href="#" onclick="remote_link('contributions_data.php', 'lang=en'); return false;">Contributions Data</a> \ 
+		  <a href="#" onclick="remote_link('contributions_data.php', 'lang=en'); return false;">Contributions Data</a> (<a href="/contrib_generate/build.log">view log</a> | <a href="#" onclick="remote_link('libraries_log_delete.php', 'lang=en'); return false;">delete log</a>) \ 
 		  Modes (to come...)<br />
 	<br />
 	Scott: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
