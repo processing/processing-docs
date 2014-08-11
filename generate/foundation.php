@@ -23,8 +23,8 @@ putenv('HOME=' . CONTENTDIR);
 $source = CONTENTDIR."foundation-test/";
 
 $page = new Page("Foundation Overview", "Foundation Overview");
-$page->content(file_get_contents($source."overviewf.html"));
-writeFile('overviewf/index.html', $page->out());
+$page->content(file_get_contents($source."foundation-test/overviewf.html"));
+writeFile('overviewf.html', $page->out());
 #copydirr($source.'/images', $path.'/images');
 
 $page = new Page("Mission", "Mission");
