@@ -24,36 +24,36 @@ $source = CONTENTDIR."foundation-test/";
 
 $page = new Page("Overview", "Overview");
 $page->content(file_get_contents($source."overview.html"));
-writeFile('overview/index.html', $page->out());
+writeFile('overview.html', $page->out());
 #copydirr($source.'/images', $path.'/images');
 
 $page = new Page("Mission", "Mission");
 $page->content(file_get_contents($source."mission.html"));
-writeFile('mission/index.html', $page->out());
+writeFile('mission.html', $page->out());
 
 $page = new Page("Projects", "Projects");
 $page->content(file_get_contents($source."projects.html"));
-writeFile('projects/index.html', $page->out());
+writeFile('projects.html', $page->out());
 
 $page = new Page("People", "People");
 $page->content(file_get_contents($source."people.html"));
-writeFile('people/index.html', $page->out());
+writeFile('people.html', $page->out());
 
 $page = new Page("Fellowships", "Fellowships");
 $page->content(file_get_contents($source."fellowships.html"));
-writeFile('fellowships/index.html', $page->out());
+writeFile('fellowships.html', $page->out());
 
 $page = new Page("Reports", "Reports");
 $page->content(file_get_contents($source."reports.html"));
-writeFile('reports/index.html', $page->out());
+writeFile('reports.html', $page->out());
 
 $page = new Page("Patrons", "Patrons");
 $page->content(file_get_contents($source."patrons.html"));
-writeFile('patrons/index.html', $page->out());
+writeFile('patrons.html', $page->out());
 
 $page = new Page("Donate", "Donate");
 $page->content(file_get_contents($source."donate.html"));
-writeFile('donate/index.html', $page->out());
+writeFile('donate.html', $page->out());
 
 // Copy over the errata file for Processing: A Programming Handbook...
 copy($source.'processing-errata.txt', $path.'books/processing-errata.txt');
