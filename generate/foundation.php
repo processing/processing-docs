@@ -4,14 +4,14 @@ require('../config.php');
 $benchmark_start = microtime_float();
 
 // make troubleshooting page
-$source = CONTENTDIR."static";
+$source = CONTENTDIR."foundation-test";
 $path = BASEDIR;
 
 // update the files on the server via SVN
 // look for the .subversion folder somewhere else
 // otherwise will go looking for /home/root/.subversion or some other user
 
-$where = CONTENTDIR . 'static';
+$where = CONTENTDIR . 'foundation-test';
 putenv('HOME=' . CONTENTDIR);
 
 //`cd $where && /usr/bin/svn update`;
@@ -20,7 +20,7 @@ putenv('HOME=' . CONTENTDIR);
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 // make troubleshooting page
-$source = CONTENTDIR."static/foundation-test/";
+$source = CONTENTDIR."foundation-test/";
 
 $page = new Page("Overview", "Overview");
 $page->content(file_get_contents($source."overview.html"));
