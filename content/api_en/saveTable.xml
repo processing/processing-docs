@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>loadTable()</name>
+<name>saveTable()</name>
 
-<category>Input</category>
+<category>Output</category>
 
 <subcategory>Files</subcategory>
 
