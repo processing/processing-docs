@@ -1,0 +1,38 @@
+<h1 class="large-header"><span class="black">Donate.</span> </h1>
+	
+<p>
+<table width="656" border="0" cellpadding="0" cellspacing="0">
+   	<tr>
+   	  <td>
+          
+<div class="donate-box">
+
+	<p>Processing is open source, free software. All donations fund the <a href="/foundation/">Processing Foundation</a>, a nonprofit organization devoted to advancing the role of programming within the visual arts through developing Processing.</p>
+
+	<!--<p>To celebrate the launch of the new Processing <a href="https://github.com/atduskgreg/opencv-processing">OpenCV library</a>, <a href="http://www.oreilly.com/">O'Reilly Media</a> is matching donations to the Processing Foundation up to $3000 for the remainder of 2013.</p>-->
+
+	<div class="messages"></div>
+
+	
+	<form method="post" action="/download/" id="selectForm">
+		<input type="hidden" name="form" value="1">
+		<input type="hidden" name="radioChecked" value="0">
+
+		<div class="select-amount">
+			<label><input type="radio" name="selectAmount" value="0"> No Donation</label>
+			<label><input type="radio" name="selectAmount" value="10"> $10</label>
+			<label><input type="radio" name="selectAmount" value="25"> $25</label>
+			<label><input type="radio" name="selectAmount" value="50"> $50</label>
+			<label><input type="radio" name="selectAmount" value="100"> $100</label>
+			<label class="last"><input type="radio" name="selectAmount" value="other" id="wildcard"></label><span>$ <input type="text" value="" id="otra" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"></span>
+		</div>
+
+		<input type="submit" name="submit" value="Donate &amp; Download">
+	</form>
+
+</div>
+          
+     </td>
+	</tr>
+  </table>
+</p>

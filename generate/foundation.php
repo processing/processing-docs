@@ -20,7 +20,7 @@ putenv('HOME=' . CONTENTDIR);
 `cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 // make troubleshooting page
-$source = CONTENTDIR."static/foundation/";
+$source = CONTENTDIR."static/foundation-test/";
 
 $page = new Page("Overview", "Overview");
 $page->content(file_get_contents($source."overview.html"));
