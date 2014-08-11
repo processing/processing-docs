@@ -22,8 +22,8 @@ putenv('HOME=' . CONTENTDIR);
 // make troubleshooting page
 $source = CONTENTDIR."foundation-test/";
 
-$page = new Page("Overview", "Overview");
-$page->content(file_get_contents($source."overview.html"));
+$page = new Page("Foundation Overview", "Foundation Overview");
+$page->content(file_get_contents($source."overviewf.html"));
 writeFile('overviewf/index.html', $page->out());
 #copydirr($source.'/images', $path.'/images');
 
@@ -35,8 +35,8 @@ $page = new Page("Projects", "Projects");
 $page->content(file_get_contents($source."projects.html"));
 writeFile('projects/index.html', $page->out());
 
-$page = new Page("People", "People");
-$page->content(file_get_contents($source."people.html"));
+$page = new Page("Foundation People", "Foundation People");
+$page->content(file_get_contents($source."peoplef.html"));
 writeFile('peoplef/index.html', $page->out());
 
 $page = new Page("Fellowships", "Fellowships");
