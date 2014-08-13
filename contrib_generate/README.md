@@ -7,18 +7,24 @@
 
 ###`build_listing.py`
 * Reads `sources.conf` and writes `contribs.txt`
-* Use it by running the following in the command line: 
+* Use it by running the following in the command line:
+
 	```
 	python build_listing.py
 	```
-* Pass in arguments for the input and output files: 
+
+* Pass in arguments for the input and output files:
+
 	```
 	python build_listing.py sources.conf contribs.txt
 	```
+
 * Pass in arguments for the compatible Processing revisions: 
+
 	```
 	python build_listing.py sources.conf contribs.txt 216 227
 	```
+
 	* Entries out of range will be skipped
 	* You can use `0` to ignore the limit: `python build_listing.py sources.conf contribs.txt 228 0`
 
@@ -32,6 +38,7 @@
 
 ###Generating list for Processing 2.x
 Processing 2.x read data from the `contributions.txt` file and should only include compatible entries. The following command will generate the appropriate file:
+
 	```
 	python build_listing.py sources.conf contributions.txt 216 227
 	```
