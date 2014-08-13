@@ -160,15 +160,19 @@ def missing_key(exports):
 
 if __name__ == "__main__":
   if len(argv) == 1:
-    #print "Usage is [Input Configuration File] [Output file]"
-    #exit()
     script = argv
     conf = 'sources.conf'
-    fileout = 'contributions.txt'
+    fileout = 'contribs.txt'
+    minrev = 0
+    maxrev = 0
   elif len(argv) == 3:
     script, conf, fileout = argv
+    minrev = 0
+    maxrev = 0
+  elif len(argv) == 5:
+    script, conf, fileout, minrev, maxrev = argv
   else:
-    print "Usage is [Input Configuration File] [Output file]"
+    print "Usage is [Input File] [Output File] [Min Revision] [Max Revision]"
     exit()  
   
   print "----- " + strftime("%a %d %b %Y %H:%M:%S", localtime()) + " -----"
@@ -193,6 +197,12 @@ if __name__ == "__main__":
         # overwrite the category with what was in the .conf file
         exports['category'] = cat
 
+        # set default compatible strings if none found
+        if not 'minRevision' in exports:
+          exports['minRevision'] = '0'
+        if not 'maxRevision' in exports:
+          exports['maxRevision'] = '0'
+
         key = missing_key(exports)
         if key:
           print 'Error reading', prop_url
@@ -203,9 +213,11 @@ if __name__ == "__main__":
         if len([x for x in exports if m.match(x)]) == 0:
           exports['download'] = download_url
 
-        f.write('%s\n' % software_type)
-        write_exports(f, exports)
-        f.write('\n')
+        # add the contribution if it's compatible with the revision number
+        if (minrev == 0 or minrev <= exports['maxRevision']) and (maxrev == 0 or maxrev >= exports['minRevision']):
+          f.write('%s\n' % software_type)
+          write_exports(f, exports)
+          f.write('\n')
 
       except IOError as inst:
         print 'Error reading', prop_url
