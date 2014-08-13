@@ -36,8 +36,8 @@
 * Contains all the data for the older contributions that have not been updated for the new system.
 * Edited by a human by copy/pasting/editing.
 
-###Generating list for Processing 2.x
-Processing 2.x read data from the `contributions.txt` file and should only include compatible entries. The following command will generate the appropriate file:
+###Processing 2.x
+* Processing 2.x read data from the `contributions.txt` file and should only include compatible entries. The following command will generate the appropriate file:
 
 	```
 	python build_listing.py sources.conf contributions.txt 216 227
