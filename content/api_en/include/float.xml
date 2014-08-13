@@ -38,7 +38,7 @@ Data type for floating-point numbers, e.g. numbers that have a decimal point.<br
 <br/>
 Floats are not precise, so adding small values (such as 0.0001) may not always increment precisely due to rounding errors. If you want to increment a value in small intervals, use an <b>int</b>, and divide by a <b>float</b> value before using it. (See the second example above.)<br />
 <br />
-Floating-point numbers can be as large as 3.40282347E+38 and as low as -3.40282347E+38. They are stored as 32 bits (4 bytes) of information. The <b>float</b> data type is inherited from Java; you can read more about the technical details <a href="http://download.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a> and <a href="http://java.sun.com/docs/books/jls/third_edition/html/typesValues.html#4.2.3">here</a>.<br />
+Floating-point numbers can be as large as 3.40282347E+38 and as low as -3.40282347E+38. They are stored as 32 bits (4 bytes) of information. The <b>float</b> data type is inherited from Java; you can read more about the technical details <a href="http://download.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">here</a> and <a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-4.html#jls-4.2.3">here</a>.<br />
 <br />
 Processing supports the <b>double</b> datatype from Java as well. However, none of the Processing functions use <b>double</b> values, which use more memory and are typically overkill for most work created in Processing. We do not plan to add support for <b>double</b> values, as doing so would require increasing the number of API functions significantly.
 ]]></description>
