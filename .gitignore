@@ -20,3 +20,4 @@ exhibition/
 /examples/ # Ignore the folder at the root, but not inside "content"
 about/
 contrib_generate/contribs.txt # File now built on the server side; don't need to track here
+contrib_generate/contributions.txt # File now built on the server side; don't need to track here
