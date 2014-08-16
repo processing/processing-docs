@@ -72,6 +72,8 @@ li { margin-bottom: 1em; }
 <strong>Generate Site Files</strong>
 
 <p>	
+	<a href="#" onclick="remote_link('pull_latest.php'); return false;">Pull latest changes</a> (without rebuilding anything)<br />
+	<br />
 	Filip: <a href="#" onclick="remote_link('exhibition.php'); return false;">Exhibition and archives</a><br />
 	<br />
 	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
