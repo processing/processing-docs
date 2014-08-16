@@ -38,14 +38,14 @@ $version = $_GET['v'];
 
 if ($version == 2) {
 
-	echo 'Generating "contributions.txt" for Processing 2.x...';
+	echo '<p>Generating "contributions.txt" for Processing 2.x...</p>';
 
 	// Generate "contributions.txt" for Processing 2.x
 	`cd $referencepath && python build_listing.py sources.conf contributions.txt 216 227`;
 
 } elseif ($version == 3) {
 
-	echo 'Generating "contribs.txt" for Processing 3.x...';
+	echo '<p>Generating "contribs.txt" for Processing 3.x...</p>';
 	
 	// Generate "contribs.txt" for Processing 3.x
 	`cd $referencepath && python build_listing.py`;
