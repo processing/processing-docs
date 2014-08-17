@@ -10,6 +10,7 @@ $path = BASEDIR;  //define('BASEDIR',       dirname(__FILE__).'/');
 // Note that the Reference generate script needs this,
 // just in case someone changed anything in the .java source files.
 $mainRepoPath = $path . '../processing';
+echo '<p>' . $mainRepoPath . '</p>';
 `cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing/`;
 
 // Pull latest processing/processing-docs from GitHub
