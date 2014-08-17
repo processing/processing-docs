@@ -20,7 +20,9 @@ println(b + " : " + c);  // Prints "65 : A"
 </example>
 
 <description><![CDATA[
-Converts a primitive datatype or array to a numeric character representation.
+Converts any value of a primitive data type (<b>boolean</b>, <b>byte</b>, <b>char</b>, <b>color</b>, <b>double</b>, <b>float</b>, <b>int</b>, or <b>long</b>) to its numeric character representation.<br />
+<br />
+When an array of values is passed in, then a <b>char</b> array of the same length is returned.
 ]]></description>
 
 </root>

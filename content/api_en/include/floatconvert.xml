@@ -16,7 +16,9 @@ println(i + " : " + f);  // Prints "65 : 65.0"
 </example>
 
 <description><![CDATA[
-Converts an int, string, or array to its floating point representation.
+Converts an <b>int</b> or <b>String</b> to its floating point representation.  An <b>int</b> is easily converted to a <b>float</b>, but the contents of a <b>String</b> must resemble a number, or <b>NaN</b> (not a number) will be returned.  For example, <b>float("1234.56")</b> evaluates to <b>1234.56</b>, but <b>float("giraffe")</b> will return <b>NaN</b>.<br />
+<br />
+When an array of <b>int</b> or <b>String</b> values is passed in, then a floating point array of the same length is returned.
 ]]></description>
 
 </root>

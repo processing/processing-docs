@@ -20,7 +20,9 @@ println(i + " : " + b);  // Prints "130 : -126"
 </example>
 
 <description><![CDATA[
-Converts a primitive datatype or array to its byte representation. A byte can only be a whole number between -128 and 127, therefore when a number outside this range is converted, its value wraps to the corresponding byte representation.
+Converts any value of a primitive data type (<b>boolean</b>, <b>byte</b>, <b>char</b>, <b>color</b>, <b>double</b>, <b>float</b>, <b>int</b>, or <b>long</b>) to its byte representation. A byte can only be a whole number between <b>-128</b> and <b>127</b>, so when a value outside of this range is converted, it wraps around to the corresponding byte representation.  (For example, <b>byte(128)</b> evaluates to <b>-128</b>.)<br />
+<br />
+When an array of values is passed in, then a <b>byte</b> array of the same length is returned.
 ]]></description>
 
 </root>

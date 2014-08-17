@@ -20,7 +20,9 @@ if (b) {
 </example>
 
 <description><![CDATA[
-Converts an int, string, or array to its boolean representation. For int calues, the number 0 evaluates to false and all other numbers evaluate to true. 
+Converts an <b>int</b> or <b>String</b> to its boolean representation.  For an <b>int</b>, any non-zero value (positive or negative) evaluates to true, while zero evaluates to false. For a <b>String</b>, the value <b>"true"</b> evaluates to true, while any other value (including <b>"false"</b> or <b>"hippopotamus"</b>) evaluates to false.<br />
+<br />
+When an array of <b>int</b> or <b>String</b> values is passed in, then a <b>boolean</b> array of the same length is returned.
 ]]></description>
 
 </root>
