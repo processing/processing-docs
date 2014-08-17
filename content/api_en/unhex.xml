@@ -15,12 +15,11 @@ String hs = "FF006699";
 int hi = unhex(hs);
 fill(hi);
 rect(30, 20, 55, 55);
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Converts a String representation of a hexadecimal number to its equivalent integer value.
+Converts a <b>String</b> representation of a hexadecimal number to its equivalent integer value.
 ]]></description>
 
 </root>

@@ -30,9 +30,9 @@ println(hex(c, 6));  // Prints "FFCC00"
 
 
 <description><![CDATA[
-Converts a byte, char, int, or color to a String containing the equivalent hexadecimal notation. For example, the color value produced by <b>color(0, 102, 153)</b> will convert to the String value "FF006699". This function can help make your geeky debugging sessions much happier.<br/>
+Converts an <b>int</b>, <b>byte</b>, <b>char</b>, or <b>color</b> to a <b>String</b> containing the equivalent hexadecimal notation. For example, the <b>color</b> value produced by <b>color(0, 102, 153)</b> will convert to the <b>String</b> value <b>"FF006699"</b>. This function can help make your geeky debugging sessions much happier.<br/>
 <br/>
-Note that the maximum number of digits is 8, because an <b>int</b> value can only represent up to 32 bits. Specifying more than 8 digits will not increase the length of the string further.
+Note that the maximum number of digits is 8, because an <b>int</b> value can only represent up to 32 bits. Specifying more than 8 digits will not increase the length of the <b>String</b> further.
 ]]></description>
 
 </root>
