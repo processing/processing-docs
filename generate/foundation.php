@@ -1,7 +1,7 @@
 <?
 
 require('../config.php');
-require(TEMPLATEDIR.'foundation-template.php');
+require_once(TEMPLATEDIR.'foundation-template.php');
 $benchmark_start = microtime_float();
 
 // make troubleshooting page
