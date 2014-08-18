@@ -28,8 +28,8 @@ function navigation($section = '')
     global $translation;
     //$tr = $translation->navigation;  // Removed 22 Sep 2011  --CR
 
-    $abo = array('About', 'Overview', 'People', 'Foundation');
-    $ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
+   // $abo = array('About', 'Overview', 'People', 'Foundation');
+    //$ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
     //$learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books');
 
     $html = "\t\t\t".'<div id="navigation">'."\n";
