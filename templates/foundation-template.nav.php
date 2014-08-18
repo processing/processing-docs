@@ -15,10 +15,6 @@ $pages = array(
         
     'Download'        => array('/download/', 0),
     
-    'Shop'            => array('/shop/', 0),
-    
-    'FAQ'             => array('http://wiki.processing.org/w/FAQ', 1),
-    
     );
 
 
@@ -48,15 +44,8 @@ function navigation($section = '')
 	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Donate', $section == 'Donate') . "<br>\n";
-
-	    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Donate', $section == 'Donate') . "<br><br>\n";
 	       
-	    $html .= "\t\t\t\t\t" . "<a href=\"http://forum.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Forum</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing\"" . 'class="outward"' . "><span>&raquo;</span>GitHub</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org/w/Report_Bugs\"" . 'class="outward"' . "><span>&raquo;</span>Issues</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Wiki</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org/w/FAQ\"" . 'class="outward"' . "><span>&raquo;</span>FAQ</a><br> \n";
         $html .= "\t\t\t\t\t" . "<a href=\"https://twitter.com/processingOrg\"" . 'class="outward"' . "><span>&raquo;</span>Twitter</a><br> \n";
         $html .= "\t\t\t\t\t" . "<a href=\"https://www.facebook.com/page.processing\"" . 'class="outward"' . "><span>&raquo;</span>Facebook</a><br> \n";
     
