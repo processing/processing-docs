@@ -31,6 +31,7 @@ function navigation($section = '')
    // $abo = array('About', 'Overview', 'People', 'Foundation');
     //$ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
     //$learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books');
+    $found = array('Overview', 'Mission', 'Projects', 'People', 'Fellowships', 'Reports', 'Patrons', 'Donate');
 
     $html = "\t\t\t".'<div id="navigation">'."\n";
 
