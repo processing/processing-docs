@@ -166,6 +166,17 @@ a.large-link:before {
 	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
 	background-image: linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
 }
+
+#header-f .processing-logo {
+	width: 206px;
+	height: 38px;
+	margin: 20px 0 0 30px;
+	background: transparent url(../img/processing-logo.png) center center no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
+	background-image: linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
+}
+
 #header .processing-logo.no-cover:before {
 	position: relative;
 	top: 3px;
@@ -173,7 +184,23 @@ a.large-link:before {
 	font-size: 24px;
 	content: '\2039';
 }
+
+#header-f .processing-logo.no-cover:before {
+	position: relative;
+	top: 3px;
+	left: -18px;
+	font-size: 24px;
+	content: '\2039';
+}
+
 #header a { 
+	font-family: 'theSerif', 'Enriqueta', georgia, times, sans-serif;
+	text-decoration: none;
+	border: none;
+	color: white;
+}
+
+#header-f a { 
 	font-family: 'theSerif', 'Enriqueta', georgia, times, sans-serif;
 	text-decoration: none;
 	border: none;
@@ -185,7 +212,20 @@ a.large-link:before {
 		float: left;
 }
 
+#header-f h1 {
+		display: none;
+		float: left;
+}
+
 #header form {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	width: 176px;
+	color: #959595;
+}
+
+#header-f form {
 	position: absolute;
 	top: 20px;
 	right: 5px;
@@ -203,11 +243,30 @@ a.large-link:before {
 	font-size: 1em;
 	color: #959595;
 }
+
+#header-f form input {
+	float: left;
+	border: 1px solid #136796;
+	outline: none;
+	height: 18px;
+	background: #fff;
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif; 
+	font-size: 1em;
+	color: #959595;
+}
+
 #header form input[type="text"]{
 	padding-left: 3px;
 	width: 127px;
 	border-right: none;
 }
+
+#header-f form input[type="text"]{
+	padding-left: 3px;
+	width: 127px;
+	border-right: none;
+}
+
 #header form input[type="submit"]{
 	height: 22px;
 	width: 22px;
@@ -218,7 +277,21 @@ a.large-link:before {
 	background-image: linear-gradient(transparent, transparent), url(../img/search.svg);
 	cursor: pointer;
 }
+
+#header-f form input[type="submit"]{
+	height: 22px;
+	width: 22px;
+	border-left: none;
+	background: white url(../img/search.png) center center no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/search.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(../img/search.svg);
+	background-image: linear-gradient(transparent, transparent), url(../img/search.svg);
+	cursor: pointer;
+}
+
 #header form p { margin: 0; }
+
+#header-f form p { margin: 0; }
 
 /* ================ NAVBAR ================== */
 
