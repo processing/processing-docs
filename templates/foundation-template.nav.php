@@ -2,16 +2,16 @@
 
 $pages = array(
 
-    'Home'           => array('/', 0),
+    'Overview'           => array('/', 0),
 
     'Mission'      => array('/exhibition/', 1), 
     
-    'Learning'        => array('/learning/', 1), 
+    'Projects'        => array('/learning/', 1), 
     	'Tutorials'   => array('/tutorials/', 2),  
     	'Examples'      => array('/examples/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
-    'Books'       	  => array('/books/', 2),
+        'Books'       	  => array('/books/', 2),
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
@@ -51,24 +51,18 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="'.$id.'">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Cover', $section == 'Cover') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overviewf', $section == 'Overviewf') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Exhibition', $section == 'Exhibition') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Reference', $section == 'Reference') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Libraries', $section == 'Libraries') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Tools', $section == 'Tools') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Environment', $section == 'Environment') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Peoplef', $section == 'Peoplef') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Fellowships', $section == 'Fellowships') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Examples', $section == 'Examples') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . "<br><br>\n";
-	    
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br> \n";
-	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Foundation', $section == 'Foundation') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Donate', $section == 'Donate') . "<br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . "<br><br>\n";
 	       
