@@ -2,9 +2,9 @@
 
 $pages = array(
 
-    'Cover'           => array('/', 0),
+    'Home'           => array('/', 0),
 
-    'Exhibition'      => array('/exhibition/', 1), 
+    'Mission'      => array('/exhibition/', 1), 
     
     'Learning'        => array('/learning/', 1), 
     	'Tutorials'   => array('/tutorials/', 2),  
