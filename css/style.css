@@ -147,6 +147,16 @@ a.large-link:before {
 	position:relative;
 }
 
+#header-f {
+	width: 900px;
+	height: 106px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	background: #0c2033 url(../img/foundation-head-test.png) center center no-repeat;
+	background-size: 900px 106px;	
+	position:relative;
+}
+
 #header .processing-logo {
 	width: 206px;
 	height: 38px;

@@ -18,9 +18,9 @@ class Page
         $this->xhtml = new xhtml_page(TEMPLATEDIR.'foundation-template.html');
         $this->set('relpath', $rel_path);
         if (strcmp($rel_path, '/')) {
-          $this->xhtml->set('header', REL_HEADER);
+          $this->xhtml->set('header-f', REL_HEADER);
         } else {
-          $this->xhtml->set('header', $section == 'Cover' ? HEADER : HEADER_LINK);
+          $this->xhtml->set('header-f', $section == 'Cover' ? HEADER : HEADER_LINK);
         }
         $this->section = $section;
         $this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
