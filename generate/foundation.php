@@ -1,7 +1,7 @@
 <?
 
-require('../config.php');
-require_once(TEMPLATEDIR.'foundation-template.php');
+require('../config-f.php');
+//require_once(TEMPLATEDIR.'foundation-template.php');
 $benchmark_start = microtime_float();
 
 // make troubleshooting page
@@ -55,11 +55,6 @@ writeFile('patrons/index.html', $page->out());
 $page = new Page("Donate", "Donate");
 $page->content(file_get_contents($source."donate.html"));
 writeFile('donate/index.html', $page->out());
-
-// Copy over the errata file for Processing: A Programming Handbook...
-copy($source.'processing-errata.txt', $path.'books/processing-errata.txt');
-// Copy over the media.zip file for Getting Started with Processing...
-copy($source.'media.zip', $path.'books/media.zip');
 
 
 $benchmark_end = microtime_float();
