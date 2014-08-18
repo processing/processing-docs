@@ -4,14 +4,14 @@ $pages = array(
 
     'Overview'           => array('/', 0),
 
-    'Mission'      => array('/exhibition/', 1), 
+    'Mission'      => array('/foundation-test/mission.html', 1), 
     
     'Projects'        => array('/learning/', 1), 
-    	'Tutorials'   => array('/tutorials/', 2),  
-    	'Examples'      => array('/examples/', 2),  
+    	'People'   => array('/tutorials/', 2),  
+    	'Fellowships'      => array('/examples/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
-        'Books'       	  => array('/books/', 2),
+        'Reports'       	  => array('/books/', 2),
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
@@ -52,11 +52,8 @@ function navigation($section = '')
     $html .= "\t\t\t\t".'<div class="navBar" id="'.$id.'">'."\n";
     
 	    $html .= "\t\t\t\t\t" . l('Overviewf', $section == 'Overviewf') . "<br><br>\n";
-
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br><br>\n";
-
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br><br>\n";
-
 	    $html .= "\t\t\t\t\t" . l('Peoplef', $section == 'Peoplef') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Fellowships', $section == 'Fellowships') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
