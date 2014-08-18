@@ -161,6 +161,7 @@ a.large-link:before {
 	width: 206px;
 	height: 38px;
 	margin: 20px 0 0 30px;
+     /* -- NEW FOUNDATION LOGO GOES HERE -- */
 	background: transparent url(../img/processing-logo.png) center center no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
 	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
@@ -171,6 +172,7 @@ a.large-link:before {
 	width: 206px;
 	height: 38px;
 	margin: 20px 0 0 30px;
+    /* -- NEW FOUNDATION LOGO GOES HERE -- */
 	background: transparent url(../img/processing-logo.png) center center no-repeat;
 	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
 	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
@@ -340,6 +342,27 @@ a.large-link:before {
 
 } 
 #footer #copyright {
+	border-top: 1px solid #A6BCCF;
+	padding-top: 10px;
+}
+
+/* === FOUNDATION FOOTER === */
+
+#footer-f {
+	clear: both;
+	padding: 100px 30px 20px 30px;
+	line-height: 23px;
+	color: #959595;
+}
+#footer-f a {
+	color: #959595;
+	border-bottom: 1px solid #CECECE;
+}
+#footer-f #copyright,
+#footer-f #colophon {
+
+} 
+#footer-f #copyright {
 	border-top: 1px solid #A6BCCF;
 	padding-top: 10px;
 }
