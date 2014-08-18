@@ -4,14 +4,14 @@ $pages = array(
 
     'Overview'           => array('/', 0),
 
-    'Mission'      => array('/foundation-test/mission.html', 1), 
+    'Mission'      => array('/mission.html/', 1), 
     
-    'Projects'        => array('/learning/', 1), 
-    	'People'   => array('/tutorials/', 2),  
-    	'Fellowships'      => array('/examples/', 2),  
+    'Projects'        => array('/projects.html/', 1), 
+    	'People'   => array('/peoplef.html/', 2),  
+    	'Fellowships'      => array('/fellowships.html/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),  
-        'Reports'       	  => array('/books/', 2),
+        'Reports'       	  => array('/reports.html/', 2),
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
