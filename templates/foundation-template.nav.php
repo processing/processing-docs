@@ -4,23 +4,18 @@ $pages = array(
 
     'Overview'           => array('/overviewf/', 0),
 
-    'Mission'      => array('/mission/', 1), 
+    'Mission'      => array('/mission/', 0), 
     
-    'Projects'        => array('/projects/', 1), 
-    'People'   => array('/peoplef/', 2),  
-    'Fellowships'      => array('/fellowships/', 2),  
-    'Reports'       	  => array('/reports/', 2),
-    'Patrons'       	  => array('/patrons/', 2),
-    'Donate'       	  => array('/donate/', 2),
+    'Projects'        => array('/projects/', 0), 
+    'People'   => array('/peoplef/', 0),  
+    'Fellowships'      => array('/fellowships/', 0),  
+    'Reports'       	  => array('/reports/', 0),
+    'Patrons'       	  => array('/patrons/', 0),
+    'Donate'       	  => array('/donate/', 0),
         
-    'Download'        => array('/download/', 1),
+    'Download'        => array('/download/', 0),
     
-    'Shop'            => array('/shop/', 1),
-        
-    'About'           => array('/about/', 1),
-        'Overview'    => array('/overview/', 2),
-        'People'      => array('/people/', 2),
-        'Foundation'     => array('/foundation/', 2),
+    'Shop'            => array('/shop/', 0),
     
     'FAQ'             => array('http://wiki.processing.org/w/FAQ', 1),
     
@@ -35,7 +30,7 @@ function navigation($section = '')
 
     $abo = array('About', 'Overview', 'People', 'Foundation');
     $ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
-    $learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books');
+    //$learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books');
 
     $html = "\t\t\t".'<div id="navigation">'."\n";
 
