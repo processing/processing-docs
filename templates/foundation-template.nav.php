@@ -2,23 +2,16 @@
 
 $pages = array(
 
-    'Overview'           => array('/', 0),
+    'Overview'           => array('/overviewf/', 0),
 
     'Mission'      => array('/mission/', 1), 
     
     'Projects'        => array('/projects/', 1), 
-    	'People'   => array('/peoplef/', 2),  
-    	'Fellowships'      => array('/fellowships/', 2),  
-     #   '3D'          => array('/learning/3d/', 2),  
-     #   'Library'     => array('/learning/library/', 2),  
-        'Reports'       	  => array('/reports/', 2),
-            
-    'Reference'       => array('/reference/', 1),
-        'Language'    => array('/reference/', 2),
-        'A-Z'         => array('/reference/alpha.html', 2),
-        'Libraries'   => array('/reference/libraries/', 2),
-        'Tools'       => array('/reference/tools/', 2),
-        'Environment' => array('/reference/environment/', 2), 
+    'People'   => array('/peoplef/', 2),  
+    'Fellowships'      => array('/fellowships/', 2),  
+    'Reports'       	  => array('/reports/', 2),
+    'Patrons'       	  => array('/patrons/', 2),
+    'Donate'       	  => array('/donate/', 2),
         
     'Download'        => array('/download/', 1),
     
