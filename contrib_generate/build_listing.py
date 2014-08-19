@@ -171,6 +171,7 @@ if __name__ == "__main__":
     maxrev = 0
   elif len(argv) == 5:
     script, conf, fileout, minrev, maxrev = argv
+    minrev, maxrev = int(minrev), int(maxrev)
   else:
     print "Usage is [Input File] [Output File] [Min Revision] [Max Revision]"
     exit()  
@@ -199,9 +200,9 @@ if __name__ == "__main__":
 
         # set default compatible strings if none found
         if not 'minRevision' in exports:
-          exports['minRevision'] = '0'
+          exports['minRevision'] = 0
         if not 'maxRevision' in exports:
-          exports['maxRevision'] = '0'
+          exports['maxRevision'] = sys.maxint
 
         key = missing_key(exports)
         if key:
