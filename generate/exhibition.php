@@ -1,4 +1,4 @@
-<?
+<?php
 define('CURATED_PER_PAGE', 12);
 define('NETWORK_FIRST_PAGE', 25);
 define('NETWORK_PER_PAGE', 90);

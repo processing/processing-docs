@@ -1,4 +1,4 @@
-<?
+<?php
 
 require('../config.php');
 $benchmark_start = microtime_float();

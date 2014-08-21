@@ -1,11 +1,17 @@
-<?
+<?php
 require('../config.php');
 require('lib/Ref.class.php');
 
 $language = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 
 $charset = 'utf-8';
-if($language == 'zh') { $charset = "big5"; }         # Chinese Traditional if($language == 'zh-cn') { $charset = "GB2312"; }    # Chinese Simplifiedif($language == 'he') { $charset = "Windows-1255"; } # Hebrewif($language == 'ru') { $charset = "ISO-8859-5"; }   # Russianif($language == 'tr') { $charset = "ISO-8859-9"; }   # Turkishif($language == 'pl') { $charset = "ISO-8859-2"; }   # Polishif($language == 'jp') { $charset = "Shift_JIS"; }    # Japanese
+if($language == 'zh') { $charset = "big5"; }         # Chinese Traditional 
+if($language == 'zh-cn') { $charset = "GB2312"; }    # Chinese Simplified
+if($language == 'he') { $charset = "Windows-1255"; } # Hebrew
+if($language == 'ru') { $charset = "ISO-8859-5"; }   # Russian
+if($language == 'tr') { $charset = "ISO-8859-9"; }   # Turkish
+if($language == 'pl') { $charset = "ISO-8859-2"; }   # Polish
+if($language == 'jp') { $charset = "Shift_JIS"; }    # Japanese
 
 echo '<meta http-equiv="Content-Type" content="text/html; charset='.$charset.'">';
 

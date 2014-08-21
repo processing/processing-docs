@@ -1,4 +1,4 @@
-<?
+<?php
 
 include('domit/xml_domit_include.php');
 $doc =& new DOMIT_Document();

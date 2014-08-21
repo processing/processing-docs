@@ -1,4 +1,4 @@
-<?
+<?php
 
 $benchmark_start = microtime_float();
 

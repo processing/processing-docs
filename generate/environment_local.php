@@ -1,4 +1,4 @@
-<?
+<?php
 require('../config.php');
 require('lib/Translation.class.php');
 

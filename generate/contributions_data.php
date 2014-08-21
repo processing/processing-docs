@@ -1,4 +1,4 @@
-<?
+<?php
 
 //
 // This script pulls in the latest changes from the repo

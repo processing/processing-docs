@@ -1,4 +1,4 @@
-<?
+<?php
 
 require('../config-f.php');
 //require_once(TEMPLATEDIR.'foundation-template.php');

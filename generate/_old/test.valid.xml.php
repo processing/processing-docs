@@ -1,4 +1,4 @@
-<?
+<?php
 
 require('../config.php');
 require('lib/Ref.class.php');

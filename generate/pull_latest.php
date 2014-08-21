@@ -1,4 +1,4 @@
-<?
+<?php
 
 //
 // This script, unlike others in this directory,

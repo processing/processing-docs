@@ -1,4 +1,4 @@
-<?
+<?php
 
 define( 'PRO_EXHIBIT', 'ALL_GOOD' );
 

@@ -1,4 +1,4 @@
-<? 
+<?php
 
 require('../config.php');
 require('lib/Example.class.php');
@@ -110,7 +110,7 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 <h2>Updated <?=$where?> </h2>
 
 
-<?
+<?php
 
 function get_examples_list($exstr){
     $xml = openXML($exstr);
