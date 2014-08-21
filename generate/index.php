@@ -71,7 +71,7 @@ li { margin-bottom: 1em; }
 
 <strong>Generate Site Files</strong>
 
-<p style="background-color: red; font-weight: bold;">Do not run any of these scripts right now. Scott is transitioning this to the new server. Clicking any links below will break everything, aaaah!</p>
+<p style="background-color: red; font-weight: bold; color: white;">Do not run any of these scripts right now. Scott is transitioning this to the new server. Clicking any links below will break everything, aaaah!</p>
 
 <p>	
 	<a href="#" onclick="remote_link('pull_latest.php'); return false;">Pull latest changes</a> (without rebuilding anything)<br />
