@@ -1,4 +1,4 @@
-<?
+<?php
 
 require(TEMPLATEDIR.'foundation-template.nav.php');
 

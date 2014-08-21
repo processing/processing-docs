@@ -1,4 +1,4 @@
-<?
+<?php
 
 class RSS_feed
 {

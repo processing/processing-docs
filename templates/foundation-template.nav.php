@@ -1,4 +1,4 @@
-<?
+<?php
 
 $pages = array(
 

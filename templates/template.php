@@ -1,4 +1,4 @@
-<?
+<?php
 
 require(TEMPLATEDIR.'template.nav.php');
 
