@@ -49,9 +49,9 @@ for (int i = 30; i < 80; i = i+5) {
 </example>
 
 <example>
-<image>blank.png</image>
 <code><![CDATA[
-
+// This example has no visual output,
+// but prints values to the console.
 
 int[] nums = { 5, 4, 3, 2, 1 };
 
