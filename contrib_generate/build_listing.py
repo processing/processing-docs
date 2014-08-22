@@ -214,7 +214,8 @@ if __name__ == "__main__":
           exports['download'] = download_url
 
         # add the contribution if it's compatible with the revision number
-        if (minrev == 0 or minrev <= exports['maxRevision']) and (maxrev == 0 or maxrev >= exports['minRevision']):
+        if ((int(minrev) == 0 or int(exports['maxRevision']) == 0 or int(minrev) <= int(exports['maxRevision'])) and 
+            (int(maxrev) == 0 or int(exports['minRevision']) == 0 or int(maxrev) >= int(exports['minRevision']))):
           f.write('%s\n' % software_type)
           write_exports(f, exports)
           f.write('\n')
