@@ -8,8 +8,8 @@ $thankYou 		  = false;
 $type 			  = NULL;
 $amount 		  = NULL;
 
-$fPath = $_SERVER['HTTP_HOST']=='trunk.processing.org' ? '/../../www/cred/' : '/../../cred/';
-require(__DIR__.$fPath.'config.php');
+// updated by fry for new server layout [140826]
+require(realpath(__DIR__ . '/../../../cred/config.php'));
 
 //Check what to show
 if(isset($_POST['form'])){
