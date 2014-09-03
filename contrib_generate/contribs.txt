@@ -117,9 +117,9 @@ name=NXTComm Processing
 maxRevision=0
 sentence=The NXTComm Processing library allows you to control the Lego Mindstorms NXT robots.
 url=http://jorgecardoso.eu/processing/NXTComm/
-prettyVersion=0.91
+prettyVersion=0.99
 paragraph=
-version=4
+version=5
 download=http://jorgecardoso.eu/processing/NXTComm/NXTComm.zip
 id=025
 
@@ -312,9 +312,9 @@ name=G4PTool
 maxRevision=0
 sentence=Graphic design tool for creating user interfaces with G4P.
 url=http://www.lagers.org.uk/g4ptool/index.html
-prettyVersion=2.4.2
+prettyVersion=2.5
 paragraph=Provides a visual environment for the rapid creation and editing of user interfaces using GUI controls from the [G4P](http://www.lagers.org.uk) library. It generates all the source code necessary for the creation of the components and skeleton event handlers for the user to complete. The [G4P](http://www.lagers.org.uk) library will need to be installed to run the completed sketch.
-version=15
+version=16
 download=http://www.lagers.org.uk/processing/guibuilder/G4PTool.zip
 id=052
 
@@ -447,20 +447,6 @@ id=087
 mode
 category=
 minRevision=0
-authorList=[The Processing Foundation](http://android.processing.org/)
-name=Android Mode
-maxRevision=0
-sentence=Create projects with Processing for Android devices
-url=https://github.com/processing/processing-android
-prettyVersion=217
-paragraph=Android Mode has been around since Processing 1.5, but we have moved it to a separate download so that it can be developed indepdendently of the PDE and the core.
-version=217
-download=http://android.processing.org/AndroidMode.zip
-id=101
-
-mode
-category=
-minRevision=0
 authorList=[Gal Sasson](http://galsasson.com)
 name=Tweak Mode
 maxRevision=0
@@ -494,9 +480,9 @@ name=Python
 maxRevision=0
 sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0364, built 2014/07/08 23:00
+prettyVersion=Build 0371, built 2014/09/02 22:31
 paragraph=
-version=0364
+version=0371
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -957,9 +943,9 @@ name=LeapMotion
 maxRevision=0
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.17
+prettyVersion=1.18
 paragraph=
-version=19
+version=20
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -999,9 +985,9 @@ name=PixelPusher
 maxRevision=0
 sentence=System for controlling an unlimited number of LEDs.
 url=http://www.heroicrobotics.com/
-prettyVersion=20140730
+prettyVersion=20140822
 paragraph=A pure Java implementation of the PixelPusher protocol, a dynamically timed, infinitely scalable, plesiochronous system for running LED fabrics of any size, and with any organization.  The PixelPusher library is intended for controlling PixelPusher hardware, which you can buy from Heroic Robotics.
-version=108
+version=109
 download=http://www.heroicrobotics.com/software/PixelPusher.zip
 id=145
 
@@ -1198,7 +1184,7 @@ url=https://sites.google.com/site/blobscanner/home/
 prettyVersion=0.2-a
 paragraph=Searches images or videos for blobs of a requested brightness, size, or quantity. From the objects found it returns all the main features, like center of mass, weight, bounding box, contours, perimeter size and more... Lightweight and easy to extend, this plugin is also very easy to use.
 version=8
-download=https://sites.google.com/site/blobscanner/Download/blobscanner.zip
+download=http://decoder.x10.mx/blobscanner/blobscanner.zip
 id=134
 
 library
@@ -1245,7 +1231,7 @@ id=149
 
 library
 category=Video & Vision
-minRevision=0
+minRevision=228
 authorList=The Processing Foundation
 name=Video
 maxRevision=0
@@ -1298,6 +1284,20 @@ paragraph=Includes ls and get, needs to be updated with put
 version=1
 download=http://www.shiffman.net/p5/libraries/sftp/sftp.zip
 id=011
+
+library
+category=Data
+minRevision=0
+authorList=[Daniel Shiffman](http://www.shiffman.net)
+name=QRCode
+maxRevision=0
+sentence=Reads QR Code images, a two-dimensional barcode format.
+url=http://www.shiffman.net/p5/qrcode-processing/
+prettyVersion=0.3a
+paragraph=
+version=3
+download=http://www.shiffman.net/p5/libraries/qrcode/qrcodeprocessing.zip
+id=012
 
 library
 category=Data
@@ -1461,9 +1461,9 @@ name=Temboo
 maxRevision=0
 sentence=Generate code to connect to 100+ APIs, code utilities, and databases in Processing.
 url=http://www.temboo.com/processing
-prettyVersion=2.2.0
+prettyVersion=2.3.0
 paragraph=Explore [temboo.com](http://temboo.com/) and auto-generate Processing sketches for your favorite web services and resources.
-version=3
+version=4
 download=https://temboo.com/files/temboo-processing.zip
 id=135
 
@@ -1503,9 +1503,9 @@ name=G4P
 maxRevision=0
 sentence=Provides a set of 2D GUI controls and multiple window support.
 url=http://www.lagers.org.uk/g4p
-prettyVersion=3.4
+prettyVersion=3.5
 paragraph=Controls include buttons, sliders, knobs, labels, textfields, timers, combo boxes, option buttons etc. and multiple windows.  [G4P GUI builder](http://www.lagers.org.uk/g4ptool/index.html) is a companion tool that enables the rapid (visual) development of user interfaces with this library.
-version=17
+version=18
 download=http://www.lagers.org.uk/processing/g4p/G4P.zip
 id=051
 
