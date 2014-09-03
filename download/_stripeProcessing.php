@@ -68,7 +68,7 @@ if ($_POST) {
 		$mail->MsgHTML($message);
 		$mail->Send();
 
-		$log = __DIR__.$fPath.'purchases.log';
+		$log = __DIR__ . '/../../../cred/purchases.log';
 		$cleanDate = date('Y-m-d', $donation['created']);
 		$data = $cleanDate."\t".$amount."\t".'stripe'."\t".$name."\t".$email."\t".get_client_ip()."\n";
 		file_put_contents($log, $data, FILE_APPEND | LOCK_EX);
