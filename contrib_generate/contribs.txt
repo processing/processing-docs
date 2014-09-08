@@ -445,6 +445,20 @@ download=http://bezier.de/processing/modes/JavaScriptMode.zip
 id=087
 
 mode
+minRevision=228
+category=
+authorList=[The Processing Foundation](http://android.processing.org/)
+name=Android Mode
+maxRevision=0
+sentence=Create projects with Processing for Android devices
+url=https://github.com/processing/processing-android
+prettyVersion=3.0
+paragraph=This version of the Android Mode is for Processing 3.0+
+version=228
+download=https://github.com/processing/processing-android/releases/tag/latest
+id=101
+
+mode
 category=
 minRevision=0
 authorList=[Gal Sasson](http://galsasson.com)
@@ -480,9 +494,9 @@ name=Python
 maxRevision=0
 sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0371, built 2014/09/02 22:31
+prettyVersion=Build 0374, built 2014/09/07 22:43
 paragraph=
-version=0371
+version=0374
 download=http://py.processing.org/PythonMode.zip
 id=142
 
