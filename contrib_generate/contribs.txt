@@ -82,6 +82,20 @@ download=http://code.compartmental.net/minim/distro/minim_for_processing.zip
 id=147
 
 library
+category=Sound
+minRevision=0
+authorList=[Chris Johnson-Roberson](http://www.chrisjr.org)
+name=Loom
+maxRevision=0
+sentence=Patterns that change over time, flexibly mapped to audiovisual output.
+url=http://chrisjr.github.io/loom
+prettyVersion=1.0.0
+paragraph=Sequences of events can be rendered both sonically (through MIDI, Minim, SuperCollider, etc.) and graphically (through Processing itself).
+version=1
+download=https://chrisjr.github.io/loom/download/loom.zip
+id=151
+
+library
 category=I/O
 minRevision=0
 authorList=[Markus Zimmermann](http://www.die-seite.ch/)
@@ -406,14 +420,14 @@ tool
 category=
 minRevision=0
 authorList=[Kevin Workman](http://StaticVoidGames.com)
-name=SvgExe
+name=JarMatey
 maxRevision=0
 sentence=A utility that creates a self-extracting jar that runs on any platform.
-url=http://StaticVoidGames.com/SvgExe/
-prettyVersion=1
-paragraph=This is a workaround for Processing only exporting applications for the current system.
-version=1
-download=http://s3.staticvoidgames.com/SvgExe/SvgExeProcessingTool.zip
+url=http://StaticVoidGames.com/JarMatey/
+prettyVersion=2
+paragraph=This is a workaround for Processing only exporting applications.
+version=2
+download=http://s3.staticvoidgames.com/JarMatey/JarMateyProcessingTool.zip
 id=141
 
 mode
@@ -455,7 +469,7 @@ url=https://github.com/processing/processing-android
 prettyVersion=3.0
 paragraph=This version of the Android Mode is for Processing 3.0+
 version=228
-download=https://github.com/processing/processing-android/releases/tag/latest
+download=https://github.com/processing/processing-android/releases/download/latest/AndroidMode.zip
 id=101
 
 mode
@@ -508,9 +522,9 @@ name=RiTa
 maxRevision=0
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.65
+prettyVersion=1.0.67
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1065
+version=1067
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
