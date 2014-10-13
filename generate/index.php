@@ -75,7 +75,7 @@ li { margin-bottom: 1em; }
 <br/>
 BASEDIR is: <?= BASEDIR ?>
 <br/><br/>
-Hello, Jamie and I are testing this now, thanks.</p>
+Hello, Jamie and I are testing this now, thanks. No, really, we are working on it.</p>
 
 <p>	
 	<a href="#" onclick="remote_link('pull_latest.php'); return false;">Pull latest changes</a> (without rebuilding anything)<br />
