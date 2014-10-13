@@ -73,7 +73,9 @@ li { margin-bottom: 1em; }
 
 <p style="background-color: red; font-weight: bold; color: white;">Do not run any of these scripts right now. Scott is transitioning this to the new server. Clicking any links below will break everything, aaaah!<br/>
 <br/>
-BASEDIR is: <?= BASEDIR ?></p>
+BASEDIR is: <?= BASEDIR ?>
+<br/><br/>
+Hello, Jamie and I are testing this now, thanks.</p>
 
 <p>	
 	<a href="#" onclick="remote_link('pull_latest.php'); return false;">Pull latest changes</a> (without rebuilding anything)<br />
