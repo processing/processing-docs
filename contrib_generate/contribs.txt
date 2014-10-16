@@ -69,7 +69,7 @@ id=138
 
 library
 category=Sound
-minRevision=0
+minRevision=228
 authorList=[Damien Di Fede](http://code.compartmental.net/) and [Anderson Mills](http://konfuzo.net/)
 name=Minim
 maxRevision=0
@@ -501,16 +501,16 @@ download=http://download.processing.org/pdeX.zip
 id=124
 
 mode
+minRevision=227
 category=
-minRevision=0
 authorList=[Jonathan Feinberg](http://MrFeinberg.com/)
 name=Python
-maxRevision=0
+maxRevision=231
 sentence=Write Processing sketches in Python.
 url=https://github.com/jdf/processing.py
-prettyVersion=Build 0374, built 2014/09/07 22:43
+prettyVersion=Build 0401, built 2014/09/16 10:56
 paragraph=
-version=0374
+version=0401
 download=http://py.processing.org/PythonMode.zip
 id=142
 
@@ -522,9 +522,9 @@ name=RiTa
 maxRevision=0
 sentence=A library for experiments in natural language and generative writing (works in Java & JavaScript modes).
 url=http://rednoise.org/rita/
-prettyVersion=1.0.67
+prettyVersion=1.0.68
 paragraph=RiTa is a library for experiments in natural language and generative writing. Components include text-generation (via context-free grammars and Markov-chains), tagging (for syllables, phonemes, stresses, and parts-of-speech), conjugation, pluralization, stemming, letter-to-phoneme mapping, text-mining, a user-customizable lexicon, and facilities for text display and animation. RiTa and RiTaJS (the JavaScript version) work alone or in conjunction with Processing and NodeJS, and are free, libre, and open-source (via a GPL license).
-version=1067
+version=1068
 imports=rita
 download=http://www.rednoise.org/rita/RiTa.zip
 id=063
@@ -598,20 +598,6 @@ paragraph=
 version=6
 download=http://sixthsensor.dk/code/p5/point2line/download/point2line.zip
 id=113
-
-library
-category=Compilation
-minRevision=0
-authorList=[Jo Wood](http://gicentre.org/) and [Aidan Slingsby](http://gicentre.org/)
-name=gicentreUtils
-maxRevision=0
-sentence=Assists creation of data visualization sketches.
-url=http://www.gicentre.org/utils/
-prettyVersion=3.3.0
-paragraph=Includes color utilities, statistical graphics, morphing classes, spatial utilities and map projections, text input/output and multi-sketch tools. Together these make the task of creating data visualization sketches much faster by providing code for commonly repeated tasks such as zooming in and out of a sketch, setting up color tables etc. For documentation and examples, see the [gicentreUtils pages](http://www.gicentre.org/utils/).
-version=13
-download=http://www.gicentre.org/utils/gicentreUtils.zip
-id=004
 
 library
 category=Compilation
@@ -775,9 +761,9 @@ name=CountdownTimer
 maxRevision=0
 sentence=A countdown timer which triggers callback events for each user-defined tick interval during the timer's duration.
 url=https://github.com/dhchoi/processing-countdowntimer
-prettyVersion=0.9.0
+prettyVersion=0.9.1
 paragraph=The timer will trigger onTickEvents after each interval and finish with an onFinishEvent. Multiple timers can be created inside the program, in which case each timer will have its own unique id.
-version=1
+version=2
 download=https://raw.github.com/dhchoi/processing-countdowntimer/master/release/CountdownTimer.zip
 id=140
 
@@ -1013,9 +999,9 @@ name=PixelPusher
 maxRevision=0
 sentence=System for controlling an unlimited number of LEDs.
 url=http://www.heroicrobotics.com/
-prettyVersion=20140822
+prettyVersion=20141013
 paragraph=A pure Java implementation of the PixelPusher protocol, a dynamically timed, infinitely scalable, plesiochronous system for running LED fabrics of any size, and with any organization.  The PixelPusher library is intended for controlling PixelPusher hardware, which you can buy from Heroic Robotics.
-version=109
+version=110
 download=http://www.heroicrobotics.com/software/PixelPusher.zip
 id=145
 
@@ -1223,9 +1209,9 @@ name=BoofCV for Processing
 maxRevision=0
 sentence=Processing interface for BoofCV.
 url=http://boofcv.org/index.php?title=Tutorial_Processing
-prettyVersion=0.17
+prettyVersion=0.18
 paragraph=Processing interface for [BoofCV](http://boofcv.org). BoofCV is a general purpose computer vision library written in Java.
-version=1
+version=2
 download=http://boofcv.org/processing/boofcv_processing.zip
 id=146
 
@@ -1489,9 +1475,9 @@ name=Temboo
 maxRevision=0
 sentence=Generate code to connect to 100+ APIs, code utilities, and databases in Processing.
 url=http://www.temboo.com/processing
-prettyVersion=2.3.0
+prettyVersion=2.5.0
 paragraph=Explore [temboo.com](http://temboo.com/) and auto-generate Processing sketches for your favorite web services and resources.
-version=4
+version=6
 download=https://temboo.com/files/temboo-processing.zip
 id=135
 
@@ -1628,9 +1614,9 @@ name=QScript
 maxRevision=0
 sentence=Algorithm and Expression evaluator.
 url=http://www.lagers.org.uk
-prettyVersion=1.0.0
+prettyVersion=2.0
 paragraph=Not only will it evaluate mathematical expressions, it can execute a simple algorithm created from multiple expressions. Simple selection and iteration statements can be used in the algorithm to control execution flow. The more advanced user can easily extend the evaluator by adding their own methods.
-version=1
+version=2
 download=http://www.lagers.org.uk/processing/qscript/QScript.zip
 id=131
 
@@ -1642,9 +1628,9 @@ name=proscene
 maxRevision=0
 sentence=Library that eases the creation of interactive scenes.
 url=http://otrolado.info
-prettyVersion=2.0.4
+prettyVersion=2.0.5
 paragraph=Main features include: 1. Default interactivity throughthe mouse and keyboard that simply does what you expect; 2. Generic suppport for Human Interface Devices; 3. Arcball, walkthrough and third person camera modes; 4. Hierarchical coordinate systems (frames), with functions to convert between them; 5. Coordinate systems can easily be moved with the mouse. 6. Keyframes; 7. Object picking; 8. Keyboard shortcuts and camera profiles customization; 8. Animation framework; 9. Screen drawing; and, 10. Off-screen rendering mode support.
-version=20
+version=22
 download=http://otrolado.info/proscene.zip
 id=001
 
