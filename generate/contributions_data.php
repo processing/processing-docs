@@ -22,7 +22,7 @@
 // If 'v' is missing, then both 2.x/3.x files are generated.
 //
 
-require('../config.php');
+require_once('../config.php');
 
 $benchmark_start = microtime_float();
 

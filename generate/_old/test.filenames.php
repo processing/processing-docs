@@ -1,5 +1,5 @@
 <?php
-require('../config.php');
+require_once('../config.php');
 require('lib/Ref.class.php');
 
 $language = isset($_GET['lang']) ? $_GET['lang'] : 'en';

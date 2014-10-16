@@ -2,7 +2,7 @@
 
 define( 'PRO_EXHIBIT', 'ALL_GOOD' );
 
-require('../config.php');
+require_once('../config.php');
 //require('lib/files.inc.php');
 require('lib/functions.inc.php');
 require('lib/xhtml.class.php');

@@ -1,5 +1,5 @@
 <?php
-require('../config.php');
+require_once('../config.php');
 include('lib/Ref.class.php');
 include('lib/Translation.class.php');
 

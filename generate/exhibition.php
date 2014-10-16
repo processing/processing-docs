@@ -4,7 +4,7 @@ define('NETWORK_FIRST_PAGE', 25);
 define('NETWORK_PER_PAGE', 90);
 
 if (!defined('SUBMIT')) {
-	require('../config.php');
+	require_once('../config.php');
 }
 
 require(GENERATEDIR.'lib/Curated.class.php');

@@ -42,7 +42,7 @@ element
 *****************************************************************/
 function openXML($file)
 {
-    $doc =& new DOMIT_Document();
+    $doc = new DOMIT_Document();
     if ($doc->loadXML(CONTENTDIR.$file)) {
         $xml =& $doc->documentElement;
         return $xml;
@@ -294,7 +294,7 @@ function make_necessary_directories($filepath)
 {	
 	$newDir = '';
 		
-	foreach(split('/',dirname($filepath)) as $dirPart)
+	foreach(explode('/',dirname($filepath)) as $dirPart)
 	{
 		#echo $newDir . $dirPart . "/" . "\n";
 	

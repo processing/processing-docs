@@ -1,6 +1,6 @@
 <?php
 
-require('../config.php');
+require_once('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 

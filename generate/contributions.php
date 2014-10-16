@@ -6,7 +6,7 @@
  * 04.16.2013
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-require('../config.php');
+require_once('../config.php');
 //$benchmark_start = microtime_float();
 
 //Grab the contributions data from the text file
@@ -41,7 +41,12 @@ foreach($byType as $type => &$contents){
 			$line = preg_replace('/=/', '===', $line, 1);
 			$line = explode('===', $line);
 
-			$clean[$type][$count][$line[0]] = $line[1];
+			if(count($line) < 2) {
+				error_log("\nError parsing contribution. Likely just a line break in the text file.");
+			}
+			else {
+				$clean[$type][$count][$line[0]] = $line[1];				
+			}
 		}
 		$count++;
 	}

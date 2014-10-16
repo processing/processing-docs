@@ -1,6 +1,6 @@
 <?php
 
-require('../config.php');
+require_once('../config.php');
 
 // arguments
 $title = isset($_POST['title']) ? $_POST['title'] : false;
