@@ -45,7 +45,7 @@ foreach($byType as $type => &$contents){
 				error_log("\nError parsing contribution. Likely just a line break in the text file.");
 			}
 			else {
-				$clean[$type][$count][$line[0]] = $line[1];				
+				$clean[$type][$count][$line[0]] = $line[1];
 			}
 		}
 		$count++;
