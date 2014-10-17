@@ -1,17 +1,23 @@
 #!/bin/sh
 
+echo "[REFERENCE GENERATOR] Booting up..."
+
 # PROCESSING_SRC_PATH=./test
 PROCESSING_SRC_PATH=../../../processing/core/src
 PROCESSING_LIB_PATH=../../../processing/java/libraries
 # GENERATE REFERENCE ENTRIES AND INDEX THROUGH JAVADOC - BY DAVID WICKS
 
-#remove everything old
+echo "[REFERENCE GENERATOR] Source Path :: $PROCESSING_SRC_PATH"
+echo "[REFERENCE GENERATOR] Library Path :: $PROCESSING_LIB_PATH"
+
+
+echo "[REFERENCE GENERATOR] Removing previous version of the ref..."
 rm -rf ../../reference
 mkdir ../../reference
 rm -rf ../../distribution
 mkdir ../../distribution
 
-#generate everything anew
+echo "[REFERENCE GENERATOR] Generating new javadocs..."
 javadoc -doclet ProcessingWeblet \
         -docletpath bin/ \
         -public \
@@ -33,12 +39,12 @@ javadoc -doclet ProcessingWeblet \
 	$PROCESSING_LIB_PATH/serial/src/processing/serial/*.java \
 	$PROCESSING_LIB_PATH/../../../processing-video/src/processing/video/*.java \
 	-noisy
-	# ./test/seetags.java \
 
 
-# COPY IMAGES FROM CONTENT FOLDER TO CORRECT FOLDERS
 
-# manage web reference
+echo "[REFERENCE GENERATOR] Copying images from content directory to the correct location..."
+
+echo "[REFERENCE GENERATOR] Updating web paths..."
 cp -R ../../css	 ../../reference/
 cp -R ../../javascript	 ../../reference/
 mkdir -p ../../reference/images
@@ -46,7 +52,7 @@ cp -R ../../content/api_media/*.jpg ../../reference/images/
 cp -R ../../content/api_media/*.gif ../../reference/images/
 cp -R ../../content/api_media/*.png ../../reference/images/
 
-# manage local reference
+echo "[REFERENCE GENERATOR] Updating local reference paths..."
 cp -R ../../css	 ../../distribution/
 cp -R ../../javascript	 ../../distribution/
 rm -rf ../../distribution/css/fonts/TheSerif_B4_Bold_.eot
@@ -62,10 +68,11 @@ cp -R ../../content/api_media/*.png ../../distribution/images/
 
 
 # COPY IMAGES
-
+echo "[REFERENCE GENERATOR] Copying images to web reference..."
 # copy images for web reference isn't needed because they are already on server
 
 # copy images for local reference
+echo "[REFERENCE GENERATOR] Copying images to local reference..."
 mkdir -p ../../distribution/img
 chmod 755 ../../distribution/img
 mkdir -p ../../distribution/img/about/
@@ -85,6 +92,7 @@ cp ../../content/api_en/images/header.gif ../../distribution/img/
 cd ../../generate/
 
 # run web reference creations files
+echo "[REFERENCE GENERATOR] Running PHP to generate static files..."
 php staticpages.php
 php tools.php
 php libraries.php
@@ -97,6 +105,7 @@ php libraries_local.php
 php environment_local.php
 
 # add the links to load in the libraries and tools lists online
+echo "[REFERENCE GENERATOR] Generating symlinks for web libraries and tools..."
 cd ../reference/libraries/
 ln -s index.html index.shtml
 cd ../tools/
