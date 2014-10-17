@@ -3,7 +3,8 @@
 require_once('../config.php');
 
 function out($output) {
-	echo "<p>$output</p>";
+	$htmlOutput = str_replace("\n", "<br />", $output);
+	echo "<p>$htmlOutput</p>";
 	error_log($output);
 }
 
