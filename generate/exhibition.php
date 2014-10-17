@@ -125,6 +125,8 @@ function get_curated_short()
     $curated = curated_xml(4);
     
     // output html
+    $html = '';
+
     foreach ($curated as $c) {
         $html .= $c->display_short_home();
     }
@@ -135,7 +137,7 @@ function get_curated_short()
 function curated_xml($num)
 {
     // open and parse curated.xml
-    $xml =& openXML('curated.xml');
+    $xml = openXML('curated.xml');
     
     // get software nodes
     $softwares = $xml->getElementsByTagName('software');

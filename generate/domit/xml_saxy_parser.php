@@ -723,7 +723,7 @@ class SAXY_Parser extends SAXY_Parser_Base {
 	* @param string The text of the comment
 	*/
 	function fireCommentEvent($data) {
-		call_user_func($this->commentHandler, &$this, $data);
+		call_user_func($this->commentHandler, array(&$this), $data);
 	} //fireCommentEvent
 	
 	/**
@@ -731,7 +731,7 @@ class SAXY_Parser extends SAXY_Parser_Base {
 	* @param string The processing instruction data
 	*/
 	function fireProcessingInstructionEvent($target, $data) {
-		call_user_func($this->processingInstructionHandler, &$this, $target, $data);
+		call_user_func($this->processingInstructionHandler, array(&$this), $target, $data);
 	} //fireProcessingInstructionEvent
 	
 	/**

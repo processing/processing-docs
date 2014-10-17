@@ -255,7 +255,7 @@ class SAXY_Parser_Base {
 	* @param Array The start element attributes
 	*/
 	function fireStartElementEvent($tagName, $attributes) {
-		call_user_func($this->startElementHandler, &$this, $tagName, $attributes);
+		call_user_func($this->startElementHandler, array(&$this), $tagName, $attributes);
 	} //fireStartElementEvent		
 	
 	/**
@@ -263,7 +263,7 @@ class SAXY_Parser_Base {
 	* @param string The end element tag name
 	*/
 	function fireEndElementEvent($tagName) {
-		call_user_func($this->endElementHandler, &$this, $tagName);
+		call_user_func($this->endElementHandler, array(&$this), $tagName);
 	} //fireEndElementEvent
 	
 	/**
@@ -276,7 +276,7 @@ class SAXY_Parser_Base {
 			$data = strtr($data, $this->definedEntities);
 		}
 		
-		call_user_func($this->characterDataHandler, &$this, $data);
+		call_user_func($this->characterDataHandler, array(&$this), $data);
 	} //fireCharacterDataEvent	
 	
 	/**
@@ -284,7 +284,7 @@ class SAXY_Parser_Base {
 	* @param string The CDATA Section data
 	*/
 	function fireCDataSectionEvent($data) {
-		call_user_func($this->cDataSectionHandler, &$this, $data);
+		call_user_func($this->cDataSectionHandler, array(&$this), $data);
 	} //fireCDataSectionEvent	
 } //SAXY_Parser_Base
 

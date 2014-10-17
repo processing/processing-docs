@@ -281,7 +281,7 @@ function writeFile($filename, $content)
 	if ( strpos( $filename, BASEDIR ) !== 0  ) # force basedir
 		$filename = BASEDIR . $filename;
 		
-	#echo $filename . "\n";
+	echo $filename . "\n";
 	#echo $content . "\n";
 	
     make_necessary_directories($filename);

@@ -296,7 +296,7 @@ class DOMIT_Utilities {
 	* @param string The XML text
 	* @return boolean True if the XML text is valid
 	*/
-	function validateXML($xmlText) {
+	static function validateXML($xmlText) {
 		//this does only rudimentary validation
 		//at this point in time
 		$isValid = true;
