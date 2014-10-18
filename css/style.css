@@ -7,8 +7,7 @@ Reworked by CR, 23 Sep 2011
 Reworked by Jon Gacnik, 19 Feb 2013
 
 Created: 2005.08.29 04:28PM
-x Last Modified: 2013.10.16 09:28AM
-
+Last Modified: 2014.10.18, Scott Murray
 */
 
 
@@ -273,10 +272,10 @@ a.large-link:before {
 	height: 22px;
 	width: 22px;
 	border-left: none;
-	background: white url(../img/search.png) center center no-repeat;
-	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/search.svg);
-	background-image: -moz-linear-gradient(transparent, transparent), url(../img/search.svg);
-	background-image: linear-gradient(transparent, transparent), url(../img/search.svg);
+	background: white url(//../img/search.png) center center no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url(//../img/search.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(//../img/search.svg);
+	background-image: linear-gradient(transparent, transparent), url(//../img/search.svg);
 	cursor: pointer;
 }
 
@@ -284,10 +283,10 @@ a.large-link:before {
 	height: 22px;
 	width: 22px;
 	border-left: none;
-	background: white url(../img/search.png) center center no-repeat;
-	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/search.svg);
-	background-image: -moz-linear-gradient(transparent, transparent), url(../img/search.svg);
-	background-image: linear-gradient(transparent, transparent), url(../img/search.svg);
+	background: white url(//../img/search.png) center center no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url(//../img/search.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(//../img/search.svg);
+	background-image: linear-gradient(transparent, transparent), url(//../img/search.svg);
 	cursor: pointer;
 }
 
