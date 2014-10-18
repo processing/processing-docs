@@ -51,7 +51,7 @@ void drawAnotherLine() {
 
 void drawYetAnotherLine() {
   // Because no new local variable "a" is set, 
-  // this lines draws using the original global
-  // variable "a" which is set to the value 20.
+  // this line draws using the original global
+  // variable "a", which is set to the value 80.
   line(a+2, 0, a+2, height);
 }
