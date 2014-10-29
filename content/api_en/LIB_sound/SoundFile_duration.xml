@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>duration()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+SoundFile file;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Load a soundfile from the data folder of the sketch and get the duration of the file
+    file = new SoundFile(this, "sample.mp3");
+    println("SFDuration= " + soundfile.duration() + " seconds");
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the duration of the file in seconds
+]]></description>
+
+<syntax>
+<c>file</c>.duration()
+</syntax>
+	
+<returns>float</returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

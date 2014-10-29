@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>room()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+AudioIn in;
+Reverb reverb;
+
+void setup() {
+    size(640,360);
+    background(255);
+        
+    // create the input stream
+    in = new AudioIn(this, 0);
+    
+    // create a delay effect
+    reverb = new Reverb(this);
+    
+    // start the input stream
+    in.play();
+
+    // Patch the delay
+    reverb.process(in);
+    reverb.room(0.5);
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Changes the room size of the reverb
+]]></description>
+
+<syntax>
+<c>reverb</c>.room()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

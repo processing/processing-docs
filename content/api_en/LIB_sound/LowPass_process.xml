@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>process()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+WhiteNoise noise;
+LowPass lowPass;
+
+void setup() {
+    size(640,360);
+    background(255);
+    
+    // Create a noise generator and a bandpass filter
+    noise = new WhiteNoise(this);
+    lowPass = new lowPass(this);    
+
+    // start the noise generator and the filter
+    noise.play(0.5);
+    lowPass.process(noise);
+
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Start the effect on the audio stream
+]]></description>
+
+<syntax>
+<c>lowPass</c>.process()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>stop()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+WhiteNoise noise;
+HighPass highPass;
+
+float amp=0.0;
+
+void setup() {
+    size(640,360);
+    background(255);
+    
+    // Create a noise generator and a bandpass filter
+    noise = new WhiteNoise(this);
+    highPass = new highPass(this);
+    
+    noise.play(0.5);
+    highPass.process(noise, 5000);
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+	
+	//stop the noise generator and the filter
+	noise.stop();
+	highPass.stop();
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops the Filter.
+]]></description>
+
+<syntax>
+<c>highPass</c>.stop()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

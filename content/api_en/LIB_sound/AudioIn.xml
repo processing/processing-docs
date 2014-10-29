@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>AudioIn</name>
+
+<category>Sound</category>
+
+<subcategory>IO</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+
+SIMPLE EXAMPLE CODE
+
+
+]]></code>
+</example>
+
+<description><![CDATA[
+
+	DESCRIPTION
+
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameters>
+
+</parameters>
+
+<method>
+<mname>start()</mname>
+<mdescription>Start the Input Stream</mdescription>
+</method>
+
+<method>
+<mname>start()</mname>
+<mdescription>Start the Input Stream and route it to the Audio Hardware Output</mdescription>
+</method>
+
+<method>
+<mname>stop()</mname>
+<mdescription>Stop the Input Stream</mdescription>
+</method>
+
+<method>
+<mname>amp()</mname>
+<mdescription>Change the amplitude/volume of the input stream</mdescription>
+</method>
+
+<method>
+<mname>add()</mname>
+<mdescription>Offset the output of the input stream by given value</mdescription>
+</method>
+
+<method>
+<mname>pan()</mname>
+<mdescription>Move the sound in a stereo panorama</mdescription>
+</method>
+
+<method>
+<mname>set()</mname>
+<mdescription>Set multiple parameters at once</mdescription>
+</method>
+
+<constructor>
+AudioIn(<c>parent</c>, <c>input channel</c>)
+</constructor>
+
+<cparameter>
+<clabel>parent</clabel>
+<cdescription>PApplet: typically use "this"</cdescription>
+</cparameter>
+
+<cparameter>
+<clabel>sampleRate</clabel>
+<cdescription>int: input channel </cdescription>
+</cparameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>

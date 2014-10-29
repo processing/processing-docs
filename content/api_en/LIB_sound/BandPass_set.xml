@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+WhiteNoise noise;
+BandPass bandPass;
+
+void setup() {
+    size(640,360);
+    background(255);
+    
+    // Create a noise generator and a bandpass filter
+    noise = new WhiteNoise(this);
+    bandPass = new bandPass(this);    
+
+    // start the noise generator and the filter
+    noise.play(0.5);
+    bandPass.process(noise);
+
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+	float freq=1000;
+	float bw=80;
+	bandPass.set(freq, bw);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets frequency and bandwidth of the filter with one method. 
+]]></description>
+
+<syntax>
+<c>bandPass</c>.set(freq, bw)
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

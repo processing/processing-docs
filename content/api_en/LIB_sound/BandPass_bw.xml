@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>freq()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+WhiteNoise noise;
+BandPass bandPass;
+
+float freq=2500;
+float bw=80;
+
+void setup() {
+    size(640,360);
+    background(255);
+    
+    // Create a noise generator and a highpass filter
+    noise = new WhiteNoise(this);
+    bandPass = new bandPass(this);
+    
+    noise.play(0.5);
+    bandPass.process(noise);
+
+    // Change the cutoff frequency and bandwidth of the filter
+    bandpass.bw(bw);
+    bandpass.freq(freq);
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Set the bandwidth for the filter in Hz
+]]></description>
+
+<syntax>
+<c>bandPass</c>.bw()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

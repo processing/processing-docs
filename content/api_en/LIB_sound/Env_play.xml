@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>play()</name>
+
+<category>Envelopes</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+TriOsc triOsc;
+Env env;
+
+float attackTime = 0.001;
+float sustainTime = 0.004;
+float sustainLevel = 0.3;
+float releaseTime = 0.4;
+
+void setup() {
+  size(640, 360);
+  background(255);
+  
+  // Create triangle wave
+  triOsc = new TriOsc(this);
+
+  // Create the envelope 
+  env  = new Env(this); 
+ 
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+    triOsc.play(440);
+    env.play(triOsc, attackTime, sustainTime, sustainLevel, releaseTime);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Triggers the envelope function
+]]></description>
+
+<syntax>
+<c>env</c>.play()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

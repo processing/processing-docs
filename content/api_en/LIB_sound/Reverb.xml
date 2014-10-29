@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>Reverb</name>
+
+<category>Sound</category>
+
+<subcategory>Effects</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+AudioIn in;
+Reverb reverb;
+
+void setup() {
+    size(640,360);
+    background(255);
+        
+    // create the input stream
+    in = new AudioIn(this, 0);
+    
+    // create a delay effect
+    reverb = new Reverb(this);
+    
+    // start the input stream
+    in.play();
+
+    // ;
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+
+This is a simple Delay Effect. 
+
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameters>
+
+</parameters>
+
+<method>
+<mname>process()</mname>
+<mdescription>Start the reverb effect</mdescription>
+</method>
+
+<method>
+<mname>stop()</mname>
+<mdescription>Stop the reverb effect</mdescription>
+</method>
+
+<method>
+<mname>set()</mname>
+<mdescription>set multiple parameters of the reverb effect</mdescription>
+</method>
+
+<method>
+<mname>room()</mname>
+<mdescription>Change the room size of the reverb effect</mdescription>
+</method>
+
+<method>
+<mname>damp()</mname>
+<mdescription>Change the dampening of the reverb effect</mdescription>
+</method>
+
+<method>
+<mname>wet()</mname>
+<mdescription>Change the dry/wet ration of the delay effect</mdescription>
+</method>
+
+<constructor>
+Reverb(<c>parent</c>)
+</constructor>
+
+<cparameter>
+<clabel>parent</clabel>
+<cdescription>PApplet: typically use "this"</cdescription>
+</cparameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>

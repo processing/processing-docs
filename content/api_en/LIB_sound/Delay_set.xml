@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+AudioIn in;
+Delay delay;
+
+void setup() {
+    size(640,360);
+    background(255);
+        
+    // create the input stream
+    in = new AudioIn(this, 0);
+    
+    // create a delay effect
+    delay = new Delay(this);
+    
+    // start the input stream
+    in.play();
+
+    // Patch the delay
+    delay.process(in, 5);
+    delay.time(0.5);
+    delay.feedback(0.1);
+
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+	float time=0.2;
+	float feedback=0.3;
+	delay.set(time, feedback);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops the Filter.
+]]></description>
+
+<syntax>
+<c>delay</c>.set()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

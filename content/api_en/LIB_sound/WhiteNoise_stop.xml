@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>play()</name>
+
+<category>Noise</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+WhiteNoise noise;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create the noise generator
+    noise = new WhiteNoise(this);
+    noise.play();
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+	noise.stop();
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops the White Noise generator.
+]]></description>
+
+<syntax>
+<c>noise</c>.stop()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

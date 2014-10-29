@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>ClassNAme</name>
+
+<category>Sound</category>
+
+<subcategory>Category</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+
+SIMPLE EXAMPLE CODE
+
+
+]]></code>
+</example>
+
+<description><![CDATA[
+
+	DESCRIPTION
+
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameters>
+
+</parameters>
+
+<method>
+</method>
+
+<constructor>
+Movie(<c>parent</c>, <c>filename</c>)
+Movie(<c>parent</c>, <c>filename</c>, <c>fps</c>)
+Movie(<c>parent</c>, <c>url</c>)
+Movie(<c>parent</c>, <c>url</c>, <c>fps</c>)
+</constructor>
+
+<cparameter>
+<clabel>parent</clabel>
+<cdescription>PApplet: typically use "this"</cdescription>
+</cparameter>
+
+<cparameter>
+<clabel>sampleRate</clabel>
+<cdescription>int: samplerate (i.e. 44100/48000/96000) </cdescription>
+</cparameter>
+
+<cparameter>
+<clabel>bufferSize</clabel>
+<cdescription>int: buffersize (i.e. 32/64/128 ..) </cdescription>
+</cparameter>
+
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>

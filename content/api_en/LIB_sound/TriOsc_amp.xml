@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>amp()</name>
+
+<category>Oscillator</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+TriOsc triangle;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create triangle wave oscillator.
+    triangle = new TriOsc(this);
+    triangle.play();
+    triangle.amp(0.5);
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Changes the amplitude/volume of the triangle oscillator. Allowed values are between 0.0 and 1.0.
+]]></description>
+
+<syntax>
+<c>triangle</c>.amp(vol)
+</syntax>
+	
+<parameters>
+
+</parameters>
+
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

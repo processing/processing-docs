@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>play()</name>
+
+<category>Oscillator</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+SinOsc noise;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create the sine oscillator
+    sine = new SinOsc(this);
+    sine.play();
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Starts the Sine Oscillator generator.
+]]></description>
+
+<syntax>
+<c>sine</c>.play()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>add()</name>
+
+<category>Oscillator</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+SinOsc sine;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create the noise generator
+    sine = new SinOsc(this);
+    sine.play();
+    sine.add(0.5);
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+The .add() method is useful for modulating other audio signals.
+]]></description>
+
+<syntax>
+<c>sine</c>.add()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

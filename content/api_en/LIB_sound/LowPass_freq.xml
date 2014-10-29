@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>freq()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+WhiteNoise noise;
+LowPass lowPass;
+
+float freq=2500;
+
+void setup() {
+    size(640,360);
+    background(255);
+    
+    // Create a noise generator and a lowpass filter
+    noise = new WhiteNoise(this);
+    lowPass = new lowPass(this);
+    
+    noise.play(0.5);
+    lowPass.process(noise);
+
+    // Change the cutoff frequency of the filter
+    highpass.freq(freq);
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Set the cut off frequency for the filter
+]]></description>
+
+<syntax>
+<c>lowPass</c>.freq()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

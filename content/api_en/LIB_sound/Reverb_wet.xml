@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>wet()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+AudioIn in;
+Reverb reverb;
+
+void setup() {
+    size(640,360);
+    background(255);
+        
+    // create the input stream
+    in = new AudioIn(this, 0);
+    
+    // create a delay effect
+    reverb = new Reverb(this);
+    
+    // start the input stream
+    in.play();
+
+    // Patch the delay
+    reverb.process(in);
+    reverb.wet(0.5);
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Changes the wet/dry ratio of the reverb
+]]></description>
+
+<syntax>
+<c>reverb</c>.wet()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

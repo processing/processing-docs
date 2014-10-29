@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>TriOsc</name>
+
+<category>Sound</category>
+
+<subcategory>Category</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+TriOsc triangle;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create triangle wave oscillator.
+    triangle = new TriOsc(this);
+    triangle.play();
+}
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+This is a simple Triangle Wave Oscillator
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameters>
+
+</parameters>
+
+<method>
+<mname>play()</mname>
+<mdescription>Start the oscillator</mdescription>
+</method>
+
+<method>
+<mname>stop()</mname>
+<mdescription>Stop the oscillator</mdescription>
+</method>
+
+<method>
+<mname>freq()</mname>
+<mdescription>Change the frequency of the oscillator</mdescription>
+</method>
+
+<method>
+<mname>amp()</mname>
+<mdescription>Change the amplitude/volume of the oscillator</mdescription>
+</method>
+
+<method>
+<mname>add()</mname>
+<mdescription>Offset the output of the oscillator by given value</mdescription>
+</method>
+
+<method>
+<mname>pan()</mname>
+<mdescription>Move the sound in a stereo panorama</mdescription>
+</method>
+
+<method>
+<mname>set()</mname>
+<mdescription>Set multiple parameters at once</mdescription>
+</method>
+
+<constructor>
+TriOsc(<c>parent</c>)
+
+<cparameter>
+<clabel>parent</clabel>
+<cdescription>PApplet: typically use "this"</cdescription>
+</cparameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<availability>1.0</availability>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>

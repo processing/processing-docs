@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>set()</name>
+
+<category>Oscillator</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+TriOsc triangle;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create the triangle oscillator
+    triangle = new TriOsc(this);
+    triangle.play();
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+	float freq=200;
+	float amp=0.5;
+	float add=0.0;
+	float pos=1;
+	triangle.set(freq, amp, add, pos);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets amplitude, add and pan position with one method. 
+]]></description>
+
+<syntax>
+<c>triangle</c>.set(freq, amp, add, pos)
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>

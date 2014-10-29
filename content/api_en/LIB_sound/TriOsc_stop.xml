@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>stop()</name>
+
+<category>Oscillator</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+TriOsc triangle;
+
+void setup() {
+    size(640, 360);
+    background(255);
+    
+    // Create the sine oscillator
+    triangle = new TriOsc(this);
+    triangle.play();
+}      
+
+void draw() {
+}
+
+void mousePressed() {
+	triangle.stop();
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Stops the triangle oscillator.
+]]></description>
+
+<syntax>
+<c>triangle</c>.stop()
+</syntax>
+	
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+
+</root>
