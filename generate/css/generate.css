@@ -1,0 +1,275 @@
+/* fonts */
+@font-face {
+	font-family: 'theSerifItalic';
+	src: url(/fonts/TheSerif_B4_Italic.eot),
+		 url(/fonts/TheSerif_B4_Italic.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'theSerif';
+	src: url(/fonts/TheSerif_B4_Plain_.eot),
+		 url(/fonts/TheSerif_B4_Plain_.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'theSerif';
+	src: url(/fonts/TheSerif_B4_Bold_.eot),
+		 url(/fonts/TheSerif_B4_Bold_.woff) format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Enriqueta';
+	src: url(/fonts/Enriqueta-Regular-webfont.eot),
+		 url(/fonts/Enriqueta-Regular-webfont.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Enriqueta';
+	src: url(/fonts/Enriqueta-Bold-webfont.eot),
+		 url(/fonts/Enriqueta-Bold-webfont.woff) format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+	color: #5A5A5A; 
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
+	font-weight: 400;
+	line-height: 1.6em;
+}
+
+h1, h2, h3, h4 {
+	word-spacing: 0.2em;
+}
+
+h2 {
+	font-size:1.5rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+/* page styles */
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	width:100%;
+	height: 100%;
+}
+
+body { 
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif;
+	font-size: 12px;
+	background: #ddd;
+}
+
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	margin-bottom: 1em;
+}
+
+.hide {
+	display: none !important;
+}
+
+.wholepage {
+	margin:0 auto;
+	min-height: 100%;
+	width:100%;
+	max-width:900px;
+	background: white;
+}
+
+.global-header {
+	width: 900px;
+	height: 106px;
+	overflow: hidden;
+	background: #0c2033 url(/img/processing-web.png) center center no-repeat;
+	background-size: 900px 106px;
+	position:relative;
+}
+
+.global-header .logo {
+	width: 206px;
+	height: 38px;
+	margin: 20px 0 0 30px;
+	background: transparent url(/img/processing-logo.png) center center no-repeat;
+	background-image: -webkit-linear-gradient(transparent, transparent), url(/img/processing-logo.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(/img/processing-logo.svg);
+	background-image: linear-gradient(transparent, transparent), url(/img/processing-logo.svg);
+	text-indent: -9999px;
+}
+
+.main-content {
+	position: relative;
+	padding: 27px 34px;
+	width: 832px; /* 900px is 34px padding on either side */
+}
+
+.notice {
+	padding:1em 2em;
+	font-weight: normal;
+	font-size: 1.5em;
+}
+
+.notice.warning {
+	background:#FF3399;
+	color: white;
+}
+
+.notice.alert {
+	color:white;
+	background:red;
+}
+
+.generator {
+	margin-top:50px;
+}
+
+.submit-btn,
+.preset-btn {
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	min-width:100px;
+	margin:0 5px 0 0;
+	padding:20px 10px;
+	border:1px solid #2c7bb5;
+	text-align: center;
+	text-decoration: none;
+	color:#2c7bb5;
+	font-size:1rem;
+}
+
+.submit-btn {
+	font-family: 'theSerif', 'Enriqueta', georgia, times, serif;	
+	width: 122px;
+	margin-top:20px;
+}
+
+.submit-btn:focus {
+	outline:none;
+}
+
+.submit-btn::-moz-focus-inner {
+	border: 0;
+}
+
+.submit-btn:hover,
+.preset-btn:hover {
+	background: #2c7bb5;
+	color: white;
+}
+
+.preset-btn.everything {
+	border:1px solid #FF3399;
+	color:#FF3399;
+}
+
+.preset-btn.everything:hover {
+	background: #FF3399;
+	color: white;
+}
+
+.options {
+	margin-top: 50px;
+}
+
+.highlight {
+	display: inline-block;
+	margin:10px 0;
+	color:#2c7bb5;
+}
+
+a.highlight {
+	text-decoration: none;
+}
+
+a.highlight:hover {
+	color:black;
+}
+
+.debug {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 80%;
+	height: 80%;
+	overflow: auto;
+	background: rgba(0,0,0, 0.85);
+	color:white;
+	opacity: 0;
+	z-index: -1;
+
+	margin:auto;
+	left:0;
+	right:0;
+	top:0;
+	bottom: 0;
+
+	transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+	-o-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	-moz-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+	-webkit-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+
+}
+
+.debug:before {
+	display: block;
+	content:'Debug Log';
+	background: #2c7bb5;
+	width: calc(100% - 40px);
+	font-size:1.5rem;
+	padding:10px 20px;
+}
+
+.debug p {
+	font-family:Courier;
+	line-height: 1.6;
+	padding:0 2em;
+	color:white;
+	font-size: 1.25em;
+}
+
+/* debug mode */
+.is-debug-mode .debug {
+	opacity: 1;
+	z-index: 2;
+}
+
+.is-debug-mode body {
+    position:fixed;
+    overflow:hidden;
+}
+
+.is-debug-mode .wholepage {
+	pointer-events:none;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

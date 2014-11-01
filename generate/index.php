@@ -1,111 +1,137 @@
-<? require_once('../config.php'); ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>
+<html>
 
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
- 	<title>Processing.org Generator</title>
-    <script language="javascript" type="text/javascript" src="/javascript/prototype.js"></script>
-    <script language="javascript" type="text/javascript">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Processing.org Generator</title>
 
-function remote_link(href, params)
-{
-    return new Ajax.Updater('status', href, {asynchronous: true, onLoading: showloading, parameters: params});
-}
-
-function showloading()
-{
-    $('status-container').style.display = 'block';
-    $('status').innerHTML = 'Loading...';
-}
-    </script>
-    
-    <style type="text/css">
-    body { margin: 0 auto; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; }
-
-h1 { margin: 0; width: 900px; background: #000; }
-
-#header {
-	width: 900px;
-	height: 106px;
-	margin-bottom: 7px;
-	overflow: hidden;
-	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
-	background-size: 900px 106px;	
-	position:relative;
-}
-
-#header .processing-logo {
-	width: 206px;
-	height: 38px;
-	margin: 20px 0 0 30px;
-	background: transparent url(../img/processing-logo.png) center center no-repeat;
-	background-image: -webkit-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
-	background-image: -moz-linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
-	background-image: linear-gradient(transparent, transparent), url(../img/processing-logo.svg);
-}
-
-#body { margin-left: 34px; width: 900px; }
-
-ul, li { margin: 0; padding: 0; list-style: none; }
-li { margin-bottom: 1em; }
-
-#status-container { display: none; background: #efefff; border: 1px solid #c8c8ff; padding: 5px; width: 820px; overflow-x: hidden; margin-bottom: 34px; }
-#status-container h3 { margin: 0; }
-#status { font-size: 12px; }
-
-.inline { display: inline; }
-    </style>
+	<link rel="stylesheet" type="text/css" href="./css/generate.css" />
 </head>
 
 <body>
-	<div id="header">
-		<div class="processing-logo" alt="Processing cover"></div>
+	<div class="wholepage">
+		<header class="global-header">
+			<h1 class="logo">Processing</h1>
+		</header>
+
+		<article class="main-content">
+			<h2>Processing.org Generator</h2>
+
+			<p>Select a preset, or choose what you&rsquo;re going to update.</p>
+			
+			<?php /* you can set a notice to "alert" or "warning" */ ?>
+			<p class="notice alert hide">Hello, this is a notice!</p>
+
+			<section class="generator">
+				<div class="presets">
+					<h3>Presets</h3>
+
+					<p>
+						<?php /* each data-preset is a JSON encoded array referring to the id of a checkbox further down the page. */ ?>
+
+						<a href="#" class="preset-btn" data-presets='[ "git-pull", "exhibitions" ]'>Filip</a>
+						<a href="#" class="preset-btn" data-presets='[ "git-pull", "tutorials" ]'>Dan</a>
+						<a href="#" class="preset-btn" data-presets='[ "git-pull", "libraries", "tools", "contributions-2-x", "contributions-3-x" ]'>Elie</a>
+						<a href="#" class="preset-btn" data-presets='[ "git-pull", "cover", "environment", "examples", "static-pages", "reference" ]'>Scott</a>
+						<a href="#" class="preset-btn" data-presets='[ "git-pull", "foundation" ]'>Philip</a>
+					</p>
+
+					<p>
+						<a href="#" class="preset-btn everything" data-presets='[ "git-pull", "cover", "reference", "exhibitions", "tutorials", "libraries", "tools", "static-pages", "examples", "environment", "foundation", "contributions-3-x", "contributions-2-x" ]'>Everything</a>
+						<a href="#" class="preset-btn everything" data-presets='[ "git-pull", "cover", "reference", "exhibitions", "tutorials", "libraries", "tools", "static-pages", "examples", "environment", "foundation" ]'>Site</a>
+						<a href="#" class="preset-btn everything" data-presets='[]'>Nothing</a>
+					</p>
+				</div>
+
+				<div class="options">
+					<h3>Options</h3>
+
+					<?php /* each checkbox has a data-command attribute, which corresponds to a php file in the generate folder */ ?>
+					<p class="highlight">
+						<input type="checkbox" name="option" value="git-pull" id="git-pull" data-command="pull_latest">
+						<label for="git-pull">Pull Latest Changes</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="cover" id="cover" data-command="cover">
+						<label for="cover">Cover</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="reference" id="reference" data-command="reference">
+						<label for="reference">Reference</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="exhibitions" id="exhibitions" data-command="exhibition">
+						<label for="exhibitions">Exhibitions &amp; Archives</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="tutorials" id="tutorials" data-command="tutorials">
+						<label for="tutorials">Tutorials</label>
+					</p>
+
+
+					<p>
+						<input type="checkbox" name="option" value="libraries" id="libraries" data-command="libraries" data-command-args='{ "lang": "en" }'>
+						<label for="libraries">Libraries</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="tools" id="tools" data-command="tools",  data-command-args='{ "lang": "en" }'>
+						<label for="tools">Tools</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="static-pages" id="static-pages" data-command="staticpages">
+						<label for="static-pages">Static Pages</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="examples" id="examples" data-command="examples">
+						<label for="examples">Examples</label>
+					</p>
+
+					<p>
+						<input type="checkbox" name="option" value="environment" id="environment" data-command="environment">
+						<label for="environment">Environment</label>
+					</p>
+
+
+					<p>
+						<input type="checkbox" name="option" value="foundation" id="foundation" data-command="foundation">
+						<label for="foundation">Foundation</label>
+					</p>
+
+					<p>
+						<span class="highlight">Contributions</span>
+
+						<input type="checkbox" name="option" value="contributions-2-x" id="contributions-2-x" data-command="contributions_data" data-command-args='{ "v": 2, "lang": "en" }'>
+						<label for="contributions-2-x">2.x</label>
+
+						<input type="checkbox" name="option" value="contributions-3-x" id="contributions-3-x" data-command="contributions_data" data-command-args='{ "v": 3, "lang": "en" }'>
+						<label for="contributions-3-x">3.x</label>
+					</p>
+
+					<p>
+						<a href="/contrib_generate/build.log" class="highlight">Contributions Log</a>
+
+						<input type="checkbox" name="option" value="delete-log" id="delete-log" data-command="libraries_log_delete">
+						<label for="delete-log">Delete</label>						
+					</p>
+
+					<input type="submit" value="Generate" class="submit-btn" />
+				</div>
+			</section>
+		</article>
 	</div>
 
-<div id="body">
+	<article class="debug">
+	</article>
 
-<p>&nbsp;</p>
-
-<strong>Generate Site Files</strong>
-
-<p style="background-color: red; font-weight: bold; color: white;">Do not run any of these scripts right now. Scott is transitioning this to the new server. Clicking any links below will break everything, aaaah!<br/>
-<br/>
-BASEDIR is: <?= BASEDIR ?>
-</p>
-
-<p>	
-	<a href="#" onclick="remote_link('pull_latest.php'); return false;">Pull latest changes</a> (without rebuilding anything)<br />
-	<br />
-	Filip: <a href="#" onclick="remote_link('exhibition.php'); return false;">Exhibition and archives</a><br />
-	<br />
-	Dan: <a href="#" onclick="remote_link('tutorials.php'); return false;">Tutorials</a><br />
-	<br />
-	Elie: <a href="#" onclick="remote_link('libraries.php', 'lang=en'); return false;">Libraries</a> \ 
-		  <a href="#" onclick="remote_link('tools.php', 'lang=en'); return false;">Tools</a> \ 
-		  Contributions Data <a href="#" onclick="remote_link('contributions_data.php?v=2', 'lang=en'); return false;">2.x</a> <a href="#" onclick="remote_link('contributions_data.php?v=3', 'lang=en'); return false;">3.x</a> (<a href="/contrib_generate/build.log">view log</a> | <a href="#" onclick="remote_link('libraries_log_delete.php', 'lang=en'); return false;">delete log</a>) \ 
-		  Modes (to come...)<br />
-	<br />
-	Scott: <a href="#" onclick="remote_link('cover.php');return false;">Cover</a> \ 
-		<a href="#" onclick="remote_link('environment.php'); return false;">Environment</a> \ 
-		<a href="#" onclick="remote_link('examples.php'); return false;">Examples</a> \ 
-		<a href="#" onclick="remote_link('staticpages.php'); return false;">Static Pages</a> \ 
-		<a href="#" onclick="remote_link('reference.php');return false;">Reference</a> (REFERENCE!!!)
-<br /> 
-<br /> 
-    Philip: <a href="#" onclick="remote_link('foundation.php');return false;">Foundation</a>
-	</p>
-<p>&nbsp;</p>
-
-
-<div id="status-container">
-    <h3>Status</h3>
-    <div id="status"></div>
-</div>
-
-</div>
-
+	<script type="text/javascript" src="./javascript/reqwest.min.js"></script>
+    <script type="text/javascript" src="./javascript/generate.js"></script>
 </body>
+
 </html>
