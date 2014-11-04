@@ -126,20 +126,6 @@ id=025
 library
 category=I/O
 minRevision=0
-authorList=[Jorge C. S. Cardoso](http://jorgecardoso.eu)
-name=MindSet Processing
-maxRevision=0
-sentence=The MindSetProcessing library allows you to use the NeuroSky Mindset brainwave sensing headset with Processing.
-url=http://jorgecardoso.eu/processing/MindSetProcessing/
-prettyVersion=0.1.1
-paragraph=It gives you access to the raw wave values, to the eSense meters (Attention and Meditation) and to the EEG values. It does not provide blink data. This library was implemented using the Think Gear Communications driver J2ME implementation provided in the Mindset Development Tools 2.1.
-version=1
-download=http://jorgecardoso.eu/processing/MindSetProcessing/MindSetProcessing.zip
-id=026
-
-library
-category=I/O
-minRevision=0
 authorList=[Michael Heuer](https://github.com/heuermh) and [Iain Lobb](http://blog.iainlobb.com)
 name=Gamepad
 maxRevision=0
@@ -740,6 +726,20 @@ download=https://raw.github.com/dhchoi/processing-countdowntimer/master/release/
 id=140
 
 library
+category=Utilities
+minRevision=0
+authorList=[Andrew Glassner](http://glassner.com)
+name=Andrew's Utilities
+maxRevision=0
+sentence=A collection of utilities for Processing.
+url=http://imaginary-institute.com/resources/AULibrary/AULibrary.php
+prettyVersion=1.0.0
+paragraph=The library consists of a dozen sections: 1) flip a fair coin, 2) choose objects from a list, 3) a variety of distance functions, 4) a variety of easing functions, 5) blending functions, 6) repeating wave patterns, 7) a camera for producing offline animation with motion blur, 8) Bezier and CR curves that provide points at arclength distances on multi-segment curves, 9) 2D field of floats, 10) N-D field of floats (with support for color images), 11) return shuffled items from a list, 12) produce frames for a multi-step animation.
+version=1
+download=http://www.imaginary-institute.com/resources/AULibrary/AULib.zip
+id=152
+
+library
 category=Simulation
 minRevision=0
 authorList=[Ricard Marxer](http://www.ricardmarxer.com/)
@@ -929,9 +929,9 @@ name=LeapMotion
 maxRevision=0
 sentence=Forwards Leap Motion controller events to a Processing sketch.
 url=https://github.com/heuermh/leap-motion-processing
-prettyVersion=1.18
+prettyVersion=1.20
 paragraph=
-version=20
+version=22
 download=https://dl.dropbox.com/u/87680069/LeapMotion.zip
 id=090
 
@@ -957,9 +957,9 @@ name=Leap Motion for Processing
 maxRevision=0
 sentence=Simple library to use the complete [Leap Motion](https://leapmotion.com/) [API](https://developer.leapmotion.com/documentation/api/annotated) in [Processing](http://processing.org/).
 url=https://github.com/voidplus/leap-motion-processing
-prettyVersion=1.1.3.1
+prettyVersion=2.1.5.1
 paragraph=
-version=5
+version=8
 download=https://raw.github.com/voidplus/leap-motion-processing/master/download/LeapMotionForProcessing.zip
 id=109
 
@@ -971,9 +971,9 @@ name=PixelPusher
 maxRevision=0
 sentence=System for controlling an unlimited number of LEDs.
 url=http://www.heroicrobotics.com/
-prettyVersion=20141013
+prettyVersion=20141102
 paragraph=A pure Java implementation of the PixelPusher protocol, a dynamically timed, infinitely scalable, plesiochronous system for running LED fabrics of any size, and with any organization.  The PixelPusher library is intended for controlling PixelPusher hardware, which you can buy from Heroic Robotics.
-version=110
+version=111
 download=http://www.heroicrobotics.com/software/PixelPusher.zip
 id=145
 
@@ -1153,9 +1153,9 @@ name=OpenCV for Processing
 maxRevision=0
 sentence=Computer vision with OpenCV.
 url=https://github.com/atduskgreg/opencv-processing
-prettyVersion=0.4.5
+prettyVersion=0.5.0
 paragraph=Based on the official OpenCV Java API. A nice Processing-style API for common tasks and access to the full power of the OpenCV API for the advanced stuff.
-version=10
+version=11
 download=https://github.com/atduskgreg/opencv-processing/releases/download/latest/opencv_processing.zip
 id=132
 
@@ -1433,9 +1433,9 @@ name=Temboo
 maxRevision=0
 sentence=Generate code to connect to 100+ APIs, code utilities, and databases in Processing.
 url=http://www.temboo.com/processing
-prettyVersion=2.5.0
+prettyVersion=2.5.1
 paragraph=Explore [temboo.com](http://temboo.com/) and auto-generate Processing sketches for your favorite web services and resources.
-version=6
+version=7
 download=https://temboo.com/files/temboo-processing.zip
 id=135
 
@@ -1572,9 +1572,9 @@ name=QScript
 maxRevision=0
 sentence=Algorithm and Expression evaluator.
 url=http://www.lagers.org.uk
-prettyVersion=2.0
+prettyVersion=2.1
 paragraph=Not only will it evaluate mathematical expressions, it can execute a simple algorithm created from multiple expressions. Simple selection and iteration statements can be used in the algorithm to control execution flow. The more advanced user can easily extend the evaluator by adding their own methods.
-version=2
+version=3
 download=http://www.lagers.org.uk/processing/qscript/QScript.zip
 id=131
 
