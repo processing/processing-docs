@@ -27,6 +27,7 @@ javadoc -doclet ProcessingWeblet \
 	-examplesdir ../../content/api_en \
 	-includedir ../../content/api_en/include \
 	-imagedir images \
+	-encoding UTF-8 \
 	-corepackage processing.data \
 	-corepackage processing.event \
 	-corepackage processing.opengl \
