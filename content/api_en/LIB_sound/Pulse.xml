@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>SinOsc</name>
+<name>Pulse</name>
 
 <category>Sound</category>
 
@@ -80,7 +80,8 @@ void draw() {
 </method>
 
 <constructor>
-SinOsc(<c>parent</c>)
+Pulse(<c>parent</c>)
+</constructor>
 
 <cparameter>
 <clabel>parent</clabel>
