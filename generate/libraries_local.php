@@ -8,7 +8,7 @@ require_once('./contributions.php');
 $benchmark_start = microtime_float();
 
 
-$libraries = array('net', 'serial', 'video', 'dxf', 'pdf');
+$libraries = array('net', 'serial', 'video', 'dxf', 'pdf', 'sound');
 $lib_dir = DISTDIR.'libraries';
 
 
