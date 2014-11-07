@@ -22,16 +22,19 @@ $path = BASEDIR;  //define('BASEDIR',       dirname(__FILE__).'/');
 // just in case someone changed anything in the .java source files.
 out("Pulling in latest changes from processing/processing/...");
 
-$mainRepoPath = $path . '../processing';
-$shell_output = shell_exec("cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing-docs/ 2>&1");
+$mainRepoPath = "{$path}../processing";
+$shell_output = shell_exec("cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing/ 2>&1");
 
 out($shell_output);
+
+out("---------------");
 
 //exec("cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing/");
 
 // Pull latest processing/processing-docs from GitHub
-echo '<p>Pulling in latest changes from processing/processing-docs/...</p>';
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
+out("<p>Pulling in latest changes from processing/processing-docs/...</p>");
+$docsRepoPath = "{$path}../processing-docs";
+$shell_output = shell_exec("cd $docsRepoPath && /usr/bin/git pull https://github.com/processing/processing-docs/ 2>&1");
 
 out("---------------");
 
