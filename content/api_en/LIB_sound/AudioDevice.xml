@@ -26,7 +26,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Audio Device allows for configuring the Audio Server. If you need a low latency server you can reduce the Buffer Size. Allowed values are power of 2. For changing the sample rate pass the appropriate value in the constructor. 
+Audio Device allows for configuring the audio server. If you need a low latency server you can reduce the buffer size. Allowed values are power of 2. For changing the sample rate pass the appropriate value in the constructor. 
 ]]></description>
 
 <syntax>

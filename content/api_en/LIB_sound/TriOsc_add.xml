@@ -36,7 +36,7 @@ The .add() method is useful for modulating other audio signals.
 ]]></description>
 
 <syntax>
-<c>triangle</c>.add()
+<c>triangle</c>.add(add)
 </syntax>
 	
 <returns></returns>

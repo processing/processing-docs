@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>amp()</name>
+<name>add()</name>
 
 <category>Oscillator</category>
 
@@ -35,7 +35,7 @@ Changes the amplitude/volume of the saw oscillator. Allowed values are between 0
 ]]></description>
 
 <syntax>
-<c>saw</c>.amp(vol)
+<c>saw</c>.add(add)
 </syntax>
 	
 <parameters>

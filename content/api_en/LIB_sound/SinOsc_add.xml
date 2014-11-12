@@ -36,7 +36,7 @@ The .add() method is useful for modulating other audio signals.
 ]]></description>
 
 <syntax>
-<c>sine</c>.add()
+<c>sine</c>.add(add)
 </syntax>
 	
 <returns></returns>

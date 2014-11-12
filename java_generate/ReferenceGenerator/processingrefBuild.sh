@@ -39,7 +39,7 @@ javadoc -doclet ProcessingWeblet \
 	$PROCESSING_LIB_PATH/net/src/processing/net/*.java \
 	$PROCESSING_LIB_PATH/serial/src/processing/serial/*.java \
 	$PROCESSING_LIB_PATH/../../../processing-video/src/processing/video/*.java \
-#	$PROCESSING_LIB_PATH/../../../processing-sound/src/processing/sound/*.java \
+	$PROCESSING_LIB_PATH/../../../processing-sound/src/processing/sound/*.java \
 	-noisy
 
 

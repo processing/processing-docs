@@ -49,7 +49,7 @@ void mousePressed() {
 ]]></description>
 
 <syntax>
-    <c>highPass</c>.stop()
+<c>bandPass</c>.stop()
 </syntax>
 
 <returns></returns>

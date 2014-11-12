@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
     
-<name>amp()</name>
+<name>start()</name>
 
 <category>IO</category>
 
@@ -31,11 +31,11 @@ void draw() {
 </example>
 
 <description><![CDATA[
-    Start the input stream without routing it to the audio hardware output
+Start the input stream without routing it to the audio hardware output
 ]]></description>
 
 <syntax>
-    <c>in</c>.start()
+<c>in</c>.start()
 </syntax>
 
 <parameters>

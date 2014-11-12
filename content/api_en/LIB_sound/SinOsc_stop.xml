@@ -28,7 +28,7 @@ void draw() {
 }
 
 void mousePressed() {
-	sine.stop();
+  sine.stop();
 }
 
 ]]></code>

@@ -49,7 +49,7 @@ AudioIn let's you grab the audio input from your soundcard.
 </method>
 
 <method>
-<mname>start()</mname>
+<mname>play()</mname>
 <mdescription>Start the Input Stream and route it to the Audio Hardware Output</mdescription>
 </method>
 

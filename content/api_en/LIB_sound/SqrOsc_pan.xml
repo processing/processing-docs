@@ -13,7 +13,7 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SqrOsc sine;
+SqrOsc square;
 
 void setup() {
   size(640, 360);

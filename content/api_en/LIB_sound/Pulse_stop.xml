@@ -28,7 +28,7 @@ void draw() {
 }
 
 void mousePressed() {
-	pulse.stop();
+  pulse.stop();
 }
 
 ]]></code>

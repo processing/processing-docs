@@ -37,6 +37,11 @@ void draw() {
     line( i, height, i, height - spectrum[i]*height*5 );
   } 
 }
+
+void mousePressed() {
+  in.stop();
+  fft.stop();
+}
 ]]></code>
 </example>
 

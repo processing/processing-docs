@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>freq()</name>
+<name>stop()</name>
 
-<category>Oscillator</category>
+<category>Sound</category>
 
-<subcategory></subcategory>
+<subcategory>Analyzer</subcategory>
 
 <usage>Web &amp; Application</usage>
 
@@ -13,30 +13,36 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SqrOsc square;
+Amplitude amp;
+AudioIn in;
 
 void setup() {
   size(640, 360);
   background(255);
-  
-  // Create square wave oscillator.
-  square = new SqrOsc(this);
-  square.play();
-  square.freq(200);
+    
+  // Create an Input stream which is routed into the Amplitude analyzer
+  amp = new Amplitude(this);
+  in = new AudioIn(this, 0);
+  amp.input(in);
 }      
 
-void draw() {
+void draw() {  
+  println(amp.analyze());
 }
 
+void mousePressed() {
+  in.stop();
+  amp.stop();
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-Changes the frequency of the square oscillator in Hz.
+Defines the audio input of the Amplitude analyzer.
 ]]></description>
 
 <syntax>
-<c>square</c>.freq(frequency)
+<c>amp</c>.stop()
 </syntax>
 	
 <parameters>

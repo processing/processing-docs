@@ -35,7 +35,7 @@ Starts the Pulse oscillator.
 ]]></description>
 
 <syntax>
-<c>sine</c>.play()
+<c>pulse</c>.play()
 </syntax>
 	
 <returns></returns>
