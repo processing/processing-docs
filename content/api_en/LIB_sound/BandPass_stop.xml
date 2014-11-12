@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
+
+<name>play()</name>
+
+<category>Effects</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
     
-    <name>play()</name>
+WhiteNoise noise;
+BandPass bandPass;
     
-    <category>Effects</category>
+float amp=0.0;
     
-    <subcategory></subcategory>
+void setup() {
+  size(640,360);
+  background(255);
     
-    <usage>Web &amp; Application</usage>
+  // Create a noise generator and a bandpass filter
+  noise = new WhiteNoise(this);
+  highPass = new highPass(this);
     
-    <example>
-        <image></image>
-        <code><![CDATA[
-            import processing.sound.*;
-            
-            WhiteNoise noise;
-            BandPass bandPass;
-            
-            float amp=0.0;
-            
-            void setup() {
-            size(640,360);
-            background(255);
-            
-            // Create a noise generator and a bandpass filter
-            noise = new WhiteNoise(this);
-            highPass = new highPass(this);
-            
-            noise.play(0.5);
-            highPass.process(noise, 5000);
-            }
-            
-            void draw() {
-            }
-            
-            void mousePressed() {
-            
-            //stop the noise generator and the filter
-            noise.stop();
-            highpass.stop();
-            }
-            
-        ]]></code>
-    </example>
+  noise.play(0.5);
+  highPass.process(noise, 5000);
+}
     
-    <description><![CDATA[
-        Stops the Filter.
-    ]]></description>
+void draw() {
+}
     
-    <syntax>
-        <c>highPass</c>.stop()
-    </syntax>
+void mousePressed() {
     
-    <returns></returns>
+  //stop the noise generator and the filter
+  noise.stop();
+  highpass.stop();
+}
     
-    <related></related>
-    
-    <availability>1.0</availability>
-    
-    <type>Method</type>
-    
-    <partof>Library</partof>
-    
+]]></code>
+</example>
+
+<description><![CDATA[
+    Stops the Filter.
+]]></description>
+
+<syntax>
+    <c>highPass</c>.stop()
+</syntax>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
     
 </root>

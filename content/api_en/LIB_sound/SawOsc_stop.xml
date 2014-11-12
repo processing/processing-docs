@@ -13,22 +13,22 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SqrOsc square;
+SawOsc saw;
 
 void setup() {
-    size(640, 360);
-    background(255);
+  size(640, 360);
+  background(255);
     
-    // Create square wave oscillator.
-    square = new SqrOsc(this);
-    square.play();
-}      
+  // Create square wave oscillator.
+  saw = new SawOsc(this);
+  saw.play();
+}
 
 void draw() {
 }
 
 void mousePressed() {
-	square.stop();
+  saw.stop();
 }
 
 ]]></code>
@@ -39,7 +39,7 @@ Stops the oscillator.
 ]]></description>
 
 <syntax>
-<c>square</c>.stop()
+<c>saw</c>.stop()
 </syntax>
 	
 <returns></returns>

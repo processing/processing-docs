@@ -16,18 +16,18 @@ import processing.sound.*;
 AudioInput in;
 
 void setup() {
-    size(640, 360);
-    background(255);
+  size(640, 360);
+  background(255);
     
-    // Create the Input stream
-    in = new AudioInput(this);
-    in.play();
-    in.amp(0.5);
+  // Create the Input stream
+  in = new AudioInput(this);
+  in.play();
+  in.amp(0.5);
 }      
 
 void draw() {
-	// Map mouseX from -1.0 to 1.0 for left to right
-    in.pan(map(mouseX, 0, width, -1.0, 1.0));
+  // Map mouseX from -1.0 to 1.0 for left to right
+  in.pan(map(mouseX, 0, width, -1.0, 1.0));
 }
 
 ]]></code>

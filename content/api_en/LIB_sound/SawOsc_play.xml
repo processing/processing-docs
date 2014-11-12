@@ -13,16 +13,16 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SinOsc noise;
+SawOsc saw;
 
 void setup() {
-    size(640, 360);
-    background(255);
+  size(640, 360);
+  background(255);
     
-    // Create square wave oscillator.
-    sine = new SinOsc(this);
-    sine.play();
-}      
+  // Create square wave oscillator.
+  saw = new SawOsc(this);
+  saw.play();
+}
 
 void draw() {
 }
@@ -31,11 +31,11 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Starts the Sine Oscillator generator.
+Starts the Saw Oscillator generator.
 ]]></description>
 
 <syntax>
-<c>square</c>.play()
+<c>saw</c>.play()
 </syntax>
 	
 <returns></returns>

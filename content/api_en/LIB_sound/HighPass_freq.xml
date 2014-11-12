@@ -20,18 +20,18 @@ HighPass highPass;
 float freq=2500;
 
 void setup() {
-    size(640,360);
-    background(255);
+  size(640,360);
+  background(255);
     
-    // Create a noise generator and a highpass filter
-    noise = new WhiteNoise(this);
-    highPass = new highPass(this);
+  // Create a noise generator and a highpass filter
+  noise = new WhiteNoise(this);
+  highPass = new highPass(this);
     
-    noise.play(0.5);
-    highPass.process(noise);
+  noise.play(0.5);
+  highPass.process(noise);
 
-    // Change the cutoff frequency of the filter
-    highpass.freq(freq);
+  // Change the cutoff frequency of the filter
+  highpass.freq(freq);
 }      
 
 void draw() {

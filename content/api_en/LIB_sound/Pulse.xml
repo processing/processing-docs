@@ -12,17 +12,17 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SinOsc sine;
+Pulse pulse;
 
 void setup() {
-    size(640, 360);
-    background(255);
+  size(640, 360);
+  background(255);
     
-    // Create and start the sine oscillator.
-    sine = new SinOsc(this);
+  // Create and start the sine oscillator.
+  pulse = new Pulse(this);
     
-    //Start the Sine Oscillator. 
-    sine.play();
+  //Start the Pulse Oscillator. 
+  pulse.play();
 }
 
 void draw() {
@@ -57,6 +57,11 @@ void draw() {
 <method>
 <mname>freq()</mname>
 <mdescription>Change the frequency of the oscillator</mdescription>
+</method>
+
+<method>
+<mname>width()</mname>
+<mdescription>Change the pulse width of the oscillator</mdescription>
 </method>
 
 <method>

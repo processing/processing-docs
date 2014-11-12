@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
     
-    <name>amp()</name>
+<name>amp()</name>
+
+<category>IO</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioIn in;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create the Input stream
+  in = new AudioIn(this);
+  in.start();
+}
+
+void draw() {
+}
     
-    <category>IO</category>
+]]></code>
+</example>
+
+<description><![CDATA[
+    Start the input stream without routing it to the audio hardware output
+]]></description>
+
+<syntax>
+    <c>in</c>.start()
+</syntax>
+
+<parameters>
     
-    <subcategory></subcategory>
-    
-    <usage>Web &amp; Application</usage>
-    
-    <example>
-        <image></image>
-        <code><![CDATA[
-            import processing.sound.*;
-            AudioIn in;
-            
-            void setup() {
-            size(640, 360);
-            background(255);
-            
-            // Create the Input stream
-            in = new AudioIn(this);
-            in.start();
-            }
-            
-            void draw() {
-            }
-            
-        ]]></code>
-    </example>
-    
-    <description><![CDATA[
-        Start the input stream without routing it to the audio hardware output
-    ]]></description>
-    
-    <syntax>
-        <c>in</c>.start()
-    </syntax>
-    
-    <parameters>
-        
-    </parameters>
-    
-    
-    <returns></returns>
-    
-    <related></related>
-    
-    <availability>1.0</availability>
-    
-    <type>Method</type>
-    
-    <partof>Library</partof>
-    
+</parameters>
+
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
     
 </root>

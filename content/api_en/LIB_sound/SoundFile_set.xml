@@ -1,73 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>ClassNAme</name>
 
-<category>Sound</category>
+<name>set()</name>
 
-<subcategory>Category</subcategory>
+<category>Sound Files</category>
 
-<usage>Application</usage>
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
 
 <example>
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
+SoundFile file;
 
+void setup() {
+  size(640, 360);
+  background(255);
+    
+  // Load a soundfile from the data folder of the sketch and get the number of channels
+  file = new SoundFile(this, "sample.mp3");
+  println("SFSampleRate= " + sample.sampleRate() + " Hz");
+}      
 
-SIMPLE EXAMPLE CODE
+void draw() {
+}
 
+void mousePressed() {
+  float rate=3;
+  float pos=0.5;
+  float amp=0.5;
+  float add=0;
+  file.set(freq, amp, add, pos);
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-
-	DESCRIPTION
-
+Returns the sample rate of the soundfile as an int
 ]]></description>
 
 <syntax>
+<c>file</c>.set()
 </syntax>
+	
+<returns>int</returns>
 
-<parameters>
-
-</parameters>
-
-<method>
-</method>
-
-<constructor>
-Movie(<c>parent</c>, <c>filename</c>)
-Movie(<c>parent</c>, <c>filename</c>, <c>fps</c>)
-Movie(<c>parent</c>, <c>url</c>)
-Movie(<c>parent</c>, <c>url</c>, <c>fps</c>)
-</constructor>
-
-<cparameter>
-<clabel>parent</clabel>
-<cdescription>PApplet: typically use "this"</cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>sampleRate</clabel>
-<cdescription>int: samplerate (i.e. 44100/48000/96000) </cdescription>
-</cparameter>
-
-<cparameter>
-<clabel>bufferSize</clabel>
-<cdescription>int: buffersize (i.e. 32/64/128 ..) </cdescription>
-</cparameter>
-
-
-<returns></returns>
-
-<related>
-</related>
+<related></related>
 
 <availability>1.0</availability>
 
-<type>Object</type>
+<type>Method</type>
 
 <partof>Library</partof>
+
 
 </root>

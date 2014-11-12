@@ -18,17 +18,16 @@ WhiteNoise noise;
 HighPass highPass;
 
 void setup() {
-    size(640,360);
-    background(255);
+  size(640,360);
+  background(255);
     
-    // Create a noise generator and a bandpass filter
-    noise = new WhiteNoise(this);
-    highPass = new highPass(this);    
+  // Create a noise generator and a bandpass filter
+  noise = new WhiteNoise(this);
+  highPass = new highPass(this);    
 
-    // start the noise generator and the filter
-    noise.play(0.5);
-    highPass.process(noise);
-
+  // start the noise generator and the filter
+  noise.play(0.5);
+  highPass.process(noise);
 }      
 
 void draw() {

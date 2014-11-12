@@ -38,8 +38,8 @@ void draw() {
 }
 
 void mousePressed() {
-    triOsc.play(440);
-    env.play(triOsc, attackTime, sustainTime, sustainLevel, releaseTime);
+  triOsc.play(440);
+  env.play(triOsc, attackTime, sustainTime, sustainLevel, releaseTime);
 }
 
 ]]></code>

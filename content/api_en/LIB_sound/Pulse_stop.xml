@@ -13,22 +13,22 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SinOsc noise;
+Pulse pulse;
 
 void setup() {
-    size(640, 360);
-    background(255);
+  size(640, 360);
+  background(255);
     
-    // Create the sine oscillator
-    sine = new SinOsc(this);
-    sine.play();
+  // Create the pulse oscillator
+  pulse = new Pulse(this);
+  pulse.play();
 }      
 
 void draw() {
 }
 
 void mousePressed() {
-	sine.stop();
+	pulse.stop();
 }
 
 ]]></code>
@@ -39,7 +39,7 @@ Stops the Sine Oscillator generator.
 ]]></description>
 
 <syntax>
-<c>sine</c>.stop()
+<c>pulse</c>.stop()
 </syntax>
 	
 <returns></returns>

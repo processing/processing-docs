@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>process()</name>
+<name>amp()</name>
 
-<category>Effects</category>
+<category>Oscillator</category>
 
 <subcategory></subcategory>
 
@@ -13,42 +13,36 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-
-AudioIn in;
-Delay delay;
+SawOsc saw;
 
 void setup() {
-  size(640,360);
+  size(640, 360);
   background(255);
-        
-  // create the input stream
-  in = new AudioIn(this, 0);
     
-  // create a delay effect
-  delay = new Delay(this);
-    
-  // start the input stream
-  in.play();
-
-  // Patch the delay
-  delay.process(in, 5);
-  delay.time(0.5);
-}      
+  // Create square wave oscillator.
+  saw = new SawOsc(this);
+  saw.play();
+  saw.add(0.5);
+}
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Changes the delay time of the filter
+Changes the amplitude/volume of the saw oscillator. Allowed values are between 0.0 and 1.0.
 ]]></description>
 
 <syntax>
-<c>delay</c>.process()
+<c>saw</c>.amp(vol)
 </syntax>
 	
+<parameters>
+
+</parameters>
+
+
 <returns></returns>
 
 <related></related>

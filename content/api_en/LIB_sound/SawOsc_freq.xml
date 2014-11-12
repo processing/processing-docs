@@ -13,30 +13,29 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SqrOsc sine;
+SawOsc saw;
 
 void setup() {
-    size(640, 360);
-    background(255);
+  size(640, 360);
+  background(255);
     
-    // Create square wave oscillator.
-    square = new SqrOsc(this);
-    square.play();
-    square.freq(200);
-}      
+  // Create square wave oscillator.
+  saw = new SawOsc(this);
+  saw.play();
+  saw.freq(200);
+}
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Changes the frequency of the square oscillator in Hz.
+Changes the frequency of the saw oscillator in Hz.
 ]]></description>
 
 <syntax>
-<c>square</c>.freq(frequency)
+<c>saw</c>.freq(frequency)
 </syntax>
 	
 <parameters>
