@@ -39,6 +39,10 @@ $page = new Page("Books", "Books");
 $page->content(file_get_contents($source."books.html"));
 writeFile('books/index.html', $page->out());
 
+$page = new Page("Handbook", "Handbook");
+$page->content(file_get_contents($source."handbook.html"));
+writeFile('handbook/index.html', $page->out());
+
 // Copy over the errata file for Processing: A Programming Handbook...
 copy($source.'processing-errata.txt', $path.'books/processing-errata.txt');
 // Copy over the media.zip file for Getting Started with Processing...

@@ -10,8 +10,10 @@ $pages = array(
     	'Tutorials'   => array('/tutorials/', 2),  
     	'Examples'      => array('/examples/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
-     #   'Library'     => array('/learning/library/', 2),  
-    'Books'       	  => array('/books/', 2),
+     #   'Library'     => array('/learning/library/', 2),
+        'Books'       	  => array('/books/', 2),
+        'Handbook'        => array('/handbook/', 2),
+
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
@@ -23,11 +25,12 @@ $pages = array(
     'Download'        => array('/download/', 1),
     
     'Shop'            => array('/shop/', 1),
+    
         
     'About'           => array('/about/', 1),
         'Overview'    => array('/overview/', 2),
         'People'      => array('/people/', 2),
-        'Foundation'     => array('/foundation/', 2),
+        'Foundation'  => array('/foundation/', 2),
     
     'FAQ'             => array('http://wiki.processing.org/w/FAQ', 1),
     
@@ -42,7 +45,7 @@ function navigation($section = '')
 
     $abo = array('About', 'Overview', 'People', 'Foundation');
     $ref = array('Reference', 'Language', 'A-Z', 'Libraries', 'Tools', 'Environment');
-    $learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books');
+    $learn = array('Learning', 'Tutorials', 'Basics', 'Topics', '3D', 'Library', 'Books', 'Handbook');
 
     $html = "\t\t\t".'<div id="navigation">'."\n";
 
@@ -64,6 +67,7 @@ function navigation($section = '')
 
 	    $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Examples', $section == 'Examples') . "<br>\n";
+        $html .= "\t\t\t\t\t" . l('Handbook', $section == 'Handbook') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . "<br><br>\n";
 	    
 	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br> \n";
