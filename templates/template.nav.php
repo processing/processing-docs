@@ -23,6 +23,8 @@ $pages = array(
     'Download'        => array('/download/', 1),
     
     'Shop'            => array('/shop/', 1),
+    
+    'Handbook'        => array('/handbook/', 1),
         
     'About'           => array('/about/', 1),
         'Overview'    => array('/overview/', 2),
@@ -71,6 +73,8 @@ function navigation($section = '')
 	    $html .= "\t\t\t\t\t" . l('Foundation', $section == 'Foundation') . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . "<br><br>\n";
+    
+        $html .= "\t\t\t\t\t" . l('Handbook', $section == 'Handbook') . "<br><br>\n";
 	       
 	    $html .= "\t\t\t\t\t" . "<a href=\"http://forum.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Forum</a><br> \n";
         $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing\"" . 'class="outward"' . "><span>&raquo;</span>GitHub</a><br> \n";
