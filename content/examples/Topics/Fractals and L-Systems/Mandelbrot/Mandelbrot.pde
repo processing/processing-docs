@@ -5,18 +5,20 @@
  * Simple rendering of the Mandelbrot set.
  */
 
-
-// Establish a range of values on the complex plane
-// A different range will allow us to "zoom" in or out on the fractal
-// float xmin = -1.5; float ymin = -.1; float wh = 0.15;
-float xmin = -3;
-float ymin = -1.25;
-float w = 5;
-float h = 2.5;
-
 size(640, 360);
 noLoop();
 background(255);
+
+// Establish a range of values on the complex plane
+// A different range will allow us to "zoom" in or out on the fractal
+
+// It all starts with the width, try higher or lower values
+float w = 5;
+float h = (w * height) / width;
+
+// Start at negative half the width and height
+float xmin = -w/2;
+float ymin = -h/2;
 
 // Make sure we can write to the pixels[] array.
 // Only need to do this once since we don't do any other drawing.
@@ -39,7 +41,7 @@ float y = ymin;
 for (int j = 0; j < height; j++) {
   // Start x
   float x = xmin;
-  for (int i = 0;  i < width; i++) {
+  for (int i = 0; i < width; i++) {
 
     // Now we test, as we iterate z = z^2 + cm does z tend towards infinity?
     float a = x;
@@ -62,8 +64,7 @@ for (int j = 0; j < height; j++) {
     // If we never got there, let's pick the color black
     if (n == maxiterations) {
       pixels[i+j*width] = color(0);
-    }
-    else {
+    } else {
       // Gosh, we could make fancy colors here if we wanted
       pixels[i+j*width] = color(n*16 % 255);
     }
@@ -72,4 +73,3 @@ for (int j = 0; j < height; j++) {
   y += dy;
 }
 updatePixels();
-
