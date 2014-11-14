@@ -15,8 +15,8 @@ class KochLine {
   PVector b;
 
   KochLine(PVector start, PVector end) {
-    a = start.get();
-    b = end.get();
+    a = start.copy();
+    b = end.copy();
   }
 
   void display() {
@@ -25,11 +25,11 @@ class KochLine {
   }
 
   PVector start() {
-    return a.get();
+    return a.copy();
   }
 
   PVector end() {
-    return b.get();
+    return b.copy();
   }
 
   // This is easy, just 1/3 of the way
@@ -45,7 +45,7 @@ class KochLine {
     PVector v = PVector.sub(b, a);
     v.div(3);
     
-    PVector p = a.get();
+    PVector p = a.copy();
     p.add(v);
     
     v.rotate(-radians(60));
@@ -62,6 +62,3 @@ class KochLine {
     return v;
   }
 }
-
-
-
