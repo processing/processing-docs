@@ -8,7 +8,6 @@
 
 void setup() {
   size(640,360);
-  smooth();
 }
 
 void draw() {
@@ -34,5 +33,3 @@ void draw() {
   line(0,0,mouse.x,mouse.y);
   
 }
-
-
