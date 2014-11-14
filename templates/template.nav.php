@@ -11,8 +11,9 @@ $pages = array(
     	'Examples'      => array('/examples/', 2),  
      #   '3D'          => array('/learning/3d/', 2),  
      #   'Library'     => array('/learning/library/', 2),
+        'Books'       	  => array('/books/', 2),
         'Handbook'        => array('/handbook/', 2),
-    'Books'       	  => array('/books/', 2),
+
             
     'Reference'       => array('/reference/', 1),
         'Language'    => array('/reference/', 2),
@@ -25,7 +26,6 @@ $pages = array(
     
     'Shop'            => array('/shop/', 1),
     
-    'Handbook'        => array('/handbook/', 1),
         
     'About'           => array('/about/', 1),
         'Overview'    => array('/overview/', 2),
@@ -67,7 +67,7 @@ function navigation($section = '')
 
 	    $html .= "\t\t\t\t\t" . l('Tutorials', $section == 'Tutorials') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Examples', $section == 'Examples') . "<br>\n";
-        $html .= "\t\t\t\t\t" . l('Handbook', $section == 'Handbook') . "<br><br>\n";
+        $html .= "\t\t\t\t\t" . l('Handbook', $section == 'Handbook') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Books', $section == 'Books') . "<br><br>\n";
 	    
 	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br> \n";
