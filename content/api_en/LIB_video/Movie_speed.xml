@@ -34,7 +34,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Sets the relative playback speed of the movie. The <b>rate</b> parameters sets the speed where 2.0 will play the movie twice as fast, 0.5 will play at half the speed, and -1 will play the movie in normal speed in reverse.
+Sets the relative playback speed of the movie. The <b>rate</b> parameters sets the speed where 2.0 will play the movie twice as fast, 0.5 will play at half the speed, and -1 will play the movie in normal speed in reverse. (Note that not all video formats support backwards playback. For example, the theora codec does support backward playback, but not so the H264 codec, at least in its current version.)
 ]]></description>
 
 <syntax>
