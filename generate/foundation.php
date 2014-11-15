@@ -18,7 +18,8 @@ putenv('HOME=' . CONTENTDIR);
 //`cd $where && /usr/bin/svn update`;
 
 // Switch from SVN to GIT, 14 FEB 2013
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
+// Disabled for now, so we can test generate scripts without pulling latest from repo. -SM
+//`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 // make troubleshooting page
 $source = CONTENTDIR."static/foundation-test/";

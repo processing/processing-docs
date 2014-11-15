@@ -32,9 +32,10 @@ out("---------------");
 //exec("cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing/");
 
 // Pull latest processing/processing-docs from GitHub
-out("<p>Pulling in latest changes from processing/processing-docs/...</p>");
-$docsRepoPath = "{$path}../processing-docs";
-$shell_output = shell_exec("cd $docsRepoPath && /usr/bin/git pull https://github.com/processing/processing-docs/ 2>&1");
+// Disabled for now, so we can test generate scripts without pulling latest from repo. -SM
+//out("<p>Pulling in latest changes from processing/processing-docs/...</p>");
+//$docsRepoPath = "{$path}../processing-docs";
+//$shell_output = shell_exec("cd $docsRepoPath && /usr/bin/git pull https://github.com/processing/processing-docs/ 2>&1");
 
 out("---------------");
 
