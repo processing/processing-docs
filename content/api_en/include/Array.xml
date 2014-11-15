@@ -43,6 +43,28 @@ for (int i=0; i < degrees; i++) {
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+// You can also use an enhanced loop to
+// access the elements of an array
+float[] randoms = new float[100];
+for (int i = 0; i < randoms.length; i++) {
+  randoms[i] = random(100);
+}
+// Now let's look at all the values
+for (float val : randoms) {
+  println(val);
+}
+
+// This is often used with objects to execute
+// a function on all objects in an array
+for (Particle part : particles) {
+  part.display();
+}
+]]></code>
+</example>
+
 <description><![CDATA[
 An array is a list of data. It is possible to have an array of any type of data. Each piece of data in an array is identified by an index number representing its position in the array. The first element in the array is <b>[0]</b>, the second element is <b>[1]</b>, and so on. Arrays are similar to objects, so they must be created with the keyword <b>new</b>.<br/>
 <br/>
