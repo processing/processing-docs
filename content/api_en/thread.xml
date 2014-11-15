@@ -23,7 +23,7 @@ void draw() {
   if (frameCount % 30 == 0) {
     thread("requestData");
   }
-  text(time, 40, 100);
+  text(time, 10, 50);
 }
 
 // This happens as a separate thread and can take as long as it wants
