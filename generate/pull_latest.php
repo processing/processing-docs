@@ -20,8 +20,7 @@ $path = BASEDIR;  //define('BASEDIR',       dirname(__FILE__).'/');
 echo "<p>Pulling in latest changes from GitHub master repository...</p>";
 
 // Pull from GitHub
-// Disabled for now, so we can test generate scripts without pulling latest from repo. -SM
-//`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
+`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
