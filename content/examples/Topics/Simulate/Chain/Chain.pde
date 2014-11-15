@@ -12,8 +12,7 @@ Spring2D s1, s2;
 float gravity = 9.0;
 float mass = 2.0;
 
-void setup() 
-{
+void setup() {
   size(640, 360);
   fill(255, 126);
   // Inputs: x, y, mass, gravity
@@ -21,8 +20,7 @@ void setup()
   s2 = new Spring2D(0.0, width/2, mass, gravity);
 }
 
-void draw() 
-{
+void draw() {
   background(0);
   s1.update(mouseX, mouseY);
   s1.display(mouseX, mouseY);

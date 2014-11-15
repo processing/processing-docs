@@ -23,10 +23,10 @@ void setup() {
 
 void draw() {
   background(0);
-  for (int i = 0; i < numBalls; i++) {
-    balls[i].collide();
-    balls[i].move();
-    balls[i].display();  
+  for (Ball ball : balls) {
+    ball.collide();
+    ball.move();
+    ball.display();  
   }
 }
 
