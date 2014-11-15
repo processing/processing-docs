@@ -15,7 +15,8 @@ $where = CONTENTDIR . 'static/';
 //`cd $where && /usr/bin/svn update libraries.html`;
 
 // Switch from SVN to GIT, 14 FEB 2013
-`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
+// Disabled for now, so we can test generate scripts without pulling latest from repo. -SM
+//`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 
 $libraries = array('net', 'serial', 'video', 'dxf', 'pdf', 'sound');

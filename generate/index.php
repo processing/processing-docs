@@ -49,22 +49,22 @@
 					<?php /* each checkbox has a data-command attribute, which corresponds to a php file in the generate folder */ ?>
 					<p class="highlight">
 						<input type="checkbox" name="option" value="git-pull" id="git-pull" data-command="pull_latest">
-						<label for="git-pull">Pull Latest Changes</label>
+						<label for="git-pull">Pull Latest Changes</label> (gets latest from 'processing-docs' repo)
 					</p>
 
 					<p>
 						<input type="checkbox" name="option" value="cover" id="cover" data-command="cover">
-						<label for="cover">Cover</label>
+						<label for="cover">Cover</label> (also updates Exhibition)
 					</p>
 
 					<p>
 						<input type="checkbox" name="option" value="reference" id="reference" data-command="reference">
-						<label for="reference">Reference</label>
+						<label for="reference">Reference</label> (pulls in latest changes to 'processing' repo)
 					</p>
 
 					<p>
 						<input type="checkbox" name="option" value="exhibitions" id="exhibitions" data-command="exhibition">
-						<label for="exhibitions">Exhibitions &amp; Archives</label>
+						<label for="exhibitions">Exhibition</label>
 					</p>
 
 					<p>
