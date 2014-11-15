@@ -25,10 +25,10 @@ void setup() {
     
   // Create a noise generator and a bandpass filter
   noise = new WhiteNoise(this);
-  highPass = new highPass(this);
+  bandPass = new BandPass(this);
     
   noise.play(0.5);
-  highPass.process(noise, 5000);
+  bandPass.process(noise, 5000);
 }
     
 void draw() {
@@ -38,7 +38,7 @@ void mousePressed() {
     
   //stop the noise generator and the filter
   noise.stop();
-  highpass.stop();
+  bandpass.stop();
 }
     
 ]]></code>

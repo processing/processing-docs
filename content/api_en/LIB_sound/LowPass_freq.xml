@@ -25,7 +25,7 @@ void setup() {
     
   // Create a noise generator and a lowpass filter
   noise = new WhiteNoise(this);
-  lowPass = new lowPass(this);
+  lowPass = new LowPass(this);
     
   noise.play(0.5);
   lowPass.process(noise);

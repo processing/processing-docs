@@ -25,7 +25,7 @@ void setup() {
     
   // Create a noise generator and a highpass filter
   noise = new WhiteNoise(this);
-  bandPass = new bandPass(this);
+  bandPass = new BandPass(this);
     
   noise.play(0.5);
   bandPass.process(noise);

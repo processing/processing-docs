@@ -20,7 +20,7 @@ void setup() {
   background(255);
     
   // Create the Input stream
-  in = new AudioInput(this);
+  in = new AudioInput(this, 0);
   in.play();
   in.amp(0.5);
 }      
