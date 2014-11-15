@@ -11,12 +11,33 @@
 <example>
 <image></image>
 <code><![CDATA[
-// No example yet
+String time = "";
+
+void setup() {
+  
+}
+
+void draw() {
+  background(0);
+  // Every 30 frames request new data
+  if (frameCount % 30 == 0) {
+    thread("requestData");
+  }
+  text(time, 40, 100);
+}
+
+// This happens as a separate thread and can take as long as it wants
+void requestData() {
+  JSONObject json = loadJSONObject("http://time.jsontest.com/");
+  time = json.getString("time");
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-No description yet.
+Procesing sketches follow a specific sequence of steps -- setup() first then draw() over and over and over again in a loop. A thread is also a series of steps with a beginning, a middle, and an end. A Processing sketch is a single thread, often referred to as the "Animation" thread. Other threads sequences, however, can run independently of the main animation loop. In fact, you can launch any number of threads at one time and they will all run concurrently.
+
+Processing does this quite often, in fact, we've seen this with library functions such as captureEvent() and movieEvent().  These functions are triggered by a different thread running behind the scenes, and they alert Processing whenever they have something to report. This is useful whenever you need to perform a task that takes too long and would slow down the main animation's frame rate, such as grabbing data from the network.  If a separate thread gets stuck or has an error, the entire program won't grind to a halt, since the error only stops that individual thread.  Writing your own thread can be a complex endeavor that involves extending the Java <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/threads.html">Thread</a> class.  However, the thread() method is a quick and dirty way to implement a simple thread in Processing.  By passing in a String that matches the name of a function, Processing will execute that function in a separate thread.
 ]]></description>
 
 
