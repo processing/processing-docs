@@ -47,25 +47,15 @@ void draw() {
   s.display();
 
   // All the Planets
-  for (int i = 0; i < planets.length; i++) {
+  for (Planet planet : planets) {
     // Sun attracts Planets
-    PVector force = s.attract(planets[i]);
-    planets[i].applyForce(force);
+    PVector force = s.attract(planet);
+    planet.applyForce(force);
     // Update and draw Planets
-    planets[i].update();
-    planets[i].display();
+    planet.update();
+    planet.display();
   }
 
   // Rotate around the scene
   angle += 0.003;
 }
-
-
-
-
-
-
-
-
-
-

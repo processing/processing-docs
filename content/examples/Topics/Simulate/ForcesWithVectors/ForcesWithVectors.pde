@@ -31,25 +31,25 @@ void draw() {
   // Draw water
   liquid.display();
 
-  for (int i = 0; i < movers.length; i++) {
+  for (Mover mover : movers) {
     
     // Is the Mover in the liquid?
-    if (liquid.contains(movers[i])) {
+    if (liquid.contains(mover) {
       // Calculate drag force
-      PVector drag = liquid.drag(movers[i]);
+      PVector drag = liquid.drag(mover);
       // Apply drag force to Mover
-      movers[i].applyForce(drag);
+      mover.applyForce(drag);
     }
 
     // Gravity is scaled by mass here!
-    PVector gravity = new PVector(0, 0.1*movers[i].mass);
+    PVector gravity = new PVector(0, 0.1*mover.mass);
     // Apply gravity
-    movers[i].applyForce(gravity);
+    mover.applyForce(gravity);
    
     // Update and display
-    movers[i].update();
-    movers[i].display();
-    movers[i].checkEdges();
+    mover.update();
+    mover.display();
+    mover.checkEdges();
   }
   
   fill(255);
@@ -67,10 +67,3 @@ void reset() {
     movers[i] = new Mover(random(0.5, 3), 40+i*70, 0);
   }
 }
-
-
-
-
-
-
-

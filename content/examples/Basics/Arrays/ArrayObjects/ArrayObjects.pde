@@ -26,9 +26,8 @@ void setup() {
 
 void draw() {
   background(0);
-  for (int i = 0; i < count; i++) {
-    mods[i].update();
-    mods[i].draw();
+  for (Module mod : mods) {
+    mod.update();
+    mod.draw();
   }
 }
-

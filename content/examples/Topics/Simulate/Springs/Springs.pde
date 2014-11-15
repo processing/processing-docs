@@ -5,46 +5,41 @@
  * When you release the mouse, it will snap back into position. 
  * Each circle has a slightly different behavior.  
  */
- 
+
 
 int num = 3; 
 Spring[] springs = new Spring[num]; 
 
-void setup()
-{
+void setup() {
   size(640, 360);
   noStroke(); 
-  springs[0] = new Spring(240, 260,  40, 0.98, 8.0, 0.1, springs, 0); 
+  springs[0] = new Spring(240, 260, 40, 0.98, 8.0, 0.1, springs, 0); 
   springs[1] = new Spring(320, 210, 120, 0.95, 9.0, 0.1, springs, 1); 
-  springs[2] = new Spring(180, 170, 200, 0.90, 9.9, 0.1, springs, 2);   
+  springs[2] = new Spring(180, 170, 200, 0.90, 9.9, 0.1, springs, 2);
 }
 
-void draw() 
-{
+void draw() {
   background(51); 
-  
-  for (int i = 0; i < num; i++) { 
-    springs[i].update(); 
-    springs[i].display(); 
-  }  
+
+  for (Spring spring : springs) { 
+    spring.update(); 
+    spring.display();
+  }
 }
 
-void mousePressed() 
-{
-  for (int i = 0; i < num; i++) { 
-    springs[i].pressed(); 
-  } 
+void mousePressed() {
+  for (Spring spring : springs) { 
+    spring.pressed();
+  }
 }
 
-void mouseReleased() 
-{
-  for (int i=0; i<num; i++) { 
-    springs[i].released(); 
-  } 
+void mouseReleased() {
+  for (Spring spring : springs) { 
+    spring.released();
+  }
 }
 
-class Spring 
-{ 
+class Spring { 
   // Screen values 
   float xpos, ypos;
   float tempxpos, tempypos; 
@@ -68,11 +63,10 @@ class Spring
 
   Spring[] friends;
   int me;
-  
+
   // Constructor
   Spring(float x, float y, int s, float d, float m, 
-         float k_in, Spring[] others, int id) 
-  { 
+  float k_in, Spring[] others, int id) { 
     xpos = tempxpos = x; 
     ypos = tempypos = y;
     rest_posx = x;
@@ -82,11 +76,10 @@ class Spring
     mass = m; 
     k = k_in;
     friends = others;
-    me = id; 
+    me = id;
   } 
 
-  void update() 
-  { 
+  void update() { 
     if (move) { 
       rest_posy = mouseY; 
       rest_posx = mouseX;
@@ -102,14 +95,14 @@ class Spring
     velx = damp * (velx + accel);         // Set the velocity 
     tempxpos = tempxpos + velx;           // Updated position 
 
-    
+
     if ((overEvent() || move) && !otherOver() ) { 
-      over = true; 
+      over = true;
     } else { 
-      over = false; 
-    } 
+      over = false;
+    }
   } 
-  
+
   // Test to see if mouse is over this spring
   boolean overEvent() {
     float disX = tempxpos - mouseX;
@@ -120,7 +113,7 @@ class Spring
       return false;
     }
   }
-  
+
   // Make sure no other springs are active
   boolean otherOver() {
     for (int i=0; i<num; i++) {
@@ -133,29 +126,26 @@ class Spring
     return false;
   }
 
-  void display() 
-  { 
+  void display() { 
     if (over) { 
-      fill(153); 
+      fill(153);
     } else { 
-      fill(255); 
+      fill(255);
     } 
     ellipse(tempxpos, tempypos, size, size);
   } 
 
-  void pressed() 
-  { 
+  void pressed() { 
     if (over) { 
-      move = true; 
+      move = true;
     } else { 
-      move = false; 
-    }  
+      move = false;
+    }
   } 
 
-  void released() 
-  { 
+  void released() { 
     move = false; 
     rest_posx = xpos;
     rest_posy = ypos;
-  } 
+  }
 } 
