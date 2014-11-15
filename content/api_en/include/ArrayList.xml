@@ -11,45 +11,57 @@
 
 <example>
 <image></image>
+<code>
+
+<example>
+<image></image>
 <code><![CDATA[
-// This is a code fragment that shows how to use an ArrayList.
-// It won't compile because it's missing the Ball class.
+// These are code fragments that show how to use an ArrayList.
+// They won't compile because they assume the existence of a Particle class
 
-// Declaring the ArrayList, note the use of the syntax "&lt;Ball&gt;" to indicate
+// Declaring the ArrayList, note the use of the syntax "&lt;Particle&gt;" to indicate
 // our intention to fill this ArrayList with Ball objects
-ArrayList&lt;Ball&gt; balls;
+ArrayList&lt;Particle&gt; particles = new ArrayList&lt;Particle&gt;;
 
-void setup() {
-  size(200, 200);
-  balls = new ArrayList&lt;Ball&gt;();  // Create an empty ArrayList
-  balls.add(new Ball(width/2, 0, 48));  // Start by adding one element
+// Objects can be added to an ArrayList with add()
+particles.add(new Particle());
+
+// Particles can be pulled out of an ArrayList with get()
+Particle part = particles.get(0);
+part.display();
+
+// The size method returns the current number of particles in the list
+int total = particles.size();
+println("The total number of particles is: " + total);
+
+// You can iterate over an ArrayList two ways
+// The first is by counting through the elements
+for (int i = 0; i < particles.size(); i++) {
+  Particle part = particles.get(i);
+  part.display();
 }
 
-void draw() {
-  background(255);
+// The second is using an enhanced loop
+for (Particle part : particles) {
+  part.display();
+}
 
-  // With an array, we say balls.length. With an ArrayList,
-  // we say balls.size(). The length of an ArrayList is dynamic.
-  // Notice how we are looping through the ArrayList backwards.
-  // This is because we are deleting elements from the list.
-  for (int i = balls.size()-1; i >= 0; i--) {
-    Ball ball = balls.get(i);
-    ball.move();
-    ball.display();
-    if (ball.finished()) {
-      // Items can be deleted with remove().
-      balls.remove(i);
-    }
+// You can delete particles from an ArrayList
+particles.remove(0);
+println(particles.size()); // Now one less!
+
+// If you are modifying an ArrayList during the loop
+// you cannot use the enhanced loop syntax.
+// In addition, when deleting in order to hit all elements, 
+// you should loop through it backwards.
+for (int i = particles.size - 1; i >= 0; i--) {
+  Particle part = particles.get(i);
+  if (part.finished()) {
+    particles.remove(i);
   }
-}
-
-void mousePressed() {
-  // A new ball object is added to the ArrayList, by default to the end.
-  balls.add(new Ball(mouseX, mouseY, ballWidth));
 }
 ]]></code>
 </example>
-
 
 <description><![CDATA[
 An <b>ArrayList</b> stores a variable number of objects. This is similar to making an array of objects, but with an <b>ArrayList</b>, items can be easily added and removed from the ArrayList and it is resized dynamically. This can be very convenient, but it's slower than making an array of objects when using many elements.  Note that for resizable lists of integers, floats, and Strings, you can use the Processing classes IntList, FloatList, and StringList.<br />
