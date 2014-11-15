@@ -51,14 +51,14 @@ for (int i = 0; i < randoms.length; i++) {
   randoms[i] = random(100);
 }
 
-// You can also use an enhanced loop to
-// access the elements of an array
+// You can also use an enhanced loop
+// to access the elements of an array
 for (float val : randoms) {
   println(val);
 }
 
-// This works with arrays of objects too
-// But not when making the array
+// This works with arrays of objects, too,
+// but not when first making the array
 PVector vectors = new PVector[5];
 for (int i = 0; i < vectors.length; i++) {
   vectors[i] = new PVector();
