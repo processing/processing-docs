@@ -46,13 +46,13 @@ for (int i=0; i < degrees; i++) {
 <example>
 <image></image>
 <code><![CDATA[
-// You can also use an enhanced loop to
-// access the elements of an array
 float[] randoms = new float[100];
 for (int i = 0; i < randoms.length; i++) {
   randoms[i] = random(100);
 }
-// Now let's look at all the values
+
+// You can also use an enhanced loop to
+// access the elements of an array
 for (float val : randoms) {
   println(val);
 }
