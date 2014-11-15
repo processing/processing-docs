@@ -7,7 +7,7 @@ Reworked by CR, 23 Sep 2011
 Reworked by Jon Gacnik, 19 Feb 2013
 
 Created: 2005.08.29 04:28PM
-x Last Modified: 2013.10.16 09:28AM
+Last Modified: 2014.11.15 by Scott Murray
 
 */
 
@@ -136,6 +136,63 @@ a.large-link:before {
 	background-color: white;
 }
 
+
+
+/* ================ RIBBON ================== */
+
+#ribbon {
+	width: 900px;
+	height: auto;
+	background-color: #1d517e;
+	background: linear-gradient(to bottom, #003b6e, #1d517e);
+}
+
+#ribbon ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#ribbon ul.left {
+	float: left;
+}
+
+#ribbon ul.right {
+	float: right;
+}
+
+#ribbon ul li {
+	display: inline-block;
+	margin: 0;
+	padding: 6px 10px 5px 10px;
+	list-style: none;
+	background-color: transparent;
+	background-color: rgba(0, 0, 0, 0.12);
+}
+
+#ribbon ul.left li {
+	border-right: 1px solid #1a1a1a;
+}
+
+#ribbon ul.right li {
+	border-left: 1px solid #1a1a1a;
+}
+
+#ribbon ul li a {
+	color: #b2b2b2;
+}
+
+#ribbon ul li.highlight {
+	background-color: black;
+	border-right: none;
+}
+
+#ribbon ul li.highlight a {
+	color: white;
+	font-weight: bold;
+}
+
+
 /* ================ HEADER ================== */
 #header {
 	width: 900px;
@@ -143,8 +200,9 @@ a.large-link:before {
 	margin-bottom: 30px;
 	overflow: hidden;
 	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
+	background-position: bottom;
 	background-size: 900px 106px;	
-	position:relative;
+	position: relative;
 }
 
 #header-f {
@@ -154,7 +212,7 @@ a.large-link:before {
 	overflow: hidden;
 	background: #0c2033 url(../img/foundation-head-test.png) center center no-repeat;
 	background-size: 900px 106px;	
-	position:relative;
+	position: relative;
 }
 
 #header .processing-logo {
