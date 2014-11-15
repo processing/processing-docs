@@ -35,7 +35,7 @@ void requestData() {
 </example>
 
 <description><![CDATA[
-Procesing sketches follow a specific sequence of steps: <b>setup()</b> first, followed by <b>draw()</b> over and over and over again in a loop. A thread is also a series of steps with a beginning, a middle, and an end. A Processing sketch is a single thread, often referred to as the "Animation" thread. Other threads' sequences, however, can run independently of the main animation loop. In fact, you can launch any number of threads at one time, and they will all run concurrently.
+Processing sketches follow a specific sequence of steps: <b>setup()</b> first, followed by <b>draw()</b> over and over and over again in a loop. A thread is also a series of steps with a beginning, a middle, and an end. A Processing sketch is a single thread, often referred to as the "Animation" thread. Other threads' sequences, however, can run independently of the main animation loop. In fact, you can launch any number of threads at one time, and they will all run concurrently.
 <br /><br />
 Processing does this quite often, such as with library functions like <b>captureEvent()</b> and <b>movieEvent()</b>. These functions are triggered by a different thread running behind the scenes, and they alert Processing whenever they have something to report. This is useful when you need to perform a task that takes too long and would slow down the main animation's frame rate, such as grabbing data from the network.  If a separate thread gets stuck or has an error, the entire program won't grind to a halt, since the error only stops that individual thread.
 <br /><br />
