@@ -17,6 +17,8 @@ $benchmark_start = microtime_float();
 
 $path = BASEDIR;  //define('BASEDIR',       dirname(__FILE__).'/');
 
+
+
 // Pull latest processing/processing from GitHub
 // Note that the Reference generate script needs this,
 // just in case someone changed anything in the .java source files.
@@ -26,18 +28,32 @@ $mainRepoPath = "{$path}../processing";
 $shell_output = shell_exec("cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing/ 2>&1");
 
 out($shell_output);
-
 out("---------------");
 
-//exec("cd $mainRepoPath && /usr/bin/git pull https://github.com/processing/processing/");
+
+
+// Pull latest processing/processing-sound from GitHub
+// Note that the Reference generate script needs this,
+// just in case someone changed anything in the .java source files.
+out("Pulling in latest changes from processing/processing-sound/...");
+
+$soundRepoPath = "{$path}../processing-sound";
+$shell_output = shell_exec("cd $soundRepoPath && /usr/bin/git pull https://github.com/processing/processing-sound/ 2>&1");
+
+out($shell_output);
+out("---------------");
+
+
 
 // Pull latest processing/processing-docs from GitHub
 // Disabled for now, so we can test generate scripts without pulling latest from repo. -SM
 //out("<p>Pulling in latest changes from processing/processing-docs/...</p>");
 //$docsRepoPath = "{$path}../processing-docs";
 //$shell_output = shell_exec("cd $docsRepoPath && /usr/bin/git pull https://github.com/processing/processing-docs/ 2>&1");
+//out($shell_output);
+//out("---------------");
 
-out("---------------");
+
 
 $referencepath = $path . "java_generate/ReferenceGenerator/";
 
