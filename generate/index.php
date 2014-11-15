@@ -59,7 +59,7 @@
 
 					<p>
 						<input type="checkbox" name="option" value="reference" id="reference" data-command="reference">
-						<label for="reference">Reference</label> (pulls in latest changes to 'processing' repo)
+						<label for="reference">Reference</label> (pulls in latest changes to 'processing' and 'processing-sound' repos)
 					</p>
 
 					<p>
