@@ -64,7 +64,7 @@
 
 					<p>
 						<input type="checkbox" name="option" value="exhibitions" id="exhibitions" data-command="exhibition">
-						<label for="exhibitions">Exhibitions &amp; Archives</label>
+						<label for="exhibitions">Exhibitions &amp; Archives</label> (also updates Exhibitions)
 					</p>
 
 					<p>

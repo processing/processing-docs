@@ -7,7 +7,7 @@ DEFINE('COVER', true);
 //    require_once('happenings.php');
 //    require_once('courses.php');
 //}
-require_once('exhibition.php');
+//require_once('exhibition.php');
 
 $benchmark_start = microtime_float();
 
