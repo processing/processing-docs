@@ -6,6 +6,9 @@ import os
 import re
 from xml.dom import minidom
 
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
 linePrefix = "   *"
 startString = linePrefix + " ( begin auto-generated from %s )"
 endString = "%s ( end auto-generated )" % linePrefix
@@ -17,8 +20,8 @@ xmlDirectory = "somwhere/"
 # auto-generated reference will get hard returns after this many characters
 maxCharsPerLine = 72
 
-codeDir = "/Users/REAS/Documents/reas@processing.org/trunk/processing/core/src/processing/core/"
-xmlDir = "/Users/REAS/Documents/reas@processing.org/trunk/web/content/api_en/"
+codeDir = "/Users/REAS/Documents/30-Code/processing/processing-docs/java_generate/ReferenceGenerator/test/core/"
+xmlDir = "/Users/REAS/Documents/30-Code/processing/processing-docs/content/api_en/"
 
 netCodeDir = "/Users/REAS/Documents/reas@processing.org/trunk/processing/java/libraries/net/src/processing/net/"
 netXmlDir = "/Users/REAS/Documents/reas@processing.org/trunk/web/content/api_en/LIB_net/"
@@ -32,14 +35,14 @@ thisFile = ""
 def main():
 	#maker = DescriptionIntegrator( codeDirectory=sys.argv[1], xmlDirectory=sys.argv[2] )
 	
-	makerVideo = DescriptionIntegrator( codeDirectory=videoCodeDir, xmlDirectory=videoXmlDir )
-	makerVideo.run()
-	
 	maker = DescriptionIntegrator( codeDirectory=codeDir, xmlDirectory=xmlDir )
 	maker.run()
+
+	#makerVideo = DescriptionIntegrator( codeDirectory=videoCodeDir, xmlDirectory=videoXmlDir )
+	#makerVideo.run()
 	
-	makerNet = DescriptionIntegrator( codeDirectory=netCodeDir, xmlDirectory=netXmlDir )
-	makerNet.run()
+	#makerNet = DescriptionIntegrator( codeDirectory=netCodeDir, xmlDirectory=netXmlDir )
+	#makerNet.run()
 
 
 def prefixedString( input ):
@@ -67,6 +70,8 @@ class DescriptionIntegrator:
 		# split apart the source code by line
 		portions = text.split("\n")
 		for line in portions:
+			#line = line.rstrip()
+			#print "line is '%s'" % (line)
 			if( line.find( shortString ) != -1):
 				print line + " - full line"
 				parts = line.split(" ")
@@ -99,7 +104,7 @@ class DescriptionIntegrator:
 		parts = self.generateLines( description, maxCharsPerLine )
 		for p in parts:
 			# insert each comment line into the source code
-			list.insert( startIndex, prefixedString(p) )
+			list.insert( startIndex, prefixedString(p).rstrip() )
 			startIndex += 1
 		return startIndex
 	
