@@ -40,7 +40,9 @@ println(s);
 <description><![CDATA[
 The <b>print()</b> function writes to the console area, the black rectangle at the bottom of the Processing environment. This function is often helpful for looking at the data a program is producing. The companion function <b>println()</b> works like <b>print()</b>, but creates a new line of text for each call to the function. More than one parameter can be passed into the function by separating them with commas. Alternatively, individual elements can be separated with quotes ("") and joined with the addition operator (+).<br />
 <br />
-Using <b>print()</b> on an object will output <b>null</b>, a memory location that may look like "@10be08," or the result of the <b>toString()</b> method from the object that's being printed. Advanced users who want more useful output when calling <b>print()</b> on their own classes can add a <b>toString()</b> method to the class that returns a String.
+Using <b>print()</b> on an object will output <b>null</b>, a memory location that may look like "@10be08," or the result of the <b>toString()</b> method from the object that's being printed. Advanced users who want more useful output when calling <b>print()</b> on their own classes can add a <b>toString()</b> method to the class that returns a String.<br />
+<br />
+Note that the console is relatively slow. It works well for occasional messages, but does not support high-speed, real-time output (such as at 60 frames per second).
 ]]></description>
 
 </root>

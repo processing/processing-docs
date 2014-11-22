@@ -8,6 +8,9 @@
   <p>
     Issues related to the Serial library on different platforms are documented on the <a href="https://github.com/processing/processing/wiki/Serial-Issues">Processing Wiki</a>. The source code is available on the <a href="https://github.com/processing/processing/tree/master/java/libraries/serial">processing</a> GitHub repository.
   </p>
+  <p>
+    When sending data to the console, such as via print() or println(), note that the console is relatively slow.  It does not support high-speed, real-time output (such as at 60 frames per second).  For real-time monitoring of serial values, render those values to the Processing window during draw().
+  </p>
 	
 </div>
 
