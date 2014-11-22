@@ -39,9 +39,9 @@ void draw() {
 PImage webImg;
 
 void setup() {
-  String url = "http://processing.org/img/processing_cover";
+  String url = "https://processing.org/img/processing-web.png";
   // Load image from a web server
-  webImg = loadImage(url, "gif");
+  webImg = loadImage(url, "png");
 }
 
 void draw() {
