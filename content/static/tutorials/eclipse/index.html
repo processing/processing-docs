@@ -22,11 +22,11 @@
 
 <h3>Step 3. Import the Processing libraries</h3>
 
-<p>Eclipse doesn't know anything about Processing so we'll have to go and get the Processing libraries ourselves. One way to do this is by pointing Eclipse to Processing's "core library" directory, however, it's sometimes a good idea to copy the necessary Processing files into the project folder itself so that everything stays together. Go to:
+<p>Eclipse doesn't know anything about Processing so we'll have to manually add the Processing libraries to the Eclipse project ourselves. One way to do this is by pointing Eclipse to Processing's "core library" directory. However, it's sometimes a good idea to copy the necessary Processing files into the project folder itself so that everything stays together. Go to:
 <br /><br />
 FILE --&gt; IMPORT --&gt; GENERAL --&gt; FILE SYSTEM.
 <br /><br />
-Click next. Click browse and find the Processing application. On Windows you will then want to look inside PATH_TO_PROCESSING/core/library/, but on Mac (for Processing 2.0) you'll have to go inside the application's "package contents": Processing->Contents->Java. Select the file "core.jar" inside the "library" folder.
+Click next. On Windows, click "Browse..." and select the Processing jar files inside PATH_TO_PROCESSING/core/library/. On OS X, do not use the "Browse..." button. Instead, use the "From directory:" field to manually enter the path to Processing's jar files, which is typically /Applications/Processing.app/Contents/Java/core/library/. At minimum, select the "core.jar" file inside the "library" folder. 
 <br /><br />
 <img src="imgs/import.jpg" border="1" />
 <br /><br />
@@ -229,7 +229,7 @@ and if you are in another class and have to refer to the "parent" PApplet:
 int pink = parent.color(255,200,200); 
 </pre>
 <br />
-For more, check out this <a href="http://web.archive.org/web/20120118054840/http://creativecoding.org/en/beyond/p5/eclipse_as_editor?">Eclipse as Editor</a> (retrieved from internet archive) tutorial by <a href="http://creativecoding.org/">creativecoding.org.</a>
+For more help, check out the <a title="How to Craft Your Processing Sketches in Eclipse" href="http://www.creativeapplications.net/processing/craft-your-processing-sketches-in-eclipse/">How to Craft Your Processing Sketches in Eclipse</a> tutorial from the <a href="http://creativeapplications.net/">Creative Applications Network</a>, or <a title="Proclipsing: Using the Eclipse IDE for Processing Projects" href="http://www.instructables.com/id/Proclipsing-Using-the-Eclipse-IDE-for-Processing-p/?ALLSTEPS">Proclipsing: Using the Eclipse IDE for Processing Projects</a> by <a title="Scott Kildall" href="http://kildall.com/">Scott Kildall</a> at <a title="Instructables" href="http://www.instructables.com/">Instructables</a>.
 
 </p>
 
