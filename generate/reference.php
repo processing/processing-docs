@@ -55,19 +55,25 @@ out("---------------");
 
 
 
-$referencepath = $path . "java_generate/ReferenceGenerator/";
-
-// 
-
+//Build reference files
 out("Rebuilding reference files...");
-
+$referencepath = $path . "java_generate/ReferenceGenerator/";
 $shell_output = shell_exec("cd $referencepath && ./processingrefBuild.sh 2>&1");
-
 out($shell_output);
+
+
+
+// Compress distribution into a ZIP, so it can be rolled into an IDE build.
+out("Compressing distribution directory...");
+$docsRepoPath = "{$path}../processing-docs";
+$shell_output = shell_exec("cd $docsRepoPath && zip -r ../processing/reference.zip distribution 2>&1");
+out($shell_output);
+out("Done compressing!");
+
+
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
-
 
 out("Generated files in $execution_time seconds.");
 ?>
