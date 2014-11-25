@@ -66,7 +66,7 @@ out($shell_output);
 // Compress distribution into a ZIP, so it can be rolled into an IDE build.
 out("Compressing distribution directory...");
 $docsRepoPath = "{$path}../processing-docs";
-$shell_output = shell_exec("cd $docsRepoPath && zip -r ../processing/reference.zip distribution 2>&1");
+$shell_output = shell_exec("cd $docsRepoPath && zip -r ../processing/build/shared/reference.zip distribution 2>&1");
 out($shell_output);
 out("Done compressing!");
 
