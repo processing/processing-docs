@@ -70,6 +70,7 @@ $shell_output = shell_exec("cd $docsRepoPath && cp -r distribution/ $mainRepoPat
 out($shell_output);
 $shell_output = shell_exec("cd $mainRepoPath/build/shared/ && zip -r reference.zip reference/ 2>&1");
 out($shell_output);
+shell_exec("rm -r $mainRepoPath/build/shared/reference/ 2>&1");
 out("Done compressing!");
 
 
