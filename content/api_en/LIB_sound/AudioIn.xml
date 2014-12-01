@@ -88,7 +88,7 @@ AudioIn(<c>parent</c>, <c>input channel</c>)
 </cparameter>
 
 <cparameter>
-<clabel>sampleRate</clabel>
+<clabel>input channel</clabel>
 <cdescription>int: input channel </cdescription>
 </cparameter>
 
