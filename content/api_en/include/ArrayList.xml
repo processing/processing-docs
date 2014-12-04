@@ -17,7 +17,7 @@
 
 // Declaring the ArrayList, note the use of the syntax "&lt;Particle&gt;" to indicate
 // our intention to fill this ArrayList with Particle objects
-ArrayList&lt;Particle&gt; particles = new ArrayList&lt;Particle&gt;;
+ArrayList&lt;Particle&gt; particles = new ArrayList&lt;Particle&gt;();
 
 // Objects can be added to an ArrayList with add()
 particles.add(new Particle());
