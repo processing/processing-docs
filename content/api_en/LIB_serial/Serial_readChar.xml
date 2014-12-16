@@ -37,7 +37,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns the next byte in the buffer as a char. Returns -1 or 0xffff if nothing is there.
+Returns the next byte in the buffer as a char. Returns <b>-1</b> or <b>0xffff</b> if nothing is there.
 ]]></description>
 
 
