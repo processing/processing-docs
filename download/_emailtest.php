@@ -27,27 +27,21 @@ $email = "shm@alignedleft.com";
 // Build and send the email *using PHPMailer
 $mail = new PHPMailer();
 $mail->IsSMTP(); 
-$mail->SMTPDebug  = 0;
+$mail->SMTPDebug  = 3;  //0 is no debug output
 $mail->SMTPAuth   = true;
-$mail->Host       = $mailConfig['host'];
+$mail->SMTPSecure = 'tls';
 $mail->Port       = 587;
+$mail->Host       = $mailConfig['host'];
 $mail->Username   = $mailConfig['user'];
 $mail->Password   = $mailConfig['pass'];
-$mail->SMTPSecure = 'tls';
 
 $mail->SetFrom('foundation@processing.org', 'Processing Foundation');
 $mail->AddBCC('foundation@processing.org', 'Processing Foundation');
 $mail->AddAddress($email, $name);
 
-// Build message from Stripe values. Find and replace from config email
 $message = str_replace('%name%', $name , $body) . "\n\n";
-//$message .= "Amount: $" . $amount . "<br />\n";
 $message .= "Email: " . $email . "<br />\n";
-//$message .= "Date: " . date('M j, Y', $donation['created']) . "<br />\n";
-//$message .= "Transaction ID: " . $donation['id'] . "<br /><br />\n\n\n";
-//$message .= "Best regards, and thanks again,<br>Ben Fry, Casey Reas, and Dan Shiffman";
 
-//$mail->Subject = $config['email-subject'];
 $mail->Subject = "Test message from Processing.org";
 $mail->MsgHTML($message);
 $result = $mail->Send();
