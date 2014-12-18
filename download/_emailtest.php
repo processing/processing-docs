@@ -8,6 +8,7 @@ require(realpath(__DIR__ . '/../../../cred/config.php'));
 
 //Load PHPMailer Class
 require_once('phpmailer/class.phpmailer.php');
+require_once('phpmailer/class.smtp.php');
 
 
 // Force https
