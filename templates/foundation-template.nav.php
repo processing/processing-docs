@@ -2,7 +2,7 @@
 
 $pages = array(
 
-    'Overview'           => array('./', 0),
+    'Overview'           => array('/', 0),
 
     'Mission'         => array('/mission/', 1), 
     
@@ -66,7 +66,7 @@ function short_nav($section)
     $html  = "\t\t\t".'<div id="navigation">'."\n";
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav_noSub">'."\n";
     
-    $html .= "\t\t\t\t\t<a href=\"http://processing.org/overviewf.html\"" . ($section == 'Cover' ? ' class="active"' : '') . ">Foundation</a> \\ \n";
+    $html .= "\t\t\t\t\t<a href=\"\"" . ($section == 'Cover' ? ' class="active"' : '') . ">Foundation</a> \\ \n";
     $html .= "\t\t\t\t\t<a href=\"/reference/index.html\"" . ($section == 'Language' ? ' class="active"' : '') . ">Language</a> \\ \n";
     $html .= "\t\t\t\t\t<a href=\"/reference/libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a> \\ \n";
     $html .= "\t\t\t\t\t<a href=\"/reference/tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a> \\ \n";
