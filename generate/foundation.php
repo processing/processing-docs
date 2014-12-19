@@ -11,8 +11,8 @@ $where = CONTENTDIR . 'static/foundation-site';
 putenv('HOME=' . CONTENTDIR);
 
 $source = CONTENTDIR."static/foundation-site/";
-$dest = $path."foundation-site/";
-//$dest = "/var/www/foundation/"; 
+//$dest = $path."foundation-site/";
+$dest = FOUNDDIR; 
 
 $page = new Page("Foundation Overview", "Foundation Overview");
 $page->content(file_get_contents($source."overviewf.html"));
