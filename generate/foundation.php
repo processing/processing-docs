@@ -50,7 +50,10 @@ writeFile($dest."patrons/index.html", $page->out());
 //$page->content(file_get_contents($source."donate.html"));
 //writeFile($dest."donate/index.html", $page->out());
 
+// After the pages are created, copy them to the Foundation subdomain
+//cp ../../img/processing-web.png ../../distribution/img/
 
+`cp ../processing-site/* /var/www/foundation/`;
 
 
 $benchmark_end = microtime_float();
