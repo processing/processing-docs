@@ -107,7 +107,8 @@ if(isset($_POST['form'])){
 					<a href="/reference/environment/">Environment</a><br><br>
 					<a href="/tutorials/">Tutorials</a><br>
 					<a href="/examples/">Examples</a><br>
-					<a href="/books/">Books</a><br><br>
+					<a href="/books/">Books</a><br>
+					<a href="/handbook/">Handbook</a><br><br>
 					<a href="/overview/">Overview</a><br> 
 					<a href="/people/">People</a><br>
 					<a href="/foundation/">Foundation</a><br><br>
