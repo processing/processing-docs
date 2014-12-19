@@ -17,7 +17,7 @@ $dest = $path."foundation-site/";
 $page = new Page("Foundation Overview", "Foundation Overview");
 $page->content(file_get_contents($source."overviewf.html"));
 writeFile($dest."index.html", $page->out());
-copydirr($source.'/imgs', $dest.'/images');
+//copydirr($source.'/imgs', $dest.'/images');
 
 //echo("hey");
 //echo($dest);
