@@ -54,8 +54,8 @@ writeFile($dest."patrons/index.html", $page->out());
 //cp ../../img/processing-web.png ../../distribution/img/
 
 echo("Starting to copy the site...");
-`cd $path && cp processing-site/* /var/www/foundation/`;
-echo("... and done!");
+`cd $path && cp -r processing-site/* /var/www/foundation/`;
+echo("done!");
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
