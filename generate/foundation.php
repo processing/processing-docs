@@ -4,14 +4,15 @@ require('../config-f.php');
 //require_once(TEMPLATEDIR.'foundation-template.php');
 $benchmark_start = microtime_float();
 
-$source = CONTENTDIR."static/foundation-test";
+$source = CONTENTDIR."static/foundation-site";
 $path = BASEDIR;
 
-$where = CONTENTDIR . 'static/foundation-test';
+$where = CONTENTDIR . 'static/foundation-site';
 putenv('HOME=' . CONTENTDIR);
 
-$source = CONTENTDIR."static/foundation-test/";
-$dest = $path."foundation-site/";
+$source = CONTENTDIR."static/foundation-site/";
+//$dest = $path."foundation-site/";
+$dest = "/var/www/foundation/"; 
 
 $page = new Page("Foundation Overview", "Foundation Overview");
 $page->content(file_get_contents($source."overviewf.html"));
