@@ -14,7 +14,7 @@ define('REFERENCEDIR',  BASEDIR.'reference/');
 define('DISTDIR',       BASEDIR.'distribution/');
 define('EXAMPLESDIR',	BASEDIR.'examples/');
 //define('BASEDIRUP', dirname(__FILE__).'/..');
-define('FOUNDDIR', '../../foundation/');
+define('FOUNDDIR', dirname("/var/www/foundation/"));
 
 require_once(DOMITDIR.'xml_domit_include.php');
 require_once(GENLIBDIR.'xhtml.class.php');

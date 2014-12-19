@@ -19,8 +19,8 @@ $page->content(file_get_contents($source."overviewf.html"));
 writeFile($dest."index.html", $page->out());
 #copydirr($source.'/images', $path.'/images');
 
-echo("hey");
-echo($dest);
+//echo("hey");
+//echo($dest);
 
 $page = new Page("Mission", "Mission");
 $page->content(file_get_contents($source."mission.html"));
