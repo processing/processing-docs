@@ -11,8 +11,8 @@ $where = CONTENTDIR . 'static/foundation-site';
 putenv('HOME=' . CONTENTDIR);
 
 $source = CONTENTDIR."static/foundation-site/";
-//$dest = $path."foundation-site/";
-$dest = "/var/www/foundation/"; 
+$dest = $path."foundation-site/";
+//$dest = "/var/www/foundation/"; 
 
 $page = new Page("Foundation Overview", "Foundation Overview");
 $page->content(file_get_contents($source."overviewf.html"));
@@ -43,9 +43,9 @@ $page = new Page("Patrons", "Patrons");
 $page->content(file_get_contents($source."patrons.html"));
 writeFile($dest."patrons/index.html", $page->out());
 
-$page = new Page("Donate", "Donate");
-$page->content(file_get_contents($source."donate.html"));
-writeFile($dest."donate/index.html", $page->out());
+//$page = new Page("Donate", "Donate");
+//$page->content(file_get_contents($source."donate.html"));
+//writeFile($dest."donate/index.html", $page->out());
 
 
 $benchmark_end = microtime_float();
