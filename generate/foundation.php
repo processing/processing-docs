@@ -11,13 +11,13 @@ $where = CONTENTDIR . 'static/foundation-site';
 putenv('HOME=' . CONTENTDIR);
 
 $source = CONTENTDIR."static/foundation-site/";
-//$dest = $path."foundation-site/";
-$dest = FOUNDDIR; 
+$dest = $path."foundation-site/";
+//$dest = FOUNDDIR; 
 
 $page = new Page("Foundation Overview", "Foundation Overview");
 $page->content(file_get_contents($source."overviewf.html"));
 writeFile($dest."index.html", $page->out());
-#copydirr($source.'/images', $path.'/images');
+copydirr($source.'/imgs', $dest.'/images');
 
 //echo("hey");
 //echo($dest);
@@ -49,6 +49,8 @@ writeFile($dest."patrons/index.html", $page->out());
 //$page = new Page("Donate", "Donate");
 //$page->content(file_get_contents($source."donate.html"));
 //writeFile($dest."donate/index.html", $page->out());
+
+
 
 
 $benchmark_end = microtime_float();
