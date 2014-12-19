@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 640 480" enable-background="new 0 0 640 480" xml:space="preserve">
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="36.2" y1="303.3" x2="185.1" y2="230.2"/>
+<polyline fill="none" stroke="#999999" stroke-width="1.3" points="177.1,227.4 185.5,230 182.9,238.4 "/>
+<text transform="matrix(1 0 0 1 28.5 88.5)"><tspan x="0" y="0" font-family="'TheSerif-HP5Plain'" font-size="18">This vector </tspan><tspan x="0" y="24" font-family="'TheSerif-HP5Plain'" font-size="18">has a length of 10.</tspan></text>
+<text transform="matrix(1 0 0 1 121.833 88.834)" fill="#999999" font-family="'TheSerif-HP5Plain'" font-size="18">v</text>
+<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="131,67.4 135.5,71.8 131,76.2 "/>
+<line fill="#FFFFFF" stroke="#999999" stroke-width="1.3" x1="135.5" y1="71.8" x2="118.8" y2="71.8"/>
+<text transform="matrix(1 0 0 1 458.5 88.5)"><tspan x="0" y="0" font-family="'TheSerif-HP5Plain'" font-size="18">This vector </tspan><tspan x="0" y="24" font-family="'TheSerif-HP5Plain'" font-size="18">points in the same</tspan><tspan x="0" y="48" font-family="'TheSerif-HP5Plain'" font-size="18">direction and now</tspan><tspan x="0" y="72" font-family="'TheSerif-HP5Plain'" font-size="18">has a length of 1.</tspan><tspan x="0" y="96" fill="#999999" font-family="'TheSerif-HP5Plain'" font-size="18">(unit vector)</tspan></text>
+<text transform="matrix(1 0 0 1 551.833 88.834)" fill="#999999" font-family="'TheSerif-HP5Plain'" font-size="18">v</text>
+<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="561,67.4 565.5,71.8 561,76.2 "/>
+<line fill="#FFFFFF" stroke="#999999" stroke-width="1.3" x1="565.5" y1="71.8" x2="548.8" y2="71.8"/>
+<line fill="#FFFFFF" stroke="#000000" stroke-width="2" x1="334.5" y1="246.8" x2="297.5" y2="246.8"/>
+<line fill="#FFFFFF" stroke="#000000" stroke-width="2" x1="334.5" y1="234.8" x2="297.5" y2="234.8"/>
+<polyline fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="4,4" points="32.1,294.9 27.3,285 176.9,212.9 
+	181.7,222.8 "/>
+<text transform="matrix(1 0 0 1 83.5 237.5)" font-family="'TheSerif-HP5Plain'" font-size="18">10</text>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="508.6" y1="301.1" x2="557.9" y2="276.9"/>
+<polyline fill="none" stroke="#999999" stroke-width="1.3" points="549.6,274.3 557.9,276.9 555.3,285.2 "/>
+<polyline fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="4,4" points="505.1,295.9 500.3,286 551.6,261.3 
+	556.3,271.2 "/>
+<text transform="matrix(1 0 0 1 516.5 260.5)" font-family="'TheSerif-HP5Plain'" font-size="18">1</text>
+<text transform="matrix(1 0 0 1 278.3896 279.5)"><tspan x="0" y="0" font-family="'TheSerif-HP5Plain'" font-size="18">Process of </tspan><tspan x="-17.2" y="24" font-family="'TheSerif-HP5Plain'" font-size="18">Normalization</tspan></text>
+<polyline fill="none" stroke="#000000" stroke-width="2" points="327,226.9 340.3,240.6 326.7,253.9 "/>
+</svg>
