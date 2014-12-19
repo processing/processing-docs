@@ -53,8 +53,9 @@ writeFile($dest."patrons/index.html", $page->out());
 // After the pages are created, copy them to the Foundation subdomain
 //cp ../../img/processing-web.png ../../distribution/img/
 
-`cp ../processing-site/* /var/www/foundation/`;
-
+echo("Starting to copy the site...");
+`cd $path && cp processing-site/* /var/www/foundation/`;
+echo("... and done!");
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
