@@ -212,7 +212,7 @@ a.large-link:before {
 	height: 106px;
 	margin-bottom: 30px;
 	overflow: hidden;
-	background: #0c2033 url(../img/foundation-head-test.png) center center no-repeat;
+	background: #0c2033 url(../content/static/foundation-site/imgs/processing-site.png) center center no-repeat;
 	background-size: 900px 106px;	
 	position: relative;
 }
