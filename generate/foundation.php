@@ -15,7 +15,7 @@ $dest = $path."foundation-site/";
 //$dest = FOUNDDIR; 
 
 $page = new Page("Foundation Overview", "Foundation Overview");
-$page->content(file_get_contents($source."overviewf.html"));
+$page->content(file_get_contents($source."overview.html"));
 writeFile($dest."index.html", $page->out());
 //copydirr($source.'/imgs', $dest.'/images');
 
@@ -31,7 +31,7 @@ $page->content(file_get_contents($source."projects.html"));
 writeFile($dest."projects/index.html", $page->out());
 
 $page = new Page("Foundation People", "Foundation People");
-$page->content(file_get_contents($source."peoplef.html"));
+$page->content(file_get_contents($source."people.html"));
 writeFile($dest."people/index.html", $page->out());
 
 $page = new Page("Fellowships", "Fellowships");
@@ -59,6 +59,10 @@ echo("done!");
 
 echo("Starting to copy the CSS...");
 `cd $path && rm -rf /var/www/foundation/css/ && mkdir /var/www/foundation/css/ && cp -r css/* /var/www/foundation/css/`;
+echo("done!");
+
+echo("Starting to copy the images...");
+`cd $path && rm -rf /var/www/foundation/images/ && mkdir /var/www/foundation/images/ && cp -r content/static/foundation-site/imgs/* /var/www/foundation/images/`;
 echo("done!");
 
 $benchmark_end = microtime_float();

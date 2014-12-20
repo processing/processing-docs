@@ -2,9 +2,9 @@
 
 require(TEMPLATEDIR.'foundation-template.nav.php');
 
-define('HEADER', '<div class="processing-logo" alt="Processing cover"></div>');
-define('REL_HEADER', '<a href="/" title="Back to the Foundation cover."><div class="processing-logo no-cover" alt="Processing cover"></div></a>');
-define('HEADER_LINK', '<a href="/" title="Back to the Foundation cover."><div class="processing-logo no-cover" alt="Processing cover"></div></a>');
+define('HEADER', '<div class="processing-logo" alt="Processing Foundation Overview"></div>');
+define('REL_HEADER', '<a href="/" title="Back to the Foundation cover."><div class="processing-logo no-cover" alt="Processing Foundation overview"></div></a>');
+define('HEADER_LINK', '<a href="/" title="Back to the Foundation cover."><div class="processing-logo no-cover" alt="Processing Foundation overview"></div></a>');
 
 class Page
 {
