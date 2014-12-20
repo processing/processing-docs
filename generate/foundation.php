@@ -57,6 +57,10 @@ echo("Starting to copy the site...");
 `cd $path && cp -r foundation-site/* /var/www/foundation/`;
 echo("done!");
 
+echo("Starting to copy the CSS...");
+`cd $path && rm -rf /var/www/foundation/css/ && mkdir /var/www/foundation/css/ && cp -r css/* /var/www/foundation/css/`;
+echo("done!");
+
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
 
