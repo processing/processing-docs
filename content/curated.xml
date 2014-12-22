@@ -1,5 +1,26 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
+	
+	<software name="Non-Linear Code" by="Dextro" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/dextro.jpg</image>
+		  <description>
+			  Dextro writes ‘non-linear code’ drawing inspiration from nature. The results are non-fractal or random programs that iterate without change, with equal rules for all objects. Most of the scripts rely on trigonometry and could be seen as sets of wave generators interacting with one another. Some of these pieces take years to develop but the code is usually short but complex.
+		  </description>
+		  <location>http://dextro.org/default_h.html</location>
+		 <link href="http://dextro.org/default_h.html">Dextro</link>
+		<link href="https://vimeo.com/turux">Vimeo</link>
+	</software>
+	
+	<software name="Computational design methodologies for large-scale 3D printing" by="GAD – RC4" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/rc4.jpg</image>
+		  <description>
+			  With an exponential increase in the possibilities of computation and computer-controlled fabrication, architecture is now facing a novel challenge. Bartlett School of Architecture’s RC4 in London researches computational design methodologies for large-scale 3D printing with industrial robots, taking logistical, structural and material constraints as design opportunities.
+		  </description>
+		  <location>http://bartlett-rc4.com/</location>
+		 <link href="http://bartlett-rc4.com/">GAD – RC4</link>
+		<link href="http://www.creativeapplications.net/environment/gad-rc4-computational-design-methodologies-for-large-scale-3d-printing/">CreativeApplications.Net</link>
+	</software>
+	
 
 	<software name="Filament Sculptures" by="Lia" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/filament.jpg</image>
