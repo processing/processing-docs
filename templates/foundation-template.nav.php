@@ -4,7 +4,7 @@ $pages = array(
 
     'Overview'           => array('/', 0),
 
-    'Mission'         => array('/', 1), 
+    'Mission'         => array('/mission/', 1), 
     
     'Projects'        => array('/projects/', 2), 
     'People'          => array('/people/', 3),  
@@ -37,7 +37,7 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overview', $section == '') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
