@@ -96,37 +96,6 @@ function local_nav($section, $rel_path='')
 }
 
 
-
-function language_nav($current)
-{
-    global $LANGUAGES;
-    global $FINISHED;
-    if (count($FINISHED) < 2) { return ''; }
-    
-    $html = "\t".'Language: <select name="nav" size="1" class="refnav" onChange="javascript:gogo(this)">'."\n";
-    foreach ($FINISHED as $code) {
-        if ($LANGUAGES[$code][3] != '' ) {
-            $sel = ($current == $code) ? ' selected="selected"' : '';
-            $html .= "\t\t<option value=\"{$LANGUAGES[$code][3]}\"$sel>{$LANGUAGES[$code][0]}</option>\n";
-        }
-    }
-    $html .= "\t</select>\n";
-    return $html;
-}
-
-
-
-function library_nav($current=null)
-{
-    $html = "\n\t<span class=\"lib-nav\">\n";
-    $html .= "\t\t<a href=\"../index.html\">Libraries</a>\n";
-    if ($current) {
-        $html .= "\t\t \ <a href=\"index.html\">".ucfirst($current)."</a>\n";
-    }
-    $html .= "\t</span>\n";
-    return $html;
-}
-
 function examples_nav($current) {
     // $html = "\n\t<div id=\"examples-nav\">\n";
 }
