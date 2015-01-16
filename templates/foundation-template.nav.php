@@ -2,12 +2,12 @@
 
 $pages = array(
 
-    'Overview'           => array('/', 0),
+    'Overviewf'           => array('/', 0),
 
     'Mission'         => array('/mission/', 1), 
     
     'Projects'        => array('/projects/', 2), 
-    'People'          => array('/people/', 3),  
+    'Peoplef'          => array('/people/', 3),  
     'Fellowships'      => array('/fellowships/', 4),  
     'Reports'       	  => array('/reports/', 5),
     'Patrons'       	  => array('/patrons/', 6),
@@ -37,10 +37,10 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overviewf', $section == 'Overview') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Peoplef', $section == 'People') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Fellowships', $section == 'Fellowships') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . "<br><br>\n";
