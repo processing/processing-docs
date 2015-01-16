@@ -4,7 +4,7 @@ $pages = array(
 
     'Overview'           => array('/', 0),
 
-    'Mission'         => array('/mission/', 1), 
+    'Mission'         => array('/', 1), 
     
     'Projects'        => array('/projects/', 2), 
     'People'          => array('/people/', 3),  
