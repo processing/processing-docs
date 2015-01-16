@@ -11,7 +11,7 @@ $pages = array(
     'Fellowships'      => array('/fellowships/', 4),  
     'Reports'       	  => array('/reports/', 5),
     'Patrons'       	  => array('/patrons/', 6),
-    'Donate'       	  => array('/donate/', 7),
+    //'Donate'       	  => array('/donate/', 7),
         
     //'Download'        => array('/download/', 0),
     
