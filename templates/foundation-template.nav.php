@@ -2,12 +2,12 @@
 
 $pages = array(
 
-    'Overviewf'           => array('/', 0),
+    'Overview'           => array('/', 0),
 
     'Mission'         => array('/mission/', 1), 
     
     'Projects'        => array('/projects/', 2), 
-    'Peoplef'          => array('/people/', 3),  
+    'People'          => array('/people/', 3),  
     'Fellowships'      => array('/fellowships/', 4),  
     'Reports'       	  => array('/reports/', 5),
     'Patrons'       	  => array('/patrons/', 6),
@@ -37,10 +37,10 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Overviewf', $section == 'Overview') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Peoplef', $section == 'People') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Fellowships', $section == 'Fellowships') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . "<br><br>\n";
@@ -60,46 +60,5 @@ function l($s, $c)
     global $pages;
     return "<a href=\"{$pages[$s][0]}\"" . ($c ? ' class="active"' : '') . ">$s</a>";
 }
-
-function short_nav($section)
-{
-    $html  = "\t\t\t".'<div id="navigation">'."\n";
-    $html .= "\t\t\t\t".'<div class="navBar" id="mainnav_noSub">'."\n";
-    
-    $html .= "\t\t\t\t\t<a href=\"\"" . ($section == 'Cover' ? ' class="active"' : '') . ">Foundation</a> \\ \n";
-    $html .= "\t\t\t\t\t<a href=\"/reference/index.html\"" . ($section == 'Language' ? ' class="active"' : '') . ">Language</a> \\ \n";
-    $html .= "\t\t\t\t\t<a href=\"/reference/libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a> \\ \n";
-    $html .= "\t\t\t\t\t<a href=\"/reference/tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a> \\ \n";
-    $html .= "\t\t\t\t\t<a href=\"/reference/environment/index.html\"" . ($section == 'Environment' ? ' class="active"' : '') . ">Environment</a>\n";
-       
-    $html .= "\t\t\t\t</div>\n";
-    $html .= "\t\t\t</div>\n";
-    
-    return $html;
-}
-
-function local_nav($section, $rel_path='')
-{
-    $html  = "\t\t\t".'<div id="navigation">'."\n";
-    $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
-
-    $html .= "\t\t\t\t\t<a href=\"{$rel_path}index.html\"" . ($section == 'Language' ? ' class="active"' : '') . ">Language</a><br> \n";
-    #$html .= "<a href=\"{$rel_path}alpha.html\"" . ($section == 'A-Z' ? ' class="active"' : '') . ">A-Z</a>)<br> \n";
-    $html .= "\t\t\t\t\t<a href=\"{$rel_path}libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a><br> \n";
-    $html .= "\t\t\t\t\t<a href=\"{$rel_path}tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a><br> \n";
-    $html .= "\t\t\t\t\t<a href=\"{$rel_path}environment/index.html\"" . ($section == 'Environment' ? ' class="active"' : '') . ">Environment</a>\n";
-    
-    $html .= "\t\t\t\t</div>\n";
-    $html .= "\t\t\t</div>\n";
-    
-    return $html;    
-}
-
-
-function examples_nav($current) {
-    // $html = "\n\t<div id=\"examples-nav\">\n";
-}
-
-
 
 ?>
