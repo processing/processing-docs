@@ -44,6 +44,8 @@ function navigation($section = '')
 	    $html .= "\t\t\t\t\t" . l('Fellowships', $section == 'Fellowships') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . "<br><br>\n";
+    
+        $html .= "\t\t\t\t\t<a href=\"http://foundation.processing.org/\"" . ($section          == 'Overview' ? ' class="active"' : '') . ">Overview</a> \\ \n";
 
 	    //$html .= "\t\t\t\t\t" . l('Donate', $section == 'Donate') . "<br><br>\n";
 	       
@@ -59,7 +61,23 @@ function l($s, $c)
 {
     global $pages;
     return "<a href=\"{$pages[$s][0]}\"" . ($c ? ' class="active"' : '') . ">$s</a>";
-    return "<a href=\"{$pages[$s][3]}\"" . ($c ? ' class="active"' : '') . ">$s</a>";
+}
+
+function short_nav($section)
+{
+    $html  = "\t\t\t".'<div id="navigation">'."\n";
+    $html .= "\t\t\t\t".'<div class="navBar" id="mainnav_noSub">'."\n";
+    
+
+    $html .= "\t\t\t\t\t<a href=\"/reference/index.html\"" . ($section == 'Language' ? ' class="active"' : '') . ">Language</a> \\ \n";
+    $html .= "\t\t\t\t\t<a href=\"/reference/libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a> \\ \n";
+    $html .= "\t\t\t\t\t<a href=\"/reference/tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a> \\ \n";
+    $html .= "\t\t\t\t\t<a href=\"/reference/environment/index.html\"" . ($section == 'Environment' ? ' class="active"' : '') . ">Environment</a>\n";
+       
+    $html .= "\t\t\t\t</div>\n";
+    $html .= "\t\t\t</div>\n";
+    
+    return $html;
 }
 
 ?>
