@@ -37,7 +37,7 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Cover') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
@@ -59,6 +59,7 @@ function l($s, $c)
 {
     global $pages;
     return "<a href=\"{$pages[$s][0]}\"" . ($c ? ' class="active"' : '') . ">$s</a>";
+    return "<a href=\"{$pages[$s][3]}\"" . ($c ? ' class="active"' : '') . ">$s</a>";
 }
 
 ?>
