@@ -37,7 +37,7 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	        $html .= "\t\t\t\t\t<a href=\"http://foundation.processing.org/\"" . ($section == 'Overview' ? ' class="active"' : '/overview') . ">Overview</a> \\ \n";
+	        $html .= "\t\t\t\t\t<a href=\"http://foundation.processing.org/\"" . ($section == 'Overview' ? ' class="active"' : '/') . ">Overview</a> <br>\n"
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
