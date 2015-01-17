@@ -21,6 +21,7 @@ class Page
           $this->xhtml->set('header', REL_HEADER);
         } else {
           $this->xhtml->set('header', $section == 'Cover' ? HEADER : HEADER_LINK);
+          $this->xhtml->set('header', $section == 'Overview' ? HEADER : HEADER_LINK);
         }
         $this->section = $section;
         $this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
