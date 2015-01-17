@@ -37,7 +37,7 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview' ? ' class="active"' : '') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview' ? ' class="active"' : '/') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
@@ -66,7 +66,7 @@ function short_nav($section)
     $html  = "\t\t\t".'<div id="navigation">'."\n";
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav_noSub">'."\n";
     
-    $html .= "\t\t\t\t\t<a href=\"http://foundation.processing.org/\"" . ($section == 'Overview' ? ' class="active"' : '') . ">Overview</a> \\ \n";
+    $html .= "\t\t\t\t\t<a href=\"http://foundation.processing.org/\"" . ($section == 'Overview' ? ' class="active"' : '/') . ">Overview</a> \\ \n";
     $html .= "\t\t\t\t\t<a href=\"/reference/index.html\"" . ($section == 'Language' ? ' class="active"' : '') . ">Language</a> \\ \n";
     $html .= "\t\t\t\t\t<a href=\"/reference/libraries/index.html\"" . ($section == 'Libraries' ? ' class="active"' : '') . ">Libraries</a> \\ \n";
     $html .= "\t\t\t\t\t<a href=\"/reference/tools/index.html\"" . ($section == 'Tools' ? ' class="active"' : '') . ">Tools</a> \\ \n";
