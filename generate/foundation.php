@@ -22,7 +22,7 @@ writeFile($dest."index.html", $page->out());
 //echo("hey");
 //echo($dest);
 
-$page = new Page("Mission-f", "Mission");
+$page = new Page("Mission", "Mission");
 $page->content(file_get_contents($source."mission.html"));
 writeFile($dest."mission/index.html", $page->out());
 
@@ -30,7 +30,7 @@ $page = new Page("Projects", "Projects");
 $page->content(file_get_contents($source."projects.html"));
 writeFile($dest."projects/index.html", $page->out());
 
-$page = new Page("People-f", "People");
+$page = new Page("People", "People");
 $page->content(file_get_contents($source."people.html"));
 writeFile($dest."people/index.html", $page->out());
 
