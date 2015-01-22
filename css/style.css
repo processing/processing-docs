@@ -255,7 +255,7 @@ a.large-link:before {
 	content: '\2039';
 }
 
-#Overview2 #header-f .processing-logo.no-cover:before {
+#Overview2 .processing-logo.no-cover:before {
 	position: relative;
 	top: 3px;
 	left: -18px;
