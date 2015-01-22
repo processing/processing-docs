@@ -37,10 +37,10 @@ function navigation($section = '')
             
     $html .= "\t\t\t\t".'<div class="navBar" id="mainnav">'."\n";
     
-	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview2') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Mission', $section == 'Mission') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Projects', $section == 'Projects') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
+	    $html .= "\t\t\t\t\t" . l('People', $section == 'People2') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Fellowships', $section == 'Fellowships') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Reports', $section == 'Reports') . "<br>\n";
 	    $html .= "\t\t\t\t\t" . l('Patrons', $section == 'Patrons') . "<br><br>\n";
