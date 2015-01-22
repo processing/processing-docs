@@ -255,6 +255,13 @@ a.large-link:before {
 	content: '\2039';
 }
 
+#Overview2 #header-f .processing-logo.no-cover:before {
+	position: relative;
+	top: 3px;
+	left: -18px;
+	font-size: 24px;
+}
+
 #header a { 
 	font-family: 'theSerif', 'Enriqueta', georgia, times, sans-serif;
 	text-decoration: none;
