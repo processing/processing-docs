@@ -24,7 +24,7 @@ void setup() {
     
   // Create an Input stream which is routed into the Amplitude analyzer
   fft = new FFT(this);
-  in = new FFT(this);
+  in = new AudioIn(this, 0);
   fft.input(in, bands);
 }      
 
