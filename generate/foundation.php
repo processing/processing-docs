@@ -14,7 +14,7 @@ $source = CONTENTDIR."static/foundation-site/";
 $dest = $path."foundation-site/";
 //$dest = FOUNDDIR; 
 
-$page = new Page("Overview", "Foundation Overview");
+$page = new Page("Overview", "Overview");
 $page->content(file_get_contents($source."overview.html"));
 writeFile($dest."index.html", $page->out());
 //copydirr($source.'/imgs', $dest.'/images');
@@ -30,7 +30,7 @@ $page = new Page("Projects", "Projects");
 $page->content(file_get_contents($source."projects.html"));
 writeFile($dest."projects/index.html", $page->out());
 
-$page = new Page("People", "Foundation People");
+$page = new Page("People", "People");
 $page->content(file_get_contents($source."people.html"));
 writeFile($dest."people/index.html", $page->out());
 
