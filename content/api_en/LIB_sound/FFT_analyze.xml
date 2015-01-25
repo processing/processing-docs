@@ -25,10 +25,16 @@ void setup() {
   // Create an Input stream which is routed into the Amplitude analyzer
   fft = new FFT(this);
   in = new AudioIn(this, 0);
+
+  // start the Audio Input
+  in.start();
+  
+  // patch the AudioIn
   fft.input(in, bands);
 }      
 
 void draw() {
+  background(255);
   fft.analyze(spectrum);
   
   for(int i = 0; i < bands; i++){
