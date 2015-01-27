@@ -65,8 +65,8 @@ if(!$mail->send()) {
 }
 
 
-echo("<p>mailed returned " . $result . "</p>");
-echo("<p>ErrorInfo is " . $mail->ErrorInfo . "</p>");
+//echo("<p>mailed returned " . $result . "</p>");
+//echo("<p>ErrorInfo is " . $mail->ErrorInfo . "</p>");
 
 
 
