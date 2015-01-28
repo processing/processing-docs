@@ -7,42 +7,41 @@
  * element in the array is [0], the second element is [1], and so on. 
  * In this example, an array named "coswav" is created and
  * filled with the cosine values. This data is displayed three 
- * separate ways on the screen.  
+ * separate ways on the screen. 
  */
 
+var coswave; 
 
-float[] coswave; 
-
-void setup() {
-  size(640, 360);
-  coswave = new float[width];
-  for (int i = 0; i < width; i++) {
-    float amount = map(i, 0, width, 0, PI);
+function setup() {
+  createCanvas(640, 360);
+  coswave = [];
+  for (var i = 0; i < width; i++) {
+    var amount = map(i, 0, width, 0, PI);
     coswave[i] = abs(cos(amount));
   }
   background(255);
   noLoop();
 }
 
-void draw() {
+function draw() {
 
-  int y1 = 0;
-  int y2 = height/3;
-  for (int i = 0; i < width; i+=2) {
+  var y1 = 0;
+  var y2 = height/3;
+  for (var i = 0; i < width; i+=2) {
     stroke(coswave[i]*255);
     line(i, y1, i, y2);
   }
 
   y1 = y2;
   y2 = y1 + y1;
-  for (int i = 0; i < width; i+=2) {
+  for (var i = 0; i < width; i+=2) {
     stroke(coswave[i]*255 / 4);
     line(i, y1, i, y2);
   }
   
   y1 = y2;
   y2 = height;
-  for (int i = 0; i < width; i+=2) {
+  for (var i = 0; i < width; i+=2) {
     stroke(255 - coswave[i]*255);
     line(i, y1, i, y2);
   }

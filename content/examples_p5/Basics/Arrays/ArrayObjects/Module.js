@@ -1,39 +1,32 @@
-class Module {
-  int xOffset;
-  int yOffset;
-  float x, y;
-  int unit;
-  int xDirection = 1;
-  int yDirection = 1;
-  float speed; 
-  
+
   // Contructor
-  Module(int xOffsetTemp, int yOffsetTemp, int xTemp, int yTemp, float speedTemp, int tempUnit) {
-    xOffset = xOffsetTemp;
-    yOffset = yOffsetTemp;
-    x = xTemp;
-    y = yTemp;
-    speed = speedTemp;
-    unit = tempUnit;
-  }
-  
+function Module(xOffsetTemp, yOffsetTemp, xTemp, yTemp, speedTemp, tempUnit) {
+  this.xOffset = xOffsetTemp;
+  this.yOffset = yOffsetTemp;
+  this.x = xTemp;
+  this.y = yTemp;
+  this.speed = speedTemp;
+  this.unit = tempUnit;
+  this.xDirection = 1;
+  this.yDirection = 1;
+
   // Custom method for updating the variables
-  void update() {
-    x = x + (speed * xDirection);
-    if (x >= unit || x <= 0) {
-      xDirection *= -1;
-      x = x + (1 * xDirection);
-      y = y + (1 * yDirection);
+  this.update = function() {
+    this.x = this.x + (this.speed * this.xDirection);
+    if (this.x >= this.unit || this.x <= 0) {
+      this.xDirection *= -1;
+      this.x = this.x + (1 * this.xDirection);
+      this.y = this.y + (1 * this.yDirection);
     }
-    if (y >= unit || y <= 0) {
-      yDirection *= -1;
-      y = y + (1 * yDirection);
+    if (this.y >= this.unit || this.y <= 0) {
+      this.yDirection *= -1;
+      this.y = this.y + (1 * this.yDirection);
     }
   }
   
   // Custom method for drawing the object
-  void draw() {
+  this.draw = function() {
     fill(255);
-    ellipse(xOffset + x, yOffset + y, 6, 6);
+    ellipse(this.xOffset + this.x, this.yOffset + this.y, 6, 6);
   }
 }
