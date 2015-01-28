@@ -18,23 +18,23 @@ PVector[] equidistantPoints;
 float t = 0.0;
 float tStep = 0.004;
 
-final int POINT_COUNT = 120;
+final int POINT_COUNT = 80;
 
-int borderSize = 50;
+int borderSize = 40;
 
 void setup() {
-  size(1000, 700, P2D);
+  size(640, 360, P2D);
   
   frameRate(60);
   smooth(8);
   textAlign(CENTER);
-  textSize(20);
+  textSize(16);
   strokeWeight(2);
   
-  PVector a = new PVector(   0, 600);
-  PVector b = new PVector( 600,   0);
+  PVector a = new PVector(   0, 300);
+  PVector b = new PVector( 440,   0);
   PVector c = new PVector(-200,   0);
-  PVector d = new PVector( 400, 600);
+  PVector d = new PVector( 240, 300);
 
   curve = new BezierCurve(a, b, c, d);
   
@@ -59,10 +59,10 @@ void draw() {
   
   // draw curve and circle using standard parametrization
   pushMatrix();
-    translate(borderSize, -80);
+    translate(borderSize, -50);
     
     labelStyle();
-    text("STANDARD\nPARAMETRIZATION", 200, 630);
+    text("STANDARD\nPARAMETRIZATION", 120, 310);
     
     curveStyle();
     beginShape(LINES);
@@ -74,17 +74,17 @@ void draw() {
     
     circleStyle();
     PVector pos1 = curve.pointAtParameter(t);
-    ellipse(pos1.x, pos1.y, 15, 15);
+    ellipse(pos1.x, pos1.y, 12, 12);
     
   popMatrix();
   
   
   // draw curve and circle using arc length parametrization
   pushMatrix();
-    translate(width/2 + borderSize, -80);
+    translate(width/2 + borderSize, -50);
     
     labelStyle();
-    text("ARC LENGTH\nPARAMETRIZATION", 200, 630);
+    text("ARC LENGTH\nPARAMETRIZATION", 120, 310);
     
     curveStyle();
     beginShape(LINES);
@@ -96,14 +96,14 @@ void draw() {
     
     circleStyle();
     PVector pos2 = curve.pointAtFraction(t);
-    ellipse(pos2.x, pos2.y, 15, 15);
+    ellipse(pos2.x, pos2.y, 12, 12);
     
   popMatrix();
   
   
   // draw seek bar
   pushMatrix();
-    translate(borderSize, 640);
+    translate(borderSize, height - 45);
     
     int barLength = width - 2 * borderSize;
   
@@ -116,7 +116,7 @@ void draw() {
     line(0, 0, t * barLength, 0);
     
     barLabelStyle();
-    text(nf(t, 0, 2), barLength/2, 35);
+    text(nf(t, 0, 2), barLength/2, 25);
   popMatrix();
   
 }
@@ -131,7 +131,7 @@ void curveStyle() {
 
 void labelStyle() {
   noStroke();
-  fill(160);
+  fill(120);
 }
 
 void circleStyle() {
@@ -151,7 +151,7 @@ void barStyle() {
 
 void barLabelStyle() {
   noStroke();
-  fill(160);
+  fill(120);
 }
 
 
