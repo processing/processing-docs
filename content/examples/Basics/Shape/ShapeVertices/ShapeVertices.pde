@@ -11,37 +11,32 @@
  */
 
 // The shape
-PShape pentagram;
+PShape uk;
 
 void setup() {
-  size(600, 400);
-  // Load teh shape
-  pentagram = loadShape("pentagram.svg");
+  size(640, 360);
+  // Load the shape
+  uk = loadShape("uk.svg");
 }
 
 void draw() {
-  background(0);
+  background(51);
+  // Center where we will draw all the vertices
+  translate(width/2 - uk.width/2, height/2- uk.height/2);
+  
   // Iterate over the children
-  int children = pentagram.getChildCount();
+  int children = uk.getChildCount();
   for (int i = 0; i < children; i++) {
-    PShape child = pentagram.getChild(i);
+    PShape child = uk.getChild(i);
     int total = child.getVertexCount();
-    // The vertices of each child
+    
+    // Now we can actually get the vertices from each child
     for (int j = 0; j < total; j++) {
       PVector v = child.getVertex(j);
-      stroke(255);
-      strokeWeight(4);
-      ellipse(v.x, v.y, 16, 16);
+      // Cycling brightness for each vertex
+      stroke((frameCount + (i+1)*j) % 255);
+      // Just a dot for each one
+      point(v.x, v.y);
     }
   }
-  
-  /* 
-  // You could also get the "tessllation"
-  // which is a single shape of all the vertices
-  PShape tes = pentagram.getTessellation();
-  int total = tes.getVertexCount();
-  for (int j = 0; j < total; j++) {
-    PVector v = tes.getVertex(j);
-    point(v.x, v.y, v.z);
-  }*/
 }
