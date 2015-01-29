@@ -161,6 +161,10 @@ a.large-link:before {
 	float: right;
 }
 
+#ribbon ul.righthighlight {
+	float: right;
+}
+
 #ribbon ul li {
 	display: inline-block;
 	margin: 0;
