@@ -153,5 +153,19 @@
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+    
+     <tutorial>
+		<title>Interactivity</title>
+		<directory>interactivity</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
+    
+     <tutorial>
+		<title>Typography</title>
+		<directory>typography</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
 
 </tutorials>
