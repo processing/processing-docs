@@ -61,6 +61,10 @@ echo("Starting to copy the CSS...");
 `cd $path && rm -rf /var/www/foundation/css/ && mkdir /var/www/foundation/css/ && cp -r css/* /var/www/foundation/css/`;
 echo("done!");
 
+echo("Starting to copy the JavaScript...");
+`cd $path && rm -rf /var/www/foundation/javascript/ && mkdir /var/www/foundation/javascript/ && cp -r css/* /var/www/foundation/javascript/`;
+echo("done!");
+
 echo("Starting to copy the images...");
 `cd $path && rm -rf /var/www/foundation/images/ && mkdir /var/www/foundation/images/ && cp -r content/static/foundation-site/imgs/* /var/www/foundation/images/`;
 echo("done!");
