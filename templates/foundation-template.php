@@ -25,7 +25,7 @@ class Page
         }
         $this->section = $section;
         $this->xhtml->set('bodyid', ($bodyid == '') ? $section : $bodyid);
-        $title = ($title == '') ? 'Processing.org' : $title . ' \ Processing.org';
+        $title = ($title == '') ? 'Processing Foundation' : $title . ' \ Processing Foundation';
         $this->xhtml->set('title', $title);
         $this->xhtml->set('navigation', navigation($section));
     }
