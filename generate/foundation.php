@@ -62,7 +62,7 @@ echo("Starting to copy the CSS...");
 echo("done!");
 
 echo("Starting to copy the JavaScript...");
-`cd $path && rm -rf /var/www/foundation/javascript/ && mkdir /var/www/foundation/javascript/ && cp -r css/* /var/www/foundation/javascript/`;
+`cd $path && rm -rf /var/www/foundation/javascript/ && mkdir /var/www/foundation/javascript/ && cp -r javascript/* /var/www/foundation/javascript/`;
 echo("done!");
 
 echo("Starting to copy the images...");
