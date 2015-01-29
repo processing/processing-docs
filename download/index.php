@@ -108,8 +108,8 @@ if(isset($_POST['form'])){
 					<a href="/books/">Books</a><br>
 					<a href="/handbook/">Handbook</a><br><br>
 					<a href="/overview/">Overview</a><br> 
-					<a href="/people/">People</a><br>
-					<a href="/foundation/">Foundation</a><br><br>
+					<a href="/people/">People</a><br><br />
+					<!--<a href="/foundation/">Foundation</a><br><br>-->
 					<a href="/shop/">Shop</a><br><br>
 					<a href="http://forum.processing.org" class="outward"><span>&raquo;</span>Forum</a><br>
     				<a href="https://github.com/processing" class="outward"><span>&raquo;</span>GitHub</a><br>

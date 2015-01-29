@@ -71,8 +71,8 @@ function navigation($section = '')
 	    $html .= "\t\t\t\t\t" . l('Handbook', $section == 'Handbook') . "<br><br />\n";
 
 	    $html .= "\t\t\t\t\t" . l('Overview', $section == 'Overview') . "<br> \n";
-	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br>\n";
-	    $html .= "\t\t\t\t\t" . l('Foundation', $section == 'Foundation') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('People', $section == 'People') . "<br><br>\n";
+	    # $html .= "\t\t\t\t\t" . l('Foundation', $section == 'Foundation') . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Shop', $section == 'Shop') . "<br><br>\n";
 	       
