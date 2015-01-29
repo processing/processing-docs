@@ -146,5 +146,12 @@
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+    
+    <tutorial>
+		<title>Render Techniques</title>
+		<directory>rendering</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
 
 </tutorials>
