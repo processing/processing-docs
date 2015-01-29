@@ -102,22 +102,7 @@ The next example is similar to the previous example, but it blends the two drawi
 <p>
 In general, blend modes and controlling transparency with tint() are the primarily ways to easily mix the pixels from two PGraphics objects together in the main display window. Try experimenting with this using the last example in the chapter. Keep in mind that the default blend mode is blendMode(BLEND) to reset to the way a program draws. Also, some blend modes don’t work with all background values. For example, if the background is white, then using blendMode(LIGHTEST) will always be a white screen because no pixel will ever be lighter than the background value. Conversely, blendMode(DARKEST) and blendMode(MULTIPLY) don’t have results with a black background.
 </p>
-<p>
-<br />
-<br />
-Notes
-<br />
-1. H. W. Franke, <em>Computer Graphics, Computer Art</em> (Phaidon, 1971), p. 60. <br />
-2. Ibid., p. 69. <br />
-3. Frieder Nake, “Notes on the Programming of Computer Graphics,” In <em>Cybernetic Serendipity</em>, edited by Jasia Reichardt (Praeger, 1969), p. 77. <br />
-4. This work is also credited as <em>Mural</em> in the exhibition catalog <em>Cybernetic Serendipity</em>. <br />
-5. Rick Poynor, “<em>Emigre</em>: An Ending,” Design Observer, 10 November 2005. <br />
-	http://www.designobserver.com/archives/007816.html.<br />
-6. Lewis Blackwell, <em>The End of Print: The Graphic Design of David Carson</em> (Chronicle Books, 1995),  p. 173. <br />
-7. ICC profiles are files that define the mappings between a print’s data and the specific paper and printer specifications. Well-designed profiles can increase the quality of a print. Check the website of the paper manufacturer to see if it has created one for your printer. 
-</p>
-<br />
-<br />
+
 <p>
 <h3>Code</h3>
 <hr /> 
@@ -125,16 +110,18 @@ Notes
 <em>Example 1: Setting up a PGraphics circle</em>
 <pre>
 PGraphics circle;
+
 void setup() {
-size(100, 100);
-circle = createGraphics(100, 100);
+  size(100, 100);
+  circle = createGraphics(100, 100);
 }
+
 void draw() {
-circle.beginDraw();
-circle.background(0);
-circle.ellipse(50, 50, 75, 75);
-circle.endDraw();
-image(circle, 0, 0);
+  circle.beginDraw();
+  circle.background(0);
+  circle.ellipse(50, 50, 75, 75);
+  circle.endDraw();
+  image(circle, 0, 0);
 }
 </pre>
 
@@ -146,18 +133,20 @@ image(circle, 0, 0);
 
 <pre>
 void setup() {
-size(100, 100);
-background(0);
-noCursor();
+  size(100, 100);
+  background(0);
+  noCursor();
 }
+
 void draw() {
-stroke(255);
-line(mouseX, 0, mouseX, height);
-line(0, mouseY, width, mouseY); }
+  stroke(255);
+  line(mouseX, 0, mouseX, height);
+  line(0, mouseY, width, mouseY); 
+}
 void mousePressed() {
-noStroke();
-fill(255, 100);
-ellipse(mouseX, mouseY, 40, 40);
+  noStroke();
+  fill(255, 100);
+  ellipse(mouseX, mouseY, 40, 40);
 }
 </pre>
 
@@ -167,23 +156,27 @@ ellipse(mouseX, mouseY, 40, 40);
 <em>Example 2b:  Crosshairs with PGraphics</em>
 <pre>
 PGraphics circles;
+
 void setup() {
-size(100, 100);
-circles = createGraphics(width, height); circles.beginDraw();
-circles.background(0);
-circles.noStroke();
-circles.fill(255, 100); circles.endDraw();
-noCursor();
-} void draw() {
-image(circles, 0, 0);
-stroke(255);
-line(mouseX, 0, mouseX, height);
-line(0, mouseY, width, mouseY);
+  size(100, 100);
+  circles = createGraphics(width, height); circles.beginDraw();
+  circles.background(0);
+  circles.noStroke();
+  circles.fill(255, 100); circles.endDraw();
+  noCursor();
+} 
+
+void draw() {
+  image(circles, 0, 0);
+  stroke(255);
+  line(mouseX, 0, mouseX, height);
+  line(0, mouseY, width, mouseY);
 }
+
 void mousePressed() {
-circles.beginDraw();
-circles.ellipse(mouseX, mouseY, 40, 40);
-circles.endDraw();
+  circles.beginDraw();
+  circles.ellipse(mouseX, mouseY, 40, 40);
+  circles.endDraw();
 }
 </pre>
 
@@ -194,30 +187,34 @@ circles.endDraw();
 
 <pre>
 PGraphics tile;
+
 void setup() {
-size(700, 100);
-tile = createGraphics(50, 50);
-background(0);
+  size(700, 100);
+  tile = createGraphics(50, 50);
+  background(0);
 }
+
 void draw() {
-runTile();
-for (int y = 0; y < height; y += tile.height) {
-for (int x = 0; x < width; x += tile.width) {
-image(tile, x, y);
+  runTile();
+  for (int y = 0; y < height; y += tile.height) {
+    for (int x = 0; x < width; x += tile.width) {
+      image(tile, x, y);
+      }
+   }
 }
-}
-}
+
 void runTile() {
-float x = random(20, tile.width-20);
-float y = random(20, tile.height-20);
-tile.beginDraw();
-tile.noStroke();
-tile.fill(0, 20);
-tile.rect(0, 0, tile.width, tile.height);
-tile.fill(255);
-tile.ellipse(x, y, 10, 10);
-tile.endDraw();
+  float x = random(20, tile.width-20);
+  float y = random(20, tile.height-20);
+  tile.beginDraw();
+  tile.noStroke();
+  tile.fill(0, 20);
+  tile.rect(0, 0, tile.width, tile.height);
+  tile.fill(255);
+  tile.ellipse(x, y, 10, 10);
+  tile.endDraw();
 }
+
 </pre>
 
 <hr />
@@ -227,23 +224,28 @@ tile.endDraw();
 
 <pre>
 PGraphics cube;
+
 void setup() {
-size(100, 100, P3D);
-cube = createGraphics(width, height, P3D);
+  size(100, 100, P3D);
+  cube = createGraphics(width, height, P3D);
 }
+
 void draw() {
-background(0); drawCube();
-image(cube, 0, 0);
+  background(0); 
+  drawCube();
+  image(cube, 0, 0);
 }
-void drawCube() { cube.beginDraw();
-cube.lights();
-cube.background(0);
-cube.noStroke();
-cube.translate(width/2, height/2);
-cube.rotateX(frameCount/100.0);
-cube.rotateY(frameCount/200.0);
-cube.box(40);
-cube.endDraw();
+
+void drawCube() { 
+  cube.beginDraw();
+  cube.lights();
+  cube.background(0);
+  cube.noStroke();
+  cube.translate(width/2, height/2);
+  cube.rotateX(frameCount/100.0);
+  cube.rotateY(frameCount/200.0);
+  cube.box(40);
+  cube.endDraw();
 }
 </pre>
 
@@ -255,41 +257,47 @@ cube.endDraw();
 <pre>
 PGraphics cubeA;
 PGraphics cubeB;
+
 void setup() {
-size(200, 200, P3D); cubeA = createGraphics(width, height, P3D);
-cubeB = createGraphics(width, height, P3D);
-} void draw() {
-background(0);
-drawCubeA();
-drawCubeB();
-float alphaA = map(mouseX, 0, width, 0, 255);
-float alphaB = map(mouseY, 0, height, 0, 255);
-tint(255, alphaA);
-image(cubeA, 0, 0);
-tint(255, alphaB);
-image(cubeB, 0, 0);
+  size(200, 200, P3D); 
+  cubeA = createGraphics(width, height, P3D);
+  cubeB = createGraphics(width, height, P3D);
+} 
+
+void draw() {
+  background(0);
+  drawCubeA();
+  drawCubeB();
+  float alphaA = map(mouseX, 0, width, 0, 255);
+  float alphaB = map(mouseY, 0, height, 0, 255);
+  tint(255, alphaA);
+  image(cubeA, 0, 0);
+  tint(255, alphaB);
+  image(cubeB, 0, 0);
 }
+
 void drawCubeA() {
-cubeA.beginDraw();
-cubeA.lights();
-cubeA.clear();
-cubeA.noStroke();
-cubeA.translate(width/2, height/2);
-cubeA.rotateX(frameCount/100.0);
-cubeA.rotateY(frameCount/200.0);
-cubeA.box(80);
-cubeA.endDraw();
+  cubeA.beginDraw();
+  cubeA.lights();
+  cubeA.clear();
+  cubeA.noStroke();
+  cubeA.translate(width/2, height/2);
+  cubeA.rotateX(frameCount/100.0);
+  cubeA.rotateY(frameCount/200.0);
+  cubeA.box(80);
+  cubeA.endDraw();
 }
+
 void drawCubeB() {
-cubeB.beginDraw();
-cubeB.lights();
-cubeB.clear();
-cubeB.noStroke();
-cubeB.translate(width/2, height/2);
-cubeB.rotateX(frameCount/150.0);
-cubeB.rotateY(frameCount/250.0);
-cubeB.box(80);
-cubeB.endDraw();
+  cubeB.beginDraw();
+  cubeB.lights();
+  cubeB.clear();
+  cubeB.noStroke();
+  cubeB.translate(width/2, height/2);
+  cubeB.rotateX(frameCount/150.0);
+  cubeB.rotateY(frameCount/250.0);
+  cubeB.box(80);
+  cubeB.endDraw();
 }
 </pre>
 
@@ -301,29 +309,36 @@ cubeB.endDraw();
 <pre>
 PGraphics cubeA;
 PGraphics cubeB;
+
 void setup() {
-size(200, 200, P3D); cubeA = createGraphics(width, height, P3D);
-cubeB = createGraphics(width, height, P3D);
-} void draw() {
-background(0);
-drawCube(cubeA, 100, 200);
-drawCube(cubeB, 150, 250); float alphaA = map(mouseX, 0, width, 0, 255);
-float alphaB = map(mouseY, 0, height, 0, 255);
-tint(255, alphaA);
-image(cubeA, 0, 0);
-tint(255, alphaB);
-image(cubeB, 0, 0);
+  size(200, 200, P3D); 
+  cubeA = createGraphics(width, height, P3D);
+  cubeB = createGraphics(width, height, P3D);
+} 
+
+void draw() {
+  background(0);
+  drawCube(cubeA, 100, 200);
+  drawCube(cubeB, 150, 250); 
+  float alphaA = map(mouseX, 0, width, 0, 255);
+  float alphaB = map(mouseY, 0, height, 0, 255);
+  tint(255, alphaA);
+  image(cubeA, 0, 0);
+  tint(255, alphaB);
+  image(cubeB, 0, 0);
 }
+
 void drawCube(PGraphics cube, float xd, float yd) {
-cube.beginDraw();
-cube.lights();
-cube.clear();
-cube.noStroke();
-cube.translate(cube.width/2, cube.height/2);
-cube.rotateX(frameCount/xd);
-cube.rotateY(frameCount/yd);
-cube.box(80);
-cube.
+  cube.beginDraw();
+  cube.lights();
+  cube.clear();
+  cube.noStroke();
+  cube.translate(cube.width/2, cube.height/2);
+  cube.rotateX(frameCount/xd);
+  cube.rotateY(frameCount/yd);
+  cube.box(80);
+  cube.endDraw(); 
+} 
 </pre>
 
 <hr /> 
@@ -334,26 +349,32 @@ cube.
 <pre>
 PGraphics cubeA;
 PGraphics cubeB;
+
 void setup() {
-size(200, 200, P3D); cubeA = createGraphics(width, height, P3D);
-cubeB = createGraphics(width, height, P3D);
-blendMode(DARKEST);
-} void draw() {
-background(255);
-drawCube(cubeA, 100, 200);
-drawCube(cubeB, 150, 250); image(cubeA, 0, 0);
-image(cubeB, 0, 0);
+  size(200, 200, P3D); 
+  cubeA = createGraphics(width, height, P3D);
+  cubeB = createGraphics(width, height, P3D);
+  blendMode(DARKEST);
+} 
+
+void draw() {
+  background(255);
+  drawCube(cubeA, 100, 200);
+  drawCube(cubeB, 150, 250); 
+  image(cubeA, 0, 0);
+  image(cubeB, 0, 0);
 }
+
 void drawCube(PGraphics cube, float xd, float yd) {
-cube.beginDraw();
-cube.lights();
-cube.clear();
-cube.noStroke();
-cube.translate(cube.width/2, cube.height/2);
-cube.rotateX(frameCount/xd);
-cube.rotateY(frameCount/yd);
-cube.box(80);
-cube.endDraw();
+  cube.beginDraw();
+  cube.lights();
+  cube.clear();
+  cube.noStroke();
+  cube.translate(cube.width/2, cube.height/2);
+  cube.rotateX(frameCount/xd);
+  cube.rotateY(frameCount/yd);
+  cube.box(80);
+  cube.endDraw();
 }
 </pre>
 </p>
