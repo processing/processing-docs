@@ -180,6 +180,17 @@ a.large-link:before {
 	border-left: 1px solid #1a1a1a;
 }
 
+#ribbon ul.righthighlight li {
+	background-color: black;
+	float: right;
+	border-left: 1px solid #1a1a1a;
+}
+
+#ribbon ul.righthighlight li a{
+	color: white;
+	font-weight: bold;
+}
+
 #ribbon ul li a {
 	color: #b2b2b2;
 }
