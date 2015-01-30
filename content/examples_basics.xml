@@ -54,6 +54,7 @@
 		<ex file="DisableStyle.html">Disable Style</ex>
 		<ex file="ScaleShape.html">Scale Shape</ex>
 		<ex file="GetChild.html">Get Child</ex>
+		<ex file="ShapeVertices.html">Shape Vertices</ex>
 	</cat>
 	<cat label="Color">
 		<ex file="Hue.html">Hue</ex>
