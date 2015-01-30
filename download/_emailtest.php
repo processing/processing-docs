@@ -47,8 +47,8 @@ $mail->Host       = $mailConfig['host'];
 $mail->Username   = $mailConfig['user'];
 $mail->Password   = $mailConfig['pass'];
 
-$mail->From('foundation@processing.org');
-$mail->FromName('Processing Foundation');
+$mail->From = 'foundation@processing.org';
+$mail->FromName = 'Processing Foundation';
 $mail->addAddress($email, $name);
 $mail->addBCC('foundation@processing.org');
 
