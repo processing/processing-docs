@@ -42,7 +42,7 @@ $mail->SMTPDebug  = 3;  //0 is no debug output
 $mail->IsSMTP(); 
 $mail->SMTPAuth   = true;
 $mail->SMTPSecure = 'tls';
-$mail->Port       = 587;
+$mail->Port       = 25;
 $mail->Host       = $mailConfig['host'];
 $mail->Username   = $mailConfig['user'];
 $mail->Password   = $mailConfig['pass'];
