@@ -48,7 +48,7 @@ if ($final['ACK'] == 'Success') {
 	$mail->From 	  = 'foundation@processing.org';
 	$mail->FromName   = 'Processing Foundation';
 	$mail->addAddress($email, $name);
-	$mail->AddBCC('foundation@processing.org');
+	$mail->addBCC('foundation@processing.org');
 
 	// Build message from PayPal values. Find and replace from config email
 	$message = str_replace('%name%', $name , $config['email-message']) . "\n\n";
