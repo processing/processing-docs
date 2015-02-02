@@ -37,7 +37,7 @@ $email = "shm@alignedleft.com";
 
 $mail = new PHPMailer();
 
-$mail->SMTPDebug  = 3;  //0 is no debug output
+$mail->SMTPDebug  = 3;  //0 is no debug output, 3 is verbose
 
 $mail->IsSMTP(); 
 $mail->SMTPAuth   = true;
