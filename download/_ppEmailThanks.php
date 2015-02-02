@@ -10,10 +10,10 @@ require('phpmailer529/PHPMailerAutoload.php');
 require_once('./_helpers.php');
 
 //Use this form for production server 
-//$r = new PayPal(true);
+$r = new PayPal(true);
 
 //Use this form for sandbox tests
-$r = new PayPal();
+//$r = new PayPal();
 
 $final = $r->doPayment();
 
