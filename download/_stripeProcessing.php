@@ -3,8 +3,8 @@
 // Load Stripe library
 require 'stripe/Stripe.php';
 
-//Load PHPMailer Class
-require_once('phpmailer/class.phpmailer.php');
+//Load PHPMailer autoloader v5.2.9
+require('phpmailer529/PHPMailerAutoload.php');
 
 //Load Helpers for the ip address function
 require_once('./_helpers.php');
@@ -43,18 +43,21 @@ if ($_POST) {
 
 		// Build and send the email *using PHPMailer
 		$mail = new PHPMailer();
+
+		$mail->SMTPDebug  = 0;  //0 is no debug output, 3 is verbose
+
 		$mail->IsSMTP(); 
-		$mail->SMTPDebug  = 0;
 		$mail->SMTPAuth   = true;
+		$mail->SMTPSecure = 'tls';
+		$mail->Port       = 25;
 		$mail->Host       = $mailConfig['host'];
-		$mail->Port       = 587;
 		$mail->Username   = $mailConfig['user'];
 		$mail->Password   = $mailConfig['pass'];
-		$mail->SMTPSecure = 'tls';
 
-		$mail->SetFrom('foundation@processing.org', 'Processing Foundation');
-		$mail->AddBCC('foundation@processing.org', 'Processing Foundation');
-		$mail->AddAddress($email, $name);
+		$mail->From 	  = 'foundation@processing.org';
+		$mail->FromName   = 'Processing Foundation';
+		$mail->addAddress($email, $name);
+		$mail->addBCC('foundation@processing.org');
 
 		// Build message from Stripe values. Find and replace from config email
 		$message = str_replace('%name%', $name , $config['email-message']) . "\n\n";
@@ -64,8 +67,10 @@ if ($_POST) {
 		$message .= "Transaction ID: " . $donation['id'] . "<br /><br />\n\n\n";
 		$message .= "Best regards, and thanks again,<br>Ben Fry, Casey Reas, and Dan Shiffman";
 
+		$mail->isHTML(true);
 		$mail->Subject = $config['email-subject'];
-		$mail->MsgHTML($message);
+		$mail->Body    = $message;
+
 		$mail->Send();
 
 		$log = __DIR__ . '/../../../cred/purchases.log';
