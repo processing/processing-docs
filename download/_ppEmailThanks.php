@@ -2,8 +2,9 @@
 require_once('./paypal/paypal.php');
 require_once('./paypal/httprequest.php');
 
-//Load PHPMailer Class
-require_once('phpmailer/class.phpmailer.php');
+//Load PHPMailer autoloader v5.2.9
+require('phpmailer529/PHPMailerAutoload.php');
+
 
 //Load Helpers for the ip address function
 require_once('./_helpers.php');
@@ -17,6 +18,7 @@ $r = new PayPal(true);
 $final = $r->doPayment();
 
 if ($final['ACK'] == 'Success') {
+
 	$payment = $r->getCheckoutDetails($final['TOKEN']);
 
 	//If payment from PayPal is successful, send out our thankyou email
@@ -32,28 +34,33 @@ if ($final['ACK'] == 'Success') {
 
 	// Build and send the email *using PHPMailer
 	$mail = new PHPMailer();
+
+	$mail->SMTPDebug  = 0;  //0 is no debug output
+
 	$mail->IsSMTP(); 
-	$mail->SMTPDebug  = 0;
 	$mail->SMTPAuth   = true;
+	$mail->SMTPSecure = 'tls';
+	$mail->Port       = 25;
 	$mail->Host       = $mailConfig['host'];
-	$mail->Port       = 587;
 	$mail->Username   = $mailConfig['user'];
 	$mail->Password   = $mailConfig['pass'];
-	$mail->SMTPSecure = 'tls';
 
-	$mail->SetFrom('foundation@processing.org', 'Processing Foundation');
-	$mail->AddBCC('foundation@processing.org', 'Processing Foundation');
-	$mail->AddAddress($email, $name);
+	$mail->From 	  = 'foundation@processing.org';
+	$mail->FromName   = 'Processing Foundation';
+	$mail->addAddress($email, $name);
+	$mail->AddBCC('foundation@processing.org');
 
-	// Build message from Stripe values. Find and replace from config email
+	// Build message from PayPal values. Find and replace from config email
 	$message = str_replace('%name%', $name , $config['email-message']) . "\n\n";
 	$message .= "Amount: $" . $amount . "<br />\n";
 	$message .= "Email: " . $email . "<br />\n";
 	$message .= "Date: " . date('M j, Y', $date) . "<br /><br />\n";
 	$message .= "Best regards, and thanks again,<br />Ben Fry, Casey Reas, and Dan Shiffman";
 
+	$mail->isHTML(true);
 	$mail->Subject = $config['email-subject'];
-	$mail->MsgHTML($message);
+	$mail->Body    = $message;
+	
 	$mail->Send();
 
 	$log = __DIR__ . '/../../../cred/purchases.log';
@@ -62,4 +69,6 @@ if ($final['ACK'] == 'Success') {
 	file_put_contents($log, $data, FILE_APPEND | LOCK_EX);
 	
 	
-} ?>
+}
+
+?>

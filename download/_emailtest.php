@@ -8,7 +8,7 @@ require(realpath(__DIR__ . '/../../../cred/config.php'));
 
 
 
-//Load PHPMailer autoloader
+//Load PHPMailer autoloader v5.2.9
 require('phpmailer529/PHPMailerAutoload.php');
 
 
