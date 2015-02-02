@@ -35,7 +35,7 @@ if ($final['ACK'] == 'Success') {
 	// Build and send the email *using PHPMailer
 	$mail = new PHPMailer();
 
-	$mail->SMTPDebug  = 3;  //0 is no debug output, 3 is verbose
+	$mail->SMTPDebug  = 0;  //0 is no debug output, 3 is verbose
 
 	$mail->IsSMTP(); 
 	$mail->SMTPAuth   = true;
