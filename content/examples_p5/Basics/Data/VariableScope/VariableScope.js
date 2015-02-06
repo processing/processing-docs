@@ -12,26 +12,26 @@
  * within each block, the space between a { and }. 
  */
  
-int a = 80;  // Create a global variable "a"
+var a = 80;  // Create a global variable "a"
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   background(0);
   stroke(255);
   noLoop();
 }
 
-void draw() {
+function draw() {
   // Draw a line using the global variable "a"
   line(a, 0, a, height);
   
   // Create a new variable "a" local to the for() statement 
-  for (int a = 120; a < 200; a += 2) {
+  for (var a = 120; a < 200; a += 2) {
     line(a, 0, a, height);
   }
   
   // Create a new variable "a" local to the draw() function
-  int a = 300;
+  var a = 300;
   // Draw a line using the new local variable "a"
   line(a, 0, a, height);  
   
@@ -42,14 +42,14 @@ void draw() {
   drawYetAnotherLine();
 }
 
-void drawAnotherLine() {
+function drawAnotherLine() {
   // Create a new variable "a" local to this method
-  int a = 320;
+  var a = 320;
   // Draw a line using the local variable "a"
   line(a, 0, a, height);
 }
 
-void drawYetAnotherLine() {
+function drawYetAnotherLine() {
   // Because no new local variable "a" is set, 
   // this line draws using the original global
   // variable "a", which is set to the value 80.

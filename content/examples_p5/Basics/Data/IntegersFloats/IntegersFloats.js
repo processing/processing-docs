@@ -3,21 +3,21 @@
  * 
  * Integers and floats are two different kinds of numerical data. 
  * An integer (more commonly called an int) is a number without 
- * a decimal point. A float is a floating-point number, which means 
+ * a decimal point. A var is a floating-point number, which means 
  * it is a number that has a decimal place. Floats are used when
  * more precision is needed. 
  */
  
-int a = 0;      // Create a variable "a" of the datatype "int"
-float b = 0.0;  // Create a variable "b" of the datatype "float"
+var a = 0;      // Create a variable "a" of the datatype "int"
+var b = 0.0;  // Create a variable "b" of the datatype "float"
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   stroke(255);
   frameRate(30);
 }
 
-void draw() {
+function draw() {
   background(0);
   
   a = a + 1;
