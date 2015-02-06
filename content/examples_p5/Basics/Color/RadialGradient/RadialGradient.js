@@ -5,10 +5,10 @@
  * from one color to another.
  */
 
-int dim;
+var dim;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   dim = width/2;
   background(0);
   colorMode(HSB, 360, 100, 100);
@@ -17,17 +17,17 @@ void setup() {
   frameRate(1);
 }
 
-void draw() {
+function draw() {
   background(0);
-  for (int x = 0; x <= width; x+=dim) {
+  for (var x = 0; x <= width; x+=dim) {
     drawGradient(x, height/2);
   } 
 }
 
-void drawGradient(float x, float y) {
-  int radius = dim/2;
-  float h = random(0, 360);
-  for (int r = radius; r > 0; --r) {
+function drawGradient(x, y) {
+  var radius = dim/2;
+  var h = random(0, 360);
+  for (var r = radius; r > 0; --r) {
     fill(h, 90, 90);
     ellipse(x, y, r, r);
     h = (h + 1) % 360;
