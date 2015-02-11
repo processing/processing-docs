@@ -11,10 +11,10 @@
 /* @pjs preload="moonwalk.jpg"; */ 
 
 PImage img;
-int smallPoint, largePoint;
+var smallPoint, largePoint;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   img = loadImage("moonwalk.jpg");
   smallPoint = 4;
   largePoint = 40;
@@ -23,10 +23,10 @@ void setup() {
   background(255);
 }
 
-void draw() { 
-  float pointillize = map(mouseX, 0, width, smallPoint, largePoint);
-  int x = int(random(img.width));
-  int y = int(random(img.height));
+function draw() { 
+  var pointillize = map(mouseX, 0, width, smallPoint, largePoint);
+  var x = int(random(img.width));
+  var y = int(random(img.height));
   color pix = img.get(x, y);
   fill(pix, 128);
   ellipse(x, y, pointillize, pointillize);

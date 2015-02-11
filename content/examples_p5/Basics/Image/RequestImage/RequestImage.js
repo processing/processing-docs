@@ -11,34 +11,34 @@
  * images to get the full effect. 
  */
 
-int imgCount = 12;
+var imgCount = 12;
 PImage[] imgs = new PImage[imgCount];
-float imgW;
+var imgW;
 
 // Keeps track of loaded images (true or false)
 boolean[] loadStates = new boolean[imgCount];
 
 // For loading animation
-float loaderX, loaderY, theta;
+var loaderX, loaderY, theta;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   smooth();
   imgW = width/imgCount;
 
   // Load images asynchronously
-  for (int i = 0; i < imgCount; i++){
+  for (var i = 0; i < imgCount; i++){
     imgs[i] = requestImage("PT_anim"+nf(i, 4)+".gif");
   }
 }
 
-void draw(){
+function draw(){
   background(0);
   
   // Start loading animation
   runLoaderAni();
   
-  for (int i = 0; i < imgs.length; i++){
+  for (var i = 0; i < imgs.length; i++){
     // Check if individual images are fully loaded
     if ((imgs[i].width != 0) && (imgs[i].width != -1)){
       // As images are loaded set true in boolean array
@@ -51,15 +51,15 @@ void draw(){
   }
 }
 
-void drawImages() {
-  int y = (height - imgs[0].height) / 2;
-  for (int i = 0; i < imgs.length; i++){
+function drawImages() {
+  var y = (height - imgs[0].height) / 2;
+  for (var i = 0; i < imgs.length; i++){
     image(imgs[i], width/imgs.length*i, y, imgs[i].height, imgs[i].height);
   }
 }
 
 // Loading animation
-void runLoaderAni(){
+function runLoaderAni(){
   // Only run when images are loading
   if (!checkLoadStates()){
     ellipse(loaderX, loaderY, 10, 10);
@@ -75,7 +75,7 @@ void runLoaderAni(){
 
 // Return true when all images are loaded - no false values left in array 
 boolean checkLoadStates(){
-  for (int i = 0; i < imgs.length; i++){
+  for (var i = 0; i < imgs.length; i++){
     if (loadStates[i] == false){
       return false;
     } 
