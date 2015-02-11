@@ -8,13 +8,16 @@
 // The next line is needed if running in JavaScript Mode with Processing.js
 /* @pjs preload="moonwalk.jpg"; */ 
 
-PImage img;  // Declare variable "a" of type PImage
+var img;  // Declare variable "a" of type PImage
+
+function preload() {
+  // The image file must be in the data folder of the current sketch 
+  // to load successfully
+  img = loadImage("data/moonwalk.jpg");
+}
 
 function setup() {
   createCanvas(640, 360);
-  // The image file must be in the data folder of the current sketch 
-  // to load successfully
-  img = loadImage("moonwalk.jpg");  // Load the image into the program  
 }
 
 function draw() {

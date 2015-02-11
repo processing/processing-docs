@@ -9,13 +9,16 @@
 // The next line is needed if running in JavaScript Mode with Processing.js
 /* @pjs preload="moonwalk.jpg"; */ 
 
-PImage img;
+var img;
 var offset = 0;
 var easing = 0.05;
 
+function preload() {
+  img = loadImage("data/moonwalk.jpg");  // Load an image into the program 
+}
+
 function setup() {
   createCanvas(640, 360);
-  img = loadImage("moonwalk.jpg");  // Load an image into the program 
 }
 
 function draw() { 

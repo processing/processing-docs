@@ -5,15 +5,20 @@
  * This example creates an image gradient.
  */
 
-PImage img;
+var img;
 
 function setup() {
   createCanvas(640, 360);  
-  img = createImage(230, 230, ARGB);
-  for(var i = 0; i < img.pixels.length; i++) {
+  img = createImage(230, 230);
+  img.loadPixels();
+  for(var i = 0; i < img.pixels.length; i+=4) {
     var a = map(i, 0, img.pixels.length, 255, 0);
-    img.pixels[i] = color(0, 153, 204, a); 
+    img.pixels[i] = 0;
+    img.pixels[i+1] = 153;
+    img.pixels[i+2] = 204;
+    img.pixels[i+3] = a; 
   }
+  img.updatePixels();
 }
 
 function draw() {

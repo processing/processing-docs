@@ -9,15 +9,18 @@
 // The next line is needed if running in JavaScript Mode with Processing.js
 /* @pjs preload="moonwalk.jpg"; */ 
 
-PImage bg;
-var y;
+var bg;
+var y = 0;
 
-function setup() {
-  createCanvas(640, 360);
+function preload() {
   // The background image must be the same size as the parameters
   // into the size() method. In this program, the size of the image
   // is 640 x 360 pixels.
-  bg = loadImage("moonwalk.jpg");
+  bg = loadImage("data/moonwalk.jpg");
+}
+
+function setup() {
+  createCanvas(640, 360);
 }
 
 function draw() {
