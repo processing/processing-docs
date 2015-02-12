@@ -7,26 +7,30 @@
  * and the bottom row is the signal from "mousePressed". 
  */
  
-int[] xvals;
-int[] yvals;
-int[] bvals;
+var xvals;
+var yvals;
+var bvals;
 
-void setup() 
+function setup() 
 {
-  size(640, 360);
+  createCanvas(640, 360);
   noSmooth();
-  xvals = new int[width];
-  yvals = new int[width];
-  bvals = new int[width];
+  xvals = [];
+  yvals = [];
+  bvals = [];
+  for (var i = 0; i < width; i++) {
+    xvals[i] = 0;
+    yvals[i] = 0;
+    bvals[i] = 0;
+  }
 }
 
-int arrayindex = 0;
+var arrayindex = 0;
 
-void draw()
-{
+function draw() {
   background(102);
   
-  for(int i = 1; i < width; i++) { 
+  for(var i = 1; i < width; i++) { 
     xvals[i-1] = xvals[i]; 
     yvals[i-1] = yvals[i];
     bvals[i-1] = bvals[i];
@@ -34,7 +38,7 @@ void draw()
   // Add the new values to the end of the array 
   xvals[width-1] = mouseX; 
   yvals[width-1] = mouseY;
-  if(mousePressed) {
+  if(mouseIsPressed) {
     bvals[width-1] = 0;
   } else {
     bvals[width-1] = 255;
@@ -44,7 +48,7 @@ void draw()
   noStroke();
   rect(0, height/3, width, height/3+1);
 
-  for(int i=1; i<width; i++) {
+  for(var i=1; i<width; i++) {
     stroke(255);
     point(i, xvals[i]/3);
     stroke(0);

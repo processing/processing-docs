@@ -4,23 +4,23 @@
  * Click on the box and drag it across the screen. 
  */
  
-float bx;
-float by;
-int boxSize = 75;
-boolean overBox = false;
-boolean locked = false;
-float xOffset = 0.0; 
-float yOffset = 0.0; 
+var bx;
+var by;
+var boxSize = 75;
+var overBox = false;
+var locked = false;
+var xOffset = 0.0; 
+var yOffset = 0.0; 
 
-void setup() 
+function setup() 
 {
-  size(640, 360);
+  createCanvas(640, 360);
   bx = width/2.0;
   by = height/2.0;
   rectMode(RADIUS);  
 }
 
-void draw() 
+function draw() 
 { 
   background(0);
   
@@ -42,7 +42,7 @@ void draw()
   rect(bx, by, boxSize, boxSize);
 }
 
-void mousePressed() {
+function mousePressed() {
   if(overBox) { 
     locked = true; 
     fill(255, 255, 255);
@@ -54,14 +54,14 @@ void mousePressed() {
 
 }
 
-void mouseDragged() {
+function mouseDragged() {
   if(locked) {
     bx = mouseX-xOffset; 
     by = mouseY-yOffset; 
   }
 }
 
-void mouseReleased() {
+function mouseReleased() {
   locked = false;
 }
 

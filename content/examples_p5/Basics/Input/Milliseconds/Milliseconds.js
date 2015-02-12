@@ -7,16 +7,16 @@
  * different patterns in time are created.  
  */
  
-float scale;
+var scale;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
   scale = width/20;
 }
 
-void draw() { 
-  for (int i = 0; i < scale; i++) {
+function draw() { 
+  for (var i = 0; i < scale; i++) {
     colorMode(RGB, (i+1) * scale * 10);
     fill(millis()%((i+1) * scale * 10));
     rect(i*scale, 0, scale, height);

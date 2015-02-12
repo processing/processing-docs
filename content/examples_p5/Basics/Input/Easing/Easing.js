@@ -9,26 +9,26 @@
  * current position toward the cursor. 
  */
  
-float x;
-float y;
-float easing = 0.05;
+var x = 0;
+var y = 0;
+var easing = 0.05;
 
-void setup() {
-  size(640, 360); 
+function setup() {
+  createCanvas(640, 360); 
   noStroke();  
 }
 
-void draw() { 
+function draw() { 
   background(51);
   
-  float targetX = mouseX;
-  float dx = targetX - x;
+  var targetX = mouseX;
+  var dx = targetX - x;
   if(abs(dx) > 1) {
     x += dx * easing;
   }
   
-  float targetY = mouseY;
-  float dy = targetY - y;
+  var targetY = mouseY;
+  var dy = targetY - y;
   if(abs(dy) > 1) {
     y += dy * easing;
   }

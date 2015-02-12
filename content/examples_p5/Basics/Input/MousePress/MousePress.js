@@ -6,15 +6,15 @@
  */
 
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noSmooth();
   fill(126);
   background(102);
 }
 
-void draw() {
-  if (mousePressed) {
+function draw() {
+  if (mouseIsPressed) {
     stroke(255);
   } else {
     stroke(0);

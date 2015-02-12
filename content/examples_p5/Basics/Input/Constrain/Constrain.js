@@ -5,21 +5,21 @@
  * The program constrains the circle to its box. 
  */
  
-float mx;
-float my;
-float easing = 0.05;
-int radius = 24;
-int edge = 100;
-int inner = edge + radius;
+var mx = 0;
+var my = 0;
+var easing = 0.05;
+var radius = 24;
+var edge = 100;
+var inner = edge + radius;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke(); 
   ellipseMode(RADIUS);
   rectMode(CORNERS);
 }
 
-void draw() { 
+function draw() { 
   background(51);
   
   if (abs(mouseX - mx) > 0.1) {
