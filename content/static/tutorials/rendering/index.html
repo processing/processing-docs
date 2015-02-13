@@ -50,13 +50,13 @@ To draw the same shape into a new surface, first create a new PGraphics object, 
    circle.endDraw();
    image(circle, 0, 0);
     </pre>
-<br /> 
 <p>
 The createGraphics() function generates the new drawing surface at the size in pixels defined by the parameters. This step only happens once to initialize it. The beginDraw() function is used to start working with a custom PGraphics object and the endDraw() method is used to stop. Both are needed each time a change is made. Finally, the surface may be drawn to the display window with the image() function. All of the parameters to image() to control the position and size may be used to change the way the surface is drawn.
 <br /> 
 <br /> 
 In practice, new PGraphics layers are most often used with programs that have setup() and draw(). To work together, the PGraphics object is declared as global, it is created inside setup(), then can be modified in draw().
 </p>
+<br /> 
 <div style="float: left; width: 120px;">
 <img src="imgs/35_03.png" style= "width: 100px; height: 100px;">
 <br /> 
@@ -85,6 +85,7 @@ void draw() {
 <p>
 Based on this example, the most obvious differences to working with PGraphics objects are the additional lines of code and the extra step of prepending each drawing function with the name of the object. This example is simplified to demonstrate the mechanics of the technique, but it doesn’t do anything to justify it. The following example reveals a typical issue that creating a new drawing surface can fix. The goal of the program is to use a crosshair to show the position of the cursor and to draw a new circle to the screen each time the mouse is clicked. For the circles to accumulate on screen, the background() function isn’t used. This has the unintended effect of also accumulating the crosshairs as seen in this code:
 </p>
+<br /> 
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_04_1.png" style= "width: 100px; height: 100px;">
 <br /> 
@@ -123,6 +124,7 @@ void mousePressed() {
 <p>
 To allow for the circles to accumulate in the display window, but to have a different effect for the crosshairs, a new drawing surface is created to render the circles, while the crosshairs are drawn in the main display window. The surface with the circles is redrawn each frame in draw(), followed by the lines so they are on top of the circles layer.
 </p>
+<br /> 
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_05_1.png" style= "width: 100px; height: 100px;">
 <br /> 
@@ -213,7 +215,6 @@ void runTile() {
   tile.ellipse(x, y, 10, 10);
   tile.endDraw();
 }
-
 </pre>
 <p>
 This example clarifies two things about working with PGraphics objects. First, each object has its own width and height field, just like the main display window. Second, while the drawing functions such as noStroke() and rect() are applied to the drawing surface through the dot operator, variables still belong to the main program. Notice that the x and y variables in the runTile() function aren’t defined as belonging to the tile object.
@@ -271,6 +272,7 @@ void drawCube() {
 <br />
 <p>
 As implied by the previous example, the only rule to remember about selecting renderers for new drawing surfaces is to match the renderer defined in size() and createGraphics(). The exception to this rule is using the default renderer and P2D as alternate options when P3D is the main renderer defined in size(). For example, the following code won’t run because it’s not possible to run a 3D renderer when the default is used as the primary renderer:
+<br /> 
     <pre>
 PGraphics cube;
 
@@ -290,6 +292,7 @@ void draw() {
 <h3>Combine surfaces</h3>
 The final section in this chapter demonstrates techniques for combining more than one drawing surface together within the display window. This builds on the code earlier in the chapter, but extends it further. The next example builds on code 35-07 with two changes. First, another drawing surface was added and second, the background() was removed from each layer and replaced with clear(). The clear() method is similar to defining the background because it erases everything in the drawing surface, but it makes each pixel transparent instead of filling each with a color. Here, clear() is used to make it easier to combine the two drawing surfaces together because the shapes drawn into each buffer are surrounded by transparent pixels. Transparent backgrounds aren’t possible for the display window, the default PGraphics object. They are one of the primary advantages of creating a new drawing surface.
 </p>
+<br /> 
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_09_1.png" style= "width: 100px; height: 100px;">
 <br /> 
@@ -417,6 +420,7 @@ When the cubeA object is passed into the drawCube() function in the second line 
 <br /> 
 The next example is similar to the previous example, but it blends the two drawing surfaces together with the blendMode() function. The blend mode is defined at the end of setup() and is then applied for the duration of the program.
 </p>
+<br /> 
 <div style="float: left; width: 120px;">
 <img src="imgs/35_11_1.png" style= "width: 100px; height: 100px;">
 <br /> 
