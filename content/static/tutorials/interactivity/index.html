@@ -155,8 +155,6 @@ line(mouseX, mouseY, pmouseX, pmouseY);
 <br /> 
 <br /> 
 <br /> 
-<br /> 
-<br /> 
 <p>
 Use the mouseX and mouseY variables with an if structure to allow the cursor to select regions of the screen. The following examples demonstrate the cursor making a selection between different areas of the display window. The first divides the screen into halves, and the second divides the screen into thirds.
 </p>
@@ -209,7 +207,8 @@ rect(66, 0, 33, 100); // Right
 <br /> 
 <br />
 <br /> 
-
+<br />
+<br /> 
 <p>
 Use the logical operator && with an if structure to select a rectangular region of the screen. As demonstrated in the following example, when a relational expression
 is made to test each edge of a rectangle (left, right, top, bottom) and these are concatenated with a logical AND, the entire relational expression is true only when the cursor is inside the rectangle.
@@ -241,7 +240,7 @@ rect(40, 20, 40, 60);
 This code asks, “Is the cursor to the right of the left edge and is the cursor to the left of the right edge and is the cursor beyond the top edge and is the cursor above the bottom?” The code for the next example asks a set of similar questions and combines them with the keyword else to determine which one of the defined areas contains the cursor.
 </p>
 <br /> 
-<div style="float:left; width: 120px; margin-bottom: 20px;"> 
+<div style="float:left; width: 120px;"> 
 <img src="imgs/07_11_1.png" style= "width: 100px; height: 100px;">
 <br />
 <img src="imgs/07_11_2.png" style= "width: 100px; height: 100px;">
@@ -327,6 +326,8 @@ rect(25, 25, 50, 50);
 <br />
 <br />
 <br />
+<br />
+<br />
 <div style="float:left; width: 120px; margin-bottom: 10px;"> 
 <img src="imgs/07_14_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -349,6 +350,8 @@ fill(126); // Gray
 rect(25, 25, 50, 50);
 }
 </pre> 
+<br />
+<br />
 <br />
 <br />
 <br />
@@ -402,6 +405,8 @@ x++; // add 1 to x
 } line(x, 20, x-60, 80);
 }
 </pre>
+<br />
+<br />
 <br />
 <br />
 <br />
