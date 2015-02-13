@@ -26,8 +26,6 @@ The modern computer keyboard is a direct descendant of the typewriter. The posit
 
 <p>
 <h3>Mouse Data</h3>
-<br /> 
-<br /> 
 The Processing variables mouseX and mouseY (note the capital X and Y) store the x-coordinate and y-coordinate of the cursor relative to the origin in the upper-left corner of the display window. To see the actual values produced while moving the mouse, run this program to print the values to the console:
 <pre>
 void draw() {
@@ -42,6 +40,7 @@ The mouse position is most commonly used to control the location of visual eleme
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_01_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_02_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -56,6 +55,7 @@ ellipse(mouseX, mouseY, 33, 33);
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_03_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_03_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -72,6 +72,7 @@ ellipse(mouseX-20, 84, 33, 33); // Bottom circle
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_04_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_04_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -91,6 +92,7 @@ To invert the value of the mouse, subtract the mouseX value from the width of th
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_05_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_05_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -124,6 +126,7 @@ Draw a line from the previous mouse position to the current position to show the
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_07_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_07_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -142,6 +145,7 @@ Use the mouseX and mouseY variables with an if structure to allow the cursor to 
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_08_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_08_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -161,7 +165,9 @@ rect(50, 0, 50, 100); // Right
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_09_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_09_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_09_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -187,6 +193,7 @@ is made to test each edge of a rectangle (left, right, top, bottom) and these ar
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_10_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_10_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -211,8 +218,11 @@ This code asks, “Is the cursor to the right of the left edge and is the cursor
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_11_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_11_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_11_3.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_11_4.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -237,13 +247,12 @@ rect(50, 50, 50, 50); // Lower-right
 
 <p>
 <h3>Mouse buttons</h3>
-<br /> 
-<br /> 
 Computer mice and other related input devices typically have between one and
 three buttons; Processing can detect when these buttons are pressed with the mousePressed and mouseButton variables. Used with the button status, the cursor position enables the mouse to perform different actions. For example, a button press when the mouse is over an icon can select it, so the icon can be moved to a different location on screen. The mousePressed variable is true if any mouse button is pressed and false if no mouse button is pressed. The variable mouseButton is LEFT, CENTER, or RIGHT depending on the mouse button most recently pressed. The mousePressed variable reverts to false as soon as the button is released, but the mouseButton variable retains its value until a different button is pressed. These variables can be used independently or in combination to control the software. Run these programs to see how the software responds to your fingers.
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_12_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_12_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -261,7 +270,9 @@ rect(25, 25, 50, 50);
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_13_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_13_2tif.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_13_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -279,7 +290,9 @@ rect(25, 25, 50, 50);
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_14_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_14_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_14_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -302,12 +315,11 @@ Not all mice have multiple buttons, and if software is distributed widely, the i
 </p>
 <p>
 <h3>Keyboard data</h3>
-<br /> 
-<br /> 
 Processing registers the most recently pressed key and whether a key is currently pressed. The boolean variable keyPressed is true if a key is pressed and is false if not. Include this variable in the test of an if structure to allow lines of code to run only if a key is pressed. The keyPressed variable remains true while the key is held down and becomes false only when the key is released.
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_15_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_15_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -325,7 +337,9 @@ rect(40, 40, 20, 20); // draw a rectangle
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_16_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_16_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_16_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -346,7 +360,9 @@ The key variable stores a single alphanumeric character. Specifically, it holds 
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_17_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_17_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_17_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -364,6 +380,7 @@ The key variable may be used to determine whether a specific key is pressed. The
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_18_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_18_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -390,7 +407,9 @@ Because each character has a numeric value as defined by the ASCII table (p. 605
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_19_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_19_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_19_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -405,7 +424,9 @@ line(x, 0, x, height); }
 </pre>
 <div style="float:left;"> 
 <img src="imgs/07_20_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_20_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_20_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -426,14 +447,14 @@ arc(50, 50, 66, 66, 0, radians(angle));
 </pre>
 
 <p> 
-<h3>Coded keys</h3>
-<br /> 
-<br /> 
+<h3>Coded keys</h3> 
 In addition to reading key values for numbers, letters, and symbols, Processing can also read the values from other keys including the arrow keys and the Alt, Control, Shift, Backspace, Tab, Enter, Return, Escape, and Delete keys. The variable keyCode stores the ALT, CONTROL, SHIFT, UP, DOWN, LEFT, and RIGHT keys as constants. Before determining which coded key is pressed, it’s necessary to check first to see if the key is coded. The expression key==CODED is true if the key is coded and false otherwise. Even though not alphanumeric, the keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) will not be identified as a coded key. If you’re making cross-platform projects, note that the Enter key is commonly used on PCs and UNIX and the Return key is used on Macintosh. Check for both Enter and Return to make sure your program will work for all platforms (see code 12-17).
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_21_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_21_2.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_21_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -460,8 +481,6 @@ A category of functions called events alter the normal flow of a program when an
 </p>
 <p>
 <h3>Mouse events</h3>
-<br /> 
-<br /> 
 The mouse event functions are mousePressed(), mouseReleased(), mouseMoved(), and mouseDragged():
 <br /> 
 <br />
@@ -476,7 +495,9 @@ an action, such as clearing the screen. In the following example, the background
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_22_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_22_2.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_22_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -494,7 +515,9 @@ The following example is the same as the one above, but the gray variable is set
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_23_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_23_2.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_23_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -513,6 +536,7 @@ think about the flow of the program. In this example, squares are drawn inside m
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_24_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_24_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -529,7 +553,9 @@ The code inside the mouseMoved() and mouseDragged() event functions are run when
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_25_1.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_25_2.png" style= "width: 100px; height: 100px;">
+    <br />
 <img src="imgs/07_25_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -554,9 +580,7 @@ dragY = mouseY;
 </pre>
 
 <p> 
-<h3>Key events</h3>
-<br /> 
-<br /> 
+<h3>Key events</h3> 
 Each key press is registered through the keyboard event functions keyPressed() and keyReleased():
 <br /> 
 <br />
@@ -568,6 +592,7 @@ Each time a key is pressed, the code inside the keyPressed() block is run once. 
 </p>
 <div style="float:left;"> 
 <img src="imgs/07_26_1.png" style= "width: 100px; height: 100px;">
+<br />
 <img src="imgs/07_26_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -593,9 +618,11 @@ drawT = true;
 Each time a key is released, the code inside the keyReleased() block is run once. The following example builds on the previous code; each time the key is released the boolean variable drawT is set back to false to stop the shape from displaying within draw().
 </p>
 <div style="float:left;"> 
-<img src="imgs/07_27_1.png" style= "width: 100px; height: 100px;">
-<img src="imgs/07_27_2.png" style= "width: 100px; height: 100px;">
-<img src="imgs/07_27_3.png" style= "width: 100px; height: 100px;">
+<img src="imgs/07_27-1.png" style= "width: 100px; height: 100px;">
+<br />
+<img src="imgs/07_27-2.png" style= "width: 100px; height: 100px;">
+<br />
+<img src="imgs/07_27-3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
 boolean drawT = false;
@@ -620,8 +647,6 @@ drawT = false;
 
 <p>
 <h3>Event flow</h3>
-<br /> 
-<br /> 
 As discussed previously, programs written with draw() display frames to the screen sixty frames each second. The frameRate() function is used to set a limit on the number of frames that will display each second, and the noLoop() function can be used to stop draw() from looping. The additional functions loop() and redraw() provide more options when used in combination with the mouse and keyboard event functions.
 If a program has been paused with noLoop(), running loop() resumes its action. Because the event functions are the only elements that continue to run when a program is paused with noLoop(), the loop() function can be used within these events to continue running the code in draw(). The following example runs the draw() function for about two seconds each time a mouse button is pressed and then pauses the program after that time has elapsed.
 <br /> 
@@ -664,9 +689,7 @@ redraw(); // Run the code in draw one time
 }
 </pre>
 <p>
-<h3>Cursor icon</h3>
-<br /> 
-<br /> 
+<h3>Cursor icon</h3> 
 The cursor can be hidden with the noCursor() function and can be set to appear as a different icon or image with the cursor() function. When the noCursor() function is run, the cursor icon disappears as it moves into the display window. To give feedback about the location of the cursor within the software, a custom cursor can be drawn and controlled with the mouseX and mouseY variables.
 <br /> 
 <pre>
