@@ -36,7 +36,6 @@ The text() function is used to draw letters, words, and paragraphs to the screen
 <img src="imgs/12_04.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<br /> 
 
 </div>
 <pre>
@@ -56,6 +55,7 @@ text("DAY", 0, 100);
 
 
 
+
 textSize(32);
 fill(0); // Fill color black
 text("LAX", 0, 40);
@@ -63,6 +63,7 @@ fill(126); // Fill color gray
 text("HKG", 0, 70);
 fill(255); // Fill color white
 text("PVG", 0, 100);
+
 
 textSize(64);
 fill(0, 140); // Fill black with low opacity
@@ -75,11 +76,11 @@ text("8", 60, 80);
 <p>
 Another version of text() draws the characters inside a rectangle. In this use, the second and third parameters define the position of the upper-left corner of the box and fourth and fifth parameters define the width and height of the box. If the length of the text exceeds the dimensions of the defined box, the text will not display.
 </p>
-<div style = "float: left; width: 120px">
+<br /> 
+<div style = "float: left; width: 120px; margin-bottom: 30px;">
 <img src="imgs/12_05.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_06.png" style= "width: 100px; height: 100px;">
 </div>
-<br /> 
 <pre>
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
@@ -281,8 +282,8 @@ text(lines, 70, 15, 30, 100);
 <p> 
 Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
 </p>
-<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 50px;">
-<br /> 
+<br />
+<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 50px;"> 
 <pre>
 fill(0);
 textSize(12);
