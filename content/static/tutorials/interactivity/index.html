@@ -150,7 +150,11 @@ background(204);
 line(mouseX, mouseY, pmouseX, pmouseY);
 }
 </pre>
-
+<br /> 
+    <br /> 
+    <br /> 
+    <br /> 
+    <br /> 
 <p>
 Use the mouseX and mouseY variables with an if structure to allow the cursor to select regions of the screen. The following examples demonstrate the cursor making a selection between different areas of the display window. The first divides the screen into halves, and the second divides the screen into thirds.
 </p>
@@ -174,6 +178,8 @@ rect(50, 0, 50, 100); // Right
 }
 }
 </pre>
+<br /> 
+<br />
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_09_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -198,6 +204,11 @@ rect(66, 0, 33, 100); // Right
 }
 }
 </pre>
+<br /> 
+<br />
+<br /> 
+<br />
+<br />
 <p>
 Use the logical operator && with an if structure to select a rectangular region of the screen. As demonstrated in the following example, when a relational expression
 is made to test each edge of a rectangle (left, right, top, bottom) and these are concatenated with a logical AND, the entire relational expression is true only when the cursor is inside the rectangle.
@@ -227,7 +238,7 @@ rect(40, 20, 40, 60);
 <p> 
 This code asks, “Is the cursor to the right of the left edge and is the cursor to the left of the right edge and is the cursor beyond the top edge and is the cursor above the bottom?” The code for the next example asks a set of similar questions and combines them with the keyword else to determine which one of the defined areas contains the cursor.
 </p>
-<div style="float:left; width: 120px; margin-bottom: 150px;"> 
+<div style="float:left; width: 120px; margin-bottom: 20px;"> 
 <img src="imgs/07_11_1.png" style= "width: 100px; height: 100px;">
 <br />
 <img src="imgs/07_11_2.png" style= "width: 100px; height: 100px;">
@@ -255,13 +266,24 @@ rect(50, 50, 50, 50); // Lower-right
 }
 }
 </pre>
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <p>
 <h3>Mouse buttons</h3>
 Computer mice and other related input devices typically have between one and
 three buttons; Processing can detect when these buttons are pressed with the mousePressed and mouseButton variables. Used with the button status, the cursor position enables the mouse to perform different actions. For example, a button press when the mouse is over an icon can select it, so the icon can be moved to a different location on screen. The mousePressed variable is true if any mouse button is pressed and false if no mouse button is pressed. The variable mouseButton is LEFT, CENTER, or RIGHT depending on the mouse button most recently pressed. The mousePressed variable reverts to false as soon as the button is released, but the mouseButton variable retains its value until a different button is pressed. These variables can be used independently or in combination to control the software. Run these programs to see how the software responds to your fingers.
 </p>
-<div style="float:left; width: 120px; margin-bottom: 40px;"> 
+<div style="float:left; width: 120px; margin-bottom: 10px;"> 
 <img src="imgs/07_12_1.png" style= "width: 100px; height: 100px;">
 <br />
 <img src="imgs/07_12_2.png" style= "width: 100px; height: 100px;">
@@ -279,7 +301,13 @@ fill(0); // Black
 rect(25, 25, 50, 50);
 }
 </pre>
-<div style="float:left; width: 120px; margin-bottom: 100px;"> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="float:left; width: 120px; margin-bottom: 10px;"> 
 <img src="imgs/07_13_1.png" style= "width: 100px; height: 100px;">
 <br />
 <img src="imgs/07_13_2tif.png" style= "width: 100px; height: 100px;">
@@ -299,7 +327,18 @@ fill(255); // White
 rect(25, 25, 50, 50);
 }
 </pre>
-<div style="float:left; width: 120px; margin-bottom: 50px;"> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="float:left; width: 120px; margin-bottom: 10px;"> 
 <img src="imgs/07_14_1.png" style= "width: 100px; height: 100px;">
 <br />
 <img src="imgs/07_14_2.png" style= "width: 100px; height: 100px;">
@@ -321,6 +360,14 @@ fill(126); // Gray
 rect(25, 25, 50, 50);
 }
 </pre> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <p>
 Not all mice have multiple buttons, and if software is distributed widely, the interaction should not rely on detecting which button is pressed.
 </p>
@@ -346,6 +393,10 @@ rect(40, 40, 20, 20); // draw a rectangle
 }
 }
 </pre>
+<br />
+<br />
+<br />
+<br />
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_16_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -365,7 +416,16 @@ x++; // add 1 to x
 } line(x, 20, x-60, 80);
 }
 </pre>
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /> 
+<br /> 
 <p>
 The key variable stores a single alphanumeric character. Specifically, it holds the most recently pressed key. The key can be displayed on screen with the text() function (p. 150).
 </p>
@@ -385,7 +445,18 @@ background(0);
 text(key, 20, 75); // Draw at coordinate (20,75)
 }
 </pre>
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /> 
+<br /> 
 <p>
 The key variable may be used to determine whether a specific key is pressed. The following example uses the expression key=='A' to test if the A key is pressed. The single quotes signify A as the data type char (p. 144). The expression key=="A" will cause an error because the double quotes signify the A as a String, and it’s not possible to compare a String with a char. The logical AND symbol, the && operator, is used to connect the expression with the keyPressed variable to ascertain that the key pressed is the uppercase A.
 </p>
@@ -408,6 +479,8 @@ ellipse(50, 50, 50, 50);
 }
 }
 </pre>
+<br /> 
+<br /> 
 
 <p>
 The previous example works with an uppercase A, but not if the lowercase letter is pressed. To check for both uppercase and lowercase letters, extend the relational expression with a logical OR, the || relational operator. Line 9 in the previous program would be changed to
@@ -433,6 +506,20 @@ int x = key - 32;
 line(x, 0, x, height); }
 }
 </pre>
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_20_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -456,7 +543,14 @@ angle = (key - 32) * 3;
 arc(50, 50, 66, 66, 0, radians(angle));
 }
 </pre>
-
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 <p> 
 <h3>Coded keys</h3> 
 In addition to reading key values for numbers, letters, and symbols, Processing can also read the values from other keys including the arrow keys and the Alt, Control, Shift, Backspace, Tab, Enter, Return, Escape, and Delete keys. The variable keyCode stores the ALT, CONTROL, SHIFT, UP, DOWN, LEFT, and RIGHT keys as constants. Before determining which coded key is pressed, it’s necessary to check first to see if the key is coded. The expression key==CODED is true if the key is coded and false otherwise. Even though not alphanumeric, the keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) will not be identified as a coded key. If you’re making cross-platform projects, note that the Enter key is commonly used on PCs and UNIX and the Return key is used on Macintosh. Check for both Enter and Return to make sure your program will work for all platforms (see code 12-17).
