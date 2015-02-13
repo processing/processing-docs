@@ -25,7 +25,18 @@ fi and æ—made impractical by modern mechanized typography are flourishing aga
 <br /> 
 The text() function is used to draw letters, words, and paragraphs to the screen. In the simplest use, the first parameter can be a String, char, int, or float. The second and third parameters set the position of the text. By default, the second parameter defines the distance from the left edge of the window; the third parameter defines the distance from the text’s baseline to the top of the window. The textSize() function defines the size the letters will draw in units of pixels. The number used to define the text size will not be the precise height of each letter, the difference depends on the design of each font. For instance, the statement textSize(30); won’t necessarily draw a capital H at 30 pixels high. The fill() function controls the color and transparency of text. This function affects text the same way it affects shapes such as rect() and ellipse(), but text is not affected by stroke().
 </p>
-<img src="imgs/12_01.png" style= "width: 100px; height: 100px; float: left;">
+<div style="float: left; width: 120px;">
+<img src="imgs/12_01.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br /> 
+<img src="imgs/12_02.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br /> 
+<img src="imgs/12_03.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br /> 
+<img src="imgs/12_04.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 fill(0);
 text("LAX", 0, 40); // Write "LAX" at coordinate (0,40)
@@ -35,7 +46,6 @@ text("FRA", 0, 100); // Write "FRA" at coordinate (0,100)
 <br /> 
 <br /> 
 <br />
-<img src="imgs/12_02.png" style= "width: 100px; height: 100px; float: left;">
 <pre>
 textSize(32); // Set text size to 32
 fill(0);
@@ -43,10 +53,6 @@ text("LAX", 0, 40);
 text("ORD", 0, 70);
 text("DAY", 0, 100);
 </pre>
-<br /> 
-<br /> 
-
-<img src="imgs/12_03.png" style= "width: 100px; height: 100px; float: left;">
 <pre>
 textSize(32);
 fill(0); // Fill color black
@@ -56,7 +62,6 @@ text("HKG", 0, 70);
 fill(255); // Fill color white
 text("PVG", 0, 100);
 </pre>
-<img src="imgs/12_04.png" style= "width: 100px; height: 100px; float: left;">
 <pre>
 textSize(64);
 fill(0, 140); // Fill black with low opacity
@@ -69,17 +74,15 @@ text("8", 60, 80);
 <p>
 Another version of text() draws the characters inside a rectangle. In this use, the second and third parameters define the position of the upper-left corner of the box and fourth and fifth parameters define the width and height of the box. If the length of the text exceeds the dimensions of the defined box, the text will not display.
 </p>
-<img src="imgs/12_05.png" style= "width: 100px; height: 100px; float: left;">
+<div style = "float: left; width: 120px">
+<img src="imgs/12_05.png" style= "width: 100px; height: 100px;">
+<img src="imgs/12_06.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
 text(s, 10, 10, 60, 80);
 </pre>
-<br />
-<br />
-<br />
-<br />
-<img src="imgs/12_06.png" style= "width: 100px; height: 100px; float: left;">
 <pre>
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
@@ -137,7 +140,7 @@ The printArray() function (p. 420) is used to write each font on a new line. The
 </pre>
 Before a font is used in a program, it must be converted and set as the current font. Processing has a unique data type called PFont to store font data. Make a new variable of the type PFont and use the createFont() function to convert the font. The first parameter to createFont() is the name of the font to convert and the second parameter defines the base size of the font. (Optional third and fourth parameters are defined in the Reference.) The textFont() function must then be used to set the current font. On our development computer, to work with Ziggurat Black, list option 571 above, the following code is run:
 </p>
-<img src="imgs/12_08.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_08.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 PFont zigBlack;
 void setup() {
@@ -159,7 +162,7 @@ To make this program work on your computer, you will likely need to modify line 
 <br /> 
 To ensure a font will load on all computers, regardless if the font is installed, add the file to the sketch’s data folder. (Fonts in the data folder don’t print in the console list as demonstrated in code 12-07.) Follow the instructions on page 10 to add a font to the data folder. When fonts inside the data folder are used, the complete file name, including the data type extension, needs to be written as the parameter to createFont(). The following example is similar to the prior example, but it uses an OpenType font inside the data folder. It uses Source Code Pro, an open source typeface that can be found online and downloaded through a web browser.
 </p>
-<img src="imgs/12_09.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_09.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 PFont sourceLight;
 void setup() {
@@ -178,7 +181,7 @@ text("TXL", 0, 100);
 <p> 
 To use two fonts in one program, create two PFont variables and use the textFont() function to change the current font. Based on the prior two examples, the Ziggurat-Black font loads from its location on the local computer and Source Code Pro loads from the data folder.
 </p>
-<img src="imgs/12_10.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_10.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 PFont zigBlack, sourceLight;
 void setup() {
@@ -228,7 +231,7 @@ text("TXL", 0, 100);
 <p>
 When the font is drawn at a different size from the size at which it was created, it is scaled and therefore does not always look as crisp and smooth. For example, if a font is created at 12 pixels and is displayed at 96 pixels, it will appear blurry.
 </p>
-<img src="imgs/12_12.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_12.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 PFont zigBlack;
 void setup() {
@@ -256,7 +259,7 @@ For the best results, draw a font at the size at which it was created. If the sa
 Processing includes functions to control the leading (the spacing between lines of text) and alignment. Processing can also calculate the width of any character or group of characters, a useful technique for arranging shapes and typographic elements.
 The textLeading() function sets the spacing between lines of text. It has one parameter that defines this space in units of pixels.
 </p>
-<img src="imgs/12_13.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_13.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 String lines = "L1 L2 L3";
 textSize(12);
@@ -271,7 +274,7 @@ text(lines, 70, 15, 30, 100);
 <p> 
 Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
 </p>
-<img src="imgs/12_14.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 fill(0);
 textSize(12);
@@ -289,7 +292,7 @@ The settings for textSize(), textLeading(), and textAlign() will be used for all
 <br /> 
 The textWidth() function calculates and returns the pixel width of any character or text string. This number is calculated from the current font and size as defined by the textFont() and textSize() functions. Because the letters of every font are a different size and letters within many fonts have different widths, this function is the only way to know how wide a string or character is when displayed on screen. For this reason, always use textWidth() to position elements relative to text, rather than hard-coding them into your program.
 </p>
-<img src="imgs/12_15.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
 <pre>
 String s = "AEIOU";
 float tw; // Text width
