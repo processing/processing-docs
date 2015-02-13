@@ -42,18 +42,21 @@ fill(0);
 text("LAX", 0, 40); // Write "LAX" at coordinate (0,40)
 text("AMS", 0, 70); // Write "AMS" at coordinate (0,70)
 text("FRA", 0, 100); // Write "FRA" at coordinate (0,100)
-</pre>
-<br /> 
-<br /> 
-<br />
-<pre>
+
+
+
+
+
 textSize(32); // Set text size to 32
 fill(0);
 text("LAX", 0, 40);
 text("ORD", 0, 70);
 text("DAY", 0, 100);
-</pre>
-<pre>
+
+
+
+
+
 textSize(32);
 fill(0); // Fill color black
 text("LAX", 0, 40);
@@ -61,8 +64,8 @@ fill(126); // Fill color gray
 text("HKG", 0, 70);
 fill(255); // Fill color white
 text("PVG", 0, 100);
-</pre>
-<pre>
+
+
 textSize(64);
 fill(0, 140); // Fill black with low opacity
 text("8", 0, 60);
@@ -71,6 +74,11 @@ text("8", 30, 70);
 text("8", 45, 75);
 text("8", 60, 80);
 </pre>
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 <p>
 Another version of text() draws the characters inside a rectangle. In this use, the second and third parameters define the position of the upper-left corner of the box and fourth and fifth parameters define the width and height of the box. If the length of the text exceeds the dimensions of the defined box, the text will not display.
 </p>
@@ -82,12 +90,16 @@ Another version of text() draws the characters inside a rectangle. In this use, 
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
 text(s, 10, 10, 60, 80);
-</pre>
-<pre>
+
+
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
 text(s, 10, 10, 60, 55); // Box too small
 </pre>
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 <br /> 
 <br /> 
 <p>
@@ -112,10 +124,11 @@ To confirm the file was added correctly, select “Show Sketch Folder” from th
 <br /> 
 To make media files accessible from anywhere in a program, they are typically declared as globally available variables outside of setup() and draw(). Files are usually loaded inside setup() because they need only be loaded once and because it takes time to load them. Loading a file inside draw() reduces the frame rate of a program because it causes the file to reload each frame. Once a file is loaded in setup(), it may be utilized anywhere in the program. In most Processing programs, all files are loaded when the program starts.
 </p>
+<br /> 
+<br /> 
 <p>
 <h3>Vector Fonts</h3>
-<br /> 
-<br /> 
+
 To work with fonts different than the default, more functions are needed to prepare
 a font to be used with Processing. The createFont() function is used to convert a TrueType font (.ttf) or OpenType font (.otf) so that is can display through text(). The textFont() function is used to define the current font to display. Any compatible font installed on the computer running Processing or stored in the sketch’s data folder may be used. The following short program is used to print the list of the available installed fonts to the console:
 <pre>
@@ -123,6 +136,7 @@ String[] fontList = PFont.list();
 printArray(fontList);
 </pre>
 The printArray() function (p. 420) is used to write each font on a new line. The first few options printed to the console are general typographic classifications such as Serif, SansSerif, and Monospaced. Use these options to define a style, but not a specific font. When the list is generated on the computer used to write this book, a list of 573 font options are printed to the console. Your computer will produce different results depending on the operating system and custom fonts installed. The list starts with general font categories that will work across platforms, then continues with specific font names. A short excerpt from our list follows:
+<br />
 <pre>
 [0] "Serif"
 [1] "SansSerif"
@@ -140,7 +154,7 @@ The printArray() function (p. 420) is used to write each font on a new line. The
 </pre>
 Before a font is used in a program, it must be converted and set as the current font. Processing has a unique data type called PFont to store font data. Make a new variable of the type PFont and use the createFont() function to convert the font. The first parameter to createFont() is the name of the font to convert and the second parameter defines the base size of the font. (Optional third and fourth parameters are defined in the Reference.) The textFont() function must then be used to set the current font. On our development computer, to work with Ziggurat Black, list option 571 above, the following code is run:
 </p>
-<img src="imgs/12_08.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_08.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 60px;">
 <pre>
 PFont zigBlack;
 void setup() {
@@ -162,7 +176,7 @@ To make this program work on your computer, you will likely need to modify line 
 <br /> 
 To ensure a font will load on all computers, regardless if the font is installed, add the file to the sketch’s data folder. (Fonts in the data folder don’t print in the console list as demonstrated in code 12-07.) Follow the instructions on page 10 to add a font to the data folder. When fonts inside the data folder are used, the complete file name, including the data type extension, needs to be written as the parameter to createFont(). The following example is similar to the prior example, but it uses an OpenType font inside the data folder. It uses Source Code Pro, an open source typeface that can be found online and downloaded through a web browser.
 </p>
-<img src="imgs/12_09.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_09.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 60px;">
 <pre>
 PFont sourceLight;
 void setup() {
@@ -181,7 +195,7 @@ text("TXL", 0, 100);
 <p> 
 To use two fonts in one program, create two PFont variables and use the textFont() function to change the current font. Based on the prior two examples, the Ziggurat-Black font loads from its location on the local computer and Source Code Pro loads from the data folder.
 </p>
-<img src="imgs/12_10.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_10.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 100px;">
 <pre>
 PFont zigBlack, sourceLight;
 void setup() {
@@ -202,8 +216,6 @@ text("TXL", 0, 100);
 </pre>
 <p>
 <h3>Pixel fonts</h3>
-<br /> 
-<br /> 
 Processing can also work with fonts that it converts into small image textures. These fonts aren’t as flexible and crisp as fonts converted for Processing with createFont() and used with the default renderer, but they are more optimized for use with the P2D and P3D renderers. The difference between renderers is discussed on page 547. The pixel font format used by Processing was developed at the MIT Media Lab in the mid 1990s in the Visual Language Workshop (VLW). The VLW format stores each alphanumeric character as a grid of pixels. It is a quick way to render text and makes it possible to include a font with a sketch without including the vector data.
 <br /> 
 <br /> 
@@ -212,7 +224,7 @@ To convert a font to the VLW format, select the “Create Font” option from th
 <br /> 
 The following example uses the same font as the prior createFont() example. The only difference is the replacement of that function with loadFont(). To run these examples, first use the “Create Font” tool to turn a font into a VLW file. Change the name of the parameter to loadFont() to match the name of the VLW file created.
 </p>
-<img src="imgs/12_11.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/12_11.png" style= "width: 100px; height: 100px; float: left; margin-right: 20px; margin-bottom: 60px;">
 <pre>
 PFont zigBlack;
 void setup() {
@@ -231,7 +243,7 @@ text("TXL", 0, 100);
 <p>
 When the font is drawn at a different size from the size at which it was created, it is scaled and therefore does not always look as crisp and smooth. For example, if a font is created at 12 pixels and is displayed at 96 pixels, it will appear blurry.
 </p>
-<img src="imgs/12_12.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_12.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 60px;">
 <pre>
 PFont zigBlack;
 void setup() {
@@ -259,7 +271,7 @@ For the best results, draw a font at the size at which it was created. If the sa
 Processing includes functions to control the leading (the spacing between lines of text) and alignment. Processing can also calculate the width of any character or group of characters, a useful technique for arranging shapes and typographic elements.
 The textLeading() function sets the spacing between lines of text. It has one parameter that defines this space in units of pixels.
 </p>
-<img src="imgs/12_13.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_13.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 30px;">
 <pre>
 String lines = "L1 L2 L3";
 textSize(12);
@@ -274,7 +286,7 @@ text(lines, 70, 15, 30, 100);
 <p> 
 Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
 </p>
-<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 30px;">
 <pre>
 fill(0);
 textSize(12);
@@ -292,7 +304,7 @@ The settings for textSize(), textLeading(), and textAlign() will be used for all
 <br /> 
 The textWidth() function calculates and returns the pixel width of any character or text string. This number is calculated from the current font and size as defined by the textFont() and textSize() functions. Because the letters of every font are a different size and letters within many fonts have different widths, this function is the only way to know how wide a string or character is when displayed on screen. For this reason, always use textWidth() to position elements relative to text, rather than hard-coding them into your program.
 </p>
-<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left;">
+<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 60px;">
 <pre>
 String s = "AEIOU";
 float tw; // Text width
@@ -314,13 +326,12 @@ Drawing letters to the screen becomes more engaging when used in combination wit
 </p>
 <div style ="float:left; width: 120px;">
 <img src="imgs/12_16_1.png" style= "width: 100px; height: 100px;">
-<br /> 
-<br /> 
 <img src="imgs/12_16_2.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
 <br /> 
-
+<br /> 
+    <br /> 
 </div>
 <pre>
 String letters = "";
@@ -346,7 +357,7 @@ letters = letters + key;
 }
 }
 </pre>
-<div style = "float: left; width: 120px;">
+<div style = "float: left; width: 120px; margin-bottom: 150px;">
 <img src="imgs/12_17_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_17_2.png" style= "width: 100px; height: 100px;">
 </div>
@@ -391,8 +402,13 @@ Typographic elements can be assigned behaviors that define a personality in rela
 <img src="imgs/12_18_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_18_2.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_18_3.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br /> 
+<img src="imgs/12_19_1.png" style= "width: 100px; height: 100px;">
+<img src="imgs/12_19_2.png" style= "width: 100px; height: 100px;">
+<img src="imgs/12_19_3.png" style= "width: 100px; height: 100px;">
 </div>
-<pre>
+<pre style="margin-bottom: 210px;">
 void setup() {
 size(100, 100);
 textSize(24);
@@ -403,15 +419,6 @@ background(204);
 text("avoid", width-mouseX, height-mouseY);
 }
 </pre>
-
-<div style ="float:left; width: 120px;">
-<img src="imgs/12_19_1.png" style= "width: 100px; height: 100px;">
-<img src="imgs/12_19_2.png" style= "width: 100px; height: 100px;">
-<img src="imgs/12_19_3.png" style= "width: 100px; height: 100px;">
-<br /> 
-<br /> 
-<br /> 
-</div>
 <pre>
 float x = 33;
 float y = 60;
@@ -433,10 +440,13 @@ y += random(-2, 2);
 text("tickle", x, y);
 }
 </pre>
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 <p> 
 <h3>Notes</h3>
-<br /> 
-<br /> 
+
 1. Ellen Lupton, Thinking with Type: A Critical Guide for Designers, Writers, Editors, & Students (Princeton Architectural Press, 2004), p. 29.
 </p>
 	<p>&nbsp;</p>
