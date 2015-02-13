@@ -18,11 +18,9 @@ Letters on screen are created by setting the color of pixels. The quality of the
 The proliferation of personal computers in the mid-1980s spawned a period of rapid typographic experimentation. Digital typefaces are software, and the old rules of metal and photo type no longer apply. The Dutch typographers known as LettError explain, “The industrial methods of producing typography meant that all letters had to be identical… Typography is now produced with sophisticated equipment that doesn’t impose such rules. The only limitations are in our expectations.”1 LettError expanded the possibilities of typography with their typeface Beowolf (p. 131). It printed every letter differently so that each time an A is printed, for example, it will have a different shape. During this time, typographers such as Zuzana Licko and Barry Deck created innovative typefaces with the assistance of new software tools. The flexibility of software has enabled extensive font revivals and historic homages such as Adobe Garamond from Robert Slimbach and The Proteus Project from Jonathan Hoefler. Typographic nuances such as ligatures—connections between letter pairs such as
 fi and æ—made impractical by modern mechanized typography are flourishing again through software font tools.
 </p>
-
+<br /> 
 <p>
 <h3>Draw text</h3>
-<br /> 
-<br /> 
 The text() function is used to draw letters, words, and paragraphs to the screen. In the simplest use, the first parameter can be a String, char, int, or float. The second and third parameters set the position of the text. By default, the second parameter defines the distance from the left edge of the window; the third parameter defines the distance from the text’s baseline to the top of the window. The textSize() function defines the size the letters will draw in units of pixels. The number used to define the text size will not be the precise height of each letter, the difference depends on the design of each font. For instance, the statement textSize(30); won’t necessarily draw a capital H at 30 pixels high. The fill() function controls the color and transparency of text. This function affects text the same way it affects shapes such as rect() and ellipse(), but text is not affected by stroke().
 </p>
 <div style="float: left; width: 120px;">
@@ -39,6 +37,8 @@ The text() function is used to draw letters, words, and paragraphs to the screen
 <br /> 
 <br /> 
 <br /> 
+<br /> 
+<br /> 
 </div>
 <pre>
 fill(0);
@@ -49,14 +49,11 @@ text("FRA", 0, 100); // Write "FRA" at coordinate (0,100)
 
 
 
-
 textSize(32); // Set text size to 32
 fill(0);
 text("LAX", 0, 40);
 text("ORD", 0, 70);
 text("DAY", 0, 100);
-
-
 
 
 
@@ -84,6 +81,7 @@ Another version of text() draws the characters inside a rectangle. In this use, 
 <img src="imgs/12_05.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_06.png" style= "width: 100px; height: 100px;">
 </div>
+<br /> 
 <pre>
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
@@ -95,13 +93,7 @@ text(s, 10, 10, 60, 80);
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
 text(s, 10, 10, 60, 55); // Box too small
-</pre>
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<br /> 
+</pre> 
 <p>
 The examples in this chapter are the first to load external media into a sketch. Up to now, all examples have used only graphics generated within Processing through drawing functions such as line() and ellipse(). Processing is capable of loading and displaying other media, including fonts, images, vector files, formatted data, and sounds. While this chapter focuses on loading fonts and other chapters discuss specific information about other media types, there are a few things about loading media that apply to all categories. These similarities are discussed here.
 <br /> 
@@ -155,6 +147,7 @@ The printArray() function (p. 420) is used to write each font on a new line. The
 </pre>
 Before a font is used in a program, it must be converted and set as the current font. Processing has a unique data type called PFont to store font data. Make a new variable of the type PFont and use the createFont() function to convert the font. The first parameter to createFont() is the name of the font to convert and the second parameter defines the base size of the font. (Optional third and fourth parameters are defined in the Reference.) The textFont() function must then be used to set the current font. On our development computer, to work with Ziggurat Black, list option 571 above, the following code is run:
 </p>
+<br /> 
 <img src="imgs/12_08.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 110px;">
 <pre>
 PFont zigBlack;
@@ -177,6 +170,7 @@ To make this program work on your computer, you will likely need to modify line 
 <br /> 
 To ensure a font will load on all computers, regardless if the font is installed, add the file to the sketch’s data folder. (Fonts in the data folder don’t print in the console list as demonstrated in code 12-07.) Follow the instructions on page 10 to add a font to the data folder. When fonts inside the data folder are used, the complete file name, including the data type extension, needs to be written as the parameter to createFont(). The following example is similar to the prior example, but it uses an OpenType font inside the data folder. It uses Source Code Pro, an open source typeface that can be found online and downloaded through a web browser.
 </p>
+<br /> 
 <img src="imgs/12_09.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 110px;">
 <pre>
 PFont sourceLight;
@@ -196,7 +190,8 @@ text("TXL", 0, 100);
 <p> 
 To use two fonts in one program, create two PFont variables and use the textFont() function to change the current font. Based on the prior two examples, the Ziggurat-Black font loads from its location on the local computer and Source Code Pro loads from the data folder.
 </p>
-<img src="imgs/12_10.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 110px;">
+<br /> 
+<img src="imgs/12_10.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 140px;">
 <pre>
 PFont zigBlack, sourceLight;
 void setup() {
@@ -225,6 +220,7 @@ To convert a font to the VLW format, select the “Create Font” option from th
 <br /> 
 The following example uses the same font as the prior createFont() example. The only difference is the replacement of that function with loadFont(). To run these examples, first use the “Create Font” tool to turn a font into a VLW file. Change the name of the parameter to loadFont() to match the name of the VLW file created.
 </p>
+<br /> 
 <img src="imgs/12_11.png" style= "width: 100px; height: 100px; float: left; margin-right: 20px; margin-bottom: 110px;">
 <pre>
 PFont zigBlack;
@@ -244,6 +240,7 @@ text("TXL", 0, 100);
 <p>
 When the font is drawn at a different size from the size at which it was created, it is scaled and therefore does not always look as crisp and smooth. For example, if a font is created at 12 pixels and is displayed at 96 pixels, it will appear blurry.
 </p>
+<br /> 
 <img src="imgs/12_12.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 120px;">
 <pre>
 PFont zigBlack;
@@ -264,14 +261,13 @@ text("A", 20, 90);
 <p>
 For the best results, draw a font at the size at which it was created. If the same font needs to be used at multiple sizes, consider rendering and loading it at these precise sizes. When VLW fonts are used in 3D, letters with different z-coordinates can sometimes occlude other letters. This can be corrected with a hint, see page 547.
 </p>
-
+<br /> 
 <p>
 <h3>Text attributes</h3>
-<br /> 
-<br /> 
 Processing includes functions to control the leading (the spacing between lines of text) and alignment. Processing can also calculate the width of any character or group of characters, a useful technique for arranging shapes and typographic elements.
 The textLeading() function sets the spacing between lines of text. It has one parameter that defines this space in units of pixels.
 </p>
+<br /> 
 <img src="imgs/12_13.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 30px;">
 <pre>
 String lines = "L1 L2 L3";
@@ -288,6 +284,7 @@ text(lines, 70, 15, 30, 100);
 Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
 </p>
 <img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 30px;">
+<br /> 
 <pre>
 fill(0);
 textSize(12);
@@ -305,7 +302,8 @@ The settings for textSize(), textLeading(), and textAlign() will be used for all
 <br /> 
 The textWidth() function calculates and returns the pixel width of any character or text string. This number is calculated from the current font and size as defined by the textFont() and textSize() functions. Because the letters of every font are a different size and letters within many fonts have different widths, this function is the only way to know how wide a string or character is when displayed on screen. For this reason, always use textWidth() to position elements relative to text, rather than hard-coding them into your program.
 </p>
-<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 110px;">
+<br /> 
+<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 100px;">
 <pre>
 String s = "AEIOU";
 float tw; // Text width
@@ -323,6 +321,7 @@ rect(4, 78, tw, 5);
 <h3>Typing</h3>
 Drawing letters to the screen becomes more engaging when used in combination with the keyboard. The keyPressed() event function introduced on page 97 can be used to record each letter as it is typed. The following two examples use this function to read and analyze input from the keyboard by using the String methods introduced in the Text chapter (p. 143). In both, the String variable letters starts empty. Each key typed is added to the end of the string. The first example displays the string as it grows as keys are pressed and removes letters from the end when backspace is pressed. The second example builds on the first—when the Return or Enter key is pressed, the program checks if the word “gray” or “black” was typed. If one of these words was input, the background changes to that value.
 </p>
+<br /> 
 <div style ="float:left; width: 150px;">
 <img src="imgs/12_16_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_16_2.png" style= "width: 100px; height: 100px;">
@@ -330,7 +329,10 @@ Drawing letters to the screen becomes more engaging when used in combination wit
 <br /> 
 <br /> 
 <br /> 
-    <br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
 </div>
 <pre>
 String letters = "";
@@ -356,7 +358,7 @@ letters = letters + key;
 }
 }
 </pre>
-<div style = "float: left; width: 120px; margin-bottom: 150px;">
+<div style = "float: left; width: 120px; margin-bottom: 180px;">
 <img src="imgs/12_17_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_17_2.png" style= "width: 100px; height: 100px;">
 </div>
@@ -397,6 +399,7 @@ Many artists and designers are fascinated with type and have created unique ways
 <br /> 
 Typographic elements can be assigned behaviors that define a personality in relation to the mouse or keyboard. A word can express aggression by moving quickly toward the mouse, or moving away slowly can express timidity. The following examples demonstrate basic applications of this area. In the first, the word avoid stays away from the mouse because its position is set to the inverse of the cursor position. In the second, the word tickle jitters when the cursor hovers over its position.
 </p>
+<br /> 
 <div style ="float:left; width: 120px;">
 <img src="imgs/12_18_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_18_2.png" style= "width: 100px; height: 100px;">
@@ -439,10 +442,7 @@ y += random(-2, 2);
 text("tickle", x, y);
 }
 </pre>
-<br /> 
-<br /> 
-<br /> 
-<br /> 
+
 <p> 
 <h3>Notes</h3>
 
