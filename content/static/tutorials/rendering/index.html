@@ -77,17 +77,15 @@ void draw() {
 <p>
 Based on this example, the most obvious differences to working with PGraphics objects are the additional lines of code and the extra step of prepending each drawing function with the name of the object. This example is simplified to demonstrate the mechanics of the technique, but it doesn’t do anything to justify it. The following example reveals a typical issue that creating a new drawing surface can fix. The goal of the program is to use a crosshair to show the position of the cursor and to draw a new circle to the screen each time the mouse is clicked. For the circles to accumulate on screen, the background() function isn’t used. This has the unintended effect of also accumulating the crosshairs as seen in this code:
 </p>
-<img src="imgs/35_04_1.png" style= "width: 100px; height: 100px; float: left;">
+<div style = "float: left;">
+<img src="imgs/35_04_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
+<img src="imgs/35_04_2.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<img src="imgs/35_04_2.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_04_3.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_04_3.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 void setup() {
   size(100, 100);
@@ -109,22 +107,18 @@ void mousePressed() {
 <p>
 To allow for the circles to accumulate in the display window, but to have a different effect for the crosshairs, a new drawing surface is created to render the circles, while the crosshairs are drawn in the main display window. The surface with the circles is redrawn each frame in draw(), followed by the lines so they are on top of the circles layer.
 </p>
-<img src="imgs/35_05_1.png" style= "width: 100px; height: 100px; float: left;">
+<div style = "float: left;">
+<img src="imgs/35_05_1.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br />  
+<img src="imgs/35_05_2.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br />  
+<img src="imgs/35_05_3.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_05_2.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_05_3.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_05_4.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_05_4.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 PGraphics circles;
 
@@ -203,22 +197,18 @@ This example clarifies two things about working with PGraphics objects. First, e
 <h3>OpenGL surfaces</h3>
 Just as the the size() function defines the main renderer for a program, each createGraphics() function defines the renderer for the PGraphics object with a third, optional parameter. When the third parameter isn’t used, as in the examples seen already in this chapter, the default renderer is set. The P2D and P3D renderers are the other options. For instance, to create a new drawing surface for 3D shapes, use P3D as the third parameter to size() and createGraphics():
 </p>
-<img src="imgs/35_07_1.png" style= "width: 100px; height: 100px; float: left;">
+<div style = "float: left;">
+<img src="imgs/35_07_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
+<img src="imgs/35_07_2.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<img src="imgs/35_07_2.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_07_3.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_07_3.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br />
-<br /> 
-<br /> 
-<img src="imgs/35_07_4.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_07_4.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 PGraphics cube;
 
@@ -266,17 +256,15 @@ void draw() {
 <h3>Combine surfaces</h3>
 The final section in this chapter demonstrates techniques for combining more than one drawing surface together within the display window. This builds on the code earlier in the chapter, but extends it further. The next example builds on code 35-07 with two changes. First, another drawing surface was added and second, the background() was removed from each layer and replaced with clear(). The clear() method is similar to defining the background because it erases everything in the drawing surface, but it makes each pixel transparent instead of filling each with a color. Here, clear() is used to make it easier to combine the two drawing surfaces together because the shapes drawn into each buffer are surrounded by transparent pixels. Transparent backgrounds aren’t possible for the display window, the default PGraphics object. They are one of the primary advantages of creating a new drawing surface.
 </p>
-<img src="imgs/35_09_1.png" style= "width: 100px; height: 100px; float: left;">
+<div style = "float: left;">
+<img src="imgs/35_09_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br />
+<img src="imgs/35_09_2.png" style= "width: 100px; height: 100px;">
 <br /> 
-<br /> 
-<img src="imgs/35_09_2.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_09_3.png" style= "width: 100px; height: 100px; float: left;">
+<br />  
+<img src="imgs/35_09_3.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 PGraphics cubeA;
 PGraphics cubeB;
@@ -326,22 +314,18 @@ void drawCubeB() {
 <p>
 Move the cursor around in the display window to modify the transparency of each layer. The visibility of each other is set by the tint() that precedes the image() function. A quick look at the drawCubeA() and drawCubeB() functions reveal there might be a better way to write the program. Both functions are nearly identical with three differences: the name of the surface to draw to, the rotation amount for the x-axis, the rotation amount for the y-axis. These values can be passed into a function as parameters so a single function can be used in place of two. The unknown syntax is how to pass in a PGraphics object as a parameter to a function. Fortunately, it follows the same pattern as all parameters, the name of the data type is followed by a variable name. The updated program follows.
 </p>
-<img src="imgs/35_10_1.png" style= "width: 100px; height: 100px; float: left;">
+<div style = "float: left;">
+<img src="imgs/35_10_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br />
+<img src="imgs/35_10_2.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<img src="imgs/35_10_2.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_10_3.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_10_3.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_10_4.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_10_4.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 PGraphics cubeA;
 PGraphics cubeB;
@@ -382,22 +366,18 @@ When the cubeA object is passed into the drawCube() function in the second line 
 <br /> 
 The next example is similar to the previous example, but it blends the two drawing surfaces together with the blendMode() function. The blend mode is defined at the end of setup() and is then applied for the duration of the program.
 </p>
-<img src="imgs/35_11_1.png" style= "width: 100px; height: 100px; float: left;">
+<div style="float: left;">
+<img src="imgs/35_11_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
+<img src="imgs/35_11_2.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br /> 
-<img src="imgs/35_11_2.png" style= "width: 100px; height: 100px; float: left;">
-<br /> 
-<br /> 
-<br /> 
-<br /> 
-<img src="imgs/35_11_3.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_11_3.png" style= "width: 100px; height: 100px;">
 <br /> 
 <br />
-<br /> 
-<br /> 
-<img src="imgs/35_11_4.png" style= "width: 100px; height: 100px; float: left;">
+<img src="imgs/35_11_4.png" style= "width: 100px; height: 100px;">
+</div>
 <pre>
 PGraphics cubeA;
 PGraphics cubeB;
