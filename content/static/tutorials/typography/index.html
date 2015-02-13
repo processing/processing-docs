@@ -37,8 +37,7 @@ The text() function is used to draw letters, words, and paragraphs to the screen
 <br /> 
 <br /> 
 <br /> 
-<br /> 
-<br /> 
+
 </div>
 <pre>
 fill(0);
@@ -64,7 +63,6 @@ fill(126); // Fill color gray
 text("HKG", 0, 70);
 fill(255); // Fill color white
 text("PVG", 0, 100);
-
 
 textSize(64);
 fill(0, 140); // Fill black with low opacity
@@ -283,7 +281,7 @@ text(lines, 70, 15, 30, 100);
 <p> 
 Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
 </p>
-<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 30px;">
+<img src="imgs/12_14.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 50px;">
 <br /> 
 <pre>
 fill(0);
@@ -303,7 +301,7 @@ The settings for textSize(), textLeading(), and textAlign() will be used for all
 The textWidth() function calculates and returns the pixel width of any character or text string. This number is calculated from the current font and size as defined by the textFont() and textSize() functions. Because the letters of every font are a different size and letters within many fonts have different widths, this function is the only way to know how wide a string or character is when displayed on screen. For this reason, always use textWidth() to position elements relative to text, rather than hard-coding them into your program.
 </p>
 <br /> 
-<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 100px;">
+<img src="imgs/12_15.png" style= "width: 100px; height: 100px; margin-right: 20px; float: left; margin-bottom: 90px;">
 <pre>
 String s = "AEIOU";
 float tw; // Text width
@@ -322,7 +320,7 @@ rect(4, 78, tw, 5);
 Drawing letters to the screen becomes more engaging when used in combination with the keyboard. The keyPressed() event function introduced on page 97 can be used to record each letter as it is typed. The following two examples use this function to read and analyze input from the keyboard by using the String methods introduced in the Text chapter (p. 143). In both, the String variable letters starts empty. Each key typed is added to the end of the string. The first example displays the string as it grows as keys are pressed and removes letters from the end when backspace is pressed. The second example builds on the first—when the Return or Enter key is pressed, the program checks if the word “gray” or “black” was typed. If one of these words was input, the background changes to that value.
 </p>
 <br /> 
-<div style ="float:left; width: 150px;">
+<div style ="float:left; width: 120px;">
 <img src="imgs/12_16_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_16_2.png" style= "width: 100px; height: 100px;">
 <br /> 
@@ -358,6 +356,7 @@ letters = letters + key;
 }
 }
 </pre>
+<br /> 
 <div style = "float: left; width: 120px; margin-bottom: 180px;">
 <img src="imgs/12_17_1.png" style= "width: 100px; height: 100px;">
 <img src="imgs/12_17_2.png" style= "width: 100px; height: 100px;">
@@ -444,6 +443,7 @@ text("tickle", x, y);
 </pre>
 
 <p> 
+<br /> 
 <h3>Notes</h3>
 
 1. Ellen Lupton, Thinking with Type: A Critical Guide for Designers, Writers, Editors, & Students (Princeton Architectural Press, 2004), p. 29.
