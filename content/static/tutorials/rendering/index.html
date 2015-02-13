@@ -35,6 +35,9 @@ New drawing surfaces can be the same size as the display window, but they can al
     background(0); 
     ellipse(50, 50, 75, 75); 
     </pre>
+<br />
+<br />
+<br />
 
 <p>
 To draw the same shape into a new surface, first create a new PGraphics object, then draw to it by typing the name of the object and dot operator before the name of the drawing functions. This new surface is placed in the display window with the image() function.
@@ -57,7 +60,15 @@ The createGraphics() function generates the new drawing surface at the size in p
 <br /> 
 In practice, new PGraphics layers are most often used with programs that have setup() and draw(). To work together, the PGraphics object is declared as global, it is created inside setup(), then can be modified in draw().
 </p>
-<img src="imgs/35_03.png" style= "width: 100px; height: 100px; float: left;">
+<div style="float: left;">
+<img src="imgs/35_03.png" style= "width: 100px; height: 100px;">
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+</div>
 <pre>
 PGraphics circle;
 
@@ -104,6 +115,14 @@ void mousePressed() {
   ellipse(mouseX, mouseY, 40, 40);
 }
 </pre>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <p>
 To allow for the circles to accumulate in the display window, but to have a different effect for the crosshairs, a new drawing surface is created to render the circles, while the crosshairs are drawn in the main display window. The surface with the circles is redrawn each frame in draw(), followed by the lines so they are on top of the circles layer.
 </p>
@@ -144,6 +163,16 @@ void mousePressed() {
   circles.endDraw();
 }
 </pre>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <p>
 To allow for the circles to accumulate in the display window, but to have a different effect for the crosshairs, a new drawing surface is created to render the circles, while the crosshairs are drawn in the main display window. The surface with the circles is redrawn each frame in draw(), followed by the lines so they are on top of the circles layer.
 </p>
@@ -235,6 +264,14 @@ void drawCube() {
   cube.endDraw();
 }
 </pre>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <p>
 As implied by the previous example, the only rule to remember about selecting renderers for new drawing surfaces is to match the renderer defined in size() and createGraphics(). The exception to this rule is using the default renderer and P2D as alternate options when P3D is the main renderer defined in size(). For example, the following code won’t run because it’s not possible to run a 3D renderer when the default is used as the primary renderer:
     <pre>
@@ -264,6 +301,22 @@ The final section in this chapter demonstrates techniques for combining more tha
 <br /> 
 <br />  
 <img src="imgs/35_09_3.png" style= "width: 100px; height: 100px;">
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+    
 </div>
 <pre>
 PGraphics cubeA;
@@ -360,6 +413,8 @@ void drawCube(PGraphics cube, float xd, float yd) {
   cube.endDraw(); 
 } 
 </pre>
+<br />
+<br />
 <p>
 When the cubeA object is passed into the drawCube() function in the second line of draw(), the drawCube() functions renders into that object. When the cubeB object is passed into the drawCube() function in the third line of draw(), the drawCube() function renders into that object. This ability is the power of the revised program; it shows a modular technique for drawing into any PGraphics object through parameterization.
 <br /> 
@@ -409,6 +464,10 @@ void drawCube(PGraphics cube, float xd, float yd) {
   cube.endDraw();
 }
 </pre>
+<br />
+<br />
+<br />
+<br />
 <p>
 In general, blend modes and controlling transparency with tint() are the primarily ways to easily mix the pixels from two PGraphics objects together in the main display window. Try experimenting with this using the last example in the chapter. Keep in mind that the default blend mode is blendMode(BLEND) to reset to the way a program draws. Also, some blend modes don’t work with all background values. For example, if the background is white, then using blendMode(LIGHTEST) will always be a white screen because no pixel will ever be lighter than the background value. Conversely, blendMode(DARKEST) and blendMode(MULTIPLY) don’t have results with a black background.
 </p>
