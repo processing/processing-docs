@@ -103,7 +103,7 @@ To invert the value of the mouse, subtract the mouseX value from the width of th
 </p>
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_05_1.png" style= "width: 100px; height: 100px;">
-    <br />
+<br />
 <img src="imgs/07_05_2.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -135,13 +135,12 @@ println(pmouseX - mouseX);
 </pre>
 Draw a line from the previous mouse position to the current position to show the changing position in one frame and reveal the speed and direction of the mouse. When the mouse is not moving, a point is drawn, but quick mouse movements create long lines.
 </p>
-
+<br /> 
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_07_1.png" style= "width: 100px; height: 100px;">
     <br />
 <img src="imgs/07_07_2.png" style= "width: 100px; height: 100px;">
 </div>
-<br /> 
 <pre>
 void setup() {
 size(100, 100);
@@ -152,7 +151,6 @@ background(204);
 line(mouseX, mouseY, pmouseX, pmouseY);
 }
 </pre>
-<br /> 
 <br /> 
 <br /> 
 <p>
@@ -209,6 +207,7 @@ rect(66, 0, 33, 100); // Right
 <br /> 
 <br />
 <br /> 
+<br /> 
 <p>
 Use the logical operator && with an if structure to select a rectangular region of the screen. As demonstrated in the following example, when a relational expression
 is made to test each edge of a rectangle (left, right, top, bottom) and these are concatenated with a logical AND, the entire relational expression is true only when the cursor is inside the rectangle.
@@ -236,6 +235,7 @@ fill(0);
 rect(40, 20, 40, 60);
 }
 </pre>
+<br /> 
 <p> 
 This code asks, “Is the cursor to the right of the left edge and is the cursor to the left of the right edge and is the cursor beyond the top edge and is the cursor above the bottom?” The code for the next example asks a set of similar questions and combines them with the keyword else to determine which one of the defined areas contains the cursor.
 </p>
@@ -275,7 +275,7 @@ rect(50, 50, 50, 50); // Lower-right
 <br />
 <br />
 <br />
-
+<br />
 <p>
 <h3>Mouse buttons</h3>
 Computer mice and other related input devices typically have between one and
@@ -323,6 +323,9 @@ fill(255); // White
 rect(25, 25, 50, 50);
 }
 </pre>
+<br />
+<br />
+<br />
 <br />
 <br />
 <br />
@@ -405,6 +408,9 @@ x++; // add 1 to x
 } line(x, 20, x-60, 80);
 }
 </pre>
+<br />
+<br />
+<br />
 <br />
 <br />
 <br />
@@ -528,7 +534,10 @@ angle = (key - 32) * 3;
 arc(50, 50, 66, 66, 0, radians(angle));
 }
 </pre>
-
+<br />
+<br />
+<br />
+<br />
 <p> 
 <h3>Coded keys</h3> 
 In addition to reading key values for numbers, letters, and symbols, Processing can also read the values from other keys including the arrow keys and the Alt, Control, Shift, Backspace, Tab, Enter, Return, Escape, and Delete keys. The variable keyCode stores the ALT, CONTROL, SHIFT, UP, DOWN, LEFT, and RIGHT keys as constants. Before determining which coded key is pressed, it’s necessary to check first to see if the key is coded. The expression key==CODED is true if the key is coded and false otherwise. Even though not alphanumeric, the keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) will not be identified as a coded key. If you’re making cross-platform projects, note that the Enter key is commonly used on PCs and UNIX and the Return key is used on Macintosh. Check for both Enter and Return to make sure your program will work for all platforms (see code 12-17).
@@ -601,6 +610,10 @@ gray += 20;
 <br /> 
 <br /> 
 <br /> 
+<br />
+<br />
+<br />
+
 <p> 
 The following example is the same as the one above, but the gray variable is set in the mouseReleased() event function, which is called once every time a button is released. This difference can be seen only by running the program and clicking the mouse button. Keep the mouse button pressed for a long time and notice that the background value changes only when the button is released.
 </p>
@@ -625,6 +638,10 @@ gray += 20;
 <br /> 
 <br /> 
 <br /> 
+<br />
+<br />
+<br />
+
 <p> 
 It is generally not a good idea to draw inside an event function, but it can be done under certain conditions. Before drawing inside these functions, it’s important to
 think about the flow of the program. In this example, squares are drawn inside mousePressed() and they remain on screen because there is no background() inside draw(). But if background() is used, visual elements drawn within one of the mouse event functions will appear on screen for only a single frame, or, by default, 1/60th of a second. In fact, you’ll notice this example has nothing at all inside draw(), but it needs to be there to force Processing to keep listening for the events. If a background() function were run inside draw(), the rectangles would flash onto the screen and disappear.
@@ -647,6 +664,7 @@ rect(mouseX, mouseY, 33, 33);
 <br /> 
 <br /> 
 <br /> 
+<br />
 <p> 
 The code inside the mouseMoved() and mouseDragged() event functions are run when there is a change in the mouse position. The code in the mouseMoved() block is run at the end of each frame when the mouse moves and no button is pressed. The code in the mouseDragged() block does the same when the mouse button is pressed. If the mouse stays in the same position from frame to frame, the code inside these functions does not run. In this example, the gray circle follows the mouse when the button is not pressed, and the black circle follows the mouse when a mouse button is pressed.
 </p>
@@ -692,6 +710,7 @@ keyReleased() Code inside this block is run one time when any key is released
 <br />
 Each time a key is pressed, the code inside the keyPressed() block is run once. Within this block, it’s possible to test which key has been pressed and to use this value for any purpose. If a key is held down for an extended time, the code inside the keyPressed() block might run many times in a rapid succession because most operating systems will take over and repeatedly call the keyPressed() function. The amount of time it takes to start repeating and the rate of repetitions will be different from computer to computer, depending on the keyboard preference settings. In this example, the value of the boolean variable drawT is set from false to true when the T key is pressed; this causes the lines of code to render the rectangles in draw() to start running.
 </p>
+<br />
 <div style="float:left; width: 120px; margin-bottom: 40px;"> 
 <img src="imgs/07_26_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -719,6 +738,7 @@ drawT = true;
 <p> 
 Each time a key is released, the code inside the keyReleased() block is run once. The following example builds on the previous code; each time the key is released the boolean variable drawT is set back to false to stop the shape from displaying within draw().
 </p>
+<br />
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_27-1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -755,6 +775,7 @@ drawT = false;
 As discussed previously, programs written with draw() display frames to the screen sixty frames each second. The frameRate() function is used to set a limit on the number of frames that will display each second, and the noLoop() function can be used to stop draw() from looping. The additional functions loop() and redraw() provide more options when used in combination with the mouse and keyboard event functions.
 If a program has been paused with noLoop(), running loop() resumes its action. Because the event functions are the only elements that continue to run when a program is paused with noLoop(), the loop() function can be used within these events to continue running the code in draw(). The following example runs the draw() function for about two seconds each time a mouse button is pressed and then pauses the program after that time has elapsed.
 <br /> 
+<br />
 <pre>
 int frame = 0;
 void setup() {
@@ -779,6 +800,8 @@ frame = 0;
 
 The redraw() function runs the code in draw() one time and then halts the execution. It’s helpful when the display needn’t be updated continuously. The following example runs the code in draw() once each time a mouse button is pressed.
 </p>
+<br />
+<br />
 <pre>
 void setup() {
 size(100, 100);
@@ -797,6 +820,7 @@ redraw(); // Run the code in draw one time
 <h3>Cursor icon</h3> 
 The cursor can be hidden with the noCursor() function and can be set to appear as a different icon or image with the cursor() function. When the noCursor() function is run, the cursor icon disappears as it moves into the display window. To give feedback about the location of the cursor within the software, a custom cursor can be drawn and controlled with the mouseX and mouseY variables.
 <br /> 
+<br />
 <pre>
 void setup() {
 size(100, 100);
