@@ -59,7 +59,6 @@ ellipse(mouseX, mouseY, 33, 33);
 <br /> 
 <br /> 
 <br /> 
-<br />
 
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_03_1.png" style= "width: 100px; height: 100px;">
@@ -78,7 +77,6 @@ ellipse(mouseX+20, 50, 33, 33); // Middle circle
 ellipse(mouseX-20, 84, 33, 33); // Bottom circle
 }
 </pre>
-<br /> 
 <br /> 
 <br /> 
 <br /> 
@@ -104,6 +102,7 @@ ellipse(mouseX*2, 84, 33, 33); // Bottom circle
 <p>
 To invert the value of the mouse, subtract the mouseX value from the width of the window and subtract the mouseY value from the height of the screen.
 </p>
+<br /> 
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_05_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -218,7 +217,7 @@ Use the logical operator && with an if structure to select a rectangular region 
 is made to test each edge of a rectangle (left, right, top, bottom) and these are concatenated with a logical AND, the entire relational expression is true only when the cursor is inside the rectangle.
 </p>
 <br /> 
-<div style="float:left; width: 120px;"> 
+<div style="float:left; width: 120px; margin-bottom: 10px;"> 
 <img src="imgs/07_10_1.png" style= "width: 100px; height: 100px;">
 <br />
 <img src="imgs/07_10_2.png" style= "width: 100px; height: 100px;">
@@ -240,7 +239,7 @@ fill(0);
 rect(40, 20, 40, 60);
 }
 </pre>
-<br /> 
+
 <p> 
 This code asks, “Is the cursor to the right of the left edge and is the cursor to the left of the right edge and is the cursor beyond the top edge and is the cursor above the bottom?” The code for the next example asks a set of similar questions and combines them with the keyword else to determine which one of the defined areas contains the cursor.
 </p>
@@ -363,7 +362,6 @@ rect(25, 25, 50, 50);
 <br />
 <br />
 <br />
-<br />
 <p>
 Not all mice have multiple buttons, and if software is distributed widely, the interaction should not rely on detecting which button is pressed.
 </p>
@@ -420,6 +418,7 @@ x++; // add 1 to x
 <br />
 <br />
 <br />
+<br /> 
 <p>
 The key variable stores a single alphanumeric character. Specifically, it holds the most recently pressed key. The key can be displayed on screen with the text() function (p. 150).
 </p>
@@ -475,10 +474,11 @@ ellipse(50, 50, 50, 50);
 }
 </pre>
 <br /> 
-<br /> 
+
 
 <p>
 The previous example works with an uppercase A, but not if the lowercase letter is pressed. To check for both uppercase and lowercase letters, extend the relational expression with a logical OR, the || relational operator. Line 9 in the previous program would be changed to
+<br /> 
 <br /> 
 <pre>
 if ((keyPressed == true) && ((key == 'a') || (key == 'A'))) {
@@ -578,7 +578,7 @@ rect(25, y, 50, 30);
 <br /> 
 <br /> 
 <br /> 
-<br /> 
+
 <p> 
 <h3>Events</h3>
 A category of functions called events alter the normal flow of a program when an action such as a key press or mouse movement takes place. An event is a polite interruption of the normal flow of a program. Key presses and mouse movements are stored until the end of draw(), where they can take action that won’t disturb drawing that’s currently in progress. The code inside an event function is run once each time the corresponding event occurs. For example, if a mouse button is pressed, the code inside the mousePressed() function will run once and will not run again until the button is pressed again. This allows data produced by the mouse and keyboard to be read independently from what is happening in the rest of the program.
@@ -623,9 +623,11 @@ gray += 20;
 <br />
 <br /> 
 <br /> 
+<br /> 
 <p> 
 The following example is the same as the one above, but the gray variable is set in the mouseReleased() event function, which is called once every time a button is released. This difference can be seen only by running the program and clicking the mouse button. Keep the mouse button pressed for a long time and notice that the background value changes only when the button is released.
 </p>
+<br /> 
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_23_1.png" style= "width: 100px; height: 100px;">
     <br />
@@ -651,10 +653,13 @@ gray += 20;
 <br />
 <br />
 <br /> 
+<br /> 
+<br /> 
 <p> 
 It is generally not a good idea to draw inside an event function, but it can be done under certain conditions. Before drawing inside these functions, it’s important to
 think about the flow of the program. In this example, squares are drawn inside mousePressed() and they remain on screen because there is no background() inside draw(). But if background() is used, visual elements drawn within one of the mouse event functions will appear on screen for only a single frame, or, by default, 1/60th of a second. In fact, you’ll notice this example has nothing at all inside draw(), but it needs to be there to force Processing to keep listening for the events. If a background() function were run inside draw(), the rectangles would flash onto the screen and disappear.
 </p>
+<br /> 
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_24_1.png" style= "width: 100px; height: 100px;">
     <br />
@@ -811,7 +816,6 @@ frame = 0;
 The redraw() function runs the code in draw() one time and then halts the execution. It’s helpful when the display needn’t be updated continuously. The following example runs the code in draw() once each time a mouse button is pressed.
 </p>
 <br />
-<br />
 <pre>
 void setup() {
 size(100, 100);
@@ -843,6 +847,7 @@ ellipse(mouseX, mouseY, 10, 10);
 }
 </pre>
 If noCursor() is run, the cursor will be hidden while the program is running until the cursor() function is run to reveal it.
+<br /> 
 <pre>
 void setup() {
 size(100, 100);
@@ -855,10 +860,8 @@ cursor();
 }
 }
 </pre>
-
-<br /> 
-<br /> 
 Add a parameter to the cursor() function to change it to another icon or image. Either load and use image, or use the self-descriptive options are ARROW, CROSS, HAND, MOVE, TEXT, and WAIT.
+<br /> 
 <br /> 
 
 <pre>
