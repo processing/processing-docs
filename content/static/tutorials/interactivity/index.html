@@ -125,10 +125,11 @@ fill(0, 159);
 ellipse(ix, height/2, iy, iy);
 }
 </pre>
-
+<br /> 
 <p>
 The Processing variables pmouseX and pmouseY store the mouse values from the previous frame. If the mouse does not move, the values will be the same, but if the mouse is moving quickly there can be large differences between the values. To see
 the difference, run the following program and alternate moving the mouse slowly and quickly. Watch the values print to the console.
+<br /> 
 <pre>
 void draw() {
 frameRate(12);
@@ -391,7 +392,7 @@ rect(40, 40, 20, 20); // draw a rectangle
 </pre>
 <br />
 <br />
-<br />
+
 <div style="float:left; width: 120px;"> 
 <img src="imgs/07_16_1.png" style= "width: 100px; height: 100px;">
 <br />
@@ -583,6 +584,7 @@ rect(25, y, 50, 30);
 <h3>Events</h3>
 A category of functions called events alter the normal flow of a program when an action such as a key press or mouse movement takes place. An event is a polite interruption of the normal flow of a program. Key presses and mouse movements are stored until the end of draw(), where they can take action that won’t disturb drawing that’s currently in progress. The code inside an event function is run once each time the corresponding event occurs. For example, if a mouse button is pressed, the code inside the mousePressed() function will run once and will not run again until the button is pressed again. This allows data produced by the mouse and keyboard to be read independently from what is happening in the rest of the program.
 </p>
+<br /> 
 <p>
 <h3>Mouse events</h3>
 The mouse event functions are mousePressed(), mouseReleased(), mouseMoved(), and mouseDragged():
@@ -847,6 +849,7 @@ ellipse(mouseX, mouseY, 10, 10);
 }
 </pre>
 If noCursor() is run, the cursor will be hidden while the program is running until the cursor() function is run to reveal it.
+<br /> 
 <br /> 
 <pre>
 void setup() {
