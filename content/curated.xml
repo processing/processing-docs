@@ -2,6 +2,17 @@
 <curated>
 	
 	<software name="Non-Linear Code" by="Dextro" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/pathfinder.jpg</image>
+		  <description>
+			  Created by Princemio in collaboration with onformative and presented at Choreographic Coding laboratory in Frankfurt 2013, the Pathfinder project was created with aim to contribute to the creative processes of choreographic development. 
+		  </description>
+		  <location>http://princemio.net/portfolio/pathfinder/</location>
+		 <link href="http://princemio.net/portfolio/pathfinder/">Pathfinder</link>
+		 <link href="http://motionbank.org/">Motionbank</link>
+		<link href="http://www.onformative.com/">Onformative</link>
+	</software>
+	
+	<software name="Non-Linear Code" by="Dextro" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/dextro.jpg</image>
 		  <description>
 			  Dextro writes ‘non-linear code’ drawing inspiration from nature. The results are non-fractal or random programs that iterate without change, with equal rules for all objects. Most of the scripts rely on trigonometry and could be seen as sets of wave generators interacting with one another. Some of these pieces take years to develop but the code is usually short but complex.
