@@ -5,7 +5,6 @@
 
 <tr>
 <td>
-<br /> 
     <p class="license">This tutorial is Extension 35 from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 <br /> 
 <br /> 
@@ -35,20 +34,26 @@ New drawing surfaces can be the same size as the display window, but they can al
 
 <br /> 
 
-<tr style= "width: 100px; height: 100px; float:left;">
+<tr style= "width: 100px; float:left;">
     <td>
         <img src="imgs/35_01.png" style= "width: 100px; height: 100px; float: left;">     </td>
 </tr>
 
-<tr style="float:left;">
+<br />
+<br /> 
+<br /> 
+
+<tr style="float:left; margin-left: 20px;">
     <td>
         <pre>
-    background(0); 
-    ellipse(50, 50, 75, 75); 
+background(0); 
+ellipse(50, 50, 75, 75); 
         </pre>
     </td>
 </tr>
 
+<br /> 
+<br /> 
 
 <tr>
     <td>
@@ -67,7 +72,7 @@ New drawing surfaces can be the same size as the display window, but they can al
     </td>
 </tr>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
     <pre>
 PGraphics circle = createGraphics(100, 100);
@@ -100,7 +105,7 @@ In practice, new PGraphics layers are most often used with programs that have se
     </td>
 </tr>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
 PGraphics circle;
@@ -121,6 +126,7 @@ void draw() {
     </td>
 </tr>
 
+
 <tr>
     <td>
 <p>
@@ -128,6 +134,7 @@ Based on this example, the most obvious differences to working with PGraphics ob
 </p>
   </td>  
 </tr>
+
 
 <br /> 
 
@@ -145,7 +152,9 @@ Based on this example, the most obvious differences to working with PGraphics ob
     </td>
 </tr>
 
-<tr style="float:left;">
+<br />
+
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
 void setup() {
@@ -168,7 +177,7 @@ void mousePressed() {
         </td>
     </tr>
 
-<br />
+
 
 <tr>
     <td>
@@ -197,7 +206,7 @@ To allow for the circles to accumulate in the display window, but to have a diff
         </td>
     </tr>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
 PGraphics circles;
@@ -256,7 +265,7 @@ Another good reason to use a PGraphics object is to render geometry a single tim
 </td>
     </tr>
 
-<tr style="float:left;">
+<tr>
     <td>
 <pre>
 PGraphics tile;
@@ -323,7 +332,7 @@ Just as the the size() function defines the main renderer for a program, each cr
 </td>
     </tr>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
 PGraphics cube;
@@ -400,9 +409,10 @@ The final section in this chapter demonstrates techniques for combining more tha
     </tr>
 </td>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
+
 PGraphics cubeA;
 PGraphics cubeB;
 
@@ -475,9 +485,10 @@ Move the cursor around in the display window to modify the transparency of each 
         </td>
     </tr>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
+
 PGraphics cubeA;
 PGraphics cubeB;
 
@@ -527,7 +538,6 @@ The next example is similar to the previous example, but it blends the two drawi
 </p>
         </td>
 </tr>
-
 <tr style ="width: 100px; float:left;">
     <td>
 <br /> 
@@ -541,13 +551,13 @@ The next example is similar to the previous example, but it blends the two drawi
 <br /> 
 <br />
 <img src="imgs/35_11_4.png" style= "width: 100px; height: 100px;">
-
     </td>
 </tr>
 
-<tr style="float:left;">
+<tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
+
 PGraphics cubeA;
 PGraphics cubeB;
 
@@ -577,6 +587,7 @@ void drawCube(PGraphics cube, float xd, float yd) {
   cube.box(80);
   cube.endDraw();
 }
+
 </pre>
     </td>
 </tr>
