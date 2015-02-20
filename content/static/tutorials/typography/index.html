@@ -6,7 +6,6 @@
    	<td>
 <p class="license">This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
 	
-	<p>&nbsp;</p>
 
 <p>
 The evolution of typographic reproduction and display technologies has and continues to impact human culture. Early printing techniques developed by Johannes Gutenberg in fifteenth-century Germany using letters cast from lead provided a catalyst for increased literacy and the scientific revolution. Automated typesetting machines, such as the Linotype invented in the nineteenth century, changed the way information was produced, distributed, and consumed. In the digital era, the way we consume text has changed drastically since the proliferation of personal computers in the 1980s and the rapid growth of the Internet in the 1990s. Text from emails, websites, and instant messages fill computer screens, and while many of the typographic rules of the past apply, type on screen requires additional considerations for enhanced communication and legibility.
@@ -182,16 +181,16 @@ Before a font is used in a program, it must be converted and set as the current 
 <pre>
 PFont zigBlack;
 void setup() {
-size(100, 100);
-zigBlack = createFont("Ziggurat-Black", 32);
-textFont(zigBlack);
-fill(0);
+  size(100, 100);
+  zigBlack = createFont("Ziggurat-Black", 32);
+  textFont(zigBlack);
+  fill(0);
 }
 void draw() {
-background(204);
-text("LAX", 0, 40);
-text("LHR", 0, 70);
-text("TXL", 0, 100);
+  background(204);
+  text("LAX", 0, 40);
+  text("LHR", 0, 70);
+  text("TXL", 0, 100);
 }
 </pre>
         </td>
@@ -223,16 +222,16 @@ To ensure a font will load on all computers, regardless if the font is installed
 <pre>
 PFont sourceLight;
 void setup() {
-size(100, 100);
-sourceLight = createFont("SourceCodePro-Light.otf", 34);
-textFont(sourceLight);
-fill(0);
+  size(100, 100);
+  sourceLight = createFont("SourceCodePro-Light.otf", 34);
+  textFont(sourceLight);
+  fill(0);
 }
 void draw() {
-background(204);
-text("LAX", 0, 40);
-text("LHR", 0, 70);
-text("TXL", 0, 100);
+  background(204);
+  text("LAX", 0, 40);
+  text("LHR", 0, 70);
+  text("TXL", 0, 100);
 }
 </pre>
         </td>
@@ -261,19 +260,19 @@ To use two fonts in one program, create two PFont variables and use the textFont
 <pre>
 PFont zigBlack, sourceLight;
 void setup() {
-size(100, 100);
-zigBlack = createFont("Ziggurat-Black", 24);
-sourceLight = createFont("SourceCodePro-Light.otf", 34);
-fill(0);
+  size(100, 100);
+  zigBlack = createFont("Ziggurat-Black", 24);
+  sourceLight = createFont("SourceCodePro-Light.otf", 34);
+  fill(0);
 }
 void draw() {
-background(204);
-textFont(zigBlack);
-text("LAX", 0, 40);
-textFont(sourceLight);
-text("LHR", 0, 70);
-textFont(zigBlack);
-text("TXL", 0, 100);
+  background(204);
+  textFont(zigBlack);
+  text("LAX", 0, 40);
+  textFont(sourceLight);
+  text("LHR", 0, 70);
+  textFont(zigBlack);
+  text("TXL", 0, 100);
 }
 </pre>
         </td>
@@ -309,16 +308,16 @@ The following example uses the same font as the prior createFont() example. The 
 <pre>
 PFont zigBlack;
 void setup() {
-size(100, 100);
-zigBlack = loadFont("Ziggurat-Black-32.vlw");
-textFont(zigBlack);
-fill(0);
+  size(100, 100);
+  zigBlack = loadFont("Ziggurat-Black-32.vlw");
+  textFont(zigBlack);
+  fill(0);
 }
 void draw() {
-background(204);
-text("LAX", 0, 40);
-text("LHR", 0, 70);
-text("TXL", 0, 100);
+  background(204);
+  text("LAX", 0, 40);
+  text("LHR", 0, 70);
+  text("TXL", 0, 100);
 }
 </pre>
         </td>
@@ -346,17 +345,17 @@ When the font is drawn at a different size from the size at which it was created
 <pre>
 PFont zigBlack;
 void setup() {
-size(100, 100);
-zigBlack = loadFont("Ziggurat-Black-12.vlw");
-textFont(zigBlack);
-fill(0);
+  size(100, 100);
+  zigBlack = loadFont("Ziggurat-Black-12.vlw");
+  textFont(zigBlack);
+  fill(0);
 }
 void draw() {
-background(204);
-textSize(12);
-text("A", 20, 20);
-textSize(96);
-text("A", 20, 90);
+  background(204);
+  textSize(12);
+  text("A", 20, 20);
+  textSize(96);
+  text("A", 20, 90);
 }
 </pre>
         </td>
@@ -497,25 +496,25 @@ Drawing letters to the screen becomes more engaging when used in combination wit
 <pre>
 String letters = "";
 void setup() {
-size(100, 100);
-stroke(255);
-fill(0);
-textSize(16);
+  size(100, 100);
+  stroke(255);
+  fill(0);
+  textSize(16);
 }
 void draw() {
-background(204);
-float cursorPosition = textWidth(letters);
-line(cursorPosition, 0, cursorPosition, 100);
-text(letters, 0, 50);
+  background(204);
+  float cursorPosition = textWidth(letters);
+  line(cursorPosition, 0, cursorPosition, 100);
+  text(letters, 0, 50);
 }
 void keyPressed() {
-if (key == BACKSPACE) {
-if (letters.length() > 0) {
-letters = letters.substring(0, letters.length()-1);
-}
-} else if (textWidth(letters+key) < width) {
-letters = letters + key;
-}
+  if (key == BACKSPACE) {
+    if (letters.length() > 0) {
+      letters = letters.substring(0, letters.length()-1);
+    }
+  } else if (textWidth(letters+key) < width) {
+    letters = letters + key;
+  }
 }
 </pre>
 </td>
@@ -538,28 +537,28 @@ letters = letters + key;
 String letters = "";
 int back = 102;
 void setup() {
-size(100, 100);
-textSize(16);
-textAlign(CENTER);
+  size(100, 100);
+  textSize(16);
+  textAlign(CENTER);
 }
 void draw() {
-background(back);
-text(letters, 50, 50);
+  background(back);
+  text(letters, 50, 50);
 }
 void keyPressed() {
-if ((key == ENTER) || (key == RETURN)) {
-letters = letters.toLowerCase();
-println(letters); // Print to console to see input
-if (letters.equals("black")) {
-back = 0;
-} else if (letters.equals("gray")) {
-back = 204;
-}
-letters = ""; // Clear the variable
-} else if ((key > 31) && (key != CODED)) {
-// If the key is alphanumeric, add it to the String
-letters = letters + key;
-}
+  if ((key == ENTER) || (key == RETURN)) {
+    letters = letters.toLowerCase();
+    println(letters); // Print to console to see input
+    if (letters.equals("black")) {
+      back = 0;
+    } else if (letters.equals("gray")) {
+      back = 204;
+    }
+    letters = ""; // Clear the variable
+  } else if ((key > 31) && (key != CODED)) {
+    // If the key is alphanumeric, add it to the String
+    letters = letters + key;
+  }
 }
 </pre>
         </td>
@@ -599,34 +598,34 @@ Typographic elements can be assigned behaviors that define a personality in rela
     <td>
 <pre>
 void setup() {
-size(100, 100);
-textSize(24);
-textAlign(CENTER);
+  size(100, 100);
+  textSize(24);
+  textAlign(CENTER);
 }
 void draw() {
-background(204);
-text("avoid", width-mouseX, height-mouseY);
+  background(204);
+  text("avoid", width-mouseX, height-mouseY);
 }
 </pre>
 <pre>
 float x = 33;
 float y = 60;
 void setup() {
-size(100, 100);
-textSize(24);
-noStroke();
+  size(100, 100);
+  textSize(24);
+  noStroke();
 }
 void draw() {
-fill(204, 120);
-rect(0, 0, width, height);
-fill(0);
-// If cursor is over the text, change the position
-if ((mouseX >= x) && (mouseX <= x+55) &&
-(mouseY >= y-24) && (mouseY <= y)) {
-x += random(-2, 2);
-y += random(-2, 2);
-}
-text("tickle", x, y);
+  fill(204, 120);
+  rect(0, 0, width, height);
+  fill(0);
+  // If cursor is over the text, change the position
+  if ((mouseX >= x) && (mouseX <= x+55) &&
+    (mouseY >= y-24) && (mouseY <= y)) {
+    x += random(-2, 2);
+    y += random(-2, 2);
+  }
+  text("tickle", x, y);
 }
 </pre>
 </td>
