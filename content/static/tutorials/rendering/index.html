@@ -40,11 +40,11 @@ New drawing surfaces can be the same size as the display window, but they can al
         <img src="imgs/35_01.png" style= "width: 100px; height: 100px; float: left;">     </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
         <pre>
-        background(0); 
-        ellipse(50, 50, 75, 75); 
+    background(0); 
+    ellipse(50, 50, 75, 75); 
         </pre>
     </td>
 </tr>
@@ -61,13 +61,13 @@ New drawing surfaces can be the same size as the display window, but they can al
 
 <br /> 
 
-<tr>
+<tr style="float:left;">
     <td>
         <img src="imgs/35_02.png" style= "width: 100px; height: 100px; float: left;">
     </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
     <pre>
    PGraphics circle = createGraphics(100, 100);
@@ -80,7 +80,7 @@ New drawing surfaces can be the same size as the display window, but they can al
     </td>
 </tr>
 
-<tr style= "width: 100px; height: 100px; float:left;">
+<tr>
     <td>
 <p>
 The createGraphics() function generates the new drawing surface at the size in pixels defined by the parameters. This step only happens once to initialize it. The beginDraw() function is used to start working with a custom PGraphics object and the endDraw() method is used to stop. Both are needed each time a change is made. Finally, the surface may be drawn to the display window with the image() function. All of the parameters to image() to control the position and size may be used to change the way the surface is drawn.
@@ -92,7 +92,7 @@ In practice, new PGraphics layers are most often used with programs that have se
 </tr>
 
 <br /> 
-<tr>
+<tr style="float:left;">
     <td>
 <div style="float: left; width: 120px;">
 <img src="imgs/35_03.png" style= "width: 100px; height: 100px;">
@@ -100,7 +100,7 @@ In practice, new PGraphics layers are most often used with programs that have se
     </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics circle;
@@ -121,7 +121,7 @@ void draw() {
     </td>
 </tr>
 
-<tr style= "width: 100px; height: 100px; float:left;">
+<tr>
     <td>
 <p>
 Based on this example, the most obvious differences to working with PGraphics objects are the additional lines of code and the extra step of prepending each drawing function with the name of the object. This example is simplified to demonstrate the mechanics of the technique, but it doesn’t do anything to justify it. The following example reveals a typical issue that creating a new drawing surface can fix. The goal of the program is to use a crosshair to show the position of the cursor and to draw a new circle to the screen each time the mouse is clicked. For the circles to accumulate on screen, the background() function isn’t used. This has the unintended effect of also accumulating the crosshairs as seen in this code:
@@ -131,7 +131,7 @@ Based on this example, the most obvious differences to working with PGraphics ob
 
 <br /> 
 
-<tr>
+<tr style="float:left;">
 <td>
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_04_1.png" style= "width: 100px; height: 100px;">
@@ -145,7 +145,7 @@ Based on this example, the most obvious differences to working with PGraphics ob
     </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 void setup() {
@@ -180,7 +180,7 @@ To allow for the circles to accumulate in the display window, but to have a diff
 
 <br /> 
 
-<tr>
+<tr style="float:left;">
     <td>
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_05_1.png" style= "width: 100px; height: 100px;">
@@ -197,7 +197,7 @@ To allow for the circles to accumulate in the display window, but to have a diff
         </td>
     </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics circles;
@@ -243,7 +243,7 @@ Another good reason to use a PGraphics object is to render geometry a single tim
     </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <br /> 
 <br /> 
@@ -256,7 +256,7 @@ Another good reason to use a PGraphics object is to render geometry a single tim
 </td>
     </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics tile;
@@ -306,7 +306,7 @@ Just as the the size() function defines the main renderer for a program, each cr
 
 <br /> 
 
-<tr>
+<tr style="float:left;">
     <td>
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_07_1.png" style= "width: 100px; height: 100px;">
@@ -323,7 +323,7 @@ Just as the the size() function defines the main renderer for a program, each cr
 </td>
     </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics cube;
@@ -384,7 +384,7 @@ The final section in this chapter demonstrates techniques for combining more tha
   </td>
     </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <br /> 
 <div style = "float: left; width: 120px;">
@@ -400,7 +400,7 @@ The final section in this chapter demonstrates techniques for combining more tha
     </tr>
 </td>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics cubeA;
@@ -459,7 +459,7 @@ Move the cursor around in the display window to modify the transparency of each 
 </td>
     </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <br /> 
 <div style = "float: left; width: 120px;">
@@ -477,7 +477,7 @@ Move the cursor around in the display window to modify the transparency of each 
         </td>
     </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics cubeA;
@@ -530,7 +530,7 @@ The next example is similar to the previous example, but it blends the two drawi
         </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <br /> 
 <div style="float: left; width: 120px;">
@@ -548,7 +548,7 @@ The next example is similar to the previous example, but it blends the two drawi
     </td>
 </tr>
 
-<tr>
+<tr style="float:left;">
     <td>
 <pre>
 PGraphics cubeA;
