@@ -30,20 +30,44 @@ Throughout this book, everything has drawn to the primary display window. Someti
 <h3>Another drawing surface</h3>
 New drawing surfaces can be the same size as the display window, but they can also be smaller or larger. Each drawing surface in Processing is an instance of the PGraphics class. The display window is the default surface to draw to; every function renders there by default. For example, to draw a circle into the display window, run the ellipse() function:
 </p>
-<br />  
-<img src="imgs/35_01.png" style= "width: 100px; height: 100px; float: left;">
-    <pre>
-    background(0); 
-    ellipse(50, 50, 75, 75); 
-    </pre>
-<br />
-<br />
-<p>
-To draw the same shape into a new surface, first create a new PGraphics object, then draw to it by typing the name of the object and dot operator before the name of the drawing functions. This new surface is placed in the display window with the image() function.
-</p>
+</td>
 <br /> 
-<img src="imgs/35_02.png" style= "width: 100px; height: 100px; float: left;">
+<br /> 
 
+<tr style= "width: 100px; height: 100px; float:left;">
+    <td>
+        <img src="imgs/35_01.png" style= "width: 100px; height: 100px; float: left;">     </td>
+</tr>
+
+<tr>
+    <td>
+        <pre>
+        background(0); 
+        ellipse(50, 50, 75, 75); 
+        </pre>
+    </td>
+</tr>
+
+<br />
+
+<tr>
+    <td>
+            <p>
+                To draw the same shape into a new surface, first create a new                         PGraphics object, then draw to it by typing the name of the object                   and dot operator before the name of the drawing functions. This new                   surface is placed in the display window with the image() function.
+            </p>
+    </td>
+</tr>
+
+<br /> 
+
+<tr>
+    <td>
+        <img src="imgs/35_02.png" style= "width: 100px; height: 100px; float: left;">
+    </td>
+</tr>
+
+<tr>
+    <td>
     <pre>
    PGraphics circle = createGraphics(100, 100);
    circle.beginDraw();
@@ -52,6 +76,9 @@ To draw the same shape into a new surface, first create a new PGraphics object, 
    circle.endDraw();
    image(circle, 0, 0);
     </pre>
+    </td>
+</tr>
+
 <p>
 The createGraphics() function generates the new drawing surface at the size in pixels defined by the parameters. This step only happens once to initialize it. The beginDraw() function is used to start working with a custom PGraphics object and the endDraw() method is used to stop. Both are needed each time a change is made. Finally, the surface may be drawn to the display window with the image() function. All of the parameters to image() to control the position and size may be used to change the way the surface is drawn.
 <br /> 
@@ -88,13 +115,14 @@ void draw() {
 Based on this example, the most obvious differences to working with PGraphics objects are the additional lines of code and the extra step of prepending each drawing function with the name of the object. This example is simplified to demonstrate the mechanics of the technique, but it doesn’t do anything to justify it. The following example reveals a typical issue that creating a new drawing surface can fix. The goal of the program is to use a crosshair to show the position of the cursor and to draw a new circle to the screen each time the mouse is clicked. For the circles to accumulate on screen, the background() function isn’t used. This has the unintended effect of also accumulating the crosshairs as seen in this code:
 </p>
 <br /> 
+<br /> 
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_04_1.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_04_2.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_04_3.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -131,13 +159,13 @@ To allow for the circles to accumulate in the display window, but to have a diff
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_05_1.png" style= "width: 100px; height: 100px;">
 <br /> 
-  
+<br />  
 <img src="imgs/35_05_2.png" style= "width: 100px; height: 100px;">
 <br /> 
-  
+<br />  
 <img src="imgs/35_05_3.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_05_4.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -183,14 +211,15 @@ The setup() is this example defines the default values for the new drawing surfa
 <br /> 
 <br /> 
 Another good reason to use a PGraphics object is to render geometry a single time, but to display it many times within the program as a texture unit. The following example draws an ellipse at a random location on an surface that’s only 50 × 50 pixels, then follows to draw that surface in a grid by placing the image() function inside a nested loop.
-</p> 
+</p>
+<br /> 
 <br /> 
 <img src="imgs/35_06_1.png" style= "width: 600px; height: 100px">
 <br /> 
- 
+<br /> 
 <img src="imgs/35_06_2.png" style= "width: 600px; height: 100px">
 <br/> 
-
+<br /> 
 <pre>
 PGraphics tile;
 
@@ -233,13 +262,13 @@ Just as the the size() function defines the main renderer for a program, each cr
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_07_1.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_07_2.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_07_3.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br />
 <img src="imgs/35_07_4.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -302,10 +331,10 @@ The final section in this chapter demonstrates techniques for combining more tha
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_09_1.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br />
 <img src="imgs/35_09_2.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br />  
 <img src="imgs/35_09_3.png" style= "width: 100px; height: 100px;">
 <br />
 <br />
@@ -377,13 +406,13 @@ Move the cursor around in the display window to modify the transparency of each 
 <div style = "float: left; width: 120px;">
 <img src="imgs/35_10_1.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br />
 <img src="imgs/35_10_2.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_10_3.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br /> 
 <img src="imgs/35_10_4.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>
@@ -432,13 +461,13 @@ The next example is similar to the previous example, but it blends the two drawi
 <div style="float: left; width: 120px;">
 <img src="imgs/35_11_1.png" style= "width: 100px; height: 100px;">
 <br /> 
- 
+<br /> 
 <img src="imgs/35_11_2.png" style= "width: 100px; height: 100px;">
 <br /> 
- 
+<br /> 
 <img src="imgs/35_11_3.png" style= "width: 100px; height: 100px;">
 <br /> 
-
+<br />
 <img src="imgs/35_11_4.png" style= "width: 100px; height: 100px;">
 </div>
 <pre>

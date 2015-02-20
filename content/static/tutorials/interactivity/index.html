@@ -29,8 +29,8 @@ The modern computer keyboard is a direct descendant of the typewriter. The posit
 The Processing variables mouseX and mouseY (note the capital X and Y) store the x-coordinate and y-coordinate of the cursor relative to the origin in the upper-left corner of the display window. To see the actual values produced while moving the mouse, run this program to print the values to the console:
 <pre>
 void draw() {
-frameRate(12);
-println(mouseX + " : " + mouseY);
+  frameRate(12);
+  println(mouseX + " : " + mouseY);
 }
 </pre>
 When a program starts, the mouseX and mouseY values are 0. If the cursor moves into the display window, the values are set to the current position of the cursor. If the cursor is at the left, the mouseX value is 0 and the value increases as the cursor moves to the right. If the cursor is at the top, the mouseY value is 0 and the value increases as the cursor moves down. If mouseX and mouseY are used in programs without a draw() or if noLoop() is run in setup(), the values will always be 0.
@@ -46,12 +46,12 @@ The mouse position is most commonly used to control the location of visual eleme
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
+  size(100, 100);
+  noStroke();
 }
 void draw() {
-background(126);
-ellipse(mouseX, mouseY, 33, 33);
+  background(126);
+  ellipse(mouseX, mouseY, 33, 33);
 }
 </pre>
 <br /> 
@@ -67,14 +67,14 @@ ellipse(mouseX, mouseY, 33, 33);
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
+  size(100, 100);
+  noStroke();
 }
 void draw() {
-background(126);
-ellipse(mouseX, 16, 33, 33); // Top circle
-ellipse(mouseX+20, 50, 33, 33); // Middle circle
-ellipse(mouseX-20, 84, 33, 33); // Bottom circle
+  background(126);
+  ellipse(mouseX, 16, 33, 33); // Top circle
+  ellipse(mouseX+20, 50, 33, 33); // Middle circle
+  ellipse(mouseX-20, 84, 33, 33); // Bottom circle
 }
 </pre>
 <br /> 
@@ -87,14 +87,14 @@ ellipse(mouseX-20, 84, 33, 33); // Bottom circle
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
+  size(100, 100);
+  noStroke();
 }
 void draw() {
-background(126);
-ellipse(mouseX, 16, 33, 33); // Top circle
-ellipse(mouseX/2, 50, 33, 33); // Middle circle
-ellipse(mouseX*2, 84, 33, 33); // Bottom circle
+  background(126);
+  ellipse(mouseX, 16, 33, 33); // Top circle
+  ellipse(mouseX/2, 50, 33, 33); // Middle circle
+  ellipse(mouseX*2, 84, 33, 33); // Bottom circle
 }
 </pre>
 <br /> 
@@ -110,19 +110,19 @@ To invert the value of the mouse, subtract the mouseX value from the width of th
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
+  size(100, 100);
+  noStroke();
 }
 void draw() {
-float x = mouseX;
-float y = mouseY;
-float ix = width - mouseX; // Inverse X
-float iy = height - mouseY; // Inverse Y
-background(126);
-fill(255, 150);
-ellipse(x, height/2, y, y);
-fill(0, 159);
-ellipse(ix, height/2, iy, iy);
+  float x = mouseX;
+  float y = mouseY;
+  float ix = width - mouseX; // Inverse X
+  float iy = height - mouseY; // Inverse Y
+  background(126);
+  fill(255, 150);
+  ellipse(x, height/2, y, y);
+  fill(0, 159);
+  ellipse(ix, height/2, iy, iy);
 }
 </pre>
 <br /> 
@@ -146,12 +146,12 @@ Draw a line from the previous mouse position to the current position to show the
 </div>
 <pre>
 void setup() {
-size(100, 100);
-strokeWeight(8);
+  size(100, 100);
+  strokeWeight(8);
 }
 void draw() {
-background(204);
-line(mouseX, mouseY, pmouseX, pmouseY);
+  background(204);
+  line(mouseX, mouseY, pmouseX, pmouseY);
 }
 </pre>
 <br /> 
@@ -169,17 +169,17 @@ Use the mouseX and mouseY variables with an if structure to allow the cursor to 
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
-fill(0);
+  size(100, 100);
+  noStroke();
+  fill(0);
 }
 void draw() {
-background(204);
-if (mouseX < 50) {
-rect(0, 0, 50, 100); // Left
-} else {
-rect(50, 0, 50, 100); // Right
-}
+  background(204);
+  if (mouseX < 50) {
+    rect(0, 0, 50, 100); // Left
+  } else {
+    rect(50, 0, 50, 100); // Right
+  }
 }
 </pre>
 <br /> 
@@ -192,19 +192,19 @@ rect(50, 0, 50, 100); // Right
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
-fill(0);
+  size(100, 100);
+  noStroke();
+  fill(0);
 }
 void draw() {
-background(204);
-if (mouseX < 33) {
-rect(0, 0, 33, 100); // Left
-} else if (mouseX < 66) {
-rect(33, 0, 33, 100); // Middle
-} else {
-rect(66, 0, 33, 100); // Right
-}
+  background(204);
+  if (mouseX < 33) {
+    rect(0, 0, 33, 100); // Left
+  } else if (mouseX < 66) {
+    rect(33, 0, 33, 100); // Middle
+  } else {
+    rect(66, 0, 33, 100); // Right
+  }
 }
 </pre>
 <br /> 
@@ -225,19 +225,19 @@ is made to test each edge of a rectangle (left, right, top, bottom) and these ar
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
-fill(0);
+  size(100, 100);
+  noStroke();
+  fill(0);
 }
 void draw() {
-background(204);
-if ((mouseX > 40) && (mouseX < 80) &&
-(mouseY > 20) && (mouseY < 80)) {
-fill(255);
-} else {
-fill(0);
-}
-rect(40, 20, 40, 60);
+  background(204);
+  if ((mouseX > 40) && (mouseX < 80) &&
+    (mouseY > 20) && (mouseY < 80)) {
+    fill(255);
+  } else {
+    fill(0);
+  }
+  rect(40, 20, 40, 60);
 }
 </pre>
 
@@ -256,21 +256,21 @@ This code asks, “Is the cursor to the right of the left edge and is the cursor
 </div>
 <pre>
 void setup() {
-size(100, 100);
-noStroke();
-fill(0);
+  size(100, 100);
+  noStroke();
+  fill(0);
 }
 void draw() {
-background(204);
-if ((mouseX <= 50) && (mouseY <= 50)) {
-rect(0, 0, 50, 50); // Upper-left
-} else if ((mouseX <= 50) && (mouseY > 50)) {
-rect(0, 50, 50, 50); // Lower-left
-} else if ((mouseX > 50) && (mouseY <= 50)) {
-rect(50, 0, 50, 50); // Upper-right
-} else {
-rect(50, 50, 50, 50); // Lower-right
-}
+  background(204);
+  if ((mouseX <= 50) && (mouseY <= 50)) {
+    rect(0, 0, 50, 50); // Upper-left
+  } else if ((mouseX <= 50) && (mouseY > 50)) {
+    rect(0, 50, 50, 50); // Lower-left
+  } else if ((mouseX > 50) && (mouseY <= 50)) {
+    rect(50, 0, 50, 50); // Upper-right
+  } else {
+    rect(50, 50, 50, 50); // Lower-right
+  }
 }
 </pre>
 <br />
@@ -294,15 +294,16 @@ three buttons; Processing can detect when these buttons are pressed with the mou
 </div>
 <pre>
 void setup() {
-size(100, 100);
-} void draw() {
-background(204);
-if (mousePressed == true) {
-fill(255); // White
-} else {
-fill(0); // Black
-}
-rect(25, 25, 50, 50);
+  size(100, 100);
+} 
+void draw() {
+  background(204);
+  if (mousePressed == true) {
+    fill(255); // White
+  } else {
+    fill(0); // Black
+  }
+  rect(25, 25, 50, 50);
 }
 </pre>
 <br />
@@ -316,15 +317,17 @@ rect(25, 25, 50, 50);
 </div>
 <pre>
 void setup() {
-size(100, 100);
+  size(100, 100);
 }
-void draw() { if (mouseButton == LEFT) {
-fill(0); // Black
-} else if (mouseButton == RIGHT) {
-fill(255); // White
-} else { fill(126); // Gray
-}
-rect(25, 25, 50, 50);
+void draw() { 
+  if (mouseButton == LEFT) {
+    fill(0); // Black
+  } else if (mouseButton == RIGHT) {
+    fill(255); // White
+  } else { 
+    fill(126); // Gray
+  }
+  rect(25, 25, 50, 50);
 }
 </pre>
 <br />
@@ -344,17 +347,19 @@ rect(25, 25, 50, 50);
 </div>
 <pre>
 void setup() {
-size(100, 100);
-} void draw() {
-if (mousePressed == true) {
-if (mouseButton == LEFT) {
-fill(0); // Black
-} else if (mouseButton == RIGHT) { fill(255); // White
-}
-} else {
-fill(126); // Gray
-}
-rect(25, 25, 50, 50);
+  size(100, 100);
+} 
+void draw() {
+  if (mousePressed == true) {
+    if (mouseButton == LEFT) {
+      fill(0); // Black
+    } else if (mouseButton == RIGHT) { 
+      fill(255); // White
+    }
+  } else {
+    fill(126); // Gray
+  }
+  rect(25, 25, 50, 50);
 }
 </pre> 
 <br />
@@ -379,15 +384,16 @@ Processing registers the most recently pressed key and whether a key is currentl
 </div>
 <pre>
 void setup() {
-size(100, 100);
-strokeWeight(4);
-} void draw() {
-background(204);
-if (keyPressed == true) { // If the key is pressed,
-line(20, 20, 80, 80); // draw a line
-} else { // Otherwise,
-rect(40, 40, 20, 20); // draw a rectangle
-}
+  size(100, 100);
+  strokeWeight(4);
+} 
+void draw() {
+  background(204);
+  if (keyPressed == true) { // If the key is pressed,
+    line(20, 20, 80, 80); // draw a line
+  } else { // Otherwise,
+    rect(40, 40, 20, 20); // draw a rectangle
+  }
 }
 </pre>
 <br />
@@ -403,13 +409,15 @@ rect(40, 40, 20, 20); // draw a rectangle
 <pre>
 int x = 20;
 void setup() {
-size(100, 100);
-strokeWeight(4);
-} void draw() {
-background(204);
-if (keyPressed == true) { // If the key is pressed
-x++; // add 1 to x
-} line(x, 20, x-60, 80);
+  size(100, 100);
+  strokeWeight(4);
+} 
+void draw() {
+  background(204);
+  if (keyPressed == true) { // If the key is pressed
+    x++; // add 1 to x
+  } 
+  line(x, 20, x-60, 80);
 }
 </pre>
 <br />
@@ -433,12 +441,14 @@ The key variable stores a single alphanumeric character. Specifically, it holds 
 </div>
 <pre>
 void setup() {
-size(100, 100);
-textSize(60);
-} void draw() {
-background(0);
-text(key, 20, 75); // Draw at coordinate (20,75)
+  size(100, 100);
+  textSize(60);
+} 
+void draw() {
+  background(0);
+  text(key, 20, 75); // Draw at coordinate (20,75)
 }
+
 </pre>
 <br />
 <br />
@@ -462,16 +472,17 @@ The key variable may be used to determine whether a specific key is pressed. The
 </div>
 <pre>
 void setup() {
-size(100, 100);
-strokeWeight(4);
-} void draw() {
-background(204);
-// If the 'A' key is pressed draw a line
-if ((keyPressed == true) && (key == 'A')) {
-line(50, 25, 50, 75);
-} else { // Otherwise, draw an ellipse
-ellipse(50, 50, 50, 50);
-}
+  size(100, 100);
+  strokeWeight(4);
+} 
+void draw() {
+  background(204);
+  // If the 'A' key is pressed draw a line
+  if ((keyPressed == true) && (key == 'A')) {
+    line(50, 25, 50, 75);
+  } else { // Otherwise, draw an ellipse
+    ellipse(50, 50, 50, 50);
+  }
 }
 </pre>
 <br /> 
@@ -496,12 +507,14 @@ Because each character has a numeric value as defined by the ASCII table (p. 605
 </div>
 <pre>
 void setup() {
-size(100, 100);
-stroke(0);
-} void draw() {
-if (keyPressed == true) {
-int x = key - 32;
-line(x, 0, x, height); }
+  size(100, 100);
+  stroke(0);
+} 
+void draw() {
+  if (keyPressed == true) {
+    int x = key - 32;
+    line(x, 0, x, height);
+  }
 }
 </pre>
 <br /> 
@@ -526,17 +539,18 @@ line(x, 0, x, height); }
 <pre>
 float angle = 0;
 void setup() {
-size(100, 100);
-fill(0);
-} void draw() {
-background(204);
-if (keyPressed == true) {
-if ((key >= 32) && (key <= 126)) {
-// If the key is alphanumeric, // use its value as an angle
-angle = (key - 32) * 3;
-}
-}
-arc(50, 50, 66, 66, 0, radians(angle));
+  size(100, 100);
+  fill(0);
+} 
+void draw() {
+  background(204);
+  if (keyPressed == true) {
+    if ((key >= 32) && (key <= 126)) {
+      // If the key is alphanumeric, // use its value as an angle
+      angle = (key - 32) * 3;
+    }
+  }
+  arc(50, 50, 66, 66, 0, radians(angle));
 }
 </pre>
 <br />
@@ -560,20 +574,23 @@ In addition to reading key values for numbers, letters, and symbols, Processing 
 <pre>
 int y = 35;
 void setup() {
-size(100, 100); }
+  size(100, 100);
+}
 void draw() {
-background(204);
-line(10, 50, 90, 50);
-if (key == CODED) { if (keyCode == UP) {
-y = 20;
-} else if (keyCode == DOWN) {
-y = 50;
+  background(204);
+  line(10, 50, 90, 50);
+  if (key == CODED) { 
+    if (keyCode == UP) {
+      y = 20;
+    } else if (keyCode == DOWN) {
+      y = 50;
+    }
+  } else {
+    y = 35;
+  }
+  rect(25, y, 50, 30);
 }
-} else {
-y = 35;
-}
-rect(25, y, 50, 30);
-}
+
 </pre>
 <br /> 
 <br /> 
@@ -609,11 +626,13 @@ an action, such as clearing the screen. In the following example, the background
 <pre>
 int gray = 0;
 void setup() {
-size(100, 100); }
+  size(100, 100);
+}
 void draw() {
-background(gray);
-} void mousePressed() {
-gray += 20;
+  background(gray);
+} 
+void mousePressed() {
+  gray += 20;
 }
 </pre>
 <br /> 
@@ -640,11 +659,13 @@ The following example is the same as the one above, but the gray variable is set
 <pre>
 int gray = 0;
 void setup() {
-size(100, 100); }
+  size(100, 100);
+}
 void draw() {
-background(gray);
-} void mouseReleased() {
-gray += 20;
+  background(gray);
+} 
+void mouseReleased() {
+  gray += 20;
 }
 </pre>
 <br /> 
@@ -669,11 +690,13 @@ think about the flow of the program. In this example, squares are drawn inside m
 </div>
 <pre>
 void setup() {
-size(100, 100);
-fill(0, 102);
-} void draw() { } // Empty draw() keeps the program running
+  size(100, 100);
+  fill(0, 102);
+} 
+void draw() {
+} // Empty draw() keeps the program running
 void mousePressed() {
-rect(mouseX, mouseY, 33, 33);
+  rect(mouseX, mouseY, 33, 33);
 }
 </pre>
 <br /> 
@@ -695,21 +718,23 @@ The code inside the mouseMoved() and mouseDragged() event functions are run when
 <pre>
 int dragX, dragY, moveX, moveY;
 void setup() {
-size(100, 100);
-noStroke(); }
+  size(100, 100);
+  noStroke();
+}
 void draw() {
-background(204);
-fill(0); ellipse(dragX, dragY, 33, 33); // Black circle
-fill(153);
-ellipse(moveX, moveY, 33, 33); // Gray circle
+  background(204);
+  fill(0); 
+  ellipse(dragX, dragY, 33, 33); // Black circle
+  fill(153);
+  ellipse(moveX, moveY, 33, 33); // Gray circle
 }
 void mouseMoved() { // Move gray circle
-moveX = mouseX;
-moveY = mouseY;
+  moveX = mouseX;
+  moveY = mouseY;
 }
 void mouseDragged() { // Move black circle
-dragX = mouseX;
-dragY = mouseY;
+  dragX = mouseX;
+  dragY = mouseY;
 }
 </pre>
 <br /> 
@@ -736,19 +761,20 @@ Each time a key is pressed, the code inside the keyPressed() block is run once. 
 <pre>
 boolean drawT = false;
 void setup() {
-size(100, 100);
-noStroke();
-} void draw() {
-background(204);
-if (drawT == true) {
-rect(20, 20, 60, 20);
-rect(39, 40, 22, 45);
-}
+  size(100, 100);
+  noStroke();
+} 
+void draw() {
+  background(204);
+  if (drawT == true) {
+    rect(20, 20, 60, 20);
+    rect(39, 40, 22, 45);
+  }
 }
 void keyPressed() {
-if ((key == 'T') || (key == 't')) {
-drawT = true;
-}
+  if ((key == 'T') || (key == 't')) {
+    drawT = true;
+  }
 }
 </pre>
 
@@ -766,21 +792,23 @@ Each time a key is released, the code inside the keyReleased() block is run once
 <pre>
 boolean drawT = false;
 void setup() {
-size(100, 100);
-noStroke();
-} void draw() {
-background(204);
-if (drawT == true) { rect(20, 20, 60, 20);
-rect(39, 40, 22, 45);
-}
+  size(100, 100);
+  noStroke();
+} 
+void draw() {
+  background(204);
+  if (drawT == true) { 
+    rect(20, 20, 60, 20);
+    rect(39, 40, 22, 45);
+  }
 }
 void keyPressed() {
-if ((key == 'T') || (key == 't')) {
-drawT = true;
-}
+  if ((key == 'T') || (key == 't')) {
+    drawT = true;
+  }
 }
 void keyReleased() {
-drawT = false;
+  drawT = false;
 }
 </pre>
 <br /> 
@@ -796,22 +824,22 @@ If a program has been paused with noLoop(), running loop() resumes its action. B
 <pre>
 int frame = 0;
 void setup() {
-size(100, 100);
+  size(100, 100);
 }
 void draw() {
-if (frame > 120) { // If 120 frames since the mouse
-noLoop(); // was pressed, stop the program
-background(0); // and turn the background black.
-} else { // Otherwise, set the background
-background(204); // to light gray and draw lines
-line(mouseX, 0, mouseX, 100); // at the mouse position
-line(0, mouseY, 100, mouseY);
-frame++;
-}
+  if (frame > 120) { // If 120 frames since the mouse
+    noLoop(); // was pressed, stop the program
+    background(0); // and turn the background black.
+  } else { // Otherwise, set the background
+    background(204); // to light gray and draw lines
+    line(mouseX, 0, mouseX, 100); // at the mouse position
+    line(0, mouseY, 100, mouseY);
+    frame++;
+  }
 }
 void mousePressed() {
-loop();
-frame = 0;
+  loop();
+  frame = 0;
 }
 </pre>
 
@@ -820,16 +848,16 @@ The redraw() function runs the code in draw() one time and then halts the execut
 <br />
 <pre>
 void setup() {
-size(100, 100);
-noLoop();
+  size(100, 100);
+  noLoop();
 }
 void draw() {
-background(204);
-line(mouseX, 0, mouseX, 100);
-line(0, mouseY, 100, mouseY);
+  background(204);
+  line(mouseX, 0, mouseX, 100);
+  line(0, mouseY, 100, mouseY);
 }
 void mousePressed() {
-redraw(); // Run the code in draw one time
+  redraw(); // Run the code in draw one time
 }
 </pre>
 <p>
@@ -839,13 +867,13 @@ The cursor can be hidden with the noCursor() function and can be set to appear a
 <br />
 <pre>
 void setup() {
-size(100, 100);
-strokeWeight(7);
-noCursor();
+  size(100, 100);
+  strokeWeight(7);
+  noCursor();
 }
 void draw() {
-background(204);
-ellipse(mouseX, mouseY, 10, 10);
+  background(204);
+  ellipse(mouseX, mouseY, 10, 10);
 }
 </pre>
 If noCursor() is run, the cursor will be hidden while the program is running until the cursor() function is run to reveal it.
@@ -853,14 +881,14 @@ If noCursor() is run, the cursor will be hidden while the program is running unt
 <br /> 
 <pre>
 void setup() {
-size(100, 100);
-noCursor();
+  size(100, 100);
+  noCursor();
 }
 void draw() {
-background(204);
-if (mousePressed == true) {
-cursor();
-}
+  background(204);
+  if (mousePressed == true) {
+    cursor();
+  }
 }
 </pre>
 Add a parameter to the cursor() function to change it to another icon or image. Either load and use image, or use the self-descriptive options are ARROW, CROSS, HAND, MOVE, TEXT, and WAIT.
@@ -869,17 +897,17 @@ Add a parameter to the cursor() function to change it to another icon or image. 
 
 <pre>
 void setup() {
-size(100, 100);
+  size(100, 100);
 }
 void draw() {
-background(204);
-if (mousePressed == true) {
-cursor(HAND); // Draw cursor as hand
-} else {
-cursor(CROSS);
-}
-line(mouseX, 0, mouseX, height);
-line(0, mouseY, height, mouseY);
+  background(204);
+  if (mousePressed == true) {
+    cursor(HAND); // Draw cursor as hand
+  } else {
+    cursor(CROSS);
+  }
+  line(mouseX, 0, mouseX, height);
+  line(0, mouseY, height, mouseY);
 }
 </pre> 
 These cursor icons are part of your computer’s operating system and will appear different on different machines.
