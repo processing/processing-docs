@@ -3,7 +3,7 @@
    	<tr>
    	<td>
 <h1>Typography</h1>
-<p class="license">This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
+<p class="license">This tutorial is Extension 12 from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 	
 <br />
 <p>
@@ -69,8 +69,6 @@ fill(126); // Fill color gray
 text("HKG", 0, 70);
 fill(255); // Fill color white
 text("PVG", 0, 100);
-
-
 
 
 textSize(64);
@@ -284,10 +282,11 @@ void draw() {
         </td>
     </tr>
 
-<p>
+
     
     <tr>
     <td>
+<p>
 <h3>Pixel fonts</h3>
 Processing can also work with fonts that it converts into small image textures. These fonts aren’t as flexible and crisp as fonts converted for Processing with createFont() and used with the default renderer, but they are more optimized for use with the P2D and P3D renderers. The difference between renderers is discussed on page 547. The pixel font format used by Processing was developed at the MIT Media Lab in the mid 1990s in the Visual Language Workshop (VLW). The VLW format stores each alphanumeric character as a grid of pixels. It is a quick way to render text and makes it possible to include a font with a sketch without including the vector data.
 <br /> 
