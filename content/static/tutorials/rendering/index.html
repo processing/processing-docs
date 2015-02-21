@@ -6,10 +6,10 @@
 <h3 style="line-height: 0.7em;"><em>By Casey Reas</em></h3>
     <p class="license">This tutorial is Extension 35 from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 <br /> 
-<br /> 
 <p>
 Throughout this book, everything has drawn to the primary display window. Sometimes, however, there is an advantage in drawing to another graphics surface. All of the drawing features available in the display window can be applied to an offscreen drawing surface and then drawn back into the display window as an image or texture. This technique makes it easier to imagine a program as a stack of layers similar to the technique used in photo editing and vector drawing software. Similarly, drawing surfaces in Processing can be moved around, drawn using blending effects and transparency, and drawn in different orders to change how the layers combine. Before the discussion moves to multiple drawing surfaces, this chapter starts with a discussion of the different renderers used by Processing.
 </p>
+<br /> 
 <p>
 <h3>Renderers</h3>
 	This short text provides a brief history of the digital printing technologies that have led to these new techniques. It presents examples of software written to produce print output, and discusses a few common contemporary print technologies. The industry surrounding digital printing is full of trademarked names and buzzwords, so this text aspires to demystify some of the terminology and provide pointers to additional information. The content that follows is tailored for printing at home or working with a vendor to produce small editions. 
@@ -286,7 +286,7 @@ void runTile() {
 <p>
 This example clarifies two things about working with PGraphics objects. First, each object has its own width and height field, just like the main display window. Second, while the drawing functions such as noStroke() and rect() are applied to the drawing surface through the dot operator, variables still belong to the main program. Notice that the x and y variables in the runTile() function aren’t defined as belonging to the tile object.
 </p>
-
+<br /> 
 <p>
 <h3>OpenGL surfaces</h3>
 Just as the the size() function defines the main renderer for a program, each createGraphics() function defines the renderer for the PGraphics object with a third, optional parameter. When the third parameter isn’t used, as in the examples seen already in this chapter, the default renderer is set. The P2D and P3D renderers are the other options. For instance, to create a new drawing surface for 3D shapes, use P3D as the third parameter to size() and createGraphics():

@@ -1,5 +1,5 @@
 <div class="content">
-<table width="656">
+<table width="656" style="margin-top: 0px;">
    	<tr>
    	<td>
 <h1>Typography</h1>
@@ -49,11 +49,17 @@ text("LAX", 0, 40); // Write "LAX" at coordinate (0,40)
 text("AMS", 0, 70); // Write "AMS" at coordinate (0,70)
 text("FRA", 0, 100); // Write "FRA" at coordinate (0,100)
 
+
+
+
 textSize(32); // Set text size to 32
 fill(0);
 text("LAX", 0, 40);
 text("ORD", 0, 70);
 text("DAY", 0, 100);
+
+
+
 
 textSize(32);
 fill(0); // Fill color black
@@ -62,6 +68,11 @@ fill(126); // Fill color gray
 text("HKG", 0, 70);
 fill(255); // Fill color white
 text("PVG", 0, 100);
+
+
+
+
+
 
 textSize(64);
 fill(0, 140); // Fill black with low opacity
@@ -95,10 +106,10 @@ Another version of text() draws the characters inside a rectangle. In this use, 
 <tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
-
 String s = "Five hexing wizard bots jump quickly.";
 fill(0);
 text(s, 10, 10, 60, 80);
+
 
 
 
@@ -292,7 +303,7 @@ The following example uses the same font as the prior createFont() example. The 
 
 
     <tr style="float:left;">
-    <td>
+    <td style="width:0px">
 <img src="imgs/12_11.png" style= "width: 100px; height: 100px; float: left;">
         <br />
     </td>
@@ -565,25 +576,15 @@ Typographic elements can be assigned behaviors that define a personality in rela
         </tr> 
     <tr style= "width: 100px; float:left;">
     <td>
-<br /> 
 <img src="imgs/12_18_1.png" style= "width: 100px; height: 100px;">
         <br /> 
 <img src="imgs/12_18_2.png" style= "width: 100px; height: 100px;">
-        <br /> 
-<img src="imgs/12_18_3.png" style= "width: 100px; height: 100px;">
-<br /> 
-<br /> 
-<img src="imgs/12_19_1.png" style= "width: 100px; height: 100px;">
-        <br /> 
-<img src="imgs/12_19_2.png" style= "width: 100px; height: 100px;">
-        <br /> 
-<img src="imgs/12_19_3.png" style= "width: 100px; height: 100px;">
-        <br />
+<br />
         </td>
         </tr>
-    <tr style="float:left; margin-left: 20px;">
-    <td>
-<pre>
+ <tr style="margin-left: 20px; float:left;">
+    <td> 
+    <pre>
 void setup() {
   size(100, 100);
   textSize(24);
@@ -594,6 +595,21 @@ void draw() {
   text("avoid", width-mouseX, height-mouseY);
 }
 </pre>
+        </td>
+        </tr>
+    <tr style= "width: 100px; float:left;">
+    <td>
+<img src="imgs/12_19_1.png" style= "width: 100px; height: 100px;">
+        <br /> 
+<img src="imgs/12_19_2.png" style= "width: 100px; height: 100px;">
+        <br /> 
+<img src="imgs/12_19_3.png" style= "width: 100px; height: 100px;">
+        <br />
+           </td>
+        </tr>
+
+    <tr style="float:left; margin-left: 20px;">
+    <td>
 <pre>
 float x = 33;
 float y = 60;
