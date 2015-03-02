@@ -24,9 +24,9 @@ void setup() {
   // Interior part of shape
   s.beginContour();
   s.vertex(-10,-10);
-  s.vertex(10,-10);
-  s.vertex(10,10);
   s.vertex(-10,10);
+  s.vertex(10,10);
+  s.vertex(10,-10);
   s.endContour();
   
   // Finishing off shape
@@ -41,4 +41,3 @@ void draw() {
   s.rotate(0.01);
   shape(s);
 }
-
