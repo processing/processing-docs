@@ -7,15 +7,15 @@
  * y = r * sin(theta)
  */
  
-float r;
+var r;
 
 // Angle and angular velocity, accleration
-float theta;
-float theta_vel;
-float theta_acc;
+var theta;
+var theta_vel;
+var theta_acc;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   
   // Initialize all values
   r = height * 0.45;
@@ -24,7 +24,7 @@ void setup() {
   theta_acc = 0.0001;
 }
 
-void draw() {
+function draw() {
   
   background(0);
   
@@ -32,8 +32,8 @@ void draw() {
   translate(width/2, height/2);
   
   // Convert polar to cartesian
-  float x = r * cos(theta);
-  float y = r * sin(theta);
+  var x = r * cos(theta);
+  var y = r * sin(theta);
   
   // Draw the ellipse at the cartesian coordinate
   ellipseMode(CENTER);

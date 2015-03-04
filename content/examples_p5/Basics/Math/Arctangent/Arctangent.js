@@ -6,17 +6,17 @@
  * to the cursor. 
  */
  
-Eye e1, e2, e3;
+var e1, e2, e3;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
   e1 = new Eye( 250,  16, 120);
   e2 = new Eye( 164, 185,  80);  
   e3 = new Eye( 420, 230, 220);
 }
 
-void draw() {
+function draw() {
   background(102);
   
   e1.update(mouseX, mouseY);
@@ -28,30 +28,25 @@ void draw() {
   e3.display();
 }
 
-class Eye {
-  int x, y;
-  int size;
-  float angle = 0.0;
-  
-  Eye(int tx, int ty, int ts) {
-    x = tx;
-    y = ty;
-    size = ts;
- }
-
-  void update(int mx, int my) {
-    angle = atan2(my-y, mx-x);
+function Eye(tx, ty, ts) {
+  this.x = tx;
+  this.y = ty;
+  this.size = ts;
+  this.angle = 0.0;
+ 
+  this.update = function(mx, my) {
+    this.angle = atan2(my-this.y, mx-this.x);
   }
   
-  void display() {
-    pushMatrix();
-    translate(x, y);
+  this.display = function() {
+    push();
+    translate(this.x, this.y);
     fill(255);
-    ellipse(0, 0, size, size);
-    rotate(angle);
+    ellipse(0, 0, this.size, this.size);
+    rotate(this.angle);
     fill(153, 204, 0);
-    ellipse(size/4, 0, size/2, size/2);
-    popMatrix();
+    ellipse(this.size/4, 0, this.size/2, this.size/2);
+    pop();
   }
 }
 

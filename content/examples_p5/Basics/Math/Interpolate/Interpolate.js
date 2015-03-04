@@ -9,15 +9,15 @@
  * This is the same as the Easing under input only with lerp() instead. 
  */
  
-float x;
-float y;
+var x = 0;
+var y = 0;
 
-void setup() {
-  size(640, 360); 
+function setup() {
+  createCanvas(640, 360); 
   noStroke();  
 }
 
-void draw() { 
+function draw() { 
   background(51);
   
   // lerp() calculates a number between two numbers at a specific increment. 

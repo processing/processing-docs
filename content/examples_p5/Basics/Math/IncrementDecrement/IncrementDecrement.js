@@ -5,12 +5,12 @@
  * Writing "a--" is equivalent to "a = a - 1".   
  */
  
-int a;
-int b;
-boolean direction;
+var a;
+var b;
+var direction;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   colorMode(RGB, width);
   a = 0;
   b = width;
@@ -18,7 +18,7 @@ void setup() {
   frameRate(30);
 }
 
-void draw() {
+function draw() {
   a++;
   if(a > width) {
     a = 0;

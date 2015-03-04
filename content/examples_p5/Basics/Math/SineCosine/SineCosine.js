@@ -7,21 +7,21 @@
  * returned. These values are then scaled to produce larger movements. 
  */
  
-float x1, x2, y1, y2;
-float angle1, angle2;
-float scalar = 70;
+var x1, x2, y1, y2 = 0;
+var angle1, angle2 = 0;
+var scalar = 70;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
   rectMode(CENTER);
 }
 
-void draw() {
+function draw() {
   background(0);
 
-  float ang1 = radians(angle1);
-  float ang2 = radians(angle2);
+  var ang1 = radians(angle1);
+  var ang2 = radians(angle2);
 
   x1 = width/2 + (scalar * cos(ang1));
   x2 = width/2 + (scalar * cos(ang2));

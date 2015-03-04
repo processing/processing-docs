@@ -5,16 +5,16 @@
  * speed and direction of the moving shapes. 
  */
  
-float xpos1;
-float xpos2;
-float xpos3;
-float xpos4;
-int thin = 8;
-int thick = 36;
+var xpos1;
+var xpos2;
+var xpos3;
+var xpos4;
+var thin = 8;
+var thick = 36;
 
-void setup() 
+function setup() 
 {
-  size(640, 360);
+  createCanvas(640, 360);
   noStroke();
   xpos1 = width/2;
   xpos2 = width/2;
@@ -22,11 +22,11 @@ void setup()
   xpos4 = width/2;
 }
 
-void draw() 
+function draw() 
 {
   background(0);
   
-  float mx = mouseX * 0.4 - width/5.0;
+  var mx = mouseX * 0.4 - width/5.0;
   
   fill(102);
   rect(xpos2, 0, thick, height/2);

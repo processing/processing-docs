@@ -6,19 +6,19 @@
  * to create an irregular sawtooth line.
  */
 
-int totalPts = 300;
-float steps = totalPts + 1;
+var totalPts = 300;
+var steps = totalPts + 1;
   
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   stroke(255);
   frameRate(1);
 } 
 
-void draw() {
+function draw() {
   background(0);
-  float rand = 0;
-  for  (int i = 1; i < steps; i++) {
+  var rand = 0;
+  for  (var i = 1; i < steps; i++) {
     point( (width/steps) * i, (height/2) + random(-rand, rand) );
     rand += random(-5, 5);
   }
