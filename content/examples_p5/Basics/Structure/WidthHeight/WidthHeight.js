@@ -5,14 +5,14 @@
  * of the display window as defined in the size() function. 
  */
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
 }
 
-void draw() {
+function draw() {
   background(127);
   noStroke();
-  for (int i = 0; i < height; i += 20) {
+  for (var i = 0; i < height; i += 20) {
     fill(129, 206, 15);
     rect(0, i, width, 10);
     fill(255);

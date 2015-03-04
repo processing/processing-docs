@@ -6,13 +6,13 @@
  * code inside draw() is run continually. 
  */
 
-float y;
+var y;
 
 // The statements in the setup() function 
 // execute once when the program begins
-void setup() 
+function setup() 
 {
-  size(640, 360);  // Size should be the first statement
+  createCanvas(640, 360);  // Size should be the first statement
   stroke(255);     // Set line drawing color to white
   noLoop();
   
@@ -23,7 +23,7 @@ void setup()
 // program is stopped. Each statement is executed in 
 // sequence and after the last line is read, the first 
 // line is executed again.
-void draw() 
+function draw() 
 { 
   background(0);   // Set the background to black
   y = y - 1; 

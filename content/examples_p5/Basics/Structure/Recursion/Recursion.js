@@ -6,18 +6,18 @@
  * It continues to do this until the variable "level" is equal to 1. 
  */
  
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
   noLoop();
 }
 
-void draw() {
+function draw() {
   drawCircle(width/2, 280, 6);
 }
 
-void drawCircle(int x, int radius, int level) {                    
-  float tt = 126 * level/4.0;
+function drawCircle(x, radius, level) {                    
+  var tt = 126 * level/4.0;
   fill(tt);
   ellipse(x, height/2, radius*2, radius*2);      
   if(level > 1) {
