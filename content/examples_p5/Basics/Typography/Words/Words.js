@@ -6,19 +6,21 @@
  * textAlign() function. 
  */
   
-PFont f;
+var f;
   
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   
   // Create the font
-  printArray(PFont.list());
-  f = createFont("Georgia", 24);
+  //printArray(PFont.list());
+  f = "Georgia";
   textFont(f);
 }
 
-void draw() {
+function draw() {
   background(102);
+  noStroke();
+  fill(255);
   textAlign(RIGHT);
   drawType(width * 0.25);
   textAlign(CENTER);
@@ -27,7 +29,7 @@ void draw() {
   drawType(width * 0.75);
 }
 
-void drawType(float x) {
+function drawType(x) {
   line(x, 0, x, 65);
   line(x, 220, x, height);
   fill(0);
