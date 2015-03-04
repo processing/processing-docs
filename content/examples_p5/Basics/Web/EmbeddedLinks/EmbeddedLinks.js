@@ -5,14 +5,14 @@
  * works online). Click on the right button to open a URL in a new browser window.  
 */
 
-boolean overLeftButton = false;
-boolean overRightButton = false;
+var overLeftButton = false;
+var overRightButton = false;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
 }
 
-void draw() {
+function draw() {
   background(204);
 
   // Left buttom
@@ -36,23 +36,25 @@ void draw() {
   line(155, 85, 155, 100);
 }
 
-void mousePressed() {
+function mousePressed() {
   if (overLeftButton) { 
-    link("http://www.processing.org");
+    window.location = "http://www.processing.org";
+    //link("http://www.processing.org");
   } else if (overRightButton) {
-    link("http://www.processing.org", "_new");
+    window.open("http://www.processing.org");
+    //link("http://www.processing.org", "_new");
   }
 }
 
-void mouseMoved() { 
+function mouseMoved() { 
   checkButtons(); 
 }
   
-void mouseDragged() {
+function mouseDragged() {
   checkButtons(); 
 }
 
-void checkButtons() {
+function checkButtons() {
   if (mouseX > 20 && mouseX < 95 && mouseY > 60 && mouseY < 135) {
     overLeftButton = true;   
   } else if (mouseX > 105 && mouseX < 180 && mouseY > 60 && mouseY <135) {
