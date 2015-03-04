@@ -9,17 +9,17 @@
  * is identical to the statement scale(PI/2). 
  */
 
-float angle;
-float jitter;
+var angle = 0;
+var jitter = 0;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
   fill(255);
   rectMode(CENTER);
 }
 
-void draw() {
+function draw() {
   background(51);
 
   // during even-numbered seconds (0, 2, 4, 6...)
@@ -27,7 +27,7 @@ void draw() {
     jitter = random(-0.1, 0.1);
   }
   angle = angle + jitter;
-  float c = cos(angle);
+  var c = cos(angle);
   translate(width/2, height/2);
   rotate(c);
   rect(0, 0, 180, 180);   

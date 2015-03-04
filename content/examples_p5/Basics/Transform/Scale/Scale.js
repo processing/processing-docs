@@ -8,17 +8,17 @@
  * Objects always scale from the origin. 
  */
  
-float a = 0.0;
-float s = 0.0;
+var a = 0.0;
+var s = 0.0;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
   rectMode(CENTER);
   frameRate(30);
 }
 
-void draw() {
+function draw() {
   
   background(102);
   

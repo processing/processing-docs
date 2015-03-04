@@ -7,15 +7,15 @@
  * y-axis offset. 
  */
  
-float x, y;
-float dim = 80.0;
+var x = 0;
+var dim = 80.0;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke();
 }
 
-void draw() {
+function draw() {
   background(102);
   
   x = x + 0.8;
