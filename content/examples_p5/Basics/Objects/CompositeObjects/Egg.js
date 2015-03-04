@@ -1,29 +1,23 @@
-class Egg {
-  float x, y; // X-coordinate, y-coordinate
-  float tilt; // Left and right angle offset
-  float angle; // Used to define the tilt
-  float scalar; // Height of the egg
+// Constructor
+function Egg(xpos, ypos, t, s) {
+  this.x = xpos;
+  this.y = ypos;
+  this.tilt = t;
+  this.scalar = s / 100.0;
+  this.angle = 0;
 
-  // Constructor
-  Egg(float xpos, float ypos, float t, float s) {
-    x = xpos;
-    y = ypos;
-    tilt = t;
-    scalar = s / 100.0;
+  this.wobble = function() {
+    this.tilt = cos(this.angle) / 8;
+    this.angle += 0.1;
   }
 
-  void wobble() {
-    tilt = cos(angle) / 8;
-    angle += 0.1;
-  }
-
-  void display() {
+  this.display = function() {
     noStroke();
     fill(255);
-    pushMatrix();
-    translate(x, y);
-    rotate(tilt);
-    scale(scalar);
+    push();
+    translate(this.x, this.y);
+    rotate(this.tilt);
+    scale(this.scalar);
     beginShape();
     vertex(0, -100);
     bezierVertex(25, -100, 40, -65, 40, -40);
@@ -31,6 +25,6 @@ class Egg {
     bezierVertex(-25, 0, -40, -15, -40, -40);
     bezierVertex(-40, -65, -25, -100, 0, -100);
     endShape();
-    popMatrix();
+    pop();
   }
 }

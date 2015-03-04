@@ -7,16 +7,16 @@
  * inherits from is called a superclass. A subclass extends the superclass.
  */
 
-SpinSpots spots;
-SpinArm arm;
+var spots;
+var arm;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   arm = new SpinArm(width/2, height/2, 0.01);
   spots = new SpinSpots(width/2, height/2, -0.02, 90.0);
 }
 
-void draw() {
+function draw() {
   background(204);
   arm.update();
   arm.display();
@@ -24,49 +24,57 @@ void draw() {
   spots.display();
 }
 
-class Spin {
-  float x, y, speed;
-  float angle = 0.0;
-  Spin(float xpos, float ypos, float s) {
-    x = xpos;
-    y = ypos;
-    speed = s;
-  }
-  void update() {
-    angle += speed;
+
+function Spin(xpos, ypos, s) {
+  this.x = xpos;
+  this.y = ypos;
+  this.speed = s;
+  this.angle = 0;
+  
+  this.update = function() {
+    this.angle += this.speed;
   }
 }
 
-class SpinArm extends Spin {
-  SpinArm(float x, float y, float s) {
-    super(x, y, s);
-  }
-  void display() {
+// Child class constructor
+function SpinArm(x, y, s) {
+  Spin.call(this, x, y, s);
+
+  // Override the display method
+  this.display = function(){
     strokeWeight(1);
     stroke(0);
-    pushMatrix();
-    translate(x, y);
-    angle += speed;
-    rotate(angle);
+    push();
+    translate(this.x, this.y);
+    this.angle += this.speed;
+    rotate(this.angle);
     line(0, 0, 165, 0);
-    popMatrix();
-  }
-}
+    pop();
+  };
+};
 
-class SpinSpots extends Spin {
-  float dim;
-  SpinSpots(float x, float y, float s, float d) {
-    super(x, y, s);
-    dim = d;
-  }
-  void display() {
+// Inherit from the parent class
+SpinArm.prototype = Object.create(Spin.prototype);
+this.constructor = SpinArm;
+
+// Child class constructor
+function SpinSpots(x, y, s, d) {
+  this.dim = d;
+  Spin.call(this, x, y, s);
+
+  // Override the display method
+  this.display = function(){
     noStroke();
-    pushMatrix();
-    translate(x, y);
-    angle += speed;
-    rotate(angle);
-    ellipse(-dim/2, 0, dim, dim);
-    ellipse(dim/2, 0, dim, dim);
-    popMatrix();
-  }
-}
+    push();
+    translate(this.x, this.y);
+    this.angle += this.speed;
+    rotate(this.angle);
+    ellipse(-this.dim/2, 0, this.dim, this.dim);
+    ellipse(this.dim/2, 0, this.dim, this.dim);
+    pop();
+  };
+};
+
+// Inherit from the parent class
+SpinSpots.prototype = Object.create(Spin.prototype);
+this.constructor = SpinSpots;

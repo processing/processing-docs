@@ -1,19 +1,16 @@
-class EggRing {
-  Egg ovoid;
-  Ring circle = new Ring();
 
-  EggRing(float x, float y, float t, float sp) {
-    ovoid = new Egg(x, y, t, sp);
-    circle.start(x, y - sp/2);
-  }
-
-  void transmit() {
-    ovoid.wobble();
-    ovoid.display();
-    circle.grow();
-    circle.display();
-    if (circle.on == false) {
-      circle.on = true;
+function EggRing(x,  y,  t,  sp) {
+  this.ovoid = new Egg(x, y, t, sp);
+  this.circle = new Ring();
+  this.circle.start(x, y - sp/2);
+  
+  this.transmit = function() {
+    this.ovoid.wobble();
+    this.ovoid.display();
+    this.circle.grow();
+    this.circle.display();
+    if (this.circle.on == false) {
+      this.circle.on = true;
     }
   }
 }

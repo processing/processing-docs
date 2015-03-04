@@ -1,31 +1,32 @@
-class Ring {
-  
-  float x, y; // X-coordinate, y-coordinate
-  float diameter; // Diameter of the ring
-  boolean on = false; // Turns the display on and off
-  
-  void start(float xpos, float ypos) {
-    x = xpos;
-    y = ypos;
-    on = true;
-    diameter = 1;
+function Ring() {
+
+  this.x = 0;
+  this.y = 0;
+  this.on = false;
+  this.diameter = 0;
+
+  this.start = function(xpos,  ypos) {
+    this.x = xpos;
+    this.y = ypos;
+    this.on = true;
+    this.diameter = 1;
   }
   
-  void grow() {
-    if (on == true) {
-      diameter += 0.5;
-      if (diameter > width*2) {
-        diameter = 0.0;
+  this.grow = function() {
+    if (this.on == true) {
+      this.diameter += 0.5;
+      if (this.diameter > width*2) {
+        this.diameter = 0.0;
       }
     }
   }
   
-  void display() {
-    if (on == true) {
+  this.display = function() {
+    if (this.on == true) {
       noFill();
       strokeWeight(4);
       stroke(155, 153);
-      ellipse(x, y, diameter, diameter);
+      ellipse(this.x, this.y, this.diameter, this.diameter);
     }
   }
 }
