@@ -6,18 +6,18 @@
  * the background. 
  */
  
-int rectX, rectY;      // Position of square button
-int circleX, circleY;  // Position of circle button
-int rectSize = 90;     // Diameter of rect
-int circleSize = 93;   // Diameter of circle
-color rectColor, circleColor, baseColor;
-color rectHighlight, circleHighlight;
-color currentColor;
-boolean rectOver = false;
-boolean circleOver = false;
+var rectX, rectY;      // Position of square button
+var circleX, circleY;  // Position of circle button
+var rectSize = 90;     // Diameter of rect
+var circleSize = 93;   // Diameter of circle
+var rectColor, circleColor, baseColor;
+var rectHighlight, circleHighlight;
+var currentColor;
+var rectOver = false;
+var circleOver = false;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   rectColor = color(0);
   rectHighlight = color(51);
   circleColor = color(255);
@@ -31,7 +31,7 @@ void setup() {
   ellipseMode(CENTER);
 }
 
-void draw() {
+function draw() {
   update(mouseX, mouseY);
   background(currentColor);
   
@@ -52,7 +52,7 @@ void draw() {
   ellipse(circleX, circleY, circleSize, circleSize);
 }
 
-void update(int x, int y) {
+function update(x, y) {
   if ( overCircle(circleX, circleY, circleSize) ) {
     circleOver = true;
     rectOver = false;
@@ -64,7 +64,7 @@ void update(int x, int y) {
   }
 }
 
-void mousePressed() {
+function mousePressed() {
   if (circleOver) {
     currentColor = circleColor;
   }
@@ -73,7 +73,7 @@ void mousePressed() {
   }
 }
 
-boolean overRect(int x, int y, int width, int height)  {
+function overRect(x, y, width, height)  {
   if (mouseX >= x && mouseX <= x+width && 
       mouseY >= y && mouseY <= y+height) {
     return true;
@@ -82,9 +82,9 @@ boolean overRect(int x, int y, int width, int height)  {
   }
 }
 
-boolean overCircle(int x, int y, int diameter) {
-  float disX = x - mouseX;
-  float disY = y - mouseY;
+function overCircle(x, y, diameter) {
+  var disX = x - mouseX;
+  var disY = y - mouseY;
   if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
     return true;
   } else {
