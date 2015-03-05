@@ -8,21 +8,21 @@
  * because of Java security restrictions.
  */
 
-int[] x = new int[0];
-int[] y = new int[0];
+var x = [];
+var y = [];
 
-void setup() 
+function setup() 
 {
-  size(200, 200);
+  createCanvas(200, 200);
 }
 
-void draw() 
+function draw() 
 {
   background(204);
   stroke(0);
   noFill();
   beginShape();
-  for (int i = 0; i < x.length; i++) {
+  for (var i = 0; i < x.length; i++) {
     vertex(x[i], y[i]);
   }
   endShape();
@@ -33,17 +33,17 @@ void draw()
   }
 }
 
-void mousePressed() { // Click to add a line segment
-  x = append(x, mouseX);
-  y = append(y, mouseY);
+function mousePressed() { // Click to add a line segment
+  x.push(mouseX);
+  y.push(mouseY);
 }
 
-void keyPressed() { // Press a key to save the data
-  String[] lines = new String[x.length];
-  for (int i = 0; i < x.length; i++) {
+function keyPressed() { // Press a key to save the data
+  var lines = new Array(x.length);
+  for (var i = 0; i < x.length; i++) {
     lines[i] = x[i] + "\t" + y[i];
   }
-  saveStrings("lines.txt", lines);
-  exit(); // Stop the program
+  saveStrings(lines,"lines.txt");
+  //exit(); // Stop the program
 }
 

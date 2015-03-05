@@ -7,46 +7,49 @@
  * makes and models. Press a mouse button to advance to the next group of entries.
  */
 
-Record[] records;
-String[] lines;
-int recordCount;
-PFont body;
-int num = 9; // Display this many entries on each screen.
-int startingEntry = 0;  // Display from this entry number
+var records;
+var lines;
+var recordCount = 0;
+var num = 9; // Display this many entries on each screen.
+var startingEntry = 0;  // Display from this entry number
 
-void setup() {
-  size(200, 200);
+function preload() {
+  lines = loadStrings("data/cars2.tsv");
+}
+
+function setup() {
+  createCanvas(200, 200);
   fill(255);
   noLoop();
   
-  body = loadFont("TheSans-Plain-12.vlw");
-  textFont(body);
+  textFont('TheSans');
   
-  lines = loadStrings("cars2.tsv");
-  records = new Record[lines.length];
-  for (int i = 0; i < lines.length; i++) {
-    String[] pieces = split(lines[i], TAB); // Load data into array
+  records = new Array(lines.length);
+  for (var i = 0; i < lines.length; i++) {
+    var pieces = split(lines[i], '\t'); // Load data into array
     if (pieces.length == 9) {
       records[recordCount] = new Record(pieces);
       recordCount++;
     }
   }
   if (recordCount != records.length) {
-    records = (Record[]) subset(records, 0, recordCount);
+    //records = (Record[]) subset(records, 0, recordCount);
   }
 }
 
-void draw() {
+function draw() {
   background(0);
-  for (int i = 0; i < num; i++) {
-    int thisEntry = startingEntry + i;
+  for (var i = 0; i < num; i++) {
+    var thisEntry = startingEntry + i;
     if (thisEntry < recordCount) {
+      fill(255);
+      noStroke();
       text(thisEntry + " > " + records[thisEntry].name, 20, 20 + i*20);
     }
   }
 }
 
-void mousePressed() {
+function mousePressed() {
   startingEntry += num; 
   if (startingEntry > records.length) {
     startingEntry = 0;  // go back to the beginning

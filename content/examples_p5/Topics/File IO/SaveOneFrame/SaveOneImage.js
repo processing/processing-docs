@@ -7,16 +7,16 @@
  * same folder as the sketch's program file.
  */
 
-void setup() {
-  size(200, 200);
+function setup() {
+  createCanvas(200, 200);
 }
 
-void draw() {
+function draw() {
   background(204);
   line(0, 0, mouseX, height);
   line(width, 0, 0, mouseY);
 }
 
-void mousePressed() {
+function mousePressed() {
   save("line.tif");
 }
