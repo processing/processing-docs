@@ -9,44 +9,57 @@
 // The next line is needed if running in JavaScript Mode with Processing.js
 /* @pjs preload="moon.jpg"; */
 
-float[][] kernel = {{ -1, -1, -1}, 
-                    { -1,  9, -1}, 
-                    { -1, -1, -1}};
-                    
-PImage img;
 
-void setup() { 
-  size(640, 360);
-  img = loadImage("moon.jpg"); // Load the original image
-  noLoop();
+var kernel = [[ -1, -1, -1 ], 
+                    [ -1, 9, -1 ], 
+                    [ -1, -1, -1 ]];
+                    
+var img;
+
+function preload() {
+  img = loadImage("data/moon.jpg"); // Load the original image
 }
 
-void draw() {
+function setup() {
+  createCanvas(640, 360);
+  devicePixelScaling(false);
+  noLoop();
+} 
+
+function draw() {
   image(img, 0, 0); // Displays the image from point (0,0) 
   img.loadPixels();
+
   // Create an opaque image of the same size as the original
-  PImage edgeImg = createImage(img.width, img.height, RGB);
-  // Loop through every pixel in the image.
-  for (int y = 1; y < img.height-1; y++) { // Skip top and bottom edges
-    for (int x = 1; x < img.width-1; x++) { // Skip left and right edges
-      float sum = 0; // Kernel sum for this pixel
-      for (int ky = -1; ky <= 1; ky++) {
-        for (int kx = -1; kx <= 1; kx++) {
+  var edgeImg = createImage(img.width, img.height, RGB);
+  edgeImg.loadPixels();
+
+  // Loop through every pixel in the image
+  for (var y = 1; y < img.height-1; y++) {   // Skip top and bottom edges
+    for (var x = 1; x < img.width-1; x++) {  // Skip left and right edges
+      var sum = 0; // Kernel sum for this pixel
+      for (var ky = -1; ky <= 1; ky++) {
+        for (var kx = -1; kx <= 1; kx++) {
           // Calculate the adjacent pixel for this kernel point
-          int pos = (y + ky)*img.width + (x + kx);
+          var pos = ((y + ky)*img.width + (x + kx))*4;
           // Image is grayscale, red/green/blue are identical
-          float val = red(img.pixels[pos]);
+          var val = img.pixels[pos];
           // Multiply adjacent pixels based on the kernel values
           sum += kernel[ky+1][kx+1] * val;
         }
       }
       // For this pixel in the new image, set the gray value
       // based on the sum from the kernel
-      edgeImg.pixels[y*img.width + x] = color(sum, sum, sum);
+      var pos = (y*img.width + x)*4;
+      edgeImg.pixels[pos] = sum;
+      edgeImg.pixels[pos+1] = sum;
+      edgeImg.pixels[pos+2] = sum;
+      edgeImg.pixels[pos+3] = 255;
     }
   }
   // State that there are changes to edgeImg.pixels[]
   edgeImg.updatePixels();
+
   image(edgeImg, width/2, 0); // Draw the new image
 }
 

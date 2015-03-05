@@ -8,40 +8,46 @@
 // The next line is needed if running in JavaScript Mode with Processing.js
 /* @pjs preload="sea.jpg"; */
 
-PImage img;
-int direction = 1;
+// This needs to be resolved: https://github.com/processing/p5.js/issues/478
 
-float signal;
+// var img;
+// var direction = 1;
 
-void setup() {
-  size(640, 360);
-  stroke(255);
-  img = loadImage("sea.jpg");
-  img.loadPixels();
-  loadPixels();
-}
+// var signal = 0;
 
-void draw() {
-  if (signal > img.height-1 || signal < 0) { 
-    direction = direction * -1;
-  }
-  if (mousePressed == true) {
-    signal = abs(mouseY % img.height);
-  } 
-  else {
-    signal += (0.3*direction);
-  }
+// function preload() {
+//   img = loadImage("data/sea.jpg");
+// }
 
-  if (keyPressed == true) {
-    set(0, 0, img);
-    line(0, signal, img.width, signal);
-  } 
-  else {
-    int signalOffset = int(signal)*img.width;
-    for (int y = 0; y < img.height; y++) {
-      arrayCopy(img.pixels, signalOffset, pixels, y*width, img.width);
-    }
-    updatePixels();
-  }
-}
+// function setup() {
+//   createCanvas(640, 360);
+//   stroke(255);
+//   img.loadPixels();
+//   loadPixels();
+// }
+
+// function draw() {
+//   loadPixels();
+//   if (signal > img.height-1 || signal < 0) { 
+//     direction = direction * -1;
+//   }
+//   if (mouseIsPressed == true) {
+//     signal = abs(mouseY % img.height);
+//   } 
+//   else {
+//     signal += (0.3*direction);
+//   }
+
+//   if (keyIsPressed == true) {
+//     set(0, 0, img);
+//     line(0, signal, img.width, signal);
+//   } 
+//   else {
+//     var signalOffset = int(signal)*img.width;
+//     for (var y = 0; y < img.height; y++) {
+//       //arrayCopy(img.pixels, signalOffset, pixels, y*width, img.width);
+//     }
+//     updatePixels();
+//   }
+// }
 
