@@ -4,14 +4,14 @@
  * Click and drag the mouse to draw a line. 
  */
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   background(102);
 }
 
-void draw() {
+function draw() {
   stroke(255);
-  if (mousePressed == true) {
+  if (mouseIsPressed == true) {
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
 }

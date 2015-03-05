@@ -30,7 +30,6 @@ function draw() {
   translate(0,-120);
   // Start the recursive branching!
   branch(120);
-
 }
 
 function branch(h) {
