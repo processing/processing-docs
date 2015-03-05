@@ -1,3 +1,5 @@
+// TOO SLOW!
+
 /**
  * Spore 1 
  * by Mike Davis. 
@@ -8,103 +10,106 @@
  * based on the cell's surroundings.  Cells run one at a time (to avoid conflicts
  * like wanting to move to the same space) and in random order.
  */
-
-World w;
-int numcells = 0;
-int maxcells = 6700;
-Cell[] cells = new Cell[maxcells];
-color spore_color;
+/*
+var w;
+var numcells = 0;
+var maxcells = 10;
+var cells = [];
+var spore_color;
 // set lower for smoother animation, higher for faster simulation
-int runs_per_loop = 10000;
-color black = color(0, 0, 0);
+var runs_per_loop = 100;
   
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
+  devicePixelScaling(false);
   frameRate(24);
   reset();
 }
 
-void reset() {
+function reset() {
   clearScreen();  
   w = new World();
   spore_color = color(172, 255, 128);
   seed();
 }
 
-void seed() {
+function seed() {
   // Add cells at random places
-  for (int i = 0; i < maxcells; i++)
+  for (var i = 0; i < maxcells; i++)
   {
-    int cX = (int)random(width);
-    int cY = (int)random(height);
-    if (w.getpix(cX, cY) == black) {
+    var cX = int(random(width));
+    var cY = int(random(height));
+    //if (w.getpix(cX, cY) === black) {
       w.setpix(cX, cY, spore_color);
       cells[numcells] = new Cell(cX, cY);
       numcells++;
-    }
+    //}
   }
 }
 
-void draw() {
+function draw() {
   // Run cells in random order
-  for (int i = 0; i < runs_per_loop; i++) {
-    int selected = min((int)random(numcells), numcells - 1);
+  loadPixels();
+  for (var i = 0; i < runs_per_loop; i++) {
+    var selected = min(int(random(numcells)), numcells - 1);
     cells[selected].run();
   }
+  updatePixels();
 }
 
-void clearScreen() {
+function clearScreen() {
   background(0);
 }
 
-class Cell {
-  int x, y;
-  Cell(int xin, int yin) {
-    x = xin;
-    y = yin;
-  }
-
-    // Perform action based on surroundings
-  void run() {
+function Cell(xin, yin) {
+  this.x = xin;
+  this.y = yin;
+  
+  // Perform action based on surroundings
+  this.run = function() {
     // Fix cell coordinates
-    while(x < 0) {
-      x+=width;
+    while(this.x < 0) {
+      this.x+=width;
     }
-    while(x > width - 1) {
-      x-=width;
+    while(this.x > width - 1) {
+      this.x-=width;
     }
-    while(y < 0) {
-      y+=height;
+    while(this.y < 0) {
+      this.y+=height;
     }
-    while(y > height - 1) {
-      y-=height;
+    while(this.y > height - 1) {
+      this.y-=height;
     }
     
     // Cell instructions
-    if (w.getpix(x + 1, y) == black) {
-      move(0, 1);
-    } else if (w.getpix(x, y - 1) != black && w.getpix(x, y + 1) != black) {
-      move((int)random(9) - 4, (int)random(9) - 4);
+    if (isBlack(w.getpix(this.x + 1, this.y))) {
+      this.move(0, 1);
+    } else if (!isBlack(w.getpix(this.x, this.y - 1)) && !isBlack(w.getpix(this.x, this.y + 1))) {
+      this.move(int(random(9)) - 4, int(random(9)) - 4);
     }
   }
   
   // Will move the cell (dx, dy) units if that space is empty
-  void move(int dx, int dy) {
-    if (w.getpix(x + dx, y + dy) == black) {
-      w.setpix(x + dx, y + dy, w.getpix(x, y));
-      w.setpix(x, y, color(0));
-      x += dx;
-      y += dy;
+  this.move = function(dx, dy) {
+    if (isBlack(w.getpix(this.x + dx, this.y + dy))) {
+      w.setpix(this.x + dx, this.y + dy, w.getpix(this.x, this.y));
+      w.setpix(this.x, this.y, color(0));
+      this.x += dx;
+      this.y += dy;
     }
   }
+}
+
+function isBlack(col) {
+  return (col[0] === 0 && col[1] === 0 && col[2] === 0);
 }
 
 //  The World class simply provides two functions, get and set, which access the
 //  display in the same way as getPixel and setPixel.  The only difference is that
 //  the World class's get and set do screen wraparound ("toroidal coordinates").
-class World {
+function World() {
   
-  void setpix(int x, int y, int c) {
+  this.setpix = function(x, y, c) {
     while(x < 0) x+=width;
     while(x > width - 1) x-=width;
     while(y < 0) y+=height;
@@ -112,17 +117,19 @@ class World {
     set(x, y, c);
   }
   
-  color getpix(int x, int y) {
+  this.getpix = function(x, y) {
     while(x < 0) x+=width;
     while(x > width - 1) x-=width;
     while(y < 0) y+=height;
     while(y > height - 1) y-=height;
-    return get(x, y);
+    var c = get(x,y);
+    //console.log(c);
+    return c;
   }
 }
 
-void mousePressed() {
+function mousePressed() {
   numcells = 0;
   reset();
 }
-
+*/

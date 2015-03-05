@@ -31,81 +31,84 @@
  */
 
 // An Array of Bubble objects
-Bubble[] bubbles;
+var bubbles;
 // A JSON object
-JSONObject json;
+var json;
 
-void setup() {
-  size(640, 360);
+function preload() {
+  json = loadJSON("data/data.json");
+}
+
+function setup() {
+  createCanvas(640, 360);
   loadData();
 }
 
-void draw() {
+function draw() {
   background(255);
   // Display all bubbles
-  for (Bubble b : bubbles) {
+  for (var i = 0; i < bubbles.length; i++) {
+    var b = bubbles[i];
     b.display();
     b.rollover(mouseX, mouseY);
   }
   //
   textAlign(LEFT);
   fill(0);
+  noStroke();
   text("Click to add bubbles.", 10, height-10);
 }
- void loadData() {
+ function loadData() {
   // Load JSON file
   // Temporary full path until path problem resolved.
-  json = loadJSONObject("data.json");
 
-  JSONArray bubbleData = json.getJSONArray("bubbles");
+  var bubbleData = json.bubbles;
 
   // The size of the array of Bubble objects is determined by the total XML elements named "bubble"
-  bubbles = new Bubble[bubbleData.size()]; 
+  bubbles = []; 
 
-  for (int i = 0; i < bubbleData.size(); i++) {
+  for (var i = 0; i < bubbleData.length; i++) {
     // Get each object in the array
-    JSONObject bubble = bubbleData.getJSONObject(i); 
+    var bubble = bubbleData[i]; 
     // Get a position object
-    JSONObject position = bubble.getJSONObject("position");
+    var position = bubble.position;
     // Get x,y from position
-    int x = position.getInt("x");
-    int y = position.getInt("y");
+    var x = position.x;
+    var y = position.y;
     
     // Get diamter and label
-    float diameter = bubble.getFloat("diameter");
-    String label = bubble.getString("label");
+    var diameter = bubble.diameter;
+    var label = bubble.label;
 
     // Put object in array
     bubbles[i] = new Bubble(x, y, diameter, label);
   }
 }
 
- void mousePressed() {
+ function mousePressed() {
   // Create a new JSON bubble object
-  JSONObject newBubble = new JSONObject();
+  var newBubble = {};
 
   // Create a new JSON position object
-  JSONObject position = new JSONObject();
-  position.setInt("x", mouseX);
-  position.setInt("y", mouseY);
+  var position = { x: mouseX, y: mouseY };
 
   // Add position to bubble
-  newBubble.setJSONObject("position", position);
+  newBubble.position = position;
 
   // Add diamater and label to bubble
-  newBubble.setFloat("diameter", random(40, 80));
-  newBubble.setString("label", "New label");
+  newBubble.diameter =  random(40, 80);
+  newBubble.label = "New label";
 
   // Append the new JSON bubble object to the array
-  JSONArray bubbleData = json.getJSONArray("bubbles");
-  bubbleData.append(newBubble);
+  var bubbleData = json.bubbles;
+  bubbleData.push(newBubble);
 
-  if (bubbleData.size() > 10) {
-    bubbleData.remove(0);
+  if (bubbleData.length > 10) {
+    bubbleData.splice(0,1);
   }
 
   // Save new data
-  saveJSONObject(json,"data/data.json");
+  // saveJSONObject(json,"data/data.json");
   loadData();
 }
 

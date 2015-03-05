@@ -6,8 +6,10 @@
  * to retrieve data from an XML document via a URL
  */
 
+// Also needs this resolved: https://github.com/processing/p5.js/issues/562
+
 // We're going to store the temperature
-int temperature = 0;
+var temperature = 0;
 // We're going to store text about the weather
 String weather = "";
 
@@ -16,8 +18,8 @@ String zip = "10003";
 
 PFont font;
 
-void setup() {
-  size(600, 360);
+function setup() {
+  createCanvas(600, 360);
   
   font = createFont("Merriweather-Light.ttf", 28);
   textFont(font);
@@ -36,7 +38,7 @@ void setup() {
   weather = forecast.getString("text");
 }
 
-void draw() {
+function draw() {
   background(255);
   fill(0);
 

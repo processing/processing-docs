@@ -7,16 +7,16 @@
  * Mouse click restarts as well. 
  */
  
-CA ca;   // An instance object to describe the Wolfram basic Cellular Automata
+var ca;   // An instance object to describe the Wolfram basic Cellular Automata
 
-void setup() {
-  size(640, 360);
-  int[] ruleset = {0,1,0,1,1,0,1,0};    // An initial rule system
+function setup() {
+  createCanvas(640, 360);
+  var ruleset = [0,1,0,1,1,0,1,0];    // An initial rule system
   ca = new CA(ruleset);                 // Initialize CA
   background(0);
 }
 
-void draw() {
+function draw() {
   ca.render();    // Draw the CA
   ca.generate();  // Generate the next level
   
@@ -27,11 +27,9 @@ void draw() {
   }
 }
 
-void mousePressed() {
+function mousePressed() {
   background(0);
   ca.randomize();
   ca.restart();
 }
-
-
 

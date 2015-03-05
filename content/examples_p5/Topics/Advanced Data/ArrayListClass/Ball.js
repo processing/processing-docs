@@ -1,50 +1,43 @@
 // Simple bouncing ball class
 
-class Ball {
   
-  float x;
-  float y;
-  float speed;
-  float gravity;
-  float w;
-  float life = 255;
+function Ball(tempX, tempY, tempW) {
+  this.x = tempX;
+  this.y = tempY;
+  this.w = tempW;
+  this.speed = 0;
+  this.gravity = 0.1;
+  this.life = 255;
   
-  Ball(float tempX, float tempY, float tempW) {
-    x = tempX;
-    y = tempY;
-    w = tempW;
-    speed = 0;
-    gravity = 0.1;
-  }
   
-    void move() {
+  this.move = function() {
     // Add gravity to speed
-    speed = speed + gravity;
+    this.speed = this.speed + this.gravity;
     // Add speed to y location
-    y = y + speed;
+    this.y = this.y + this.speed;
     // If square reaches the bottom
     // Reverse speed
-    if (y > height) {
+    if (this.y > height) {
       // Dampening
-      speed = speed * -0.8;
-      y = height;
+      this.speed = this.speed * -0.8;
+      this.y = height;
     }
   }
   
-  boolean finished() {
+  this.finished = function() {
     // Balls fade out
-    life--;
-    if (life < 0) {
+    this.life--;
+    if (this.life < 0) {
       return true;
     } else {
       return false;
     }
   }
   
-  void display() {
+  this.display = function() {
     // Display the circle
-    fill(0,life);
+    fill(0,this.life);
     //stroke(0,life);
-    ellipse(x,y,w,w);
+    ellipse(this.x,this.y,this.w,this.w);
   }
 }  

@@ -15,20 +15,29 @@
  121,179,44.758068,Melancholy
  */
 
-// An Array of Bubble objects
-Bubble[] bubbles;
-// A Table object
-Table table;
+ // Should work once this is fixed: https://github.com/processing/p5.js/issues/486
 
-void setup() {
-  size(640, 360);
+// An Array of Bubble objects
+var bubbles;
+// A Table object
+var table;
+
+function preload() {
+  // Load CSV file into a Table object
+  // "header" option indicates the file has a header row
+  table = loadTable("data/data.csv", "header");
+}
+
+function setup() {
+  createCanvas(640, 360);
   loadData();
 }
 
-void draw() {
+function draw() {
   background(255);
   // Display all bubbles
-  for (Bubble b : bubbles) {
+  for (var i = 0; i < bubbles.length; i++) {
+    var b = bubbles[i];
     b.display();
     b.rollover(mouseX, mouseY);
   }
@@ -38,31 +47,30 @@ void draw() {
   text("Click to add bubbles.", 10, height-10);
 }
 
-void loadData() {
-  // Load CSV file into a Table object
-  // "header" option indicates the file has a header row
-  table = loadTable("data.csv", "header");
+function loadData() {
 
   // The size of the array of Bubble objects is determined by the total number of rows in the CSV
-  bubbles = new Bubble[table.getRowCount()]; 
+  bubbles = []; 
 
   // You can access iterate over all the rows in a table
-  int rowCount = 0;
-  for (TableRow row : table.rows()) {
+  var rowCount = 0;
+  for (var i = 0; i < table.getRowCount(); i++) {
+    var row = table.getRow(i);
+    console.log(row);
     // You can access the fields via their column name (or index)
-    float x = row.getFloat("x");
-    float y = row.getFloat("y");
-    float d = row.getFloat("diameter");
-    String n = row.getString("name");
+    var x = row.getNum("x");
+    var y = row.getNum("y");
+    var d = row.getNum("diameter");
+    var n = row.getString("name");
     // Make a Bubble object out of the data read
     bubbles[rowCount] = new Bubble(x, y, d, n);
     rowCount++;
   }
 }
 
-void mousePressed() {
+function mousePressed() {
   // Create a new row
-  TableRow row = table.addRow();
+  var row = table.addRow();
   // Set the values of that row
   row.setFloat("x", mouseX);
   row.setFloat("y", mouseY);
@@ -76,7 +84,7 @@ void mousePressed() {
   }
 
   // Writing the CSV back to the same file
-  saveTable(table, "data/data.csv");
+  // saveTable(table, "data/data.csv");
   // And reloading it
   loadData();
 }

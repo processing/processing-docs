@@ -14,38 +14,38 @@
  */
  
 // Three lists of integers
-IntList lottery;
-IntList results;
-IntList ticket;
+var lottery;
+var results;
+var ticket;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   frameRate(30);
   // Create empy lists
-  lottery = new IntList();
-  results = new IntList();
-  ticket  = new IntList();
+  lottery = new p5.NumberList();
+  results = new p5.NumberList();
+  ticket  = new p5.NumberList();
   
   
   // Add 20 integers in order to the lottery list
-  for (int i = 0; i < 20; i++) {
+  for (var i = 0; i < 20; i++) {
     lottery.append(i);
   }
   
   // Pick five numbers from the lottery list to go into the Ticket list
-  for (int i = 0; i < 5; i++) {
-    int index = int(random(lottery.size()));
+  for (var i = 0; i < 5; i++) {
+    var index = int(random(lottery.size()));
     ticket.append(lottery.get(index));
   }
 }
 
-void draw() {
+function draw() {
   background(51);
   
-  // The shuffle() method randomly shuffles the order of the values in the list
+  // // The shuffle() method randomly shuffles the order of the values in the list
   lottery.shuffle();
   
-  // Call a method that will display the integers in the list at an x,y location
+  // // Call a method that will display the integers in the list at an x,y location
   showList(lottery, 16, 48);
   showList(results, 16, 100);
   showList(ticket, 16, 140);
@@ -53,7 +53,7 @@ void draw() {
   
   // This loop checks if the picked numbers (results)
   // match the ticket numbers
-  for (int i = 0; i < results.size(); i++) {
+  for (var i = 0; i < results.size(); i++) {
     // Are the integers equal?
     if (results.get(i) == ticket.get(i)) {
       fill(0, 255, 0, 100);  // if so green
@@ -68,12 +68,12 @@ void draw() {
   if (frameCount % 30 == 0) {
     if (results.size() < 5) {
       // Get the first value in the lottery list and remove it
-      int val = lottery.remove(0);
+      var val = lottery.remove(0);
       // Put it in the results
       results.append(val);
     } else {
       // Ok we picked five numbers, let's reset
-      for (int i = 0; i < results.size(); i++) {
+      for (var i = 0; i < results.size(); i++) {
         // Put the picked results back into the lottery
         lottery.append(results.get(i));
       }
@@ -84,16 +84,17 @@ void draw() {
 }
 
 // Draw a list of numbers starting at an x,y location
-void showList(IntList list, float x, float y) {
-  for (int i = 0; i < list.size(); i++) {
+function showList(list, x, y) {
+  for (var i = 0; i < list.size(); i++) {
     // Use get() to pull a value from the list at the specified index
-    int val = list.get(i);
+    var val = list.get(i);
     stroke(255);
     noFill();
     ellipse(x+i*32, y, 24, 24);
     textAlign(CENTER);
     fill(255);
-    text(val, x+i*32, y+6);
+    noStroke();
+    text(''+val, x+i*32, y+6);
   }
 }
 

@@ -1,40 +1,36 @@
 // A Bubble class
+  
+  
+// Create  the Bubble
+function Bubble(x_, y_, diameter_, s) {
+  this.over = false;
+  this.x = x_;
+  this.y = y_;
+  this.diameter = diameter_;
+  this.name = s;
 
-class Bubble {
-  float x,y;
-  float diameter;
-  String name;
-  
-  boolean over = false;
-  
-  // Create  the Bubble
-  Bubble(float x_, float y_, float diameter_, String s) {
-    x = x_;
-    y = y_;
-    diameter = diameter_;
-    name = s;
-  }
   
   // CHecking if mouse is over the Bubble
-  void rollover(float px, float py) {
-    float d = dist(px,py,x,y);
-    if (d < diameter/2) {
-      over = true; 
+  this.rollover = function(px, py) {
+    var d = dist(px,py,this.x,this.y);
+    if (d < this.diameter/2) {
+      this.over = true; 
     } else {
-      over = false;
+      this.over = false;
     }
   }
   
   // Display the Bubble
-  void display() {
+  this.display = function() {
     stroke(0);
     strokeWeight(2);
     noFill();
-    ellipse(x,y,diameter,diameter);
-    if (over) {
+    ellipse(this.x,this.y,this.diameter,this.diameter);
+    if (this.over) {
       fill(0);
+      noStroke();
       textAlign(CENTER);
-      text(name,x,y+diameter/2+20);
+      text(this.name,this.x,this.y+this.diameter/2+20);
     }
   }
 }
