@@ -1,71 +1,74 @@
-class PentigreeLSystem extends LSystem {
+// Child class constructor
+function PentigreeLSystem() {
+  LSystem.call(this);
+  this.steps = 0;
+  this.somestep = 0.1;
+  this.xoff = 0.01;
+  this.axiom = "F-F-F-F-F";
+  this.rule = "F-F++F+F-F-F";
+  this.startLength = 60.0;
+  this.theta = radians(72);  
+  this.reset();
+};
 
-  int steps = 0;
-  float somestep = 0.1;
-  float xoff = 0.01;
+// Inherit from the parent class
+PentigreeLSystem.prototype = Object.create(LSystem.prototype);
+this.constructor = PentigreeLSystem;
 
-  PentigreeLSystem() {
-    axiom = "F-F-F-F-F";
-    rule = "F-F++F+F-F-F";
-    startLength = 60.0;
-    theta = radians(72);  
-    reset();
-  }
-
-  void useRule(String r_) {
-    rule = r_;
-  }
-
-  void useAxiom(String a_) {
-    axiom = a_;
-  }
-
-  void useLength(float l_) {
-    startLength = l_;
-  }
-
-  void useTheta(float t_) {
-    theta = radians(t_);
-  }
-
-  void reset() {
-    production = axiom;
-    drawLength = startLength;
-    generations = 0;
-  }
-
-  int getAge() {
-    return generations;
-  }
-
-  void render() {
-    translate(width/4, height/2);
-    steps += 3;          
-    if (steps > production.length()) {
-      steps = production.length();
-    }
-
-    for (int i = 0; i < steps; i++) {
-      char step = production.charAt(i);
-      if (step == 'F') {
-        noFill();
-        stroke(255);
-        line(0, 0, 0, -drawLength);
-        translate(0, -drawLength);
-      } 
-      else if (step == '+') {
-        rotate(theta);
-      } 
-      else if (step == '-') {
-        rotate(-theta);
-      } 
-      else if (step == '[') {
-        pushMatrix();
-      } 
-      else if (step == ']') {
-        popMatrix();
-      }
-    }
-  }
-
+PentigreeLSystem.prototype.useRule = function(r_) {
+  this.rule = r_;
 }
+
+PentigreeLSystem.prototype.useAxiom = function(a_) {
+  this.axiom = a_;
+}
+
+PentigreeLSystem.prototype.useLength = function(l_) {
+  this.startLength = l_;
+}
+
+PentigreeLSystem.prototype.useTheta = function(t_) {
+  this.theta = radians(t_);
+}
+
+PentigreeLSystem.prototype.reset = function() {
+  this.production = this.axiom;
+  this.drawLength = this.startLength;
+  this.generations = 0;
+}
+
+PentigreeLSystem.prototype.getAge = function() {
+  return this.generations;
+}
+
+PentigreeLSystem.prototype.render = function() {
+  translate(width/4, height/2);
+  this.steps += 3;          
+  if (this.steps > this.production.length) {
+    this.steps = this.production.length;
+  }
+
+  for (var i = 0; i < this.steps; i++) {
+    var step = this.production.charAt(i);
+    if (step == 'F') {
+      noFill();
+      stroke(255);
+      line(0, 0, 0, -this.drawLength);
+      translate(0, -this.drawLength);
+    } 
+    else if (step == '+') {
+      rotate(this.theta);
+    } 
+    else if (step == '-') {
+      rotate(-this.theta);
+    } 
+    else if (step == '[') {
+      push();
+    } 
+    else if (step == ']') {
+      pop();
+    }
+  }
+}
+
+

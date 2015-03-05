@@ -1,76 +1,63 @@
-class LSystem 
-{
-  int steps = 0;
+function LSystem() {
+  this.steps = 0;
+  this.axiom = "F";
+  this.rule = "F+F-F";
+  this.startLength = 90.0;
+  this.theta = radians(120.0);
+  this.reset();
+}
 
-  String axiom;
-  String rule;
-  String production;
+LSystem.prototype.reset = function() {
+  this.production = this.axiom;
+  this.drawLength = this.startLength;
+  this.generations = 0;
+}
 
-  float startLength;
-  float drawLength;
-  float theta;
+LSystem.prototype.getAge = function() {
+  return this.generations;
+}
 
-  int generations;
-
-  LSystem() {
-    axiom = "F";
-    rule = "F+F-F";
-    startLength = 90.0;
-    theta = radians(120.0);
-    reset();
+LSystem.prototype.render = function() {
+  translate(width/2, height/2);
+  this.steps += 5;          
+  if (this.steps > this.production.length()) {
+    this.steps = this.production.length();
   }
-
-  void reset() {
-    production = axiom;
-    drawLength = startLength;
-    generations = 0;
-  }
-
-  int getAge() {
-    return generations;
-  }
-
-  void render() {
-    translate(width/2, height/2);
-    steps += 5;          
-    if (steps > production.length()) {
-      steps = production.length();
+  for (var i = 0; i < steps; i++) {
+    var step = this.production.charAt(i);
+    if (step == 'F') {
+      rect(0, 0, -this.drawLength, -this.drawLength);
+      noFill();
+      translate(0, -this.drawLength);
+    } 
+    else if (step == '+') {
+      rotate(this.theta);
+    } 
+    else if (step == '-') {
+      rotate(-this.theta);
+    } 
+    else if (step == '[') {
+      push();
+    } 
+    else if (step == ']') {
+      pop();            
     }
-    for (int i = 0; i < steps; i++) {
-      char step = production.charAt(i);
-      if (step == 'F') {
-        rect(0, 0, -drawLength, -drawLength);
-        noFill();
-        translate(0, -drawLength);
-      } 
-      else if (step == '+') {
-        rotate(theta);
-      } 
-      else if (step == '-') {
-        rotate(-theta);
-      } 
-      else if (step == '[') {
-        pushMatrix();
-      } 
-      else if (step == ']') {
-        popMatrix();            
-      }
-    }
-  }
-
-  void simulate(int gen) {
-    while (getAge() < gen) {
-      production = iterate(production, rule);
-    }
-  }
-
-  String iterate(String prod_, String rule_) {
-    drawLength = drawLength * 0.6;
-    generations++;
-    String newProduction = prod_;          
-    newProduction = newProduction.replaceAll("F", rule_);
-    return newProduction;
   }
 }
+
+LSystem.prototype.simulate = function(gen) {
+  while (this.getAge() < gen) {
+    this.production = this.iterate(this.production, this.rule);
+  }
+}
+
+LSystem.prototype.iterate = function(prod_, rule_) {
+  this.drawLength = this.drawLength * 0.6;
+  this.generations++;
+  var newProduction = prod_;          
+  newProduction = newProduction.replaceAll("F", rule_);
+  return newProduction;
+}
+
 
 

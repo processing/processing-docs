@@ -1,40 +1,38 @@
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
+
 // Koch Curve
 // A class to manage the list of line segments in the snowflake pattern
 
-class KochFractal {
-  PVector start;       // A PVector for the start
-  PVector end;         // A PVector for the end
-  ArrayList<KochLine> lines;   // A list to keep track of all the lines
-  int count;
+function KochFractal() {
+  this.start = createVector(0,height-20);   // A p5.Vector for the start
+  this.end = createVector(width,height-20); // A p5.Vector for the end
+  this.lines = [];                         // An array to keep track of all the lines
+  this.count = 0;
   
-  KochFractal() {
-    start = new PVector(0,height-20);
-    end = new PVector(width,height-20);
-    lines = new ArrayList<KochLine>();
-    restart();
-  }
-
-  void nextLevel() {  
+  this.nextLevel = function() {  
     // For every line that is in the arraylist
     // create 4 more lines in a new arraylist
-    lines = iterate(lines);
-    count++;
+    this.lines = this.iterate(this.lines);
+    this.count++;
   }
 
-  void restart() { 
-    count = 0;      // Reset count
-    lines.clear();  // Empty the array list
-    lines.add(new KochLine(start,end));  // Add the initial line (from one end PVector to the other)
+  this.restart = function() { 
+    this.count = 0;      // Reset count
+    this.lines = [];  // Empty the array list
+    this.lines.push(new KochLine(this.start,this.end));  // Add the initial line (from one end p5.Vector to the other)
   }
-  
-  int getCount() {
-    return count;
+  this.restart();
+
+  this.getCount = function() {
+    return this.count;
   }
-  
+
   // This is easy, just draw all the lines
-  void render() {
-    for(KochLine l : lines) {
-      l.display();
+  this.render = function() {
+    for(var i = 0; i < this.lines.length; i++) {
+      this.lines[i].display();
     }
   }
 
@@ -44,24 +42,24 @@ class KochFractal {
   //   - calculate 4 line segments based on Koch algorithm
   //   - add all 4 line segments into the new arraylist
   // Step 3: Return the new arraylist and it becomes the list of line segments for the structure
-  
+
   // As we do this over and over again, each line gets broken into 4 lines, which gets broken into 4 lines, and so on. . . 
-  ArrayList iterate(ArrayList<KochLine> before) {
-    ArrayList now = new ArrayList<KochLine>();    // Create emtpy list
-    for(KochLine l : before) {
-      // Calculate 5 koch PVectors (done for us by the line object)
-      PVector a = l.start();                 
-      PVector b = l.kochleft();
-      PVector c = l.kochmiddle();
-      PVector d = l.kochright();
-      PVector e = l.end();
-      // Make line segments between all the PVectors and add them
-      now.add(new KochLine(a,b));
-      now.add(new KochLine(b,c));
-      now.add(new KochLine(c,d));
-      now.add(new KochLine(d,e));
+  this.iterate = function(before) {
+    var now = [];    // Create emtpy list
+    for(var i = 0; i < this.lines.length; i++) {
+      var l = this.lines[i];
+      // Calculate 5 koch p5.Vectors (done for us by the line object)
+      var a = l.kochA();                 
+      var b = l.kochB();
+      var c = l.kochC();
+      var d = l.kochD();
+      var e = l.kochE();
+      // Make line segments between all the p5.Vectors and add them
+      now.push(new KochLine(a,b));
+      now.push(new KochLine(b,c));
+      now.push(new KochLine(c,d));
+      now.push(new KochLine(d,e));
     }
     return now;
   }
-
 }

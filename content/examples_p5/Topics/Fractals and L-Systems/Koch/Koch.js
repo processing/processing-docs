@@ -7,15 +7,15 @@
  */
  
 
-KochFractal k;
+var k;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   frameRate(1);  // Animate slowly
   k = new KochFractal();
 }
 
-void draw() {
+function draw() {
   background(0);
   // Draws the snowflake!
   k.render();

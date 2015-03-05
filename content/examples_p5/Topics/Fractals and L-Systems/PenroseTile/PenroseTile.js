@@ -5,15 +5,15 @@
  * This code was based on Patrick Dwyer's L-System class. 
  */
 
-PenroseLSystem ds;
+var ds;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   ds = new PenroseLSystem();
   ds.simulate(4);
 }
 
-void draw() {
+function draw() {
   background(0);
   ds.render();
 }

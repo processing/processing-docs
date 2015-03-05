@@ -6,15 +6,15 @@
  */
  
 
-PentigreeLSystem ps;
+var ps;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   ps = new PentigreeLSystem();
   ps.simulate(3);
 }
 
-void draw() {
+function draw() {
   background(0);
   ps.render();
 }

@@ -5,7 +5,9 @@
  * Simple rendering of the Mandelbrot set.
  */
 
-size(640, 360);
+function setup() {
+createCanvas(640, 360);
+devicePixelScaling(false);
 noLoop();
 background(255);
 
@@ -13,44 +15,44 @@ background(255);
 // A different range will allow us to "zoom" in or out on the fractal
 
 // It all starts with the width, try higher or lower values
-float w = 5;
-float h = (w * height) / width;
+var w = 5;
+var h = (w * height) / width;
 
 // Start at negative half the width and height
-float xmin = -w/2;
-float ymin = -h/2;
+var xmin = -w/2;
+var ymin = -h/2;
 
 // Make sure we can write to the pixels[] array.
 // Only need to do this once since we don't do any other drawing.
 loadPixels();
 
 // Maximum number of iterations for each point on the complex plane
-int maxiterations = 100;
+var maxiterations = 100;
 
 // x goes from xmin to xmax
-float xmax = xmin + w;
+var xmax = xmin + w;
 // y goes from ymin to ymax
-float ymax = ymin + h;
+var ymax = ymin + h;
 
 // Calculate amount we increment x,y for each pixel
-float dx = (xmax - xmin) / (width);
-float dy = (ymax - ymin) / (height);
+var dx = (xmax - xmin) / (width);
+var dy = (ymax - ymin) / (height);
 
 // Start y
-float y = ymin;
-for (int j = 0; j < height; j++) {
+var y = ymin;
+for (var j = 0; j < height; j++) {
   // Start x
-  float x = xmin;
-  for (int i = 0; i < width; i++) {
+  var x = xmin;
+  for (var i = 0; i < width; i++) {
 
     // Now we test, as we iterate z = z^2 + cm does z tend towards infinity?
-    float a = x;
-    float b = y;
-    int n = 0;
+    var a = x;
+    var b = y;
+    var n = 0;
     while (n < maxiterations) {
-      float aa = a * a;
-      float bb = b * b;
-      float twoab = 2.0 * a * b;
+      var aa = a * a;
+      var bb = b * b;
+      var twoab = 2.0 * a * b;
       a = aa - bb + x;
       b = twoab + y;
       // Infinty in our finite world is simple, let's just consider it 16
@@ -62,14 +64,23 @@ for (int j = 0; j < height; j++) {
 
     // We color each pixel based on how long it takes to get to infinity
     // If we never got there, let's pick the color black
+    var loc = (i+j*width)*4
     if (n == maxiterations) {
-      pixels[i+j*width] = color(0);
+      pixels[loc] = 0;
+      pixels[loc+1] = 0;
+      pixels[loc+2] = 0;
+      pixels[loc+3] = 255;
     } else {
       // Gosh, we could make fancy colors here if we wanted
-      pixels[i+j*width] = color(n*16 % 255);
+      pixels[loc] = n*16 % 255;
+      pixels[loc+1] = n*16 % 255;
+      pixels[loc+2] = n*16 % 255;
+      pixels[loc+3] = 255;
     }
     x += dx;
   }
   y += dy;
 }
 updatePixels();
+
+}
