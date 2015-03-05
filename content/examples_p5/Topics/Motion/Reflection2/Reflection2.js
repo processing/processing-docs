@@ -6,35 +6,36 @@
  * Foundation Actionscript Animation: Making Things Move!
  */
 
-Orb orb;
+var orb;
 
-PVector gravity = new PVector(0,0.05);
+var gravity;
 // The ground is an array of "Ground" objects
-int segments = 40;
-Ground[] ground = new Ground[segments];
+var segments = 40;
+var ground = new Array(segments);
 
-void setup(){
-  size(640, 360);
+function setup(){
+  createCanvas(640, 360);
+  gravity  = createVector(0,0.05);
   // An orb object that will fall and bounce around
   orb = new Orb(50, 50, 3);
 
   // Calculate ground peak heights 
-  float[] peakHeights = new float[segments+1];
-  for (int i=0; i<peakHeights.length; i++){
+  var peakHeights = new Array(segments+1);
+  for (var i=0; i<peakHeights.length; i++){
     peakHeights[i] = random(height-40, height-30);
   }
 
-  /* Float value required for segment width (segs)
-   calculations so the ground spans the entire 
-   display window, regardless of segment number. */
-  float segs = segments;
-  for (int i=0; i<segments; i++){
+  // Float value required for segment width (segs)
+  // calculations so the ground spans the entire 
+  // display window, regardless of segment number. 
+  var segs = segments;
+  for (var i=0; i<segments; i++){
     ground[i]  = new Ground(width/segs*i, peakHeights[i], width/segs*(i+1), peakHeights[i+1]);
   }
 }
 
 
-void draw(){
+function draw(){
   // Background
   noStroke();
   fill(0, 15);
@@ -47,7 +48,7 @@ void draw(){
   orb.checkWallCollision();
 
   // Check against all the ground segments
-  for (int i=0; i<segments; i++){
+  for (var i=0; i<segments; i++){
     orb.checkGroundCollision(ground[i]);
   }
 
@@ -55,7 +56,7 @@ void draw(){
   // Draw ground
   fill(127);
   beginShape();
-  for (int i=0; i<segments; i++){
+  for (var i=0; i<segments; i++){
     vertex(ground[i].x1, ground[i].y1);
     vertex(ground[i].x2, ground[i].y2);
   }

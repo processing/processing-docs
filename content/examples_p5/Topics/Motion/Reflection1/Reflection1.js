@@ -8,38 +8,38 @@
  */
 
 // Position of left hand side of floor
-PVector base1;
+var base1;
 // Position of right hand side of floor
-PVector base2;
+var base2;
 // Length of floor
-float baseLength;
+var baseLength;
 
 // An array of subpoints along the floor path
-PVector[] coords;
+var coords = [];
 
 // Variables related to moving ball
-PVector position;
-PVector velocity;
-float r = 6;
-float speed = 3.5;
+var position;
+var velocity;
+var r = 6;
+var speed = 3.5;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
 
   fill(128);
-  base1 = new PVector(0, height-150);
-  base2 = new PVector(width, height);
+  base1 = createVector(0, height-150);
+  base2 = createVector(width, height);
   createGround();
 
   // start ellipse at middle top of screen
-  position = new PVector(width/2, 0);
+  position = createVector(width/2, 0);
 
   // calculate initial random velocity
-  velocity = PVector.random2D();
+  velocity = p5.Vector.random2D();
   velocity.mult(speed);
 }
 
-void draw() {
+function draw() {
   // draw background
   fill(0, 12);
   noStroke();
@@ -50,9 +50,9 @@ void draw() {
   quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
   // calculate base top normal
-  PVector baseDelta = PVector.sub(base2, base1);
+  var baseDelta = p5.Vector.sub(base2, base1);
   baseDelta.normalize();
-  PVector normal = new PVector(-baseDelta.y, baseDelta.x);
+  var normal = new p5.Vector(-baseDelta.y, baseDelta.x);
 
   // draw ellipse
   noStroke();
@@ -63,16 +63,16 @@ void draw() {
   position.add(velocity);
 
   // normalized incidence vector
-  PVector incidence = PVector.mult(velocity, -1);
+  var incidence = p5.Vector.mult(velocity, -1);
   incidence.normalize();
 
   // detect and handle collision
-  for (int i=0; i<coords.length; i++) {
+  for (var i=0; i<coords.length; i++) {
     // check distance between ellipse and base top coordinates
-    if (PVector.dist(position, coords[i]) < r) {
+    if (p5.Vector.dist(position, coords[i]) < r) {
 
       // calculate dot product of incident vector and base top normal 
-      float dot = incidence.dot(normal);
+      var dot = incidence.dot(normal);
 
       // calculate reflection vector
       // assign reflection vector to direction vector
@@ -109,14 +109,14 @@ void draw() {
 
 
 // Calculate variables for the ground
-void createGround() {
+function createGround() {
   // calculate length of base top
-  baseLength = PVector.dist(base1, base2);
+  baseLength = p5.Vector.dist(base1, base2);
 
   // fill base top coordinate array
-  coords = new PVector[ceil(baseLength)];
-  for (int i=0; i<coords.length; i++) {
-    coords[i] = new PVector();
+  coords = new Array(ceil(baseLength));
+  for (var i=0; i<coords.length; i++) {
+    coords[i] = new p5.Vector();
     coords[i].x = base1.x + ((base2.x-base1.x)/baseLength)*i;
     coords[i].y = base1.y + ((base2.y-base1.y)/baseLength)*i;
   }

@@ -1,48 +1,34 @@
-// An ArrayList is used to manage the list of Particles
-
-class ParticleSystem {
-
-  ArrayList<Particle> particles;    // An arraylist for all the particles
-  PVector origin;                   // An origin point for where particles are birthed
-
-  ParticleSystem(int num, PVector v) {
-    particles = new ArrayList<Particle>();   // Initialize the arraylist
-    origin = v.copy();                        // Store the origin point
-    for (int i = 0; i < num; i++) {
-      particles.add(new Particle(origin));    // Add "num" amount of particles to the arraylist
-    }
+var ParticleSystem = function(num, position) {
+  this.origin = position.get();
+  this.particles = [];
+  for (var i = 0; i < num; i++) {
+    this.particles.push(new Particle(this.origin));    // Add "num" amount of particles to the arraylist
   }
 
-
-  void run() {
-    // Cycle through the ArrayList backwards, because we are deleting while iterating
-    for (int i = particles.size()-1; i >= 0; i--) {
-      Particle p = particles.get(i);
-      p.run();
-      if (p.isDead()) {
-        particles.remove(i);
-      }
-    }
-  }
-
-  void addParticle() {
-    Particle p;
+  this.addParticle = function() {
+    var p;
     // Add either a Particle or CrazyParticle to the system
     if (int(random(0, 2)) == 0) {
-      p = new Particle(origin);
+      p = new Particle(this.origin);
     } 
     else {
-      p = new CrazyParticle(origin);
+      p = new CrazyParticle(this.origin);
     }
-    particles.add(p);
-  }
+    this.particles.push(p);
+  };
 
-  void addParticle(Particle p) {
-    particles.add(p);
-  }
+  this.run = function() {
+    for (var i = this.particles.length-1; i >= 0; i--) {
+      var p = this.particles[i];
+      p.run();
+      if (p.isDead()) {
+        this.particles.splice(i, 1);
+      }
+    }
+  };
 
   // A method to test if the particle system still has particles
-  boolean dead() {
-    return particles.isEmpty();
+  this.dead = function() {
+    return particles.length === 0;
   }
 }

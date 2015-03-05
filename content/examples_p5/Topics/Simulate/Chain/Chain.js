@@ -7,20 +7,20 @@
  */
 
 
-Spring2D s1, s2;
+var s1, s2;
 
-float gravity = 9.0;
-float mass = 2.0;
+var gravity = 9.0;
+var mass = 2.0;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   fill(255, 126);
   // Inputs: x, y, mass, gravity
   s1 = new Spring2D(0.0, width/2, mass, gravity);
   s2 = new Spring2D(0.0, width/2, mass, gravity);
 }
 
-void draw() {
+function draw() {
   background(0);
   s1.update(mouseX, mouseY);
   s1.display(mouseX, mouseY);
@@ -28,38 +28,34 @@ void draw() {
   s2.display(s1.x, s1.y);
 }
 
-class Spring2D {
-  float vx, vy; // The x- and y-axis velocities
-  float x, y; // The x- and y-coordinates
-  float gravity;
-  float mass;
-  float radius = 30;
-  float stiffness = 0.2;
-  float damping = 0.7;
   
-  Spring2D(float xpos, float ypos, float m, float g) {
-    x = xpos;
-    y = ypos;
-    mass = m;
-    gravity = g;
+function Spring2D(xpos, ypos, m, g) {
+  this.x = xpos;// The x- and y-coordinates
+  this.y = ypos;
+  this.vx = 0; // The x- and y-axis velocities
+  this.vy = 0;
+  this.mass = m;
+  this.gravity = g;
+  this.radius = 30;
+  this.stiffness = 0.2;
+  this.damping = 0.7;
+  
+  this.update = function(targetX, targetY) {
+    var forceX = (targetX - this.x) * this.stiffness;
+    var ax = forceX / this.mass;
+    this.vx = this.damping * (this.vx + ax);
+    this.x += this.vx;
+    var forceY = (targetY - this.y) * this.stiffness;
+    forceY += this.gravity;
+    var ay = forceY / this.mass;
+    this.vy = this.damping * (this.vy + ay);
+    this.y += this.vy;
   }
   
-  void update(float targetX, float targetY) {
-    float forceX = (targetX - x) * stiffness;
-    float ax = forceX / mass;
-    vx = damping * (vx + ax);
-    x += vx;
-    float forceY = (targetY - y) * stiffness;
-    forceY += gravity;
-    float ay = forceY / mass;
-    vy = damping * (vy + ay);
-    y += vy;
-  }
-  
-  void display(float nx, float ny) {
+   this.display = function(nx, ny) {
     noStroke();
-    ellipse(x, y, radius*2, radius*2);
+    ellipse(this.x, this.y, this.radius*2, this.radius*2);
     stroke(255);
-    line(x, y, nx, ny);
+    line(this.x, this.y, nx, ny);
   }
 }

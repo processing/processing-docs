@@ -11,14 +11,14 @@
  */
 
 // A Mover object
-Mover mover;
+var mover;
 
-void setup() {
-  size(640,360);
+function setup() {
+  createCanvas(640,360);
   mover = new Mover(); 
 }
 
-void draw() {
+function draw() {
   background(0);
   
   // Update the location

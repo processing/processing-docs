@@ -1,40 +1,32 @@
-// A subclass of Particle
+function CrazyParticle(position) {
+  this.theta = 0;
 
-class CrazyParticle extends Particle {
+  Particle.call(this, position);
+  
+  // Method to update position
+  this.update = function(){
+    this.velocity.add(this.acceleration);
+    this.position.add(this.velocity);
+    this.lifespan -= 2;
+    var theta_vel = (this.velocity.x * this.velocity.mag()) / 10;
+    this.theta += theta_vel;
+  };
 
-  // Just adding one new variable to a CrazyParticle
-  // It inherits all other fields from "Particle", and we don't have to retype them!
-  float theta;
-
-  // The CrazyParticle constructor can call the parent class (super class) constructor
-  CrazyParticle(PVector l) {
-    // "super" means do everything from the constructor in Particle
-    super(l);
-    // One more line of code to deal with the new variable, theta
-    theta = 0.0;
-  }
-
-  // Notice we don't have the method run() here; it is inherited from Particle
-
-  // This update() method overrides the parent class update() method
-  void update() {
-    super.update();
-    // Increment rotation based on horizontal velocity
-    float theta_vel = (velocity.x * velocity.mag()) / 10.0f;
-    theta += theta_vel;
-  }
-
-  // This display() method overrides the parent class display() method
-  void display() {
-    // Render the ellipse just like in a regular particle
-    super.display();
+  // Override the display method
+  this.display = function(){
+    stroke(255,this.lifespan);
+    fill(255,this.lifespan);
+    ellipse(this.position.x,this.position.y,8,8);
     // Then add a rotating line
-    pushMatrix();
-    translate(location.x,location.y);
-    rotate(theta);
-    stroke(255,lifespan);
+    push();
+    translate(this.position.x,this.position.y);
+    rotate(this.theta);
+    stroke(255,this.lifespan);
     line(0,0,25,0);
-    popMatrix();
+    pop();
   }
-
 }
+
+// Inherit from the parent class
+CrazyParticle.prototype = Object.create(Particle.prototype);
+this.constructor = CrazyParticle;

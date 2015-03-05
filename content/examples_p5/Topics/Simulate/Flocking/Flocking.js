@@ -9,23 +9,24 @@
  * Click the mouse to add a new boid.
  */
 
-Flock flock;
+var flock;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   flock = new Flock();
   // Add an initial set of boids into the system
-  for (int i = 0; i < 150; i++) {
+  for (var i = 0; i < 150; i++) {
     flock.addBoid(new Boid(width/2,height/2));
   }
 }
 
-void draw() {
+function draw() {
   background(50);
   flock.run();
 }
 
 // Add a new boid into the System
-void mousePressed() {
+function mousePressed() {
   flock.addBoid(new Boid(mouseX,mouseY));
 }
+

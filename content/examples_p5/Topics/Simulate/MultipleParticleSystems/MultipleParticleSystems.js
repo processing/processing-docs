@@ -10,26 +10,26 @@
  * Note use of Inheritance and Polymorphism here.
  */
 
-ArrayList<ParticleSystem> systems;
+var systems = [];
 
-void setup() {
-  size(640, 360);
-  systems = new ArrayList<ParticleSystem>();
+function setup() {
+  createCanvas(640,360);
 }
 
-void draw() {
-  background(0);
-  for (ParticleSystem ps: systems) {
-    ps.run();
-    ps.addParticle();
+function draw() {
+  background(51);
+  for(var i = 0; i < systems.length; i++){
+    systems[i].addParticle();
+    systems[i].run();
   }
-  if (systems.isEmpty()) {
+  if (systems.length === 0) {
     fill(255);
+    noStroke();
     textAlign(CENTER);
     text("click mouse to add particle systems", width/2, height/2);
   }
 }
 
-void mousePressed() {
-  systems.add(new ParticleSystem(1, new PVector(mouseX, mouseY)));
+function mousePressed() {
+  systems.push(new ParticleSystem(1, createVector(mouseX, mouseY)));
 }

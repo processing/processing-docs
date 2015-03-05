@@ -1,26 +1,22 @@
-// A class to describe a group of Particles
-// An ArrayList is used to manage the list of Particles 
+// The Nature of Code
+// Daniel Shiffman
+// http://natureofcode.com
 
-class ParticleSystem {
-  ArrayList<Particle> particles;
-  PVector origin;
+var ParticleSystem = function(position) {
+  this.origin = position.get();
+  this.particles = [];
 
-  ParticleSystem(PVector location) {
-    origin = location.copy();
-    particles = new ArrayList<Particle>();
-  }
+  this.addParticle = function() {
+    this.particles.push(new Particle(this.origin));
+  };
 
-  void addParticle() {
-    particles.add(new Particle(origin));
-  }
-
-  void run() {
-    for (int i = particles.size()-1; i >= 0; i--) {
-      Particle p = particles.get(i);
+  this.run = function() {
+    for (var i = this.particles.length-1; i >= 0; i--) {
+      var p = this.particles[i];
       p.run();
       if (p.isDead()) {
-        particles.remove(i);
+        this.particles.splice(i, 1);
       }
     }
-  }
+  };
 }

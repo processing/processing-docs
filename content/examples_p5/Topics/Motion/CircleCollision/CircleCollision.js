@@ -6,19 +6,21 @@
  * Foundation Actionscript Animation: Making Things Move!
  */
  
-Ball[] balls =  { 
+var balls;
+function setup() {
+  createCanvas(640, 360);
+  balls =  [
   new Ball(100, 400, 20), 
   new Ball(700, 400, 80) 
-};
+];
 
-void setup() {
-  size(640, 360);
 }
 
-void draw() {
+function draw() {
   background(51);
 
-  for (Ball b : balls) {
+  for (var i = 0; i < balls.length; i++) {
+    var b = balls[i];
     b.update();
     b.display();
     b.checkBoundaryCollision();

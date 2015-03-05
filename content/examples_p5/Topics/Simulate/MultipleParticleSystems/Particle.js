@@ -1,40 +1,35 @@
-// A simple Particle class
 
-class Particle {
-  PVector location;
-  PVector velocity;
-  PVector acceleration;
-  float lifespan;
+var Particle = function(position) {
+  this.acceleration = createVector(0, 0.05);
+  this.velocity = createVector(random(-1, 1), random(-2, 0));
+  this.position = position.get();
+  this.lifespan = 255.0;
 
-  Particle(PVector l) {
-    acceleration = new PVector(0,0.05);
-    velocity = new PVector(random(-1,1),random(-2,0));
-    location = l.copy();
-    lifespan = 255.0;
-  }
+  this.run = function() {
+    this.update();
+    this.display();
+  };
 
-  void run() {
-    update();
-    display();
-  }
-
-  // Method to update location
-  void update() {
-    velocity.add(acceleration);
-    location.add(velocity);
-    lifespan -= 2.0;
-  }
+  // Method to update position
+  this.update = function(){
+    this.velocity.add(this.acceleration);
+    this.position.add(this.velocity);
+    this.lifespan -= 2;
+  };
 
   // Method to display
-  void display() {
-    stroke(255,lifespan);
-    fill(255,lifespan);
-    ellipse(location.x,location.y,8,8);
-  }
+  this.display = function() {
+    stroke(255,this.lifespan);
+    fill(255,this.lifespan);
+    ellipse(this.position.x,this.position.y,8,8);
+  };
 
   // Is the particle still useful?
-  boolean isDead() {
-    return (lifespan < 0.0);
-  }
-
+  this.isDead = function(){
+    if (this.lifespan < 0.0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 }

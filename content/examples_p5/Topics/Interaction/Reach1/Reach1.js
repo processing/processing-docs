@@ -7,11 +7,11 @@
  */
 
  
-float segLength = 80;
-float x, y, x2, y2;
+var segLength = 80;
+var x, y, x2, y2;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   strokeWeight(20.0);
   stroke(255, 100);
   
@@ -21,18 +21,18 @@ void setup() {
   y2 = y;
 }
 
-void draw() {
+function draw() {
   background(0);
   
-  float dx = mouseX - x;
-  float dy = mouseY - y;
-  float angle1 = atan2(dy, dx);  
+  var dx = mouseX - x;
+  var dy = mouseY - y;
+  var angle1 = atan2(dy, dx);  
   
-  float tx = mouseX - cos(angle1) * segLength;
-  float ty = mouseY - sin(angle1) * segLength;
+  var tx = mouseX - cos(angle1) * segLength;
+  var ty = mouseY - sin(angle1) * segLength;
   dx = tx - x2;
   dy = ty - y2;
-  float angle2 = atan2(dy, dx);  
+  var angle2 = atan2(dy, dx);  
   x = x2 + cos(angle2) * segLength;
   y = y2 + sin(angle2) * segLength;
   
@@ -40,11 +40,11 @@ void draw() {
   segment(x2, y2, angle2); 
 }
 
-void segment(float x, float y, float a) {
-  pushMatrix();
+function segment(x,y,a) {
+  push();
   translate(x, y);
   rotate(a);
   line(0, 0, segLength, 0);
-  popMatrix();
+  pop();
 }
 

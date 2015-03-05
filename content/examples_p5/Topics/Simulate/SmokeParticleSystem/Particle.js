@@ -1,47 +1,38 @@
 
 // A simple Particle class, renders the particle as an image
+var Particle = function(l, img_) {
+  this.acc = createVector(0, 0.05);
+  var vx = randomGaussian()*0.3;
+  var vy = randomGaussian()*0.3 - 1.0;
+  this.vel = createVector(vx, vy);
+  this.pos = l.get();
+  this.lifespan = 100.0;
+  this.img = img_;
 
-class Particle {
-  PVector loc;
-  PVector vel;
-  PVector acc;
-  float lifespan;
-  PImage img;
+  this.run = function() {
+    this.update();
+    this.render();
+  };
 
-  Particle(PVector l,PImage img_) {
-    acc = new PVector(0,0);
-    float vx = randomGaussian()*0.3;
-    float vy = randomGaussian()*0.3 - 1.0;
-    vel = new PVector(vx,vy);
-    loc = l.copy();
-    lifespan = 100.0;
-    img = img_;
-  }
-
-  void run() {
-    update();
-    render();
-  }
-  
   // Method to apply a force vector to the Particle object
   // Note we are ignoring "mass" here
-  void applyForce(PVector f) {
-    acc.add(f);
+  this.applyForce = function(f) {
+    this.acc.add(f);
   }  
 
   // Method to update location
-  void update() {
-    vel.add(acc);
-    loc.add(vel);
-    lifespan -= 2.5;
-    acc.mult(0); // clear Acceleration
+  this.update = function() {
+    this.vel.add(this.acc);
+    this.pos.add(this.vel);
+    this.lifespan -= 2.5;
+    this.acc.mult(0); // clear Acceleration
   }
 
   // Method to display
-  void render() {
+  this.render = function() {
     imageMode(CENTER);
-    tint(255,lifespan);
-    image(img,loc.x,loc.y);
+    tint(255,this.lifespan);
+    image(this.img,this.pos.x,this.pos.y);
     // Drawing a circle instead
     // fill(255,lifespan);
     // noStroke();
@@ -49,8 +40,8 @@ class Particle {
   }
 
   // Is the particle still useful?
-  boolean isDead() {
-    if (lifespan <= 0.0) {
+  this.isDead = function() {
+    if (this.lifespan <= 0.0) {
       return true;
     } else {
       return false;

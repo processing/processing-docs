@@ -7,107 +7,96 @@
  */
 
 
-int num = 3; 
-Spring[] springs = new Spring[num]; 
+var num = 3; 
+var springs = [];
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   noStroke(); 
   springs[0] = new Spring(240, 260, 40, 0.98, 8.0, 0.1, springs, 0); 
   springs[1] = new Spring(320, 210, 120, 0.95, 9.0, 0.1, springs, 1); 
   springs[2] = new Spring(180, 170, 200, 0.90, 9.9, 0.1, springs, 2);
 }
 
-void draw() {
+function draw() {
   background(51); 
 
-  for (Spring spring : springs) { 
+  for (var i = 0; i < springs.length; i++) {
+    var spring = springs[i]; 
     spring.update(); 
     spring.display();
   }
 }
 
-void mousePressed() {
-  for (Spring spring : springs) { 
+function mousePressed() {
+  for (var i = 0; i < springs.length; i++) {
+    var spring = springs[i]; 
     spring.pressed();
   }
 }
 
-void mouseReleased() {
-  for (Spring spring : springs) { 
+function mouseReleased() {
+  for (var i = 0; i < springs.length; i++) {
+    var spring = springs[i]; 
     spring.released();
   }
 }
 
-class Spring { 
-  // Screen values 
-  float xpos, ypos;
-  float tempxpos, tempypos; 
-  int size = 20; 
-  boolean over = false; 
-  boolean move = false; 
 
-  // Spring simulation constants 
-  float mass;       // Mass 
-  float k = 0.2;    // Spring constant 
-  float damp;       // Damping 
-  float rest_posx;  // Rest position X 
-  float rest_posy;  // Rest position Y 
-
-  // Spring simulation variables 
-  //float pos = 20.0; // Position 
-  float velx = 0.0;   // X Velocity 
-  float vely = 0.0;   // Y Velocity 
-  float accel = 0;    // Acceleration 
-  float force = 0;    // Force 
-
-  Spring[] friends;
-  int me;
 
   // Constructor
-  Spring(float x, float y, int s, float d, float m, 
-  float k_in, Spring[] others, int id) { 
-    xpos = tempxpos = x; 
-    ypos = tempypos = y;
-    rest_posx = x;
-    rest_posy = y;
-    size = s;
-    damp = d; 
-    mass = m; 
-    k = k_in;
-    friends = others;
-    me = id;
-  } 
+function Spring(x, y, s, d, m, k_in, others, id) { 
+  // Screen values 
+  this.xpos = this.tempxpos = x; 
+  this.ypos = this.tempypos = y;
+  this.size = 20;
+  this.over = false;
+  this.move = false;
+  // Spring simulation constants 
+  this.rest_posx = x;
+  this.rest_posy = y;
+  this.size = s;
+  this.damp = d; 
+  this.mass = m; 
+  this.k = k_in;
+  this.friends = others;
+  this.me = id;
+  // Spring simulation variables 
+  //var pos = 20.0; // Position 
+  this.velx = 0.0;   // X Velocity 
+  this.vely = 0.0;   // Y Velocity 
+  this.accel = 0;    // Acceleration 
+  this.force = 0;    // Force 
 
-  void update() { 
-    if (move) { 
-      rest_posy = mouseY; 
-      rest_posx = mouseX;
+  this.update = function() { 
+    if (this.move) { 
+      this.rest_posy = mouseY; 
+      this.rest_posx = mouseX;
     } 
 
-    force = -k * (tempypos - rest_posy);  // f=-ky 
-    accel = force / mass;                 // Set the acceleration, f=ma == a=f/m 
-    vely = damp * (vely + accel);         // Set the velocity 
-    tempypos = tempypos + vely;           // Updated position 
+    this.force = -this.k * (this.tempypos - this.rest_posy);  // f=-ky 
+    this.accel = this.force / this.mass;                 // Set the acceleration, f=ma == a=f/m 
+    this.vely = this.damp * (this.vely + this.accel);         // Set the velocity 
+    this.tempypos = this.tempypos + this.vely;           // Updated position 
 
-    force = -k * (tempxpos - rest_posx);  // f=-ky 
-    accel = force / mass;                 // Set the acceleration, f=ma == a=f/m 
-    velx = damp * (velx + accel);         // Set the velocity 
-    tempxpos = tempxpos + velx;           // Updated position 
+    this.force = -this.k * (this.tempxpos - this.rest_posx);  // f=-ky 
+    this.accel = this.force / this.mass;                 // Set the acceleration, f=ma == a=f/m 
+    this.velx = this.damp * (this.velx + this.accel);         // Set the velocity 
+    this.tempxpos = this.tempxpos + this.velx;           // Updated position 
 
 
-    if ((overEvent() || move) && !otherOver() ) { 
-      over = true;
+    if ((this.overEvent() || this.move) && !this.otherOver() ) { 
+      this.over = true;
     } else { 
-      over = false;
+      this.over = false;
     }
   } 
 
   // Test to see if mouse is over this spring
-  boolean overEvent() {
-    float disX = tempxpos - mouseX;
-    float disY = tempypos - mouseY;
-    if (sqrt(sq(disX) + sq(disY)) < size/2 ) {
+  this.overEvent = function() {
+    var disX = this.tempxpos - mouseX;
+    var disY = this.tempypos - mouseY;
+    if (sqrt(sq(disX) + sq(disY)) < this.size/2 ) {
       return true;
     } else {
       return false;
@@ -115,10 +104,10 @@ class Spring {
   }
 
   // Make sure no other springs are active
-  boolean otherOver() {
-    for (int i=0; i<num; i++) {
-      if (i != me) {
-        if (friends[i].over == true) {
+  this.otherOver = function() {
+    for (var i=0; i<num; i++) {
+      if (i != this.me) {
+        if (this.friends[i].over == true) {
           return true;
         }
       }
@@ -126,26 +115,26 @@ class Spring {
     return false;
   }
 
-  void display() { 
-    if (over) { 
+  this.display = function() { 
+    if (this.over) { 
       fill(153);
     } else { 
       fill(255);
     } 
-    ellipse(tempxpos, tempypos, size, size);
+    ellipse(this.tempxpos, this.tempypos, this.size, this.size);
   } 
 
-  void pressed() { 
-    if (over) { 
-      move = true;
+  this.pressed = function() { 
+    if (this.over) { 
+      this.move = true;
     } else { 
-      move = false;
+      this.move = false;
     }
   } 
 
-  void released() { 
-    move = false; 
-    rest_posx = xpos;
-    rest_posy = ypos;
+  this.released = function() { 
+    this.move = false; 
+    this.rest_posx = this.xpos;
+    this.rest_posy = this.ypos;
   }
 } 

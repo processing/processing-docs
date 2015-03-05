@@ -8,43 +8,37 @@
  */
 
 
-class Mover {
 
+function Mover() {
+  // Start in the center
   // The Mover tracks location, velocity, and acceleration 
-  PVector location;
-  PVector velocity;
-  PVector acceleration;
+  this.location = createVector(width/2,height/2);
+  this.velocity = createVector(0,0);
   // The Mover's maximum speed
-  float topspeed;
+  this.topspeed = 5;
+  
 
-  Mover() {
-    // Start in the center
-    location = new PVector(width/2,height/2);
-    velocity = new PVector(0,0);
-    topspeed = 5;
-  }
-
-  void update() {
+  this.update = function() {
     
     // Compute a vector that points from location to mouse
-    PVector mouse = new PVector(mouseX,mouseY);
-    PVector acceleration = PVector.sub(mouse,location);
+    var mouse = createVector(mouseX,mouseY);
+    var acceleration = p5.Vector.sub(mouse,this.location);
     // Set magnitude of acceleration
     acceleration.setMag(0.2);
     
     // Velocity changes according to acceleration
-    velocity.add(acceleration);
+    this.velocity.add(acceleration);
     // Limit the velocity by topspeed
-    velocity.limit(topspeed);
+    this.velocity.limit(this.topspeed);
     // Location changes by velocity
-    location.add(velocity);
+    this.location.add(this.velocity);
   }
 
-  void display() {
+  this.display = function() {
     stroke(255);
     strokeWeight(2);
     fill(127);
-    ellipse(location.x,location.y,48,48);
+    ellipse(this.location.x,this.location.y,48,48);
   }
 
 }

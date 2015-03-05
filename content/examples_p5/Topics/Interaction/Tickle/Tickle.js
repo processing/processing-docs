@@ -8,15 +8,16 @@
 // The next line is needed if running in JavaScript Mode with Processing.js
 /* @pjs font="Georgia.ttf"; */
 
-String message = "tickle";
-float x, y; // X and Y coordinates of text
-float hr, vr;  // horizontal and vertical radius of the text
+var message = "tickle";
+var x, y; // X and Y coordinates of text
+var hr, vr;  // horizontal and vertical radius of the text
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   
   // Create the font
-  textFont(createFont("Georgia", 36));
+  textFont("Georgia");
+  textSize(36);
   textAlign(CENTER, CENTER);
   
   hr = textWidth(message) / 2;
@@ -26,7 +27,7 @@ void setup() {
   y = height / 2;
 }
 
-void draw() {
+function draw() {
   // Instead of clearing the background, fade it by drawing
   // a semi-transparent rectangle on top
   fill(204, 120);

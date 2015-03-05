@@ -4,19 +4,19 @@
  * When the shape hits the edge of the window, it reverses its direction. 
  */
  
-int rad = 60;        // Width of the shape
-float xpos, ypos;    // Starting position of shape    
+var rad = 60;        // Width of the shape
+var xpos, ypos;    // Starting position of shape    
 
-float xspeed = 2.8;  // Speed of the shape
-float yspeed = 2.2;  // Speed of the shape
+var xspeed = 2.8;  // Speed of the shape
+var yspeed = 2.2;  // Speed of the shape
 
-int xdirection = 1;  // Left or Right
-int ydirection = 1;  // Top to Bottom
+var xdirection = 1;  // Left or Right
+var ydirection = 1;  // Top to Bottom
 
 
-void setup() 
+function setup() 
 {
-  size(640, 360);
+  createCanvas(640, 360);
   noStroke();
   frameRate(30);
   ellipseMode(RADIUS);
@@ -25,7 +25,7 @@ void setup()
   ypos = height/2;
 }
 
-void draw() 
+function draw() 
 {
   background(102);
   

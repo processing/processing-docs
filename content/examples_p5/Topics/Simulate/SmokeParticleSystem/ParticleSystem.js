@@ -1,42 +1,35 @@
 // A class to describe a group of Particles
 // An ArrayList is used to manage the list of Particles 
 
-class ParticleSystem {
-
-  ArrayList<Particle> particles;    // An arraylist for all the particles
-  PVector origin;                   // An origin point for where particles are birthed
-  PImage img;
-  
-  ParticleSystem(int num, PVector v, PImage img_) {
-    particles = new ArrayList<Particle>();              // Initialize the arraylist
-    origin = v.copy();                                   // Store the origin point
-    img = img_;
-    for (int i = 0; i < num; i++) {
-      particles.add(new Particle(origin, img));         // Add "num" amount of particles to the arraylist
-    }
+var ParticleSystem = function(num, v, img_) {
+  this.origin = v.get();
+  this.img = img_;
+  this.particles = [];
+  for (var i = 0; i < num; i++) {
+    particles.add(new Particle(this.origin, this.img));         // Add "num" amount of particles to the arraylist
   }
 
-  void run() {
-    for (int i = particles.size()-1; i >= 0; i--) {
-      Particle p = particles.get(i);
+  this.addParticle = function() {
+    this.particles.push(new Particle(this.origin, this.img));
+  };
+
+  this.run = function() {
+    for (var i = this.particles.length-1; i >= 0; i--) {
+      var p = this.particles[i];
       p.run();
       if (p.isDead()) {
-        particles.remove(i);
+        this.particles.splice(i, 1);
       }
     }
-  }
-  
+  };
+
   // Method to add a force vector to all particles currently in the system
-  void applyForce(PVector dir) {
+  this.applyForce = function(dir) {
     // Enhanced loop!!!
-    for (Particle p: particles) {
+    for (var i = 0; i < this.particles.length; i++) {
+      var p = this.particles[i];
       p.applyForce(dir);
     }
   
   }  
-
-  void addParticle() {
-    particles.add(new Particle(origin,img));
-  }
-
 }

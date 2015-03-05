@@ -6,17 +6,17 @@
  * Normalizing a vector sets its length to 1.
  */
 
-void setup() {
-  size(640,360);
+function setup() {
+  createCanvas(640,360);
 }
 
-void draw() {
+function draw() {
   background(0);
   
   // A vector that points to the mouse location
-  PVector mouse = new PVector(mouseX,mouseY);
+  var mouse = createVector(mouseX,mouseY);
   // A vector that points to the center of the window
-  PVector center = new PVector(width/2,height/2);
+  var center = createVector(width/2,height/2);
   // Subtract center from mouse which results in a vector that points from center to mouse
   mouse.sub(center);
   

@@ -7,53 +7,40 @@
  * Bodies experience fluid resistance when in "water"
  */
  
- // Liquid class 
- class Liquid {
+var Liquid = function(x, y, w, h, c) {
+  this.x = x;
+  this.y = y;
+  this.w = w;
+  this.h = h;
+  this.c = c;
 
-  
-  // Liquid is a rectangle
-  float x,y,w,h;
-  // Coefficient of drag
-  float c;
-
-  Liquid(float x_, float y_, float w_, float h_, float c_) {
-    x = x_;
-    y = y_;
-    w = w_;
-    h = h_;
-    c = c_;
-  }
-  
   // Is the Mover in the Liquid?
-  boolean contains(Mover m) {
-    PVector l = m.location;
-    if (l.x > x && l.x < x + w && l.y > y && l.y < y + h) {
-      return true;
-    }  
-    else {
-      return false;
-    }
-  }
-  
+  this.contains = function(m) {
+    var l = m.position;
+    return l.x > this.x && l.x < this.x + this.w &&
+           l.y > this.y && l.y < this.y + this.h;
+  };
+    
   // Calculate drag force
-  PVector drag(Mover m) {
+  this.drag = function(m) {
     // Magnitude is coefficient * speed squared
-    float speed = m.velocity.mag();
-    float dragMagnitude = c * speed * speed;
+    var speed = m.velocity.mag();
+    var dragMagnitude = this.c * speed * speed;
 
     // Direction is inverse of velocity
-    PVector drag = m.velocity.copy();
-    drag.mult(-1);
+    var dragForce = m.velocity.get();
+    dragForce.mult(-1);
     
     // Scale according to magnitude
-    drag.setMag(dragMagnitude);
-    return drag;
-  }
-  
-  void display() {
+    // dragForce.setMag(dragMagnitude);
+    dragForce.normalize();
+    dragForce.mult(dragMagnitude);
+    return dragForce;
+  };
+    
+  this.display = function() {
     noStroke();
     fill(127);
-    rect(x,y,w,h);
-  }
-
-}
+    rect(this.x, this.y, this.w, this.h);
+  };
+};

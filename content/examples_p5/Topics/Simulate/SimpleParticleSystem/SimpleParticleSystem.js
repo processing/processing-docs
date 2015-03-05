@@ -8,14 +8,14 @@
  * list of particles. 
  */
  
-ParticleSystem ps;
+var ps;
 
-void setup() {
-  size(640,360);
-  ps = new ParticleSystem(new PVector(width/2,50));
+function setup() {
+  createCanvas(640,360);
+  ps = new ParticleSystem(createVector(width/2,50));
 }
 
-void draw() {
+function draw() {
   background(0);
   ps.addParticle();
   ps.run();

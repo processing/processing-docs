@@ -4,29 +4,29 @@
  * Recording random movement as a continuous line. 
  */
  
-int num = 2000;
-int range = 6;
+var num = 2000;
+var range = 6;
 
-float[] ax = new float[num];
-float[] ay = new float[num]; 
+var ax = [];
+var ay = []; 
 
 
-void setup() 
+function setup() 
 {
-  size(640, 360);
-  for(int i = 0; i < num; i++) {
+  createCanvas(640, 360);
+  for(var i = 0; i < num; i++) {
     ax[i] = width/2;
     ay[i] = height/2;
   }
   frameRate(30);
 }
 
-void draw() 
+function draw() 
 {
   background(51);
   
   // Shift all elements 1 place to the left
-  for(int i = 1; i < num; i++) {
+  for(var i = 1; i < num; i++) {
     ax[i-1] = ax[i];
     ay[i-1] = ay[i];
   }
@@ -40,8 +40,8 @@ void draw()
   ay[num-1] = constrain(ay[num-1], 0, height);
   
   // Draw a line connecting the points
-  for(int i=1; i<num; i++) {    
-    float val = float(i)/num * 204.0 + 51;
+  for(var i=1; i<num; i++) {    
+    var val = float(i)/num * 204.0 + 51;
     stroke(val);
     line(ax[i-1], ay[i-1], ax[i], ay[i]);
   }

@@ -5,22 +5,22 @@
  * A line segment is pushed and pulled by the cursor.
  */
 
-float x = 100;
-float y = 100;
-float angle1 = 0.0;
-float segLength = 50;
+var x = 100;
+var y = 100;
+var angle1 = 0.0;
+var segLength = 50;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   strokeWeight(20.0);
   stroke(255, 100);
 }
 
-void draw() {
+function draw() {
   background(0);
   
-  float dx = mouseX - x;
-  float dy = mouseY - y;
+  var dx = mouseX - x;
+  var dy = mouseY - y;
   angle1 = atan2(dy, dx);  
   x = mouseX - (cos(angle1) * segLength);
   y = mouseY - (sin(angle1) * segLength);
@@ -29,10 +29,10 @@ void draw() {
   ellipse(x, y, 20, 20);
 }
 
-void segment(float x, float y, float a) {
-  pushMatrix();
+function segment(x, y, a) {
+  push();
   translate(x, y);
   rotate(a);
   line(0, 0, segLength, 0);
-  popMatrix();
+  pop();
 }

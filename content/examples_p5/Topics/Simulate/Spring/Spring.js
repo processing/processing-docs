@@ -5,46 +5,46 @@
  */
  
 // Spring drawing constants for top bar
-int springHeight = 32;  // Height
-int left;               // Left position
-int right;              // Right position
-int max = 200;          // Maximum Y value
-int min = 100;          // Minimum Y value
-boolean over = false;   // If mouse over
-boolean move = false;   // If mouse down and over
+var springHeight = 32;  // Height
+var left = 0;               // Left position
+var right = 0;              // Right position
+var maxVal = 200;          // Maximum Y value
+var minVal = 100;          // Minimum Y value
+var over = false;   // If mouse over
+var move = false;   // If mouse down and over
 
 // Spring simulation constants
-float M = 0.8;   // Mass
-float K = 0.2;   // Spring constant
-float D = 0.92;  // Damping
-float R = 150;   // Rest position
+var M = 0.8;   // Mass
+var K = 0.2;   // Spring constant
+var D = 0.92;  // Damping
+var R = 150;   // Rest position
 
 // Spring simulation variables
-float ps = R;    // Position
-float vs = 0.0;  // Velocity
-float as = 0;    // Acceleration
-float f = 0;     // Force
+var ps = R;    // Position
+var vs = 0.0;  // Velocity
+var as = 0;    // Acceleration
+var f = 0;     // Force
 
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   rectMode(CORNERS);
   noStroke();
   left = width/2 - 100;
   right = width/2 + 100;
 }
 
-void draw() {
+function draw() {
   background(102);
   updateSpring();
   drawSpring();
 }
 
-void drawSpring() {
+function drawSpring() {
   
   // Draw base
   fill(0.2);
-  float baseWidth = 0.5 * ps + -8;
+  var baseWidth = 0.5 * ps + -8;
   rect(width/2 - baseWidth, ps + springHeight, width/2 + baseWidth, height);
 
   // Set color and draw top bar
@@ -57,7 +57,7 @@ void drawSpring() {
 }
 
 
-void updateSpring() {
+function updateSpring() {
   // Update the spring position
   if(!move) {
     f = -K * (ps - R);    // f=-ky
@@ -79,16 +79,16 @@ void updateSpring() {
   // Set and constrain the position of top bar
   if(move) {
     ps = mouseY - springHeight/2;
-    ps = constrain(ps, min, max);
+    ps = constrain(ps, minVal, maxVal);
   }
 }
 
-void mousePressed() {
+function mousePressed() {
   if(over) {
     move = true;
   }
 }
 
-void mouseReleased() {
+function mouseReleased() {
   move = false;
 }

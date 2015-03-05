@@ -13,36 +13,37 @@
  */
 
 // Five moving bodies
-Mover[] movers = new Mover[10];
+var movers = [];
 
 // Liquid
-Liquid liquid;
+var liquid;
 
-void setup() {
-  size(640, 360);
+function setup() {
+  createCanvas(640, 360);
   reset();
   // Create liquid object
   liquid = new Liquid(0, height/2, width, height/2, 0.1);
 }
 
-void draw() {
+function draw() {
   background(0);
   
   // Draw water
   liquid.display();
 
-  for (Mover mover : movers) {
-    
+  for (var i = 0; i < movers.length; i++) {   
+    var mover = movers[i];
+
     // Is the Mover in the liquid?
-    if (liquid.contains(mover) {
+    if (liquid.contains(mover)) {
       // Calculate drag force
-      PVector drag = liquid.drag(mover);
+      var drag = liquid.drag(mover);
       // Apply drag force to Mover
       mover.applyForce(drag);
     }
 
     // Gravity is scaled by mass here!
-    PVector gravity = new PVector(0, 0.1*mover.mass);
+    var gravity = createVector(0, 0.1*mover.mass);
     // Apply gravity
     mover.applyForce(gravity);
    
@@ -53,17 +54,18 @@ void draw() {
   }
   
   fill(255);
+  noStroke();
   text("click mouse to reset",10,30);
   
 }
 
-void mousePressed() {
+function mousePressed() {
   reset();
 }
 
 // Restart all the Mover objects randomly
-void reset() {
-  for (int i = 0; i < movers.length; i++) {
+function reset() {
+  for (var i = 0; i < 10; i++) {
     movers[i] = new Mover(random(0.5, 3), 40+i*70, 0);
   }
 }
