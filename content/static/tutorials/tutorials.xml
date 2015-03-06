@@ -167,5 +167,12 @@
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+    
+     <tutorial>
+		<title>Arrays</title>
+		<directory>arrays</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
 
 </tutorials>
