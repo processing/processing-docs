@@ -3,7 +3,7 @@
    	<tr width="656">
         <td style= "width: 656px;">
  	 <h1>Interactivity</h1>
-<p class="license">This tutorial is Extension 7 from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
+<p class="license">This is the Interactivity chapter from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
             <br /> 
             </td>
         </tr>
@@ -88,6 +88,7 @@ void setup() {
   size(100, 100);
   noStroke();
 }
+
 void draw() {
   background(126);
   ellipse(mouseX, 16, 33, 33); // Top circle
@@ -120,6 +121,7 @@ void setup() {
   size(100, 100);
   noStroke();
 }
+
 void draw() {
   background(126);
   ellipse(mouseX, 16, 33, 33); // Top circle
@@ -156,6 +158,7 @@ void setup() {
   size(100, 100);
   noStroke();
 }
+
 void draw() {
   float x = mouseX;
   float y = mouseY;
@@ -206,6 +209,7 @@ void setup() {
   size(100, 100);
   strokeWeight(8);
 }
+
 void draw() {
   background(204);
   line(mouseX, mouseY, pmouseX, pmouseY);
@@ -241,6 +245,7 @@ void setup() {
   noStroke();
   fill(0);
 }
+
 void draw() {
   background(204);
   if (mouseX < 50) {
@@ -275,6 +280,7 @@ void setup() {
   noStroke();
   fill(0);
 }
+
 void draw() {
   background(204);
   if (mouseX < 33) {
@@ -316,6 +322,7 @@ void setup() {
   noStroke();
   fill(0);
 }
+
 void draw() {
   background(204);
   if ((mouseX > 40) && (mouseX < 80) &&
@@ -358,6 +365,7 @@ void setup() {
   noStroke();
   fill(0);
 }
+
 void draw() {
   background(204);
   if ((mouseX <= 50) && (mouseY <= 50)) {
@@ -399,6 +407,7 @@ three buttons; Processing can detect when these buttons are pressed with the mou
 void setup() {
   size(100, 100);
 } 
+
 void draw() {
   background(204);
   if (mousePressed == true) {
@@ -432,6 +441,7 @@ void draw() {
 void setup() {
   size(100, 100);
 }
+
 void draw() { 
   if (mouseButton == LEFT) {
     fill(0); // Black
@@ -466,6 +476,7 @@ void draw() {
 void setup() {
   size(100, 100);
 } 
+
 void draw() {
   if (mousePressed == true) {
     if (mouseButton == LEFT) {
@@ -512,7 +523,8 @@ Processing registers the most recently pressed key and whether a key is currentl
 void setup() {
   size(100, 100);
   strokeWeight(4);
-} 
+}
+
 void draw() {
   background(204);
   if (keyPressed == true) { // If the key is pressed,
@@ -546,6 +558,7 @@ void setup() {
   size(100, 100);
   strokeWeight(4);
 } 
+
 void draw() {
   background(204);
   if (keyPressed == true) { // If the key is pressed
@@ -581,7 +594,8 @@ The key variable stores a single alphanumeric character. Specifically, it holds 
 void setup() {
   size(100, 100);
   textSize(60);
-} 
+}
+
 void draw() {
   background(0);
   text(key, 20, 75); // Draw at coordinate (20,75)
@@ -616,7 +630,8 @@ The key variable may be used to determine whether a specific key is pressed. The
 void setup() {
   size(100, 100);
   strokeWeight(4);
-} 
+}
+
 void draw() {
   background(204);
   // If the 'A' key is pressed draw a line
@@ -661,7 +676,8 @@ Because each character has a numeric value as defined by the ASCII table (p. 605
 void setup() {
   size(100, 100);
   stroke(0);
-} 
+}
+
 void draw() {
   if (keyPressed == true) {
     int x = key - 32;
@@ -689,10 +705,12 @@ void draw() {
     <td>
 <pre>
 float angle = 0;
+
 void setup() {
   size(100, 100);
   fill(0);
 } 
+
 void draw() {
   background(204);
   if (keyPressed == true) {
@@ -733,9 +751,11 @@ In addition to reading key values for numbers, letters, and symbols, Processing 
     <td>
 <pre>
 int y = 35;
+
 void setup() {
   size(100, 100);
 }
+
 void draw() {
   background(204);
   line(10, 50, 90, 50);
@@ -793,12 +813,15 @@ an action, such as clearing the screen. In the following example, the background
     <td>
 <pre>
 int gray = 0;
+
 void setup() {
   size(100, 100);
 }
+
 void draw() {
   background(gray);
 } 
+
 void mousePressed() {
   gray += 20;
 }
@@ -828,12 +851,15 @@ The following example is the same as the one above, but the gray variable is set
     <td>
 <pre>
 int gray = 0;
+
 void setup() {
   size(100, 100);
 }
+
 void draw() {
   background(gray);
 } 
+
 void mouseReleased() {
   gray += 20;
 }
@@ -867,8 +893,10 @@ void setup() {
   size(100, 100);
   fill(0, 102);
 } 
+
 void draw() {
 } // Empty draw() keeps the program running
+
 void mousePressed() {
   rect(mouseX, mouseY, 33, 33);
 }
@@ -899,10 +927,12 @@ The code inside the mouseMoved() and mouseDragged() event functions are run when
     <td>
 <pre>
 int dragX, dragY, moveX, moveY;
+
 void setup() {
   size(100, 100);
   noStroke();
 }
+
 void draw() {
   background(204);
   fill(0); 
@@ -910,10 +940,12 @@ void draw() {
   fill(153);
   ellipse(moveX, moveY, 33, 33); // Gray circle
 }
+
 void mouseMoved() { // Move gray circle
   moveX = mouseX;
   moveY = mouseY;
 }
+
 void mouseDragged() { // Move black circle
   dragX = mouseX;
   dragY = mouseY;
@@ -952,10 +984,12 @@ Each time a key is pressed, the code inside the keyPressed() block is run once. 
     <td>
 <pre>
 boolean drawT = false;
+
 void setup() {
   size(100, 100);
   noStroke();
 } 
+
 void draw() {
   background(204);
   if (drawT == true) {
@@ -963,6 +997,7 @@ void draw() {
     rect(39, 40, 22, 45);
   }
 }
+
 void keyPressed() {
   if ((key == 'T') || (key == 't')) {
     drawT = true;
@@ -995,10 +1030,12 @@ Each time a key is released, the code inside the keyReleased() block is run once
     <td>
 <pre>
 boolean drawT = false;
+
 void setup() {
   size(100, 100);
   noStroke();
 } 
+
 void draw() {
   background(204);
   if (drawT == true) { 
@@ -1006,11 +1043,13 @@ void draw() {
     rect(39, 40, 22, 45);
   }
 }
+
 void keyPressed() {
   if ((key == 'T') || (key == 't')) {
     drawT = true;
   }
 }
+
 void keyReleased() {
   drawT = false;
 }
@@ -1028,9 +1067,11 @@ If a program has been paused with noLoop(), running loop() resumes its action. B
 <br />
 <pre>
 int frame = 0;
+
 void setup() {
   size(100, 100);
 }
+
 void draw() {
   if (frame > 120) { // If 120 frames since the mouse
     noLoop(); // was pressed, stop the program
@@ -1042,6 +1083,7 @@ void draw() {
     frame++;
   }
 }
+
 void mousePressed() {
   loop();
   frame = 0;
@@ -1056,11 +1098,13 @@ void setup() {
   size(100, 100);
   noLoop();
 }
+
 void draw() {
   background(204);
   line(mouseX, 0, mouseX, 100);
   line(0, mouseY, 100, mouseY);
 }
+
 void mousePressed() {
   redraw(); // Run the code in draw one time
 }
@@ -1076,6 +1120,7 @@ void setup() {
   strokeWeight(7);
   noCursor();
 }
+
 void draw() {
   background(204);
   ellipse(mouseX, mouseY, 10, 10);
@@ -1089,6 +1134,7 @@ void setup() {
   size(100, 100);
   noCursor();
 }
+
 void draw() {
   background(204);
   if (mousePressed == true) {
@@ -1104,6 +1150,7 @@ Add a parameter to the cursor() function to change it to another icon or image. 
 void setup() {
   size(100, 100);
 }
+
 void draw() {
   background(204);
   if (mousePressed == true) {

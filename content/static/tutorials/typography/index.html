@@ -3,7 +3,7 @@
    	<tr>
    	<td>
 <h1>Typography</h1>
-<p class="license">This tutorial is Extension 12 from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
+<p class="license">This tutorial is the Typography chapter from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 	
 <br />
 <p>
@@ -187,12 +187,14 @@ Before a font is used in a program, it must be converted and set as the current 
     <td>
 <pre>
 PFont zigBlack;
+
 void setup() {
   size(100, 100);
   zigBlack = createFont("Ziggurat-Black", 32);
   textFont(zigBlack);
   fill(0);
 }
+
 void draw() {
   background(204);
   text("LAX", 0, 40);
@@ -226,12 +228,14 @@ To ensure a font will load on all computers, regardless if the font is installed
     <td>
 <pre>
 PFont sourceLight;
+
 void setup() {
   size(100, 100);
   sourceLight = createFont("SourceCodePro-Light.otf", 34);
   textFont(sourceLight);
   fill(0);
 }
+
 void draw() {
   background(204);
   text("LAX", 0, 40);
@@ -263,12 +267,14 @@ To use two fonts in one program, create two PFont variables and use the textFont
     <td>
 <pre>
 PFont zigBlack, sourceLight;
+
 void setup() {
   size(100, 100);
   zigBlack = createFont("Ziggurat-Black", 24);
   sourceLight = createFont("SourceCodePro-Light.otf", 34);
   fill(0);
 }
+
 void draw() {
   background(204);
   textFont(zigBlack);
@@ -311,12 +317,14 @@ The following example uses the same font as the prior createFont() example. The 
     <td>
 <pre>
 PFont zigBlack;
+
 void setup() {
   size(100, 100);
   zigBlack = loadFont("Ziggurat-Black-32.vlw");
   textFont(zigBlack);
   fill(0);
 }
+
 void draw() {
   background(204);
   text("LAX", 0, 40);
@@ -347,12 +355,14 @@ When the font is drawn at a different size from the size at which it was created
     <td>
 <pre>
 PFont zigBlack;
+
 void setup() {
   size(100, 100);
   zigBlack = loadFont("Ziggurat-Black-12.vlw");
   textFont(zigBlack);
   fill(0);
 }
+
 void draw() {
   background(204);
   textSize(12);
@@ -491,18 +501,21 @@ Drawing letters to the screen becomes more engaging when used in combination wit
     <td>
 <pre>
 String letters = "";
+
 void setup() {
   size(100, 100);
   stroke(255);
   fill(0);
   textSize(16);
 }
+
 void draw() {
   background(204);
   float cursorPosition = textWidth(letters);
   line(cursorPosition, 0, cursorPosition, 100);
   text(letters, 0, 50);
 }
+
 void keyPressed() {
   if (key == BACKSPACE) {
     if (letters.length() > 0) {
@@ -532,15 +545,18 @@ void keyPressed() {
 <pre>
 String letters = "";
 int back = 102;
+
 void setup() {
   size(100, 100);
   textSize(16);
   textAlign(CENTER);
 }
+
 void draw() {
   background(back);
   text(letters, 50, 50);
 }
+
 void keyPressed() {
   if ((key == ENTER) || (key == RETURN)) {
     letters = letters.toLowerCase();
@@ -588,6 +604,7 @@ void setup() {
   textSize(24);
   textAlign(CENTER);
 }
+
 void draw() {
   background(204);
   text("avoid", width-mouseX, height-mouseY);
@@ -616,11 +633,13 @@ void draw() {
 <pre>
 float x = 33;
 float y = 60;
+
 void setup() {
   size(100, 100);
   textSize(24);
   noStroke();
 }
+
 void draw() {
   fill(204, 120);
   rect(0, 0, width, height);

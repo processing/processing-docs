@@ -3,8 +3,7 @@
 <tr>
 <td>
 <h1 style="line-height: 0.7em;">Render Techniques</h1>
-<h3 style="line-height: 0.7em;"><em>By Casey Reas</em></h3>
-    <p class="license">This tutorial is Extension 35 from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
+    <p class="license">This tutorial is the Render Techniques chapter from the second edition of <em><a href="http://mitpress.mit.edu/books/processing-1">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2013 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 <br /> 
 <br />
 <p>
@@ -160,6 +159,7 @@ void draw() {
   line(mouseX, 0, mouseX, height);
   line(0, mouseY, width, mouseY); 
 }
+
 void mousePressed() {
   noStroke();
   fill(255, 100);
@@ -354,6 +354,7 @@ void setup() {
     size(100, 100);
     cube = createGraphics(width, height, P3D); // Error
 }
+
 void draw() {
     cube.beginDraw();
     cube.box(40);
