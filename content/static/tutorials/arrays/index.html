@@ -15,7 +15,7 @@ For instance, an array can store five integers (1919, 1940, 1975, 1976, 1990), t
 
     <tr style= "width: 100px; float:left;">
     <td>
-<img src="imgs/28_01.png" style= "width: 100px; height: 100px;">
+<img src="imgs/Dia-28-1.svg" style= "width: 100px; height: 100px;">
         </td>
         </tr>
 
@@ -33,7 +33,7 @@ Arrays can make the task of programming much easier. While it’s not necessary 
 
 <tr style= "width: 100px; float:left;">
     <td>
-<img src="imgs/28_02.png" style= "width: 100px; height: 100px;">
+<img src="imgs/Dia-28-2.svg" style= "width: 100px; height: 100px;">
         <br />
         </td>
     </tr>
@@ -118,18 +118,19 @@ In contrast, the following example shows how to use an array within a program. T
 <tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
-int[] x = { 50, 61, 83, 69, 71, 50, 29, 31, 17, 39 };
+int[] x = { 
+  50, 61, 83, 69, 71, 50, 29, 31, 17, 39
+};
+
 fill(0);
 // Read one array element each time through the for loop
 for (int i = 0; i < x.length; i++) {
-rect(0, i*10, x[i], 8);
+  rect(0, i*10, x[i], 8);
 }
 </pre>
         </td>
     </tr>
 
-
-    
     <tr>
     <td>
 <p>
@@ -143,27 +144,32 @@ Arrays are declared similarly to other data types, but they are distinguished wi
     <td>
 <pre>
 int[] data; // Declare
+
 void setup() {
-size(100, 100);
-data = new int[5]; // Create
-data[0] = 19; // Assign
-data[1] = 40;
-data[2] = 75;
-data[3] = 76;
-data[4] = 90;
+  size(100, 100);
+  data = new int[5]; // Create
+  data[0] = 19; // Assign
+  data[1] = 40;
+  data[2] = 75;
+  data[3] = 76;
+  data[4] = 90;
 }
+
 int[] data = new int[5]; // Declare, create
+
 void setup() {
-size(100, 100);
-data[0] = 19; // Assign
-data[1] = 40;
-data[2] = 75;
-data[3] = 76;
-data[4] = 90;
+  size(100, 100);
+  data[0] = 19; // Assign
+  data[1] = 40;
+  data[2] = 75;
+  data[3] = 76;
+  data[4] = 90;
 }
+
 int[] data = { 19, 40, 75, 76, 90 }; // Declare, create, assign
+
 void setup() {
-size(100, 100);
+  size(100, 100);
 }
 </pre>
         </td>
@@ -184,7 +190,9 @@ Arrays can also be used in programs that don’t include a setup() and draw(), b
     <td>
 <pre>
 int[] data; // Declare
+
 data = new int[5]; // Create
+
 data[0] = 19; // Assign
 data[1] = 40;
 data[2] = 75;
@@ -192,7 +200,9 @@ data[3] = 76;
 data[4] = 90;
 
 int[] data = new int[5]; // Declare, create
+
 data[0] = 19; // Assign
+
 data[1] = 40;
 data[2] = 75;
 data[3] = 76;
@@ -223,6 +233,7 @@ After an array is defined and assigned values, its data can be accessed and used
     <td>
 <pre>
 int[] data = { 19, 40, 75, 76, 90 };
+
 line(data[0], 0, data[0], 100);
 line(data[1], 0, data[1], 100);
 line(data[2], 0, data[2], 100);
@@ -244,6 +255,7 @@ Remember, the first element in the array is in the 0 position. If you try to acc
     <td>
 <pre>
 int[] data = { 19, 40, 75, 76, 90 };
+
 println(data[0]); // Prints "19" to the console
 println(data[2]); // Prints "75" to the console
 println(data[5]); // ERROR! The last element of the array is 4
@@ -265,6 +277,7 @@ The length field stores the number of elements in an array. This field is stored
 int[] data1 = { 19, 40, 75, 76, 90 };
 int[] data2 = { 19, 40 };
 int[] data3 = new int[127];
+
 println(data1.length); // Prints "5" to the console
 println(data2.length); // Prints "2" to the console
 println(data3.length); // Prints "127" to the console
@@ -281,7 +294,7 @@ Usually, a for loop is used to access array elements, especially with large arra
 </tr>
     <tr style= "width: 100px; float:left;">
     <td>
-<img src="imgs/28_12.png" style= "width: 100px; height: 100px;">
+<img src="imgs/28_12.png" style= "width: 100px; height: 100px; margin-bottom: 10px;">
 </td>
 </tr>
 
@@ -289,8 +302,9 @@ Usually, a for loop is used to access array elements, especially with large arra
     <td>
 <pre>
 int[] data = { 19, 40, 75, 76, 90 };
+
 for (int i = 0; i < data.length; i++) {
-line(data[i], 0, data[i], 100);
+    line(data[i], 0, data[i], 100);
 }
 </pre>
 </td>
@@ -314,21 +328,21 @@ A for loop can also be used to put data inside an array. For instance, it can ca
 float[] sineWave;
 
 void setup() {
-size(100, 100);
-sineWave = new float[width];
-for (int i = 0; i < sineWave.length; i++) {
-// Fill array with values from sin()
-float r = map(i, 0, width, 0, TWO_PI);
-sineWave[i] = abs(sin(r));
-}
+  size(100, 100);
+  sineWave = new float[width];
+  for (int i = 0; i < sineWave.length; i++) {
+    // Fill array with values from sin()
+    float r = map(i, 0, width, 0, TWO_PI);
+    sineWave[i] = abs(sin(r));
+  }
 }
 
 void draw() {
-for (int i = 0; i < sineWave.length; i++) {
-// Set stroke values to numbers read from array
-stroke(sineWave[i] * 255);
-line(i, 0, i, height);
-}
+  for (int i = 0; i < sineWave.length; i++) {
+    // Set stroke values to numbers read from array
+    stroke(sineWave[i] * 255);
+    line(i, 0, i, height);
+  }
 }
 </pre>
         </td>
@@ -343,10 +357,8 @@ As one example of how arrays may be used, this section shows how to use arrays t
 </p>		
 </td>
 	</tr>
-
 <tr style ="width: 100px; float:left;">
     <td>
-<br /> 
 <img src="imgs/28_15_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <img src="imgs/28_15_2.png" style= "width: 100px; height: 100px;">
@@ -363,24 +375,23 @@ As one example of how arrays may be used, this section shows how to use arrays t
 int[] y;
 
 void setup() {
-size(100, 100);
-y = new int[width]; 
+  size(100, 100);
+  y = new int[width];
 }
 
 void draw() {
-background(204); // Read the array from the end to the
-// beginning to avoid overwriting the data
-for (int i = y.length-1; i > 0; i--) {
-y[i] = y[i-1];
+  background(204); // Read the array from the end to the
+  // beginning to avoid overwriting the data
+  for (int i = y.length-1; i > 0; i--) {
+    y[i] = y[i-1];
+  }
+  // Add new values to the beginning
+  y[0] = mouseY;
+  // Display each pair of values as a line
+  for (int i = 1; i < y.length; i++) {
+    line(i, y[i], i-1, y[i-1]);
+  }
 }
-// Add new values to the beginning
-y[0] = mouseY;
-// Display each pair of values as a line
-for (int i = 1; i < y.length; i++) {
-line(i, y[i], i-1, y[i-1]);
-}
-}
-
 </pre>
     </td>
 </tr>
@@ -395,7 +406,6 @@ Apply the same code simultaneously to the mouseX and mouseY values to store the 
 
 <tr style ="width: 100px; float:left;">
     <td>
-<br /> 
 <img src="imgs/28_16_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <img src="imgs/28_16_2.png" style= "width: 100px; height: 100px;">
@@ -408,28 +418,30 @@ Apply the same code simultaneously to the mouseX and mouseY values to store the 
 <tr style="float:left; margin-left: 20px;">
     <td>
 <pre>
-
 int num = 50;
 int[] x = new int[num];
 int[] y = new int[num];
-void setup() { size(100, 100);
-noStroke();
-fill(255, 102);
+
+void setup() { 
+  size(100, 100);
+  noStroke();
+  fill(255, 102);
 }
+
 void draw() {
-background(0);
-// Shift the values to the right
-for (int i = num-1; i > 0; i--) {
-x[i] = x[i-1];
-y[i] = y[i-1];
-}
-// Add the new values to the beginning of the array
-x[0] = mouseX;
-y[0] = mouseY;
-// Draw the circles
-for (int i = 0; i < num; i++) {
-ellipse(x[i], y[i], i/2.0, i/2.0);
-}
+  background(0);
+  // Shift the values to the right
+  for (int i = num-1; i > 0; i--) {
+    x[i] = x[i-1];
+    y[i] = y[i-1];
+  }
+  // Add the new values to the beginning of the array
+  x[0] = mouseX;
+  y[0] = mouseY;
+  // Draw the circles
+  for (int i = 0; i < num; i++) {
+    ellipse(x[i], y[i], i/2.0, i/2.0);
+  }
 }
 </pre>
     </td>
@@ -449,23 +461,25 @@ int num = 50;
 int[] x = new int[num];
 int[] y = new int[num];
 int indexPosition = 0;
+
 void setup() {
-size(100, 100);
-noStroke();
-fill(255, 102);
+  size(100, 100);
+  noStroke();
+  fill(255, 102);
 }
+
 void draw() {
-background(0);
-x[indexPosition] = mouseX;
-y[indexPosition] = mouseY;
-// Cycle between 0 and the number of elements
-indexPosition = (indexPosition + 1) % num;
-for (int i = 0; i < num; i++) {
-// Set the array position to read
-int pos = (indexPosition + i) % num;
-float radius = (num-i) / 2.0;
-ellipse(x[pos], y[pos], radius, radius);
-}
+  background(0);
+  x[indexPosition] = mouseX;
+  y[indexPosition] = mouseY;
+  // Cycle between 0 and the number of elements
+  indexPosition = (indexPosition + 1) % num;
+  for (int i = 0; i < num; i++) {
+    // Set the array position to read
+    int pos = (indexPosition + i) % num;
+    float radius = (num-i) / 2.0;
+    ellipse(x[pos], y[pos], radius, radius);
+  }
 }
 </pre>
     </td>
@@ -487,6 +501,7 @@ The append() function expands an array by one element, adds data to the new posi
     <td>
 <pre>
 String[] trees = { "ash", "oak" };
+
 append(trees, "maple"); // INCORRECT! Does not change the array
 printArray(trees); // Prints [0] "ash", [1] "oak"
 println();
@@ -495,7 +510,9 @@ printArray(trees); // Prints [0] "ash", [1] "oak", [2] "maple"
 println();
 // Add "beech" to the end of the trees array, and creates a new
 // array to store the change
+
 String[] moretrees = append(trees, "beech");
+
 // Prints [0] "ash", [1] "oak", [2] "maple", [3] "beech"
 printArray(moretrees);
 </pre>
@@ -513,6 +530,7 @@ The shorten() function decreases an array by one element by removing the last el
     <td>
 <pre>
 String[] trees = { "lychee", "coconut", "fig" };
+
 trees = shorten(trees); // Remove the last element from the array
 printArray(trees); // Prints [0] "lychee", [1] "coconut"
 println();
@@ -535,15 +553,15 @@ The expand() function increases the size of an array. It can expand to a specifi
 int[] x = new int[100]; // Array to store x-coordinates
 int count = 0; // Positions stored in array
 void setup() {
-size(100, 100);
+  size(100, 100);
 }
 void draw() {
-x[count] = mouseX; // Assign new x-coordinate to the array
-count++; // Increment the counter
-if (count == x.length) { // If the x array is full,
-x = expand(x); // double the size of x
-println(x.length); // Write the new size to the console
-}
+  x[count] = mouseX; // Assign new x-coordinate to the array
+  count++; // Increment the counter
+  if (count == x.length) { // If the x array is full,
+    x = expand(x); // double the size of x
+    println(x.length); // Write the new size to the console
+  }
 }
 </pre>
     </td>
@@ -562,11 +580,14 @@ Array values cannot be copied with the assignment operator because they are obje
 <pre>
 String[] north = { "OH", "IN", "MI" };
 String[] south = { "GA", "FL", "NC" };
+
 arrayCopy(north, south); // Copy from north array to south array
 printArray(south); // Prints [0] "OH", [1] "IN", [3] "MI"
 println();
+
 String[] east = { "MA", "NY", "RI" };
 String[] west = new String[east.length]; // Create a new array
+
 arrayCopy(east, west); // Copy from east array to west array
 printArray(west); // Prints [0] "MA", [1] "NY", [2] "RI"
 </pre>
@@ -587,18 +608,19 @@ In the following example, the data[] array is used as the parameter to halve(). 
     <td>
 <pre>
 float[] data = { 19.0, 40.0, 75.0, 76.0, 90.0 };
+
 void setup() {
-halve(data);
-println(data[0]); // Prints "9.5"
-println(data[1]); // Prints "20.0"
-println(data[2]); // Prints "37.5"
-println(data[3]); // Prints "38.0"
-println(data[4]); // Prints "45.0"
+  halve(data);
+  println(data[0]); // Prints "9.5"
+  println(data[1]); // Prints "20.0"
+  println(data[2]); // Prints "37.5"
+  println(data[3]); // Prints "38.0"
+  println(data[4]); // Prints "45.0"
 }
 void halve(float[] d) {
-for (int i = 0; i < d.length; i++) { // For each array element,
-d[i] = d[i] / 2.0; // divide the value by 2
-}
+  for (int i = 0; i < d.length; i++) { // For each array element,
+    d[i] = d[i] / 2.0; // divide the value by 2
+  }
 }
 </pre>
     </td>
@@ -618,20 +640,21 @@ Changing array data within a function without modifying the original array requi
 float[] data = { 19.0, 40.0, 75.0, 76.0, 90.0 };
 float[] halfData;
 void setup() {
-halfData = halve(data); // Run the halve() function
-println(data[0], halfData[0]); // Prints "19.0, 9.5"
-println(data[1], halfData[1]); // Prints "40.0, 20.0"
-println(data[2], halfData[2]); // Prints "75.0, 37.5"
-println(data[3], halfData[3]); // Prints "76.0, 38.0"
-println(data[4], halfData[4]); // Prints "90.0, 45.0"
+  halfData = halve(data); // Run the halve() function
+  println(data[0], halfData[0]); // Prints "19.0, 9.5"
+  println(data[1], halfData[1]); // Prints "40.0, 20.0"
+  println(data[2], halfData[2]); // Prints "75.0, 37.5"
+  println(data[3], halfData[3]); // Prints "76.0, 38.0"
+  println(data[4], halfData[4]); // Prints "90.0, 45.0"
 }
+
 float[] halve(float[] d) {
-float[] numbers = new float[d.length]; // Create a new array
-arrayCopy(d, numbers);
-for (int i = 0; i < numbers.length; i++) { // For each element,
-numbers[i] = numbers[i] / 2.0; // divide the value by 2
-}
-return numbers; // Return the new array
+  float[] numbers = new float[d.length]; // Create a new array
+  arrayCopy(d, numbers);
+  for (int i = 0; i < numbers.length; i++) { // For each element,
+    numbers[i] = numbers[i] / 2.0; // divide the value by 2
+  }
+  return numbers; // Return the new array
 }
 </pre>
     </td>
@@ -646,7 +669,9 @@ Working with arrays of objects is technically similar to working with arrays of 
 <br /> 
 <br /> 
 1. Declare the array
+<br /> 
 2. Create the array
+<br /> 
 3. Create each object in the array
 <br /> 
 <br /> 
@@ -657,7 +682,6 @@ These steps are translated into code in the following example. It uses the Ring 
 
 <tr style ="width: 100px; float:left;">
     <td>
-<br /> 
 <img src="imgs/28_24_1.png" style= "width: 100px; height: 100px;">
 <br /> 
 <img src="imgs/28_24_2.png" style= "width: 100px; height: 100px;">
@@ -672,31 +696,35 @@ These steps are translated into code in the following example. It uses the Ring 
 <pre>
 Ring[] rings; // Declare the array
 int numRings = 50;
-int currentRing = 0; void setup() {
-size(100, 100);
-rings = new Ring[numRings]; // Create the array
-for (int i = 0; i < rings.length; i++) {
-rings[i] = new Ring(); // Create each object
-} }
-void draw() {
-background(0);
-for (int i = 0; i < rings.length; i++) {
-rings[i].grow();
-rings[i].display();
+int currentRing = 0; 
+void setup() {
+  size(100, 100);
+  rings = new Ring[numRings]; // Create the array
+  for (int i = 0; i < rings.length; i++) {
+    rings[i] = new Ring(); // Create each object
+  }
 }
+void draw() {
+  background(0);
+  for (int i = 0; i < rings.length; i++) {
+    rings[i].grow();
+    rings[i].display();
+  }
 }
 28-24
-9236_028.indd 426 10/16/2014 8:43:18 PM
+9236_028.indd 426 10/16/2014 8:
+43:
+18 PM
 PROPERTY OF THE MIT PRESS
 FOR PROOFREADING, INDEXING, AND PROMOTIONAL PURPOSES ONLY
 427 Arrays
 // Click to create a new Ring
 void mousePressed() {
-rings[currentRing].start(mouseX, mouseY);
-currentRing++;
-if (currentRing >= numRings) {
-currentRing = 0;
-}
+  rings[currentRing].start(mouseX, mouseY);
+  currentRing++;
+  if (currentRing >= numRings) {
+    currentRing = 0;
+  }
 }
 //Insert Ring Class
 </pre>
@@ -725,26 +753,26 @@ The next example requires the Spot class from page 363. Unlike the prior example
 <pre>
 Spot[] spots; // Declare array
 void setup() {
-size(700, 100);
-int numSpots = 70; // Number of objects
-int dia = width/numSpots; // Calculate diameter
-spots = new Spot[numSpots]; // Create array
-for (int i = 0; i < spots.length; i++) {
-float x = dia/2 + i*dia;
-float rate = random(0.1, 2.0);
-// Create each object
-spots[i] = new Spot(x, 50, dia, rate);
-}
-noStroke();
+  size(700, 100);
+  int numSpots = 70; // Number of objects
+  int dia = width/numSpots; // Calculate diameter
+  spots = new Spot[numSpots]; // Create array
+  for (int i = 0; i < spots.length; i++) {
+    float x = dia/2 + i*dia;
+    float rate = random(0.1, 2.0);
+    // Create each object
+    spots[i] = new Spot(x, 50, dia, rate);
+  }
+  noStroke();
 }
 void draw() {
-fill(0, 12);
-rect(0, 0, width, height);
-fill(255);
-for (int i=0; i < spots.length; i++) {
-spots[i].move(); // Move each object
-spots[i].display(); // Display each object
-}
+  fill(0, 12);
+  rect(0, 0, width, height);
+  fill(255);
+  for (int i=0; i < spots.length; i++) {
+    spots[i].move(); // Move each object
+    spots[i].display(); // Display each object
+  }
 }
 // Insert Spot class
 </pre>
@@ -757,10 +785,10 @@ spots[i].display(); // Display each object
 Working with arrays of objects gives us the opportunity to access each object with a code structure called an enhanced for loop to simplify the code. Unlike the for loop used previously in this chapter, the enhanced loop automatically goes through each element in an array one by one without needing to define the start and stop conditions. An enhanced loop is structured by stating the data type of the array elements, a variable name to assign to each element of the array, and the name of the array. For instance, the for loop in code 28-25 is rewritten like this:
 </p>
 <pre>
-for (Spot s : spots) {
-s.move();
-s.display();
-}
+    for (Spot s : spots) {
+      s.move();
+      s.display();
+    }
 </pre>
 <p> 
 Each object in the array is in turn assigned to the variable s, so the first time through the loop, the code s.move() runs the move() method for the first element in the array, then the next time through the loop, s.move() runs the move() method for the second element in the array, etc. The two statements inside the block run for each element of the array until the end of the array. This way of accessing each element in an array of objects is used for the remainder of the book.
@@ -774,7 +802,7 @@ Data can also be stored and retrieved from arrays with more than one dimension. 
 
     <tr style= "width: 100px; float:left;">
     <td>
-<img src="imgs/" style= "width: 100px; height: 100px;">
+<img src="imgs/Dia-28-3.svg" style= "width: 100px; height: 100px;">
         </td>
         </tr>
 
@@ -786,6 +814,7 @@ A 2D array is essentially a list of 1D arrays. It must first be declared, then c
 <pre>
 int[][] x = { {50, 0}, {61,204}, {83,51}, {69,102}, {71, 0},
 {50,153}, {29, 0}, {31,51}, {17,102}, {39,204} };
+
 println(x[0][0]); // Prints "50"
 println(x[0][1]); // Prints "0"
 println(x[4][2]); // ERROR! This element is outside the array
@@ -809,14 +838,15 @@ This sketch shows how it all fits together.
 int[][] x = { {50, 0}, {61,204}, {83,51}, {69,102},
 {71, 0}, {50,153}, {29, 0}, {31,51},
 {17,102}, {39,204} };
+
 void setup() {
-size(100, 100);
+  size(100, 100);
 }
 void draw() {
-for (int i = 0; i < x.length; i++) {
-fill(x[i][1]);
-rect(0, i*10, x[i][0], 8);
-}
+  for (int i = 0; i < x.length; i++) {
+    fill(x[i][1]);
+    rect(0, i*10, x[i][0], 8);
+  }
 }
 </pre>
         </td>
