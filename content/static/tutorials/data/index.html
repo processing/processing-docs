@@ -202,7 +202,7 @@ Table table = loadTable("data.csv","header");
 
 <img src="imgs/data_05_headers.jpg" border=0>
 
-<p>In the above grid we can see that the data is organized in terms of columns and rows.  One way to access the data would be to therefore request a value by its numeric row and column location (with zero being the first row or first column).  This is similar to accessing a pixel color at a given (x, y) location though in this case the y location comes first.  Here we are getting a piece of data at a given (row, column) location.</p>
+<p>In the above grid we can see that the data is organized in terms of rows and columns.  One way to access the data would be to therefore request a value by its numeric row and column location (with zero being the first row or first column).  This is similar to accessing a pixel color at a given (x, y) location though in this case the y position (i.e. row) comes first.  The following code requests a piece of data at a given (row, column) location.</p>
  
 <pre>
 int val1 = table.getInt(2, 1);      // val now has the value 235
