@@ -202,12 +202,12 @@ Table table = loadTable("data.csv","header");
 
 <img src="imgs/data_05_headers.jpg" border=0>
 
-<p>In the above grid we can see that the data is organized in terms of columns and rows.  One way to access the data would be to therefore request a value by its numeric column and row location (with zero being the first row or first column).  This is similar to accessing a pixel color at a given (x,y) location.  Here we are getting a piece of data at a given (column,row) location.</p>
+<p>In the above grid we can see that the data is organized in terms of columns and rows.  One way to access the data would be to therefore request a value by its numeric row and column location (with zero being the first row or first column).  This is similar to accessing a pixel color at a given (x, y) location though in this case the y location comes first.  Here we are getting a piece of data at a given (row, column) location.</p>
  
 <pre>
-int val1 = table.getInt(1,2);      // val now has the value 235
-float val2 = table.getFloat(2,3);  // val2 now has the value 44.758068
-String s = table.getString(3,0);   // s now has the value "Happy"
+int val1 = table.getInt(2, 1);      // val now has the value 235
+float val2 = table.getFloat(3, 2);  // val2 now has the value 44.758068
+String s = table.getString(0, 3);   // s now has the value "Happy"
 </pre>
 
 <p>While the numeric index is sometimes useful, it's generally going to be more convenient to access each piece of data by the column name.  For example, we could pull out a specific row from the Table.</p>  
