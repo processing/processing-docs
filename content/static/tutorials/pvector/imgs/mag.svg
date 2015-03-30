@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 640 480" enable-background="new 0 0 640 480" xml:space="preserve">
-<text transform="matrix(1 0 0 1 174.0059 183.0439)" font-family="'TheSerif-HP5Plain'" font-size="18">3</text>
-<text transform="matrix(1 0 0 1 237.0762 245.9736)" font-family="'TheSerif-HP5Plain'" font-size="18">4</text>
-<line fill="none" stroke="#999999" stroke-width="1.3" x1="206.2" y1="149.6" x2="281.7" y2="211"/>
-<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="193.7" y1="219.8" x2="293.2" y2="219.8"/>
-<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="194.1" y1="144.5" x2="194.1" y2="219.2"/>
-<polyline fill="none" stroke="#999999" stroke-width="1.3" points="281.8,202.7 281.7,211.5 272.9,211.4 "/>
-<text transform="matrix(1 0 0 1 224.5 203.5)" fill="#999999" font-family="'TheSerif-HP5Plain'" font-size="18">v </text>
-<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="233.7,182.1 238.1,186.5 233.7,190.9 "/>
-<line fill="#FFFFFF" stroke="#999999" stroke-width="1.3" x1="238.1" y1="186.5" x2="221.5" y2="186.5"/>
-<circle cx="294.9" cy="219.1" r="5.8"/>
-<circle cx="195.1" cy="141.2" r="5.8"/>
-<text transform="matrix(1 0 0 1 282.5 152.5)" font-family="'TheSerif-HP5Plain'" font-size="18">How long is the vector?</text>
-<path fill="none" stroke="#808080" stroke-width="2" d="M203.2,148.8"/>
-<polyline fill="none" stroke="#999999" stroke-width="1.3" stroke-dasharray="4,4" points="201.1,129.3 208.1,120.8 311.9,205.1 
-	304.9,213.6 "/>
+	 viewBox="0 252 612 200" enable-background="new 0 252 612 200" xml:space="preserve">
+<text transform="matrix(1 0 0 1 166.3936 341.5361)" font-family="'ArialMT'" font-size="17.2125">3</text>
+<text transform="matrix(1 0 0 1 226.7041 401.7129)" font-family="'ArialMT'" font-size="17.2125">4</text>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="197.2" y1="309.6" x2="269.4" y2="368.3"/>
+<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="185.2" y1="376.7" x2="280.4" y2="376.7"/>
+<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="185.6" y1="304.7" x2="185.6" y2="376.1"/>
+<polyline fill="none" stroke="#999999" stroke-width="1.3" points="269.5,360.3 269.4,368.7 261,368.7 "/>
+<text transform="matrix(1 0 0 1 214.6782 361.0972)" fill="#999999" font-family="'ArialMT'" font-size="17.2125">v </text>
+<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="223.5,340.6 227.7,344.8 223.5,349 "/>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="227.7" y1="344.8" x2="211.8" y2="344.8"/>
+<circle cx="282" cy="376" r="5.5"/>
+<circle cx="186.6" cy="301.5" r="5.5"/>
+<text transform="matrix(1 0 0 1 270.1407 312.3286)" font-family="'ArialMT'" font-size="17.2125">How long is the vector?</text>
+<path fill="none" stroke="#808080" stroke-width="2" d="M194.3,308.8"/>
+<polyline fill="none" stroke="#999999" stroke-width="1.3" stroke-dasharray="4,4" points="192.3,290.1 199,282 298.3,362.6 
+	291.6,370.8 "/>
 </svg>
