@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="Light Kinetics" by="Espadaysantacruz" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/lightkinetics.jpg</image>
+		  <description>
+			  Created by Madrid based creative studio Espadaysantacruz, Light Kinetics is an interactive light installation where the behaviour of light is controlled by a physics simulator.
+		  </description>
+		  <location>http://espadaysantacruz.com/Light-kinetics</location>
+		 <link href="http://espadaysantacruz.com/Light-kinetics">Light Kinetics</link>
+	</software>	
+	
 	<software name="Pathfinder" by="Princemio" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/pathfinder.jpg</image>
 		  <description>
