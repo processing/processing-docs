@@ -6,8 +6,8 @@
 * that you are working on. Say you want to map mouse movement
 * to the size or color (as seen above) of an object. 
 * In this example, we are taking the mouse’s x position (which can 
-* be between 0 and the width, 700) and we are scaling that to another
-* range (40 to 440 for size, and 0 to 175 for color). 
+* be between 0 and the width, 640) and we are scaling that to another
+* range (40 to 300 for size, and 0 to 175 for color). 
 *
 */
 void setup() {
