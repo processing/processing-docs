@@ -59,7 +59,7 @@ for (float val : randoms) {
 
 // This works with arrays of objects, too,
 // but not when first making the array
-PVector vectors = new PVector[5];
+PVector[] vectors = new PVector[5];
 for (int i = 0; i < vectors.length; i++) {
   vectors[i] = new PVector();
 }
