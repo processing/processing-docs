@@ -37,10 +37,10 @@ println(south);
 </example>
 
 <description><![CDATA[
-Copies an array (or part of an array) to another array. The <b>src</b> array is copied to the <b>dst</b> array, beginning at the position specified by <b>srcPosition</b> and into the position specified by <b>dstPosition</b>. The number of elements to copy is determined by <b>length</b>. Note that copying values overwrites existing values in the destination array. To append values instead of overwriting them, use <b>concat()</b>.<br/>
-<br/>
-The simplified version with only two arguments &mdash; <b>arrayCopy(src, dst)</b> &mdash; copies an entire array to another of the same size. It is equivalent to <b>arrayCopy(src, 0, dst, 0, src.length)</b>.<br/>
-<br/>
+Copies an array (or part of an array) to another array. The <b>src</b> array is copied to the <b>dst</b> array, beginning at the position specified by <b>srcPosition</b> and into the position specified by <b>dstPosition</b>. The number of elements to copy is determined by <b>length</b>. Note that copying values overwrites existing values in the destination array. To append values instead of overwriting them, use <b>concat()</b>.<br />
+<br />
+The simplified version with only two arguments &mdash; <b>arrayCopy(src, dst)</b> &mdash; copies an entire array to another of the same size. It is equivalent to <b>arrayCopy(src, 0, dst, 0, src.length)</b>.<br />
+<br />
 Using this function is far more efficient for copying array data than iterating through a <b>for()</b> loop and copying each element individually. This function only copies references, which means that for most purposes it only copies one-dimensional arrays (a single set of brackets). If used with a two (or three or more) dimensional array, it will only copy the references at the first level, because a two dimensional array is simply an "array of arrays". This does not produce an error, however, because this is often the desired behavior. Internally, this function calls Java's <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/System.html#arraycopy(java.lang.Object, int, java.lang.Object, int, int)">System.arraycopy()</a> method, so most things that apply there are inherited.
 ]]></description>
 

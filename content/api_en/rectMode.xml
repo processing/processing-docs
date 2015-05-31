@@ -35,14 +35,14 @@ rect(50, 50, 30, 30);  // Draw gray rect using CENTER mode
 </example>
 
 <description><![CDATA[
-Modifies the location from which rectangles are drawn by changing the way in which parameters given to <b>rect()</b> are intepreted.<br/>
-<br/>
-The default mode is <b>rectMode(CORNER)</b>, which interprets the first two parameters of <b>rect()</b> as the upper-left corner of the shape, while the third and fourth parameters are its width and height.<br/>
-<br/>
-<b>rectMode(CORNERS)</b> interprets the first two parameters of <b>rect()</b> as the location of one corner, and the third and fourth parameters as the location of the opposite corner.<br/>
-<br/>
-<b>rectMode(CENTER)</b> interprets the first two parameters of <b>rect()</b> as the shape's center point, while the third and fourth parameters are its width and height.<br/>
-<br/>
+Modifies the location from which rectangles are drawn by changing the way in which parameters given to <b>rect()</b> are intepreted.<br />
+<br />
+The default mode is <b>rectMode(CORNER)</b>, which interprets the first two parameters of <b>rect()</b> as the upper-left corner of the shape, while the third and fourth parameters are its width and height.<br />
+<br />
+<b>rectMode(CORNERS)</b> interprets the first two parameters of <b>rect()</b> as the location of one corner, and the third and fourth parameters as the location of the opposite corner.<br />
+<br />
+<b>rectMode(CENTER)</b> interprets the first two parameters of <b>rect()</b> as the shape's center point, while the third and fourth parameters are its width and height.<br />
+<br />
 <b>rectMode(RADIUS)</b> also uses the first two parameters of <b>rect()</b> as the shape's center point, but uses the third and fourth parameters to specify half of the shapes's width and height.<br />
 <br />
 The parameter must be written in ALL CAPS because Processing is a case-sensitive language.

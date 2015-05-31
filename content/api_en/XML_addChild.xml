@@ -42,8 +42,8 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Appends a new child to the element.  The child can be specified with either a String, which will be used as the new tag's name, or as a reference to an existing XML object.<br/>
-<br/>
+Appends a new child to the element.  The child can be specified with either a String, which will be used as the new tag's name, or as a reference to an existing XML object.<br />
+<br />
 A reference to the newly created child is returned as an XML object.
 ]]></description>
 

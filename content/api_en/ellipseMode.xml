@@ -35,16 +35,16 @@ ellipse(25, 25, 50, 50);  // Draw gray ellipse using CORNERS mode
 </example>
 
 <description><![CDATA[
-Modifies the location from which ellipses are drawn by changing the way in which parameters given to <b>ellipse()</b> are intepreted.<br/>
-<br/>
-The default mode is <b>ellipseMode(CENTER)</b>, which interprets the first two parameters of <b>ellipse()</b> as the shape's center point, while the third and fourth parameters are its width and height.<br/>
-<br/>
+Modifies the location from which ellipses are drawn by changing the way in which parameters given to <b>ellipse()</b> are intepreted.<br />
+<br />
+The default mode is <b>ellipseMode(CENTER)</b>, which interprets the first two parameters of <b>ellipse()</b> as the shape's center point, while the third and fourth parameters are its width and height.<br />
+<br />
 <b>ellipseMode(RADIUS)</b> also uses the first two parameters of <b>ellipse()</b> as the shape's center point, but uses the third and fourth parameters to specify half of the shapes's width and height.<br />
-<br/>
-<b>ellipseMode(CORNER)</b> interprets the first two parameters of <b>ellipse()</b> as the upper-left corner of the shape, while the third and fourth parameters are its width and height.<br/>
-<br/>
-<b>ellipseMode(CORNERS)</b> interprets the first two parameters of <b>ellipse()</b> as the location of one corner of the ellipse's bounding box, and the third and fourth parameters as the location of the opposite corner.<br/>
-<br/>
+<br />
+<b>ellipseMode(CORNER)</b> interprets the first two parameters of <b>ellipse()</b> as the upper-left corner of the shape, while the third and fourth parameters are its width and height.<br />
+<br />
+<b>ellipseMode(CORNERS)</b> interprets the first two parameters of <b>ellipse()</b> as the location of one corner of the ellipse's bounding box, and the third and fourth parameters as the location of the opposite corner.<br />
+<br />
 The parameter must be written in ALL CAPS because Processing is a case-sensitive language.
 ]]></description>
 

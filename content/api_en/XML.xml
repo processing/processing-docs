@@ -44,8 +44,8 @@ void setup() {
 </example>
 
 <description><![CDATA[
-<b>XML</b> is a representation of an XML object, able to parse XML code. Use <b>loadXML()</b> to load external XML files and create <b>XML</b> objects.<br/>
-<br/>
+<b>XML</b> is a representation of an XML object, able to parse XML code. Use <b>loadXML()</b> to load external XML files and create <b>XML</b> objects.<br />
+<br />
 Only files encoded as UTF-8 (or plain ASCII) are parsed properly; the encoding parameter inside XML files is ignored.
 ]]></description>
 

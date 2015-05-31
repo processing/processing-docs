@@ -47,12 +47,12 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Reads the contents of a file or URL and creates an Table object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online. The filename must either end in an extension or an extension must be specified in the options (if an extension is in both places, the extension in the options is used). For example, to use tab-separated data, include "tsv" in the options parameter if the filename or URL does not end in <b>.tsv</b>.<br/>
-<br/>
-If the file contains a header row, include "header" in the options parameter.  If the file does not have a header row, then simply omit the "header" option.<br/>
-<br/>
-When specifying both a header and the file type, separate the options with commas, as in: <b>loadTable("data.csv", "header, tsv")</b><br/>
-<br/>
+Reads the contents of a file or URL and creates an Table object with its values. If a file is specified, it must be located in the sketch's "data" folder. The filename parameter can also be a URL to a file found online. The filename must either end in an extension or an extension must be specified in the options (if an extension is in both places, the extension in the options is used). For example, to use tab-separated data, include "tsv" in the options parameter if the filename or URL does not end in <b>.tsv</b>.<br />
+<br />
+If the file contains a header row, include "header" in the options parameter.  If the file does not have a header row, then simply omit the "header" option.<br />
+<br />
+When specifying both a header and the file type, separate the options with commas, as in: <b>loadTable("data.csv", "header, tsv")</b><br />
+<br />
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 

@@ -58,8 +58,8 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Loads an array of JSON objects from the data folder or a URL, and returns a <b>JSONArray</b>.  Per standard JSON syntax, the array must be enclosed in a pair of hard brackets <b>[]</b>, and each object within the array must be separated by a comma.<br>
-<br>
+Loads an array of JSON objects from the data folder or a URL, and returns a <b>JSONArray</b>.  Per standard JSON syntax, the array must be enclosed in a pair of hard brackets <b>[]</b>, and each object within the array must be separated by a comma.<br />
+<br />
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 

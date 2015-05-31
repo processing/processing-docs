@@ -51,8 +51,8 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Removes any of the specified characters (or "tokens").  The example above removes all commas, dollar signs, and spaces from the table.<br>
-<br>
+Removes any of the specified characters (or "tokens").  The example above removes all commas, dollar signs, and spaces from the table.<br />
+<br />
 If no column is specified, then the values in all columns and rows are processed.  A specific column may be referenced by either its ID or title.
 ]]></description>
 

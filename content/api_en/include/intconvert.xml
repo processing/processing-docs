@@ -20,7 +20,7 @@ println(c + " : " + i);  // Prints "E : 69"
 </example>
 
 <description><![CDATA[
-Converts any value of a primitive data type (<b>boolean</b>, <b>byte</b>, <b>char</b>, <b>color</b>, <b>double</b>, <b>float</b>, <b>int</b>, or <b>long</b>) to its integer representation.<br />
+Converts any value of a primitive data type (<b>boolean</b>, <b>byte</b>, <b>char</b>, <b>color</b>, <b>float</b>, <b>int</b>, or <b>long</b>) to its integer representation.<br />
 <br />
 When an array of values is passed in, then an <b>int</b> array of the same length is returned.
 ]]></description>

@@ -39,8 +39,8 @@ void setup() {
 </example>
 
 <description><![CDATA[
-Loads a JSON from the data folder or a URL, and returns a <b>JSONObject</b>.<br>
-<br>
+Loads a JSON from the data folder or a URL, and returns a <b>JSONObject</b>.<br />
+<br />
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
 

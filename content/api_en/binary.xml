@@ -22,8 +22,8 @@ println(binary(c, 16)); // Prints "1100110000000000"
 
 
 <description><![CDATA[
-Converts an <b>int</b>, <b>byte</b>, <b>char</b>, or <b>color</b> to a <b>String</b> containing the equivalent binary notation. For example, the <b>color</b> value produced by <b>color(0, 102, 153, 255)</b> will convert to the <b>String</b> value <b>"11111111000000000110011010011001"</b>. This function can help make your geeky debugging sessions much happier.<br/>
-<br/>
+Converts an <b>int</b>, <b>byte</b>, <b>char</b>, or <b>color</b> to a <b>String</b> containing the equivalent binary notation. For example, the <b>color</b> value produced by <b>color(0, 102, 153, 255)</b> will convert to the <b>String</b> value <b>"11111111000000000110011010011001"</b>. This function can help make your geeky debugging sessions much happier.<br />
+<br />
 Note that the maximum number of digits is 32, because an <b>int</b> value can only represent up to 32 bits. Specifying more than 32 digits will have no effect.
 ]]></description>
 

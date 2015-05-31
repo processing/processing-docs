@@ -37,9 +37,9 @@ With the "@pjs globalKeyEvents" directive you can catch all key events on the wi
 
 <description><![CDATA[
 The <b>keyTyped()</b> function is called once every time a key is pressed, but action keys such as Ctrl, Shift, and Alt are ignored.
-<br/><br/>
+<br /><br />
 Because of how operating systems handle key repeats, holding down a key may cause multiple calls to <b>keyTyped()</b>. The rate of repeat is set by the operating system, and may be configured differently on each computer.
-<br/><br/>
+<br /><br />
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
 
