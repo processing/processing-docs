@@ -10,12 +10,12 @@
       <a href="#Renderers">Renderers</a><br />
       <a href="#Coordinates">Coordinates</a><br />
       <a href="#Tabs">Tabs, Multiple Files, and Classes</a><br />
+      <a href="#Debug">Debug</a><br />
       <a href="#Programming_modes">Programming Modes</a><br />
-      <a href="#Extensions">Adding Libraries, Tools, and Modes</a><br />
+      <a href="#Extensions">Adding Libraries, Tools, Modes, and Examples</a><br />
       <a href="#Export">Export</a><br />
 
     </p>
-    
     
     
     <!-- Overview -->
@@ -25,38 +25,19 @@
     </h5>
        
     <p>
-		The Processing Development Environment (PDE) makes it easy to write Processing 
-		programs. Programs are written in the Text Editor and started by pressing the Run button.
-		In Processing, a computer program is called a <em>sketch</em>. Sketches are stored in the
-		<em>Sketchbook</em>, which is a folder on your computer. It's easy to open the sketches by 
-		clicking on the Open button.
+		The Processing Development Environment (PDE) makes it easy to write Processing programs. Programs are written in the Text Editor and started by pressing the Run button. In Processing, a computer program is called a <em>sketch</em>. Sketches are stored in the <em>Sketchbook</em>, which is a folder on your computer.
     </p>
 
     <p>
-		Sketches can draw two- and three-dimensional graphics. The default renderer is for drawing 
-		two-dimensional graphics. The P3D renderer makes it possible to draw three-dimensional graphics, 
-		which includes controlling the camera, lighting, and materials. 
-		The P2D renderer is a fast, but less accurate renderer for drawing two-dimensional graphics. Both the P2D and P3D 
-		renderers are accelerated if your computer has an OpenGL compatible graphics card.
+		Sketches can draw two- and three-dimensional graphics. The default renderer is for drawing two-dimensional graphics. The P3D renderer makes it possible to draw three-dimensional graphics, which includes controlling the camera, lighting, and materials. The P2D renderer is a fast, but less accurate renderer for drawing two-dimensional graphics. Both the P2D and P3D renderers are accelerated if your computer has an OpenGL compatible graphics card.
     </p>  
        
 	<p>
-		The capabilities of Processing are extended with <em>Libraries</em> and <em>Tools</em>. 
-		Libraries make it possible for sketches to do things beyond the <em>core</em> 
-		Processing code. There are hundreds of libraries contributed by the Processing community 
-		that can be added to your sketches to enable new things like playing sounds, doing computer 
-		vision, and working with advanced 3D geometry. Tools extend the PDE to help make creating 
-		sketches easier by providing interfaces for tasks like selecting colors.
+		The capabilities of Processing are extended with <em>Libraries</em> and <em>Tools</em>. Libraries make it possible for sketches to do things beyond the <em>core</em> Processing code. There are hundreds of libraries contributed by the Processing community that can be added to your sketches to enable new things like playing sounds, doing computer vision, and working with advanced 3D geometry. Tools extend the PDE to help make creating sketches easier by providing interfaces for tasks like selecting colors.
 	</p>
        
     <p>
-		Processing has different <em>programming modes</em> to make it possible to deploy sketches
-		on different platforms and program in different ways. The current default programming modes 
-		are <em>Java</em> and <em>Experimental</em>. Other programming modes, such as <em>JavaScript</em> and 
-		<em>Android</em>, are added by selecting "Add Mode..." from the menu in the upper-right
-		corner of the PDE. <!--The Java mode makes Java Applications, 
-		the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
-		and the Android mode makes sketches that run on Android phones and tablets.-->
+		Processing has different <em>programming modes</em> to make it possible to deploy sketches on different platforms and program in different ways. The Java mode is the default. Other programming modes may be downloaded by selecting "Add Mode..." from the menu in the upper-right corner of the PDE.
     </p>
 
 <!--
@@ -82,20 +63,9 @@ Big-picture keywords / concepts for getting into Processing
     </h5>
       
     <p>
-		The Processing Development Environment (PDE) consists of a simple text 
-		editor for writing code, a message area, a text console, tabs for managing 
-		files, a toolbar with buttons for common actions, and a series of menus. 
-		The menus options change from mode to mode. The default Java mode is documented here.
+		The Processing Development Environment (PDE) consists of a simple text editor for writing code, a message area, a text console, tabs for managing 
+		files, a toolbar with buttons for common actions, and a series of menus. The menus options change from mode to mode. The default Java mode is documented here.
 	</p>
-	
-	<!--
-	<p>
-		There are three variations of the PDE, one for each programming mode. The menus
-		change a little depending if it currently in Java, JavaScript, or Android mode.
-		The Java and JavaScript modes are documented here. For more information about
-		Android mode, please visit the <a href="http://wiki.processing.org/w/Android">Processing 
-		for Android reference</a>.
-	</p>-->
 
 	<p>
 		<br />
@@ -104,18 +74,13 @@ Big-picture keywords / concepts for getting into Processing
     </p>
     
     <p>
-		Programs written using Processing are called sketches. These sketches are 
-		written in the text editor. It has features for cutting/pasting and for 
-		searching/replacing text. The message area gives feedback while saving and 
-		exporting and also displays errors. The console displays text output by 
-		Processing sketches including complete error messages and text output from 
-		sketches with the print() and println() functions. (Note that the console works
-    well for occasional messages, but is not intended for high-speed, real-time output.)
+		Programs written using Processing are called sketches. These sketches are written in the text editor. It has features for cutting/pasting and for 
+		searching/replacing text. The message area gives feedback while saving and exporting and also displays errors. The console displays text output by 
+		Processing sketches including complete error messages and text output from sketches with the print() and println() functions. (Note that the console works well for occasional messages, but is not intended for high-speed, real-time output.)
 	</p>
 	
 	<p>
-		The buttons on the toolbar can run and stop programs, create a new sketch, open, save, 
-		and export:
+		The buttons on the toolbar can run and stop programs,:
     </p>
     
     <table border="0" cellpadding="0" cellspacing="0" width="550">
@@ -123,269 +88,190 @@ Big-picture keywords / concepts for getting into Processing
         <td valign="top" width="30"><img src="images/play.gif" height="23" width="23"></td>
         <td width="15">&nbsp;</td>
         <td valign="top" width="480"><em>Run</em><br />
-			Runs the sketch. In Java mode, it compiles the code and opens a new display window.
-			<!--In JavaScript mode, it starts a new server and opens the sketch in a web browser.-->
-		</td>
+			Runs the sketch. In Java mode, it compiles the code and opens a new display window.</td>
       </tr>
       <tr> 
         <td valign="top"><img src="images/stop.gif" height="23" width="23"></td>
         <td>&nbsp;</td>
         <td valign="top"><em>Stop</em><br />
 			Terminates a running sketch.
-		</td>
-      </tr>
-      <tr> 
-        <td valign="top"><img src="images/new.gif" height="21" width="21"></td>
-        <td>&nbsp;</td>
-        <td valign="top"><em>New</em><br />
-			Creates a new sketch (project) in the current window. To create a new sketch in 
-			its own window, use File &rarr; New.
-		</td>
-      </tr>
-      <tr> 
-        <td valign="top"><img src="images/open.gif" height="21" width="21"></td>
-        <td>&nbsp;</td>
-        <td valign="top"><em>Open</em><br />
-			Provides a menu with options to open files from anywhere on your computer (Open...),
-			from the Example Menu (Examples...), or one of the programs in the Sketchbook.
-			Opening a sketch from the toolbar will replace the sketch in the 
-          	current window. To open a sketch in a new window, use File &rarr; Open.
-          </td>
-      </tr>
-      <tr> 
-        <td valign="top"><img src="images/save.gif" height="21" width="21"></td>
-        <td>&nbsp;</td>
-        <td valign="top"><em>Save</em><br />
-			Saves the current sketch to its current location. 
-          	If you want to give the sketch a different name, select &ldquo;Save As&rdquo; from 
-          	the File menu.
-          </td>
-      </tr>
-      <tr> 
-        <td valign="top"><img src="images/export.gif" height="21" width="21"></td>
-        <td>&nbsp;</td>
-        <td valign="top"><em>Export</em><br />
-			In Java mode, it exports the current sketch as a Java application and
-          	the folder containing the files is opened. <!--In JavaScript mode, this button exports the current sketch 
-          	as JavaScript and HTML files and the folder containing the files is opened.-->
-          	(Note: Exporting a sketch will delete the previous contents of the export folder,
-          	unless this preference is unchecked in the Preferences.) 
-          </td>
+		  </td>
       </tr>
     </table>
     
     <p>
-      Additional commands are found within the five menus: File, Edit, Sketch, Tools, Help. 
+      Additional commands are found within the five menus: File, Edit, Sketch, Debug, Tools, Help. 
       The menus are context sensitive which means only those items relevant to the work currently 
       being carried out are available.
     </p>
     
     <h6>File</h6>
 	<ul>
-    <li><em>New (Ctrl+N)</em><br />
+    <li><em>New</em><br />
       Creates a new sketch in a new window, named as the current date is the format 
       "sketch_YYMMDDa".</li>
-    <li><em>Open (Ctrl+O)</em><br />
+    <li><em>Open...</em><br />
       Open a sketch in a new window.
     <li><em>Sketchbook</em><br />
       Open a sketch from the sketchbook folder.</li>
-    <li><em>Recent</em><br />
-      Open a recently closed sketch.</li>
-    <li><em>Examples</em><br />
-      Open one of the examples included with Processing.</li>
-    <li><em>Close (Ctrl+W)</em><br />
+    <li><em>Open Recent</em><br />
+      Select a sketch to open from the list of recently closed sketches.</li>
+    <li><em>Sketchbook...</em><br />
+      Open a new window to show the list of sketches in the sketchbook.</li>
+    <li><em>Examples...</em><br />
+      Open a new window to show the list of the examples.</li>
+    <li><em>Close</em><br />
       Close the sketch in the frontmost window. If this is the last sketch that's open, you 
       will be prompted whether you would like to quit. To avoid the prompt, use Quit instead 
       of Close when you want to exit the application.</li>
-    <li><em>Save (Ctrl+S)</em><br />
+    <li><em>Save</em><br />
       Saves the open sketch in it's current state.</li>
-    <li><em>Save as... (Shift+Ctrl+S)</em><br />
+    <li><em>Save as...</em><br />
       Saves the currently open sketch, with the option of giving it a different 
       name. Does not replace the previous version of the sketch.</li>
-    <li><em>Export (Ctrl+E)</em><br />
-      In Java mode, exports a Java application as an executable file and opens the folder 
-      containing the exported files. <!--In JavaScript mode, exports the JavaScript and HTML needed 
-      to run the sketch in a browser and opens the folder containing the exported files. 
-      Note that exporting a sketch will delete the previous contents of the "application.xxxxx" 
-      or "[JAVASCRIPT EXPORT FOLDER]" folders.--></li>
-    <li><em>Page Setup (Shift+Ctrl+P)</em><br />
+    <li><em>Export</em><br />
+      Exports a Java application as an executable file and opens the folder containing the exported files.</li>
+    <li><em>Page Setup</em><br />
       Define page settings for printing.</li>
     <li><em>Print (Ctrl+P)</em><br />
       Prints the code inside the text editor.</li>
-    <li><em>Preferences (Ctrl+,)</em><br />
+    <li><em>Preferences</em><br />
       Change some of the ways Processing works. (This item is located in the Processing menu 
       on Mac OS X.)</li>
-    <li><em>Quit (Ctrl+Q)</em><br />
+    <li><em>Quit</em><br />
       Exits the Processing Environment and closes all Processing windows. (This item is
       located in the Processing menu on Mac OS X.)</li>
 	</ul>
 	
 	<h6>Edit</h6>
 	<ul>
-    <li><em>Undo (Ctrl+Z)</em><br />
-      Reverses the last command or the last entry typed. Cancel the Undo command 
-      by choosing Edit » Redo.</li>
-    <li><em>Redo (Shift+Ctrl+Z)</em><br />
-      Reverses the action of the last Undo command. This option is only available, if 
-      there has already been an Undo action.</li>
-    <li><em>Cut (Ctrl+X)</em><br />
+    <li><em>Undo</em><br />
+      Reverses the last command or the last entry typed. Cancel the Undo command by choosing Edit » Redo.</li>
+    <li><em>Redo</em><br />
+      Reverses the action of the last Undo command. This option is only available if there has already been an Undo action.</li>
+    <li><em>Cut</em><br />
       Removes and copies selected text to the clipboard (an off-screen text buffer).</li>
-    <li><em>Copy (Ctrl+C)</em><br />
+    <li><em>Copy</em><br />
       Copies selected text to the clipboard.</li>
-    <li><em>Copy as HTML (Shift+Ctrl+C)</em><br />
-      Formats code as HTML, the same way it appears in the Processing environment and copies 
-      it to the clipboard so it can be pasted somewhere else.</li>
-    <li><em>Paste (Ctrl+V)</em><br />
-      Inserts the contents of the clipboard at the location of the cursor, and 
-      replaces any selected text.</li>
-    <li><em>Select All (Ctrl+A)</em><br />
-      Selects all of the text in the file which is currently open in the text 
-      editor.</li>
-    <li><em>Auto Format (Ctrl-T)</em><br />
-      Attempts to format the code into a more human-readable layout. Auto Format was 
-      previously called <em>Beautify</em>.</li>
-    <li><em>Comment/Uncomment (Ctrl+/)</em><br />
-      Comments the selected text. If the selected text is already commented, 
-      it uncomments it.</li>
-    <li><em>Increase Indent (Ctrl+])</em><br />
+    <li><em>Copy as HTML</em><br />
+      Formats code as HTML in the same way it appears in the Processing environment and copies it to the clipboard so it can be pasted somewhere else.</li>
+    <li><em>Paste</em><br />
+      Inserts the contents of the clipboard at the location of the cursor, and replaces any selected text.</li>
+    <li><em>Select All</em><br />
+      Selects all of the text in the file which is currently open in the text editor.</li>
+    <li><em>Auto Format</em><br />
+      Attempts to format the code into a more human-readable layout. Auto Format was previously called <em>Beautify</em>.</li>
+    <li><em>Comment/Uncomment</em><br />
+      Comments the selected text. If the selected text is already commented, it uncomments it.</li>
+    <li><em>Increase Indent</em><br />
       Indents the selected text two spaces.</li>
     <li><em>Decrease Indent (Ctrl+[)</em><br />
       If the text is indented, removes two spaces from the indent.</li>
-    <li><em>Find... (Ctrl+F)</em><br />
-      Finds an occurence of a text string within the file open in the text editor 
-      and gives the option to replace it with a different text.</li>
-    <li><em>Find Next (Ctrl+G)</em><br />
-      Finds the next occurence of a text string within the file open in the text 
-      editor.</li>
-    <li><em>Find Previous (Shift+Ctrl+G)</em><br />
-      Finds the previous occurence of a text string within the file open in the text 
-      editor.</li>
-    <!--<li><em>Use Selection for Find</em><br /></li>-->
+    <li><em>Find...</em><br />
+      Finds an occurence of a text string within the file open in the text editor and gives the option to replace it with a different text.</li>
+    <li><em>Find Next</em><br />
+      Finds the next occurence of a text string within the file open in the text editor.</li>
+    <li><em>Find Previous</em><br />
+      Finds the previous occurence of a text string within the file open in the text editor.</li>
+    <li><em>Use Selection for Find</em><br />
+      Sets the currently selected text as the item to find with Find Next and Find Previous.</li>
 	</ul>
 
 	
-	<!--<h6>Sketch (Java Mode)</h6>-->
 	<h6>Sketch</h6>
 	<ul>
-    <li><em>Run (Ctrl+R)</em><br />
-      Runs the code (compiles the code, opens the display window, and runs the 
-      sketch inside)</li>
-    <li><em>Present (Ctrl+Shift+R)</em><br />
-      Runs the code in the center of the screen with a solid-color background. Click 
-      the "stop" button in the lower left to exit the presentation.</li>
+    <li><em>Run</em><br />
+      Runs the code (compiles the code, opens the display window, and runs the sketch inside)</li>
+    <li><em>Present</em><br />
+      Runs the code in the center of the screen with a solid-color background. Click the "stop" button in the lower left to exit the presentation or press the Escape key. Change the background color in the Preferences.</li>
+    <li><em>Tweak</em><br />
+      Runs the code in a way where some color and variable values can be changed while the code is running. The sketch needs to be saved before it can be run as a sketch to Tweak.</li>
     <li><em>Stop</em><br />
-      If the code is running, stops the execution. Programs written without using 
-      the draw() function are stopped automatically after they draw.</li>
+      If the code is running, stops the execution. Programs written without using the draw() function are stopped automatically after they draw.</li>
     <li><em>Import Library</em><br />
-      Adds the necessary import statements to the top of the current sketch. For 
-      example, selecting Sketch » Import Library » video adds the statement "import 
-      processing.video.*;" to the top of the file. These import statements are 
-      necessary for using Libraries.</li>
+      Adds the necessary import statements to the top of the current sketch. For example, selecting Sketch » Import Library » pdf adds the statement "import processing.pdf.*;" to the top of the file. These import statements are necessary for using Libraries. Select Add Libraries... to open the Library Manager to browse and install new libraries.</li>
     <li><em>Show Sketch Folder</em><br />
       Opens the folder for the current sketch.</li>
-    <li><em>Add File</em><br />
-      Opens a file navigator. Select an image, font, or other media files to add 
-      it to the sketch's "data" folder. </li>
+    <li><em>Add File...</em><br />
+      Opens a file navigator window. Select an image, font, or other media files to add it to the sketch's "data" folder. </li>
 	</ul>
-	
-	<!--
-    <h6>Sketch (JavaScript Mode)</h6>
-	<ul>
-    <li><em>Start Server (Ctrl+R)</em><br />
-      Starts a local server, opens the default web browser and runs the code inside.</li>
-    <li><em>Stop Sever</em><br />
-      Stops the local server.</li>
-    <li><em>Copy Server Address</em><br />
-      Copies the address of the most current server into the clipboard (an off-screen 
-      text buffer).</li>
-    <li><em>Set Sever Port</em><br />
-      Manually set the port number for the local server.</li>
-    <li><em>Import Library</em><br />
-      Adds the necessary import statements to the top of the current sketch. For 
-      example, selecting Sketch » Import Library » video adds the statement "import 
-      processing.video.*;" to the top of the file. These import statements are 
-      necessary for using the Libraries. Use the [Add Library...]</li>
-    <li><em>Show Sketch Folder</em><br />
-      Opens the folder for the current sketch.</li>
-    <li><em>Add File</em><br />
-      Opens a file navigator. Select an image, font, or other media files to add 
-      it to the sketch's "data" folder. </li>
-	</ul>-->
+
+
+  <h6>Debug</h6>
+  <ul>
+    <li><em>Enable Debugger</em><br />
+      (Description to come...)
+    </li>
+    <li><em>Continue</em><br />
+      (Description to come...)
+    </li>
+    <li><em>Step</em><br />
+      (Description to come...)
+    </li>
+    <li><em>Step Into</em><br />
+      (Description to come...)
+    </li>
+    <li><em>Step Out</em><br />
+      (Description to come...)
+    </li>
+    <li><em>Toggle Breakpoint</em><br />
+      (Description to come...)
+    </li>
+  </ul>
 	
 
-    <h6>Tools</h6>
+  <h6>Tools</h6>
 	<ul>
     <li><em>Create Font...</em><br />
-      Converts fonts into the Processing font format and adds to the current sketch. 
-      Opens a dialog box which give options for setting the font, it's size, if 
-      it is anti-aliased, and if all characters should be generated. If the "All 
-      Characters" options is selected, non-English characters such as ü and Å 
-      are generated, but the font file is larger in size. The amount of memory 
-      required for the font is also determined by the size selected. Processing 
-      fonts are textures, so larger fonts require more image data.</li>
-	  <li><em>Color Selector</em><br />
-      Interface for selecting colors.</li>
+      Converts fonts into the Processing font format (VLW) and adds to the current sketch. Opens a dialog box that gives options for setting the font, its size, if it is anti-aliased (smooth), and which characters to be generated. The amount of memory required for the font is determined by the size selected and the number of characters selected through the "Characters..." menu; Processing fonts are textures, so larger fonts require more image data. Fonts can also be created in the code with the createFont() function.</li>
+	  <li><em>Color Selector...</em><br />
+      Interface for selecting colors. For each color, the HSB, RBG, and Hex values are shown. The Hex value can be copied into the clipboard with the Copy button.</li>
     <li><em>Archive Sketch</em><br />
-      Archives a copy of the current sketch in .zip format. The archive is placed 
-      in the same folder as the sketch.</li>
+      Archives a copy of the current sketch in .zip format. The archive is placed in the same folder as the sketch.</li>
+    <li><em>Install "processing-java"</em><br />
+      (Description to come...)</li>
 	  <li><em>Movie Maker</em><br />
-      Creates a QuickTime movie from a sequence of images. Options include setting the size,
-      frame rate, and compression, as well as an audio file.
-	</li>
+      Creates a QuickTime movie from a sequence of images. Options include setting the size, frame rate, and compression, as well as an audio file.
+    <li><em>Add Tool...</em><br />
+      Opens the Tool Manager to browse and install new Tools.
+	  </li>
 	</ul>
-	  
-	<!--<h6>JavaScript (JavaScript Mode only)</h6>
-	<ul>
-    <li><em>Playback Settings (Directives)</em><br />
-      JavaScript mode uses directives to preload images and fonts and to better  
-      integrate with the browser that the sketch is running inside. This dialog box assists 
-      in adding these directives to a sketch.
-    </li>
-	<li><em>Start Custom Template</em><br />
-      Copies a template that includes an index.html file and the required JavaScript code to run
-      a JavaScript mode sketch. The index.html file can be modified to customize the HTML around
-      the sketch when it's exported. 
-      </li>
-    <li><em>Show Custom Template</em><br />
-      Opens the folder for the current sketch's custom template.</li>
-	</li>
-	</ul>-->
 	
-    <!--<h6>Help (Java Mode)</h6>-->
-    <h6>Help</h6>
-    <ul>
 
-    <li><em>About Processing</em><br />
-      Opens a concise information panel about the software. (This item is
-      located in the Processing menu on Mac OS X.)</li>
+  <h6>Help</h6>
+  <ul>
     <li><em>Environment</em><br />
-      Opens the reference for the Processing Development Environment (this page) in the 
-      default web browser.</li>
-    <li><em>Reference </em><br />
-      Opens the reference in the default web browser. Includes reference for the language, 
-      programming environment, libraries, and a language comparison.</li>
-    <li><em>Find in Reference (Ctrl+Shift+F)</em><br />
-      Select a word in your sketch and select "Find in Reference" to open its reference 
-      HTML page.</li>
-	<br />
+      Opens the reference for the Processing Development Environment (this page) in the default web browser.
+    </li>
+    <li><em>Reference</em><br />
+      Opens the reference in the default web browser. Includes references for the language, programming environment, and core libraries.
+    </li>
+    <li><em>Find in Reference</em><br />
+      Select an element of the Processing language in the text editor and select Find in Reference to open that page in the default web browser.
+    </li>
+    <li><em>Libraries Reference</em><br />
+      (Description to come...)
+    </li>
+    <li><em>Tools Reference</em><br />
+      (Description to come...)
+    </li>
     <li><em>Getting Started</em><br />
-      Opens a tutorial on getting started with Processing.</li>
+      Opens the online Getting Started tutorial in the default browser.
+    </li>
     <li><em>Troubleshooting</em><br />
-      Opens the troubleshooting information in the default web browser.</li>
+      Opens the online Troubleshooting wiki page in the default browser.
+    </li>
     <li><em>Frequently Asked Questions</em><br />
-      Answers to some basic question about the Processing project.</li>
+      Opens the online FAQ wiki page in the default browser.
+    </li>
+    <li><em>The Processing Foundation</em><br />
+      Opens the Foundation website in the default browser.
+    </li>
     <li><em>Visit Processing.org</em><br />
-      Opens default web browser to the Processing.org homepage.</li>
+      Opens Processing website in the default browser.
+    </li>
+  </ul>
 
-	</ul>
-	
-	<!--<h6>Help (JavaScript)</h6>
-    
-	<ul><li><em>This menu is currently in flux.</em></li></ul>-->
-	
-	
-	
-	<!-- Preferences -->
     
     <h5 id="Preferences">
     	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Preferences
@@ -401,70 +287,92 @@ Big-picture keywords / concepts for getting into Processing
     </p>
     
     <ul>
-    <li>
-    	<em>Sketchbook location</em><br />
-        Any folder can be used as the Sketchbook. Input a new location or select "Browse" to set
-        the folder you want to use.
-    </li>
-    <li>
-    	<em>Editor font size</em><br />
-      	Sets the font size of the code in the text editor. Restart Processing after making
-      	this change. 
-	</li>
-    <li>
-    	<em>Use smooth text in editor window</em><br />
-      	By default, the text in the editor is aliased. When checked, the editor switches
-      	to an anti-aliased (smoothed) font. Restart Processing after making this change. 
-    </li>
-    <li>
-    	<em>Increase maximum available memory</em><br />
-      	Allocates more RAM to Processing sketches when they run. Sketches that use media 
-      	files (images, audio, etc.) sometimes require more RAM. Increase the amount of RAM
-      	if a sketch is throwing Out of Memory Errors. 
-    </li>
-    <li>
-    	<em>Delete previous folder on export</em><br />
-      	When checked (default behavior), Processing deletes the complete export folder 
-      	before re-creating it and adding the new media. 
-    </li>
-    <li>
-    	<em>Check for updates on startup</em><br />
-      	When checked (default behavior), you'll be informed of new Processing software releases 
-      	as they become available through a small dialog box that opens as Processing starts. 
-    </li>
-	</ul>
+      <li>
+      	<em>Sketchbook location</em><br />
+          Any folder can be used as the Sketchbook. Input a new location or select "Browse" to set
+          the folder you want to use.
+      </li>
+      <li>
+        <em>Language</em><br />
+          Select the language to use for the menus. Processing needs to be restarted after making a new selection.
+      </li>
+      <li>
+        <em>Editor and Console font</em><br />
+          Select a different font to use for text in the Editor and Console. Note: the selected font should match the language used in the Text Editor. See the "Enable complex text input" preference below.  
+      </li>
+      <li>
+      	<em>Editor font size</em><br />
+        	Sets the font size of the code in the text editor.
+  	  </li>
+      <li>
+        <em>Console font size</em><br />
+          Sets the font size of the text in the console.
+      </li>
+      <li>
+        <em>Background color when Presenting</em><br />
+          Defined the background color used when a sketch is run with Present. 
+      </li>
+      <li>
+      	<em>Use smooth text in editor window</em><br />
+        	By default, the text in the editor is aliased. When checked, the editor switches
+        	to an anti-aliased (smoothed) font. Restart Processing after making this change. 
+      </li>
+      <li>
+        <em>Enable complex text input</em><br />
+          Enables the Text Editor to display non-Latin fonts such as Japanese. Processing needs to be restarted after making this selection.
+      </li>
+      <li>
+        <em>Continuously check for errors and Show warnings</em><br />
+          Turn on and off the features that continuously check for and report potential code errors. 
+      </li>
+      <li>
+        <em>Code completion with Ctrl-space</em><br />
+          (Description to come...)
+      </li>
+      <li>
+        <em>Suggest import statements</em><br />
+          (Description to come...)
+      </li>
+      <li>
+      	<em>Increase maximum available memory</em><br />
+        	Allocates more RAM to Processing sketches when they run. Sketches that use media 
+        	files (images, audio, etc.) sometimes require more RAM. Increase the amount of RAM
+        	if a sketch is throwing Out of Memory Errors. 
+      </li>
+      <li>
+      	<em>Delete previous folder on export</em><br />
+        	When checked (default behavior), Processing deletes the complete export folder 
+        	before re-creating it and adding the new media. 
+      </li>
+      <li>
+      	<em>Check for updates on startup</em><br />
+        	When checked (default behavior), you'll be informed of new Processing software releases 
+        	as they become available through a small dialog box that opens as Processing starts. 
+      </li>
+      <li>
+        <em>Run sketches on display</em><br />
+          If more than one monitor is attached, select the monitor on which to display the sketch. 
+      </li>
+	  </ul>
     
     
     
     <!-- Sketches and Sketchbook -->
 	  
-    <h5 id="Sketchbook">
-    	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Sketches and Sketchbook
-    </h5>
+  <h5 id="Sketchbook">
+   	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Sketches and Sketchbook
+  </h5>
     
-    <p>
-    	All Processing projects are called sketches. Each sketch has its own folder. The main file 
-    	for each sketch has the same name as the folder and is found inside. For example, if the 
-    	sketch is named "Sketch_123", the folder for the sketch will be called "Sketch_123" and the 
-    	main file will be called "Sketch_123.pde". The PDE file extension is an acronym for the 
-    	Processing Development Environment.</p>
+  <p>
+    All Processing projects are called sketches. Each sketch has its own folder. The main file for each sketch has the same name as the folder and is found inside. For example, if the sketch is named "Sketch_123", the folder for the sketch will be called "Sketch_123" and the main file will be called "Sketch_123.pde". The PDE file extension is an acronym for the Processing Development Environment.</p>
 	</p>
 	
 	<p>
-		Processing sketches can be stored anywhere on your computer, but by default they are
-		stored in the sketchbook, which will be in different places on your computer or network 
-		depending if you use PC, Mac, or Linux and how the preferences are set. To locate this 
-		folder, select the "Preferences" option from the File menu (or from the "Processing" menu 
-		on the Mac) and look for the "Sketchbook location".
+		Processing sketches can be stored anywhere on your computer, but by default they are stored in the sketchbook, which will be in different places on your computer or network depending if you use PC, Mac, or Linux and how the preferences are set. To locate this folder, select the "Preferences" option from the File menu (or from the "Processing" menu on the Mac) and look for the "Sketchbook location."
 	</p>
 	
 	<p>
-		A sketch folder sometimes contains other folders for media files and other code. 
-		When a font or image is added to a sketch by selecting "Add File..." from the Sketch menu, 
-		a "data" folder is created. Files may also be added to your Processing sketch by dragging 
-		them into the text editor. Image and sound files dragged into the application window will 
-		automatically be added to the current sketch's "data" folder. All images, fonts, sounds, 
-		and other data files loaded in the sketch must be in this folder. 
+		A sketch folder sometimes contains other folders for media files and other code. When a font or image is added to a sketch by selecting "Add File..." from the Sketch menu, a "data" folder is created. Files may also be added to your Processing sketch by dragging them into the text editor. Image and sound files dragged into the application window will automatically be added to the current sketch's "data" folder. All images, fonts, sounds, and other data files loaded in the sketch must be in this folder. 
 	</p>
 
 
@@ -475,26 +383,20 @@ Big-picture keywords / concepts for getting into Processing
     </h5>
       
     <p>
-      Processing has three built-in renderers. The default renderer is for drawing two-dimensional
-      shapes. <em>P2D</em> is a faster, but less accurate renderer for drawing two-dimensional 
-      shapes. <em>P3D</em> is for three-dimensional geometry, it can also control
-      the camera, lighting, and materials. The P2D and P3D renderers are accelerated if 
-      your computer has an OpenGL compatible graphics card.
+      Processing has six built-in screen renderers. The default renderer is for drawing two-dimensional shapes. <em>P2D</em> is a faster, but less accurate renderer for drawing two-dimensional shapes. <em>P3D</em> is for three-dimensional geometry; it can also control the camera, lighting, and materials. The P2D and P3D renderers are accelerated if your computer has an OpenGL compatible graphics card. Each of these three renderers has a "_2X" version for rendering on high definition screens. To render for a high def screen, use the JAVA2D_2X, P2D_2X, or P3D_2X depending on the type of sketch. The smooth() function affects the amount of antialiasing for each renderer. Check the reference for smooth() for more information.
     </p>
     
     <p>  
-      The renderer used for each sketch is specified through the size() function. 
-      If a renderer is not explicitly defined in size(), it uses the default renderer.
-      For example, the following program:
+      The renderer used for each sketch is specified through the size() function. If a renderer is not explicitly defined in size(), it uses the default renderer as shown in the following program:
     </p>
     
-<pre>void setup() {
-  size(200, 200);
+<pre><span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200, 200);
 }
 
-void draw() {
-  background(204);
-  line(width/2, height/2, mouseX, mouseY);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(<span style="color: #D94A7A;">width</span>/2, <span style="color: #D94A7A;">height</span>/2, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>);
 }
 </pre>
 
@@ -502,23 +404,21 @@ void draw() {
 	To change the renderer, add a third parameter to size(). For example:
 	</p>
 
-<pre>void setup() {
-  size(200, 200, P2D);
+<pre><span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200, 200);
 }
 
-void draw() {
-  background(204);
-  line(width/2, height/2, mouseX, mouseY);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(<span style="color: #D94A7A;">width</span>/2, <span style="color: #D94A7A;">height</span>/2, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>);
 }
 </pre>
 
     <p>
-      A large effort has been made to make the Processing renderers behave similarly across 
-      the different renderers, but there are currently some inconsistencies that are explained 
-      in the reference.
+      A large effort has been made to make Processing code behave similarly across the different renderers, but there are currently some inconsistencies that are explained in the reference.
     </p>
 		
-    <p>For more information, see the <a href="../size_.html">size()</a> reference entry.</b>
+    <p>For more information, see the size() reference entry.</b>
     
     
    
@@ -528,11 +428,7 @@ void draw() {
       Coordinates</h5>
       
     <p>
-    	Processing uses a Cartesian coordinate system with the origin in the upper-left 
-      	corner. If your sketch is 320 pixels wide and 240 pixels high, coordinate 
-      	(0, 0) is the upper-left pixel and coordinate (320, 240) is in the lower-right. 
-      	The last visible pixel in the lower-right corner of the screen is at position 
-      	(319, 239) because pixels are drawn to the right and below the coordinate.
+    	Processing uses a Cartesian coordinate system with the origin in the upper-left corner. If your sketch is 320 pixels wide and 240 pixels high, coordinate (0, 0) is the upper-left pixel and coordinate (320, 240) is in the lower-right. The last visible pixel in the lower-right corner of the screen is at position(319, 239) because pixels are drawn to the right and below the coordinate.
     </p>
     	
     <p>
@@ -540,38 +436,23 @@ void draw() {
     </p>
     
     <p>
-    	Using the three-dimension coordinate system of P3D, the z-coordinate is zero at the 
-    	surface of the image, with negative z-values moving back in space. When drawing in 
-    	3D, the <em>camera</em> is positioned in the center of the screen.
+    	Using the three-dimension coordinate system of P3D, the z-coordinate is zero at the surface of the image, with negative z-values moving back in space. When drawing in 3D, the <em>camera</em> is positioned in the center of the screen.
     </p>
       
-      
-    
+
     
 	<!-- Tabs, Multiples Files, and Classes -->
 
-    <h5 id="Tabs">
-    	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Tabs, Multiple Files, and Classes
-    </h5>
+  <h5 id="Tabs">
+    <a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Tabs, Multiple Files, and Classes
+  </h5>
     
-    <p>
-    	It can be inconvenient to write a long program within a single file. 
-		When Processing sketches grow to hundreds or thousands of lines, breaking them 
-		into modular units helps manage the different parts. Processing manages files with 
-		the Sketchbook and each sketch can have multiple files that are managed with tabs.
+  <p>
+    It can be inconvenient to write a long program within a single file. When Processing sketches grow to hundreds or thousands of lines, breaking them into modular units helps manage the different parts. Processing manages files with the Sketchbook and each sketch can have multiple files that are managed with tabs.
 	</p>
 	
 	<p>
-		The arrow button to the right of the tabs in the Processing Development Environment 
-		is used to manage these files. Click this button to reveal options to create a new tab, 
-		rename the current tab, and delete the current tab. If a project has more than one tab, 
-		they can also be hidden and revealed. Hiding a tab temporarily removes that code 
-		from the sketch (it will not be compiled with the sketch when you press Run).
-	</p>
-	
-	<p>
-		Tabs are intended for more advanced users, and for this reason, the menu that 
-		controls the tabs is intentionally made less prominent.
+		The arrow button to the right of the tabs in the Processing Development Environment is used to manage these files. Click this button to reveal options to create a new tab, rename the current tab, and delete the current tab. Tabs are intended for more advanced users, and for this reason, the menu that controls the tabs is intentionally made less prominent.
 	</p>
 
 	<p>
@@ -580,21 +461,24 @@ void draw() {
   				<td>
 		<em>Advanced</em><br />
 		<br />
-		When a program with multiple tabs is run, the code is grouped together and the 
-		classes in other tabs become inner classes. Because they're inner classes, they 
-		cannot have static variables. Simply place the "static" variable outside the class 
-		itself to do the same thing (it need not be explicitly named "static" once you list 
-		it in this manner). If you don't want code to be an inner class, you can also create 
-		a tab with a .java suffix, which means it will be interpreted as straight java code. 
-		It is also not possible to use static classes in separate tabs. If you do this, 
-		however, you'll need to pass the PApplet object to that object in that tab in order 
-		to get PApplet functions like line(), loadStrings() or saveFrame() to work.<br />
+		When a program with multiple tabs is run, the code is grouped together and the classes in other tabs become inner classes. Because they're inner classes, they cannot have static variables. Simply place the "static" variable outside the class itself to do the same thing (it need not be explicitly named "static" once you list it in this manner). If you don't want code to be an inner class, you can also create a tab with a ".java" suffix, which means it will be interpreted as straight java code. It is also not possible to use static classes in separate tabs. If you do this, however, you'll need to pass the PApplet object to that object in that tab in order to get PApplet functions like line(), loadStrings() or saveFrame() to work.<br />
 				</td>
 			</tr>
 		</table>
 	</p>
 	
+
+  <!-- Programming Modes -->
 	
+  <h5 id="Debug">
+    <a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Debug
+  </h5>
+    
+  <p>
+    (Description to come...)
+  </p>
+
+
 	<!-- Programming Modes -->
     
      <h5 id="Programming_modes">
@@ -603,41 +487,17 @@ void draw() {
     
     <p>
 		Processing has different <em>programming modes</em> to make it possible to deploy sketches
-		on different platforms and program in different ways. The current default programming modes 
-		are <em>Java</em> and <em>Experimental</em>. Other programming modes, such as <em>JavaScript</em> and 
-		<em>Android</em>, are added by selecting "Add Mode..." from the menu in the upper-right
-		corner of the PDE. <!--The Java mode makes Java Applications, 
-		the JavaScript mode makes sketches that run through HTML5 Canvas and WebGL, 
-		and the Android mode makes sketches that run on Android phones and tablets.-->
+		on different platforms and program in different ways. The current default programming mode 
+		is <em>Java</em> mode. Other programming modes such as <em>Android Mode</em> and 
+		<em>Python</em> are added by selecting "Add Mode..." from the menu in the upper-right
+		corner of the PDE.
     </p>
-    
-    <!--
-    <p>
-    	Processing has different <em>programming modes</em> to make it possible to deploy 
-    	sketches on different platforms. The three current programming modes are <em>Java</em>, 
-		<em>JavaScript</em>, and <em>Android</em>. The Java mode makes Java Applications, 
-		the JavaScript mode makes sketches that run through HTML5 Canvas and
-		WebGL, and the Android mode makes sketches that run on Android phones and tablets. 
-		Each mode has unique menu items, examples, and a distinct visual theme for the PDE.
-    </p>
-    -->
-    
-    <!--
-    <p>
-    	While each mode has some custom language elements, the core Processing syntax works 
-    	identically regardless of the mode and export platform. Additionally, now that the 
-    	software architecture for modes is in place, it's possible to create many other
-    	compatible modes based on other programming and scripting languages such as Python, 
-    	and Ruby, etc.
-    </p>
-    -->
-      
       
     <h6>Java Mode</h6>
     
     <p>
     	This mode makes it possible to write short programs to draw to the screen, but also
-    	enables complex Java programs as well. It's can be used simply by beginners, but 
+    	enables complex Java programs as well. It can be used simply by beginners, but 
     	it scales to professional Java software development. Sketches written in this mode can
     	be exported as Java Applications to run on Linux, Mac OS X, and Windows operating 
     	systems. 
@@ -660,84 +520,14 @@ void draw() {
 public class MyDemo extends PApplet {
    	</pre>
    	
-   		This is for advanced developers only and is not really recommended. Using this technique 
-   		means that any additional tabs will no longer be inner classes, meaning you'll have to 
-   		do extra work to make them communicate properly with the host PApplet. It is not necessary 
-   		to use this technique just to get features of the Java language. Advanced developers can
-   		also program with Processing in another Java Editor if higher-level code editing and
-   		tools are needed. We've documented how to use 
-   		<a href="http://processing.org/learning/eclipse/">Processing
-   		in Eclipse</a>, but core.jar can be used as a part of any Java project.
+   		This is for advanced developers only and is not really recommended. Using this technique means that any additional tabs will no longer be inner classes, meaning you'll have to do extra work to make them communicate properly with the host PApplet. It is not necessary to use this technique just to get features of the Java language. Advanced developers can also program with Processing in another Java Editor if higher-level code editing and tools are needed. <!--We've documented how to use <a href="http://processing.org/learning/eclipse/">Processing
+   		in Eclipse</a>, but core.jar can be used as a part of any Java project.--> Processing's core.jar can be used as a part of any Java project.
 				</td>
 			</tr>
 		</table>
 	</p>
-
-  <h6>Experimental Mode</h6>
-    
-    <p>
-      This is a prototype of a potential future version of the Processing Development Environment.
-      It includes features to check for errors in the code while it's written, to follow variables
-      as they change, to debug a program with break points, and more.
-    </p>
-
     
     <!--
-    <h6>JavaScript Mode</h6>
-    
-    <p>
-    	The JavaScript Mode is built around <a href="http://processingjs.org">Processing.js</a>, 
-    	a port of the Processing API to JavaScript that renders with HTML5 Canvas and WebGL.
-    	Processing.js was originally started by John Resig and is now developed by a great team 
-    	at Seneca College led by David Humphrey.
-    </p>
-    	
-    <p>
-    	This mode allows Processing to export Processing.js sketches directly from inside the
-    	Processing environment to target web environments without having to worry about plugins. 
-    	Running a sketch starts a server that delivers the code directly from its export 
-    	folder. This allows you to view and test your sketch on multiple browsers and even 
-    	multiple devices if you are on a network. 
-    </p>
-    
-    <p>
-    	When the Run button is pressed, a new local server is started and the default web 
-    	browser opens a new window with the address of the server. To make changes
-    	to the code, navigate back to Processing and make the changes in the text editor. Save
-    	the sketch, then navigate back to the web browser and reload the page. Press "stop" or 
-    	close the sketch window will stop the server. 
-    </p>
-    
-    <p>
-    	If the computer is on a network the sketch can be accessed by other devices on the 
-    	network through the IP address of the computer followd by the port assigned by Processing. 
-    	Just replace "127.0.0.1" with your computer's IP address. 
-    </p>
-    
-    <p>
-    	Similar to .java tabs in the Java mode, JavaScript files may be added to 
-    	a sketch. Create a new tab with a name ending in ".js" or drag an existing ".js" file 
-    	into the text editor of the sketch to copy it. JavaScript tabs make it possible to
-    	write pure JavaScript code inside the PDE that can reach beyond what the Processing 
-    	language alone offers. Check the examples included with the mode to see how to 
-    	integrate JavaScript code. 
-    </p>
-    
-    <p>
-    	JavaScript Mode is new for Processing 2.0. There's more information about this mode
-    	on the emerging <a href="http://wiki.processing.org/w/JavaScript">JavaScript Mode</a> 
-    	page on the Processing Wiki.
-    </p>-->
-    
-    <h6>JavaScript Mode</h6>
-    
-    <p>
-		Sketches written in this mode can be exported to run inside web browsers using
-		HTML5 and WebGL. This mode is documented on the <a href="http://wiki.processing.org/w/JavaScript">
-		JavaScript</a> page of the Processing Wiki. To add this mode, click on the mode 
-    button in the upper-right corner of the PDE and select "Add Mode..."
-    </p>
-    
     <h6>Android Mode</h6>
     
     <p>
@@ -745,125 +535,9 @@ public class MyDemo extends PApplet {
 		This mode is documented on the <a href="http://wiki.processing.org/w/Android">
 		Processing for Android</a> page of the Processing Wiki. To add this mode, click on 
     the mode button in the upper-right corner of the PDE and select "Add Mode..."
-    </p>
-    
-    
-    <!--
-    
-    <h5 id="Programming_modes">
-    	<a href="#top"><img src="images/up_arrow.gif" alt="Top" /></a> Programming Modes
-    </h5>
-    
-    <p>Processing allows people to create sketches at three levels of complexity: Basic 
-      Mode, Continuous Mode, and Java Mode. People new to programming should begin 
-      with the Basic Mode to learn about coordinates, variables, and loops before 
-      moving to Continuous and Java modes. </p>
-      
-      
-    <h6>Basic</h6>
-    <p>This mode is used drawing static images and learning fundamentals of programming. 
-      Simple lines of code have a direct representation on the screen. The following 
-      example draws a yellow rectangle on the screen:</p>
-    <pre>size(200, 200);
-background(255);
-noStroke();
-fill(255, 204, 0);
-rect(30, 20, 50, 50);
-</pre>
+    </p>-->
 
 
-    <h6>Continuous</h6>
-    <p>This mode provides a setup() structure that is run once when the sketch 
-      begins and a draw() structure which by default continually loops through 
-      the code inside. This additional structure allows writing custom functions 
-      and classes and using keyboard and mouse events.<br />
-      <br />
-      This example draws four circles on the screen and utilizes a custom function 
-      called circles(). The circles() function is not a part of the Processing 
-      language, but was written for this example. The code in draw() only runs 
-      once because noLoop() is called in setup().</p>
-    <pre>void setup() {
-  size(200, 200);
-  noStroke();
-  background(255);
-  fill(0, 102, 153, 204);
-  smooth();
-  noLoop();
-}
-
-void draw() {
-  circles(40, 80);
-  circles(90, 70);
-}
-
-void circles(int x, int y) {
-  ellipse(x, y, 50, 50);
-  ellipse(x+20, y+20, 60, 60);
-}</pre>
-    <p>This example draws rectangles that follow the mouse position (stored in 
-      the system variables mouseX and mouseY). The <b>draw()</b> 
-      block runs forever until the sketch is stopped, thus creating the 
-      potential for motion and interaction.</p>
-    <pre>void setup() {
-  size(200, 200);
-  rectMode(CENTER);
-  noStroke();
-  fill(0, 102, 153, 204);
-}
-
-void draw() {
-  background(255);
-  rect(width-mouseX, height-mouseY, 50, 50);
-  rect(mouseX, mouseY, 50, 50);
-}
-</pre>
-
-
-    <h6>Java</h6>
-    <p>
-    	This mode is the most flexible, allowing complete Java code to be written from inside 
-    	the Processing Environment (as long as they're still subclasses of PApplet). This mode 
-    	is for advanced users only and is not really recommended. Using this mode means that any 
-    	additional tabs will no longer be inner classes, meaning that you'll have to do extra 
-    	work to make them communicate properly with the host PApplet. It is not necessary to use 
-    	this mode just to get features of the Java language.
-    </p>
-
-    <pre>public class MyDemo extends PApplet {
-
-  void setup() {
-    size(200, 200);
-
-    rectMode(CENTER);
-    noStroke();
-    fill(0, 102, 153, 204);
-  }
-
-  void draw() {
-    background(255);
-    rect(width-mouseX, height-mouseY, 50, 50);
-    rect(mouseX, mouseY, 50, 50);
-  }
-}
-</pre>
-
-    -->
-    
-    <!-- more for JAVA
-    
-	<p>
-		It is possible to have multiple files in a single sketch. These can be Processing text 
-		files (the extension .pde) or Java files (the extension .java). To create a new file, 
-		click on the arrow button to the right of the file tabs. This button gives access to 
-		creating, deleting, and renaming the files that comprise the current sketch. You can 
-		write functions and classes in new PDE files and you can write any Java code in files 
-		with the JAVA extension. Working with multiple files makes it easier to re-use code 
-		and to separate sketches into small sub-programs.
-	</p>
-	
-    -->
- 
- 
 
 
     <!-- Tabs, Multiples Files, and Classes -->
@@ -873,28 +547,24 @@ void draw() {
     </h5>
     
     <p>
-    	Processing 2.0 includes a set of new features to make it easier to install, update, and
-    	remove Libraries, Tools, and Modes.
+    	Processing 3.0 includes a set of features to make it easier to install, update, and remove Libraries, Tools, Modes, and Examples.
     </p>
     
     <p>
-    	Add contributed libraries by selecting "Add Library..." from the "Import Library..." 
-    	submenu within the Sketch menu. Not all available libraries have been converted to 
-    	show up in "Add Library...". If a library isn't there, it will need to be installed 
-    	manually. Follow the <a href="http://wiki.processing.org/w/How_to_Install_a_Contributed_Library">
-    	How to Install a Contributed Library</a> instructions on the Processing 
-    	Wiki for more information.  
+    	Add a contributed library by selecting "Add Library..." from the "Import Library..." submenu within the Sketch menu. This opens the Library Manager. Next, select a library and then click on Install to download it.
     </p>
     
     <p>
-    	Add contributed tools by selecting "Add Tool..." from the Tools menu to select a Tool 
-    	to download. 
+    	Add a contributed tool by selecting "Add Tool..." from the Tools menu, then select a Tool to download from the Tool Manager. 
     </p>
     
     <p>
-    	Add contributed modes by selecting "Add Mode..." from the Mode menu in the upper-right
-    	corner of the PDE.
-	</p>
+    	Add contributed modes by selecting "Add Mode..." from the Mode menu in the upper-right corner of the PDE, then select a Mode to install.
+	   </p>
+
+     <p>
+      Add contributed Examples by first opening the "Examples..." submenu from the File menu. Click on the Add Examples button to open the Examples Manager. Next, select an examples package and select Install to download.
+     </p>
 	
 	
  
@@ -909,6 +579,7 @@ void draw() {
     	Tips</a> page on the Processing Wiki covers the details of exporting Applications from Java mode.
     </p>
     
+    <!--
     <p>
     	Exporting from JavaScript mode is discussed on the 
     	<a href="http://wiki.processing.org/w/JavaScript">JavaScript</a> page of the Processing Wiki.
@@ -917,5 +588,5 @@ void draw() {
     <p>
     	Exporting from Android mode is discussed on the 
     	<a href="http://wiki.processing.org/w/Android">Android</a> page of the Processing Wiki.
-    </p>
+    </p>-->
     
