@@ -2,9 +2,6 @@
 <root>
 <name>endContour()</name>
 
-<!-- unsupported_modes>js</unsupported_modes -->
-<!-- js_mode><description>This part of the Processing API is not supported in JavaScript mode</description></js_mode -->
-
 <category>Shape</category>
 
 <subcategory>Vertex</subcategory>
