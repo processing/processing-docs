@@ -11,6 +11,8 @@
 <example>
 <image></image>
 <code><![CDATA[
+int x = 0;
+
 void setup() {
   size(200, 200);
   background(0);
@@ -18,20 +20,46 @@ void setup() {
   fill(102);
 }
 
-int a = 0;
+void draw() {
+  rect(x, 10, 2, 80); 
+  x = x + 1;
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+int w = 200;
+int h = 200;
+int x = 0;
+
+void settings() {
+  size(w, h);
+}
+
+void setup() {
+  background(0);
+  noStroke();
+  fill(102);
+}
 
 void draw() {
-  rect(a++%width, 10, 2, 80); 
+  rect(x, 10, 1, 180); 
+  x = x + 2;
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-The <b>setup()</b> function is called once when the program starts. It's used to define initial 
+The <b>setup()</b> function is called once, when the program starts. It's used to define initial 
 enviroment properties such as screen size and background color and to load media such as images
 and fonts as the program starts. There can only be one <b>setup()</b> function for each program and 
-it shouldn't be called again after its initial execution. Note: Variables declared within 
-<b>setup()</b> are not accessible within other functions, including <b>draw()</b>. 
+it shouldn't be called again after its initial execution.<br />
+<br />
+The <b>size()</b> function must be the first line in <b>setup()</b> if the program doesn't use the <b>settings()</b> function to define the size differently. As of Processing 3.0, some things original done in <b>setup()</b> should now be defined in a new function called <b>settings()</b>. For example, if you want to define the parameters of <b>size()</b> with variables, that needs to be in <b>settings()</b>.<br />
+<br />
+Note: Variables declared within <b>setup()</b> are not accessible within other functions, including <b>draw()</b>.
 ]]></description>
 
 </root>
