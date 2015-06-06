@@ -6,17 +6,17 @@
 
 <subcategory></subcategory>
 
-<type></type>
+<type>p5function</type>
 
 <example>
 <image></image>
 <code><![CDATA[
-// Run code at full screen using the P2D renderer
+// Run code at full screen using the default renderer
 
 int x = 0;
 
 void settings() {
-  fullScreen(P2D);
+  fullScreen();
 }
 
 void setup() {

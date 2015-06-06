@@ -30,12 +30,10 @@ void draw() {
 <example>
 <image></image>
 <code><![CDATA[
-int w = 200;
-int h = 200;
 int x = 0;
 
 void settings() {
-  size(w, h);
+  fullScreen();
 }
 
 void setup() {
@@ -45,7 +43,7 @@ void setup() {
 }
 
 void draw() {
-  rect(x, 10, 1, 180); 
+  rect(x, height*0.2, 1, height*0.6); 
   x = x + 2;
 }
 ]]></code>
