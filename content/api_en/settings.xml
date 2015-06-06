@@ -11,10 +11,62 @@
 <example>
 <image></image>
 <code><![CDATA[
+// Run code at full screen using the P2D renderer
+
 int x = 0;
 
 void settings() {
   fullScreen(P2D);
+}
+
+void setup() {
+  background(0);
+  noStroke();
+  fill(102);
+}
+
+void draw() {
+  rect(x, height*0.2, 1, height*0.6); 
+  x = x + 2;
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Run code at full screen using the P2D renderer
+// on screen 2 of a multiple monitor hardware setup
+
+int x = 0;
+
+void settings() {
+  fullScreen(P2D, 2);
+}
+
+void setup() {
+  background(0);
+  noStroke();
+  fill(102);
+}
+
+void draw() {
+  rect(x, height*0.2, 1, height*0.6); 
+  x = x + 2;
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+// Run code at full screen using the P2D renderer
+// across all screens on a multiple monitor setup
+
+int x = 0;
+
+void settings() {
+  fullScreen(P2D, SPAN);
 }
 
 void setup() {
@@ -55,7 +107,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-To come...
+The <b>settings()</b> function is new with Processing 3.0. It allows more flexibility in running full-screen applications with the <b>fullScreen()</b> function. The <b>fullScreen()</b> and <b>smooth()</b> functions are the only two functions that should appear in <b>settings()</b>. 
 ]]></description>
 
 </root>
