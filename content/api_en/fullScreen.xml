@@ -11,12 +11,74 @@
 <example>
 <image></image>
 <code><![CDATA[
-	// To come...
+// Run the code at the full dimensions of the screen currently
+// selected inside the Preferences window
+
+int x = 0;
+
+void setup() {
+  fullScreen();
+  background(0);
+  noStroke();
+  fill(102);
+}
+
+void draw() {
+  rect(x, height*0.2, 1, height*0.6); 
+  x = x + 2;
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+// If more than one screen is attached to the computer, run the 
+// code at the full dimensions of the screen defined by the 
+// parameter to fullScreen()
+
+int x = 0;
+
+void setup() {
+  fullScreen(P2D, 2);
+  background(0);
+  noStroke();
+  fill(102);
+}
+
+void draw() {
+  rect(x, height*0.2, 1, height*0.6); 
+  x = x + 2;
+}
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+// If more than one screen is attached to the computer, run the 
+// code at the full dimensions across all of the attached screens
+
+int x = 0;
+
+void setup() {
+  fullScreen(P2D, SPAN);
+  background(0);
+  noStroke();
+  fill(102);
+}
+
+void draw() {
+  rect(x, height*0.2, 1, height*0.6); 
+  x = x + 2;
+}
 ]]></code>
 </example>
 
 <description><![CDATA[
-To come...
+This function is new for Processing 3.0. It allows a sketch to open at the size of the computer's display. This function can only be the first line in <b>setup()</b>. The first parameter defines the renderer to use and the second defines either an individual screen to display to or to open a full-screen window across all of the attached displays if there are more than one.<br />
+<br />
+Don't include both a <b>size()</b> and <b>fullScreen()</b> in the same program. It's not (currently) prevented, but results will be inconsistent and difficult to predict. Prior to Processing 3.0, a full-screen program was defined with <b>size(displayWidth, displayHeight)</b>.
 ]]></description>
 
 </root>

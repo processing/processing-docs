@@ -107,7 +107,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-The <b>settings()</b> function is new with Processing 3.0. It allows more flexibility in running full-screen applications with the <b>fullScreen()</b> function. The <b>fullScreen()</b> and <b>smooth()</b> functions are the only two functions that should appear in <b>settings()</b>. 
+The <b>settings()</b> function is new with Processing 3.0. It's not needed in most sketches. It's only useful when it's necessary to define the parameters to <b>size()</b> with a variable or to load that information from a file. Alternately, the <b>settings()</b> function is necessary when using the Processing code outside the of Processing Development Environment (PDE). For example, when using the Eclipse code editor, it's necessary to use <b>settings()</b> to define the <b>size()</b> and <b>smooth()</b> values for a sketch.</b>. 
 ]]></description>
 
 </root>
