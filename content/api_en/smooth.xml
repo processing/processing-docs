@@ -11,20 +11,9 @@
 <example>
 <image></image>
 <code><![CDATA[
-smooth(4);
-noStroke();
-background(0);
-ellipse(30, 48, 36, 36);
-ellipse(70, 48, 36, 36);
-]]></code>
-</example>
-
-<example>
-<image></image>
-<code><![CDATA[
 void setup() {
   size(100, 100);
-  smooth(4);
+  smooth(2);
   noStroke();
 }
 
@@ -55,11 +44,11 @@ void draw() {
 <description><![CDATA[
 Draws all geometry with smooth (anti-aliased) edges. This behavior is the default, so <b>smooth()</b> only needs to be used when a program needs to set the smoothing in a different way. The <b>level</b> parameter increases the level of smoothness. This is the level of over sampling applied to the graphics buffer.<br />
 <br />
-With the P2D, P2D_2X, P3D, and P3D_2X renderers, <b>smooth(2)</b> increases the rendering size before scaling it down to the display size. This is called "2x anti-aliasing." The code <b>smooth(4)</b> is used for 4x anti-aliasing and <b>smooth(8)</b> is specified for 8x anti-aliasing. If <b>smooth(0)</b> is run, it disables all smoothing; it's the equivalent of the function <b>noSmooth()</b>. The maximum anti-aliasing level is determined by the hardware of the machine that is running the software.<br >
+With the P2D and P3D renderers, <b>smooth(2)</b> is the default, this is called "2x anti-aliasing." The code <b>smooth(4)</b> is used for 4x anti-aliasing and <b>smooth(8)</b> is specified for 8x anti-aliasing. The maximum anti-aliasing level is determined by the hardware of the machine that is running the software, so <b>smooth(4)</b> and <b>smooth(8)</b> will not work with every computer.<br >
 <br />
-With Processing 3.0, <b>smooth()</b> is now used differently than before. It was common to use <b>smooth()</b> and <b>noSmooth()</b> to turn on and off antialiasing within a sketch. Now, because of how the software has changed, <b>smooth()</b> can only be set once within a sketch. It can be used either at the top of a sketch without a <b>setup()</b>, or after the <b>size()</b> function when used in a sketch with <b>setup()</b>. See the examples above for both scenarios.<br />
+The default renderer uses <b>smooth(3)</b> by default. This is bicubic smoothing. The other open for the default renderer is <b>smooth(2)</b>, which is bilinear smoothing.<br />
 <br />
-With the default renderer and JAVA2D_2X, <b>smooth(2)</b> is bilinear and <b>smooth(4)</b> is bicubic. Nothing implemented on Android 2D.
+With Processing 3.0, <b>smooth()</b> is different than before. It was common to use <b>smooth()</b> and <b>noSmooth()</b> to turn on and off antialiasing within a sketch. Now, because of how the software has changed, <b>smooth()</b> can only be set once within a sketch. It can be used either at the top of a sketch without a <b>setup()</b>, or after the <b>size()</b> function when used in a sketch with <b>setup()</b>. The <b>noSmooth()</b> function also follows the same rules. 
 ]]></description>
 
 </root>

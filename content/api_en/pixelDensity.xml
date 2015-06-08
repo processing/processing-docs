@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>pixelDensity()</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+size(100, 100);
+pixelDensity(2);
+noStroke();
+background(0);
+ellipse(30, 48, 36, 36);
+ellipse(70, 48, 36, 36);
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(100, 100);
+  pixelDensity(2);
+  noStroke();
+}
+
+void draw() {
+  background(0);
+  ellipse(30, 48, 36, 36);
+  ellipse(70, 48, 36, 36);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This function is new with Processing 3.0. It makes it possible for Processing to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays. This function can only be run once within a program and it must be used right after <b>size()</b> in a program without a <b>setup()</b> and used within <b>setup()</b> when a program has one.
+]]></description>
+
+</root>

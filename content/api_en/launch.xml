@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>open()</name>
+<name>launch()</name>
 
 <category>Input</category>
 
@@ -21,7 +21,7 @@ void draw() {
 
 void mousePressed() {
   println("Opening Process_4");
-  open("/Applications/Process_4.app");
+  launch("/Applications/Process_4.app");
 }
 
 ]]></code>
@@ -41,7 +41,7 @@ void draw() {
 
 void mousePressed() {
   String[] params = { "/usr/bin/jikes", "-help" };
-  open(params);
+  launch(params);
 }
 
 ]]></code>

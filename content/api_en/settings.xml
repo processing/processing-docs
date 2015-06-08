@@ -107,7 +107,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-The <b>settings()</b> function is new with Processing 3.0. It's not needed in most sketches. It's only useful when it's necessary to define the parameters to <b>size()</b> with a variable or to load that information from a file. Alternately, the <b>settings()</b> function is necessary when using the Processing code outside the of Processing Development Environment (PDE). For example, when using the Eclipse code editor, it's necessary to use <b>settings()</b> to define the <b>size()</b> and <b>smooth()</b> values for a sketch.</b>. 
+The <b>settings()</b> function is new with Processing 3.0. It's not needed in most sketches. It's only useful when it's necessary to define the parameters to <b>size()</b> with a variable or to load that information from a file. Alternately, the <b>settings()</b> function is necessary when using Processing code outside of the Processing Development Environment (PDE). For example, when using the Eclipse code editor, it's necessary to use <b>settings()</b> to define the <b>size()</b> and <b>smooth()</b> values for a sketch.</b>. 
 ]]></description>
 
 </root>
