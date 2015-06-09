@@ -16,7 +16,6 @@ String[] links;
 
 void setup() {
   size(640, 360);
-  smooth();
   // Load the links
   links = loadLinks(url);
 }

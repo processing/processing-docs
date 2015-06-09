@@ -15,7 +15,6 @@ PShape[] shapes = new PShape[3];
 
 void setup() {
   size(640, 360, P2D);
-  smooth();
   
   shapes[0] = createShape(ELLIPSE,0,0,100,100);
   shapes[0].setFill(color(255, 127));

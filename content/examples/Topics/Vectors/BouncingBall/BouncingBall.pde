@@ -13,7 +13,6 @@ PVector gravity;   // Gravity acts at the shape's acceleration
 
 void setup() {
   size(640,360);
-  smooth();
   location = new PVector(100,100);
   velocity = new PVector(1.5,2.1);
   gravity = new PVector(0,0.2);

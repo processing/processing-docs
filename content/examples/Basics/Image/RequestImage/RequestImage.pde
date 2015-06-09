@@ -23,7 +23,6 @@ float loaderX, loaderY, theta;
 
 void setup() {
   size(640, 360);
-  smooth();
   imgW = width/imgCount;
 
   // Load images asynchronously

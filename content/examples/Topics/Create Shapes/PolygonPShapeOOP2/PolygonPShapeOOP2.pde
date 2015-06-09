@@ -12,7 +12,7 @@ ArrayList<Polygon> polygons;
 
 void setup() {
   size(640, 360, P2D);
-  smooth();
+
   // Make a PShape
   PShape star = createShape();
   star.beginShape();

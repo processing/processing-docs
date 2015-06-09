@@ -8,7 +8,7 @@ PShape s;
 
 void setup() {
   size(640, 360, P2D);
-  smooth();
+
   // Make a shape
   s = createShape();
   s.beginShape();

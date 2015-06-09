@@ -25,7 +25,6 @@ float angle = 0;
 
 void setup() {
   size(640, 360, P3D);
-  smooth();
   // Some random planets
   for (int i = 0; i < planets.length; i++) {
     planets[i] = new Planet(random(0.1, 2), random(-width/2, width/2), random(-height/2, height/2), random(-100, 100));

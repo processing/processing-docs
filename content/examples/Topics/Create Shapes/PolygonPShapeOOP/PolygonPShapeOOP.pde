@@ -10,7 +10,7 @@ Star s1, s2;
 
 void setup() {
   size(640, 360, P2D);
-  smooth();
+
   // Make a new Star
   s1 = new Star();
   s2 = new Star();
