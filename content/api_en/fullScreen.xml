@@ -97,9 +97,9 @@ void draw() {
 </example>
 
 <description><![CDATA[
-This function is new for Processing 3.0. It allows a sketch to open at the full size of the computer's display. This function can only be the first line in <b>setup()</b>. The first parameter defines the renderer to use and the second defines either an individual screen to display to or to open a full-screen window across all of the attached displays if there are more than one.<br />
+This function is new for Processing 3.0. It opens a sketch using the full size of the computer's display. This function must be the first line in <b>setup()</b>. The first parameter defines the renderer to use and the second defines either an individual screen to display to or to open a full-screen window across all of the attached displays if there are more than one.<br />
 <br />
-Don't include both a <b>size()</b> and <b>fullScreen()</b> in the same program. It's not (currently) prevented, but results will be inconsistent and difficult to predict. Prior to Processing 3.0, a full-screen program was defined with <b>size(displayWidth, displayHeight)</b>.
+The <b>size()</b> and <b>fullScreen()</b> methods cannot both be used in the same program, just choose one. Prior to Processing 3.0, a full-screen program was defined with <b>size(displayWidth, displayHeight)</b>.
 ]]></description>
 
 </root>
