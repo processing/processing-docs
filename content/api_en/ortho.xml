@@ -13,7 +13,7 @@
 <code><![CDATA[
 size(100, 100, P3D);
 noFill();
-ortho(0, width, 0, height); // same as ortho()
+ortho(-width/2, width/2, -height/2, height/2); // same as ortho()
 translate(width/2, height/2, 0);
 rotateX(-PI/6);
 rotateY(PI/3);
