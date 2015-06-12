@@ -26,11 +26,7 @@ void draw() {
   if (showPerspective == true) {
     perspective(PI/3.0, float(width)/float(height), 10, far);
   } else {
-<<<<<<< HEAD
     ortho(-width/2.0, width/2.0, -height/2.0, height/2.0, 10, far);
-=======
-    ortho(-width/2, width/2, -height/2, height/2, 10, far);
->>>>>>> 9b46c2acd960332c85802564d392f48f65995db9
   }
   translate(width/2, height/2, 0);
   rotateX(-PI/6);
