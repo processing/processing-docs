@@ -46,7 +46,7 @@ Draws all geometry with smooth (anti-aliased) edges. This behavior is the defaul
 <br />
 With the P2D and P3D renderers, <b>smooth(2)</b> is the default, this is called "2x anti-aliasing." The code <b>smooth(4)</b> is used for 4x anti-aliasing and <b>smooth(8)</b> is specified for 8x anti-aliasing. The maximum anti-aliasing level is determined by the hardware of the machine that is running the software, so <b>smooth(4)</b> and <b>smooth(8)</b> will not work with every computer.<br >
 <br />
-The default renderer uses <b>smooth(3)</b> by default. This is bicubic smoothing. The other open for the default renderer is <b>smooth(2)</b>, which is bilinear smoothing.<br />
+The default renderer uses <b>smooth(3)</b> by default. This is bicubic smoothing. The other option for the default renderer is <b>smooth(2)</b>, which is bilinear smoothing.<br />
 <br />
 With Processing 3.0, <b>smooth()</b> is different than before. It was common to use <b>smooth()</b> and <b>noSmooth()</b> to turn on and off antialiasing within a sketch. Now, because of how the software has changed, <b>smooth()</b> can only be set once within a sketch. It can be used either at the top of a sketch without a <b>setup()</b>, or after the <b>size()</b> function when used in a sketch with <b>setup()</b>. The <b>noSmooth()</b> function also follows the same rules. 
 ]]></description>
