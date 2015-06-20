@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>pixelWidth</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<type>variable</type>
+
+<example>
+<code><![CDATA[
+size(600, 400);
+pixelDensity(2);
+println(width, height);
+pirnltn(pixelWidth, pixelHeight);
+]]></code>
+</example>
+
+<description><![CDATA[
+This variable stores the pixel width of the display window. If the screen is a high resolution display like a Mac Retina or Windows High-DPI display and <b>pixelDensity(2)</b> is included in the code after <b>size()</b>, this value will be twice as large as the dimensions of the sketch defined in <b>size()</b>. For example if <b>size(600, 400)</b> is defined for a program, the <b>pixelWidth</b> value will be 1200 pixels.
+]]></description>
+
+</root>

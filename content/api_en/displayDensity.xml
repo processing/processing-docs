@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>displayDensity()</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(100, 100);
+  int d = displayDensity();
+  pixelDensity(d);
+  noStroke();
+}
+
+void draw() {
+  background(0);
+  ellipse(30, 48, 36, 36);
+  ellipse(70, 48, 36, 36);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This function is new with Processing 3.0. It returns the number "2" if the screen is a high-density screen (called a Retina display on OS X or high-dpi on Windows and Linux)and a "1" if not. This information is useful for a program to adapt to run at double the pixel density on a screen that supports it.
+]]></description>
+
+</root>
