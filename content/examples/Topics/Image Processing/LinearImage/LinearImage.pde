@@ -5,9 +5,6 @@
  * Press and hold any key to watch the scanning. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="sea.jpg"; */
-
 PImage img;
 int direction = 1;
 

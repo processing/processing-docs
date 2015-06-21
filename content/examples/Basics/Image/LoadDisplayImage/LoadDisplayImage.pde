@@ -4,9 +4,6 @@
  * Images can be loaded and displayed to the screen at their actual size
  * or any other size. 
  */
- 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moonwalk.jpg"; */ 
 
 PImage img;  // Declare variable "a" of type PImage
 

@@ -4,9 +4,6 @@
  * Using a rectangular image to map a texture onto a triangle.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="berlin-1.jpg"; */ 
-
 PImage img;
 
 void setup() {

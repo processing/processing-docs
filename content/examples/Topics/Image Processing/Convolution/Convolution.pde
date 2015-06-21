@@ -7,10 +7,6 @@
  * not accurate in JavaScript mode.
  */
 
-
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moon-wide.jpg"; */ 
-
 PImage img;
 int w = 120;
 

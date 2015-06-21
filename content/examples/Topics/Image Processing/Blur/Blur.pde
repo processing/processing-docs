@@ -6,9 +6,6 @@
  * to blur the image. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moon.jpg"; */ 
-
 float v = 1.0 / 9.0;
 float[][] kernel = {{ v, v, v }, 
                     { v, v, v }, 

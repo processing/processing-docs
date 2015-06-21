@@ -6,9 +6,6 @@
  * heights corresponding to a color value read from an image. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="ystone08.jpg"; */ 
-
 PImage img;
 int[][] imgPixels;
 float sval = 1.0;

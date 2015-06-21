@@ -7,9 +7,6 @@
  * translation along z axis. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="eames.jpg"; */ 
-
 PImage img;       // The source image
 int cellsize = 2; // Dimensions of each cell in the grid
 int columns, rows;   // Number of columns and rows in our system

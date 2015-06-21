@@ -4,11 +4,6 @@
  * Move the scrollbars left and right to change the positions of the images. 
  */
 
-
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="seedTop.jpg,seedBottom.jpg"; */ 
-
-
 HScrollbar hs1, hs2;  // Two scrollbars
 PImage img1, img2;  // Two images to load
 

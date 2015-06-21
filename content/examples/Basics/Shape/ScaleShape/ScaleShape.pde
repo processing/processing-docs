@@ -7,9 +7,6 @@
  * remain smooth at any size.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="bot1.svg"; */ 
-
 PShape bot;
 
 void setup() {

@@ -7,9 +7,6 @@
  * and displays this color to fill the window.  
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="sea.jpg"; */ 
-
 PImage img;
 int direction = 1;
 float signal;

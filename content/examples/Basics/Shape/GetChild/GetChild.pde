@@ -8,9 +8,6 @@
  * two new PShape objects by extracting the data from two states.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="usa-wikipedia.svg"; */ 
-
 PShape usa;
 PShape michigan;
 PShape ohio;

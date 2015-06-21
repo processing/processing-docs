@@ -6,12 +6,6 @@
  * Twelve images are loaded and each is displayed individually in a loop. 
  */
 
-// @pjs preload must be used to preload media if the program is 
-// running with Processing.js
-/* @pjs preload="PT_anim0000.gif, PT_anim0001.gif, PT_anim0002.gif, PT_anim0003.gif,
-PT_anim0004.gif, PT_anim0005.gif, PT_anim0006.gif, PT_anim0007.gif, PT_anim0008.gif,
-PT_anim0009.gif, PT_anim0010.gif, PT_anim0011.gif"; */ 
-
 int numFrames = 12;  // The number of frames in the animation
 int currentFrame = 0;
 PImage[] images = new PImage[numFrames];

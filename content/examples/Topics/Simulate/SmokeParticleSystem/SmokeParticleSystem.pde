@@ -6,10 +6,6 @@
  * is rendered as an alpha masked image.
  */
 
-// @pjs preload must be used to preload media if the program is
-// running with Processing.js
-/* @pjs preload="texture.png"; */
-
 ParticleSystem ps;
 
 void setup() {

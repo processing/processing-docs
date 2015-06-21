@@ -5,9 +5,6 @@
  * Sometimes, it can be tickled off the screen.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs font="Georgia.ttf"; */
-
 String message = "tickle";
 float x, y; // X and Y coordinates of text
 float hr, vr;  // horizontal and vertical radius of the text

@@ -9,9 +9,6 @@
  * A 3D textured sphere with simple rotation control.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="world32k.jpg"; */
-
 int ptsW, ptsH;
 
 PImage img;

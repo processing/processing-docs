@@ -3,10 +3,7 @@
  * 
  * Load an image and draw it onto a cylinder and a quad. 
  */
-
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="berlin-1.jpg"; */ 
-
+ 
 int tubeRes = 32;
 float[] tubeX = new float[tubeRes];
 float[] tubeY = new float[tubeRes];

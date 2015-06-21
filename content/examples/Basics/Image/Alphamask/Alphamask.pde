@@ -6,9 +6,6 @@
  * together using the mask() method of PImage. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moonwalk.jpg,mask.jpg"; */ 
-
 PImage img;
 PImage imgMask;
 

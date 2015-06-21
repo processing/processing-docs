@@ -6,9 +6,6 @@
  * Creates a simple pointillist effect using ellipses colored
  * according to pixels in an image. 
  */
- 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moonwalk.jpg"; */ 
 
 PImage img;
 int smallPoint, largePoint;

@@ -13,9 +13,6 @@
  *
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs font="Georgia.ttf"; */
-
 // An IntDict pairs Strings with integers
 IntDict concordance;
 

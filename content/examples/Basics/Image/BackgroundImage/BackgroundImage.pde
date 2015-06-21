@@ -5,9 +5,6 @@
  * into Processing. To load an image as the background, it must be
  * the same width and height as the program.
  */
- 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moonwalk.jpg"; */ 
 
 PImage bg;
 int y;

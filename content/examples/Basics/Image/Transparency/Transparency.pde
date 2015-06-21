@@ -6,9 +6,6 @@
  * by modifying the alpha value of the image with the tint() function. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moonwalk.jpg"; */ 
-
 PImage img;
 float offset = 0;
 float easing = 0.05;

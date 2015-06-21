@@ -7,9 +7,6 @@
  * The conversion functions include int(), float(), char(), byte(), and others. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs font="Georgia.ttf"; */
-
 size(640, 360);
 background(0);
 noStroke();

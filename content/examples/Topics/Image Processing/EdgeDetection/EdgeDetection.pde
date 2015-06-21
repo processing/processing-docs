@@ -6,9 +6,6 @@
  * the image. This example is currently not accurate in JavaScript mode.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="moon.jpg"; */
-
 float[][] kernel = {{ -1, -1, -1}, 
                     { -1,  9, -1}, 
                     { -1, -1, -1}};

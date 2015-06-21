@@ -7,9 +7,6 @@
  * the P3D renderer as you can see, but they look great using OPENGL.
 */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs preload="berlin-1.jpg"; */ 
-
 PImage tex;
 float rotx = PI/4;
 float roty = PI/4;

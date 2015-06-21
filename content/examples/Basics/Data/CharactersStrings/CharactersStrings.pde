@@ -16,9 +16,6 @@
  * featured below. 
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs font="Georgia.ttf"; */
-
 char letter;
 String words = "Begin...";
 

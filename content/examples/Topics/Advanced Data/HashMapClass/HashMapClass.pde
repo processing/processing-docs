@@ -18,9 +18,6 @@
  * while words the other (Frankenstein) are colored black.
  */
 
-// The next line is needed if running in JavaScript Mode with Processing.js
-/* @pjs font="Georgia.ttf"; */
-
 HashMap<String, Word> words;  // HashMap object
 
 void setup() {
