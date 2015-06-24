@@ -12,16 +12,14 @@ boolean locked = false;
 float xOffset = 0.0; 
 float yOffset = 0.0; 
 
-void setup() 
-{
+void setup() {
   size(640, 360);
   bx = width/2.0;
   by = height/2.0;
   rectMode(RADIUS);  
 }
 
-void draw() 
-{ 
+void draw() { 
   background(0);
   
   // Test if the cursor is over the box 
@@ -64,4 +62,3 @@ void mouseDragged() {
 void mouseReleased() {
   locked = false;
 }
-

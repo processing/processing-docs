@@ -21,7 +21,7 @@ void draw() {
   
   pushMatrix();
   translate(width*0.5, height*0.5);
-  rotate(frameCount / 50.0);
+  rotate(frameCount / 400.0);
   star(0, 0, 80, 100, 40); 
   popMatrix();
   

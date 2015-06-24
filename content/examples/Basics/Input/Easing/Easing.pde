@@ -23,15 +23,11 @@ void draw() {
   
   float targetX = mouseX;
   float dx = targetX - x;
-  if(abs(dx) > 1) {
-    x += dx * easing;
-  }
+  x += dx * easing;
   
   float targetY = mouseY;
   float dy = targetY - y;
-  if(abs(dy) > 1) {
-    y += dy * easing;
-  }
+  y += dy * easing;
   
   ellipse(x, y, 66, 66);
 }

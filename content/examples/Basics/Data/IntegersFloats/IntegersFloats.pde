@@ -14,7 +14,6 @@ float b = 0.0;  // Create a variable "b" of the datatype "float"
 void setup() {
   size(640, 360);
   stroke(255);
-  frameRate(30);
 }
 
 void draw() {

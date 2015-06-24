@@ -24,6 +24,4 @@ void draw() {
   
   fill(r2);
   rect(width/2 - r2/2, height/2, r2, r2);
-
 }
-

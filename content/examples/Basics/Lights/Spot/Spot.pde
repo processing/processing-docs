@@ -7,17 +7,14 @@
  
 int concentration = 600; // Try values 1 -> 10000
 
-void setup() 
-{
-  //size(200, 200, P3D);
+void setup() {
   size(640, 360, P3D);
   noStroke();
   fill(204);
   sphereDetail(60);
 }
 
-void draw() 
-{
+void draw() {
   background(0); 
   
   // Light the bottom of the sphere
@@ -32,4 +29,3 @@ void draw()
   translate(width/2, height/2, 0); 
   sphere(120); 
 }
-

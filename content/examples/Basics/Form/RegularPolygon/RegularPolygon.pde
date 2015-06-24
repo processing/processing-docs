@@ -18,19 +18,19 @@ void draw() {
   pushMatrix();
   translate(width*0.2, height*0.5);
   rotate(frameCount / 200.0);
-  polygon(0, 0, 82, 3); 
+  polygon(0, 0, 82, 3);  // Triangle
   popMatrix();
   
   pushMatrix();
   translate(width*0.5, height*0.5);
   rotate(frameCount / 50.0);
-  polygon(0, 0, 80, 20); 
+  polygon(0, 0, 80, 20);  // Icosahedron
   popMatrix();
   
   pushMatrix();
   translate(width*0.8, height*0.5);
   rotate(frameCount / -100.0);
-  polygon(0, 0, 70, 7); 
+  polygon(0, 0, 70, 7);  // Heptagon
   popMatrix();
 }
 

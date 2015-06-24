@@ -13,7 +13,7 @@ void setup() {
 
   // Create the font
   printArray(PFont.list());
-  f = createFont("Georgia", 24);
+  f = createFont("SourceCodePro-Regular.ttf", 24);
   textFont(f);
   textAlign(CENTER, CENTER);
 } 
@@ -48,4 +48,3 @@ void draw() {
     }
   }
 }
-

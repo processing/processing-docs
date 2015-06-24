@@ -32,7 +32,7 @@ class Module {
   }
   
   // Custom method for drawing the object
-  void draw() {
+  void display() {
     fill(255);
     ellipse(xOffset + x, yOffset + y, 6, 6);
   }

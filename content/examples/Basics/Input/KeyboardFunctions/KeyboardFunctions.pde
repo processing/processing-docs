@@ -22,8 +22,7 @@ boolean newletter;
 int numChars = 26;      // There are 26 characters in the alphabet
 color[] colors = new color[numChars];
 
-void setup()
-{
+void setup() {
   size(640, 360);
   noStroke();
   colorMode(HSB, numChars);
@@ -34,8 +33,7 @@ void setup()
   }
 }
 
-void draw()
-{
+void draw() {
   if(newletter == true) {
     // Draw the "letter"
     int y_pos;

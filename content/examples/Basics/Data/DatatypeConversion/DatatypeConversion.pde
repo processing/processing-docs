@@ -11,7 +11,7 @@ size(640, 360);
 background(0);
 noStroke();
 
-textFont(createFont("Georgia",24));
+textFont(createFont("SourceCodePro-Regular.ttf",24));
 
 char c;    // Chars are used for storing alphanumeric symbols
 float f;   // Floats are decimal numbers

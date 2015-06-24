@@ -28,6 +28,6 @@ void draw() {
   background(0);
   for (Module mod : mods) {
     mod.update();
-    mod.draw();
+    mod.display();
   }
 }

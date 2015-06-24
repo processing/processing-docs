@@ -21,7 +21,7 @@ void setup() {
 
 void draw() {
   lights();
-  background(204);
+  background(0);
   float cameraY = height/2.0;
   float fov = mouseX/float(width) * PI/2;
   float cameraZ = cameraY / tan(fov / 2.0);
@@ -38,4 +38,3 @@ void draw() {
   translate(0, 0, -50);
   box(30);
 }
-

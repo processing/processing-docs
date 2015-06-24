@@ -22,6 +22,7 @@ void setup() {
     }
   }
   spacer = 10;
+  strokeWeight(6);
   noLoop();  // Run once and stop
 }
 
@@ -38,6 +39,3 @@ void draw() {
     }
   }
 }
-
-
-

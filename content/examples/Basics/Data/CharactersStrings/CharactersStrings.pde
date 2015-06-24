@@ -22,7 +22,7 @@ String words = "Begin...";
 void setup() {
   size(640, 360);
   // Create the font
-  textFont(createFont("Georgia", 36));
+  textFont(createFont("SourceCodePro-Regular.ttf", 36));
 }
 
 void draw() {

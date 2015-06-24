@@ -11,7 +11,7 @@ size(640, 360);
 background(102);
 noStroke();
  
-// Draw gray bars 
+// White bars 
 fill(255);
 y = 60;
 for(int i = 0; i < num/3; i++) {

@@ -13,8 +13,7 @@ void setup() {
   noStroke();
 }
 
-void draw()
-{
+void draw() {
   // Create an alpha blended background
   fill(0, 10);
   rect(0,0,width,height);
@@ -31,5 +30,3 @@ void draw()
   fill(200);
   ellipse(n,height/2, 64, 64);
 }
-
-

@@ -15,7 +15,7 @@ background(0);
 stroke(255);
 
 int d = 20;
-int middle = width/2;;
+int middle = width/2;
 
 for (int i = d; i <= width; i += d) {
   

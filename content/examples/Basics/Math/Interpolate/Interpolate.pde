@@ -26,8 +26,8 @@ void draw() {
   // is half-way in between, etc.  
   
   // Here we are moving 5% of the way to the mouse location each frame
-  x = lerp(x,mouseX,0.05);
-  y = lerp(y,mouseY,0.05);
+  x = lerp(x, mouseX, 0.05);
+  y = lerp(y, mouseY, 0.05);
   
   fill(255);
   stroke(255);

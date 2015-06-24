@@ -8,7 +8,6 @@
 
 size(640, 360); 
 background(0); 
-noStroke(); 
 
 int gridSize = 40;
 
@@ -17,8 +16,7 @@ for (int x = gridSize; x <= width - gridSize; x += gridSize) {
     noStroke();
     fill(255);
     rect(x-1, y-1, 3, 3);
-    stroke(255, 50);
+    stroke(255, 100);
     line(x, y, width/2, height/2);
   }
 }
-
