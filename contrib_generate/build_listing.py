@@ -77,6 +77,7 @@ def read_exports(f):
   Reads a library's export.txt file and returns a dictionary.
   """
   lines = f.read().replace('\r\n', '\n').replace('\r', '\n')
+  lines = lines.replace("authorList", "authors").replace("category", "categories").replace("compatibleModesList", "modes")
   lines = lines.split('\n')
   export_table = {}
   for line in lines:
@@ -137,7 +138,7 @@ def get_lib_locations(f):
 
       contents = line.split('\\')
       if len(contents) != 2:
-        print 'Lines for contributions must be of the form "Contribution Name : http://example.com/location.zip"'
+        print 'Lines for contributions must be of the form "[Contribution ID] : [Contribution URL]"'
         print contents
         continue
 
@@ -152,7 +153,7 @@ def get_lib_locations(f):
 
 def missing_key(exports):
   keys = exports.keys()
-  required_keys = ['name', 'authorList', 'url', 'category', 'sentence', 'version']
+  required_keys = ['name', 'authors', 'url', 'categories', 'sentence', 'version']
   for key in required_keys:
     if not keys.count(key):
       return key
