@@ -182,8 +182,7 @@ if __name__ == "__main__":
   urls_by_category = get_lib_locations(f);
   f.close()
 
-  tmpfile = fileout + '.tmp'
-  f = open(tmpfile, 'w')
+  contribs_by_id = {}
 
   for cat in urls_by_category:
     contribs = urls_by_category[cat]
@@ -196,7 +195,7 @@ if __name__ == "__main__":
 
         exports['id'] = contrib_id
         # overwrite the category with what was in the .conf file
-        exports['category'] = cat
+        exports['categories'] = cat
 
         # set default compatible strings if none found
         if not 'minRevision' in exports:
@@ -217,9 +216,14 @@ if __name__ == "__main__":
         # add the contribution if it's compatible with the revision number
         if ((int(minrev) == 0 or int(exports['maxRevision']) == 0 or int(minrev) <= int(exports['maxRevision'])) and 
             (int(maxrev) == 0 or int(exports['minRevision']) == 0 or int(maxrev) >= int(exports['minRevision']))):
-          f.write('%s\n' % software_type)
-          write_exports(f, exports)
-          f.write('\n')
+          if not contribs_by_id.has_key(contrib_id):
+            # add the new contribution to the list
+            print 'Adding contrib ' + contrib_id + ' ' + exports['name']
+            contribs_by_id[contrib_id] = exports
+          else:
+            # append the category to the existing contribution
+            print 'Appending contrib ' + contrib_id + ' ' + exports['name']
+            contribs_by_id[contrib_id]['categories'] += "," + cat
 
       except IOError as inst:
         print 'Error reading', prop_url
@@ -228,6 +232,15 @@ if __name__ == "__main__":
       except UnicodeDecodeError as inst:
         print 'Error decoding', prop_url
         print inst
+
+  # write all contributions out to file
+  tmpfile = fileout + '.tmp'
+  f = open(tmpfile, 'w')
+
+  for contrib_id in contribs_by_id:
+    f.write('%s\n' % software_type)
+    write_exports(f, contribs_by_id[contrib_id])
+    f.write('\n')
   
   f.close()
   shutil.move(tmpfile, fileout)
