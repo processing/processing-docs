@@ -164,12 +164,12 @@ if __name__ == "__main__":
     script = argv
     conf = 'sources.conf'
     fileout = 'contributions.txt'
-    minrev = '216'
-    maxrev = '227'
+    minrev = 216
+    maxrev = 227
   elif len(argv) == 3:
     script, conf, fileout = argv
-    minrev = '216'
-    maxrev = '227'
+    minrev = 216
+    maxrev = 227
   elif len(argv) == 5:
     script, conf, fileout, minrev, maxrev = argv
   else:
@@ -199,9 +199,9 @@ if __name__ == "__main__":
         exports['category'] = cat
 
         # set default compatible strings if none found
-        if not 'minRevision' in exports:
+        if (not 'minRevision' in exports or exports['minRevision'] == ''):
           exports['minRevision'] = '0'
-        if not 'maxRevision' in exports:
+        if (not 'maxRevision' in exports or exports['maxRevision'] == ''):
           exports['maxRevision'] = '0'
 
         key = missing_key(exports)

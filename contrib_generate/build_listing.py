@@ -203,9 +203,9 @@ if __name__ == "__main__":
         exports['categories'] = cat
 
         # set default compatible strings if none found
-        if not 'minRevision' in exports:
+        if (not 'minRevision' in exports or exports['minRevision'] == ''):
           exports['minRevision'] = '0'
-        if not 'maxRevision' in exports:
+        if (not 'maxRevision' in exports or exports['maxRevision'] == ''):
           exports['maxRevision'] = '0'
 
         key = missing_key(exports)
