@@ -77,6 +77,7 @@ def read_exports(f):
   Reads a library's export.txt file and returns a dictionary.
   """
   lines = f.read().replace('\r\n', '\n').replace('\r', '\n')
+  lines = lines.replace("authors", "authorList").replace("categories", "category").replace("modes", "compatibleModesList")
   lines = lines.split('\n')
   export_table = {}
   for line in lines:
