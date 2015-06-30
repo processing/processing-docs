@@ -177,7 +177,7 @@ if __name__ == "__main__":
     print "Usage is [Input File] [Output File] [Min Revision] [Max Revision]"
     exit()
 
-  if int(maxrev) < 228:
+  if (int(maxrev) != 0 and int(maxrev) < 228):
     print "Incompatible maxrev! This script is only for Processing 3.x. Please use build_listing_legacy.py instead."
     exit()
   
