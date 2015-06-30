@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # Part of the Processing project - http://processing.org
 # 
@@ -218,11 +219,9 @@ if __name__ == "__main__":
             (int(maxrev) == 0 or int(exports['minRevision']) == 0 or int(maxrev) >= int(exports['minRevision']))):
           if not contribs_by_id.has_key(contrib_id):
             # add the new contribution to the list
-            print 'Adding contrib ' + contrib_id + ' ' + exports['name']
             contribs_by_id[contrib_id] = exports
           else:
             # append the category to the existing contribution
-            print 'Appending contrib ' + contrib_id + ' ' + exports['name']
             contribs_by_id[contrib_id]['categories'] += "," + cat
 
       except IOError as inst:
