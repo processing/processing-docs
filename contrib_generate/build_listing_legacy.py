@@ -162,13 +162,13 @@ if __name__ == "__main__":
   if len(argv) == 1:
     script = argv
     conf = 'sources.conf'
-    fileout = 'contribs.txt'
-    minrev = 0
-    maxrev = 0
+    fileout = 'contributions.txt'
+    minrev = '216'
+    maxrev = '227'
   elif len(argv) == 3:
     script, conf, fileout = argv
-    minrev = 0
-    maxrev = 0
+    minrev = '216'
+    maxrev = '227'
   elif len(argv) == 5:
     script, conf, fileout, minrev, maxrev = argv
   else:
