@@ -37,8 +37,8 @@
 * Edited by a human by copy/pasting/editing.
 
 ###Processing 2.x
-* Processing 2.x read data from the `contributions.txt` file and should only include compatible entries. The following command will generate the appropriate file:
+* Processing 2.x read data from the `contributions.txt` file and should only include compatible entries. This file must be generated using the `build_listing_legacy.py` script:
 
 	```
-	python build_listing.py sources.conf contributions.txt 216 227
+	python build_listing_legacy.py
 	```
