@@ -41,7 +41,8 @@ if ($version == 2) {
 	echo '<p>Generating "contributions.txt" for Processing 2.x...</p>';
 
 	// Generate "contributions.txt" for Processing 2.x
-	`cd $referencepath && python build_listing.py sources.conf contributions.txt 216 227`;
+	//`cd $referencepath && python build_listing.py sources.conf contributions.txt 216 227`;
+	`cd $referencepath && python build_listing_legacy.py`;
 
 } elseif ($version == 3) {
 
@@ -57,7 +58,8 @@ if ($version == 2) {
 	echo '<p>Generating "contributions.txt" for Processing 2.x...</p>';
 
 	// Generate "contributions.txt" for Processing 2.x
-	`cd $referencepath && python build_listing.py sources.conf contributions.txt 216 227`;
+	//`cd $referencepath && python build_listing.py sources.conf contributions.txt 216 227`;
+	`cd $referencepath && python build_listing_legacy.py`;
 
 	echo '<p>Generating "contribs.txt" for Processing 3.x...</p>';
 	
