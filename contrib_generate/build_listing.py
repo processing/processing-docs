@@ -175,7 +175,11 @@ if __name__ == "__main__":
     script, conf, fileout, minrev, maxrev = argv
   else:
     print "Usage is [Input File] [Output File] [Min Revision] [Max Revision]"
-    exit()  
+    exit()
+
+  if int(maxrev) < 228:
+    print "Incompatible maxrev! This script is only for Processing 3.x. Please use build_listing_legacy.py instead."
+    exit()
   
   print "----- " + strftime("%a %d %b %Y %H:%M:%S", localtime()) + " -----"
 
