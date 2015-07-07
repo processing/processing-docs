@@ -135,6 +135,9 @@ def get_lib_locations(f):
         # XXX Error. Bad syntax for .conf file
         print "Ignoring contribution without type or category"
         continue
+      if software_type == 'examples':
+        print "Ignoring example contribution"
+        continue
 
       contents = line.split('\\')
       if len(contents) != 2:
