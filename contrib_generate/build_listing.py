@@ -202,6 +202,8 @@ if __name__ == "__main__":
         # overwrite the category with what was in the .conf file
         exports['categories'] = cat
 
+        exports['type'] = software_type
+
         # set default compatible strings if none found
         if (not 'minRevision' in exports or exports['minRevision'] == ''):
           exports['minRevision'] = '0'
@@ -241,7 +243,7 @@ if __name__ == "__main__":
   f = open(tmpfile, 'w')
 
   for contrib_id in contribs_by_id:
-    f.write('%s\n' % software_type)
+    f.write('%s\n' % contribs_by_id[contrib_id]['type'])
     write_exports(f, contribs_by_id[contrib_id])
     f.write('\n')
   
