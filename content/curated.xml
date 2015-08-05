@@ -1,6 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 	
+	<software name="Large Napkin" by="Pixtil" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/pixtil.jpg</image>
+		  <description>
+			  Pixtil is a French design/product studio founded by Delphine Saltet and Olivier Paradeise that uses new digital drawing tools to create contemporary fabrics. Their latest release is a Large Napkin, made using Processing and double-cloth Jacquard weaving. Each piece is unique and numbered, combining long textile tradition and contemporary techniques of textile production.
+		  </description>
+		  <location>http://pixtil.fr/php/produits/accueil.php?page=2#debut</location>
+		 <link href="http://pixtil.fr/php/produits/accueil.php?page=2#debut">Pixtil</link>
+		 <link href="http://www.creativeapplications.net/processing/pixtil-weaving-generative-patterns-using-traditional-textile-techniques/">More Info</link>
+	 </software>		
+	
 	<software name="Light Kinetics" by="Espadaysantacruz" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/lightkinetics.jpg</image>
 		  <description>
