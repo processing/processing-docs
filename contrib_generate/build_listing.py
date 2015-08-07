@@ -184,8 +184,10 @@ if __name__ == "__main__":
   print "----- " + strftime("%a %d %b %Y %H:%M:%S", localtime()) + " -----"
 
   f = open(conf)
-  urls_by_category = get_lib_locations(f);
+  urls_by_category = get_lib_locations(f)
   f.close()
+
+  broken_ids = [line.rstrip('\n') for line in open('broken.conf')]
 
   contribs_by_id = {}
 
@@ -208,7 +210,10 @@ if __name__ == "__main__":
         if (not 'minRevision' in exports or exports['minRevision'] == ''):
           exports['minRevision'] = '0'
         if (not 'maxRevision' in exports or exports['maxRevision'] == ''):
-          exports['maxRevision'] = '0'
+          if (contrib_id in broken_ids):
+            exports['maxRevision'] = '228'
+          else:
+            exports['maxRevision'] = '0'
 
         key = missing_key(exports)
         if key:
