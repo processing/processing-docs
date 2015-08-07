@@ -34,7 +34,7 @@ void draw() {
   for (Mover mover : movers) {
     
     // Is the Mover in the liquid?
-    if (liquid.contains(mover) {
+    if (liquid.contains(mover)) {
       // Calculate drag force
       PVector drag = liquid.drag(mover);
       // Apply drag force to Mover

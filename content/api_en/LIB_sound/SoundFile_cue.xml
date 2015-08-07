@@ -21,7 +21,7 @@ void setup() {
     
   // Load a soundfile from the /data folder of the sketch and play it back
   file = new SoundFile(this, "sample.mp3");
-  file.cue(15.3);
+  file.cue(15);
   file.play();
 }      
 
@@ -32,7 +32,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Cues the playhead to a fixed position in the soundfile.
+Cues the playhead to a fixed position in the soundfile. Note that the <b>second</b> parameter supports only integer values.
 ]]></description>
 
 <syntax>
