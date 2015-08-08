@@ -149,15 +149,15 @@ void createCube() {
   face.beginShape(POLYGON);
   face.stroke(255, 0, 0);
   face.fill(255);
-  face.vertex(-cubeSize/2, +cubeSize/2, +cubeSize/2);
-  face.vertex(+cubeSize/2, +cubeSize/2, +cubeSize/2);
-  face.vertex(+cubeSize/2, +cubeSize/2, -cubeSize/2);
-  face.vertex(-cubeSize/2, +cubeSize/2, -cubeSize/2);
+  face.vertex(+cubeSize/2, -cubeSize/2, +cubeSize/2);
+  face.vertex(-cubeSize/2, -cubeSize/2, +cubeSize/2);
+  face.vertex(-cubeSize/2, -cubeSize/2, -cubeSize/2);
+  face.vertex(+cubeSize/2, -cubeSize/2, -cubeSize/2);
   face.beginContour();
   for (int i = 0; i < circleRes; i++) {
     float angle = TWO_PI * i / circleRes;
     float x = circleRad * sin(angle);
-    float y = +cubeSize/2;
+    float y = -cubeSize/2;
     float z = circleRad * cos(angle);
     face.vertex(x, y, z);
   }
@@ -170,15 +170,15 @@ void createCube() {
   face.beginShape(POLYGON);
   face.stroke(255, 0, 0);
   face.fill(255);
-  face.vertex(+cubeSize/2, -cubeSize/2, +cubeSize/2);
-  face.vertex(-cubeSize/2, -cubeSize/2, +cubeSize/2);
-  face.vertex(-cubeSize/2, -cubeSize/2, -cubeSize/2);
-  face.vertex(+cubeSize/2, -cubeSize/2, -cubeSize/2);
+  face.vertex(-cubeSize/2, +cubeSize/2, +cubeSize/2);
+  face.vertex(+cubeSize/2, +cubeSize/2, +cubeSize/2);
+  face.vertex(+cubeSize/2, +cubeSize/2, -cubeSize/2);
+  face.vertex(-cubeSize/2, +cubeSize/2, -cubeSize/2);
   face.beginContour();
   for (int i = 0; i < circleRes; i++) {
     float angle = TWO_PI * i / circleRes;
     float x = circleRad * sin(angle);
-    float y = -cubeSize/2;
+    float y = +cubeSize/2;
     float z = circleRad * cos(angle);
     face.vertex(x, y, z);
   }
@@ -248,20 +248,6 @@ void restoreCube() {
 
   // Top face
   face = cube.getChild(4);
-  face.setVertex(0, -cubeSize/2, +cubeSize/2, +cubeSize/2);
-  face.setVertex(1, +cubeSize/2, +cubeSize/2, +cubeSize/2);
-  face.setVertex(2, +cubeSize/2, +cubeSize/2, -cubeSize/2);
-  face.setVertex(3, -cubeSize/2, +cubeSize/2, -cubeSize/2);
-  for (int i = 0; i < circleRes; i++) {
-    float angle = TWO_PI * i / circleRes;
-    float x = circleRad * sin(angle);
-    float y = +cubeSize/2;
-    float z = circleRad * cos(angle);
-    face.setVertex(4 + i, x, y, z);
-  }    
-
-  // Bottom face
-  face = cube.getChild(5);
   face.setVertex(0, +cubeSize/2, -cubeSize/2, +cubeSize/2);
   face.setVertex(1, -cubeSize/2, -cubeSize/2, +cubeSize/2);
   face.setVertex(2, -cubeSize/2, -cubeSize/2, -cubeSize/2);
@@ -270,6 +256,20 @@ void restoreCube() {
     float angle = TWO_PI * i / circleRes;
     float x = circleRad * sin(angle);
     float y = -cubeSize/2;
+    float z = circleRad * cos(angle);
+    face.setVertex(4 + i, x, y, z);
+  }    
+
+  // Bottom face
+  face = cube.getChild(5);
+  face.setVertex(0, -cubeSize/2, +cubeSize/2, +cubeSize/2);
+  face.setVertex(1, +cubeSize/2, +cubeSize/2, +cubeSize/2);
+  face.setVertex(2, +cubeSize/2, +cubeSize/2, -cubeSize/2);
+  face.setVertex(3, -cubeSize/2, +cubeSize/2, -cubeSize/2);
+  for (int i = 0; i < circleRes; i++) {
+    float angle = TWO_PI * i / circleRes;
+    float x = circleRad * sin(angle);
+    float y = +cubeSize/2;
     float z = circleRad * cos(angle);
     face.setVertex(4 + i, x, y, z);
   }
