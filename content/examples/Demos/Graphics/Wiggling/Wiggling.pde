@@ -93,7 +93,7 @@ void createCube() {
   face.beginContour();
   for (int i = 0; i < circleRes; i++) {
     float angle = TWO_PI * i / circleRes;
-    float x = circleRad * sin(angle);
+    float x = -circleRad * sin(angle);
     float y = circleRad * cos(angle);
     float z = -cubeSize/2;
     face.vertex(x, y, z);
@@ -137,7 +137,7 @@ void createCube() {
     float angle = TWO_PI * i / circleRes;
     float x = -cubeSize/2;
     float y = circleRad * sin(angle);
-    float z = circleRad * cos(angle);
+    float z = -circleRad * cos(angle);
     face.vertex(x, y, z);
   }
   face.endContour();
@@ -177,7 +177,7 @@ void createCube() {
   face.beginContour();
   for (int i = 0; i < circleRes; i++) {
     float angle = TWO_PI * i / circleRes;
-    float x = circleRad * sin(angle);
+    float x = -circleRad * sin(angle);
     float y = +cubeSize/2;
     float z = circleRad * cos(angle);
     face.vertex(x, y, z);
@@ -212,7 +212,7 @@ void restoreCube() {
   face.setVertex(3, +cubeSize/2, +cubeSize/2, -cubeSize/2);
   for (int i = 0; i < circleRes; i++) {
     float angle = TWO_PI * i / circleRes;
-    float x = circleRad * sin(angle);
+    float x = -circleRad * sin(angle);
     float y = circleRad * cos(angle);
     float z = -cubeSize/2;
     face.setVertex(4 + i, x, y, z);
@@ -242,7 +242,7 @@ void restoreCube() {
     float angle = TWO_PI * i / circleRes;
     float x = -cubeSize/2;
     float y = circleRad * sin(angle);
-    float z = circleRad * cos(angle);
+    float z = -circleRad * cos(angle);
     face.setVertex(4 + i, x, y, z);
   }    
 
@@ -268,7 +268,7 @@ void restoreCube() {
   face.setVertex(3, -cubeSize/2, +cubeSize/2, -cubeSize/2);
   for (int i = 0; i < circleRes; i++) {
     float angle = TWO_PI * i / circleRes;
-    float x = circleRad * sin(angle);
+    float x = -circleRad * sin(angle);
     float y = +cubeSize/2;
     float z = circleRad * cos(angle);
     face.setVertex(4 + i, x, y, z);
