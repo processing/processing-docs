@@ -13,14 +13,14 @@
 
 		<!-- Downloads -->
 		<div class="downloads">
-			<span class="version">3.0 beta 1</span>
-			<span class="version-date">(6 August 2015)</span>
+			<span class="version">3.0 beta 2</span>
+			<span class="version-date">(9 August 2015)</span>
 			<ul class="current-downloads">
-				<li><a href="http://download.processing.org/processing-3.0b1-windows64.zip">Windows</a> 64-bit<br>
-				<a href="http://download.processing.org/processing-3.0b1-windows32.zip">Windows</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-3.0b1-linux64.tgz">Linux</a> 64-bit<br>
-				<a href="http://download.processing.org/processing-3.0b1-linux32.tgz">Linux</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-3.0b1-macosx.zip">Mac OS X</a></li>
+				<li><a href="http://download.processing.org/processing-3.0b2-windows64.zip">Windows</a> 64-bit<br>
+				<a href="http://download.processing.org/processing-3.0b2-windows32.zip">Windows</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-3.0b2-linux64.tgz">Linux</a> 64-bit<br>
+				<a href="http://download.processing.org/processing-3.0b2-linux32.tgz">Linux</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-3.0b2-macosx.zip">Mac OS X</a></li>
 			</ul>
 <!--
 			<span class="version">2.2.1</span>
@@ -54,6 +54,16 @@
 		<h3>Stable Releases</h3>
 		<ul>
 			<li>
+				<span class="version">3.0 beta 2</span>
+				<span class="version-date">(9 August 2015)</span>
+				<a href="http://download.processing.org/processing-3.0b2-windows32.zip">Win 32</a>
+				<a href="http://download.processing.org/processing-3.0b2-windows64.zip">Win 64</a> 
+				<a href="http://download.processing.org/processing-3.0b2-linux32.tgz">Linux 32</a> 
+				<a href="http://download.processing.org/processing-3.0b2-linux64.tgz">Linux 64</a>
+				<a href="http://download.processing.org/processing-3.0b2-macosx.zip">Mac OS X</a> 
+			</li>
+
+                        <li>
 				<span class="version">3.0 beta 1</span>
 				<span class="version-date">(6 August 2015)</span>
 				<a href="http://download.processing.org/processing-3.0b1-windows32.zip">Win 32</a>
@@ -169,9 +179,8 @@
 	<div class="releases">
 		<h3>Pre-Releases</h3>
 		<ul>
-<!--
 		  <li>No pre-release versions are currently available.</li>
--->
+                        <!--
 			<li>
 				<span class="version">3.0a11</span>
 				<span class="version-date">(16 July 2015)</span>
@@ -181,7 +190,6 @@
 				<a href="http://download.processing.org/processing-3.0a11-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-3.0a11-macosx.zip">Mac OS X</a> 
 			</li>
-                        <!--
 			<li>
 				<span class="version">3.0a10</span>
 				<span class="version-date">(9 June 2015)</span>
@@ -228,7 +236,7 @@
 				<a href="http://download.processing.org/processing-3.0a6-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-3.0a6-macosx.zip">Mac OS X</a> 
 			</li>
--->
+
 			<li>
 				<span class="version">3.0a5</span>
 				<span class="version-date">(16 November 2014)</span>
@@ -239,7 +247,6 @@
 				<a href="http://download.processing.org/processing-3.0a5-macosx.zip">Mac OS X</a> 
 			</li>
 
-<!--
 			<li>
 				<span class="version">3.0a4</span>
 				<span class="version-date">(12 September 2014)</span>
