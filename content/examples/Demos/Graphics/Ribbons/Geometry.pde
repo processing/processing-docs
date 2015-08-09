@@ -316,23 +316,23 @@ void generateFlatRibbon(ArrayList vertices, ArrayList normals) {
       Normal1.normalize();
 
       // The (Sid1Point0, Sid1Point1, CentPoint1) triangle is added.
-      vertices.add(new PVector(Sid1Point0.x, Sid1Point0.y, Sid1Point0.z));
-      normals.add(new PVector(Normal0.x, Normal0.y, Normal0.z));
+      vertices.add(new PVector(CentPoint1.x, CentPoint1.y, CentPoint1.z));
+      normals.add(new PVector(Normal1.x, Normal1.y, Normal1.z));      
 
       vertices.add(new PVector(Sid1Point1.x, Sid1Point1.y, Sid1Point1.z));
       normals.add(new PVector(Normal1.x, Normal1.y, Normal1.z));
 
-      vertices.add(new PVector(CentPoint1.x, CentPoint1.y, CentPoint1.z));
-      normals.add(new PVector(Normal1.x, Normal1.y, Normal1.z));      
+      vertices.add(new PVector(Sid1Point0.x, Sid1Point0.y, Sid1Point0.z));
+      normals.add(new PVector(Normal0.x, Normal0.y, Normal0.z));
 
       // The (Sid1Point0, CentPoint1, CentPoint0) triangle is added.
-      vertices.add(new PVector(Sid1Point0.x, Sid1Point0.y, Sid1Point0.z));
+      vertices.add(new PVector(CentPoint0.x, CentPoint0.y, CentPoint0.z));
       normals.add(new PVector(Normal0.x, Normal0.y, Normal0.z));
 
       vertices.add(new PVector(CentPoint1.x, CentPoint1.y, CentPoint1.z));
       normals.add(new PVector(Normal1.x, Normal1.y, Normal1.z));      
 
-      vertices.add(new PVector(CentPoint0.x, CentPoint0.y, CentPoint0.z));
+      vertices.add(new PVector(Sid1Point0.x, Sid1Point0.y, Sid1Point0.z));
       normals.add(new PVector(Normal0.x, Normal0.y, Normal0.z));
       
       // (Sid2Point0, Sid2Point1, CentPoint1) triangle is added.
