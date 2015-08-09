@@ -53,9 +53,9 @@ void draw() {
          height/2/tan(PI*30.0 / 180.0), 
          width, height/2.0, 0, 
          0, 1, 0);
-
+    
   pushMatrix();
-  translate(width/2, height/2, 0);
+  translate(width/2, height/2, 0);  
   textureSphere(200, 200, 200, img);
   popMatrix();
 }
@@ -112,10 +112,10 @@ void textureSphere(float rx, float ry, float rz, PImage t) {
     float multxz=multXZ[i];
     float multxzPlus=multXZ[i+1];
 
-    for (int j=0; j<numPointsW; j++) {  // For all the pts in the ring
-      normal(coorX[j]*multxz, coory, coorZ[j]*multxz);
+    for (int j=0; j<numPointsW; j++) { // For all the pts in the ring
+      normal(-coorX[j]*multxz, -coory, -coorZ[j]*multxz);
       vertex(coorX[j]*multxz*rx, coory*ry, coorZ[j]*multxz*rz, u, v);
-      normal(coorX[j]*multxzPlus, cooryPlus, coorZ[j]*multxzPlus);
+      normal(-coorX[j]*multxzPlus, -cooryPlus, -coorZ[j]*multxzPlus);
       vertex(coorX[j]*multxzPlus*rx, cooryPlus*ry, coorZ[j]*multxzPlus*rz, u, v+changeV);
       u+=changeU;
     }
@@ -124,4 +124,3 @@ void textureSphere(float rx, float ry, float rz, PImage t) {
   }
   endShape();
 }
-
