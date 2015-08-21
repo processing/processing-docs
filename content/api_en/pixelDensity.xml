@@ -37,8 +37,29 @@ void draw() {
 ]]></code>
 </example>
 
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(100, 100);
+  // Pulling the display's density dynamically
+  pixelDensity(displayDensity());
+  noStroke();
+}
+
+void draw() {
+  background(0);
+  ellipse(30, 48, 36, 36);
+  ellipse(70, 48, 36, 36);
+}
+]]></code>
+</example>
+
 <description><![CDATA[
-This function is new with Processing 3.0. It makes it possible for Processing to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays. This function can only be run once within a program and it must be used right after <b>size()</b> in a program without a <b>setup()</b> and used within <b>setup()</b> when a program has one.
+This function is new with Processing 3.0. It makes it possible for Processing to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays. This function can only be run once within a program and it must be used right after <b>size()</b> in a program without a <b>setup()</b> and used within <b>setup()</b> when a program has one.  The <b>pixelDensity()</b> should only be used with hardcoded numbers (in almost all cases this number will be 2) or in combination with <b>displayDensity()</b> as in the third example above.
+
+To use variables as the arguments to <b>pixelDensity()</b> function, place the <b>pixelDensity()</b> function within the <b>settings()</b> function. There is more information about this on the <b>settings()</b> reference page.
+
 ]]></description>
 
 </root>
