@@ -45,7 +45,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Datatype for storing shapes. Before a shape is used, it must be loaded with the <b>loadShape()</b> or created with the <b>createShape()</b>. The <b>shape()</b> function is used to draw the shape to the display window. Processing can currently load and display SVG (Scalable Vector Graphics) and OBJ shapes. OBJ files can only be opened using the <b>P3D</b> renderer and <b>createShape()</b> is only available with the <b>P2D</b> and <b>P3D</b> renderers. The <b>loadShape()</b> function supports SVG files created with Inkscape and Adobe Illustrator. It is not a full SVG implementation, but offers some straightforward support for handling vector data.
+Datatype for storing shapes. Before a shape is used, it must be loaded with the <b>loadShape()</b> or created with the <b>createShape()</b>. The <b>shape()</b> function is used to draw the shape to the display window. Processing can currently load and display SVG (Scalable Vector Graphics) and OBJ shapes. OBJ files can only be opened using the <b>P3D</b> renderer. The <b>loadShape()</b> function supports SVG files created with Inkscape and Adobe Illustrator. It is not a full SVG implementation, but offers some straightforward support for handling vector data.
 <br /><br />
 The <b>PShape</b> object contains a group of methods that can operate on the shape data. Some of the methods are listed below, but the full list used for creating and modifying shapes is <a href="http://www.processing.org/reference/javadoc/core/processing/core/PShape.html">available here in the Processing Javadoc</a>.<br />
 <br />
