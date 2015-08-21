@@ -962,7 +962,7 @@ The above might seem like a good guess, but it's just not the way the PVector cl
     y = y + v.y;
  }
 </pre><br/>
-. . . we see that it does not accomplish our goal.  Number one, it does not return a new PVector (the return type is "void") and number two, it changes the value of the PVector upon which it is called.  In order to add two PVector objects together and return the result as a new PVector, we must use the static <strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong> function.  
+. . . we see that it does not accomplish our goal.  Number one, it does not return a new PVector and number two, it changes the value of the PVector upon which it is called.  In order to add two PVector objects together and return the result as a new PVector, we must use the static <strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong> function.  
 <br /><br />
 Functions that we call from the class name itself (rather than from a specific object instance) are known 
 as <strong>static</strong> functions. 
@@ -982,10 +982,9 @@ Since you can't write <strong>static</strong> functions yourself in Processing, 
     return v3;
   }
 </pre><br/>
-There are several differences here:
+There are two key differences here:
 <ul>
 	<li>The function is labeled as <strong>static</strong>.</li>
-	<li>The function does not have a <strong>void</strong> return type, but rather returns a PVector.</li>
 	<li>The function creates a new PVector (v3) and returns the result of adding the components of v1 and v2 in that new PVector.</li>
 </ul>
 When you call a static function, instead of referencing an actual object instance, you simply reference the name of the class itself.
@@ -1000,6 +999,25 @@ PVector u = new PVector(4,5);
 PVector w = PVector.add(v,u);
 </pre><br/>
 The PVector class has static versions of <strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong>, <strong><a href="http://processing.org/reference/PVector_sub_.html"><em>sub()</em></a></strong>, <strong><a href="http://processing.org/reference/PVector_mult_.html"><em>mult()</em></a></strong>, <strong><a href="http://processing.org/reference/PVector_div_.html"><em>div()</em></a></strong>.
+
+<h3>Vectors: Chaining</h3>
+
+<p>One detail left out of the above discussion is that all of the methods discussed above return an object of type PVector.  The key distinction is that the static versions return a <b>new</b> PVector object rather than act on the existing one.  The non-static versions return a reference to that existing one.  While this feature is not typically used in most Processing examples, it allows for the methods to be called in a single line of code.  This is known as <em>chaining</em>. For example, let's say you would like to add to a PVector and then multiply it by two.</p>
+
+<pre>
+  PVector a = new PVector(0, 0);
+  // Add (5,3) to a
+  a.add(5, 3);
+  // Multiply a by 2
+  a.mult(2);
+</pre>
+
+<p>With chaining the above can be written as:</p>
+
+<pre>
+  PVector a = new PVector(0, 0);
+  a.add(5, 3).mult(2);
+</pre>
 
 <h3>Vectors: Interactivity</h3>
 
