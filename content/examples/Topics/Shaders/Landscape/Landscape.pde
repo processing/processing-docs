@@ -6,25 +6,26 @@
  * Processing port by Raphaël de Courville.
  */
  
-PShader shader;
+PShader landscape;
 
 void setup() {
   size(640, 360, P2D);
   noStroke();
    
-  // The code of this shader shows how to integrate shaders from shadertoy
-  // into Processing with minimal changes.
-  shader = loadShader("landscape.glsl");
-  shader.set("resolution", float(width), float(height));   
+  // This GLSL code shows how to use shaders from 
+  // shadertoy in Processing with minimal changes.
+  landscape = loadShader("landscape.glsl");
+  landscape.set("resolution", float(width), float(height));   
 }
 
 void draw() {
   background(0);
     
-  shader.set("time", (float)(millis()/1000.0));
-  shader(shader); 
+  landscape.set("time", millis() / 1000.0);
+  shader(landscape); 
   rect(0, 0, width, height);
 
-  frame.setTitle("frame: " + frameCount + " - fps: " + frameRate);     
+  if (frameCount % 10 == 0) {  // every 10th frame
+    println("frame: " + frameCount + " - fps: " + frameRate);
+  }
 }
-
