@@ -17,7 +17,7 @@ void setup() {
   size(200, 200);
   // Uncomment the following two lines to see the available fonts 
   //String[] fontList = PFont.list();
-  //println(fontList);
+  //printArray(fontList);
   myFont = createFont("Georgia", 32);
   textFont(myFont);
   textAlign(CENTER, CENTER);

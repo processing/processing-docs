@@ -12,7 +12,7 @@ function setup() {
   background(0);
 
   // Create the font
-  //println(PFont.list());
+  //printArray(PFont.list());
   f = "Georgia";
   textFont(f);
   textAlign(CENTER, CENTER);
