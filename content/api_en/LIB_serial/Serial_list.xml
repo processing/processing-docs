@@ -20,7 +20,7 @@ import processing.serial.*;
 Serial myPort;       
 
 // List all the available serial ports
-println(Serial.list());
+printArray(Serial.list());
  
 ]]></code>
 </example>
