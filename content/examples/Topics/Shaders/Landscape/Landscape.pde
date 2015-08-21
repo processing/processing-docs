@@ -25,6 +25,6 @@ void draw() {
   shader(shader); 
   rect(0, 0, width, height);
 
-  frame.setTitle("frame: " + frameCount + " - fps: " + frameRate);     
+  surface.setTitle("frame: " + frameCount + " - fps: " + frameRate);
 }
 
