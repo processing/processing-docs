@@ -21,7 +21,7 @@ void setup() {
     
   // Load a soundfile from the data folder of the sketch and get the duration of the file
   file = new SoundFile(this, "sample.mp3");
-  println("SFDuration= " + soundfile.duration() + " seconds");
+  println("SFDuration= " + file.duration() + " seconds");
 }      
 
 void draw() {
