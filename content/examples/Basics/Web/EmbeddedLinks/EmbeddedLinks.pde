@@ -1,12 +1,10 @@
 /**
  * Loading URLs. 
  * 
- * Click on the left button to open a different URL in the same window (Only
- * works online). Click on the right button to open a URL in a new browser window.  
-*/
+ * Click on the button to open a URL in a browser
+ */
 
-boolean overLeftButton = false;
-boolean overRightButton = false;
+boolean overButton = false;
 
 void setup() {
   size(640, 360);
@@ -15,17 +13,7 @@ void setup() {
 void draw() {
   background(204);
 
-  // Left buttom
-  if (overLeftButton == true) {
-    fill(255);
-  } else {
-    noFill();
-  }
-  rect(20, 60, 75, 75);
-  rect(50, 90, 15, 15);
-  
-  // Right button
-  if (overRightButton == true) {
+  if (overButton == true) {
     fill(255);
   } else {
     noFill();
@@ -37,10 +25,8 @@ void draw() {
 }
 
 void mousePressed() {
-  if (overLeftButton) { 
+  if (overButton) { 
     link("http://www.processing.org");
-  } else if (overRightButton) {
-    link("http://www.processing.org", "_new");
   }
 }
 
@@ -53,15 +39,9 @@ void mouseDragged() {
 }
 
 void checkButtons() {
-  if (mouseX > 20 && mouseX < 95 && mouseY > 60 && mouseY < 135) {
-    overLeftButton = true;   
-  } else if (mouseX > 105 && mouseX < 180 && mouseY > 60 && mouseY <135) {
-    overRightButton = true; 
+  if (mouseX > 105 && mouseX < 180 && mouseY > 60 && mouseY <135) {
+    overButton = true;   
   } else {
-    overLeftButton = overRightButton = false;
+    overButton = false;
   }
 }
-
-
-
-

@@ -14,7 +14,7 @@
 <code><![CDATA[
 size(200, 200);
 String[] fontList = PFont.list();
-println(fontList);
+printArray(fontList);
 ]]></code>
 </example>
 

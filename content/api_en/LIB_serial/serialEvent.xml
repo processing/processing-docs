@@ -26,7 +26,7 @@ void setup() {
   myFont = loadFont("ArialMS-18.vlw"); 
   textFont(myFont, 18); 
   // List all the available serial ports: 
-  println(Serial.list()); 
+  printArray(Serial.list()); 
   // I know that the first port in the serial list on my mac 
   // is always my  Keyspan adaptor, so I open Serial.list()[0]. 
   // Open whatever port is the one you're using. 

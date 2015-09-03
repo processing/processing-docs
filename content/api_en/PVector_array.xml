@@ -21,7 +21,7 @@ println(f[2]);  // Prints "30.0"
 </example>
 
 <description><![CDATA[
-Return a representation of this vector as a float array. This is only for temporary use. If used in any other fashion, the contents should be copied by using the <b>PVector.get()</b> method to copy into your own array.
+Return a representation of this vector as a float array. This is only for temporary use. If used in any other fashion, the contents should be copied by using the <b>copy()</b> method to copy into your own array.
 ]]></description>
 
 </root>

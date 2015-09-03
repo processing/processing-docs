@@ -38,7 +38,7 @@ void draw() {
   text(words, 50, 120, 540, 300);
 }
 
-void keyPressed() {
+void keyTyped() {
   // The variable "key" always contains the value 
   // of the most recent key pressed.
   if ((key >= 'A' && key <= 'z') || key == ' ') {
