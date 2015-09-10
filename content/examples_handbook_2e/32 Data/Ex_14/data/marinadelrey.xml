@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<data type="forecast">
+	<location>
+		<description>Marina Del Rey, CA</description>
+		<point latitude="34" longitude="-118.43"/>
+	</location>
+	<temperature type="maximum" units="Fahrenheit">
+		<name>Daily Maximum Temperature</name>
+		<value>70</value>
+		<value>64</value>
+		<value>72</value>
+		<value>71</value>
+		<value>75</value>
+		<value>75</value>
+		<value>70</value>
+	</temperature>
+	<temperature type="minimum" units="Fahrenheit">
+	<name>Daily Minimum Temperature</name>
+		<value>46</value>
+		<value>46</value>
+		<value>48</value>
+		<value>49</value>
+		<value>50</value>
+		<value>49</value>
+		<value>47</value>
+	</temperature>
+</data>

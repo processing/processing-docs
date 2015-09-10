@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Six Years",
+		"author": "Lippard",
+		"ISBN-10": 0520210131,
+		"dimensions": [ 7.0, 8.0, 0.8 ]
+	},
+	{
+		"title": "Beyond Modern",
+		"author": "Burnham",
+		"ISBN-10": 0987654321,
+		"dimensions": [ 7.6, 9.2, 1 ]
+	},
+	{
+		"title": "Relational Aesthetics",
+		"author": "Bourriaud",
+		"ISBN-10": 2840660601,
+		"dimensions": [ 5.8, 8.2, 0.3 ]
+	},
+	{
+		"title": "The Open Work",
+		"author": "Eco",
+		"ISBN-10": 0674639766,
+		"dimensions": [ 5.9, 8.9, 1 ]
+	},
+	{
+		"title": "Open Systems",
+		"author": "De Salvo",
+		"ISBN-10": 1854375652,
+		"dimensions": [ 9, 10.6, 0.6 ]
+	},
+	{
+		"title": "Designing Programmes",
+		"author": "Gerstner",
+		"ISBN-10": 3037780932,
+		"dimensions": [ 7.2, 9.2, 0.6 ]
+	},
+	{
+		"title": "Typographie",
+		"author": "Ruder",
+		"ISBN-10": 3721200438,
+		"dimensions": [ 8.8, 9.2, 1.2 ]
+	},
+	{
+		"title": "Conditional Design",
+		"author": "Maurer et al.",
+		"ISBN-10": 9078088583,
+		"dimensions": [ 8.2, 11.8, 1.1 ]
+	}
+]
