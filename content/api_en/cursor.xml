@@ -30,7 +30,7 @@ Sets the cursor to a predefined symbol or an image, or makes it visible if alrea
 <br /> <br />
 Setting or hiding the cursor does not generally work with "Present" mode (when running full-screen).
 <br /> <br />
-With the P2D and P3D renderers, a generic set of cursors are used because the OpenGL renderer doesn't have access to the default cursor images for each platform.
+With the P2D and P3D renderers, a generic set of cursors are used because the OpenGL renderer doesn't have access to the default cursor images for each platform (<a href="https://github.com/processing/processing/issues/3791">Issue 3791</a>).
 ]]></description>
 
 </root>
