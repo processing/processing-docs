@@ -9,7 +9,7 @@
 	<!-- Current Version -->
 	<div class="current-version">
 		<!-- Logo -->
-		<img class="download-logo" src="/img/processing2-logo.jpg">
+		<img class="download-logo" src="/img/processing3-logo.png">
 
 		<!-- Downloads -->
 		<div class="downloads">
