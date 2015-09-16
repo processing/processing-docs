@@ -1,15 +1,13 @@
 /**
-* Map()
-*
-* Using the map() function allows you to take any number,
-* and scale it to a number that is more useful to the project
-* that you are working on. Say you want to map mouse movement
-* to the size or color (as seen above) of an object. 
-* In this example, we are taking the mouse’s x position (which can 
-* be between 0 and the width, 640) and we are scaling that to another
-* range (40 to 300 for size, and 0 to 175 for color). 
-*
-*/
+ * Map.
+ *
+ * Use the map() function to take any number and scale it to a new number 
+ * that is more useful for the project that you are working on. For example, use the
+ * numbers from the mouse position to control the size or color of a shape. 
+ * In this example, the mouse’s x-coordinate (numbers between 0 and 360) are scaled to
+ * new numbers to define the color and size of a circle.
+ */
+
 void setup() {
   size(640, 360);
   noStroke();
