@@ -42,7 +42,7 @@ The <b>print()</b> function writes to the console area, the black rectangle at t
 <br />
 Using <b>print()</b> on an object will output <b>null</b>, a memory location that may look like "@10be08," or the result of the <b>toString()</b> method from the object that's being printed. Advanced users who want more useful output when calling <b>print()</b> on their own classes can add a <b>toString()</b> method to the class that returns a String.<br />
 <br />
-Note that the console is relatively slow. It works well for occasional messages, but does not support high-speed, real-time output (such as at 60 frames per second).
+Note that the console is relatively slow. It works well for occasional messages, but does not support high-speed, real-time output (such as at 60 frames per second). It should also be noted, that a print() within a for loop can sometimes lock up the program, and cause the sketch to freeze.
 ]]></description>
 
 </root>

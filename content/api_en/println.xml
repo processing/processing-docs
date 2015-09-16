@@ -43,7 +43,7 @@ The <b>println()</b> function writes to the console area, the black rectangle at
 <br />
 Before Processing 2.1, <b>println()</b> was used to write array data to the console. Now, use <b>printArray()</b> to write array data to the console.<br />
 <br />
-Note that the console is relatively slow. It works well for occasional messages, but does not support high-speed, real-time output (such as at 60 frames per second).
+Note that the console is relatively slow. It works well for occasional messages, but does not support high-speed, real-time output (such as at 60 frames per second). It should also be noted, that a println() within a for loop can sometimes lock up the program, and cause the sketch to freeze.
 ]]></description>
 
 </root>
