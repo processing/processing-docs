@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<data type="forecast">
+	<location>
+		<description>Cambridge, MA</description>
+		<point latitude="42.37" longitude="-71.1"/>
+	</location>
+	<temperature type="maximum" units="Fahrenheit">
+		<name>Daily Maximum Temperature</name>
+		<value>29</value>
+		<value>26</value>
+		<value>32</value>
+		<value>27</value>
+		<value>33</value>
+		<value>38</value>
+		<value>36</value>
+	</temperature>
+	<temperature type="minimum" units="Fahrenheit">
+	<name>Daily Minimum Temperature</name>
+		<value>18</value>
+		<value>13</value>
+		<value>23</value>
+		<value>18</value>
+		<value>11</value>
+		<value>25</value>
+		<value>24</value>
+	</temperature>
+</data>

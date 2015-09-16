@@ -1,0 +1,10 @@
+strokeWeight(20);
+//stroke(0, 230);
+float r1 = random(5, 45);
+float r2 = random(55, 95);
+stroke(r1 * 4, 230);
+line(r1, 0, r2, 100);
+r1 = random(5, 45);
+r2 = random(55, 95);
+stroke(r1 * 4, 230);
+line(r1, 0, r2, 100);

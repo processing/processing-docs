@@ -57,7 +57,7 @@ SCREEN - opposite multiply, uses inverse values of the colors.<br />
 <br />
 REPLACE - the pixels entirely replace the others and don't utilize alpha (transparency) values<br />
 <br />
-For Processing 2.0, we recommend using <b>blendMode()</b> and not the previous <b>blend()</b> function. However, unlike <b>blend()</b>, the <b>blendMode()</b> function does not support the following: HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN. On older hardware, the LIGHTEST, DARKEST, and DIFFERENCE modes might not be available as well. 
+We recommend using <b>blendMode()</b> and not the previous <b>blend()</b> function. However, unlike <b>blend()</b>, the <b>blendMode()</b> function does not support the following: HARD_LIGHT, SOFT_LIGHT, OVERLAY, DODGE, BURN. On older hardware, the LIGHTEST, DARKEST, and DIFFERENCE modes might not be available as well. 
 ]]></description>
 
 </root>

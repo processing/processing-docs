@@ -85,19 +85,6 @@ void draw() {
   image(starfield, 0, 0, width, height);
   hint(ENABLE_DEPTH_MASK);
   
-  /*
-  // Displacing the u texture coordinate of layer 1 in planet
-  // so it creates the effect of moving clouds.
-  PShape3D p = (PShape3D)planet1;
-  p.loadTexcoords(1);
-  for (int i = 0; i < p.getVertexCount(); i++) {
-      float u = p.texcoords[2 * i + 0];
-      u += 0.002;
-      p.texcoords[2 * i + 0] = u;
-  }
-  p.updateTexcoords();
-  */
-  
   pushMatrix();
   translate(width/2, height/2, -300);  
   
