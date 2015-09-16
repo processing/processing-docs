@@ -59,7 +59,9 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Changes the way Processing interprets color data. By default, the parameters for <b>fill()</b>, <b>stroke()</b>, <b>background()</b>, and <b>color()</b> are defined by values between 0 and 255 using the RGB color model. The <b>colorMode()</b> function is used to change the numerical range used for specifying colors and to switch color systems. For example, calling <b>colorMode(RGB, 1.0)</b> will specify that values are specified between 0 and 1. The limits for defining colors are altered by setting the parameters <b>max</b>, <b>max1</b>, <b>max2</b>, <b>max3</b>, and <b>maxA</b>. 
+Changes the way Processing interprets color data. By default, the parameters for <b>fill()</b>, <b>stroke()</b>, <b>background()</b>, and <b>color()</b> are defined by values between 0 and 255 using the RGB color model. The <b>colorMode()</b> function is used to change the numerical range used for specifying colors and to switch color systems. For example, calling <b>colorMode(RGB, 1.0)</b> will specify that values are specified between 0 and 1. The limits for defining colors are altered by setting the parameters <b>max</b>, <b>max1</b>, <b>max2</b>, <b>max3</b>, and <b>maxA</b>.
+<br /><br />
+After changing the range of values for colors with code like <b>colorMode(HSB, 360, 100, 100)</b>, those ranges remain in use until they are explicitly changed again. For example, after running <b>colorMode(HSB, 360, 100, 100)</b> and then changing back to <b>colorMode(RGB)</b>, the range for R will be 0 to 360 and the range for G and B will be 0 to 100. To avoid this, be explicit about the ranges when changing the color mode. For instance, instead of <b>colorMode(RGB)</b>, write <b>colorMode(RGB, 255, 255, 255)</b>. 
 ]]></description>
 
 </root>
