@@ -14,21 +14,21 @@
 
 <p>The most basic building block for programming motion is the <em><strong>vector</strong></em>.   And so this is where we begin. Now, the word <em><strong>vector</strong></em> can mean a lot of different things:
 <br /><br /> 
-Vector is the name of a new wave rock band formed in Sacremento, CA in the early 1980s.  It's the name of a breakfast cereal manufactured by Kellogg's Canada.   In the field of epidemiology, a vector is used to describe an organism that transmits infection from one host to another.  In the C++ programming language, a Vector (std::vector) is an implementation of a dynamically resizable array data structure.   
+Vector is the name of a new wave rock band formed in Sacramento, CA in the early 1980s.  It's the name of a breakfast cereal manufactured by Kellogg's Canada.   In the field of epidemiology, a vector is used to describe an organism that transmits infection from one host to another.  In the C++ programming language, a Vector (std::vector) is an implementation of a dynamically resizable array data structure.   
 <br /><br />
 While all interesting, these are not the definitions we are looking for.   Rather, what we want is this <em><strong>vector</strong></em>:
 <br /><br />
 <strong><em>A vector is a collection of values that describe relative position in space.</strong></em>
 <br /><br />
 <!--<img src="imgs/definition.jpg">-->
-<img src="imgs/definition.svg" style= "width: 645px; height: 202px">
+<img src="imgs/definition.svg" style= "width: 645px; height: 300px">
 
 <h3>Vectors: You Complete Me</h3>
 
 Before we get into vectors themselves, let's look at a beginner Processing example that demonstrates why it is in the first place we should care.  If you've read any of the introductory Processing textbooks or taken a class on programming with Processing (and hopefully you've done one of these things to help prepare you for this book), you probably, at one point or another, learned to how to write a simple  bouncing ball sketch.  
 <br /><br />
 <img src="imgs/bouncingball1.jpg">
-<br />
+<br /><br />
 Example: Bouncing Ball with No Vectors
 <pre>
 
@@ -79,7 +79,7 @@ In a more advanced sketch, we could imagine this ball and world having many more
 	<li>WIND: xwind and ywind</li>
 	<li>FRICTION: xfriction and yfriction</li>
 </ul>
-<br />
+
 It's becoming more and more clear that for every singular concept in this world (wind, location, acceleration, etc.), we need two variables.  And this is only a two-dimensional world, in a 3D world, we'd need x, y, z, xspeed, yspeed, zspeed, etc.   Our first goal in this chapter is learn the fundamental concepts behind using vectors and rewrite this bouncing ball example.  After all, wouldn't it be nice if we could simple write our code like the following?
 <br /><br />
 Instead of:
@@ -101,15 +101,15 @@ Vector speed;
 Vectors aren't going to allow us to do anything new.  Using vectors won't suddenly make your Processing sketches magically simulate physics, however, they will simplify your code and provide a set of functions for common mathematical operations that happen over and over and over again while programming motion.
 <br /><br />
 As an introduction to vectors, we're going to live in 2 dimensions for quite some time (at least until we get through the first several chapters.)  All of these examples can be fairly easily extended to three dimensions (and the class we will use -- <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> -- allows for three dimensions.)  However, for the time being, it's easier to start with just two.
-<br /><br />
+
 <h3>Vectors: What are they to us, the Processing programmer?</h3>
 
 Technically speaking, the definition of a vector is the difference between two points.   Consider how you might go about providing instructions to walk from one point to another.
 <br /><br />
 Here are some vectors and possible translations:
-<br /><br />
+<br />
 <!--<img src="imgs/steps.jpg">-->
-<img src="imgs/steps.svg" style= "width: 645px; height: 780px">
+<img src="imgs/steps.svg" style= "width: 645px; height: 700px">
 <br />
 You've probably done this before when programming motion.  For every frame of animation (i.e. single cycle through Processing's <strong></strong><a href="http://processing.org/reference/draw_.html">draw()</a></strong> loop), you instruct each object on the screen to move a certain number of pixels horizontally and a certain number of pixels (vertically).  
 <br /><br />
@@ -120,7 +120,7 @@ For every frame:
 <strong><em>location = location + velocity</strong></em>
 <br /><br />
 <!--<img src="imgs/howtogetthere.jpg">-->
-<img src="imgs/howtogetthere.svg" style= "width: 645px; height: 260px">
+<img src="imgs/howtogetthere.svg" style= "width: 645px; height: 220px">
 <br /><br />
 If velocity is a vector (the difference between two points), what is location?   Is it a vector too?  Technically, one might argue that location is not a vector, it's not describing the change between two points, it's simply describing a singular point in space -- a location.  And so conceptually, we think of a location as different: a single point rather than the difference between two points.  
 <br /><br />
@@ -164,7 +164,7 @@ PVector location = new PVector(100,100);
 PVector velocity = new PVector(1,3.3);
 </pre><br />
 
-Now that we have two vector objects ("location" and "velocity") we're ready to implement the algorithm for motion -- location = location + velocity.   In the bouncing ball example, without vectors, we had:
+Now that we have two vector objects ("location" and "velocity"), we're ready to implement the algorithm for motion -- location = location + velocity.   In the bouncing ball example, without vectors, we had:
 <pre>
 
   // Add the current speed to the location.
@@ -191,7 +191,7 @@ Vector:	<strong>v</strong>
 Let's say I have the following two vectors:
 <br /><br />
 <!--<img src="imgs/v.jpg">-->
-<img src="imgs/v.svg" style= "width: 645px; height: 173px">
+<img src="imgs/v.svg" style= "width: 645px; height: 150px">
 <br /><br />                 
 <strong>u</strong> = (5,2)
 <br /><strong>v</strong> = (3,4)
@@ -215,7 +215,7 @@ and therefore:
 <strong>w</strong> =  (8,6)
 <br /><br />
 <!--<img src="imgs/add.jpg">-->
-<img src="imgs/add.svg" style= "width: 645px; height: 212px">
+<img src="imgs/add.svg" style= "width: 645px; height: 200px">
 <br /><br />
 Now that we understand how to add two vectors together, we can look at how addition is implemented in the <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> class itself.    Let's write a function called <strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong> that takes as its argument another PVector object.
 <pre>
@@ -323,7 +323,7 @@ Addition was really just the first step.   There is a long list of common mathem
 	<li><strong><a href="http://processing.org/reference/PVector_dot_.html"><em>dot()</em></a></strong> -- the dot product of two vectors</li>
 	<li><strong><a href="http://processing.org/reference/PVector_cross_.html"><em>cross()</em></a></strong> -- the cross product of two vectors</li>
 </ul>
-<br /><br />
+<br />
 Having already run through addition, let's start with subtraction.  This one's not so bad, just take the plus sign from addition and replace it with a minus!
 <br /><br />
 Vector subtraction:	<strong>w</strong> =  <strong>u</strong> - <strong>v</strong>
@@ -340,15 +340,15 @@ and the function inside <a href="http://processing.org/reference/PVector.html"><
     x = x - v.x;
     y = y - v.y;
   }
-</pre><br />
+</pre>
 
 <!--<img src="imgs/sub.jpg">-->
 <img src="imgs/sub.svg" style= "width: 645px; height: 202px">
-<br /><br />
+<br />
 Following is an example that demonstrates vector subtraction by taking the difference between two points -- the mouse location and the center of the window.
 <br /><br />
 <img src="imgs/vector_sub.jpg" >
-<br />
+<br /><br />
 Example: Vector subtraction
 <pre>
 
@@ -372,7 +372,7 @@ void draw() {
   line(0,0,mouse.x,mouse.y);
   
 }
-</pre><br />
+</pre>
 
 <table width="100%" border="0" cellpadding="20" bgcolor="#DEDEDE"> 
 <tr><td>
@@ -486,7 +486,7 @@ Multiplication and division, as we just saw, is a means by which the length of t
 <br /><br />  
 <!--<img src="imgs/mag.jpg">-->
 <img src="imgs/mag.svg" style= "width: 645px; height: 163px">
-<br /><br />
+<br />
 The length or "magnitude" of a vector  is often written as: ||<strong>v</strong>||
 <br /><br />
 Understanding how to calculate the length (referred from here on out as magnitude) is incredibly useful and important. 
@@ -495,7 +495,7 @@ Notice in the above diagram how when we draw a vector as an arrow and two compon
 <br /><br />
 <!--<img src="imgs/pythagorean.jpg">-->
 <img src="imgs/pythagorean.svg" style= "width: 645px; height: 163px">
-<br /><br />
+<br />
 The Pythagorean theorem: a squared plus b squared equals c squared.
 <br /><br />
 Armed with this lovely formula, we can now compute the magnitude of  as follows:
@@ -544,7 +544,7 @@ Calculating the magnitude of a vector is only the beginning.  The magnitude func
 <br /><br />
 <!--<img src="imgs/normalize1.jpg">-->
 <img src="imgs/normalize1.svg" style= "width: 645px; height: 249px">
-<br /><br />
+<br />
 Being able to quickly access the unit vector is useful since it describes a vector's direction without regard to length.  For any given vector <strong>u</strong>, its unit vector (written as &#251;) is calculated as follows:
 <br /><br />
 &#251; = <strong>u</strong> / ||<strong>u</strong>||
@@ -553,7 +553,7 @@ In other words, to normalize a vector, simply divide each component by its magni
 <br /><br />
 <!--<img src="imgs/normalize2.jpg">-->
 <img src="imgs/normalize2.svg" style= "width: 645px; height: 151px">
-<br /><br />
+<br />
 In the <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> class, we therefore write our normalization function as follows:
 <pre>
 
@@ -1023,14 +1023,14 @@ The PVector class has static versions of <strong><a href="http://processing.org/
 
 Ok, to finish out this tutorial, let's try something a bit more complex and a great deal more useful.  Let's dynamically calculate an object's acceleration according to a rule, acceleration algorithm #4 -- "the object accelerates towards the mouse."
 <br /><br />
-<img src="imgs/mouseaccelerate1.jpg">
-<img src="imgs/mouseaccelerate1.svg" style= "width: 645px; height: 193px">
-<br /><br />
+<!<img src="imgs/mouseaccelerate1.jpg">
+<img src="imgs/mouseaccelerate1.svg" style= "width: 645px; height: 200px">
+<br />
 Anytime we want to calculate a vector based on a rule/formula, we need to compute two things: <strong>magnitude</strong> and <strong>direction</strong>.  Let's start with direction.  We know the acceleration vector should point from the object's location towards the mouse location.  Let's say the object is located at the point (x,y) and the mouse at (mouseX,mouseY).  
 <br /><br />
-<img src="imgs/mouseaccelerate2.jpg">
+<!<img src="imgs/mouseaccelerate2.jpg">
 <img src="imgs/mouseaccelerate2.svg" style= "width: 645px; height: 193px">
-<br /><br />
+<br />
 As illustrated in the above diagram, we see that we can get a vector (dx,dy) by subtracting the object's location from the mouse's location.   After  all, this is precisely where we started this chapter -- the definition of a vector is "the difference between two points in space!"
 <br /><br />
 dx = mouseX - x
@@ -1086,7 +1086,7 @@ And here are those steps in the update() function itself:
     location.add(velocity);
 
   }
- </pre><br/>
+ </pre>
  
  
 <table width="100%" border="0" cellpadding="20" bgcolor="#DEDEDE"> 

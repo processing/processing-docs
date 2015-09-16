@@ -14,18 +14,18 @@
 Trigonometry (really just a couple of the trig functions) is central to graphics programming. That being said if you're anything like me you probably have a hazy memory of trig. Perhaps you remember the mnemonic device <strong>soh-cah-toa</strong>, used to remember the relationships between the trig functions and a right triangle. Here's a diagram to awaken your memory.
 <br /><br />
 <!--<img src="imgs/sohcahtoa.jpg">-->
-<img src="imgs/sohcahtoa.svg" style= "width: 645px; height: 586px">
+<img src="imgs/sohcahtoa.svg" style= "width: 645px; height: 486px">
 <ul>
 <li><strong>soh</strong> stands for "sine equals opposite over hypotenuse." "Opposite" refers to the side opposite the angle.</li>
 <li><strong>cah</strong> stands for "cosine equals adjacent over hypotenuse." "Adjacent" is the side next to the angle.</li>
 <li><strong>toa</strong> refers to "tangent equals opposite over adjacent."</li>
 </ul>
-<br />
+
 You should also notice in the figure that tangent equals sine(θ) over cosine(θ). You may also remember that sine and cosine are similar when you graph them, both forming periodic waves. Only the cosine wave is shifted a bit (90° or pi/2) on the graph, which is technically called a phase shift. I fully realize that it is difficult to deal with this stuff in the abstract. Fortunately, there is another model, the unit circle (shown below) used to visualize and study the trig functions.
-<br /><br />
+
 <!--<img src="imgs/unit_circle.jpg">-->
 <img src="imgs/unit_circle.svg" style= "width: 645px; height: 486px">
-<br /><br />
+
 The unit circle is a circle with a radius of 1 unit in length—hence its imaginative name. When you work with the unit circle, you don't use the regular and trusted Cartesian coordinate system; instead you use a polar coordinate system. The Cartesian system works great in a rectangular grid space, where a point can be located by a coordinate, such as (x, y). In a polar coordinate system, in contrast, location is specified by (r, θ), where r is the radius and θ (the Greek letter theta) is the angle of rotation. The unit circle has its origin at its center, and you measure angles of rotation beginning at the right-middle edge of the unit circle (facing 3 o'clock) and moving in a counterclockwise direction around it.
 <br /><br />
 In the unit_circle diagram, the point p is at 45° or pi / 4. You can use pi also to measure around the unit circle, as illustrated in the figure. Halfway around the circle (180°) is equal to pi radians, and all the way around the circle is equal to 2pi radians and also 0 radians, since a circle is continuous and ends where it begins. The number pi is a constant that is equal to the circumference of a circle divided by its diameter, and is approximately 3.142. 
@@ -39,102 +39,101 @@ There is a really simple relationship between the trig functions and the unit ci
 <br /><br />
 These seemingly humble little expressions are very powerful and can be exploited for all sorts of expressive and organic purposes.
 <br /><br />
-Here's how you actually use the trig functions in Processing:<br /><br />
+Here's how you actually use the trig functions in Processing:
 <pre>
 &nbsp;&nbsp;<strong>float x = cos(radians(angle)) * radius;<br />
 &nbsp;&nbsp;float y = sin(radians(angle)) * radius;</strong>
 </pre>
-<br />
+
 Notice the function call <strong>(radians(angle))</strong> inside each of the trig function calls. Remember that theta is measured in radians, in the polar coordinate system. However, in the Cartesian coordinate system, you work in degrees. To convert between radians and degrees and vice versa, you can use the following expressions:
 <br /><br />
 &nbsp;&nbsp;<strong>theta = angle*pi/180<br />
 &nbsp;&nbsp;angle = theta*180/pi</strong>
 <br /><br />
-Or better yet, just use Processing's handy conversion functions:<br /><br />
+Or better yet, just use Processing's handy conversion functions:
 <pre>
 &nbsp;&nbsp;<strong>theta = radians(angle)<br />
 &nbsp;&nbsp;angle = degrees(theta)</strong>
 </pre>
-<br />
+
 </p>
 <p>
 Lastly, I include a Processing sketch that clearly demonstrates how the unit circle and sine function relate. A while back I came across a Java applet on the Web that showed this relationship (sorry, but I don't remember the link), and I thought it was helpful, so I created a version in Processing (screen-shot below):
 <pre>
 <img src="imgs/trig_console.jpg">
-<span style="color: #7E7E7E;">/**&nbsp;Sine&nbsp;Console</span>
-<span style="color: #7E7E7E;">*&nbsp;Processing:&nbsp;Creative&nbsp;Coding&nbsp;and</span>
-<span style="color: #7E7E7E;">*&nbsp;Computational&nbsp;Art</span>
-<span style="color: #7E7E7E;">*&nbsp;By&nbsp;Ira&nbsp;Greenberg&nbsp;*/</span>
+/**&nbsp;Sine&nbsp;Console</span>
+*&nbsp;Processing:&nbsp;Creative&nbsp;Coding&nbsp;and</span>
+*&nbsp;Computational&nbsp;Art</span>
+*&nbsp;By&nbsp;Ira&nbsp;Greenberg&nbsp;*/</span>
 
-<span style="color: #CC6600;">float</span> px, py, px2, py2;
-<span style="color: #CC6600;">float</span> angle, angle2;
-<span style="color: #CC6600;">float</span> radius = 50;
-<span style="color: #CC6600;">float</span> frequency = 2;
-<span style="color: #CC6600;">float</span> frequency2 = 2;
-<span style="color: #CC6600;">float</span> x, x2;
+float</span> px, py, px2, py2;
+float</span> angle, angle2;
+float</span> radius = 50;
+float</span> frequency = 2;
+float</span> frequency2 = 2;
+float</span> x, x2;
 
-<span style="color: #7E7E7E;">//&nbsp;used&nbsp;to&nbsp;create&nbsp;font</span>
-<span style="color: #CC6600;">PFont</span> myFont;
+//&nbsp;used&nbsp;to&nbsp;create&nbsp;font</span>
+PFont</span> myFont;
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>(){
-&nbsp;&nbsp;<span style="color: #CC6600;">size</span>(600, 200);
-&nbsp;&nbsp;<span style="color: #CC6600;">background</span> (127);
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// generate processing font from system font</span>
-&nbsp;&nbsp;myFont&nbsp;=&nbsp;<span style="color: #CC6600;">createFont</span>(<span style="color: #006699;">"verdana"</span>, 12);
-&nbsp;&nbsp;<span style="color: #CC6600;">textFont</span>(myFont);
+void</span> <b>setup</b></span>(){
+&nbsp;&nbsp;size</span>(600, 200);
+&nbsp;&nbsp;background</span> (127);
+&nbsp;&nbsp;// generate processing font from system font</span>
+&nbsp;&nbsp;myFont&nbsp;=&nbsp;createFont</span>("verdana"</span>, 12);
+&nbsp;&nbsp;textFont</span>(myFont);
 }
 
-<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>draw</b></span>(){
-&nbsp;&nbsp;<span style="color: #CC6600;">background</span> (127);
-&nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
-&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(255);
-&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8, 75, radius*2, radius*2);
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// rotates rectangle around circle</span>
-&nbsp;&nbsp;px&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius);
-&nbsp;&nbsp;py&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle))*(radius);
-&nbsp;&nbsp;<span style="color: #CC6600;">rectMode</span>(<span style="color: #006699;">CENTER</span>);
-&nbsp;&nbsp;<span style="color: #CC6600;">fill</span>(0);
-&nbsp;&nbsp;<span style="color: #7E7E7E;">//draw rectangle</span>
-&nbsp;&nbsp;<span style="color: #CC6600;">rect</span> (px, py, 5, 5);
-&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(100);
-&nbsp;&nbsp;<span style="color: #CC6600;">line</span>(<span style="color: #006699;">width</span>/8, 75, px, py);
-&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(200);
+void</span> <b>draw</b></span>(){
+&nbsp;&nbsp;background</span> (127);
+&nbsp;&nbsp;noStroke</span>();
+&nbsp;&nbsp;fill</span>(255);
+&nbsp;&nbsp;ellipse</span>(width</span>/8, 75, radius*2, radius*2);
+&nbsp;&nbsp;// rotates rectangle around circle</span>
+&nbsp;&nbsp;px&nbsp;=&nbsp;width</span>/8 + cos</span>(radians</span>(angle))*(radius);
+&nbsp;&nbsp;py&nbsp;=&nbsp;75&nbsp;+&nbsp;sin</span>(radians</span>(angle))*(radius);
+&nbsp;&nbsp;fill</span>(0);
+&nbsp;&nbsp;//draw rectangle</span>
+&nbsp;&nbsp;rect</span> (px, py, 5, 5);
+&nbsp;&nbsp;stroke</span>(100);
+&nbsp;&nbsp;line</span>(width</span>/8, 75, px, py);
+&nbsp;&nbsp;stroke</span>(200);
 
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// keep reinitializing to 0, to avoid</span>
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// flashing during redrawing</span>
+&nbsp;&nbsp;// keep reinitializing to 0, to avoid</span>
+&nbsp;&nbsp;// flashing during redrawing</span>
 &nbsp;&nbsp;angle2&nbsp;=&nbsp;0;
 
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// draw static curve - y = sin(x)</span>
-&nbsp;&nbsp;<span style="color: #CC6600;">for</span> (<span style="color: #CC6600;">int</span> i = 0; i< <span style="color: #006699;">width</span>; i++){
-&nbsp;&nbsp;&nbsp;&nbsp;px2&nbsp;=&nbsp;<span style="color: #006699;">width</span>/8 + <span style="color: #CC6600;">cos</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius);
-&nbsp;&nbsp;&nbsp;&nbsp;py2&nbsp;=&nbsp;75&nbsp;+&nbsp;<span style="color: #CC6600;">sin</span>(<span style="color: #CC6600;">radians</span>(angle2))*(radius);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">point</span>(<span style="color: #006699;">width</span>/8+radius+i, py2);
+&nbsp;&nbsp;// draw static curve - y = sin(x)</span>
+&nbsp;&nbsp;for</span> (int</span> i = 0; i< width</span>; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;px2&nbsp;=&nbsp;width</span>/8 + cos</span>(radians</span>(angle2))*(radius);
+&nbsp;&nbsp;&nbsp;&nbsp;py2&nbsp;=&nbsp;75&nbsp;+&nbsp;sin</span>(radians</span>(angle2))*(radius);
+&nbsp;&nbsp;&nbsp;&nbsp;point</span>(width</span>/8+radius+i, py2);
 &nbsp;&nbsp;&nbsp;&nbsp;angle2&nbsp;-=&nbsp;frequency2;
 &nbsp;&nbsp;}
 
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// send small ellipse along sine curve</span>
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// to illustrate relationship of circle to wave</span>
-&nbsp;&nbsp;<span style="color: #CC6600;">noStroke</span>();
-&nbsp;&nbsp;<span style="color: #CC6600;">ellipse</span>(<span style="color: #006699;">width</span>/8+radius+x, py, 5, 5);
+&nbsp;&nbsp;// send small ellipse along sine curve</span>
+&nbsp;&nbsp;// to illustrate relationship of circle to wave</span>
+&nbsp;&nbsp;noStroke</span>();
+&nbsp;&nbsp;ellipse</span>(width</span>/8+radius+x, py, 5, 5);
 &nbsp;&nbsp;angle&nbsp;-=&nbsp;frequency;
 &nbsp;&nbsp;x+=1;
 
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// when little ellipse reaches end of window</span>
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// reinitialize some variables</span>
-&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (x>= <span style="color: #006699;">width</span>-60) {
+&nbsp;&nbsp;// when little ellipse reaches end of window</span>
+&nbsp;&nbsp;// reinitialize some variables</span>
+&nbsp;&nbsp;if</span> (x >= width</span>-60) {
 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;0;
 &nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;=&nbsp;0;
 &nbsp;&nbsp;}
 
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// draw dynamic line connecting circular</span>
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// path with wave</span>
-&nbsp;&nbsp;<span style="color: #CC6600;">stroke</span>(50);
-&nbsp;&nbsp;<span style="color: #CC6600;">line</span>(px, py, <span style="color: #006699;">width</span>/8+radius+x, py);
+&nbsp;&nbsp;// draw dynamic line connecting circular</span>
+&nbsp;&nbsp;// path with wave</span>
+&nbsp;&nbsp;stroke</span>(50);
+&nbsp;&nbsp;line</span>(px, py, width</span>/8+radius+x, py);
 
-&nbsp;&nbsp;<span style="color: #7E7E7E;">// output some calculations</span>
-&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"y = sin x"</span>, 35, 185);
-&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"px = "</span> + px, 105, 185);
-&nbsp;&nbsp;<span style="color: #CC6600;">text</span>(<span style="color: #006699;">"py = "</span> + py, 215, 185);
+&nbsp;&nbsp;// output some calculations</span>
+&nbsp;&nbsp;text</span>("y = sin x"</span>, 35, 185);
+&nbsp;&nbsp;text</span>("px = "</span> + px, 105, 185);
+&nbsp;&nbsp;text</span>("py = "</span> + py, 215, 185);
 }
 </pre>
 </p>
