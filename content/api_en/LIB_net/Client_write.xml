@@ -12,7 +12,6 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe 
 // Creates a client that sends input to a server
 
 import processing.net.*; 

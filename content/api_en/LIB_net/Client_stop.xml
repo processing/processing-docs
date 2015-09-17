@@ -13,6 +13,7 @@
 <image></image>
 <code><![CDATA[
 import processing.net.*; 
+
 Client myClient;
 int dataIn; 
 

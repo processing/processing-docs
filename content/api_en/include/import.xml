@@ -14,7 +14,7 @@
 import processing.pdf.*;
 
 void setup() {
-  size(screenWidth, screenHeight, PDF);
+  size(1024, 768, PDF);
 }
 
 void draw() {
@@ -52,12 +52,6 @@ import <c>libraryName</c>
 <type>Keyword</type>
 
 <partof>PDE</partof>
-
-
-
-
-
-
 
 
 </root>

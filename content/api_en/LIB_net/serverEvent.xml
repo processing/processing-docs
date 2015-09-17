@@ -11,7 +11,6 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe
 // Creates a server that prints new client's IP addresses. 
 
 import processing.net.*;

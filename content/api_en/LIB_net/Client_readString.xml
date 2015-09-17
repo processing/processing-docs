@@ -12,8 +12,6 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe
-
 import processing.net.*; 
 Client myClient; 
 String inString;

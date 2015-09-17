@@ -12,6 +12,7 @@
 <image></image>
 <code><![CDATA[
 import processing.net.*;
+
 Server myServer;
 int val = 0;
 

@@ -12,8 +12,6 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe
- 
 // Creates a client that listens for input and puts 
 // the bytes it gets into a byte[] buffer.
 

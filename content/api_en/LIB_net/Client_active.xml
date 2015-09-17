@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>active()</name>
+
+<category>Client</category>
+
+<subcategory>Client</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+TK
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the number of bytes available. When any client has bytes available from the server, it returns the number of bytes.
+]]></description>
+
+
+</root>

@@ -12,8 +12,6 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe
-
 // Creates a client that listens for input until it gets a 
 // linefeed and then throws the rest of the input away.
 

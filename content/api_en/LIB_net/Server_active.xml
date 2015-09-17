@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>active()</name>
+
+<category>Server</category>
+
+<subcategory>Server</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+TK
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns true if this server is still active and hasn't run into any trouble.
+]]></description>
+
+
+</root>

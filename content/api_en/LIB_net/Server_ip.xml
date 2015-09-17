@@ -12,8 +12,6 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe
-
 // Bug note: stopping the server produces an unrecoverable error:
 // "java.net.SocketException: Socket closed
 //  at java.net.PlainSocketImpl.socketAccept(Native Method)"
