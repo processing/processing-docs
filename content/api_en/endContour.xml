@@ -32,7 +32,7 @@ endShape(CLOSE);
 </example>
 
 <description><![CDATA[
-Use the <b>beginContour()</b> and <b>endContour()</b> function to create negative shapes within shapes such as the center of the letter 'O'. <b>beginContour()</b> begins recording vertices for the shape and <b>endContour()</b> stops recording. The vertices that define a negative shape must "wind" in the opposite direction from the exterior shape. First draw vertices for the exterior shape in clockwise order, then for internal shapes, draw vertices counter-clockwise.<br />
+Use the <b>beginContour()</b> and <b>endContour()</b> function to create negative shapes within shapes such as the center of the letter 'O'. <b>beginContour()</b> begins recording vertices for the shape and <b>endContour()</b> stops recording. The vertices that define a negative shape must "wind" in the opposite direction from the exterior shape. First draw vertices for the exterior shape in clockwise order, then for internal shapes, draw vertices counterclockwise.<br />
 <br />
 These functions can only be used within a <b>beginShape()</b>/<b>endShape()</b> pair and transformations such as <b>translate()</b>, <b>rotate()</b>, and <b>scale()</b> do not work within a <b>beginContour()</b>/<b>endContour()</b> pair. It is also not possible to use other shapes, such as <b>ellipse()</b> or <b>rect()</b> within.
 ]]></description>

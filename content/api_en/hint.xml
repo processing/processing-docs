@@ -9,9 +9,7 @@
 <type></type>
 
 <description><![CDATA[
-This command is used to enable or disable special features that control how graphics are drawn. In the course of developing Processing, we have to make many decisions about tradeoffs between performance and visual quality. We put significant effort into determining what makes most sense for the largest number of users, and then use functions like the hint() command to allow people to tune the settings for their particular sketch. 
-<br /><br />
-Implementing a <b>hint()</b> is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
+This command is used to enable or disable special features that control how graphics are drawn. In the course of developing Processing, we had to make hard decisions about tradeoffs between performance and visual quality. We put significant effort into determining what makes most sense for the largest number of users, and then use functions like <b>hint()</b> to allow people to tune the settings for their particular sketch. Implementing a <b>hint()</b> is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
 <br /><br />
 Hints that are used by the default (Java2D) renderer:
 <br /><br />
@@ -33,7 +31,7 @@ Hints for use with P3D only:
 <br /><br />
 <b>hint(DISABLE_OPTIMIZED_STROKE)</b> - It forces the P3D renderer to draw each shape (including its strokes) separately, instead of batching them into larger groups for better performance. One consequence of this is that 2D items drawn with P3D are correctly stacked on the screen, depending on the order in which they were drawn. Otherwise, glitches such as the stroke lines being drawn on top of the interior of all the shapes will occur. However, this hint can make rendering substantially slower, so it is recommended to use it only when drawing a small amount of shapes. For drawing two-dimensional scenes, use the P2D renderer instead, which doesn't need the hint to properly stack shapes and their strokes.
 <br /><br />
-<b>hint(ENABLE_STROKE_PERSPECTIVE)</b> - This causes stroke geometry (lines and points) to be affected by the perspective, meaning that they will look smaller as they move away from the camera. 
+<b>hint(ENABLE_STROKE_PERSPECTIVE)</b> - This causes stroke geometry (lines and points) to be affected by the perspective, meaning that they will look smaller as they move away from the camera.
 ]]></description>
 
 </root>
