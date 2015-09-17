@@ -200,22 +200,22 @@ Big-picture keywords / concepts for getting into Processing
   <h6>Debug</h6>
   <ul>
     <li><em>Enable Debugger</em><br />
-      (Description to come...)
+      Activates the debugger. Note that the Run button will change to Debug. New Continue and Step buttons will appear, along with a separate window for viewing variable values.
     </li>
     <li><em>Continue</em><br />
-      (Description to come...)
+      Advances the code until the next breakpoint.
     </li>
     <li><em>Step</em><br />
-      (Description to come...)
+      Advances the code one line at a time. (Note that once the code reaches the end of draw, the debugger will revert to "continue.")
     </li>
     <li><em>Step Into</em><br />
-      (Description to come...)
+      Advances the debugger into the interior of a function call. This only works for user-defined functions in the sketch.
     </li>
     <li><em>Step Out</em><br />
-      (Description to come...)
+      Advances the debugger outside of a function to the calling area. This only works for user-defined functions in the sketch.
     </li>
     <li><em>Toggle Breakpoint</em><br />
-      (Description to come...)
+      Add or remove a breakpoint.
     </li>
   </ul>
 	
@@ -229,7 +229,7 @@ Big-picture keywords / concepts for getting into Processing
     <li><em>Archive Sketch</em><br />
       Archives a copy of the current sketch in .zip format. The archive is placed in the same folder as the sketch.</li>
     <li><em>Install "processing-java"</em><br />
-      (Description to come...)</li>
+      Installs the processing-java program to make it possible to build and run Java mode sketches from the command line.</li>
 	  <li><em>Movie Maker</em><br />
       Creates a QuickTime movie from a sequence of images. Options include setting the size, frame rate, and compression, as well as an audio file.
     <li><em>Add Tool...</em><br />
@@ -250,10 +250,10 @@ Big-picture keywords / concepts for getting into Processing
       Select an element of the Processing language in the text editor and select Find in Reference to open that page in the default web browser.
     </li>
     <li><em>Libraries Reference</em><br />
-      (Description to come...)
+      Select from the list to open the reference for compatiable Libraries. 
     </li>
     <li><em>Tools Reference</em><br />
-      (Description to come...)
+      Select from the list to open the reference for compatiable Tools. 
     </li>
     <li><em>Getting Started</em><br />
       Opens the online Getting Started tutorial in the default browser.
@@ -327,11 +327,11 @@ Big-picture keywords / concepts for getting into Processing
       </li>
       <li>
         <em>Code completion with Ctrl-space</em><br />
-          (Description to come...)
+          Turn on and off code completion. Press Ctrl-space to activate code completion while typing.
       </li>
       <li>
         <em>Suggest import statements</em><br />
-          (Description to come...)
+          When checked, Processing will try to suggest libraries to import when code from that library is detected.
       </li>
       <li>
       	<em>Increase maximum available memory</em><br />
@@ -475,7 +475,15 @@ Big-picture keywords / concepts for getting into Processing
   </h5>
     
   <p>
-    (Description to come...)
+    The Processing Debugger is a tool for diagnosing problems with a sketch. Enable it to pause a sketch while running and advance through the code one line at a time. The debugger is enabled through the File menu (Debug &gt; Enable Debugger) or by clicking the Debugger icon, the butterfly in the upper-right corner of the PDE.
+  </p>
+
+  <p>
+    When the Debugger is enabled, the program runs as normal, but stops at "breakpoints." To create a breakpoint, set the cursor at the line you want to pause the sketch and select Debug &gt; Toggle Breakpoint. The keyboard shortcut is Command-B. To remove the breakpoint, select Toggle Breakpoint again.
+  </p>
+
+  <p>
+    Running the sketch in Debug mode causes the sketch to pause at any breakpoints. When paused, current variable values are visible in a separate pane. You can advance to the next breakpoint by selecting "Continue" or advance line by line through the code with "Step". Stepping only works within the scope of the current function being run.
   </p>
 
 
@@ -486,21 +494,14 @@ Big-picture keywords / concepts for getting into Processing
     </h5>
     
     <p>
-		Processing has different <em>programming modes</em> to make it possible to deploy sketches
-		on different platforms and program in different ways. The current default programming mode 
-		is <em>Java</em> mode. Other programming modes such as <em>Android Mode</em> and 
-		<em>Python</em> are added by selecting "Add Mode..." from the menu in the upper-right
-		corner of the PDE.
+		Processing has different <em>programming modes</em> to make it possible to deploy sketches on different platforms and program in different ways. The current default programming mode is <em>Java</em> mode. Other programming modes such as <em>Android Mode</em> and <em>Python</em> are added by selecting "Add Mode..." from the menu in the upper-right corner of the PDE.
     </p>
       
     <h6>Java Mode</h6>
     
     <p>
-    	This mode makes it possible to write short programs to draw to the screen, but also
-    	enables complex Java programs as well. It can be used simply by beginners, but 
-    	it scales to professional Java software development. Sketches written in this mode can
-    	be exported as Java Applications to run on Linux, Mac OS X, and Windows operating 
-    	systems. 
+    	This mode makes it possible to write short programs to draw to the screen, but also enables complex Java programs as well. It can be used simply by beginners, but it scales to professional Java software development. Sketches written in this mode can
+    	be exported as Java Applications to run on Linux, Mac OS X, and Windows operating systems. 
     </p>
     
     <p>
@@ -509,11 +510,7 @@ Big-picture keywords / concepts for getting into Processing
   				<td>
 		<em>Advanced</em><br />
 		<br />
-		Java files with the extension .java can be included with a Java mode sketch. 
-		They may be created directly in the PDE or copied into the sketch folder through 
-		the "Add File..." item in the Sketch menu or dragged into the text editor. It's possible 
-		to write any Java code in files with the .java extension. In fact, complete Java code 
-		can be written from inside the Processing Environment by subclassing PApplet like this:
+		Java files with the extension .java can be included with a Java mode sketch. They may be created directly in the PDE or copied into the sketch folder through the "Add File..." item in the Sketch menu or dragged into the text editor. It's possible to write any Java code in files with the .java extension. In fact, complete Java code can be written from inside the Processing Environment by subclassing PApplet like this:
    	
    	<pre>
 
