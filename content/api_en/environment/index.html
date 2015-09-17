@@ -206,16 +206,16 @@ Big-picture keywords / concepts for getting into Processing
       Advances the code until the next breakpoint.
     </li>
     <li><em>Step</em><br />
-      Advances the code one line at a time. (Note that once the code reaches the end of draw, the debugger will revert to "continue.")
+      Advances the code one line at a time. (Note that once the code reaches the end of the current function call, the debugger will revert to "continue.")
     </li>
-    <li><em>Step Into</em><br />
+ff    <li><em>Step Into</em><br />
       Advances the debugger into the interior of a function call. This only works for user-defined functions in the sketch.
     </li>
     <li><em>Step Out</em><br />
       Advances the debugger outside of a function to the calling area. This only works for user-defined functions in the sketch.
     </li>
     <li><em>Toggle Breakpoint</em><br />
-      Add or remove a breakpoint.
+      Add or remove a breakpoint.  When a breakpoint is added, the line number is replaced with the symbol: <code>&lt;&gt;</code>.
     </li>
   </ul>
 	
@@ -479,7 +479,7 @@ Big-picture keywords / concepts for getting into Processing
   </p>
 
   <p>
-    When the Debugger is enabled, the program runs as normal, but stops at "breakpoints." To create a breakpoint, set the cursor at the line you want to pause the sketch and select Debug &gt; Toggle Breakpoint. The keyboard shortcut is Command-B. To remove the breakpoint, select Toggle Breakpoint again.
+    When the Debugger is enabled, the program runs as normal, but stops at "breakpoints." To create a breakpoint, set the cursor at the line you want to pause the sketch and select Debug &gt; Toggle Breakpoint. The keyboard shortcut is Command-B. To remove the breakpoint, select Toggle Breakpoint again.  When a breakpoint is added, the line number is replaced with the symbol: <code>&lt;&gt;</code>. 
   </p>
 
   <p>
