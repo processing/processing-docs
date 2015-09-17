@@ -23,7 +23,7 @@ if (a) {
 </example>
 
 <example>
-<image>logicalNOT.png</image>
+<image>logicalNOT_2.png</image>
 <code><![CDATA[
 boolean a = true;
 if (!a) {
