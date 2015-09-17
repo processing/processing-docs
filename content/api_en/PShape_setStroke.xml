@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>setStroke()</name>
+
+<category>PShape</category>
+
+<subcategory>Method</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+PShape circle;
+
+void setup() {  
+  size(640, 360, P2D);
+  circle = createShape(ELLIPSE, 0, 0, 200, 200);
+  circle.setStroke(color(255));  
+}
+
+void draw() {
+  background(51);
+  circle.setFill(color(random(255)));
+  translate(mouseX, mouseY);
+  shape(circle);
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>setStroke()</b> method defines the outline color of a <b>PShape</b>. This method is used after shapes are created or when a shape is defined explicitly (e.g. <b>createShape(RECT, 20, 20, 80, 80)</b>) as shown in the above example. When a shape is created with <b>beginShape()</b> and <b>endShape()</b>, its attributes may be changed with <b>fill()</b> and <b>stroke()</b> within <b>beginShape()</b> and <b>endShape()</b>. However, after the shape is created, only the <b>setStroke()</b> method can define a new stroke value for the <b>PShape</b>. 
+]]></description>
+
+</root>
