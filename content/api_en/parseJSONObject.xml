@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>parseJSONObject()</name>
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String data = "{ \"id\": 0, \"species\": \"Panthera leo\", \"name\": \"Lion\"}";
+
+void setup() {
+  JSONObject json = parseJSONObject(data);
+  if (json == null) {
+    println("JSONObject could not be parsed");
+  } else {
+    String species = json.getString("species");
+    println(species);
+  }
+}
+
+// Sketch prints:
+// Panthera leo
+]]></code>
+</example>
+
+<description><![CDATA[
+Takes a <b>String</b>, parses its contents, and returns a <b>JSONObject</b>. If the <b>String</b> does not contain <b>JSONObject</b> data or cannot be parsed, a <b>null</b> value is returned.<br />
+<br />
+<b>parseJSONObject()</b> is most useful when pulling data dynamically, such as from third-party APIs. Normally, API results would be saved to a <b>String</b>, and then can be converted to a structured <b>JSONObject</b> using <b>parseJSONObject()</b>. Be sure to check if <b>null</b> is returned before performing operations on the new <b>JSONObject</b> in case the <b>String</b> content could not be parsed.<br />
+<br />
+If your data already exists as a <b>JSON</b> file in the data folder, it is simpler to use <b>loadJSONObject()</b>.
+]]></description>
+
+</root>

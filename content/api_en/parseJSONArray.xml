@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>parseJSONArray()</name>
+
+<category>Input</category>
+
+<subcategory>Files</subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+String data = "[ \"Capra hircus\", \"Panthera pardus\", \"Equus zebra\" ]";
+
+void setup() {
+  JSONArray json = parseJSONArray(data);
+  if (json == null) {
+    println("JSONArray could not be parsed");
+  } else {
+    String species = json.getString(1);
+    println(species);
+  }
+}
+
+// Sketch prints:
+// Panthera pardus
+]]></code>
+</example>
+
+<description><![CDATA[
+Takes a <b>String</b>, parses its contents, and returns a <b>JSONArray</b>. If the <b>String</b> does not contain <b>JSONArray</b> data or cannot be parsed, a <b>null</b> value is returned.<br />
+<br />
+<b>parseJSONArray()</b> is most useful when pulling data dynamically, such as from third-party APIs. Normally, API results would be saved to a <b>String</b>, and then can be converted to a structured <b>JSONArray</b> using <b>parseJSONArray()</b>. Be sure to check if <b>null</b> is returned before performing operations on the new <b>JSONArray</b> in case the <b>String</b> content could not be parsed.<br />
+<br />
+If your data already exists as a <b>JSON</b> file in the data folder, it is simpler to use <b>loadJSONArray()</b>.
+]]></description>
+
+</root>
