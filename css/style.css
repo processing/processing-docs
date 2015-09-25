@@ -572,7 +572,8 @@ dd { margin: 0 0 1em 0; }
 
 td img { margin: 0; display: block; }
 
-#Cover .video,
+#Cover .video { margin-top: 0em; }
+
 #Cover .twitter,
 #Cover .commits,
 #Cover .partners,
