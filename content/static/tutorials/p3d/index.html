@@ -200,16 +200,11 @@ Note above how it's often simpler to specify vertex locations using a standardiz
 	<h3>Textures</h3>
 	
 	<p>	
-	In P3D mode, you can load and display images just like you do in 2D (see: <a href="http://processing.org/learning/pixels/">Images and Pixels Tutorial</a>).  Everything we covered under transformations can be applied to images; they can be translated, rotated, and scaled in a virtual 3D space.   In addition to drawing an image the old-fashioned way, however, images can be made into "textures" and applied to a shape.  This is particularly useful when you want a 3D shape to resemble a real-world object.  For example, applying an image of earth as a texture on a sphere will result in a globe.</p>  
-	
-	<p><img src="imgs/globe.png"><br/>
-	<a href="http://processing.org/learning/topics/texturesphere.html">Example: Textured Sphere</a></p>
-	
-	<p>To apply an image as a texture to a shape, we first need to define the shape using beginShape() and endShape() as demonstrated in the previous section.  Let's say you are drawing a rectangle, like so:</p>
+	With the P3D renderer, you can load and display images just like you do in 2D (see: <a href="http://processing.org/learning/pixels/">Images and Pixels Tutorial</a>).  Everything covered under transformations can be applied to images; they can be translated, rotated, and scaled in a virtual 3D space.   In addition to drawing an image the old-fashioned way, however, images can be made into "textures" and applied to a shape.  This is particularly useful when you want a 3D shape to resemble a real-world object.  For example, applying an image of earth as a texture on a sphere will result in a globe.  To apply an image as a texture to a shape, we first need to define the shape using <code>beginShape()</code> and <code>endShape()</code> as demonstrated in the previous section.  Let's say you are drawing a rectangle, like so:</p>
 	
 	<p><img src="imgs/texture1.png"><br/>
 <pre>
-size(640, 360,P3D);
+size(640, 360, P3D);
 background(0);
 translate(width/2, height/2);
 stroke(255);
@@ -274,8 +269,23 @@ void draw() {
 </pre><br/>
 
 <p>
-	If the above seems like a trivial example, that's because it is.  After all, if we're just going to texture a square, we can just draw the image using image().  Nevertheless, understanding the above process opens up a world of possibilities as we can now apply image textures to arbitrary 2D and 3D shapes.  For some examples of more sophisticated mappings, check out <a href="http://processing.org/learning/topics/texturetriangle.html">Texture Triangle</a>, <a href="http://processing.org/learning/topics/texturecylinder.html">Texture Cylinder</a>, and <a href="http://processing.org/learning/topics/texturecube.html">Texture Cube</a>.		
+	If the above seems like a trivial example, that's because it is.  After all, if we're just going to texture a square, we can just draw the image using image().  Nevertheless, understanding the above process opens up a world of possibilities as we can now apply image textures to arbitrary 2D and 3D shapes.  For some examples of more sophisticated mappings, check out <a href="http://processing.org/learning/topics/texturetriangle.html">Texture Triangle</a>, <a href="http://processing.org/learning/topics/texturecylinder.html">Texture Cylinder</a>, <a href="http://processing.org/learning/topics/texturecube.html">Texture Cube</a>, and <a href="https://processing.org/examples/texturesphere.html">Textured Sphere</a>.
 </p>
+
+<p>
+	As mentioned in the <a href="">PShape tutorial</a>, you can also texture <code>PShape</code> objects with the <code>setTexture()</code> function.  PShape's <code>setTexture()</code> automatically textures the shape without having to specify uv coordinates and is useful for simple scenarios like texturing a sphere (where doing it with <code>beginShape()</code> and <code>endShape()</code> would be extraordinarily complex (as seen in <a href="https://processing.org/examples/texturesphere.html">Textured Sphere</a>).  The following code demonstrates how easy it is to texture with <code>PShape</code>.
+</p>
+
+<pre>
+PImage img;
+PShape globe;
+	
+void setup() {
+  img = loadImage("earth.jpg");
+  globe = createShape(SPHERE, 50);
+  globe.setTexture(img);
+}
+</pre>
 
 	<h3>Lighting</h3>
 	
