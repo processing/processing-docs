@@ -8,6 +8,8 @@
 
 <usage>Application</usage>
 
+<type>Object</type>
+
 <example>
 <image></image>
 <code><![CDATA[
@@ -31,19 +33,11 @@ void draw() {
 ]]></code>
 </example>
 
-<description><![CDATA[
-
-This is a volume analyzer. It calculates the root mean square of the amplitude of each audio block.
+<description><![CDATA[	
+This is a volume analyzer. It calculates the root mean square of the amplitude of each audio block and returns that value.
 ]]></description>
 
-<syntax>
-</syntax>
-
-<parameters>
-
-</parameters>
-
-<method>
+<!-- <method>
 <mname>input()</mname>
 <mdescription>Define the audio input for the analyzer</mdescription>
 </method>
@@ -67,16 +61,9 @@ Amplitude(<c>parent</c>)
 <clabel>parent</clabel>
 <cdescription>PApplet: typically use "this"</cdescription>
 </cparameter>
-
-<returns></returns>
-
-<related>
-</related>
-
 <availability>1.0</availability>
 
 <type>Object</type>
-
-<partof>Library</partof>
+ -->
 
 </root>
