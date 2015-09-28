@@ -30,7 +30,7 @@ void draw() {
 
 <description><![CDATA[
 
-This is a Soundfile Player which allows to play back and manipulate soundfiles of various formats.
+This is a Soundfile Player which allows to play back and manipulate soundfiles. Supported formats are: WAV, AIF/AIFF, MP3.
 
 ]]></description>
 
