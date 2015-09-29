@@ -209,10 +209,15 @@ if __name__ == "__main__":
         # set default compatible strings if none found
         if (not 'minRevision' in exports or exports['minRevision'] == ''):
           exports['minRevision'] = '0'
-        if (not 'maxRevision' in exports or exports['maxRevision'] == ''):
-          if (contrib_id in broken_ids):
+        # if (not 'maxRevision' in exports or exports['maxRevision'] == ''):
+        #   if (contrib_id in broken_ids):
+        #     exports['maxRevision'] = '228'
+        #   else:
+        #     exports['maxRevision'] = '0'
+        if (contrib_id in broken_ids):
             exports['maxRevision'] = '228'
-          else:
+        else:
+          if (not 'maxRevision' in exports or exports['maxRevision'] == ''):
             exports['maxRevision'] = '0'
 
         key = missing_key(exports)
