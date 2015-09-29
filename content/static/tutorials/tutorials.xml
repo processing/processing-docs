@@ -78,7 +78,7 @@
 	</tutorial>
 
 	<tutorial>
-		<title>Trigonometry Primer I</title>
+		<title>Trigonometry Primer</title>
 		<directory>trig</directory>
 		<imgs>true</imgs>
 		<code>false</code>
@@ -119,12 +119,12 @@
 		<code>true</code>
 	</tutorial>
 	
-	<tutorial>
+	<!--<tutorial>
 		<title>Processing in Eclipse</title>
 		<directory>eclipse</directory>
 		<imgs>true</imgs>
 		<code>false</code>
-	</tutorial>
+	</tutorial>-->
     
     <tutorial>
 		<title>Electronics</title>
@@ -171,6 +171,13 @@
      <tutorial>
 		<title>Arrays</title>
 		<directory>arrays</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
+
+	<tutorial>
+		<title>Sound</title>
+		<directory>sound</directory>
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
