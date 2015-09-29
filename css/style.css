@@ -1097,6 +1097,14 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
 #Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
 
+#Tutorials p { 	
+				margin-top: 2.0em;
+				margin-bottom: 2.0em;
+				font-size           : 1.0em;
+				font-weight			: normal;
+				line-height			: 2.0em; 
+			  }
+
 /*#Tutorials h3 { 
 	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
 	font-size			: 1.3em;
