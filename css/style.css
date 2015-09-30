@@ -1158,6 +1158,10 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	background-color: #eee;
 }
 
+#Tutorials pre.tut {
+	margin-left: 0px;
+}
+
 #Tutorials p.txt {
 	color: #00CCFF;
 	margin-top: 0em;
