@@ -491,7 +491,6 @@ h6 { font-size			: 1em; 		}
 p { font-size			: 1em; 		}
 
 pre {  
-	display 			: inline;
 	font-family			: monaco, "Courier New", Courier, monospace; 
 	font-size			: 11px; 
 	line-height			: normal; color: #000000;
@@ -1157,11 +1156,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	padding: 10px;
 	margin-bottom: 40px;
 	background-color: #eee;
-}
-
-#Tutorials pre {
-	display: inline;
-	margin-left: 0px;
 }
 
 #Tutorials p.txt {

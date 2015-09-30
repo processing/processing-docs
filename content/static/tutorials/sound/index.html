@@ -82,52 +82,52 @@
 	<p class="txt">Example 1</p>
 
 	<pre>
-		<span style="color: #666666;">/**</span>
-		<span style="color: #666666;">&nbsp;*&nbsp;In&nbsp;this&nbsp;example,&nbsp;five&nbsp;sine&nbsp;waves&nbsp;are&nbsp;layered&nbsp;to&nbsp;construct&nbsp;a&nbsp;cluster&nbsp;</span>
-		<span style="color: #666666;">&nbsp;*&nbsp;of&nbsp;frequencies.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;additive&nbsp;synthesis.&nbsp;Use&nbsp;the&nbsp;</span>
-		<span style="color: #666666;">&nbsp;*&nbsp;mouse&nbsp;position&nbsp;inside&nbsp;the&nbsp;display&nbsp;window&nbsp;to&nbsp;detune&nbsp;the&nbsp;cluster.</span>
-		<span style="color: #666666;">&nbsp;*/</span>
+<span style="color: #666666;">/**</span>
+<span style="color: #666666;">&nbsp;*&nbsp;In&nbsp;this&nbsp;example,&nbsp;five&nbsp;sine&nbsp;waves&nbsp;are&nbsp;layered&nbsp;to&nbsp;construct&nbsp;a&nbsp;cluster&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;of&nbsp;frequencies.&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;additive&nbsp;synthesis.&nbsp;Use&nbsp;the&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;mouse&nbsp;position&nbsp;inside&nbsp;the&nbsp;display&nbsp;window&nbsp;to&nbsp;detune&nbsp;the&nbsp;cluster.</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-		<span style="color: #33997E;">import</span> processing.sound.*;
+<span style="color: #33997E;">import</span> processing.sound.*;
 
-		SinOsc[]&nbsp;sineWaves;&nbsp;<span style="color: #666666;">// Array of sines</span>
-		<span style="color: #E2661A;">float</span>[] sineFreq; <span style="color: #666666;">// Array of frequencies</span>
-		<span style="color: #E2661A;">int</span> numSines = 5; <span style="color: #666666;">// Number of oscillators to use</span>
+SinOsc[]&nbsp;sineWaves;&nbsp;<span style="color: #666666;">// Array of sines</span>
+<span style="color: #E2661A;">float</span>[] sineFreq; <span style="color: #666666;">// Array of frequencies</span>
+<span style="color: #E2661A;">int</span> numSines = 5; <span style="color: #666666;">// Number of oscillators to use</span>
 
-		<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {  
-		&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
-		&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {  
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
 
-		&nbsp;&nbsp;sineWaves&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SinOsc[numSines]; <span style="color: #666666;">// Initialize the oscillators</span>
-		&nbsp;&nbsp;sineFreq&nbsp;=&nbsp;<span style="color: #33997E;">new</span> <span style="color: #E2661A;">float</span>[numSines]; <span style="color: #666666;">// Initialize array for Frequencies</span>
+&nbsp;&nbsp;sineWaves&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SinOsc[numSines]; <span style="color: #666666;">// Initialize the oscillators</span>
+&nbsp;&nbsp;sineFreq&nbsp;=&nbsp;<span style="color: #33997E;">new</span> <span style="color: #E2661A;">float</span>[numSines]; <span style="color: #666666;">// Initialize array for Frequencies</span>
 
-		&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; numSines; i++) {
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Calculate the amplitude for each oscillator</span>
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> sineVolume = (1.0 / numSines) / (i + 1);
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Create the oscillators</span>
-		&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SinOsc(<span style="color: #33997E;">this</span>);
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Start Oscillators</span>
-		&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].play();
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Set the amplitudes for all oscillators</span>
-		&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].amp(sineVolume);
-		&nbsp;&nbsp;}
-		}
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; numSines; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Calculate the amplitude for each oscillator</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> sineVolume = (1.0 / numSines) / (i + 1);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Create the oscillators</span>
+&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SinOsc(<span style="color: #33997E;">this</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Start Oscillators</span>
+&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].play();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Set the amplitudes for all oscillators</span>
+&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].amp(sineVolume);
+&nbsp;&nbsp;}
+}
 
-		<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
 
-		&nbsp;&nbsp;<span style="color: #666666;">//Map mouseY from 0 to 1</span>
-		&nbsp;&nbsp;<span style="color: #E2661A;">float</span> yoffset = <span style="color: #006699;">map</span>(<span style="color: #D94A7A;">mouseY</span>, 0, <span style="color: #D94A7A;">height</span>, 0, 1);
-		&nbsp;&nbsp;<span style="color: #666666;">//Map mouseY logarithmically to 150 - 1150 to create a base frequency range</span>
-		&nbsp;&nbsp;<span style="color: #E2661A;">float</span> frequency = <span style="color: #006699;">pow</span>(1000, yoffset) + 150;
-		&nbsp;&nbsp;<span style="color: #666666;">//Use mouseX mapped from -0.5 to 0.5 as a detune argument</span>
-		&nbsp;&nbsp;<span style="color: #E2661A;">float</span> detune = <span style="color: #006699;">map</span>(<span style="color: #D94A7A;">mouseX</span>, 0, <span style="color: #D94A7A;">width</span>, -0.5, 0.5);
+&nbsp;&nbsp;<span style="color: #666666;">//Map mouseY from 0 to 1</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> yoffset = <span style="color: #006699;">map</span>(<span style="color: #D94A7A;">mouseY</span>, 0, <span style="color: #D94A7A;">height</span>, 0, 1);
+&nbsp;&nbsp;<span style="color: #666666;">//Map mouseY logarithmically to 150 - 1150 to create a base frequency range</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> frequency = <span style="color: #006699;">pow</span>(1000, yoffset) + 150;
+&nbsp;&nbsp;<span style="color: #666666;">//Use mouseX mapped from -0.5 to 0.5 as a detune argument</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> detune = <span style="color: #006699;">map</span>(<span style="color: #D94A7A;">mouseX</span>, 0, <span style="color: #D94A7A;">width</span>, -0.5, 0.5);
 
-		&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; numSines; i++) { 
-		&nbsp;&nbsp;&nbsp;&nbsp;sineFreq[i]&nbsp;=&nbsp;frequency&nbsp;*&nbsp;(i&nbsp;+&nbsp;1&nbsp;*&nbsp;detune);
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Set the frequencies for all oscillators</span>
-		&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].freq(sineFreq[i]);
-		&nbsp;&nbsp;}
-		}
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; numSines; i++) { 
+&nbsp;&nbsp;&nbsp;&nbsp;sineFreq[i]&nbsp;=&nbsp;frequency&nbsp;*&nbsp;(i&nbsp;+&nbsp;1&nbsp;*&nbsp;detune);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Set the frequencies for all oscillators</span>
+&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].freq(sineFreq[i]);
+&nbsp;&nbsp;}
+}
 	</pre>
 
 	<hr />
