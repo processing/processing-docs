@@ -347,14 +347,14 @@
 	</p>
 
 
-	<h3>Example 3:  Turning a light on and off (Code below)</h3>
+	<h3>Example 3:  Turn a light on and off (Code below)</h3>
 
 	<p class="txt">
 		This example sends data from a Processing program running on a computer to a Wiring or Arduino board to turn a light ON or OFF. The program continually writes an <em>H</em> to the serial port if the cursor is inside the rectangle and writes a <em>L</em> if it’s not. Software running on the board receives the data and checks for the value. If the value is <em>H</em>, it turns on a light connected to the digital I/O pin number 4, and if the value is <em>L</em>, it turns off the light. The light always reflects the status of the rectangle on the computer’s screen.
 	</p>
 
 
-	<h3>Example 4:  Controlling a servomotor (Code below)</h3>
+	<h3>Example 4:  Control a servomotor (Code below)</h3>
 
 	<p class="txt">
 		This example controls the position of a servomotor through an interface within a Processing program. When the mouse is dragged through the interface, it writes the position data to the serial port. Software running on a Wiring or Arduino board receives data from the serial port and sets the position of a servomotor connected to the digital I/O pin number 4.
@@ -362,7 +362,7 @@
 
 
  
-	<h3>Example 5:  Turning a DC motor on and off (Code below)</h3>
+	<h3>Example 5:  Turn a DC motor on and off (Code below)</h3>
 
 	<p class="txt">
 		This example controls a DC motor from a Processing program. The program displays an interface that responds to a mouse click. When the mouse is clicked within the interface, the program writes data to the serial port. Software running on the board receives data from the serial port and turns the DC motor connected to the PWM pin ON and OFF. The DC motor is connected to the board through an L293D chip to protect the microcontroller from current spikes caused when the motor turns on.
@@ -386,55 +386,60 @@
 	</p>
 
 
-<h3>Code</h3>
-<p>
-To run these examples, unlike the other examples in this book, you will need additional equipment. They require either a Wiring (wiring.org.co) or Arduino (www.arduino.cc) board and the following:
-<br /> 
-<br /> 
+
+
+	<h3>Code</h3>
+
+	<p class="txt">
+		To run these examples, unlike the other examples in this book, you will need additional equipment. They require either a Wiring (wiring.org.co) or Arduino (www.arduino.cc) board and the following:
+	</p>
+
     <ul>
-<li>USB cable (used to send data between board and computer)</li>
-<li>9–15V 1000mA power supply or 9V battery</li>
-<li>22-gauge solid core wire (get different colors)</li>
-<li>Breadboard</li>
-<li>Switch</li>
-<li>Resistors  (10K ohm for the switch circuits, 330 ohm for the LEDs, 1K ohm for the photoresistor)</li>
-<li>LEDs</li>
-<li>Servo motor (Futaba or Hi-Tech)</li>
-<li>DC motor (a generic DC motor like the ones in toy cars)</li>
-<li>L293D or SN754410 H-Bridge Integrated Circuit</li>
-<li>Wire cutters</li>
-<li>Wire strippers</li>
-<li>Needlenose pliers </li>
-    </ul> 
-<br /> 
-This equipment can be purchased from an electronics store such as Radio Shack or from an online vendor.
-<br />
-<br />
-	Each example presents two programs: code for the I/O board and code for Processing. Diagrams and breadboard illustrations for the examples are presented side by side in this tutorial to reinforce the connections between the two representations. Learning to translate a circuit diagram into a physical circuit is one of the most difficult challenges when starting to work with electronics. 
-<br />
-<br />
-	The Wiring or Arduino software environment is necessary to program each board. These environments are built on top of the Processing environment, but they have special features for uploading code to the board and monitoring serial communication. Both can be downloaded at no cost from their respective websites and both are available for Linux, Macintosh, and Windows. 
-<br />
-<br />
-	The examples that follow assume the I/O board is connected to your computer and serial communication is working. Before working with these examples, get one of the simple Serial library examples included with Processing to work. For the most up-to-date information and troubleshooting tips, read the Serial reference on the Processing website: www.processing.org/reference/libraries. The Wiring and Arduino websites have additional information.
-<br />
-<br /> 
-<hr />
-<br /> 
-<br />
-<em>Example 1A:  Switch (Wiring/Arduino)</em>
-<br /> 
-<br /> 
-<img src="imgs/fg39-13.svg" style= "width: 650px; height: 240px">
-<br /> 
+		<li>USB cable (used to send data between board and computer)</li>
+		<li>9–15V 1000mA power supply or 9V battery</li>
+		<li>22-gauge solid core wire (get different colors)</li>
+		<li>Breadboard</li>
+		<li>Switch</li>
+		<li>Resistors  (10K ohm for the switch circuits, 330 ohm for the LEDs, 1K ohm for the photoresistor)</li>
+		<li>LEDs</li>
+		<li>Servo motor (Futaba or Hi-Tech)</li>
+		<li>DC motor (a generic DC motor like the ones in toy cars)</li>
+		<li>L293D or SN754410 H-Bridge Integrated Circuit</li>
+		<li>Wire cutters</li>
+		<li>Wire strippers</li>
+		<li>Needlenose pliers </li>
+    </ul>
+
+	<p class="txt">
+		This equipment can be purchased from an electronics store such as Radio Shack or from an online vendor.
+	</p>
+
+	<p class="txt">
+		Each example presents two programs: code for the I/O board and code for Processing. Diagrams and breadboard illustrations for the examples are presented side by side in this tutorial to reinforce the connections between the two representations. Learning to translate a circuit diagram into a physical circuit is one of the most difficult challenges when starting to work with electronics. 
+	</p>
+
+	<p class="txt">
+		The Wiring or Arduino software environment is necessary to program each board. These environments are built on top of the Processing environment, but they have special features for uploading code to the board and monitoring serial communication. Both can be downloaded at no cost from their respective websites and both are available for Linux, Macintosh, and Windows. 
+	</p>
+
+	<p class="txt">
+		The examples that follow assume the I/O board is connected to your computer and serial communication is working. Before working with these examples, get one of the simple Serial library examples included with Processing to work. For the most up-to-date information and troubleshooting tips, read the Serial reference on the Processing website: www.processing.org/reference/libraries. The Wiring and Arduino websites have additional information.
+	</p>
+
+	<p class="txt">
+		<em>Example 1A:  Switch (Wiring/Arduino)</em>
+	</p>
+
+	<img src="imgs/fg39-13.svg" style= "width: 650px; height: 240px" class="tut">
+
 <pre>
 // Code for sensing a switch status and writing the value to the serial port
 
-int switchPin = 4;  		       // Switch connected to pin 4 
+int switchPin = 4;  // Switch connected to pin 4 
  
 void setup() { 
-  pinMode(switchPin, INPUT);  	       // Set pin 0 as an input 
-  Serial.begin(9600);         	       // Start serial communication at 9600 bps 
+  pinMode(switchPin, INPUT);  // Set pin 0 as an input 
+  Serial.begin(9600);         // Start serial communication at 9600 bps 
 } 
  
 void loop() { 
@@ -446,10 +451,13 @@ void loop() {
   delay(100);                            // Wait 100 milliseconds 
 } 
 </pre>
-<br /> 
-<br />
-<em>Example 1B:  Switch (Processing)</em>
+
+	<p class="txt">
+		<em>Example 1B:  Switch (Processing)</em>
+	</p>
+
 <pre>
+
 // Read data from the serial port and change the color of a rectangle 
 // when a switch connected to the board is pressed and released
  
@@ -466,7 +474,7 @@ void setup() {
 } 
 
 void draw() { 
-  if (0 &lt; port.available()) {            // If data is available,
+  if (0 &lt; port.available()) {         // If data is available,
     val = port.read();                   // read it and store it in val
   } 
   background(255);                       // Set background to white
@@ -478,14 +486,17 @@ void draw() {
   rect(50, 50, 100, 100);
 } 
 </pre>
-<br />
+
+
 <hr />
-<br />
-<em>Example 2A:  Light sensor (Wiring/Arduino)</em>
-<br />
-<br /> 
-<img src="imgs/fg39-14.svg" style= "width: 650px; height: 240px">
-<br /> 
+
+
+<p class="txt">
+	<em>Example 2A:  Light sensor (Wiring/Arduino)</em>
+</p>
+
+<img src="imgs/fg39-14.svg" style= "width: 650px; height: 240px" class="tut">
+
 <pre>
 // Code to read an analog value and write it to the serial port
 
@@ -502,44 +513,53 @@ void loop() {
   delay(100);                    // Wait 100ms for next reading 
 }
 </pre>
-<br /> 
-<br /> 
-<em>Example 2B:  Light sensor (Processing)</em>
+
+<p class="txt"> 
+	<em>Example 2B:  Light sensor (Processing)</em>
+</p>
+
 <pre>
+
 // Read data from the serial port and assign it to a variable. Set the fill a 
 // rectangle on the screen using the value read from a light sensor connected 
 // to the Wiring or Arduino board 
  
 import processing.serial.*; 
  
-Serial port;  			       // Create object from Serial class
-int val;      			       // Data received from the serial port 
+Serial port;  // Create object from Serial class
+int val;      // Data received from the serial port 
  
 void setup() { 
   size(200, 200); 
   noStroke(); 
-  frameRate(10);                // Run 10 frames per second
+  frameRate(10);  // Run 10 frames per second
   // Open the port that the board is connected to and use the same speed (9600 bps) 
   port = new Serial(this, 9600); 
 } 
 
 void draw() { 
-  if (0 &lt; port.available()) {    // If data is available to read,
-    val = port.read();           // read it and store it in val
+  if (0 &lt; port.available()) {  // If data is available to read,
+    val = port.read();            // read it and store it in val
   } 
-  background(204);               // Clear background
-  fill(val);                     // Set fill color with the value read
-  rect(50, 50, 100, 100);        // Draw square
+  background(204);                // Clear background
+  fill(val);                      // Set fill color with the value read
+  rect(50, 50, 100, 100);         // Draw square
 } 
+
 </pre>
-<br />
+
+
 <hr />
-<br />
-<em>Example 3A: Turning a light on and off</em>
-<br /> 
-<br /> 
-<img src="imgs/fg39-15.svg" style= "width: 650px; height: 240px">
-<br /> 
+
+
+<p class="txt">
+	<em>Example 3A: Turning a light on and off</em>
+</p>
+
+
+<img src="imgs/fg39-15.svg" style= "width: 650px; height: 240px" class="tut">
+
+
 <pre>
 // Read data from the serial and turn ON or OFF a light depending on the value
  
@@ -563,10 +583,13 @@ void loop() {
   delay(100);                      // Wait 100 milliseconds for next reading 
 } 
 </pre>
-<br /> 
-<br /> 
-<em>Example 3B: Turning a light on and off (Processing)</em>
+
+<p class="txt">
+	<em>Example 3B: Turning a light on and off (Processing)</em>
+</p>
+
 <pre>
+
 // Check if the mouse is over a rectangle and write the status to the serial port
 
 import processing.serial.*; 
@@ -598,14 +621,19 @@ boolean mouseOverRect() {        // Test if mouse is over square
   return ((mouseX >= 50) &amp;&amp; (mouseX &lt;= 150) &amp;&amp; (mouseY >= 50) &amp;&amp; (mouseY &lt;= 150)); 
 } 
 </pre>
-<br />
+
+
 <hr />
-<br />
-<em>Example 4A: Controlling a servomotor(Wiring/Arduino)</em>
-<br /> 
-<br /> 
-<img src="imgs/fg39-16.svg" style= "width: 650px; height: 310px">
-<br /> 
+
+
+<p class="txt">
+	<em>Example 4A: Controlling a servomotor(Wiring/Arduino)</em>
+</p>
+
+
+<img src="imgs/fg39-16.svg" style= "width: 650px; height: 310px" class="tut">
+
+
 <pre>
 // Read data from the serial port and set the position of a servomotor 
 // according to the value
@@ -616,7 +644,7 @@ int val = 0;                     // Data received from the serial port
 
 void setup() {
   myservo.attach(servoPin);      // Attach the servo to the PWM pin
-  Serial.begin(9600);    	       // Start serial communication at 9600 bps
+  Serial.begin(9600);    	     // Start serial communication at 9600 bps
 }
 
 void loop() {
@@ -627,10 +655,14 @@ void loop() {
   delay(15);                     // Wait for the servo to get there
 }
 </pre>
-<br /> 
-<br /> 
-<em>Example 4B: Controlling a servomotor (Processing)</em>
+
+
+<p class="txt">
+	<em>Example 4B: Controlling a servomotor (Processing)</em>
+</p>
+
 <pre>
+
 // Write data to the serial port according to the mouseX value
 
 import processing.serial.*;
@@ -667,15 +699,20 @@ void draw() {
   port.write(angle);	                      // Write the angle to the serial port
 }
 </pre>
-<br />
+
+
+
 <hr />
-<br />
-<em>Example 5A: Turning a DC Motor on and off (Wiring/Arduino)</em>
-<br /> 
-<br /> 
-<img src="imgs/fg39-17.svg" style= "width: 650px; height: 385px">
-<br /> 
-<br /> 
+
+
+<p class="txt">
+	<em>Example 5A: Turning a DC Motor on and off (Wiring/Arduino)</em>
+</p>
+
+
+<img src="imgs/fg39-17.svg" style= "width: 650px; height: 385px" class="tut">
+
+
 <pre>
 // Read data from the serial and turn a DC motor on or off according to the value
 
@@ -699,10 +736,14 @@ void loop() {
   delay(100);                          // Wait 100 milliseconds for next reading
 }
 </pre>
-<br /> 
-<br /> 
-<em>Example 5B: Turning a DC motor on and off (Processing)</em>
+
+
+<p class="txt">
+	<em>Example 5B: Turning a DC motor on and off (Processing)</em>
+</p>
+
 <pre>
+
 // Write data to the serial port according to the status of a button controlled 
 // by the mouse 
 
@@ -763,7 +804,7 @@ boolean overRect(int x, int y, int width, int height) {
   }
 }
 </pre>
-</p>
+
 
 <!--
 <p>
