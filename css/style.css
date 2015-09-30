@@ -1155,9 +1155,9 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tutorials p.txt {
 	margin-top: 0em;
   	margin-bottom: 2em;
-	font-size           : 120%;
+	font-size           : 110%;
 	font-weight			: normal;
-	line-height			: 200%em; 
+	line-height			: 150%; 
 }
 
 /************************************************************** Books ***/
