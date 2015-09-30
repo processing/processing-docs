@@ -1097,13 +1097,13 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tutorials .colthree { width: 224px; float: left; margin-right: 20px; }
 #Tutorials h2 { margin: 0 0 20px 0; font-size: 1em; }
 
-#Tutorials p { 	
+/*#Tutorials p { 	
 				margin-top: 2.0em;
 				margin-bottom: 2.0em;
 				font-size           : 1.0em;
 				font-weight			: normal;
 				line-height			: 2.0em; 
-			  }
+			  }*/
 
 /*#Tutorials h3 { 
 	font-family			: Verdana, Geneva, Arial, Helvetica, sans-serif; 
@@ -1150,6 +1150,14 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	border-left: solid 1px #ccc;
 	padding: 10px;
 	background-color: #eee;
+}
+
+#Tutorials p.txt {
+	margin-top: 0em;
+  	margin-bottom: 2em;
+	font-size           : 120%;
+	font-weight			: normal;
+	line-height			: 200%em; 
 }
 
 /************************************************************** Books ***/
