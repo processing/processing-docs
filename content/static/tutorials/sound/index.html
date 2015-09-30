@@ -5,11 +5,11 @@
 	<td>
 
 	<p class="license">
-    	This tutorial is “Extension 1” from <em><a href="https://mitpress.mit.edu/books/processing-0">Processing: A Programming Handbook for Visual Designers and Artists, Second Edition</a></em>, published by MIT Press. &copy; 2014 MIT Press. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+    	This tutorial is “Extension 1” from <em><a href="../../handbook">Processing: A Programming Handbook for Visual Designers and Artists, Second Edition</a></em>, published by MIT Press. &copy; 2014 MIT Press. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
     </p>
 
 	<h1 style="line-height: 0.7em;">Sound</h1>
-	<h3 style="line-height: 0.7em;"><em>Text by R. Luke DuBois, code by Wilm Thoben</em></h3>
+	<h3 style="line-height: 0.7em;"><em>R. Luke DuBois and Wilm Thoben</em></h3>
 
 	<p class="txt">
 		The history of music is, in many ways, the history of technology. From developments in the writing and transcription of music (notation) to the design of spaces for the performance of music (acoustics) to the creation of musical instruments, composers and musicians have availed themselves of advances in human understanding to perfect and advance their professions. Unsurprisingly, therefore, we find that in the machine age these same people found themselves first in line to take advantage of the new techniques and possibilities offered by electricity, telecommunications, and, in the last century, digital computers to leverage all of these systems to create new and expressive forms of sonic art. Indeed, the development of phonography (the ability to reproduce sound mechanically) has, by itself, had such a transformative effect on aural culture that it seems inconceivable now to step back to an age where sound could emanate only from its original source.<sup>1</sup> The ability to create, manipulate, and reproduce lossless sound by digital means is having, at the time of this writing, an equally revolutionary effect on how we listen. As a result, the artist today working with sound has not only a huge array of tools to work with, but also a medium exceptionally well suited to technological experimentation.
@@ -142,12 +142,119 @@
 		Rather than using a small waveform in computer memory as an oscillator, we could use a longer piece of recorded audio stored as an AIFF or WAV file on our computer’s hard disk. This sample could then be played back at varying rates, affecting its pitch. For example, playing back a sound at twice the speed at which it was recorded will result in its rising in pitch by an octave. Similarly, playing a sound at half speed will cause it to drop in pitch by an octave.
 	</p>
 
-	<!--<img src="imgs/TK.svg" style= "width: 650px; height: 220px" class="tut">
+	<p class="txt">
+		Most samplers (i.e., musical instruments based on playing back audio recordings as sound sources) work by assuming that a recording has a base frequency that, though often linked to the real pitch of an instrument in the recording, is ultimately arbitrary and simply signifies the frequency at which the sampler will play back the recording at normal speed. For example, if we record a cellist playing a sound at 220 hertz (the musical note A below middle C in the Western scale), we would want that recording to play back normally when we ask our sampler to play us a sound at 220 hertz. If we ask our sampler for a sound at a different frequency, our sampler will divide the requested frequency by the base frequency and use that ratio to determine the playback speed of the sampler. For example, if we want to hear a 440 hertz sound from our cello sample, we play it back at double speed. If we want to hear a sound at middle C (261.62558 hertz), we play back our sample at 1.189207136 times the original speed.
+	</p>
 
 	<p class="txt">
-
+		Many samplers use recordings that have meta-data associated with them to help give the sampler algorithm information that it needs to play back the sound correctly. The base frequency is often one of these pieces of information, as are loop points within the recording that the sampler can safely use to make the sound repeat for longer than the length of the original recording. For example, an orchestral string sample loaded into a commercial sampler may last for only a few seconds, but a record producer or keyboard player may need the sound to last much longer; in this case, the recording is designed so that in the middle of the recording there is a region that can be safely repeated, ad infinitum if need be, to create a sense of a much longer recording.
 	</p>
-    -->
+
+
+
+	<h3>Effects processing</h3>
+
+	<p class="txt">
+		In addition to serving as a generator of sound, computers are used increasingly as machines for processing audio. The field of digital audio processing (DAP) is one of the most extensive areas for research in both the academic computer music communities and the commercial music industry. Faster computing speeds and the increased standardization of digital audio processing systems has allowed most techniques for sound processing to happen in real time, either using software algorithms or audio DSP coprocessors such as the Digidesign TDM and T|C Electronics Powercore cards.
+	</p>
+
+	<p class="txt">
+		As we saw with audio representation, audio effects processing is typically done using either time- or frequency-domain algorithms that process a stream of audio vectors. An echo effect, for example, can be easily implemented by creating a buffer of sample memory to delay a sound and play it back later, mixing it in with the original. Extremely short delays (of one or two samples) can be used to implement digital filters, which attenuate or boost different frequency ranges in the sound. Slightly longer delays create resonation points called comb filters that form an important building block in simulating the short echoes in room reverberation. A variable-delay comb filter creates the resonant swooshing effect called flanging. Longer delays are used to create a variety of echo, reverberation, and looping systems and can also be used to create pitch shifters (by varying the playback speed of a slightly delayed sound).
+	</p>
+
+
+
+	<h3>Audio analysis</h3>
+
+	<p class="txt">
+		A final important area of research, especially in interactive sound environments, is the derivation of information from audio analysis. Speech recognition is perhaps the most obvious application of this, and a variety of paradigms for recognizing speech exist today, largely divided between “trained” systems (which accept a wide vocabulary from a single user) and “untrained” systems (which attempt to understand a small set of words spoken by anyone). Many of the tools implemented in speech recognition systems can be abstracted to derive a wealth of information from virtually any sound source.
+	</p>
+
+	<p class="txt">
+		Interactive systems that “listen” to an audio input typically use a few simple techniques to abstract a complex sound source into a control source that can be mapped as a parameter in interaction design. For example, a plot of average amplitude of an audio signal over time can be used to modulate a variable continuously through a technique called envelope following. Similarly, a threshold of amplitude can be set to trigger an event when the sound reaches a certain level; this technique of attack detection (“attack” is a common term for the onset of a sound) can be used, for example, to create a visual action synchronized with percussive sounds coming into the computer.
+	</p>
+
+	<p class="txt">
+		The technique of pitch tracking, which uses a variety of analysis techniques to attempt to discern the fundamental frequency of an input sound that is reasonably harmonic, is often used in interactive computer music to track a musician in real time, comparing her/his notes against a “score” in the computer’s memory. This technology of score-following can be used to sequence interactive events in a computer program without having to rely on absolute timing information, allowing musicians to deviate from a strict tempo, improvise, or otherwise inject a more fluid musicianship into a performance.
+	</p>
+
+	<p class="txt">
+		A wide variety of timbral analysis tools also exist to transform an audio signal into data that can be mapped to computer-mediated interactive events. Simple algorithms such as zero-crossing counters, which tabulate the number of times a time-domain audio signal crosses from positive to negative polarity, can be used to derive the amount of noise in an audio signal. Fourier analysis can also be used to find, for example, the five loudest frequency components in a sound, allowing the sound to be examined for harmonicity or timbral brightness. Filter banks and envelope followers can be combined to split a sound into overlapping frequency ranges that can then be used to drive another process. This technique is used in a common piece of effects hardware called the vocoder, in which a harmonic signal (such as a synthesizer) has different frequency ranges boosted or attenuated by a noisy signal (usually speech). The effect is that of one sound “talking” through another sound; it is among a family of techniques called cross-synthesis.
+	</p>
+
+
+
+	<h3>Music as information</h3>
+
+	<p class="txt">
+		Digital representations of music, as opposed to sound, vary widely in scope and character. By far the most common system for representing real-time musical performance data is the Musical Instrument Digital Interface (MIDI) specification, released in 1983 by a consortium of synthesizer manufacturers to encourage interoperability between different brands of digital music equipment. Based on a unidirectional, low-speed serial specification, MIDI represents different categories of musical events (notes, continuous changes, tempo and synchronization information) as abstract numerical values, nearly always with a 7-bit (0–127) numeric resolution.
+	</p>
+
+	<p class="txt">
+		Over the years, the increasing complexity of synthesizers and computer music systems began to draw attention to the drawbacks of the simple MIDI specification. In particular, the lack of support for the fast transmission of digital audio and high-precision, syntactic synthesizer control specifications along the same cable led to a number of alternative systems. Open Sound Control, developed by a research team at the University of California, Berkeley, makes the interesting assumption that the recording studio (or computer music studio) of the future will use standard network interfaces (Ethernet or wireless TCP/IP communication) as the medium for communication. OSC allows a client-server model of communication between controllers (keyboards, touch screens) and digital audio devices (synthesizers, effects processors, or general-purpose computers), all through UDP packets transmitted on the network.
+	</p>
+
+
+
+	<h3>Tools for sound programming</h3>
+
+	<p class="txt">
+		A wide variety of tools are available to the digital artist working with sound. Sound recording, editing, mixing, and playback are typically accomplished through digital sound editors and so-called digital audio workstation (DAW) environments. Sound editors range from open source and free software (Ardour, Audacity) to professional-level studio or live programs (Ableton Live, Logic Pro, Digital Performer, Nuendo, Pro Tools). These programs typically allow you to import and record sounds, edit them with clipboard functionality (copy, paste, etc.), and perform a variety of simple digital sound processing (DSP) tasks nondestructively on the sound file itself, such as signal normalization, fading edits, and sample-rate conversion. Often these programs will act as hosts for software plug-ins originally designed for working inside of DAW software.
+	</p>
+
+	<p class="txt">
+		Digital audio workstation suites offer a full range of multitrack recording, playback, processing, and mixing tools, allowing for the production of large-scale, highly layered projects. DAW software is now considered standard in the music recording and production industry. The Avid/Digidesign Pro Tools software, considered the industry standard, allows for the recording and mixing of many tracks of audio in real time along a timeline roughly similar to that in a video NLE (nonlinear editing) environment. Automation curves can be drawn to specify different parameters (volume, pan) of these tracks, which contain clips of audio (“regions” or “soundbites”) that can be assembled and edited nondestructively. Other DAW software applications on the market are Apple’s Logic Audio, Mark of the Unicorn’s Digital Performer or Steinberg’s. All of these platforms also support third-party audio plug-ins written in a variety of formats, such as Apple’s AudioUnits (AU), Steinberg’s Virtual Studio Technology (VST), or Microsoft’s DirectX format. Most DAW programs also include extensive support for MIDI, allowing the package to control and sequence external synthesizers, samplers, and drum machines; as well as software plug-in “instruments” that run inside the DAW itself as sound generators. In 2001, Ableton introduced a revolutionary DAW software called LIVE. This software is not only directed to studio work with the metaphor of tape machines but is directed to live performance and revitalized the cue list idiom. Users can switch to the LIVE view which is a non-linear, modular based view of musical material organized in lists. 
+	</p>
+
+	<p class="txt">
+		Classic computer music “languages,” most of which are derived from Max Mathews’ MUSIC program, are still in wide use today. Some of these, such as CSound (developed by Barry Vercoe at MIT) have wide followings and are taught in computer music studios as standard tools for electroacoustic composition. The majority of these MUSIC-N programs use text files for input, though they are increasingly available with graphical editors for many tasks. Typically, two text files are used; the first contains a description of the sound to be generated using a specification language that defines one or more “instruments” made by combining simple unit generators. A second file contains the “score,” a list of instructions specifying which instrument in the first file plays what event, when, for how long, and with what variable parameters. Most of these programs go beyond simple task-based synthesis and audio processing to facilitate algorithmic composition, often by building on top of a standard programming language; F. Richard Moore’s CLM package, for example, is built on top of Common LISP. Some of these languages have been retrofitted in recent years to work in real time (as opposed to rendering a sound file to disk); Real-Time Cmix, for example, contains a C-style parser as well as support for connectivity from clients over network sockets and MIDI.
+	</p>
+
+	<p class="txt">
+		A number of computer music environments were begun with the premise of real-time interaction as a foundational principle of the system. The Max development environment for real-time media, first developed at IRCAM in the 1980s and currently developed by Cycling’74, is a visual programming system based on a control graph of “objects” that execute and pass messages to one another in real time. The MSP extensions to Max allow for the design of customizable synthesis and signal-processing systems, all of which run in real time. The open-source older sibling to Max called Pure Data was developed by the original author of Max, Miller Puckette. James McCartney’s SuperCollider program, which is open source, and Ge Wang and Perry Cook’s ChucK software are both textual languages designed to execute real-time interactive sound algorithms.
+	</p>
+
+	<p class="txt">
+		Finally, standard computer languages have a variety of APIs to choose from when working with sound. Phil Burke’s JSyn (Java Synthesis) provides a unit generator-based API for doing real-time sound synthesis and processing in Java. The CCRMA Synthesis ToolKit (STK) is a C++ library of routines aimed at low-level synthesizer design and centered on physical modeling synthesis technology. 
+	</p>
+
+	<p class="txt">
+		Sound, a library for Processing that has many features in common with the above-mentioned languages, is used in the examples for this text.
+	</p>
+
+
+
+	<h3>Example 1, 2:  Synthesizer</h3>
+
+	<p class="txt">
+		These examples show two basic methods for synthesizing sound. In the first, a cluster of sound is created through adding up five sine-waves. To calculate the correct amplitude for each sine wave an array with float numbers corresponding to each oscillator’s amplitude is filled. First, the maximum amplitude of 1.0 is divided by the number of oscillators to avoid exceeding the overall maximum amplitude. The amplitude is then decreased by the factor 1 / (i + 1) which results in higher frequencies being quieter than lower frequencies. The frequency for each oscillator is calculated in the draw() function. Based on a variable fundamental frequency between 150 and 1150 Hz the next harmonic overtones are calculated by multiplying the frequency with a series of integer numbers from 1-5. A detune factor with the range -0.5 to 0.5 is then applied to deviate from a purely harmonic spectrum into an inharmonic cluster.
+	</p>
+
+	<p class="txt">
+		In the second example, envelope functions are used to create event based sounds like notes on an instrument. Sound provides ASR (attack / sustain / release) envelopes. An envelope describes the course of the amplitude over time. With an ASR envelope one can define an attack phase, a sustain and a release phase in seconds. After creating the envelope an oscillator can be directly passed to the function. In this case an array of midi notes is translated into frequencies by the midiToFreq() function. To sequence the succession of notes we create a trigger with the current time and a duration between the notes. 
+	</p>
+
+
+
+	<h3>Example 3, 4:  Sample playback</h3>
+
+	<p class="txt">
+		Sound file playback with the Sound library is fairly simple. The Soundfile class just needs to be instantiated with a path to the file. Example three uses an Array of Soundfiles as a basis for a sampler. The files are named by integer numbers which makes it easy to read the files into an array with a loop. The Soundfile class has a method called rate() which lets us change the sample rate of the playback, in short: the speed and therefore pitch. The default value equals to one. If we assign 0.5 the playback speed will be half and the pitch will be an octave below the original. For 2.0 the pitch will be an octave above and double the speed. This is the simplest method for pitch shifting a sample and we can use it to generate a simple algorithmic composition. In this example a trigger is created which represents the current time in milliseconds plus a random integer between 200 and 1000 milliseconds. If that moment has passed up to 5 rectangles are drawn, each of them filled with a random color. Since this statement is in a loop it is simple to play back up to 5 sounds with one line of code. Before doing that, a random octave for each sound is assigned. The number of rectangles and sounds we play is determined by the array playSound. This array gets reassigned at every iteration of the sequencer and when an index equals 1 the corresponding file in the Soundfile array will be played and a rectangle will be drawn.
+	</p>
+
+
+
+	<h3>Example 5, 6:  Audio analysis</h3>
+
+	<p class="txt">
+		In addition to the classes used for generating and manipulating audio streams, Sound provides two classes for audio analysis: a Fast Fourier Transformation (FFT) and an amplitude follower. The FFT class analyzes an audio stream and fills an array with bins (samples in the frequency domain) of the positive side of the audio spectrum up to half the sample rate. This allows us to use different frequency bands of a particular sound to trigger events or visualize them in the draw() loop. The code draws a normalized spectrogram of a sound file. First, a few variables like scale factor, the number of bands to be retrieved and arrays for the frequency data are declared. The sound file player is then passed to the FFT object with the .input() method. In the visual representation the width of each frequency band is dynamically calculated depending on how many bands are being analyzed. For each frame the method .analyze() needs to be called to retrieve the current analysis frame of the FFT. After smoothing the amplitude values each bin is simply represented by a vertical line.
+	</p>
+
+	<p class="txt">
+		Example 6 is very similar to example 5 but instead of an array of values one single value is retrieved. This value represents the root mean square of the last frames of audio meaning the mean amplitude. Important factors for analyzing sound and using the data for visualizations is the smoothing, the number of bands and the scaling factors.
+	</p>
+
+
 
 	<h3>Notes</h3>
 
