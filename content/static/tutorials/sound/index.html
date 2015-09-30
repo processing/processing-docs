@@ -317,11 +317,218 @@ SoundFile[]&nbsp;files;
 
 	<hr />
 
+<pre>
+<span style="color: #666666;">/**</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;4</span>
+<span style="color: #666666;">&nbsp;*&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Five&nbsp;soundfiles&nbsp;are&nbsp;mapped&nbsp;to&nbsp;the&nbsp;numbers&nbsp;on&nbsp;the&nbsp;keyboard.&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Numbers&nbsp;1-5&nbsp;are&nbsp;played&nbsp;back&nbsp;an&nbsp;octave&nbsp;lower&nbsp;and&nbsp;numbers</span>
+<span style="color: #666666;">&nbsp;*&nbsp;6-0&nbsp;an&nbsp;octave&nbsp;higher.</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
+<span style="color: #33997E;">import</span> processing.sound.*;
+
+AudioDevice&nbsp;device;
+SoundFile[]&nbsp;file;
+
+<span style="color: #E2661A;">int</span> red, green, blue;
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+
+&nbsp;&nbsp;<span style="color: #666666;">// Create an AudioDevice with low buffer size </span>
+&nbsp;&nbsp;<span style="color: #666666;">// and create an array containing 5 empty soundfiles</span>
+&nbsp;&nbsp;device&nbsp;=&nbsp;<span style="color: #33997E;">new</span> AudioDevice(<span style="color: #33997E;">this</span>, 48000, 32);
+&nbsp;&nbsp;file&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile[5];
+
+&nbsp;&nbsp;<span style="color: #666666;">// Load 5 soundfiles from a folder in a for loop. </span>
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; file.<span style="color: #33997E;">length</span>; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;file[i]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, (i+1) + <span style="color: #7D4793;">&quot;.aif&quot;</span>);
+&nbsp;&nbsp;}
+}
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(red, green, blue);
+}
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>keyPressed</b></span>() {
+&nbsp;&nbsp;<span style="color: #666666;">// Set a random background color each time you hit then number keys</span>
+&nbsp;&nbsp;red=<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
+&nbsp;&nbsp;green=<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
+&nbsp;&nbsp;blue=<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
+
+&nbsp;&nbsp;<span style="color: #666666;">// Assign a sound to each number on your keyboard. 1-5 play at</span>
+&nbsp;&nbsp;<span style="color: #666666;">// an octave below the original pitch of the file, 6-0 play at</span>
+&nbsp;&nbsp;<span style="color: #666666;">// an octave above.</span>
+&nbsp;&nbsp;<span style="color: #669900;">switch</span>(<span style="color: #D94A7A;">key</span>) {
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;1&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[0].play(0.5,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;2&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[1].play(0.5,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;3&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[2].play(0.5,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;4&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[3].play(0.5,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;5&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[4].play(0.5,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;6&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[0].play(2.0,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;7&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[1].play(2.0,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;8&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[2].play(2.0,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;9&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[3].play(2.0,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;0&apos;</span>:
+&nbsp;&nbsp;&nbsp;&nbsp;file[4].play(2.0,&nbsp;1.0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
+&nbsp;&nbsp;}
+}
+
+</pre>
 
 	<hr />
 
+<pre>
+<span style="color: #666666;">/**</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;5</span>
+<span style="color: #666666;">&nbsp;*&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;sketch&nbsp;shows&nbsp;how&nbsp;to&nbsp;use&nbsp;the&nbsp;FFT&nbsp;class&nbsp;to&nbsp;analyze&nbsp;a&nbsp;stream&nbsp;&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;of&nbsp;sound.&nbsp;Change&nbsp;the&nbsp;variable&nbsp;bands&nbsp;to&nbsp;get&nbsp;more&nbsp;or&nbsp;less&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;spectral&nbsp;bands&nbsp;to&nbsp;work&nbsp;with.&nbsp;The&nbsp;smooth_factor&nbsp;variable&nbsp;determines&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;how&nbsp;much&nbsp;the&nbsp;signal&nbsp;will&nbsp;be&nbsp;smoothed&nbsp;on&nbsp;a&nbsp;scale&nbsp;form&nbsp;0-1.</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
+<span style="color: #33997E;">import</span> processing.sound.*;
+
+<span style="color: #666666;">//&nbsp;Declare&nbsp;the&nbsp;processing&nbsp;sound&nbsp;variables&nbsp;</span>
+SoundFile&nbsp;sample;
+FFT&nbsp;fft;
+AudioDevice&nbsp;device;
+
+<span style="color: #666666;">//&nbsp;Declare&nbsp;a&nbsp;scaling&nbsp;factor</span>
+<span style="color: #E2661A;">int</span> scale = 5;
+
+<span style="color: #666666;">//&nbsp;Define&nbsp;how&nbsp;many&nbsp;FFT&nbsp;bands&nbsp;we&nbsp;want</span>
+<span style="color: #E2661A;">int</span> bands = 128;
+
+<span style="color: #666666;">//&nbsp;declare&nbsp;a&nbsp;drawing&nbsp;variable&nbsp;for&nbsp;calculating&nbsp;rect&nbsp;width</span>
+<span style="color: #E2661A;">float</span> r_width;
+
+<span style="color: #666666;">//&nbsp;Create&nbsp;a&nbsp;smoothing&nbsp;vector</span>
+<span style="color: #E2661A;">float</span>[] sum = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">float</span>[bands];
+
+<span style="color: #666666;">//&nbsp;Create&nbsp;a&nbsp;smoothing&nbsp;factor</span>
+<span style="color: #E2661A;">float</span> smooth_factor = 0.2;
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+
+&nbsp;&nbsp;<span style="color: #666666;">// If the Buffersize is larger than the FFT Size, the FFT will fail</span>
+&nbsp;&nbsp;<span style="color: #666666;">// so we set Buffersize equal to bands</span>
+&nbsp;&nbsp;device&nbsp;=&nbsp;<span style="color: #33997E;">new</span> AudioDevice(<span style="color: #33997E;">this</span>, 44000, bands);
+
+&nbsp;&nbsp;<span style="color: #666666;">// Calculate the width of the rects depending on how many bands we have</span>
+&nbsp;&nbsp;r_width&nbsp;=&nbsp;<span style="color: #D94A7A;">width</span>/<span style="color: #006699;">float</span>(bands);
+
+&nbsp;&nbsp;<span style="color: #666666;">// Load and play a soundfile and loop it. This has to be called </span>
+&nbsp;&nbsp;<span style="color: #666666;">// before the FFT is created.</span>
+&nbsp;&nbsp;sample&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, <span style="color: #7D4793;">&quot;beat.aiff&quot;</span>);
+&nbsp;&nbsp;sample.<span style="color: #006699;">loop</span>();
+
+&nbsp;&nbsp;<span style="color: #666666;">// Create and patch the FFT analyzer</span>
+&nbsp;&nbsp;fft&nbsp;=&nbsp;<span style="color: #33997E;">new</span> FFT(<span style="color: #33997E;">this</span>, bands);
+&nbsp;&nbsp;fft.input(sample);
+}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #666666;">// Set background color, noStroke and fill color</span>
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0, 0, 255);
+&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
+
+&nbsp;&nbsp;fft.analyze();
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; bands; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Smooth the FFT data by smoothing factor</span>
+&nbsp;&nbsp;&nbsp;&nbsp;sum[i]&nbsp;+=&nbsp;(fft.spectrum[i]&nbsp;-&nbsp;sum[i])&nbsp;*&nbsp;smooth_factor;
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw the rects with a scale factor</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>( i*r_width, <span style="color: #D94A7A;">height</span>, r_width, -sum[i]*<span style="color: #D94A7A;">height</span>*scale );
+&nbsp;&nbsp;}
+}
+
+</pre>
+
+	<hr />
+
+<pre>
+<span style="color: #666666;">/**</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;6</span>
+<span style="color: #666666;">&nbsp;*&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;sketch&nbsp;shows&nbsp;how&nbsp;to&nbsp;use&nbsp;the&nbsp;Amplitude&nbsp;class&nbsp;to&nbsp;analyze&nbsp;a</span>
+<span style="color: #666666;">&nbsp;*&nbsp;stream&nbsp;of&nbsp;sound.&nbsp;In&nbsp;this&nbsp;case&nbsp;a&nbsp;sample&nbsp;is&nbsp;analyzed.&nbsp;The&nbsp;smoothFactor</span>
+<span style="color: #666666;">&nbsp;*&nbsp;variable&nbsp;determines&nbsp;how&nbsp;much&nbsp;the&nbsp;signal&nbsp;will&nbsp;be&nbsp;smoothed&nbsp;on&nbsp;a&nbsp;scale</span>
+<span style="color: #666666;">&nbsp;*&nbsp;from&nbsp;0&nbsp;-&nbsp;1.</span>
+<span style="color: #666666;">&nbsp;*/</span>
+
+<span style="color: #33997E;">import</span> processing.sound.*;
+
+<span style="color: #666666;">//&nbsp;Declare&nbsp;the&nbsp;processing&nbsp;sound&nbsp;variables&nbsp;</span>
+SoundFile&nbsp;sample;
+Amplitude&nbsp;rms;
+
+<span style="color: #666666;">//&nbsp;Declare&nbsp;a&nbsp;scaling&nbsp;factor</span>
+<span style="color: #E2661A;">float</span> scale = 5.0;
+
+<span style="color: #666666;">//&nbsp;Declare&nbsp;a&nbsp;smooth&nbsp;factor</span>
+<span style="color: #E2661A;">float</span> smoothFactor = 0.25;
+
+<span style="color: #666666;">//&nbsp;Used&nbsp;for&nbsp;smoothing</span>
+<span style="color: #E2661A;">float</span> sum;
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
+
+&nbsp;&nbsp;<span style="color: #666666;">//Load and play a soundfile and loop it</span>
+&nbsp;&nbsp;sample&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, <span style="color: #7D4793;">&quot;beat.aiff&quot;</span>);
+&nbsp;&nbsp;sample.<span style="color: #006699;">loop</span>();
+
+&nbsp;&nbsp;<span style="color: #666666;">// Create and patch the rms tracker</span>
+&nbsp;&nbsp;rms&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Amplitude(<span style="color: #33997E;">this</span>);
+&nbsp;&nbsp;rms.input(sample);
+}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #666666;">// Set background color, noStroke and fill color</span>
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0, 0, 255);
+&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255, 0, 150);
+
+&nbsp;&nbsp;<span style="color: #666666;">// Smooth the rms data by smoothing factor</span>
+&nbsp;&nbsp;sum&nbsp;+=&nbsp;(rms.analyze()&nbsp;-&nbsp;sum)&nbsp;*&nbsp;smoothFactor;&nbsp;&nbsp;
+
+&nbsp;&nbsp;<span style="color: #666666;">// rms.analyze() return a value between 0 and 1. It&apos;s</span>
+&nbsp;&nbsp;<span style="color: #666666;">// scaled to height/2 and then multiplied by a scale factor</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> rmsScaled = sum * (<span style="color: #D94A7A;">height</span>/2) * scale;
+
+&nbsp;&nbsp;<span style="color: #666666;">// Draw an ellipse at a size based on the audio analysis</span>
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(<span style="color: #D94A7A;">width</span>/2, <span style="color: #D94A7A;">height</span>/2, rmsScaled, rmsScaled);
+}
+
+</pre>
+
+	<hr />
 
 	</td></tr>
  </table>
