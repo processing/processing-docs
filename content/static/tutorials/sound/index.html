@@ -1,5 +1,3 @@
-
-
 <table width="650">
 	<tr>
 	<td>
@@ -8,8 +6,10 @@
     	This tutorial is &#8220;Extension 3&#8221; from <em><a href="../../handbook">Processing: A Programming Handbook for Visual Designers and Artists, Second Edition</a></em>, published by MIT Press. &copy; 2014 MIT Press. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
     </p>
 
+
 	<h1 style="line-height: 0.7em;">Sound</h1>
 	<h3 style="line-height: 0.7em;"><em>R. Luke DuBois and Wilm Thoben</em></h3>
+
 
 	<p class="txt">
 		The history of music is, in many ways, the history of technology. From developments in the writing and transcription of music (notation) to the design of spaces for the performance of music (acoustics) to the creation of musical instruments, composers and musicians have availed themselves of advances in human understanding to perfect and advance their professions. Unsurprisingly, therefore, we find that in the machine age these same people found themselves first in line to take advantage of the new techniques and possibilities offered by electricity, telecommunications, and, in the last century, digital computers to leverage all of these systems to create new and expressive forms of sonic art. Indeed, the development of phonography (the ability to reproduce sound mechanically) has, by itself, had such a transformative effect on aural culture that it seems inconceivable now to step back to an age where sound could emanate only from its original source.<sup>1</sup> The ability to create, manipulate, and reproduce lossless sound by digital means is having, at the time of this writing, an equally revolutionary effect on how we listen. As a result, the artist today working with sound has not only a huge array of tools to work with, but also a medium exceptionally well suited to technological experimentation.
@@ -56,7 +56,7 @@
 	</p>
 
 	<!-- [Diagram 56-1] -->
-	<img src="imgs/56-1.svg" style= "width: 650px; height: 170px" class="tut">
+	<img src="imgs/56-1.svg" style="width: 650px; height: 170px" class="tut">
 
 	<p class="txt">
 		This time-domain representation of sound provides an accurate portrayal of how sound works in the real world, and, as we shall see shortly, it is the most common representation of sound used in work with digitized audio. When we attempt a technical description of a sound wave, we can easily derive a few metrics to help us better understand what&#8217;s going on. In the first instance, by looking at the amount of displacement caused by the sound pressure wave, we can measure the amplitude of the sound. This can be measured on a scientific scale in <em>pascals</em> of pressure, but it is more typically quantified along a logarithmic scale of <em>decibels</em>. If the sound pressure wave repeats in a regular or <em>periodic</em> pattern, we can look at the wavelength of a single iteration of that pattern and from there derive the frequency of that wave. For example, if a sound traveling in a medium at 343 meters per second (the speed of sound in air at room temperature) contains a wave that repeats every half-meter, that sound has a frequency of 686 hertz, or cycles per second. The figure below shows a plot of a cello note sounding at 440 Hz; as a result, the periodic pattern of the waveform (demarcated with vertical lines) repeats every 2.27 ms:
