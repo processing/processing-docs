@@ -74,7 +74,7 @@
 		A resistor limits (provides resistance to) the flow of electricity. Resistors are measured in units called ohms. The value 10 ohms is less resistance than 10,000 (10K) ohms. The value of each resistor is marked on the component with a series of colored bands. A variable resistor that changes its resistance when a slider, knob, or dial attached to it is turned is called a potentiometer or trimmer. Variable resistors are designed to change in response to different environmental phenomena. For example, one that changes in response to light is called a photoresistor or photocell, and one that changes in response to heat is called a thermistor. Resistors can be used to limit current, reduce voltage, and perform many other essential tasks. 
 	</p>
 
-	<img src="imgs/fg39-2.jpg">
+	<img src="imgs/fg39-2.jpg" class="tut">
 
 	<p class="txt">
 		<em>Capacitor</em>
@@ -82,7 +82,7 @@
 		A capacitor stores electrons i.e. electrical charge; it gains charge when current flows in, and it releases charge (discharges) when the current flows out. This can smooth out the dips and spikes in a current signal. Capacitors are combined with resistors to create filters, integrators, differentiators, and oscillators. A simple capacitor is two parallel sheets of conductive materials, separated by an insulator. Capacitors are measured in units called farads. A farad is a large measurement, so most capacitors you will use will be measured in microfarads (µF), picofarads (pF), or nanofarads (nF). 
 	</p>
 
-	<img src="imgs/fg39-4.jpg">
+	<img src="imgs/fg39-4.jpg" class="tut">
 	
 
 	<p class="txt">
@@ -91,7 +91,7 @@
 		Current flows only in one direction through a diode. One side is called the cathode (marked on the device with a line) and the other is the anode. Current flows when the anode is more positive than the cathode. Diodes are commonly used to block or invert the negative part of an AC signal. A light-emitting diode (LED) is used to produce light. The longer wire coming out of the LED is the anode and the other is the cathode. LEDs come in many sizes, forms, colors, and brightness levels. 
 	</p>
 
-	<img src="imgs/fg39-5.jpg">
+	<img src="imgs/fg39-5.jpg" class="tut">
 	
 	<p class="txt">
 		<em>Transistor</em>
@@ -99,7 +99,7 @@
 		A transistor can be used as an electrical switch or an amplifier. A bipolar transistor has three leads (wires) called the base, collector, and emitter. Depending on the type of transistor, applying current to the base either allows current to flow or stops it from flowing through the device from the collector to the emitter. Transistors make it possible for the low current from a microcontroller to control the much higher currents necessary for motors and other power-hungry devices, and thus to turn them on and off.
 	</p>
 
-	<img src="imgs/fg39-6.jpg">
+	<img src="imgs/fg39-6.jpg" class="tut">
 
 
 
@@ -110,7 +110,7 @@
 		An electrical circuit is a configuration of components, typically designed to produce a desired behavior such as decreasing the current, filtering a signal, or turning on an LED. The following simple circuit can be used to turn a light on and off:
 	</p>
 
-	<img src="imgs/fg39-7.jpg">
+	<img src="imgs/fg39-7.jpg" class="tut">
 
 	<p class="txt">
 		This simple electric circuit is a closed loop with an energy source (battery), a load (lightbulb) that offers a resistance to the flow of electrons and transforms the electric energy into another form of energy (light), wires that carry the electricity, and a switch to connect and disconnect the wires. The electrons move from one end of the battery, through the load, and to the other end.
@@ -120,13 +120,13 @@
 		Circuits are usually represented with diagrams. A circuit diagram uses standardized symbols to represent specific electrical components. It is easier to read the connections on a diagram than on photographs of the components. A diagram of the simple circuit above could look like this:
 	</p>
 
-	<img src="imgs/fg39-8.svg" style= "width: 650px; height: 150px">
+	<img src="imgs/fg39-8.svg" style= "width: 650px; height: 150px" class="tut">
 
 	<p class="txt">
 		Circuits are often prototyped on a "breadboard,” a rectangular piece of plastic with holes for inserting wires. A breadboard makes it easy to quickly make variations on a circuit without soldering (fusing components together with a soft metal). Conductive strips underneath the surface connect the long horizontal rows at the top and bottom of the board and the short vertical rows within the middle: 
 	</p>
 
-	<img src="imgs/fg39-9.svg" style= "width: 650px; height: 170px">
+	<img src="imgs/fg39-9.svg" style= "width: 650px; height: 170px" class="tut">
 
 	<p class="txt">
 		Circuits are tested with a multimeter, an instrument to measure volts, current, resistance, and other electrical properties. A multimeter allows the electrical properties of the circuit to be read as numbers and is necessary for debugging. Analog multimeters have a small needle that moves from left to right, and digital multimeters have a screen that displays numbers. Most multimeters have two metal prongs to probe the circuit and a central dial to select between different modes. 
@@ -216,7 +216,7 @@
 	</p>
 
 	
-	<img src="imgs/fg39-11.svg" style= "width: 650px; height: 110px" />
+	<img src="imgs/fg39-11.svg" style= "width: 650px; height: 110px"  class="tut">
 
 	<p class="txt">
 		Most basic analog sensors utilize resistance. Changes in a physical phenomenon modify the resistance of the sensor, therefore varying the voltage output through the sensor. An analog-to-digital converter can continuously measure this changing voltage and convert it to a number that can be used by software. Sensors that produce digital signals send data as binary values to an attached device or computer. These sensors use a voltage (typically between 3.5 and 5 volts) as ON (binary digit 1 or TRUE) and no voltage as a OFF (binary digit 0 or FALSE). More complex sensors include their own microcontrollers to convert the data to digital signals and to use established communication protocols for transmitting these signals to another computer.
@@ -306,7 +306,7 @@
 	</p>
 
 
-	<img src="imgs/fg39-12.svg" style= "width: 650px; height: 120px">
+	<img src="imgs/fg39-12.svg" style= "width: 650px; height: 120px" class="tut">
 
 	<p class="txt">
 		The PWM technique can be used to dim a light, run a motor at a slow speed, and control the frequency of a tone through a speaker. In some applications, any necessary smoothing is obtained for free e.g. the inertia in a motor can average out the PWM duty cycle and result in smooth motion.
@@ -386,7 +386,7 @@
 	</p>
 
 
-
+	<h3>&nbsp;</h3>
 
 	<h3>Code</h3>
 
@@ -457,7 +457,6 @@ void loop() {
 	</p>
 
 <pre>
-
 // Read data from the serial port and change the color of a rectangle 
 // when a switch connected to the board is pressed and released
  
@@ -519,7 +518,6 @@ void loop() {
 </p>
 
 <pre>
-
 // Read data from the serial port and assign it to a variable. Set the fill a 
 // rectangle on the screen using the value read from a light sensor connected 
 // to the Wiring or Arduino board 
@@ -589,7 +587,6 @@ void loop() {
 </p>
 
 <pre>
-
 // Check if the mouse is over a rectangle and write the status to the serial port
 
 import processing.serial.*; 
@@ -662,7 +659,6 @@ void loop() {
 </p>
 
 <pre>
-
 // Write data to the serial port according to the mouseX value
 
 import processing.serial.*;
@@ -743,7 +739,6 @@ void loop() {
 </p>
 
 <pre>
-
 // Write data to the serial port according to the status of a button controlled 
 // by the mouse 
 
