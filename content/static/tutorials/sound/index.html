@@ -5,7 +5,7 @@
 	<td>
 
 	<p class="license">
-    	This tutorial is Extension 1 from the second edition of <em><a href="https://mitpress.mit.edu/books/processing-0">Processing: A Programming Handbook for Visual Designers and Artists</a></em>, published by MIT Press. Copyright 2014 MIT Press. This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+    	This tutorial is “Extension 1” from <em><a href="https://mitpress.mit.edu/books/processing-0">Processing: A Programming Handbook for Visual Designers and Artists, Second Edition</a></em>, published by MIT Press. &copy; 2014 MIT Press. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
     </p>
 
 	<h1 style="line-height: 0.7em;">Sound</h1>
@@ -55,14 +55,99 @@
 		Simply put, we define sound as a vibration traveling through a medium (typically air) that we can perceive through our sense of hearing. Sound propagates as a longitudinal wave that alternately compresses and decompresses the molecules in the matter (e.g., air) through which it travels. As a result, we typically represent sound as a plot of pressure over time:
 	</p>
 
+	<!-- [Diagram 56-1] -->
 	<img src="imgs/TK.svg" style= "width: 650px; height: 220px" class="tut">
 
 	<p class="txt">
 		This time-domain representation of sound provides an accurate portrayal of how sound works in the real world, and, as we shall see shortly, it is the most common representation of sound used in work with digitized audio. When we attempt a technical description of a sound wave, we can easily derive a few metrics to help us better understand what’s going on. In the first instance, by looking at the amount of displacement caused by the sound pressure wave, we can measure the amplitude of the sound. This can be measured on a scientific scale in pascals of pressure, but it is more typically quantified along a logarithmic scale of decibels. If the sound pressure wave repeats in a regular or periodic pattern, we can look at the wavelength of a single iteration of that pattern and from there derive the frequency of that wave. For example, if a sound traveling in a medium at 343 meters per second (the speed of sound in air at room temperature) contains a wave that repeats every half-meter, that sound has a frequency of 686 hertz, or cycles per second. The figure below shows a plot of a cello note sounding at 440 Hz; as a result, the periodic pattern of the waveform (demarcated with vertical lines) repeats every 2.27 ms:
 	</p>
 
+	<!-- [Diagram 56-2] -->
+	<img src="imgs/TK.svg" style= "width: 650px; height: 220px" class="tut">
+
+	<p class="txt">
+		Typically, sounds occurring in the natural world contain many discrete frequency components. In noisy sounds, these frequencies may be completely unrelated to one another or grouped by a typology of boundaries (e.g., a snare drum may produce frequencies randomly spread between 200 and 800 hertz). In harmonic sounds, however, these frequencies are often spaced in integer ratios, such that a cello playing a note at 200 hertz will produce frequencies not only at the fundamental of 200, but at multiples of 200 up the harmonic series, i.e., at 400, 800, 1200, 1600, 2000, and so on. A male singer producing the same note will have the same frequency components in his voice, though in different proportions to the cello. The presence, absence, and relative strength of these harmonics (also called partials or overtones) provide what we perceive as the timbre of a sound.
+	</p>
+
+	<p class="txt">
+		When a sound reaches our ears, an important sensory translation happens that is important to understand when working with audio. Just as light of different wavelengths and brightness excites different retinal receptors in your eyes to produce a color image, the cochlea of your inner ear contains an array of hair cells on the basilar membrane that are tuned to respond to different frequencies of sound. The inner ear contains hair cells that respond to frequencies spaced roughly between 20 and 20,000 hertz, though many of these hairs will gradually become desensitized with age or exposure to loud noise. These cells in turn send electrical signals via your auditory nerve into the auditory cortex of your brain, where they are parsed to create a frequency-domain image of the sound arriving in your ears:
+	</p>
+
+	<!-- [Diagram 56-3] -->
+	<img src="imgs/TK.svg" style= "width: 650px; height: 220px" class="tut">
+
+	<p class="txt">
+		This representation of sound, as a discrete “frame” of frequencies and amplitudes independent of time, is more akin to the way in which we perceive our sonic environment than the raw pressure wave of the time domain. Jean-Baptiste-Joseph Fourier, a nineteenth-century French mathematician, developed the equations that allow us to translate a sound pressure wave (no matter how complex) into its constituent frequencies and amplitudes. This Fourier transform is an important tool in working with sound in the computer.
+	</p>
+
+	<p class="txt">
+		This representation of sound, as a discrete “frame” of frequencies and amplitudes independent of time, is more akin to the way in which we perceive our sonic environment than the raw pressure wave of the time domain. Jean-Baptiste-Joseph Fourier, a nineteenth-century French mathematician, developed the equations that allow us to translate a sound pressure wave (no matter how complex) into its constituent frequencies and amplitudes. This Fourier transform is an important tool in working with sound in the computer.
+	</p>
+
+	<p class="txt">
+		Our auditory system takes these streams of frequency and amplitude information from our two ears and uses them to construct an auditory “scene,” akin to the visual scene derived from the light reaching our retinas.6 Our brain analyzes the acoustic information based on a number of parameters such as onset time, stereo correlation, harmonic ratio, and complexity to parse out a number of acoustic sources that are then placed in a three-dimensional image representing what we hear. Many of the parameters that psychoacousticians believe we use to comprehend our sonic environment are similar to the grouping principles defined in Gestalt psychology.
+	</p>
+
+	<p class="txt">
+		If we loosely define music as the organization and performance of sound, a new set of metrics reveals itself. While a comprehensive overview of music theory, Western or otherwise, is well beyond the scope of this text, it’s worth noting that there is a vocabulary for the description of music, akin to how we describe sound. Our system for perceiving loudness and pitch (useful “musical” equivalents to amplitude and frequency) work along a logarithmic scale, such that a tone at 100 hertz and a tone at 200 hertz are considered to be the same distance apart in terms of pitch as tones at 2000 and 4000 hertz. The distance between two sounds of doubling frequency is called the octave, and is a foundational principle upon which most culturally evolved theories of music rely. Most musical cultures then subdivide the octave into a set of pitches (e.g., 12 in the Western chromatic scale, 7 in the Indonesian pelog scale) that are then used in various collections (modes or keys). These pitches typically reflect some system of temperament or tuning, so that multiple musicians can play together; for example, the note A4 (the A above middle C) on the Western scale is usually calibrated to sound at 440 hertz in contemporary music.
+	</p>
 
 
+	<h3>Digital representation of sound and music</h3>
+
+	<p class="txt">
+		Sound typically enters the computer from the outside world (and vice versa) according to the time-domain representation explained earlier. Before it is digitized, the acoustic pressure wave of sound is first converted into an electromagnetic wave of sound that is a direct analog of the acoustic wave. This electrical signal is then fed to a piece of computer hardware called an analog-to-digital converter (ADC or A/D), which then digitizes the sound by sampling the amplitude of the pressure wave at a regular interval and quantifying the pressure readings numerically, passing them upstream in small packets, or vectors, to the main processor, where they can be stored or processed. Similarly, vectors of digital samples can be sent downstream from the computer to a hardware device called a digital-to-analog converter (DAC or D/A), which takes the numeric values and uses them to construct a smoothed-out electromagnetic pressure wave that can then be fed to a speaker or other device for playback:
+	</p>
+
+	<!-- [Diagram 56-4] -->
+	<img src="imgs/TK.svg" style= "width: 650px; height: 220px" class="tut">
+
+	<p class="txt">
+		Most contemporary digital audio systems (soundcards, etc.) contain both A/D and D/A converters (often more than one of each, for stereo or multichannel sound recording and playback) and can use both simultaneously (so-called full duplex audio). The specific system of encoding and decoding audio using this methodology is called PCM (or pulse-code modulation); developed in 1937 by Alec Reeves, it is by far the most prevalent scheme in use today. 
+	</p>
+
+	<p class="txt">
+		The speed at which audio signals are digitized is referred to as the sampling rate; it is the resolution that determines the highest frequency of sound that can be measured (equal to half the sampling rate, according to the Nyquist theorem). The numeric resolution of each sample in terms of computer storage space is called the bit depth; this value determines how many discrete levels of amplitude can be described by the digitized signal. The digital audio on a compact disc, for example, is digitized at 44,100 hertz with a 16-bit resolution, allowing for frequencies up to 22,050 hertz (i.e., just above the range of human hearing) with 65,536 (216) different levels of amplitude possible for each sample. Professional audio systems will go higher (96 or 192 kHz at 24- or 32-bit resolution) while industry telephony systems will go lower (e.g., 8,192 Hz at 8-bit). Digitized sound representing multiple acoustic sources (e.g., instruments) or destinations (e.g., speakers) is referred to as multi-channel audio. Monaural sound consists of, naturally, only one stream; stereo (two-stream) audio is standard on all contemporary computer audio hardware, and various types of surround-sound (five or seven streams of audio with one or two special channels for low frequencies) are becoming more and more common.
+	</p>
+
+	<p class="txt">
+		Once in the computer, sound is stored using a variety of formats, both as sequences of PCM samples and in other representations. The two most common PCM sound file formats are the Audio Interchange File Format (AIFF) developed by Apple Computer and Electronic Arts and the WAV file format developed by Microsoft and IBM. Both formats are effectively equivalent in terms of quality and interoperability, and both are inherently lossless formats, containing the uncompressed PCM data from the digitized source. In recent years, compressed audio file formats have received a great deal of attention, most notably the MP3 (MPEG-1 Audio Layer 3), the Vorbis codec, and the Advanced Audio Coding (AAC) codec. Many of these “lossy” audio formats translate the sound into the frequency domain (using the Fourier transform or a related technique called Linear Predictive Coding) to package the sound in a way that allows compression choices to be made based on the human hearing model, by discarding perceptually irrelevant frequencies in the sound. Unlike the PCM formats outlined above, MP3 files are much harder to encode, manipulate, and process in real time, due to the extra step required to decompress and compress the audio into and out of the time domain.
+	</p>
+
+
+
+	<h3>Synthesis</h3>
+
+	<p class="txt">
+		Digital audio systems typically perform a variety of tasks by running processes in signal processing networks. Each node in the network typically performs a simple task that either generates or processes an audio signal. Most software for generating and manipulating sound on the computer follows this paradigm, originally outlined by Max Mathews as the unit generator model of computer music, where a map or function graph of a signal processing chain is executed for every sample (or vector of samples) passing through the system. A simple algorithm for synthesizing sound with a computer could be implemented using this paradigm with only three unit generators, described as follows.
+	</p>
+
+	<p class="txt">
+		First, let’s assume we have a unit generator that generates a repeating sound waveform and has a controllable parameter for the frequency at which it repeats. We refer to this piece of code as an oscillator. Most typical digital oscillators work by playing back small tables or arrays of PCM audio data that outlines a specific waveform. These wavetables can contain incredibly simple patterns (e.g., a sine or square wave) or complex patterns from the outside world (e.g., a professionally recorded segment of a piano playing a single note). 
+	</p>
+
+	<p class="txt">
+		If we play our oscillator directly (i.e., set its frequency to an audible value and route it directly to the D/A) we will hear a constant tone as the wavetable repeats over and over again. In order to attain a more nuanced and articulate sound, we may want to vary the volume of the oscillator over time so that it remains silent until we want a sound to occur. The oscillator will then increase in volume so that we can hear it. When we want the sound to silence again, we fade the oscillator down. Rather than rewriting the oscillator itself to accommodate instructions for volume control, we could design a second unit generator that takes a list of time and amplitude instructions and uses those to generate a so-called envelope, or ramp that changes over time. Our envelope generator generates an audio signal in the range of 0 to 1, though the sound from it is never experienced directly. Our third unit generator simply multiplies, sample per sample, the output of our oscillator with the output of our envelope generator. This amplifier code allows us to use our envelope ramp to dynamically change the volume of the oscillator, allowing the sound to fade in and out as we like.
+	</p>
+
+	<p class="txt">
+		In a commercial synthesizer, further algorithms could be inserted into the signal network—for example, a filter that could shape the frequency content of the oscillator before it gets to the amplifier. Many synthesis algorithms depend on more than one oscillator, either in parallel (e.g., additive synthesis, in which you create a rich sound by adding many simple waveforms) or through modulation (e.g., frequency modulation, where one oscillator modulates the pitch of another).
+	</p>
+
+
+
+	<h3>Sampling</h3>
+
+	<p class="txt">
+		Rather than using a small waveform in computer memory as an oscillator, we could use a longer piece of recorded audio stored as an AIFF or WAV file on our computer’s hard disk. This sample could then be played back at varying rates, affecting its pitch. For example, playing back a sound at twice the speed at which it was recorded will result in its rising in pitch by an octave. Similarly, playing a sound at half speed will cause it to drop in pitch by an octave.
+	</p>
+
+	<!--<img src="imgs/TK.svg" style= "width: 650px; height: 220px" class="tut">
+
+	<p class="txt">
+
+	</p>
+    -->
 
 	<h3>Notes</h3>
 
