@@ -47,7 +47,7 @@
 
 
 
-	<h3>Internet protocols and concepts</h3>
+	<h3>Internet concepts</h3>
 
 	<p class="txt">
 		In order to understand how online works are made and viewed, it will be useful to address a number of key concepts in the area of computer networking. A computer network consists of two or more machines connected via a data link. If a networked computer acts primarily as a source of data, it is called a <em>server</em>. A server typically has a fixed address, is online continuously, and functions as a repository for files which are transmitted back to any other computers on the network that request them. If a networked computer acts primarily as a solicitor of information, it is called a <em>client</em>. For example, in checking one’s email, one acts as a client. Likewise, the machine where the email is stored (the machine named after the @ sign in the email address) acts as a server. These terms are flexible; a machine may act as a server in one context and a client in another.
@@ -73,8 +73,6 @@
 	<p class="txt">
 		While most computers have only a single Ethernet <em>port</em> (or wireless connection), the entire connectivity of each machine is able to sustain more connections than a single input or output, because the concept of a port is abstracted into software and the functionality of the port is thus duplicated many times over. In this way, each networked computer is able to multitask its single network connection across scores of different connections (there are 1,024 well-known ports, and 65,535 ports in all). Thus ports allow a networked computer to communicate simultaneously on a large number of &#8220;channels&#8221; without blocking other channels or impeding the data flow of applications. For example, it is possible to read email and surf the web simultaneously because email arrives through one port while websites use another. The union of IP address and port number (example: 123.45.67.89:80) is called a <em>socket</em>. Socket connections are the bread and butter of networking.
 	</p>
-	
-	<em>Example 1: Web client</em>
 
 <pre>
 // A simple web client using HTTP
@@ -117,6 +115,8 @@ void draw() {
 <br />
 
 <pre>
+// Shared drawing canvas (Server)
+
 import processing.net.*;
 
 Server s; 
@@ -153,10 +153,13 @@ void draw() {
 }
 </pre>
 
-<em>Example 2B:  Shared drawing canvas (client)</em>
+<hr />
 
 <pre>
+// Shared drawing canvas (Client)
+
 import processing.net.*; 
+
 Client c; 
 String input;
 int data[]; 
@@ -197,187 +200,6 @@ void draw() {
 	<p class="txt">
 		If a lower&ndash;level examination of the flows of data networks is desired, the Carnivore library for Processing allows the programmer to run a <em>packet sniffer</em> from within the Processing environment. A packet sniffer is any application that is able to indiscriminately eavesdrop on data traffic traveling through a local area network (LAN), even traffic not addressed to the machine running the sniffer. While this might sound unorthodox, and indeed a machine running a sniffer is described as being in &#8220;promiscuous mode,&#8221; packet-sniffing technologies are as ubiquitous as the Internet itself and just as old. Systems administrators use packet sniffers to troubleshoot networking bugs. All Macintosh machines ship with the packet sniffer <em>tcpdump</em> preinstalled, while Windows and Linux users have an assortment of free sniffers (including tcpdump and its variants) to choose from. The Carnivore library for Processing merely simplifies the act of sniffing packets, making real-time traffic monitoring simple and easy to implement for any artist wishing to do so. Packets captured via Carnivore can be visualized in map form, parsed for keywords, or simply used for any type of algorithm that requires a steady stream of nonrandom event triggers.
 	</p>
-	
-	<p class="txt">
-		Carnivore is a good stepping stone into the final area of computer networking discussed here: the Internet protocols. A protocol is a technological standard. The Internet protocols are a series of documents that describe how to implement standard Internet technologies such as data routing, handshaking between two machines, network addressing, and many other technologies. Two protocols have already been discussed&ndash;HTML, which is the language protocol for hypertext layout and design; and HTTP, which is the protocol for accessing web-accessible files—but there are a few other protocols worth discussing in this context.
-	</p>
-
-	<p class="txt">
-		Protocols are abstract concepts, but they are also quite material and manifest themselves in the form of structured data headers that prepend and encapsulate all content traveling through the Internet. For example, in order for a typical HTML page to travel from server to client, the page is prepended by an HTTP header (a few lines of text similar to the GET command referenced previously). This glob of data is itself prepended by two additional headers, first a Transmission Control Protocol (TCP) header and next by an Internet Protocol (IP) header. Upon arrival at its destination, the message is unwrapped: the IP header is removed, followed by the TCP header, and finally the HTTP header is removed to reveal the original HTML page. All of this is done in the blink of an eye. All headers contain useful information about the packet. But perhaps the four most useful pieces of information are the sender IP address, receiver IP address, sender port, and receiver port. These four pieces are significant because they indicate the network addresses of the machines in question, plus, via a reverse lookup of the port numbers, the type of data being transferred (port 80 indicating web data, port 23 indicating a Telnet connection, and so on). See the <em>/etc/services</em> file on any Macintosh, Linux, or UNIX machine, or browse IANA’s registry for a complete listing of port numbers. The addresses are contained in the IP header from byte 12 to byte 29 (counting from 0), while the ports are contained in bytes zero through three of the TCP header.
-	</p>
-
-	<p class="txt">
-		The two elements of the socket connection (IP address and port) are separated into two different protocols because of the different nature of IP and TCP. The IP protocol is concerned with routing data from one place to another and hence requires having an IP address in order to route correctly but cares little about the type of data in its payload. TCP is concerned with establishing a virtual circuit between server and client and thus requires slightly more information about the type of Internet communication being attempted. IP and TCP work so closely together that they are often described in one breath as the &#8220;TCP/IP suite.&#8221;
-	</p>
-
-	<p class="txt">
-		While most data on the Internet relies on the TCP/IP suite to get around, certain forms of networked communication are better suited to the UDP/IP combination. User Datagram Protocol (UDP) has a much leaner implementation than TCP, and while it therefore sacrifices many of the features of TCP, it is nevertheless useful for stateless data connections and connections that require a high throughput of packets per second, such as online games.
-	</p>
-
-
-
-	<h3>Network tools</h3>
-
-
-	<p class="txt">
-		There are a number of existing network tools that a programmer may use beyond the Processing environment. Carnivore and tcpdump, two different types of packet sniffers that allow one to receive LAN packets in real time, have already been mentioned. The process of scanning networks for available hosts, called network discovery, is also possible using port scanner tools such as Nmap. These tools use a variety of methods for looping through a numerical set of IP addresses (example: 192.168.1.x where x is incremented from 0 to 255), testing to see if a machine responds at that address. Then, if a machine is known to be online, the port scanner is used to loop through a range of ports on the machine (example: 192.168.1.1:x where x is a port number incremented from 1 to 1024) in order to determine which ports are open, thereby determining which application services are available. Port scans can also be used to obtain “fingerprints” for remote machines, which aid in the identification of the machine’s current operating system, type, and version information for known application services. 
-	</p>
-
-	<p class="txt">
-		Perhaps the most significant advance in popular networking since the emergence of the web in the mid-1990s was the development of peer-to-peer systems like Gnutella or BitTorrent. Coming on the heels of Napster, Gnutella fully distributed the process of file sharing and transfer, but also fully distributed the network’s search algorithm, a detail that had created bottlenecks (not to mention legal liabilities) for the more centralized Napster. With a distributed search algorithm, search queries hopscotch from node to node, just like the &#8220;hot potato&#8221; method used in IP routing; they do not pass through any centralized server. The Gnutella protocol has been implemented in dozens of peer-to-peer applications.
-	</p>
-
-	<p class="txt">
-		Yet more recently Gnutella has been superseded by systems like BitTorrent, a peer&ndash;to&ndash;peer application that allows file transfers to happen simultaneously between large numbers of users. BitTorrent has gained wide popularity for its increased efficiencies, particularly for transfers of large files such as video and software.
-	</p>
-
-	<p class="txt">
-		Many software projects requiring networked audio have come to rely on the Open Sound Control (OSC) protocol. OSC is a protocol for communication between multimedia devices such as computers and synthesizers. OSC has been integrated into SuperCollider and Max/MSP and has been ported to most modern languages including Perl and Java. Andreas Schlegel’s &#8220;oscP5&#8221; is an OSC extension library for Processing.
-	</p>
-
-	<p class="txt">
-		The Internet has become more peer-oriented in other ways too, not simply through file sharing but also through friend communities and other kinds of social interaction. Web 2.0 platforms like Facebook, Twitter, or YouTube allow groups of people to network with each other, whether it be a small group of five or ten, or a larger group of several thousands. While the more traditional client-server model relied on a clear distinction between information providers and information consumers, newer systems have disrupted some of the old hierarchies, allowing networked users to act as both producers and consumers of content. Such systems thus rely heavily on <em>user-generated content</em> and expect a higher amount of participation and interaction from their user base. 
-	</p>
-
-
-
-	<h3>Conclusion</h3>
-
-
-	<p class="txt">
-		Programmers are often required to consider interconnections between webs of objects and events. Because of this, programming for networks is a natural extension of programming for a single machine. Classes send messages to other classes just like hosts send messages to other hosts. An object has an interface, and so does an Ethernet adapter. The algorithmic construction of entities in dialogue&ndash;pixels, bits, frames, nodes&ndash;is central to what Processing is all about. Networking these entities by moving some of them to one machine and some to another is but a small additional step. What is required, however, is a knowledge of the various standards and techniques at play when bona fide networking takes place.
-	</p>
-
-	<p class="txt">	
-		Historically, there have been two basic strands of networked art: art where the network is used as the actual medium of art&ndash;making, or art where the network is used as the transportation medium for dissemination of the work. The former might be understood as art of the Internet, while the latter as art <em>for</em> the Internet. The goal of this text has been to introduce some of the basic conditions, both technological and aesthetic, for making networked art, in the hopes that entirely new techniques and approaches will spring forth in the future as both strands blend together into exciting new forms.
-	</p>
-
-
-
-	<h3>Notes</h3>
-
-	<p class="txt">
-	<ol>
-		<li>Alexei Shulgin, &#8220;Net.Art – the origin,&#8221; Nettime mailing list archives, 18  March 1997, http://nettime.org/Lists-Archives/nettime-l-9703/msg00094.html.</li>
-		<li>Marina Grzinic, &#8220;Exposure Time, the Aura, and Telerobotics,&#8221; in <em>The Robot in the Garden: Telerobotics and Telepistemology in the Age of the Internet</em>, edited by Ken Goldberg (MIT Press, 2000), p. 215.</li>
-	</ol>
-	</p>
-
-
-	
-	<h3>Code</h3>
-<hr /> 
-<br /> 
-<em>Example 1: Web client</em>
-<br />
-
-
-<pre>
-// A simple web client using HTTP
-
-import processing.net.*; 
-
-Client c; 
-String data;
-
-void setup() { 
-  size(200, 200); 
-  background(50); 
-  fill(200);
-  c = new Client(this, "www.processing.org", 80);  // Connect to server on port 80 
-  c.write("GET / HTTP/1.0\n");  // Use the HTTP "GET" command to ask for a webpage
-  c.write("Host: my_domain_name.com\n\n"); // Be polite and say who we are
-} 
-
-void draw() {
-  if (c.available() > 0) {    // If there's incoming data from the client...
-    data += c.readString();   // ...then grab it and print it 
-    println(data); 
-  } 
-}
-</pre>
-
-<hr />
-<br />
-
-<em>Example 2A:  Shared drawing canvas (server)</em>
-<br />
-
-<pre>import processing.net.*;
-
-Server s; 
-Client c;
-String input;
-int data[];
-
-void setup() { 
-  size(450, 255);
-  background(204);
-  stroke(0);
-  frameRate(5); // Slow it down a little
-  s = new Server(this, 12345);  // Start a simple server on a port
-} 
-void draw() { 
-  if (mousePressed == true) {
-    // Draw our line
-    stroke(255);
-    line(pmouseX, pmouseY, mouseX, mouseY); 
-    // Send mouse coords to other person
-    s.write(pmouseX + " " + pmouseY + " " + mouseX + " " + mouseY + "\n");
-  }
-  
-  // Receive data from client
-  c = s.available();
-  if (c != null) {
-    input = c.readString(); 
-    input = input.substring(0, input.indexOf("\n"));  // Only up to the newline
-    data = int(split(input, ' '));  // Split values into an array
-    // Draw line using received coords
-    stroke(0);
-    line(data[0], data[1], data[2], data[3]); 
-  }
-} </pre>
-<br />
-<em>Example 2B:  Shared drawing canvas (client)</em>
-
-<pre>import processing.net.*; 
-Client c; 
-String input;
-int data[]; 
-
-void setup() { 
-  size(450, 255); 
-  background(204);
-  stroke(0);
-  frameRate(5); // Slow it down a little
-  // Connect to the server’s IP address and port­
-  c = new Client(this, "127.0.0.1", 12345); // Replace with your server’s IP and port
-} 
-
-void draw() {         
-  if (mousePressed == true) {
-    // Draw our line
-    stroke(255);
-    line(pmouseX, pmouseY, mouseX, mouseY); 
-    // Send mouse coords to other person
-    c.write(pmouseX + " " + pmouseY + " " + mouseX + " " + mouseY + "\n");
-  }
-
-  // Receive data from server
-  if (c.available() > 0) { 
-    input = c.readString(); 
-    input = input.substring(0,input.indexOf("\n"));  // Only up to the newline
-    data = int(split(input, ' '));  // Split values into an array
-    // Draw line using received coords
-    stroke(0);
-    line(data[0], data[1], data[2], data[3]); 
-  } 
-}</pre>
-
-<hr />
-<br />
-
-<em>Example 3: Carnivore client</em>
 
 <pre>
 // Note: requires Carnivore Library for Processing v4 (http://r-s-g.org/carnivore)
@@ -457,10 +279,75 @@ synchronized void packetEvent(CarnivorePacket packet){
   nodes.put(packet.senderAddress.toString(), str(startDiameter));
 }
 </pre>
-</p>
-<hr /> 
-<br />
-<br />
+
+	<h3>Internet protocols</h3>
+
+	<p class="txt">
+		Carnivore is a good stepping stone into the final area of computer networking discussed here: the Internet protocols. A protocol is a technological standard. The Internet protocols are a series of documents that describe how to implement standard Internet technologies such as data routing, handshaking between two machines, network addressing, and many other technologies. Two protocols have already been discussed&ndash;HTML, which is the language protocol for hypertext layout and design; and HTTP, which is the protocol for accessing web-accessible files—but there are a few other protocols worth discussing in this context.
+	</p>
+
+	<p class="txt">
+		Protocols are abstract concepts, but they are also quite material and manifest themselves in the form of structured data headers that prepend and encapsulate all content traveling through the Internet. For example, in order for a typical HTML page to travel from server to client, the page is prepended by an HTTP header (a few lines of text similar to the GET command referenced previously). This glob of data is itself prepended by two additional headers, first a Transmission Control Protocol (TCP) header and next by an Internet Protocol (IP) header. Upon arrival at its destination, the message is unwrapped: the IP header is removed, followed by the TCP header, and finally the HTTP header is removed to reveal the original HTML page. All of this is done in the blink of an eye. All headers contain useful information about the packet. But perhaps the four most useful pieces of information are the sender IP address, receiver IP address, sender port, and receiver port. These four pieces are significant because they indicate the network addresses of the machines in question, plus, via a reverse lookup of the port numbers, the type of data being transferred (port 80 indicating web data, port 23 indicating a Telnet connection, and so on). See the <em>/etc/services</em> file on any Macintosh, Linux, or UNIX machine, or browse IANA’s registry for a complete listing of port numbers. The addresses are contained in the IP header from byte 12 to byte 29 (counting from 0), while the ports are contained in bytes zero through three of the TCP header.
+	</p>
+
+	<p class="txt">
+		The two elements of the socket connection (IP address and port) are separated into two different protocols because of the different nature of IP and TCP. The IP protocol is concerned with routing data from one place to another and hence requires having an IP address in order to route correctly but cares little about the type of data in its payload. TCP is concerned with establishing a virtual circuit between server and client and thus requires slightly more information about the type of Internet communication being attempted. IP and TCP work so closely together that they are often described in one breath as the &#8220;TCP/IP suite.&#8221;
+	</p>
+
+	<p class="txt">
+		While most data on the Internet relies on the TCP/IP suite to get around, certain forms of networked communication are better suited to the UDP/IP combination. User Datagram Protocol (UDP) has a much leaner implementation than TCP, and while it therefore sacrifices many of the features of TCP, it is nevertheless useful for stateless data connections and connections that require a high throughput of packets per second, such as online games.
+	</p>
+
+
+
+	<h3>Network tools</h3>
+
+
+	<p class="txt">
+		There are a number of existing network tools that a programmer may use beyond the Processing environment. Carnivore and tcpdump, two different types of packet sniffers that allow one to receive LAN packets in real time, have already been mentioned. The process of scanning networks for available hosts, called network discovery, is also possible using port scanner tools such as Nmap. These tools use a variety of methods for looping through a numerical set of IP addresses (example: 192.168.1.x where x is incremented from 0 to 255), testing to see if a machine responds at that address. Then, if a machine is known to be online, the port scanner is used to loop through a range of ports on the machine (example: 192.168.1.1:x where x is a port number incremented from 1 to 1024) in order to determine which ports are open, thereby determining which application services are available. Port scans can also be used to obtain “fingerprints” for remote machines, which aid in the identification of the machine’s current operating system, type, and version information for known application services. 
+	</p>
+
+	<p class="txt">
+		Perhaps the most significant advance in popular networking since the emergence of the web in the mid-1990s was the development of peer-to-peer systems like Gnutella or BitTorrent. Coming on the heels of Napster, Gnutella fully distributed the process of file sharing and transfer, but also fully distributed the network’s search algorithm, a detail that had created bottlenecks (not to mention legal liabilities) for the more centralized Napster. With a distributed search algorithm, search queries hopscotch from node to node, just like the &#8220;hot potato&#8221; method used in IP routing; they do not pass through any centralized server. The Gnutella protocol has been implemented in dozens of peer-to-peer applications.
+	</p>
+
+	<p class="txt">
+		Yet more recently Gnutella has been superseded by systems like BitTorrent, a peer&ndash;to&ndash;peer application that allows file transfers to happen simultaneously between large numbers of users. BitTorrent has gained wide popularity for its increased efficiencies, particularly for transfers of large files such as video and software.
+	</p>
+
+	<p class="txt">
+		Many software projects requiring networked audio have come to rely on the Open Sound Control (OSC) protocol. OSC is a protocol for communication between multimedia devices such as computers and synthesizers. OSC has been integrated into SuperCollider and Max/MSP and has been ported to most modern languages including Perl and Java. Andreas Schlegel’s &#8220;oscP5&#8221; is an OSC extension library for Processing.
+	</p>
+
+	<p class="txt">
+		The Internet has become more peer-oriented in other ways too, not simply through file sharing but also through friend communities and other kinds of social interaction. Web 2.0 platforms like Facebook, Twitter, or YouTube allow groups of people to network with each other, whether it be a small group of five or ten, or a larger group of several thousands. While the more traditional client-server model relied on a clear distinction between information providers and information consumers, newer systems have disrupted some of the old hierarchies, allowing networked users to act as both producers and consumers of content. Such systems thus rely heavily on <em>user-generated content</em> and expect a higher amount of participation and interaction from their user base. 
+	</p>
+
+
+
+	<h3>Conclusion</h3>
+
+
+	<p class="txt">
+		Programmers are often required to consider interconnections between webs of objects and events. Because of this, programming for networks is a natural extension of programming for a single machine. Classes send messages to other classes just like hosts send messages to other hosts. An object has an interface, and so does an Ethernet adapter. The algorithmic construction of entities in dialogue&ndash;pixels, bits, frames, nodes&ndash;is central to what Processing is all about. Networking these entities by moving some of them to one machine and some to another is but a small additional step. What is required, however, is a knowledge of the various standards and techniques at play when bona fide networking takes place.
+	</p>
+
+	<p class="txt">	
+		Historically, there have been two basic strands of networked art: art where the network is used as the actual medium of art&ndash;making, or art where the network is used as the transportation medium for dissemination of the work. The former might be understood as art of the Internet, while the latter as art <em>for</em> the Internet. The goal of this text has been to introduce some of the basic conditions, both technological and aesthetic, for making networked art, in the hopes that entirely new techniques and approaches will spring forth in the future as both strands blend together into exciting new forms.
+	</p>
+
+
+
+	<h3>Notes</h3>
+
+	<p class="txt">
+	<ol>
+		<li>Alexei Shulgin, &#8220;Net.Art – the origin,&#8221; Nettime mailing list archives, 18  March 1997, http://nettime.org/Lists-Archives/nettime-l-9703/msg00094.html.</li>
+		<li>Marina Grzinic, &#8220;Exposure Time, the Aura, and Telerobotics,&#8221; in <em>The Robot in the Garden: Telerobotics and Telepistemology in the Age of the Internet</em>, edited by Ken Goldberg (MIT Press, 2000), p. 215.</li>
+	</ol>
+	</p>
+
+
 <!--
 <p>
 <h3>Resources</h3>
@@ -535,8 +422,6 @@ Schoenerwissen/OfCD. <a href="http://minitasking.com">Minitasking</a>. Software 
 <br />
 Stevens, W. Richard. <em>TCP/IP Illustrated</em>. Volume 1, The Protocols. Addison-Wesley, 1994. <br />
 </p>-->
-
-</p>
 
 	</td>
        </tr>
