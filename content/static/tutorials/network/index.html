@@ -75,27 +75,27 @@
 	</p>
 
 <pre>
-// 1: A simple web client using HTTP
+<span style="color: #666666;">//&nbsp;1:&nbsp;A&nbsp;simple&nbsp;web&nbsp;client&nbsp;using&nbsp;HTTP</span>
 
-import processing.net.*; 
+<span style="color: #33997E;">import</span> processing.net.*; 
 
-Client c; 
-String data;
+Client&nbsp;c;&nbsp;
+<span style="color: #E2661A;">String</span> data;
 
-void setup() { 
-  size(200, 200); 
-  background(50); 
-  fill(200);
-  c = new Client(this, "www.processing.org", 80);  // Connect to server on port 80 
-  c.write("GET / HTTP/1.0\n");  // Use the HTTP "GET" command to ask for a webpage
-  c.write("Host: my_domain_name.com\n\n"); // Be polite and say who we are
-} 
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() { 
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200, 200); 
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(50); 
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(200);
+&nbsp;&nbsp;c&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Client(<span style="color: #33997E;">this</span>, <span style="color: #7D4793;">&quot;www.processing.org&quot;</span>, 80);  <span style="color: #666666;">// Connect to server on port 80 </span>
+&nbsp;&nbsp;c.write(<span style="color: #7D4793;">&quot;GET / HTTP/1.0\n&quot;</span>);  <span style="color: #666666;">// Use the HTTP &quot;GET&quot; command to ask for a webpage</span>
+&nbsp;&nbsp;c.write(<span style="color: #7D4793;">&quot;Host: my_domain_name.com\n\n&quot;</span>); <span style="color: #666666;">// Be polite and say who we are</span>
+}&nbsp;
 
-void draw() {
-  if (c.available() > 0) {    // If there's incoming data from the client...
-    data += c.readString();   // ...then grab it and print it 
-    println(data); 
-  } 
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (c.available() &gt; 0) {    <span style="color: #666666;">// If there&apos;s incoming data from the client...</span>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;+=&nbsp;c.readString();&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// ...then grab it and print it </span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(data); 
+&nbsp;&nbsp;}&nbsp;
 }
 </pre>
 
@@ -113,41 +113,41 @@ void draw() {
 
 
 <pre>
-// 2A: Shared drawing canvas (Server)
+<span style="color: #666666;">//&nbsp;2A:&nbsp;Shared&nbsp;drawing&nbsp;canvas&nbsp;(Server)</span>
 
-import processing.net.*;
+<span style="color: #33997E;">import</span> processing.net.*;
 
-Server s; 
-Client c;
-String input;
-int data[];
+Server&nbsp;s;&nbsp;
+Client&nbsp;c;
+<span style="color: #E2661A;">String</span> input;
+<span style="color: #E2661A;">int</span> data[];
 
-void setup() { 
-  size(450, 255);
-  background(204);
-  stroke(0);
-  frameRate(5); // Slow it down a little
-  s = new Server(this, 12345);  // Start a simple server on a port
-} 
-void draw() { 
-  if (mousePressed == true) {
-    // Draw our line
-    stroke(255);
-    line(pmouseX, pmouseY, mouseX, mouseY); 
-    // Send mouse coords to other person
-    s.write(pmouseX + " " + pmouseY + " " + mouseX + " " + mouseY + "\n");
-  }
-  
-  // Receive data from client
-  c = s.available();
-  if (c != null) {
-    input = c.readString(); 
-    input = input.substring(0, input.indexOf("\n"));  // Only up to the newline
-    data = int(split(input, ' '));  // Split values into an array
-    // Draw line using received coords
-    stroke(0);
-    line(data[0], data[1], data[2], data[3]); 
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() { 
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(450, 255);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;<span style="color: #006699;">frameRate</span>(5); <span style="color: #666666;">// Slow it down a little</span>
+&nbsp;&nbsp;s&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Server(<span style="color: #33997E;">this</span>, 12345);  <span style="color: #666666;">// Start a simple server on a port</span>
+}&nbsp;
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() { 
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (<span style="color: #D94A7A;">mousePressed</span> == <span style="color: #33997E;">true</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw our line</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(<span style="color: #D94A7A;">pmouseX</span>, <span style="color: #D94A7A;">pmouseY</span>, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Send mouse coords to other person</span>
+&nbsp;&nbsp;&nbsp;&nbsp;s.write(<span style="color: #D94A7A;">pmouseX</span> + <span style="color: #7D4793;">&quot; &quot;</span> + <span style="color: #D94A7A;">pmouseY</span> + <span style="color: #7D4793;">&quot; &quot;</span> + <span style="color: #D94A7A;">mouseX</span> + <span style="color: #7D4793;">&quot; &quot;</span> + <span style="color: #D94A7A;">mouseY</span> + <span style="color: #7D4793;">&quot;\n&quot;</span>);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// Receive data from client</span>
+&nbsp;&nbsp;c&nbsp;=&nbsp;s.available();
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (c != <span style="color: #33997E;">null</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;=&nbsp;c.readString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;=&nbsp;input.<span style="color: #006699;">substring</span>(0, input.<span style="color: #006699;">indexOf</span>(<span style="color: #7D4793;">&quot;\n&quot;</span>));  <span style="color: #666666;">// Only up to the newline</span>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;=&nbsp;<span style="color: #006699;">int</span>(<span style="color: #006699;">split</span>(input, <span style="color: #7D4793;">&apos; &apos;</span>));  <span style="color: #666666;">// Split values into an array</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw line using received coords</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(data[0], data[1], data[2], data[3]); 
+&nbsp;&nbsp;}
 }
 </pre>
 
@@ -155,41 +155,41 @@ void draw() {
 
 <pre>
 
-// 2B: Shared drawing canvas (Client)
+<span style="color: #666666;">//&nbsp;2B:&nbsp;Shared&nbsp;drawing&nbsp;canvas&nbsp;(Client)</span>
 
-import processing.net.*; 
+<span style="color: #33997E;">import</span> processing.net.*; 
 
-Client c; 
-String input;
-int data[]; 
+Client&nbsp;c;&nbsp;
+<span style="color: #E2661A;">String</span> input;
+<span style="color: #E2661A;">int</span> data[]; 
 
-void setup() { 
-  size(450, 255); 
-  background(204);
-  stroke(0);
-  frameRate(5); // Slow it down a little
-  // Connect to the server’s IP address and port­
-  c = new Client(this, "127.0.0.1", 12345); // Replace with your server’s IP and port
-} 
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() { 
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(450, 255); 
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;<span style="color: #006699;">frameRate</span>(5); <span style="color: #666666;">// Slow it down a little</span>
+&nbsp;&nbsp;<span style="color: #666666;">// Connect to the server&#8217;s IP address and port&#173;</span>
+&nbsp;&nbsp;c&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Client(<span style="color: #33997E;">this</span>, <span style="color: #7D4793;">&quot;127.0.0.1&quot;</span>, 12345); <span style="color: #666666;">// Replace with your server&#8217;s IP and port</span>
+}&nbsp;
 
-void draw() {         
-  if (mousePressed == true) {
-    // Draw our line
-    stroke(255);
-    line(pmouseX, pmouseY, mouseX, mouseY); 
-    // Send mouse coords to other person
-    c.write(pmouseX + " " + pmouseY + " " + mouseX + " " + mouseY + "\n");
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {         
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (<span style="color: #D94A7A;">mousePressed</span> == <span style="color: #33997E;">true</span>) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw our line</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(<span style="color: #D94A7A;">pmouseX</span>, <span style="color: #D94A7A;">pmouseY</span>, <span style="color: #D94A7A;">mouseX</span>, <span style="color: #D94A7A;">mouseY</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Send mouse coords to other person</span>
+&nbsp;&nbsp;&nbsp;&nbsp;c.write(<span style="color: #D94A7A;">pmouseX</span> + <span style="color: #7D4793;">&quot; &quot;</span> + <span style="color: #D94A7A;">pmouseY</span> + <span style="color: #7D4793;">&quot; &quot;</span> + <span style="color: #D94A7A;">mouseX</span> + <span style="color: #7D4793;">&quot; &quot;</span> + <span style="color: #D94A7A;">mouseY</span> + <span style="color: #7D4793;">&quot;\n&quot;</span>);
+&nbsp;&nbsp;}
 
-  // Receive data from server
-  if (c.available() > 0) { 
-    input = c.readString(); 
-    input = input.substring(0,input.indexOf("\n"));  // Only up to the newline
-    data = int(split(input, ' '));  // Split values into an array
-    // Draw line using received coords
-    stroke(0);
-    line(data[0], data[1], data[2], data[3]); 
-  } 
+&nbsp;&nbsp;<span style="color: #666666;">// Receive data from server</span>
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (c.available() &gt; 0) { 
+&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;=&nbsp;c.readString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;=&nbsp;input.<span style="color: #006699;">substring</span>(0,input.<span style="color: #006699;">indexOf</span>(<span style="color: #7D4793;">&quot;\n&quot;</span>));  <span style="color: #666666;">// Only up to the newline</span>
+&nbsp;&nbsp;&nbsp;&nbsp;data&nbsp;=&nbsp;<span style="color: #006699;">int</span>(<span style="color: #006699;">split</span>(input, <span style="color: #7D4793;">&apos; &apos;</span>));  <span style="color: #666666;">// Split values into an array</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw line using received coords</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">line</span>(data[0], data[1], data[2], data[3]); 
+&nbsp;&nbsp;}&nbsp;
 }
 </pre>
 
@@ -201,79 +201,79 @@ void draw() {
 	</p>
 
 <pre>
-/**
- * 3: Carnivore Client
- *  
- * This example requires the Carnivore Library for Processing (http://r-s-g.org/carnivore)
- * On Windows, first install winpcap (http://winpcap.org)
- * On Mac OS X, first open a Terminal and execute this commmand: sudo chmod 777 /dev/bpf*
- * (This must be done each time you reboot your Mac)
- */
+<span style="color: #666666;">/**</span>
+<span style="color: #666666;">&nbsp;*&nbsp;3:&nbsp;Carnivore&nbsp;Client</span>
+<span style="color: #666666;">&nbsp;*&nbsp;&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;example&nbsp;requires&nbsp;the&nbsp;Carnivore&nbsp;Library&nbsp;for&nbsp;Processing&nbsp;(http://r-s-g.org/carnivore)</span>
+<span style="color: #666666;">&nbsp;*&nbsp;On&nbsp;Windows,&nbsp;first&nbsp;install&nbsp;winpcap&nbsp;(http://winpcap.org)</span>
+<span style="color: #666666;">&nbsp;*&nbsp;On&nbsp;Mac&nbsp;OS&nbsp;X,&nbsp;first&nbsp;open&nbsp;a&nbsp;Terminal&nbsp;and&nbsp;execute&nbsp;this&nbsp;commmand:&nbsp;sudo&nbsp;chmod&nbsp;777&nbsp;/dev/bpf*</span>
+<span style="color: #666666;">&nbsp;*&nbsp;(This&nbsp;must&nbsp;be&nbsp;done&nbsp;each&nbsp;time&nbsp;you&nbsp;reboot&nbsp;your&nbsp;Mac)</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-import java.util.Iterator;
-import org.rsg.carnivore.*;
-import org.rsg.carnivore.net.*;
-import org.rsg.lib.Log;
+<span style="color: #33997E;">import</span> java.util.Iterator;
+<span style="color: #33997E;">import</span> org.rsg.carnivore.*;
+<span style="color: #33997E;">import</span> org.rsg.carnivore.net.*;
+<span style="color: #33997E;">import</span> org.rsg.lib.Log;
 
-HashMap nodes = new HashMap();
-float startDiameter = 100.0;
-float shrinkSpeed = 0.97;
-int splitter, x, y;
-CarnivoreP5 c;
+<span style="color: #E2661A;">HashMap</span> nodes = <span style="color: #33997E;">new</span> <span style="color: #006699;">HashMap</span>();
+<span style="color: #E2661A;">float</span> startDiameter = 100.0;
+<span style="color: #E2661A;">float</span> shrinkSpeed = 0.97;
+<span style="color: #E2661A;">int</span> splitter, x, y;
+CarnivoreP5&nbsp;c;
 
-void setup(){
-  size(800, 600);
-  ellipseMode(CENTER);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>(){
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(800, 600);
+&nbsp;&nbsp;<span style="color: #006699;">ellipseMode</span>(<span style="color: #718A62;">CENTER</span>);
 
-  Log.setDebug(true); // Uncomment this for verbose mode
-  c = new CarnivoreP5(this);
-  //c.setVolumeLimit(4);
+&nbsp;&nbsp;Log.setDebug(<span style="color: #33997E;">true</span>); <span style="color: #666666;">// Uncomment this for verbose mode</span>
+&nbsp;&nbsp;c&nbsp;=&nbsp;<span style="color: #33997E;">new</span> CarnivoreP5(<span style="color: #33997E;">this</span>);
+&nbsp;&nbsp;<span style="color: #666666;">//c.setVolumeLimit(4);</span>
 }
 
-void draw() {
-  background(255);
-  drawNodes();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+&nbsp;&nbsp;drawNodes();
 }
 
-// Iterate through each node
-synchronized void drawNodes() {
-  Iterator it = nodes.keySet().iterator();
-  while (it.hasNext()){
-    String ip = (String)it.next();
-    float d = float(nodes.get(ip).toString());
+<span style="color: #666666;">//&nbsp;Iterate&nbsp;through&nbsp;each&nbsp;node</span>
+<span style="color: #669900;">synchronized</span> <span style="color: #33997E;">void</span> drawNodes() {
+&nbsp;&nbsp;Iterator&nbsp;it&nbsp;=&nbsp;nodes.keySet().iterator();
+&nbsp;&nbsp;<span style="color: #669900;">while</span> (it.hasNext()){
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">String</span> ip = (<span style="color: #E2661A;">String</span>)it.next();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> d = <span style="color: #006699;">float</span>(nodes.<span style="color: #006699;">get</span>(ip).<span style="color: #006699;">toString</span>());
 
-    // Use last two IP address bytes for x/y coords
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Use last two IP address bytes for x/y coords</span>
 
-    String ip_as_array[] = split(ip, '.');
-    x = int(ip_as_array[2]) * width / 255; // Scale to applet size
-    y = int(ip_as_array[3]) * height / 255; // Scale to applet size
-    
-    // Draw the node
-    stroke(0);
-    fill(color(100, 200));  // Rim
-    ellipse(x, y, d, d);    // Node circle
-    noStroke();
-    fill(color(100, 50));   // Halo
-    ellipse(x, y, d + 20, d + 20);
-    
-    // Draw the text
-    fill(0);
-    text(ip, x, y);
-    
-    // Shrink the nodes a little
-    if(d > 50) {
-        nodes.put(ip, str(d * shrinkSpeed));
-    }
-  }  
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">String</span> ip_as_array[] = <span style="color: #006699;">split</span>(ip, <span style="color: #7D4793;">&apos;.&apos;</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;<span style="color: #006699;">int</span>(ip_as_array[2]) * <span style="color: #D94A7A;">width</span> / 255; <span style="color: #666666;">// Scale to applet size</span>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;<span style="color: #006699;">int</span>(ip_as_array[3]) * <span style="color: #D94A7A;">height</span> / 255; <span style="color: #666666;">// Scale to applet size</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw the node</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(<span style="color: #006699;">color</span>(100, 200));  <span style="color: #666666;">// Rim</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(x, y, d, d);    <span style="color: #666666;">// Node circle</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(<span style="color: #006699;">color</span>(100, 50));   <span style="color: #666666;">// Halo</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(x, y, d + 20, d + 20);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw the text</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">text</span>(ip, x, y);
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Shrink the nodes a little</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span>(d &gt; 50) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodes.put(ip,&nbsp;<span style="color: #006699;">str</span>(d * shrinkSpeed));
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}&nbsp;&nbsp;
 }
 
-// Called each time a new packet arrives
-synchronized void packetEvent(CarnivorePacket packet){
-  println("[PDE] packetEvent: " + packet);
+<span style="color: #666666;">//&nbsp;Called&nbsp;each&nbsp;time&nbsp;a&nbsp;new&nbsp;packet&nbsp;arrives</span>
+<span style="color: #669900;">synchronized</span> <span style="color: #33997E;">void</span> packetEvent(CarnivorePacket packet){
+&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;[PDE] packetEvent: &quot;</span> + packet);
 
-  // Remember these nodes in our hash map
-  nodes.put(packet.receiverAddress.toString(), str(startDiameter));
-  nodes.put(packet.senderAddress.toString(), str(startDiameter));
+&nbsp;&nbsp;<span style="color: #666666;">// Remember these nodes in our hash map</span>
+&nbsp;&nbsp;nodes.put(packet.receiverAddress.<span style="color: #006699;">toString</span>(), <span style="color: #006699;">str</span>(startDiameter));
+&nbsp;&nbsp;nodes.put(packet.senderAddress.<span style="color: #006699;">toString</span>(), <span style="color: #006699;">str</span>(startDiameter));
 }
 </pre>
 
