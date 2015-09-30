@@ -235,45 +235,7 @@
 	</p>
 
 
-
-	<h3>Example 3, 4:  Sample playback</h3>
-
-	<p class="txt">
-		Sound file playback with the Sound library is fairly simple. The Soundfile class just needs to be instantiated with a path to the file. Example three uses an Array of Soundfiles as a basis for a sampler. The files are named by integer numbers which makes it easy to read the files into an array with a loop. The Soundfile class has a method called rate() which lets us change the sample rate of the playback, in short: the speed and therefore pitch. The default value equals to one. If we assign 0.5 the playback speed will be half and the pitch will be an octave below the original. For 2.0 the pitch will be an octave above and double the speed. This is the simplest method for pitch shifting a sample and we can use it to generate a simple algorithmic composition. In this example a trigger is created which represents the current time in milliseconds plus a random integer between 200 and 1000 milliseconds. If that moment has passed up to 5 rectangles are drawn, each of them filled with a random color. Since this statement is in a loop it is simple to play back up to 5 sounds with one line of code. Before doing that, a random octave for each sound is assigned. The number of rectangles and sounds we play is determined by the array playSound. This array gets reassigned at every iteration of the sequencer and when an index equals 1 the corresponding file in the Soundfile array will be played and a rectangle will be drawn.
-	</p>
-
-
-
-	<h3>Example 5, 6:  Audio analysis</h3>
-
-	<p class="txt">
-		In addition to the classes used for generating and manipulating audio streams, Sound provides two classes for audio analysis: a Fast Fourier Transformation (FFT) and an amplitude follower. The FFT class analyzes an audio stream and fills an array with bins (samples in the frequency domain) of the positive side of the audio spectrum up to half the sample rate. This allows us to use different frequency bands of a particular sound to trigger events or visualize them in the draw() loop. The code draws a normalized spectrogram of a sound file. First, a few variables like scale factor, the number of bands to be retrieved and arrays for the frequency data are declared. The sound file player is then passed to the FFT object with the .input() method. In the visual representation the width of each frequency band is dynamically calculated depending on how many bands are being analyzed. For each frame the method .analyze() needs to be called to retrieve the current analysis frame of the FFT. After smoothing the amplitude values each bin is simply represented by a vertical line.
-	</p>
-
-	<p class="txt">
-		Example 6 is very similar to example 5 but instead of an array of values one single value is retrieved. This value represents the root mean square of the last frames of audio meaning the mean amplitude. Important factors for analyzing sound and using the data for visualizations is the smoothing, the number of bands and the scaling factors.
-	</p>
-
-
-
-	<h3>Notes</h3>
-
-	<p class="txt">
-		<ol>
-		<li>Douglas Kahn, <em>Noise, Water, Meat: A History of Sound in the Arts</em> (MIT Press, 2001),  p. 10.</li>
-		<li>Paul Théberge, <em>Any Sound You Can Imagine: Making Music / Consuming Technology</em> (Wesleyan University Press, 1997),  p. 105.</li>
-		<li>John Cage, &#8220;Credo: The Future of Music (1937),&#8221; in <em>John Cage: An Anthology</em>, edited by Richard Kostelanetz (Praeger, 1970),  p. 52.</li>
-		<li>Joel Chadabe, <em>Electric Sound: The Past and Promise of Electronic Music</em> (Prentice Hall, 1996), p. 145.</li>
-		<li>Curtis Roads, <em>The Computer Music Tutorial</em> (MIT Press, 1996), p. 43.</li>
-		<li>Albert Bregman, <em>Auditory Scene Analysis</em> (MIT Press, 1994),  p. 215.</li>
-		</ol>
-	</p>
-
-
-	<h3> </h3>
-	<h3>Code</h3>
-
-	<hr />
+		<hr />
 
 	<pre>
 <span style="color: #666666;">/**</span>
@@ -410,6 +372,18 @@ Env&nbsp;env;&nbsp;
 }
 
 </pre>
+
+	<hr />
+
+
+
+	<h3>Example 3, 4:  Sample playback</h3>
+
+	<p class="txt">
+		Sound file playback with the Sound library is fairly simple. The Soundfile class just needs to be instantiated with a path to the file. Example three uses an Array of Soundfiles as a basis for a sampler. The files are named by integer numbers which makes it easy to read the files into an array with a loop. The Soundfile class has a method called rate() which lets us change the sample rate of the playback, in short: the speed and therefore pitch. The default value equals to one. If we assign 0.5 the playback speed will be half and the pitch will be an octave below the original. For 2.0 the pitch will be an octave above and double the speed. This is the simplest method for pitch shifting a sample and we can use it to generate a simple algorithmic composition. In this example a trigger is created which represents the current time in milliseconds plus a random integer between 200 and 1000 milliseconds. If that moment has passed up to 5 rectangles are drawn, each of them filled with a random color. Since this statement is in a loop it is simple to play back up to 5 sounds with one line of code. Before doing that, a random octave for each sound is assigned. The number of rectangles and sounds we play is determined by the array playSound. This array gets reassigned at every iteration of the sequencer and when an index equals 1 the corresponding file in the Soundfile array will be played and a rectangle will be drawn.
+	</p>
+
+
 
 	<hr />
 
@@ -593,6 +567,19 @@ SoundFile[]&nbsp;file;
 
 	<hr />
 
+
+
+	<h3>Example 5, 6:  Audio analysis</h3>
+
+	<p class="txt">
+		In addition to the classes used for generating and manipulating audio streams, Sound provides two classes for audio analysis: a Fast Fourier Transformation (FFT) and an amplitude follower. The FFT class analyzes an audio stream and fills an array with bins (samples in the frequency domain) of the positive side of the audio spectrum up to half the sample rate. This allows us to use different frequency bands of a particular sound to trigger events or visualize them in the draw() loop. The code draws a normalized spectrogram of a sound file. First, a few variables like scale factor, the number of bands to be retrieved and arrays for the frequency data are declared. The sound file player is then passed to the FFT object with the .input() method. In the visual representation the width of each frequency band is dynamically calculated depending on how many bands are being analyzed. For each frame the method .analyze() needs to be called to retrieve the current analysis frame of the FFT. After smoothing the amplitude values each bin is simply represented by a vertical line.
+	</p>
+
+	<p class="txt">
+		Example 6 is very similar to example 5 but instead of an array of values one single value is retrieved. This value represents the root mean square of the last frames of audio meaning the mean amplitude. Important factors for analyzing sound and using the data for visualizations is the smoothing, the number of bands and the scaling factors.
+	</p>
+
+
 <pre>
 <span style="color: #666666;">/**</span>
 <span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;5</span>
@@ -723,6 +710,23 @@ Amplitude&nbsp;rms;
 </pre>
 
 	<hr />
+
+
+
+
+	<h3>Notes</h3>
+
+	<p class="txt">
+		<ol>
+		<li>Douglas Kahn, <em>Noise, Water, Meat: A History of Sound in the Arts</em> (MIT Press, 2001),  p. 10.</li>
+		<li>Paul Théberge, <em>Any Sound You Can Imagine: Making Music / Consuming Technology</em> (Wesleyan University Press, 1997),  p. 105.</li>
+		<li>John Cage, &#8220;Credo: The Future of Music (1937),&#8221; in <em>John Cage: An Anthology</em>, edited by Richard Kostelanetz (Praeger, 1970),  p. 52.</li>
+		<li>Joel Chadabe, <em>Electric Sound: The Past and Promise of Electronic Music</em> (Prentice Hall, 1996), p. 145.</li>
+		<li>Curtis Roads, <em>The Computer Music Tutorial</em> (MIT Press, 1996), p. 43.</li>
+		<li>Albert Bregman, <em>Auditory Scene Analysis</em> (MIT Press, 1994),  p. 215.</li>
+		</ol>
+	</p>
+
 
 	</td></tr>
  </table>
