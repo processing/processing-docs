@@ -1139,6 +1139,10 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	border-collapse:collapse;
 }
 
+#Tutorials img {
+	margin-bottom: 40px; 
+}
+
 #Tutorials td { 
 	width: 224px; 
 	padding-right: 5px; 
