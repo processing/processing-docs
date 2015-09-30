@@ -1134,8 +1134,8 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tutorials h2.with-nav { margin-bottom: 0; }
 #Tutorials .onecol { clear: both; }
 #Tutorials table { 
-	width: 687px; 
-	margin-top: 35px; 
+	/*width: 687px;*/ 
+	margin-top: 0px; 
 	border-collapse:collapse;
 }
 
@@ -1159,6 +1159,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 }
 
 #Tutorials pre {
+	display: inline;
 	margin-left: 0px;
 }
 
