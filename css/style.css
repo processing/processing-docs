@@ -491,6 +491,7 @@ h6 { font-size			: 1em; 		}
 p { font-size			: 1em; 		}
 
 pre {  
+	display 			: inline;
 	font-family			: monaco, "Courier New", Courier, monospace; 
 	font-size			: 11px; 
 	line-height			: normal; color: #000000;
