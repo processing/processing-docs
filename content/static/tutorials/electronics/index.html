@@ -119,7 +119,7 @@
 	Circuits are often prototyped on a "breadboard,” a rectangular piece of plastic with holes for inserting wires. A breadboard makes it easy to quickly make variations on a circuit without soldering (fusing components together with a soft metal). Conductive strips underneath the surface connect the long horizontal rows at the top and bottom of the board and the short vertical rows within the middle: 
 <br />
 <br />
-	<img src="imgs/fg39-9.svg" style= "width: 650px; height: 150px">
+	<img src="imgs/fg39-9.svg" style= "width: 650px; height: 170px">
 <br />
 	Circuits are tested with a multimeter, an instrument to measure volts, current, resistance, and other electrical properties. A multimeter allows the electrical properties of the circuit to be read as numbers and is necessary for debugging. Analog multimeters have a small needle that moves from left to right, and digital multimeters have a screen that displays numbers. Most multimeters have two metal prongs to probe the circuit and a central dial to select between different modes. 
 <br />
@@ -353,7 +353,7 @@ This equipment can be purchased from an electronics store such as Radio Shack or
 <em>Example 1A:  Switch (Wiring/Arduino)</em>
 <br /> 
 <br /> 
-<img src="imgs/fg39-13.svg" style= "width: 687px; height: 220px">
+<img src="imgs/fg39-13.svg" style= "width: 650px; height: 240px">
 <br /> 
 <pre>
 // Code for sensing a switch status and writing the value to the serial port
@@ -412,7 +412,7 @@ void draw() {
 <em>Example 2A:  Light sensor (Wiring/Arduino)</em>
 <br />
 <br /> 
-<img src="imgs/fg39-14.svg" style= "width: 687px; height: 220px">
+<img src="imgs/fg39-14.svg" style= "width: 650px; height: 240px">
 <br /> 
 <pre>
 // Code to read an analog value and write it to the serial port
@@ -466,7 +466,7 @@ void draw() {
 <em>Example 3A: Turning a light on and off</em>
 <br /> 
 <br /> 
-<img src="imgs/fg39-15.svg" style= "width: 687px; height: 220px">
+<img src="imgs/fg39-15.svg" style= "width: 650px; height: 240px">
 <br /> 
 <pre>
 // Read data from the serial and turn ON or OFF a light depending on the value
@@ -523,7 +523,7 @@ void draw() {
 
 
 boolean mouseOverRect() {        // Test if mouse is over square 
-  return ((mouseX >= 50) &amp;&amp; (mouseX <= 150) && (mouseY >= 50) &amp;&amp; (mouseY <= 150)); 
+  return ((mouseX >= 50) &amp;&amp; (mouseX &lt;= 150) &amp;&amp; (mouseY >= 50) &amp;&amp; (mouseY &lt;= 150)); 
 } 
 </pre>
 <br />
@@ -532,7 +532,7 @@ boolean mouseOverRect() {        // Test if mouse is over square
 <em>Example 4A: Controlling a servomotor(Wiring/Arduino)</em>
 <br /> 
 <br /> 
-<img src="imgs/fg39-16.svg" style= "width: 687px; height: 297px">
+<img src="imgs/fg39-16.svg" style= "width: 650px; height: 310px">
 <br /> 
 <pre>
 // Read data from the serial port and set the position of a servomotor 
@@ -563,7 +563,7 @@ void loop() {
 
 import processing.serial.*;
  
-Serial port;                          // Create object from Serial class
+Serial port;                      // Create object from Serial class
 float mx = 0.0;
 
 void setup() { 
@@ -575,8 +575,8 @@ void setup() {
 } 
 
 void draw() {   
-  background(0);			    // Clear background 
-  fill(204);				    // Set fill color 
+  background(0);  // Clear background 
+  fill(204);	  // Set fill color 
   rect(40, height/2-15, 120, 25);	    // Draw square
 
   float dif = mouseX - mx;
@@ -591,8 +591,8 @@ void draw() {
   
   rect(mx-2, height/2-5, 4, 5);               // Draw the position marker
   int angle = int(map(mx, 50, 149, 0, 180));  // Scale the value to the range 0-180
-  //print(angle + " ");	                    // Print the current angle (debug)
-  port.write(angle);	                    // Write the angle to the serial port
+  //print(angle + " ");	                      // Print the current angle (debug)
+  port.write(angle);	                      // Write the angle to the serial port
 }
 </pre>
 <br />
@@ -601,7 +601,7 @@ void draw() {
 <em>Example 5A: Turning a DC Motor on and off (Wiring/Arduino)</em>
 <br /> 
 <br /> 
-<img src="imgs/fg39-17.svg" style= "width: 687px; height: 369px">
+<img src="imgs/fg39-17.svg" style= "width: 650px; height: 385px">
 <br /> 
 <br /> 
 <pre>
@@ -692,9 +692,7 @@ boolean overRect(int x, int y, int width, int height) {
 }
 </pre>
 </p>
-<hr />
-<br />
-<br />
+
 <!--
 <p>
 <h3>Resources</h3>
@@ -807,7 +805,7 @@ Paik, Nam June. <em>The Worlds of Nam June Paik</em>. Solomon R. Guggenheim Foun
 <br />
 <a href="http://www.bitforms.com/artist_vogel.html">Vogel, Peter</a>
 </p>-->
-</p>
+
 
 </td>
        </tr>
