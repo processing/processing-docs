@@ -102,8 +102,9 @@ endX endY lineto stroke     % Draw line to coordinate (200,200)
 		The difference is illustrated with this diagram:
 	</p>
 
+
 	<!-- <img src="imgs/fg40-1.svg" style="width: 687px; height: 180px"> -->
-	<object data="imgs/fg40-1.svg" style="width: 650px; height: 180px" type="image/svg+xml"></object>
+	<object data="imgs/fg40-1.svg" style="width: 650px; height: 210px" type="image/svg+xml"></object>
 
 
 	<p class="txt">
@@ -119,15 +120,17 @@ endX endY lineto stroke     % Draw line to coordinate (200,200)
 	</p>
 
 <pre>
-// Example 1: Render to PDF
+<span style="color: #666666;">/*</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Example&nbsp;1:&nbsp;Render&nbsp;to&nbsp;PDF</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-import processing.pdf.*;          // Import PDF code
+<span style="color: #33997E;">import</span> processing.pdf.*;          <span style="color: #666666;">// Import PDF code</span>
 
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
-background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
+<span style="color: #006699;">size</span>(600, 600, <span style="color: #718A62;">PDF</span>, <span style="color: #7D4793;">&quot;line.pdf&quot;</span>);  <span style="color: #666666;">// Set PDF as the renderer</span>
+<span style="color: #006699;">background</span>(255);                  
+<span style="color: #006699;">stroke</span>(0);                                   
+<span style="color: #006699;">line</span>(200, 0, <span style="color: #D94A7A;">width</span>/2, <span style="color: #D94A7A;">height</span>);    <span style="color: #666666;">// Draw line to PDF</span>
+<span style="color: #006699;">exit</span>();                           <span style="color: #666666;">// Stop the program</span>
 
 </pre>
 
@@ -140,17 +143,19 @@ exit();                           // Stop the program
 	</p>
 
 <pre>
-// Example 2:  Render to screen, export to PDF
+<span style="color: #666666;">/*</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Example&nbsp;2:&nbsp;&nbsp;Render&nbsp;to&nbsp;screen,&nbsp;export&nbsp;to&nbsp;PDF</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-import processing.pdf.*;          // Import PDF code
+<span style="color: #33997E;">import</span> processing.pdf.*;          <span style="color: #666666;">// Import PDF code</span>
 
-size(600, 600);
-beginRecord(PDF, "line.pdf");     // Start writing to PDF
-background(255);                  
-stroke(0, 20);		                 
-strokeWeight(20);                 
-line(200, 0, 400, height);        // Draw line to screen and to PDF
-endRecord();                      // Stop writing to PDF
+<span style="color: #006699;">size</span>(600, 600);
+<span style="color: #006699;">beginRecord</span>(<span style="color: #718A62;">PDF</span>, <span style="color: #7D4793;">&quot;line.pdf&quot;</span>);     <span style="color: #666666;">// Start writing to PDF</span>
+<span style="color: #006699;">background</span>(255);                  
+<span style="color: #006699;">stroke</span>(0, 20);                     
+<span style="color: #006699;">strokeWeight</span>(20);                 
+<span style="color: #006699;">line</span>(200, 0, 400, <span style="color: #D94A7A;">height</span>);        <span style="color: #666666;">// Draw line to screen and to PDF</span>
+<span style="color: #006699;">endRecord</span>();                      <span style="color: #666666;">// Stop writing to PDF</span>
 
 </pre>
 
@@ -162,32 +167,34 @@ endRecord();                      // Stop writing to PDF
 	</p>
 
 <pre>
-// Example 3:  Save one frame from a continuous program
+<span style="color: #666666;">/*</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Example&nbsp;3:&nbsp;&nbsp;Save&nbsp;one&nbsp;frame&nbsp;from&nbsp;a&nbsp;continuous&nbsp;program</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-import processing.pdf.*;  // Import PDF code
+<span style="color: #33997E;">import</span> processing.pdf.*;  <span style="color: #666666;">// Import PDF code</span>
 
-boolean saveOneFrame = false;
+<span style="color: #E2661A;">boolean</span> saveOneFrame = <span style="color: #33997E;">false</span>;
 
-void setup() {
-  size(600, 600);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(600, 600);
 }
 
-void draw() {
-  if (saveOneFrame == true) {             // When the saveOneFrame boolean is true,
-    beginRecord(PDF, "line-####.pdf");    // start recording to the PDF
-  }
-  background(255);
-  stroke(0, 20);
-  strokeWeight(20);
-  line(mouseX, 0, width-mouseY, height);
-  if (saveOneFrame == true) {             // If the PDF has been recording,</em>
-    endRecord();                          // stop recording, 
-    saveOneFrame = false;                 // and set the boolean value to false
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (saveOneFrame == <span style="color: #33997E;">true</span>) {             <span style="color: #666666;">// When the saveOneFrame boolean is true,</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">beginRecord</span>(<span style="color: #718A62;">PDF</span>, <span style="color: #7D4793;">&quot;line-####.pdf&quot;</span>);    <span style="color: #666666;">// start recording to the PDF</span>
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0, 20);
+&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(20);
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(<span style="color: #D94A7A;">mouseX</span>, 0, <span style="color: #D94A7A;">width</span>-<span style="color: #D94A7A;">mouseY</span>, <span style="color: #D94A7A;">height</span>);
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (saveOneFrame == <span style="color: #33997E;">true</span>) {             <span style="color: #666666;">// If the PDF has been recording,&lt;/em&gt;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">endRecord</span>();                          <span style="color: #666666;">// stop recording, </span>
+&nbsp;&nbsp;&nbsp;&nbsp;saveOneFrame&nbsp;=&nbsp;<span style="color: #33997E;">false</span>;                 <span style="color: #666666;">// and set the boolean value to false</span>
+&nbsp;&nbsp;}
 }
 
-void mousePressed() {                     // When a mouse button is pressed,
-  saveOneFrame = true;                    // trigger PDF recording within the draw()
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>mousePressed</b></span>() {                     <span style="color: #666666;">// When a mouse button is pressed,</span>
+&nbsp;&nbsp;saveOneFrame&nbsp;=&nbsp;<span style="color: #33997E;">true</span>;                    <span style="color: #666666;">// trigger PDF recording within the draw()</span>
 }
 
 </pre>
@@ -201,29 +208,31 @@ void mousePressed() {                     // When a mouse button is pressed,
 	</p>
 
 <pre>
-// Example 4:  Accumulate many frames into one PDF
+<span style="color: #666666;">/*</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Example&nbsp;4:&nbsp;&nbsp;Accumulate&nbsp;many&nbsp;frames&nbsp;into&nbsp;one&nbsp;PDF</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-import processing.pdf.*;  // Import PDF code
+<span style="color: #33997E;">import</span> processing.pdf.*;  <span style="color: #666666;">// Import PDF code</span>
 
-void setup() {
-  size(600, 600);
-  background(255);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(600, 600);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
 }
 
-void draw() {
-  stroke(0, 20);
-  strokeWeight(20);
-  line(mouseX, 0, width-mouseY, height);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0, 20);
+&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(20);
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(<span style="color: #D94A7A;">mouseX</span>, 0, <span style="color: #D94A7A;">width</span>-<span style="color: #D94A7A;">mouseY</span>, <span style="color: #D94A7A;">height</span>);
 }
 
-void keyPressed() {
-  if (key == 'B' || key == 'b') {         // When 'B' or 'b' is pressed,
-    beginRecord(PDF, "lines.pdf");        // start recording to the PDF 
-    background(255);                      // Set a white background
-  } else if (key == 'E' || key == 'e') {  // When 'E' or 'e' is pressed,
-    endRecord();                          // stop recording the PDF and
-    exit();                               // quit the program
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>keyPressed</b></span>() {
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (<span style="color: #D94A7A;">key</span> == <span style="color: #7D4793;">&apos;B&apos;</span> || <span style="color: #D94A7A;">key</span> == <span style="color: #7D4793;">&apos;b&apos;</span>) {         <span style="color: #666666;">// When &apos;B&apos; or &apos;b&apos; is pressed,</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">beginRecord</span>(<span style="color: #718A62;">PDF</span>, <span style="color: #7D4793;">&quot;lines.pdf&quot;</span>);        <span style="color: #666666;">// start recording to the PDF </span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);                      <span style="color: #666666;">// Set a white background</span>
+&nbsp;&nbsp;}&nbsp;<span style="color: #669900;">else</span> <span style="color: #669900;">if</span> (<span style="color: #D94A7A;">key</span> == <span style="color: #7D4793;">&apos;E&apos;</span> || <span style="color: #D94A7A;">key</span> == <span style="color: #7D4793;">&apos;e&apos;</span>) {  <span style="color: #666666;">// When &apos;E&apos; or &apos;e&apos; is pressed,</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">endRecord</span>();                          <span style="color: #666666;">// stop recording the PDF and</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">exit</span>();                               <span style="color: #666666;">// quit the program</span>
+&nbsp;&nbsp;}
 }
 
 </pre>
@@ -238,17 +247,19 @@ void keyPressed() {
 	</p>
 
 <pre>
-// Example 5: High-resolution off-screen buffer
+<span style="color: #666666;">/*&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Example&nbsp;5:&nbsp;High-resolution&nbsp;off-screen&nbsp;buffer</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-PGraphics big;  // Declare a PGraphics variable
+<span style="color: #E2661A;">PGraphics</span> big;  <span style="color: #666666;">// Declare a PGraphics variable</span>
 
-void setup() {
-  big = createGraphics(3000, 3000);  // Create a new PGraphics object
-  big.beginDraw();                   // Start drawing to the PGraphics object 
-  big.background(128);               // Set the background
-  big.line(20, 1800, 1800, 900);     // Draw a line
-  big.endDraw();                     // Stop drawing to the PGraphics object 
-  big.save("big.tif");
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;big&nbsp;=&nbsp;<span style="color: #006699;">createGraphics</span>(3000, 3000);  <span style="color: #666666;">// Create a new PGraphics object</span>
+&nbsp;&nbsp;big.<span style="color: #006699;">beginDraw</span>();                   <span style="color: #666666;">// Start drawing to the PGraphics object </span>
+&nbsp;&nbsp;big.<span style="color: #006699;">background</span>(128);               <span style="color: #666666;">// Set the background</span>
+&nbsp;&nbsp;big.<span style="color: #006699;">line</span>(20, 1800, 1800, 900);     <span style="color: #666666;">// Draw a line</span>
+&nbsp;&nbsp;big.<span style="color: #006699;">endDraw</span>();                     <span style="color: #666666;">// Stop drawing to the PGraphics object </span>
+&nbsp;&nbsp;big.<span style="color: #006699;">save</span>(<span style="color: #7D4793;">&quot;big.tif&quot;</span>);
 }
 
 </pre>
@@ -262,38 +273,41 @@ void setup() {
 	</p>
 
 <pre>
-// Example 6:  Scale and segment an image
-// Draws an image larger than the screen by tiling it into small sections.
-// The scaleValue variable sets amount of scaling: 1 is 100%, 2 is 200%, etc.
+<span style="color: #666666;">/*&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Example&nbsp;6:&nbsp;Scale&nbsp;and&nbsp;segment&nbsp;an&nbsp;image</span>
+<span style="color: #666666;">&nbsp;*&nbsp;</span>
+<span style="color: #666666;">&nbsp;*&nbsp;Draws&nbsp;an&nbsp;image&nbsp;larger&nbsp;than&nbsp;the&nbsp;screen&nbsp;by&nbsp;tiling&nbsp;it&nbsp;into&nbsp;small&nbsp;sections.</span>
+<span style="color: #666666;">&nbsp;*&nbsp;The&nbsp;scaleValue&nbsp;variable&nbsp;sets&nbsp;amount&nbsp;of&nbsp;scaling:&nbsp;1&nbsp;is&nbsp;100%,&nbsp;2&nbsp;is&nbsp;200%,&nbsp;etc.</span>
+<span style="color: #666666;">&nbsp;*/</span>
 
-int scaleValue = 3;  // Multiplication factor
-int xoffset = 0;     // x-axis offset 
-int yoffset = 0;     // y-axis offset
+<span style="color: #E2661A;">int</span> scaleValue = 3;  <span style="color: #666666;">// Multiplication factor</span>
+<span style="color: #E2661A;">int</span> xoffset = 0;     <span style="color: #666666;">// x-axis offset </span>
+<span style="color: #E2661A;">int</span> yoffset = 0;     <span style="color: #666666;">// y-axis offset</span>
 
-void setup() {
-  size(600, 600);
-  stroke(0, 100);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(600, 600);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0, 100);
 }
 
-void draw() {
-  scale(scaleValue);
-  translate(xoffset * (-width/scaleValue), yoffset * (-height/scaleValue));
-  line(10, 150, 500, 50);
-  line(0, 600, 600, 0); 
-  setOffset();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">scale</span>(scaleValue);
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(xoffset * (-<span style="color: #D94A7A;">width</span>/scaleValue), yoffset * (-<span style="color: #D94A7A;">height</span>/scaleValue));
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(10, 150, 500, 50);
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(0, 600, 600, 0); 
+&nbsp;&nbsp;setOffset();
 }
 
-void setOffset() {
-  save("lines-" + xoffset + "-" + yoffset + ".jpg");
-  xoffset++;
-  if (xoffset == scaleValue) {
-    xoffset = 0;
-    yoffset++;
-    if (yoffset == scaleValue) {
-      exit();
-    } 
-  }
-  background(204);
+<span style="color: #33997E;">void</span> setOffset() {
+&nbsp;&nbsp;<span style="color: #006699;">save</span>(<span style="color: #7D4793;">&quot;lines-&quot;</span> + xoffset + <span style="color: #7D4793;">&quot;-&quot;</span> + yoffset + <span style="color: #7D4793;">&quot;.jpg&quot;</span>);
+&nbsp;&nbsp;xoffset++;
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (xoffset == scaleValue) {
+&nbsp;&nbsp;&nbsp;&nbsp;xoffset&nbsp;=&nbsp;0;
+&nbsp;&nbsp;&nbsp;&nbsp;yoffset++;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span> (yoffset == scaleValue) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">exit</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
 }
 
 </pre>
