@@ -1,20 +1,28 @@
-<h1>Data</h1>
-	
-<p>
-<table width="656">
-   	<tr>
-   	
-	<p class="license">This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
-   	   		
-	<p>&nbsp;</p>
+<table width="650">
+    <tr>
+    <td>
 
-<p>This tutorial picks up where the <a href="http://processing.org/learning/text/">Strings and Drawing Text</a> tutorial leaves off and examines how to use String objects as the basis for reading and writing data. We'll start by learning more sophisticated methods for manipulating Strings, searching in them, chopping them up, and joining them together.  Afterwards, we'll see how these skills allow us to use input from data sources, such as text files, web pages, xml feeds, and 3rd party APIs and take a step into the world of data visualization.</p>
+  <p class="license">
+      This tutorial is from the book <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a> by Daniel Shiffman, published by Morgan Kaufmann, &copy; 2008 Elsevier Inc. All rights reserved. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+    </p>
 
-<h3>Manipulating Strings</h3>
+    <h1 style="line-height: 0.7em;">Data</h1>
+    <h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
 
-<p>In <a href="http://processing.org/learning/text/">Strings and Drawing Text</a>, we touched on a few of the basic functions available in the Java String class, such as charAt(), toUpperCase(), equals(), and length().  These functions are documented on the Processing reference page for Strings.  Nevertheless, in order to perform some more advanced data parsing techniques, we'll need to explore some additional String manipulation functions <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html">documented in the Java API</a>.</p>
 
-<p>Let's take a closer look at the following two String functions:  indexOf() and substring(). indexOf() locates a sequence of characters within a String.   It takes one argument, a search String, and returns a numeric value that corresponds to first occurrence of the search string inside of the string being searched.  </p>
+    <p>
+      This tutorial picks up where the <a href="http://processing.org/learning/text/">Strings and Drawing Text</a> tutorial leaves off and examines how to use String objects as the basis for reading and writing data. We'll start by learning more sophisticated methods for manipulating Strings, searching in them, chopping them up, and joining them together.  Afterwards, we'll see how these skills allow us to use input from data sources, such as text files, web pages, xml feeds, and 3rd party APIs and take a step into the world of data visualization.
+    </p>
+
+    <h3>Manipulating Strings</h3>
+
+    <p>
+      In <a href="http://processing.org/learning/text/">Strings and Drawing Text</a>, we touched on a few of the basic functions available in the Java String class, such as charAt(), toUpperCase(), equals(), and length().  These functions are documented on the Processing reference page for Strings.  Nevertheless, in order to perform some more advanced data parsing techniques, we'll need to explore some additional String manipulation functions <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html">documented in the Java API</a>.
+    </p>
+
+    <p>
+      Let's take a closer look at the following two String functions:  indexOf() and substring(). indexOf() locates a sequence of characters within a String.   It takes one argument, a search String, and returns a numeric value that corresponds to first occurrence of the search string inside of the string being searched.
+    </p>
 
 <pre>
 String search = "def";
@@ -22,7 +30,9 @@ String toBeSearched = "abcdefghi";
 int index = toBeSearched.indexOf(search);  // The value of index in this example is 3.
 </pre>
 
-<p>Strings are just like arrays, in that the first character is index number zero and the last character is the length of the string minus one.  If the search string cannot be found, indexOf() returns -1.   This is a good choice because -1 is not a legitimate index value and therefore can indicate "not found." After finding a search phrase within a String, we might want to separate out part of the string, saving it in a different variable.  A part of a string is known as "substring."  The substring() function which takes two arguments, a start index and an end index and returns the substring in between the two indices.</p>
+    <p>
+      Strings are just like arrays, in that the first character is index number zero and the last character is the length of the string minus one.  If the search string cannot be found, indexOf() returns -1.   This is a good choice because -1 is not a legitimate index value and therefore can indicate "not found." After finding a search phrase within a String, we might want to separate out part of the string, saving it in a different variable.  A part of a string is known as "substring."  The substring() function which takes two arguments, a start index and an end index and returns the substring in between the two indices.
+    </p>
 
 <pre>
 String alphabet = "abcdefghi";
@@ -510,11 +520,8 @@ void draw() {
 
 <p>While using the thread() function is a very simple way of getting an independent thread, it should be noted that it is somewhat limited. Being able to make a thread object is a great deal more powerful, and this can be done by extending the Java <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Thread.html">Thread</a> class.</p>
 
-<p>&nbsp;</p>
-
-  <p class="license">This tutorial is for Processing version 2.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 
 </td>
 	</tr>
   </table>
-</p>
+
