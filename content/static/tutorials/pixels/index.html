@@ -1,25 +1,28 @@
-<h1>Images and Pixels</h1>
-	
-<p>
-<table width="656">
-   	<tr>
-   	
-<p class="license">This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
-	
-	<p>&nbsp;</p>
+<table width="650">
+    <tr>
+    <td>
 
+    <p class="license">
+      This tutorial is from the book <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a> by Daniel Shiffman, published by Morgan Kaufmann, &copy; 2008 Elsevier Inc. All rights reserved. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+    </p>
 
-A digital image is nothing more than data -- numbers indicating variations of red, green, and blue at a particular location on a grid of pixels.   Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen.  With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways.   This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
+    <h1 style="line-height: 0.7em;">Images and Pixels</h1>
+    <h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
 
-<h3>Getting started with images.</h3>
+    <p>
+      A digital image is nothing more than data -- numbers indicating variations of red, green, and blue at a particular location on a grid of pixels.   Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen.  With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways.   This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
+    <p>
 
-Hopefully, you are comfortable with the idea of data types.  You probably specify them often -- a float variable "speed", an int "x", etc.  These are all primitive data types, bits sitting in the computer's memory ready for our use.   Though perhaps a bit trickier, you hopefully also use objects, complex data types that store multiple pieces of data (along with functionality) --  a "Ball" class, for example, might include floating point variables for location, size, and speed as well as methods to move, display itself, and so on.  
-<br /><br />
+    <h3>Getting started with images.</h3>
+
+    <p>
+      Hopefully, you are comfortable with the idea of data types.  You probably specify them often -- a float variable "speed", an int "x", etc.  These are all primitive data types, bits sitting in the computer's memory ready for our use.   Though perhaps a bit trickier, you hopefully also use objects, complex data types that store multiple pieces of data (along with functionality) --  a "Ball" class, for example, might include floating point variables for location, size, and speed as well as methods to move, display itself, and so on.  
+    <br /><br />
 
 In addition to user-defined objects (such as Ball), Processing has a bunch of handy classes all ready to go without us writing any code. In this tutorial, we'll examine <a href="http://processing.org/reference/PImage.html">PImage</a>, a class for loading and displaying an image as well as looking at its pixels.
 
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-1/">Example: "Hello World" images</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-1/">Example: "Hello World" images</a>-->
 <br />
 <pre>
 // Declaring a variable of type PImage
@@ -156,7 +159,7 @@ We are familiar with the idea of each pixel on the screen having an X and Y posi
 <br /><br />
 Take the following simple example. This program sets each pixel in a window to a random grayscale value.   The pixels array is just like an other array, the only difference is that we don't have to declare it since it is a Processing built-in variable. 
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-5-setting-pixels/">Example:  Setting Pixels</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-5-setting-pixels/">Example:  Setting Pixels</a>-->
 <br /><br />
 <pre>
 size(200, 200);
@@ -198,7 +201,7 @@ This may remind you of our <a href="http://www.processing.org/learning/2darray/"
 <br /><br />
 Let's look at how it is done.
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-6/">Example: Setting Pixels according to their 2D location</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-6/">Example: Setting Pixels according to their 2D location</a>-->
 <br /><br />
 <pre>
 size(200, 200);
@@ -284,7 +287,7 @@ int displayLoc = x + y*width;
 
 Just a few paragraphs ago, we were enjoying a relaxing coding session, colorizing images and adding alpha transparency with the friendly tint() method.   For basic filtering, this method did the trick.   The pixel by pixel method, however, will allow us to develop custom algorithms for mathematically altering the colors of an image.  Consider brightness -- brighter colors have higher values for their red, green, and blue components.    It follows naturally that we can alter the brightness of an image by increasing or decreasing the color components of each pixel.  In the next example, we dynamically increase or decrease those values based on the mouse's horizontal location.  (Note, the next two examples include only the image processing loop itself, the rest of the code is assumed.) 
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-8/">Example:  Adjusting image brightness</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-8/">Example:  Adjusting image brightness</a>-->
 <br /><br />
 <pre>
 for (int x = 0; x < img.width; x++) {
@@ -315,7 +318,7 @@ Since we are altering the image on a per pixel basis, all pixels need not be tre
 <br /><br />
 <img src="imgs/flashlight.jpg">
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-9/">Example: Adjusting image brightness based on pixel location</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-9/">Example: Adjusting image brightness based on pixel location</a>-->
 <br /><br />
 <pre>
 for (int x = 0; x < img.width; x++) {
@@ -351,7 +354,7 @@ A threshold filter displays each pixel of an image in only one of two states, bl
 <br /><br />
 <img src="imgs/threshold.jpg">
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-10/">Example: Brightness Threshold</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-10/">Example: Brightness Threshold</a>-->
 <br /><br />
 <pre>
 PImage source;       // Source image
@@ -433,7 +436,7 @@ Here is the full algorithm:
 <br><br />
 <img src="imgs/edges.jpg">
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-12/">Example: Pixel neighbor differences (edges)</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-12/">Example: Pixel neighbor differences (edges)</a>-->
 <br /><br />
 <pre>
 // Since we are looking at left neighbors
@@ -484,7 +487,7 @@ Following is an example that performs a convolution using a 2D array (see Chapte
 <br><br />
 <img src="imgs/sharpen.jpg">
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-13/">Example: Sharpen with Convolution</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-13/">Example: Sharpen with Convolution</a>-->
 <br /><br />
 <pre>
 PImage img;
@@ -571,7 +574,7 @@ In this first example, for every cycle through draw(), we fill one ellipse at a 
 <br /><br />
 <img src="imgs/pointillism.jpg">
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-14/">Example: "Pointillism"</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-14/">Example: "Pointillism"</a>-->
 <br /><br />
 <pre>
 PImage img;
@@ -608,7 +611,7 @@ In this next example, we take the data from a two-dimensional image and using th
 <br /><br />  
 <img src="imgs/explode1.jpg"> <img src="imgs/explode2.jpg"> <img src="imgs/explode3.jpg">
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-15/">Example: 2D image mapped to 3D</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-15/">Example: 2D image mapped to 3D</a>-->
 <br /><br />
 <pre>
 PImage img;       // The source image
@@ -648,9 +651,6 @@ void draw() {
 }
 </pre>
 
-	<p>&nbsp;</p>
-
-<p class="license">This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
 
 </td>
 	</tr>
