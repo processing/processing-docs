@@ -9,9 +9,9 @@
 
 	<p><em>(The source code for this tutorial is in the example. Selecting File &rarr; Examples in the Processing IDE, then select Topics &rarr; Create Shapes.)</em></p>
 
-  <p>Before we should begin, it should also be noted that the features of this tutorial (i.e. the use of createShape()) are currently only supported by the P2D and P3D drawing modes.</p>
+<!--  <p>Before we should begin, it should also be noted that the features of this tutorial (i.e. the use of createShape()) are currently only supported by the P2D and P3D drawing modes.</p>
 
-<h3>What is a PShape?</h3>
+<h3>What is a PShape?</h3>-->
 
 <p>One of the very first things you learn when programming with Processing is how to draw "primitive" shapes to the screen: rectangles, ellipses, lines, triangles, and more.</p>
 
@@ -163,7 +163,7 @@ void draw() {
 
 <p>It should be noted that unlike with fill() and stroke() you must pass a full color as an argument.  i.e. instead of saying "setFill(255,0,0)" for a red fill, you'll need to say "setFill(color(255,0,0))".  In addition, setFill() and setStroke() can take a boolean argument (e.g. setFill(false)) to turn the fill or stroke on or off for a given vertex as well as an integer (e.g. setFill(i,color(255,0,0))) to set the fill or stroke for a specific vertex.
 
-<p>See Example "PrimitivePShape" (under File > Examples > Topics > Create Shapes) for an example that demonstrates all of the above code.</p>
+<p>See Example "PrimitivePShape" (under File &rarr; Examples &rarr; Topics &rarr; Create Shapes) for an example that demonstrates all of the above code.</p>
 
 <h3>Custom PShapes</h3>
 
@@ -365,8 +365,9 @@ void setup() {
   star.vertex(-47, -15);
   star.vertex(-14, -20);
   star.endShape(CLOSE);
-
-  poly = new Polygon(star);     // Then we make the Polygon object by passing in the reference to the PShape
+  
+  // Make the Polygon object by passing in the reference to the PShape
+  poly = new Polygon(star);
 
 }
 </pre>
@@ -377,25 +378,25 @@ void setup() {
 
 <pre>
 ArrayList<Polygon> polygons;
-PShape[] shapes = new PShape[2];                       // An array of PShapes
+PShape[] shapes = new PShape[2];                 // An array of PShapes
 
 void setup() {
   size(640, 360, P2D);
   smooth();
-  shapes[0] = createShape(ELLIPSE,0,0,100,100);        // Two PShapes
+  shapes[0] = createShape(ELLIPSE,0,0,100,100);  // Two PShapes
   shapes[1] = createShape(RECT,0,0,100,100);
 
   polygons = new ArrayList<Polygon>();
 
   for (int i = 0; i < 25; i++) {
-    int selection = int(random(shapes.length));        // Pick a random index
-    Polygon p = new Polygon(shapes[selection]);        // Use corresponding PShape to create Polygon
+    int selection = int(random(shapes.length));  // Pick a random index
+    Polygon p = new Polygon(shapes[selection]);  // Use corresponding PShape to create Polygon
     polygons.add(p);
   }
 }
 </pre>
 
-<p>For the full examples, take a look at "PolygonPShapeOOP1", "PolygonPShapeOOP2", and "PolygonPShapeOOP3" (Under File > Examples > Topics > Create Shapes).</p>
+<p>For the full examples, take a look at "PolygonPShapeOOP1", "PolygonPShapeOOP2", and "PolygonPShapeOOP3" (Under File &rarr; Examples &rarr; Topics &rarr; Create Shapes).</p>
 
 <h3>More Custom PShapes</h3>
 
@@ -455,7 +456,7 @@ s.endShape();
 
 <p>Note that the vertices that define a negative shape must "wind" in the opposite direction from the exterior shape. First draw vertices for the exterior shape in clockwise order, then for internal shapes, draw vertices counter-clockwise.</p>
 
-<p>See Example "BeginEndContour" (under File > Examples > Topics > Create Shapes) for the full implementation.</p>
+<p>See Example "BeginEndContour" (under File &rarr; Examples &rarr; Topics &rarr; Create Shapes) for the full implementation.</p>
 
 <h3>PShape Groups</h3>
 
@@ -542,7 +543,7 @@ for (int i = 0; i < s.getVertexCount(); i++) {
 }
 </pre>
 
-<p>For an example that wiggles a polygon's vertices using Perlin noise, see "WigglePShape" (under File > Examples > Topics > Create Shapes).</p>
+<p>For an example that wiggles a polygon's vertices using Perlin noise, see "WigglePShape" (under File &rarr; Examples > Topics &rarr; Create Shapes).</p>
 
   </td>
 	</tr>
