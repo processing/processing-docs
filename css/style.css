@@ -1135,7 +1135,8 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tutorials .onecol { clear: both; }
 #Tutorials table { 
 	/*width: 687px;*/ 
-	margin-top: 0px; 
+	margin-top: 0px;
+	margin-bottom: 20px; 
 	border-collapse:collapse;
 }
 
