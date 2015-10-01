@@ -11,20 +11,19 @@
 
     <p>
 		In the digital world, when we want to talk about a color, precision is required. Saying "Hey, can you make that circle bluish-green?"  will not do. Color, rather, is defined as a range of numbers. Let's start with the simplest case:  black & white or grayscale.   0 means black, 255 means white. In between, every other number - 50, 87, 162, 209, and so on - is a shade of gray ranging from black to white. 
-<br /><br />
-<img src="imgs/grayscale.jpg" border="1">
-<br /><br />
-<table width="100%" border="0" cellpadding="20" bgcolor="#DEDEDE">
-<tr><td><em>Does 0-255 seem arbitrary to you?</em><br />
-Color for a given shape needs to be stored in the computer's memory. This memory is just a long sequence of 0's and 1's (a whole bunch of on or off switches.) 
-Each one of these switches is a bit, eight of them together is a byte. Imagine if we had eight bits (one byte) in sequence - how many ways can we 
-configure these switches? The answer is (and doing a little <a href="http://en.wikipedia.org/wiki/Binary_number">research into binary numbers</a> will prove this point) 256 possibilities, or a range 
-of numbers between 0 and 255. We will use eight bit color for our grayscale range and 24 bit for full color (eight bits for each of the red, green, and blue color components).      
-</td></tr></table>
-<br /><br />
-By adding the <strong><a href="http://processing.org/reference/stroke_.html">stroke()</a></strong> and 
-<strong><a href="http://processing.org/reference/fill_.html">fill()</a></strong> functions before something is drawn, we can set the color of any given shape.  There is also the function   
-<strong><a href="http://processing.org/reference/background_.html">background()</a></strong>, which sets a background color for the window.  Here's an example.
+		<br /><br />
+
+		<img src="imgs/grayscale.jpg" border="1">
+
+		<br /><br />
+		<p class="license">
+			<em>Does 0-255 seem arbitrary to you?</em><br />
+			Color for a given shape needs to be stored in the computer's memory. This memory is just a long sequence of 0's and 1's (a whole bunch of on or off switches.) Each one of these switches is a bit, eight of them together is a byte. Imagine if we had eight bits (one byte) in sequence - how many ways can we configure these switches? The answer is (and doing a little <a href="http://en.wikipedia.org/wiki/Binary_number">research into binary numbers</a> will prove this point) 256 possibilities, or a range of numbers between 0 and 255. We will use eight bit color for our grayscale range and 24 bit for full color (eight bits for each of the red, green, and blue color components).      
+		</p>
+
+		<br /><br />
+
+		By adding the <strong><a href="http://processing.org/reference/stroke_.html">stroke()</a></strong> and <strong><a href="http://processing.org/reference/fill_.html">fill()</a></strong> functions before something is drawn, we can set the color of any given shape.  There is also the function <strong><a href="http://processing.org/reference/background_.html">background()</a></strong>, which sets a background color for the window.  Here's an example.
 
 <br /><br />
 
