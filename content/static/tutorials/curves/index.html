@@ -6,39 +6,38 @@
   
   <h1 style="line-height: 0.7em;">Curves</h1>
   <h3 style="line-height: 0.7em;"><em>J David Eisenberg</em></h3>
-    
-  <p>
-    <em>(<a href="code/curve_programs.zip">Download the files from this tutorial.</a>)</em>
+  
+  <p class="txt">
+      <em>(<a href="code/curve_programs.zip">Download the files from this tutorial.</a>)</em>
+  </p>
+  
+  <p class="txt">
+      This tutorial introduces you to the three types of curves in Processing: arcs, spline curves, and B&eacute;zier curves.
   </p>
 
-<p>
-This tutorial introduces you to the three types of curves in Processing:
-arcs, spline curves, and B&eacute;zier curves.
+  <h3>Arcs</h3>
+
+  
+  <p class="txt">
+    Arcs are the simplest curves to draw. Processing defines an arc as a section of an ellipse. You call the function with these parameters:
 </p>
 
-<h3>Arcs</h3>
-
-<p>
-Arcs are the simplest curves to draw. Processing defines an arc as a section of an ellipse.
-You call the function with these parameters:
-</p>
-
-<pre>arc(<i>x</i>, <i>y</i>, <i>width</i>, <i>height</i>, <i>start</i>, <i>stop</i>);
-
+<pre>
+arc(<i>x</i>, <i>y</i>, <i>width</i>, <i>height</i>, <i>start</i>, <i>stop</i>);
 </pre>
 
-<p>
-The first four parameters are the same as the ones for <code>ellipse()</code>; they define
-the boundary box for your arc. The last two parameters are the starting and ending
+  
+  <p class="txt">
+    The first four parameters are the same as the ones for <code>ellipse()</code>; they define the boundary box for your arc. The last two parameters are the starting and ending
 angle for the arc. These angles, as with all other angles in Processing, are given
 in radians. Remember that angles are measured clockwise, with zero degrees pointing
 east. Using the fact that <code>PI</code> radians equals 180&deg;, here are some example arcs.
 </p>
 
-<img src="imgs/arc1.png" width="210" height="132"
-  alt="Sample arcs" style="float: right;"/>
-<pre>void setup()
-{
+<img src="imgs/arc1.png" width="210" height="132" alt="Sample arcs" class="tut" />
+
+<pre>
+void setup() {
   size(300, 200);
   background(255);
   smooth();
@@ -56,25 +55,18 @@ east. Using the fact that <code>PI</code> radians equals 180&deg;, here are some
   arc(175, 35, 50, 50, -PI / 6, PI / 6); // 60 degrees
   arc(105, 105, 100, 50, PI / 2, 3 * PI / 2); // 180 degrees
 }
-
 </pre>
 
-<h3>Spline Curves</h3>
-<p>
-Arcs are fine, but they&rsquo;re plain. The next function,
-<code>curve()</code>, lets you draw curves that aren&rsquo;t
-necessarily part of an arc. This function draws what is
-technically called a <dfn>Rom-Catmull Spline</dfn>. To
-draw the curve, you have to specify the 
-(<i>x</i>,&nbsp;<i>y</i>) coordinates of the points where the
-curve starts and ends. You
-must also specify two <dfn>control points</dfn> which determine
-the direction and amount of curvature. A call to <code>curve()</code>
-uses these parameters:
-</p>
+    <h3>Spline Curves</h3>
 
-<pre>curve(<i>cpx1</i>, <i>cpy1</i>, <i>x1</i>, <i>y1</i>, <i>x2</i>, <i>y2</i>, <i>cpx2</i>, <i>cpy2</i>);
+    <p class="txt">
+      Arcs are fine, but they&rsquo;re plain. The next function, <code>curve()</code>, lets you draw curves that aren&rsquo;t necessarily part of an arc. This function draws what is technically called a <dfn>Rom-Catmull Spline</dfn>. To draw the curve, you have to specify the (<i>x</i>,&nbsp;<i>y</i>) coordinates of the points where the curve starts and ends. You must also specify two <dfn>control points</dfn> which determine the direction and amount of curvature. A call to <code>curve()</code> uses these parameters:
+    </p>
+
+<pre>
+  curve(<i>cpx1</i>, <i>cpy1</i>, <i>x1</i>, <i>y1</i>, <i>x2</i>, <i>y2</i>, <i>cpx2</i>, <i>cpy2</i>);
 </pre>
+
 <table cellpadding="4">
 <tr>
   <td><code>cpx1, cpy1</code></td>
@@ -94,15 +86,16 @@ uses these parameters:
 </tr>
 </table>
 
-<p>
+<p class="txt">
 Here is an example that shows a <code>curve()</code>. The control
 points are shown in red and the curve points in blue.
 </p>
 
-<img src="imgs/curve1.png" width="118" height="126"
-  alt="gentle curve with control points" style="float: right; "/>
-<pre>void setup()
-{
+<img src="imgs/curve1.png" width="118" height="126" alt="gentle curve with control points" class="tut" />
+
+
+<pre>
+void setup() {
   size(200, 200);
   background(255);
   smooth();
@@ -120,11 +113,12 @@ points are shown in red and the curve points in blue.
 }
 
 </pre>
-<p>
-<img src="imgs/curve_with_tangent.png" width="138" height="121"
-  alt="curve showing relationship between control points"
-  style="float: left;" />
-How do the control points affect the way the curve looks? Take a deep
+
+<img src="imgs/curve_with_tangent.png" width="138" height="121" alt="curve showing relationship between control points" class="tut" />
+
+
+<p class="txt">
+  How do the control points affect the way the curve looks? Take a deep
 breath, because this is somewhat complicated.
 </p>
 <ul>
@@ -138,7 +132,7 @@ shown in purple in the diagram at the left.</li>
 </ul>
 
 <h3>Continuous Spline Curves</h3>
-<p>
+<p class="txt">
 In isolation, a single <code>curve()</code> is not particularly appealing. To draw a
 continuous curve through several points, you are better off using
 the <code>curveVertex()</code> function. You can only use this
@@ -146,7 +140,7 @@ function when you are creating a shape with the
 <code>beginShape()</code> and <code>endShape()</code> functions.
 </p>
 
-<p>
+<p class="txt">
 Here is a curve connecting the points (40,&nbsp;40),
 (80,&nbsp;60), (100,&nbsp;100), (60,&nbsp;120), and
 (50,&nbsp;150). In common usage, people use the first point
@@ -155,14 +149,13 @@ of the curve as the last control point. The lower diagram
 shows the tangents at the intermediate points.
 </p>
 
-<div style="float:right; width: 119px;">
-<img src="imgs/curvevertex1.png"
-  alt="curve showing vertices" width="119" height="140" /><br />
-<img src="imgs/curvevertex2.png"
-  alt="curve showing vertices and tangents" width="119" height="140" />
-</div>
-<pre>void setup()
-{
+
+<img src="imgs/curvevertex1.png" alt="curve showing vertices" width="119" height="140"  class="tut" />
+<br />
+<img src="imgs/curvevertex2.png" alt="curve showing vertices and tangents" width="119" height="140"  class="tut" />
+
+<pre>
+void setup() {
   int[ ] coords = {
     40, 40, 80, 60, 100, 100, 60, 120, 50, 150
   };
@@ -197,17 +190,18 @@ shows the tangents at the intermediate points.
 
 </pre>
 
-<h3>B&eacute;zier Curves</h3>
-<p>
-Though better than arcs, spline curves don&rsquo;t seem to have those 
-graceful, swooping curves that say &ldquo;art.&rdquo; For those,
-you need to draw B&eacute;zier curves with the 
-<code>bezier()</code> function. As with spline curves, the
-<code>bezier()</code> function has eight parameters, but the order is different:
-</p>
+    <h3>B&eacute;zier Curves</h3>
 
-<pre>bezier(<i>x1</i>, <i>y1</i>, <i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>, <i>x2</i>, <i>y2</i>);
+
+    <p class="txt">
+      Though better than arcs, spline curves don&rsquo;t seem to have those graceful, swooping curves that say &ldquo;art.&rdquo; For those, you need to draw B&eacute;zier curves with the <code>bezier()</code> function. As with spline curves, the <code>bezier()</code> function has eight parameters, but the order is different:
+    </p>
+
+<pre>
+bezier(<i>x1</i>, <i>y1</i>, <i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>, <i>x2</i>, <i>y2</i>);
 </pre>
+
+
 <table cellpadding="4">
 <tr>
   <td><code>x1, y1</code></td>
@@ -227,17 +221,15 @@ you need to draw B&eacute;zier curves with the
 </tr>
 </table>
 
-<p>
+<p class="txt">
 Here is a program that displays a B&eacute;zier curve
 and its control points.
 </p>
 
-<img src="imgs/bezier_with_points.png"
-  alt="B&eacute;zier curve with endpoints and control points marked"
-  width="154" height="99" style="float: right;" />
+<img src="imgs/bezier_with_points.png" alt="B&eacute;zier curve with endpoints and control points marked" width="154" height="99" class="tut" />
+
 <pre>
-void setup( )
-{
+void setup() {
   size(150, 150);
   background(255);
   smooth();
@@ -251,27 +243,20 @@ void setup( )
   stroke(0);
   bezier(50, 75, 25, 25, 125, 25, 100, 75);
 }
-
 </pre>
 
-<p>
-<img src="imgs/bezier_with_lines.png"
-  alt="B&eacute;zier curve showing control points connected to curve"
-  width="154" height="99" style="float:left" />
-While it is difficult to visualize how the control points affect a
-<code>curve()</code>, it is slightly easier to see how the control points affect
-B&eacute;zier curves. Imagine two poles and several
-rubber bands.  The poles connect the control points
-to the endpoints of the curve. A rubber band connects the tops of the
-poles.  Two more rubber bands connect the midpoints of the poles to the
-midpoint of the first rubber band. One more rubber band
-connects <em>their</em> midpoints. The center of that last rubber
-band is tied to the curve.
-</p>
+<img src="imgs/bezier_with_lines.png" alt="B&eacute;zier curve showing control points connected to curve" width="154" height="99" class="tut" />
 
-<h3>Continuous B&eacute;zier Curves</h3>
-<p>
-Just as <code>curveVertex()</code> allows you to make continuous
+    <p class="txt">
+      While it is difficult to visualize how the control points affect a <code>curve()</code>, it is slightly easier to see how the control points affect B&eacute;zier curves. Imagine two poles and several rubber bands.  The poles connect the control points to the endpoints of the curve. A rubber band connects the tops of the poles.  Two more rubber bands connect the midpoints of the poles to the midpoint of the first rubber band. One more rubber band connects <em>their</em> midpoints. The center of that last rubber band is tied to the curve.
+    </p>
+
+
+    <h3>Continuous B&eacute;zier Curves</h3>
+
+
+    <p class="txt">
+      Just as <code>curveVertex()</code> allows you to make continuous
 spline curves, <code>bezierVertex()</code> lets you make continuous
 B&eacute;zier curves.
 Again, you must be within a <code>beginShape()</code> /
@@ -281,9 +266,10 @@ the starting point of the curve. Subsequent points are specified
 with a call to:
 </p>
 
-<pre>bezierVertex(<i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>, <i>x</i>, <i>y</i>);
-
+<pre>
+  bezierVertex(<i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>, <i>x</i>, <i>y</i>);
 </pre>
+
 <table cellpadding="4">
 <tr>
   <td><code>cpx1, cpy1</code></td>
@@ -299,13 +285,13 @@ with a call to:
 </tr>
 </table>
 
-<p>
+<p class="txt">
 So, to draw the previous example using <code>bezierVertex()</code>,
 you would do this:
 </p>
 
-<pre>void setup( )
-{
+<pre>
+void setup() {
   size(150, 150);
   background(255);
   smooth();
@@ -317,58 +303,46 @@ you would do this:
   bezierVertex(25, 25, 125, 25, 100, 75);
   endShape();
 }
-
 </pre>
 
-<p>
-<img src="imgs/nonsmooth_bezier.png" width="136" height="136"
-  alt="lumpy continuous bezier curve" style="float:right;" />
-Here is a continuous B&eacute;zier curve, but it doesn&rsquo;t
-join smoothly.
+<img src="imgs/nonsmooth_bezier.png" width="136" height="136" alt="lumpy continuous bezier curve"  class="tut" />
+
+    <p class="txt">
+      Here is a continuous B&eacute;zier curve, but it doesn&rsquo;t join smoothly.
 The diagram shows the control points, but only the
 relevant code for drawing the curve is here.
-</p>
+    </p>
 
-<pre>beginShape();
+<pre>
+beginShape();
 vertex(30, 70); // first point
 bezierVertex(25, 25, 100, 50, 50, 100);
 bezierVertex(50, 140, 75, 140, 120, 120);
 endShape();
-
 </pre>
 
-<br style="clear:right;" />
+<img src="imgs/smooth_bezier.png" width="132" height="132" alt="smooth continuous bezier curve" class="tut" />
 
-<img src="imgs/smooth_bezier.png" width="132" height="132"
-  alt="smooth continuous bezier curve" style="float:right;" />
-<p>
-In order to make two curves A and B smoothly continuous, the last control
-point of A, the last point of A, and the first control point of B
-have to be on a straight line.  Here is an example that
-meets those conditions. The points that are in a line are
-shown in bold.
-</p>
 
-<pre>beginShape();
+    <p class="txt">
+      In order to make two curves A and B smoothly continuous, the last control point of A, the last point of A, and the first control point of B have to be on a straight line.  Here is an example that meets those conditions. The points that are in a line are shown in bold.
+    </p>
+
+<pre>
+beginShape();
 vertex(30, 70); // first point
 bezierVertex(25, 25, <b>100, 50, 50, 100</b>);
 bezierVertex(<b>20, 130</b>, 75, 140, 120, 120);
 endShape();
 </pre>
 
-<h3>Summary</h3>
 
-<ul>
-<li>Use <code>arc()</code> when you need a segment of a circle
-or an ellipse. You can&rsquo;t make continuous arcs or use them as
-part of a shape.</li>
-<li>Use <code>curve()</code> when you need a small curve between
-two points. Use <code>curveVertex()</code> to make a continuous series
-of curves as part of a shape.</li>
-<li>Use <code>bezier()</code> when you need long, smooth curves.
-Use <code>bezierVertex()</code> to make a continuous series
-of B&eacute;zier curves as part
-of a shape.</li>
+    <h3>Summary</h3>
+
+    <ul>
+      <li>Use <code>arc()</code> when you need a segment of a circle or an ellipse. You can&rsquo;t make continuous arcs or use them as part of a shape.</li>
+      <li>Use <code>curve()</code> when you need a small curve between two points. Use <code>curveVertex()</code> to make a continuous series of curves as part of a shape.</li>
+      <li>Use <code>bezier()</code> when you need long, smooth curves. Use <code>bezierVertex()</code> to make a continuous series of B&eacute;zier curves as part of a shape.</li>
 </ul>
 
 <!-- end of page stuff here -->
