@@ -7,10 +7,10 @@
     <h1 style="line-height: 0.7em;">Shaders</h1>
     <h3 style="line-height: 0.7em;"><em>Andres Colubri</em></h3>
 
-	  <p><em>(The code for this tutorial is <a href="https://github.com/codeanticode/pshader-tutorials">available here.</a>)</em></p>
+	  <p><br /><em>(The code for this tutorial is <a href="https://github.com/codeanticode/pshader-tutorials">available here.</a>)</em><br /></p>
 
     <p class="txt">
-      Everything that Processing draws on the screen with the <a href="http://processing.org/reference/size_.html">P2D and P3D renderers</a> is the output of an appropriate "default shader" running behind the scenes. Processing handles these default shaders transparently so that the user doesn't need to worry about them, and she or he can continue to use the well-known <a href="http://processing.org/reference/">drawing functions</a> and expect the same visual results as with previous versions of Processing. However, Processing 2 incorporates a new set of functions and variables that allows advanced users to replace the default shaders with her or his own. This opens up many exciting possibilities: rendering 3D scenes using more sophisticated lighting and texturing algorithms, applying image post-processing effects in real-time, creating complex procedural objects that would be very hard or impossible to generate with other techniques, and sharing shader effects between desktop, mobile, and web platforms with minimal code changes.
+      Everything that Processing draws on the screen with the <a href="http://processing.org/reference/size_.html">P2D and P3D renderers</a> is the output of an appropriate "default shader" running behind the scenes. Processing handles these default shaders transparently so that the user doesn't need to worry about them, and she or he can continue to use the well-known <a href="http://processing.org/reference/">drawing functions</a> and expect the same visual results as with previous versions of Processing. However, Processing incorporates a new set of functions and variables that allows advanced users to replace the default shaders with her or his own. This opens up many exciting possibilities: rendering 3D scenes using more sophisticated lighting and texturing algorithms, applying image post-processing effects in real-time, creating complex procedural objects that would be very hard or impossible to generate with other techniques, and sharing shader effects between desktop, mobile, and web platforms with minimal code changes.
    </p>
 
   <p>
@@ -34,16 +34,17 @@
 <p>Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. This sketch draws a quad with lights and some geometric transformations applied to it:
 
 <table>
-<caption><b>Code listing 1.1:</b> Simple 3D sketch that draws a lit rotating rectangle</caption>
+<strong>Code listing 1.1:</strong> Simple 3D sketch that draws a lit rotating rectangle
 <tr><td>
 <pre>
 <span style="color: #CC6633;">float</span> angle;
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(400, 400, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();  
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">camera</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2, 300, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2, 0, 0, 1, 0);
@@ -149,12 +150,12 @@ A shader (program) is encapsulated by the <em>PShader</em> class. A <em>PShader<
 </p>
 
 <table>
-<caption><b>Code listing 2.1:</b> Sketch that uses a toon effect shader to render a sphere.</caption>
+<strong>Code listing 2.1:</strong> Sketch that uses a toon effect shader to render a sphere.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShader</span> toon;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
 &nbsp;&nbsp;<span style="color: #006699;">fill</span>(204);
@@ -162,7 +163,7 @@ A shader (program) is encapsulated by the <em>PShader</em> class. A <em>PShader<
 &nbsp;&nbsp;toon.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;fraction&quot;</span>, 1.0);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(toon);
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0); 
 &nbsp;&nbsp;<span style="color: #CC6633;">float</span> dirY = (<span style="color: #FF6699;">mouseY</span> / float(<span style="color: #FF6699;">height</span>) - 0.5) * 2;
@@ -172,7 +173,7 @@ A shader (program) is encapsulated by the <em>PShader</em> class. A <em>PShader<
 &nbsp;&nbsp;<span style="color: #006699;">sphere</span>(120);
 }
 
-<b>ToonVert.glsl:</b>
+<strong>ToonVert.glsl:</strong>
 
 uniform mat4 transform;
 uniform mat3 normalMatrix;
@@ -193,7 +194,7 @@ void main() {
   vertLightDir = -lightNormal;
 }
 
-<b>ToonFrag.glsl:</b>
+<strong>ToonFrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -267,7 +268,7 @@ When setting a shader with the <em>shader()</em> function, if no type argument i
 </p>
 
 <pre>
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(lineShader, <span style="color: #666666;">LINES</span>);
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(polyShader); <span style="color: #7E7E7E;">// same as shader(polyShader, TRIANGLE);</span>
@@ -364,19 +365,19 @@ We will go through the different types of shaders available in Processing and ex
 </p>
 
 <table>
-<caption><b>Code listing 4.1:</b> Base cylinder.</caption>
+<strong>Code listing 4.1:</strong> Base cylinder.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShape</span> can;
 <span style="color: #CC6633;">float</span> angle;
 <span style="color: #CC6633;">PShader</span> colorShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
 &nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
@@ -414,10 +415,10 @@ First, save the code in listing 1 and add the following two files in the data fo
 </p>
 
 <table>
-<caption><b>Code listing 4.2:</b> Vertex and fragment shaders for color rendering.</caption>
+<strong>Code listing 4.2:</strong> Vertex and fragment shaders for color rendering.
 <tr><td>
 <pre>
-<b>colorvert.glsl:</b>
+<strong>colorvert.glsl:</strong>
 
 #define PROCESSING_COLOR_SHADER
 
@@ -433,7 +434,7 @@ void main() {
   vertColor = color;
 }
 
-<b>colorfrag.glsl:</b>
+<strong>colorfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -486,7 +487,7 @@ Rendering textured geometry requires additional uniforms and attributes in the s
 </p>
 
 <table>
-<caption><b>Code listing 5.1:</b> Sketch for textured rendering (no lights).</caption>
+<strong>Code listing 5.1:</strong> Sketch for textured rendering (no lights).
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PImage</span> label;
@@ -495,14 +496,14 @@ Rendering textured geometry requires additional uniforms and attributes in the s
 
 <span style="color: #CC6633;">PShader</span> texShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;texShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texvert.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(texShader);  
@@ -532,7 +533,7 @@ Rendering textured geometry requires additional uniforms and attributes in the s
 &nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
 }
 
-<b>texvert.glsl:</b>
+<strong>texvert.glsl:</strong>
 
 #define PROCESSING_TEXTURE_SHADER
 
@@ -553,7 +554,7 @@ void main() {
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
 }
 
-<b>texfrag.glsl:</b>
+<strong>texfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -609,7 +610,7 @@ Using the same geometry from the previous examples, we can now write a simple sh
 </p>
 
 <table>
-<caption><b>Code listing 6.1:</b> Sketch for simple (per-vertex) lighting. The implementation of the <em>createCan()</em> function in the sketch code is omitted since it is identical to that of listing 3.</caption>
+<strong>Code listing 6.1:</strong> Sketch for simple (per-vertex) lighting. The implementation of the <em>createCan()</em> function in the sketch code is omitted since it is identical to that of listing 3.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShape</span> can;
@@ -617,13 +618,13 @@ Using the same geometry from the previous examples, we can now write a simple sh
 
 <span style="color: #CC6633;">PShader</span> lightShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32);
 &nbsp;&nbsp;lightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;lightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;lightvert.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(lightShader);
@@ -636,7 +637,7 @@ Using the same geometry from the previous examples, we can now write a simple sh
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 
-<b>lightvert.glsl:</b>
+<strong>lightvert.glsl:</strong>
 
 #define PROCESSING_LIGHT_SHADER
 
@@ -662,7 +663,7 @@ void main() {
   vertColor = vec4(intensity, intensity, intensity, 1) * color;             
 }
 
-<b>lightfrag.glsl:</b>
+<strong>lightfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -706,10 +707,10 @@ As it was discussed at the beginning, the possibility of setting custom shaders 
 </p>
 
 <table>
-<caption><b>Code listing 6.2:</b> Vertex and fragment shaders for simple per-pixel lighting.</caption>
+<strong>Code listing 6.2:</strong> Vertex and fragment shaders for simple per-pixel lighting.
 <tr><td>
 <pre>
-<b>pixlightvert.glsl:</b>
+<strong>pixlightvert.glsl:</strong>
 
 #define PROCESSING_LIGHT_SHADER
 
@@ -737,7 +738,7 @@ void main() {
   vertColor = color;
 }
 
-<b>pixlightfrag.glsl:</b>
+<strong>pixlightfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -779,7 +780,7 @@ We can integrate the examples from the previous sections in the following sketch
 
 
 <table>
-<caption><b>Code listing 7.1:</b> Sketch combining texturing and per-vertex lighting. The implementation of the <em>createCan()</em> function in the sketch code is omitted since it is identical to that of listing 5.1.</caption>
+<strong>Code listing 7.1:</strong> Sketch combining texturing and per-vertex lighting. The implementation of the <em>createCan()</em> function in the sketch code is omitted since it is identical to that of listing 5.1.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PImage</span> label;
@@ -788,14 +789,14 @@ We can integrate the examples from the previous sections in the following sketch
 
 <span style="color: #CC6633;">PShader</span> texlightShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;texlightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texlightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texlightvert.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(texlightShader);
@@ -808,7 +809,7 @@ We can integrate the examples from the previous sections in the following sketch
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 
-<b>texlightvert.glsl:</b>
+<strong>texlightvert.glsl:</strong>
 
 #define PROCESSING_TEXLIGHT_SHADER
 
@@ -839,7 +840,7 @@ void main() {
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
 }
 
-<b>texlightfrag.glsl:</b>
+<strong>texlightfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -863,10 +864,10 @@ The lighting can be also done on a per-pixel basis, in which case we need to use
 </p>
 
 <table>
-<caption><b>Code listing 7.2:</b> Shaders for texturing and per-pixel lighting.</caption>
+<strong>Code listing 7.2:</strong> Shaders for texturing and per-pixel lighting.
 <tr><td>
 <pre>
-<b>pixlightxvert.glsl:</b>
+<strong>pixlightxvert.glsl:</strong>
 
 #define PROCESSING_TEXLIGHT_SHADER
 
@@ -898,7 +899,7 @@ void main() {
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
 }
 
-<b>pixlightxfrag.glsl:</b>
+<strong>pixlightxfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -964,7 +965,7 @@ The fragment shader samples the texture at position <em>vertTexCoord.st</em> and
 </p>
 
 <table>
-<caption><b>Code listing 8.1:</b> Sketch using the black&white shader.</caption>
+<strong>Code listing 8.1:</strong> Sketch using the black&white shader.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PImage</span> label;
@@ -973,14 +974,14 @@ The fragment shader samples the texture at position <em>vertTexCoord.st</em> and
 
 <span style="color: #CC6633;">PShader</span> bwShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;bwShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;bwfrag.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(bwShader);
@@ -1003,7 +1004,7 @@ You will notice that this time the <em>loadShader()</em> function only receives 
 </p>
 
 <table>
-<caption><b>Code listing 8.2:</b> Edge-detection shader.</caption>
+<strong>Code listing 8.2:</strong> Edge-detection shader.
 <tr><td>
 <pre>
 #ifdef GL_ES
@@ -1050,7 +1051,7 @@ void main() {
 </table>
 
 <table>
-<caption><b>Code listing 8.3:</b> Emboss shader.</caption>
+<strong>Code listing 8.3:</strong> Emboss shader.
 <tr><td>
 <pre>
 #ifdef GL_ES
@@ -1106,7 +1107,7 @@ The output of these post-processing effects are displayed in the following image
 <p>In all of the examples we have seen so far, only one shader is used throughout the execution of the entire sketch. However, we can load and use as many shaders as we need. At each given time, one shader will be selected and running, but we can change the selected shader using the <em>shader()</em> function, and restore the default shaders with <em>resetShader()</em>. The following example combines all the shaders from the previous sections, so they can be enabled/disabled using the keyboard:</p>
 
 <table>
-<caption><b>Code listing 9.1:</b> All the shaders we have seen so far.</caption>
+<strong>Code listing 9.1:</strong> All the shaders we have seen so far.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">float</span> canSize = 60;
@@ -1129,7 +1130,7 @@ The output of these post-processing effects are displayed in the following image
 <span style="color: #CC6633;">PShader</span> edgesShader;
 <span style="color: #CC6633;">PShader</span> embossShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(480, 480, <span style="color: #666666;">P3D</span>);  
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(canSize,&nbsp;2&nbsp;*&nbsp;canSize,&nbsp;32,&nbsp;label);
@@ -1153,7 +1154,7 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, texture shading&quot;</span>);  
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #CC6633;">float</span> x = 1.88 * canSize;
@@ -1240,7 +1241,7 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;<span style="color: #996633;">return</span> sh;  
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>keyPressed</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>keyPressed</strong></span>() {
 &nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;1&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;No lights, no texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;colorShader;
@@ -1324,12 +1325,12 @@ Let's start with point rendering. P3D represents points as either rectangles (wh
 </p>
 
 <table>
-<caption><b>Code listing 10.1:</b> Simple point rendering sketch with associated shaders.</caption>
+<strong>Code listing 10.1:</strong> Simple point rendering sketch with associated shaders.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShader</span> pointShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;
 &nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pointfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pointvert.glsl&quot;</span>);
@@ -1340,14 +1341,14 @@ Let's start with point rendering. P3D represents points as either rectangles (wh
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {  
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {  
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
 &nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {   
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
 &nbsp;&nbsp;}&nbsp;&nbsp;
 }
 
-<b>pointvert.glsl:</b>
+<strong>pointvert.glsl:</strong>
 
 #define PROCESSING_POINT_SHADER
 
@@ -1369,7 +1370,7 @@ void main() {
   vertColor = color;
 }
 
-<b>pointfrag.glsl:</b>
+<strong>pointfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -1394,7 +1395,7 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 <p>The default point shader doesn't allow to apply any texturing to the points, but this limitation can be circumvented with a custom shader with an additional uniform for the texture sampler. Let's see in the next example how we can use this trick to create a shader that renders textured point sprites.</p>
 
 <table>
-<caption><b>Code listing 10.2:</b> Sketch that renders sprites using a custom point shader.</caption>
+<strong>Code listing 10.2:</strong> Sketch that renders sprites using a custom point shader.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShader</span> pointShader;
@@ -1404,7 +1405,7 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 
 <span style="color: #CC6633;">float</span> weight = 100;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;
 &nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;spritefrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;spritevert.glsl&quot;</span>);
@@ -1421,14 +1422,14 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {  
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {  
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
 &nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {   
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
 &nbsp;&nbsp;}&nbsp;&nbsp;
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>mousePressed</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>mousePressed</strong></span>() {
 &nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;1&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sprite&quot;</span>, cloud1);
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;2&apos;</span>) {
@@ -1438,7 +1439,7 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 &nbsp;&nbsp;}
 }
 
-<b>spritevert.glsl:</b>
+<strong>spritevert.glsl:</strong>
 
 #define PROCESSING_POINT_SHADER
 
@@ -1465,7 +1466,7 @@ void main() {
   vertColor = color;
 }
 
-<b>spritefrag.glsl:</b>
+<strong>spritefrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -1505,12 +1506,12 @@ One alternative solution is to generate the points procedurally in the fragment 
 </p>
 
 <table>
-<caption><b>Code listing 10.3:</b> Sketch that draws procedurally-generated round points.</caption>
+<strong>Code listing 10.3:</strong> Sketch that draws procedurally-generated round points.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShader</span> pointShader;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;
 &nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pointfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pointvert.glsl&quot;</span>);  
@@ -1520,7 +1521,7 @@ One alternative solution is to generate the points procedurally in the fragment 
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);  
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -1533,7 +1534,7 @@ One alternative solution is to generate the points procedurally in the fragment 
 &nbsp;&nbsp;}
 }
 
-<b>pointvert.glsl:</b>
+<strong>pointvert.glsl:</strong>
 
 #define PROCESSING_POINT_SHADER
 
@@ -1557,7 +1558,7 @@ void main() {
   pos = offset;
 }
 
-<b>pointfrag.glsl:</b>
+<strong>pointfrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -1593,7 +1594,7 @@ The following sketch simply draws the edges of a box using a simplified version 
 </p>
 
 <table>
-<caption><b>Code listing 10.4:</b> Simple line shader.</caption>
+<strong>Code listing 10.4:</strong> Simple line shader.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShape</span> cube;
@@ -1602,7 +1603,7 @@ The following sketch simply draws the edges of a box using a simplified version 
 
 <span style="color: #CC6633;">float</span> weight = 10;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;
 &nbsp;&nbsp;lineShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;linefrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;linevert.glsl&quot;</span>);
@@ -1613,7 +1614,7 @@ The following sketch simply draws the edges of a box using a simplified version 
 &nbsp;&nbsp;cube.setStrokeWeight(weight);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
@@ -1626,7 +1627,7 @@ The following sketch simply draws the edges of a box using a simplified version 
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;&nbsp;&nbsp;
 }
 
-<b>linevert.glsl:</b>
+<strong>linevert.glsl:</strong>
 
 #define PROCESSING_LINE_SHADER
 
@@ -1661,7 +1662,7 @@ void main() {
   vertColor = color;  
 }
 
-<b>linefrag.glsl:</b>
+<strong>linefrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
@@ -1692,7 +1693,7 @@ A final example in this section modifies the simple line shader to incorporate t
 <p><img src="imgs/alphalines.png"></p>
 
 <table>
-<caption><b>Code listing 10.5:</b> Line shader with transparency effect on the edges of the strokes.</caption>
+<strong>Code listing 10.5:</strong> Line shader with transparency effect on the edges of the strokes.
 <tr><td>
 <pre>
 <span style="color: #CC6633;">PShape</span> cube;
@@ -1701,7 +1702,7 @@ A final example in this section modifies the simple line shader to incorporate t
 
 <span style="color: #CC6633;">float</span> weight = 20;
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;
 &nbsp;&nbsp;lineShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;linefrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;linevert.glsl&quot;</span>);
@@ -1715,7 +1716,7 @@ A final example in this section modifies the simple line shader to incorporate t
 &nbsp;&nbsp;<span style="color: #006699;">hint</span>(<span style="color: #666666;">DISABLE_DEPTH_MASK</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
@@ -1728,7 +1729,7 @@ A final example in this section modifies the simple line shader to incorporate t
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;&nbsp;&nbsp;
 }
 
-<b>linevert.glsl:</b>
+<strong>linevert.glsl:</strong>
 
 #define PROCESSING_LINE_SHADER
 
@@ -1767,7 +1768,7 @@ void main() {
   center = (win0.xy + win1.xy) / 2.0;
 }
 
-<b>linefrag.glsl:</b>
+<strong>linefrag.glsl:</strong>
 
 #ifdef GL_ES
 precision mediump float;
