@@ -103,6 +103,7 @@ void draw() {
       <tr>
         <td style="width: 120px; float:left;">
           <img src="imgs/07_04_1.png" style= "width: 100px; height: 100px;">
+          <br />
           <img src="imgs/07_04_2.png" style= "width: 100px; height: 100px;">
         </td>
         <td style="width: 530px;">
@@ -124,24 +125,19 @@ void draw() {
     </table>
 
 
-<p class="txt">
-To invert the value of the mouse, subtract the mouseX value from the width of the window and subtract the mouseY value from the height of the screen.
-</p>
+    <p class="txt">
+      To invert the value of the mouse, subtract the mouseX value from the width of the window and subtract the mouseY value from the height of the screen.
+    </p>
+ 
+
+ <table style="width: 650" class="ex">
+      <tr>
+        <td style="width: 120px; float:left;">
+          <img src="imgs/07_05_1.png" style= "width: 100px; height: 100px;">
+          <br />
+          <img src="imgs/07_05_2.png" style= "width: 100px; height: 100px;">
         </td>
-    </tr>
-
-
-<tr style= "width: 100px; float:left;">
-    <td>
-<img src="imgs/07_05_1.png" style= "width: 100px; height: 100px;">
-<br />
-<img src="imgs/07_05_2.png" style= "width: 100px; height: 100px;">
-<br />
-</td>
-    </tr>
-
-<tr style="float:left; margin-left: 20px;">
-    <td>
+        <td style="width: 530px;">
 <pre>
 void setup() {
   size(100, 100);
@@ -161,23 +157,48 @@ void draw() {
 }
 </pre>
         </td>
-    </tr>
+      </tr>
+</table>
 
+  <p class="txt">
+    The Processing variables pmouseX and pmouseY store the mouse values from the previous frame. If the mouse does not move, the values will be the same, but if the mouse is moving quickly there can be large differences between the values. To see the difference, run the following program and alternate moving the mouse slowly and quickly. Watch the values print to the console.
+  </p>
 
-<tr>
-    <td>
-<p>
-The Processing variables pmouseX and pmouseY store the mouse values from the previous frame. If the mouse does not move, the values will be the same, but if the mouse is moving quickly there can be large differences between the values. To see
-the difference, run the following program and alternate moving the mouse slowly and quickly. Watch the values print to the console.
-<br /> 
 <pre>
 void draw() {
   frameRate(12);
   println(pmouseX - mouseX);
 }
 </pre>
-Draw a line from the previous mouse position to the current position to show the changing position in one frame and reveal the speed and direction of the mouse. When the mouse is not moving, a point is drawn, but quick mouse movements create long lines.
-</p>
+
+  <p class="txt">
+      Draw a line from the previous mouse position to the current position to show the changing position in one frame and reveal the speed and direction of the mouse. When the mouse is not moving, a point is drawn, but quick mouse movements create long lines.
+  </p>
+
+
+  <table style="width: 650" class="ex">
+      <tr>
+        <td style="width: 120px; float:left;">
+          <img src="imgs/07_07_1.png" style= "width: 100px; height: 100px;">
+          <br />
+          <img src="imgs/07_07_2.png" style= "width: 100px; height: 100px;">
+        </td>
+        <td style="width: 530px;">
+<pre>
+void setup() {
+  size(100, 100);
+  strokeWeight(8);
+}
+
+void draw() {
+  background(204);
+  line(mouseX, mouseY, pmouseX, pmouseY);
+}
+</pre>
+        </td>
+      </tr>
+  </table>
+<!--
 </td>
 </tr>
 
@@ -209,10 +230,78 @@ void draw() {
 
 
 <tr>
-    <td>
-<p>
-Use the mouseX and mouseY variables with an if structure to allow the cursor to select regions of the screen. The following examples demonstrate the cursor making a selection between different areas of the display window. The first divides the screen into halves, and the second divides the screen into thirds.
-</p>
+    <td>-->
+
+
+  <p class="txt">
+    Use the mouseX and mouseY variables with an if structure to allow the cursor to select regions of the screen. The following examples demonstrate the cursor making a selection between different areas of the display window. The first divides the screen into halves, and the second divides the screen into thirds.
+  </p>
+
+
+<table style="width: 650" class="ex">
+      <tr>
+        <td style="width: 120px; float:left;">
+          <img src="imgs/07_08_1.png" style= "width: 100px; height: 100px;">
+          <br />
+          <img src="imgs/07_08_2.png" style= "width: 100px; height: 100px;">
+        </td>
+        <td style="width: 530px;">
+<pre>
+void setup() {
+  size(100, 100);
+  noStroke();
+  fill(0);
+}
+
+void draw() {
+  background(204);
+  if (mouseX < 50) {
+    rect(0, 0, 50, 100); // Left
+  } else {
+    rect(50, 0, 50, 100); // Right
+  }
+}
+</pre>
+        </td>
+      </tr>
+</table>
+
+<hr />
+
+<table style="width: 650" class="ex">
+      <tr>
+        <td style="width: 120px; float:left;">
+          <img src="imgs/imgs/07_09_1.png" style= "width: 100px; height: 100px;">
+          <br />
+          <img src="imgs/imgs/07_09_2.png" style= "width: 100px; height: 100px;">
+          <br />
+          <img src="imgs/imgs/07_09_3.png" style= "width: 100px; height: 100px;">
+        </td>
+        <td style="width: 530px;">
+<pre>
+void setup() {
+  size(100, 100);
+  noStroke();
+  fill(0);
+}
+
+void draw() {
+  background(204);
+  if (mouseX < 33) {
+    rect(0, 0, 33, 100); // Left
+  } else if (mouseX < 66) {
+    rect(33, 0, 33, 100); // Middle
+  } else {
+    rect(66, 0, 33, 100); // Right
+  }
+}
+</pre>
+        </td>
+      </tr>
+</table>
+
+
+  <!--
         </td>
     </tr>
 
@@ -286,11 +375,15 @@ void draw() {
  
 
 <tr>
-    <td>
-<p>
-Use the logical operator && with an if structure to select a rectangular region of the screen. As demonstrated in the following example, when a relational expression
-is made to test each edge of a rectangle (left, right, top, bottom) and these are concatenated with a logical AND, the entire relational expression is true only when the cursor is inside the rectangle.
-</p>
+    <td>-->
+      
+    <p class="txt">
+        Use the logical operator && with an if structure to select a rectangular region of the screen. As demonstrated in the following example, when a relational expression is made to test each edge of a rectangle (left, right, top, bottom) and these are concatenated with a logical AND, the entire relational expression is true only when the cursor is inside the rectangle.
+    </p>
+
+
+
+
         </td>
     </tr>
 
