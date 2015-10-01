@@ -67,24 +67,24 @@ east. Using the fact that <code>PI</code> radians equals 180&deg;, here are some
   curve(<i>cpx1</i>, <i>cpy1</i>, <i>x1</i>, <i>y1</i>, <i>x2</i>, <i>y2</i>, <i>cpx2</i>, <i>cpy2</i>);
 </pre>
 
-<table cellpadding="4">
-<tr>
-  <td><code>cpx1, cpy1</code></td>
-  <td>Coordinates of the first control point</td>
-</tr>
-<tr>
-  <td><code>x1, y1</code></td>
-  <td>Coordinates of the curve&rsquo;s starting point</td>
-</tr>
-<tr>
-  <td><code>x2, y2</code></td>
-  <td>Coordinates of the curve&rsquo;s ending point</td>
-</tr>
-<tr>
-  <td><code>cpx2, cpy2</code></td>
-  <td>Coordinates of the second control point</td>
-</tr>
-</table>
+<table style="width: 650px; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+        <td style="width: 100px"><code>cpx1, cpy1</code></td>
+        <td style="width: 550px">Coordinates of the first control point</td>
+      </tr>
+      <tr>
+        <td style="width: 100px"><code>x1, y1</code></td>
+        <td style="width: 550px">Coordinates of the curve&rsquo;s starting point</td>
+      </tr>
+      <tr>
+        <td style="width: 100px"><code>x2, y2</code></td>
+        <td style="width: 550px">Coordinates of the curve&rsquo;s ending point</td>
+      </tr>
+      <tr>
+        <td style="width: 100px"><code>cpx2, cpy2</code></td>
+        <td style="width: 550px">Coordinates of the second control point</td>
+      </tr>
+    </table>
 
 <p class="txt">
 Here is an example that shows a <code>curve()</code>. The control
@@ -194,25 +194,25 @@ shows the tangents at the intermediate points.-->
 bezier(<i>x1</i>, <i>y1</i>, <i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>, <i>x2</i>, <i>y2</i>);
 </pre>
 
+<table style="width: 650px; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+        <td style="width: 100px"><code>x1, y1</code></td>
+        <td style="width: 550px">Coordinates of the curve&rsquo;s starting point</td>
+      </tr>
+      <tr>
+        <td style="width: 100px"><code>cpx1, cpy1</code></td>
+        <td style="width: 550px">Coordinates of the first control point</td>
+      </tr>
+      <tr>
+        <td style="width: 100px"><code>cpx2, cpy2</code></td>
+        <td style="width: 550px">Coordinates of the second control point</td>
+      </tr>
+      <tr>
+        <td style="width: 100px"><code>x2, y2</code></td>
+        <td style="width: 550px">Coordinates of the curve&rsquo;s ending point</td>
+      </tr>
+    </table>
 
-<table cellpadding="4">
-<tr>
-  <td><code>x1, y1</code></td>
-  <td>Coordinates of the curve&rsquo;s starting point</td>
-</tr>
-<tr>
-  <td><code>cpx1, cpy1</code></td>
-  <td>Coordinates of the first control point</td>
-</tr>
-<tr>
-  <td><code>cpx2, cpy2</code></td>
-  <td>Coordinates of the second control point</td>
-</tr>
-<tr>
-  <td><code>x2, y2</code></td>
-  <td>Coordinates of the curve&rsquo;s ending point</td>
-</tr>
-</table>
 
     <p class="txt">
         Here is a program that displays a B&eacute;zier curve and its control points.
@@ -254,20 +254,32 @@ bezier(<i>x1</i>, <i>y1</i>, <i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>,
   bezierVertex(<i>cpx1</i>, <i>cpy1</i>, <i>cpx2</i>, <i>cpy2</i>, <i>x</i>, <i>y</i>);
 </pre>
 
-<table cellpadding="4">
-<tr>
-  <td><code>cpx1, cpy1</code></td>
-  <td>Coordinates of the first control point</td>
-</tr>
-<tr>
-  <td><code>cpx2, cpy2</code></td>
-  <td>Coordinates of the second control point</td>
-</tr>
-<tr>
-  <td><code>x, y</code></td>
-  <td>The next point on the curve</td>
-</tr>
-</table>
+<table style="width: 650px; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+        <td style="width: 100px">
+          <code>cpx1, cpy1</code>
+        </td>
+        <td style="width: 550px">
+          Coordinates of the first control point
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 100px">
+          <code>cpx2, cpy2</code>
+        </td>
+        <td style="width: 550px">
+          Coordinates of the second control point
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 100px">
+          <code>x, y</code>
+        </td>
+        <td style="width: 550px">
+          The next point on the curve
+        </td>
+      </tr>
+    </table>
 
 <p class="txt">
 So, to draw the previous example using <code>bezierVertex()</code>,
