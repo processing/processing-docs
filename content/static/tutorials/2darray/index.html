@@ -16,15 +16,15 @@
     </p>
 
     <p class="txt">
-      <pre>(lettuce, tomatoes, salad dressing, steak, mashed potatoes, string beans, cake, ice cream, coffee)</pre> 
+      <pre>(lettuce, tomatoes, steak, mashed potatoes, cake, ice cream)</pre> 
 </p>
 
     <p class="txt">
-Or you could have a two-dimensional list of three courses, each containing three things you eat: 
+Or you could have a two-dimensional list of three courses, each containing two things you eat: 
 </p>
 
     <p class="txt">
-<pre>(lettuce, tomatoes, salad dressing) and (steak, mashed potatoes, string beans) and (cake, ice cream, coffee)</pre> 
+<pre>(lettuce, tomatoes) and (steak, mashed potatoes) and (cake, ice cream)</pre> 
 </p>
 
     <p class="txt">
@@ -32,7 +32,7 @@ Or you could have a two-dimensional list of three courses, each containing three
     </p>
 
 <pre>
-int[] myArray = {0,1,2,3};
+<span style="color: #E2661A;">int</span>[] myArray = {0,1,2,3};
 </pre>     
 
     <p class="txt">
@@ -40,7 +40,7 @@ int[] myArray = {0,1,2,3};
     </p>
 
 <pre>
-int[][] myArray = { {0,1,2,3}, {3,2,1,0}, {3,5,6,1}, {3,8,3,4} };     
+<span style="color: #E2661A;">int</span>[][] myArray = { {0,1,2,3}, {3,2,1,0}, {3,5,6,1}, {3,8,3,4} };   
 </pre>
 
     <p class="txt">
@@ -48,10 +48,10 @@ int[][] myArray = { {0,1,2,3}, {3,2,1,0}, {3,5,6,1}, {3,8,3,4} };
     </p>
 
 <pre>
-int[][] myArray = {  {0, 1, 2, 3},
-                     {3, 2, 1, 0},
-                     {3, 5, 6, 1},
-                     {3, 8, 3, 4}  };
+<span style="color: #E2661A;">int</span>[][] myArray = {  {0, 1, 2, 3},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3,&nbsp;2,&nbsp;1,&nbsp;0},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3,&nbsp;5,&nbsp;6,&nbsp;1},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3,&nbsp;8,&nbsp;3,&nbsp;4}&nbsp;&nbsp;};
 </pre>
 
     <p class="txt">
@@ -61,10 +61,10 @@ int[][] myArray = {  {0, 1, 2, 3},
     <img src="imgs/grid.jpg"  class="tut">
 
 <pre>
-int[][] myArray = {  {236, 189, 189,   0},
-                     {236,  80, 189, 189},
-                     {236,   0, 189,  80},
-                     {236, 189, 189,  80}  };
+<span style="color: #E2661A;">int</span>[][] myArray = {  {236, 189, 189,   0},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{236,&nbsp;&nbsp;80,&nbsp;189,&nbsp;189},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{236,&nbsp;&nbsp;&nbsp;0,&nbsp;189,&nbsp;&nbsp;80},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{236,&nbsp;189,&nbsp;189,&nbsp;&nbsp;80}&nbsp;&nbsp;};
 </pre>
 
     <p class="txt">
@@ -72,9 +72,9 @@ int[][] myArray = {  {236, 189, 189,   0},
     </p>
 
 <pre> 
-int[] myArray = new int[10];
-for (int i = 0; i &lt; myArray.length; i++) {
-  myArray[i] = 0;
+<span style="color: #E2661A;">int</span>[] myArray = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">int</span>[10];
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; myArray.<span style="color: #33997E;">length</span>; i++) {
+&nbsp;&nbsp;myArray[i]&nbsp;=&nbsp;0;
 }
 </pre>
 
@@ -84,16 +84,16 @@ for (int i = 0; i &lt; myArray.length; i++) {
 </p>
 
 <pre>
-int cols = 10;
-int rows = 10;
-int[][] myArray = new int[cols][rows];
+<span style="color: #E2661A;">int</span> cols = 10;
+<span style="color: #E2661A;">int</span> rows = 10;
+<span style="color: #E2661A;">int</span>[][] myArray = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">int</span>[cols][rows];
 
-// Two nested loops allow us to visit every spot in a 2D array.   
-// For every column I, visit every row J.
-for (int i = 0; i &lt; cols; i++) {
-  for (int j = 0; j &lt; rows; j++) {
-    myArray[i][j] = 0;
-  }
+<span style="color: #666666;">//&nbsp;Two&nbsp;nested&nbsp;loops&nbsp;allow&nbsp;us&nbsp;to&nbsp;visit&nbsp;every&nbsp;spot&nbsp;in&nbsp;a&nbsp;2D&nbsp;array.&nbsp;&nbsp;&nbsp;</span>
+<span style="color: #666666;">//&nbsp;For&nbsp;every&nbsp;column&nbsp;I,&nbsp;visit&nbsp;every&nbsp;row&nbsp;J.</span>
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;myArray[i][j]&nbsp;=&nbsp;0;
+&nbsp;&nbsp;}
 }
 </pre>
 
@@ -107,27 +107,28 @@ for (int i = 0; i &lt; cols; i++) {
 <img src="imgs/points.jpg"  class="tut">
 
 <pre>
-// Example: 2D Array
-size(200,200);
-int cols = width;
-int rows = height;
+<span style="color: #666666;">//&nbsp;Example:&nbsp;2D&nbsp;Array</span>
 
-// Declare 2D array
-int[][] myArray = new int[cols][rows];
+<span style="color: #006699;">size</span>(200,200);
+<span style="color: #E2661A;">int</span> cols = <span style="color: #D94A7A;">width</span>;
+<span style="color: #E2661A;">int</span> rows = <span style="color: #D94A7A;">height</span>;
 
-// Initialize 2D array values
-for (int i = 0; i &lt; cols; i++) {
-  for (int j = 0; j &lt; rows; j++) {
-    myArray[i][j] = int(random(255));
-  }
+<span style="color: #666666;">//&nbsp;Declare&nbsp;2D&nbsp;array</span>
+<span style="color: #E2661A;">int</span>[][] myArray = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">int</span>[cols][rows];
+
+<span style="color: #666666;">//&nbsp;Initialize&nbsp;2D&nbsp;array&nbsp;values</span>
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;myArray[i][j]&nbsp;=&nbsp;<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
+&nbsp;&nbsp;}
 }
 
-// Draw points
-for (int i = 0; i &lt; cols; i++) {
-  for (int j = 0; j &lt; rows; j++) {
-    stroke(myArray[i][j]);
-    point(i,j);
-  }
+<span style="color: #666666;">//&nbsp;Draw&nbsp;points</span>
+<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(myArray[i][j]);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(i,j);
+&nbsp;&nbsp;}
 }
 </pre>
 
@@ -148,8 +149,8 @@ Cell[][]&nbsp;grid;
 <span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(200,200);
 &nbsp;&nbsp;grid&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Cell[cols][rows];
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &amp;lt; cols; i++) {
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &amp;lt; rows; j++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Initialize each object</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Cell(i*20,j*20,20,20,i+j);
 &nbsp;&nbsp;&nbsp;&nbsp;}
@@ -160,8 +161,8 @@ Cell[][]&nbsp;grid;
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;<span style="color: #666666;">// The counter variables i and j are also the column and row numbers and </span>
 &nbsp;&nbsp;<span style="color: #666666;">// are used as arguments to the constructor for each object in the grid.  </span>
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &amp;lt; cols; i++) {
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &amp;lt; rows; j++) {
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; cols; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &lt; rows; j++) {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Oscillate and display each object</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j].oscillate();
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j].display();
