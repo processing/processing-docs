@@ -1282,34 +1282,34 @@ void draw() {
 
     <table style="width: 650px; border-collapse: separate; border-spacing: 10px;">
       <tr>
-        <td style="width: 150px">
+        <td style="width: 130px">
           <strong>mousePressed()</strong> 
         </td>
-        <td style="width: 500">
+        <td style="width: 520px">
           Code inside this block is run one time when a mouse button is pressed
         </td>
       </tr>
       <tr>
-        <td style="width: 150px">
+        <td style="width: 130px">
           <strong>mouseReleased()</strong> 
         </td>
-        <td style="width: 500px">
+        <td style="width: 520px">
           Code inside this block is run one time when a mouse button is released
         </td>
       </tr>
       <tr>
-        <td style="width: 150px">
+        <td style="width: 130px">
           <strong>mouseMoved()</strong> 
         </td>
-        <td style="width: 500px">
+        <td style="width: 520px">
           Code inside this block is run one time when the mouse is moved
         </td>
       </tr>
       <tr>
-        <td style="width: 150px">
+        <td style="width: 130px">
           <strong>mouseDragged()</strong> 
         </td>
-        <td style="width: 500px">
+        <td style="width: 520px">
           Code inside this block is run one time when the mouse is moved while a mouse button is pressed
         </td>
       </tr>
@@ -1629,10 +1629,30 @@ void mouseDragged() { // Move black circle
       Each key press is registered through the keyboard event functions keyPressed() and keyReleased():
   </p>
 
+  <table style="width: 650px; border-collapse: separate; border-spacing: 10px;">
+      <tr>
+        <td style="width: 130px">
+          <strong>keyPressed()</strong> 
+        </td>
+        <td style="width: 520px">
+          Code inside this block is run one time when any key is pressed
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 130px">
+          <strong>keyReleased()</strong> 
+        </td>
+        <td style="width: 520px">
+          Code inside this block is run one time when any key is released
+        </td>
+      </tr>
+    </table>
+
+<!--
   <ul>
     <li><strong>keyPressed()</strong> Code inside this block is run one time when any key is pressed</li>
     <li><strong>keyReleased()</strong> Code inside this block is run one time when any key is released</li>
-  </ul>
+  </ul>-->
 
   <p class="txt">
     Each time a key is pressed, the code inside the keyPressed() block is run once. Within this block, it’s possible to test which key has been pressed and to use this value for any purpose. If a key is held down for an extended time, the code inside the keyPressed() block might run many times in a rapid succession because most operating systems will take over and repeatedly call the keyPressed() function. The amount of time it takes to start repeating and the rate of repetitions will be different from computer to computer, depending on the keyboard preference settings. In this example, the value of the boolean variable drawT is set from false to true when the T key is pressed; this causes the lines of code to render the rectangles in draw() to start running.
