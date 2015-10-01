@@ -25,7 +25,7 @@
 	</p>
 
 	<p class="txt">
-		Another area of printed computer graphics produced during the 1960s was more similar to photography than to drawings. At Bell Laboratories, the engineers Kenneth Knowlton and Leon Harmon explored what they called “picture processing.” To create their 1966 Studies in Perception I, a 5 × 12 foot print of a reclining nude, they scanned a photograph with a device similar to a television camera to convert it to a series of numbers stored on a magnetic tape.<sup>5</sup> The picture’s range of gray values was reduced to eight levels, and when it was printed using a microfilm plotter, each gray level was replaced with a corresponding icon with a similar density that, when viewed at a distance, simulated the gray value. The icons used for the print included mathematical symbols (multiplication and division signs) and electronics symbols for diodes and transistors. The final enlargement was made from the microfilm using a photographic process. The techniques used to create this work envisioned the now familiar technologies of scanning and image filtering.
+		Another area of printed computer graphics produced during the 1960s was more similar to photography than to drawings. At Bell Laboratories, the engineers Kenneth Knowlton and Leon Harmon explored what they called “picture processing.” To create their 1966 Studies in Perception I, a 5 × 12 foot print of a reclining nude, they scanned a photograph with a device similar to a television camera to convert it to a series of numbers stored on a magnetic tape.<sup>4</sup> The picture’s range of gray values was reduced to eight levels, and when it was printed using a microfilm plotter, each gray level was replaced with a corresponding icon with a similar density that, when viewed at a distance, simulated the gray value. The icons used for the print included mathematical symbols (multiplication and division signs) and electronics symbols for diodes and transistors. The final enlargement was made from the microfilm using a photographic process. The techniques used to create this work envisioned the now familiar technologies of scanning and image filtering.
 	</p>
 
 	<p class="txt">
@@ -69,7 +69,7 @@ endX endY lineto stroke     % Draw line to coordinate (200,200)
 	</p>
 
 	<p class="txt">
-		This expanded freedom was manifested in <em>Emigre</em> magazine, started in 1984 with Rudy Vanderlans as editor/designer and his partner Zuzana Licko supplying new typefaces. Emigre is a digital type foundry, and the magazine simultaneously promoted the fonts and served as a protagonist in the wider debate on digital aesthetics within the design community. The pages of <em>Emigre</em> were filled with portfolios and interviews with the most interesting designers of that time, including P. Scott Makela, Rick Valicenti, and The Designers Republic. In the time before the Web and blogs, <em>Emigre</em> magazine was a place to be informed of new ideas and to discuss possible futures. When the last issue was published in 2005, Rick Poynor, founder of <em>Eye</em> magazine, wrote: “<em>Emigre</em> emerged at a time when technology was changing design forever, and the magazine sizzled with this energy and excitement.” With regard to Vanderlans, Poynor stated, “His page designs were exemplary demonstrations of the new digital design aesthetic.”5
+		This expanded freedom was manifested in <em>Emigre</em> magazine, started in 1984 with Rudy Vanderlans as editor/designer and his partner Zuzana Licko supplying new typefaces. Emigre is a digital type foundry, and the magazine simultaneously promoted the fonts and served as a protagonist in the wider debate on digital aesthetics within the design community. The pages of <em>Emigre</em> were filled with portfolios and interviews with the most interesting designers of that time, including P. Scott Makela, Rick Valicenti, and The Designers Republic. In the time before the Web and blogs, <em>Emigre</em> magazine was a place to be informed of new ideas and to discuss possible futures. When the last issue was published in 2005, Rick Poynor, founder of <em>Eye</em> magazine, wrote: “<em>Emigre</em> emerged at a time when technology was changing design forever, and the magazine sizzled with this energy and excitement.” With regard to Vanderlans, Poynor stated, “His page designs were exemplary demonstrations of the new digital design aesthetic.”<sup>5</sup>
 	</p>
 
 	<p class="txt">
@@ -102,57 +102,142 @@ endX endY lineto stroke     % Draw line to coordinate (200,200)
 		The difference is illustrated with this diagram:
 	</p>
 
-<!-- <img src="imgs/fg40-1.svg" style="width: 687px; height: 180px"> -->
-<object data="imgs/fg40-1.svg" style="width: 687px; height: 180px" type="image/svg+xml"></object>
-	</p>
+	<!-- <img src="imgs/fg40-1.svg" style="width: 687px; height: 180px"> -->
+	<object data="imgs/fg40-1.svg" style="width: 650px; height: 180px" type="image/svg+xml"></object>
+
 
 	<p class="txt">
-		Use the vector technique to export line art, type, or shapes that can be printed professionally, published, or printed at very large sizes. It’s also helpful to create a file that can be edited further with a program like Inkscape or Adobe Illustrator. Raster images are useful when exporting an image from a program that does not refresh its background each frame. If the image accumulates by adding each new frame to the display window, it may not be possible for vector data to achieve the same effect, or it may be too much geometry to store in a single file. A raster file does not represent each visual element separately (it saves it as a series of pixels), so it is editable only by programs like GIMP and Photoshop. A raster file can be printed with as much resolution as a vector file if it is output with a large enough width and height setting to give the file a high resolution when scaled for print. For example, to print a four-inch image at 600 dpi would require size(2400,2400) inside setup(). Vector files are eventually rasterized during the printing process, so it’s simply a matter of when the rasterizing takes place—whether directly from the program, or inside a professional raster image processor (RIP). The following examples clarify the strengths and weaknesses of each technique.
+		Use the vector technique to export line art, type, or shapes that can be printed professionally, published, or printed at very large sizes. It’s also helpful to create a file that can be edited further with a program like Inkscape or Adobe Illustrator. Raster images are useful when exporting an image from a program that does not refresh its background each frame. If the image accumulates by adding each new frame to the display window, it may not be possible for vector data to achieve the same effect, or it may be too much geometry to store in a single file. A raster file does not represent each visual element separately (it saves it as a series of pixels), so it is editable only by programs like GIMP and Photoshop. A raster file can be printed with as much resolution as a vector file if it is output with a large enough width and height setting to give the file a high resolution when scaled for print. For example, to print a four-inch image at 600 dpi would require size(2400,2400) inside setup(). Vector files are eventually rasterized during the printing process, so it’s simply a matter of when the rasterizing takes place—whether directly from the program, or inside a professional raster image processor (RIP). After a file is generated through software, it is often modified before it is printed. Common changes include tweaking color or changing the weight of the lines after print tests. To make changes, load raster files into a program such as GIMP or Photoshop. Load vector files into a program such as Inkscape, Illustrator, or CorelDRAW. The following examples clarify the strengths and weaknesses of each technique. 
 	</p>
 
 
 
-
-	<h3>Example 1:  Render to PDF </h3>
+	<h3>Example 1:  Render to PDF</h3>
 
 	<p class="txt">
 		When <code>PDF</code> is used as the third parameter to the <code>size()</code> function, the program renders to a PDF file instead of drawing to the display window. The file name is set by a fourth parameter to <code>size()</code> and the file is saved to the sketch’s folder. Most sketches can be rendered as PDF by simply adding the two parameters to the <code>size()</code> command and selecting Sketch -> Import Library -> PDF. Once you do this, you’ll no longer see the image on-screen as it is running, but it becomes possible to create PDF files at sizes much larger than the screen.
 	</p>
 
-	<p class="txt">
-<em>Example 2:  Render to screen, export to PDF</em>
-<br />
-This example saves a PDF file while simultaneously drawing to the screen. The <code>beginRecord()</code> function opens a new file, and all subsequent drawing functions are echoed to this file as well as to the display window. The <code>endRecord()</code> function stops the recording process and closes the file. The <code>beginRecord()</code> function requires two parameters; the first is the renderer to use (in this example, <code>PDF</code>), and the second is the file name. 
-<br />
-<br />
-<em>Example 3:  Save one frame from a continuous program</em>
-<br />
-This example saves a PDF file each time the mouse is pressed. The <code>boolean</code> variable <code>saveOneFrame</code> is set to <code>true</code> when a mouse button is pressed, causing <code>beginRecord()</code> to run the next time through <code>draw()</code>. At the end of <code>draw()</code>, <code>endRecord()</code> is run and the variable is set to false so another file won’t be saved while drawing the next frame. Each PDF file is numbered with the current frame (the number of elapsed frames since the program started).
-<br />
-<br />
-<em>Example 4:  Accumulate many frames into one PDF</em>
-<br />
-This example saves multiple frames drawn to the screen within a single PDF file. The file opens when the <em>B</em> key is pressed, and everything drawn in subsequent frames is saved into it, until the <em>E</em> key is pressed. The background function is run after <code>beginRecord()</code> to clear the background within the PDF document as well as in the display window. This example draws only one new line to the PDF file each frame so the file remains small, but it’s possible to write thousands of lines each frame. However, when vector files get very large, computers can have difficulty opening and printing them.
-<br />
-<br />
-<em>Example 5: Save a TIFF image from a high-resolution off-screen buffer</em>
-<br />
-This example creates a TIFF file larger than the screen and draws into it directly, rather than drawing to the screen. The <code>createGraphics()</code> function creates an object from the <code>PGraphics</code> class (<code>PGraphics</code> is the main graphics and rendering context for Processing). The <code>beginDraw()</code> method is necessary to prepare for drawing, then each subsequent drawing function is written into the large raster object. The <code>endDraw()</code> and <code>save()</code> methods are necessary to complete the file and then save it to the machine so that it can later be viewed in a different program such as GIMP or Photoshop. 
-<br />
-<br />
-<em>Example 6: Scale and segment an image</em>
-<br />
-This example saves a series of image files at screen resolution from a single image enlarged to any dimension. These files can be tiled within an image editor such as Photoshop to create a single, high-resolution file. Another program can also be written to tile the images together automatically. A <code>scaleValue</code> of 2 tiles the image to 4 files, a <code>scaleValue</code> of 3 tiles the image to 9 files, etc. This example code works only with 2D images. 
-<br />
-<br />
-After a file is generated through software, it is often modified before it is printed. Common changes include tweaking color or changing the weight of the lines after print tests. To make changes, load raster files into a program such as GIMP or Photoshop. Load vector files into a program such as Inkscape, Illustrator, or CorelDRAW. 
-</p>
-<br />
-<br />
+<pre>
+//Example 1: Render to PDF
 
-<p>
-<h3>Production</h3>
-Like traditional printing technologies, creating a high-quality digital print is a craft that requires knowledge and experience in addition to excellent tools and machines. The quality of a print is affected by the quality of the printer, ink, and paper, the preparation of the digital file, and the printer settings. Each of these components is introduced below.
+import processing.pdf.*;          // Import PDF code
+
+size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+background(255);                  
+stroke(0);                                   
+line(200, 0, width/2, height);    // Draw line to PDF
+exit();                           // Stop the program
+</pre>
+
+
+
+	<h3>Example 2:  Render to screen, export to PDF</h3>
+
+	<p class="txt">
+		This example saves a PDF file while simultaneously drawing to the screen. The <code>beginRecord()</code> function opens a new file, and all subsequent drawing functions are echoed to this file as well as to the display window. The <code>endRecord()</code> function stops the recording process and closes the file. The <code>beginRecord()</code> function requires two parameters; the first is the renderer to use (in this example, <code>PDF</code>), and the second is the file name. 
+	</p>
+
+<pre>
+//Example 1: Render to PDF
+
+import processing.pdf.*;          // Import PDF code
+
+size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+background(255);                  
+stroke(0);                                   
+line(200, 0, width/2, height);    // Draw line to PDF
+exit();                           // Stop the program
+</pre>
+
+
+	<h3>Example 3:  Save one frame from a continuous program</h3>
+
+	<p class="txt">
+		This example saves a PDF file each time the mouse is pressed. The <code>boolean</code> variable <code>saveOneFrame</code> is set to <code>true</code> when a mouse button is pressed, causing <code>beginRecord()</code> to run the next time through <code>draw()</code>. At the end of <code>draw()</code>, <code>endRecord()</code> is run and the variable is set to false so another file won’t be saved while drawing the next frame. Each PDF file is numbered with the current frame (the number of elapsed frames since the program started).
+	</p>
+
+<pre>
+//Example 1: Render to PDF
+
+import processing.pdf.*;          // Import PDF code
+
+size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+background(255);                  
+stroke(0);                                   
+line(200, 0, width/2, height);    // Draw line to PDF
+exit();                           // Stop the program
+</pre>
+
+
+
+	<h3>Example 4:  Accumulate many frames into one PDF</h3>
+
+	<p class="txt">
+		This example saves multiple frames drawn to the screen within a single PDF file. The file opens when the <em>B</em> key is pressed, and everything drawn in subsequent frames is saved into it, until the <em>E</em> key is pressed. The background function is run after <code>beginRecord()</code> to clear the background within the PDF document as well as in the display window. This example draws only one new line to the PDF file each frame so the file remains small, but it’s possible to write thousands of lines each frame. However, when vector files get very large, computers can have difficulty opening and printing them.
+	</p>
+
+<pre>
+//Example 1: Render to PDF
+
+import processing.pdf.*;          // Import PDF code
+
+size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+background(255);                  
+stroke(0);                                   
+line(200, 0, width/2, height);    // Draw line to PDF
+exit();                           // Stop the program
+</pre>
+
+
+
+
+	<h3>Example 5: Save a TIFF image from a high-resolution off-screen buffer</h3>
+
+	<p class="txt">
+		This example creates a TIFF file larger than the screen and draws into it directly, rather than drawing to the screen. The <code>createGraphics()</code> function creates an object from the <code>PGraphics</code> class (<code>PGraphics</code> is the main graphics and rendering context for Processing). The <code>beginDraw()</code> method is necessary to prepare for drawing, then each subsequent drawing function is written into the large raster object. The <code>endDraw()</code> and <code>save()</code> methods are necessary to complete the file and then save it to the machine so that it can later be viewed in a different program such as GIMP or Photoshop. 
+	</p>
+
+<pre>
+//Example 1: Render to PDF
+
+import processing.pdf.*;          // Import PDF code
+
+size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+background(255);                  
+stroke(0);                                   
+line(200, 0, width/2, height);    // Draw line to PDF
+exit();                           // Stop the program
+</pre>
+
+
+
+	<h3>Example 6: Scale and segment an image</h3>
+
+	<p class="txt">
+		This example saves a series of image files at screen resolution from a single image enlarged to any dimension. These files can be tiled within an image editor such as Photoshop to create a single, high-resolution file. Another program can also be written to tile the images together automatically. A <code>scaleValue</code> of 2 tiles the image to 4 files, a <code>scaleValue</code> of 3 tiles the image to 9 files, etc. This example code works only with 2D images. 
+	</p>
+
+<pre>
+//Example 1: Render to PDF
+
+import processing.pdf.*;          // Import PDF code
+
+size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+background(255);                  
+stroke(0);                                   
+line(200, 0, width/2, height);    // Draw line to PDF
+exit();                           // Stop the program
+</pre>
+
+
+
+
+	<h3>Production</h3>
+
+	<p class="txt">
+		Like traditional printing technologies, creating a high-quality digital print is a craft that requires knowledge and experience in addition to excellent tools and machines. The quality of a print is affected by the quality of the printer, ink, and paper, the preparation of the digital file, and the printer settings. Each of these components is introduced below.
+	</p>
 <br />
 <br />
 <em>Printing technologies</em>
@@ -224,34 +309,33 @@ Many different printing technologies are currently in use by artists and designe
     There are also disadvantages to printing software images. The ability to animate the image is lost, and the color palette is reduced. Digital printing technology evolves rapidly, and it’s possible that the current research into electronic paper (e-paper, e-ink) and organic light-emitting diodes (OLEDs) will allow the best aspects of printed images to merge with the best elements of digital screens. These or other emerging technologies may make it possible for digital printing to evolve into an original area of image-making rather than simply mimicking traditional printing technologies. 
 <br />
 <br />
-Notes
-<br />
-1. H. W. Franke, <em>Computer Graphics, Computer Art</em> (Phaidon, 1971), p. 60. <br />
-2. Ibid., p. 69. <br />
-3. Frieder Nake, “Notes on the Programming of Computer Graphics,” In <em>Cybernetic Serendipity</em>, edited by Jasia Reichardt (Praeger, 1969), p. 77. <br />
-4. This work is also credited as <em>Mural</em> in the exhibition catalog <em>Cybernetic Serendipity</em>. <br />
-5. Rick Poynor, “<em>Emigre</em>: An Ending,” Design Observer, 10 November 2005. <br />
-	http://www.designobserver.com/archives/007816.html.<br />
-6. Lewis Blackwell, <em>The End of Print: The Graphic Design of David Carson</em> (Chronicle Books, 1995),  p. 173. <br />
-7. ICC profiles are files that define the mappings between a print’s data and the specific paper and printer specifications. Well-designed profiles can increase the quality of a print. Check the website of the paper manufacturer to see if it has created one for your printer. 
-</p>
-<br />
-<br />
-<p>
+
+
+
+<h3>Notes</h3>
+
+	<p class="txt">
+	<ol>
+		<li>H. W. Franke, <em>Computer Graphics, Computer Art</em> (Phaidon, 1971), p. 60. </li>
+		<li>Ibid., p. 69.</li>
+		<li>Frieder Nake, “Notes on the Programming of Computer Graphics,” In <em>Cybernetic Serendipity</em>, edited by Jasia Reichardt (Praeger, 1969), p. 77.</li>
+		<li>This work is also credited as <em>Mural</em> in the exhibition catalog <em>Cybernetic Serendipity</em>.</li>
+		<li>Rick Poynor, “<em>Emigre</em>: An Ending,” Design Observer, 10 November 2005. <br />
+	http://www.designobserver.com/archives/007816.html.</li>
+		<li>Lewis Blackwell, <em>The End of Print: The Graphic Design of David Carson</em> (Chronicle Books, 1995),  p. 173.</li>
+		<li>ICC profiles are files that define the mappings between a print’s data and the specific paper and printer specifications. Well-designed profiles can increase the quality of a print. Check the website of the paper manufacturer to see if it has created one for your printer. </li>
+	</ol>
+	</p>
+
+
+
 <h3>Code</h3>
+
 <hr /> 
+
 <br /> 
 <em>Example 1: Render to PDF</em>
-<pre>
 
-import processing.pdf.*;          // Import PDF code
-
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
-background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
-</pre>
 
 <hr />
 <br />
