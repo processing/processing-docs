@@ -157,15 +157,19 @@ text(s, 10, 10, 60, 55); // Box too small
 
   <h3>Vector Fonts</h3>
 
-To work with fonts different than the default, more functions are needed to prepare
-a font to be used with Processing. The createFont() function is used to convert a TrueType font (.ttf) or OpenType font (.otf) so that is can display through text(). The textFont() function is used to define the current font to display. Any compatible font installed on the computer running Processing or stored in the sketch’s data folder may be used. The following short program is used to print the list of the available installed fonts to the console:
+  <p class="txt">  
+    To work with fonts different than the default, more functions are needed to prepare a font to be used with Processing. The createFont() function is used to convert a TrueType font (.ttf) or OpenType font (.otf) so that is can display through text(). The textFont() function is used to define the current font to display. Any compatible font installed on the computer running Processing or stored in the sketch’s data folder may be used. The following short program is used to print the list of the available installed fonts to the console:
+  </p>
+
 <pre>
 String[] fontList = PFont.list();
 printArray(fontList);
 </pre>
-The printArray() function (p. 420) is used to write each font on a new line. The first few options printed to the console are general typographic classifications such as Serif, SansSerif, and Monospaced. Use these options to define a style, but not a specific font. When the list is generated on the computer used to write this book, a list of 573 font options are printed to the console. Your computer will produce different results depending on the operating system and custom fonts installed. The list starts with general font categories that will work across platforms, then continues with specific font names. A short excerpt from our list follows:
-<br /> 
-<br /> 
+
+  <p class="txt"> 
+    The printArray() function (p. 420) is used to write each font on a new line. The first few options printed to the console are general typographic classifications such as Serif, SansSerif, and Monospaced. Use these options to define a style, but not a specific font. When the list is generated on the computer used to write this book, a list of 573 font options are printed to the console. Your computer will produce different results depending on the operating system and custom fonts installed. The list starts with general font categories that will work across platforms, then continues with specific font names. A short excerpt from our list follows:
+  </p>
+
 <pre>
 [0] "Serif"
 [1] "SansSerif"
@@ -181,10 +185,12 @@ The printArray() function (p. 420) is used to write each font on a new line. The
 [571] "Ziggurat-Black"
 [572] "Ziggurat-BlackItalic"
 </pre>
-Before a font is used in a program, it must be converted and set as the current font. Processing has a unique data type called PFont to store font data. Make a new variable of the type PFont and use the createFont() function to convert the font. The first parameter to createFont() is the name of the font to convert and the second parameter defines the base size of the font. (Optional third and fourth parameters are defined in the Reference.) The textFont() function must then be used to set the current font. On our development computer, to work with Ziggurat Black, list option 571 above, the following code is run:
-</p>
- </td>
-    </tr>
+
+  <p class="txt"> 
+    Before a font is used in a program, it must be converted and set as the current font. Processing has a unique data type called PFont to store font data. Make a new variable of the type PFont and use the createFont() function to convert the font. The first parameter to createFont() is the name of the font to convert and the second parameter defines the base size of the font. (Optional third and fourth parameters are defined in the Reference.) The textFont() function must then be used to set the current font. On our development computer, to work with Ziggurat Black, list option 571 above, the following code is run:
+  </p>
+
+ <table>
 
 <tr style= "width: 100px; float:left;">
     <td>
@@ -214,17 +220,17 @@ void draw() {
 </pre>
         </td>
     </tr>
+</table>
 
-<tr>
-    <td>
-<p class="txt">
-To make this program work on your computer, you will likely need to modify line 5 to work with a font on your machine. This program is similar to code 12-01, but notice the differences in the letters in the Ziggurat font in relation to the default font.
-<br /> 
-<br /> 
-To ensure a font will load on all computers, regardless if the font is installed, add the file to the sketch’s data folder. (Fonts in the data folder don’t print in the console list as demonstrated in code 12-07.) Follow the instructions on page 10 to add a font to the data folder. When fonts inside the data folder are used, the complete file name, including the data type extension, needs to be written as the parameter to createFont(). The following example is similar to the prior example, but it uses an OpenType font inside the data folder. It uses Source Code Pro, an open source typeface that can be found online and downloaded through a web browser.
-</p>
-        </td>
-    </tr>
+  <p class="txt">
+    To make this program work on your computer, you will likely need to modify line 5 to work with a font on your machine. This program is similar to code 12-01, but notice the differences in the letters in the Ziggurat font in relation to the default font.
+  </p>
+  <p class="txt">
+    To ensure a font will load on all computers, regardless if the font is installed, add the file to the sketch’s data folder. (Fonts in the data folder don’t print in the console list as demonstrated in code 12-07.) Follow the instructions on page 10 to add a font to the data folder. When fonts inside the data folder are used, the complete file name, including the data type extension, needs to be written as the parameter to createFont(). The following example is similar to the prior example, but it uses an OpenType font inside the data folder. It uses Source Code Pro, an open source typeface that can be found online and downloaded through a web browser.
+  </p>
+
+
+<table>
 
 
 <tr style= "width: 100px; float:left;">
@@ -256,14 +262,14 @@ void draw() {
         </td>
     </tr>
 
-<tr>
-    <td>
-<p class="txt"> 
-To use two fonts in one program, create two PFont variables and use the textFont() function to change the current font. Based on the prior two examples, the Ziggurat-Black font loads from its location on the local computer and Source Code Pro loads from the data folder.
+</table>
+
+  <p class="txt"> 
+    To use two fonts in one program, create two PFont variables and use the textFont() function to change the current font. Based on the prior two examples, the Ziggurat-Black font loads from its location on the local computer and Source Code Pro loads from the data folder.
 </p>
         
-        </td>
-    </tr>
+
+<table>
 
 
 <tr style= "width: 100px; float:left;">
@@ -298,22 +304,26 @@ void draw() {
         </td>
     </tr>
 
+</table>
 
-    
-    <tr>
-    <td>
-<p class="txt">
-<h3>Pixel fonts</h3>
-Processing can also work with fonts that it converts into small image textures. These fonts aren’t as flexible and crisp as fonts converted for Processing with createFont() and used with the default renderer, but they are more optimized for use with the P2D and P3D renderers. The difference between renderers is discussed on page 547. The pixel font format used by Processing was developed at the MIT Media Lab in the mid 1990s in the Visual Language Workshop (VLW). The VLW format stores each alphanumeric character as a grid of pixels. It is a quick way to render text and makes it possible to include a font with a sketch without including the vector data.
-<br /> 
-<br /> 
-To convert a font to the VLW format, select the “Create Font” option from the Tools menu. A window opens and displays the names of the fonts installed on your computer that are compatible. Select a font from the list and click “OK.” The font is generated and copied into the current sketch’s data folder. To make sure the font is there, click on the Sketch menu and select “Show Sketch Folder.” The Create Font tool offers the option to set the size of the font and to select whether it will have smooth, antialiased edges. This tool also offers the option to export “All Characters,” which means every character in the font will be included and will therefore increase the file size.
-<br /> 
-<br /> 
-The following example uses the same font as the prior createFont() example. The only difference is the replacement of that function with loadFont(). To run these examples, first use the “Create Font” tool to turn a font into a VLW file. Change the name of the parameter to loadFont() to match the name of the VLW file created.
+
+
+  <h3>Pixel fonts</h3>
+
+  <p class="txt"> 
+    Processing can also work with fonts that it converts into small image textures. These fonts aren’t as flexible and crisp as fonts converted for Processing with createFont() and used with the default renderer, but they are more optimized for use with the P2D and P3D renderers. The difference between renderers is discussed on page 547. The pixel font format used by Processing was developed at the MIT Media Lab in the mid 1990s in the Visual Language Workshop (VLW). The VLW format stores each alphanumeric character as a grid of pixels. It is a quick way to render text and makes it possible to include a font with a sketch without including the vector data.
+  </p>
+
+  <p class="txt"> 
+    To convert a font to the VLW format, select the “Create Font” option from the Tools menu. A window opens and displays the names of the fonts installed on your computer that are compatible. Select a font from the list and click “OK.” The font is generated and copied into the current sketch’s data folder. To make sure the font is there, click on the Sketch menu and select “Show Sketch Folder.” The Create Font tool offers the option to set the size of the font and to select whether it will have smooth, antialiased edges. This tool also offers the option to export “All Characters,” which means every character in the font will be included and will therefore increase the file size.
+  </p>
+
+  <p class="txt"> 
+    The following example uses the same font as the prior createFont() example. The only difference is the replacement of that function with loadFont(). To run these examples, first use the “Create Font” tool to turn a font into a VLW file. Change the name of the parameter to loadFont() to match the name of the VLW file created.
 </p>
-    </td>
-</tr>
+
+
+  <table>
 
 
     <tr style="float:left;">
@@ -344,14 +354,15 @@ void draw() {
 </pre>
         </td>
         </tr>
+</table>
 
-    <tr>
-    <td>
+
 <p class="txt">
 When the font is drawn at a different size from the size at which it was created, it is scaled and therefore does not always look as crisp and smooth. For example, if a font is created at 12 pixels and is displayed at 96 pixels, it will appear blurry.
 </p>
-        </td>
-        </tr>
+
+
+<table>
 
 
     <tr style= "width: 100px; float:left;">
@@ -384,19 +395,21 @@ void draw() {
         </td>
         </tr>
 
-    <tr>
-    <td>
-<p class="txt">
-For the best results, draw a font at the size at which it was created. If the same font needs to be used at multiple sizes, consider rendering and loading it at these precise sizes. When VLW fonts are used in 3D, letters with different z-coordinates can sometimes occlude other letters. This can be corrected with a hint, see page 547.
-</p>
-<br /> 
-<p class="txt">
-<h3>Text attributes</h3>
-Processing includes functions to control the leading (the spacing between lines of text) and alignment. Processing can also calculate the width of any character or group of characters, a useful technique for arranging shapes and typographic elements.
+</table>
+
+
+    <p class="txt">
+      For the best results, draw a font at the size at which it was created. If the same font needs to be used at multiple sizes, consider rendering and loading it at these precise sizes. When VLW fonts are used in 3D, letters with different z-coordinates can sometimes occlude other letters. This can be corrected with a hint, see page 547.
+    </p>
+ 
+    <h3>Text attributes</h3>
+
+    <p class="txt">
+        Processing includes functions to control the leading (the spacing between lines of text) and alignment. Processing can also calculate the width of any character or group of characters, a useful technique for arranging shapes and typographic elements.
 The textLeading() function sets the spacing between lines of text. It has one parameter that defines this space in units of pixels.
 </p>
-</td>
-</tr>
+
+</table>
 
     <tr style= "width: 100px; float:left;">
     <td>
@@ -421,13 +434,14 @@ text(lines, 70, 15, 30, 100);
         </td>
         </tr>
 
-    <tr>
-    <td>
-<p class="txt"> 
-Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
-</p>
-        </td>
-        </tr>
+    </table>
+
+    <p class="txt"> 
+      Letters and words can be drawn from their center, left, and right edges. The textAlign() function sets the alignment for drawing text through its parameter, which can be LEFT, CENTER, or RIGHT. It sets the display characteristics of the letters in relation to the x-coordinate stated in the text() function.
+    </p>
+
+
+<table>
 
     <tr style= "width: 100px; float:left;">
     <td>
@@ -452,16 +466,19 @@ text("Center", 50, 80);
         </td>
         </tr>
 
-    <tr>
-    <td>
-<p class="txt"> 
-The settings for textSize(), textLeading(), and textAlign() will be used for all subsequent calls to the text() function. However, note that the textSize() function will reset the text leading, and the textFont() function will reset both the size and the leading.
-<br /> 
-<br /> 
-The textWidth() function calculates and returns the pixel width of any character or text string. This number is calculated from the current font and size as defined by the textFont() and textSize() functions. Because the letters of every font are a different size and letters within many fonts have different widths, this function is the only way to know how wide a string or character is when displayed on screen. For this reason, always use textWidth() to position elements relative to text, rather than hard-coding them into your program.
-</p>
-        </td>
-</tr> 
+    </table>
+
+
+    <p class="txt"> 
+      The settings for textSize(), textLeading(), and textAlign() will be used for all subsequent calls to the text() function. However, note that the textSize() function will reset the text leading, and the textFont() function will reset both the size and the leading.
+    </p> 
+
+  <p class="txt"> 
+      The textWidth() function calculates and returns the pixel width of any character or text string. This number is calculated from the current font and size as defined by the textFont() and textSize() functions. Because the letters of every font are a different size and letters within many fonts have different widths, this function is the only way to know how wide a string or character is when displayed on screen. For this reason, always use textWidth() to position elements relative to text, rather than hard-coding them into your program.
+  </p>
+
+
+ </table>
 
     <tr style= "width: 100px; float:left;">
     <td>
@@ -488,14 +505,17 @@ rect(4, 78, tw, 5);
         </td>
         </tr>
 
-    <tr>
-    <td>
-<p class="txt">
-<h3>Typing</h3>
-Drawing letters to the screen becomes more engaging when used in combination with the keyboard. The keyPressed() event function introduced on page 97 can be used to record each letter as it is typed. The following two examples use this function to read and analyze input from the keyboard by using the String methods introduced in the Text chapter (p. 143). In both, the String variable letters starts empty. Each key typed is added to the end of the string. The first example displays the string as it grows as keys are pressed and removes letters from the end when backspace is pressed. The second example builds on the first—when the Return or Enter key is pressed, the program checks if the word “gray” or “black” was typed. If one of these words was input, the background changes to that value.
-</p>
-</td>
-</tr>
+    </table>
+
+
+    <h3>Typing</h3>
+
+    <p class="txt">
+      Drawing letters to the screen becomes more engaging when used in combination with the keyboard. The keyPressed() event function introduced on page 97 can be used to record each letter as it is typed. The following two examples use this function to read and analyze input from the keyboard by using the String methods introduced in the Text chapter (p. 143). In both, the String variable letters starts empty. Each key typed is added to the end of the string. The first example displays the string as it grows as keys are pressed and removes letters from the end when backspace is pressed. The second example builds on the first—when the Return or Enter key is pressed, the program checks if the word “gray” or “black” was typed. If one of these words was input, the background changes to that value.
+    </p>
+
+
+    <table>
 
 
     <tr style= "width: 100px; float:left;">
@@ -539,8 +559,11 @@ void keyPressed() {
 </td>
 </tr>
 
-<tr>
-</tr>
+</table>
+
+<hr />
+
+<table>
 
     <tr style= "width: 100px; float:left;">
     <td>
@@ -585,19 +608,21 @@ void keyPressed() {
 </pre>
         </td>
         </tr>
-    <tr>
-    <td>
-<p class="txt"> 
-Many people spend hours a day inputting letters into computers, but this action is very constrained. What features could be added to a text editor to make it more responsive to the typist? For example, the speed of typing could decrease the size of the letters, or a long pause in typing could add many spaces, mimicking a person’s pause while speaking. What if the keyboard could register how hard a person is typing (the way a piano plays a soft note when a key is pressed gently) and could automatically assign attributes such as italics for soft presses and bold for forceful presses? These analogies suggest how conservatively current software treats typography and typing.
-<br /> 
-<br /> 
-Many artists and designers are fascinated with type and have created unique ways of exploring letterforms with the mouse, keyboard, and more exotic input devices. A minimal yet engaging example is John Maeda’s Type, Tap, Write software, created in 1998 as homage to manual typewriters. This software uses the keyboard as the input to a black-and-white screen representation of a keyboard. Pressing the number keys cause the software to cycle through different modes, each revealing a playful interpretation of keyboard data. In Jeffrey Shaw and Dirk Groeneveld’s The Legible City (1989–91), buildings are replaced with three-dimensional letters to create a city of typography that conforms to the streets of a real place. In the Manhattan version, for instance, texts from the mayor, a taxi driver, and Frank Lloyd Wright comprise the city. The image is presented on a projection screen, and the user navigates by pedaling and steering a stationary bicycle situated in front of the projected image. Projects such as these demonstrate that software presents an extraordinary opportunity to extend the way we read and write.
-<br /> 
-<br /> 
-Typographic elements can be assigned behaviors that define a personality in relation to the mouse or keyboard. A word can express aggression by moving quickly toward the mouse, or moving away slowly can express timidity. The following examples demonstrate basic applications of this area. In the first, the word avoid stays away from the mouse because its position is set to the inverse of the cursor position. In the second, the word tickle jitters when the cursor hovers over its position.
-</p>
-        </td>
-        </tr> 
+</table>
+
+    <p class="txt"> 
+      Many people spend hours a day inputting letters into computers, but this action is very constrained. What features could be added to a text editor to make it more responsive to the typist? For example, the speed of typing could decrease the size of the letters, or a long pause in typing could add many spaces, mimicking a person’s pause while speaking. What if the keyboard could register how hard a person is typing (the way a piano plays a soft note when a key is pressed gently) and could automatically assign attributes such as italics for soft presses and bold for forceful presses? These analogies suggest how conservatively current software treats typography and typing.
+    </p>
+
+    <p class="txt"> 
+      Many artists and designers are fascinated with type and have created unique ways of exploring letterforms with the mouse, keyboard, and more exotic input devices. A minimal yet engaging example is John Maeda’s Type, Tap, Write software, created in 1998 as homage to manual typewriters. This software uses the keyboard as the input to a black-and-white screen representation of a keyboard. Pressing the number keys cause the software to cycle through different modes, each revealing a playful interpretation of keyboard data. In Jeffrey Shaw and Dirk Groeneveld’s The Legible City (1989–91), buildings are replaced with three-dimensional letters to create a city of typography that conforms to the streets of a real place. In the Manhattan version, for instance, texts from the mayor, a taxi driver, and Frank Lloyd Wright comprise the city. The image is presented on a projection screen, and the user navigates by pedaling and steering a stationary bicycle situated in front of the projected image. Projects such as these demonstrate that software presents an extraordinary opportunity to extend the way we read and write.
+  </p>
+
+  <p class="txt"> 
+      Typographic elements can be assigned behaviors that define a personality in relation to the mouse or keyboard. A word can express aggression by moving quickly toward the mouse, or moving away slowly can express timidity. The following examples demonstrate basic applications of this area. In the first, the word avoid stays away from the mouse because its position is set to the inverse of the cursor position. In the second, the word tickle jitters when the cursor hovers over its position.
+  </p>
+
+  <table>
     <tr style= "width: 100px; float:left;">
     <td>
 <img src="imgs/12_18_1.png" style= "width: 100px; height: 100px;">
@@ -623,9 +648,11 @@ void draw() {
         </td>
         </tr>
 
-<tr>
+</table>
 
-</tr>
+<hr />
+
+<table>
 
     <tr style= "width: 100px; float:left;">
     <td>
@@ -665,15 +692,17 @@ void draw() {
 </pre>
 </td>
 </tr>
-        <tr>
-    <td>
 
-<p class="txt"> 
-<br /> 
+</table>
+
+
 <h3>Notes</h3>
 
-1. Ellen Lupton, Thinking with Type: A Critical Guide for Designers, Writers, Editors, &amp; Students (Princeton Architectural Press, 2004), p. 29.
-</p>		
+<ol>
+  <li>Ellen Lupton, Thinking with Type: A Critical Guide for Designers, Writers, Editors, &amp; Students (Princeton Architectural Press, 2004), p. 29.</li>
+</ol>
+
+		
 </td>
 	</tr>
   </table>
