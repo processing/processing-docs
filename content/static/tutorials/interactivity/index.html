@@ -1278,14 +1278,50 @@ void draw() {
 
     <p class="txt">
         The mouse event functions are mousePressed(), mouseReleased(), mouseMoved(), and mouseDragged():
-  </p>
+    </p>
 
+    <table>
+      <tr>
+        <td>
+          <strong>mousePressed()</strong> 
+        </td>
+        <td style="margin-left: 20px;">
+          Code inside this block is run one time when a mouse button is pressed
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>mouseReleased()</strong> 
+        </td>
+        <td style="margin-left: 20px;">
+          Code inside this block is run one time when a mouse button is released
+        </td>
+      </tr>
+      <tr>
+        <td style="margin-left: 20px;">
+          <strong>mouseMoved()</strong> 
+        </td>
+        <td>
+          Code inside this block is run one time when the mouse is moved
+        </td>
+      </tr>
+      <tr>
+        <td style="margin-left: 20px;">
+          <strong>mouseDragged()</strong> 
+        </td>
+        <td>
+          Code inside this block is run one time when the mouse is moved while a mouse button is pressed
+        </td>
+      </tr>
+    </table>
+
+<!--
   <ul>
     <li><strong>mousePressed()</strong> Code inside this block is run one time when a mouse button is pressed</li>
     <li><strong>mouseReleased()</strong> Code inside this block is run one time when a mouse button is released</li>
     <li><strong>mouseMoved()</strong> Code inside this block is run one time when the mouse is moved</li>
     <li><strong>mouseDragged()</strong> Code inside this block is run one time when the mouse is moved while a mouse button is pressed</li>
-  </ul>
+  </ul>-->
 
     <p class="txt">
       The mousePressed() function works differently than the mousePressed variable. The value of the mousePressed variable is true until the mouse button is released. It can therefore be used within draw() to have a line of code run while the mouse is pressed. In contrast, the code inside the mousePressed() function only runs once when a button is pressed. This makes it useful when a mouse click is used to trigger an action, such as clearing the screen. In the following example, the background value becomes lighter each time a mouse button is pressed. Run the example on your computer to see the change in response to your finger.
