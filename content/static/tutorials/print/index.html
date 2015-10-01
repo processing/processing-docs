@@ -119,7 +119,7 @@ endX endY lineto stroke     % Draw line to coordinate (200,200)
 	</p>
 
 <pre>
-//Example 1: Render to PDF
+// Example 1: Render to PDF
 
 import processing.pdf.*;          // Import PDF code
 
@@ -128,6 +128,7 @@ background(255);
 stroke(0);                                   
 line(200, 0, width/2, height);    // Draw line to PDF
 exit();                           // Stop the program
+
 </pre>
 
 
@@ -139,15 +140,18 @@ exit();                           // Stop the program
 	</p>
 
 <pre>
-//Example 1: Render to PDF
+// Example 2:  Render to screen, export to PDF
 
 import processing.pdf.*;          // Import PDF code
 
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
+size(600, 600);
+beginRecord(PDF, "line.pdf");     // Start writing to PDF
 background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
+stroke(0, 20);		                 
+strokeWeight(20);                 
+line(200, 0, 400, height);        // Draw line to screen and to PDF
+endRecord();                      // Stop writing to PDF
+
 </pre>
 
 
@@ -158,208 +162,8 @@ exit();                           // Stop the program
 	</p>
 
 <pre>
-//Example 1: Render to PDF
+// Example 3:  Save one frame from a continuous program
 
-import processing.pdf.*;          // Import PDF code
-
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
-background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
-</pre>
-
-
-
-	<h3>Example 4:  Accumulate many frames into one PDF</h3>
-
-	<p class="txt">
-		This example saves multiple frames drawn to the screen within a single PDF file. The file opens when the <em>B</em> key is pressed, and everything drawn in subsequent frames is saved into it, until the <em>E</em> key is pressed. The background function is run after <code>beginRecord()</code> to clear the background within the PDF document as well as in the display window. This example draws only one new line to the PDF file each frame so the file remains small, but it’s possible to write thousands of lines each frame. However, when vector files get very large, computers can have difficulty opening and printing them.
-	</p>
-
-<pre>
-//Example 1: Render to PDF
-
-import processing.pdf.*;          // Import PDF code
-
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
-background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
-</pre>
-
-
-
-
-	<h3>Example 5: Save a TIFF image from a high-resolution off-screen buffer</h3>
-
-	<p class="txt">
-		This example creates a TIFF file larger than the screen and draws into it directly, rather than drawing to the screen. The <code>createGraphics()</code> function creates an object from the <code>PGraphics</code> class (<code>PGraphics</code> is the main graphics and rendering context for Processing). The <code>beginDraw()</code> method is necessary to prepare for drawing, then each subsequent drawing function is written into the large raster object. The <code>endDraw()</code> and <code>save()</code> methods are necessary to complete the file and then save it to the machine so that it can later be viewed in a different program such as GIMP or Photoshop. 
-	</p>
-
-<pre>
-//Example 1: Render to PDF
-
-import processing.pdf.*;          // Import PDF code
-
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
-background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
-</pre>
-
-
-
-	<h3>Example 6: Scale and segment an image</h3>
-
-	<p class="txt">
-		This example saves a series of image files at screen resolution from a single image enlarged to any dimension. These files can be tiled within an image editor such as Photoshop to create a single, high-resolution file. Another program can also be written to tile the images together automatically. A <code>scaleValue</code> of 2 tiles the image to 4 files, a <code>scaleValue</code> of 3 tiles the image to 9 files, etc. This example code works only with 2D images. 
-	</p>
-
-<pre>
-//Example 1: Render to PDF
-
-import processing.pdf.*;          // Import PDF code
-
-size(600, 600, PDF, "line.pdf");  // Set PDF as the renderer
-background(255);                  
-stroke(0);                                   
-line(200, 0, width/2, height);    // Draw line to PDF
-exit();                           // Stop the program
-</pre>
-
-
-
-
-	<h3>Production</h3>
-
-	<p class="txt">
-		Like traditional printing technologies, creating a high-quality digital print is a craft that requires knowledge and experience in addition to excellent tools and machines. The quality of a print is affected by the quality of the printer, ink, and paper, the preparation of the digital file, and the printer settings. Each of these components is introduced below.
-	</p>
-<br />
-<br />
-<em>Printing technologies</em>
-<br />
-Many different printing technologies are currently in use by artists and designers, and each has unique attributes. This list presents some of the most popular ones. Because printing technology changes rapidly, specific printer models are not discussed.
-<br />
-<br />
-	<strong>Laser.</strong> Laser printers are exceptional because of their high resolution, speed, and low cost per page. For these reasons, they are ubiquitous in office environments. Laser printers use a technology similar to that of photocopiers. When a print is made, a cylindrical drum inside the printer is electrically charged. A high-precision laser is reflected to strike the drum, and it reverses the electrical charge where it hits. When the drum comes in contact with charged toner (small particles of carbon blended with a polymer), the toner is attracted to the drum where the laser hit. A sheet of paper is then passed over the drum, and the toner is transferred and then fused to the paper surface with heat.
-<br />
-<br />
-	<strong>Inkjet.</strong> Inkjet prints are the most common technology for home printers because of their low cost and high image quality. They have also become a dominant technology for professional photographic printing. In comparison to laser printers, inkjet printers are slow, but they can produce images with a much higher resolution. They achieve this resolution by precisely squirting tiny droplets of ink onto the page. For this reason, the actual resolution of an inkjet can’t compare directly to that of a laser printer, which is more precise. A 600 dpi inkjet printer may produce distinguishable shapes down to 150 dpi, while a laser printer at 600 dpi maintains precision almost to the full 600 dpi. Each inkjet printer operates using one of three technologies: thermal, piezoelectric, or continuous. The thermal technique forces a drop of ink onto the paper by using heat to cause a tiny steam explosion within a chamber. The piezoelectric technique bends a piezoelectric crystal to force a droplet out of the ink chamber. The continuous technique sends a constant flow of droplets but charges each with a varying electrostatic field that determines how or whether it will hit the paper. Inkjet printers are sometimes also called bubblejet printers.
-<br />
-<br />
-	<strong>Digital chromogenic print (C Print).</strong> A digital C print is similar to a traditional color photographic print, but a digital file is used instead of a negative. A C print is made by exposing photographic paper to light (either an LED or laser) inside the printer. It is then processed using chemicals, just like a photographic print. Chromira and Lightjet are two popular types of printers that use this technique.  
-<br />
-<br />
-	<strong>Iris.</strong> Iris printers were developed to make full-color proofs before a job was printed in large numbers on a commercial press. They started to be used as fine art printers in the early 1990s. The most distinct aspect of this technology is the ability to print on many different flexible substrates including paper, silk, and canvas. To make an Iris print, the substrate is attached to a metal drum and spun at a high speed while tiny drops of ink are applied to the substrate in a high-pressure stream. An Iris printer is a specific type of inkjet printer.
-<br />
-<br />
-	<strong>Giclée.</strong> Giclée (pronounced zhee-CLAY) is not a specific printing technology; it is a term used to define a high-quality, digitally produced fine art print. The term giclée was selected to distance the technique from connotations to digital technology and computers, as a tactic to gain acceptance within the art community. The first giclée prints were made using the Iris printing technology, but they are now made using other technologies as well.
-<br />
-<br />
-	<strong>Other techniques.</strong> In addition to the printing technologies mentioned above, commercial printers offer a wide selection of specialized printers for creating large-format prints for buses, billboards, and buildings. These printing techniques produce lower-resolution images, but they look crisp at a distance.
-<br />
-<br />
-<em>Ink</em>
-<br />
-	The various printing technologies use different types of inks. Laser printers use toner, inkjet printers use liquid inks, and C prints don’t use inks because they are made with a photographic process. Toner must be fixed with heat, but liquid inks are absorbed into the paper. Inkjet inks can be divided into two broad categories: dye-based and pigmented. In comparison to pigmented inks, the more common dye-based inks are not water-resistant, are less expensive, are less resistant to fading, and can create more vivid colors. 
-<br />
-<br />
-	Ink selection partially determines how long a print will last. Inkjet inks have been notorious for fading color (early prints could fade within six months), but prints from some of the current generation of printers are rated to hold their color for over 100 years when used with special papers. Ultraviolet (UV) light is a huge contributing factor to fading. Use frames with UV-filtering glass or plexiglass to significantly increase the life of the print.
-<br />
-<br />
-<em>Paper</em>
-<br />
-	Paper is defined by its surface, material, and weight. Basic surface options include matte, luster, semigloss, gloss, and supergloss with textures ranging from extremely smooth to rough. Paper is typically made from wood fibers, but fibers from cotton, hemp, linen, and rice are also used. Paper made from wood is naturally acidic, so look for papers that are acid-free (pH neutral) to increase the longevity of prints. Paper made from 100 percent rag is the most stable and will not grow brittle with age. The weight of a paper affects its thickness. Fine art papers are usually measured in units of grams per square meter (gsm or g/m2). Common weights range from 110 (thin) to 350 (thick).
-<br />
-<br />
-	The selection of papers available for digital printing is extremely limited in comparison to those manufactured for traditional fine art and commercial printing, but the selection is still broad. Printer manufacturers such as Hewlett-Packard, Canon, and Epson offer their own papers, but the finest-quality paper can arguably be found at companies that specialize in making paper. Companies like Hahnemühle and Somerset have recently started producing papers specifically for digital printing technologies. Some inkjet printers require paper to be coated with a special layer to stop the ink from bleeding into the paper and dulling the color. Iris printers offer the widest selection of printable media. An Iris printer can print on any absorbent material and still produce strong color.
-<br />
-	Paper for printers comes in sheets and rolls, but depending on where you live, it will either be sized according to the international ISO 216 standard (A4, A3, etc.) or North American sizes (letter, tabloid, etc.).
-
-<br />
-<br />
-<em>File preparation</em>
-<br />
-	The format, resolution, and color profile are the most important components of preparing a file. For the best printing results, files should be saved in a format that does not compress the data in a way that loses information. For instance, the JPEG image format compresses a file by removing color data. Each type of printer produces the best results when files are at a specific resolution. Images should typically be saved at 300 dpi or higher. Images produced for Inkjet printers should be prepared at a dpi resolution that is an increment of the maximum printer resolution. For example, an image file prepared for a 2880 dpi printer should be saved at 360 dpi (360 × 8 = 2880). The 360 dpi resolution is suggested for photographic images, but the quality of an image with fine lines can be improved by doubling the resolution to 720 dpi (720 × 4 = 2880). A higher dpi resolution won’t help a great deal (with inkjet) and will significantly increase file size. The color profile for a file is essential to match color when working with other people or across different computers. Each file should be tagged with a color profile to specify the color space of the document (e.g., ColorMatch RGB or Adobe RGB 1998). A color profile tells an output device such as a monitor or printer how to interpret the file’s numerical color data to display it correctly on that device.
-<br />
-<br />
-	Our experience has shown that complex vector files should be rasterized in a program such as Adobe Photoshop before they are sent to a vendor for printing. Most printers specialize in printing photographs and have more competence in working with image formats like TIFF and PSD. Printers eventually rasterize the image, and it’s a good idea to have complete control over this process, unless the print shop specifies otherwise. 
-<br />
-<br />
-<em>Inkjet printer settings</em>
-<br />
-	C prints and Iris prints are typically made through a vendor and laser printing is straightforward. Making a high-quality print with an inkjet printer, however, is often done at home but requires following a few important protocols. Because every type of paper behaves differently with each printer, it’s necessary to define the paper type within the print dialog box. Most printers offer selections for their proprietary papers. If you are using one of these papers, select it from the list. If you are using a different paper, you may want to install the ICC profile for the paper that matches the printer.<sup>7</sup> The dialog box will also offer an option to set the dpi of the print. Sometimes it’s necessary to go into the advanced settings to gain access to this. There are a few things to consider when selecting the dpi. Glossy papers can hold a higher resolution than matte papers, and higher-resolution prints require more ink. Unless your print has extremely precise details and will be viewed close up, 1440 dpi is an adequate resolution. 
-<br />
-<br />
-	Making test prints is an essential step toward producing a high-quality print. Precise colors and line weights look very different on-screen than on paper. If working with a vendor, always have a small test print made to check the quality before producing the final print.  
-</p>
-<br />
-<br />
-
-<h3>Conclusion</h3>
-
-<p>
-	Only within the last fifteen years have digital printing technologies begun to rival traditional printing techniques in their resolution and longevity, but there is a vast discrepancy between the physical qualities of a digital print and an original Hokusai (1760–1849) woodblock print or an Albrecht Dürer (1472–1528) etching. Each printing technique has its constraints and advantages. One arguable advantage of digital printing is the absence of a physical representation of the print. A lithograph has a corresponding stone, and offset printing has a metal plate, but the information for a digital print is stored in a computer’s memory and is therefore easier to modify. The primary advantage of digital printing is the ease with which a software image can be manifested as a physical image. In contrast to an image on-screen, a print can have a much higher resolution and will exist long after the software becomes incompatible with future computers. 	
-<br />
-<br />
-    There are also disadvantages to printing software images. The ability to animate the image is lost, and the color palette is reduced. Digital printing technology evolves rapidly, and it’s possible that the current research into electronic paper (e-paper, e-ink) and organic light-emitting diodes (OLEDs) will allow the best aspects of printed images to merge with the best elements of digital screens. These or other emerging technologies may make it possible for digital printing to evolve into an original area of image-making rather than simply mimicking traditional printing technologies. 
-<br />
-<br />
-
-
-
-<h3>Notes</h3>
-
-	<p class="txt">
-	<ol>
-		<li>H. W. Franke, <em>Computer Graphics, Computer Art</em> (Phaidon, 1971), p. 60. </li>
-		<li>Ibid., p. 69.</li>
-		<li>Frieder Nake, “Notes on the Programming of Computer Graphics,” In <em>Cybernetic Serendipity</em>, edited by Jasia Reichardt (Praeger, 1969), p. 77.</li>
-		<li>This work is also credited as <em>Mural</em> in the exhibition catalog <em>Cybernetic Serendipity</em>.</li>
-		<li>Rick Poynor, “<em>Emigre</em>: An Ending,” Design Observer, 10 November 2005. <br />
-	http://www.designobserver.com/archives/007816.html.</li>
-		<li>Lewis Blackwell, <em>The End of Print: The Graphic Design of David Carson</em> (Chronicle Books, 1995),  p. 173.</li>
-		<li>ICC profiles are files that define the mappings between a print’s data and the specific paper and printer specifications. Well-designed profiles can increase the quality of a print. Check the website of the paper manufacturer to see if it has created one for your printer. </li>
-	</ol>
-	</p>
-
-
-
-<h3>Code</h3>
-
-<hr /> 
-
-<br /> 
-<em>Example 1: Render to PDF</em>
-
-
-<hr />
-<br />
-
-<em>Example 2:  Render to screen, export to PDF</em>
-<br />
-
-<pre>
-import processing.pdf.*;          // Import PDF code
-
-size(600, 600);
-beginRecord(PDF, "line.pdf");     // Start writing to PDF
-background(255);                  
-stroke(0, 20);		                 
-strokeWeight(20);                 
-line(200, 0, 400, height);        // Draw line to screen and to PDF
-endRecord();                      // Stop writing to PDF
-</pre>
-
-<hr />
-<br />
-
-<em>Example 3:  Save one frame from a continuous program</em>
-<pre>
 import processing.pdf.*;  // Import PDF code
 
 boolean saveOneFrame = false;
@@ -385,14 +189,20 @@ void draw() {
 void mousePressed() {                     // When a mouse button is pressed,
   saveOneFrame = true;                    // trigger PDF recording within the draw()
 }
+
 </pre>
 
-<hr />
-<br />
 
-<em>Example 4:  Accumulate many frames into one PDF</em>
+
+	<h3>Example 4:  Accumulate many frames into one PDF</h3>
+
+	<p class="txt">
+		This example saves multiple frames drawn to the screen within a single PDF file. The file opens when the <em>B</em> key is pressed, and everything drawn in subsequent frames is saved into it, until the <em>E</em> key is pressed. The background function is run after <code>beginRecord()</code> to clear the background within the PDF document as well as in the display window. This example draws only one new line to the PDF file each frame so the file remains small, but it’s possible to write thousands of lines each frame. However, when vector files get very large, computers can have difficulty opening and printing them.
+	</p>
 
 <pre>
+// Example 4:  Accumulate many frames into one PDF
+
 import processing.pdf.*;  // Import PDF code
 
 void setup() {
@@ -415,32 +225,44 @@ void keyPressed() {
     exit();                               // quit the program
   }
 }
+
 </pre>
 
-<hr />
-<br />
 
-<em>Example 5:  Save a TIFF image from a high-resolution off-screen buffer</em>
+
+
+	<h3>Example 5: High-resolution off-screen buffer</h3>
+
+	<p class="txt">
+		This example creates a TIFF file larger than the screen and draws into it directly, rather than drawing to the screen. The <code>createGraphics()</code> function creates an object from the <code>PGraphics</code> class (<code>PGraphics</code> is the main graphics and rendering context for Processing). The <code>beginDraw()</code> method is necessary to prepare for drawing, then each subsequent drawing function is written into the large raster object. The <code>endDraw()</code> and <code>save()</code> methods are necessary to complete the file and then save it to the machine so that it can later be viewed in a different program such as GIMP or Photoshop. 
+	</p>
 
 <pre>
+// Example 5: High-resolution off-screen buffer
+
 PGraphics big;  // Declare a PGraphics variable
 
 void setup() {
   big = createGraphics(3000, 3000);  // Create a new PGraphics object
-  big.beginDraw();                           // Start drawing to the PGraphics object 
-  big.background(128);                       // Set the background
-  big.line(20, 1800, 1800, 900);             // Draw a line
-  big.endDraw();                             // Stop drawing to the PGraphics object 
+  big.beginDraw();                   // Start drawing to the PGraphics object 
+  big.background(128);               // Set the background
+  big.line(20, 1800, 1800, 900);     // Draw a line
+  big.endDraw();                     // Stop drawing to the PGraphics object 
   big.save("big.tif");
 }
+
 </pre>
 
-<hr /> 
-<br /> 
 
-<em>Example 6:  Scale and segment an image</em>
+
+	<h3>Example 6: Scale and segment an image</h3>
+
+	<p class="txt">
+		This example saves a series of image files at screen resolution from a single image enlarged to any dimension. These files can be tiled within an image editor such as Photoshop to create a single, high-resolution file. Another program can also be written to tile the images together automatically. A <code>scaleValue</code> of 2 tiles the image to 4 files, a <code>scaleValue</code> of 3 tiles the image to 9 files, etc. This example code works only with 2D images. 
+	</p>
 
 <pre>
+// Example 6:  Scale and segment an image
 // Draws an image larger than the screen by tiling it into small sections.
 // The scaleValue variable sets amount of scaling: 1 is 100%, 2 is 200%, etc.
 
@@ -473,10 +295,131 @@ void setOffset() {
   }
   background(204);
 }
+
 </pre>
-</p>
-<hr /> 
-<br />
+
+
+	<h3>Printing technologies</h3>
+
+	<p class="txt">
+		Like traditional printing technologies, creating a high-quality digital print is a craft that requires knowledge and experience in addition to excellent tools and machines. The quality of a print is affected by the quality of the printer, ink, and paper, the preparation of the digital file, and the printer settings. Each of these components is introduced below. Many different printing technologies are currently in use by artists and designers, and each has unique attributes. This list presents some of the most popular ones. Because printing technology changes rapidly, specific printer models are not discussed.
+	</p>
+
+	<p class="txt">
+		<em>Laser</em><br />
+		Laser printers are exceptional because of their high resolution, speed, and low cost per page. For these reasons, they are ubiquitous in office environments. Laser printers use a technology similar to that of photocopiers. When a print is made, a cylindrical drum inside the printer is electrically charged. A high-precision laser is reflected to strike the drum, and it reverses the electrical charge where it hits. When the drum comes in contact with charged toner (small particles of carbon blended with a polymer), the toner is attracted to the drum where the laser hit. A sheet of paper is then passed over the drum, and the toner is transferred and then fused to the paper surface with heat.
+	</p>
+
+	<p class="txt">
+		<em>Inkjet</em><br /> 
+		Inkjet prints are the most common technology for home printers because of their low cost and high image quality. They have also become a dominant technology for professional photographic printing. In comparison to laser printers, inkjet printers are slow, but they can produce images with a much higher resolution. They achieve this resolution by precisely squirting tiny droplets of ink onto the page. For this reason, the actual resolution of an inkjet can’t compare directly to that of a laser printer, which is more precise. A 600 dpi inkjet printer may produce distinguishable shapes down to 150 dpi, while a laser printer at 600 dpi maintains precision almost to the full 600 dpi. Each inkjet printer operates using one of three technologies: thermal, piezoelectric, or continuous. The thermal technique forces a drop of ink onto the paper by using heat to cause a tiny steam explosion within a chamber. The piezoelectric technique bends a piezoelectric crystal to force a droplet out of the ink chamber. The continuous technique sends a constant flow of droplets but charges each with a varying electrostatic field that determines how or whether it will hit the paper. Inkjet printers are sometimes also called bubblejet printers.
+	</p>
+
+	<p class="txt">
+		<em>Digital chromogenic print (C Print)</em><br />
+		A digital C print is similar to a traditional color photographic print, but a digital file is used instead of a negative. A C print is made by exposing photographic paper to light (either an LED or laser) inside the printer. It is then processed using chemicals, just like a photographic print. Chromira and Lightjet are two popular types of printers that use this technique.  
+	</p>
+
+	<p class="txt">
+		<em>Iris</em><br />
+		Iris printers were developed to make full-color proofs before a job was printed in large numbers on a commercial press. They started to be used as fine art printers in the early 1990s. The most distinct aspect of this technology is the ability to print on many different flexible substrates including paper, silk, and canvas. To make an Iris print, the substrate is attached to a metal drum and spun at a high speed while tiny drops of ink are applied to the substrate in a high-pressure stream. An Iris printer is a specific type of inkjet printer.
+	</p>
+
+	<p class="txt">
+		<em>Giclée</em><br />
+		Giclée (pronounced zhee-CLAY) is not a specific printing technology; it is a term used to define a high-quality, digitally produced fine art print. The term giclée was selected to distance the technique from connotations to digital technology and computers, as a tactic to gain acceptance within the art community. The first giclée prints were made using the Iris printing technology, but they are now made using other technologies as well.
+	</p>
+
+	<p class="txt">
+		<em>Other techniques</em><br />
+		In addition to the printing technologies mentioned above, commercial printers offer a wide selection of specialized printers for creating large-format prints for buses, billboards, and buildings. These printing techniques produce lower-resolution images, but they look crisp at a distance.
+	</p>
+
+
+
+	<h3>Ink</h3>
+
+	<p class="txt">
+		The various printing technologies use different types of inks. Laser printers use toner, inkjet printers use liquid inks, and C prints don’t use inks because they are made with a photographic process. Toner must be fixed with heat, but liquid inks are absorbed into the paper. Inkjet inks can be divided into two broad categories: dye-based and pigmented. In comparison to pigmented inks, the more common dye-based inks are not water-resistant, are less expensive, are less resistant to fading, and can create more vivid colors. 
+	</p>
+
+	<p class="txt">
+		Ink selection partially determines how long a print will last. Inkjet inks have been notorious for fading color (early prints could fade within six months), but prints from some of the current generation of printers are rated to hold their color for over 100 years when used with special papers. Ultraviolet (UV) light is a huge contributing factor to fading. Use frames with UV-filtering glass or plexiglass to significantly increase the life of the print.
+	</p>
+
+
+
+	<h3>Paper</h3>
+
+	<p class="txt">
+		Paper is defined by its surface, material, and weight. Basic surface options include matte, luster, semigloss, gloss, and supergloss with textures ranging from extremely smooth to rough. Paper is typically made from wood fibers, but fibers from cotton, hemp, linen, and rice are also used. Paper made from wood is naturally acidic, so look for papers that are acid-free (pH neutral) to increase the longevity of prints. Paper made from 100 percent rag is the most stable and will not grow brittle with age. The weight of a paper affects its thickness. Fine art papers are usually measured in units of grams per square meter (gsm or g/m2). Common weights range from 110 (thin) to 350 (thick).
+	</p>
+
+	<p class="txt">
+		The selection of papers available for digital printing is extremely limited in comparison to those manufactured for traditional fine art and commercial printing, but the selection is still broad. Printer manufacturers such as Hewlett-Packard, Canon, and Epson offer their own papers, but the finest-quality paper can arguably be found at companies that specialize in making paper. Companies like Hahnemühle and Somerset have recently started producing papers specifically for digital printing technologies. Some inkjet printers require paper to be coated with a special layer to stop the ink from bleeding into the paper and dulling the color. Iris printers offer the widest selection of printable media. An Iris printer can print on any absorbent material and still produce strong color.
+	</p>
+
+	<p class="txt">
+		Paper for printers comes in sheets and rolls, but depending on where you live, it will either be sized according to the international ISO 216 standard (A4, A3, etc.) or North American sizes (letter, tabloid, etc.)
+	</p>
+
+
+
+
+	<h3>File preparation</h3>
+
+	<p class="txt">
+		The format, resolution, and color profile are the most important components of preparing a file. For the best printing results, files should be saved in a format that does not compress the data in a way that loses information. For instance, the JPEG image format compresses a file by removing color data. Each type of printer produces the best results when files are at a specific resolution. Images should typically be saved at 300 dpi or higher. Images produced for Inkjet printers should be prepared at a dpi resolution that is an increment of the maximum printer resolution. For example, an image file prepared for a 2880 dpi printer should be saved at 360 dpi (360 × 8 = 2880). The 360 dpi resolution is suggested for photographic images, but the quality of an image with fine lines can be improved by doubling the resolution to 720 dpi (720 × 4 = 2880). A higher dpi resolution won’t help a great deal (with inkjet) and will significantly increase file size. The color profile for a file is essential to match color when working with other people or across different computers. Each file should be tagged with a color profile to specify the color space of the document (e.g., ColorMatch RGB or Adobe RGB 1998). A color profile tells an output device such as a monitor or printer how to interpret the file’s numerical color data to display it correctly on that device.
+	</p>
+
+	<p class="txt">
+		Our experience has shown that complex vector files should be rasterized in a program such as Adobe Photoshop before they are sent to a vendor for printing. Most printers specialize in printing photographs and have more competence in working with image formats like TIFF and PSD. Printers eventually rasterize the image, and it’s a good idea to have complete control over this process, unless the print shop specifies otherwise. 
+	</p>
+
+
+
+
+	<h3>Inkjet printer settings</h3>
+
+	<p class="txt">
+		C prints and Iris prints are typically made through a vendor and laser printing is straightforward. Making a high-quality print with an inkjet printer, however, is often done at home but requires following a few important protocols. Because every type of paper behaves differently with each printer, it’s necessary to define the paper type within the print dialog box. Most printers offer selections for their proprietary papers. If you are using one of these papers, select it from the list. If you are using a different paper, you may want to install the ICC profile for the paper that matches the printer.<sup>7</sup> The dialog box will also offer an option to set the dpi of the print. Sometimes it’s necessary to go into the advanced settings to gain access to this. There are a few things to consider when selecting the dpi. Glossy papers can hold a higher resolution than matte papers, and higher-resolution prints require more ink. Unless your print has extremely precise details and will be viewed close up, 1440 dpi is an adequate resolution.
+	</p> 
+
+	<p class="txt">
+		Making test prints is an essential step toward producing a high-quality print. Precise colors and line weights look very different on-screen than on paper. If working with a vendor, always have a small test print made to check the quality before producing the final print.  
+	</p>
+
+
+
+	<h3>Conclusion</h3>
+
+	<p class="txt">
+		Only within the last fifteen years have digital printing technologies begun to rival traditional printing techniques in their resolution and longevity, but there is a vast discrepancy between the physical qualities of a digital print and an original Hokusai (1760–1849) woodblock print or an Albrecht Dürer (1472–1528) etching. Each printing technique has its constraints and advantages. One arguable advantage of digital printing is the absence of a physical representation of the print. A lithograph has a corresponding stone, and offset printing has a metal plate, but the information for a digital print is stored in a computer’s memory and is therefore easier to modify. The primary advantage of digital printing is the ease with which a software image can be manifested as a physical image. In contrast to an image on-screen, a print can have a much higher resolution and will exist long after the software becomes incompatible with future computers. 	
+	</p>
+
+	<p class="txt">
+    	There are also disadvantages to printing software images. The ability to animate the image is lost, and the color palette is reduced. Digital printing technology evolves rapidly, and it’s possible that the current research into electronic paper (e-paper, e-ink) and organic light-emitting diodes (OLEDs) will allow the best aspects of printed images to merge with the best elements of digital screens. These or other emerging technologies may make it possible for digital printing to evolve into an original area of image-making rather than simply mimicking traditional printing technologies. 
+    </p>
+
+
+
+
+	<h3>Notes</h3>
+
+	<p class="txt">
+	<ol>
+		<li>H. W. Franke, <em>Computer Graphics, Computer Art</em> (Phaidon, 1971), p. 60. </li>
+		<li>Ibid., p. 69.</li>
+		<li>Frieder Nake, “Notes on the Programming of Computer Graphics,” In <em>Cybernetic Serendipity</em>, edited by Jasia Reichardt (Praeger, 1969), p. 77.</li>
+		<li>This work is also credited as <em>Mural</em> in the exhibition catalog <em>Cybernetic Serendipity</em>.</li>
+		<li>Rick Poynor, “<em>Emigre</em>: An Ending,” Design Observer, 10 November 2005. <br />
+	http://www.designobserver.com/archives/007816.html.</li>
+		<li>Lewis Blackwell, <em>The End of Print: The Graphic Design of David Carson</em> (Chronicle Books, 1995),  p. 173.</li>
+		<li>ICC profiles are files that define the mappings between a print’s data and the specific paper and printer specifications. Well-designed profiles can increase the quality of a print. Check the website of the paper manufacturer to see if it has created one for your printer. </li>
+	</ol>
+	</p>
+
+
 <!--
 <p>
 <h3>Resources</h3>
@@ -512,8 +455,7 @@ Vanderlans, Rudy, Zuzana Licko, et al. <em>Emigre: Graphic Design into the Digit
 <br /> 
 Wilson, Mark. <em>Drawing with Computers</em>. Putnam, 1985.
 </p>-->
-</p>
 
-</td>
-       </tr>
- </table>
+	</td>
+	</tr>
+</table>
