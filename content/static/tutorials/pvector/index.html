@@ -6,25 +6,24 @@
     <p class="license">This tutorial is adapted from <a href="http://natureofcode.com">The Nature of Code</a> by Daniel Shiffman. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.</p>
 
     <h1 style="line-height: 0.7em;">PVector</h1>
-    <h3 style="line-height: 0.7em;"><em>Casey Reas and Ben Fry</em></h3>
+    <h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
 
    	   		
-	<p>The source code contained in this tutorial is <a href="https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/Processing/chp1_vectors">available on GitHub</a>.</p>
+	<!--<p>The source code contained in this tutorial is <a href="https://github.com/shiffman/The-Nature-of-Code-Examples/tree/master/Processing/chp1_vectors">available on GitHub</a>.</p>-->
 	
     <p class="txt">	
-      The most basic building block for programming motion is the <em><strong>vector</strong></em>. And so this is where we begin. Now, the word <em><strong>vector</strong></em> can mean a lot of different things:
-<br /><br /> 
-Vector is the name of a new wave rock band formed in Sacramento, CA in the early 1980s.  It's the name of a breakfast cereal manufactured by Kellogg's Canada.   In the field of epidemiology, a vector is used to describe an organism that transmits infection from one host to another.  In the C++ programming language, a Vector (std::vector) is an implementation of a dynamically resizable array data structure.   
-<br /><br />
-While all interesting, these are not the definitions we are looking for.   Rather, what we want is this <em><strong>vector</strong></em>:
-<br /><br />
-<strong><em>A vector is a collection of values that describe relative position in space.</strong></em>
-<br /><br />
-<!--<img src="imgs/definition.jpg">-->
-<img src="imgs/definition.svg" style= "width: 645px; height: 300px">
+      The most basic building block for programming motion is the <em><strong>vector</strong></em>. And so this is where we begin. Now, the word <em><strong>vector</strong></em> can mean a lot of different things. Vector is the name of a new wave rock band formed in Sacramento, CA in the early 1980s.  It's the name of a breakfast cereal manufactured by Kellogg's Canada. In the field of epidemiology, a vector is used to describe an organism that transmits infection from one host to another. In the C++ programming language, a Vector (std::vector) is an implementation of a dynamically resizable array data structure.   
+      <br /><br />
+      While all interesting, these are not the definitions we are looking for.   Rather, what we want is this <em><strong>vector</strong></em>:
+      <br /><br />
+      <strong><em>A vector is a collection of values that describe relative position in space.</strong></em>
+    </p>
+
+    <img src="imgs/definition.svg" style= "width: 645px; height: 300px">
 
 <h3>Vectors: You Complete Me</h3>
 
+<p>
 Before we get into vectors themselves, let's look at a beginner Processing example that demonstrates why it is in the first place we should care.  If you've read any of the introductory Processing textbooks or taken a class on programming with Processing (and hopefully you've done one of these things to help prepare you for this book), you probably, at one point or another, learned to how to write a simple  bouncing ball sketch.  
 <br /><br />
 <img src="imgs/bouncingball1.jpg">
@@ -310,18 +309,18 @@ if ((location.x > width) || (location.x < 0)) {
 Addition was really just the first step.   There is a long list of common mathematical operations that are used with vectors when programming the motion of objects on the screen.   Following is a comprehensive list of all of the mathematical operations available as functions in the <a href="http://processing.org/reference/PVector.html"><strong>PVector</strong></a> class.  We'll then go through a few of the key ones now.  As our examples get more and more sophisticated we'll continue to reveal the details of these functions.
 <br /><br />
 <ul>
-	<li><strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong> -- add vectors</li>
-	<li><strong><a href="http://processing.org/reference/PVector_sub_.html"><em>sub()</em></a></strong> -- subtract vectors</li>
-	<li><strong><a href="http://processing.org/reference/PVector_mult_.html"><em>mult()</em></a></strong> -- scale the vector with multiplication</li>
-	<li><strong><a href="http://processing.org/reference/PVector_div_.html"><em>div()</em></a></strong> -- scale the vector with division</li>
-	<li><strong><a href="http://processing.org/reference/PVector_mag_.html"><em>mag()</em></a></strong> -- calculate the magnitude of a vector</li>
-	<li><strong><a href="http://processing.org/reference/PVector_normalize_.html"><em>normalize()</em></a></strong> -- normalize the vector to unit length of 1</li>
-	<li><strong><a href="http://processing.org/reference/PVector_limit_.html"><em>limit()</em></a></strong> -- limit the magnitude of a vector</li>
-	<li><strong><a href="http://processing.org/reference/PVector_heading_.html"><em>heading()</em></a></strong> -- the heading of a vector expressed as an angle</li>
-	<li><strong><a href="http://processing.org/reference/PVector_dist_.html"><em>dist()</em></a></strong> -- the euclidean distance between two vectors (considered as points)</li>
-	<li><strong><a href="http://processing.org/reference/PVector_angleBetween_.html"><em>angleBetween()</em></a></strong> -- find the angle between two vectors</li>
-	<li><strong><a href="http://processing.org/reference/PVector_dot_.html"><em>dot()</em></a></strong> -- the dot product of two vectors</li>
-	<li><strong><a href="http://processing.org/reference/PVector_cross_.html"><em>cross()</em></a></strong> -- the cross product of two vectors</li>
+	<li><strong><a href="http://processing.org/reference/PVector_add_.html"><em>add()</em></a></strong> &mdash; add vectors</li>
+	<li><strong><a href="http://processing.org/reference/PVector_sub_.html"><em>sub()</em></a></strong> &mdash; subtract vectors</li>
+	<li><strong><a href="http://processing.org/reference/PVector_mult_.html"><em>mult()</em></a></strong> &mdash; scale the vector with multiplication</li>
+	<li><strong><a href="http://processing.org/reference/PVector_div_.html"><em>div()</em></a></strong> &mdash; scale the vector with division</li>
+	<li><strong><a href="http://processing.org/reference/PVector_mag_.html"><em>mag()</em></a></strong> &mdash; calculate the magnitude of a vector</li>
+	<li><strong><a href="http://processing.org/reference/PVector_normalize_.html"><em>normalize()</em></a></strong> &mdash; normalize the vector to unit length of 1</li>
+	<li><strong><a href="http://processing.org/reference/PVector_limit_.html"><em>limit()</em></a></strong> &mdash; limit the magnitude of a vector</li>
+	<li><strong><a href="http://processing.org/reference/PVector_heading_.html"><em>heading()</em></a></strong> &mdash; the heading of a vector expressed as an angle</li>
+	<li><strong><a href="http://processing.org/reference/PVector_dist_.html"><em>dist()</em></a></strong> &mdash; the euclidean distance between two vectors (considered as points)</li>
+	<li><strong><a href="http://processing.org/reference/PVector_angleBetween_.html"><em>angleBetween()</em></a></strong> &mdash; find the angle between two vectors</li>
+	<li><strong><a href="http://processing.org/reference/PVector_dot_.html"><em>dot()</em></a></strong> &mdash; the dot product of two vectors</li>
+	<li><strong><a href="http://processing.org/reference/PVector_cross_.html"><em>cross()</em></a></strong> &mdash; the cross product of two vectors</li>
 </ul>
 <br />
 Having already run through addition, let's start with subtraction.  This one's not so bad, just take the plus sign from addition and replace it with a minus!
