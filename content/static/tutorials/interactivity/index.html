@@ -59,6 +59,7 @@ void setup() {
   size(100, 100);
   noStroke();
 }
+
 void draw() {
   background(126);
   ellipse(mouseX, mouseY, 33, 33);
@@ -73,7 +74,7 @@ void draw() {
 
 <table style="width: 650" class="ex">
       <tr>
-        <td>
+        <td style="width: 120px; float:left;">
           <img src="imgs/07_03_1.png" style= "width: 100px; height: 100px;">
           <br />
           <img src="imgs/07_03_2.png" style= "width: 100px; height: 100px;">
@@ -87,7 +88,7 @@ void setup() {
 
 void draw() {
   background(126);
-  ellipse(mouseX, 16, 33, 33); // Top circle
+  ellipse(mouseX, 16, 33, 33);    // Top circle
   ellipse(mouseX+20, 50, 33, 33); // Middle circle
   ellipse(mouseX-20, 84, 33, 33); // Bottom circle
 }
@@ -100,9 +101,8 @@ void draw() {
 
 <table style="width: 650" class="ex">
       <tr>
-        <td>
+        <td style="width: 120px; float:left;">
           <img src="imgs/07_04_1.png" style= "width: 100px; height: 100px;">
-          <br />
           <img src="imgs/07_04_2.png" style= "width: 100px; height: 100px;">
         </td>
         <td style="width: 530px;">
@@ -114,7 +114,7 @@ void setup() {
 
 void draw() {
   background(126);
-  ellipse(mouseX, 16, 33, 33); // Top circle
+  ellipse(mouseX, 16, 33, 33);   // Top circle
   ellipse(mouseX/2, 50, 33, 33); // Middle circle
   ellipse(mouseX*2, 84, 33, 33); // Bottom circle
 }
