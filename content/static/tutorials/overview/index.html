@@ -137,7 +137,7 @@
       Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More advanced mouse handling can also be introduced; for instance, the <tt>mousePressed()</tt> function will be called whenever the mouse is pressed. In the following example, when the mouse is pressed, the screen is cleared via the <tt>background()</tt> function:
     </p>
 
-		<pre>
+<pre>
     void setup() {
        size(400, 400);
        stroke(255);
@@ -156,167 +156,243 @@
 		<h3>Exporting and distributing your work</h3>
 		
 		
-		<p>One of the most significant features of the Processing environment is its ability to bundle your sketch into an application with just one click. Select File &rarr; Export Application to package your current sketch as an application. This will bundle your sketch as an application for Windows, Mac OS X, or Linux depending on which operating system you're exporting from. The application folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the contents of the folder. Alternatively, you can turn off the automatic file erasure in the Preferences.<br />
-	  <br />
-        More about the export features can be found in the reference at <a href="http://processing.org/reference/environment/#Export"><em>http://processing.org/reference/environment/#Export</em></a><br />
-      </p>
+		<p class="txt">
+      One of the most significant features of the Processing environment is its ability to bundle your sketch into an application with just one click. Select File &rarr; Export Application to package your current sketch as an application. This will bundle your sketch as an application for Windows, Mac OS X, or Linux depending on which operating system you're exporting from. The application folders are overwritten whenever you export&mdash;make a copy or remove them from the sketch folder before making changes to the contents of the folder. Alternatively, you can turn off the automatic file erasure in the Preferences.
+    </p>
+
+    <p class="txt">
+      More about the export features can be found in the reference at <a href="http://processing.org/reference/environment/#Export"><em>http://processing.org/reference/environment/#Export</em></a>
+    </p>
 
       
 		<h3>Creating images from your work</h3>
 		
-		<p>If you don't want to distribute the actual project, you might want to create images of its output instead. Images are saved with the <tt>saveFrame()</tt> function. Adding <tt>saveFrame()</tt> at the end of <tt>draw()</tt> will produce a numbered sequence of TIFF-format images of the program's output, named <em>screen-0001.tif</em>, <em>screen-0002.tif</em>, and so on. A new file will be saved each time <tt>draw()</tt> runs &mdash; watch out, this can quickly fill your sketch folder with hundreds of files. You can also specify your own name and file type for the file to be saved with a function like:
-		<pre>     saveFrame(&quot;output.png&quot;)</pre>
+		<p class="txt">
+      If you don't want to distribute the actual project, you might want to create images of its output instead. Images are saved with the <tt>saveFrame()</tt> function. Adding <tt>saveFrame()</tt> at the end of <tt>draw()</tt> will produce a numbered sequence of TIFF-format images of the program's output, named <em>screen-0001.tif</em>, <em>screen-0002.tif</em>, and so on. A new file will be saved each time <tt>draw()</tt> runs &mdash; watch out, this can quickly fill your sketch folder with hundreds of files. You can also specify your own name and file type for the file to be saved with a function like:
+    </p>
 
-		<br />
-          To do the same for a numbered sequence, use # (hash marks) where the numbers should be placed:<br />
-          <br />
-          <pre>     saveFrame(&quot;output-####.png&quot;);</pre>
-          <br />
-          For high quality output, you can write geometry to PDF files instead of the screen, as described in the later section about the <tt>size()</tt> function.<br />
+<pre>     saveFrame(&quot;output.png&quot;)</pre>
 
-      </p>
+		<p class="txt">
+          To do the same for a numbered sequence, use # (hash marks) where the numbers should be placed:
+    </p>
+
+<pre>     saveFrame(&quot;output-####.png&quot;);</pre>
+
+    <p class="txt">
+          For high quality output, you can write geometry to PDF files instead of the screen, as described in the later section about the <tt>size()</tt> function.
+    </p>
       
+
+
 		<h3>Examples and reference</h3>
 
-		<p>While many programmers learn to code in school, others teach themselves and learn on their own. Learning on your own involves looking at lots of other code: running, altering, breaking, and enhancing it until you can reshape it into something new. With this learning model in mind, the Processing software download includes hundreds of examples that demonstrate different features of the environment and API.<br />
-		  <br />
-		  The examples can be accessed from the File &rarr; Examples menu. They're grouped into categories based on their function (such as Motion, Typography, and Image) or the libraries they use (PDF, Network, and Video). <br />
-          <br />
-          Find an interesting topic in the list and try an example. You'll see functions that are familiar, e.g. <tt>stroke()</tt>, <tt>line()</tt>, and <tt>background()</tt>, as well as others that have not yet been covered. To see how a function works, select its name, and then right-click and choose Find in Reference from the pop-up menu (Find in Reference can also be found beneath the Help menu). This will open the reference for that function in your default web browser.<br />
-          <br />
-          In addition to a description of the function's syntax, each reference page includes an example that uses the function. The reference examples are much shorter (usually four or five lines apiece) and easier to follow than the longer code examples. <br />
-      </p>
+		<p class="txt">
+        While many programmers learn to code in school, others teach themselves and learn on their own. Learning on your own involves looking at lots of other code: running, altering, breaking, and enhancing it until you can reshape it into something new. With this learning model in mind, the Processing software download includes hundreds of examples that demonstrate different features of the environment and API.
+    </p>
+
+    <p class="txt">
+		    The examples can be accessed from the File &rarr; Examples menu. They're grouped into categories based on their function (such as Motion, Typography, and Image) or the libraries they use (PDF, Network, and Video).
+    </p>
+
+    <p class="txt">
+        Find an interesting topic in the list and try an example. You'll see functions that are familiar, e.g. <tt>stroke()</tt>, <tt>line()</tt>, and <tt>background()</tt>, as well as others that have not yet been covered. To see how a function works, select its name, and then right-click and choose Find in Reference from the pop-up menu (Find in Reference can also be found beneath the Help menu). This will open the reference for that function in your default web browser.
+    </p>
+
+    <p class="txt">
+        In addition to a description of the function's syntax, each reference page includes an example that uses the function. The reference examples are much shorter (usually four or five lines apiece) and easier to follow than the longer code examples.
+    </p>
       
+
+
       
 		<h3>More about size()</h3>
 		
-		<p>The <tt>size()</tt> function sets the global variables width and height. For objects whose size is dependent on the screen, always use the width and height variables instead of a number. This prevents problems when the size() line is altered.
-		<pre>     size(400, 400);
+		<p class="txt">
+      The <tt>size()</tt> function sets the global variables width and height. For objects whose size is dependent on the screen, always use the width and height variables instead of a number. This prevents problems when the size() line is altered.
+    </p>
+
+<pre>
+     size(400, 400);
 
      // The wrong way to specify the middle of the screen
      ellipse(200, 200, 50, 50); </p>
 
      // Always the middle, no matter how the size() line changes
-     ellipse(width/2, height/2, 50, 50);</pre>
-        <br />
-        In the earlier examples, the <tt>size()</tt> function specified only a width and height for the window to be created. An optional parameter to the <tt>size()</tt> function specifies how graphics are rendered. A renderer handles how the Processing API is implemented for a particular output function (whether the screen, or a screen driven by a high-end graphics card, or a PDF file). The default renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels directly is slow. Several other renderers are included with Processing, each having a unique function. At the risk of getting too far into the specifics, here's a description of the other possible drawing modes to use with Processing. <br />
+     ellipse(width/2, height/2, 50, 50);
+</pre>
 
-        <br />
+    <p class="txt">
+        In the earlier examples, the <tt>size()</tt> function specified only a width and height for the window to be created. An optional parameter to the <tt>size()</tt> function specifies how graphics are rendered. A renderer handles how the Processing API is implemented for a particular output function (whether the screen, or a screen driven by a high-end graphics card, or a PDF file). The default renderer does an excellent job with high-quality 2D vector graphics, but at the expense of speed. In particular, working with pixels directly is slow. Several other renderers are included with Processing, each having a unique function. At the risk of getting too far into the specifics, here's a description of the other possible drawing modes to use with Processing.
+    </p>
+
 <pre>     size(400, 400, P2D);</pre>
-<br />
+
+    <p class="txt">
         The P2D renderer uses OpenGL for faster rendering of two-dimensional graphics, while using Processing's simpler graphics APIs and the Processing development environment's easy application export.<br />
-<br />
+    </p>
 
 <pre>     size(400, 400, P3D);</pre>
-<br />
+
+
+    <p class="txt">
         The P3D renderer also uses OpenGL for faster rendering. It can draw three-dimensional objects and two-dimensional object in space as well as lighting, texture, and materials.<br />
-        <br />
+    </p>
         
 <pre>     size(400, 400, PDF, &quot;output.pdf&quot;);</pre>
-<br />
-        The PDF renderer draws all geometry to a file instead of the screen. To use PDF, in addition to altering your size() function, you must select Import Library, then PDF from the Sketch menu. This is a cousin of the default renderer, but instead writes directly to PDF files. <br />
-        <br />
-      </p>
+
+
+    <p class="txt">
+        The PDF renderer draws all geometry to a file instead of the screen. To use PDF, in addition to altering your size() function, you must select Import Library, then PDF from the Sketch menu. This is a cousin of the default renderer, but instead writes directly to PDF files.
+    </p>
       
       
       <h3>Loading and displaying data</h3>
       
       
-      <p>One of the unique aspects of the Processing API is the way files are handled. The <tt>loadImage()</tt> and <tt>loadStrings()</tt> functions each expect to find a file inside a folder named <em>data</em>, which is a subdirectory of the sketch folder. <br />
+      <p class="txt">
+        One of the unique aspects of the Processing API is the way files are handled. The <tt>loadImage()</tt> and <tt>loadStrings()</tt> functions each expect to find a file inside a folder named <em>data</em>, which is a subdirectory of the sketch folder.
+      </p>
 
-<table width="100%" border="0" cellpadding="20" bgcolor="#DEDEDE">
-  <tr><td><em>Advanced Topic: Notes on the data folder</em><br />
-              <br />
+    <table width="100%" border="0" cellpadding="20" bgcolor="#DEDEDE">
+    <tr><td><em>Advanced Topic: Notes on the data folder</em><br />
+     <br />
           The <em>data</em> folder addresses a common frustration when dealing with code that is tested locally but deployed over the web. Like Java, software written with Processing is subject to security restrictions that determine how a program can access resources such as the local hard disk or other servers via the Internet. This prevents malicious developers from writing code that could harm your computer or compromise your data.<br />
-        <br />
-        The security restrictions can be tricky to work with during development. When running a program locally, data can be read directly from the disk, though it must be placed relative to the user's &ldquo;working directory,&rdquo; generally the location of the application. When running online, data must come from a location on the same server. It might be bundled with the code itself (in a JAR archive, discussed later; or from another URL on the same server). For a local file, Java's <tt>FileInputStream</tt> class can be used. If the file is bundled in a JAR archive, the <tt>getResource()</tt> function is used. For a file on the server, <tt>URL.openStream()</tt> might be employed. During the journey from development to deployment, it may be necessary to use all three of these functions.<br />
+          <br />
+          The security restrictions can be tricky to work with during development. When running a program locally, data can be read directly from the disk, though it must be placed relative to the user's &ldquo;working directory,&rdquo; generally the location of the application. When running online, data must come from a location on the same server. It might be bundled with the code itself (in a JAR archive, discussed later; or from another URL on the same server). For a local file, Java's <tt>FileInputStream</tt> class can be used. If the file is bundled in a JAR archive, the <tt>getResource()</tt> function is used. For a file on the server, <tt>URL.openStream()</tt> might be employed. During the journey from development to deployment, it may be necessary to use all three of these functions.<br />
+          <br />
+          With Processing, each of these scenarios (and some others) is handled  transparently by the file API functions. By placing resources in the data folder, Processing packages the files as necessary for online and offline use.
+        </td>
+        </tr>
+    </table>
 
-        <br />
-      With Processing, each of these scenarios (and some others) is handled  transparently by the file API functions. By placing resources in the data folder, Processing packages the files as necessary for online and offline use.</td>
-        </tr></table><br />
-<br />
-        File handling functions include <tt>loadStrings()</tt>, which reads a text file into an array of String objects, and <tt>loadImage()</tt> which reads an image into a PImage object, the container for image data in Processing. <br />
-<br />
+    <p class="txt">
+      File handling functions include <tt>loadStrings()</tt>, which reads a text file into an array of String objects, and <tt>loadImage()</tt> which reads an image into a PImage object, the container for image data in Processing.
+    </p>
 
-<pre>     // Examples of loading a text file and a JPEG image
+<pre>
+     // Examples of loading a text file and a JPEG image
      // from the data folder of a sketch.
      String[] lines = loadStrings(&quot;something.txt&quot;);
-     PImage image = loadImage(&quot;picture.jpg&quot;);</pre>
-<br />
-        These examples may be a bit easier to read if you know the programming concepts of data types and classes. Each variable has to have a data type, such as <tt>String</tt> or <tt>PImage</tt>.<br />
-        <br />
+     PImage image = loadImage(&quot;picture.jpg&quot;);
+</pre>
 
-The <tt>String[]</tt> syntax means &ldquo;an array of data of the class <tt>String</tt>.&rdquo; This array is created by the <tt>loadStrings</tt> function and is given the name lines; it will presumably be used later in the program under this name. The reason <tt>loadStrings</tt> creates an array is that it splits the <em>something.txt</em> file into its individual lines. The following function creates a single variable of class <tt>PImage</tt>, with the name image.<br />
+    <p class="txt">
+      These examples may be a bit easier to read if you know the programming concepts of data types and classes. Each variable has to have a data type, such as <tt>String</tt> or <tt>PImage</tt>.
+    </p>
 
-        <br />
-To add a file to the data folder of a Processing sketch, use the Sketch &rarr; Add File menu option, or drag the file into the editor window of the PDE. The data folder will be created if it does not exist already. <br />
-<br />
-        To view the contents of the sketch folder, use the Sketch &rarr; Show Sketch Folder menu option. This opens the sketch window in your operating system's file browser. <br />
-      </p>
+     <p class="txt">
+      The <tt>String[]</tt> syntax means &ldquo;an array of data of the class <tt>String</tt>.&rdquo; This array is created by the <tt>loadStrings</tt> function and is given the name lines; it will presumably be used later in the program under this name. The reason <tt>loadStrings</tt> creates an array is that it splits the <em>something.txt</em> file into its individual lines. The following function creates a single variable of class <tt>PImage</tt>, with the name image.
+    </p>
+
+    <p class="txt">
+      To add a file to the data folder of a Processing sketch, use the Sketch &rarr; Add File menu option, or drag the file into the editor window of the PDE. The data folder will be created if it does not exist already.
+    </p>
+
+    <p class="txt">
+        To view the contents of the sketch folder, use the Sketch &rarr; Show Sketch Folder menu option. This opens the sketch window in your operating system's file browser.
+    </p>
+      
       
       
       <h3>Libraries add new features</h3>
 
-      
-      
-      <p>A <em>library</em> is a collection of code in a specified format that makes it easy to use within Processing. Libraries have been important to the growth of the project, because they let developers make new features accessible to users without needing to make them part of the core Processing API.<br />
-        <br />
-        Several core libraries come with Processing. These can be seen in the Libraries section of the online reference (also available from the Help menu from within the PDE.) These libraries can be seen at <a href="http://processing.org/reference/libraries/"><em>http://processing.org/reference/libraries/</em></a><br />
-        <br />
+
+      <p class="txt">
+          A <em>library</em> is a collection of code in a specified format that makes it easy to use within Processing. Libraries have been important to the growth of the project, because they let developers make new features accessible to users without needing to make them part of the core Processing API.
+      </p>
+
+      <p class="txt">
+        Several core libraries come with Processing. These can be seen in the Libraries section of the online reference (also available from the Help menu from within the PDE.) These libraries can be seen at <a href="http://processing.org/reference/libraries/"><em>http://processing.org/reference/libraries/</em></a>
+      </p>
+
+      <p class="txt">
         One example is the PDF Export library. This library makes it possible to write PDF files directly from Processing. These vector graphics files can be scaled to any size and output at very high resolutions.<br />
+      </p>
 
-        <br />
+      <p class="txt">
         To use the PDF library in a project, choose Sketch &rarr; Import Library &rarr; pdf. This will add the following line to the top of the sketch:
+      </p>
+
       <pre>     import processing.pdf.*;</pre>
-      <br />
-      Java programmers will recognize the <tt>import</tt> command. In Processing, this line is also used to determine what code is packaged with a sketch when it is exported as an applet or application.<br />
 
-        <br />
-        Now that the PDF library is imported, you may use it to create a file. For instance, the following line of code creates a new PDF file named <em>lines.pdf</em> that you can draw to.<br />
-        <br />
-        <pre>     beginRecord(PDF, "lines.pdf");</pre>
-        <br />
+      <p class="txt">
+        Java programmers will recognize the <tt>import</tt> command. In Processing, this line is also used to determine what code is packaged with a sketch when it is exported as an applet or application.
+      </p>
 
-        Each drawing function such as <tt>line()</tt> and <tt>ellipse()</tt> will now draw to the screen as well as to the PDF.<br />
-        <br />
-        Other libraries provide features such as reading images from a camera, sending and receiving MIDI and OSC commands, sophisticated 3D camera control, and access to MySQL databases.<br />
+      <p class="txt">
+        Now that the PDF library is imported, you may use it to create a file. For instance, the following line of code creates a new PDF file named <em>lines.pdf</em> that you can draw to.
+      </p>
 
+      <pre>     beginRecord(PDF, "lines.pdf");</pre>
+
+      <p class="txt">
+        Each drawing function such as <tt>line()</tt> and <tt>ellipse()</tt> will now draw to the screen as well as to the PDF.
+      </p>
+
+      <p class="txt">
+        Other libraries provide features such as reading images from a camera, sending and receiving MIDI and OSC commands, sophisticated 3D camera control, and access to MySQL databases.
       </p>
       
+
       
       <h3>Sketching and scripting</h3>
       
       
-      <p>Processing sketches are made up of one or more tabs, with each tab representing a piece of code. The environment is designed around projects that are a few pages of code, and often three to five tabs in total. This covers a significant number of projects developed to test and prototype ideas, often before embedding them into a larger project or building a more robust application for broader deployment.<br />
-        <br />
-        The idea of sketching is identical to that of scripting, except that you're not working in an interpreted scripting language, but rather gaining the performance benefit of compiling to Java class files. Of course, strictly speaking, Java is itself an interpreted language, but its bytecode compilation brings it much closer to the &quot;metal&quot; than languages such as JavaScript, Python, or Ruby.<br />
-        <br />
+      <p class="txt">
+          Processing sketches are made up of one or more tabs, with each tab representing a piece of code. The environment is designed around projects that are a few pages of code, and often three to five tabs in total. This covers a significant number of projects developed to test and prototype ideas, often before embedding them into a larger project or building a more robust application for broader deployment.
+      </p>
 
+      <p class="txt">    
+        The idea of sketching is identical to that of scripting, except that you're not working in an interpreted scripting language, but rather gaining the performance benefit of compiling to Java class files. Of course, strictly speaking, Java is itself an interpreted language, but its bytecode compilation brings it much closer to the &quot;metal&quot; than languages such as JavaScript, Python, or Ruby.
+      </p>
+
+      <p class="txt">
         Processing was never intended as the ultimate language for programming visuals; instead, we set out to make something that was:
-<ul><li>A sketchbook for our own work, simplifying the majority of tasks that we undertake.<br />
-        <li>A programming environment suitable for teaching programming to a non-traditional audience.<br />
-        <li>A stepping stone from scripting languages to more complicated or difficult languages such as full-blown Java or C++.</ul>
-        <br />
-        At the intersection of these points is a tradeoff between speed and simplicity of use. If we didn't care about speed, it might make sense to use Python, Ruby, or many other scripting languages. This is especially true for the education side. If we didn't care about making a transition to more advanced languages, we'd probably avoid a C++ or Java-style syntax. But Java makes a nice starting point for a sketching language because it's far more forgiving than C/C++ and also allows users to export sketches for distribution via the web. <br />
-        <br />
+          <ul>
+            <li>A sketchbook for our own work, simplifying the majority of tasks that we undertake.</li>
+            <li>A programming environment suitable for teaching programming to a non-traditional audience.</li>
+            <li>A stepping stone from scripting languages to more complicated or difficult languages such as full-blown Java or C++.</li>
+          </ul>
+      </p>
 
-        Processing assembles our experience in building software of this kind (sketches of interactive works or data-driven visualization) and simplifies the parts that we felt should be easier, such as getting started quickly, and insulating new users from issues like those associated with setting up Java. <br />
+      <p class="txt">
+        At the intersection of these points is a tradeoff between speed and simplicity of use. If we didn't care about speed, it might make sense to use Python, Ruby, or many other scripting languages. This is especially true for the education side. If we didn't care about making a transition to more advanced languages, we'd probably avoid a C++ or Java-style syntax. But Java makes a nice starting point for a sketching language because it's far more forgiving than C/C++ and also allows users to export sketches for distribution via the web.
+      </p>
+
+      <p class="txt">
+        Processing assembles our experience in building software of this kind (sketches of interactive works or data-driven visualization) and simplifies the parts that we felt should be easier, such as getting started quickly, and insulating new users from issues like those associated with setting up Java.
       </p>
       
+
       
       <h3>Don't start by trying to build a cathedral</h3>
       
       
-      <p>If you're already familiar with programming, it's important to understand how Processing differs from other development environments and languages. The Processing project encourages a style of work that builds code quickly, understanding that either the code will be used as a quick sketch, or ideas are being tested before developing a final project. This could be misconstrued as software engineering heresy. Perhaps we're not far from &ldquo;hacking,&rdquo; but this is more appropriate for the roles in which Processing is used. Why force students or casual programmers to learn about graphics contexts, threading, and event handling functions before they can show something on the screen that interacts with the mouse? The same goes for advanced developers: why should they always need to start with the same two pages of code whenever they begin a project?<br />
-        <br />
-        In another scenario, the ability to try things out quickly is a far higher priority than sophisticated code structure. Usually you don't know what the outcome will be, so you might build something one week to try an initial hypothesis, and build something new the next based on what was learned in the first week. To this end, remember the following considerations as you begin writing code with Processing:
+      <p class="txt">
+          If you're already familiar with programming, it's important to understand how Processing differs from other development environments and languages. The Processing project encourages a style of work that builds code quickly, understanding that either the code will be used as a quick sketch, or ideas are being tested before developing a final project. This could be misconstrued as software engineering heresy. Perhaps we're not far from &ldquo;hacking,&rdquo; but this is more appropriate for the roles in which Processing is used. Why force students or casual programmers to learn about graphics contexts, threading, and event handling functions before they can show something on the screen that interacts with the mouse? The same goes for advanced developers: why should they always need to start with the same two pages of code whenever they begin a project?
+      </p>
 
-<ul><li>Be careful about creating unnecessary structures in your code. As you learn about encapsulating your code into classes, it's tempting to make ever-smaller classes, because data can always be distilled further. Do you need classes at the level of molecules, atoms, or quarks? Just because atoms go smaller doesn't mean that we need to work at a lower level of abstraction. If a class is half a page, does it make sense to have six additional subclasses that are each half a page long? Could the same thing be accomplished with a single class that is a page and a half in total?
-        <li>Consider the scale of the project. It's not always necessary to build enterprise-level software on the first day. Explore first: figure out the minimum code necessary to help answer your questions and satisfy your curiosity.
-</ul>
-        The argument is not to avoid continually rewriting, but rather to delay engineering work until it's appropriate. The threshold for where to begin engineering a piece of software is much later than for traditional programming projects because there is a kind of <em>art</em> to the early process of quick iteration.<br />
-        <br />
-Of course, once things are working, avoid the urge to rewrite for its own sake. A rewrite should be used when addressing a completely different problem. If you've managed to hit the nail on the head, you should refactor to clean up function names and class interactions. But a full rewrite of already finished code is almost always a bad idea, no matter how &quot;ugly&quot; it may seem.<br />
+      <p class="txt">
+        In another scenario, the ability to try things out quickly is a far higher priority than sophisticated code structure. Usually you don't know what the outcome will be, so you might build something one week to try an initial hypothesis, and build something new the next based on what was learned in the first week. To this end, remember the following considerations as you begin writing code with Processing:
+      </p>
+
+        <ul>
+          <li>
+            Be careful about creating unnecessary structures in your code. As you learn about encapsulating your code into classes, it's tempting to make ever-smaller classes, because data can always be distilled further. Do you need classes at the level of molecules, atoms, or quarks? Just because atoms go smaller doesn't mean that we need to work at a lower level of abstraction. If a class is half a page, does it make sense to have six additional subclasses that are each half a page long? Could the same thing be accomplished with a single class that is a page and a half in total?
+          </li>
+          <li>
+            Consider the scale of the project. It's not always necessary to build enterprise-level software on the first day. Explore first: figure out the minimum code necessary to help answer your questions and satisfy your curiosity.
+          </li>
+        </ul>
+
+      <p class="txt">
+        The argument is not to avoid continually rewriting, but rather to delay engineering work until it's appropriate. The threshold for where to begin engineering a piece of software is much later than for traditional programming projects because there is a kind of <em>art</em> to the early process of quick iteration.
+      </p>
+
+      <p class="txt">
+        Of course, once things are working, avoid the urge to rewrite for its own sake. A rewrite should be used when addressing a completely different problem. If you've managed to hit the nail on the head, you should refactor to clean up function names and class interactions. But a full rewrite of already finished code is almost always a bad idea, no matter how &quot;ugly&quot; it may seem.
+      </p>
 	
 
     </td>
