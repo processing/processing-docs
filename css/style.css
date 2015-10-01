@@ -1147,11 +1147,12 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	border-collapse:collapse;
 }
 
-#Tutoriala hr {
+#Tutorials hr {
 	height: 1px;
 	color: #666666;
 	background-color: #666666;
 	border: none;
+	border-width: 0px;
 }
 
 #Tutorials img.tut {
