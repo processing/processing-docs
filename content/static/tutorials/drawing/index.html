@@ -3,14 +3,12 @@
    	<td>
 
 	<p class="license">
-    	This tutorial is from the book <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a> by Daniel Shiffman, published by Morgan Kaufmann Publishers, &copy; 2008 Elsevier Inc. All rights reserved. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+    	This tutorial is from the book <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a> by Daniel Shiffman, published by Morgan Kaufmann, &copy; 2008 Elsevier Inc. All rights reserved. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
     </p>
 
    	<h1 style="line-height: 0.7em;">Coordinate System and Shapes</h1>
 	<h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
 
-
-   <h3>Coordinate Space</h3>
 
    <p>
 		Before we begin programming with Processing, we must first channel our eighth grade selves, pull out a piece of graph paper, and draw a line. The shortest distance between two points is a good old fashioned line, and this is where we begin, with two points on that graph paper. 
@@ -71,11 +69,17 @@ Finally, we can also draw a rectangle with two points (the top left corner and t
 <br /><br />
 Once we have become comfortable with the concept of drawing a rectangle, an <a href="http://www.processing.org/reference/ellipse_.html"><strong>ellipse()</strong></a> is a snap. In fact, it is identical to <strong>rect()</strong> with the difference being that an ellipse is drawn where the bounding box of the rectangle would be.  The default mode for <em>ellipse()</em> is  "CENTER", rather than "CORNER."
 <br /><br />
+
 <img src="imgs/drawing-10.svg" style= "width: 645px; height: 244px">
+
 <br /><br />
+
 <img src="imgs/drawing-11.svg" style= "width: 645px; height: 244px">
+
 <br /><br />
+
 <img src="imgs/drawing-12.svg" style= "width: 645px; height: 244px">
+
 <br /><br />
 
 
@@ -85,16 +89,18 @@ It is important to acknowledge that these ellipses do not look particularly circ
 Now let's look at what some code with shapes in more realistic setting, with window dimensions of 200 by 200.  Note the use of the <a href="http://www.processing.org/reference/size_.html">size()</a> function to specify the width and height of the window.
 <br /><br />
 <img src="imgs/1.11.jpg">
-<br /><br />
+<br />
+<br />
+
 <pre>
-size(200,200);
-rectMode(CENTER);
-rect(100,100,20,100);
-ellipse(100,70,60,60);
-ellipse(81,70,16,32); 
-ellipse(119,70,16,32); 
-line(90,150,80,160);
-line(110,150,120,160);
+<span style="color: #006699;">size</span>(200,200);
+<span style="color: #006699;">rectMode</span>(<span style="color: #718A62;">CENTER</span>);
+<span style="color: #006699;">rect</span>(100,100,20,100);
+<span style="color: #006699;">ellipse</span>(100,70,60,60);
+<span style="color: #006699;">ellipse</span>(81,70,16,32); 
+<span style="color: #006699;">ellipse</span>(119,70,16,32); 
+<span style="color: #006699;">line</span>(90,150,80,160);
+<span style="color: #006699;">line</span>(110,150,120,160);
 </pre>
 
 </p>
