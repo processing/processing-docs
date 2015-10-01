@@ -1,79 +1,104 @@
-<h1>Processing Overview</h1>
-	
-<p>
-<table width="656">
-  <tr>
-   	<td>
+<table width="650">
+    <tr>
+    <td>
 
-	<p class="license">This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007. Copyright &copy; 2008 Ben Fry. All rights reserved.</p>
+  <p class="license">
+      This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007. &copy; 2007 Ben Fry. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+  </p>
+
+  <h1 style="line-height: 0.7em;">Processing Overview</h1>
+  <h3 style="line-height: 0.7em;"><em>Ben Fry and Casey Reas</em></h3>
 	
 	<p>&nbsp;</p>
 	
-<p>Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to &ldquo;sketch&rdquo; ideas in code. As its capabilities have expanded over the past decade, Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization.<br />
-  <br />
-  Processing is based on Java, but because program elements in Processing are fairly simple, you can learn to use it even if you don't know any Java. If you're familiar with Java, it's best to forget that Processing has anything to do with Java for a while, until you get the hang of how the API works.<br />
-<br />
-The latest version of Processing can be downloaded at <a href="http://processing.org/download"><em>http://processing.org/download</em></a><br />
-<br />
-</em>An important goal for the project was to make this type of programming accessible to a wider audience. For this reason, Processing is free to download, free to use, and open source. But projects developed using the Processing environment and core libraries can be used for any purpose. This model is identical to GCC, the GNU Compiler Collection. GCC and its associated libraries (e.g. libc) are open source under the GNU Public License (GPL), which stipulates that changes to the code must be made available. However, programs created with GCC (examples too numerous to mention) are not themselves required to be open source.<br />
-
-<br />
-Processing consists of:</p>
-<ul><li>The Processing Development Environment (PDE). This is the software that runs when you double-click the Processing icon. The PDE is an Integrated Development Environment (IDE) with a minimalist set of features designed as a simple introduction to programming or for testing one-off ideas.
-    <li>A collection of functions (also referred to as commands or methods) that make up the &ldquo;core&rdquo; programming interface, or API, as well as several libraries that support more advanced features such as sending data over a network, reading live images from a webcam, and saving complex imagery in PDF format.
-    <li>A language syntax, identical to Java but with a few modifications. 
-    <li>An active online community, based at <a href="http://processing.org"><em>http://processing.org</em></a>.</ul>
-
+  <p class="txt">
+    Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to &ldquo;sketch&rdquo; ideas in code. As its capabilities have expanded over the past decade, Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization.
+  </p>
   
-    <br />For this reason, references to &ldquo;Processing&rdquo; can be somewhat ambiguous. Are we talking about the API, the development environment, or the web site? We'll be careful in this text when referring to each.  </p>
+  <p class="txt">
+    Processing is based on Java, but because program elements in Processing are fairly simple, you can learn to use it even if you don't know any Java. If you're familiar with Java, it's best to forget that Processing has anything to do with Java for a while, until you get the hang of how the API works.
+  </p>
+
+  <p class="txt">
+    The latest version of Processing can be downloaded at <a href="http://processing.org/download"><em>http://processing.org/download</em></a><br />
+  </p>
+
+
+  <p class="txt">
+    An important goal for the project was to make this type of programming accessible to a wider audience. For this reason, Processing is free to download, free to use, and open source. But projects developed using the Processing environment and core libraries can be used for any purpose. This model is identical to GCC, the GNU Compiler Collection. GCC and its associated libraries (e.g. libc) are open source under the GNU Public License (GPL), which stipulates that changes to the code must be made available. However, programs created with GCC (examples too numerous to mention) are not themselves required to be open source.
+  </p>
+
+  <p class="txt">
+    Processing consists of:
+      <ul>
+        <li>The Processing Development Environment (PDE). This is the software that runs when you double-click the Processing icon. The PDE is an Integrated Development Environment (IDE) with a minimalist set of features designed as a simple introduction to programming or for testing one-off ideas.
+        <li>A collection of functions (also referred to as commands or methods) that make up the &ldquo;core&rdquo; programming interface, or API, as well as several libraries that support more advanced features such as sending data over a network, reading live images from a webcam, and saving complex imagery in PDF format.
+        <li>A language syntax, identical to Java but with a few modifications. 
+        <li>An active online community, based at <a href="http://processing.org"><em>http://processing.org</em></a>.</ul>
+  </p>
+  
+  <p class="txt">
+      For this reason, references to &ldquo;Processing&rdquo; can be somewhat ambiguous. Are we talking about the API, the development environment, or the web site? We'll be careful in this text when referring to each.
+  </p>
 
 	
-<h3>Sketching with Processing</h3>
+  <h3>Sketching with Processing</h3>
 	
-	<p>
-	A Processing program is called a <em>sketch</em>. The idea is to make Java-style programming feel more like scripting, and adopt the process of scripting to quickly write code. Sketches are stored in the <em>sketchbook</em>, a folder that's used as the default location for saving all of your projects. Sketches that are stored in the sketchbook can be accessed from File &rarr; Sketchbook. Alternatively, File &rarr; Open... can be used to open a sketch from elsewhere on the system.<br />
-	<br />
-	Advanced programmers need not use the PDE, and may instead choose to use its libraries with the Java environment of choice. However, if you're just getting started, it's recommended that you use the PDE for your first few projects to gain familiarity with the way things are done. While Processing is based on Java, it was never meant to be a Java IDE with training wheels. To better address our target audience, the conceptual model (how programs work, how interfaces are built, and how files are handled) is somewhat different from Java. <br />
+	<p class="txt">
+	   A Processing program is called a <em>sketch</em>. The idea is to make Java-style programming feel more like scripting, and adopt the process of scripting to quickly write code. Sketches are stored in the <em>sketchbook</em>, a folder that's used as the default location for saving all of your projects. Sketches that are stored in the sketchbook can be accessed from File &rarr; Sketchbook. Alternatively, File &rarr; Open... can be used to open a sketch from elsewhere on the system.
+  </p>
+
+  <p class="txt">
+	 Advanced programmers need not use the PDE, and may instead choose to use its libraries with the Java environment of choice. However, if you're just getting started, it's recommended that you use the PDE for your first few projects to gain familiarity with the way things are done. While Processing is based on Java, it was never meant to be a Java IDE with training wheels. To better address our target audience, the conceptual model (how programs work, how interfaces are built, and how files are handled) is somewhat different from Java. <br />
 	</p>
 
 
-<h3>Hello world</h3>
+  <h3>Hello world</h3>
 
 
-    <p>The Processing equivalent of a &quot;Hello World&quot; program is simply to draw a line:
-    <br />
+  <p class="txt">
+    The Processing equivalent of a &quot;Hello World&quot; program is simply to draw a line:
+  <p>
 
-    <pre>     line(15, 25, 70, 90);</pre> 
-    <br />   
-Enter this example and press the Run button, which is an icon that looks like the Play button from any audio or video device. Your code will appear in a new window, with a gray background and a black line from coordinate (15, 25) to (70, 90). The (0, 0) coordinate is the upper left-hand corner of the display window. Building on this program to change the size of the display window and set the background color, type in the code below:<br />
-    <br />
-<pre>     size(400, 400);
+<pre>     line(15, 25, 70, 90);</pre> 
+
+  <p class="txt">
+    Enter this example and press the Run button, which is an icon that looks like the Play button from any audio or video device. Your code will appear in a new window, with a gray background and a black line from coordinate (15, 25) to (70, 90). The (0, 0) coordinate is the upper left-hand corner of the display window. Building on this program to change the size of the display window and set the background color, type in the code below:<br />
+  </p>
+
+<pre>
+     size(400, 400);
      background(192, 64, 0);
      stroke(255);
-     line(150, 25, 270, 350);</pre>
-      <br />
-      This version sets the window size to 400 x 400 pixels, sets the background to an orange-red, and draws the line in white, by setting the stroke color to 255. By default, colors are specified in the range 0 to 255. Other variations of the parameters to the <tt>stroke()</tt> function provide alternate results:<br />
+     line(150, 25, 270, 350);
+</pre>
 
-<br />
-<pre>     stroke(255);               // sets the stroke color to white
+  <p class="txt">
+      This version sets the window size to 400 x 400 pixels, sets the background to an orange-red, and draws the line in white, by setting the stroke color to 255. By default, colors are specified in the range 0 to 255. Other variations of the parameters to the <tt>stroke()</tt> function provide alternate results:
+  </p>
+
+<pre>
+     stroke(255);               // sets the stroke color to white
      stroke(255, 255, 255);     // identical to the line above
      stroke(255, 128, 0);       // bright orange (red 255, green 128, blue 0)
      stroke(#FF8000);           // bright orange as a web color
-     stroke(255, 128, 0, 128);  // bright orange with 50% transparency</pre>
-	  <br />
-The same alternatives work for the <tt>fill()</tt> function, which sets the fill color, and the <tt>background()</tt> function, which clears the display window. Like all Processing functions that affect drawing properties, the fill and stroke colors affect all geometry drawn to the screen until the next fill and stroke functions.
-<br />
-<br />
-</p>
+     stroke(255, 128, 0, 128);  // bright orange with 50% transparency
+</pre>
+
+  <p class="txt">
+    The same alternatives work for the <tt>fill()</tt> function, which sets the fill color, and the <tt>background()</tt> function, which clears the display window. Like all Processing functions that affect drawing properties, the fill and stroke colors affect all geometry drawn to the screen until the next fill and stroke functions.
+  </p>
 
 
 	  <h3>Hello mouse</h3>
 
       
-	  <p>A program written as a list of statements (like the previous examples) is called a <em>static</em> sketch. In a static sketch, a series of functions are used to perform tasks or create a single image without any animation or interaction. Interactive programs are drawn as a series of frames, which you can create by adding functions titled <tt>setup()</tt> and <tt>draw()</tt> as shown in the code below. These are built-in functions that are called automatically.<br />
+	  <p class="txt">
+        A program written as a list of statements (like the previous examples) is called a <em>static</em> sketch. In a static sketch, a series of functions are used to perform tasks or create a single image without any animation or interaction. Interactive programs are drawn as a series of frames, which you can create by adding functions titled <tt>setup()</tt> and <tt>draw()</tt> as shown in the code below. These are built-in functions that are called automatically.
+    </p>
 
-<br />
-<pre>     void setup() {
+<pre>
+     void setup() {
        size(400, 400);
        stroke(255);
        background(192, 64, 0);
@@ -81,15 +106,19 @@ The same alternatives work for the <tt>fill()</tt> function, which sets the fill
 
      void draw() {
        line(150, 25, mouseX, mouseY);
-     }</pre>
-		<br />
- The <tt>setup()</tt> block runs once, and the <tt>draw()</tt> block runs repeatedly. As such, <tt>setup()</tt> can be used for any initialization; in this case, setting the screen size, making the background orange, and setting the stroke color to white. The <tt>draw()</tt> block is used to handle animation. The <tt>size()</tt> function must always be the first line inside <tt>setup()</tt>.<br />
+     }
+</pre>
 
- <br />
+    <p class="txt">
+      The <tt>setup()</tt> block runs once, and the <tt>draw()</tt> block runs repeatedly. As such, <tt>setup()</tt> can be used for any initialization; in this case, setting the screen size, making the background orange, and setting the stroke color to white. The <tt>draw()</tt> block is used to handle animation. The <tt>size()</tt> function must always be the first line inside <tt>setup()</tt>.<br />
+    </p>
+
+    <p class="txt">
         Because the <tt>background()</tt> function is used only once, the screen will fill with lines as the mouse is moved. To draw just a single line that follows the mouse, move the <tt>background()</tt> function to the <tt>draw()</tt> function, which will clear the display window (filling it with orange) each time <tt>draw()</tt> runs.<br />
+    </p>
 
-<br />
-<pre>     void setup() {
+<pre>
+     void setup() {
        size(400, 400);
        stroke(255);
      }
@@ -97,14 +126,19 @@ The same alternatives work for the <tt>fill()</tt> function, which sets the fill
      void draw() {
        background(192, 64, 0);
        line(150, 25, mouseX, mouseY);
-     }</pre>
-		<br />
-        Static programs are most commonly used for extremely simple examples, or for scripts that run in a linear fashion and then exit. For instance, a static program might start, draw a page to a PDF file, and exit.<br />
-        <br />
-Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More advanced mouse handling can also be introduced; for instance, the <tt>mousePressed()</tt> function will be called whenever the mouse is pressed. In the following example, when the mouse is pressed, the screen is cleared via the <tt>background()</tt> function:<br />
+     }
+</pre>
 
-<br />
-		<pre>     void setup() {
+		<p class="txt">
+        Static programs are most commonly used for extremely simple examples, or for scripts that run in a linear fashion and then exit. For instance, a static program might start, draw a page to a PDF file, and exit.<br />
+    </p>
+
+    <p class="txt">
+      Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More advanced mouse handling can also be introduced; for instance, the <tt>mousePressed()</tt> function will be called whenever the mouse is pressed. In the following example, when the mouse is pressed, the screen is cleared via the <tt>background()</tt> function:
+    </p>
+
+		<pre>
+    void setup() {
        size(400, 400);
        stroke(255);
      }
@@ -115,10 +149,8 @@ Most programs will use the <tt>setup()</tt> and <tt>draw()</tt> blocks. More adv
      
      void mousePressed() {
        background(192, 64, 0);
-     }</pre>
-<br />
-<!--More about static versus active mode programs can be found in the Programming Modes section of the reference, which can be viewed from Help &rarr; Environment, or online at <a href="http://processing.org/reference/environment/"><em>http://processing.org/reference/environment</em></a><br />-->
-      </p>
+     }
+</pre>
 		
 		
 		<h3>Exporting and distributing your work</h3>
@@ -285,14 +317,10 @@ To add a file to the data folder of a Processing sketch, use the Sketch &rarr; A
         The argument is not to avoid continually rewriting, but rather to delay engineering work until it's appropriate. The threshold for where to begin engineering a piece of software is much later than for traditional programming projects because there is a kind of <em>art</em> to the early process of quick iteration.<br />
         <br />
 Of course, once things are working, avoid the urge to rewrite for its own sake. A rewrite should be used when addressing a completely different problem. If you've managed to hit the nail on the head, you should refactor to clean up function names and class interactions. But a full rewrite of already finished code is almost always a bad idea, no matter how &quot;ugly&quot; it may seem.<br />
-
-	<p>&nbsp;</p>
-	
-  <p class="license">This tutorial is for Processing 2+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is adapted from the book, <a href="http://www.processing.org/learning/books/#fry">Visualizing Data</a> by Ben Fry, O'Reilly 2007. Copyright &copy; 2008 Ben Fry. All rights reserved.</p>
 	
 
     </td>
   </tr>
 </table>
-</p>
+
 
