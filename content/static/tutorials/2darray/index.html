@@ -16,7 +16,7 @@
     </p>
 
     <p class="txt">
-      <em>(lettuce, tomatoes, salad dressing, steak, mashed potatoes, string beans, cake, ice cream, coffee)</em> 
+      <pre>(lettuce, tomatoes, salad dressing, steak, mashed potatoes, string beans, cake, ice cream, coffee)</pre> 
 </p>
 
     <p class="txt">
@@ -24,28 +24,28 @@ Or you could have a two-dimensional list of three courses, each containing three
 </p>
 
     <p class="txt">
-<em>(lettuce, tomatoes, salad dressing) and (steak, mashed potatoes, string beans) and (cake, ice cream, coffee)</em> 
+<pre>(lettuce, tomatoes, salad dressing) and (steak, mashed potatoes, string beans) and (cake, ice cream, coffee)</pre> 
 </p>
 
     <p class="txt">
-In the case of an array, our old-fashioned one-dimensional array looks like this:<br />
-</p>
+        In the case of an array, our old-fashioned one-dimensional array looks like this:<br />
+    </p>
 
 <pre>
 int[] myArray = {0,1,2,3};
 </pre>     
 
     <p class="txt">
-And a two-dimensional array looks like this:
-</p>
+      And a two-dimensional array looks like this:
+    </p>
 
 <pre>
 int[][] myArray = { {0,1,2,3}, {3,2,1,0}, {3,5,6,1}, {3,8,3,4} };     
 </pre>
 
     <p class="txt">
-For our purposes, it is better to think of the two-dimensional array as a matrix. A matrix can be thought of as a grid of numbers, arranged in rows and columns, kind of like a bingo board. We might write the two-dimensional array out as follows to illustrate this point: <br />
-</p>
+        For our purposes, it is better to think of the two-dimensional array as a matrix. A matrix can be thought of as a grid of numbers, arranged in rows and columns, kind of like a bingo board. We might write the two-dimensional array out as follows to illustrate this point: <br />
+    </p>
 
 <pre>
 int[][] myArray = {  {0, 1, 2, 3},
@@ -138,64 +138,65 @@ for (int i = 0; i &lt; cols; i++) {
 <img src="imgs/cells.jpg"  class="tut">
 
 <pre>
-// 2D Array of objects
-Cell[][] grid;
+<span style="color: #666666;">//&nbsp;2D&nbsp;Array&nbsp;of&nbsp;objects</span>
+Cell[][]&nbsp;grid;
 
-// Number of columns and rows in the grid
-int cols = 10;
-int rows = 10;
+<span style="color: #666666;">//&nbsp;Number&nbsp;of&nbsp;columns&nbsp;and&nbsp;rows&nbsp;in&nbsp;the&nbsp;grid</span>
+<span style="color: #E2661A;">int</span> cols = 10;
+<span style="color: #E2661A;">int</span> rows = 10;
 
-void setup() {
-  size(200,200);
-  grid = new Cell[cols][rows];
-  for (int i = 0; i &lt; cols; i++) {
-    for (int j = 0; j &lt; rows; j++) {
-      // Initialize each object
-      grid[i][j] = new Cell(i*20,j*20,20,20,i+j);
-    }
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200,200);
+&nbsp;&nbsp;grid&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Cell[cols][rows];
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &amp;lt; cols; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &amp;lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Initialize each object</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Cell(i*20,j*20,20,20,i+j);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
 }
 
-void draw() {
-  background(0);
-  // The counter variables i and j are also the column and row numbers and 
-  // are used as arguments to the constructor for each object in the grid.  
-  for (int i = 0; i &lt; cols; i++) {
-    for (int j = 0; j &lt; rows; j++) {
-      // Oscillate and display each object
-      grid[i][j].oscillate();
-      grid[i][j].display();
-    }
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;<span style="color: #666666;">// The counter variables i and j are also the column and row numbers and </span>
+&nbsp;&nbsp;<span style="color: #666666;">// are used as arguments to the constructor for each object in the grid.  </span>
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &amp;lt; cols; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j = 0; j &amp;lt; rows; j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Oscillate and display each object</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j].oscillate();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid[i][j].display();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
 }
 
-// A Cell object
-class Cell {
-  // A cell object knows about its location in the grid as well as its size with the variables x,y,w,h.
-  float x,y;   // x,y location
-  float w,h;   // width and height
-  float angle; // angle for oscillating brightness
+<span style="color: #666666;">//&nbsp;A&nbsp;Cell&nbsp;object</span>
+<span style="color: #33997E;">class</span> Cell {
+&nbsp;&nbsp;<span style="color: #666666;">// A cell object knows about its location in the grid </span>
+&nbsp;&nbsp;<span style="color: #666666;">// as well as its size with the variables x,y,w,h</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> x,y;   <span style="color: #666666;">// x,y location</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> w,h;   <span style="color: #666666;">// width and height</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle; <span style="color: #666666;">// angle for oscillating brightness</span>
 
-  // Cell Constructor
-  Cell(float tempX, float tempY, float tempW, float tempH, float tempAngle) {
-    x = tempX;
-    y = tempY;
-    w = tempW;
-    h = tempH;
-    angle = tempAngle;
-  } 
-  
-  // Oscillation means increase angle
-  void oscillate() {
-    angle += 0.02; 
-  }
+&nbsp;&nbsp;<span style="color: #666666;">// Cell Constructor</span>
+&nbsp;&nbsp;Cell(<span style="color: #E2661A;">float</span> tempX, <span style="color: #E2661A;">float</span> tempY, <span style="color: #E2661A;">float</span> tempW, <span style="color: #E2661A;">float</span> tempH, <span style="color: #E2661A;">float</span> tempAngle) {
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;tempX;
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;tempY;
+&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;=&nbsp;tempW;
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;tempH;
+&nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;=&nbsp;tempAngle;
+&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// Oscillation means increase angle</span>
+&nbsp;&nbsp;<span style="color: #33997E;">void</span> oscillate() {
+&nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;+=&nbsp;0.02;&nbsp;
+&nbsp;&nbsp;}
 
-  void display() {
-    stroke(255);
-    // Color calculated using sine wave
-    fill(127+127*sin(angle));
-    rect(x,y,w,h); 
-  }
+&nbsp;&nbsp;<span style="color: #33997E;">void</span> display() {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255);
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Color calculated using sine wave</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(127+127*<span style="color: #006699;">sin</span>(angle));
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>(x,y,w,h); 
+&nbsp;&nbsp;}
 }
 </pre>
 
