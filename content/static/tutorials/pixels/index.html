@@ -239,7 +239,7 @@ img.pixels[0] = color(255,0,0); // Sets the first pixel of the image to red
 <br />
 Access to these fields allows us to loop through all the pixels of an image and display them onscreen.
 <br /><br />
-<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-7/">Example: Displaying the pixels of an image</a>
+<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-7/">Example: Displaying the pixels of an image</a>-->
 <br /><br />
 <pre>
 PImage img;
@@ -263,7 +263,8 @@ void draw() {
       float b = blue(img.pixels[loc]);
       
       // Image Processing would go here
-      // If we were to change the RGB values, we would do it here, before setting the pixel in the display window.
+      // If we were to change the RGB values, we would do it here, 
+      // before setting the pixel in the display window.
       
       // Set the display pixel to the image pixel
       pixels[loc] =  color(r,g,b);          
