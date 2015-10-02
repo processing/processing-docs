@@ -126,22 +126,12 @@
     </p>
 
     <div style="text-align:center;">
-      <img src="imgs/bad_pentagon.jpg" alt="pentagon with unequal sides" width="200" height="200" style="display: inline;" />
+      <img src="imgs/bad_pentagon.jpg" alt="pentagon with unequal sides" width="200" height="200" style="display: inline;" class="tut" />
       <img src="imgs/accurate_pentagon.jpg" alt="pentagon with equal sides" width="210" height="200" style="display: inline;" class="tut" />
     </div>
 
     <p class="txt">
-      Well, that was a dead end. That sort of thing happens in programming all
-      the time, so I didn&rsquo;t spend too much time worrying about it.
-      It was time for another approach. Since I didn't have an accurate way of 
-      drawing ellipses, I had to think about the problem a different way. Presume
-      you have a circle drawn on a square sheet of rubber, and you stretch it out
-      so that it&rsquo;s twice as wide but the same height. The vertical position of
-      the points on the circle does not change, but the horizontal positions are now
-      twice as far away from the center as they used to be. The same idea applies
-      if you stretch the sheet vertically. The
-      following crude drawings seemed to bear this out,
-      so it was time to rewrite the <code>polygon()</code> function.
+      Well, that was a dead end. That sort of thing happens in programming all the time, so I didn&rsquo;t spend too much time worrying about it. It was time for another approach. Since I didn't have an accurate way of drawing ellipses, I had to think about the problem a different way. Presume you have a circle drawn on a square sheet of rubber, and you stretch it out so that it&rsquo;s twice as wide but the same height. The vertical position of the points on the circle does not change, but the horizontal positions are now twice as far away from the center as they used to be. The same idea applies if you stretch the sheet vertically. The following crude drawings seemed to bear this out, so it was time to rewrite the <code>polygon()</code> function.
     </p>
 
     <p style="text-align:center;">
@@ -192,91 +182,63 @@
 }
 </pre>
 
-<p class="txt">
-Since everything was in radians, I now described
-angles in terms of <code>PI</code> and <code>TWO_PI</code> (2&pi;), since
-2&pi; radians equals 360&deg;.
-In addition to the code in <code>setup()</code> to test the new
-features, I drew ellipses with the same center and width and height as
-the polygons to make sure that
-the vertices were within the proper area.
-</p>
+    <p class="txt">
+      Since everything was in radians, I now described angles in terms of <code>PI</code> and <code>TWO_PI</code> (2&pi;), since 2&pi; radians equals 360&deg;. In addition to the code in <code>setup()</code> to test the new features, I drew ellipses with the same center and width and height as the polygons to make sure that the vertices were within the proper area.
+    </p>
 
-<h3>Too Many Parameters</h3>
-<p class="txt">
-I now had a much more flexible function for drawing polygons, but
-it came at the expense of more parameters. It would be nice to be
-able to draw the ordinary case (equal width and height, start angle
-of zero) without having to specify all those parameters. The solution
-is to <dfn>overload</dfn> the function. In Processing, you can have
-two functions with the same name, as long as they have different
-numbers of parameters and/or types of parameters. An example of
-this is Processing&rsquo;s <code>stroke()</code> function, which is
-overloaded so that you can call it with one number for grayscale,
-three numbers for color, or four numbers for color with opacity.
-Processing looks at the number of arguments you provide and figures
-out which version of <code>stroke()</code> to call.
-</p>
 
-<p class="txt">
-Here is the code to add to the previous example. When you give
-<code>polygon()</code> only four numbers, it will call the following
-function, which calls the &ldquo;big&rdquo; version of the
-function with width and height equal to twice your desired
-radius, and a start angle of zero.
-</p>
+
+
+    <h3>Too Many Parameters</h3>
+
+    <p class="txt">
+      I now had a much more flexible function for drawing polygons, but it came at the expense of more parameters. It would be nice to be able to draw the ordinary case (equal width and height, start angle of zero) without having to specify all those parameters. The solution is to <dfn>overload</dfn> the function. In Processing, you can have two functions with the same name, as long as they have different numbers of parameters and/or types of parameters. An example of this is Processing&rsquo;s <code>stroke()</code> function, which is overloaded so that you can call it with one number for grayscale, three numbers for color, or four numbers for color with opacity. Processing looks at the number of arguments you provide and figures out which version of <code>stroke()</code> to call.
+    </p>
+
+    <p class="txt">
+      Here is the code to add to the previous example. When you give <code>polygon()</code> only four numbers, it will call the following function, which calls the &ldquo;big&rdquo; version of the function with width and height equal to twice your desired radius, and a start angle of zero.
+    </p>
 
 <pre>
-void polygon(int n, float cx, float cy, float r)
-{
-  polygon(n, cx, cy, r * 2.0, r * 2.0, 0.0);
+<span style="color: #33997E;">void</span> polygon(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> r) {
+&nbsp;&nbsp;polygon(n,&nbsp;cx,&nbsp;cy,&nbsp;r&nbsp;*&nbsp;2.0,&nbsp;r&nbsp;*&nbsp;2.0,&nbsp;0.0);
 }
-
 </pre>
 
-<p class="txt">
-And here is some code to test the overloaded function.
-</p>
+    <p class="txt">
+      And here is some code to test the overloaded function.
+    </p>
 
-<img src="imgs/poly3.png" alt="regular triangle and diamond using overloaded functions"
-    width="214" height="169" style="float: right;" />
+    <img src="imgs/poly3.png" alt="regular triangle and diamond using overloaded functions" width="214" height="169" class="tut" />
+
 <pre>
-void setup()
-{
-  size(300, 300);
-  background(255);
-  smooth();
-  
-  noFill();
-  polygon(3, 70, 75, 50); // use the defaults
-  polygon(4, 170, 75, 25);
-  
-  stroke(128);
-  // draw enclosing ellipses to make sure we did it right
-  ellipse(70, 75, 100, 100);
-  ellipse(170, 75, 50, 50);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(300, 300);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">smooth</span>();
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;polygon(3,&nbsp;70,&nbsp;75,&nbsp;50);&nbsp;<span style="color: #666666;">// use the defaults</span>
+&nbsp;&nbsp;polygon(4,&nbsp;170,&nbsp;75,&nbsp;25);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128);
+&nbsp;&nbsp;<span style="color: #666666;">// draw enclosing ellipses to make sure we did it right</span>
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(70, 75, 100, 100);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 75, 50, 50);
 }
-
 </pre>
 
-<h3>Safe Computing</h3>
-<p class="txt">
-What happens if someone tries to draw a polygon with 2 sides, 1 side,
-or worse, 0 sides?  The first two will generate a line and a point,
-but the third one will cause a division by zero error when trying to
-figure out the angle. And what would happen with negative numbers?
-Since polygons with fewer than three sides
-don&rsquo;t make a lot of sense, I wrapped the body of the
-<code>polygon()</code> function inside of an <code>if</code> statement.
-Now, when someone specifies two or fewer sides, the function just
-won&rsquo;t draw anything.
-</p>
+
+
+    <h3>Safe Computing</h3>
+    
+    <p class="txt">
+      What happens if someone tries to draw a polygon with 2 sides, 1 side, or worse, 0 sides?  The first two will generate a line and a point, but the third one will cause a division by zero error when trying to figure out the angle. And what would happen with negative numbers? Since polygons with fewer than three sides don&rsquo;t make a lot of sense, I wrapped the body of the <code>polygon()</code> function inside of an <code>if</code> statement. Now, when someone specifies two or fewer sides, the function just won&rsquo;t draw anything.
+    </p>
 
 <pre>
-void polygon(int n, float cx, float cy, float w, float h, float startAngle)
-{
-  if (n &gt; 2)
-  {
+void polygon(int n, float cx, float cy, float w, float h, float startAngle) {
+  if (n &gt; 2) {
     float angle = TWO_PI/ n;
     .
     .
@@ -286,67 +248,48 @@ void polygon(int n, float cx, float cy, float w, float h, float startAngle)
     endShape(CLOSE);
   }
 }
-
 </pre>
 
-<h3>Drawing Stars</h3>
-<p class="txt">
-Now that I was satisfied with the <code>polygon()</code> function, it was time
-to move on to drawing stars. From some playing around with a crude sketch, I
-figured that it would be possible to draw a star by figuring out where all the
-diagonals of a polygon intersect.
-</p>
 
-<div class="text-align:center;">
-<img src="imgs/bad_stars.jpg" width="450" height="204"
-  alt="Stars drawn by intersections of diagonals" />
-</div>
+    <h3>Drawing Stars</h3>
 
-<p class="txt">
-I saw two problems here. First, finding the intersection point of two lines is
+    <p class="txt">
+      Now that I was satisfied with the <code>polygon()</code> function, it was time to move on to drawing stars. From some playing around with a crude sketch, I figured that it would be possible to draw a star by figuring out where all the diagonals of a polygon intersect.
+    </p>
+
+    <div class="text-align:center;">
+      <img src="imgs/bad_stars.jpg" width="450" height="204" alt="Stars drawn by intersections of diagonals" class="tut" />
+    </div>
+
+    <p class="txt">
+      I saw two problems here. First, finding the intersection point of two lines is
 a lot of calculation. Not particularly hard calculation, but a lot of it,
 and it gets tricky when you have vertical lines.
 Second, I couldn't have a four-sided or three-sided
 arrow shape; there weren&rsquo;t enough diagonals.
-</p>
+    </p>
 
-<p class="txt">
-Then, I had another idea. I can&rsquo;t tell you where the idea came from
-or how I arrived at it; it just hit me. That&rsquo;s a part of the process
-that I don&rsquo;t think can be taught. Here was the idea:
-What if you had a
-polygon cut out of cookie dough and you sort of pushed in the sides
-to make a star shape? That is a method that works for squares and triangles.
-</p>
+    <p class="txt">
+      Then, I had another idea. I can&rsquo;t tell you where the idea came from or how I arrived at it; it just hit me. That&rsquo;s a part of the process that I don&rsquo;t think can be taught. Here was the idea: What if you had a polygon cut out of cookie dough and you sort of pushed in the sides to make a star shape? That is a method that works for squares and triangles.
+    </p>
 
-<div class="text-align:center;">
-<img src="imgs/cookie_stars.jpg" width="450" height="128"
-  alt="Stars drawn by pushing in the sides" />
-</div>
+    <div class="text-align:center;">
+      <img src="imgs/cookie_stars.jpg" width="450" height="128" alt="Stars drawn by pushing in the sides" class="tut" />
+    </div>
 
-<p class="txt">
-When you push in the sides, you push them in at the midpoint so that
-you get a nice symmetric cookie. From there, it wasn&rsquo;t a big
-leap to figure out: &ldquo;what if I had a shorter radius at half
-of every slice of the polygon?&rdquo; 
-</p>
+    <p class="txt">
+      When you push in the sides, you push them in at the midpoint so that you get a nice symmetric cookie. From there, it wasn&rsquo;t a big leap to figure out: &ldquo;what if I had a shorter radius at half of every slice of the polygon?&rdquo; 
+    </p>
 
-<div class="text-align:center;">
-<img src="imgs/good_stars.jpg" width="450" height="114"
-  alt="Stars drawn by pushing in the sides" />
-</div>
+    <div class="text-align:center;">
+      <img src="imgs/good_stars.jpg" width="450" height="114" alt="Stars drawn by pushing in the sides" class="tut" />
+    </div>
 
-<p class="txt">
-This code would be fairly easy to write. I would need one extra
-parameter: the proportion of the small radius to the
-big radius. In the following code, an <code>if</code> statement
-controls whether to use the short radius or the long radius.
-I also put in an overloaded version that draws a star with
-equal width and height and a start angle of zero. For the
-test, I made the short radius one half the long radius.
-</p>
+    <p class="txt">
+      This code would be fairly easy to write. I would need one extra parameter: the proportion of the small radius to the big radius. In the following code, an <code>if</code> statement controls whether to use the short radius or the long radius. I also put in an overloaded version that draws a star with equal width and height and a start angle of zero. For the test, I made the short radius one half the long radius.
+    </p>
 
-<img src="imgs/surprise.png" width="200" height="226" alt="3, 4, 5, and 6-sided stars" class="tut" />
+    <img src="imgs/surprise.png" width="200" height="226" alt="3, 4, 5, and 6-sided stars" class="tut" />
 
 <pre>
 <span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
