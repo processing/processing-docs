@@ -31,7 +31,10 @@ void captureEvent(Capture c) {
 </example>
 
 <description><![CDATA[
-Called when a new camera frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one capture device in the program, <b>captureEvent()</b> is called each time any of the devices has a new frame available. Use an <b>if</b> within the function to determine which device is triggering the event.]]></description>
+Called when a new camera frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one capture device in the program, <b>captureEvent()</b> is called each time any of the devices has a new frame available. Use an <b>if</b> within the function to determine which device is triggering the event.
+<br /><br />
+This function is for people who want to process the image data separately from drawing (and as quickly as possible.) You cannot draw to the screen inside the <b>captureEvent()</b> function. If you want to draw immediately based on the new image, then use the <b>Capture.available()</b> method.
+]]></description>
 
 <syntax>
 void captureEvent(Capture <c>which</c>) {
