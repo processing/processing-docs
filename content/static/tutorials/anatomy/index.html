@@ -3,271 +3,196 @@
     <tr>
     <td>
 
- <p class="license">
+    <p class="license">
       If you see any errors in this tutorial or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
     </p>
 
-  <h1 style="line-height: 0.7em;">Anatomy of a Program</h1>
-  <h3 style="line-height: 0.7em;"><em>J David Eisenberg</em></h3>
+    <h1 style="line-height: 0.7em;">Anatomy of a Program</h1>
+    <h3 style="line-height: 0.7em;"><em>J David Eisenberg</em></h3>
 
-  <p>&nbsp;</p>
+    <p class="txt">&nbsp;</p>
 
-<p>
-Many of the tutorials for Processing concentrate on what the language 
-can do (change colors, draw shapes, create arrays of objects) and which
-function calls will let you accomplish these tasks. These are things you
-need to know in order to write a program in Processing.
-</p>
-<p>
-There&rsquo;s one piece of
-the puzzle that these tutorials don&rsquo;t address: how do you analyze a
-problem and break it down into steps that the computer can do? In this
-tutorial, I&rsquo;m going to show you what
-went through my head as I took on the task of writing functions to draw
-regular polygons and star-shaped figures in Processing. This is a good choice
-because the task is not too big to get your mind around, but it&rsquo;s not an
-entirely trivial problem, either.  
-</p>
+    <p class="txt">
+      Many of the tutorials for Processing concentrate on what the language can do (change colors, draw shapes, create arrays of objects) and which function calls will let you accomplish these tasks. These are things you need to know in order to write a program in Processing.
+    </p>
 
-<p>
-Remember that what you are seeing here is my particular thought process and programming
-style. There are many different approaches and styles. As you continue
-programming, you will find your own. You can also see other people&rsquo;s programming
-stye (though not their thought process!) by looking at the source code for
-the programs at <a href="http://openprocessing.org/">openProcessing.org</a>.
-</p>
+    <p class="txt">
+      There&rsquo;s one piece of the puzzle that these tutorials don&rsquo;t address: how do you analyze a problem and break it down into steps that the computer can do? In this
+      tutorial, I&rsquo;m going to show you what went through my head as I took on the task of writing functions to draw regular polygons and star-shaped figures in Processing. This is a good choice because the task is not too big to get your mind around, but it&rsquo;s not an entirely trivial problem, either.  
+    </p>
 
-<h3>Drawing Regular Polygons</h3>
+    <p class="txt">
+      Remember that what you are seeing here is my particular thought process and programming style. There are many different approaches and styles. As you continue programming, you will find your own. You can also see other people&rsquo;s programming stye (though not their thought process!) by looking at the source code for the programs at <a href="http://openprocessing.org/">openProcessing.org</a>.
+    </p>
 
-<p>
-You wouldn&rsquo;t think of building a house without a blueprint, and you
-shouldn&rsquo;t think of writing a program without a plan of some sort.
-Since Processing is such a visual language,
-I always have to sketch out what I want as a result before I approach the
-keyboard. So that&rsquo;s where I started.
-</p>
 
-<h3>Step 1: Planning on paper</h3>
 
-<p>
-The first step was to draw a crude diagram to dredge up old memories of how regular
-polygons work. The hexagon was the first one I drew. As you can see from the little loop
-I drew inside the hexagon, the center angles of all the slices add up to a complete circle, or
-360&deg;, and the &ldquo;radius&rdquo; of the polygon is a line from the
-center to each vertex. The angle between each of the radius lines is thus 360&deg; divided
-by the number of sides.
-</p>
+    <h3>Drawing Regular Polygons</h3>
 
-<p><img src="imgs/sketch1.jpg" alt="Crude diagram of regular polygons with 3-6 sides"
-    width="400" height="120" /></p>
+    <p class="txt">
+      You wouldn&rsquo;t think of building a house without a blueprint, and you shouldn&rsquo;t think of writing a program without a plan of some sort. Since Processing is such a visual language, I always have to sketch out what I want as a result before I approach the keyboard. So that&rsquo;s where I started.
+    </p>
 
-<p>
-I just needed to get an idea of
-what the task was, and a hand-drawn diagram did the job. I didn&rsquo;t need
-to generate the diagram in a drawing program.
-</p>
 
-<blockquote>
-<p>Programming Hint: When you do your planning, do it away from the computer. If you are
-sitting in front of the computer, the screen will whisper, &ldquo;Look at me!
-Look at me!&rdquo; and the keyboard will whisper &ldquo;Type something!
-Type something!&rdquo; Go to your kitchen table instead.
-</p>
-</blockquote>
 
-<h3>Step 2: Some basic trigonometry</h3>
-<p>
-So, if you have a line of length <em>r</em> starting at (0,0) at an angle theta (&theta;),
-what are its coordinates in terms of <em>x</em> and <em>y</em>? If you know a little bit of
-trigonometry, the answer is that the endpoint of the line is at 
-(<em>r</em>&nbsp;cos&nbsp;&theta;,&nbsp;<em>r</em>&nbsp;sin&nbsp;&theta;). If you don&rsquo;t
-know trigonometry, take a look at 
-<a href="http://catcode.com/trig/">this tutorial</a> (a general and very light introduction to
-trigonometry),
-<a href="http://processing.org/learning/trig/">this tutorial</a> (oriented towards Processing),
-and
-<a href="http://www.learningprocessing.com/examples/chapter-13/example-13-5-polar-to-cartesian/">this 
-example from chapter 13 of <em>Learning Processing</em></a>.
-In the following diagram, angles are drawn clockwise, which is how they are measured in
-Processing.
-</p>
+    <h3>Step 1: Planning on paper</h3>
 
-<p><img src="imgs/sketch2.jpg" alt="Diagram of angle showing relationship of cosine and sine"
-    width="250" height="164" /></p>
+    <p class="txt">
+      The first step was to draw a crude diagram to dredge up old memories of how regular polygons work. The hexagon was the first one I drew. As you can see from the little loop I drew inside the hexagon, the center angles of all the slices add up to a complete circle, or 360&deg;, and the &ldquo;radius&rdquo; of the polygon is a line from the center to each vertex. The angle between each of the radius lines is thus 360&deg; divided by the number of sides.
+    </p>
 
-<h3>Step 3: Design Decisions</h3>
-<p>
-It looks like this is a job for a <code>for</code> loop that runs from 0 to
-<em>n</em> (the number of sides), calculating the points for each vertex and drawing
-lines connecting them. At each step, the angle at which we draw is increased
-by 360&deg;/<em>n</em>.
-</p>
 
-<p>The problem with drawing a group of lines is that they are just lines&mdash;you
-don&rsquo;t get a true shape that you can fill, like <code>rect()</code>
-or <code>triangle()</code>. Luckily, Processing lets you create your own shapes
-with the <a href="http://processing.org/reference/beginShape_.html"><code>beginShape()</code></a>,
-<a href="file:///home/david/processing-1.0.9/reference/vertex_.html"><code>vertex()</code></a>, and
-<a href="http://processing.org/reference/endShape_.html"><code>endShape()</code></a> functions.
-The first example on the reference page for <code>beginShape()</code> is the model
-to follow. So the next design decision is to make polygons as true shapes.</p>
+    <img src="imgs/sketch1.jpg" alt="Crude diagram of regular polygons with 3-6 sides" width="400" height="120" class="tut" />
 
-<p>Since you probably want to draw many polygons during a program, it makes sense
-to have a <code>polygon()</code> function. What parameters does it need?
-Four come to mind: the number of sides, the center <em>x</em> and <em>y</em>
-coordinate, and the radius.  Here&rsquo;s the code. I wrote several different
-calls to <code>polygon()</code> in the <code>setup()</code> function.
-Although I calculated <code>angle</code> in degrees, sine and cosine measure
-angles in radians, so I had to use the <code>radians()</code> function to
-do a conversion.
-</p>
+    <p class="txt">
+      I just needed to get an idea of what the task was, and a hand-drawn diagram did the job. I didn&rsquo;t need to generate the diagram in a drawing program.
+    </p>
 
-<img src="imgs/polytest1.jpg" alt="polygon tests"
-    width="200" height="200" style="float: right;" /><pre>
-void setup()
-{
-  size(300, 300);
-  background(255);
-  smooth();
+    <blockquote>
+      <p class="txt">Programming Hint: When you do your planning, do it away from the computer. If you are sitting in front of the computer, the screen will whisper, &ldquo;Look at me! Look at me!&rdquo; and the keyboard will whisper &ldquo;Type something! Type something!&rdquo; Go to your kitchen table instead.
+    </p>
+    </blockquote>
 
-  noFill();
-  polygon(3, 50, 75, 50);
-  polygon(4, 170, 75, 50);
 
-  fill(255, 204, 255);
-  stroke(128, 0, 128);
-  polygon(5, 50, 180, 50);
 
-  noFill();
-  stroke(0);
-  polygon(6, 170, 180, 50);
-}
+      <h3>Step 2: Some basic trigonometry</h3>
 
-void polygon(int n, float cx, float cy, float r)
-{
-  float angle = 360.0 / n;
+    <p class="txt">
+      So, if you have a line of length <em>r</em> starting at (0,0) at an angle theta (&theta;), what are its coordinates in terms of <em>x</em> and <em>y</em>? If you know a little bit of
+      trigonometry, the answer is that the endpoint of the line is at (<em>r</em>&nbsp;cos&nbsp;&theta;,&nbsp;<em>r</em>&nbsp;sin&nbsp;&theta;). If you don&rsquo;t
+      know trigonometry, take a look at <a href="http://catcode.com/trig/">this tutorial</a> (a general and very light introduction to
+      trigonometry), <a href="http://processing.org/learning/trig/">this tutorial</a> (oriented towards Processing), and <a href="http://www.learningprocessing.com/examples/chapter-13/example-13-5-polar-to-cartesian/">this example from chapter 13 of <em>Learning Processing</em></a>. In the following diagram, angles are drawn clockwise, which is how they are measured in Processing.
+    </p>
 
-  beginShape();
-  for (int i = 0; i &lt; n; i++)
-  {
-    vertex(cx + r * cos(radians(angle * i)),
-      cy + r * sin(radians(angle * i)));
-  }
-  endShape(CLOSE);
-}
+    <img src="imgs/sketch2.jpg" alt="Diagram of angle showing relationship of cosine and sine" width="250" height="164" class="tut" />
 
-</pre>
 
-<h3>Two Steps Forward, One Step Back</h3>
-<p>
-The program works, so it&rsquo;s time to see if there are things that
-could be added or changed.  First, the triangle and pentagon seem
-somehow wrong; they are usually drawn pointing upwards instead of
-to the side. The reason they look odd is that the first vertex
-(at 0&deg;) points to the right instead of straight up. It
-would be nice to have an extra parameter that gives the starting
-angle for the first vertex. (Another solution is to leave things
-as they are and let programmers use <code>rotate()</code>
-[<a href="http://processing.org/learning/transform2d">see this
-tutorial</a>], but I made the design decision
-to use an extra parameter.) Should the angle be given in degrees
-or in radians? The answer: radians, in order to be consistent
-with everything else that Processing does.
-</p>
 
-<p>
-My next thought was that it would be nice to be able to specify a
-width and height for the polygon, much as you do with an
-<code>ellipse()</code> or <code>rectangle()</code>. I already
-knew what the formula would be, but I wanted to make a drawing
-to check it out. As a preliminary
-experiment, I tried drawing a pentagon into a square using a protractor and straightedge,
-and ended up with the awful drawing at the left. How come the sides
-weren&rsquo;t equal length? I realized that I was trying to make
-the drawing fit my preconceptions, rather than making an accurate
-drawing and seeing where that led me. The drawing on the right
-was done much more carefully. After a little thinking, I realized
-that the pentagon wouldn&rsquo;t fit the square exactly, because
-the angles weren&rsquo;t multiples of 90 degrees. The regular
-polygon fits in a <em>circle</em>, not in a square!
-</p>
+    <h3>Step 3: Design Decisions</h3>
 
-<div style="text-align:center;">
-<img src="imgs/bad_pentagon.jpg" alt="pentagon with unequal sides"
-    width="200" height="200" style="display: inline;" />
-<img src="imgs/accurate_pentagon.jpg" alt="pentagon with equal sides"
-    width="210" height="200" style="display: inline;" />
-</div>
+    <p class="txt">
+      It looks like this is a job for a <code>for</code> loop that runs from 0 to <em>n</em> (the number of sides), calculating the points for each vertex and drawing lines connecting them. At each step, the angle at which we draw is increased by 360&deg;/<em>n</em>.
+    </p>
 
-<p>
-Well, that was a dead end. That sort of thing happens in programming all
-the time, so I didn&rsquo;t spend too much time worrying about it.
-It was time for another approach. Since I didn't have an accurate way of 
-drawing ellipses, I had to think about the problem a different way. Presume
-you have a circle drawn on a square sheet of rubber, and you stretch it out
-so that it&rsquo;s twice as wide but the same height. The vertical position of
-the points on the circle does not change, but the horizontal positions are now
-twice as far away from the center as they used to be. The same idea applies
-if you stretch the sheet vertically. The
-following crude drawings seemed to bear this out,
-so it was time to rewrite the <code>polygon()</code> function.
-</p>
+    <p class="txt">
+      The problem with drawing a group of lines is that they are just lines&mdash;you don&rsquo;t get a true shape that you can fill, like <code>rect()</code> or <code>triangle()</code>. Luckily, Processing lets you create your own shapes with the <a href="http://processing.org/reference/beginShape_.html"><code>beginShape()</code></a>, <a href="file:///home/david/processing-1.0.9/reference/vertex_.html"><code>vertex()</code></a>, and <a href="http://processing.org/reference/endShape_.html"><code>endShape()</code></a> functions. The first example on the reference page for <code>beginShape()</code> is the model to follow. So the next design decision is to make polygons as true shapes.</p>
 
-<p style="text-align:center;">
-<img src="imgs/stretchy.jpg" alt="diagrams showing stretched circle"
-  width="600" height="194" />
-</p>
+    <p class="txt">
+      Since you probably want to draw many polygons during a program, it makes sense to have a <code>polygon()</code> function. What parameters does it need? Four come to mind: the number of sides, the center <em>x</em> and <em>y</em> coordinate, and the radius.  Here&rsquo;s the code. I wrote several different calls to <code>polygon()</code> in the <code>setup()</code> function. Although I calculated <code>angle</code> in degrees, sine and cosine measure angles in radians, so I had to use the <code>radians()</code> function to do a conversion.
+    </p>
 
-<img src="imgs/poly2.png" alt="more complex polygon tests"
-    width="200" height="229" style="float: right;" />
+
+    <img src="imgs/polytest1.jpg" alt="polygon tests"width="200" height="200" class="tut" />
+
 <pre>
-void setup( )
-{
-  size(300, 300);
-  background(255);
-  smooth();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(300, 300);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
 
-  noFill();
-  polygon(3, 50, 75, 100, 100, -PI / 2.0); // -90 degrees
-  polygon(4, 170, 75, 50, 125, -PI / 4.0); // -45 degrees
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;polygon(3,&nbsp;50,&nbsp;75,&nbsp;50);
+&nbsp;&nbsp;polygon(4,&nbsp;170,&nbsp;75,&nbsp;50);
 
-  fill(255, 204, 255);
-  stroke(128, 0, 128);
-  polygon(5, 50, 200, 75, 50, -PI / 2.0); // -90 degrees
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255, 204, 255);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128, 0, 128);
+&nbsp;&nbsp;polygon(5,&nbsp;50,&nbsp;180,&nbsp;50);
 
-  noFill();
-  stroke(0);
-  polygon(6, 170, 200, 50, 100, 0);
-
-  stroke(128);
-  // draw enclosing ellipses to make sure we did it right
-  ellipse(50, 75, 100, 100);
-  ellipse(170, 75, 50, 125);
-  ellipse(50, 200, 75, 50);
-  ellipse(170, 200, 50, 100);
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;polygon(6,&nbsp;170,&nbsp;180,&nbsp;50);
 }
 
-void polygon(int n, float cx, float cy, float w, float h, float startAngle)
-{
-  float angle = TWO_PI/ n;
+<span style="color: #33997E;">void</span> polygon(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> r) {
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle = 360.0 / n;
 
-  /* The horizontal "radius" is one half the width;
-     the vertical "radius" is one half the height */
-  w = w / 2.0;
-  h = h / 2.0;
-
-  beginShape();
-  for (int i = 0; i &lt; n; i++)
-  {
-    vertex(cx + w * cos(startAngle + angle * i),
-      cy + h * sin(startAngle + angle * i));
-  }
-  endShape(CLOSE);
+&nbsp;&nbsp;<span style="color: #006699;">beginShape</span>();
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">vertex</span>(cx + r * <span style="color: #006699;">cos</span>(<span style="color: #006699;">radians</span>(angle * i)),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cy&nbsp;+&nbsp;r&nbsp;*&nbsp;<span style="color: #006699;">sin</span>(<span style="color: #006699;">radians</span>(angle * i)));
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">endShape</span>(<span style="color: #718A62;">CLOSE</span>);
 }
-
 </pre>
 
-<p>
+
+    <h3>Two Steps Forward, One Step Back</h3>
+
+    <p class="txt">
+      The program works, so it&rsquo;s time to see if there are things that could be added or changed.  First, the triangle and pentagon seem somehow wrong; they are usually drawn pointing upwards instead of to the side. The reason they look odd is that the first vertex (at 0&deg;) points to the right instead of straight up. It would be nice to have an extra parameter that gives the starting angle for the first vertex. (Another solution is to leave things as they are and let programmers use <code>rotate()</code> [<a href="http://processing.org/learning/transform2d">see this tutorial</a>], but I made the design decision to use an extra parameter.) Should the angle be given in degrees or in radians? The answer: radians, in order to be consistent with everything else that Processing does.
+    </p>
+
+    <p class="txt">
+      My next thought was that it would be nice to be able to specify a width and height for the polygon, much as you do with an <code>ellipse()</code> or <code>rectangle()</code>. I already knew what the formula would be, but I wanted to make a drawing to check it out. As a preliminary experiment, I tried drawing a pentagon into a square using a protractor and straightedge, and ended up with the awful drawing at the left. How come the sides weren&rsquo;t equal length? I realized that I was trying to make the drawing fit my preconceptions, rather than making an accurate drawing and seeing where that led me. The drawing on the right was done much more carefully. After a little thinking, I realized that the pentagon wouldn&rsquo;t fit the square exactly, because the angles weren&rsquo;t multiples of 90 degrees. The regular polygon fits in a <em>circle</em>, not in a square!
+    </p>
+
+    <div style="text-align:center;">
+      <img src="imgs/bad_pentagon.jpg" alt="pentagon with unequal sides" width="200" height="200" style="display: inline;" />
+      <img src="imgs/accurate_pentagon.jpg" alt="pentagon with equal sides" width="210" height="200" style="display: inline;" />
+    </div>
+
+    <p class="txt">
+      Well, that was a dead end. That sort of thing happens in programming all
+      the time, so I didn&rsquo;t spend too much time worrying about it.
+      It was time for another approach. Since I didn't have an accurate way of 
+      drawing ellipses, I had to think about the problem a different way. Presume
+      you have a circle drawn on a square sheet of rubber, and you stretch it out
+      so that it&rsquo;s twice as wide but the same height. The vertical position of
+      the points on the circle does not change, but the horizontal positions are now
+      twice as far away from the center as they used to be. The same idea applies
+      if you stretch the sheet vertically. The
+      following crude drawings seemed to bear this out,
+      so it was time to rewrite the <code>polygon()</code> function.
+    </p>
+
+    <p style="text-align:center;">
+      <img src="imgs/stretchy.jpg" alt="diagrams showing stretched circle" width="600" height="194" />
+    </p>
+
+    <img src="imgs/poly2.png" alt="more complex polygon tests" width="200" height="229" />
+
+<pre>
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(300, 300);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;polygon(3,&nbsp;50,&nbsp;75,&nbsp;100,&nbsp;100,&nbsp;-<span style="color: #718A62;">PI</span> / 2.0); <span style="color: #666666;">// -90 degrees</span>
+&nbsp;&nbsp;polygon(4,&nbsp;170,&nbsp;75,&nbsp;50,&nbsp;125,&nbsp;-<span style="color: #718A62;">PI</span> / 4.0); <span style="color: #666666;">// -45 degrees</span>
+
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255, 204, 255);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128, 0, 128);
+&nbsp;&nbsp;polygon(5,&nbsp;50,&nbsp;200,&nbsp;75,&nbsp;50,&nbsp;-<span style="color: #718A62;">PI</span> / 2.0); <span style="color: #666666;">// -90 degrees</span>
+
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;polygon(6,&nbsp;170,&nbsp;200,&nbsp;50,&nbsp;100,&nbsp;0);
+
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128);
+&nbsp;&nbsp;<span style="color: #666666;">// Draw enclosing ellipses to make sure we did it right</span>
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(50, 75, 100, 100);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 75, 50, 125);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(50, 200, 75, 50);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 200, 50, 100);
+}
+
+<span style="color: #33997E;">void</span> polygon(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> w, <span style="color: #E2661A;">float</span> h, <span style="color: #E2661A;">float</span> startAngle) {
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle = <span style="color: #718A62;">TWO_PI</span>/ n;
+
+&nbsp;&nbsp;<span style="color: #666666;">// The horizontal &quot;radius&quot; is one half the width,</span>
+&nbsp;&nbsp;<span style="color: #666666;">// the vertical &quot;radius&quot; is one half the height</span>
+&nbsp;&nbsp;w&nbsp;=&nbsp;w&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;h&nbsp;=&nbsp;h&nbsp;/&nbsp;2.0;
+
+&nbsp;&nbsp;<span style="color: #006699;">beginShape</span>();
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">vertex</span>(cx + w * <span style="color: #006699;">cos</span>(startAngle + angle * i), 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cy&nbsp;+&nbsp;h&nbsp;*&nbsp;<span style="color: #006699;">sin</span>(startAngle + angle * i));
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">endShape</span>(<span style="color: #718A62;">CLOSE</span>);
+}
+</pre>
+
+<p class="txt">
 Since everything was in radians, I now described
 angles in terms of <code>PI</code> and <code>TWO_PI</code> (2&pi;), since
 2&pi; radians equals 360&deg;.
@@ -278,7 +203,7 @@ the vertices were within the proper area.
 </p>
 
 <h3>Too Many Parameters</h3>
-<p>
+<p class="txt">
 I now had a much more flexible function for drawing polygons, but
 it came at the expense of more parameters. It would be nice to be
 able to draw the ordinary case (equal width and height, start angle
@@ -293,7 +218,7 @@ Processing looks at the number of arguments you provide and figures
 out which version of <code>stroke()</code> to call.
 </p>
 
-<p>
+<p class="txt">
 Here is the code to add to the previous example. When you give
 <code>polygon()</code> only four numbers, it will call the following
 function, which calls the &ldquo;big&rdquo; version of the
@@ -309,7 +234,7 @@ void polygon(int n, float cx, float cy, float r)
 
 </pre>
 
-<p>
+<p class="txt">
 And here is some code to test the overloaded function.
 </p>
 
@@ -335,7 +260,7 @@ void setup()
 </pre>
 
 <h3>Safe Computing</h3>
-<p>
+<p class="txt">
 What happens if someone tries to draw a polygon with 2 sides, 1 side,
 or worse, 0 sides?  The first two will generate a line and a point,
 but the third one will cause a division by zero error when trying to
@@ -365,7 +290,7 @@ void polygon(int n, float cx, float cy, float w, float h, float startAngle)
 </pre>
 
 <h3>Drawing Stars</h3>
-<p>
+<p class="txt">
 Now that I was satisfied with the <code>polygon()</code> function, it was time
 to move on to drawing stars. From some playing around with a crude sketch, I
 figured that it would be possible to draw a star by figuring out where all the
@@ -377,7 +302,7 @@ diagonals of a polygon intersect.
   alt="Stars drawn by intersections of diagonals" />
 </div>
 
-<p>
+<p class="txt">
 I saw two problems here. First, finding the intersection point of two lines is
 a lot of calculation. Not particularly hard calculation, but a lot of it,
 and it gets tricky when you have vertical lines.
@@ -385,7 +310,7 @@ Second, I couldn't have a four-sided or three-sided
 arrow shape; there weren&rsquo;t enough diagonals.
 </p>
 
-<p>
+<p class="txt">
 Then, I had another idea. I can&rsquo;t tell you where the idea came from
 or how I arrived at it; it just hit me. That&rsquo;s a part of the process
 that I don&rsquo;t think can be taught. Here was the idea:
@@ -399,7 +324,7 @@ to make a star shape? That is a method that works for squares and triangles.
   alt="Stars drawn by pushing in the sides" />
 </div>
 
-<p>
+<p class="txt">
 When you push in the sides, you push them in at the midpoint so that
 you get a nice symmetric cookie. From there, it wasn&rsquo;t a big
 leap to figure out: &ldquo;what if I had a shorter radius at half
@@ -411,7 +336,7 @@ of every slice of the polygon?&rdquo;
   alt="Stars drawn by pushing in the sides" />
 </div>
 
-<p>
+<p class="txt">
 This code would be fairly easy to write. I would need one extra
 parameter: the proportion of the small radius to the
 big radius. In the following code, an <code>if</code> statement
@@ -487,7 +412,7 @@ void star(int n, float cx, float cy, float w, float h,
 </pre>
 
 <h3>What Went Wrong?</h3>
-<p>
+<p class="txt">
 When I ran this program, I just freaked out. Everything looked great,
 except for the three-sided star. How come I didn&rsquo;t
 get a star from it?  The code sure looks correct, so I decided to see
@@ -505,7 +430,7 @@ star, with the sides pushed in by zero.
   alt="triangular star drawn by hand" />
 </div>
 
-<p>
+<p class="txt">
 While wondering why this happened, I remembered that the
 cosine of the angle between the lines, 60&deg; (&pi;/3) comes out to 0.5,
 and I strongly suspected that this had something to do with it. To
@@ -516,7 +441,7 @@ hexagon to cosine of 30&deg; (&pi;/6). Sure enough, they all came out
 with no push-in.
 </p>
 
-<p>
+<p class="txt">
 So, if you are drawing a star
 with <i>n</i> sides and you set the proportion for the
 short radius to long radius to the cos(&pi;/<i>n</i>), you get
@@ -528,14 +453,14 @@ I did learn something new and mildly interesting, and it
 may turn out to be useful in the future.</p>
 
 <blockquote>
-<p>
+<p class="txt">
 <b>Programming Challenge:</b> What happens if you set the
 proportion to something <em>greater</em> than the &ldquo;non-star&rdquo;
 ratio? Try it and find out.
 </p>
 </blockquote>
 
-<p>
+<p class="txt">
 Of course, the way to get a three-sided star is to set the proportion
 to an amount less than 0.5, which I did in the following setup code,
 with much better results. I also changed the proportions for the other
@@ -574,7 +499,7 @@ void setup()
 </pre>
 
 <h3>Using the Functions</h3>
-<p>
+<p class="txt">
 Finally, in order to use the functions in something other
 than a test, I decided to write a program that
 would randomly generate polygons and stars. The window is
@@ -589,7 +514,7 @@ star shape, so I have to keep the proportion of short to long radius
 less than the cosine of &pi; divided by the number of sides.
 </p>
 
-<p>Here is the code for <code>setup()</code> and <code>draw()</code>;
+<p class="txt">Here is the code for <code>setup()</code> and <code>draw()</code>;
 I am not including the code for the <code>polygon()</code> and
 <code>star()</code> functions here; it is the same as in the
 examples.
@@ -648,7 +573,7 @@ void draw()
 </pre>
 
 <h3>Polygons and Stars as Objects</h3>
-<p>
+<p class="txt">
 Now that I have working functions for polygons and stars, it might
 be useful to make a <code>Polygon</code> and <code>Star</code> class
 so that I can treat them as objects. The method I would use is much
@@ -659,7 +584,7 @@ a tutorial about objects in Processing.</a>
 </p>
 
 <h3>Summing Up</h3>
-<p>
+<p class="txt">
 This tutorial has shown you the things you never see in books.
 In a book, all the diagrams are
 picture perfect. You see a sample program, and it just works, and
@@ -675,7 +600,7 @@ and development. I wanted you to see that process at least once,
 because we are all in this together.
 </p>
 
-<p>
+<p class="txt">
 You can <a href="code/polystar.zip">download the files from this tutorial</a>.
 </p>
 
