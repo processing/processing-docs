@@ -10,7 +10,7 @@
     <h1 style="line-height: 0.7em;">Strings and Drawing Text</h1>
     <h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
 
-    <p>
+    <p class="txt">
         If you are looking to display text onscreen with Processing, you've got to first become familiar with the <a href="http://processing.org/reference/String.html">String</a> class.  Strings are probably not a totally new concept for you, it's quite likely you've dealt with them before.  For example, if you've printed some text to the message window or loaded an image from a file, you've written code like so:
     </p>
 
@@ -18,170 +18,237 @@
 println("printing some text to the message window!");  // Printing a String
 PImage img = loadImage("filename.jpg");                // Using a String for a file name
 </pre>
-<p>
-Nevertheless, although you may have used a <a href="http://processing.org/reference/String.html">String</a> here and there, it's time to unleash their full potential.</p>
 
-<h3>Where do we find documentation for the String class?</h3>
-<p>
-Although technically a Java class, because Strings are so commonly used, Processing includes documentation in its reference: <a href="http://www.processing.org/reference/String.html">http://www.processing.org/reference/String.html</a>.
-</p>
-<p>
-This page only covers some of the available methods of the String class.  The full documentation can be found on java's <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html">String</a> page.
-</p>
-<h3>What is a String?</h3>
-<p>
-A String, at its core, is really just a fancy way of storing an array of characters. If we didn't have the String class, we'd probably have to write some code like this:
-</p>
+    <p class="txt">
+      Nevertheless, although you may have used a <a href="http://processing.org/reference/String.html">String</a> here and there, it's time to unleash their full potential.
+    </p>
+
+
+
+    <h3>Where do we find documentation for the String class?</h3>
+
+    <p class="txt">	
+      Although technically a Java class, because Strings are so commonly used, Processing includes documentation in its reference: <a href="http://www.processing.org/reference/String.html">http://www.processing.org/reference/String.html</a>.
+    </p>
+
+    <p class="txt">	
+      This page only covers some of the available methods of the String class.  The full documentation can be found on java's <a href="http://download.oracle.com/javase/6/docs/api/java/lang/String.html">String</a> page.
+    </p>
+
+
+    <h3>What is a String?</h3>
+
+    <p class="txt">	
+      A String, at its core, is really just a fancy way of storing an array of characters. If we didn't have the String class, we'd probably have to write some code like this:
+    </p>
+
 <pre>
 char[] sometext = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};
 </pre>
-<p>
-Clearly, this would be a royal pain in the Processing behind.  It's much simpler to do the following and make a String object:
-</p>
+
+    <p class="txt">	
+    Clearly, this would be a royal pain in the Processing behind.  It's much simpler to do the following and make a String object:
+    </p>
+
 <pre>
 String sometext = "How do I make String? Type some characters between quotation marks!";
 </pre>
-<p>
-It appears from the above that a String is nothing more than a list of characters in between quotes.  Nevertheless, this is only the data of a String.  We must remember that a String is an object with methods (which you can find on the reference page.)   This is just like how we learned in the <a href="http://processing.org/learning/pixels/">Pixels tutorial</a> that a <a href="http://processing.org/reference/PImage.html">PImage</a> stores both the data associated with an image as well as the functionality: <a href="http://processing.org/reference/copy_.html">copy()</a>, <a href="http://processing.org/reference/loadPixels_.html">loadPixels()</a>, etc.  
-</p><p>
-For example, the method <a href="http://processing.org/reference/String_charAt_.html">charAt()</a> returns the individual character in the String at a given index.   Note that Strings are just like arrays in that the first character is index #0!
-</p>
+
+    <p class="txt">	
+      It appears from the above that a String is nothing more than a list of characters in between quotes.  Nevertheless, this is only the data of a String.  We must remember that a String is an object with methods (which you can find on the reference page.)   This is just like how we learned in the <a href="http://processing.org/learning/pixels/">Pixels tutorial</a> that a <a href="http://processing.org/reference/PImage.html">PImage</a> stores both the data associated with an image as well as the functionality: <a href="http://processing.org/reference/copy_.html">copy()</a>, <a href="http://processing.org/reference/loadPixels_.html">loadPixels()</a>, etc.  
+    </p>
+
+    <p class="txt">	
+      For example, the method <a href="http://processing.org/reference/String_charAt_.html">charAt()</a> returns the individual character in the String at a given index.   Note that Strings are just like arrays in that the first character is index #0!
+    </p>
+
 <pre>
 String message = "some text here.";
 char c = message.charAt(3);
 println(c);                // Results in 'e'
 </pre>
-<p>
-Another useful method is <a href="http://processing.org/reference/String_length_.html">length()</a>.  This is easy to confuse with the length property of an array.  However, when we ask for the length of a String object, we must use the parentheses since we are calling a function called length() rather than accessing a property called length.
-</p>
+
+    <p class="txt">	
+      Another useful method is <a href="http://processing.org/reference/String_length_.html">length()</a>.  This is easy to confuse with the length property of an array.  However, when we ask for the length of a String object, we must use the parentheses since we are calling a function called length() rather than accessing a property called length.
+    </p>
+
 <pre>
 String message = "This String is 34 characters long.";
 println(message.length());
 </pre>
-<p>We can also change a String to all uppercase using the <a href="http://processing.org/reference/String_toUpperCase_.html">toUpperCase()</a> method (<a href="http://processing.org/reference/String_toLowerCase_.html">toLowerCase()</a> is also available).  </p>
+
+    <p class="txt">
+      We can also change a String to all uppercase using the <a href="http://processing.org/reference/String_toUpperCase_.html">toUpperCase()</a> method (<a href="http://processing.org/reference/String_toLowerCase_.html">toLowerCase()</a> is also available).  
+    </p>
+
+
 <pre>
 String uppercase = message.toUpperCase();
 println(uppercase); 
 </pre>
-<p>
-You might notice something a bit odd here.  Why didn't we simply say "message.toUpperCase()" and then print "message" variable?  Instead, we assigned the result of "message.toUpperCase()" to a new variable with a different name -- "uppercase".  
-</p><p>
-This is because a String is a special kind of object.  It is immutable.  An immutable object is one whose data can never be changed.  Once we create a String, it stays the same for life.  Anytime we want to change the String, we have to create a new one.  So in the case of converting to uppercase, the method toUpperCase() returns a copy of the String object with all caps.
-</p>
-<p>Finally, let's look at <a href="http://processing.org/reference/String_equals_.html">equals()</a>.   Now, Strings can be compared with the "==" operator as follows:  
-</p>
+
+    <p class="txt">	
+      You might notice something a bit odd here.  Why didn't we simply say "message.toUpperCase()" and then print "message" variable?  Instead, we assigned the result of "message.toUpperCase()" to a new variable with a different name&mdash;"uppercase".  
+    </p>
+
+    <p class="txt">	
+      This is because a String is a special kind of object.  It is immutable.  An immutable object is one whose data can never be changed.  Once we create a String, it stays the same for life.  Anytime we want to change the String, we have to create a new one.  So in the case of converting to uppercase, the method toUpperCase() returns a copy of the String object with all caps.
+    </p>
+
+    <p class="txt">
+      Finally, let's look at <a href="http://processing.org/reference/String_equals_.html">equals()</a>.   Now, Strings can be compared with the "==" operator as follows:  
+    </p>
+
 <pre>
 String one = "hello";
 String two = "hello";
 println(one == two);
 </pre>
-<p>
-However, technically speaking, when "==" is used with objects, it compares the memory addresses for each object.  Even though they contain the same data -- "hello"-- if they are different object instances "==" could result in a false comparison.  The <a href="http://processing.org/reference/String_equals_.html">equals()</a> function ensures that we are checking to see if two String objects contain the exact same sequence of characters, regardless of where that data is stored in the computer's memory.
-</p>
+
+    <p class="txt">	
+      However, technically speaking, when "==" is used with objects, it compares the memory addresses for each object.  Even though they contain the same data&mdash;"hello"-- if they are different object instances "==" could result in a false comparison.  The <a href="http://processing.org/reference/String_equals_.html">equals()</a> function ensures that we are checking to see if two String objects contain the exact same sequence of characters, regardless of where that data is stored in the computer's memory.
+    </p>
+
 <pre>
 String one = "hello";
 String two = "hello";
 println(one.equals(two));
 </pre>
-<p>
-Although both of the above methods return the correct result, it's safer to use equals().  Depending on how String objects are created in a sketch, "==" will not always work.
-</p><p>
-One other feature of String objects is concatenation, joining two Strings together.   Strings are joined with the "+" operator.   Plus, of course, usually means add in the case of numbers.   When used with Strings, it means join.  
-</p>
+
+    <p class="txt">	
+      Although both of the above methods return the correct result, it's safer to use equals().  Depending on how String objects are created in a sketch, "==" will not always work.
+    </p>
+
+    <p class="txt">	
+      One other feature of String objects is concatenation, joining two Strings together.   Strings are joined with the "+" operator.   Plus, of course, usually means add in the case of numbers.   When used with Strings, it means join.  
+    </p>
+
 <pre>
 String helloworld = "Hello" + "World";
 </pre>
-<p>
-Variables can also be brought into a String using concatenation.
-</p>
+
+    <p class="txt">	
+      Variables can also be brought into a String using concatenation.
+    </p>
+
 <pre>
 int x = 10;
 String message = "The value of x is: " + x;
 </pre>
 
-<h3>Displaying Text</h3>
-<p>
-The easiest way to display a String is to print it in the message window.  This is likely something you've done while debugging.   For example, if you needed to know the horizontal mouse location, you would write:
-</p>
+
+
+    <h3>Displaying Text</h3>
+
+    <p class="txt">	
+      The easiest way to display a String is to print it in the message window.  This is likely something you've done while debugging.   For example, if you needed to know the horizontal mouse location, you would write:
+    </p>
+
 <pre>
 println(mouseX);
 </pre>
-<p>
-Or if you needed to determine that a certain part of the code was executed, you might print out a descriptive message.
-</p>
+
+    <p class="txt">	
+      Or if you needed to determine that a certain part of the code was executed, you might print out a descriptive message.
+    </p>
+
 <pre>
 println("We got here and we're printing out the mouse location!!!");
 </pre>
-<p>
-While this is valuable for debugging, it's not going to help our goal of displaying text for a user.  To place text on screen, we have to follow a series of simple steps.
-</p><p>
-1.  Declare an object of type <a href="http://processing.org/reference/PFont.html">PFont</a>.
-</p>
+
+    <p class="txt">	
+      While this is valuable for debugging, it's not going to help our goal of displaying text for a user.  To place text on screen, we have to follow a series of simple steps.
+    </p>
+
+    <p class="txt">	
+      <strong>1.  Declare an object of type PFont.</strong>
+    </p>
+
 <pre>
 PFont f;
 </pre>
-<p>
-2.  Create the font by referencing the font  name and the function <a href="http://processing.org/reference/createFont_.html">createFont_()</a>.  This should be done only once, usually in <a href="http://processing.org/reference/setup_.html">setup()</a>.  Just as with loading an image, the process of loading a font into memory is slow and would seriously affect the sketch's performance if placed inside <a href="http://processing.org/reference/draw_.html">draw()</a>.  You can see a list of your available system fonts by via <a href="http://processing.org/reference/PFont_list_.html">PFont.list()</a>.   Because of limitations in Java, not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.  In addition to the name of the font, you can specify the size as well as whether the font should be antialiased or not.
 
+    <p class="txt">	
+      <strong>2.  Create the font by referencing the font  name and the function createFont().</strong><br />  
+      This should be done only once, usually in <a href="http://processing.org/reference/setup_.html">setup()</a>.  Just as with loading an image, the process of loading a font into memory is slow and would seriously affect the sketch's performance if placed inside <a href="http://processing.org/reference/draw_.html">draw()</a>.  You can see a list of your available system fonts by via <a href="http://processing.org/reference/PFont_list_.html">PFont.list()</a>.   Because of limitations in Java, not all fonts can be used and some might work with one operating system and not others. When sharing a sketch with other people or posting it on the web, you may need to include a .ttf or .otf version of your font in the data directory of the sketch because other people might not have the font installed on their computer. Only fonts that can legally be distributed should be included with a sketch.  In addition to the name of the font, you can specify the size as well as whether the font should be antialiased or not.
 </p>
+
 <pre>
 f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
 </pre>
-<p>
-3. Specify the font using <a href="http://processing.org/reference/textFont_.html">textFont()</a>. textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically.  When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
-</p>
+
+    <p class="txt">	
+      <strong>3. Specify the font using textFont()</strong>. 
+      textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically.  When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
+    </p>
+
 <pre>
 textFont(f,36);
 </pre>
-<p>
-4. Specify a color using <a href="http://processing.org/reference/fill_.html">fill()</a>.
-</p>
+
+    <p class="txt">	
+      <strong>4. Specify a color using fill()</strong>.
+    </p>
+
 <pre>
 fill(255);
 </pre>
-<p>
-5.  Call the <a href="http://processing.org/reference/text_.html">text()</a> function to display text.  (This function is just like shape or image drawing, it takes 3 arguments -- the text to be displayed, and the x & y coordinate to display that text.)
-</p>
+
+    <p class="txt">	
+      <strong>5.  Call the text() function to display text.</strong>
+      This function is just like shape or image drawing, it takes three arguments&mdash;the text to be displayed, and the x and y coordinate to display that text.
+    </p>
+
 <pre>
 text("Hello Strings!",10,100);
 </pre>
-<p>
-Here are all the steps together:
-</p>
+
+    <p class="txt">	
+      Here are all the steps together:
+    </p>
+
 <pre>
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-1-simple-displaying-text/"><b>Example Simple Displaying Text</b></a>-->
-PFont f;                          // STEP 2 Declare PFont variable
+PFont f;                           // STEP 1 Declare PFont variable
   
 void setup() {
   size(200,200);
-  f = createFont("Arial",16,true); // STEP 3 Create Font
+  f = createFont("Arial",16,true); // STEP 2 Create Font
 }
 
 void draw() {
   background(255);
-  textFont(f,16);                 // STEP 4 Specify font to be used
-  fill(0);                        // STEP 5 Specify font color 
-  text("Hello Strings!",10,100);  // STEP 6 Display Text
+  textFont(f,16);                  // STEP 3 Specify font to be used
+  fill(0);                         // STEP 4 Specify font color 
+  text("Hello Strings!",10,100);   // STEP 5 Display Text
 }
 </pre>
-<p>
-Fonts can also be created using "Tools" --> "Create Font."  This will create and place a VLW font file in your data directory which you can load into a PFont object using <a href="http://processing.org/reference/loadFont_.html">loadFont()</a>.
-</p>
+
+
+    <p class="txt">	
+      Fonts can also be created using "Tools" &rarr; "Create Font."  This will create and place a VLW font file in your data directory which you can load into a PFont object using <a href="http://processing.org/reference/loadFont_.html">loadFont()</a>.
+    </p>
+
 <pre>
 f = loadFont("ArialMT-16.vlw");
 </pre>
 
-<h3>Animating Text</h3>
 
-<p>Let's look at two more useful Processing functions related to displaying text:
-</p><p>
-<a href="http://processing.org/reference/textAlign_.html">textAlign()</a> -- specifies RIGHT, LEFT or CENTER alignment for text.
-</p>
+
+    <h3>Animating Text</h3>
+
+    <p class="txt">
+      Let's look at two more useful Processing functions related to displaying text:
+    </p>
+
+    <p class="txt">	
+      <a href="http://processing.org/reference/textAlign_.html">textAlign()</a>&mdash;specifies RIGHT, LEFT or CENTER alignment for text.
+    </p>
+
+    <img src="imgs/textalign.jpg" class="tut" />
+
+<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-2/"><strong>Example Text Align</strong></a>-->
+
 <pre>
-
-<p><img src="imgs/textalign.jpg"></p>
-
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-2/"><b>Example Text Align</b></a>-->
 PFont f;
 
 void setup() {
@@ -208,11 +275,11 @@ void draw() {
   text("This text is right aligned.",width/2,140); 
 }
 </pre>
-<p>
-<a href="http://processing.org/reference/textWidth_.html">textWidth()</a> -- Calculates and returns the width of any character or text string.
-</p><p>
+<p class="txt">	
+<a href="http://processing.org/reference/textWidth_.html">textWidth()</a>&mdash;Calculates and returns the width of any character or text string.
+</p><p class="txt">	
 Let's say we want to create a news ticker, where text scrolls across the bottom of the screen from left to right.  When the news headline leaves the window, it reappears on the right hand side and scrolls again.  If we know the x location of the beginning of the text and we know the width of that text, we can determine when it is no longer in view.  textWidth() gives us that width.
-</p><p>
+</p><p class="txt">	
 To start, we declare headline, font, and x location variables, initializing them in setup().
 </p>
 <pre>
@@ -226,7 +293,7 @@ void setup() {
   x = width; // initializing headline off-screen to the right
 }
 </pre>
-<p>
+<p class="txt">	
 In draw(), we display the text at the appropriate location.
 </p>
 <pre>
@@ -235,17 +302,17 @@ textFont(f,16);
 textAlign(LEFT);
 text(headline,x,180); 
 </pre>
-<p>
+<p class="txt">	
 We change x by a speed value (in this case a negative number so that the text moves to the left.)
 </p>
 <pre>
 // Decrement x
 x = x - 3;
 </pre>
-<p>
+<p class="txt">	
 Now comes more difficult part.  It was easy to test when a circle reached the left side of the screen.  We would simply ask: is x less than 0?  With text, however, since it is left-aligned, when x equals zero, it is still viewable on screen.   Instead, the text will be invisible when x is less than 0 minus the width of the text (See figure below).  When that is the case, we reset x back to the right-hand side of the window, i.e. width.
-</p><p>
-<img src="imgs/textwidth.jpg">
+</p><p class="txt">	
+<img src="imgs/textwidth.jpg" class="tut" />
 </p>
 <pre>
 // If x is less than the negative width, then it is completely off the screen
@@ -254,11 +321,11 @@ if (x < -w) {
   x = width; 
 }
 </pre>
-<p>
+<p class="txt">	
 Here's the full example that displays a different headline each time the previous headline leaves the screen.  The headlines are stored in a String array.
 </p>
 <pre>
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-3/"><b>Example Scrolling Headlines</b></a>-->
+<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-3/"><strong>Example Scrolling Headlines</strong></a>-->
 // An array of news headlines
 
 String[] headlines = {
@@ -298,16 +365,16 @@ void draw() {
   }
 }
 </pre>
-<p>
+<p class="txt">	
 In addition to textAlign() and textWidth(), Processing also offers the functions <a href="http://processing.org/reference/textLeading_.html">textLeading()</a>, <a href="http://processing.org/reference/textMode_.html">textMode()</a>, <a href="http://processing.org/reference/textSize_.html">textSize()</a> for additional display functionality.  
 </p>
 
 <h3>Rotating text</h3>
 
-<p><a href="http://processing.org/learning/transform2d/">Translation and rotation</a> can also be applied to text.  For example, to rotate text around its center, translate to an origin point and use textAlign(CENTER) before displaying the text.
+<p class="txt">	<a href="http://processing.org/learning/transform2d/">Translation and rotation</a> can also be applied to text.  For example, to rotate text around its center, translate to an origin point and use textAlign(CENTER) before displaying the text.
 </p>
 <pre>
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-5-rotating-text/"><b>Example: Rotating Text</b></a>-->
+<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-5-rotating-text/"><strong>Example: Rotating Text</strong></a>-->
 PFont f;
 String message = "this text is spinning";
 float theta;
@@ -329,19 +396,30 @@ void draw() {
 }
 </pre>
 
-<h3>Displaying text character by character</h3>
-<p>
-In certain graphics applications, displaying text with each character rendered individually is required.  For example, if each character needs to move or be colored independently then simply saying</p>
+
+
+    <h3>Displaying text character by character</h3>
+
+    <p class="txt">	
+      In certain graphics applications, displaying text with each character rendered individually is required.  For example, if each character needs to move or be colored independently then simply saying
+    </p>
+
 <pre>
 text("a bunch of letters",0,0);
 </pre>
-<p>
-will not do.
-</p><p>
-The solution is to loop through a String, displaying each character one at a time.
-</p><p>
-Let's start by looking at an example that displays the text all at once.
-</p>
+
+    <p class="txt">	
+      will not do.
+    </p>
+
+    <p class="txt">	
+      The solution is to loop through a String, displaying each character one at a time.
+    </p>
+
+    <p class="txt">	
+      Let's start by looking at an example that displays the text all at once.
+    </p>
+
 <pre>
 PFont f;
 String message = "Each character is not written individually.";
@@ -355,13 +433,15 @@ void draw() {
   background(255);
   fill(0);
   textFont(f);         
-  <b>// Displaying a block of text all at once using text().</b>     
+  <strong>// Displaying a block of text all at once using text().</strong>     
   text(message,10,height/2);
 }
 </pre>
-<p>
-We can rewrite the code to display each character in loop, using the <a href="http://processing.org/reference/String_charAt_.html">charAt()</a> function.
-</p>
+
+    <p class="txt">	
+      We can rewrite the code to display each character in loop, using the <a href="http://processing.org/reference/String_charAt_.html">charAt()</a> function.
+    </p>
+
 <pre>
 String message = "Each character is written individually.";
 
@@ -374,13 +454,18 @@ for (int i = 0; i < message.length(); i++) {
   x += 10; 
 }
 </pre>
-<p>
-Calling the <a href="http://processing.org/reference/text_.html">text()</a> function for each character will allow us more flexibility (for coloring, sizing, and placing characters within one String individually).   The above code has a pretty major flaw, however -- the x location is increased by 10 pixels for each character.  Although this is approximately correct, because each character is not exactly ten pixels wide, the spacing is off.
-</p><p>
-The proper spacing can be achieved using the <a href="http://processing.org/reference/textWidth_.html">textWidth()</a> function as demonstrated in the code below.  Note how this example achieves the proper spacing even with each character being a random size!
-</p><p>
-<img src="imgs/charbychar.jpg" >
-</p>
+
+    <p class="txt">	
+      Calling the <a href="http://processing.org/reference/text_.html">text()</a> function for each character will allow us more flexibility (for coloring, sizing, and placing characters within one String individually).   The above code has a pretty major flaw, however&mdash;the x location is increased by 10 pixels for each character.  Although this is approximately correct, because each character is not exactly ten pixels wide, the spacing is off.
+    </p>
+
+    <p class="txt">	
+      The proper spacing can be achieved using the <a href="http://processing.org/reference/textWidth_.html">textWidth()</a> function as demonstrated in the code below.  Note how this example achieves the proper spacing even with each character being a random size!
+    </p>
+
+
+    <img src="imgs/charbychar.jpg"  class="tut" />
+
 <pre>
 PFont f;
 String message = "Each character is written individually.";
@@ -398,17 +483,20 @@ void draw() {
   for (int i = 0; i < message.length(); i++) {
     textSize(random(12,36));
     text(message.charAt(i),x,height/2);
-    <b></b>// textWidth() spaces the characters out properly.</b>
+    <strong></strong>// textWidth() spaces the characters out properly.</strong>
     x += textWidth(message.charAt(i)); 
   }
   noLoop();
 }
 </pre>
-<p>
-This "letter by letter" methodology can also be applied to a sketch where characters from a String move independently of one another.   The following example uses object-oriented design to make each character from the original String a Letter object, allowing it to both be a displayed in its proper location as well as move about the screen individually.  
-</p>
+
+
+    <p class="txt">	
+      This "letter by letter" methodology can also be applied to a sketch where characters from a String move independently of one another.   The following example uses object-oriented design to make each character from the original String a Letter object, allowing it to both be a displayed in its proper location as well as move about the screen individually.  
+    </p>
+
 <pre>
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-6/"><b>Example Text breaking up</b></a>-->
+<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-6/"><strong>Example Text breaking up</strong></a>-->
 PFont f;
 String message = "click mouse to shake it up";
 // An array of Letter objects
@@ -480,14 +568,16 @@ class Letter {
   }
 }
 </pre>
-<p>
-The character by character method also allows us to display text along a curve.  Before we move on to letters, let's first look at how we would draw a series of boxes along a curve.  This example makes heavy use of <a href="http://www.processing.org/learning/trig/">Trignometry</a>.
-</p>
+
+    <p class="txt">	
+      The character by character method also allows us to display text along a curve.  Before we move on to letters, let's first look at how we would draw a series of boxes along a curve.  This example makes heavy use of <a href="http://www.processing.org/learning/trig/">Trignometry</a>.
+    </p>
+
+<img src="imgs/boxes.jpg" class="tut" />
+
+<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-7/"><strong>Example Boxes along a curve</strong></a>-->
+
 <pre>
-<p>
-<img src="imgs/boxes.jpg">
-</p>
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-7/"><b>Example Boxes along a curve</b></a>-->
 PFont f;
 // The radius of a circle
 float r = 100;
@@ -537,13 +627,15 @@ void draw() {
   }
 }
 </pre>
-<p>
-What we need to do is replace each box with a character from a String that fits inside the box.  And since characters all do not have the same width, instead of using a variable "w" that stays constant, each box will have a variable width along the curve according to the textWidth() function. 
-</p><p>
-<img src="imgs/textcurve.jpg" >
-</p>
+
+    <p class="txt">	
+      What we need to do is replace each box with a character from a String that fits inside the box.  And since characters all do not have the same width, instead of using a variable "w" that stays constant, each box will have a variable width along the curve according to the textWidth() function. 
+    </p>
+
+    <img src="imgs/textcurve.jpg" class="tut" />
+
 <pre>
-<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-8/"><b>Example Characters along a curve</b></a>-->
+<!--<a href="http://www.learningprocessing.com/examples/chapter-17/example-17-8/"><strong>Example Characters along a curve</strong></a>-->
 // The message to be displayed
 String message = "text along a curve";
 
@@ -599,11 +691,12 @@ void draw() {
   }
 }
 </pre>
-<p>
-<i>Special thanks to <a href="http://ariel.chronotext.org/">Ariel Malka</a> for his advice on this last curved text example.</i>
-</p>
 
-</td>
+    <p class="txt">	
+      <em>Special thanks to <a href="http://ariel.chronotext.org/">Ariel Malka</a> for his advice on this last curved text example.</em>
+    </p>
+
+  </td>
 	</tr>
-  </table>
+</table>
 
