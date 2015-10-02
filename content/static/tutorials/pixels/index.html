@@ -602,77 +602,77 @@ Following is an example that performs a convolution using a 2D array (see Chapte
 <!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-13/">Example: Sharpen with Convolution</a>-->
 
 <pre>
-PImage img;
-int w = 80;
+<span style="color: #E2661A;">PImage</span> img;
+<span style="color: #E2661A;">int</span> w = 80;
 
-// It's possible to perform a convolution
-// the image with different matrices
+<span style="color: #666666;">//&nbsp;It&apos;s&nbsp;possible&nbsp;to&nbsp;perform&nbsp;a&nbsp;convolution</span>
+<span style="color: #666666;">//&nbsp;the&nbsp;image&nbsp;with&nbsp;different&nbsp;matrices</span>
 
-float[][] matrix = { { -1, -1, -1 },
-                     { -1,  9, -1 },
-                     { -1, -1, -1 } }; 
+<span style="color: #E2661A;">float</span>[][] matrix = { { -1, -1, -1 },
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;-1,&nbsp;&nbsp;9,&nbsp;-1&nbsp;},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;-1,&nbsp;-1,&nbsp;-1&nbsp;}&nbsp;};&nbsp;
 
-void setup() {
-  size(200, 200);
-  frameRate(30);
-  img = loadImage("sunflower.jpg");
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200, 200);
+&nbsp;&nbsp;<span style="color: #006699;">frameRate</span>(30);
+&nbsp;&nbsp;img&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;sunflower.jpg&quot;</span>);
 }
 
-void draw() {
-  // We're only going to process a portion of the image
-  // so let's set the whole image as the background first
-  image(img,0,0);
-  // Where is the small rectangle we will process
-  int xstart = constrain(mouseX-w/2,0,img.width);
-  int ystart = constrain(mouseY-w/2,0,img.height);
-  int xend = constrain(mouseX+w/2,0,img.width);
-  int yend = constrain(mouseY+w/2,0,img.height);
-  int matrixsize = 3;
-  loadPixels();
-  // Begin our loop for every pixel
-  for (int x = xstart; x < xend; x++) {
-    for (int y = ystart; y < yend; y++ ) {
-      // Each pixel location (x,y) gets passed into a function called convolution() 
-      // which returns a new color value to be displayed.
-      color c = convolution(x,y,matrix,matrixsize,img);
-      int loc = x + y*img.width;
-      pixels[loc] = c;
-    }
-  }
-  updatePixels();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #666666;">// We&apos;re only going to process a portion of the image</span>
+&nbsp;&nbsp;<span style="color: #666666;">// so let&apos;s set the whole image as the background first</span>
+&nbsp;&nbsp;<span style="color: #006699;">image</span>(img,0,0);
+&nbsp;&nbsp;<span style="color: #666666;">// Where is the small rectangle we will process</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> xstart = <span style="color: #006699;">constrain</span>(<span style="color: #D94A7A;">mouseX</span>-w/2,0,img.<span style="color: #D94A7A;">width</span>);
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> ystart = <span style="color: #006699;">constrain</span>(<span style="color: #D94A7A;">mouseY</span>-w/2,0,img.<span style="color: #D94A7A;">height</span>);
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> xend = <span style="color: #006699;">constrain</span>(<span style="color: #D94A7A;">mouseX</span>+w/2,0,img.<span style="color: #D94A7A;">width</span>);
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> yend = <span style="color: #006699;">constrain</span>(<span style="color: #D94A7A;">mouseY</span>+w/2,0,img.<span style="color: #D94A7A;">height</span>);
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> matrixsize = 3;
+&nbsp;&nbsp;<span style="color: #006699;">loadPixels</span>();
+&nbsp;&nbsp;<span style="color: #666666;">// Begin our loop for every pixel</span>
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> x = xstart; x &lt; xend; x++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> y = ystart; y &lt; yend; y++ ) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Each pixel location (x,y) gets passed into a function called convolution() </span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// which returns a new color value to be displayed.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">color</span> c = convolution(x,y,matrix,matrixsize,img);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> loc = x + y*img.<span style="color: #D94A7A;">width</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #D94A7A;">pixels</span>[loc] = c;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">updatePixels</span>();
 
-  stroke(0);
-  noFill();
-  rect(xstart,ystart,w,w);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(xstart,ystart,w,w);
 }
 
-color convolution(int x, int y, float[][] matrix, int matrixsize, PImage img) {
-  float rtotal = 0.0;
-  float gtotal = 0.0;
-  float btotal = 0.0;
-  int offset = matrixsize / 2;
-  // Loop through convolution matrix
-  for (int i = 0; i < matrixsize; i++){
-    for (int j= 0; j < matrixsize; j++){
-      // What pixel are we testing
-      int xloc = x+i-offset;
-      int yloc = y+j-offset;
-      int loc = xloc + img.width*yloc;
-      // Make sure we have not walked off the edge of the pixel array
-      loc = constrain(loc,0,img.pixels.length-1);
-      // Calculate the convolution
-      // We sum all the neighboring pixels multiplied by the values in the convolution matrix.
-      rtotal += (red(img.pixels[loc]) * matrix[i][j]);
-      gtotal += (green(img.pixels[loc]) * matrix[i][j]);
-      btotal += (blue(img.pixels[loc]) * matrix[i][j]);
-    }
-  }
-  // Make sure RGB is within range
-  rtotal = constrain(rtotal,0,255);
-  gtotal = constrain(gtotal,0,255);
-  btotal = constrain(btotal,0,255);
-  // Return the resulting color
-  return color(rtotal,gtotal,btotal);
+<span style="color: #E2661A;">color</span> convolution(<span style="color: #E2661A;">int</span> x, <span style="color: #E2661A;">int</span> y, <span style="color: #E2661A;">float</span>[][] matrix, <span style="color: #E2661A;">int</span> matrixsize, <span style="color: #E2661A;">PImage</span> img) {
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> rtotal = 0.0;
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> gtotal = 0.0;
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> btotal = 0.0;
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> offset = matrixsize / 2;
+&nbsp;&nbsp;<span style="color: #666666;">// Loop through convolution matrix</span>
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; matrixsize; i++){
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> j= 0; j &lt; matrixsize; j++){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// What pixel are we testing</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> xloc = x+i-offset;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> yloc = y+j-offset;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> loc = xloc + img.<span style="color: #D94A7A;">width</span>*yloc;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Make sure we have not walked off the edge of the pixel array</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loc&nbsp;=&nbsp;<span style="color: #006699;">constrain</span>(loc,0,img.<span style="color: #D94A7A;">pixels</span>.<span style="color: #33997E;">length</span>-1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Calculate the convolution</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// We sum all the neighboring pixels multiplied by the values in the convolution matrix.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtotal&nbsp;+=&nbsp;(<span style="color: #006699;">red</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]) * matrix[i][j]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gtotal&nbsp;+=&nbsp;(<span style="color: #006699;">green</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]) * matrix[i][j]);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;btotal&nbsp;+=&nbsp;(<span style="color: #006699;">blue</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]) * matrix[i][j]);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #666666;">// Make sure RGB is within range</span>
+&nbsp;&nbsp;rtotal&nbsp;=&nbsp;<span style="color: #006699;">constrain</span>(rtotal,0,255);
+&nbsp;&nbsp;gtotal&nbsp;=&nbsp;<span style="color: #006699;">constrain</span>(gtotal,0,255);
+&nbsp;&nbsp;btotal&nbsp;=&nbsp;<span style="color: #006699;">constrain</span>(btotal,0,255);
+&nbsp;&nbsp;<span style="color: #666666;">// Return the resulting color</span>
+&nbsp;&nbsp;<span style="color: #33997E;">return</span> <span style="color: #006699;">color</span>(rtotal,gtotal,btotal);
 }
 </pre>
 
@@ -697,79 +697,82 @@ In this first example, for every cycle through draw(), we fill one ellipse at a 
 <!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-14/">Example: "Pointillism"</a>-->
 
 <pre>
-PImage img;
-int pointillize = 16;
+<span style="color: #E2661A;">PImage</span> img;
+<span style="color: #E2661A;">int</span> pointillize = 16;
 
-void setup() {
-  size(200,200);
-  img = loadImage("sunflower.jpg");
-  background(0);
-  smooth();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200,200);
+&nbsp;&nbsp;img&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;sunflower.jpg&quot;</span>);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;<span style="color: #006699;">smooth</span>();
 }
 
-void draw() {
-  // Pick a random point
-  int x = int(random(img.width));
-  int y = int(random(img.height));
-  int loc = x + y*img.width;
-  
-  // Look up the RGB color in the source image
-  loadPixels();
-  float r = red(img.pixels[loc]);
-  float g = green(img.pixels[loc]);
-  float b = blue(img.pixels[loc]);
-  noStroke();
-  
-  // Draw an ellipse at that location with that color
-  fill(r,g,b,100);
-  ellipse(x,y,pointillize,pointillize);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #666666;">// Pick a random point</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> x = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(img.<span style="color: #D94A7A;">width</span>));
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> y = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(img.<span style="color: #D94A7A;">height</span>));
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> loc = x + y*img.<span style="color: #D94A7A;">width</span>;
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// Look up the RGB color in the source image</span>
+&nbsp;&nbsp;<span style="color: #006699;">loadPixels</span>();
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> r = <span style="color: #006699;">red</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]);
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> g = <span style="color: #006699;">green</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]);
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> b = <span style="color: #006699;">blue</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]);
+&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// Draw an ellipse at that location with that color</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(r,g,b,100);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(x,y,pointillize,pointillize);
 }
 </pre>
 
 In this next example, we take the data from a two-dimensional image and using the 3D translation techniques described in chapter 14, render a rectangle for each pixel in three-dimensional space.  The z location is determined by the brightness of the color.  Brighter colors appear closer to the viewer and darker ones farther away.
 
-
-<img src="imgs/explode1.jpg" class="tut" />
-<img src="imgs/explode2.jpg" class="tut" /> 
-<img src="imgs/explode3.jpg" class="tut" />
+<table>
+  <tr>
+    <td><img src="imgs/explode1.jpg" class="tut" /></td>
+    <td><img src="imgs/explode2.jpg" class="tut" /></td>
+    <td><img src="imgs/explode3.jpg" class="tut" /></td>
+  </tr>
+</table>
 
 <!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-15/">Example: 2D image mapped to 3D</a>-->
 
 <pre>
-PImage img;       // The source image
-int cellsize = 2; // Dimensions of each cell in the grid
-int cols, rows;   // Number of columns and rows in our system
+<span style="color: #E2661A;">PImage</span> img;       <span style="color: #666666;">// The source image</span>
+<span style="color: #E2661A;">int</span> cellsize = 2; <span style="color: #666666;">// Dimensions of each cell in the grid</span>
+<span style="color: #E2661A;">int</span> cols, rows;   <span style="color: #666666;">// Number of columns and rows in our system</span>
 
-void setup() {
-  size(200, 200, P3D); 
-  img  = loadImage("sunflower.jpg"); // Load the image
-  cols = width/cellsize;             // Calculate # of columns
-  rows = height/cellsize;            // Calculate # of rows
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(200, 200, <span style="color: #718A62;">P3D</span>); 
+&nbsp;&nbsp;img&nbsp;&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;sunflower.jpg&quot;</span>); <span style="color: #666666;">// Load the image</span>
+&nbsp;&nbsp;cols&nbsp;=&nbsp;<span style="color: #D94A7A;">width</span>/cellsize;             <span style="color: #666666;">// Calculate # of columns</span>
+&nbsp;&nbsp;rows&nbsp;=&nbsp;<span style="color: #D94A7A;">height</span>/cellsize;            <span style="color: #666666;">// Calculate # of rows</span>
 }
 
-void draw() {
-  background(0);
-  loadPixels();
-  // Begin loop for columns
-  for ( int i = 0; i < cols;i++) {
-    // Begin loop for rows
-    for ( int j = 0; j < rows;j++) {
-      int x = i*cellsize + cellsize/2; // x position
-      int y = j*cellsize + cellsize/2; // y position
-      int loc = x + y*width;           // Pixel array location
-      color c = img.pixels[loc];       // Grab the color
-      // Calculate a z position as a function of mouseX and pixel brightness
-      float z = (mouseX/(float)width) * brightness(img.pixels[loc]) - 100.0;
-      // Translate to the location, set fill and stroke, and draw the rect
-      pushMatrix();
-      translate(x,y,z);
-      fill(c);
-      noStroke();
-      rectMode(CENTER);
-      rect(0,0,cellsize,cellsize);
-      popMatrix();
-    }
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
+&nbsp;&nbsp;<span style="color: #006699;">loadPixels</span>();
+&nbsp;&nbsp;<span style="color: #666666;">// Begin loop for columns</span>
+&nbsp;&nbsp;<span style="color: #669900;">for</span> ( <span style="color: #E2661A;">int</span> i = 0; i &lt; cols;i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Begin loop for rows</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> ( <span style="color: #E2661A;">int</span> j = 0; j &lt; rows;j++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> x = i*cellsize + cellsize/2; <span style="color: #666666;">// x position</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> y = j*cellsize + cellsize/2; <span style="color: #666666;">// y position</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">int</span> loc = x + y*<span style="color: #D94A7A;">width</span>;           <span style="color: #666666;">// Pixel array location</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">color</span> c = img.<span style="color: #D94A7A;">pixels</span>[loc];       <span style="color: #666666;">// Grab the color</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Calculate a z position as a function of mouseX and pixel brightness</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> z = (<span style="color: #D94A7A;">mouseX</span>/(float)<span style="color: #D94A7A;">width</span>) * <span style="color: #006699;">brightness</span>(img.<span style="color: #D94A7A;">pixels</span>[loc]) - 100.0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Translate to the location, set fill and stroke, and draw the rect</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">translate</span>(x,y,z);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(c);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rectMode</span>(<span style="color: #718A62;">CENTER</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>(0,0,cellsize,cellsize);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
 }
 </pre>
 
