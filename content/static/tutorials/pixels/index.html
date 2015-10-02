@@ -10,14 +10,14 @@
     <h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
 
     <p class="txt">
-      A digital image is nothing more than data -- numbers indicating variations of red, green, and blue at a particular location on a grid of pixels.   Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen.  With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways.   This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
+      A digital image is nothing more than data&mdash;numbers indicating variations of red, green, and blue at a particular location on a grid of pixels.   Most of the time, we view these pixels as miniature rectangles sandwiched together on a computer screen.  With a little creative thinking and some lower level manipulation of pixels with code, however, we can display that information in a myriad of ways.   This tutorial is dedicated to breaking out of simple shape drawing in Processing and using images (and their pixels) as the building blocks of Processing graphics.
     </p>
 
 
     <h3>Getting started with images.</h3>
 
     <p class="txt">
-      Hopefully, you are comfortable with the idea of data types.  You probably specify them often -- a float variable "speed", an int "x", etc.  These are all primitive data types, bits sitting in the computer's memory ready for our use.   Though perhaps a bit trickier, you hopefully also use objects, complex data types that store multiple pieces of data (along with functionality) --  a "Ball" class, for example, might include floating point variables for location, size, and speed as well as methods to move, display itself, and so on.  
+      Hopefully, you are comfortable with the idea of data types.  You probably specify them often&mdash;a float variable "speed", an int "x", etc.  These are all primitive data types, bits sitting in the computer's memory ready for our use.   Though perhaps a bit trickier, you hopefully also use objects, complex data types that store multiple pieces of data (along with functionality)&mdash;a "Ball" class, for example, might include floating point variables for location, size, and speed as well as methods to move, display itself, and so on.  
     </p>
 
     <p class="txt">
@@ -97,7 +97,7 @@ PImage img = createImage(200, 200,RGB);
     </p>
 
      <p class="txt">
-      Once the image is loaded, it is displayed with the <a href="http://processing.org/reference/image_.html">image()</a> function.  The <a href="http://processing.org/reference/image_.html">image()</a> function must include 3 arguments -- the image to be displayed, the x location, and the y location.  Optionally two arguments can be added to resize the image to a certain width and height.
+      Once the image is loaded, it is displayed with the <a href="http://processing.org/reference/image_.html">image()</a> function.  The <a href="http://processing.org/reference/image_.html">image()</a> function must include 3 arguments&mdash;the image to be displayed, the x location, and the y location.  Optionally two arguments can be added to resize the image to a certain width and height.
     </p>
 
 <pre>
@@ -169,7 +169,7 @@ image(sunflower,0,0);
 </pre>
 
     <p class="txt">
-      Finally, adding a fourth argument to the method manipulates the alpha (same as with 2).   Incidentally, the range of values for tint() can be specified with colorMode().
+      Finally, adding a fourth argument to the method manipulates the alpha (same as with 2). Incidentally, the range of values for tint() can be specified with colorMode().
     </p>
 
 <img src="imgs/tint5.jpg" class="tut" />
@@ -291,7 +291,7 @@ updatePixels();
     </ol>
 
      <p class="txt">
-      The <a href="http://processing.org/reference/PImage.html">PImage</a> class includes some useful fields that store data related to the image -- width, height, and pixels.   Just as with our user-defined classes, we can access these fields via the dot syntax.
+      The <a href="http://processing.org/reference/PImage.html">PImage</a> class includes some useful fields that store data related to the image&mdash;width, height, and pixels.   Just as with our user-defined classes, we can access these fields via the dot syntax.
     </p>
 
 <pre>
@@ -358,7 +358,7 @@ int displayLoc = x + y*width;
     <h3>Our second image filter, making our own "tint"</h3>
 
     <p class="txt">
-      Just a few paragraphs ago, we were enjoying a relaxing coding session, colorizing images and adding alpha transparency with the friendly tint() method.   For basic filtering, this method did the trick.   The pixel by pixel method, however, will allow us to develop custom algorithms for mathematically altering the colors of an image.  Consider brightness -- brighter colors have higher values for their red, green, and blue components.    It follows naturally that we can alter the brightness of an image by increasing or decreasing the color components of each pixel.  In the next example, we dynamically increase or decrease those values based on the mouse's horizontal location.  (Note, the next two examples include only the image processing loop itself, the rest of the code is assumed.) 
+      Just a few paragraphs ago, we were enjoying a relaxing coding session, colorizing images and adding alpha transparency with the friendly tint() method.   For basic filtering, this method did the trick.   The pixel by pixel method, however, will allow us to develop custom algorithms for mathematically altering the colors of an image.  Consider brightness&mdash;brighter colors have higher values for their red, green, and blue components.    It follows naturally that we can alter the brightness of an image by increasing or decreasing the color components of each pixel.  In the next example, we dynamically increase or decrease those values based on the mouse's horizontal location.  (Note, the next two examples include only the image processing loop itself, the rest of the code is assumed.) 
     </p>
 
 <!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-8/">Example:  Adjusting image brightness</a>-->
@@ -502,7 +502,7 @@ filter(THRESHOLD,0.5);
     </p>
 
      <p class="txt">
-        Let's start by creating a new pixel out of a two pixels from a source image -- a pixel and its neighbor to the left.
+        Let's start by creating a new pixel out of a two pixels from a source image&mdash;a pixel and its neighbor to the left.
     </p>
 
      <p class="txt">
