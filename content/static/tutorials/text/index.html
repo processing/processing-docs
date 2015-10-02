@@ -178,7 +178,7 @@ f = createFont("Arial",16,true); // Arial, 16 point, anti-aliasing on
 </pre>
 
     <p class="txt">	
-      <strong>3. Specify the font using textFont()</strong>. 
+      <strong>3. Specify the font using textFont()</strong>.<br />
       textFont() takes one or two arguments, the font variable and the font size, which is optional.  If you do not include the font size, the font will be displayed at the size originally loaded.   When possible, the text() function will use a native font rather than the bitmapped version created behind the scenes with createFont() so you have the opportunity to scale the font dynamically.  When using P2D, the actual native version of the font will be employed by the sketch, improving drawing quality and performance. With the P3D renderer, the bitmapped version will be used and therefore specifying a font size that is different from the font size loaded can result in pixelated text.
     </p>
 
@@ -195,7 +195,7 @@ fill(255);
 </pre>
 
     <p class="txt">	
-      <strong>5.  Call the text() function to display text.</strong>
+      <strong>5.  Call the text() function to display text.</strong><br />
       This function is just like shape or image drawing, it takes three arguments&mdash;the text to be displayed, and the x and y coordinate to display that text.
     </p>
 
@@ -401,7 +401,7 @@ void draw() {
     <h3>Displaying text character by character</h3>
 
     <p class="txt">	
-      In certain graphics applications, displaying text with each character rendered individually is required.  For example, if each character needs to move or be colored independently then simply saying
+      In certain graphics applications, displaying text with each character rendered individually is required.  For example, if each character needs to move or be colored independently then simply saying...
     </p>
 
 <pre>
@@ -409,7 +409,7 @@ text("a bunch of letters",0,0);
 </pre>
 
     <p class="txt">	
-      will not do.
+      ...will not do.
     </p>
 
     <p class="txt">	
