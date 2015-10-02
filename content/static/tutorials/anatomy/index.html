@@ -127,7 +127,7 @@
 
     <div style="text-align:center;">
       <img src="imgs/bad_pentagon.jpg" alt="pentagon with unequal sides" width="200" height="200" style="display: inline;" />
-      <img src="imgs/accurate_pentagon.jpg" alt="pentagon with equal sides" width="210" height="200" style="display: inline;" />
+      <img src="imgs/accurate_pentagon.jpg" alt="pentagon with equal sides" width="210" height="200" style="display: inline;" class="tut" />
     </div>
 
     <p class="txt">
@@ -145,10 +145,10 @@
     </p>
 
     <p style="text-align:center;">
-      <img src="imgs/stretchy.jpg" alt="diagrams showing stretched circle" width="600" height="194" />
+      <img src="imgs/stretchy.jpg" alt="diagrams showing stretched circle" width="600" height="194" class="tut" />
     </p>
 
-    <img src="imgs/poly2.png" alt="more complex polygon tests" width="200" height="229" />
+    <img src="imgs/poly2.png" alt="more complex polygon tests" width="200" height="229" class="tut" />
 
 <pre>
 <span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
@@ -346,230 +346,255 @@ equal width and height and a start angle of zero. For the
 test, I made the short radius one half the long radius.
 </p>
 
-<img src="imgs/surprise.png" width="200" height="226"
-  alt="3, 4, 5, and 6-sided stars" style="float: right;"/>
+<img src="imgs/surprise.png" width="200" height="226" alt="3, 4, 5, and 6-sided stars" class="tut" />
+
 <pre>
-void setup( )
-{
-  size(300, 300);
-  background(255);
-  smooth();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(300, 300);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">smooth</span>();
 
-  noFill();
-  star(3, 60, 75, 100, 100, -PI / 2.0, 0.50); // -90 degrees
-  star(4, 170, 75, 25, 0.50);  // use simpler call
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;star(3,&nbsp;60,&nbsp;75,&nbsp;100,&nbsp;100,&nbsp;-<span style="color: #718A62;">PI</span> / 2.0, 0.50); <span style="color: #666666;">// -90 degrees</span>
+&nbsp;&nbsp;star(4,&nbsp;170,&nbsp;75,&nbsp;25,&nbsp;0.50);&nbsp;&nbsp;<span style="color: #666666;">// use simpler call</span>
 
-  fill(255, 204, 255);
-  stroke(128, 0, 128);
-  star(5, 60, 200, 75, 50, -PI / 2.0, 0.50); // -90 degrees
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255, 204, 255);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128, 0, 128);
+&nbsp;&nbsp;star(5,&nbsp;60,&nbsp;200,&nbsp;75,&nbsp;50,&nbsp;-<span style="color: #718A62;">PI</span> / 2.0, 0.50); <span style="color: #666666;">// -90 degrees</span>
 
-  noFill();
-  stroke(0);
-  star(6, 170, 200, 50, 100, 0, 0.50);
-  stroke(128);
-  
-  // draw enclosing ellipses to make sure we did it right
-  ellipse(60, 75, 100, 100);
-  ellipse(170, 75, 50, 50);
-  ellipse(60, 200, 75, 50);
-  ellipse(170, 200, 50, 100);
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;star(6,&nbsp;170,&nbsp;200,&nbsp;50,&nbsp;100,&nbsp;0,&nbsp;0.50);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// draw enclosing ellipses to make sure we did it right</span>
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(60, 75, 100, 100);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 75, 50, 50);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(60, 200, 75, 50);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 200, 50, 100);
 }
 
-void star(int n, float cx, float cy, float r, float proportion)
-{
-  star(n, cx, cy, 2.0 * r, 2.0 * r, 0.0, proportion);
+<span style="color: #33997E;">void</span> star(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> r, <span style="color: #E2661A;">float</span> proportion) {
+&nbsp;&nbsp;star(n,&nbsp;cx,&nbsp;cy,&nbsp;2.0&nbsp;*&nbsp;r,&nbsp;2.0&nbsp;*&nbsp;r,&nbsp;0.0,&nbsp;proportion);
 }
 
-void star(int n, float cx, float cy, float w, float h,
-  float startAngle, float proportion)
-{
-  if (n > 2)
-  {
-    float angle = TWO_PI/ (2 *n);  // twice as many sides
-    float dw; // draw width
-    float dh; // draw height
-    
-    w = w / 2.0;
-    h = h / 2.0;
-    
-    beginShape();
-    for (int i = 0; i &lt; 2 * n; i++)
-    {
-      dw = w;
-      dh = h;
-      if (i % 2 == 1) // for odd vertices, use short radius
-      {
-        dw = w * proportion;
-        dh = h * proportion;
-      }
-      vertex(cx + dw * cos(startAngle + angle * i),
-        cy + dh * sin(startAngle + angle * i));
-    }
-    endShape(CLOSE);
-  }
-}
+<span style="color: #33997E;">void</span> star(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> w, <span style="color: #E2661A;">float</span> h,
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> startAngle, <span style="color: #E2661A;">float</span> proportion) {
 
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (n &gt; 2) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle = <span style="color: #718A62;">TWO_PI</span>/ (2 *n);  <span style="color: #666666;">// twice as many sides</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> dw; <span style="color: #666666;">// draw width</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> dh; <span style="color: #666666;">// draw height</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;=&nbsp;w&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;h&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">beginShape</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; 2 * n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dw&nbsp;=&nbsp;w;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dh&nbsp;=&nbsp;h;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span> (i % 2 == 1) { <span style="color: #666666;">// for odd vertices, use short radius</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dw&nbsp;=&nbsp;w&nbsp;*&nbsp;proportion;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dh&nbsp;=&nbsp;h&nbsp;*&nbsp;proportion;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">vertex</span>(cx + dw * <span style="color: #006699;">cos</span>(startAngle + angle * i),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cy&nbsp;+&nbsp;dh&nbsp;*&nbsp;<span style="color: #006699;">sin</span>(startAngle + angle * i));
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">endShape</span>(<span style="color: #718A62;">CLOSE</span>);
+&nbsp;&nbsp;}
+}
 </pre>
 
-<h3>What Went Wrong?</h3>
-<p class="txt">
-When I ran this program, I just freaked out. Everything looked great,
-except for the three-sided star. How come I didn&rsquo;t
-get a star from it?  The code sure looks correct, so I decided to see
-what would happen if I drew the diagram by hand. I measured
-the angles with my protractor,
-and I drew the long radius lines with a length of two inches in black
-and the short radius lines with a length of one inch in red. Sure
-enough, it just so happens that the endpoints of the short radius lines
-are right on the lines of the main triangle. The program <em>is</em> drawing a
-star, with the sides pushed in by zero.
-</p>
 
-<div style="text-align:center;">
-<img src="imgs/triangle_star.jpg" width="200" height="178"
-  alt="triangular star drawn by hand" />
-</div>
 
-<p class="txt">
-While wondering why this happened, I remembered that the
-cosine of the angle between the lines, 60&deg; (&pi;/3) comes out to 0.5,
-and I strongly suspected that this had something to do with it. To
-test my hypothesis, I changed the square to use a proportion of
-cosine of 45&deg; (&pi;/4), the pentagon to cosine of 36&deg;
-(&pi;/5), and the
-hexagon to cosine of 30&deg; (&pi;/6). Sure enough, they all came out
-with no push-in.
-</p>
+    <h3>What Went Wrong?</h3>
+    
+    <p class="txt">
+      When I ran this program, I just freaked out. Everything looked great, except for the three-sided star. How come I didn&rsquo;t get a star from it?  The code sure looks correct, so I decided to see what would happen if I drew the diagram by hand. I measured the angles with my protractor, and I drew the long radius lines with a length of two inches in black and the short radius lines with a length of one inch in red. Sure enough, it just so happens that the endpoints of the short radius lines are right on the lines of the main triangle. The program <em>is</em> drawing a star, with the sides pushed in by zero.
+    </p>
 
-<p class="txt">
-So, if you are drawing a star
-with <i>n</i> sides and you set the proportion for the
-short radius to long radius to the cos(&pi;/<i>n</i>), you get
-a non-star star! I still can&rsquo;t write a mathematical
-proof of it, but it is an interesting result. 
-I don&rsquo;t consider that side trip of writing the
-test program to be wasted time;
-I did learn something new and mildly interesting, and it
-may turn out to be useful in the future.</p>
+    <div style="text-align:center;">
+        <img src="imgs/triangle_star.jpg" width="200" height="178" alt="triangular star drawn by hand" class="tut" />
+    </div>
 
-<blockquote>
-<p class="txt">
-<b>Programming Challenge:</b> What happens if you set the
-proportion to something <em>greater</em> than the &ldquo;non-star&rdquo;
-ratio? Try it and find out.
-</p>
-</blockquote>
+    <p class="txt">
+      While wondering why this happened, I remembered that the cosine of the angle between the lines, 60&deg; (&pi;/3) comes out to 0.5, and I strongly suspected that this had something to do with it. To test my hypothesis, I changed the square to use a proportion of cosine of 45&deg; (&pi;/4), the pentagon to cosine of 36&deg; (&pi;/5), and the hexagon to cosine of 30&deg; (&pi;/6). Sure enough, they all came out with no push-in.
+    </p>
 
-<p class="txt">
-Of course, the way to get a three-sided star is to set the proportion
-to an amount less than 0.5, which I did in the following setup code,
-with much better results. I also changed the proportions for the other
-stars just to see what they would look like.
-</p>
+    <p class="txt">
+      So, if you are drawing a star with <i>n</i> sides and you set the proportion for the short radius to long radius to the cos(&pi;/<i>n</i>), you get a non-star star! I still can&rsquo;t write a mathematical proof of it, but it is an interesting result. I don&rsquo;t consider that side trip of writing the test program to be wasted time; I did learn something new and mildly interesting, and it may turn out to be useful in the future.
+    </p>
 
-<img src="imgs/better_stars.png" width="200" height="228"
-  alt="3, 4, 5, and 6-sided stars" style="float: right;"/>
+
+    <blockquote>
+      <p class="txt">
+      <b>Programming Challenge:</b> What happens if you set the
+      proportion to something <em>greater</em> than the &ldquo;non-star&rdquo;
+      ratio? Try it and find out.
+      </p>
+    </blockquote>
+
+
+    <p class="txt">
+      Of course, the way to get a three-sided star is to set the proportion
+      to an amount less than 0.5, which I did in the following setup code,
+      with much better results. I also changed the proportions for the other
+      stars just to see what they would look like.
+    </p>
+
+<img src="imgs/better_stars.png" width="200" height="228" alt="3, 4, 5, and 6-sided stars" class="tut"/>
+
 <pre>
-void setup()
-{
-  size(300, 300);
-  background(255);
-  smooth();
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>(){
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(300, 300);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
 
-  noFill();
-  star(3, 60, 75, 100, 100, -PI / 2.0, 0.3); // -90 degrees
-  star(4, 170, 75, 25, 0.5);  // use simpler call
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;star(3,&nbsp;60,&nbsp;75,&nbsp;100,&nbsp;100,&nbsp;-<span style="color: #718A62;">PI</span> / 2.0, 0.3); <span style="color: #666666;">// -90 degrees</span>
+&nbsp;&nbsp;star(4,&nbsp;170,&nbsp;75,&nbsp;25,&nbsp;0.5);&nbsp;&nbsp;<span style="color: #666666;">// use simpler call</span>
 
-  fill(255, 204, 255);
-  stroke(128, 0, 128);
-  star(5, 60, 200, 75, 50, -PI / 2.0, 0.75); // -90 degrees
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255, 204, 255);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128, 0, 128);
+&nbsp;&nbsp;star(5,&nbsp;60,&nbsp;200,&nbsp;75,&nbsp;50,&nbsp;-<span style="color: #718A62;">PI</span> / 2.0, 0.75); <span style="color: #666666;">// -90 degrees</span>
 
-  noFill();
-  stroke(0);
-  star(6, 170, 200, 50, 100, 0, 0.4);
-  stroke(128);
-  
-  // draw enclosing ellipses to make sure we did it right
-  ellipse(60, 75, 100, 100);
-  ellipse(170, 75, 50, 50);
-  ellipse(60, 200, 75, 50);
-  ellipse(170, 200, 50, 100);
+&nbsp;&nbsp;<span style="color: #006699;">noFill</span>();
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(0);
+&nbsp;&nbsp;star(6,&nbsp;170,&nbsp;200,&nbsp;50,&nbsp;100,&nbsp;0,&nbsp;0.4);
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(128);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">// Draw enclosing ellipses to make sure we did it right</span>
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(60, 75, 100, 100);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 75, 50, 50);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(60, 200, 75, 50);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(170, 200, 50, 100);
 }
 
+
+<span style="color: #33997E;">void</span> star(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> r, <span style="color: #E2661A;">float</span> proportion) {
+&nbsp;&nbsp;star(n,&nbsp;cx,&nbsp;cy,&nbsp;2.0&nbsp;*&nbsp;r,&nbsp;2.0&nbsp;*&nbsp;r,&nbsp;0.0,&nbsp;proportion);
+}
+
+<span style="color: #33997E;">void</span> star(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> w, <span style="color: #E2661A;">float</span> h,
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> startAngle, <span style="color: #E2661A;">float</span> proportion) {
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (n &gt; 2) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle = <span style="color: #718A62;">TWO_PI</span>/ (2 *n);  <span style="color: #666666;">// twice as many sides</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> dw; <span style="color: #666666;">// draw width</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> dh; <span style="color: #666666;">// draw height</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;=&nbsp;w&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;h&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">beginShape</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; 2 * n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dw&nbsp;=&nbsp;w;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dh&nbsp;=&nbsp;h;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span> (i % 2 == 1) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dw&nbsp;=&nbsp;w&nbsp;*&nbsp;proportion;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dh&nbsp;=&nbsp;h&nbsp;*&nbsp;proportion;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">vertex</span>(cx + dw * <span style="color: #006699;">cos</span>(startAngle + angle * i),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cy&nbsp;+&nbsp;dh&nbsp;*&nbsp;<span style="color: #006699;">sin</span>(startAngle + angle * i));
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">endShape</span>(<span style="color: #718A62;">CLOSE</span>);
+&nbsp;&nbsp;}
+}
 </pre>
 
-<h3>Using the Functions</h3>
-<p class="txt">
-Finally, in order to use the functions in something other
-than a test, I decided to write a program that
-would randomly generate polygons and stars. The window is
-300 by 300, and the stars or polygons have a radius of 24 dots, so I
-have six rows and five columns (the extra dot is for spacing).
-Remember how I said
-that knowing the proportions that would create a star
-&ldquo;may turn out to be useful in the future&rdquo;? Well,
-they aren&rsquo;t just useful for this program&mdash;they&rsquo;re
-vital. When I generate a star, I need to make sure it really has a
-star shape, so I have to keep the proportion of short to long radius
-less than the cosine of &pi; divided by the number of sides.
-</p>
+    <h3>Using the Functions</h3>
+    <p class="txt">
+      Finally, in order to use the functions in something other than a test, I decided to write a program that would randomly generate polygons and stars. The window is 300 by 300, and the stars or polygons have a radius of 24 dots, so I have six rows and five columns (the extra dot is for spacing). Remember how I said that knowing the proportions that would create a star &ldquo;may turn out to be useful in the future&rdquo;? Well, they aren&rsquo;t just useful for this program&mdash;they&rsquo;re vital. When I generate a star, I need to make sure it really has a star shape, so I have to keep the proportion of short to long radius less than the cosine of &pi; divided by the number of sides.
+    </p>
 
-<p class="txt">Here is the code for <code>setup()</code> and <code>draw()</code>;
-I am not including the code for the <code>polygon()</code> and
-<code>star()</code> functions here; it is the same as in the
-examples.
-</p>
+    <p class="txt">
+      Here is the code for <code>setup()</code> and <code>draw()</code>:
+    </p>
 
-<img src="imgs/randomness.png" alt="random polygons and stars"
-    width="200" height="213" style="float: right;" />
+<img src="imgs/randomness.png" alt="random polygons and stars" width="200" height="213" class="tut" />
+
 <pre>
-void setup()
-{
-  size(300, 300);
-  background(255);
-  frameRate(6);
-  smooth();
-  rectMode(CENTER);
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(300, 300);
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">frameRate</span>(6);
+&nbsp;&nbsp;<span style="color: #006699;">rectMode</span>(<span style="color: #718A62;">CENTER</span>);
 }
 
-void draw()
-{
-  // choose a random stroke color
-  int r = int(random(0, 255));
-  int g = int(random(0, 255));
-  int b = int(random(0, 255));
-  // and fill opacity
-  int opacity = int(random(100, 255));
-  int nSides = int(random(3, 9));
-  
-  // determine the center x and y coordinates
-  int cx = 25 + 50 * int(random(0, 6));
-  int cy = 25 + 50 * int(random(0, 6));
-  
-  // if a random number (0 or 1) is 0, draw a polygon;
-  // otherwise, draw a star
-  boolean isPolygon = int(random(2)) == 0;
-  
-  // for stars, you need the proportion of short to long radius
-  float proportion;
-  
-  stroke(255); // erase any previous drawing in this area
-  fill(255);
-  rect(cx, cy, 50, 50); 
-    
-  stroke(r, g, b);
-  fill(r, g, b, opacity);
-  if (isPolygon)
-  {
-    polygon(nSides, cx, cy, 24);
-  }
-  else
-  {
-    proportion = random(0.2, 0.8) * cos(PI / nSides);
-    star(nSides, cx, cy, 24, proportion);
-  }
+<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;<span style="color: #666666;">// Choose a random stroke color</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> r = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 255));
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> g = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 255));
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> b = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 255));
+&nbsp;&nbsp;<span style="color: #666666;">// Fill opacity</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> opacity = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(100, 255));
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> nSides = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(3, 9));
+
+&nbsp;&nbsp;<span style="color: #666666;">// Determine the center x and y coordinates</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> cx = 25 + 50 * <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 6));
+&nbsp;&nbsp;<span style="color: #E2661A;">int</span> cy = 25 + 50 * <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 6));
+
+&nbsp;&nbsp;<span style="color: #666666;">// If a random number (0 or 1) is 0, draw a polygon;</span>
+&nbsp;&nbsp;<span style="color: #666666;">// otherwise, draw a star</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">boolean</span> isPolygon = <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(2)) == 0;
+
+&nbsp;&nbsp;<span style="color: #666666;">// For stars, you need the proportion of short to long radius</span>
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> proportion;
+
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255); <span style="color: #666666;">// erase any previous drawing in this area</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(cx, cy, 50, 50); 
+
+&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(r, g, b);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(r, g, b, opacity);
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (isPolygon) {
+&nbsp;&nbsp;&nbsp;&nbsp;polygon(nSides,&nbsp;cx,&nbsp;cy,&nbsp;24);
+&nbsp;&nbsp;}&nbsp;<span style="color: #669900;">else</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;proportion&nbsp;=&nbsp;<span style="color: #006699;">random</span>(0.2, 0.8) * <span style="color: #006699;">cos</span>(<span style="color: #718A62;">PI</span> / nSides);
+&nbsp;&nbsp;&nbsp;&nbsp;star(nSides,&nbsp;cx,&nbsp;cy,&nbsp;24,&nbsp;proportion);
+&nbsp;&nbsp;}
 }
 
+<span style="color: #33997E;">void</span> polygon(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> r) {
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle = 360.0 / n;
+&nbsp;&nbsp;<span style="color: #006699;">beginShape</span>();
+&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; n; i++) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">vertex</span>(cx + r * <span style="color: #006699;">cos</span>(<span style="color: #006699;">radians</span>(angle * i)),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cy&nbsp;+&nbsp;r&nbsp;*&nbsp;<span style="color: #006699;">sin</span>(<span style="color: #006699;">radians</span>(angle * i)));
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #006699;">endShape</span>(<span style="color: #718A62;">CLOSE</span>);
+}
+
+<span style="color: #33997E;">void</span> star(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> r, <span style="color: #E2661A;">float</span> proportion) {
+&nbsp;&nbsp;star(n,&nbsp;cx,&nbsp;cy,&nbsp;2.0&nbsp;*&nbsp;r,&nbsp;2.0&nbsp;*&nbsp;r,&nbsp;0.0,&nbsp;proportion);
+}
+
+<span style="color: #33997E;">void</span> star(<span style="color: #E2661A;">int</span> n, <span style="color: #E2661A;">float</span> cx, <span style="color: #E2661A;">float</span> cy, <span style="color: #E2661A;">float</span> w, <span style="color: #E2661A;">float</span> h,
+&nbsp;&nbsp;<span style="color: #E2661A;">float</span> startAngle, <span style="color: #E2661A;">float</span> proportion) {
+&nbsp;&nbsp;<span style="color: #669900;">if</span> (n &gt; 2) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> angle = <span style="color: #718A62;">TWO_PI</span>/ (2 *n);  <span style="color: #666666;">// twice as many sides</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> dw; <span style="color: #666666;">// draw width</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> dh; <span style="color: #666666;">// draw height</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;w&nbsp;=&nbsp;w&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;&nbsp;&nbsp;h&nbsp;=&nbsp;h&nbsp;/&nbsp;2.0;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">beginShape</span>();
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; 2 * n; i++)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dw&nbsp;=&nbsp;w;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dh&nbsp;=&nbsp;h;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span> (i % 2 == 1) <span style="color: #666666;">// for odd vertices, use short radius</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dw&nbsp;=&nbsp;w&nbsp;*&nbsp;proportion;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dh&nbsp;=&nbsp;h&nbsp;*&nbsp;proportion;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">vertex</span>(cx + dw * <span style="color: #006699;">cos</span>(startAngle + angle * i),
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cy&nbsp;+&nbsp;dh&nbsp;*&nbsp;<span style="color: #006699;">sin</span>(startAngle + angle * i));
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">endShape</span>(<span style="color: #718A62;">CLOSE</span>);
+&nbsp;&nbsp;}
+}
 </pre>
 
 <h3>Polygons and Stars as Objects</h3>
