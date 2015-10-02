@@ -18,7 +18,7 @@ TK
 </example>
 
 <description><![CDATA[
-Returns the number of bytes available. When any client has bytes available from the server, it returns the number of bytes.
+Returns true if this client is still active and hasn't run into any trouble.
 ]]></description>
 
 
