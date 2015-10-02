@@ -63,7 +63,8 @@ void draw() {
       </td></tr>
     </table>
 
-    <img src="imgs/datafolder.jpg" class="tut" />
+    <!-- Oh, this image is so, so old -->
+    <!--<img src="imgs/datafolder.jpg" class="tut" />-->
 
     <p class="txt">
       In the above example, it may seem a bit peculiar that we never called a "constructor" to instantiate the <a href="http://processing.org/reference/PImage.html">PImage</a> object, saying "new PImage()".  After all, in most object-related examples, a constructor is a must for producing an object instance.
@@ -513,27 +514,27 @@ int loc = x + y*img.width;
 color pix = img.pixels[loc];
 </pre>
 
- <p class="txt">
-Then its left neighbor is located at (x-1,y):
- </p>
+    <p class="txt">
+      Then its left neighbor is located at (x-1,y):
+    </p>
 
 <pre>
 int leftLoc = (x-1) + y*img.width;
 color leftPix = img.pixels[leftLoc];
 </pre>
 
- <p class="txt">
-We could then make a new color out of the difference between the pixel and its neighbor to the left.
-</p>
+    <p class="txt">
+      We could then make a new color out of the difference between the pixel and its neighbor to the left.
+    </p>
 
 <pre>
 float diff = abs(brightness(pix) - brightness(leftPix));
 pixels[loc] = color(diff);
 </pre>      
 
- <p class="txt">
-Here is the full algorithm:
-</p>
+    <p class="txt">
+      Here is the full algorithm:
+    </p>
 
 <img src="imgs/edges.jpg" class="tut" />
 
@@ -559,27 +560,27 @@ for (int x = 1; x < width; x++) {
 }
 </pre>
 
- <p class="txt">
-This example is a simple horizontal edge detection algorithm.  When pixels differ greatly from their neighbors, they are most likely "edge" pixels.  For example, think of a picture of white piece of paper on a black tabletop.   The edges of that paper are where the colors are most different, where white meets black.   
-</p>
+    <p class="txt">
+      This example is a simple horizontal edge detection algorithm.  When pixels differ greatly from their neighbors, they are most likely "edge" pixels.  For example, think of a picture of white piece of paper on a black tabletop.   The edges of that paper are where the colors are most different, where white meets black.   
+    </p>
 
- <p class="txt">
-In the previous example, we looked at two pixels to find edges.   More sophisticated algorithms, however, usually involve looking at many pixels at a time.  After all, each pixel has 8 immediate neighbors: top left, top, top right, right, bottom right, bottom, bottom left, left.  
-</p>
+    <p class="txt">
+      In the previous example, we looked at two pixels to find edges.   More sophisticated algorithms, however, usually involve looking at many pixels at a time.  After all, each pixel has 8 immediate neighbors: top left, top, top right, right, bottom right, bottom, bottom left, left.  
+    </p>
 
 <img src="imgs/neighbors.jpg" class="tut" />
 
- <p class="txt">
-These image processing algorithms are often referred to as a "spatial convolution."  The process uses a weighted average of an input pixel and its neighbors to calculate an output pixel.   In other words, that new pixel is a function of an area of pixels.   Neighboring areas of different sizes can be employed, such as a 3x3 matrix, 5x5, etc.  
-</p>
+    <p class="txt">
+      These image processing algorithms are often referred to as a "spatial convolution."  The process uses a weighted average of an input pixel and its neighbors to calculate an output pixel.   In other words, that new pixel is a function of an area of pixels.   Neighboring areas of different sizes can be employed, such as a 3x3 matrix, 5x5, etc.  
+    </p>
 
- <p class="txt">
-Different combinations of weights for each pixel result in various effects. For example, we "sharpen" an image by subtracting the neighboring pixel values and increasing the center point pixel. A blur is achieved by taking the average of all neighboring pixels. (Note that the values in the convolution matrix add up to 1). 
-</p>
+    <p class="txt">
+      Different combinations of weights for each pixel result in various effects. For example, we "sharpen" an image by subtracting the neighboring pixel values and increasing the center point pixel. A blur is achieved by taking the average of all neighboring pixels. (Note that the values in the convolution matrix add up to 1). 
+    </p>
 
- <p class="txt">
-For example, 
-</p>
+    <p class="txt">
+      For example, 
+    </p>
 
 <pre>
 Sharpen:
@@ -684,13 +685,13 @@ Following is an example that performs a convolution using a 2D array (see Chapte
       You may be thinking: "Gosh, this is all very interesting, but seriously, when I want to blur an image or change its brightness, do I really need to write code?  I mean, can't I use Photoshop?"  Indeed, what we have achieved here is an merely an introductory understanding of what highly skilled programmers at Adobe do.  The power of Processing, however, is the potential for real-time, interactive graphics applications.  There is no need for us to live within the confines of "pixel point" and "pixel group" processing.  
     </p>
 
- <p class="txt">
-Following are two examples of algorithms for drawing processing shapes.  Instead of coloring the shapes randomly or with hard-coded values as we have in the past, we select colors from pixels inside of a <a href="http://processing.org/reference/PImage.html">PImage</a> object.  The image itself is never displayed; rather, it serves as a database of information that we can exploit for a multitude of creative pursuits. 
-</p>
+    <p class="txt">
+      Following are two examples of algorithms for drawing processing shapes.  Instead of coloring the shapes randomly or with hard-coded values as we have in the past, we select colors from pixels inside of a <a href="http://processing.org/reference/PImage.html">PImage</a> object.  The image itself is never displayed; rather, it serves as a database of information that we can exploit for a multitude of creative pursuits. 
+    </p>
 
- <p class="txt">
-In this first example, for every cycle through draw(), we fill one ellipse at a random location onscreen with a color taken from its corresponding location in the source image.  The result is a basic "pointillist-like" effect:
-</p>
+    <p class="txt">
+      In this first example, for every cycle through draw(), we fill one ellipse at a random location onscreen with a color taken from its corresponding location in the source image.  The result is a basic "pointillist-like" effect:
+    </p>
 
 <img src="imgs/pointillism.jpg" class="tut" />
 
@@ -726,13 +727,15 @@ In this first example, for every cycle through draw(), we fill one ellipse at a 
 }
 </pre>
 
-In this next example, we take the data from a two-dimensional image and using the 3D translation techniques described in chapter 14, render a rectangle for each pixel in three-dimensional space.  The z location is determined by the brightness of the color.  Brighter colors appear closer to the viewer and darker ones farther away.
+    <p class="txt">
+      In this next example, we take the data from a two-dimensional image and using the 3D translation techniques described in chapter 14, render a rectangle for each pixel in three-dimensional space.  The z location is determined by the brightness of the color.  Brighter colors appear closer to the viewer and darker ones farther away.
+    </p>
 
 <table>
   <tr>
-    <td><img src="imgs/explode1.jpg" class="tut" /></td>
-    <td><img src="imgs/explode2.jpg" class="tut" /></td>
-    <td><img src="imgs/explode3.jpg" class="tut" /></td>
+    <td><img src="imgs/explode1.jpg"></td>
+    <td><img src="imgs/explode2.jpg"></td>
+    <td><img src="imgs/explode3.jpg"></td>
   </tr>
 </table>
 
