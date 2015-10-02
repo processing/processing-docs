@@ -33,13 +33,15 @@ void keyPressed() {
 </example>
 
 <description><![CDATA[
-The variable <b>keyCode</b> is used to detect special keys such as the arrow keys (UP, DOWN, LEFT, and RIGHT) as well as ALT, CONTROL, SHIFT, PAGE_UP, PAGE_DOWN, HOME, and END.
+The variable <b>keyCode</b> is used to detect special keys such as the arrow keys (UP, DOWN, LEFT, and RIGHT) as well as ALT, CONTROL, and SHIFT.
 <br /><br />
 When checking for these keys, it can be useful to first check if the key is coded. This is done with the conditional <b>if (key == CODED)</b>, as shown in the example above.
 <br /><br />
 The keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC, and DELETE) do not require checking to see if the key is coded; for those keys, you should simply use the <b>key</b> variable directly (and not <b>keyCode</b>).  If you're making cross-platform projects, note that the ENTER key is commonly used on PCs and Unix, while the RETURN key is used on Macs. Make sure your program will work on all platforms by checking for both ENTER and RETURN.
 <br /><br />
 For those familiar with Java, the values for UP and DOWN are simply shorter versions of Java's <b>KeyEvent.VK_UP</b> and <b>KeyEvent.VK_DOWN</b>. Other <b>keyCode</b> values can be found in the Java <a href="http://download.oracle.com/javase/6/docs/api/java/awt/event/KeyEvent.html">KeyEvent</a> reference.
+<br /><br />
+There are issues with how <b>keyCode</b> behaves across different renderers and operating systems. Watch out for unexpected behavior as you switch renderers and operating systems and you are using keys are aren't mentioned in this reference entry.
 ]]></description>
 
 </root>
