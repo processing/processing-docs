@@ -49,8 +49,7 @@ void drawCubeMap() {
   
   drawDomeMaster();
   
-  pgl.disable(PGL.TEXTURE_CUBE_MAP);
-  pgl.bindTexture(PGL.TEXTURE_CUBE_MAP, 0);    
+  pgl.bindTexture(PGL.TEXTURE_CUBE_MAP, 0);
 }
 
 void drawDomeMaster() {
