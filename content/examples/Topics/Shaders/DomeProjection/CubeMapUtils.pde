@@ -55,7 +55,7 @@ void drawCubeMap() {
 
 void drawDomeMaster() {
   camera();
-  ortho(0, width, 0, height);
+  ortho();
   resetMatrix();
   shader(cubemapShader);
   shape(domeSphere);
