@@ -18,7 +18,7 @@ This function is used to enable or disable special features that control how gra
 Fixes a problem with shapes that have a stroke and are rendered using small steps (for instance, using vertex() with points that are close to one another), or are drawn at small sizes.
 <br />
 <br />
-<strong>Hints for use with both P2D and P3D:<strong>
+<strong>Hints for use with both P2D and P3D:</strong>
 <br /><br />
 <b>DISABLE_OPENGL_ERRORS</b><br />
 Speeds up the P3D renderer setting by not checking for errors while running.
