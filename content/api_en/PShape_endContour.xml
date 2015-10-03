@@ -14,7 +14,7 @@
 PShape s;
 
 void setup() {
-  size(100, 100, P2D);
+  size(100, 100);
 
   // Make a shape
   s = createShape();

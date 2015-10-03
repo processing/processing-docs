@@ -14,7 +14,7 @@
 PShape s;  // The PShape object
 
 void setup() {  
-  size(100, 100, P2D);
+  size(100, 100);
   s = createShape();
   s.beginShape();
   s.fill(0, 0, 255);

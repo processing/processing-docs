@@ -14,7 +14,7 @@
 PShape square;  // The PShape object
 
 void setup() {
-  size(100, 100, P2D);
+  size(100, 100);
   // Creating the PShape as a square. The
   // numeric arguments are similar to rect().
   square = createShape(RECT, 0, 0, 50, 50);
@@ -34,7 +34,7 @@ void draw() {
 PShape s;  // The PShape object
 
 void setup() {
-  size(100, 100, P2D);
+  size(100, 100);
   // Creating a custom PShape as a square, by
   // specifying a series of vertices.
   s = createShape();
@@ -85,7 +85,7 @@ void draw() {
 PShape alien, head, body;
 
 void setup() {
-  size(100, 100, P2D);
+  size(100, 100);
 
   // Create the shape group
   alien = createShape(GROUP);

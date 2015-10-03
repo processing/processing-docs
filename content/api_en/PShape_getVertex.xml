@@ -14,7 +14,7 @@
 PShape s;
 
 void setup() {
-  size(100, 100, P2D);
+  size(100, 100);
   s = createShape();
   s.beginShape();
   s.vertex(0, 0);
@@ -38,7 +38,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-The <b>getVertex()</b> method returns a PVector with the coordinates of the vertex point located at the position defined by the <b>index</b> parameter. This method works when shapes are created as shown in the example above, but won't work properly when a shape is defined explicitly (e.g. createShape(RECT, 20, 20, 80, 80).
+The <b>getVertex()</b> method returns a PVector with the coordinates of the vertex point located at the position defined by the <b>index</b> parameter. This method works when shapes are created as shown in the example above, but won't work properly when a shape is defined explicitly (e.g. <b>createShape(RECT, 20, 20, 80, 80)</b>.
 ]]></description>
 
 </root>
