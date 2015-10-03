@@ -12,7 +12,7 @@
 This function is used to enable or disable special features that control how graphics are drawn. In the course of developing Processing, we had to make hard decisions about tradeoffs between performance and visual quality. We put significant effort into determining what makes most sense for the largest number of users, and then use functions like <b>hint()</b> to allow people to tune the settings for their particular sketch. Implementing a <b>hint()</b> is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
 <br />
 <br />
-<strong>Hints that are used by the default renderer:<strong>
+<strong>Hints that are used by the default renderer:</strong>
 <br /><br />
 <b>ENABLE_STROKE_PURE</b><br />
 Fixes a problem with shapes that have a stroke and are rendered using small steps (for instance, using vertex() with points that are close to one another), or are drawn at small sizes.
