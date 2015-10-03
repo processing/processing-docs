@@ -10,21 +10,24 @@
 
 <description><![CDATA[
 This function is used to enable or disable special features that control how graphics are drawn. In the course of developing Processing, we had to make hard decisions about tradeoffs between performance and visual quality. We put significant effort into determining what makes most sense for the largest number of users, and then use functions like <b>hint()</b> to allow people to tune the settings for their particular sketch. Implementing a <b>hint()</b> is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
-<br /><br />
-Hints that are used by the default renderer:
+<br />
+<br />
+<strong>Hints that are used by the default renderer:<strong>
 <br /><br />
 <b>ENABLE_STROKE_PURE</b><br />
 Fixes a problem with shapes that have a stroke and are rendered using small steps (for instance, using vertex() with points that are close to one another), or are drawn at small sizes.
-<br /><br />
-Hints for use with both P2D and P3D:
+<br />
+<br />
+<strong>Hints for use with both P2D and P3D:<strong>
 <br /><br />
 <b>DISABLE_OPENGL_ERRORS</b><br />
 Speeds up the P3D renderer setting by not checking for errors while running.
 <br /><br />
 <b>DISABLE_TEXTURE_MIPMAPS</b><br />
 Disable generation of texture mipmaps in P2D or P3D. This results in lower quality - but faster - rendering of texture images when they appear smaller than their native resolutions (the mipmaps are scaled-down versions of a texture that make it look better when drawing it at a small size). However, the difference in performance is fairly minor on recent desktop video cards.
-<br /><br />
-Hints for use with P3D only:
+<br />
+<br />
+<strong>Hints for use with P3D only:</strong>
 <br /><br />
 <b>DISABLE_DEPTH_MASK</b><br />
 Disables writing into the depth buffer. This means that a shape drawn with this hint can be hidden by another shape drawn later, irrespective of their distances to the camera. Note that this is different from disabling the depth test. The depth test is still applied, as long as the DISABLE_DEPTH_TEST hint is not called, but the depth values of the objects are not recorded. This is useful when drawing a semi-transparent 3D object without depth sorting, in order to avoid visual glitches due the faces of the object being at different distances from the camera, but still having the object properly occluded by the rest of the objects in the scene.
