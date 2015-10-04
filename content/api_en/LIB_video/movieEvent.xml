@@ -36,6 +36,7 @@ void movieEvent(Movie m) {
 <image></image>
 <code><![CDATA[
 import processing.video.*;
+
 Movie myMovie, yourMovie;
 
 void setup() {
@@ -63,7 +64,9 @@ void movieEvent(Movie m) {
 </example>
 
 <description><![CDATA[
-Called when a new movie frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one movie in the program, <b>movieEvent()</b> is called each time any of the movies has a new frame available. Use an <b>if</b> to determine which movie is triggering the event. See the above example for implementation details.
+This event function is run when a new movie frame is available. Use the <b>read()</b> method to capture this frame. If there is more than one movie in the program, <b>movieEvent()</b> is called each time any of the movies has a new frame available. Use an <b>if</b> to determine which movie is triggering the event. See the above example for implementation details.
+<br /><br />
+This function is for people who want to process the image data separately from drawing (and as quickly as possible.) You cannot draw to the screen inside the <b>movieEvent()</b> function. If you want to draw immediately based on the new image, then use the <b>Movie.available()</b> method.
 ]]></description>
 
 <syntax>

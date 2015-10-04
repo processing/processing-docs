@@ -14,14 +14,13 @@
 <code><![CDATA[
 void setup() {
   size(200, 200);
-  noFill();
   imageMode(CENTER);
 }
 
 void draw() {
   background(204);
   if (mousePressed) {
-    clip(mouseX, mouseY, 50, 50);
+    clip(mouseX, mouseY, 100, 100);
   } else {
     noClip();
   }

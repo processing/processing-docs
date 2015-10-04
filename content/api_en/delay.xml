@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>delay()</name>
+
+<category>Environment</category>
+
+<subcategory></subcategory>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.serial.*;
+
+Serial myPort;  // The serial port
+
+void setup() {
+  printArray(Serial.list());
+  myPort = new Serial(this, Serial.list()[0], 9600);
+}
+
+void draw() {
+  while (myPort.available() > 0) {
+    int inByte = myPort.read();
+    println(inByte);
+  }
+  delay(100);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>delay()</b> function halts for a specified time. Delay times are specified in thousandths of a second. For example, running <b>delay(3000)</b> will stop the program for three seconds and <b>delay(500)</b> will stop the program for a half-second.<br />
+<br />
+The screen only updates when the end of <b>draw()</b> is reached, so <b>delay()</b> cannot be used to slow down drawing. For instance, you cannot use <b>delay()</b> to control the timing of an animation.<br />
+<br />
+The <b>delay()</b> function should only be used for pausing scripts (i.e. a script that needs to pause a few seconds before attempting a download, or a sketch that needs to wait a few milliseconds before reading from the serial port.)
+]]></description>
+
+</root>
