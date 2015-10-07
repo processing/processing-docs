@@ -1,34 +1,24 @@
 <?php
-
 require_once('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
-
 $local = false;
-
 define('EXAMPLESOURCEDIR', '../content/examples/');
-
 $path = BASEDIR;
 $where = EXAMPLESOURCEDIR;
 $there = CONTENTDIR;
 putenv('HOME=' . CONTENTDIR);
-
 // Switch from SVN to GIT, 14 FEB 2013
 // Disabled for now, so we can test generate scripts without pulling latest from repo. -SM
 //`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
-
 # --------------------------------- Examples
-
 $subdir = 'Examples';
-
 $catBasics = get_examples_list('examples_basics.xml');
 $dirBasics = EXAMPLESOURCEDIR .'Basics/';
 // $break_after = array('Control', 'Math');
-
 $catTopics = get_examples_list('examples_topics.xml');
 $dirTopics = EXAMPLESOURCEDIR .'Topics/';
 // $break_after = array('GUI', 'Textures');
-
 //Create Basics files
 $count = 0;
 foreach ($catBasics as $cat => $array) {
@@ -46,7 +36,6 @@ foreach ($catBasics as $cat => $array) {
         }
     }
 }
-
 //Create Topics files
 $count = 0;
 foreach ($catTopics as $cat => $array) {
@@ -64,11 +53,9 @@ foreach ($catTopics as $cat => $array) {
         }
     }
 }
-
 //Create Examples page
 $page = new Page('Examples', 'Examples', "", "../../");
 $page->subtemplate('template.examples-main.html');
-
 //Create Basics html
 $html  = "<b>Basic Examples</b>. <i>Programs about form, data, images, color, typography, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
@@ -81,7 +68,6 @@ foreach ($catBasics as $cat => $array) {
     $html .= '</ul></li>';
 }
 $html .= "</ul>";
-
 //Create Topics html
 $html .= "<b>Topic Examples</b>. <i>Programs about to animation, interaction, motion, simulation, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
@@ -94,16 +80,12 @@ foreach ($catTopics as $cat => $array) {
     $html .= '</ul></li>';
 }
 $html .= "</ul>";
-
 $page->content($html);
-
 // Change 2 May 2013
 //writeFile('learning/'.strtolower($subdir).'/index.html', $page->out());
 writeFile('examples/index.html', $page->out());
-
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
-
 ?>
 
 <h2>Examples pages generation Successful</h2>
@@ -112,7 +94,6 @@ $execution_time = round($benchmark_end - $benchmark_start, 4);
 
 
 <?php
-
 function get_examples_list($exstr){
     $xml = openXML($exstr);
     $my_cats = array();
@@ -129,9 +110,7 @@ function get_examples_list($exstr){
     }
     return $my_cats;
 }
-
 function removesymbols($str){
     return preg_replace("/\W/", "", $str);
 }
-
 ?>
