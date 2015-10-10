@@ -5,6 +5,16 @@
 	1. Add the URL in the right category, prefixed by the next ID number.
 	1. Increment the value of _Next ID_ at the top.
 
+###`broken.conf`
+* Contains IDs of broken contributions. These will still appear in the PDE but will be disabled (greyed out).
+* Edited by a human.
+* Read by `build_listing.py`.
+
+###`skipped.conf`
+* Contains IDs of contributions to skip. These will not appear in the PDE. This list currently holds 2.x entries that have a 3.x counterpart, so that they are not listed twice.
+* Edited by a human.
+* Read by `build_listing.py`.
+
 ###`build_listing.py`
 * Reads `sources.conf` and writes `contribs.txt`
 * Use it by running the following in the command line:
