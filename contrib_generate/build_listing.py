@@ -188,6 +188,7 @@ if __name__ == "__main__":
   f.close()
 
   broken_ids = [line.rstrip('\n') for line in open('broken.conf')]
+  skipped_ids = [line.rstrip('\n') for line in open('skipped.conf')]
 
   contribs_by_id = {}
 
@@ -196,16 +197,20 @@ if __name__ == "__main__":
 
     for contrib in contribs:
       software_type, contrib_id, prop_url = contrib
+
+      if (contrib_id in skipped_ids):
+        continue
+
       download_url = prop_url[:prop_url.rfind('.')] + '.zip'
       try:
         exports = read_exports(urlopen(prop_url))
 
         exports['id'] = contrib_id
-        # overwrite the category with what was in the .conf file
-        exports['categories'] = cat
-
         exports['type'] = software_type
 
+        # overwrite the category with what was in the .conf file
+        exports['categories'] = cat
+        
         # set default compatible strings if none found
         if (not 'minRevision' in exports or exports['minRevision'] == ''):
           exports['minRevision'] = '0'
