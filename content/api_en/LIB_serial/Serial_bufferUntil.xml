@@ -12,20 +12,14 @@
 <example>
 <image></image>
 <code><![CDATA[
-// Example by Tom Igoe
-
 import processing.serial.*;
 
 Serial myPort;    // The serial port
-PFont myFont;     // The display font
 String inString;  // Input string from serial port
 int lf = 10;      // ASCII linefeed
 
 void setup() {
   size(400,200);
-  // Make your own font. It's fun!
-  myFont = loadFont("ArialMS-18.vlw");
-  textFont(myFont, 18);
   // List all the available serial ports:
   printArray(Serial.list());
   // Open the port you are using at the rate you want:
@@ -46,7 +40,7 @@ void serialEvent(Serial p) {
 </example>
 
 <description><![CDATA[
-Sets a specific byte to buffer until before calling serialEvent().
+Sets a specific byte to buffer until before calling <b>serialEvent()</b>.
 ]]></description>
 
 
