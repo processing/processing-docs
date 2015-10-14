@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>write()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Adds bytes to be written to the device<br/>
+<br/>
+You must call beginTransmission() before calling this function. The actual writing takes part when read() or endTransmission() is being called.
+]]></description>
+
+<syntax>
+<c>i2c</c>.write()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

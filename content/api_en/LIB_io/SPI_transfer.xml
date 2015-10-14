@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>transfer()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Transfers data over the SPI bus<br/>
+<br/>
+With SPI, data is simultaneously being exchanged between the master device and the slave device. For every byte that is being sent out, there's also one byte being read in.
+]]></description>
+
+<syntax>
+<c>spi</c>.transfer()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>
