@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>attachInterrupt()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Calls a function when the value of an INPUT pin changes<br/>
+<br/>
+Don't use enableInterrupt() and waitForInterrupt() in combination with this function, as they are orthogonal. The sketch method provided must accept a single integer (int) parameter, which is the number of the GPIO pin that the interrupt occured on.
+]]></description>
+
+<syntax>
+<c>GPIO</c>.attachInterrupt()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>digitalWrite()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets an output pin to HIGH or LOW<br/>
+<br/>
+You need set the pin to OUTPUT by calling pinMode before calling this function. It is not possible to enable or disable internal pull-up resistors for inputs using this function, which is something that's supported on Arduino.
+]]></description>
+
+<syntax>
+<c>GPIO</c>.digitalWrite()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

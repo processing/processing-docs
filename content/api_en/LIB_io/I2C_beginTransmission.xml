@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>beginTransmission()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Begins a transmission to an attached device<br/>
+<br/>
+I2C addresses consist of 7 bits plus one bit that indicates whether the device is being read from or written to. Some datasheets list the address in an 8 bit form (7 address bits + R/W bit), while others provide the address in a 7 bit form, with the address in the lower 7 bits. This function expects the address in the lower 7 bits, the same way as in Arduino's Wire library, and as shown in the output of the i2cdetect tool.<br/>
+If the address provided in a datasheet is greater than 127 (hex 0x7f) or there are separate addresses for read and write operations listed, which vary exactly by one, then you want to shift the this number by one bit to the right before passing it as an argument to this function.
+]]></description>
+
+<syntax>
+<c>i2c</c>.beginTransmission()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>
