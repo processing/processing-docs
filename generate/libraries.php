@@ -19,7 +19,7 @@ $where = CONTENTDIR . 'static/';
 //`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 
-$libraries = array('net', 'serial', 'video', 'dxf', 'pdf', 'sound');
+$libraries = array('net', 'serial', 'video', 'dxf', 'pdf', 'sound', 'io');
 $lib_dir = REFERENCEDIR.'libraries/';
 
 // Create Index
