@@ -12,14 +12,40 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+boolean ledOn = false;
+
+void setup() {
+  GPIO.pinMode(4, GPIO.OUTPUT);
+
+  // On the Raspberry Pi, GPIO 4 is pin 7 on the pin header,
+  // located on the fourth row, above one of the ground pins
+  // For this particular board one could also write:
+  // GPIO.pinMode(RPI.PIN7, GPIO.OUTPUT);
+
+  frameRate(0.5);
+}
+
+void draw() {
+  ledOn = !ledOn;
+  if (ledOn) {
+    GPIO.digitalWrite(4, GPIO.LOW);
+    fill(204);
+  } else {
+    GPIO.digitalWrite(4, GPIO.HIGH);
+    fill(255);
+  }
+  stroke(255);
+  ellipse(width/2, height/2, width*0.75, height*0.75);
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Sets an output pin to HIGH or LOW<br/>
+Sets an output pin to be either high or low<br/>
 <br/>
-You need set the pin to OUTPUT by calling pinMode before calling this function. It is not possible to enable or disable internal pull-up resistors for inputs using this function, which is something that's supported on Arduino.
+You need set the pin to output by calling <a href="GPIO_pinMode_.html">pinMode()</a> before calling this function. Unlike on Arduino, it is not possible to set a input pin's internal pull-up resistor using this function.
 ]]></description>
 
 <syntax>

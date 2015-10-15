@@ -12,12 +12,18 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+
+void setup() {
+  println("Available I2C interfaces:");
+  printArray(I2C.list());
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Lists all available I2C devices
+Lists all available I2C interfaces
 ]]></description>
 
 <syntax>

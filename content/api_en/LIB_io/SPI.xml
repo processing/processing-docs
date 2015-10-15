@@ -12,12 +12,51 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+SPI adc;
+
+void setup() {
+  //printArray(SPI.list());
+  adc = new SPI(SPI.list()[0]);
+  adc.settings(500000, SPI.MSBFIRST, SPI.MODE0);
+}
+
+void draw() {
+  // read in values over SPI from an analog-to-digital
+  // converter
+  // dummy write, actual values don't matter
+  byte[] out = { 0, 0 };
+  byte[] in = adc.transfer(out);
+  // some input bit shifting according to the datasheet
+  int val = ((in[0] & 0x1f) << 5) | ((in[1] & 0xf8) >> 3);
+  // val is between 0 and 1023
+  println(val);
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Opens an SPI interface
+Opens an SPI interface as master<br/>
+</br>
+Serial Peripheral Interface (SPI) is a serial bus, commonly used to communicate
+with sensors and memory devices. It uses four pins: MOSI (Master Out Slave In),
+MISO (Master In Slave Out), and SCLK (clock signal) - those three are shared
+among all devices on the bus - as well as one or more SS (Slave Select) pins,
+that are used for the master to signal to the slave device that it is the
+desired respondent for the transmission.<br/>
+<br/>
+The "master" device initiates a transfer by pulling the SS pin of the "slave"
+low, and begins outputting a clock signal. In SPI, both the "master" as well as
+the "slave" device output data at the same time. It is hence not possible to
+read data without also writing some (even if it means outputting zeros or other
+dummy data).</br>
+</br>
+There are multiple possible configuration settings for SPI, see
+<a href="SPI_settings_.html">settings()</a> for details.</br>
+<br/>
+This library supports multiple SPI objects making use of the same SPI
+interface.
 ]]></description>
 
 </root>

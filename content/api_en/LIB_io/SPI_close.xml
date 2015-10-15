@@ -12,12 +12,37 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+SPI adc;
+
+void setup() {
+  //printArray(SPI.list());
+  adc = new SPI(SPI.list()[0]);
+  adc.settings(500000, SPI.MSBFIRST, SPI.MODE0);
+  // read in a value over SPI from an analog-to-digital
+  // converter
+  // dummy write, actual values don't matter
+  byte[] out = { 0, 0 };
+  byte[] in = adc.transfer(out);
+  // some input bit shifting according to the datasheet
+  int val = ((in[0] & 0x1f) << 5) | ((in[1] & 0xf8) >> 3);
+  // val is between 0 and 1023
+  println(val);
+  // and close interface again
+  adc.close();
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Closes the SPI interface
+Closes the SPI interface</br>
+</br>
+It is normally not necessary to explicitly close SPI interfaces, as they
+are closed automatically by the operating system when the sketch exits.</br>
+</br>
+Note: It is possible to have two or more object using the same interface at
+a time.
 ]]></description>
 
 <syntax>

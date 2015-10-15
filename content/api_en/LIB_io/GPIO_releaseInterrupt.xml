@@ -12,14 +12,30 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+color bgcolor = 0;
+
+void setup() {
+  GPIO.pinMode(4, GPIO.INPUT);
+  GPIO.attachInterrupt(4, this, "pinEvent", GPIO.RISING);
+}
+
+void draw() {
+  background(bgcolor);
+}
+
+void pinEvent(int pin) {
+  println("Received interrupt");
+  bgcolor = color(255);
+  // disable further interrupts from occuring on this pin
+  GPIO.releaseInterrupt(pin);
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Stops listening for interrupts on an INPUT pin<br/>
-<br/>
-Use this function only in combination with attachInterrupt(). This should not be called when enableInterrupt() and waitForInterrupt() are being used.
+Stops listening for interrupts on an input pin
 ]]></description>
 
 <syntax>

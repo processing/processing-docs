@@ -12,6 +12,12 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+
+void setup() {
+  println("Available PWM channels:");
+  printArray(PWM.list());
+}
 
 ]]></code>
 </example>

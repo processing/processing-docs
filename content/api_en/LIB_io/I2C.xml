@@ -12,12 +12,49 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+I2C i2c;
+
+void setup() {
+  //printArray(I2C.list());
+  i2c = new I2C(I2C.list()[0]);
+}
+
+void draw() {
+  background(map(mouseX, 0, width, 0, 255));
+
+  // send value over I2C to an digital-to-analog
+  // converter with address 96 (hex 0x60)
+  int val = int(4095 * map(mouseX, 0, width, 0.0, 1.0));
+  i2c.beginTransmission(0x60);
+  i2c.write(val >> 8);
+  i2c.write(val & 255);
+  i2c.endTransmission();
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Opens an I2C device as master
+Opens an I2C interface as master<br/>
+<br/>
+I2C is a serial bus, commonly used to attach peripheral ICs (integrated circuits)
+to processors and microcontrollers. It uses two pins, SDA (for data) and SDL (for
+the clock signal). Multiple "slave" devices can be connected to the same bus, as
+long as they are responding to different addresses (see below).<br/>
+<br/>
+The I2C "master" device initiates a transmission, which includes sending the
+address of the desired "slave" device. I2C addresses consist of 7 bits plus one
+bit that indicates whether the device is being read from or written to. Some
+datasheets list the address in an 8 bit form (7 address bits + R/W bit), while
+others provide the address in a 7 bit form, with the address in the lower 7 bits.<br/>
+<br/>
+This library expects addresses in their 7 bit form, similar to Arduino's Wire
+library, and what is being output by the i2cdetect utility on Linux. If the
+address provided in a datasheet is greater than 127 (hex 0x7f) or there are
+separate addresses for read and write operations listed, which vary exactly by
+one, then you want to shift the this number by one bit to the right before passing
+it as an argument to <a href="I2C_beginTransmission_.html">beginTransmission()</a>.
 ]]></description>
 
 </root>

@@ -12,6 +12,31 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+color bgcolor = 0;
+
+void setup() {
+  GPIO.pinMode(4, GPIO.INPUT);
+  GPIO.pinMode(5, GPIO.INPUT);
+  GPIO.attachInterrupt(4, this, "pinEvent", GPIO.RISING);
+  GPIO.attachInterrupt(5, this, "pinEvent", GPIO.RISING);
+}
+
+void draw() {
+  background(bgcolor);
+}
+
+void pinEvent(int pin) {
+  noInterrupts();
+  println("Received interrupt on pin" + pin);
+  if (bgcolor == 0) {
+    bgcolor = color(255);
+  } else {
+    bgcolor = color(0);
+  }
+  // re-enable interrupts
+  interrupts();
+}
 
 ]]></code>
 </example>
@@ -19,7 +44,7 @@
 <description><![CDATA[
 Allows interrupts to happen<br/>
 <br/>
-You can use noInterrupts() and interrupts() in tandem to make sure no interrupts are occuring while your sketch is doing a particular task. This is only relevant when using attachInterrupt(), not for waitForInterrupt(). By default, interrupts are enabled.
+You can use <a href="GPIO_noInerrupts_.html">noInterrupts()</a> and interrupts() in tandem to make sure no interrupts are occuring while your sketch is doing a particular task. By default, interrupts are enabled.
 ]]></description>
 
 <syntax>
