@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>delay()</name>
+<name>brightness()</name>
 
 <category>I/O</category>
 
@@ -12,18 +12,34 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+LED greenLed;
+boolean ledOn = false;
+
+void setup() {
+  // the green LED is led0 on the Raspberry Pi
+  greenLed = new LED(LED.list()[0]);
+  frameRate(0.5);
+}
+
+void draw() {
+  ledOn = !ledOn;
+  if (ledOn) {
+  	greenLed.set(1.0);
+  } else {
+  	greenLed.set(0.0);
+  }
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Pauses the execution of the sketch<br/>
-<br/>
-Calling this function will have an influence on the framerate the sketch is going to achieve.
+Sets the brightness
 ]]></description>
 
 <syntax>
-<c>GPIO</c>.delay()
+<c>led</c>.brightness()
 </syntax>
 
 <parameter></parameter>

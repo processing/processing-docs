@@ -12,14 +12,43 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+color bgcolor = 0;
+
+void setup() {
+  GPIO.pinMode(4, GPIO.INPUT);
+  GPIO.attachInterrupt(4, this, "pinEvent", GPIO.RISING);
+}
+
+void draw() {
+  background(bgcolor);
+}
+
+// this function will be called whenever GPIO 4 is brought from low to high
+void pinEvent(int pin) {
+  println("Received interrupt");
+  if (bgcolor == 0) {
+    bgcolor = color(255);
+  } else {
+    bgcolor = color(0);
+  }
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Calls a function when the value of an INPUT pin changes<br/>
+Calls a function when the value of an input pin changes<br/>
 <br/>
-Don't use enableInterrupt() and waitForInterrupt() in combination with this function, as they are orthogonal. The sketch method provided must accept a single integer (int) parameter, which is the number of the GPIO pin that the interrupt occured on.
+The sketch method provided must accept a single integer (int) parameter, which is the
+number of the GPIO pin that the interrupt occured on. As this method might be called
+at any time, including when drawing to the display window isn't permitted, it is best
+to only set simple variables that are being responded to in the next draw() call, as
+shown above. Calling functions of the Hardware I/O library at this point is certainly
+possible.<br/>
+<br/>
+The mode parameter determines when the function will be called: GPIO.FALLING occurs when the level changes from high to low, GPIO.RISING when the level changes from low
+to high, and GPIO.CHANGE when either occurs.
 ]]></description>
 
 <syntax>

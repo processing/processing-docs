@@ -12,14 +12,38 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+
+void setup() {
+  GPIO.pinMode(4, GPIO.INPUT);
+
+  // On the Raspberry Pi, GPIO 4 is pin 7 on the pin header,
+  // located on the fourth row, above one of the ground pins
+  // For this particular board one could also write:
+  // GPIO.pinMode(RPI.PIN7, GPIO.INPUT);
+
+  frameRate(0.5);
+}
+
+void draw() {
+  // sense the input pin
+  if (GPIO.digitalRead(4) == GPIO.HIGH) {
+    fill(255);
+  } else {
+    fill(204);
+  }
+  stroke(255);
+  ellipse(width/2, height/2, width*0.75, height*0.75);
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Sets a pin to INPUT or OUTPUT<br/>
+Configures a pin to act either as input or output<br/>
 <br/>
-While pins are implicitly set to input by default on Arduino, it is necessary to call this function for any pin you want to access later, including input pins.
+Unlike on Arduino, where pins are implicitly set to inputs by default, it is necessary
+to call this function for any pin you want to access, including input pins.
 ]]></description>
 
 <syntax>

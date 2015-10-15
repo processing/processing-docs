@@ -12,12 +12,39 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+LED greenLed;
+boolean ledOn = false;
+
+void setup() {
+  // the green LED is led0 on the Raspberry Pi
+  greenLed = new LED(LED.list()[0]);
+  frameRate(0.5);
+}
+
+void draw() {
+  ledOn = !ledOn;
+  if (ledOn) {
+  	greenLed.set(1.0);
+  } else {
+  	greenLed.set(0.0);
+  }
+}
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Opens a LED device
+Opens a LED device<br/>
+<br/>
+This class can control your computer's build-in LEDs, such as the ones
+commonly used to indicate the power status and disk activity.</br>
+<br/>
+Your operating system might not be set up to allow regular users to do
+this kind of modification. If this is the case you should install a
+so-called <i>udev rule</i> that relaxes the permissions for the files
+in /sys/class/leds. You can also try running Processing as root user
+using "sudo", but this is generally not recommended.
 ]]></description>
 
 </root>

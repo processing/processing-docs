@@ -12,6 +12,30 @@
 <example>
 <image></image>
 <code><![CDATA[
+import processing.io.*;
+LED greenLed;
+boolean ledOn = false;
+
+void setup() {
+  // the green LED is led0 on the Raspberry Pi
+  greenLed = new LED(LED.list()[0]);
+  frameRate(1);
+}
+
+void draw() {
+  ledOn = !ledOn;
+  if (ledOn) {
+  	greenLed.set(1.0);
+  } else {
+  	greenLed.set(0.0);
+  }
+}
+
+// cleanup on keypress
+void keyPressed() {
+  led.close();
+  exit();
+}
 
 ]]></code>
 </example>
