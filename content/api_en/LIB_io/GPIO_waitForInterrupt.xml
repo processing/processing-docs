@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>waitForInterrupt()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Waits for the value of an INPUT pin to change<br/>
+<br/>
+Make sure to setup the interrupt with enableInterrupt() before calling this function. A timeout value of -1 waits indefinitely.
+]]></description>
+
+<syntax>
+<c>GPIO</c>.waitForInterrupt()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

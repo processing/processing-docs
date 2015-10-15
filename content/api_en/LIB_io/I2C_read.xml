@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>read()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Reads bytes from the attached device<br/>
+<br/>
+You must call beginTransmission() before calling this function. This function also ends the current transmisison and sends any data that was queued using write() before.
+]]></description>
+
+<syntax>
+<c>i2c</c>.read()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

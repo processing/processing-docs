@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>close()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Gives ownership of a channel back to the operating system<br/>
+<br/>
+Without calling this function the channel will remain in the current state even after the sketch has been closed.
+]]></description>
+
+<syntax>
+<c>pwm</c>.close()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>
