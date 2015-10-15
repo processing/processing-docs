@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>setBrightness()</name>
+<name>brightness()</name>
 
 <category>I/O</category>
 
@@ -21,7 +21,7 @@ Sets the brightness
 ]]></description>
 
 <syntax>
-<c>led</c>.setBrightness()
+<c>led</c>.brightness()
 </syntax>
 
 <parameter></parameter>
