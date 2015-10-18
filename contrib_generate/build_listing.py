@@ -199,6 +199,7 @@ if __name__ == "__main__":
       software_type, contrib_id, prop_url = contrib
 
       if (contrib_id in skipped_ids):
+        print "Skipping " + contrib_id
         continue
 
       download_url = prop_url[:prop_url.rfind('.')] + '.zip'
