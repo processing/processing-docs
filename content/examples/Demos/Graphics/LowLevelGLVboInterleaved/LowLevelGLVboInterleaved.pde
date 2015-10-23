@@ -104,16 +104,17 @@ public void draw() {
   endPGL();
 }
 
-public void dispose() {
-  PGL pgl = beginPGL();
+// Triggers a crash when closing the output window using the close button
+//public void dispose() {
+//  PGL pgl = beginPGL();
 
-  IntBuffer intBuffer = IntBuffer.allocate(1);
-  intBuffer.put(attribVboId);
-  intBuffer.rewind();
-  pgl.deleteBuffers(1, intBuffer);
+//  IntBuffer intBuffer = IntBuffer.allocate(1);
+//  intBuffer.put(attribVboId);
+//  intBuffer.rewind();
+//  pgl.deleteBuffers(1, intBuffer);
 
-  endPGL();
-}
+//  endPGL();
+//}
 
 void updateGeometry() {
   // Vertex 1
