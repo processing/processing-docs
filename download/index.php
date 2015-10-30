@@ -85,7 +85,7 @@ if(isset($_POST['form'])){
 			</div>
 			<div id="header">
 				<a href="/" title="Back to the Processing cover."><div class="processing-logo no-cover" alt="Processing cover"></div></a>
-				<form name="search" action="http://www.google.com/search" method="get">
+				<form name="search" action="//www.google.com/search" method="get">
 				    <p><input type="hidden" name="as_sitesearch" value="processing.org" />
 				    <input type="text" name="as_q" value="" size="20" class="text" /> 
 					<input type="submit" value=" " /></p>
