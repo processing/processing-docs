@@ -22,7 +22,7 @@ arc(x, y, d-60, d-60, 0, TAU);
 </example>
 
 <description><![CDATA[
-TAU is an alias for TWO_PI, a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions <b>sin()</b> and <b>cos()</b>.
+TAU is a mathematical constant with the value 6.28318530717958647693. It is the circle constant relating the circumference of a circle to its linear dimension, the ratio of the circumference of a circle to its radius. It is useful in combination with trigonometric functions such as <b>sin()</b> and <b>cos()</b>.
 ]]></description>
 
 </root>
