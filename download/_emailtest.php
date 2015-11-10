@@ -6,11 +6,8 @@
 
 require(realpath(__DIR__ . '/../../../cred/config.php'));
 
-
-
 //Load PHPMailer autoloader v5.2.9
 require('phpmailer529/PHPMailerAutoload.php');
-
 
 
 // Force https
@@ -23,14 +20,9 @@ if( $_SERVER["HTTPS"] != "on" && !$config['test-mode'] ) {
 */
 
 
-
-
-
-
 $body = "This is a test message sent by %name%. Please let Scott know if you receive it. Thanks!<br/><br/>- Scott";
 $name = "Scott Murray";
 $email = "shm@alignedleft.com";
-
 
 
 // Build and send the email *using PHPMailer
@@ -69,10 +61,6 @@ if(!$mail->send()) {
 
 //echo("<p>mailed returned " . $result . "</p>");
 //echo("<p>ErrorInfo is " . $mail->ErrorInfo . "</p>");
-
-
-
-
 
 exit;
 
