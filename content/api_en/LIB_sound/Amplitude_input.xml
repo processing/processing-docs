@@ -23,6 +23,7 @@ void setup() {
   // Create an Input stream which is routed into the Amplitude analyzer
   amp = new Amplitude(this);
   in = new AudioIn(this, 0);
+  in.start();
   amp.input(in);
 }      
 
