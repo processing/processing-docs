@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>isNull()</name>
+
+<category>JSONArray</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Determines if the value associated with the index is <b>null</b>, that is has no defined value (<b>false</b>) or if it has a value (<b>true</b>).
+]]></description>
+
+</root>
