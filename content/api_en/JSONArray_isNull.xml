@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>isNull()</name>
+
+<category>JSONArray</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+JSONArray json;
+
+void setup() {
+
+  json = new JSONArray();
+
+  json.setInt(0, 32);
+  json.setString(1, null);
+
+  if (json.isNull(1) == true) {
+    println("This element is undefined");
+  } else {
+    println("The value is " + json.getString(1));
+  }
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Determines if the value associated with the index is <b>null</b>, that is has no defined value (<b>false</b>) or if it has a value (<b>true</b>).
+]]></description>
+
+</root>

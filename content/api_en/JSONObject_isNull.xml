@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>isNull()</name>
+
+<category>JSONObject</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+JSONObject json;
+
+void setup() {
+
+  json = new JSONObject();
+  json.setInt("id", 0);
+  json.setString("species", null);
+
+  if (json.isNull("species") == true) {
+    println("The species is undefined");
+  } else {
+    println("The ID is " + json.getString("species"));
+  }
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Determines if the value associated with the key is <b>null</b>, that is has no defined value (<b>false</b>) or if it has a value (<b>true</b>).
+]]></description>
+
+</root>

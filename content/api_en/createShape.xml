@@ -117,7 +117,7 @@ Custom, unique shapes can be made by using <b>createShape()</b> without a parame
 <br />
 The  <b>createShape()</b> function can also be used to make a complex shape made of other shapes. This is called a "group" and it's created by using the parameter <b>GROUP</b> as the first parameter. See the fourth example above to see how it works.<br />
 <br />
-After using <b>createShape()</b>, stroke and fill color can be set by calling methods like <b>setFill()</b> and <b>setStroke()</b>, as seen in the examples above. The complete list of methods and fields for the PShape class are in the <a href="http://processing.org/reference/javadoc/core/">Processing Javadoc</a>.
+After using <b>createShape()</b>, stroke and fill color can be set by calling methods like <b>setFill()</b> and <b>setStroke()</b>, as seen in the examples above. The complete list of methods and fields for the PShape class are in the <a href="http://processing.github.io/processing-javadocs/core/">Processing Javadoc</a>.
 ]]></description>
 
 </root>
