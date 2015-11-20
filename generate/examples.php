@@ -3,7 +3,7 @@ require_once('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 $local = false;
-define('EXAMPLESOURCEDIR', '../content/examples/');
+define('EXAMPLESOURCEDIR', '../content/examples_p5/');
 $path = BASEDIR;
 $where = EXAMPLESOURCEDIR;
 $there = CONTENTDIR;
