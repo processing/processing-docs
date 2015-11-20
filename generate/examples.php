@@ -55,7 +55,7 @@ foreach ($catTopics as $cat => $array) {
 }
 //Create Examples page
 $page = new Page('Examples', 'Examples', "", "../../");
-$page->subtemplate('template.examples-main.html');
+$page->subtemplate('template.examples.html');
 //Create Basics html
 $html  = "<b>Basic Examples</b>. <i>Programs about form, data, images, color, typography, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
