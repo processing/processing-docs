@@ -88,44 +88,23 @@ class Example
     {
     	$html = "\n<div class=\"example\">";  // BEGIN example div
       
-        // This code is the from the Processing.js export from Processing 200
-      	/**
-		  <div>
-				<canvas id="Distance1D" data-processing-sources="Distance1D.pde" width="640" height="360">
-                    
-                    <p>Your browser does not support the canvas tag.</p>
-					<!-- Note: you can put any alternative content here. -->
-				</canvas>
-				<noscript>
-					<p>JavaScript is required to view the contents of this page.</p>
-				</noscript>
-	    	</div>
-	    */
-	    
-	    // This code is my attempt to generalize the code from Processing 200
-	    /**
-	    $html .= '<div>';
-	    $html .= '    <canvas id="' . $this->name . '" data-processing-sources="' . $this->name . '.pde"';
-	    $html .= 'width="640" height="360">';
-    	$html .= '        <p>Your browser does not support the canvas tag.</p>';
-    	$html .= '    </canvas>';
-    	$html .= '    <noscript>';
-    	$html .= '      <p>JavaScript is required to view the contents of this page.</p>';
-    	$html .= '    </noscript>';
-    	$html .= '</div>';
-        */
-        
-        // This code is based on the example style on ProcessingJS.org
-        $html .= '<script type="application/processing">';
-		$html .= $this->fullcode;
-		$html .= '</script><canvas width="640" height="360"></canvas>';
-        
+        // Insert the p5 version of the example into the page
 
+        //Container for example
+        $html = "\n<div class=\"p5container\"></div>";
+
+        //Script tag for example
+        $html .= '<script type="text/javascript">';
+		$html .= $this->fullcode;
+		$html .= '</script>';
+        
+        //Description
 		$html .= "\n<p class=\"doc\">";
       	$html .= nl2br($this->doc);
       	#$html .= $this->doc;
       	$html .= "</p>\n";
         
+        //Raw code from Processing (not p5) version
       	$html .= "\n<pre class=\"code\">\n";
       	$html .= $this->code;
       	$html .= "</pre>\n\n";
