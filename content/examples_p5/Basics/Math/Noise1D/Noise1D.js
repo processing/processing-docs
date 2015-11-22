@@ -8,7 +8,8 @@ var xoff = 0.0;
 var xincrement = 0.01; 
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   background(0);
   noStroke();
 }

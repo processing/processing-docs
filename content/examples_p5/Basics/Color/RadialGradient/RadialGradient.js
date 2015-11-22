@@ -8,7 +8,8 @@
 var dim;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   dim = width/2;
   background(0);
   colorMode(HSB, 360, 100, 100);

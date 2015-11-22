@@ -14,7 +14,8 @@ var thick = 36;
 
 function setup() 
 {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   xpos1 = width/2;
   xpos2 = width/2;

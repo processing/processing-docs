@@ -19,7 +19,8 @@ function preload() {
 
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   smallPoint = 4;
   largePoint = 40;
   imageMode(CENTER);

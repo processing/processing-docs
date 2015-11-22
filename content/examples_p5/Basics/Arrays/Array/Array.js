@@ -13,7 +13,8 @@
 var coswave; 
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   coswave = [];
   for (var i = 0; i < width; i++) {
     var amount = map(i, 0, width, 0, PI);

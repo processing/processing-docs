@@ -15,7 +15,8 @@ var dx = new Array(maxwaves);          // Value for incrementing X, to be calcul
 var yvalues;                           // Using an array to store height values for the wave (not entirely necessary)
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   frameRate(30);
   colorMode(RGB, 255, 255, 255, 100);
   w = width + 16;

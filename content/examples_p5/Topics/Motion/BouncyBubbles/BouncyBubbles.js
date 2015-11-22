@@ -13,7 +13,8 @@ var friction = -0.9;
 var balls = [];
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   for (var i = 0; i < numBalls; i++) {
     balls[i] = new Ball(random(width), random(height), random(30, 70), i, balls);
   }

@@ -18,7 +18,8 @@ var step = 0.01;    // Size of each step along the path
 var pct = 0.0;      // Percentage traveled (0.0 to 1.0)
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   distX = endX - beginX;
   distY = endY - beginY;

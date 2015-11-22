@@ -12,7 +12,8 @@ var y = [0,0];
 var segLength = 50;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   strokeWeight(20.0);
   stroke(255, 100);
 }

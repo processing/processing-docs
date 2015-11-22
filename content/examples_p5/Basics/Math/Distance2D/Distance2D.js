@@ -9,7 +9,8 @@
 var max_distance;
 
 function setup() {
-  createCanvas(640, 360); 
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container"); 
   noStroke();
   max_distance = dist(0, 0, width, height);
 }

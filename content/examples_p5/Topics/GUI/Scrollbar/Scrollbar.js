@@ -19,7 +19,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   
   hs1 = new HScrollbar(0, height/2-8, width, 16, 16);

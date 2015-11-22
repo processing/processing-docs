@@ -10,7 +10,8 @@
 var sp1, sp2;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   background(204);
   noLoop();
   // Run the constructor without parameters

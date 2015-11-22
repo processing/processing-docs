@@ -10,7 +10,8 @@
 var img;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   img = createImg("http://processing.org/img/processing-web.png");
   img.hide();
   // This needs to be resolved: https://github.com/processing/p5.js/issues/561

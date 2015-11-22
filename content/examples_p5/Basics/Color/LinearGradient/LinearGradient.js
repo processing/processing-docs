@@ -11,7 +11,8 @@ var X_AXIS = 2;
 var b1, b2, c1, c2;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
 
   // Define colors
   b1 = color(255);

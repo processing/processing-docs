@@ -8,7 +8,8 @@
 var img;
 
 function setup() {
-  createCanvas(640, 360);  
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");  
   img = createImage(230, 230);
   img.loadPixels();
   for(var i = 0; i < img.pixels.length; i+=4) {

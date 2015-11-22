@@ -11,7 +11,8 @@ var spots;
 var arm;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   arm = new SpinArm(width/2, height/2, 0.01);
   spots = new SpinSpots(width/2, height/2, -0.02, 90.0);
 }

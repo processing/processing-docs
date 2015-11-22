@@ -19,7 +19,8 @@ var rectOver = false;
 var circleOver = false;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   rectColor = color(0);
   circleColor = color(255);
   baseColor = color(102);
