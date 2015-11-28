@@ -114,13 +114,13 @@ function get_examples_list($exstr){
     
         if ($c->childCount > 0) {
             foreach ($c->childNodes as $s) {
-                echo $s->hasAttribute("p5");
-                if ($s->nodeType == 1 && $s->hasAttribute("p5")) {
+                if ($s->nodeType == 1 && $s->hasAttribute('p5')) {
                     $my_cats[$name][$s->getAttribute('file')] = trim($s->firstChild->nodeValue);
                 }
             }
         }
     }
+    echo $my_cats;
     return $my_cats;
 }
 function removesymbols($str){
