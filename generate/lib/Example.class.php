@@ -4,12 +4,13 @@ class Example
 {
     var $name;
     var $cat;
-    var $file;
+    var $p5_file;
+    var $pde_file;
     var $applet;
     var $data_dir;
     var $doc;
-    var $code;
-    var $fullcode;
+    var $p5_code;
+    var $code_display;
     var $sub;
     var $width;
     var $height;
@@ -20,11 +21,19 @@ class Example
         $this->cat = $cat;
         $this->sub = $sub;
 		
+        //Two directories; one for the p5 version, to be rendered on the page,
+        //and one for the original PDE, whose text is displayed on the page.
+        $p5_dir = EXAMPLESOURCEJSDIR . $cat . '/' . $name . '/';
 		$pde_dir = EXAMPLESOURCEDIR . $cat . '/' . $name . '/';
 		
-		$this->data_dir = $pde_dir . 'data/';
+        //p5 first
+		$this->data_dir = $p5_dir . 'data/';
+        $this->p5_file = file_get_contents($p5_dir . $name .'.js');
+        $this->p5_code = $this->p5_file;
+        //$this->p5_code = implode("\n", $full_code_lines);
 	
-		$this->file = file_get_contents($pde_dir . $name .'.pde');
+        //PDE second
+		$this->pde_file = file_get_contents($pde_dir . $name .'.pde');
 
         if ($handle = opendir($pde_dir)) {
           while (false !== ($newfile = readdir($handle))) {
@@ -32,25 +41,44 @@ class Example
             if (preg_match("/pde/", $newfile)) {
               //echo " $newfile\n";
               if (strcmp($name.'.pde', $newfile) != 0) {
-				$this->file .= "\n\n\n";
+				$this->pde_file .= "\n\n\n";
 				#$this->file .= file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$newfile); 
-				$this->file .= file_get_contents($pde_dir . $newfile); 
+				$this->pde_file .= file_get_contents($pde_dir . $newfile); 
               }
             }
           }
           closedir($handle);
         }
+
+
+        /*
+        //OLD CODE -- BACKUP
+        if ($handle = opendir($pde_dir)) {
+          while (false !== ($newfile = readdir($handle))) {
+            //if ($file != "." && $file != "..") {
+            if (preg_match("/pde/", $newfile)) {
+              //echo " $newfile\n";
+              if (strcmp($name.'.pde', $newfile) != 0) {
+                $this->file .= "\n\n\n";
+                #$this->file .= file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$newfile); 
+                $this->file .= file_get_contents($pde_dir . $newfile); 
+              }
+            }
+          }
+          closedir($handle);
+        }
+        */
         
-        preg_match("/(^|\s|;)size\s*\(\s*(\d+)\s*,\s*(\d+),?\s*([^\)]*)\s*\)/", $this->file, $matches);
-        $this->width = $matches[2];
-        $this->height = $matches[3];
+        //preg_match("/(^|\s|;)size\s*\(\s*(\d+)\s*,\s*(\d+),?\s*([^\)]*)\s*\)/", $this->file, $matches);
+        //$this->width = $matches[2];
+        //$this->height = $matches[3];
         
         $this->split_file();
     }
     
     function split_file()
     {
-        $lines = explode("\n", $this->file);
+        $lines = explode("\n", $this->pde_file);
         $doc_lines = array();
         $code_lines = array();
         $full_code_lines = array();
@@ -80,8 +108,8 @@ class Example
         }
         $doc_lines[0] = "<strong>" . $doc_lines[0] . "</strong>";
         $this->doc = implode(" ", $doc_lines);
-        $this->fullcode = implode("\n", $full_code_lines);
-        $this->code = implode("\n", $code_lines);
+        //$this->p5_code = implode("\n", $full_code_lines);
+        $this->pde_code = implode("\n", $code_lines);
     }
     
     function display()
@@ -95,7 +123,7 @@ class Example
 
         //Script tag for example
         $html .= '<script type="text/javascript">';
-		$html .= $this->fullcode;
+		$html .= $this->p5_code;
 		$html .= '</script>';
         
         //Description
@@ -106,7 +134,7 @@ class Example
         
         //Raw code from Processing (not p5) version
       	$html .= "\n<pre class=\"code\">\n";
-      	$html .= $this->code;
+      	$html .= $this->pde_code;
       	$html .= "</pre>\n\n";
         
       	$html .= "\n</div>\n";  // END example div
