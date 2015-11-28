@@ -10,7 +10,8 @@ var r1, r2, r3, r4;
  
 function setup()
 {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   fill(255, 204);
   noStroke();
   r1 = new MRect(1, 134.0, 0.532, 0.1*height, 10.0, 60.0);

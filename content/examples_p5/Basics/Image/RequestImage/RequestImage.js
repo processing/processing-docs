@@ -22,7 +22,8 @@ var loadStates = new Array(imgCount);
 var loaderX, loaderY, theta;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   imgW = width/imgCount;
 
   // Load images asynchronously

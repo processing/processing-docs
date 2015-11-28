@@ -18,7 +18,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   // Temporary fix until https://github.com/lmccart/p5.js/pull/533
   imgMask.loadPixels();
   for (var i = 0; i < imgMask.pixels.length; i+=4) {

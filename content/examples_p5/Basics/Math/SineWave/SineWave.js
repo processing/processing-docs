@@ -15,7 +15,8 @@ var dx;  // Value for incrementing X, a function of period and xspacing
 var yvalues;  // Using an array to store height values for the wave
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   w = width+16;
   dx = (TWO_PI / period) * xspacing;
   yvalues = new Array(w/xspacing);

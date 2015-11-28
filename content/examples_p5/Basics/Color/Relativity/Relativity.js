@@ -9,7 +9,8 @@
 var a, b, c, d, e;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   a = color(165, 167, 20);
   b = color(77, 86, 59);

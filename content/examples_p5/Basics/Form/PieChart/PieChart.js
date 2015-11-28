@@ -8,7 +8,8 @@
 var angles = [ 30, 10, 45, 35, 60, 38, 75, 67 ];
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   noLoop();  // Run once and stop
 }

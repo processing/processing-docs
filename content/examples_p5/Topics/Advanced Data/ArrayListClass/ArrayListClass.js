@@ -13,7 +13,8 @@ var balls = [];
 var ballWidth = 48;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   
   // Start by adding one element

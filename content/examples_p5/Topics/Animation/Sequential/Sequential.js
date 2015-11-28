@@ -41,7 +41,8 @@ function preload() {
   //}
 }
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   frameRate(24);
   
 

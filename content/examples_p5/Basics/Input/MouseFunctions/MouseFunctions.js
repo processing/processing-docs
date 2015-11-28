@@ -14,7 +14,8 @@ var yOffset = 0.0;
 
 function setup() 
 {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   bx = width/2.0;
   by = height/2.0;
   rectMode(RADIUS);  

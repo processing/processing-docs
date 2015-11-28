@@ -13,7 +13,8 @@ var outsideRadius = 150;
 var insideRadius = 100;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   background(204);
   x = width/2;
   y = height/2;

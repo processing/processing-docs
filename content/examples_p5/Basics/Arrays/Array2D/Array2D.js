@@ -12,7 +12,8 @@ var maxDistance;
 var spacer;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   maxDistance = dist(width/2, height/2, width, height);
   distances = [];
   for (var x = 0; x < width; x++) {

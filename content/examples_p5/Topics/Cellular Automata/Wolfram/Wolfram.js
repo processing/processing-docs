@@ -10,7 +10,8 @@
 var ca;   // An instance object to describe the Wolfram basic Cellular Automata
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   var ruleset = [0,1,0,1,1,0,1,0];    // An initial rule system
   ca = new CA(ruleset);                 // Initialize CA
   background(0);

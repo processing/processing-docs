@@ -3,7 +3,8 @@ require_once('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 $local = false;
-define('EXAMPLESOURCEDIR', '../content/examples/');
+define('EXAMPLESOURCEDIR', '../content/examples_p5/');
+define('EXAMPLESOURCEJSDIR', '../content/examples_p5/');
 $path = BASEDIR;
 $where = EXAMPLESOURCEDIR;
 $there = CONTENTDIR;
@@ -19,6 +20,9 @@ $dirBasics = EXAMPLESOURCEDIR .'Basics/';
 $catTopics = get_examples_list('examples_topics.xml');
 $dirTopics = EXAMPLESOURCEDIR .'Topics/';
 // $break_after = array('GUI', 'Textures');
+
+
+
 //Create Basics files
 $count = 0;
 foreach ($catBasics as $cat => $array) {
@@ -36,6 +40,9 @@ foreach ($catBasics as $cat => $array) {
         }
     }
 }
+
+
+
 //Create Topics files
 $count = 0;
 foreach ($catTopics as $cat => $array) {
@@ -53,9 +60,13 @@ foreach ($catTopics as $cat => $array) {
         }
     }
 }
+
+
+
 //Create Examples page
 $page = new Page('Examples', 'Examples', "", "../../");
-$page->subtemplate('template.examples-main.html');
+$page->subtemplate('template.examples.html');
+
 //Create Basics html
 $html  = "<b>Basic Examples</b>. <i>Programs about form, data, images, color, typography, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
@@ -68,6 +79,7 @@ foreach ($catBasics as $cat => $array) {
     $html .= '</ul></li>';
 }
 $html .= "</ul>";
+
 //Create Topics html
 $html .= "<b>Topic Examples</b>. <i>Programs about to animation, interaction, motion, simulation, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";

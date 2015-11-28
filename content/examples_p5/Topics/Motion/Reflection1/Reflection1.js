@@ -24,7 +24,8 @@ var r = 6;
 var speed = 3.5;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
 
   fill(128);
   base1 = createVector(0, height-150);

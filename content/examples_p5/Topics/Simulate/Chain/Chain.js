@@ -13,7 +13,8 @@ var gravity = 9.0;
 var mass = 2.0;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   fill(255, 126);
   // Inputs: x, y, mass, gravity
   s1 = new Spring2D(0.0, width/2, mass, gravity);

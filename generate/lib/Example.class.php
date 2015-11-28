@@ -4,12 +4,13 @@ class Example
 {
     var $name;
     var $cat;
-    var $file;
+    var $p5_file;
+    var $pde_file;
     var $applet;
     var $data_dir;
     var $doc;
-    var $code;
-    var $fullcode;
+    var $p5_code;
+    var $code_display;
     var $sub;
     var $width;
     var $height;
@@ -20,11 +21,19 @@ class Example
         $this->cat = $cat;
         $this->sub = $sub;
 		
+        //Two directories; one for the p5 version, to be rendered on the page,
+        //and one for the original PDE, whose text is displayed on the page.
+        $p5_dir = EXAMPLESOURCEJSDIR . $cat . '/' . $name . '/';
 		$pde_dir = EXAMPLESOURCEDIR . $cat . '/' . $name . '/';
 		
-		$this->data_dir = $pde_dir . 'data/';
+        //p5 first
+		$this->data_dir = $p5_dir . 'data/';
+        $this->p5_file = file_get_contents($p5_dir . $name .'.js');
+        $this->p5_code = $this->p5_file;
+        //$this->p5_code = implode("\n", $full_code_lines);
 	
-		$this->file = file_get_contents($pde_dir . $name .'.pde');
+        //PDE second
+		$this->pde_file = file_get_contents($pde_dir . $name .'.pde');
 
         if ($handle = opendir($pde_dir)) {
           while (false !== ($newfile = readdir($handle))) {
@@ -32,25 +41,44 @@ class Example
             if (preg_match("/pde/", $newfile)) {
               //echo " $newfile\n";
               if (strcmp($name.'.pde', $newfile) != 0) {
-				$this->file .= "\n\n\n";
+				$this->pde_file .= "\n\n\n";
 				#$this->file .= file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$newfile); 
-				$this->file .= file_get_contents($pde_dir . $newfile); 
+				$this->pde_file .= file_get_contents($pde_dir . $newfile); 
               }
             }
           }
           closedir($handle);
         }
+
+
+        /*
+        //OLD CODE -- BACKUP
+        if ($handle = opendir($pde_dir)) {
+          while (false !== ($newfile = readdir($handle))) {
+            //if ($file != "." && $file != "..") {
+            if (preg_match("/pde/", $newfile)) {
+              //echo " $newfile\n";
+              if (strcmp($name.'.pde', $newfile) != 0) {
+                $this->file .= "\n\n\n";
+                #$this->file .= file_get_contents(CONTENTDIR.'examples/'.$cat.'/'.$name.'/'.$newfile); 
+                $this->file .= file_get_contents($pde_dir . $newfile); 
+              }
+            }
+          }
+          closedir($handle);
+        }
+        */
         
-        preg_match("/(^|\s|;)size\s*\(\s*(\d+)\s*,\s*(\d+),?\s*([^\)]*)\s*\)/", $this->file, $matches);
-        $this->width = $matches[2];
-        $this->height = $matches[3];
+        //preg_match("/(^|\s|;)size\s*\(\s*(\d+)\s*,\s*(\d+),?\s*([^\)]*)\s*\)/", $this->file, $matches);
+        //$this->width = $matches[2];
+        //$this->height = $matches[3];
         
         $this->split_file();
     }
     
     function split_file()
     {
-        $lines = explode("\n", $this->file);
+        $lines = explode("\n", $this->pde_file);
         $doc_lines = array();
         $code_lines = array();
         $full_code_lines = array();
@@ -80,54 +108,33 @@ class Example
         }
         $doc_lines[0] = "<strong>" . $doc_lines[0] . "</strong>";
         $this->doc = implode(" ", $doc_lines);
-        $this->fullcode = implode("\n", $full_code_lines);
-        $this->code = implode("\n", $code_lines);
+        //$this->p5_code = implode("\n", $full_code_lines);
+        $this->pde_code = implode("\n", $code_lines);
     }
     
     function display()
     {
     	$html = "\n<div class=\"example\">";  // BEGIN example div
       
-        // This code is the from the Processing.js export from Processing 200
-      	/**
-		  <div>
-				<canvas id="Distance1D" data-processing-sources="Distance1D.pde" width="640" height="360">
-                    
-                    <p>Your browser does not support the canvas tag.</p>
-					<!-- Note: you can put any alternative content here. -->
-				</canvas>
-				<noscript>
-					<p>JavaScript is required to view the contents of this page.</p>
-				</noscript>
-	    	</div>
-	    */
-	    
-	    // This code is my attempt to generalize the code from Processing 200
-	    /**
-	    $html .= '<div>';
-	    $html .= '    <canvas id="' . $this->name . '" data-processing-sources="' . $this->name . '.pde"';
-	    $html .= 'width="640" height="360">';
-    	$html .= '        <p>Your browser does not support the canvas tag.</p>';
-    	$html .= '    </canvas>';
-    	$html .= '    <noscript>';
-    	$html .= '      <p>JavaScript is required to view the contents of this page.</p>';
-    	$html .= '    </noscript>';
-    	$html .= '</div>';
-        */
-        
-        // This code is based on the example style on ProcessingJS.org
-        $html .= '<script type="application/processing">';
-		$html .= $this->fullcode;
-		$html .= '</script><canvas width="640" height="360"></canvas>';
-        
+        // Insert the p5 version of the example into the page
 
+        //Container for example
+        $html = "\n<div id=\"p5container\"></div>";
+
+        //Script tag for example
+        $html .= '<script type="text/javascript">';
+		$html .= $this->p5_code;
+		$html .= '</script>';
+        
+        //Description
 		$html .= "\n<p class=\"doc\">";
       	$html .= nl2br($this->doc);
       	#$html .= $this->doc;
       	$html .= "</p>\n";
         
+        //Raw code from Processing (not p5) version
       	$html .= "\n<pre class=\"code\">\n";
-      	$html .= $this->code;
+      	$html .= $this->pde_code;
       	$html .= "</pre>\n\n";
         
       	$html .= "\n</div>\n";  // END example div

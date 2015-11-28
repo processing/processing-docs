@@ -19,7 +19,8 @@ var ballXDirection = 1;
 var ballYDirection = -1;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   strokeWeight(20.0);
   stroke(255, 100);
   noFill();

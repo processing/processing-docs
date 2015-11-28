@@ -14,7 +14,8 @@ var segments = 40;
 var ground = new Array(segments);
 
 function setup(){
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   gravity  = createVector(0,0.05);
   // An orb object that will fall and bounce around
   orb = new Orb(50, 50, 3);

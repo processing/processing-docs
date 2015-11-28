@@ -16,7 +16,8 @@
 // var my = [];
 
 // function setup() {
-//   createCanvas(640, 360);
+//   var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
 //   noStroke();
 //   fill(255, 153); 
 //   for (var i = 0; i < num; i++) {

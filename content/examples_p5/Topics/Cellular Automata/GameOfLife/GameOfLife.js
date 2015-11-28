@@ -41,7 +41,8 @@ function make2DArray(cols,rows) {
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   alive = color(0, 200, 0);
   dead = color(0);
   // Instantiate arrays 

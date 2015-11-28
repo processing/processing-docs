@@ -13,7 +13,8 @@ var angle = 0;
 var jitter = 0;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   fill(255);
   rectMode(CENTER);
