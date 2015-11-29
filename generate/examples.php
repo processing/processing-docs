@@ -114,8 +114,7 @@ function get_examples_list($exstr){
     
         if ($c->childCount > 0) {
             foreach ($c->childNodes as $s) {
-                echo ($s->hasAttribute("p5"))   ;
-                if ($s->nodeType == 1 && $s->hasAttribute("p5")) {
+                if ($s->nodeType == 1 && $s->hasAttribute("p5")) {  //SM hasAttribute seems to have no effect here
                     $my_cats[$name][$s->getAttribute('file')] = trim($s->firstChild->nodeValue);
                 }
             }
