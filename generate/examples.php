@@ -3,7 +3,7 @@ require_once('../config.php');
 require('lib/Example.class.php');
 $benchmark_start = microtime_float();
 $local = false;
-define('EXAMPLESOURCEDIR', '../content/examples_p5/');
+define('EXAMPLESOURCEDIR', '../content/examples/');
 define('EXAMPLESOURCEJSDIR', '../content/examples_p5/');
 $path = BASEDIR;
 $where = EXAMPLESOURCEDIR;
@@ -114,7 +114,7 @@ function get_examples_list($exstr){
     
         if ($c->childCount > 0) {
             foreach ($c->childNodes as $s) {
-                if ($s->nodeType == 1) {
+                if ($s->nodeType == 1 && $s->hasAttribute("p5")) {  //SM hasAttribute seems to have no effect here
                     $my_cats[$name][$s->getAttribute('file')] = trim($s->firstChild->nodeValue);
                 }
             }
