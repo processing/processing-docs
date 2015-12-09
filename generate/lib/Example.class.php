@@ -9,6 +9,7 @@ class Example
     var $applet;
     var $data_dir;
     var $doc;
+    var $pde_code; // CR -- I think SM left this out, needed based on his name changes
     var $p5_code;
     var $code_display;
     var $sub;
