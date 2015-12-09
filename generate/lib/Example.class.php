@@ -120,7 +120,8 @@ class Example
         // Insert the p5 version of the example into the page
 
         //Container for example
-        $html = "\n<div id=\"p5container\"></div>";
+        $html .= "\n<div id=\"p5container\"></div>";
+        //$html = "\n<div id=\"p5container\">";  // CR -- Change 8 Dec 2015
 
         //Script tag for example
         $html .= '<script type="text/javascript">';
