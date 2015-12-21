@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Stewart – A mutually trustful interface for a fully autonomous car" by="Felix Ros" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/stewart.jpg</image>
+		  <description>
+			  Created by Felix Ros, Stewart is a hypothetical tactile interface designed for a fully autonomous car. Working around the idea that even thought self-driving offer obvious benefits, they also eliminate a sense of freedom, expression, and control while driving. Stewart’s objective is to accommodate a healthy relation between man and machine.
+		  </description>
+		  <location>http://felixros.com</location>
+		 <link href="http://felixros.com/stewart.html">Felix Ros</link>
+	 </software>	
+
 	<software name="Traces, Physical Programming of Freeform Folding in Soft Matter" by="Dana Zelig" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/traces.jpg</image>
 		  <description>
