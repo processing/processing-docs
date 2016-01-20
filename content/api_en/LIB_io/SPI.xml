@@ -49,7 +49,7 @@ desired respondent for the transmission.<br/>
 The "master" device initiates a transfer by pulling the SS pin of the "slave"
 low, and begins outputting a clock signal. In SPI, both the "master" as well as
 the "slave" device output data at the same time. It is hence not possible to
-read data without also writing some (even if it means outputting zeros or other
+read data without writing some (even if it means outputting zeros or other
 dummy data).</br>
 </br>
 There are multiple possible configuration settings for SPI, see

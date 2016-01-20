@@ -36,7 +36,7 @@ void setup() {
 <description><![CDATA[
 Waits for the value of an input pin to change<br/>
 <br/>
-The mode parameter determines when the function will will return: GPIO.FALLING occurs when the level changes from high to low, GPIO.RISING when the level changes from low
+The mode parameter determines when the function will return: GPIO.FALLING occurs when the level changes from high to low, GPIO.RISING when the level changes from low
 to high, and GPIO.CHANGE when either occurs.<br/>
 <br/>
 This function returns true if the change, false if the timeout occured.

@@ -38,7 +38,7 @@ void draw() {
 <description><![CDATA[
 Opens an I2C interface as master<br/>
 <br/>
-I2C is a serial bus, commonly used to attach peripheral ICs (integrated circuits)
+I2C is a serial bus, commonly used to attach peripheral ICs (Integrated Circuits)
 to processors and microcontrollers. It uses two pins, SDA (for data) and SDL (for
 the clock signal). Multiple "slave" devices can be connected to the same bus, as
 long as they are responding to different addresses (see below).<br/>

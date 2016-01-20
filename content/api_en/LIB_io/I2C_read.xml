@@ -39,10 +39,10 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Reads bytes from the attached device<br/>
+Read bytes from the attached device<br/>
 <br/>
 You must call beginTransmission() before calling this function.
-This function also ends the current transmisison and sends any data
+This function also ends the current transmission and sends any data
 that was queued using write() before. It is not necessary to call
 <a href="I2C_endTransmission_.html">endTransmission()</a> after read().
 ]]></description>

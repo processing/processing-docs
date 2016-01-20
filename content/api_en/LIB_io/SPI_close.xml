@@ -41,7 +41,7 @@ Closes the SPI interface</br>
 It is normally not necessary to explicitly close SPI interfaces, as they
 are closed automatically by the operating system when the sketch exits.</br>
 </br>
-Note: It is possible to have two or more object using the same interface at
+Note: It is possible to have two or more objects using the same interface at
 a time.
 ]]></description>
 
