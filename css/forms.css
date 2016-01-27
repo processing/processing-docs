@@ -8,12 +8,6 @@
 table {
 }
 
-td
-{
-	/*text-align:	left;
-	vertical-align:	top;*/
-}
-
 form
 	{
 	margin-bottom		: 0px;
@@ -49,10 +43,6 @@ label
 	/*  */
 	}
 	
-select[multiple]
-	{
-	/*margin-left			: -3px;*/
-	}
 
 input[type="text"],
 input[type="password"],
