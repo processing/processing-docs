@@ -151,11 +151,6 @@ input[type="radio"]:not([class]):not([id]):not([style])
   	
 	}
 
-input[type="radio"]:focus:not([class]):not([id]):not([style])
-	{
-	
-	}
-
 input[type="radio"]:checked:not([class]):not([id]):not([style])
 	{
 

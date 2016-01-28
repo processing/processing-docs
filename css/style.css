@@ -1300,7 +1300,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	margin-bottom: 10px; 
 	margin-left: -30px; 
 	padding: 7px 0 3px 30px; 
-	background: url(/img/back_off.gif) no-repeat 
+	background: url(/img/back_off.gif) no-repeat; 
 }
 
 #Libraries pre { margin-left: 30px; margin-bottom: 30px; }
