@@ -14,7 +14,7 @@ var img;
 var smallPoint, largePoint;
 
 function preload() {
-  img = loadImage("data/moonwalk.jpg");
+  img = loadImage("/moonwalk.jpg");
 }
 
 

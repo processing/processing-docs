@@ -9,7 +9,7 @@ var lines;
 var index = 0;
 
 function preload() {
-  lines = loadStrings("data/positions.txt");
+  lines = loadStrings("/positions.txt");
 }
 
 function setup() {

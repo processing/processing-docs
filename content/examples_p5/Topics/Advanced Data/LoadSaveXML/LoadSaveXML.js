@@ -31,14 +31,14 @@ var bubbles = [];
 var xml;
 
 function preload() {
-  xml = loadXML("data/data.xml");
+  xml = loadXML("/data.xml");
 }
 
 function setup() {
   var canvas = createCanvas(640, 360);
   canvas.parent("p5container");
   loadData();
-  loadXML("data/data.xml",test);
+  loadXML("/data.xml",test);
 }
 
 function test(xml) {
@@ -62,7 +62,7 @@ function draw() {
 
 function loadData() {
   // Load XML file
-  // xml = loadXML("data.xml");
+  // xml = loadXML(".xml");
   // // Get all the child nodes named "bubble"
   // XML[] children = xml.getChildren("bubble");
 
@@ -124,7 +124,7 @@ function mousePressed() {
   // }
   
   // // Save a new XML file
-  // saveXML(xml,"data/data.xml");
+  // saveXML(xml,"/data.xml");
   
   // // reload the new data 
   // loadData();
