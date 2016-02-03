@@ -29,9 +29,9 @@ void draw() {
 
 // Click to clear the PGraphics object
 void mousePressed() {
-     pg.beginDraw(); //not required with JAVA2D
-     pg.clear();
-     pg.endDraw(); //not required with JAVA2D
+  pg.beginDraw(); 
+  pg.clear();
+  pg.endDraw(); 
 }
 ]]></code>
 </example>
