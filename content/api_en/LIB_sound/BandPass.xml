@@ -41,6 +41,7 @@ This is a band pass filter.
 
 ]]></description>
 
+<!--
 <syntax>
 </syntax>
 
@@ -92,5 +93,5 @@ BandPass(<c>parent</c>)
 <type>Object</type>
 
 <partof>Library</partof>
-
+-->
 </root>

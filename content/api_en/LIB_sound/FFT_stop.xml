@@ -47,7 +47,6 @@ void draw() {
 
 void mousePressed() {
   in.stop();
-  fft.stop();
 }
 ]]></code>
 </example>

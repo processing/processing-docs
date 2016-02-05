@@ -32,8 +32,8 @@ void setup() {
   bandPass.process(noise);
 
   // Change the cutoff frequency and bandwidth of the filter
-  bandpass.bw(bw);
-  bandpass.freq(freq);
+  bandPass.bw(bw);
+  bandPass.freq(freq);
 }      
 
 void draw() {

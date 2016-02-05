@@ -33,7 +33,6 @@ void draw() {
 
 void mousePressed() {
   in.stop();
-  amp.stop();
 }
 ]]></code>
 </example>

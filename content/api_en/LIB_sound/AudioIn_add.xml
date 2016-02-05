@@ -23,6 +23,7 @@ void setup() {
   in = new AudioIn(this, 0);
   in.start();
   in.add(0.2);
+  in.play();
 }      
 
 void draw() {

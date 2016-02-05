@@ -21,7 +21,7 @@ void setup() {
     
   // Load a soundfile from the data folder of the sketch and get the number of channels
   file = new SoundFile(this, "sample.mp3");
-  println("SFSampleRate= " + sample.sampleRate() + " Hz");
+  println("SFSampleRate= " + file.sampleRate() + " Hz");
 }      
 
 void draw() {
@@ -32,7 +32,7 @@ void mousePressed() {
   float pos=0.5;
   float amp=0.5;
   float add=0;
-  file.set(freq, amp, add, pos);
+  file.set(rate, amp, add, pos);
 }
 
 ]]></code>
