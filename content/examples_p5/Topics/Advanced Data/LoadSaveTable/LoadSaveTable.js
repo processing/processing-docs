@@ -25,7 +25,7 @@ var table;
 function preload() {
   // Load CSV file into a Table object
   // "header" option indicates the file has a header row
-  table = loadTable("data/data.csv", "header");
+  table = loadTable("/data.csv", "header");
 }
 
 function setup() {
@@ -85,7 +85,7 @@ function mousePressed() {
   }
 
   // Writing the CSV back to the same file
-  // saveTable(table, "data/data.csv");
+  // saveTable(table, "/data.csv");
   // And reloading it
   loadData();
 }

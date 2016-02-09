@@ -38,33 +38,5 @@ void draw() {
 This is a volume analyzer. It calculates the root mean square of the amplitude of each audio block and returns that value.
 ]]></description>
 
-<!-- <method>
-<mname>input()</mname>
-<mdescription>Define the audio input for the analyzer</mdescription>
-</method>
-
-<method>
-<mname>analyze()</mname>
-<mdescription>Query an analysis value</mdescription>
-</method>
-
-<method>
-<mname>stop()</mname>
-<mdescription>Stop the analyzer</mdescription>
-</method>
-
-
-<constructor>
-Amplitude(<c>parent</c>)
-</constructor>
-
-<cparameter>
-<clabel>parent</clabel>
-<cdescription>PApplet: typically use "this"</cdescription>
-</cparameter>
-<availability>1.0</availability>
-
-<type>Object</type>
- -->
 
 </root>

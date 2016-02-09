@@ -36,7 +36,7 @@ var bubbles;
 var json;
 
 function preload() {
-  json = loadJSON("data/data.json");
+  json = loadJSON("/data.json");
 }
 
 function setup() {
@@ -109,7 +109,7 @@ function draw() {
   }
 
   // Save new data
-  // saveJSONObject(json,"data/data.json");
+  // saveJSONObject(json,"/data.json");
   loadData();
 }
 

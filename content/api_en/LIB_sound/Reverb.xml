@@ -28,6 +28,7 @@ void setup() {
     
   // start the input stream
   in.play();
+  reverb.process(in);
 }      
 
 void draw() {

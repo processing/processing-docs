@@ -13,7 +13,7 @@ var img;  // Declare variable "a" of type PImage
 function preload() {
   // The image file must be in the data folder of the current sketch 
   // to load successfully
-  img = loadImage("data/moonwalk.jpg");
+  img = loadImage("/moonwalk.jpg");
 }
 
 function setup() {

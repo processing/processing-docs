@@ -31,7 +31,7 @@ void setup() {
   lowPass.process(noise);
 
   // Change the cutoff frequency of the filter
-  highpass.freq(freq);
+  lowPass.freq(freq);
 }      
 
 void draw() {

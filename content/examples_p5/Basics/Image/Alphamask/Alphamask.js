@@ -13,8 +13,8 @@ var img;
 var imgMask;
 
 function preload() {
-  img = loadImage("data/moonwalk.jpg");
-  imgMask = loadImage("data/mask.png");  
+  img = loadImage("/moonwalk.jpg");
+  imgMask = loadImage("/mask.png");  
 }
 
 function setup() {

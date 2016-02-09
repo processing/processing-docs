@@ -14,8 +14,8 @@ var img1, img2;  // Two images to load
 
 function preload() {
   // Load images
-  img1 = loadImage("data/seedTop.jpg");
-  img2 = loadImage("data/seedBottom.jpg");
+  img1 = loadImage("/seedTop.jpg");
+  img2 = loadImage("/seedBottom.jpg");
 }
 
 function setup() {

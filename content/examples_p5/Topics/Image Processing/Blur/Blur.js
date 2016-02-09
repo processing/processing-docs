@@ -16,7 +16,7 @@ var kernel = [[ v, v, v ],
                     
 var img;
 function preload() {
-  img = loadImage("data/moon.jpg"); // Load the original image
+  img = loadImage("/moon.jpg"); // Load the original image
 }
 
 function setup() {

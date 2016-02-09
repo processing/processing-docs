@@ -19,7 +19,7 @@
 // var img;
 
 // function preload() {
-//   img = loadImage("data/frontier.jpg");
+//   img = loadImage("/frontier.jpg");
 // }
 
 // function setup() {

@@ -29,11 +29,11 @@ void draw() {
 
 void mousePressed() {
   float freq=200;
-  float width=0.5;
+  float plswidth=0.5;
   float amp=0.5;
   float add=0.0;
   float pos=1;
-  pulse.set(freq, width, amp, add, pos);
+  pulse.set(freq, plswidth, amp, add, pos);
 }
 
 ]]></code>

@@ -30,6 +30,19 @@ class Example
         //p5 first
 		$this->data_dir = $p5_dir . 'data/';
         $this->p5_file = file_get_contents($p5_dir . $name .'.js');
+
+        if ($handle = opendir($p5_dir)) {
+          while (false !== ($newfile = readdir($handle))) {
+            if (preg_match("/js/", $newfile)) {
+              if (strcmp($name.'.js', $newfile) != 0) {
+                $this->p5_file .= "\n\n\n";
+                $this->p5_file .= file_get_contents($p5_dir . $newfile); 
+              }
+            }
+          }
+          closedir($handle);
+        }
+
         $this->p5_code = $this->p5_file;
         //$this->p5_code = implode("\n", $full_code_lines);
 	

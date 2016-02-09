@@ -23,6 +23,9 @@ SoundFile file;
   file = new SoundFile(this, "sample.mp3");
   file.play();
   }
+
+  void(){
+  }
     
   void mousePressed() {
   file.stop();
