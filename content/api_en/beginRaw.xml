@@ -38,7 +38,7 @@ When using <b>beginRaw()</b> and <b>endRaw()</b>, it's possible to write to eith
 <br /><br />
 If you want a background to show up in your files, use <b>rect(0, 0, width, height)</b> after setting the <b>fill()</b> to the background color. Otherwise the background will not be rendered to the file because the background is not shape.
 <br /><br />
-Using <b>hint(ENABLE_DEPTH_SORT)</b> can improve the appearance of 3D geometry drawn to 2D file formats. See the <b>hint()</b> reference for more details.
+Using <b>hint(ENABLE_DEPTH_SORT)</b> can improve the appearance of 3D geometry drawn to 2D file formats.
 <br /><br />
 See examples in the reference for the <b>PDF</b> and <b>DXF</b> libraries for more information.
 ]]></description>
