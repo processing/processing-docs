@@ -34,7 +34,7 @@ void draw() {
 <image></image>
 <code><![CDATA[
 // If more than one screen is attached to the computer, run the 
-// code at the full dimensions of the screen defined by the 
+// code at the full dimensions on the screen defined by the 
 // parameter to fullScreen()
 
 int x = 0;
@@ -97,9 +97,11 @@ void draw() {
 </example>
 
 <description><![CDATA[
-This function is new for Processing 3.0. It opens a sketch using the full size of the computer's display. This function must be the first line in <b>setup()</b>. The first parameter defines the renderer to use and the second defines either an individual screen to display to or to open a full-screen window across all of the attached displays if there are more than one.<br />
+This function is new for Processing 3.0. It opens a sketch using the full size of the computer's display. This function must be the first line in <b>setup()</b>. The <b>size()</b> and <b>fullScreen()</b> functions cannot both be used in the same program, just choose one.<br />
 <br />
-The <b>size()</b> and <b>fullScreen()</b> methods cannot both be used in the same program, just choose one. Prior to Processing 3.0, a full-screen program was defined with <b>size(displayWidth, displayHeight)</b>.
+When <b>fullScreen()</b> is used without a parameter, it draws the sketch to the screen currently selected inside the Preferences window. When it is used with a single parameter, this number defines the screen to display to program on (e.g. 1, 2, 3...). When used with two parameters, the first defines the renderer to use (e.g. P2D) and the second defines the screen. The <b>SPAN</b> parameter can be used in place of a screen number to draw the sketch as a full-screen window across all of the attached displays if there are more than one.<br />
+<br />
+Prior to Processing 3.0, a full-screen program was defined with <b>size(displayWidth, displayHeight)</b>.
 ]]></description>
 
 </root>
