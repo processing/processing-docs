@@ -23,7 +23,7 @@ function preload() {
 function setup() {
   var canvas = createCanvas(640, 360);
   canvas.parent("p5container");
-  devicePixelScaling(false);
+  pixelDensity(1);
   noLoop();
 } 
 

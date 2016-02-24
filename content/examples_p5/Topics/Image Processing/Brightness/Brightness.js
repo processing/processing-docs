@@ -18,7 +18,7 @@ function preload() {
 function setup() {
   var canvas = createCanvas(640, 360);
   canvas.parent("p5container");
-  devicePixelScaling(false);
+  pixelDensity(1);
   frameRate(30);
   img.loadPixels();
   // Only need to load the pixels[] array once, because we're only
