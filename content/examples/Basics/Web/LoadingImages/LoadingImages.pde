@@ -1,11 +1,8 @@
 /**
  * Loading Images. 
  * 
- * Processing applications can only load images from the network
- * while running in the Processing environment. 
+ * Processing applications can load images from the network. 
  * 
- * This example will not run in a web broswer and will only work when 
- * the computer is connected to the Internet. 
  */
 
 PImage img;
