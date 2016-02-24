@@ -15,7 +15,7 @@ var direction = 1;
 var signal = 0;
 
 function preload() {
-  img = loadImage("/sea.jpg");  
+  img = loadImage("sea.jpg");  
 }
 
 function setup() {

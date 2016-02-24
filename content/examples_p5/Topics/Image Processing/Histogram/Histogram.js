@@ -16,41 +16,41 @@
 
 // This needs to be resolved: https://github.com/processing/p5.js/issues/563
 
-// var img;
+var img;
 
-// function preload() {
-//   img = loadImage("/frontier.jpg");
-// }
+function preload() {
+  img = loadImage("frontier.jpg");
+}
 
-// function setup() {
+function setup() {
   // Load an image from the data directory
   // Load a different image by modifying the comments
-  // image(img, 0, 0);
-  // var hist = [];
-  // loadPixels();
-  // // Calculate the histogram
-  // for (var i = 0; i < img.width; i++) {
-  //   for (var j = 0; j < img.height; j++) {
-  //     var c = get(i,j);
-  //     var col = color(c[0],c[1],c[2])
-  //     println(c,col);
-  //     var bright = brightness(col);
-  //     //hist[bright]++; 
-  //     break;
-  //   }
-  // }
+  image(img, 0, 0);
+  var hist = [];
+  loadPixels();
+  // Calculate the histogram
+  for (var i = 0; i < img.width; i++) {
+    for (var j = 0; j < img.height; j++) {
+      var c = get(i,j);
+      var col = color(c[0],c[1],c[2])
+      println(c,col);
+      var bright = brightness(col);
+      //hist[bright]++; 
+      break;
+    }
+  }
 
-  // // Find the largest value in the histogram
-  // var histMax = max(hist);
+  // Find the largest value in the histogram
+  var histMax = max(hist);
 
-  // stroke(255);
-  // // Draw half of the histogram (skip every second value)
-  // for (var i = 0; i < img.width; i += 2) {
-  //   // Map i (from 0..img.width) to a location in the histogram (0..255)
-  //   var which = int(map(i, 0, img.width, 0, 255));
-  //   // Convert the histogram value to a location between 
-  //   // the bottom and the top of the picture
-  //   var y = int(map(hist[which], 0, histMax, img.height, 0));
-  //   line(i, img.height, i, y);
-  // }
-//}
+  stroke(255);
+  // Draw half of the histogram (skip every second value)
+  for (var i = 0; i < img.width; i += 2) {
+    // Map i (from 0..img.width) to a location in the histogram (0..255)
+    var which = int(map(i, 0, img.width, 0, 255));
+    // Convert the histogram value to a location between 
+    // the bottom and the top of the picture
+    var y = int(map(hist[which], 0, histMax, img.height, 0));
+    line(i, img.height, i, y);
+  }
+}

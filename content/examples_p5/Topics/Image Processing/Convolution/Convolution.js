@@ -20,7 +20,7 @@ var matrix = [ [ -1, -1, -1 ] ,
 
 
 function preload() {
-  img = loadImage("/moon-wide.jpg"); 
+  img = loadImage("moon-wide.jpg"); 
 }
 
 function setup() {

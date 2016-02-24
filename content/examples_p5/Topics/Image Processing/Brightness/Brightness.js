@@ -12,7 +12,7 @@
 var img;
 
 function preload() {
-  img = loadImage("/moon-wide.jpg");  
+  img = loadImage("moon-wide.jpg");  
 }
 
 function setup() {
