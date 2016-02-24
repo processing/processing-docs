@@ -8,7 +8,8 @@
  */
 
 function setup() {
-  createCanvas(200, 200);
+  var canvas = createCanvas(200, 200);
+  canvas.parent("p5container");
 }
 
 function draw() {

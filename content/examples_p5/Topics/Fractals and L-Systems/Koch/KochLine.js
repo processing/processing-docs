@@ -10,8 +10,8 @@ function KochLine(a,b) {
   // Two p5.Vectors,
   // start is the "left" p5.Vector and 
   // end is the "right p5.Vector
-  this.start = a.get();
-  this.end = b.get();
+  this.start = a.copy();
+  this.end = b.copy();
 
   this.display = function() {
     stroke(255);

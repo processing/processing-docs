@@ -59,13 +59,13 @@
 		<ex p5="true" file="IntListLottery.html">Int List Lottery</ex>
 		<ex p5="true" file="LoadSaveJSON.html">Load Save JSON</ex>
 		<ex p5="true" file="LoadSaveTable.html">Load Save Table</ex>
-		<ex p5="true" file="LoadSaveXML.html">Load Save XML</ex>
-		<ex p5="true" file="XMLYahooWeather.html">XML Yahoo Weather</ex>
+		<ex p5="false" file="LoadSaveXML.html">Load Save XML</ex>
+		<ex p5="false" file="XMLYahooWeather.html">XML Yahoo Weather</ex>
 	</cat>
 	<cat label="File IO">
 		<ex p5="true" file="LoadFile1.html">Load File 1</ex>
 		<ex p5="true" file="LoadFile2.html">Load File 2</ex>
-		<ex p5="true" file="SaveFile1.html">Save File 1</ex>
+		<ex p5="false" file="SaveFile1.html">Save File 1</ex>
 		<ex p5="true" file="SaveOneFrame.html">Save One Frame</ex>
 	</cat>
 	<cat label="Textures">
@@ -95,13 +95,13 @@
 		<ex p5="true" file="Tree.html">Tree</ex>
 		<ex p5="true" file="Koch.html">Koch</ex>
 		<ex p5="true" file="PenroseSnowflake.html">Penrose Snowflake</ex>
-		<ex p5="true" file="Penrose Tile.html">Penrose Tile</ex>
+		<ex p5="true" file="PenroseTile.html">Penrose Tile</ex>
 		<ex p5="true" file="Pentigree.html">Pentigree</ex>
 	</cat>
 	<cat label="Cellular Automata">
 		<ex p5="true" file="Wolfram.html">Wolframs's 1D CA</ex>
 		<ex p5="true" file="GameOfLife.html">Conway's Game of Life</ex>
-		<ex p5="true" file="Spore1.html">Spore 1</ex>
+		<ex p5="false" file="Spore1.html">Spore 1</ex>
 		<ex file="Spore2.html">Spore 2</ex>
 	</cat>
 </examples>

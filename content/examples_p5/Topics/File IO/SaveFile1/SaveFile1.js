@@ -4,20 +4,18 @@
  * Saving files is a useful way to store data so it can be viewed after a 
  * program has stopped running. The saveStrings() function writes an array 
  * of strings to a file, with each string written to a new line. This file 
- * is saved to the sketch's folder. This example won't work in a web browser
- * because of Java security restrictions.
+ * is saved to the sketch's folder.
  */
 
 var x = [];
 var y = [];
 
-function setup() 
-{
-  createCanvas(200, 200);
+function setup() {
+  var canvas = createCanvas(200, 200);
+  canvas.parent("p5container");
 }
 
-function draw() 
-{
+function draw() {
   background(204);
   stroke(0);
   noFill();
@@ -43,7 +41,7 @@ function keyPressed() { // Press a key to save the data
   for (var i = 0; i < x.length; i++) {
     lines[i] = x[i] + "\t" + y[i];
   }
-  saveStrings(lines,"lines.txt");
+  saveStrings(lines, "lines.txt");
   //exit(); // Stop the program
 }
 

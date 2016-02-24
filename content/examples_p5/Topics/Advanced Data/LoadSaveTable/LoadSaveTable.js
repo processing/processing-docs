@@ -45,6 +45,7 @@ function draw() {
 
   textAlign(LEFT);
   fill(0);
+  noStroke();
   text("Click to add bubbles.", 10, height-10);
 }
 

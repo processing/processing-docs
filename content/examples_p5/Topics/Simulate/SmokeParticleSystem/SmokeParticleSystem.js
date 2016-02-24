@@ -13,7 +13,7 @@
 var ps;
 
 function preload() {
-  img = loadImage("/texture.png");
+  img = loadImage("texture.png");
 }
 
 function setup() {
