@@ -65,7 +65,7 @@
 		<ex p5="true" file="Relativity.html">Relativity</ex>
 		<ex p5="true" file="LinearGradient.html">Linear Gradient</ex>
 		<ex p5="true" file="RadialGradient.html">Radial Gradient</ex>
-		<ex p5="true" file="WaveGradient.html">Wave Gradient</ex>
+		<ex file="WaveGradient.html">Wave Gradient</ex>
 	</cat>
 	<cat label="Math">
 		<ex p5="true" file="IncrementDecrement.html">Increment/Decrement</ex>
