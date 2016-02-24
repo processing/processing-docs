@@ -15,7 +15,7 @@ var c;
 function setup() {
   var canvas = createCanvas(640, 360);
   pixelDensity(1);
-  //canvas.parent("p5container");
+  canvas.parent("p5container");
   background(200);
   noLoop();
 }
