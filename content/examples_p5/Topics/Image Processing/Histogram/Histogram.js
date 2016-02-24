@@ -29,16 +29,21 @@ function setup() {
   // Load a different image by modifying the comments
   image(img, 0, 0);
   var hist = [];
-  loadPixels();
+  for (var i = 0; i < 256; i++) {
+    hist[i] = 0;
+  }
+  img.loadPixels();
   // Calculate the histogram
   for (var i = 0; i < img.width; i++) {
     for (var j = 0; j < img.height; j++) {
-      var c = get(i,j);
-      var col = color(c[0],c[1],c[2])
-      println(c,col);
-      var bright = brightness(col);
-      //hist[bright]++; 
-      break;
+      var index = (i + j * img.width) * 4;
+      var r = img.pixels[index];
+      var g = img.pixels[index+1];
+      var b = img.pixels[index+2];
+      //println(c,col);
+      var bright = floor((r+g+b)/3);
+      hist[bright]++; 
+      //break;
     }
   }
 
