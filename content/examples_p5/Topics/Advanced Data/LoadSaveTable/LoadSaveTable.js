@@ -74,9 +74,9 @@ function mousePressed() {
   // Create a new row
   var row = table.addRow();
   // Set the values of that row
-  row.setFloat("x", mouseX);
-  row.setFloat("y", mouseY);
-  row.setFloat("diameter", random(40, 80));
+  row.setNumber("x", mouseX);
+  row.setNumber("y", mouseY);
+  row.setNumber("diameter", random(40, 80));
   row.setString("name", "Blah");
 
   // If the table has more than 10 rows

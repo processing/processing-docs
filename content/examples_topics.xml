@@ -59,8 +59,8 @@
 		<ex p5="true" file="IntListLottery.html">Int List Lottery</ex>
 		<ex p5="true" file="LoadSaveJSON.html">Load Save JSON</ex>
 		<ex p5="true" file="LoadSaveTable.html">Load Save Table</ex>
-		<ex p5="false" file="LoadSaveXML.html">Load Save XML</ex>
-		<ex p5="false" file="XMLYahooWeather.html">XML Yahoo Weather</ex>
+		<ex file="LoadSaveXML.html">Load Save XML</ex>
+		<ex file="XMLYahooWeather.html">XML Yahoo Weather</ex>
 	</cat>
 	<cat label="File IO">
 		<ex p5="true" file="LoadFile1.html">Load File 1</ex>
