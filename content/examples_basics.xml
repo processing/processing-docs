@@ -72,7 +72,7 @@
 		<ex p5="true" file="OperatorPrecedence.html">Operator Precedence</ex>
 		<ex p5="true" file="Distance1D.html">Distance 1D</ex>
 		<ex p5="true" file="Distance2D.html">Distance 2D</ex>
-		<ex file="Map.html">Map</ex>
+		<ex p5="true" file="Map.html">Map</ex>
 		<ex p5="true" file="Sine.html">Sine</ex>
 		<ex p5="true" file="SineCosine.html">Sine and Cosine</ex>
 		<ex p5="true" file="SineWave.html">Sine Wave</ex>
