@@ -65,5 +65,5 @@ function draw() {
   gradient.updatePixels();
   image(gradient, 0, 0);
   noLoop();
-  console.log('complete');
+  //console.log('complete');
 }
