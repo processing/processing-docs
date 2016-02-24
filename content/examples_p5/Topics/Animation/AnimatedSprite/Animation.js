@@ -8,7 +8,7 @@ function Animation(imagePrefix, count) {
 
   for (var i = 0; i < this.imageCount; i++) {
     // Use nf() to number format 'i' into four digits
-    var filename = 'data/' + imagePrefix + nf(i, 4) + ".gif";
+    var filename = imagePrefix + nf(i, 4) + ".gif";
     this.images[i] = loadImage(filename);
   }
   

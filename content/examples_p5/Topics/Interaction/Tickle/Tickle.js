@@ -17,8 +17,7 @@ function setup() {
   canvas.parent("p5container");
   
   // Create the font
-  textFont("Georgia");
-  textSize(36);
+  textFont("Source Code Pro", 36);
   textAlign(CENTER, CENTER);
   
   hr = textWidth(message) / 2;

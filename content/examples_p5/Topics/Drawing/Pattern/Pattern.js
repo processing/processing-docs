@@ -23,9 +23,11 @@ function draw() {
 // for this program. It calculates the speed of the mouse
 // and draws a small ellipse if the mouse is moving slowly
 // and draws a large ellipse if the mouse is moving quickly 
-
 function variableEllipse(x, y, px, py) {
   var speed = abs(x-px) + abs(y-py);
   stroke(speed);
-  ellipse(x, y, speed, speed);
+  // hack to stop doing a giant one at the start
+  if (speed < width/2) {
+    ellipse(x, y, speed, speed);
+  }
 }

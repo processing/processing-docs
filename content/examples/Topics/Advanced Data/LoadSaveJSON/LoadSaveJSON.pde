@@ -1,5 +1,5 @@
 /**
- * Loading XML Data
+ * Loading JSON Data
  * by Daniel Shiffman.  
  * 
  * This example demonstrates how to use loadJSON()

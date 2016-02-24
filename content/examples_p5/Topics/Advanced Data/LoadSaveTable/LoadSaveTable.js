@@ -25,7 +25,7 @@ var table;
 function preload() {
   // Load CSV file into a Table object
   // "header" option indicates the file has a header row
-  table = loadTable("/data.csv", "header");
+  table = loadTable("data.csv", "header");
 }
 
 function setup() {
