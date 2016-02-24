@@ -19,7 +19,7 @@ function KochLine(a,b) {
   }
 
   this.kochA = function() {
-    return this.start.get();
+    return this.start.copy();
   }
 
   // This is easy, just 1/3 of the way

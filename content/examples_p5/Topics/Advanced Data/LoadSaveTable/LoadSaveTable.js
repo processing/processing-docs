@@ -74,10 +74,10 @@ function mousePressed() {
   // Create a new row
   var row = table.addRow();
   // Set the values of that row
-  row.setNumber("x", mouseX);
-  row.setNumber("y", mouseY);
-  row.setNumber("diameter", random(40, 80));
-  row.setString("name", "Blah");
+  row.set("x", mouseX);
+  row.set("y", mouseY);
+  row.set("diameter", random(40, 80));
+  row.set("name", "Blah");
 
   // If the table has more than 10 rows
   if (table.getRowCount() > 10) {

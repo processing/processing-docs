@@ -65,7 +65,7 @@
 	<cat label="File IO">
 		<ex p5="true" file="LoadFile1.html">Load File 1</ex>
 		<ex p5="true" file="LoadFile2.html">Load File 2</ex>
-		<ex p5="false" file="SaveFile1.html">Save File 1</ex>
+		<ex file="SaveFile1.html">Save File 1</ex>
 		<ex p5="true" file="SaveOneFrame.html">Save One Frame</ex>
 	</cat>
 	<cat label="Textures">
@@ -101,7 +101,7 @@
 	<cat label="Cellular Automata">
 		<ex p5="true" file="Wolfram.html">Wolframs's 1D CA</ex>
 		<ex p5="true" file="GameOfLife.html">Conway's Game of Life</ex>
-		<ex p5="false" file="Spore1.html">Spore 1</ex>
+		<ex file="Spore1.html">Spore 1</ex>
 		<ex file="Spore2.html">Spore 2</ex>
 	</cat>
 </examples>
