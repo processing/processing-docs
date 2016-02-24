@@ -32,7 +32,7 @@ function KochLine(a,b) {
 
   // More complicated, have to use a little trig to figure out where this p5.Vector is!
   this.kochC = function() {
-    var a = this.start.get(); // Start at the beginning
+    var a = this.start.copy(); // Start at the beginning
     var v = p5.Vector.sub(this.end, this.start);
     v.div(3);
     a.add(v);  // Move to point B
@@ -50,6 +50,6 @@ function KochLine(a,b) {
   }
 
   this.kochE = function() {
-    return this.end.get();
+    return this.end.copy();
   }
 }
