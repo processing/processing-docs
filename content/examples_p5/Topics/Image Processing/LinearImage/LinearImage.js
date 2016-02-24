@@ -46,7 +46,7 @@ function draw() {
   else {
     var signalOffset = int(signal)*img.width;
     for (var y = 0; y < img.height; y++) {
-      //arrayCopy(img.pixels, signalOffset, pixels, y*width, img.width);
+      arrayCopy(img.pixels, signalOffset, pixels, y*width, img.width);
     }
     updatePixels();
   }

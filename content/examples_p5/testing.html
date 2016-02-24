@@ -2,7 +2,10 @@
 <head>
 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/p5.min.js"></script>
 	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/addons/p5.dom.min.js"></script>
-	<script language="javascript" type="text/javascript" src="Topics/Advanced Data/XMLYahooWeather/XMLYahooWeather.js"></script>
+	<!--<script language="javascript" type="text/javascript" src="Topics/Simulate/MultipleParticleSystems/Particle.js"></script>
+	<script language="javascript" type="text/javascript" src="Topics/Simulate/MultipleParticleSystems/CrazyParticle.js"></script>
+	<script language="javascript" type="text/javascript" src="Topics/Simulate/MultipleParticleSystems/ParticleSystem.js"></script>
+	<script language="javascript" type="text/javascript" src="Topics/Simulate/MultipleParticleSystems/MultipleParticleSystems.js"></script>-->
 	<script type="text/javascript">
 
 		// function setup() {
@@ -18,7 +21,152 @@
 </head>
 <body>
 
-<div id="p5container"></div>
+<div id="p5container"></div><div id="p5container"></div><script type="text/javascript">/**
+ * Multiple Particle Systems
+ * by Daniel Shiffman.
+ *
+ * Click the mouse to generate a burst of particles
+ * at mouse location.
+ *
+ * Each burst is one instance of a particle system
+ * with Particles and CrazyParticles (a subclass of Particle)
+ * Note use of Inheritance and Polymorphism here.
+ */
+
+var systems = [];
+
+function setup() {
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
+}
+
+function draw() {
+  background(51);
+  for(var i = 0; i < systems.length; i++){
+    systems[i].addParticle();
+    systems[i].run();
+  }
+  if (systems.length === 0) {
+    fill(255);
+    noStroke();
+    textAlign(CENTER);
+    text("click mouse to add particle systems", width/2, height/2);
+  }
+}
+
+function mousePressed() {
+  systems.push(new ParticleSystem(1, createVector(mouseX, mouseY)));
+}
+
+
+
+var Particle = function(position) {
+  this.acceleration = createVector(0, 0.05);
+  this.velocity = createVector(random(-1, 1), random(-2, 0));
+  this.position = position.copy();
+  this.lifespan = 255.0;
+
+  this.run = function() {
+    this.update();
+    this.display();
+  };
+
+  // Method to update position
+  this.update = function(){
+    this.velocity.add(this.acceleration);
+    this.position.add(this.velocity);
+    this.lifespan -= 2;
+  };
+
+  // Method to display
+  this.display = function() {
+    stroke(255,this.lifespan);
+    fill(255,this.lifespan);
+    ellipse(this.position.x,this.position.y,8,8);
+  };
+
+  // Is the particle still useful?
+  this.isDead = function(){
+    if (this.lifespan < 0.0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+}
+
+function CrazyParticle(position) {
+  this.theta = 0;
+
+  Particle.call(this, position);
+  
+  // Method to update position
+  this.update = function(){
+    this.velocity.add(this.acceleration);
+    this.position.add(this.velocity);
+    this.lifespan -= 2;
+    var theta_vel = (this.velocity.x * this.velocity.mag()) / 10;
+    this.theta += theta_vel;
+  };
+
+  // Override the display method
+  this.display = function(){
+    stroke(255,this.lifespan);
+    fill(255,this.lifespan);
+    ellipse(this.position.x,this.position.y,8,8);
+    // Then add a rotating line
+    push();
+    translate(this.position.x,this.position.y);
+    rotate(this.theta);
+    stroke(255,this.lifespan);
+    line(0,0,25,0);
+    pop();
+  }
+}
+
+// Inherit from the parent class
+CrazyParticle.prototype = Object.create(Particle.prototype);
+this.constructor = CrazyParticle;
+
+
+
+
+
+var ParticleSystem = function(num, position) {
+  this.origin = position.copy();
+  this.particles = [];
+  for (var i = 0; i < num; i++) {
+    this.particles.push(new Particle(this.origin));    // Add "num" amount of particles to the arraylist
+  }
+
+  this.addParticle = function() {
+    var p;
+    // Add either a Particle or CrazyParticle to the system
+    if (int(random(0, 2)) == 0) {
+      p = new Particle(this.origin);
+    } 
+    else {
+      p = new CrazyParticle(this.origin);
+    }
+    this.particles.push(p);
+  };
+
+  this.run = function() {
+    for (var i = this.particles.length-1; i >= 0; i--) {
+      var p = this.particles[i];
+      p.run();
+      if (p.isDead()) {
+        this.particles.splice(i, 1);
+      }
+    }
+  };
+
+  // A method to test if the particle system still has particles
+  this.dead = function() {
+    return particles.length === 0;
+  }
+}
+</script>
 
 </body>
 </html>

@@ -23,6 +23,8 @@ function preload() {
 }
 
 function setup() {
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   // Load an image from the data directory
   // Load a different image by modifying the comments
   image(img, 0, 0);
