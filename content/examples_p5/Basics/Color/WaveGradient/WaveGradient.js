@@ -13,9 +13,9 @@ var fillGap = 2.5;
 var c;
 
 function setup() {
-  devicePixelScaling(false);
   var canvas = createCanvas(640, 360);
-  canvas.parent("p5container");
+  pixelDensity(1);
+  //canvas.parent("p5container");
   background(200);
   noLoop();
 }
