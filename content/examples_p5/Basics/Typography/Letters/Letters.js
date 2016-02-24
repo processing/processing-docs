@@ -14,8 +14,7 @@ function setup() {
 
   // Create the font
   //printArray(PFont.list());
-  f = "Georgia";
-  textFont(f);
+  textFont("Source Code Pro", 24);
   textAlign(CENTER, CENTER);
 } 
 
@@ -50,5 +49,6 @@ function draw() {
       counter++;
     }
   }
+  noLoop();
 }
 
