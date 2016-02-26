@@ -202,7 +202,7 @@ image(sunflower,0,0);
       Take the following simple example. This program sets each pixel in a window to a random grayscale value.   The pixels array is just like an other array, the only difference is that we don't have to declare it since it is a Processing built-in variable. 
     </p>
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-5-setting-pixels/">Example:  Setting Pixels</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-05-PixelArray">Example:  Setting Pixels</a>
 
 <pre>
 size(200, 200);
@@ -256,7 +256,7 @@ In programming with pixels, we need to be able to think of every pixel as living
       Let's look at how it is done.
     </p>
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-6/">Example: Setting Pixels according to their 2D location</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-06-PixelArray2D">Example: Setting Pixels according to their 2D location</a>
 
 <pre>
 size(200, 200);
@@ -305,7 +305,7 @@ img.pixels[0] = color(255,0,0); // Sets the first pixel of the image to red
       Access to these fields allows us to loop through all the pixels of an image and display them onscreen.
     </p>
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-7/">Example: Displaying the pixels of an image</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-07-PixelArrayImage">Example: Displaying the pixels of an image</a>
 
 <pre>
 PImage img;
@@ -361,7 +361,7 @@ int displayLoc = x + y*width;
       Just a few paragraphs ago, we were enjoying a relaxing coding session, colorizing images and adding alpha transparency with the friendly tint() method.   For basic filtering, this method did the trick.   The pixel by pixel method, however, will allow us to develop custom algorithms for mathematically altering the colors of an image.  Consider brightness&mdash;brighter colors have higher values for their red, green, and blue components.    It follows naturally that we can alter the brightness of an image by increasing or decreasing the color components of each pixel.  In the next example, we dynamically increase or decrease those values based on the mouse's horizontal location.  (Note, the next two examples include only the image processing loop itself, the rest of the code is assumed.) 
     </p>
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-8/">Example:  Adjusting image brightness</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-08-Brightness">Example:  Adjusting image brightness</a>
 
 <pre>
 for (int x = 0; x < img.width; x++) {
@@ -394,7 +394,7 @@ for (int x = 0; x < img.width; x++) {
 
 <img src="imgs/flashlight.jpg" class="tut" />
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-9/">Example: Adjusting image brightness based on pixel location</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-09-FlashLight">Example: Adjusting image brightness based on pixel location</a>
 
 <pre>
 for (int x = 0; x < img.width; x++) {
@@ -438,7 +438,7 @@ for (int x = 0; x < img.width; x++) {
 
 <img src="imgs/threshold.jpg" class="tut" />
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-10/">Example: Brightness Threshold</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-10-ThresholdDestinationImage">Example: Brightness Threshold</a>
 
 <pre>
 PImage source;       // Source image
@@ -538,7 +538,7 @@ pixels[loc] = color(diff);
 
 <img src="imgs/edges.jpg" class="tut" />
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-12/">Example: Pixel neighbor differences (edges)</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-12-PixelNeighborEdge">Example: Pixel neighbor differences (edges)</a>
 
 <pre>
 // Since we are looking at left neighbors
@@ -600,7 +600,7 @@ Following is an example that performs a convolution using a 2D array (see Chapte
 
 <img src="imgs/sharpen.jpg" class="tut" />
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-13/">Example: Sharpen with Convolution</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-13-Convolution">Example: Sharpen with Convolution</a>
 
 <pre>
 <span style="color: #E2661A;">PImage</span> img;
@@ -695,7 +695,7 @@ Following is an example that performs a convolution using a 2D array (see Chapte
 
 <img src="imgs/pointillism.jpg" class="tut" />
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-14/">Example: "Pointillism"</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-14-Pointillism">Example: "Pointillism"</a>
 
 <pre>
 <span style="color: #E2661A;">PImage</span> img;
@@ -739,7 +739,7 @@ Following is an example that performs a convolution using a 2D array (see Chapte
   </tr>
 </table>
 
-<!--<a href="http://www.learningprocessing.com/examples/chapter-15/example-15-15/">Example: 2D image mapped to 3D</a>-->
+<a href="http://learningprocessing.com/examples/chp15/example-15-15-explode3D">Example: 2D image mapped to 3D</a>
 
 <pre>
 <span style="color: #E2661A;">PImage</span> img;       <span style="color: #666666;">// The source image</span>
