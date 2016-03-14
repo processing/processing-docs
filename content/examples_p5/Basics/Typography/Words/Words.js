@@ -14,8 +14,8 @@ function setup() {
   
   // Create the font
   //printArray(PFont.list());
-  f = "Georgia";
-  textFont(f);
+  //f = "Georgia";
+  textFont("Source Code Pro", 24);
 }
 
 function draw() {

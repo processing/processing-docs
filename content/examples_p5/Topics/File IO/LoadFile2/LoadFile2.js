@@ -14,11 +14,12 @@ var num = 9; // Display this many entries on each screen.
 var startingEntry = 0;  // Display from this entry number
 
 function preload() {
-  lines = loadStrings("/cars2.tsv");
+  lines = loadStrings("cars2.tsv");
 }
 
 function setup() {
-  createCanvas(200, 200);
+  var canvas = createCanvas(200, 200);
+  canvas.parent("p5container");
   fill(255);
   noLoop();
   

@@ -65,14 +65,14 @@
 		<ex p5="true" file="Relativity.html">Relativity</ex>
 		<ex p5="true" file="LinearGradient.html">Linear Gradient</ex>
 		<ex p5="true" file="RadialGradient.html">Radial Gradient</ex>
-		<ex p5="true" file="WaveGradient.html">Wave Gradient</ex>
+		<ex file="WaveGradient.html">Wave Gradient</ex>
 	</cat>
 	<cat label="Math">
 		<ex p5="true" file="IncrementDecrement.html">Increment/Decrement</ex>
 		<ex p5="true" file="OperatorPrecedence.html">Operator Precedence</ex>
 		<ex p5="true" file="Distance1D.html">Distance 1D</ex>
 		<ex p5="true" file="Distance2D.html">Distance 2D</ex>
-		<ex file="Map.html">Map</ex>
+		<ex p5="true" file="Map.html">Map</ex>
 		<ex p5="true" file="Sine.html">Sine</ex>
 		<ex p5="true" file="SineCosine.html">Sine and Cosine</ex>
 		<ex p5="true" file="SineWave.html">Sine Wave</ex>

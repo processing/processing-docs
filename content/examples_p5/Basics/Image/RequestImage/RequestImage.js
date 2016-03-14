@@ -28,7 +28,7 @@ function setup() {
 
   // Load images asynchronously
   for (var i = 0; i < imgCount; i++){
-    imageLoader("/PT_anim"+nf(i, 4)+".gif",i);
+    imageLoader("PT_anim"+nf(i, 4)+".gif",i);
   }
 }
 

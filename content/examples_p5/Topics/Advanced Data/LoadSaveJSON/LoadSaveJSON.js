@@ -36,7 +36,7 @@ var bubbles;
 var json;
 
 function preload() {
-  json = loadJSON("/data.json");
+  json = loadJSON("data.json");
 }
 
 function setup() {

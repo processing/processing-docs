@@ -5,7 +5,7 @@ var Particle = function(l, img_) {
   var vx = randomGaussian()*0.3;
   var vy = randomGaussian()*0.3 - 1.0;
   this.vel = createVector(vx, vy);
-  this.pos = l.get();
+  this.pos = l.copy();
   this.lifespan = 100.0;
   this.img = img_;
 

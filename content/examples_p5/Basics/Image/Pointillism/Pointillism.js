@@ -14,7 +14,7 @@ var img;
 var smallPoint, largePoint;
 
 function preload() {
-  img = loadImage("/moonwalk.jpg");
+  img = loadImage("moonwalk.jpg");
 }
 
 
@@ -33,6 +33,6 @@ function draw() {
   var x = int(random(img.width));
   var y = int(random(img.height));
   var pix = img.get(x, y);
-  fill(pix, 128);
+  fill(pix[0], pix[1], pix[2], 128);
   ellipse(x, y, pointillize, pointillize);
 }

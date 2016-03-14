@@ -11,27 +11,29 @@
 // We're going to store the temperature
 var temperature = 0;
 // We're going to store text about the weather
-String weather = "";
+var weather = "";
 
 // The zip code we'll check for
-String zip = "10003";
+var zip = "10003";
 
-PFont font;
+var xml;
+
+function preload() {
+  var url = "http://xml.weather.yahoo.com/forecastrss?p=" + zip;
+    // Load the XML document
+  xml = loadXML(url);
+
+}
 
 function setup() {
   createCanvas(600, 360);
   
-  font = createFont("Merriweather-Light.ttf", 28);
-  textFont(font);
+  textFont("Merriweather Light", 28);
 
   // The URL for the XML document
-  String url = "http://xml.weather.yahoo.com/forecastrss?p=" + zip;
-  
-  // Load the XML document
-  XML xml = loadXML(url);
 
   // Grab the element we want
-  XML forecast = xml.getChild("channel/item/yweather:forecast");
+  var forecast = xml.getChild("channel/item/yweather:forecast");
   
   // Get the attributes we want
   temperature = forecast.getInt("high");

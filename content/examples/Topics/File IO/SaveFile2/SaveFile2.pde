@@ -3,8 +3,7 @@
  * 
  * This file a PrintWriter object to write data continuously to a file
  * while the mouse is pressed. When a key is pressed, the file closes
- * itself and the program is stopped. This example won't work in a web browser
- * because of Java security restrictions.
+ * itself and the program is stopped.
  */
 
 PrintWriter output;

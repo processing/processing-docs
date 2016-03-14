@@ -16,13 +16,13 @@ var kernel = [[ v, v, v ],
                     
 var img;
 function preload() {
-  img = loadImage("/moon.jpg"); // Load the original image
+  img = loadImage("moon.jpg"); // Load the original image
 }
 
 function setup() {
   var canvas = createCanvas(640, 360);
   canvas.parent("p5container");
-  devicePixelScaling(false);
+  pixelDensity(1);
   noLoop();
 } 
 

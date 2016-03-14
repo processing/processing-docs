@@ -2,7 +2,7 @@
 // An ArrayList is used to manage the list of Particles 
 
 var ParticleSystem = function(num, v, img_) {
-  this.origin = v.get();
+  this.origin = v.copy();
   this.img = img_;
   this.particles = [];
   for (var i = 0; i < num; i++) {
