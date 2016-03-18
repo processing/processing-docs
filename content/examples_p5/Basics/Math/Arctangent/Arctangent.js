@@ -9,7 +9,8 @@
 var e1, e2, e3;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   e1 = new Eye( 250,  16, 120);
   e2 = new Eye( 164, 185,  80);  

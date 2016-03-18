@@ -45,7 +45,7 @@ void draw() {
 <description><![CDATA[
 Sets an output pin to be either high or low<br/>
 <br/>
-You need set the pin to output by calling <a href="GPIO_pinMode_.html">pinMode()</a> before calling this function. Unlike on Arduino, it is not possible to set a input pin's internal pull-up resistor using this function.
+You need to set the pin to output by calling <a href="GPIO_pinMode_.html">pinMode()</a> before calling this function. Unlike on Arduino, it is not possible to set a input pin's internal pull-up resistor using this function.
 ]]></description>
 
 <syntax>

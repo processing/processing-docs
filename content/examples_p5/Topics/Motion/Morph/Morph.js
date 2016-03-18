@@ -19,7 +19,8 @@ var morph = [];
 var state = false;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
 
   // Create a circle using vectors pointing from center
   for (var angle = 0; angle < 360; angle += 9) {

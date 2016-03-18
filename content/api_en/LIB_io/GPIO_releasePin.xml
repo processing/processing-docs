@@ -47,7 +47,7 @@ void keyPressed() {
 <description><![CDATA[
 Gives ownership of a pin back to the operating system<br/>
 <br/>
-Without calling this function the pin will remain in the current state even after the sketch has been closed.
+Without calling this function, the pin will remain in the current state even after the sketch has been closed.
 ]]></description>
 
 <syntax>

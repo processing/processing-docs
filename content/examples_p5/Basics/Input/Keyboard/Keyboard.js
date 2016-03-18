@@ -9,7 +9,8 @@
 var rectWidth;
    
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   background(0);
   rectWidth = width/4;

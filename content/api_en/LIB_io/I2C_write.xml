@@ -23,7 +23,7 @@ void setup() {
 void draw() {
   background(map(mouseX, 0, width, 0, 255));
 
-  // send value over I2C to an digital-to-analog
+  // send value over I2C to a digital-to-analog
   // converter with address 96 (hex 0x60)
   int val = int(4095 * map(mouseX, 0, width, 0.0, 1.0));
   dac.beginTransmission(0x60);
@@ -36,7 +36,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Adds bytes to be written to the device<br/>
+Add bytes to be written to the device<br/>
 <br/>
 You must call beginTransmission() before calling this function. The actual writing takes part when read() or endTransmission() is being called.
 ]]></description>

@@ -20,12 +20,13 @@ var matrix = [ [ -1, -1, -1 ] ,
 
 
 function preload() {
-  img = loadImage("data/moon-wide.jpg"); 
+  img = loadImage("moon-wide.jpg"); 
 }
 
 function setup() {
-  createCanvas(640, 360);
-  devicePixelScaling(false);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
+  pixelDensity(1);
 }
 
 function draw() {
@@ -76,7 +77,7 @@ function convolution(x, y, matrix, matrixsize, img) {
       
       // Make sure we haven't walked off the edge of the pixel array
       // It is often good when looking at neighboring pixels to make sure we have not gone off the edge of the pixel array by accident.
-      loc = constrain(loc, 0, img.pixels.length-1);
+      loc = constrain(loc, 0, img.pixels.length-3);
       // Calculate the convolution
       // We sum all the neighboring pixels multiplied by the values in the convolution matrix.
       rtotal += img.pixels[loc    ] * matrix[i][j];

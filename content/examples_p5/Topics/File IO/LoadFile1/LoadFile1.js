@@ -9,11 +9,12 @@ var lines;
 var index = 0;
 
 function preload() {
-  lines = loadStrings("data/positions.txt");
+  lines = loadStrings("positions.txt");
 }
 
 function setup() {
-  createCanvas(200, 200);
+  var canvas = createCanvas(200, 200);
+  canvas.parent("p5container");
   background(0);
   stroke(255);
   frameRate(12);

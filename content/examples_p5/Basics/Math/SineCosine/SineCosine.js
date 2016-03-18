@@ -12,7 +12,8 @@ var angle1, angle2 = 0;
 var scalar = 70;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   rectMode(CENTER);
 }

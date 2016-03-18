@@ -36,11 +36,12 @@ var bubbles;
 var json;
 
 function preload() {
-  json = loadJSON("data/data.json");
+  json = loadJSON("data.json");
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   loadData();
 }
 
@@ -108,7 +109,7 @@ function draw() {
   }
 
   // Save new data
-  // saveJSONObject(json,"data/data.json");
+  // saveJSONObject(json,"/data.json");
   loadData();
 }
 

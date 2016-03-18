@@ -10,7 +10,8 @@ var y = 100;
 // The statements in the setup() function 
 // execute once when the program begins
 function setup() {
-  createCanvas(640, 360);  // Size must be the first statement
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");  // Size must be the first statement
   stroke(255);     // Set line drawing color to white
   frameRate(30);
 }

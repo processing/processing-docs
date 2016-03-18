@@ -12,9 +12,10 @@ var zoff = 0.0;
 var zincrement = 0.02; 
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   frameRate(30);
-  devicePixelScaling(false);
+  pixelDensity(1);
 }
 
 function draw() {

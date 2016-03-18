@@ -16,11 +16,12 @@ function preload() {
   // The background image must be the same size as the parameters
   // into the size() method. In this program, the size of the image
   // is 640 x 360 pixels.
-  bg = loadImage("data/moonwalk.jpg");
+  bg = loadImage("moonwalk.jpg");
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
 }
 
 function draw() {

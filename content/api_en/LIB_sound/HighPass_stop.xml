@@ -17,8 +17,6 @@ import processing.sound.*;
 WhiteNoise noise;
 HighPass highPass;
 
-float amp=0.0;
-
 void setup() {
   size(640,360);
   background(255);

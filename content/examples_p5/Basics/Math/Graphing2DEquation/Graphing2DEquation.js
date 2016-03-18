@@ -8,9 +8,10 @@
  */
  
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   // Temporary-ish fix for retina machines
-  devicePixelScaling(false);
+  pixelDensity(1);
 
 }
 

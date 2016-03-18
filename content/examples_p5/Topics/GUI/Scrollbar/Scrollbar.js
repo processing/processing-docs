@@ -14,12 +14,13 @@ var img1, img2;  // Two images to load
 
 function preload() {
   // Load images
-  img1 = loadImage("data/seedTop.jpg");
-  img2 = loadImage("data/seedBottom.jpg");
+  img1 = loadImage("seedTop.jpg");
+  img2 = loadImage("seedBottom.jpg");
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   
   hs1 = new HScrollbar(0, height/2-8, width, 16, 16);

@@ -37,7 +37,10 @@ void setup() {
 </example>
 
 <description><![CDATA[
-<b>Table</b> objects store data with multiple rows and columns, much like in a traditional spreadsheet.  Tables can be generated from scratch, dynamically, or using data from an existing file.  Tables can also be output and saved to disk, as in the example above.
+<b>Table</b> objects store data with multiple rows and columns, much like in a traditional spreadsheet.  Tables can be generated from scratch, dynamically, or using data from an existing file.  Tables can also be output and saved to disk, as in the example above.<br />
+<br />
+Additional <b>Table</b> methods are documented in the <a href="http://processing.github.io/processing-javadocs/core/">Processing Data Javadoc</a>.
+
 ]]></description>
 
 

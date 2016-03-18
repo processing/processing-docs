@@ -31,7 +31,7 @@ void setup() {
   bandPass.process(noise);
 
   // Change the cutoff frequency of the filter
-  bandpass.freq(freq);
+  bandPass.freq(freq);
 }      
 
 void draw() {

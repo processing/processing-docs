@@ -12,12 +12,13 @@
 var img;
 
 function preload() {
-  img = loadImage("data/moon-wide.jpg");  
+  img = loadImage("moon-wide.jpg");  
 }
 
 function setup() {
-  createCanvas(640, 360);
-  devicePixelScaling(false);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
+  pixelDensity(1);
   frameRate(30);
   img.loadPixels();
   // Only need to load the pixels[] array once, because we're only

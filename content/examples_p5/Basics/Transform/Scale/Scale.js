@@ -12,7 +12,8 @@ var a = 0.0;
 var s = 0.0;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke();
   rectMode(CENTER);
   frameRate(30);

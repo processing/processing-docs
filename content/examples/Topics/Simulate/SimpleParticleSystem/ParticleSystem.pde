@@ -6,7 +6,7 @@ class ParticleSystem {
   PVector origin;
 
   ParticleSystem(PVector location) {
-    origin = location.get();
+    origin = location.copy();
     particles = new ArrayList<Particle>();
   }
 
@@ -16,7 +16,7 @@ class ParticleSystem {
 
   void run() {
     for (int i = particles.size()-1; i >= 0; i--) {
-      Particle p = particles.get(i);
+      Particle p = particles.copy(i);
       p.run();
       if (p.isDead()) {
         particles.remove(i);

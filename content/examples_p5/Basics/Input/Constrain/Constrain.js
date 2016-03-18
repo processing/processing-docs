@@ -13,7 +13,8 @@ var edge = 100;
 var inner = edge + radius;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noStroke(); 
   ellipseMode(RADIUS);
   rectMode(CORNERS);

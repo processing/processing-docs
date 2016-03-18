@@ -13,11 +13,11 @@ var x, y; // X and Y coordinates of text
 var hr, vr;  // horizontal and vertical radius of the text
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   
   // Create the font
-  textFont("Georgia");
-  textSize(36);
+  textFont("Source Code Pro", 36);
   textAlign(CENTER, CENTER);
   
   hr = textWidth(message) / 2;

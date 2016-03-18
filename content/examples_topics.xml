@@ -9,43 +9,64 @@
 		<ex file="Icosahedra.html">Icosahedra</ex>
 	</cat>
 	<cat label="Drawing">
-		<ex file="ContinuousLines.html">Continuous Lines</ex>
-		<ex file="Pattern.html">Pattern</ex>
-		<ex file="Pulses.html">Pulses</ex>
+		<ex p5="true" file="ContinuousLines.html">Continuous Lines</ex>
+		<ex p5="true" file="Pattern.html">Pattern</ex>
+		<ex p5="true" file="Pulses.html">Pulses</ex>
 	</cat>
 	<cat label="Animation">
-		<ex file="Sequential.html">Sequential</ex>
-		<ex file="AnimatedSprite.html">Animated Sprite</ex>
+		<ex p5="true" file="Sequential.html">Sequential</ex>
+		<ex p5="true" file="AnimatedSprite.html">Animated Sprite</ex>
 	</cat>
 	<cat label="GUI">
-		<ex file="Rollover.html">Rollover</ex>
-		<ex file="Button.html">Button</ex>
-		<ex file="Handles.html">Handles</ex>
-		<ex file="Scrollbar.html">Scrollbar</ex>
+		<ex p5="true" file="Rollover.html">Rollover</ex>
+		<ex p5="true" file="Button.html">Button</ex>
+		<ex p5="true" file="Handles.html">Handles</ex>
+		<ex p5="true" file="Scrollbar.html">Scrollbar</ex>
 	</cat>
 	<cat label="Motion">
-		<ex file="Linear.html">Linear</ex>
-		<ex file="Bounce.html">Bounce</ex>
-		<ex file="BouncyBubbles.html">Bouncy Bubbles</ex>
-		<ex file="MovingOnCurves.html">Moving On Curves</ex>
-		<ex file="Brownian.html">Brownian</ex>
+		<ex p5="true" file="Linear.html">Linear</ex>
+		<ex p5="true" file="Bounce.html">Bounce</ex>
+		<ex p5="true" file="BouncyBubbles.html">Bouncy Bubbles</ex>
+		<ex p5="true" file="MovingOnCurves.html">Moving On Curves</ex>
+		<ex p5="true" file="Brownian.html">Brownian</ex>
+		<ex p5="true" file="CircleCollision.html">Circle Collision</ex>
+		<ex p5="true" file="Morph.html">Morph</ex>
+		<ex p5="true" file="Reflection1.html">Reflection 1</ex>
+		<ex p5="true" file="Reflection2.html">Reflection 2</ex>
 	</cat>
 	<cat label="Interaction">
-		<ex file="Tickle.html">Tickle</ex>
-		<ex file="Follow1.html">Follow 1</ex>
-		<ex file="Follow2.html">Follow 2</ex>
-		<ex file="Follow3.html">Follow 3</ex>
-		<ex file="Reach1.html">Reach 1</ex>
-		<ex file="Reach2.html">Reach 2</ex>
-		<ex file="Reach3.html">Reach 3</ex>
+		<ex p5="true" file="Tickle.html">Tickle</ex>
+		<ex p5="true" file="Follow1.html">Follow 1</ex>
+		<ex p5="true" file="Follow2.html">Follow 2</ex>
+		<ex p5="true" file="Follow3.html">Follow 3</ex>
+		<ex p5="true" file="Reach1.html">Reach 1</ex>
+		<ex p5="true" file="Reach2.html">Reach 2</ex>
+		<ex p5="true" file="Reach3.html">Reach 3</ex>
 	</cat>
 	<cat label="Image Processing">
-		<ex file="PixelArray.html">Pixel Array</ex>
-		<ex file="Brightness.html">Brightness</ex>
-		<ex file="Blur.html">Blur</ex>
-		<ex file="EdgeDetection.html">Edge Detection</ex>
+		<ex p5="true" file="PixelArray.html">Pixel Array</ex>
+		<ex p5="true" file="Brightness.html">Brightness</ex>
+		<ex p5="true" file="Blur.html">Blur</ex>
+		<ex p5="true" file="EdgeDetection.html">Edge Detection</ex>
+		<ex p5="true" file="Convolution.html">Convolution</ex>
+		<ex p5="true" file="Histogram.html">Histogram</ex>
+		<ex p5="true" file="LinearImage.html">Linear Image</ex>
 		<ex file="Zoom.html">Zoom</ex>
 		<ex file="Explode.html">Explode</ex>
+	</cat>
+	<cat label="Advanced Data">
+		<ex p5="true" file="ArrayListClass.html">Array List Class</ex>
+		<ex p5="true" file="IntListLottery.html">Int List Lottery</ex>
+		<ex p5="true" file="LoadSaveJSON.html">Load Save JSON</ex>
+		<ex p5="true" file="LoadSaveTable.html">Load Save Table</ex>
+		<ex file="LoadSaveXML.html">Load Save XML</ex>
+		<ex file="XMLYahooWeather.html">XML Yahoo Weather</ex>
+	</cat>
+	<cat label="File IO">
+		<ex p5="true" file="LoadFile1.html">Load File 1</ex>
+		<ex p5="true" file="LoadFile2.html">Load File 2</ex>
+		<ex file="SaveFile1.html">Save File 1</ex>
+		<ex p5="true" file="SaveOneFrame.html">Save One Frame</ex>
 	</cat>
 	<cat label="Textures">
 		<ex file="TextureQuad.html">Texture Quad</ex>
@@ -54,21 +75,32 @@
 		<ex file="TextureCube.html">Texture Cube</ex>
 	</cat>
 	<cat label="Simulate">
-		<ex file="Spring.html">Spring</ex>
-		<ex file="Springs.html">Springs</ex>
-		<ex file="Chain.html">Chain</ex>
+		<ex p5="true" file="Spring.html">Spring</ex>
+		<ex p5="true" file="Springs.html">Springs</ex>
+		<ex p5="true" file="Chain.html">Chain</ex>
 		<ex file="SoftBody.html">Soft Body</ex>
-		<ex file="Flocking.html">Flocking</ex>
-		<ex file="SimpleParticleSystem.html">Simple Particle System</ex>
-		<ex file="MultipleParticleSystems.html">Multiple Particle Systems</ex>
+		<ex p5="true" file="Flocking.html">Flocking</ex>
+		<ex p5="true" file="SimpleParticleSystem.html">Simple Particle System</ex>
+		<ex p5="true" file="MultipleParticleSystems.html">Multiple Particle Systems</ex>
+		<ex p5="true" file="ForcesWithVectors.html">Forces With Vectors</ex>
+		<ex p5="true" file="SmokeParticleSystem.html">Smoke Particle System</ex>
+	</cat>
+	<cat label="Vectors">
+		<ex p5="true" file="BouncingBall.html">Bouncing Ball</ex>
+		<ex p5="true" file="VectorMath.html">Vector Math</ex>
+		<ex p5="true" file="AccelerationWithVectors.html">Acceleration With Vectors</ex>
 	</cat>
 	<cat label="Fractals and L-Systems">
-		<ex file="Mandelbrot.html">Mandelbrot</ex>
-		<ex file="Tree.html">Tree</ex>
+		<ex p5="true" file="Mandelbrot.html">Mandelbrot</ex>
+		<ex p5="true" file="Tree.html">Tree</ex>
+		<ex p5="true" file="Koch.html">Koch</ex>
+		<ex p5="true" file="PenroseSnowflake.html">Penrose Snowflake</ex>
+		<ex p5="true" file="PenroseTile.html">Penrose Tile</ex>
+		<ex p5="true" file="Pentigree.html">Pentigree</ex>
 	</cat>
-		<cat label="Cellular Automata">
-		<ex file="Wolfram.html">Wolframs's 1D CA</ex>
-		<ex file="GameOfLife.html">Conway's Game of Life</ex>
+	<cat label="Cellular Automata">
+		<ex p5="true" file="Wolfram.html">Wolframs's 1D CA</ex>
+		<ex p5="true" file="GameOfLife.html">Conway's Game of Life</ex>
 		<ex file="Spore1.html">Spore 1</ex>
 		<ex file="Spore2.html">Spore 2</ex>
 	</cat>

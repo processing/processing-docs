@@ -12,7 +12,8 @@ var a = 0;      // Create a variable "a" of the datatype "int"
 var b = 0.0;  // Create a variable "b" of the datatype "float"
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   stroke(255);
   frameRate(30);
 }

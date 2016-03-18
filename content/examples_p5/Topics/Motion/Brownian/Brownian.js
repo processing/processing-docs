@@ -13,7 +13,8 @@ var ay = [];
 
 function setup() 
 {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   for(var i = 0; i < num; i++) {
     ax[i] = width/2;
     ay[i] = height/2;

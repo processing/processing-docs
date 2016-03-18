@@ -8,8 +8,9 @@
 var increment = 0.02;
 
 function setup() {
-  createCanvas(640, 360);
-  devicePixelScaling(false);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
+  pixelDensity(1);
 }
 
 function draw() {

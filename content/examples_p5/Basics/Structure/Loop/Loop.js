@@ -13,7 +13,8 @@ var y = 100;
 // The statements in the setup() function 
 // run once when the program begins
 function setup() {
-  createCanvas(640, 360);  // Size should be the first statement
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");  // Size should be the first statement
   stroke(255);     // Set stroke color to white
   noLoop();
   

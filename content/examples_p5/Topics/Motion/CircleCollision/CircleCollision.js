@@ -8,7 +8,8 @@
  
 var balls;
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   balls =  [
   new Ball(100, 400, 20), 
   new Ball(700, 400, 80) 

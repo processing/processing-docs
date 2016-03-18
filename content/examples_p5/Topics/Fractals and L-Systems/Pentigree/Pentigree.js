@@ -9,7 +9,8 @@
 var ps;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   ps = new PentigreeLSystem();
   ps.simulate(3);
 }

@@ -32,14 +32,14 @@ void setup() {
 
   // Patch the reverb
   reverb.process(in, 5);
-  reverb.time(0.5);
+  //reverb.damp(0.5);
 }      
 
 void draw() {
 }
 
 void mousePressed() {
-  in.stop();
+  //in.stop();
   reverb.stop();
 }
 

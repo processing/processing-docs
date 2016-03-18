@@ -139,7 +139,7 @@ def get_lib_locations(f):
 
       contents = line.split('\\')
       if len(contents) != 2:
-        print 'Lines for contributions must be of the form "[Contribution ID] : [Contribution URL]"'
+        print 'Lines for contributions must be of the form "[Contribution ID] \ [Contribution URL]"'
         print contents
         continue
 

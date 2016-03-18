@@ -13,7 +13,8 @@ function setup() {
   var p3 = p2+d;
   var p4 = p3+d;
 
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   noSmooth();
   background(0);
   translate(140, 0);

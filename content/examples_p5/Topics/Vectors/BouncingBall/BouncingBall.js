@@ -12,7 +12,8 @@ var velocity;  // Velocity of shape
 var gravity;   // Gravity acts at the shape's acceleration
 
 function setup() {
-  createCanvas(640,360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   position = createVector(100,100);
   velocity = createVector(1.5,2.1);
   gravity = createVector(0,0.2);

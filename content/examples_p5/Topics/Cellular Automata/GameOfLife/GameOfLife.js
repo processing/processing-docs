@@ -41,7 +41,8 @@ function make2DArray(cols,rows) {
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   alive = color(0, 200, 0);
   dead = color(0);
   // Instantiate arrays 
@@ -93,7 +94,7 @@ function draw() {
   }
 
   // Create  new cells manually on pause
-  if (pause && mousePressed) {
+  if (pause && mouseIsPressed) {
     // Map and avoid out of bound errors
     var xCellOver = int(map(mouseX, 0, width, 0, width/cellSize));
     xCellOver = constrain(xCellOver, 0, width/cellSize-1);
@@ -110,7 +111,7 @@ function draw() {
       fill(alive); // Fill alive color
     }
   } 
-  else if (pause && !mousePressed) { // And then save to buffer once mouse goes up
+  else if (pause && !mouseIsPressed) { // And then save to buffer once mouse goes up
     // Save cells to buffer (so we opeate with one array keeping the other intact)
     for (var x=0; x<width/cellSize; x++) {
       for (var y=0; y<height/cellSize; y++) {

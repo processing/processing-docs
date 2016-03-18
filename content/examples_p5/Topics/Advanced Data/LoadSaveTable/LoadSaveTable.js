@@ -25,11 +25,12 @@ var table;
 function preload() {
   // Load CSV file into a Table object
   // "header" option indicates the file has a header row
-  table = loadTable("data/data.csv", "header");
+  table = loadTable("data.csv", "header");
 }
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   loadData();
 }
 
@@ -44,6 +45,7 @@ function draw() {
 
   textAlign(LEFT);
   fill(0);
+  noStroke();
   text("Click to add bubbles.", 10, height-10);
 }
 
@@ -72,10 +74,10 @@ function mousePressed() {
   // Create a new row
   var row = table.addRow();
   // Set the values of that row
-  row.setFloat("x", mouseX);
-  row.setFloat("y", mouseY);
-  row.setFloat("diameter", random(40, 80));
-  row.setString("name", "Blah");
+  row.set("x", mouseX);
+  row.set("y", mouseY);
+  row.set("diameter", random(40, 80));
+  row.set("name", "Blah");
 
   // If the table has more than 10 rows
   if (table.getRowCount() > 10) {
@@ -84,7 +86,7 @@ function mousePressed() {
   }
 
   // Writing the CSV back to the same file
-  // saveTable(table, "data/data.csv");
+  // saveTable(table, "/data.csv");
   // And reloading it
   loadData();
 }

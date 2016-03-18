@@ -9,12 +9,13 @@
 var f;
   
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   
   // Create the font
   //printArray(PFont.list());
-  f = "Georgia";
-  textFont(f);
+  //f = "Georgia";
+  textFont("Source Code Pro", 24);
 }
 
 function draw() {

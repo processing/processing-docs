@@ -11,7 +11,8 @@
 var ps;
 
 function setup() {
-  createCanvas(640,360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   ps = new ParticleSystem(createVector(width/2,50));
 }
 

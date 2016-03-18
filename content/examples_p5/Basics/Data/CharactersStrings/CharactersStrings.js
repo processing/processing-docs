@@ -23,7 +23,8 @@ var letter = '';
 var words = "Begin...";
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   // Create the font
   textFont("Georgia", 36);
 }

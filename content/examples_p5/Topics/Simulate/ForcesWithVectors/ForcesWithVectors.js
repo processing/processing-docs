@@ -19,7 +19,8 @@ var movers = [];
 var liquid;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   reset();
   // Create liquid object
   liquid = new Liquid(0, height/2, width, height/2, 0.1);

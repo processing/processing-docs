@@ -13,11 +13,12 @@
 var ps;
 
 function preload() {
-  img = loadImage("data/texture.png");
+  img = loadImage("texture.png");
 }
 
 function setup() {
-  createCanvas(640,360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   ps = new ParticleSystem(0,createVector(width/2,height-60),img);
 }
 

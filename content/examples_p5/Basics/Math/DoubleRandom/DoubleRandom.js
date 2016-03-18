@@ -10,7 +10,8 @@ var totalPts = 300;
 var steps = totalPts + 1;
   
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   stroke(255);
   frameRate(1);
 } 

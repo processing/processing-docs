@@ -60,7 +60,7 @@ dl.network dd { margin: 0; }
 dl.network dd.date { color: #999966; margin-bottom: 1em; }
 
 /*** Reference ***/
-.ref-notice { margin: 2.5em 0 2.5em 0; color: #006699}
+.ref-notice { margin: 2.5em 0 2.5em 0; color: #006699;}
 
 #Language th { width: 100px; font-weight: normal; text-align: left; vertical-align: top; }
 #Language td { vertical-align: top; padding-bottom: 2em; }

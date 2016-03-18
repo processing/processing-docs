@@ -22,12 +22,13 @@ var loadStates = new Array(imgCount);
 var loaderX, loaderY, theta;
 
 function setup() {
-  createCanvas(640, 360);
+  var canvas = createCanvas(640, 360);
+  canvas.parent("p5container");
   imgW = width/imgCount;
 
   // Load images asynchronously
   for (var i = 0; i < imgCount; i++){
-    imageLoader("data/PT_anim"+nf(i, 4)+".gif",i);
+    imageLoader("PT_anim"+nf(i, 4)+".gif",i);
   }
 }
 

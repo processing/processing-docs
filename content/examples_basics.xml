@@ -1,53 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <examples>
 	<cat label="Structure">
-		<ex file="StatementsComments.html">Statements and Comments</ex>
-		<ex file="Coordinates.html">Coordinates</ex>
-		<ex file="WidthHeight.html">Width and Height</ex>
-		<ex file="SetupDraw.html">Setup and Draw</ex>
-		<ex file="NoLoop.html">No Loop</ex>
-		<ex file="Loop.html">Loop</ex>
-		<ex file="Redraw.html">Redraw</ex>
-		<ex file="Functions.html">Functions</ex>
-		<ex file="Recursion.html">Recursion</ex>
-		<ex file="CreateGraphics.html">CreateGraphics</ex>
+		<ex p5="true" file="StatementsComments.html">Statements and Comments</ex>
+		<ex p5="true" file="Coordinates.html">Coordinates</ex>
+		<ex p5="true" file="WidthHeight.html">Width and Height</ex>
+		<ex p5="true" file="SetupDraw.html">Setup and Draw</ex>
+		<ex p5="true" file="NoLoop.html">No Loop</ex>
+		<ex p5="true" file="Loop.html">Loop</ex>
+		<ex p5="true" file="Redraw.html">Redraw</ex>
+		<ex p5="true" file="Functions.html">Functions</ex>
+		<ex p5="true" file="Recursion.html">Recursion</ex>
+		<ex p5="true" file="CreateGraphics.html">CreateGraphics</ex>
 	</cat>
 	<cat label="Form">
-		<ex file="PointsLines.html">Points and Lines</ex>
-		<ex file="ShapePrimitives.html">Shape Primitives</ex>
-		<ex file="PieChart.html">Pie Chart</ex>
-		<ex file="RegularPolygon.html">Regular Polygon</ex>
-		<ex file="Star.html">Star</ex>
-		<ex file="TriangleStrip.html">Triangle Strip</ex>
-		<ex file="Bezier.html">Bezier</ex>
+		<ex p5="true" file="PointsLines.html">Points and Lines</ex>
+		<ex p5="true" file="ShapePrimitives.html">Shape Primitives</ex>
+		<ex p5="true" file="PieChart.html">Pie Chart</ex>
+		<ex p5="true" file="RegularPolygon.html">Regular Polygon</ex>
+		<ex p5="true" file="Star.html">Star</ex>
+		<ex p5="true" file="TriangleStrip.html">Triangle Strip</ex>
+		<ex p5="true" file="Bezier.html">Bezier</ex>
 		<ex file="Primitives3D.html">3D Primitives</ex>
 	</cat>
 	<cat label="Data">
-		<ex file="Variables.html">Variables</ex>
-		<ex file="IntegersFloats.html">Integers and Floats</ex>
-		<ex file="TrueFalse.html">True/False</ex>
-		<ex file="CharactersStrings.html">Characters and Strings</ex>
-		<ex file="VariableScope.html">Variable Scope</ex>
+		<ex p5="true" file="Variables.html">Variables</ex>
+		<ex p5="true" file="IntegersFloats.html">Integers and Floats</ex>
+		<ex p5="true" file="TrueFalse.html">True/False</ex>
+		<ex p5="true" file="CharactersStrings.html">Characters and Strings</ex>
+		<ex p5="true" file="VariableScope.html">Variable Scope</ex>
+		<ex p5="true" file="DatatypeConversion.html">Datatype Conversion</ex>
 	</cat>
 	<cat label="Arrays">
-		<ex file="Array.html">Array</ex>
-		<ex file="Array2D.html">Array 2D</ex>
-		<ex file="ArrayObjects.html">Array Objects</ex>
+		<ex p5="true" file="Array.html">Array</ex>
+		<ex p5="true" file="Array2D.html">Array 2D</ex>
+		<ex p5="true" file="ArrayObjects.html">Array Objects</ex>
 	</cat>
 	<cat label="Control">
-		<ex file="Iteration.html">Iteration</ex>
-		<ex file="EmbeddedIteration.html">Embedded Iteration</ex>
-		<ex file="Conditionals1.html">Conditionals 1</ex>
-		<ex file="Conditionals2.html">Conditionals 2</ex>
-		<ex file="LogicalOperators.html">Logical Operators</ex>
+		<ex p5="true" file="Iteration.html">Iteration</ex>
+		<ex p5="true" file="EmbeddedIteration.html">Embedded Iteration</ex>
+		<ex p5="true" file="Conditionals1.html">Conditionals 1</ex>
+		<ex p5="true" file="Conditionals2.html">Conditionals 2</ex>
+		<ex p5="true" file="LogicalOperators.html">Logical Operators</ex>
 	</cat>
 	<cat label="Image">
-		<ex file="LoadDisplayImage.html">Load and Display Image</ex>
-		<ex file="BackgroundImage.html">Background Image</ex>
-		<ex file="Transparency.html">Transparency</ex>
-		<ex file="Alphamask.html">Alphamask</ex>
-		<ex file="CreateImage.html">CreateImage</ex>
-		<ex file="Pointillism.html">Pointillism</ex>
+		<ex p5="true" file="LoadDisplayImage.html">Load and Display Image</ex>
+		<ex p5="true" file="BackgroundImage.html">Background Image</ex>
+		<ex p5="true" file="Transparency.html">Transparency</ex>
+		<ex p5="true" file="Alphamask.html">Alphamask</ex>
+		<ex p5="true" file="CreateImage.html">CreateImage</ex>
+		<ex p5="true" file="Pointillism.html">Pointillism</ex>
+		<ex p5="true" file="RequestImage.html">Request Image</ex>
 	</cat>
 	<cat label="Shape">
 		<ex file="LoadDisplaySVG.html">Load and Display SVG</ex>
@@ -56,62 +58,74 @@
 		<ex file="GetChild.html">Get Child</ex>
 	</cat>
 	<cat label="Color">
-		<ex file="Hue.html">Hue</ex>
-		<ex file="Saturation.html">Saturation</ex>
-		<ex file="Brightness.html">Brightness</ex>
-		<ex file="ColorVariables.html">Color Variables</ex>
-		<ex file="Relativity.html">Relativity</ex>
-		<ex file="LinearGradient.html">Linear Gradient</ex>
-		<ex file="RadialGradient.html">Radial Gradient</ex>
+		<ex p5="true" file="Hue.html">Hue</ex>
+		<ex p5="true" file="Saturation.html">Saturation</ex>
+		<ex p5="true" file="Brightness.html">Brightness</ex>
+		<ex p5="true" file="ColorVariables.html">Color Variables</ex>
+		<ex p5="true" file="Relativity.html">Relativity</ex>
+		<ex p5="true" file="LinearGradient.html">Linear Gradient</ex>
+		<ex p5="true" file="RadialGradient.html">Radial Gradient</ex>
 		<ex file="WaveGradient.html">Wave Gradient</ex>
 	</cat>
 	<cat label="Math">
-		<ex file="IncrementDecrement.html">Increment/Decrement</ex>
-		<ex file="OperatorPrecedence.html">Operator Precedence</ex>
-		<ex file="Distance1D.html">Distance 1D</ex>
-		<ex file="Distance2D.html">Distance 2D</ex>
-		<ex file="Map.html">Map</ex>
-		<ex file="Sine.html">Sine</ex>
-		<ex file="SineCosine.html">Sine and Cosine</ex>
-		<ex file="SineWave.html">Sine Wave</ex>
-		<ex file="AdditiveWave.html">Additive Wave</ex>
-		<ex file="PolarToCartesian.html">Polar to Cartesian</ex>
-		<ex file="Arctangent.html">Arctangent</ex>
-		<ex file="Graphing2DEquation.html">Graphing 2D Equation</ex>
-		<ex file="Random.html">Random</ex>
-		<ex file="DoubleRandom.html">Double Random</ex>
-		<ex file="Noise1D.html">Noise 1D</ex>
-		<ex file="NoiseWave.html">NoiseWave</ex>
+		<ex p5="true" file="IncrementDecrement.html">Increment/Decrement</ex>
+		<ex p5="true" file="OperatorPrecedence.html">Operator Precedence</ex>
+		<ex p5="true" file="Distance1D.html">Distance 1D</ex>
+		<ex p5="true" file="Distance2D.html">Distance 2D</ex>
+		<ex p5="true" file="Map.html">Map</ex>
+		<ex p5="true" file="Sine.html">Sine</ex>
+		<ex p5="true" file="SineCosine.html">Sine and Cosine</ex>
+		<ex p5="true" file="SineWave.html">Sine Wave</ex>
+		<ex p5="true" file="AdditiveWave.html">Additive Wave</ex>
+		<ex p5="true" file="PolarToCartesian.html">Polar to Cartesian</ex>
+		<ex p5="true" file="Arctangent.html">Arctangent</ex>
+		<ex p5="true" file="Graphing2DEquation.html">Graphing 2D Equation</ex>
+		<ex p5="true" file="Interpolate.html">Interpolate</ex>
+		<ex p5="true" file="Random.html">Random</ex>
+		<ex p5="true" file="DoubleRandom.html">Double Random</ex>
+		<ex p5="true" file="RandomGaussian.html">Random Gaussian</ex>
+		<ex p5="true" file="Noise1D.html">Noise 1D</ex>
+		<ex p5="true" file="Noise2D.html">Noise 2D</ex>
+		<ex p5="true" file="Noise3D.html">Noise 3D</ex>
+		<ex p5="true" file="NoiseWave.html">NoiseWave</ex>
 	</cat>
 	<cat label="Input">
-		<ex file="Mouse1D.html">Mouse 1D</ex>
-		<ex file="Mouse2D.html">Mouse 2D</ex>
-		<ex file="MousePress.html">MousePress</ex>
-		<ex file="MouseSignals.html">Mouse Signals</ex>
-		<ex file="Easing.html">Easing</ex>
-		<ex file="Constrain.html">Constrain</ex>
-		<ex file="StoringInput.html">Storing Input</ex>
-		<ex file="MouseFunctions.html">Mouse Functions</ex>
-		<ex file="Keyboard.html">Keyboard</ex>
-		<ex file="KeyboardFunctions.html">Keyboard Functions</ex>
-		<ex file="Milliseconds.html">Milliseconds</ex>
-		<ex file="Clock.html">Clock</ex>
+		<ex p5="true" file="Mouse1D.html">Mouse 1D</ex>
+		<ex p5="true" file="Mouse2D.html">Mouse 2D</ex>
+		<ex p5="true" file="MousePress.html">MousePress</ex>
+		<ex p5="true" file="MouseSignals.html">Mouse Signals</ex>
+		<ex p5="true" file="Easing.html">Easing</ex>
+		<ex p5="true" file="Constrain.html">Constrain</ex>
+		<ex p5="true" file="StoringInput.html">Storing Input</ex>
+		<ex p5="true" file="MouseFunctions.html">Mouse Functions</ex>
+		<ex p5="true" file="Keyboard.html">Keyboard</ex>
+		<ex p5="true" file="KeyboardFunctions.html">Keyboard Functions</ex>
+		<ex p5="true" file="Milliseconds.html">Milliseconds</ex>
+		<ex p5="true" file="Clock.html">Clock</ex>
 	</cat>
 	<cat label="Transform">
-		<ex file="Translate.html">Translate</ex>
-		<ex file="Scale.html">Scale</ex>
-		<ex file="Rotate.html">Rotate</ex>
+		<ex p5="true" file="Translate.html">Translate</ex>
+		<ex p5="true" p5="true" file="Scale.html">Scale</ex>
+		<ex p5="true" file="Rotate.html">Rotate</ex>
 		<ex file="RotateXY.html">RotateXY</ex>
 		<ex file="RotatePushPop.html">RotatePushPop</ex>
-		<ex file="Arm.html">Arm</ex>
+		<ex p5="true" file="Arm.html">Arm</ex>
 	</cat>
 	<cat label="Objects">
-		<ex file="Objects.html">Objects</ex>
-		<ex file="MultipleConstructors.html">Multiple Constructors</ex>
-		<ex file="CompositeObjects.html">Composite Objects</ex>
-		<ex file="Inheritance.html">Inheritance</ex>
+		<ex p5="true" file="Objects.html">Objects</ex>
+		<ex p5="true" file="MultipleConstructors.html">Multiple Constructors</ex>
+		<ex p5="true" file="CompositeObjects.html">Composite Objects</ex>
+		<ex p5="true" file="Inheritance.html">Inheritance</ex>
 	</cat>
-		<cat label="Lights">
+	<cat label="Typography">
+		<ex p5="true" file="Letters.html">Letters</ex>
+		<ex p5="true" file="Words.html">Words</ex>
+	</cat>
+	<cat label="Web">
+		<ex p5="true" file="EmbeddedLinks.html">Embedded Links</ex>
+		<ex p5="true" file="LoadingImages.html">Loading Images</ex>
+	</cat>
+	<cat label="Lights">
 		<ex file="OnOff.html">On/Off</ex>
 		<ex file="Directional.html">Directional</ex>
 		<ex file="Spot.html">Spot</ex>
