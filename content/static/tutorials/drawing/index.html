@@ -22,7 +22,6 @@
 <pre>
 <span style="color: #006699;">line</span>(1,0,4,5);
 </pre>
-<br />
 Even without having studied the syntax of writing code, the above statement should make a fair amount of sense. We are providing a <em>command</em> (which we will refer to as a  "function") for the machine to follow entitled "line."  In addition, we are specifying some arguments for how that line should be drawn, from point A (1,0) to point B (4,5). If you think of that line of code as a sentence, the  function is a verb and the arguments are the objects of the sentence.  The code sentence also ends with a semicolon instead of a period.
 <br /><br />
 <!--<img src="imgs/1.2.jpg">-->
@@ -47,17 +46,17 @@ For each shape, we will ask ourselves what information is required to specify th
  A <a href="http://www.processing.org/reference/point_.html"><strong>point()</strong></a> is the easiest of the shapes and a good place to start. To draw a point, we only need an x and y coordinate.
 <br /><br />
 <!--<img src="imgs/1.5.jpg">-->
-<img src="imgs/drawing-05.svg" style= "width: 570px; height: 270px">
+<img src="imgs/drawing-05.svg" style= "width: 500px; height: 270px">
 <br /><br />
 A <a href="http://www.processing.org/reference/line_.html"><strong>line()</strong></a> isn't terribly difficult either and simply requires two points: (x1,y1) and (x2,y2):
 <br /><br />
 <!--<img src="imgs/1.6.jpg">-->
-<img src="imgs/drawing-06.svg" style= "width: 600px; height: 280px">
+<img src="imgs/drawing-06.svg" style= "width: 500px; height: 260px">
 <br /><br />
 Once we arrive at drawing a <a href="http://www.processing.org/reference/rect_.html"><strong>rect()</strong></a>, things become a bit more complicated. In Processing, a rectangle is specified by the coordinate for the top left corner of the rectangle, as well as its width and height.
 <br /><br /> 
 <!--<img src="imgs/1.7.jpg">-->
-<img src="imgs/drawing-07.svg" style= "width: 645px; height: 290px">
+<img src="imgs/drawing-07.svg" style= "width: 515px; height: 270px">
 <br /><br />
 A second way to draw a rectangle involves specifying the centerpoint, along with width and height. If we prefer this method, we first indicate that we want to use the "CENTER" mode before the instruction for the rectangle itself. Note that Processing is case-sensitive.
 <br /><br />
