@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 192 612 190" enable-background="new 0 192 612 190" xml:space="preserve">
-<circle cx="112.5" cy="252.2" r="5.5"/>
-<line fill="none" stroke="#999999" stroke-width="1.3" x1="119.9" y1="258.1" x2="228.7" y2="295.3"/>
-<text transform="matrix(1 0 0 1 163.041 308.5034)" fill="#999999" font-family="'ArialMT'" font-size="17.2125">u</text>
-<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="123.6" y1="252.1" x2="240.5" y2="252.1"/>
-<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="238.6" y1="256.9" x2="238.6" y2="303.2"/>
-<circle cx="238.6" cy="299.6" r="5.5"/>
-<text transform="matrix(1 0 0 1 251.0635 277.9033)" font-family="'ArialMT'" font-size="17.2125">2</text>
-<polyline fill="none" stroke="#999999" stroke-width="1.3" points="225.4,287.6 228.4,295.3 220.6,298.4 "/>
-<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="171.8,288 176,292.2 171.8,296.5 "/>
-<line fill="none" stroke="#999999" stroke-width="1.3" x1="176" y1="292.2" x2="160.2" y2="292.2"/>
-<text transform="matrix(1 0 0 1 421.2285 319.022)" fill="#999999" font-family="'ArialMT'" font-size="17.2125">v</text>
-<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="430,298.6 434.2,302.8 430,307 "/>
-<line fill="none" stroke="#999999" stroke-width="1.3" x1="434.2" y1="302.8" x2="418.4" y2="302.8"/>
-<text transform="matrix(1 0 0 1 174.5635 232.9595)" font-family="'ArialMT'" font-size="17.2125">5</text>
-<circle cx="408.9" cy="252.2" r="5.5"/>
-<line fill="none" stroke="#999999" stroke-width="1.3" x1="416.4" y1="258.1" x2="480.1" y2="342.2"/>
-<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="420.1" y1="252.1" x2="490.1" y2="252.1"/>
-<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="487.2" y1="256.9" x2="487.2" y2="351.1"/>
-<circle cx="488.2" cy="347.9" r="5.5"/>
-<text transform="matrix(1 0 0 1 499.6885 306.5908)" font-family="'ArialMT'" font-size="17.2125">4</text>
-<polyline fill="none" stroke="#999999" stroke-width="1.3" points="481.5,334.1 480.1,342.4 471.9,341.1 "/>
-<text transform="matrix(1 0 0 1 442.3135 232.9595)" font-family="'ArialMT'" font-size="17.2125">3</text>
+	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+<circle cx="112.5" cy="553.2" r="5.5"/>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="119.9" y1="559.1" x2="228.7" y2="596.3"/>
+<g enable-background="new    ">
+	<path fill="#999999" d="M170.3,609.5c0-0.5,0-1.3,0.1-1.8h0c-0.5,1.2-1.5,2-3,2c-2,0-2.6-1.2-2.6-2.7v-4.8c-0.4-0.1-1-0.1-1.4-0.2
+		v-0.9c0.8-0.1,2-0.2,3-0.1v5.5c0,1.2,0.3,1.9,1.5,1.9c1.4,0,2.4-1.4,2.4-3.3v-2.9c-0.4-0.1-0.9-0.1-1.4-0.2v-0.9
+		c0.8-0.1,2-0.2,2.9-0.1v7.3c0.4,0.1,1,0.1,1.4,0.2v0.9C172.4,609.5,171.2,609.6,170.3,609.5z"/>
+</g>
+<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="123.6" y1="553.1" x2="240.5" y2="553.1"/>
+<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="238.6" y1="557.9" x2="238.6" y2="604.2"/>
+<circle cx="238.6" cy="600.6" r="5.5"/>
+<g enable-background="new    ">
+	<path d="M252.5,578.9v-1.3l2.5-2.2c2.2-1.8,2.7-2.6,2.7-3.7c0-1.1-0.7-1.9-2.1-1.9c-1,0-1.9,0.5-2.5,0.9l-0.3-1.4
+		c0.9-0.6,1.9-0.9,3.1-0.9c2.3,0,3.5,1.3,3.5,3.1c0,1.5-0.8,2.6-2.7,4.2l-2.1,1.8l-0.1,0c0.8-0.1,2.7-0.1,5.2-0.1v1.5H252.5z"/>
+</g>
+<polyline fill="none" stroke="#999999" stroke-width="1.3" points="225.4,588.6 228.4,596.3 220.6,599.4 "/>
+<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="171.8,589 176,593.2 171.8,597.5 "/>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="176" y1="593.2" x2="160.2" y2="593.2"/>
+<g enable-background="new    ">
+	<path fill="#999999" d="M429.7,612.6L427,620h-1.9l-2.7-7.4c-0.4,0-0.8-0.1-1.1-0.2v-0.9h4v0.9c-0.4,0.1-0.8,0.2-1.2,0.2l1.4,4.2
+		c0.2,0.6,0.4,1.1,0.5,1.7h0c0.2-0.6,0.3-1.1,0.5-1.6l1.5-4.2c-0.4,0-0.8-0.1-1.2-0.2v-0.9h3.9v0.9
+		C430.4,612.5,430,612.6,429.7,612.6z"/>
+</g>
+<polyline fill="#FFFFFF" stroke="#999999" stroke-width="1.3" points="430,599.6 434.2,603.8 430,608 "/>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="434.2" y1="603.8" x2="418.4" y2="603.8"/>
+<g enable-background="new    ">
+	<path d="M178.2,535.6c-0.6,0-1.3-0.1-1.9-0.2l0.1-1.4c0.6,0.2,1.4,0.2,1.9,0.2c2.1,0,3.2-1.2,3.2-2.6c0-1.5-1.2-2.3-3.1-2.3
+		c-0.7,0-1.3,0.1-1.8,0.1v-5.9h6.1v1.5l-4.6,0v3c0.3,0,0.6,0,0.8,0c2.8,0,4.3,1.5,4.3,3.3C183.3,533.8,181.2,535.6,178.2,535.6z"/>
+</g>
+<circle cx="408.9" cy="553.2" r="5.5"/>
+<line fill="none" stroke="#999999" stroke-width="1.3" x1="416.4" y1="559.1" x2="480.1" y2="643.2"/>
+<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="420.1" y1="553.1" x2="490.1" y2="553.1"/>
+<line fill="none" stroke="#000000" stroke-width="1.3" stroke-dasharray="20,5" x1="487.2" y1="557.9" x2="487.2" y2="652.1"/>
+<circle cx="488.2" cy="648.9" r="5.5"/>
+<g enable-background="new    ">
+	<path d="M507.2,606.1v2.9h-1.5v-2.9h-5.3l-0.1-1.3l4.8-7.6h2.2v7.5h2v1.4H507.2z M505.7,598.7L505.7,598.7l-3.9,6.1
+		c1,0,3.2,0,3.9,0V598.7z"/>
+</g>
+<polyline fill="none" stroke="#999999" stroke-width="1.3" points="481.5,635.1 480.1,643.4 471.9,642.1 "/>
+<g enable-background="new    ">
+	<path d="M446,535.6c-0.7,0-1.5-0.1-2.2-0.3l0.3-1.4c0.6,0.2,1.3,0.3,2.1,0.3c1.8,0,3-1,3-2.3c0-1.3-1-2.1-2.8-2.1
+		c-0.6,0-1.1,0-1.5,0.1v-1.3h0.4c2.5,0,3.7-0.7,3.7-2.1c0-1.1-0.8-1.7-2.1-1.7c-0.9,0-1.7,0.3-2.4,0.7l-0.3-1.3
+		c0.9-0.4,1.8-0.6,3-0.6c2.3,0,3.5,1.1,3.5,2.8c0,1.3-0.8,2.3-2.1,2.7l0,0c1.4,0.2,2.5,1.4,2.5,2.8
+		C450.9,533.9,448.9,535.6,446,535.6z"/>
+</g>
 </svg>
