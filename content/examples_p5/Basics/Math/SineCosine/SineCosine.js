@@ -7,8 +7,9 @@
  * returned. These values are then scaled to produce larger movements. 
  */
  
-var x1, x2, y1, y2 = 0;
-var angle1, angle2 = 0;
+var x1, x2, y1, y2;
+var angle1 = 0;
+var angle2 = 0;
 var scalar = 70;
 
 function setup() {
