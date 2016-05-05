@@ -50,7 +50,7 @@ println(particles.size()); // Now one less!
 // then you cannot use the enhanced loop syntax.
 // In addition, when deleting in order to hit all elements, 
 // you should loop through it backwards, as shown here:
-for (int i = particles.size - 1; i >= 0; i--) {
+for (int i = particles.size() - 1; i >= 0; i--) {
   Particle part = particles.get(i);
   if (part.finished()) {
     particles.remove(i);
