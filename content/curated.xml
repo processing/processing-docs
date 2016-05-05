@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Automatic Orchestra" by="Students and Lecturers at Digital Media Bremen" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/autoorchestra.jpg</image>
+		  <description>
+			  The Automatic Orchestra is an audio installation exploring algorithmic composition and networked music. The perpetual interaction among the devices and the interpretation of encoded musical messages blurs the distinctiveness between structured composition and performative improvisation.
+		  </description>
+		  <location>http://digitalmedia-bremen.de/en/project/automatic-orchestra/</location>
+		 <link href="http://digitalmedia-bremen.de/en/project/automatic-orchestra/">Digital Media Bremen</link>
+	 </software>	
+
 	<software name="Possible, Plausible, Potential" by="Miguel Nóbrega" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/possible.jpg</image>
 		  <description>
