@@ -27,7 +27,7 @@ void setup() {
   noStroke();
   colorMode(HSB, numChars);
   background(numChars/2);
-  // Set a gray value for each key
+  // Set a hue value for each key
   for(int i = 0; i < numChars; i++) {
     colors[i] = color(i, numChars, numChars);    
   }
@@ -58,11 +58,11 @@ void keyPressed()
     if(key <= 'Z') {
       keyIndex = key-'A';
       letterHeight = maxHeight;
-      fill(colors[key-'A']);
+      fill(colors[keyIndex]);
     } else {
       keyIndex = key-'a';
       letterHeight = minHeight;
-      fill(colors[key-'a']);
+      fill(colors[keyIndex]);
     }
   } else {
     fill(0);
