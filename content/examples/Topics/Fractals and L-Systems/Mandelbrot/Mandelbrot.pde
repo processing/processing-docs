@@ -13,7 +13,7 @@ background(255);
 // A different range will allow us to "zoom" in or out on the fractal
 
 // It all starts with the width, try higher or lower values
-float w = 5;
+float w = 4;
 float h = (w * height) / width;
 
 // Start at negative half the width and height
@@ -54,7 +54,7 @@ for (int j = 0; j < height; j++) {
       a = aa - bb + x;
       b = twoab + y;
       // Infinty in our finite world is simple, let's just consider it 16
-      if (aa + bb > 16.0) {
+      if (dist(aa, bb, 0, 0) > 4.0) {
         break;  // Bail
       }
       n++;
@@ -66,7 +66,8 @@ for (int j = 0; j < height; j++) {
       pixels[i+j*width] = color(0);
     } else {
       // Gosh, we could make fancy colors here if we wanted
-      pixels[i+j*width] = color(n*16 % 255);
+      float norm = map(n, 0, maxiterations, 0, 1);
+      pixels[i+j*width] = color(map(sqrt(norm), 0, 1, 0, 255));
     }
     x += dx;
   }
