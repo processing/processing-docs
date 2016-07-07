@@ -1,120 +1,150 @@
 <h1>Processing in Eclipse</h1>
-<p>
-<table width="656">
-   	<tr>
-        <td>
-   	
-<p class="license">This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<p></p>
+<table style="width: 656px;">
+<tbody>
+<tr>
+<td>
+<p class="license">This tutorial is for Processing version 3.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<p>In order to use the Processing library to create our graphics while coding in Eclipse, we need to do a couple things. The first thing we need to do is import the Processing core as a library for our project, and the second is to set up our client class to take into consideration some of the processes (pun intended) that the Processing IDE does for us in the background.</p>
+<p>This guide is written for Processing 3+, with the intended audience of someone who has already downloaded&nbsp;<a href="http://www.eclipse.org/">Eclipse</a>, but may have never used it before. If you are experienced with Java and Eclipse, you can jump to the bottom for a quick summary of the steps involved.</p>
+<h3>Create a new Project</h3>
+<p>First create a new project. It just needs to be a regular Java Project.</p>
+<p><em>File &gt; New &gt; Java Project</em></p>
+<p>Let's name it '<span>Hello Processing</span>'. Leave all the default settings and click&nbsp;<em>Finish</em>.</p>
+<p>Next, create a new class.</p>
+<p><em>File &gt; New &gt; Class</em></p>
+<p>Let's name it '<em>UsingProcessing</em>'. You can choose to&nbsp;<span>include public static void main</span>.</p>
+<p><img src="imgs/clientclass.png" border="1" alt="Creating a new Class" /></p>
+<p>We should now have a new class that probably looks like this:</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UsingProcessing</span> {
 
-<p>&nbsp;</p>
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+        <span class="pl-c">// TODO Auto-generated method stub</span>
 
-<p>This tutorial assumes you already have Java and Processing installed on your computer. This is also not an Eclipse tutorial, but just covers the basics to get you up and running with Processing in Eclipse.</p>
-
-<p>This tutorial outlines how to manually set-up a Processing project in Eclipse. However, I recommend you check out the Eclipse Plug-in <a href="http://code.google.com/p/proclipsing/">proclipsing</a> that is designed to make working with Processing in Eclipse much easier, taking care of several of the steps below for you.</p>
-
-<h3>Step 1. Download and install Eclipse</h3>
-
-<p>Grab "Eclipse IDE for Java Developers" from <a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>. When you first run eclipse, it will ask you for a workspace directory. This is the directory where you will store your project files so pick something reasonable that you will remember.</p>
-
-<h3>Step 2. Create a new project.</h3>
-
-<p>If you see a Welcome screen, go ahead and close it. Then go to FILE --&gt; NEW PROJECT and select "Java Project." Click next. Enter your project name (for example, "TestProcessing") and select "Finish."</p>
-
-<h3>Step 3. Import the Processing libraries</h3>
-
-<p>Eclipse doesn't know anything about Processing so we'll have to manually add the Processing libraries to the Eclipse project ourselves. One way to do this is by pointing Eclipse to Processing's "core library" directory. However, it's sometimes a good idea to copy the necessary Processing files into the project folder itself so that everything stays together. Go to:
-<br /><br />
-FILE --&gt; IMPORT --&gt; GENERAL --&gt; FILE SYSTEM.
-<br /><br />
-Click next. On Windows, click "Browse..." and select the Processing jar files inside PATH_TO_PROCESSING/core/library/. On OS X, do not use the "Browse..." button. Instead, use the "From directory:" field to manually enter the path to Processing's jar files, which is typically /Applications/Processing.app/Contents/Java/core/library/. At minimum, select the "core.jar" file inside the "library" folder. 
-<br /><br />
-<img src="imgs/import.jpg" border="1" />
-<br /><br />
-Click "finish."
-<br /><br />
-You should now see "core.jar" listed under your project in the package explorer.
-<br /><br />
-<img src="imgs/core1.jpg" border="1"/>
-<br /><br />
-Right-click on the file and select
-<br /><br />
-BUILD PATH --&gt; ADD TO BUILD PATH.
-<br /><br />
-The "core.jar" file should now appear with a jar icon. (Note this right-click option will only show up in the "Package Explorer." If you are in the "Project Explorer" or some other view, switch by going to WINDOW --> SHOW VIEW --> PACKAGE EXPLORER.)
-<br /><br />
-<img src="imgs/core2.jpg" border="1" />
-</p>
-<h3>Step 4. Create a class and write your code!</h3>
-<p>Go to: FILE --&gt; NEW --&gt; CLASS
-<br /><br />
-Enter in a class name "MyProcessingSketch" and click finish. Eclipse may yell at you and say "The use of the default package is discouraged." We can't really blame them for getting upset. <a href="http://en.wikipedia.org/wiki/Java_package">Packages</a> in Java provide a nice means for organizing your classes and this is a good thing. Nevertheless, for just getting this example working, we can skip thinking about packages.
-<br /><br />
-After selecting finish, you'll see the following code:
-<br />
-<pre>
-public class MyProcessingSketch {
-
-}
-</pre>
-<br />
-Eclipse is being nice and filling in the class definition for us. Thank you Eclipse! Now, if we want this class to be a Processing sketch, we've got to add some code:
-<ul>
-	<li>Import the core Processing library: "import processing.core.*;"</li>
-	<li>Extend PApplet.  PApplet is the parent Processing class that allows us to have access to all the Processing goodies.</li>
-	<li>Write setup() and draw() (and specify "public" for these Processing functions).</li>
-</ul>
-<br />
-<pre>
-import processing.core.*;
-
-public class MyProcessingSketch extends PApplet {
-
-  public void setup() {
-    size(200,200);
-    background(0);
-  }
-
-  public void draw() {
-    stroke(255);
-    if (mousePressed) {
-      line(mouseX,mouseY,pmouseX,pmouseY);
     }
-  }
+
 }</pre>
+</div>
+<p>Now that we have our project and client class ready to go, we need to get the Processing core as a library.</p>
+<h3>The idea of Libraries</h3>
+<p>One of the most important aspects of Java (or nearly any programming environment) is the idea of a&nbsp;<span>Library</span>. A Library is a collection of code that performs related tasks. They can be one class, or many. Some Libraries are so powerful and robust that they can almost be considered a "Language" themselves. When you combine the Processing library with the Processing IDE, you end up with something that most people refer to as the Processing 'Language', but&nbsp;<em>technically</em>, at it's heart, it's a collection of Java code.</p>
+<p>To make it work, the Processing IDE does a lot of stuff for us in the background 'Java' environment in order to make it really easy for us as programmers to create sketches. However, to make full use of all the Java awesomeness at our disposal, it's helpful to use a more robust IDE, which is why we are jumping into Eclipse. So let's get Eclipse to use Processing as a Library.</p>
+<h3>Import the Processing Core</h3>
+<p>In order for Eclipse to see the code that makes up Processing, we need to import it into our project.</p>
+<p><em>File &gt; Import &gt; General &gt; File System</em></p>
+<p>Click next. On Windows, click "Browse..." and select the Processing jar files inside PATH_TO_PROCESSING/core/library/. On OS X, do not use the "Browse..." button. Instead, use the "From directory:" field to manually enter the path to Processing's jar files, which is typically /Applications/Processing 3.app/Contents/Java/core/library/. At minimum, select the "core.jar" file inside the "library" folder.</p>
+<p><img src="imgs/importcore.png" border="1" alt="Importing the Processing Core" /></p>
+<p>A .jar file is a compiled collection of Java code. The core.jar is the core of the Processing libraries, it has all the code that does the stuff that we are used to doing in Processing, like drawing shapes. Once we have it, we can make use of all the normal Processing commands that are found on the&nbsp;<a href="https://processing.org/reference/">reference page</a>.</p>
+<p>Click Finish. If you look at the Package Explorer, you'll notice that there is a new file in our project, called 'core.jar'.</p>
+<p><img src="imgs/newfile.png" border="1" alt="A new file in our project!" /></p>
+<p>Now that we have the file in our project, we need to tell Eclipse that this file is part of the code base that is used to build, or compile and run, this project. Do this by right clicking on the core.jar, going to&nbsp;<em>Build Path</em>, and then&nbsp;<em>Add to Build Path</em></p>
+<p><img src="imgs/addtobuildpath.png" border="1" alt="Adding the core.jar to the build path" /></p>
+<p>You'll notice the project will expand to have a new section called 'Referenced Libraries', where there is a new core.jar file. You can expand this to see a hierarchy of it's contents, if you are really interested.</p>
+<p><img src="imgs/incore.png" border="1" alt="A successful add to build path" /></p>
+<p>We are finally ready to set up our client class (the class with our&nbsp;<span>main</span>&nbsp;function, where the program starts), to run the project like a Processing sketch.</p>
+<h3>Setting up the Client Class</h3>
+<p>A Processing window is a special type of Java program called a PApplet. This is technically a Java Class, which has its own main function (or method) and does all kinds of fancy stuff that we don't need to worry about to create a new window and draw graphics onto it. In order for us to make use of the PApplet class, we want our program to BE a PApplet. To make this happen, we use the keyword&nbsp;<span>extends</span>&nbsp;in our class declaration. This will allow our class to 'inherit' all the PApplet class' functions and variables. Change the first line of code to be:</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UsingProcessing</span> <span class="pl-k">extends</span> <span class="pl-e">PApplet</span>{</pre>
+</div>
+<p>You'll notice this will give you an error. This occurs because, although we have included the core.jar to our project, we still have to link to the library in the code. We do this by using an import statement, at the top of the Java file. Anytime we are going to reference a function, variable, or class outside of the Java file we are writing in, we need to tell Java where it is by&nbsp;<em>importing</em>&nbsp;it. Eclipse will help you by suggesting to do this. Hover over the error (where it's underlined in red) and choose from the options "Import 'PApplet' (processing.core)".</p>
+<p><img src="imgs/extendPApplet.png" border="1" alt="Import PApplet" /></p>
+<p>This will auto add a new line of code to the top of the file:&nbsp;<code>import processing.core.PApplet;</code>&nbsp;You can also type this in yourself if you choose. This will allow Java to see all the public parts of the PApplet class.</p>
+<p>The next step is to simply start a PApplet application, and tell it to use&nbsp;<em>this</em>&nbsp;class,<code>UsingProcessing</code>, as the program to run. This is done by calling PApplet's main method and giving it the name of this class as a parameter.</p>
+<p>Add the following line to the main function (method), and if the TODO comment is still there, you can delete/replace it.</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-smi">PApplet</span><span class="pl-k">.</span>main(<span class="pl-s"><span class="pl-pds">"</span>UsingProcessing<span class="pl-pds">"</span></span>);</pre>
+</div>
+<p>Your entire Java file should now look like:</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-k">import</span> <span class="pl-smi">processing.core.PApplet</span>;
 
-<h3>Step 5. Run!</h3>
-<p>Go to: RUN --&gt; RUN AS --&gt; JAVA APPLET
-<br /><br />
-For most things, you are often going to want to run your code as a Java Application (rather than applet) and turn on Processing's present mode. You can do this by adding a main() function to your code.
-<br />
-<pre>
-  public static void main(String args[]) {
-    PApplet.main(new String[] { "--present", "MyProcessingSketch" });
-  }</pre>
-<br />
-Note that the String "MyProcessingSketch" must match the name of your class (and if it is in a package, should include the package, i.e. packagename.MyProcessingSketch).
-<br /><br />
-Once you've added the main() function, you can select:
-<br /><br />
-RUN --&gt; RUN AS --&gt; JAVA APPLICATION
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UsingProcessing</span> <span class="pl-k">extends</span> <span class="pl-e">PApplet</span>{
 
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+        <span class="pl-smi">PApplet</span><span class="pl-k">.</span>main(<span class="pl-s"><span class="pl-pds">"</span>UsingProcessing<span class="pl-pds">"</span></span>);
+
+    }
+
+}</pre>
+</div>
+<p><span><em>NOTE</em></span>: If your class is part of a package other than the default package, you must call PApplet's main using the package name as well, like this:</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-smi">PApplet</span><span class="pl-k">.</span>main(<span class="pl-s"><span class="pl-pds">"</span>packageName.ClassName<span class="pl-pds">"</span></span>);</pre>
+</div>
+<p>At this point, you can run the program. If Eclipse asks, choose to run the program as a&nbsp;<span>Java Application</span>. Processing no longer extends the Applet class, so you can't run it as an Applet!</p>
+<p>This will run a PApplet as if you had run an empty sketch. You will get a new 100x100 window open with a blank canvas!</p>
+<p>Now we are ready to add the final touches to be ready to program like we were before. After main(), add three new functions:&nbsp;<code>settings()</code>,&nbsp;<code>setup()</code>, and&nbsp;<code>draw()</code>. It's just like we did in Processing, but you will also need to include the&nbsp;<code>public</code>&nbsp;declaration before the&nbsp;<code>void</code>&nbsp;declaration. Now we have this:</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-k">import</span> <span class="pl-smi">processing.core.PApplet</span>;
+
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UsingProcessing</span> <span class="pl-k">extends</span> <span class="pl-e">PApplet</span>{
+
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+        <span class="pl-smi">PApplet</span><span class="pl-k">.</span>main(<span class="pl-s"><span class="pl-pds">"</span>UsingProcessing<span class="pl-pds">"</span></span>);
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">settings</span>(){
+
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">setup</span>(){
+
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">draw</span>(){
+
+    }
+
+}</pre>
+</div>
+<p><code>setup()</code>&nbsp;and&nbsp;<code>draw()</code>&nbsp;should look familiar, and they work exactly the same way as they did in the Processing IDE. The only new concession we have to make is that when we use the&nbsp;<code>size()</code>function to set the size of the screen, we put that in&nbsp;<code>settings()</code>, and we put it first.&nbsp;<code>settings()</code>runs before anything else happens, so we can't use any other Processing functions in it, except to set the size of the screen. More information&nbsp;<a href="https://processing.org/reference/settings_.html">here</a>.</p>
+<p>Let's try it. Set a size in&nbsp;<code>settings()</code>, set a color in&nbsp;<code>setup()</code>, and draw some stuff in&nbsp;<code>draw()</code>. For example:</p>
+<div class="highlight highlight-source-java">
+<pre><span class="pl-k">import</span> <span class="pl-smi">processing.core.PApplet</span>;
+
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">UsingProcessing</span> <span class="pl-k">extends</span> <span class="pl-e">PApplet</span>{
+
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+        <span class="pl-smi">PApplet</span><span class="pl-k">.</span>main(<span class="pl-s"><span class="pl-pds">"</span>UsingProcessing<span class="pl-pds">"</span></span>);
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">settings</span>(){
+        size(<span class="pl-c1">300</span>,<span class="pl-c1">300</span>);
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">setup</span>(){
+        fill(<span class="pl-c1">120</span>,<span class="pl-c1">50</span>,<span class="pl-c1">240</span>);
+    }
+
+    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">draw</span>(){
+        ellipse(width<span class="pl-k">/</span><span class="pl-c1">2</span>,height<span class="pl-k">/</span><span class="pl-c1">2</span>,second(),second());
+    }
+
+}</pre>
+</div>
+<p>We did it! We have a Processing application running from Eclipse, and now we can take advantage of all the powerful tools that Eclipse has to offer. From here, you can develop your processing sketch to your heart's content.</p>
+<h3>The Short Version</h3>
+<p>The quick break down of what we did here:</p>
+<ol>
+<li>Create a new Java Project</li>
+<li>Import the Processing core.jar from where your Processing is installed. Add it to the build path.</li>
+<li>Create a new class, and extend PApplet. Import the PApplet from&nbsp;<code>processing.core.PApplet</code></li>
+<li>In&nbsp;<code>main()</code>, call&nbsp;<code>PApplet.main("YouClassName");</code></li>
+<li>Add a&nbsp;<code>public void settings()</code>,&nbsp;<code>public void setup()</code>, and&nbsp;<code>public void draw()</code>.</li>
+<li>Use the&nbsp;<code>size()</code>&nbsp;call inside of&nbsp;<code>settings()</code>, and other than that, use&nbsp;<code>setup()</code>&nbsp;and&nbsp;<code>draw()</code>&nbsp;like normal!</li>
+</ol>
+<p><img src="imgs/running.png" border="1" alt="It runs!" /></p>
 <h3>Processing in Eclipse with Multiple Classes</h3>
-
-<p>Take a look at this <a href="http://learningprocessing.com/examples/chp09/example-09-10-array-interactive-objects">example Processing sketch</a>. The example is object-oriented and contains a class called "Stripe." In Processing, all classes are treated as "inner classes," meaning they are not individual entities unto themselves, but rather are classes inside of the larger PApplet. This is why you can do anything you can do in a PApplet inside of the Stripe class. You can draw onto the window calling rect() and access the PApplet variables such as width and height. To get this example working in Eclipse, it's perfectly reasonable to just copy it in as is and include the Stripe class code below setup() and draw() inside the parent PApplet class. However, the inner class methodology can quickly become unwieldy in the case of larger applications with lots and lots of classes.
-<br /><br />
-And so we find ourselves in need of a means for creating separate Java classes in Eclipse that we can use in conjunction with a Processing-based application.
-<br /><br />
-First thing first, we can put all the code that is not the Stripe class in a Java class like with the first example.
-<br />
-<pre>
-import processing.core.*;
+<p>Take a look at this <a href="http://learningprocessing.com/examples/chp09/example-09-10-array-interactive-objects">example Processing sketch</a>. The example is object-oriented and contains a class called "Stripe." In Processing, all classes are treated as "inner classes," meaning they are not individual entities unto themselves, but rather are classes inside of the larger PApplet. This is why you can do anything you can do in a PApplet inside of the Stripe class. You can draw onto the window calling rect() and access the PApplet variables such as width and height. To get this example working in Eclipse, it's perfectly reasonable to just copy it in as is and include the Stripe class code below setup() and draw() inside the parent PApplet class. However, the inner class methodology can quickly become unwieldy in the case of larger applications with lots and lots of classes. <br /><br /> And so we find ourselves in need of a means for creating separate Java classes in Eclipse that we can use in conjunction with a Processing-based application. <br /><br /> First thing first, we can put all the code that is not the Stripe class in a Java class like with the first example.</p>
+<pre>import processing.core.*;
 
 public class MyProcessingSketch extends PApplet {
   //	An array of stripes
-  Stripe[] stripes = new Stripe[50];
+  Stripe[] stripes = new Stripe[50];<br />  <br />  public static void main(String[] args){<br />    PApplet.main("MyProcessingSketch");<br />  }<br /><br />  public void settings(){<br />    size(200,200);<br />  }<br />
 
   public void setup() {
-    size(200,200);
     // Initialize all "stripes"
     for (int i = 0; i &lt; stripes.length; i++) {
       stripes[i] = new Stripe();
@@ -131,42 +161,21 @@ public class MyProcessingSketch extends PApplet {
   }
 }
 </pre>
-<br />
-Second, we create a new class called Stripe.
-<br /><br />
-FILE --&gt; NEW --&gt; CLASS. Name it "Stripe." Click "finish."
-<br /><br />
-If we add the Processing code, Eclipse will give us a bunch of errors.
-<br /><br />
-<img src="imgs/errors.jpg" border="1" />
-<br /><br />
-The errors are all on lines where we call a Processing function (such as rect()) or reference a Processing variable (such as width). This is because a Stripe is not a PApplet and knows nothing about PApplets! We might be tempted to have Stripe extend PApplet, but this would be a fatal error. A Stripe is not a PApplet. A Stripe is a rectangular object that we want to draw <em>onto a PApplet</em>. What PApplet do we want to draw onto? The PApplet that is MyProcessingSketch. Instead of extending PApplet, we simply want to tell a Stripe object about a MyProcessingSketch.
-<br /><br />
-<pre>
-public class Stripe {
+<br /> Second, we create a new class called Stripe. <br /><br /> FILE --&gt; NEW --&gt; CLASS. Name it "Stripe." Click "finish." <br /><br /> If we add the Processing code, Eclipse will give us a bunch of errors. <br /><br /> <img src="imgs/errors.jpg" /> <br /><br /> The errors are all on lines where we call a Processing function (such as rect()) or reference a Processing variable (such as width). This is because a Stripe is not a PApplet and knows nothing about PApplets! We might be tempted to have Stripe extend PApplet, but this would be a fatal error. A Stripe is not a PApplet. A Stripe is a rectangular object that we want to draw <em>onto a PApplet</em>. What PApplet do we want to draw onto? The PApplet that is MyProcessingSketch. Instead of extending PApplet, we simply want to tell a Stripe object about a MyProcessingSketch. <br /><br />
+<pre>public class Stripe {
   PApplet parent; // The parent PApplet that we will render ourselves onto</pre>
-<br />
-In the constructor, we initialize the parent:
-<br /><br />
-<pre>
-  Stripe(PApplet p) {
+<br /> In the constructor, we initialize the parent: <br /><br />
+<pre>  Stripe(PApplet p) {
     parent = p;</pre>
-<br />
-And then anytime we want to call a Processing function, we access it via the parent variable.
-<br /><br />
-<pre>
-  // Draw stripe
+<br /> And then anytime we want to call a Processing function, we access it via the parent variable. <br /><br />
+<pre>  // Draw stripe
   void display() {
     parent.fill(255,100);
     parent.noStroke();
     parent.rect(x,0,w,parent.height);
   }</pre>
-<br />
-Here's the whole thing together:
-<br />
-<pre>
-
-import processing.core.PApplet;
+<br /> Here's the whole thing together: <br />
+<pre>import processing.core.PApplet;
 
 public class Stripe {
   float x;       // horizontal location of stripe
@@ -197,48 +206,21 @@ public class Stripe {
   }
 }
 </pre>
-<br />
-Finally, the last change we have to make is how we call the constructor. Previously, we had:
-<br /><br />
-<pre>
-  stripes[i] = new Stripe();</pre>
-<br />
-But now when we construct a Stripe object, we must pass in a reference to a PApplet. And here, the PApplet is <strong><em>this</em></strong>, a reference to ourselves, the PApplet we are right now, MyProcessingSketch.
-<br /><br />
-<pre>
-  stripes[i] = new Stripe(this);</pre>
-<br />
-Here is <a href="http://www.learningprocessing.com/files/ProcessingTest.zip">the full project folder for download</a>.
-<br /><br />
-Another important note. The Processing "color" primitive does not exist in Java. In fact, in Processing a "color" is really just an integer (32 bits with red, green, blue, and alpha components). Processing translates "color" to "int", but 
-Eclipse won't do that for you. So instead of saying:
-<br /><br />
-<pre>
-color pink = color(255,200,200);
+<br /> Finally, the last change we have to make is how we call the constructor. Previously, we had: <br /><br />
+<pre>  stripes[i] = new Stripe();</pre>
+<br /> But now when we construct a Stripe object, we must pass in a reference to a PApplet. And here, the PApplet is <strong><em>this</em></strong>, a reference to ourselves, the PApplet we are right now, MyProcessingSketch. <br /><br />
+<pre>  stripes[i] = new Stripe(this);</pre>
+<br /> Here is <a href="http://www.learningprocessing.com/files/ProcessingTest.zip">the full project folder for download</a>. <br /><br /> Another important note. The Processing "color" primitive does not exist in Java. In fact, in Processing a "color" is really just an integer (32 bits with red, green, blue, and alpha components). Processing translates "color" to "int", but Eclipse won't do that for you. So instead of saying: <br /><br />
+<pre>color pink = color(255,200,200);
 </pre>
-<br />
-you should say:
-<br /><br />
-<pre>
-int pink = color(255,200,200);
+<br /> you should say: <br /><br />
+<pre>int pink = color(255,200,200);
 </pre>
-<br />
-and if you are in another class and have to refer to the "parent" PApplet:
-<br /><br />
-<pre>
-int pink = parent.color(255,200,200); 
-</pre>
-<br />
-For more help, check out the <a title="How to Craft Your Processing Sketches in Eclipse" href="http://www.creativeapplications.net/processing/craft-your-processing-sketches-in-eclipse/">How to Craft Your Processing Sketches in Eclipse</a> tutorial from the <a href="http://creativeapplications.net/">Creative Applications Network</a>, or <a title="Proclipsing: Using the Eclipse IDE for Processing Projects" href="http://www.instructables.com/id/Proclipsing-Using-the-Eclipse-IDE-for-Processing-p/?ALLSTEPS">Proclipsing: Using the Eclipse IDE for Processing Projects</a> by <a title="Scott Kildall" href="http://kildall.com/">Scott Kildall</a> at <a title="Instructables" href="http://www.instructables.com/">Instructables</a>.
-
-</p>
-
+<br /> and if you are in another class and have to refer to the "parent" PApplet: <br /><br />
+<pre>int pink = parent.color(255,200,200);</pre>
 <p>&nbsp;</p>
-
-  <p class="license">This tutorial is for Processing version 1.1+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-
-
-        </td>
-	  </tr>
+<p class="license">This tutorial is for Processing version 3.0+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+</td>
+</tr>
+</tbody>
 </table>
-</p>
