@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="cf.city flows" by="Till Nagel and Christopher Pietsch" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/cfcityflows.jpg</image>
+		  <description>
+			  cf.city flows is a comparative visualization environment of urban bike mobility designed to help citizens casually analyze three bike-sharing systems in the context of a public exhibition space.
+		  </description>
+		  <location>https://uclab.fh-potsdam.de/cf/</location>
+		 <link href="https://uclab.fh-potsdam.de/cf/">cf.city flows</link>
+	 </software>	
+
 	<software name="Automatic Orchestra" by="Students and Lecturers at Digital Media Bremen" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/autoorchestra.jpg</image>
 		  <description>
