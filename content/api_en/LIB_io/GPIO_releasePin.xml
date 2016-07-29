@@ -20,8 +20,6 @@ void setup() {
 
   // On the Raspberry Pi, GPIO 4 is pin 7 on the pin header,
   // located on the fourth row, above one of the ground pins
-  // For this particular board one could also write:
-  // GPIO.pinMode(RPI.PIN7, GPIO.OUTPUT);
 
   frameRate(0.5);
 }
