@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>detach()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.io.*;
+SoftwareServo servo;
+
+void setup() {
+  servo = new SoftwareServo(this);
+  servo.attach(4);
+
+  // On the Raspberry Pi, GPIO 4 is pin 7 on the pin header,
+  // located on the fourth row, above one of the ground pins
+}
+
+void draw() {
+  // we don't go right to the edge to prevent
+  // making the servo unhappy
+  float angle = 90 + sin(frameCount / 100.0)*85;
+  servo.write(angle);
+}
+
+void keyPressed() {
+  // press a key to release the motor
+  servo.detach();
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Detatches a servo motor from a GPIO pin<br/>
+<br/>
+Calling this method will stop the servo from moving or trying to
+hold the current orientation.
+]]></description>
+
+<syntax>
+<c>softwareservo</c>.detach()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>

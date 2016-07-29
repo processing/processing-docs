@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>attached()</name>
+
+<category>I/O</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.io.*;
+SoftwareServo servo;
+
+void setup() {
+  servo = new SoftwareServo(this);
+  servo.attach(4);
+
+  // On the Raspberry Pi, GPIO 4 is pin 7 on the pin header,
+  // located on the fourth row, above one of the ground pins
+}
+
+void draw() {
+  // we don't go right to the edge to prevent
+  // making the servo unhappy
+  float angle = 90 + sin(frameCount / 100.0)*85;
+  servo.write(angle);
+}
+
+void keyPressed() {
+  // press a key to release or re-attach the motor
+  if (servo.attached()) {
+    servo.detach();
+  } else {
+    servo.attach(4);
+  }
+}
+
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns whether a servo motor is attached to a pin
+]]></description>
+
+<syntax>
+<c>softwareservo</c>.attached()
+</syntax>
+
+<parameter></parameter>
+
+<returns></returns>
+
+<related></related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>
