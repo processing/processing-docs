@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>releasePin()</name>
+<name>detach()</name>
 
 <category>I/O</category>
 
@@ -13,43 +13,40 @@
 <image></image>
 <code><![CDATA[
 import processing.io.*;
-boolean ledOn = false;
+SoftwareServo servo;
 
 void setup() {
-  GPIO.pinMode(4, GPIO.OUTPUT);
+  servo = new SoftwareServo(this);
+  servo.attach(4);
 
   // On the Raspberry Pi, GPIO 4 is pin 7 on the pin header,
   // located on the fourth row, above one of the ground pins
-
-  frameRate(0.5);
 }
 
 void draw() {
-  ledOn = !ledOn;
-  if (ledOn) {
-    GPIO.digitalWrite(4, GPIO.LOW);
-  } else {
-    GPIO.digitalWrite(4, GPIO.HIGH);
-  }
+  // we don't go right to the edge to prevent
+  // making the servo unhappy
+  float angle = 90 + sin(frameCount / 100.0)*85;
+  servo.write(angle);
 }
 
-// cleanup on keypress
 void keyPressed() {
-  GPIO.releasePin(4);
-  exit();
+  // press a key to release the motor
+  servo.detach();
 }
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Gives ownership of a pin back to the operating system<br/>
+Detatches a servo motor from a GPIO pin<br/>
 <br/>
-Without calling this function, the pin will remain in the current state even after the sketch has been closed.
+Calling this method will stop the servo from moving or trying to
+hold the current orientation.
 ]]></description>
 
 <syntax>
-<c>GPIO</c>.releasePin()
+<c>softwareservo</c>.detach()
 </syntax>
 
 <parameter></parameter>
