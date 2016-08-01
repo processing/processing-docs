@@ -27,12 +27,12 @@ void setup() {
 
 void draw() {
   background(0);
-  
+
   // Draw water
   liquid.display();
 
   for (Mover mover : movers) {
-    
+
     // Is the Mover in the liquid?
     if (liquid.contains(mover)) {
       // Calculate drag force
@@ -45,16 +45,15 @@ void draw() {
     PVector gravity = new PVector(0, 0.1*mover.mass);
     // Apply gravity
     mover.applyForce(gravity);
-   
+
     // Update and display
     mover.update();
     mover.display();
     mover.checkEdges();
   }
-  
+
   fill(255);
-  text("click mouse to reset",10,30);
-  
+  text("click mouse to reset", 10, 30);
 }
 
 void mousePressed() {

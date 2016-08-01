@@ -46,7 +46,7 @@ void draw() {
 }
 
 void drawShape() {
-  //  calculate node  starting locations
+  //  calculate node  starting positions
   for (int i=0; i<nodes; i++){
     nodeStartX[i] = centerX+cos(radians(rotAngle))*radius;
     nodeStartY[i] = centerY+sin(radians(rotAngle))*radius;

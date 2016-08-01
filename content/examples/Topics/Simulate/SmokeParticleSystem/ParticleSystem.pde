@@ -6,10 +6,10 @@ class ParticleSystem {
   ArrayList<Particle> particles;    // An arraylist for all the particles
   PVector origin;                   // An origin point for where particles are birthed
   PImage img;
-  
+
   ParticleSystem(int num, PVector v, PImage img_) {
     particles = new ArrayList<Particle>();              // Initialize the arraylist
-    origin = v.get();                                   // Store the origin point
+    origin = v.copy();                                   // Store the origin point
     img = img_;
     for (int i = 0; i < num; i++) {
       particles.add(new Particle(origin, img));         // Add "num" amount of particles to the arraylist
@@ -25,18 +25,16 @@ class ParticleSystem {
       }
     }
   }
-  
+
   // Method to add a force vector to all particles currently in the system
   void applyForce(PVector dir) {
     // Enhanced loop!!!
-    for (Particle p: particles) {
+    for (Particle p : particles) {
       p.applyForce(dir);
     }
-  
   }  
 
   void addParticle() {
-    particles.add(new Particle(origin,img));
+    particles.add(new Particle(origin, img));
   }
-
 }
