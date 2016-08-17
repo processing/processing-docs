@@ -14,13 +14,14 @@ import java.util.Date;
 
 void setup() {
 
-  // Path
-  String path = sketchPath;
+  // Using just the path of this sketch to demonstrate,
+  // but you can list any directory you like.
+  String path = sketchPath();
 
   println("Listing all filenames in a directory: ");
   String[] filenames = listFileNames(path);
-  println(filenames);
-  
+  printArray(filenames);
+
   println("\nListing info about all files in a directory: ");
   File[] files = listFiles(path);
   for (int i = 0; i < files.length; i++) {
@@ -32,11 +33,11 @@ void setup() {
     println("Last Modified: " + lastModified);
     println("-----------------------");
   }
-  
+
   println("\nListing info about all files in a directory and all subdirectories: ");
   ArrayList<File> allFiles = listFilesRecursive(path);
-  
-  for (File f: allFiles) {
+
+  for (File f : allFiles) {
     println("Name: " + f.getName());
     println("Full path: " + f.getAbsolutePath());
     println("Is directory: " + f.isDirectory());
@@ -52,7 +53,6 @@ void setup() {
 // Nothing is drawn in this program and the draw() doesn't loop because
 // of the noLoop() in setup()
 void draw() {
-
 }
 
 // This function returns all the files in a directory as an array of Strings  
@@ -82,9 +82,9 @@ File[] listFiles(String dir) {
 
 // Function to get a list of all files in a directory and all subdirectories
 ArrayList<File> listFilesRecursive(String dir) {
-   ArrayList<File> fileList = new ArrayList<File>(); 
-   recurseDir(fileList,dir);
-   return fileList;
+  ArrayList<File> fileList = new ArrayList<File>(); 
+  recurseDir(fileList, dir);
+  return fileList;
 }
 
 // Recursive function to traverse subdirectories
@@ -96,7 +96,7 @@ void recurseDir(ArrayList<File> a, String dir) {
     File[] subfiles = file.listFiles();
     for (int i = 0; i < subfiles.length; i++) {
       // Call this function on all files in this directory
-      recurseDir(a,subfiles[i].getAbsolutePath());
+      recurseDir(a, subfiles[i].getAbsolutePath());
     }
   } else {
     a.add(file);
