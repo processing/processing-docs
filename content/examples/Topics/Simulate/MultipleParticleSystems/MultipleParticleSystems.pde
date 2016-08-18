@@ -3,7 +3,7 @@
  * by Daniel Shiffman.
  *
  * Click the mouse to generate a burst of particles
- * at mouse location.
+ * at mouse position.
  *
  * Each burst is one instance of a particle system
  * with Particles and CrazyParticles (a subclass of Particle)
@@ -19,7 +19,7 @@ void setup() {
 
 void draw() {
   background(0);
-  for (ParticleSystem ps: systems) {
+  for (ParticleSystem ps : systems) {
     ps.run();
     ps.addParticle();
   }

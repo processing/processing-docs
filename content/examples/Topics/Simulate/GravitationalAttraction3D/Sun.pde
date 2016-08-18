@@ -5,20 +5,20 @@
 
 class Sun {
   float mass;         // Mass, tied to size
-  PVector location;   // Location
+  PVector position;   // position
   float G;            // Universal gravitational constant (arbitrary value)
 
   Sun() {
-    location = new PVector(0,0);
+    position = new PVector(0, 0);
     mass = 20;
     G = 0.4;
   }
 
 
   PVector attract(Planet m) {
-    PVector force = PVector.sub(location,m.location);    // Calculate direction of force
+    PVector force = PVector.sub(position, m.position);    // Calculate direction of force
     float d = force.mag();                               // Distance between objects
-    d = constrain(d,5.0,25.0);                           // Limiting the distance to eliminate "extreme" results for very close or very far objects
+    d = constrain(d, 5.0, 25.0);                           // Limiting the distance to eliminate "extreme" results for very close or very far objects
     float strength = (G * mass * m.mass) / (d * d);      // Calculate gravitional force magnitude
     force.setMag(strength);                              // Get force vector --> magnitude * direction
     return force;
@@ -29,10 +29,8 @@ class Sun {
     stroke(255);
     noFill();
     pushMatrix();
-    translate(location.x,location.y,location.z);
+    translate(position.x, position.y, position.z);
     sphere(mass*2);
     popMatrix();
   }
 }
-
-

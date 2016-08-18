@@ -30,11 +30,10 @@ class CrazyParticle extends Particle {
     super.display();
     // Then add a rotating line
     pushMatrix();
-    translate(location.x,location.y);
+    translate(position.x, position.y);
     rotate(theta);
-    stroke(255,lifespan);
-    line(0,0,25,0);
+    stroke(255, lifespan);
+    line(0, 0, 25, 0);
     popMatrix();
   }
-
 }

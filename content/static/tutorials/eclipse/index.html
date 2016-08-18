@@ -1,4 +1,6 @@
-<h1>Processing in Eclipse</h1>
+<h1 style="line-height: 0.7em;">Processing in Eclipse</h1>
+<h3 style="line-height: 0.7em;"><em>Shane White</em></h3>
+    
 <p></p>
 <table style="width: 656px;">
 <tbody>
@@ -210,7 +212,7 @@ public class Stripe {
 <pre>  stripes[i] = new Stripe();</pre>
 <br /> But now when we construct a Stripe object, we must pass in a reference to a PApplet. And here, the PApplet is <strong><em>this</em></strong>, a reference to ourselves, the PApplet we are right now, MyProcessingSketch. <br /><br />
 <pre>  stripes[i] = new Stripe(this);</pre>
-<br /> Here is <a href="http://www.learningprocessing.com/files/ProcessingTest.zip">the full project folder for download</a>. <br /><br /> Another important note. The Processing "color" primitive does not exist in Java. In fact, in Processing a "color" is really just an integer (32 bits with red, green, blue, and alpha components). Processing translates "color" to "int", but Eclipse won't do that for you. So instead of saying: <br /><br />
+<br /> Here is <a href="https://github.com/shiffman/Processing-Eclipse-Example">the project source on GitHub</a>. <br /><br /> Another important note. The Processing "color" primitive does not exist in Java. In fact, in Processing a "color" is really just an integer (32 bits with red, green, blue, and alpha components). Processing translates "color" to "int", but Eclipse won't do that for you. So instead of saying: <br /><br />
 <pre>color pink = color(255,200,200);
 </pre>
 <br /> you should say: <br /><br />
