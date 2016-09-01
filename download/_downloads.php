@@ -54,18 +54,7 @@
 				<a href="http://download.processing.org/processing-3.2.1-linux-armv6hf.tgz">Linux ARMv6hf</a>
 				<a href="http://download.processing.org/processing-3.2.1-macosx.zip">Mac OS X</a> 
 			</li>
-<!--
-           		<li>
-				<span class="version">3.2</span>
-				<span class="version-date">(16 August 2016)</span>
-				<a href="http://download.processing.org/processing-3.2-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.2-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.2-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.2-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.2-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.2-macosx.zip">Mac OS X</a> 
-			</li>
--->
+
 			<li>
 				<span class="version">3.1.2</span>
 				<span class="version-date">(29 July 2016)</span>
@@ -76,128 +65,6 @@
 				<a href="http://download.processing.org/processing-3.1.2-linux-armv6hf.tgz">Linux ARMv6hf</a>
 				<a href="http://download.processing.org/processing-3.1.2-macosx.zip">Mac OS X</a> 
 			</li>
-<!--
-			<li>
-				<span class="version">3.1.1</span>
-				<span class="version-date">(16 May 2016)</span>
-				<a href="http://download.processing.org/processing-3.1.1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.1.1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.1.1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.1.1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.1.1-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.1.1-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">3.1</span>
-				<span class="version-date">(8 May 2016)</span>
-				<a href="http://download.processing.org/processing-3.1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.1-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.1-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">3.0.2</span>
-				<span class="version-date">(13 February 2016)</span>
-				<a href="http://download.processing.org/processing-3.0.2-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0.2-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0.2-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0.2-linux64.tgz">Linux 64</a>
-                <a href="http://download.processing.org/processing-3.0.2-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.0.2-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">3.0.1</span>
-				<span class="version-date">(23 October 2015)</span>
-				<a href="http://download.processing.org/processing-3.0.1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0.1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0.1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0.1-linux64.tgz">Linux 64</a>
-                <a href="http://download.processing.org/processing-3.0.1-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.0.1-macosx.zip">Mac OS X</a> 
-			</li>
-
-                        <li>
-				<span class="version">3.0</span>
-				<span class="version-date">(30 September 2015, 3p ET)</span>
-				<a href="http://download.processing.org/processing-3.0-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">3.0 beta 7</span>
-				<span class="version-date">(22 September 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b7-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b7-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b7-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b7-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b7-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">3.0 beta 6</span>
-				<span class="version-date">(11 September 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b6-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b6-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b6-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b6-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b6-macosx.zip">Mac OS X</a> 
-			</li>
-                        
-                        <li>
-				<span class="version">3.0 beta 5</span>
-				<span class="version-date">(24 August 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b5-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b5-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b5-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b5-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b5-macosx.zip">Mac OS X</a> 
-			</li>
-			<li>
-				<span class="version">3.0 beta 4</span>
-				<span class="version-date">(17 August 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b4-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b4-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b4-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b4-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b4-macosx.zip">Mac OS X</a> 
-			</li>
-			<li>
-				<span class="version">3.0 beta 3</span>
-				<span class="version-date">(11 August 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b3-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b3-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b3-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b3-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b3-macosx.zip">Mac OS X</a> 
-			</li>
-			<li>
-				<span class="version">3.0 beta 2</span>
-				<span class="version-date">(9 August 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b2-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b2-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b2-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b2-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b2-macosx.zip">Mac OS X</a> 
-			</li>
-
-                        <li>
-				<span class="version">3.0 beta 1</span>
-				<span class="version-date">(6 August 2015)</span>
-				<a href="http://download.processing.org/processing-3.0b1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-3.0b1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-3.0b1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-3.0b1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-3.0b1-macosx.zip">Mac OS X</a> 
-			</li>
--->
 
 			<li>
 				<span class="version">2.2.1</span>
@@ -209,93 +76,13 @@
 				<a href="http://download.processing.org/processing-2.2.1-macosx.zip">Mac OS X</a> 
 			</li>
 
-<!--
-			<li>
-				<span class="version">2.2</span>
-				<span class="version-date">(12 May 2014)</span>
-				<a href="http://download.processing.org/processing-2.2-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.2-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.2-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.2-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.2-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">2.1.2</span>
-				<span class="version-date">(15 April 2014)</span>
-				<a href="http://download.processing.org/processing-2.1.2-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.1.2-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.1.2-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.1.2-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.1.2-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">2.1.1</span>
-				<span class="version-date">(21 January 2014)</span>
-				<a href="http://download.processing.org/processing-2.1.1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.1.1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.1.1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.1.1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.1.1-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">2.1</span>
-				<span class="version-date">(27 October 2013)</span>
-				<a href="http://download.processing.org/processing-2.1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.1-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">2.0.3</span>
-				<span class="version-date">(5 September 2013)</span>
-				<a href="http://download.processing.org/processing-2.0.3-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.0.3-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.0.3-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.0.3-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.0.3-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">2.0.2</span>
-				<span class="version-date">(14 August 2013)</span>
-				<a href="http://download.processing.org/processing-2.0.2-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.0.2-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.0.2-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.0.2-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.0.2-macosx.zip">Mac OS X</a> 
-			</li>
-
-			<li>
-				<span class="version">2.0.1</span>
-				<span class="version-date">(21 June 2013)</span>
-				<a href="http://download.processing.org/processing-2.0.1-windows32.zip">Win 32</a>
-				<a href="http://download.processing.org/processing-2.0.1-windows64.zip">Win 64</a> 
-				<a href="http://download.processing.org/processing-2.0.1-linux32.tgz">Linux 32</a> 
-				<a href="http://download.processing.org/processing-2.0.1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.0.1-macosx.zip">Mac OS X</a> 
-			</li>
-			<li>
-				<span class="version">2.0</span>
-				<span class="version-date">(3 June 2013)</span>
-				<a href="http://processing.googlecode.com/files/processing-2.0-windows32.zip">Win 32</a>
-				<a href="http://processing.googlecode.com/files/processing-2.0-windows64.zip">Win 64</a> 
-				<a href="http://processing.googlecode.com/files/processing-2.0-linux32.tgz">Linux 32</a> 
-				<a href="http://processing.googlecode.com/files/processing-2.0-linux64.tgz">Linux 64</a>
-				<a href="http://processing.googlecode.com/files/processing-2.0-macosx.zip">Mac OS X</a> 
-			</li>
--->
 			<li>
 				<span class="version">1.5.1</span>
 				<span class="version-date">(15 May 2011)</span>
-				<a href="http://processing.googlecode.com/files/processing-1.5.1-windows.zip">Win (standard)</a>
-				<a href="http://processing.googlecode.com/files/processing-1.5.1-windows-expert.zip">Win (no Java)</a> 
-				<a href="http://processing.googlecode.com/files/processing-1.5.1-linux.tgz">Linux x86</a> 
-				<a href="http://processing.googlecode.com/files/processing-1.5.1-macosx.zip">Mac OS X</a> 
+				<a href="http://download.processing.org/processing-1.5.1-windows.zip">Win (standard)</a>
+				<a href="http://download.processing.org/processing-1.5.1-windows-expert.zip">Win (no Java)</a> 
+				<a href="http://download.processing.org/processing-1.5.1-linux.tgz">Linux x86</a> 
+				<a href="http://download.processing.org/processing-1.5.1-macosx.zip">Mac OS X</a> 
 			</li>
 		</ul>
 		<p>Earlier releases have been removed because we can only support the current versions of the software. To update old code, read the <a href="https://github.com/processing/processing/wiki/Changes">changes</a> page. Changes for each release can be found in <a href="https://raw.github.com/processing/processing/master/build/shared/revisions.txt">revisions.txt</a>. If you have problems with the current release, please <a href="https://github.com/processing/processing/issues?state=open">file a bug</a> so that we can fix it. Older releases can also be <a href="https://github.com/processing/processing">built from the source</a>. <a href="https://github.com/processing/processing/wiki/FAQ#whats-with-the-version-numbers">Read More</a> about the releases and their numbering. To use <a href="http://android.processing.org">Android Mode</a>, Processing 3 or later is required.</p>
