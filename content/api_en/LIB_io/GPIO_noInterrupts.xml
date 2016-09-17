@@ -27,7 +27,7 @@ void draw() {
 }
 
 void pinEvent(int pin) {
-  noInterrupts();
+  GPIO.noInterrupts();
   // no other interrupt will disturb us
   println("Received interrupt on pin" + pin);
   if (bgcolor == 0) {
@@ -35,7 +35,7 @@ void pinEvent(int pin) {
   } else {
     bgcolor = color(0);
   }
-  interrupts();
+  GPIO.interrupts();
 }
 
 ]]></code>
