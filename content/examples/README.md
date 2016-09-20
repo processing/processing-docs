@@ -1,1 +1,1 @@
-The examples without a credit line in these examples were written by Casey Reas or Ben Fry and they are in the public domain. The copyright for credited files remains with the author.
+The examples without a credit line were written by Casey Reas or Ben Fry and they are in the public domain, but we appreciate a link back to the original or an acknowledgement. The copyright for credited files remains with the original author.
