@@ -7,7 +7,7 @@ function Orb(x, y, r_) {
   this.r = r_;
   // A damping of 80% slows it down when it hits the ground
   this.damping = 0.8;
-  
+
 
   this.move = function() {
     // Move orb
@@ -21,15 +21,15 @@ function Orb(x, y, r_) {
     fill(200);
     ellipse(this.position.x, this.position.y, this.r*2, this.r*2);
   }
-  
+
   // Check boundaries of window
   this.checkWallCollision = function() {
     if (this.position.x > width-this.r) {
       this.position.x = width-this.r;
       this.velocity.x *= -this.damping;
-    } 
+    }
     else if (this.position.x < this.r) {
-      this.position.x = r;
+      this.position.x = this.r;
       this.velocity.x *= -this.damping;
     }
   }
@@ -44,15 +44,15 @@ function Orb(x, y, r_) {
     var cosine = cos(groundSegment.rot);
     var sine = sin(groundSegment.rot);
 
-    /* Rotate ground and velocity to allow 
+    /* Rotate ground and velocity to allow
      orthogonal collision calculations */
     var groundXTemp = cosine * deltaX + sine * deltaY;
     var groundYTemp = cosine * deltaY - sine * deltaX;
     var velocityXTemp = cosine * this.velocity.x + sine * this.velocity.y;
     var velocityYTemp = cosine * this.velocity.y - sine * this.velocity.x;
 
-    /* Ground collision - check for surface 
-     collision and also that orb is within 
+    /* Ground collision - check for surface
+     collision and also that orb is within
      left/rights bounds of ground segment */
     if (groundYTemp > -this.r &&
       this.position.x > groundSegment.x1 &&
@@ -73,4 +73,3 @@ function Orb(x, y, r_) {
     this.position.y = groundSegment.y + deltaY;
   }
 }
-
