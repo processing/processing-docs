@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Fluid Leaves" by="Reinoud van Laar" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/FluidLeaves.jpg</image>
+		  <description>
+			  A generative approach to pattern design, which in combination with variable printing results in a unique design each time. The project grew out of an identity investigation for tea boutique, ‘Tee & Cupp’ in Xian.
+		  </description>
+		  <location>http://reinoudvanlaar.nl/project/leavespattern/</location>
+		 <link href="http://reinoudvanlaar.nl/project/leavespattern/">Reinoud van Laar</link>
+	 </software>	
+
 	<software name="cf.city flows" by="Till Nagel and Christopher Pietsch" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/cfcityflows.jpg</image>
 		  <description>
