@@ -37,7 +37,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns the last byte received as a char.
+Returns the last byte received as a char or -1 if there is none available.
 ]]></description>
 
 
