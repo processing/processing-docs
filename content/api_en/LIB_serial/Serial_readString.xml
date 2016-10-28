@@ -38,7 +38,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns all the data from the buffer as a String. This method assumes the incoming characters are ASCII. If you want to transfer Unicode data, first convert the String to a byte stream in the representation of your choice (i.e. UTF8 or two-byte Unicode data), and send it as a byte array.
+Returns all the data from the buffer as a String or <b>null</b> if there is nothing available. This method assumes the incoming characters are ASCII. If you want to transfer Unicode data, first convert the String to a byte stream in the representation of your choice (i.e. UTF8 or two-byte Unicode data), and send it as a byte array.
 ]]></description>
 
 
