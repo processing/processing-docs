@@ -14,11 +14,11 @@ require(realpath(__DIR__ . '/../../../cred/config.php'));
 //Check what to show
 if(isset($_POST['form'])){
 	if($_POST['form'] == 1){ //if form equals 1, user has selected payment amount so show the payment form
-		$showPaymentForm = true;	
+		$showPaymentForm = true;
 		$amount = $_POST['selectAmount'];
 	} elseif($_POST['form'] == 2){ //if form equals 2, check if payment was Stripe or PayPal
 		$type = $_POST['type'];
-		if($_POST['type'] == 'stripe'){ //if stripe, include Stripe processing	
+		if($_POST['type'] == 'stripe'){ //if stripe, include Stripe processing
 			require('_stripeProcessing.php');
 		} elseif($_POST['type'] == 'paypal'){ //if PayPal, include PayPal processing
 			require('_paypalProcessing.php');
@@ -40,9 +40,9 @@ if(isset($_POST['form'])){
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<title>Download \ Processing.org</title>
-		
+
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-		
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="Author" content="Processing Foundation" />
 		<meta name="Publisher" content="Processing Foundation" />
@@ -63,20 +63,21 @@ if(isset($_POST['form'])){
 			<script type="text/javascript" src="_js/jquery.validate.min.js"></script>
 			<script type="text/javascript" src="_js/donate.js"></script>
 		<? endif; ?>
-	
+
 		<link href="/css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body id="Download" onload="" >
-		
-		<!-- ==================================== PAGE ============================ --> 
+
+		<!-- ==================================== PAGE ============================ -->
 		<div id="container">
-	
-			<!-- ==================================== HEADER ============================ --> 
+
+			<!-- ==================================== HEADER ============================ -->
 			<div id="ribbon">
 				<ul class="left">
 					<li class="highlight"><a href="http://processing.org/">Processing</a></li>
 					<li><a href="http://p5js.org/">p5.js</a></li>
 					<li><a href="http://py.processing.org/">Processing.py</a></li>
+					<li><a href="http://android.processing.org/">Processing for Android</a></li>
 				</ul>
 				<ul class="right">
 					<li><a href="http://foundation.processing.org/">Processing Foundation</a></li>
@@ -87,12 +88,12 @@ if(isset($_POST['form'])){
 				<a href="/" title="Back to the Processing cover."><div class="processing-logo no-cover" alt="Processing cover"></div></a>
 				<form name="search" action="//www.google.com/search" method="get">
 				    <p><input type="hidden" name="as_sitesearch" value="processing.org" />
-				    <input type="text" name="as_q" value="" size="20" class="text" /> 
+				    <input type="text" name="as_q" value="" size="20" class="text" />
 					<input type="submit" value=" " /></p>
 				</form>
-			</div> 
+			</div>
 			<a id="TOP" name="TOP"></a>
-			
+
 			<!-- ==================================== NAVIGATION ============================ -->
 			<div id="navigation">
 				<div class="navBar" id="mainnav_noSub">
@@ -107,7 +108,7 @@ if(isset($_POST['form'])){
 					<a href="/examples/">Examples</a><br>
 					<a href="/books/">Books</a><br>
 					<a href="/handbook/">Handbook</a><br><br>
-					<a href="/overview/">Overview</a><br> 
+					<a href="/overview/">Overview</a><br>
 					<a href="/people/">People</a><br><br />
 					<!--<a href="/foundation/">Foundation</a><br><br>-->
 					<a href="/shop/">Shop</a><br><br>
@@ -131,17 +132,17 @@ if(isset($_POST['form'])){
 			<? elseif($showDownloadPage): ?>
 				<? require('_downloads.php'); ?>
 			<? endif; ?>
-      
+
 			</div>
 
-			<!-- ==================================== FOOTER ============================ --> 
+			<!-- ==================================== FOOTER ============================ -->
   			<div id="footer">
-    			<div id="copyright">Processing was initiated by <a href="http://benfry.com/">Ben Fry</a> and <a href="http://reas.com">Casey Reas</a>. It is developed by a <a href="/people/">small team of volunteers</a>.</div> 
+    			<div id="copyright">Processing was initiated by <a href="http://benfry.com/">Ben Fry</a> and <a href="http://reas.com">Casey Reas</a>. It is developed by a <a href="/people/">small team of volunteers</a>.</div>
     			<div id="colophon">
                     <a href="/copyright.html">&copy; Info</a> \ <span>Site hosted by <a href="http://www.mediatemple.net">Media Temple!</a></span>
                 </div>
   			</div>
-  			
+
 		</div>
 		<script type="text/javascript">
 

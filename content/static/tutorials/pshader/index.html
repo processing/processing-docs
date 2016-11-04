@@ -31,7 +31,7 @@
     Writing shaders requires an understanding of the individual stages involved in the rendering a scene with the GPU, and how we can use GLSL to program them. The sequence of these stages is called the "graphical pipeline" in the technical parlance of computer graphics, and we will now take a look at the main stages in the pipeline from the perspective of a Processing sketch.
   </p>
 
-<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and <a href="http://glsl.heroku.com/">coding sandboxes</a>, that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, Cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.<p>
+<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and web coding sandboxes (for example <a href="https://www.shadertoy.com/">Shader Toy</a>, <a href="http://glsl.heroku.com/">GLSL Sandbox</a>, and <a href="https://www.vertexshaderart.com/">Vertex Shader Art</a>), that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, Cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.<p>
 
 <p>Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. This sketch draws a quad with lights and some geometric transformations applied to it:
 
@@ -50,7 +50,7 @@
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">camera</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2, 300, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2, 0, 0, 1, 0);
-&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(200, 200, 200, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2, 200);
+&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(200, 200, 200, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2, -200);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
 &nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
@@ -134,7 +134,7 @@ Note that the <em>litColor</em> variable is calculated in the vertex shader, and
 </p>
 
 <p>
-The fragment shader can perform additional operations on each fragment, and in fact these could be potentially very complex. It is possible to implement a ray-tracer entirely in the fragment shader, and we will touch on this topic briefly with some more advanced examples. One important limitation of the fragment shader to keep in mind is that it cannot access fragments other than the one is currently processing (same as the vertex shader cannot access a vertex other than the one is currently operating on).
+The fragment shader can perform additional operations on each fragment, and in fact these could be potentially very complex. It is possible to implement a ray-tracer entirely in the fragment shader, and we will touch on this topic briefly with some more advanced examples. One important limitation of the fragment shader to keep in mind is that it cannot access fragments other than the one is currently processing (same as the vertex shader cannot access a vertex other than the one is currently operating on). <a href="http://thebookofshaders.com/">The Book of Shaders</a> by Patricio Gonzalez Vivo and Jen Lowe gives an excellent <a href="http://thebookofshaders.com/01/">illustrated introduction</a> to GLSL shaders, and it is a terrific resource for programming of fragment shaders in general.
 </p>
 
 <p>
@@ -181,7 +181,7 @@ uniform mat4 transform;
 uniform mat3 normalMatrix;
 uniform vec3 lightNormal;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec3 normal;
 
@@ -190,7 +190,7 @@ varying vec3 vertNormal;
 varying vec3 vertLightDir;
 
 void main() {
-  gl_Position = transform * vertex;  
+  gl_Position = transform * position;  
   vertColor = color;
   vertNormal = normalize(normalMatrix * normal);
   vertLightDir = -lightNormal;
@@ -202,8 +202,6 @@ void main() {
 precision mediump float;
 precision mediump int;
 #endif
-
-#define PROCESSING_LIGHT_SHADER
 
 uniform float fraction;
 
@@ -233,7 +231,7 @@ void main() {
 </table>
 
 <p>
-The ifdef section in the fragment shader is required to make the shader compatible with OpenGL ES and WebGL. It sets the precision of the float and integer numbers to medium, which should be fine for most devices. These precision statements are optional on the desktop. There is also a #define line declaring the PROCESSING_LIGHT_SHADER symbol. This define is used by Processing to determine the type of shader, and whether or not it is valid to render the geometry in the sketch. This topic will be explain in detail in the next section. 
+The ifdef section in the fragment shader is required to make the shader compatible with OpenGL ES and WebGL. It sets the precision of the float and integer numbers to medium, which should be fine for most devices. These precision statements are optional on the desktop.
 </p>
 
 <p>
@@ -248,7 +246,7 @@ The PShader class includes the set() function to pass values from the sketch to 
 <h3>Types of shaders in Processing</h3>
 
 <p>
-From the code and pseudo-code examples presented in the previous sections, it can be appreciated that different shaders have different uniform and attribute variables. Clearly, a shader that does not compute lighting does not need uniforms holding the light source's position and color, for example. If we work with a low-level toolkit in C or C++ with direct access to the OpenGL API, we are free to name the uniforms and attributes of a shader in any way we like, since we have absolute control on the way the geometry is stored in our application, and how and when it is passed over to the GPU pipeline using the OpenGL functions. This is different when working in Processing, since the shaders are handled automatically by the renderers and should be able to handle the geometry that is described with the drawing API of Processing. This doesn't imply that custom shaders must render things in the same way as Processing does by default, quite in the contrary, the use of custom shaders opens up the possibility of greatly altering the rendering pipeline in Processing. However, custom shaders meant to be used in conjunction with the standard drawing API have to follow certain naming conventions, and are bound by some limitations. 
+From the code and pseudo-code examples presented in the previous sections, it can be appreciated that different shaders have different uniform and attribute variables. For example, a shader that does not compute lighting does not need uniforms holding the light source's position and color, for example. If we work with a low-level toolkit in C or C++ with direct access to the OpenGL API, we are free to name the uniforms and attributes of a shader in any way we like, since we have absolute control on the way the geometry is stored in our application, and how and when it is passed over to the GPU pipeline using the OpenGL functions. This is different when working in Processing, since the shaders are handled automatically by the renderers and should be able to handle the geometry that is described with the drawing API of Processing. This doesn't imply that custom shaders must render things in the same way as Processing does by default, quite in the contrary, the use of custom shaders opens up the possibility of greatly altering the rendering pipeline in Processing. However, custom shaders meant to be used in conjunction with the standard drawing API have to follow certain naming conventions, and are bound by some limitations. 
 </p>
 
 <p>
@@ -266,14 +264,14 @@ Based on this uniform and attribute requirements, shaders in Processing must bel
 </ul>
 
 <p>
-When setting a shader with the <em>shader()</em> function, if no type argument is specified then the shader will be assumed to be a triangle shader:
+When setting a shader with the <em>shader()</em> function, we can specify the shader type explicitly:
 </p>
 
 <pre>
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(lineShader, <span style="color: #666666;">LINES</span>);
-&nbsp;&nbsp;<span style="color: #006699;">shader</span>(polyShader); <span style="color: #7E7E7E;">// same as shader(polyShader, TRIANGLE);</span>
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(polyShader); <span style="color: #7E7E7E;">// Processing will autodetect</span>
 
 &nbsp;&nbsp;<span style="color: #006699;">stroke</span>(255);
 &nbsp;&nbsp;<span style="color: #006699;">beginShape</span>(POLYGON);
@@ -282,7 +280,7 @@ When setting a shader with the <em>shader()</em> function, if no type argument i
 </pre>
 
 <p>
-This code will result in Processing using <em>pointShader</em> to render stroke points, <em>lineShader</em> to render lines, and <em>polyShader</em> to render triangles (anything else). 
+This code will result in Processing using <em>pointShader</em> to render stroke points, <em>lineShader</em> to render lines, and <em>polyShader</em> to render the appropriate kind of geometry. 
 </p>
 
 <p>
@@ -301,7 +299,7 @@ However, there are different types of triangle shaders because of the use of lig
 </ul>
 
 <p>
-As mentioned earlier, a shader for rendering lit geometry requires additional attributes and uniform variables to be sent from Processing that are not needed by a shader that only renders flat-colored geometry without lights or textures. Similarly, a shader for rendering textured polygons needs its own uniforms and attributes (texture sampler and texture coordinates) that would not be required otherwise. Although it could have been possible to have a generic shader in Processing that takes care of all different rendering scenarios, this would be very inefficient because of all the branching that should take place inside the shaders to choose the appropriate rendering path. In general, GPUs are not very efficient at handling branches in their shaders, particularly those available on mobile devices.
+As mentioned earlier, a shader for rendering lit geometry requires additional attributes and uniform variables to be sent from Processing that are not needed by a shader that only renders flat-colored geometry without lights or textures. Similarly, a shader for rendering textured polygons needs its own uniforms and attributes (texture sampler and texture coordinates) that would not be required otherwise. Depending on what uniforms and attributes are defined in the shader, it will be capable of rendering the current scene correctly or not.
 </p>
 
 <p>In consequence, the triangle shaders are further discriminated in 4 types:</p>
@@ -314,51 +312,7 @@ As mentioned earlier, a shader for rendering lit geometry requires additional at
 </ul>
 
 <p>
-Together with the POINT and LINE shaders mentioned earlier, we end up having 6 different types of shaders in Processing.
-</p>
-
-<p>
-Processing needs to use the right type of shader when drawing a piece of geometry, and by default it picks the correct shader by checking whether the geometry about to be rendered has lights or textures associated to it and then enabling the appropriate shader. When we set our own custom shader, we need to make sure that it belongs to the correct type to handle the subsequent drawing calls. For example, if simpleShader below is of type COLOR, then in the following code the rectangle will be renderer using simpleShader:
-</p>
-
-<pre>
-<span style="color: #006699;">shader</span>(simpleShader);
-<span style="color: #006699;">noLights</span>();
-<span style="color: #006699;">fill</span>(180);
-<span style="color: #006699;">rect</span>(0, 0, 100, 100);
-</pre>
-
-<p>However, if we do:</p>
-
-<pre>
-<span style="color: #006699;">shader</span>(simpleShader);
-<span style="color: #006699;">lights</span>();
-<span style="color: #006699;">fill</span>(180);
-<span style="color: #006699;">rect</span>(0, 0, 100, 100);
-</pre>
-
-<p>
-then Processing will simply ignore simpleShader and will render the lit rectangle with its own default LIGHT shader.
-</p>
-
-<p>
-The type of a shader can be specified inside the GLSL code, either in the vertex shader or the fragment shader (or both), by using a #define line, which are the following:
-</p>
-
-<ul>
-<li>#define PROCESSING_POINT_SHADER for POINT shaders</li>
-<li>#define PROCESSING_LINE_SHADER for LINE shaders</li>
-<li>#define PROCESSING_COLOR_SHADER for COLOR shaders</li>
-<li>#define PROCESSING_LIGHT_SHADER for LIGHT shaders</li>
-<li>#define PROCESSING_TEXTURE_SHADER for TEXTURE shaders</li>
-<li>#define PROCESSING_TEXLIGHT_SHADER for TEXLIGHT shaders</li>
-</ul>
-
-<p>
-These defines are in fact hints for the renderer, and could be absent from the shader code altogether. This is convenient for more advanced applications where the data used by the shader is not necessarily determined by the texture/lighting state of the scene, but we will leave the discussion of this functionality for a future tutorial.
-</p>
-
-<p>In the next sections we will describe each type of shader in detail.</p>
+Together with the POINT and LINE shaders mentioned earlier, we end up having 6 different types of shaders in Processing. In the next sections we will describe each type of shader in detail.</p>
 
 <h3>Color shaders</h3>
 
@@ -422,17 +376,15 @@ First, save the code in listing 1 and add the following two files in the data fo
 <pre>
 <strong>colorvert.glsl:</strong>
 
-#define PROCESSING_COLOR_SHADER
-
 uniform mat4 transform;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 
 varying vec4 vertColor;
 
 void main() {
-  gl_Position = transform * vertex;    
+  gl_Position = transform * position;    
   vertColor = color;
 }
 
@@ -469,7 +421,7 @@ to draw the can using our shader.
 </p>
 
 <p>
-The type of shader is indicated here with the define in the vertex shader, but it could also be in the fragment shader. In this example, there is only one uniform variable, <em>transform,</em> which is a 4x4 matrix holding the product of the projection and the modelview matrices. The multiplication of a vertex in world coordinates by the <em>transform</em> matrix gives the <a href="http://www.songho.ca/opengl/gl_transform.html">clip coordinates</a>. The <em>vertex</em> and <em>color</em> attributes hold the position and color of the input vertex, respectively. The input color is copied without any modification to the <em>vertColor</em> varying, which passes the value down to the fragment shader. The fragment shader is nothing more than a pass-through shader since the color is sent to the output without any further modifications. The uniform <em>transform</em> and the attributes <em>vertex</em> and <em>color</em> are automatically set by Processing.
+The type of shader is indicated here with the define in the vertex shader, but it could also be in the fragment shader. In this example, there is only one uniform variable, <em>transform,</em> which is a 4x4 matrix holding the product of the projection and the modelview matrices. The multiplication of a position in world coordinates by the <em>transform</em> matrix gives the <a href="http://www.songho.ca/opengl/gl_transform.html">clip coordinates</a>. The <em>position</em> and <em>color</em> attributes hold the position and color of the input vertex, respectively. The input color is copied without any modification to the <em>vertColor</em> varying, which passes the value down to the fragment shader. The fragment shader is nothing more than a pass-through shader since the color is sent to the output without any further modifications. The uniform <em>transform</em> and the attributes <em>position</em> and <em>color</em> are automatically set by Processing.
 </p>
 
 <p>
@@ -537,12 +489,10 @@ Rendering textured geometry requires additional uniforms and attributes in the s
 
 <strong>texvert.glsl:</strong>
 
-#define PROCESSING_TEXTURE_SHADER
-
 uniform mat4 transform;
 uniform mat4 texMatrix;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec2 texCoord;
 
@@ -550,7 +500,7 @@ varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
 void main() {
-  gl_Position = transform * vertex;
+  gl_Position = transform * position;
     
   vertColor = color;
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
@@ -641,26 +591,24 @@ Using the same geometry from the previous examples, we can now write a simple sh
 
 <strong>lightvert.glsl:</strong>
 
-#define PROCESSING_LIGHT_SHADER
-
 uniform mat4 modelview;
 uniform mat4 transform;
 uniform mat3 normalMatrix;
 
 uniform vec4 lightPosition;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec3 normal;
 
 varying vec4 vertColor;
 
 void main() {
-  gl_Position = transform * vertex;    
-  vec3 ecVertex = vec3(modelview * vertex);  
+  gl_Position = transform * position;    
+  vec3 ecPosition = vec3(modelview * position);  
   vec3 ecNormal = normalize(normalMatrix * normal);
 
-  vec3 direction = normalize(lightPosition.xyz - ecVertex);    
+  vec3 direction = normalize(lightPosition.xyz - ecPosition);    
   float intensity = max(0.0, dot(direction, ecNormal));
   vertColor = vec4(intensity, intensity, intensity, 1) * color;             
 }
@@ -682,7 +630,7 @@ void main() {
 </table>
 
 <p>
-In the vertex shader, the <em>ecVertex</em> variable is the position of the input vertex expressed in eye-coordinates, since it is obtained by multiplying vertex by the <em>modelview</em> matrix. Similarly, multiplying the input normal vector by the <em>normalMatrix</em> yields its coordinates in the eye-system. Once all the vectors are expressed in the same coordinate system, they can be used to calculate the intensity of the incident light at the current vector. From the formula used in the shader, the intensity is directly proportional to the angle between the normal and the vector between the vertex and the light source.
+In the vertex shader, the <em>ecPosition</em> variable is the position of the input vertex expressed in eye-coordinates, since it is obtained by multiplying vertex by the <em>modelview</em> matrix. Similarly, multiplying the input normal vector by the <em>normalMatrix</em> yields its coordinates in the eye-system. Once all the vectors are expressed in the same coordinate system, they can be used to calculate the intensity of the incident light at the current vector. From the formula used in the shader, the intensity is directly proportional to the angle between the normal and the vector between the vertex and the light source.
 </p>
 
 <p>
@@ -714,8 +662,6 @@ As it was discussed at the beginning, the possibility of setting custom shaders 
 <pre>
 <strong>pixlightvert.glsl:</strong>
 
-#define PROCESSING_LIGHT_SHADER
-
 uniform mat4 modelview;
 uniform mat4 transform;
 uniform mat3 normalMatrix;
@@ -723,7 +669,7 @@ uniform mat3 normalMatrix;
 uniform vec4 lightPosition;
 uniform vec3 lightNormal;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec3 normal;
 
@@ -732,11 +678,11 @@ varying vec3 ecNormal;
 varying vec3 lightDir;
 
 void main() {
-  gl_Position = transform * vertex;    
-  vec3 ecVertex = vec3(modelview * vertex);  
+  gl_Position = transform * position;    
+  vec3 ecPosition = vec3(modelview * position);  
   
   ecNormal = normalize(normalMatrix * normal);
-  lightDir = normalize(lightPosition.xyz - ecVertex);  
+  lightDir = normalize(lightPosition.xyz - ecPosition);  
   vertColor = color;
 }
 
@@ -813,8 +759,6 @@ We can integrate the examples from the previous sections in the following sketch
 
 <strong>texlightvert.glsl:</strong>
 
-#define PROCESSING_TEXLIGHT_SHADER
-
 uniform mat4 modelview;
 uniform mat4 transform;
 uniform mat3 normalMatrix;
@@ -822,7 +766,7 @@ uniform mat4 texMatrix;
 
 uniform vec4 lightPosition;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec3 normal;
 attribute vec2 texCoord;
@@ -831,11 +775,11 @@ varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
 void main() {
-  gl_Position = transform * vertex;    
-  vec3 ecVertex = vec3(modelview * vertex);  
+  gl_Position = transform * position;    
+  vec3 ecPosition = vec3(modelview * position);  
   vec3 ecNormal = normalize(normalMatrix * normal);
 
-  vec3 direction = normalize(lightPosition.xyz - ecVertex);    
+  vec3 direction = normalize(lightPosition.xyz - ecPosition);    
   float intensity = max(0.0, dot(direction, ecNormal));
   vertColor = vec4(intensity, intensity, intensity, 1) * color;     
   
@@ -871,8 +815,6 @@ The lighting can be also done on a per-pixel basis, in which case we need to use
 <pre>
 <strong>pixlightxvert.glsl:</strong>
 
-#define PROCESSING_TEXLIGHT_SHADER
-
 uniform mat4 modelview;
 uniform mat4 transform;
 uniform mat3 normalMatrix;
@@ -880,7 +822,7 @@ uniform mat4 texMatrix;
 
 uniform vec4 lightPosition;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec3 normal;
 attribute vec2 texCoord;
@@ -891,11 +833,11 @@ varying vec3 lightDir;
 varying vec4 vertTexCoord;
 
 void main() {
-  gl_Position = transform * vertex;    
-  vec3 ecVertex = vec3(modelview * vertex);  
+  gl_Position = transform * position;    
+  vec3 ecPosition = vec3(modelview * position);  
   
   ecNormal = normalize(normalMatrix * normal);    
-  lightDir = normalize(lightPosition.xyz - ecVertex);  
+  lightDir = normalize(lightPosition.xyz - ecPosition);  
   vertColor = color;  
   
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
@@ -941,8 +883,6 @@ The fragment shader can be used to run image post-processing effects very effici
 precision mediump float;
 precision mediump int;
 #endif
-
-#define PROCESSING_TEXTURE_SHADER
 
 uniform sampler2D texture;
 
@@ -998,7 +938,7 @@ The fragment shader samples the texture at position <em>vertTexCoord.st</em> and
 </table>
 
 <p>
-You will notice that this time the <em>loadShader()</em> function only receives the filename of the fragment shader. Because the GLSL code contains the #define PROCESSING_TEXTURE_SHADER line, Processing will know that we are providing the fragment stage of a texture shader. How does it complete the entire shader program? The answer is that it uses the default vertex stage for texture shaders. As a consequence of this, and since the varying variables are first declared in the vertex stage, the fragment shader has to follow the varying names adopted in the default shader. In this case, the varying variables for the fragment color and texture coordinate must be named <em>vertColor</em> and <em>vertTexCoord</em>, respectively.
+You will notice that this time the <em>loadShader()</em> function only receives the filename of the fragment shader. How does Processing complete the entire shader program? The answer is that it uses the default vertex stage for texture shaders. As a consequence of this, and since the varying variables are first declared in the vertex stage, the fragment shader has to follow the varying names adopted in the default shader. In this case, the varying variables for the fragment color and texture coordinate must be named <em>vertColor</em> and <em>vertTexCoord</em>, respectively.
 </p>
 
 <p>
@@ -1013,8 +953,6 @@ You will notice that this time the <em>loadShader()</em> function only receives 
 precision mediump float;
 precision mediump int;
 #endif
-
-#define PROCESSING_TEXTURE_SHADER
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
@@ -1060,8 +998,6 @@ void main() {
 precision mediump float;
 precision mediump int;
 #endif
-
-#define PROCESSING_TEXTURE_SHADER
 
 uniform sampler2D texture;
 uniform vec2 texOffset;
@@ -1352,19 +1288,17 @@ Let's start with point rendering. P3D represents points as either rectangles (wh
 
 <strong>pointvert.glsl:</strong>
 
-#define PROCESSING_POINT_SHADER
-
 uniform mat4 projection;
 uniform mat4 modelview;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec2 offset;
 
 varying vec4 vertColor;
 
 void main() {
-  vec4 pos = modelview * vertex;
+  vec4 pos = modelview * position;
   vec4 clip = projection * pos;
   
   gl_Position = clip + projection * vec4(offset, 0, 0);
@@ -1443,14 +1377,12 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 
 <strong>spritevert.glsl:</strong>
 
-#define PROCESSING_POINT_SHADER
-
 uniform mat4 projection;
 uniform mat4 modelview;
 
 uniform float weight;
  
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec2 offset;
 
@@ -1458,7 +1390,7 @@ varying vec4 vertColor;
 varying vec2 texCoord;
 
 void main() {
-  vec4 pos = modelview * vertex;
+  vec4 pos = modelview * position;
   vec4 clip = projection * pos;
   
   gl_Position = clip + projection * vec4(offset, 0, 0);
@@ -1538,12 +1470,10 @@ One alternative solution is to generate the points procedurally in the fragment 
 
 <strong>pointvert.glsl:</strong>
 
-#define PROCESSING_POINT_SHADER
-
 uniform mat4 projection;
 uniform mat4 transform;
  
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec2 offset;
 
@@ -1552,7 +1482,7 @@ varying vec2 center;
 varying vec2 pos;
 
 void main() {
-  vec4 clip = transform * vertex;
+  vec4 clip = transform * position;
   gl_Position = clip + projection * vec4(offset, 0, 0);
   
   vertColor = color;
@@ -1631,12 +1561,10 @@ The following sketch simply draws the edges of a box using a simplified version 
 
 <strong>linevert.glsl:</strong>
 
-#define PROCESSING_LINE_SHADER
-
 uniform mat4 transform;
 uniform vec4 viewport;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec4 direction;
 
@@ -1649,7 +1577,7 @@ vec3 clipToWindow(vec4 clip, vec4 viewport) {
 }
   
 void main() {
-  vec4 clip0 = transform * vertex;
+  vec4 clip0 = transform * position;
   vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
   float thickness = direction.w;
   
@@ -1733,12 +1661,10 @@ A final example in this section modifies the simple line shader to incorporate t
 
 <strong>linevert.glsl:</strong>
 
-#define PROCESSING_LINE_SHADER
-
 uniform mat4 transform;
 uniform vec4 viewport;
 
-attribute vec4 vertex;
+attribute vec4 position;
 attribute vec4 color;
 attribute vec4 direction;
 
@@ -1753,7 +1679,7 @@ vec3 clipToWindow(vec4 clip, vec4 viewport) {
 }
   
 void main() {
-  vec4 clip0 = transform * vertex;
+  vec4 clip0 = transform * position;
   vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
   float thickness = direction.w;
   
