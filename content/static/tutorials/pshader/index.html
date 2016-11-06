@@ -314,6 +314,17 @@ As mentioned earlier, a shader for rendering lit geometry requires additional at
 <p>
 Together with the POINT and LINE shaders mentioned earlier, we end up having 6 different types of shaders in Processing. In the next sections we will describe each type of shader in detail.</p>
 
+<p>The shader type can be set explicitly in the source code of the shader using pre-processor #defines, which override Processing's autodetection. The supported #defines are the following:</p>
+
+<ul>
+<li>#define PROCESSING_POINT_SHADER</li>
+<li>#define PROCESSING_LINE_SHADER</li>
+<li>#define PROCESSING_COLOR_SHADER</li>
+<li>#define PROCESSING_LIGHT_SHADER</li>
+<li>#define PROCESSING_TEXTURE_SHADER</li>
+<li>#define PROCESSING_TEXLIGHT_SHADER</li>
+</ul>
+
 <h3>Color shaders</h3>
 
 <p>
@@ -871,6 +882,19 @@ void main() {
 <p>
 Note that a texlight cannot be used to render a scene only with textures or only with lights, in those cases either a texture or light shader will be needed.
 </p>
+
+<h3>Aliases for uniforms and attributes</h3>
+
+<p>A few of the most common vertex attributes and shader uniforms have an alternative short-hand name, listed below:</p>
+
+<ul>
+<li><em>position</em> or <em>vertex</em></li>
+<li><em>transform</em> or <em>transformMatrix</em></li>
+<li><em>modelview</em> or <em>modelviewMatrix</em></li>
+<li><em>projection</em> or <em>projectionMatrix</em></li>
+<li><em>texture</em> or <em>texMap</em></li>
+</ul>
+
 
 <h3>Image post-processing effects</h3>
 
