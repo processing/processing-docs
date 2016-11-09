@@ -44,6 +44,7 @@
 	<div class="releases">
 		<h3>Stable Releases</h3>
 		<ul>
+                        <li>
 				<span class="version">3.2.3</span>
 				<span class="version-date">(7 November 2016)</span>
 				<a href="http://download.processing.org/processing-3.2.3-windows32.zip">Win 32</a>
