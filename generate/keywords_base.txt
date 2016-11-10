@@ -315,8 +315,13 @@ substring	FUNCTION2	String_substring_
 toLowerCase	FUNCTION2	String_toLowerCase_
 toUpperCase	FUNCTION2	String_toUpperCase_
 
-getColumnCount	FUNCTION2	TableRow_getColumnCount_
-getColumnTitle	FUNCTION2	TableRow_getColumnTitle_
+getDouble	FUNCTION2
+getLong	FUNCTION2
+getColumnTitles	FUNCTION2
+getColumnTypes	FUNCTION2
+getColumnType	FUNCTION2
+setDouble	FUNCTION2
+setLong	FUNCTION2
 
 length	KEYWORD2	String
 
