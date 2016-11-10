@@ -315,6 +315,9 @@ substring	FUNCTION2	String_substring_
 toLowerCase	FUNCTION2	String_toLowerCase_
 toUpperCase	FUNCTION2	String_toUpperCase_
 
+getColumnCount	FUNCTION2	TableRow_getColumnCount_
+getColumnTitle	FUNCTION2	TableRow_getColumnTitle_
+
 length	KEYWORD2	String
 
 
