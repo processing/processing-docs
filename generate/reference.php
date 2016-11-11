@@ -64,16 +64,20 @@ out($shell_output);
 
 
 // Compress distribution into a ZIP, so it can be rolled into an IDE build.
+// processing/processing/java/
 out("Compressing distribution directory...");
-shell_exec("rm $mainRepoPath/build/shared/reference.zip 2>&1");
+//shell_exec("rm $mainRepoPath/build/shared/reference.zip 2>&1");
+shell_exec("rm $mainRepoPath/java/reference.zip 2>&1");  // Add 10 Nov 2016 - CR
 $docsRepoPath = "{$path}../processing-docs";
-$shell_output = shell_exec("cd $docsRepoPath && cp -r distribution/ $mainRepoPath/build/shared/reference/ 2>&1");
+//$shell_output = shell_exec("cd $docsRepoPath && cp -r distribution/ $mainRepoPath/build/shared/reference/ 2>&1");
+$shell_output = shell_exec("cd $docsRepoPath && cp -r distribution/ $mainRepoPath/java/reference/ 2>&1");  // Add 10 Nov 2016 - CR
 out($shell_output);
-$shell_output = shell_exec("cd $mainRepoPath/build/shared/ && zip -r reference.zip reference/ 2>&1");
+//$shell_output = shell_exec("cd $mainRepoPath/build/shared/ && zip -r reference.zip reference/ 2>&1");
+$shell_output = shell_exec("cd $mainRepoPath/java/ && zip -r reference.zip reference/ 2>&1");  // Add 10 Nov 2016 - CR
 out($shell_output);
-shell_exec("rm -r $mainRepoPath/build/shared/reference/ 2>&1");
+//shell_exec("rm -r $mainRepoPath/build/shared/reference/ 2>&1");
+shell_exec("rm -r $mainRepoPath/java/reference/ 2>&1");  // Add 10 Nov 2016 - CR
 out("Done compressing!");
-
 
 
 $benchmark_end = microtime_float();
