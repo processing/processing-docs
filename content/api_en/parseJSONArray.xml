@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-String data = "[ \"Capra hircus\", \"Panthera pardus\", \"Equus zebra\" ]";
+String data = "[ \\"Capra hircus\\", \\"Panthera pardus\\", \\"Equus zebra\\" ]";
 
 void setup() {
   JSONArray json = parseJSONArray(data);
