@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>getColumnCount()</name>
+
+<category>TableRow</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+  
+  table.addColumn("number", Table.INT);
+  table.addColumn("mass", Table.FLOAT);
+  table.addColumn("name", Table.STRING);
+  
+  TableRow row = table.addRow();
+  
+  println(row.getColumnCount());  // Prints "3"
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Returns the number of columns in a <b>TableRow</b>.
+]]></description>
+
+</root>

@@ -29,6 +29,7 @@ void draw() {
   if (line == null) {
     // Stop reading because of an error or file is empty
     noLoop();  
+    reader.close();
   } else {
     String[] pieces = split(line, TAB);
     int x = int(pieces[0]);
@@ -40,8 +41,8 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Creates a <b>BufferedReader</b> object that can be used to read files line-by-line as individual <b>String</b> objects. This is the complement to the <b>createWriter()</b> function.
-<br /> <br />
+Creates a <b>BufferedReader</b> object that can be used to read files line-by-line as individual <b>String</b> objects. This is the complement to the <b>createWriter()</b> function. For more information about the <b>BufferedReader</b> class and its methods like <b>readLine()</b> and <b>close</b> used in the above example, please consult a Java reference.<br />
+<br />
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
 

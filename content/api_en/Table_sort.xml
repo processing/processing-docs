@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>sort()</name>
+
+<category>Table</category>
+
+<subcategory>Method</subcategory>
+
+<type>method</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+  table.addColumn("type");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+  
+  table.sort(0);
+
+  for (TableRow row : table.rows()) {
+    println(row.getString("name") + ": " + row.getString("type"));
+  }
+}
+
+// Sketch prints:
+// Lion: Mammal
+// Mosquito: Insect
+// Snake: Reptile
+]]></code>
+</example>
+
+<example>
+<image></image>
+<code><![CDATA[
+Table table;
+
+void setup() {
+
+  table = new Table();
+
+  table.addColumn("name");
+
+  TableRow newRow = table.addRow();
+  newRow.setString("name", "Lion");
+  newRow.setString("type", "Mammal");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Snake");
+  newRow.setString("type", "Reptile");
+
+  newRow = table.addRow();
+  newRow.setString("name", "Mosquito");
+  newRow.setString("type", "Insect");
+  
+  table.sort("name");
+
+  for (TableRow row : table.rows()) {
+    println(row.getString("name") + ": " + row.getString("type"));
+  }
+}
+
+// Sketch prints:
+// Lion: Mammal
+// Mosquito: Insect
+// Snake: Reptile
+]]></code>
+</example>
+
+<description><![CDATA[
+Sorts (orders) a table based on the values in a column.
+]]></description>
+
+</root>

@@ -35,7 +35,9 @@ void setup() {
 </example>
 
 <description><![CDATA[
-A <b>TableRow</b> object represents a single row of data values, stored in columns, from a table.
+A <b>TableRow</b> object represents a single row of data values, stored in columns, from a table.<br />
+<br />
+Additional <b>TableRow</b> methods are documented in the <a href="http://processing.github.io/processing-javadocs/core/">Processing Data Javadoc</a>.
 ]]></description>
 
 
