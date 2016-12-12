@@ -477,12 +477,14 @@ void mousePressed() {
     table.removeRow(0);
   }
 
-  // This writes the table back to the original CSV file and reloads the file so that what's drawn matches.
+  // This writes the table back to the original CSV file
+  // and reloads the file so that what's drawn matches.
   saveTable(table, "data/data.csv");
   loadData();
 }
 
-// This simple Bubble class draws a circle to the window and displays a text label when the mouse hovers.
+// This simple Bubble class draws a circle to the window 
+// and displays a text label when the mouse hovers.
 class Bubble {
   float x, y;
   float diameter;
@@ -595,7 +597,9 @@ String stuff = "Number of apples:62. Boy, do I like apples or what!";
 	</p>
 	
 <pre>
-int start      = stuff.indexOf("apples:" ) + 8;  // STEP 1 The index where a string ends can be found by searching for that string and adding its length (here, 8).
+int start      = stuff.indexOf("apples:" ) + 8;  // STEP 1 
+// The index where a string ends can be found by 
+// searching for that string and adding its length (here, 8).
 int end        = stuff.indexOf(".", start);      // STEP 2
 String apples  = stuff.substring(start, end);    // STEP 3
 int apple_no   = int(apples);                    // STEP 4
@@ -606,7 +610,8 @@ int apple_no   = int(apples);                    // STEP 4
 	</p>
 
 <pre>
-// A function that returns a substring between two substrings. If the beginning of end "tag" is not found, the function returns an empty string.
+// A function that returns a substring between two substrings. 
+// If the beginning of end "tag" is not found, the function returns an empty string.
 String giveMeTextBetween(String s, String startTag, String endTag) {
   // Find the index of the beginning tag
   int startIndex = s.indexOf(startTag);
@@ -725,7 +730,8 @@ void draw() {
 void loadData() {
   String url = "http://www.imdb.com/title/tt2872750/";
 
-  // Get the raw HTML source into an array of strings (each line is one element in the array).  // The next step is to turn array into one long string with join().
+  // Get the raw HTML source into an array of strings (each line is one element in the array).
+  // The next step is to turn array into one long string with join().
   String[] lines = loadStrings(url);
   String html = join(lines, "");
 
@@ -1221,7 +1227,7 @@ void loadData() {
   <strong>XML[] children = xml.getChildren("bubble");</strong>
 
   <strong>bubbles = new Bubble[children.length];
-  // The size of the <code>Bubble</code> array is determined by the total XML elements named “bubble.”
+  // The size of the <code>Bubble</code> array is determined by the total XML elements named “bubble.”</strong>
 
   <strong>for (int i = 0; i &lt; bubbles.length; i++) {</strong>
     
