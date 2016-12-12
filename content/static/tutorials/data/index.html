@@ -59,33 +59,33 @@ String typing = "";
 String saved = "";
 		
 void setup() {  
-	size(300, 200);  
-	f = createFont("Arial", 16);
+  size(300, 200);  
+  f = createFont("Arial", 16);
 }
 		
 void draw() {  
-	background(255);  
-	int indent = 25;  
+  background(255);  
+  int indent = 25;  
 
-	// Set the font and fill for text  
-	textFont(f);  
-	fill(0);  
+  // Set the font and fill for text  
+  textFont(f);  
+  fill(0);  
 
-	// Display everything  
-	text("Click in this sketch and type. \nHit return to save what you typed.", indent, 40);  
-	text(typing, indent, 90);  
-	text(saved, indent, 130);
+  // Display everything  
+  text("Click in this sketch and type. \nHit return to save what you typed.", indent, 40);  
+  text(typing, indent, 90);  
+  text(saved, indent, 130);
 }
 		
 void keyPressed() {  
-	// If the return key is pressed, save the String and clear it  
-	if (key == '\n') {    
-		saved = typing;    
-		typing = "";  
-		// Otherwise, concatenate the String  
-	} else {    
-		typing = typing + key;   
-	}
+  // If the return key is pressed, save the String and clear it  
+  if (key == '\n') {    
+    saved = typing;    
+    typing = "";  
+    // Otherwise, concatenate the String  
+  } else {    
+    typing = typing + key;   
+  }
 }
 		
 		</pre>
@@ -233,7 +233,6 @@ String[] lines = loadStrings("file.txt");
 println("There are " + lines.length + " lines.");
 printArray(lines);
 </pre>
-
 	<p>
 		To run the code, create a text file called “file.txt,” type a bunch of lines in that file, and place it in your sketch’s data directory.
 	</p>
@@ -443,23 +442,23 @@ void draw() {
 }
 
 void loadData() {
-  // "header" indicates the file has header row. The size of the array is then determined by the number of rows in the table. 
+  // "header" indicates the file has header row. The size of the array 
+  // is then determined by the number of rows in the table. 
   table = loadTable("data.csv", "header");
   bubbles = new Bubble[table.getRowCount()];
 
 
   for (int i = 0; i&lt;table.getRowCount(); i++) {
-    
-	// Iterate over all the rows in a table.
+    // Iterate over all the rows in a table.
     TableRow row = table.getRow(i);
 
 	
-	// Access the fields via their column name (or index).
+    // Access the fields via their column name (or index).
     float x = row.getFloat("x");
     float y = row.getFloat("y");
     float d = row.getFloat("diameter");
     String n = row.getString("name");
-	// Make a Bubble object out of the data from each row.
+    // Make a Bubble object out of the data from each row.
     bubbles[i] = new Bubble(x, y, d, n);
   }
 }
@@ -884,10 +883,10 @@ void setup() {
 
 
   for (int i = 0; i&lt;allwords.length; i++) {
-  	// It's useful to convert each word to lower case so that,
-	// for example, “The” and “the” are both counted as the same word.
+    // It's useful to convert each word to lower case so that,
+    // for example, “The” and “the” are both counted as the same word.
     String s = allwords[i].toLowerCase();
-	// For every single word, increase its count in the dictionary.
+    // For every single word, increase its count in the dictionary.
     concordance.increment(s);
   }
   
@@ -1221,11 +1220,14 @@ void loadData() {
   <strong>// Get all the child nodes named "bubble"</strong>
   <strong>XML[] children = xml.getChildren("bubble");</strong>
 
-  <strong>bubbles = new Bubble[children.length]; </strong><span class="callout-bubble pos-9">The size of the <code>Bubble</code> array is determined by the total XML elements named “bubble.”</span>
+  <strong>bubbles = new Bubble[children.length];
+  // The size of the <code>Bubble</code> array is determined by the total XML elements named “bubble.”
 
   <strong>for (int i = 0; i &lt; bubbles.length; i++) {</strong>
     
-    <strong>XML positionElement = children[i].getChild("position");</strong><span class="callout-bubble pos-10 below">The position element has two attributes: “x” and “y”.Attributes can be accessed as an integer or float via <code>getInt()</code> and <code>getFloat()</code>.</span>
+    <strong>XML positionElement = children[i].getChild("position");</strong>
+	// The position element has two attributes: “x” and “y”.
+	// Attributes can be accessed as an integer or float via <code>getInt()</code> and <code>getFloat()</code>.
     <strong>float x = positionElement.getInt("x");</strong>
     <strong>float y = positionElement.getInt("y");</strong>
     
@@ -1235,7 +1237,8 @@ void loadData() {
     
     <strong>// The diameter is the content of the child named "diameter"</strong>
     <strong>XML diameterElement = children[i].getChild("diameter");</strong>
-    <strong>float diameter = diameterElement.getFloatContent();</strong><span class="callout-bubble below">Notice, however, with the content of an XML node, I retrieve via <code>getIntContent()</code> and <code>getFloatContent()</code>.</span>
+    <strong>float diameter = diameterElement.getFloatContent();</strong>
+	// Notice, however, with the content of an XML node, I retrieve via getIntContent() and getFloatContent().
 
 
 
@@ -1280,7 +1283,8 @@ void draw() {
 	
 <pre>
 {
-  "name":"Olympia",<span class="callout-bubble pos-2">Each name/value pair is separated by a comma.</span>
+  "name":"Olympia",
+  // Each name/value pair is separated by a comma.
   "age":3,
   "height":96.5,
   "state":"giggling"
@@ -1307,7 +1311,8 @@ class Person {
   "age":3,
   "height":96.5,
   "state":"giggling",
-  "brother":{<span class="callout-bubble pos-2">The value of “brother” is an object containing two name/value pairs.</span>
+  // The value of “brother” is an object containing two name/value pairs.
+  "brother":{
     "name":"Elias",
     "age":6
   }
@@ -1346,7 +1351,8 @@ class Person {
 <pre>
 {
   "name":"Olympia",
-  "favorite colors":[<span class="callout-bubble pos-3">The value of “favorite colors” is an array of strings.</span>
+  // The value of “favorite colors” is an array of strings.
+  "favorite colors":[
     "purple",
     "blue",
     "pink"
@@ -1530,7 +1536,7 @@ void loadData() {
 
   for (int i = 0; i&lt;bubbleData.size(); i++) {
 
-	// Iterate through the array, grabbing each JSON object one at a time.
+    // Iterate through the array, grabbing each JSON object one at a time.
     JSONObject bubble = bubbleData.getJSONObject(i);
 
     // Get a position object
@@ -1543,7 +1549,7 @@ void loadData() {
     float diameter = bubble.getFloat("diameter");
     String label = bubble.getString("label");
 
-	// Put the Bubble objects into an array.
+    // Put the Bubble objects into an array.
     bubbles[i] = new Bubble(x, y, diameter, label);
   }
 }
@@ -1657,7 +1663,7 @@ void draw() {
 
   translate(20, 100);
   stroke(0);
-  //Ddraw a little animation to demonstrate that the draw() loop never pauses.
+  //Draw a little animation to demonstrate that the draw() loop never pauses.
   rotate(frameCount*0.04);
   for (int i = 0; i&lt;10; i++) {
     rotate(radians(36));
