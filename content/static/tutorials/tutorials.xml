@@ -182,4 +182,11 @@
 		<code>false</code>
 	</tutorial>
 
+	<tutorial>
+		<title>Video</title>
+		<directory>video</directory>
+		<imgs>true</imgs>
+		<code>false</code>
+	</tutorial>
+
 </tutorials>
