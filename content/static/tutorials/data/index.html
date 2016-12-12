@@ -138,7 +138,7 @@ String numbers = "8,67,5,309";
 // Converting the String array to an int array
 int[] list = int(split(numbers, ','));
 int sum = 0;
-for (int i = 0; i < list.length; i++ ) {
+for (int i = 0; i&lt;list.length; i++ ) {
   sum = sum + list[i];
 }
 println(sum);
@@ -266,7 +266,7 @@ void setup() {
 void draw() {
   background(255);
   stroke(0);
-  for (int i = 0; i < data.length; i++) { 
+  for (int i = 0; i&lt;data.length; i++) { 
   	// Use array of ints to set the color and height of each rectangle.
     rect(i*20, 0, 20, data[i]);
   }
@@ -360,7 +360,7 @@ String s = row.getString("name");   // s has the value “Joyous”
 	</p>
 	
 <pre>
-for (int i = 0; i < table.getRowCount(); i++) {
+for (int i = 0; i&lt;table.getRowCount(); i++) {
 
   // Access each row of the table one at a time, in a loop.
   TableRow row = table.getRow(i);
@@ -407,7 +407,7 @@ row.setString("name", "new label");
 
 <pre>
 // If the table has more than 10 rows
-if (table.getRowCount() > 10) {
+if (table.getRowCount()&gt;10) {
 
 //Delete the first row (index 0).
   table.removeRow(0);
@@ -437,7 +437,7 @@ void setup() {
 void draw() {
   background(255);
   // Display all bubbles
-  for (int i = 0; i < bubbles.length; i++) {
+  for (int i = 0; i&lt;bubbles.length; i++) {
     bubbles[i].display();
   }
 }
@@ -448,7 +448,7 @@ void loadData() {
   bubbles = new Bubble[table.getRowCount()];
 
 
-  for (int i = 0; i < table.getRowCount(); i++) {
+  for (int i = 0; i&lt;table.getRowCount(); i++) {
     
 	// Iterate over all the rows in a table.
     TableRow row = table.getRow(i);
@@ -474,7 +474,7 @@ void mousePressed() {
   row.setString("name", "Blah");
 
   // If the table has more than 10 rows, delete the oldest row.
-  if (table.getRowCount() > 10) {
+  if (table.getRowCount()&gt;10) {
     table.removeRow(0);
   }
 
@@ -502,7 +502,7 @@ class Bubble {
   // Checking if mouse is over the bubble
   void rollover(float px, float py) {
     float d = dist(px, py, x, y);
-    if (d < diameter/2) {
+    if (d&lt;diameter/2) {
       over = true; 
     } else {
       over = false;
@@ -536,7 +536,7 @@ class Bubble {
 
 <pre>
 boolean rollover(int mx, int my) {
-  if (dist(mx, my, x, y) < diameter/2) {
+  if (dist(mx, my, x, y)&lt;diameter/2) {
     return true;
   } else {
     return false;
@@ -883,7 +883,7 @@ void setup() {
   
 
 
-  for (int i = 0; i < allwords.length; i++) {
+  for (int i = 0; i&lt;allwords.length; i++) {
   	// It's useful to convert each word to lower case so that,
 	// for example, “The” and “the” are both counted as the same word.
     String s = allwords[i].toLowerCase();
@@ -907,7 +907,7 @@ void draw() {
   String[] keys = concordance.keyArray();
 
 
-  for (int i = 0; i < height/h; i++) {
+  for (int i = 0; i&lt;height/h; i++) {
     // Look at each key one at a time and retrieve its count.
     String word = keys[i]; 
     int count = concordance.get(word);
@@ -1528,7 +1528,7 @@ void loadData() {
   bubbles = new Bubble[bubbleData.size()]; 
 
 
-  for (int i = 0; i < bubbleData.size(); i++) {
+  for (int i = 0; i&lt;bubbleData.size(); i++) {
 
 	// Iterate through the array, grabbing each JSON object one at a time.
     JSONObject bubble = bubbleData.getJSONObject(i);
@@ -1659,7 +1659,7 @@ void draw() {
   stroke(0);
   //Ddraw a little animation to demonstrate that the draw() loop never pauses.
   rotate(frameCount*0.04);
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i&lt;10; i++) {
     rotate(radians(36));
     line(5, 0, 10, 0);
   }
