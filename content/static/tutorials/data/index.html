@@ -659,10 +659,10 @@ String giveMeTextBetween(String s, String startTag, String endTag) {
 	</p>
 	
 <pre>
-<div class="txt-block">
-  <h4 class="inline">Runtime:</h4> 
-    <time itemprop="duration" datetime="PT139M">139 min</time>
-</div>
+&lt;div class="txt-block"&gt;
+  &lt;h4 class="inline"&gt;Runtime:&lt;/h4&gt; 
+    &lt;time itemprop="duration" datetime="PT139M"&gt;139 min&lt;/time&gt;
+&lt;/div&gt;
 </pre>
 
 	<p>
@@ -670,7 +670,7 @@ String giveMeTextBetween(String s, String startTag, String endTag) {
 	</p>
 	
 <pre>
-<time itemprop="duration" datetime="PT139M">
+&lt;time itemprop="duration" datetime="PT139M"&gt;
 </pre>
 	
 	<p>
@@ -678,7 +678,7 @@ String giveMeTextBetween(String s, String startTag, String endTag) {
 	</p>
 	
 <pre>
-</time>
+&lt;/time&gt;
 </pre>
 
 	<p>
@@ -735,7 +735,6 @@ void loadData() {
   String[] lines = loadStrings(url);
   String html = join(lines, "");
 
-
   String start = "<time itemprop=\"duration\" datetime=\"PT139M\">";
   String end = "</time>";
   runningtime = giveMeTextBetween(html, start, end);Searching for running time.
@@ -747,7 +746,6 @@ void loadData() {
   // Now, load that image!
   poster = loadImage(imgUrl);
 }
-
 
 String giveMeTextBetween(String s, String before, String after) {
 
@@ -885,8 +883,6 @@ void setup() {
 
   // Make a new empty dictionary
   concordance = new IntDict();
-  
-
 
   for (int i = 0; i&lt;allwords.length; i++) {
     // It's useful to convert each word to lower case so that,
@@ -896,8 +892,6 @@ void setup() {
     concordance.increment(s);
   }
   
-  
-
   // Sort the dictionary so that words that appear most often are first.
   concordance.sortValuesReverse();
 }
@@ -910,7 +904,6 @@ void draw() {
   // In order to iterate over every word in the dictionary,
   // first ask for an array of all of the keys.
   String[] keys = concordance.keyArray();
-
 
   for (int i = 0; i&lt;height/h; i++) {
     // Look at each key one at a time and retrieve its count.
@@ -1017,7 +1010,7 @@ void draw() {
 </pre>
 
 	<p>and some have attributes (formatted by <em>Attribute Name</em> equals <em>Attribute Value in quotes</em>):</p>
-	
+	<br />
 <pre>
 &lt;yweather:forecast day="Thu" low="65" high="82" text="Partly Cloudy"/&gt;
 </pre>
@@ -1236,20 +1229,12 @@ void loadData() {
 	// Attributes can be accessed as an integer or float via <code>getInt()</code> and <code>getFloat()</code>.
     <strong>float x = positionElement.getInt("x");</strong>
     <strong>float y = positionElement.getInt("y");</strong>
-    
-    
-    
-
-    
+	
     <strong>// The diameter is the content of the child named "diameter"</strong>
     <strong>XML diameterElement = children[i].getChild("diameter");</strong>
     <strong>float diameter = diameterElement.getFloatContent();</strong>
     // Notice, however, with the content of an XML node, 
 	// I retrieve via getIntContent() and getFloatContent().
-
-
-
-
 
     <strong>// The label is the content of the child named "label"</strong>
     <strong>XML labelElement = children[i].getChild("label");</strong>
@@ -1402,7 +1387,7 @@ class Person {
 }
 </pre>
 
-<h3><tt>JSONObject</tt> and <tt>JSONArray</tt></h3>
+<h3>JSONObject and JSONArray</h3>
 
 	<p>
 		Now that I've covered the syntax of JSON, I can look at using the data in Processing. One thing that can be a bit tricky about working with JSON in Processing is that I have to treat objects and arrays differently. With XML, I simply had a single XML class with all the parsing functionality I needed. With JSON, I have two classes: JSONObject and JSONArray, and I'll have to be conscientious about picking which class I am using during the parsing process.
@@ -1660,8 +1645,8 @@ void draw() {
   // Every one second, make a new request.
   if (timer.isFinished()) {
     retrieveData();
-
-	// And restart the timer.
+  
+  // And restart the timer.
     timer.start();
   }
 
@@ -1756,9 +1741,6 @@ void setup() {
   // Here, I format the call to the API by joing the URL with the API key with the query string.
   JSONObject json = loadJSONObject(url+query+"&amp;api-key="+apiKey);
 
-
-
-
   String headline = json.getJSONObject("response").getJSONArray("docs").
     // Grabbing a single headline from the results.
     getJSONObject(0).getJSONObject("headline").getString("main");
@@ -1775,8 +1757,6 @@ void setup() {
 <pre>
 // Temboo acts as a go-between you and Twitter, so first you just authenticate with Temboo.
 TembooSession session = new TembooSession("ACCOUNT_NAME", "APP_NAME", "APP_KEY");
-
-
 
 Tweets tweets = new Tweets(session);
 // Then you can configure a query to send to Twitter itself and grab the results.
