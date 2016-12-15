@@ -20,27 +20,21 @@
 		In <a href="http://processing.org/learning/text/">Strings and Drawing Text</a>, we touched on a few of the basic functions available in the Java <tt>String</tt>, such as <tt>charAt()</tt>, <tt>toUpperCase()</tt>, <tt>equals()</tt>, and <tt>length()</tt>.  These functions are documented on the Processing reference page for Strings.  Nevertheless, in order to perform some more advanced data parsing techniques, we'll need to explore some additional String manipulation functions <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html">documented in the Java API</a>.
 		<br /><br />
 		Let's take a closer look at the following two String functions:  <tt>indexOf()</tt> and <tt>substring()</tt>.<br /><br />
-		<tt>indexOf()</tt> locates a sequence of characters within a string. It takes one argument — a search string — and returns a numeric value that corresponds to the first occurrence of the search string inside of the <tt>String</tt> object being searched.
-    </p>
-		
+		<tt>indexOf()</tt> locates a sequence of characters within a string. It takes one argument — a search string — and returns a numeric value that corresponds to the first occurrence of the search string inside of the <tt>String</tt> object being searched.<br />
 <pre>
 String search = "def";
 String toBeSearched = "abcdefghi";
 int index = toBeSearched.indexOf(search);  // The value of index in this example is 3.
 </pre>
-		
-	<p>
+
 		Strings are just like arrays, in that the first character is index number zero and the last character is the length of the string minus one.  If the search string cannot be found, <tt>indexOf()</tt> returns <tt>-1</tt>.   This is a good choice because <tt>-1</tt> is not a legitimate index value in the string itself, and therefore can indicate "not found." There are no <em>negative</em> indices in a string of characters or in an array. 
 	<br /><br />
-		After finding a search phrase within a string, we might want to separate out part of the string, saving it in a different variable. A part of a string is known as a <em>substring</em> and substrings are made with the <tt>substring()</tt> function which takes two arguments, a start index and an end index. <tt>substring()</tt> returns the substring in between the two indices.  
-    </p>
+		After finding a search phrase within a string, we might want to separate out part of the string, saving it in a different variable. A part of a string is known as a <em>substring</em> and substrings are made with the <tt>substring()</tt> function which takes two arguments, a start index and an end index. <tt>substring()</tt> returns the substring in between the two indices.<br /> 
 		
 <pre>
 String alphabet = "abcdefghi";
 String sub = alphabet.substring(3, 6); // The String sub is now "def".
 </pre>
-	
-	<p>
 		Note that the substring begins at the specified <em>start index</em> (the first argument) and extends to the character at <em>end index</em> (the second argument) <em>minus one</em>. I know, I know. Wouldn’t it have been easier to just take the <em>substring</em> from the start index all the way to the end index? While this might initially seem true, it’s actually quite convenient to stop at end index minus one. For example, if you ever want to make a substring that extends to the end of a string, you can simply go all the way to <tt>thestring.length()</tt>. In addition, with end index minus one marking the end, the length of the substring is easily calculated as <em>end index minus begin index</em>.	
 	</p>
 
@@ -87,51 +81,36 @@ void keyPressed() {
     typing = typing + key;   
   }
 }
-		
-		</pre>
-		
+</pre>	
 		Processing has two additional functions that make joining strings (or the reverse, splitting them up) easy. In sketches that involve parsing data from a file or the web, you might get hold of that data in the form of an array of strings or as one long string. Depending on what you want to accomplish, it’s useful to know how to switch between these two modes of storage. This is where these two new functions, <tt>split()</tt> and <tt>join()</tt>, will come in handy.
 	</p>
 
 		<strong><em>"one long string or array of strings" ←→ {"one", "long", "string", "or" ,"array", "of", "strings"}</em></strong>
 		
 	<p>
-		Let’s take a look at the <tt>split()</tt> function. <tt>split()</tt> separates a longer string into an array of strings, based on a split character known as the <em>delimiter</em>. It takes two arguments, the <tt>String</tt> object to be split and the delimiter. (The delimiter can be a single character or a string.) In the code below, the period is not set as a delimiter and therefore will be included in the last string in the array: “dog.” Note how <tt>printArray()</tt> can be used to print the contents of an array and their corresponding indices to the message console.
-	</p>
-		
+		Let’s take a look at the <tt>split()</tt> function. <tt>split()</tt> separates a longer string into an array of strings, based on a split character known as the <em>delimiter</em>. It takes two arguments, the <tt>String</tt> object to be split and the delimiter. (The delimiter can be a single character or a string.) In the code below, the period is not set as a delimiter and therefore will be included in the last string in the array: “dog.” Note how <tt>printArray()</tt> can be used to print the contents of an array and their corresponding indices to the message console.	<br />
 <pre>
 // Splitting a string based on spaces
 String spaceswords = "The quick brown fox jumps over the lazy dog.";
 String[] list = split(spaceswords, " ");
 printArray(list);
 </pre>
-		
-	<p>
 		Here is an example using a comma as the delimiter (this time passing in a single character: <tt>','</tt>.)	
-	</p>
-		
+		<br />
 <pre>
 // Splitting a string based on commas
 String commaswords = "The,quick,brown,fox,jumps,over,the,lazy,dog.";
 String[] list = split(commaswords, ",");
 printArray(list);
 </pre>
-		
-	<p>
-		If you want to use more than one delimiter to split up a text, you must use the Processing function <tt>splitTokens()</tt>. <tt>splitTokens()</tt> works identically as <tt>split()</tt> with one exception: any character that appears in the passed string qualifies as a delimiter.)	In the code below, the period is specified as a delimiter and therefore will not be included in the last string in the array: “dog”.
-	</p>
-		
+		If you want to use more than one delimiter to split up a text, you must use the Processing function <tt>splitTokens()</tt>. <tt>splitTokens()</tt> works identically as <tt>split()</tt> with one exception: any character that appears in the passed string qualifies as a delimiter.)	In the code below, the period is specified as a delimiter and therefore will not be included in the last string in the array: “dog”.<br />
 <pre>
 // Splitting a String based on multiple delimiters
 String stuff = "hats & apples, cars + phones % elephants dog."; 
 String[] list = splitTokens(stuff, " &,+." );
 printArray(list);
 </pre>
-		
-	<p>
-		If you are splitting numbers in a string, the resulting array can be converted into an integer array with Processing’s <tt>int()</tt> function. Numbers in a string are not numbers and cannot be used in mathematical operations unless you convert them first.
-	</p>
-		
+		If you are splitting numbers in a string, the resulting array can be converted into an integer array with Processing’s <tt>int()</tt> function. Numbers in a string are not numbers and cannot be used in mathematical operations unless you convert them first.<br />
 <pre>
 // Calculate sum of a list of numbers in a String
 String numbers = "8,67,5,309";
@@ -143,23 +122,15 @@ for (int i = 0; i&lt;list.length; i++ ) {
 }
 println(sum);
 </pre>
-
-	<p>
 		The reverse of <tt>split()</tt> is <tt>join()</tt>. <tt>join()</tt> takes an array of strings and joins them together into one long <tt>String</tt> object. The <tt>join()</tt> function also takes two arguments, the array to be joined and a <em>separator</em>. The separator can either be a single character or a string of characters.
 	</p>
 	
 	<p>
-		Consider the following array:
-	</p>
-	
+		Consider the following array:<br />
 <pre>
 String[] lines = {"It", "was", "a", "dark", "and", "stormy", "night."};
 </pre>
-
-	<p>
-		Using the “+” operator along with a <code>for</code> loop, you can join a string together as follows:
-	</p>
-	
+		Using the “+” operator along with a <code>for</code> loop, you can join a string together as follows:<br />
 <pre>
 // Manual Concatenation
 String onelongstring = "";
@@ -167,15 +138,12 @@ for (int i = 0; i &lt; lines.length; i++) {
    onelongstring = onelongstring + lines[i] + " ";
 }
 </pre>
-
-	<p>
-		The <tt>join()</tt> function, however, allows you to bypass this process, achieving the same result in only one line of code.
-	</p>
-
+		The <tt>join()</tt> function, however, allows you to bypass this process, achieving the same result in only one line of code.<br />
 <pre>
 // Using Processing's join()
 String onelongstring = join(lines, " ");
 </pre>
+</p>
 
 <h3>Dealing with Data</h3>
 
@@ -184,9 +152,7 @@ String onelongstring = join(lines, " ");
 	</p>
 	
 	<p>
-		If you are really lucky, you might find a <a href="http://processing.org/reference/libraries/">Processing library</a> that hands data to you directly with code. Maybe the answer is to just download this library and write some code like:
-	</p>
-	
+		If you are really lucky, you might find a <a href="http://processing.org/reference/libraries/">Processing library</a> that hands data to you directly with code. Maybe the answer is to just download this library and write some code like:<br />
 <pre>
 import flowers.*;
 
@@ -196,8 +162,6 @@ void setup() {
   float h = sunflower.getAverageHeight();
 }  
 </pre>
-
-	<p>
 		In this case, someone else has done all the work for you. They've gathered data about flowers and built a Processing library with a set of functions that hands you the data in an easy-to-understand format. This library, sadly, does not exist (not yet), but there are some that do. For example, <a href="http://www.onformative.com/lab/google-weather-library-for-processing">YahooWeather</a> is a library by Marcel Schwittlick that grabs weather data from Yahoo for you, allowing you to write code like <tt>weather.getWindSpeed()</tt> or <tt>weather.getSunrise()</tt> and more. There is still plenty of work to do in the case of using a library.
 	</p>
 
@@ -223,34 +187,24 @@ void setup() {
 		
 	<p>
 		Once the text file is in place, Processing’s <tt>loadStrings()</tt> function is used to read the content of the file into a <tt>String</tt> array. The individual lines of text in the file each become an individual element in the array.
-	</p>
 	<br /><br />
 	<img src="imgs/fig_18_02_filetxt.png" class="tut" />
-	
 <pre>
 // This code will print all the lines from the source text file.
 String[] lines = loadStrings("file.txt");
 println("There are " + lines.length + " lines.");
 printArray(lines);
 </pre>
-	<p>
-		To run the code, create a text file called “file.txt,” type a bunch of lines in that file, and place it in your sketch’s data directory.
-	</p>
-	
-	<p>
-	Text from a file can be used to generate a simple visualization. Take the following data file.
-	</p>
+		To run the code, create a text file called “file.txt,” type a bunch of lines in that file, and place it in your sketch’s data directory.<br /><br />Text from a file can be used to generate a simple visualization. Take the following data file.
 	<br /><br />
-	<img src="imgs/fig_18_03_datatxt.png" class="tut" />
+	<img src="imgs/fig_18_03_datatxt.png" class="tut" /><br /><br />
 	
-	<p>The results of visualizing this data are shown below.</p>
+The results of visualizing this data are shown below.</p>
 	
-	
-	
+<p>
 <strong>Graphing Comma-Separated Numbers from a Text File</strong>
 <br /><br />
 <img src="imgs/fig_18_04_bargraph.png" class="tut" />
-	
 <pre>
 int[] data;
 
@@ -272,8 +226,6 @@ void draw() {
   noLoop();
 }
 </pre>
-
-	<p>
 		Looking at how to parse a csv file with <tt>split()</tt> was a nice learning exercise. In truth, dealing with csv files (which can easily be generated from spreadsheet software such as Google docs) is such a common activity that Processing has an entire built-in class called <tt>Table</tt> to handle the parsing for you.
 	</p>
 	
@@ -286,39 +238,23 @@ void draw() {
 	<img src="imgs/fig_18_05_datacsv.png" class="tut" />
 	
 	<p>
-		Instead of saying:
-	</p>
-	
+		Instead of saying:<br />
 <pre>
 String[] stuff = loadStrings("data.csv");
 </pre>
-
-	<p>
-	We can now say:
-	</p>
-	
+	We can now say:<br />
 <pre>
 Table table = loadTable("data.csv");
 </pre>
-
-	<p>
-		Now I've missed an important detail. Take a look again at the data.csv text file above. Notice how the first line of text is not the data itself, but rather a <em>header row</em>. This row includes labels that describe the data included in each subsequent row. The good news is that Processing can automatically interpret and store the headers for you, if you pass in the option <tt>"header"</tt> when loading the table. (In addition to <tt>"header"</tt>, there are other options you can specify. For example, if your file is called data.txt but is comma separated data you can pass in the option <tt>"csv"</tt>. If it also has a header row, then you can specifiy both options like so: <tt>"header,csv"</tt>). A full list of options can be found on the <a href="http://processing.org/reference/loadTable_.html"><tt>loadTable()</tt> documentation page</a>.
-	</p>
-	
+		Now I've missed an important detail. Take a look again at the data.csv text file above. Notice how the first line of text is not the data itself, but rather a <em>header row</em>. This row includes labels that describe the data included in each subsequent row. The good news is that Processing can automatically interpret and store the headers for you, if you pass in the option <tt>"header"</tt> when loading the table. (In addition to <tt>"header"</tt>, there are other options you can specify. For example, if your file is called data.txt but is comma separated data you can pass in the option <tt>"csv"</tt>. If it also has a header row, then you can specifiy both options like so: <tt>"header,csv"</tt>). A full list of options can be found on the <a href="http://processing.org/reference/loadTable_.html"><tt>loadTable()</tt> documentation page</a>.<br />
 <pre>
 Table table = loadTable("data.csv", "header");
 </pre>
-
-	<p>
 		Now that the table is loaded, I can show how you grab individual pieces of data or iterate over the entire table. Let's look at the data visualized as a grid.
-	</p>
 	<br />
 	<img src="imgs/data_05_headers.jpg" class="tut" />
-	
-	<p>
-	In the above grid you can see that the data is organized in terms of rows and columns. One way to access the data, therefore, would be to request a value by its numeric row and column location (with zero being the first row or first column). This is similar to accessing a pixel color at a given (x,y) location, though in this case the y position (row) comes first. The following code requests a piece of data at a given (row, column) location.
-	</p>
-	
+<br />
+	In the above grid you can see that the data is organized in terms of rows and columns. One way to access the data, therefore, would be to request a value by its numeric row and column location (with zero being the first row or first column). This is similar to accessing a pixel color at a given (x,y) location, though in this case the y position (row) comes first. The following code requests a piece of data at a given (row, column) location.<br />
 <pre>
 int val1 = table.getInt(2, 1);      // val now has the value 235
 
@@ -326,24 +262,15 @@ float val2 = table.getFloat(3, 2);  // val2 now has the value 44.758068
 
 String s = table.getString(0, 3);   // s now has the value “Happy”
 </pre>
-
-	<p>
-	While the numeric index is sometimes useful, it’s generally going to be more convenient to access each piece of data by the column name. For example, I could pull out a specific row from the <tt>Table</tt>.
-	</p>
-	
+	While the numeric index is sometimes useful, it’s generally going to be more convenient to access each piece of data by the column name. For example, I could pull out a specific row from the <tt>Table</tt>.<br />
 <pre>
 TableRow row = table.getRow(2); // Gets the third row (index 2)
 </pre>
-
-
-	<p>
 		Note in the above line of code that a <tt>Table</tt> object refers to the entire table of data while a <a href="http://processing.org/reference/TableRow.html"><tt>TableRow</tt></a> object handles an individual row of data within the <tt>Table</tt>.
 	</p>
 
 	<p>
-		Once I have the <tt>TableRow</tt> object, I can ask for data from some or all of the columns.
-	</p>
-	
+		Once I have the <tt>TableRow</tt> object, I can ask for data from some or all of the columns.<br />
 <pre>
 int x = row.getInt("x"); // 	    // x has the value 273
 
@@ -353,11 +280,7 @@ float d = row.getFloat("diameter"); // d has the value 61.14072
 
 String s = row.getString("name");   // s has the value “Joyous”
 </pre>
-
-	<p>
-		The method <a href="http://processing.org/reference/Table_getRow_.html"><tt>getRow()</tt></a> returns a single row from the table. If you want to grab all the rows and iterate over them you can do so in a loop with a counter accessing each row one at a time. The total number of available rows can be retrieved with <tt>getRowCount()</tt>.
-	</p>
-	
+		The method <a href="http://processing.org/reference/Table_getRow_.html"><tt>getRow()</tt></a> returns a single row from the table. If you want to grab all the rows and iterate over them you can do so in a loop with a counter accessing each row one at a time. The total number of available rows can be retrieved with <tt>getRowCount()</tt>.<br />
 <pre>
 for (int i = 0; i&lt;table.getRowCount(); i++) {
 
@@ -372,23 +295,15 @@ for (int i = 0; i&lt;table.getRowCount(); i++) {
 
 }
 </pre>
-
-	<p>
 		If you want to search for a select number of rows within the table, you can do so with <a href="http://processing.org/reference/Table_findRows_.html"><tt>findRows()</tt></a> and <a href="http://processing.org/reference/Table_matchRows_.html"><tt>matchRows()</tt></a>.
 	</p>
 
 	<p>
-		In addition to being read, <tt>Table</tt> objects can be altered or created on the fly while a sketch is running. Cell values can be adjusted, rows can be removed, and new rows can be added. For example, to set new values in a cell there are functions <tt>setInt()</tt>, <tt>setFloat()</tt>, and <tt>setString()</tt>.
-	</p>
-
+		In addition to being read, <tt>Table</tt> objects can be altered or created on the fly while a sketch is running. Cell values can be adjusted, rows can be removed, and new rows can be added. For example, to set new values in a cell there are functions <tt>setInt()</tt>, <tt>setFloat()</tt>, and <tt>setString()</tt>.<br />
 <pre>
 row.setInt("x", mouseX); // Update the value of column "x" to mouseX in a given TableRow.
 </pre>
-
-	<p>
-		To add a new row to a <tt>Table</tt>, simply call the method <a href="http://processing.org/reference/Table_addRow_.html"><tt>addRow()</tt></a> and set the values of each column.
-	</p>
-
+		To add a new row to a <tt>Table</tt>, simply call the method <a href="http://processing.org/reference/Table_addRow_.html"><tt>addRow()</tt></a> and set the values of each column.<br />
 <pre>
 //Create a new row.
 TableRow row = table.addRow();
@@ -399,11 +314,7 @@ row.setFloat("y", mouseY);
 row.setFloat("diameter", random(40, 80));
 row.setString("name", "new label");
 </pre>
-
-	<p>
-		To delete a row, simply call the method <a href="http://processing.org/reference/Table_removeRow_.html"><tt>removeRow()</tt></a> and pass in the numeric index of the row you would like removed. For example, the following code removes the first row whenever the size of the table is greater than ten rows.
-	</p>
-
+		To delete a row, simply call the method <a href="http://processing.org/reference/Table_removeRow_.html"><tt>removeRow()</tt></a> and pass in the numeric index of the row you would like removed. For example, the following code removes the first row whenever the size of the table is greater than ten rows.<br />
 <pre>
 // If the table has more than 10 rows
 if (table.getRowCount()&gt;10) {
@@ -412,8 +323,6 @@ if (table.getRowCount()&gt;10) {
   table.removeRow(0);
 }
 </pre>
-
-	<p>
 		The following example puts all of the above code together. Notice how each row of the table contains the data for a <tt>Bubble</tt> object.
 	</p>
 	
@@ -548,34 +457,23 @@ boolean rollover(int mx, int my) {
 <h3>Data that is not in a Standardized Format</h3>
 
 	<p>
-		What if your data is not in a standard format like a table, how do you deal with it then? One of the nice features about <tt>loadStrings()</tt> is that in addition to pulling text from a file, you can also grab a URL. For example:
-	</p>
-	
+		What if your data is not in a standard format like a table, how do you deal with it then? One of the nice features about <tt>loadStrings()</tt> is that in addition to pulling text from a file, you can also grab a URL. For example:<br />
 <pre>
 String[] lines = loadStrings("http://www.yahoo.com");
 </pre>
-
-	<p>
 		When you send a URL path into <tt>loadStrings()</tt>, you get back the raw HTML (Hypertext Markup Language) source of the requested web page. It’s the same stuff that appears upon selecting “View Source” from a browser’s menu options. You don’t need to be an HTML expert to follow this section, but if you are not familiar at all with HTML, you might want to read <a href="http://en.wikipedia.org/wiki/HTML">http://en.wikipedia.org/wiki/HTML</a>.
 	</p>
 	
 	<p>
-		Unlike with the comma-delimited data from a text file that was specially formatted for use in a Processing sketch, it’s not practical to have the resulting raw HTML stored in an array of strings (each element representing one line from the source). Converting the array into one long string can make things a bit simpler. As you saw earlier in the chapter, this can be achieved using <tt>join()</tt>.
-	</p>
-	
+		Unlike with the comma-delimited data from a text file that was specially formatted for use in a Processing sketch, it’s not practical to have the resulting raw HTML stored in an array of strings (each element representing one line from the source). Converting the array into one long string can make things a bit simpler. As you saw earlier in the chapter, this can be achieved using <tt>join()</tt>.<br />
 <pre>
 String onelongstring = join(lines, " ");
 </pre>
-
-	<p>
-		When pulling raw HTML from a web page, it’s likely you do not want all of the source, but just a small piece of it. Perhaps you’re looking for weather information, a stock quote, or a news headline. You can take advantage of the text manipulation functions you learned — <tt>indexOf()</tt>, <tt>substring()</tt>, and <tt>length()</tt> — to find pieces of data within a large block of text. Take, for example, the following <tt>String</tt> object:
-	</p>
-	
+		When pulling raw HTML from a web page, it’s likely you do not want all of the source, but just a small piece of it. Perhaps you’re looking for weather information, a stock quote, or a news headline. You can take advantage of the text manipulation functions you learned — <tt>indexOf()</tt>, <tt>substring()</tt>, and <tt>length()</tt> — to find pieces of data within a large block of text. Take, for example, the following <tt>String</tt> object:<br />
 <pre>
 String stuff = "Number of apples:62. Boy, do I like apples or what!";
 </pre>
-
-	<p>Let’s say I want to pull out the number of apples from the above text. My algorithm would be as follows:</p>
+Let’s say I want to pull out the number of apples from the above text. My algorithm would be as follows:
 
 	<ol>
 		<li>
@@ -590,12 +488,10 @@ String stuff = "Number of apples:62. Boy, do I like apples or what!";
 		<li>
 			<p>Convert the string to a number (if I want to use it as such).</p>
 		</li>
-	</ol>
+</ol></p>
 
 	<p>
-		In code, this looks like:
-	</p>
-	
+		In code, this looks like:<br />
 <pre>
 int start      = stuff.indexOf("apples:" ) + 8;  // STEP 1 
 // The index where a string ends can be found by 
@@ -604,11 +500,7 @@ int end        = stuff.indexOf(".", start);      // STEP 2
 String apples  = stuff.substring(start, end);    // STEP 3
 int apple_no   = int(apples);                    // STEP 4
 </pre>
-
-	<p>
-		The above code will do the trick, but I should be a bit more careful to make sure I don’t run into any errors if I do not find the string I am searching for. I can add some error checking and generalize the code into a function:
-	</p>
-
+		The above code will do the trick, but I should be a bit more careful to make sure I don’t run into any errors if I do not find the string I am searching for. I can add some error checking and generalize the code into a function:<br />
 <pre>
 // A function that returns a substring between two substrings. 
 // If the beginning of end "tag" is not found, the function returns an empty string.
@@ -633,8 +525,6 @@ String giveMeTextBetween(String s, String startTag, String endTag) {
   return s.substring(startIndex, endIndex);
 }
 </pre>
-
-	<p>
 		With this technique, you are ready to connect to a website from within Processing and grab data to use in your sketches. For example, you could read the HTML source from nytimes.com and look for today’s headlines, search finance.yahoo.com for stock quotes, count how many times the word “flower” appears on your favorite blog, and so on. However, HTML is an ugly, scary place with inconsistently formatted pages that are difficult to reverse engineer and parse effectively. Not to mention the fact that companies change the source code of web pages rather often, so any example that I might make while I am writing this paragraph might break by the time you read this paragraph.
 	</p>
 	
@@ -645,46 +535,32 @@ String giveMeTextBetween(String s, String startTag, String endTag) {
 	<p>
 		An example of data only available as HTML is the <a href="http://imdb.com">Internet Movie Database</a>. IMDb contains information about movies sorted by year, genre, ratings, etc. For each movie, you can find the cast and crew list, a plot summary, running time, a movie poster image, the list goes on. However, IMDb has no API and does not provide its data as XML or JSON. Pulling the data into Processing therefore requires a bit of detective work. Let's look at the page for the <em>Shaun the Sheep Movie</em>
 	</p>
-	<br />
+
 	<img src="imgs/fig_18_09_shaunsheep.png" class="tut" />
-	
+
 	<p>
 		Looking in the HTML source from the above URL, I find a giant mess of markup.
 	</p>
-	<br />
+
 	<img src="imgs/fig_18_10_shaunsheep_sourc.png" class="tut" />
-	
+
 	<p>
-		It’s up to me to pore through the raw source and find the data I am looking for. Let's say I want to know the running time of the movie and grab the movie poster image. After some digging, I find that the movie is 139 minutes long as listed in the following HTML.
-	</p>
-	
+		It’s up to me to pore through the raw source and find the data I am looking for. Let's say I want to know the running time of the movie and grab the movie poster image. After some digging, I find that the movie is 139 minutes long as listed in the following HTML.<br />
 <pre>
 &lt;div class="txt-block"&gt;
   &lt;h4 class="inline"&gt;Runtime:&lt;/h4&gt; 
     &lt;time itemprop="duration" datetime="PT139M"&gt;139 min&lt;/time&gt;
 &lt;/div&gt;
 </pre>
-
-	<p>
-		For any given movie, the running time itself will be variable, but the HTML structure of the page will stay the same. I can therefore deduce that running time will always appear in between:
-	</p>
-	
+		For any given movie, the running time itself will be variable, but the HTML structure of the page will stay the same. I can therefore deduce that running time will always appear in between:<br />
 <pre>
 &lt;time itemprop="duration" datetime="PT139M"&gt;
 </pre>
-	
-	<p>
-		and:
-	</p>
-	
+		and:<br />
 <pre>
 &lt;/time&gt;
 </pre>
-
-	<p>
-		Knowing where the data starts and ends, I can use <tt>giveMeTextBetween()</tt> to pull out the running time. A quote in Java marks the beginning or end of a string. So how do you include an actual quote in a String object? The answer is via an “escape” sequence. A quote can be included using a backward slash, followed by a quote. For example: String q = "This String has a quote \"in it";
-	</p>
-	
+		Knowing where the data starts and ends, I can use <tt>giveMeTextBetween()</tt> to pull out the running time. A quote in Java marks the beginning or end of a string. So how do you include an actual quote in a String object? The answer is via an “escape” sequence. A quote can be included using a backward slash, followed by a quote. For example: String q = "This String has a quote \"in it";<br />
 <pre>
 String url = "http://www.imdb.com/title/tt0058331";
 String[] lines = loadStrings(url);
@@ -698,17 +574,12 @@ String end = "</time>";
 String runningtime = giveMeTextBetween(html, start, end);
 println(runningtime);
 </pre>
-
-	<p>
 		The following code retrieves both the running time and movie poster iamge from IMDb and displays it onscreen.
 	</p>
 	
 	<strong>Parsing IMDb Manually</strong>
 	<br /><br />
 	<img src="imgs/fig_18_11_parsing_imdb.png" class="tut" />
-	
-
-
 <pre>
 String runningtime;
 PImage poster;
@@ -785,15 +656,11 @@ String giveMeTextBetween(String s, String before, String after) {
 	<p>
 		As you learned earlier, an array is an ordered list of variables. Each element of the array is numbered and be accessed by its numeric index.
 	</p>
-	<br />
 	<img src="imgs/fig_18_12_traditional_arra.png" class="tut" />
-	
 	<p>
 		However, what if instead of numbering the elements of an array you could name them? This element is named “Sue,” this one “Bob,” this one “Jane,” and so on and so forth. In programming, this kind of data structure is often referred to as an <em>associative array, map,</em> or <em>dictionary.</em> It’s a collection of (key, value) pairs. Imagine you had a dictionary of people's ages. When you look up “Sue” (the key), the definition, or value, is her age, 24.
 	</p>
-	<br />
 	<img src="imgs/fig_18_13_associative_arra.png" class="tut" />
-	
 	<p>
 		Associative arrays can be incredibly convenient for various applications. For example, you could keep a list of student IDs (student name, id) or a list of prices (product name, price) in a dictionary. Here a dictionary is the perfect data structure to hold the concordance. Each element of the dictionary is a word paired with its count.
 	</p>
@@ -803,49 +670,30 @@ String giveMeTextBetween(String s, String before, String after) {
 	</p>
 	
 	<p>
-		Creating an <tt>IntDict</tt> is as easy as calling an empty constructor. Let's say you want a dictionary to keep track of an inventory of supplies.
-	</p>
-	
+		Creating an <tt>IntDict</tt> is as easy as calling an empty constructor. Let's say you want a dictionary to keep track of an inventory of supplies.<br />
 <pre>
 IntDict inventory = new IntDict();
 </pre>
-
-	<p>
-		Values can be paired with their keys using the <tt>set()</tt> method.
-	</p>
-	
+		Values can be paired with their keys using the <tt>set()</tt> method.<br />
 <pre>
 // set() assigns an integer to a String.
 inventory.set("pencils", 10);
 inventory.set("paper clips", 128);
 inventory.set("pens, 16");
 </pre>
-
-	<p>
-		There are a variety of other methods that can be called to change the value associated with a particular key. For example, if you wanted to add five pencils, you can use <tt>add()</tt>.
-	</p>
-	
+		There are a variety of other methods that can be called to change the value associated with a particular key. For example, if you wanted to add five pencils, you can use <tt>add()</tt>.<br />
 <pre>
 inventory.add("pencils", 5);	// The value of “pencils” is now 15.
 </pre>
 
-	<p>
-		A particularly convenient method for the concordance example is <tt>increment()</tt> which adds one to a key's value.
-	</p>
-	
+		A particularly convenient method for the concordance example is <tt>increment()</tt> which adds one to a key's value.<br />
 <pre>
 inventory.increment("pens");	// The value of “pencils” is now 16.
 </pre>
-
-	<p>
-		To retrieve a value associated with a particular key, the <tt>get()</tt> method is used.
-	</p>
-	
+		To retrieve a value associated with a particular key, the <tt>get()</tt> method is used.<br />
 <pre>
 int num = inventory.get("pencils"); 	// The value of num is 16.
 </pre>
-
-	<p>
 		Finally, dictionaries can be sorted by their keys (alphabetical) or values (smallest to largest or the reverse) with the methods <tt>sortKeys()</tt>, <tt>sortKeysReverse()</tt>, <tt>sortValues()</tt>, and <tt>sortValuesReverse()</tt>.
 	</p>
 	
@@ -856,7 +704,6 @@ int num = inventory.get("pencils"); 	// The value of num is 16.
 <strong>Text Concordance Using IntDict</strong>
 <br /><br />
 	<img src="imgs/fig_18_14_concordance_viz.png" class="tut" />
-	
 <pre>
 String[] allwords;
 
@@ -919,7 +766,6 @@ void draw() {
   }
 }
 </pre>
-	  
 	  <p>
 	  	Processing also includes three classes for lists of numbers and strings: <tt>IntList</tt>, <tt>FloatList</tt>, and <tt>StringList</tt>. In other words, if you just want a list of words (without their counts) you could use a <tt>StringList</tt> rather than an <tt>IntDict.</tt>
 	  </p>
@@ -931,13 +777,9 @@ void draw() {
 	  <p>
 	  	XML organizes information in a tree structure. Let’s imagine a list of students. Each student has an ID number, name, address, email, and telephone number. Each student’s address has a city, state, and zip code. An XML tree for this dataset might look like the following:
 	  </p>
-	  <br />
 	  <img src="imgs/data_06_xml.jpg" class="tut" />
-	  
 	  <p>
-	  	The XMl source itself (with two students listed) is:
-	  </p>
-	  
+	  	The XMl source itself (with two students listed) is:<br />
 <pre>
 &lt;?xml version = "1.0" encoding = "UTF-8 "?&gt;
 &lt;students&gt;
@@ -967,15 +809,11 @@ void draw() {
   &lt;/student&gt;
 &lt;/students&gt;
 </pre>
-	  
-	  <p>
 	  	Note the similarities to object-oriented programming. You can think of the XML tree in the following terms. The XML document represents an array of student objects. Each student object has multiple pieces of information, an ID, a name, a phone number, an email address, and a mailing address. The mailing address is also an object that has multiple pieces of data, such as street, city, state, and zip.
 	  </p>
 	  
 	  <p>
-	  	Let's look at some data made available from a web service such as Yahoo Weather. Here is the raw XML source. (Note I have edited it slightly for simplification purposes.)
-	  </p>
-	 
+	  	Let's look at some data made available from a web service such as Yahoo Weather. Here is the raw XML source. (Note I have edited it slightly for simplification purposes.)<br />
 <pre>
 &lt;?xml version="1.0" encoding="UTF-8" standalone="yes" ?&gt;
 &lt;rss version="2.0" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0"&gt;
@@ -992,40 +830,30 @@ void draw() {
   &lt;/channel&gt;
 &lt;/rss&gt;
 </pre>
-
-	<p>
 		The data is mapped in the tree stucture shown below:
 	</p>
-	<br />
 	<img src="imgs/data_07_weatherxml.jpg" class="tut" />
-	
 	<p>
 		You may be wondering what the top level “RSS” is all about. Yahoo’s XML weather data is provided in RSS format. RSS stands for “Really Simple Syndication” and is a standardized XML format for syndicating web content (such as news articles, etc.). You can read more about <a href="http://en.wikipedia.org/wiki/RSS">RSS on Wikipedia</a>.
 	</p>
 	
-	<p>Now that you have a handle on the tree structure, let's look at the specifics inside that structure. With the exception of the first line (which simply indicates that this page is XML formatted), this XML document contains a nested list of <em>elements</em>, each with a start tag, that is, <tt>&lt;channel&gt;</tt>, and an end tag, that is, <tt>&lt;/channel&gt;</tt>. Some of these elements have content between the tags:</p>
-
+	<p>Now that you have a handle on the tree structure, let's look at the specifics inside that structure. With the exception of the first line (which simply indicates that this page is XML formatted), this XML document contains a nested list of <em>elements</em>, each with a start tag, that is, <tt>&lt;channel&gt;</tt>, and an end tag, that is, <tt>&lt;/channel&gt;</tt>. Some of these elements have content between the tags:<br />
 <pre>
 &lt;title&gt;Conditions for New York, NY at 12:49 pm EDT&lt;/title&gt;
 </pre>
-
-	<p>and some have attributes (formatted by <em>Attribute Name</em> equals <em>Attribute Value in quotes</em>):</p>
-	<br />
+and some have attributes (formatted by <em>Attribute Name</em> equals <em>Attribute Value in quotes</em>):<br />
 <pre>
 &lt;yweather:forecast day="Thu" low="65" high="82" text="Partly Cloudy"/&gt;
 </pre>
+</p>
 
 <h3>Using the Processing XML Class</h3>
 
 	<p>
-		Since the syntax of XML is standardized, I could certainly use <tt>split()</tt>, <tt>indexof()</tt>, and <tt>substring()</tt> to find the pieces I want in the XML source. The point here, however, is that because XML is a standard format, I don't have to do this. Rather, I can use an XML parser. In Processing, XML can be parsed using the built-in Processing class <tt>XML</tt>.
-	</p>
-	
+		Since the syntax of XML is standardized, I could certainly use <tt>split()</tt>, <tt>indexof()</tt>, and <tt>substring()</tt> to find the pieces I want in the XML source. The point here, however, is that because XML is a standard format, I don't have to do this. Rather, I can use an XML parser. In Processing, XML can be parsed using the built-in Processing class <tt>XML</tt>.<br />
 <pre>
 XML xml = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003");
 </pre>
-
-	<p>
 		Here, instead of <tt>loadStrings()</tt> or <tt>loadTable()</tt>, I'm now calling <tt>loadXML()</tt> and passing in the address (URL or local file) of the XML document. An <tt>XML</tt> object represents one element of an XML tree. When a document is first loaded, that <tt>XML</tt> object is always the root element. Referring back to XML tree diagram from Yahoo Weather, I find the current temperature via the following path:
 	</p>
 
@@ -1048,22 +876,16 @@ XML xml = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003");
 	</ol>
 	
 	<p>
-		The children of an element are accessed via the <tt>getChild()</tt> function.
-	</p>
-	
+		The children of an element are accessed via the <tt>getChild()</tt> function.<br />
 <pre>
 // Accessing the “channel” child element of the root element --&gt;
 XML channel = xml.getChild("channel");
 </pre>
-
-	<p>
 		The content of an element itself is retrieved with one of the following methods: <tt>getContent()</tt>, <tt>getIntContent()</tt>, or <tt>getFloatcContent()</tt>. <tt>getContent()</tt> is for generic use and will always give you the content as a String. If you intend to use the content as a number, Processing will convert it for you with either <tt>getIntContent()</tt> or <tt>getFloatcContent()</tt>. Attributes can also be read as either numbers — <tt>getInt(), getFloat()</tt> — or text — <tt>getString()</tt>.
 	</p>
 
 	<p>
-		Following steps one through five outlined above through the XML tree, I have:
-	</p>
-
+		Following steps one through five outlined above through the XML tree, I have:<br />
 <pre>
 XML root = loadXML("http://xml.weather.yahoo.com/forecastrss?p=10003"); // Step 1
 
@@ -1075,11 +897,7 @@ XML yweather    = item.getChild("yweather:condition"); // Step 4
 
 int temperature = yweather.getInt("temp"); // Step 5
 </pre>
-
-	<p>
-		However, this is a bit long-winded and so can be compressed down into one (or three, as below) lines of code.
-	</p>
-	
+		However, this is a bit long-winded and so can be compressed down into one (or three, as below) lines of code.<br />
 <pre>
 XML root = loadXML(http://xml.weather.yahoo.com/forecastrss?p=10003);
 
@@ -1087,23 +905,15 @@ XML forecast =
   root.getChild("channel").getChild("item").getChild("yweather:condition"); // Steps 2-4
 int temperature = forecast.getInt("temp");
 </pre>
-
-	<p>
-		Finally, the second line of code above can be further condensed to:
-	</p>
-
+		Finally, the second line of code above can be further condensed to:<br />
 <pre>
 XML forecast = xml.getChild("channel/item/yweather:condition"); // Steps 2-4
 </pre>
-
-	<p>
 		Following is the above code put together in an example that retrieves weather data for multiple zip codes by parsing Yahoo's XML feed.
 	</p>
-
+<p>
 <strong>Parsing Yahoo Weather XML</strong>
-<br /><br />
 <img src="imgs/fig_18_17_weather.png" class="tut" />
-
 <pre>
 int temperature = 0;Temperature is stored as a number and the description of the weather as a string. 
 String weather = "";
@@ -1139,8 +949,6 @@ void draw() {
   text("Forecast: " + weather, 10, 90);
 }
 </pre>
-
-	<p>
 		Other useful XML functions are:
 	</p>
 	
@@ -1165,9 +973,7 @@ void draw() {
 	</p>
 	
 	<p>
-		Earlier, we used a <tt>Table</tt> to store information related to <tt>Bubble</tt> objects. XML document can also be used in the same manner. Here is a possible solution for an XML tree of <tt>Bubble</tt> objects:
-	</p>
-	
+		Earlier, we used a <tt>Table</tt> to store information related to <tt>Bubble</tt> objects. XML document can also be used in the same manner. Here is a possible solution for an XML tree of <tt>Bubble</tt> objects:<br />
 <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;bubbles&gt;
@@ -1193,15 +999,12 @@ void draw() {
   &lt;/bubble&gt;
 &lt;/bubbles&gt;
 </pre>
-
-	<p>
 		I can use <tt>getChildren()</tt> to retrieve the array of <tt>&lt;bubble&gt;</tt> elements and make a <tt>Bubble</tt> object from each one. Here is the example which uses the identical <tt>Bubble</tt> class from earlier (not included below). The new code is in bold.
 	</p>
 	
+<p>
 <strong>Using Processing's XML Class</strong>
-<br /><br />
 <img src="imgs/fig_18_07_tablebubbles.png" class="tut" />
-
 <pre>
 // An Array of Bubble objects
 Bubble[] bubbles;
@@ -1254,8 +1057,6 @@ void draw() {
   }
 }
 </pre>
-
-	<p>
 		In addition to <tt>loadXML()</tt>, Processing also includes a <tt>saveXML()</tt> function for writing XML files to your sketch folder. You can modify the XML tree itself by adding or removing elements with <tt>addChild()</tt> or <tt>removeChild()</tt>, as well as modify the content of elements or attributes with <tt>setContent()</tt>, <tt>setIntContent()</tt>, <tt>setFloatContent()</tt>, <tt>setString()</tt>, <tt>setInt()</tt>, and <tt>setFloat()</tt>.
 	</p>
 	
@@ -1270,9 +1071,7 @@ void draw() {
 	</p>
 
 	<p>
-		Let's take a look at a JSON object first. A JSON object is like a Processing object only with no functions. It’s simply a collection of variables with a name and a value (or "name/value pair"). For example, following is JSON data describing a person:
-	</p>
-	
+		Let's take a look at a JSON object first. A JSON object is like a Processing object only with no functions. It’s simply a collection of variables with a name and a value (or "name/value pair"). For example, following is JSON data describing a person:<br />
 <pre>
 {
   "name":"Olympia",
@@ -1281,9 +1080,7 @@ void draw() {
   "height":96.5,
   "state":"giggling"
 }</pre>
-
-<p>Notice how this maps closely to classes in Processing.</p>
-
+Notice how this maps closely to classes in Processing.
 <pre data-type="programlisting">
 class Person {
   String name;
@@ -1292,11 +1089,7 @@ class Person {
   String state;
 }
 </pre>
-
-	<p>
-		There are no classes in JSON, only the object literals themselves. Also an object can contain, as part of itself, another object.
-	</p>
-
+		There are no classes in JSON, only the object literals themselves. Also an object can contain, as part of itself, another object.<br />
 <pre>
 {
   "name":"Olympia",
@@ -1309,11 +1102,7 @@ class Person {
     "age":6
   }
 }</pre>
-
-	<p>
-		In XML, the preceding JSON data would look like the following (for simplicity I'm avoiding the use of XML attributes).
-	</p>
-	
+		In XML, the preceding JSON data would look like the following (for simplicity I'm avoiding the use of XML attributes).<br />
 <pre>
 &lt;xml version="1.0" encoding="UTF-8"?&gt;
 &lt;person&gt;
@@ -1327,19 +1116,11 @@ class Person {
   &lt;/brother&gt;
 &lt;/person&gt;
 </pre>
-
-	<p>
-		Multiple JSON objects can appear in the data as an array. Just like the arrays you use in Processing, a JSON array is simply a list of values (primitives or objects). The syntax, however, is different with square brackets indicating the use of an array rather than curly ones. Here is a simple JSON array of integers:
-	</p>
-
+		Multiple JSON objects can appear in the data as an array. Just like the arrays you use in Processing, a JSON array is simply a list of values (primitives or objects). The syntax, however, is different with square brackets indicating the use of an array rather than curly ones. Here is a simple JSON array of integers:<br />
 <pre>
 [1, 7, 8, 9, 10, 13, 15]
 </pre>
-
-	<p>
-		You might find an array as part of an object.
-	</p>
-	
+		You might find an array as part of an object.<br />
 <pre>
 {
   "name":"Olympia",
@@ -1351,11 +1132,7 @@ class Person {
   ]
 }
 </pre>
-
-	<p>
-		Or an array of objects themselves. For example, here is what the bubbles would look like in JSON. Notice how this JSON data is organized as a single JSON object "bubbles," which contains a JSON array of JSON objects, the bubbles. Flip back to compare to the CSV and XML versions of the same data.
-	</p>
-	
+		Or an array of objects themselves. For example, here is what the bubbles would look like in JSON. Notice how this JSON data is organized as a single JSON object "bubbles," which contains a JSON array of JSON objects, the bubbles. Flip back to compare to the CSV and XML versions of the same data.<br />
 <pre>
 {
   "bubbles":[
@@ -1385,7 +1162,7 @@ class Person {
     }
   ]
 }
-</pre>
+</pre></p>
 
 <h3>JSONObject and JSONArray</h3>
 
@@ -1398,9 +1175,7 @@ class Person {
 	</p>
 	
 	<p>
-		Sample 1:
-	</p>
-	
+		Sample 1:<br />
 <pre>
 [
   {
@@ -1411,11 +1186,7 @@ class Person {
   }
 ]
 </pre>
-
-	<p>
-		Sample 2:
-	</p>
-	
+		Sample 2:<br />
 <pre>
 {
   "names":[
@@ -1428,23 +1199,13 @@ class Person {
   ]
 }
 </pre>
-
-	<p>
-		Look how similar the above two samples look. They both contain exactly the same data, two names "Elias" and "Olympia." There is one, very key difference, however, to how the data is formatted: the very first character. Is it a "[" or a "{"? The answer will determine whether you’re loading an array ("[") or an object("{"). JSON objects start with a curly bracket, while JSON arrays start with a square bracket.
-	</p>
-	
+		Look how similar the above two samples look. They both contain exactly the same data, two names "Elias" and "Olympia." There is one, very key difference, however, to how the data is formatted: the very first character. Is it a "[" or a "{"? The answer will determine whether you’re loading an array ("[") or an object("{"). JSON objects start with a curly bracket, while JSON arrays start with a square bracket.<br />
 <pre>
 JSONObject json = loadJSONObject("file.json");
-</pre>
 
-<pre>
 JSONArray json = JSONArray("file.json");
 </pre>
-
-	<p>
-		Typically, even if the data is ultimately organized as an array of objects (such as the array of "bubble" objects), the root element of the JSON data will be an object that contains that array. Let's look at the bubble data one more time.
-	</p>
-	
+		Typically, even if the data is ultimately organized as an array of objects (such as the array of "bubble" objects), the root element of the JSON data will be an object that contains that array. Let's look at the bubble data one more time.<br />
 <pre>
 {
   "bubbles":[
@@ -1467,30 +1228,18 @@ JSONArray json = JSONArray("file.json");
   ]
 }
 </pre>
-
-	<p>
-		With the above, I first load an object and then pull the array out of that object.
-	</p>
-	
+		With the above, I first load an object and then pull the array out of that object.<br />
 <pre>
 JSONObject json = loadJSONObject("data.json");
 JSONArray bubbleData = json.getJSONArray("bubbles");
 </pre>
-
-	<p>
-		Just as with XML, the data from an element is accessed via its name, in this case "bubbles." With a <tt>JSONArray</tt>, however, each element of the array is retrieved via its numeric index. The following code iterates over a <tt>JSONArray</tt>.
-	</p>
-	
+		Just as with XML, the data from an element is accessed via its name, in this case "bubbles." With a <tt>JSONArray</tt>, however, each element of the array is retrieved via its numeric index. The following code iterates over a <tt>JSONArray</tt>.<br />
 <pre>
 for (int i = 0; i &lt; bubbleData.size(); i++) {
   JSONObject bubble = bubbleData.getJSONObject(i);
  }
 </pre>
-
-	<p>
-		And when you're looking for a specific piece of data from a <code>JSONObject</code>, such as an integer or string, the functions are identical to those of XML attributes. The following code gets the position object from the bubble object, then gets x and y as integers from the position object. The diameter and label are then available directly from the <tt>Bubble</tt> object.
-	</p>
-
+		And when you're looking for a specific piece of data from a <code>JSONObject</code>, such as an integer or string, the functions are identical to those of XML attributes. The following code gets the position object from the bubble object, then gets x and y as integers from the position object. The diameter and label are then available directly from the <tt>Bubble</tt> object.<br />
 <pre>
   JSONObject position = bubble.getJSONObject("position");
 
@@ -1501,13 +1250,12 @@ for (int i = 0; i &lt; bubbleData.size(); i++) {
   float diameter = bubble.getFloat("diameter");
   String label = bubble.getString("label");
 </pre>
-
-	<p>
 		Putting this all together, I can now make a JSON version of the bubbles example (leaving out the <tt>draw()</tt> function and <tt>Bubble</tt> class which haven't changed.)
 	</p>
 	
+<p>
 <strong>Using Processing's JSON Classes</strong>
-
+<br />
 <pre>
 // An Array of Bubble objects
 Bubble[] bubbles;
@@ -1545,7 +1293,7 @@ void loadData() {
     bubbles[i] = new Bubble(x, y, diameter, label);
   }
 }
-</pre>
+</pre></p>
 
 <h3>Threads</h3>
 
@@ -1563,9 +1311,7 @@ void loadData() {
 	</p>
 	
 	<p>
-		Writing your own thread can be a complex endeavor that involves extending the Java <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/threads.html"><tt>Thread</tt></a> class. However, the <tt>thread()</tt> method is a quick and dirty way to implement a simple thread in Processing. By passing in a string that matches the name of a function declared elsewhere in the sketch, Processing will execute that function in a separate thread. Let's take a look at a skeleton of how this works.
-	</p>
-
+		Writing your own thread can be a complex endeavor that involves extending the Java <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/threads.html"><tt>Thread</tt></a> class. However, the <tt>thread()</tt> method is a quick and dirty way to implement a simple thread in Processing. By passing in a string that matches the name of a function declared elsewhere in the sketch, Processing will execute that function in a separate thread. Let's take a look at a skeleton of how this works.<br />
 <pre>
 void setup() {
   thread("someFunction");
@@ -1580,15 +1326,11 @@ void someFunction() {
   // thread("someFunction") as it was in setup!
 }
 </pre>
-
-	<p>
 		The <tt>thread()</tt> function receives a string as an argument. The string should match the name of the function you want to run as a thread. In the above example it’s <tt>"someFunction"</tt>.
 	</p>
 		
 	<p>
-		Let's look at a more practical example. For an example of data that changes often, I'll use <a href="http://time.jsontest.com/">time.jsontest.com</a> which gives you the current time (in milliseconds). While I could retrieve this from the system clock, this works well for demonstrating continuously requesting data that changes over time. Not knowing about threads, my first instinct might be to say:
-	</p>
-
+		Let's look at a more practical example. For an example of data that changes often, I'll use <a href="http://time.jsontest.com/">time.jsontest.com</a> which gives you the current time (in milliseconds). While I could retrieve this from the system clock, this works well for demonstrating continuously requesting data that changes over time. Not knowing about threads, my first instinct might be to say:<br />
 <pre>
 void draw() {
   // The code will stop here and wait to receive the data before moving on.
@@ -1597,11 +1339,7 @@ void draw() {
   text(time, 40, 100);
 }
 </pre>
-
-	<p>
-		This would give me the current time every cycle through <tt>draw()</tt>. If I examine the frame rate, however, I'll notice that the sketch is running incredibly slowly (and all it needs to do is draw a single string!). This is where calling the parsing code as a separate thread will help a lot.
-	</p>
-	
+		This would give me the current time every cycle through <tt>draw()</tt>. If I examine the frame rate, however, I'll notice that the sketch is running incredibly slowly (and all it needs to do is draw a single string!). This is where calling the parsing code as a separate thread will help a lot.<br />
 <pre>
 String time = "";
 
@@ -1616,8 +1354,6 @@ void requestData() {
   time = json.getString("time");
 }
 </pre>
-
-	<p>
 		The logic is identical, only I am not requesting the data directly in <tt>draw()</tt>, but executing that request as a separate thread.  Notice that I am not doing any drawing in <tt>requestData()</tt>.  This is key as executing drawing functions in code that runs on a separate thread can cause conflicts with the main animation thread (i.e., <tt>draw()</tt>) resulting in strange behavior and errors.
 	</p>
 
@@ -1690,45 +1426,30 @@ void retrieveData() {
 </dl>
 
 	<p>
-		One thing to note about openweathermap.org is that it does not require that you tell the API any information about yourself. You simply send a request to a URL and get the data back. Other APIs, however, require you to sign up and obtain an access token. <em>The New York Times</em> API is one such example. Before you can make a request from Processing, you'll need to visit <a href="http://developer.nytimes.com/"><em>The New York Times</em> Developer site</a> and request an API key. Once you have that key, you can store it in your code as a string.
-	</p>
-	
+		One thing to note about openweathermap.org is that it does not require that you tell the API any information about yourself. You simply send a request to a URL and get the data back. Other APIs, however, require you to sign up and obtain an access token. <em>The New York Times</em> API is one such example. Before you can make a request from Processing, you'll need to visit <a href="http://developer.nytimes.com/"><em>The New York Times</em> Developer site</a> and request an API key. Once you have that key, you can store it in your code as a string.<br />
 <pre>
 // This is not a real key
 String apiKey = "40e2es0b3ca44563f9c62aeded4431dc:12:51913116";
 </pre>
-
-	<p>
-		You also need to know what the URL is for the API itself. This information is documented for you on the developer site, but here it is for simplicity:
-	</p>
-	
+		You also need to know what the URL is for the API itself. This information is documented for you on the developer site, but here it is for simplicity:<br />
 <pre>
 String url = "http://api.nytimes.com/svc/search/v2/articlesearch.json";
 </pre>
-
-	<p>
-		Finally, you have to tell the API what it is you are looking for. This is done with a “query string,” a sequence of name value pairs describing the parameters of the query joined with an ampersand. This functions similarly to how you pass arguments to a function in Processing. If you wanted to search for the term "processing" from a <tt>search()</tt> function you might say:
-	</p>
-
+		Finally, you have to tell the API what it is you are looking for. This is done with a “query string,” a sequence of name value pairs describing the parameters of the query joined with an ampersand. This functions similarly to how you pass arguments to a function in Processing. If you wanted to search for the term "processing" from a <tt>search()</tt> function you might say:<br />
 <pre>
 search("processing");
 </pre>
-
-	<p>
-		Here, the API acts as the function call, and you send it the arguments via the query string. Here is a simple example asking for a list of the oldest articles that contain the term "processing" (the oldest of which turns out to be May 12th, 1852).
-	</p>
-
+		Here, the API acts as the function call, and you send it the arguments via the query string. Here is a simple example asking for a list of the oldest articles that contain the term "processing" (the oldest of which turns out to be May 12th, 1852).<br />
 <pre>
 // The name/value pairs that configure the API query are: (q,processing) and (sort,oldest)
 String query = "?q=processing&amp;sort=oldest";
 </pre>
-
-	<p>
 		This isn't just guesswork. Figuring out how to put together a query string requires reading through the API's documentation. For <em>The New York Times</em>, it’s all outlined on <a href="http://developer.nytimes.com/docs/read/article_search_api_v2">the <em>Times'</em> developer website</a>. Once you have your query you can join all the pieces together and pass it to <tt>loadJSONObject()</tt>. Here is a tiny example that simply displays the most recent headline.
 	</p>
 
+<p>
 <strong>NYTimes API Query</strong>
-
+<br />
 <pre>
 void setup() {
   size(200, 200);
@@ -1749,8 +1470,6 @@ void setup() {
   text(headline, 10, 10, 180, 190);
 }
 </pre>
-
-	<p>
 		Some APIs require a deeper level of authentication beyond an API access key. Twitter, for example, uses an authentication protocol known as “OAuth” to provide access to its data. Writing an OAuth application requires more than just passing a String into a request and is beyond the scope of this tutorial. However, in these cases, if you’re lucky, you can find a Processing library that handles all of the authentication for you. There are several APIs that can be used directly with Processing via a library, and you can find a list of them in the “Data / Protocols” section of the <a href="http://processing.org/reference/libraries/index.html">libraires reference page</a> for some ideas. <a href="https://www.temboo.com/processing">Temboo</a>, for example, offers a Processing library that handles OAuth for you and provides direct access to many APIs (including Twitter) in Processing. With Temboo, you can write code that looks like:
 	</p>
 

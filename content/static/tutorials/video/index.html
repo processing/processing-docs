@@ -28,20 +28,20 @@ Using the “Import Library” menu option does nothing other than automatically
 		
 <strong>Step 2. Declare a <tt>Capture</tt> object.</strong>
 <br /><br />
-You’ve recently seen how to create objects from classes built into the Processing language such as <tt>PShape</tt> and <tt>PImage</tt>. Both of these classes, it should be noted, are part of the <em>processing.core</em> library and, therefore,no import statement were required. The <em>processing.video</em> library has two useful classes inside of it — <tt>Capture</tt>, for live video, and <tt>Movie</tt>, for recorded video. In this step, I’ll be declaring a <tt>Capture</tt> object.
+You’ve recently seen how to create objects from classes built into the Processing language such as <tt>PShape</tt> and <tt>PImage</tt>. Both of these classes, it should be noted, are part of the <em>processing.core</em> library and, therefore,no import statement were required. The <em>processing.video</em> library has two useful classes inside of it — <tt>Capture</tt>, for live video, and <tt>Movie</tt>, for recorded video. In this step, I’ll be declaring a <tt>Capture</tt> object.<br />
 <pre>
 Capture video;
 </pre>
 		
 <strong>Step 3. Initailize the <tt>Capture</tt> object.</strong>
 <br /><br />
-The Capture object “video” is just like any other object — to construct an object, you use the new operator followed by the constructor. With a Capture object, this code typically appears in <tt>setup()</tt>.
+The Capture object “video” is just like any other object — to construct an object, you use the new operator followed by the constructor. With a Capture object, this code typically appears in <tt>setup()</tt>.<br />
 <pre>
 video = new Capture();
 </pre>
 The above line of code is missing the appropriate arguments for the constructor. Remember, this is not a class you wrote yourself so there is no way to know what is required between the parentheses without consulting the online reference.
 <br /><br />
-The reference will show there are several ways to call the Capture constructor. A typical way to call the constructor is with three arguments:
+The reference will show there are several ways to call the Capture constructor. A typical way to call the constructor is with three arguments:<br />
 <pre>
 void setup() {  
   video = new Capture(this, 320, 240);
@@ -55,22 +55,22 @@ Let’s walk through the arguments used in the <tt>Capture</tt> constructor.
 	<li><strong>240:</strong> The height of the video.</li>
 </ul>
 		
-There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer. How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying:  
+There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer. How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying:<br />
 <pre>
 printArray(Capture.list());
 </pre>
-You can use the text of these configurations to create a <tt>Capture</tt> object. On a Mac with a built-in camera,for example, this might look like:
+You can use the text of these configurations to create a <tt>Capture</tt> object. On a Mac with a built-in camera,for example, this might look like:<br />
 <pre>
 video = new Capture(this, "name=FaceTime HD Camera (Built-in),size=320x240,fps=30");
 </pre>
-<tt>Capture.list()</tt> actually gives you an array so you can also simply refer to the index of the configurationyou want.
+<tt>Capture.list()</tt> actually gives you an array so you can also simply refer to the index of the configuration you want.<br />
 <pre>
 video = new Capture(this, Capture.list()[0]);
 </pre>
 		
 <strong>Step 4. Start the capture process.</strong>
 <br /><br />
-Once the camera is ready, it’s up to you to tell Processing to start capturing images.
+Once the camera is ready, it’s up to you to tell Processing to start capturing images.<br />
 <pre>
 void setup() {  
   video = new Capture(this, 320, 240);  
@@ -84,7 +84,7 @@ In almost every case you want to begin capturing right in <tt>setup()</tt>. Neve
 There are two strategies for reading frames from the camera. I will briefly look at both and choose one forthe remainder of the examples in this chapter. Both strategies, however, operate under the same fundamental principle: I only want to read an image from the camera when a new frame is available to be read. 
 
 <br /><br />
-In order to check if an image is available, you use the function <tt>available()</tt>, which returns true or false depending on whether something is there. If it is there, the function <tt>read()</tt> is called and the frame from the camera is read into memory. You can do this over and over again in the <tt>draw()</tt> loop, always checking to see if a new image is free to be read.
+In order to check if an image is available, you use the function <tt>available()</tt>, which returns true or false depending on whether something is there. If it is there, the function <tt>read()</tt> is called and the frame from the camera is read into memory. You can do this over and over again in the <tt>draw()</tt> loop, always checking to see if a new image is free to be read.<br />
 <pre>
 void draw() {  
   if (video.available()) {    
@@ -94,7 +94,7 @@ void draw() {
 </pre>
 The second strategy, the “event” approach, requires a function that executes any time a certain event — in this case a camera event — occurs. The function <tt>mousePressed()</tt> is executed whenever the mouse is pressed. With video, you have the option to implement the function <tt>captureEvent()</tt>, which is invoked any time a capture event occurs, that is, a new frame is available from the camera. These event functions <tt>(mousePressed(), keyPressed(), captureEvent(),</tt> etc.) aresometimes referred to as a “callback.” And as a brief aside, if you’re following closely, this is where <tt>this</tt> fits in. The <tt>Capture</tt> object, <tt>video</tt>, knows to notify this sketch by invoking <tt>captureEvent()</tt> because you passed it a reference to <em>this sketch</em> when creating the <tt>Capture</tt> object <tt>video</tt>.
 <br /><br />
-<tt>captureEvent()</tt> is a function and therefore needs to live in its own block, outside of <tt>setup()</tt> and <tt>draw()</tt>.
+<tt>captureEvent()</tt> is a function and therefore needs to live in its own block, outside of <tt>setup()</tt> and <tt>draw()</tt>.<br />
 <pre>
 void captureEvent(Capture video) {
   video.read();
@@ -107,12 +107,12 @@ To summarize, I want to call the function <tt>read()</tt> whenever there is some
 <strong>Step 6. Display the video image.</strong>
 <br /><br />
 This is, without a doubt, the easiest part. You can think of a <tt>Capture</tt> object as a <tt>PImage</tt> that changes over time, and, in fact, a <tt>Capture</tt> object can be utilized in an identical manner as a <tt>PImage</tt> object.
-<br /><br />
+<br />
 <img src="imgs/fig_16_01_capture.png" class="tut" />
 <pre>
 image(video, 0, 0);
 </pre>
-All of this is put together in the following code:
+All of this is put together in the following code:<br />
 <pre>
 // Step 1. Import the video library.
 import processing video.
@@ -228,13 +228,13 @@ void draw() {
 <h3>Recorded video</h3>
 <p>
 Displaying recorded video follows much of the same structure as live video. Processing’s video library accepts most video file formats; for specifics, visit the <tt>Movie</tt> <a href="https://www.processing.org/reference/libraries/video/Movie.html">reference</a>.
-  	
+<br /><br />
 <strong>Step 1. Instead of a Capture object, declare a Movie object.</strong>
 <pre>
 Movie movie;
 </pre>
 
-<strong>Step 2. Initialize Movie object.</strong>
+<strong>Step 2. Initialize Movie object.</strong><br />
 <pre>
 movie = new Movie(this, "testmovie.mov");
 </pre>
@@ -243,14 +243,14 @@ The only necessary arguments are <tt>this</tt> and the movie’s filename enclos
 <br /><br />
 <strong>Step 3. Start movie playing.</strong>
 <br /><br />
-There are two options, <tt>play()</tt>, which plays the movie once, or <tt>loop()</tt>, which loops it continuously.
+There are two options, <tt>play()</tt>, which plays the movie once, or <tt>loop()</tt>, which loops it continuously.<br />
 <pre>
 movie.loop();
 </pre>
 
 <strong>Step 4. Read frame from movie.</strong>
 <br /><br />
-Again, this is identical to capture. You can either check to see if a new frame is available, or use a callbackfunction.
+Again, this is identical to capture. You can either check to see if a new frame is available, or use a callback function.<br />
 <pre>
 void draw() {  
   if (movie.available()) {    
@@ -258,19 +258,19 @@ void draw() {
   }
 }
 </pre>
-Or:
+Or:<br />
 <pre>
 void movieEvent(Movie movie) {  
   movie.read();
 }
 </pre>
 
-<strong>Step 5. Display the movie.</strong>
+<strong>Step 5. Display the movie.</strong><br />
 <pre>
 image(movie, 0, 0);
 </pre>
 		
-The following code shows the program all together:
+The following code shows the program all together:<br />
 <pre>
 import processing.video.*; 
 
@@ -300,7 +300,7 @@ void draw() {
 
 Although Processing is by no means the most sophisticated environment for displaying and manipulating recorded video, there are some more advanced features available in the video library. There are function sfor obtaining the duration (length measured in seconds) of a video, for speeding it up and slowing it down, and for jumping to a specific point in the video (among others). If you find that performance is sluggish and the video playback is choppy, I would suggest trying the <tt>P2D</tt> or <tt>P3D</tt> <a href="https://processing.org/tutorials/rendering/">renderers</a>.
 <br /><br />
-Following is an example that makes use of <tt>jump()</tt> (jump to a specific point in the video) and <tt>duration()</tt> (returns the length of movie in seconds). In this example, if <tt>mouseX</tt> equals 0, the video jumps to the beginning.  If <tt>mouseX</tt> equals <tt>width</tt>, it jumps to the end. Any other value is in between. The <tt>jump()</tt> function allows you to jump immediately to a point of time within the video. <tt>duration()</tt> returns the total length of the movie in seconds.
+Following is an example that makes use of <tt>jump()</tt> (jump to a specific point in the video) and <tt>duration()</tt> (returns the length of movie in seconds). In this example, if <tt>mouseX</tt> equals 0, the video jumps to the beginning.  If <tt>mouseX</tt> equals <tt>width</tt>, it jumps to the end. Any other value is in between. The <tt>jump()</tt> function allows you to jump immediately to a point of time within the video. <tt>duration()</tt> returns the total length of the movie in seconds.<br />
 
 <pre>
 import processing.video.*;
@@ -373,8 +373,7 @@ Knowing that I want to have squares eight pixels wide by eight pixels high, I ca
 I can now capture a video image that is 80 × 60. This is useful because capturing a 640 × 480 video from a camera can be slow compared to 80 × 60. I only want to capture the color information at the resolution required for the sketch.
 <br /><br />
 <img src="imgs/fig_16_05_pixelated.png" class="tut" />
-<br /><br />
-For every square at column <tt>i</tt> and row <tt>j</tt>, I look up the color at pixel <tt>(i, j)</tt> in the video image and color itaccordingly. See the following example with the new parts in bold:
+For every square at column <tt>i</tt> and row <tt>j</tt>, I look up the color at pixel <tt>(i, j)</tt> in the video image and color itaccordingly. See the following example with the new parts in bold:<br />
 <pre>
 // Size of each cell in the grid, ratio of window size to video size
 int videoScale = 8;
@@ -416,8 +415,7 @@ void draw() {
 </pre>
 As you can see, expanding the simple grid system to include colors from video only requires a few additions. I have to declare and initialize the <tt>Capture</tt> object, read from it, and pull colors from the pixel array.<br /><br />
 <img src="imgs/fig_16_06_mirror.png" class="tut" />
-<br /><br />
-Less literal mappings of pixel colors to shapes in the grid can also be applied. In the following example, only the colors black and white are used. Squares are larger where brighter pixels in the video appear, and smaller for darker pixels.
+Less literal mappings of pixel colors to shapes in the grid can also be applied. In the following example, only the colors black and white are used. Squares are larger where brighter pixels in the video appear, and smaller for darker pixels.<br />
 <pre>
 <strong>// Each pixel from the video source is drawn as
 // a rectangle with size based on brightness.</strong>
