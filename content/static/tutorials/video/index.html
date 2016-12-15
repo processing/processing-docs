@@ -55,7 +55,7 @@ Let’s walk through the arguments used in the <tt>Capture</tt> constructor.
 	<li><strong>240:</strong> The height of the video.</li>
 </ul>
 		
-There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer. How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying:<br />
+There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer. How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying: <br /> 
 <pre>
 printArray(Capture.list());
 </pre>
@@ -107,7 +107,7 @@ To summarize, I want to call the function <tt>read()</tt> whenever there is some
 <strong>Step 6. Display the video image.</strong>
 <br /><br />
 This is, without a doubt, the easiest part. You can think of a <tt>Capture</tt> object as a <tt>PImage</tt> that changes over time, and, in fact, a <tt>Capture</tt> object can be utilized in an identical manner as a <tt>PImage</tt> object.
-<br />
+<br /><br />
 <img src="imgs/fig_16_01_capture.png" class="tut" />
 <pre>
 image(video, 0, 0);
@@ -227,8 +227,8 @@ void draw() {
 
 <h3>Recorded video</h3>
 <p>
-Displaying recorded video follows much of the same structure as live video. Processing’s video library accepts most video file formats; for specifics, visit the <tt>Movie</tt> <a href="https://www.processing.org/reference/libraries/video/Movie.html">reference</a>.
-<br /><br />
+Displaying recorded video follows much of the same structure as live video. Processing’s video library accepts most video file formats; for specifics, visit the <tt>Movie</tt> <a href="https://www.processing.org/reference/libraries/video/Movie.html">reference</a>.<br /><br />
+  	
 <strong>Step 1. Instead of a Capture object, declare a Movie object.</strong>
 <pre>
 Movie movie;
@@ -269,7 +269,6 @@ void movieEvent(Movie movie) {
 <pre>
 image(movie, 0, 0);
 </pre>
-		
 The following code shows the program all together:<br />
 <pre>
 import processing.video.*; 
@@ -373,7 +372,8 @@ Knowing that I want to have squares eight pixels wide by eight pixels high, I ca
 I can now capture a video image that is 80 × 60. This is useful because capturing a 640 × 480 video from a camera can be slow compared to 80 × 60. I only want to capture the color information at the resolution required for the sketch.
 <br /><br />
 <img src="imgs/fig_16_05_pixelated.png" class="tut" />
-For every square at column <tt>i</tt> and row <tt>j</tt>, I look up the color at pixel <tt>(i, j)</tt> in the video image and color itaccordingly. See the following example with the new parts in bold:<br />
+<br /><br />
+For every square at column <tt>i</tt> and row <tt>j</tt>, I look up the color at pixel <tt>(i, j)</tt> in the video image and color it accordingly. See the following example with the new parts in bold:<br />
 <pre>
 // Size of each cell in the grid, ratio of window size to video size
 int videoScale = 8;
