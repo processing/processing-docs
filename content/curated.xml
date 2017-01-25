@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Behavioural Complexity" by="AADRL" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/aadrl.jpg</image>
+		  <description>
+				The AADRL is a post-professional graduate design programme at the Architectural Association School of Architecture in London. Their research is focused on architectural design that is proto-typical, scenario driven and uses behaviour robotics as a design enquiry.</description>
+		  <location>http://drl.aaschool.ac.uk</location>
+		 <link href="http://drl.aaschool.ac.uk">AADRL</link>
+		 <link href="http://www.creativeapplications.net/processing/aadrl-behavioural-complexity/">CreativeApplications.Net</link>
+	 </software>
+
 	<software name="Terrapattern" by="Golan Levin, David Newbury, Kyle McDonald, Irene Alvarado, Aman Tiwari, Manzil Zaheer and The Frank-Ratchye STUDIO for Creative Inquiry" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/terrapattern.jpg</image>
 		  <description>
