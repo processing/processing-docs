@@ -1,6 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Behavioural Complexity" by="AADRL" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/aadrl.jpg</image>
+		  <description>
+				The AADRL is a post-professional graduate design programme at the Architectural Association School of Architecture in London. Their research is focused on architectural design that is proto-typical, scenario driven and uses behaviour robotics as a design enquiry.</description>
+		  <location>http://www.creativeapplications.net/processing/aadrl-behavioural-complexity/</location>
+		 <link href="http://drl.aaschool.ac.uk">AADRL</link>
+		 <link href="http://www.creativeapplications.net/processing/aadrl-behavioural-complexity/">CreativeApplications.Net</link>
+	 </software>
+
+	<software name="Terrapattern" by="Golan Levin, David Newbury, Kyle McDonald, Irene Alvarado, Aman Tiwari, Manzil Zaheer and The Frank-Ratchye STUDIO for Creative Inquiry" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/terrapattern.jpg</image>
+		  <description>
+				Terrapattern is a visual search tool for satellite imagery. The project provides journalists, citizen scientists, and other researchers with the ability to quickly scan large geographical regions for specific visual features.</description>
+		  <location>http://www.terrapattern.com</location>
+		 <link href="http://www.terrapattern.com">Terrapattern</link>
+	 </software>
+
 	<software name="Fluid Leaves" by="Reinoud van Laar" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/FluidLeaves.jpg</image>
 		  <description>
@@ -8,7 +25,7 @@
 		  </description>
 		  <location>http://reinoudvanlaar.nl/project/leavespattern/</location>
 		 <link href="http://reinoudvanlaar.nl/project/leavespattern/">Reinoud van Laar</link>
-	 </software>	
+	 </software>
 
 	<software name="cf.city flows" by="Till Nagel and Christopher Pietsch" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/cfcityflows.jpg</image>
@@ -17,7 +34,7 @@
 		  </description>
 		  <location>https://uclab.fh-potsdam.de/cf/</location>
 		 <link href="https://uclab.fh-potsdam.de/cf/">cf.city flows</link>
-	 </software>	
+	 </software>
 
 	<software name="Automatic Orchestra" by="Students and Lecturers at Digital Media Bremen" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/autoorchestra.jpg</image>
@@ -26,7 +43,7 @@
 		  </description>
 		  <location>http://digitalmedia-bremen.de/en/project/automatic-orchestra/</location>
 		 <link href="http://digitalmedia-bremen.de/en/project/automatic-orchestra/">Digital Media Bremen</link>
-	 </software>	
+	 </software>
 
 	<software name="Possible, Plausible, Potential" by="Miguel Nóbrega" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/possible.jpg</image>
@@ -35,7 +52,7 @@
 		  </description>
 		  <location>http://superficie.ink/</location>
 		 <link href="http://superficie.ink/">Miguel Nóbrega</link>
-	 </software>		
+	 </software>
 
 	<software name="Stewart – A mutually trustful interface for a fully autonomous car" by="Felix Ros" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/stewart.jpg</image>
@@ -44,17 +61,17 @@
 		  </description>
 		  <location>http://felixros.com</location>
 		 <link href="http://felixros.com/stewart.html">Felix Ros</link>
-	 </software>	
+	 </software>
 
 	<software name="Traces, Physical Programming of Freeform Folding in Soft Matter" by="Dana Zelig" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/traces.jpg</image>
 		  <description>
-			  Traces project explores the concept of programming everyday materials where objects are “made to act” by re-forming following a set of specific instructions. Dana developed 12 processed-folding objects series, using Processing and various physical techniques – printing, twisting, laser-cutting, knotting and framing. 
+			  Traces project explores the concept of programming everyday materials where objects are “made to act” by re-forming following a set of specific instructions. Dana developed 12 processed-folding objects series, using Processing and various physical techniques – printing, twisting, laser-cutting, knotting and framing.
 		  </description>
 		  <location>https://vimeo.com/133662815</location>
 		 <link href="https://vimeo.com/133662815">Vimeo</link>
 		 <link href="http://www.creativeapplications.net/processing/traces-physical-programming-of-freeform-folding-in-soft-matter/">More Info</link>
-	 </software>	
+	 </software>
 
 	<software name="Large Napkin" by="Pixtil" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/pixtil.jpg</image>
@@ -64,8 +81,8 @@
 		  <location>http://pixtil.fr/php/produits/accueil.php?page=2#debut</location>
 		 <link href="http://pixtil.fr/php/produits/accueil.php?page=2#debut">Pixtil</link>
 		 <link href="http://www.creativeapplications.net/processing/pixtil-weaving-generative-patterns-using-traditional-textile-techniques/">More Info</link>
-	 </software>		
-	
+	 </software>
+
 	<software name="Light Kinetics" by="Espadaysantacruz" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/lightkinetics.jpg</image>
 		  <description>
@@ -73,19 +90,19 @@
 		  </description>
 		  <location>http://espadaysantacruz.com/Light-kinetics</location>
 		 <link href="http://espadaysantacruz.com/Light-kinetics">Light Kinetics</link>
-	</software>	
-	
+	</software>
+
 	<software name="Pathfinder" by="Princemio" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/pathfinder.jpg</image>
 		  <description>
-			  Created by Princemio in collaboration with onformative and presented at Choreographic Coding laboratory in Frankfurt 2013, the Pathfinder project was created with aim to contribute to the creative processes of choreographic development. 
+			  Created by Princemio in collaboration with onformative and presented at Choreographic Coding laboratory in Frankfurt 2013, the Pathfinder project was created with aim to contribute to the creative processes of choreographic development.
 		  </description>
 		  <location>http://princemio.net/portfolio/pathfinder/</location>
 		 <link href="http://princemio.net/portfolio/pathfinder/">Pathfinder</link>
 		 <link href="http://motionbank.org/">Motionbank</link>
 		<link href="http://www.onformative.com/">Onformative</link>
 	</software>
-	
+
 	<software name="Non-Linear Code" by="Dextro" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/dextro.jpg</image>
 		  <description>
@@ -95,7 +112,7 @@
 		 <link href="http://dextro.org/default_h.html">Dextro</link>
 		<link href="https://vimeo.com/dextroorg">Vimeo</link>
 	</software>
-	
+
 	<software name="Computational design methodologies for large-scale 3D printing" by="GAD – RC4" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/rc4.jpg</image>
 		  <description>
@@ -105,7 +122,7 @@
 		 <link href="http://bartlett-rc4.com/">GAD – RC4</link>
 		<link href="http://www.creativeapplications.net/environment/gad-rc4-computational-design-methodologies-for-large-scale-3d-printing/">CreativeApplications.Net</link>
 	</software>
-	
+
 
 	<software name="Filament Sculptures" by="Lia" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/filament.jpg</image>
@@ -115,7 +132,7 @@
 		  <location>http://www.liaworks.com/theprojects/filament-sculptures/</location>
 		 <link href="http://www.liaworks.com/theprojects/filament-sculptures/">Lia</link>
 		 <link href="http://liasomething.tumblr.com/">liasomething.tumblr.com</link>
-	</software>	
+	</software>
 
 	<software name="Fall in Love - Phantogram" by="Timothy Saccenti and Joshua Davis" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/Phantogram.jpg</image>
@@ -126,7 +143,7 @@
 		 <link href="http://timothysaccenti.com/category/work/motion/#/phantogram-fall-in-love-video">Timothy Saccenti</link>
 		 <link href="http://www.joshuadavis.com">Joshua Davis</link>
 		 <link href="http://www.vevo.com/watch/phantogram/fall-in-love/USUV71302973">Watch Video</link>
-	</software>	
+	</software>
 
 	<software name="Keyflies" by="Miles Peyton" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/keyflies.jpg</image>
@@ -135,7 +152,7 @@
 		  </description>
 		  <location>https://vimeo.com/151334392</location>
 		 <link href="https://vimeo.com/151334392">CMU / Electronic Media Studio 2</link>
-	</software>	
+	</software>
 
 	<software name="Petting Zoo" by="Minimaforms" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/petting.jpg</image>
@@ -144,7 +161,7 @@
 		  </description>
 		  <location>http://minimaforms.com/#item=petting-zoo-frac-2</location>
 		 <link href="http://minimaforms.com/#item=petting-zoo-frac-2">Minimaforms</link>
-	</software>	
+	</software>
 
 	<software name="Fragmented Memory" by="Phillip Stearns" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/fragmented.jpg</image>
@@ -153,8 +170,8 @@
 		  </description>
 		  <location>http://phillipstearns.wordpress.com/fragmented-memory/</location>
 		 <link href="http://phillipstearns.wordpress.com/fragmented-memory/">Phillip Stearns</link>
-	</software>	
-	
+	</software>
+
 	<software name="Avena+ Test Bed" by="Benedikt Groß" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/avena.jpg</image>
 		  <description>
@@ -162,7 +179,7 @@
 		  </description>
 		  <location>http://benedikt-gross.de/log/2013/06/avena-test-bed_agricultural-printing-and-altered-landscapes/</location>
 		 <link href="http://benedikt-gross.de/">Benedikt Groß</link>
-	</software>	
+	</software>
 
 	<software name="Kinograph" by="Matthew Epler" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/kinograph.jpg</image>
@@ -172,7 +189,7 @@
 		  <location>http://mepler.com/Kinograph</location>
 		 <link href="http://kinograph.cc">Kinograph</link>
 	</software>
-	
+
 	<software name=".fluid" by="Hannes Jung" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/fluid.jpg</image>
 		  <description>
@@ -181,7 +198,7 @@
 		  <location>http://cargocollective.com/hnx/fluid</location>
 		 <link href="http://cargocollective.com/hnx/">Hannes Jung</link>
 	</software>
-	
+
 	<software name="3D Printed Record" by="Amanda Ghassaei" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/3dprintedrecord.jpg</image>
 		  <description>
@@ -190,7 +207,7 @@
 		  <location>http://www.instructables.com/id/3D-Printed-Record/</location>
 		 <link href="http://www.instructables.com/id/3D-Printed-Record/">Instructables</link>
 	</software>
-	
+
 	<software name="Digital Natives and Glitched Realities" by="Matthew Plummer-Fernandez" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/digitalnatives.jpg</image>
 		  <description>
@@ -199,7 +216,7 @@
 		  <location>http://www.plummerfernandez.com/Digital-Natives</location>
 		 <link href="http://www.plummerfernandez.com"> Matthew Plummer-Fernandez</link>
 	</software>
-	
+
 	<software name="Stone Spray" by="Petr Novikov, Inder Shergill and Anna Kulik" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/stonespray.jpg</image>
 		  <description>
@@ -208,7 +225,7 @@
 		  <location>http://www.stonespray.com</location>
 		 <link href="http://www.stonespray.com/"> Petr Novikov, Inder Shergill and Anna Kulik</link>
 	</software>
-	
+
 	<software name="City Symphonies" by="Mark McKeague" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/citysymphonies.jpg</image>
 		  <description>
@@ -218,7 +235,7 @@
 		 <link href="http://markmckeague.com/work/city-symphonies/">Mark McKeague</link>
 		<link href="http://www.creativeapplications.net/maxmsp/city-symphonies-the-future-sound-of-traffic-by-mark-mckeague-di-rca-2012/">More on CreativeApplications.Net</link>
 	</software>
-	
+
 	<software name="Silenc" by="Manas Karambelkar, Momo Miyazaki and Kenneth A. Robertsen" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/silenc2.png</image>
 		  <description>
@@ -228,7 +245,7 @@
 		 <link href="http://www.flickr.com/photos/kennethaleksander/sets/72157629659743887">Flick Page</link>
 		<link href="http://www.creativeapplications.net/processing/silenc-at-ciid-visualisation-of-silent-letters-in-a-language-processing/">CreativeApplications.Net</link>
 	</software>
-	
+
 	<software name="unnamed soundsculpture" by="Daniel Franke & Cedric Kiefer" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/unnamed.jpg</image>
 		  <description>
@@ -237,7 +254,7 @@
 		  <location>http://wearechopchop.com/%E2%80%9Cunnamed-soundsculpture%E2%80%9D/</location>
 		 <link href="http://www.the-product.org">We Are Chopchop</link>
 	</software>
-	
+
 	<software name="Soundmachines" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/soundmachines.jpg</image>
 		  <description>
@@ -247,7 +264,7 @@
 		 <link href="http://www.the-product.org">The Product</link>
 		<link href="http://www.creativeapplications.net/processing/soundmachines-objects-sound/">CreativeApplications.Net</link>
 	</software>
-	
+
 	<software name="Composition No. 1" by="Visual Editions" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/visualeditions.jpg</image>
 		  <description>
@@ -256,7 +273,7 @@
 		  <location>http://www.visual-editions.com</location>
 		 <link href="http://www.visual-editions.com/our-books/book/composition-no1">Visual Editions</link>
 	</software>
-	
+
 	<software name="Max Planck Reasearch Networks" by="Moritz Stefaner and Christopher Warnow" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/maxplanck.jpg</image>
 		  <description>
@@ -265,7 +282,7 @@
 		  <location>http://max-planck-research-networks.net/</location>
 		 <link href="http://max-planck-research-networks.net">Max Planck Reasearch Networks</link>
 	</software>
-	
+
 	<software name="The Creators" by="Constanza Casas, Mark C Mitchell and Pieter Steyaert" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/creators.jpg</image>
 		  <description>
@@ -274,7 +291,7 @@
 		  <location>http://www.thecreators.tv</location>
 		 <link href="http://www.thecreators.tv">The Creators</link>
 	</software>
-	
+
 	<software name="The Digital Rube Goldberg Processor" by="The Product" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/golberg.jpg</image>
 		  <description>
@@ -283,7 +300,7 @@
 		  <location>http://www.the-product.org/rube-goldberg-processor</location>
 		 <link href="http://www.the-product.org/">The Product</link>
 	</software>
-	
+
 	<software name="Prototyp-0" by="Yannick Mathey" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/prototyp0.jpg</image>
 		  <description>
@@ -291,8 +308,8 @@
 		  </description>
 		  <location>http://www.yannickmathey.com/prototyp</location>
 		 <link href="http://www.yannickmathey.com/">Yannick Mathey</link>
-	</software>	
-	
+	</software>
+
 	<software name="Cascade" by="NYTimes R&D Lab" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/nytcascade.jpg</image>
 		  <description>
@@ -301,7 +318,7 @@
 		  <location>http://nytlabs.com/projects/cascade.html</location>
 		 <link href="http://nytlabs.com">NYTimes R&D Lab</link>
 	</software>
-	
+
 	<software name="MIT Media Lab Identity" by="TheGreenEyl and E Roon Kang" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/mitidentity.jpg</image>
 		  <description>
@@ -310,7 +327,7 @@
 		  <location>http://www.thegreeneyl.com/mit-media-lab-identity-1</location>
 		 <link href="http://www.thegreeneyl.com">TheGreenEyl</link>
 	</software>
-	
+
 	<software name="Continuum" by="Mary Huang" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/continuum.jpg</image>
 		  <description>
@@ -319,7 +336,7 @@
 		  <location>http://www.rhymeandreasoncreative.com/portfolio/index.php?project=continuum</location>
 		 <link href="http://www.rhymeandreasoncreative.com">Mary Huang</link>
 	</software>
-	
+
 	<!--
 	<software name="Moullinex – Catalina" by="Luis Clara Gomes, Luis Calçada" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/catalina.jpg</image>
@@ -330,7 +347,7 @@
 		 <link href="http://moullinex.tumblr.com/">Moullinex</link>
 	</software>
 	-->
-	
+
 	<software name="Process Compendium 2004-2010" by="Casey Reas" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/casey_pc.jpg</image>
 		  <description>
@@ -341,7 +358,7 @@
 		  <link href="http://ca-n.in/aUxWki">Download from CAN</link>
 		 <link href="http://reas.com">Casey Reas</link>
 	</software>
-	
+
 	<software name="One Hundred and Eight" by="Nils Völker" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/108.jpg</image>
 		  <description>
@@ -350,7 +367,7 @@
 		  <location>http://nilsvoelker.com/content/onehundredandeight/index.html</location>
 		  <link href="http://nilsvoelker.com/">Nils Völker</link>
 	</software>
-	
+
 	<software name="My Little Piece of Privacy" by="Niklas Roy" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/privacy.jpg</image>
 		  <description>
@@ -359,7 +376,7 @@
 		  <location>http://www.niklasroy.com/project/88/my-little-piece-of-privacy/</location>
 		  <link href="http://www.niklasroy.com">Niklas Roy</link>
 	</software>
-	
+
 	<software name="Strata" by="Quayola" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/strata.jpg</image>
 		  <description>
@@ -368,7 +385,7 @@
 		  <location>http://www.quayola.com/selectedartworks/strata3/</location>
 		  <link href="http://www.quayola.com">Quayola</link>
 	</software>
-	
+
 	<software name="Understanding Shakespeare" by="Stephan Thiel" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/shakespeare.jpg</image>
 		  <description>
@@ -377,7 +394,7 @@
 		  <location>http://www.understanding-shakespeare.com</location>
 		  <link href="http://www.stephanthiel.com/">Stephan Thiel</link>
 	</software>
-	
+
 	<software name="One Perfect Cube" by="Florian Jenett" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/one-perfect-cube.jpg</image>
 		  <description>
@@ -386,7 +403,7 @@
 		  <location>http://florianjenett.de/one-perfect-cube-making-of/</location>
 		  <link href="http://florianjenett.de/">FlorianJenett.de</link>
 	</software>
-	
+
 	<software name="Feltron 2009 Annual Report" by="Nicholas Felton" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/feltron.jpg</image>
 		  <description>
@@ -396,7 +413,7 @@
 		  <link href="http://feltron.tumblr.com/post/384316419/processing-and-the-2009-annual-report">2009 Report and Processing</link>
 		  <link href="http://feltron.com/">Feltron.com</link>
 	</software>
-	
+
 	<software name="Computing Kaizen" by="GSAPP Hasegawa/Collins Studio" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/computing-kaizen.jpg</image>
 		  <description>
@@ -406,7 +423,7 @@
 		  <link href="http://www.proxyarch.com">Proxy</link>
 		  <link href="http://www.arch.columbia.edu/">GSAPP</link>
 	</software>
-	
+
 	<software name="Fine Collection of Curious Sound Objects" by="Georg Reil, Kathy Scheuring" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/finecollection.jpg</image>
 		  <description>
@@ -416,7 +433,7 @@
 		  <link href="http://www.geschoir.de/">geschoir.de</link>
 		  <link href="http://www.theplacetofindme.de/">theplacetofindme.de</link>
 	</software>
-	
+
 	<software name="Just Landed" by="Jer Thorp" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/justlanded.jpg</image>
 		  <description>
@@ -425,7 +442,7 @@
 		  <location>http://blog.blprnt.com/blog/blprnt/just-landed-processing-twitter-metacarta-hidden-data</location>
 		  <link href="http://blog.blprnt.com/">blprnt.com</link>
 	</software>
-	
+
 	<software name="John Henry von Neumann" by="Chandler B. McWilliams" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/johnhenry.jpg</image>
 		  <description>
@@ -434,7 +451,7 @@
 		  <location>http://brysonian.com/john-henry-von-neumann</location>
 		  <link href="http://brysonian.com/">brysonian.com</link>
 	</software>
-	
+
 	<software name="In the Air" by="Victor Viña, Nerea Calvillo" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/intheair.jpg</image>
 		  <description>
@@ -444,7 +461,7 @@
 		  <link href="http://www.dosislas.org/">Victor Viña</link>
 		  <link href="http://www.cmasarquitectos.net/">Nerea Calvillo</link>
 	</software>
-	
+
 	<software name="Silica-Esc" by="Vladimir Todorovic" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/silica.jpg</image>
 		  <description>
@@ -454,17 +471,17 @@
 		  <link href="http://tadar.net/">tadar.net</link>
 		  <link href="http://www.flickr.com/photos/tadar/">tadar Flickr</link>
 	</software>
-	
+
 	<software name="Mycelium" by="Ryan Alexander" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/mycelium.png</image>
 		  <description>
-			 A simulation of fungal hyphae growth using images as food. 
+			 A simulation of fungal hyphae growth using images as food.
 		  </description>
 		  <location>http://onecm.com/projects/mycelium/</location>
 		  <link href="http://onecm.com/">onecm.com</link>
 		  <link href="http://www.flickr.com/photos/onecm/">onecm Flickr</link>
 	</software>
-	
+
 	<software name="The Jelly Face Experiments" by="NYX (Liina Nilsson)" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/nyx.jpg</image>
 		  <description>
@@ -473,7 +490,7 @@
 		  <location>http://vimeo.com/3872857</location>
 		  <link href="http://nyxedition.wordpress.com/">NYX Blog</link>
 	</software>
-	
+
 	<software name="New Year's Cards, 2001-2010" by="Golan Levin" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/golan_cards.jpg</image>
 		  <description>
@@ -493,7 +510,7 @@
 	  <link href="http://www.shiftcontrol.dk/">shiftcontrol</link>
 	  <link href="http://www.nr2154.com/">NR2154</link>
 	</software>
-        
+
 	<software name="Branching Morphogenesis" by="Sabin+Jones LabStudio" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/branching.jpg</image>
 	  <description>
@@ -505,7 +522,7 @@
 	  <link href="http://www.andrewlucia.com/">Andrew Lucia</link>
 	  <link href="http://www.uphs.upenn.edu/ime/PJones/">Jones Lab</link>
 	</software>
-        
+
 	<software name="Telekom Realtime Information Graphics" by="Zum Kuckuck" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/realtime.jpg</image>
 	  <description>
@@ -515,7 +532,7 @@
 	  <link href="http://www.zumkuckuck.com">Zum Kuckuck</link>
 	  <link href="http://www.markgraph.de">Atelier Markgraph</link>
 	</software>
-        
+
 	<software name="Wayfarer" by="Ben Hemmendinger" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/wf3.png</image>
 	  <description>
@@ -525,7 +542,7 @@
 	  <link href="http://benhem.com/">benhem.com</link>
 	  <link href="http://roguebasin.roguelikedevelopment.org/index.php?title=Wayfarer">RogueBasin</link>
 	</software>
-        
+
 	<software name="Mud Tub" by="Tom Gerhardt" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/mud.jpg</image>
 	  <description>
@@ -535,7 +552,7 @@
 	  <link href="http://tomgerhardt.com/">tomgerhardt.com</link>
 	  <link href="http://itp.nyu.edu/itp/">NYU ITP</link>
 	</software>
-	
+
 	<software name="MOSstack" by="MOS (Michael Meredith, Hilary Sample, William Macfarlane)" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/mos.gif</image>
 	  <description>
@@ -546,7 +563,7 @@
 	  <link href="http://www.mos-office.net/project/2008_9_ComputationalPile">ComputationalPile</link>
 	  <link href="http://www.mos-office.net/project/2008_Arcade">Arcade</link>
 	</software>
-        
+
 	<software name="Terre Natale (Exits 2)" by="Stewart Smith, Robert Gerard Pietrusko, Aaron Meyers, Michael Doherty, and Hans-Christoph Steiner" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/terre.jpg</image>
 	  <description>
@@ -559,7 +576,7 @@
 	  <link href="http://neufuture.com">Michael Doherty</link>
 	  <link href="http://at.or.at/hans">Hans-Christoph Steiner</link>
 	</software>
-	
+
 	<software name="MTV Brazil ID 2009" by="Dimitre Lima" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/mtv.gif</image>
 	  <description>
@@ -569,7 +586,7 @@
 	  <link href="http://dmtr.org/">Dmtr.org</link>
 	  <link href="http://piloto.tv/refresh-mtv-2009/">Piloto</link>
 	</software>
-	
+
 	<software name="Interim Camp" by="Marcus Wendt, Vera-Maria Glahn, Arran Poole" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/camp.jpg</image>
 	  <description>
@@ -578,7 +595,7 @@
 	  <location>http://www.field.io/project/interim-camp</location>
 	  <link href="http://www.field.io/">field</link>
 	</software>
-	
+
 	<software name="People Mover" by="Aeolab" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/aeolab.jpg</image>
 	  <description>
@@ -587,7 +604,7 @@
 	  <location>http://www.aeolab.com/projects/peoplemover/applet/</location>
 	  <link href="http://www.aeolab.com/">Aeolab</link>
 	</software>
-	
+
 	<software name="BallDroppings" by="Josh Nimoy" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/balldroppings.gif</image>
 	  <description>
@@ -597,7 +614,7 @@
 	  <link href="http://balldroppings.com/">BallDroppings</link>
 	  <link href="http://www.jtnimoy.net/">JTNimoy.net</link>
 	</software>
-	
+
 	<software name="Oasis" by="Yunsil Heo, Hyunwoo Bang" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/oasis.gif</image>
 	  <description>
@@ -606,7 +623,7 @@
 	  <location>http://everyware.kr/portfolio/contents/09_oasis/</location>
 	  <link href="http://everyware.kr">everyware</link>
 	</software>
-	
+
 	<software name="Platonic Solids" by="Michael Hansmeyer" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/platonic.jpg</image>
 	  <description>
@@ -616,47 +633,47 @@
 	  <link href="http://www.michael-hansmeyer.com">Michael Hansmeyer</link>
 	  <link href="http://www.flickr.com/photos/junearch/sets/72157602857326020/">Subdivision Flickr Set</link>
 	</software>
-	
+
 	<software name="Monsters" by="Lukas Vojir (Ed.)" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/monsters.gif</image>
 	  <description>
-		 Black and white, reactive monsters created by the Processing community.       
+		 Black and white, reactive monsters created by the Processing community.
 	  </description>
 	  <location>http://www.rmx.cz/monsters/</location>
 	  <link href="http://www.rmx.cz/">Rmx</link>
 	</software>
-	
+
 	<software name="Big Screens 2" by="NYU ITP" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/itp2.jpg</image>
 	  <description>
-		 For the second year, Dan Shiffman's NYU students write software for a 120 by 12 
-		 foot video wall at IAC's world headquarters in NYC.          
+		 For the second year, Dan Shiffman's NYU students write software for a 120 by 12
+		 foot video wall at IAC's world headquarters in NYC.
 	  </description>
 	  <location>http://gizmodo.com/5110633/120-feet-of-video-art-final-exams-at-nyus-big-screens-class</location>
 	  <link href="http://www.shiffman.net/">Shiffman.net</link>
 	</software>
-	
+
 	<software name="The Emergence Project" by="Daniel Sauter, Mark Hereld" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/emergence.jpg</image>
 	  <description>
-		 Realtime art installation that explores how complex systems and patterns arise out of 
+		 Realtime art installation that explores how complex systems and patterns arise out of
 		 a multiplicity of simple interactions.
 	  </description>
 	  <location>http://emergenceproject.org/blog/?page_id=180</location>
 	  <link href="http://emergenceproject.org/blog/">The Emergence Project</link>
 	  <link href="http://daniel-sauter.com/">Daniel Sauter</link>
 	</software>
-	
+
 	<software name="Roots" by="Memo Akten, Owen Vallis, Jordan Hochenbaum" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/roots.jpg</image>
 	  <description>
-		 An interactive installation where participants engage in making generative / semi-generative / and or 
+		 An interactive installation where participants engage in making generative / semi-generative / and or
 		 composed music by moving their fingers and objects around the Brick multi-touch surface.
 	  </description>
 	  <location>http://flipmu.com/work/bricktable/what-is-roots/</location>
 	  <link href="http://www.memo.tv/projects/roots_minitek_festival_2008">Memo.tv</link>
 	</software>
-	
+
 	<software name="NPZvisualizer" by="Neil Banas" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/npz.gif</image>
 	  <description>
@@ -669,18 +686,18 @@
 	  <link href="http://neilbanas.com">Banas' design</link>
 	  <link href="http://coast.ocean.washington.edu/~neil/">Banas' oceanography</link>
 	</software>
-	
+
 	<software name="Mæve" by="Interface Design Team of FH Potsdam" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/maeve.jpg</image>
 	  <description>
-		 Provides visual and tangible access to the conceptual networks behind architectural projects. 
+		 Provides visual and tangible access to the conceptual networks behind architectural projects.
 		 The installation is part of the 11th International Architecture Exhibition of the Venice Biennale.
 	  </description>
 	  <location>http://portal.mace-project.eu/maeve/</location>
 	  <link href="http://interface.fh-potsdam.de">FH Potsdam</link>
 	  <link href="http://www.mace-project.eu">MACE</link>
 	</software>
-	
+
 	<software name="YMYI" by="Joao Martinho Moura and Jorge Sousa" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/ymyi.jpg</image>
 	  <description>
@@ -690,7 +707,7 @@
 	  <link href="http://www.jmartinho.net">Joao Martinho Moura</link>
 	  <link href="http://mtad.dsi.uminho.pt/en/">Master in Technology and Digital Art</link>
 	</software>
-	
+
 	<software name="Body Navigation" by="Jonas Jongejan and Ole Kristensen for Recoil Performance Group" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/bodynavigation.jpg</image>
 	  <description>
@@ -710,7 +727,7 @@
 	  <location>http://casualdata.com/newsknitter</location>
 	<link href="http://mahirmyavuz.com/">Mahir M. Yavuz</link>
 	</software>
-	
+
 	<software name="Wordscapes" by="Peter Cho" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/cho.jpg</image>
 	  <description>
@@ -720,26 +737,26 @@
 	  <link href="http://www.typotopo.com/">Typotopo.com</link>
 	  <link href="http://www.pcho.net/">Pcho.net</link>
 	</software>
-	
+
 	<software name="Counterclockwise" by="David Muth" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/muth.jpg</image>
 	  <description>
-		 A generative video piece with music by Hiaz. 
+		 A generative video piece with music by Hiaz.
 	  </description>
 	  <location>http://www.davidmuth.net/videos/counterclockwise/</location>
 	  <link href="http://www.davidmuth.net/">DavidMuth.net</link>
 	</software>
-	
+
 	<software name="proximityOfNeeds" by="Lia" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/proximity.gif</image>
 	  <description>
-		 Generative, parameterized images and sound. 
+		 Generative, parameterized images and sound.
 	  </description>
 	  <location>http://www.proximityofneeds.org/</location>
 	  <link href="http://www.strangethingshappen.org/">strangethingshappen.org</link>
 	</software>
-	
-	
+
+
 	<software name="Volume of Emptiness" by="John Houck" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/houck.jpg</image>
 	  <description>
@@ -748,19 +765,19 @@
 	  <location>http://www.johnhouck.com/p/</location>
 	  <link href="http://www.johnhouck.com">JohnHouck.com</link>
 	</software>
-	
+
 	<software name="Big Screens" by="NYU ITP" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/itp.jpg</image>
 	  <description>
 		 Dan Shiffman's NYU students write software for a 120 by 12 foot video wall
-		 at IAC's world headquarters designed by Frank Gehry.          
+		 at IAC's world headquarters designed by Frank Gehry.
 	  </description>
 	  <location>http://www.flickr.com/photos/shiffman/sets/72157601572932676/</location>
 	  <!--<location>http://itp.nyu.edu/bigscreens/</location>-->
 	  <!--<link href="http://www.flickr.com/photos/shiffman/sets/72157601572932676/">Flickr Gallery</link>-->
 	  <link href="http://www.shiffman.net/">Shiffman.net</link>
 	</software>
-	
+
 	<software name="Nervous System, Play + Learn" by="Jessica Rosenkrantz and Jesse Louis-Rosenberg" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/nervous.jpg</image>
 	  <description>
@@ -770,18 +787,18 @@
 	  <location>http://www.n-e-r-v-o-u-s.com/play_and_learn.php</location>
 	  <link href="http://www.n-e-r-v-o-u-s.com/">Nervous System</link>
 	</software>
-	
+
 	<software name="NYTE" by="SENSEable City Lab" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/mit.jpg</image>
 	  <description>
-	  	Shows the global exchange of information by visualizing volumes of data flowing 
+	  	Shows the global exchange of information by visualizing volumes of data flowing
 	 	in and out of New York City.
 	  </description>
 	  <location>http://senseable.mit.edu/nyte/</location>
 	  <link href="http://senseable.mit.edu/">SENSEable City Lab</link>
 	<link href="http://www.aaronkoblin.com/">AaronKoblin.com</link>
 	</software>
-	
+
 	<software name="Cascade on Wheels" by="Steph Thirion et al." scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/cascade.jpg</image>
 	  <description>
@@ -790,17 +807,17 @@
 	  <location>http://www.trsp.net/cow/</location>
 	  <link href="http://www.trsp.net/">Transparent</link>
 	</software>
-	
+
 	<software name="MYPOCKET" by="Burak Arikan" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/mypocket.jpg</image>
 	  <description>
-	  	Discloses the artist's personal financial records by exploring and revealing essential   
+	  	Discloses the artist's personal financial records by exploring and revealing essential
 		patterns in daily transactions.
 	  </description>
 	  <location>http://transition.turbulence.org/Works/mypocket/</location>
 	  <link href="http://burak-arikan.com/">Burak-Arikan.com</link>
 	</software>
-	
+
 	<software name="Michael Fakesch Vidos" by="Danny Franzreb (Taobot)" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/taobot.jpg</image>
 	  <description>
@@ -810,7 +827,7 @@
 	  <link href="http://www.taobot.com/">Taobot</link>
 	  <link href="http://www.michaelfakesch.com/">Michael Fakesch</link>
 	</software>
-	
+
 	<software name="White Glove Tracking" by="Evan Roth & Ben Engebreth" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/whiteglove.jpg</image>
 	  <description>
@@ -820,7 +837,7 @@
 	  <link href="http://ni9e.com">Evan Roth</link>
 	  <link href="http://www.benengebreth.org/">Ben Engebreth</link>
 	</software>
-	
+
 	<software name="Birds!" by="Robert Hodgin" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/foxmovies.jpg</image>
 	  <description>
@@ -830,7 +847,7 @@
 	  <link href="http://www.flight404.com/">Flight404</link>
 	  <link href="http://nervo.tv/index.html?sect=5&proj=foxmovies">Nervo</link>
 	</software>
-	
+
 	<software name="Microsoft Live / Operation Smile" by="Firstborn" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/firstborn.jpg</image>
 	  <description>
@@ -839,7 +856,7 @@
 	  <location>http://www.firstborn.com/#/our-portfolio/1007/</location>
 	  <link href="http://www.firstbornmultimedia.com/">Firstborn</link>
 	</software>
-	
+
 	<software name="Similar Diversity" by="Philipp Steinweber & Andreas Koller" scroll="yes" resize="yes" width="900" height="900">
 	<image>images/simdiv.jpg</image>
 	  <description>
@@ -849,19 +866,19 @@
 	  <link href="http://phl.kontxt.net">Philipp Steinweber</link>
 	<link href="http://andreaskoller.com">Andreas Koller</link>
 	</software>
-	
+
 	<!--
 	<software name="Query Burst Visualizer" by="Yahoo! Design Innovation Team" scroll="yes" resize="yes"\
 	width="1024" height="900">
 	<image>images/yahoo.jpg</image>
 	  <description>
-	Shows global locations of popular Yahoo! search queries related to current events. 
+	Shows global locations of popular Yahoo! search queries related to current events.
 	  </description>
 	  <location>http://design.yahoo.com/project.php?pid=9</location>
 	  <link href="http://design.yahoo.com/">Yahoo! Design Innovation Team</link>
 	</software>
 	-->
-	
+
 	<software name="The Sheep Market" by="Aaron Koblin" scroll="yes" resize="yes"\
 	width="1024" height="900">
 	<image>images/sheep.gif</image>
@@ -873,7 +890,7 @@
 	  <link href="http://www.aaronkoblin.com">Aaron Koblin</link>
 	</software>
 
- 
+
 	<software name="Celestial Workshops" by="Paul Catanese" scroll="yes" resize="yes" width="800" height="900">
 	<image>images/catanese.jpg</image>
 	  <description>
@@ -884,7 +901,7 @@
 	  <location>http://www.paulcatanese.com/artwork/celestial/process.html</location>
 	  <link href="http://www.paulcatanese.com">PaulCatanese.com</link>
 	</software>
-	
+
 	<software name="Anymails" by="Carolin Horn" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/any.gif</image>
 	  <description>
@@ -893,7 +910,7 @@
 	  <location>http://carohorn.de/anymails/</location>
 	  <link href="http://carohorn.de/">CaroHorn.de</link>
 	</software>
-	
+
 	<software name="Champs d'Ozone" by="HeHe" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/hehe.jpg</image>
 	  <description>
@@ -903,7 +920,7 @@
 	  <location>http://hehe.org.free.fr/hehe/champsdozone/</location>
 	  <link href="http://www.hehe.org">HeHe</link>
 	</software>
-	
+
 	<software name="Time Travel Tube Map" by="Tom Carden" scroll="yes" resize="yes" width="1024" height="900">
 	<image>images/carden.jpg</image>
 	  <description>
@@ -912,7 +929,7 @@
 	  <location>http://www.tom-carden.co.uk/p5/tube_map_travel_times/applet/</location>
 	  <link href="http://www.tom-carden.co.uk/">Tom Carden</link>
 	</software>
-	
+
 	<software name="Fidg't Visualizer" by="Protohaus" scroll="yes" resize="yes" width="1024" height="700">
 	<image>images/proto.jpg</image>
 	  <description>
@@ -921,27 +938,27 @@
 	  <location>http://www.fidgt.com/visualize/</location>
 	  <link href="http://protohaus.com">Protohaus</link>
 	</software>
-	
+
 	<software name="Lovebytes 2007" by="Universal Everything / Toxi" scroll="yes" resize="yes" width="900" height="700">
 	<image>images/lovebytes.png</image>
 	  <description>
-		A population of unique friendly furry faces to appear across all festival literature  for Lovebytes 2007.	  
+		A population of unique friendly furry faces to appear across all festival literature  for Lovebytes 2007.
 	  </description>
 	  <location>http://universaleverything.com/#/UE205</location>
 	  <link href="http://universaleverything.com">Universal Everything</link>
 	</software>
-	
+
 	<software name="Reconfigurable House" by="Usman Haque & Adam Somlai-Fischer" scroll="yes" resize="yes" width="900" height="700">
 	<image>images/house.jpg</image>
 	  <description>
-		 An environment constructed from thousands of low tech components that can be reconfigured by its occupants.	     
+		 An environment constructed from thousands of low tech components that can be reconfigured by its occupants.
 	  </description>
 	  <location>http://house.propositions.org.uk/</location>
 	  <link href="http://www.haque.co.uk/">Haque</link>
 	  <link href="http://www.aether.hu/">Aether</link>
 	  <link href="http://www.reorient.hu/">Reorient</link>
 	</software>
-	
+
 	<software name="Muon Launch" by="Moving Brands" scroll="yes" resize="yes" width="900" height="700">
 	<image>images/muon.jpg</image>
 	  <description>
@@ -950,7 +967,7 @@
 	  <location>http://www.movingbrands.com/?category_name=kef-work#experience</location>
 	  <link href="http://www.movingbrands.com">Moving Brands</link>
 	</software>
-	
+
 	<software name="Universe" by="Jonathan Harris" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/universe.gif</image>
 	  <description>
@@ -959,18 +976,18 @@
 	  <location>http://www.number27.org/universe.html</location>
 	  <link href="http://www.number27.org">Jonathan Harris</link>
 	</software>
-	
+
 	<!--
 	<software name="Mobzombies" by="Will Carter & Aaron Meyers" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/mz.png</image>
 	  <description>
-		 Mobzombies is a game where you run away from pixel-art zombies by physically running.  A player's motion data is read into Processing from a compass/accelerometer sensor, which controls an avatar in a virtual world full of zombies. 
+		 Mobzombies is a game where you run away from pixel-art zombies by physically running.  A player's motion data is read into Processing from a compass/accelerometer sensor, which controls an avatar in a virtual world full of zombies.
 	  </description>
 	  <location>http://mobzombies.com/</location>
 	  <link href="http://www.youtube.com/watch?v=5sJ6L6aKum4">Mobzombies trailer</link>
 	</software>
 	-->
-	
+
 	<software name="Software Kaleidoscope" by="Suzung Kim" scroll="yes" resize="yes" width="900" height="600">
 	<image>images/suzung.jpg</image>
 	  <description>
@@ -979,27 +996,27 @@
 	  <location>http://www.suzung.com/body/2006/Kaleido/display.htm</location>
 	  <link href="http://www.suzung.com/">Studio Site Suzung</link>
 	</software>
-	
+
 	<software name="State of the Union" by="Brad Borevitz" scroll="yes" resize="yes" width="1050" height="800">
 	<image>images/stateoftheunion.gif</image>
 	  <description>
-		  Provides access to the corpus of all the State of the Union addresses from 1790 to 2006. 
+		  Provides access to the corpus of all the State of the Union addresses from 1790 to 2006.
 	  </description>
 	  <location>http://stateoftheunion.onetwothree.net/</location>
 	  <link href="http://www.onetwothree.net">onetwothree</link>
 	</software>
-	
+
 	<!--
 	<software name="PixelRoller" by="rAndom international" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/pixelroller.jpg</image>
 	  <description>
-	  PixelRoller is a paint roller that paints pixels, designed as a rapid response printing tool specifically to print digital information such as imagery or text onto a great range of surfaces. 
+	  PixelRoller is a paint roller that paints pixels, designed as a rapid response printing tool specifically to print digital information such as imagery or text onto a great range of surfaces.
 	  </description>
 	  <location>http://www.random-international.com/pixelroller-overview/</location>
 	  <link href="http://www.random-international.com/">rAndom international</link>
 	</software>
 	-->
-	
+
 	<software name="Yo soy la Juani" by="Aleix Fernandez" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/juani.jpg</image>
 	  <description>
@@ -1009,7 +1026,7 @@
 	  <link href="http://www.onionlab.com/">Onionlab</link>
 	  <link href="http://yosoylajuani.com">Yo soy la Juani</link>
 	</software>
-	
+
 	<software name="Spies" by="Lisa Strausfeld and James N. Sears" scroll="yes" resize="yes" width="1024" height="800">
 	<image>images/spies.gif</image>
 	  <description>
@@ -1019,7 +1036,7 @@
 	  <link href="http://www.pentagram.com/">Pentagram</link>
 	  <link href="http://jamesnsears.com/">JamesNSears.com</link>
 	</software>
-	
+
 	<software name="Mutualism" by="David Pereira" scroll="yes" resize="yes" width="1024" height="620">
 	<image>images/mutualism.jpg</image>
 	  <description>
@@ -1077,7 +1094,7 @@
 	  <link href="http://www.motiontheory.com/">Motion Theory</link>
 	</software>
 	-->
-	
+
 	<software name="We Feel Fine" by="Jonathan Harris and Sepandar Kamvar" scroll="yes" resize="yes" width="900" height="600">
 	<image>images/wefeelfine.jpg</image>
 	  <description>
@@ -1186,7 +1203,7 @@
 	<software name="Aqueous" by="Zai Chang" scroll="yes" resize="yes" width="800" height="650">
 	<image>images/aqueous.jpg</image>
 	  <description>
-	          Aqueous is a meditative space that encourages perception of small things.  Water droplets fall from the ceiling through the space into water-filled tubes approximately tuned in a scale spanning two octaves. 
+	          Aqueous is a meditative space that encourages perception of small things.  Water droplets fall from the ceiling through the space into water-filled tubes approximately tuned in a scale spanning two octaves.
 	  </description>
 	  <location>works/aqueous/</location>
 	  <link href="http://www.zehao.com/">Zehao.com</link>
@@ -1280,7 +1297,7 @@
 	  <source>haohao/haohao.pde</source>
 	</software>
 	-->
-	
+
 	<!--
 	<software name="Structural Collider" by="Allan William Martin" scroll="yes" resize="yes" width="900" height="700">
 	<image>images/collider.jpg</image>
@@ -1292,7 +1309,7 @@
 	  <link href="http://pantheon.yale.edu/~awm9">awm</link>
 	</software>
 	-->
-	
+
 	<software name="Timescape" by="Ji-Hoon Byun &amp; E.J. Gone" scroll="yes" resize="yes" width="900" height="570">
 	<image>images/timescape.jpg</image>
 	  <description>
@@ -1303,7 +1320,7 @@
 	  <link href="http://www.phantasian.com">Phantasian</link>
 	  <link href="http://php.chol.com/~atwork/index.htm">Gone</link>
 	</software>
-	
+
 	<software name="Ortho-type" by="Enrico Bravi, Mikkel Crone Koser &amp; Paolo Palma" scroll="yes" resize="yes" width="850" height="500">
 	<image>images/ortho.gif</image>
 	  <description>
@@ -1313,7 +1330,7 @@
 	  <source>ortho/orthotype.pde</source>
 	  <link href="http://www.ortho-type.it">Ortho-type</link>
 	</software>
-	
+
 	<software name="Acoustic Cartography" by="Daniel Rothaug" scroll="yes" resize="yes" width="710" height="600">
 	<image>images/acoustic.jpg</image>
 	  <description>
@@ -1324,22 +1341,22 @@
 	  <link href="http://www.acoustic-cartography.com">Acoustic Cartography</link>
 	  <link href="http://www.zumkuckuck.com/">Zum Kuckuck</link>
 	</software>
-	
+
 	<software name="min_mod" by="Limiteazero" scroll="yes" resize="yes" width="700" height="400">
 	<image>images/min_mod.gif</image>
 	  <description>
-		A sound phenomenon represented through a spatial distribution of minimal elements, creating a sensitive environment influenced by the sounds generated in the surrounding space. 
+		A sound phenomenon represented through a spatial distribution of minimal elements, creating a sensitive environment influenced by the sounds generated in the surrounding space.
 	  </description>
 	  <location>http://www.limiteazero.com/min_mod/</location>
 	  <source>min_mod/min_mod.pde</source>
 	  <link href="http://www.limiteazero.com/">Limiteazero</link>
 	</software>
-	
+
 	<!--
 	<software name="Life vs. Life" by="Justin Bakse &amp; Eric Williams" scroll="yes" resize="yes" width="600" height="400">
 	<image>images/lifevslife.gif</image>
 	  <description>
-		A two player adaptation of by John Conway's mathematical game of Life. 
+		A two player adaptation of by John Conway's mathematical game of Life.
 	  </description>
 	  <location>http://www.lifevslife.com/</location>
 	  <source>lifevslife/lifevslife.pde</source>
@@ -1347,7 +1364,7 @@
 	  <link href="http://www.helveticore.com">helveticore</link>
 	</software>
 	-->
-	
+
 	<software name="Chronodraw" by="Andreas Gysin" scroll="yes" resize="yes" width="980" height="680">
 	<image>images/chronodraw.gif</image>
 	  <description>
@@ -1357,18 +1374,18 @@
 	  <source>chronodraw/chronodraw.txt</source>
 	  <link href="http://www.ertdfgcvb.ch">www.ertdfgcvb.ch</link>
 	</software>
-	
+
 	<software name="Getting Away with Murder" by="Gabriel Dunne" scroll="yes" resize="yes" width="600" height="500">
 	<image>images/papa.jpg</image>
 	  <description>
-		Software for Papa Roach's "Getting Away with Murder" music video by Motion Theory 
+		Software for Papa Roach's "Getting Away with Murder" music video by Motion Theory
 	  </description>
 	  <location>works/papa/index.html</location>
 	  <source>papa/ticker_applet.txt</source>
 	  <link href="http://www.quilime.com">Quilime</link>
 	  <link href="http://www.motiontheory.com">Motion Theory</link>
 	</software>
-	
+
 	<!--
 	<software name="Liquid Liquid" by="v3ga" scroll="no" resize="no" width="300" height="300">
 	<image>images/liquidliquid.gif</image>
@@ -1381,7 +1398,7 @@
 	  <link href="http://www.2roqsmuseum.net">2roqsmuseum</link>
 	</software>
 	-->
-	
+
 	<software name="Ecstasy of Communication" by="Lucas Kuzma" scroll="yes" resize="yes" width="1024" height="768">
 	<image>images/ecstasy.gif</image>
 	  <description>
@@ -1391,18 +1408,18 @@
 	  <source>ecstasy/n_e_13.pde</source>
 	  <link href="http://machinatus.net/">Machinatus</link>
 	</software>
-	
+
 	<software name="D5LV" by="Frederik Vanhoutte" scroll="yes" resize="yes" width="550" height="800">
 	<image>images/d5lv.jpg</image>
 	  <description>
-		Exploring volume and emotional texture with simple generative geometry. 
+		Exploring volume and emotional texture with simple generative geometry.
 		Interaction and randomness modify the structure.
 	  </description>
 	  <location>works/d5lv/index.html</location>
 	  <source>d5lv/D5LV.pde</source>
 	  <link href="http://www.wmute.org/">W:Mute</link>
 	</software>
-	
+
 	<software name="Presidential Discombobulator" by="Justin Manor" scroll="no" resize="no" width="330" height="368">
 	<image>images/discom.jpg</image>
 	  <description>
@@ -1416,7 +1433,7 @@
 	  <link href="http://www.justinmanor.com/">Justin Manor</link>
 	  <link href="http://www.sosolimited.com/">SOSOlimited</link>
 	</software>
-	
+
 	<software name="Friendster Pachinko" by="Krister Olsson with sound by Yoshi Sodeoka" scroll="yes" resize="no" width="416" height="640">
 	<image>images/pachinko.jpg</image>
 	  <description>
@@ -1428,7 +1445,7 @@
 	  <link href="http://www.c505.com/">c505</link>
 	  <link href="http://www.pretendster.com/">Pretendster</link>
 	</software>
-	
+
 	<software name="Tokyo" by="David Crawford" scroll="no" resize="no" width="640" height="480">
 	<image>images/tokyo.jpg</image>
 	  <description>
@@ -1438,7 +1455,7 @@
 	  <source>tokyo/Tokyo.pde</source>
 	  <link href="http://www.stopmotionstudies.net/">SMS</link>
 	</software>
-	
+
 	<software name="Portrait in Landscape" by="Katya Moorman" scroll="no" resize="no" width="640" height="384">
 	<image>images/katya.jpg</image>
 	  <description>
@@ -1449,7 +1466,7 @@
 	  <link href="http://www.lab5769.com/">lab5769</link>
 	  <link href="http://www.lab5769.com/portraits.html">lab5769 portraits</link>
 	</software>
-	
+
 	<software name="TTC" by="Ariel Malka" scroll="no" resize="no" width="402" height="402">
 	<image>images/ttc.gif</image>
 	  <description>
@@ -1460,7 +1477,7 @@
 	  <link href="http://www.chronotext.org">Chronotext</link>
 	  <link href="http://www.chronotext.org/devices/ttc/">Chronotext Devices</link>
 	</software>
-	
+
 	<software name="Burning Liquid Sky" by="Mario Klingemann" scroll="no" resize="no" width="200" height="500">
 	<image>images/liquid.jpg</image>
 	  <description>
@@ -1471,7 +1488,7 @@
 	  <link href="http://incubator.quasimondo.com/">Quasimondo Incubator</link>
 	  <link href="http://www.quasimondo.com/">Quasimondo</link>
 	</software>
-	
+
 	<software name="Relations Environment" by="Alessandro Capozzo" scroll="no" resize="no" width="400" height="400">
 	<image>images/relations.gif</image>
 	  <description>
@@ -1482,7 +1499,7 @@
 	  <link href="http://www.abstract-codex.net">Abstract-Codex</link>
 	  <link href="http://www.ghostagency.net">Ghost Agency</link>
 	</software>
-	
+
 	<software name="NudemenGarden" by="Francis Lam, Henry Chu" scroll="yes" resize="yes" width="400" height="600">
 	<image>images/nudemengarden.gif</image>
 	  <description>
@@ -1493,7 +1510,7 @@
 	  <link href="http://db-db.com/">db-db</link>
 	  <link href="http://www.exvis.net">Experimental Vision</link>
 	</software>
-	
+
 	<software name="Star Nursery" by="Ryan Alexander" scroll="yes" resize="no" width="615" height="680">
 	<image>images/starnursery.jpg</image>
 	  <description>
@@ -1504,7 +1521,7 @@
 	  <link href="http://elfman.vendetta.com/ryan/">Ryan Alexander</link>
 	  <link href="http://motiontheory.com">Motion Theory</link>
 	</software>
-	
+
 	<software name="Tech Support" by="Jonah Brucker-Cohen" scroll="yes" resize="yes" width="700" height="650">
 	<image>images/techsupport.gif</image>
 	  <description>
@@ -1514,7 +1531,7 @@
 	  <source>techsupport/tech_support.pde</source>
 	  <link href="http://coin-operated.com">Coin-Operated</link>
 	</software>
-	
+
 	<software name="Base26" by="Toxi" scroll="yes" resize="yes" width="550" height="680">
 	<image>images/base26.gif</image>
 	  <description>
@@ -1526,7 +1543,7 @@
 	  <link href="http://www.toxi.co.uk/p5/">Toxi processing work</link>
 	  <link href="http://www.toxi.co.uk/blog/">Toxi blog</link>
 	</software>
-	
+
 	<software name="Superhero" by="Mikkel Koser" scroll="no" resize="no" width="600" height="680">
 	<image>images/superhero.gif</image>
 	  <description>
@@ -1537,7 +1554,7 @@
 	  <link href="http://www.beyondthree.com">Beyond Three</link>
 	  <link href="http://proce55ing.beyondthree.com">Processing @ Beyond Three</link>
 	</software>
-	
+
 	<software name="Cinema Redux" by="Brendan Dawes" scroll="yes" resize="yes" width="600" height="800">
 	<image>images/redux.jpg</image>
 	  <description>
@@ -1547,7 +1564,7 @@
 	  <source>redux/moviemap3.pde</source>
 	  <link href="http://www.brendandawes.com">Brendan Dawes</link>
 	</software>
-	
+
 	<software name="Version B" by="Matthew Jogan" scroll="no" resize="no" width="750" height="500">
 	<image>images/872a_jogan.gif</image>
 	  <description>
@@ -1556,7 +1573,7 @@
 	  <location>works/versionb/index.html</location>
 	  <source>versionb/mmj_project_FINALd.pde</source>
 	</software>
-	
+
 	<software name="Bees" by="Julia Stanat" scroll="no" resize="no" width="1024" height="512">
 	<image>images/872a_stanat.gif</image>
 	  <description>
@@ -1565,7 +1582,7 @@
 	  <location>works/bees/index.html</location>
 	  <source>bees/bees6.pde</source>
 	</software>
-	
+
 	<!--
 	<software name="Fluidtime Applets" by="Victor Zambrano" scroll="yes" resize="yes" width="830" height="650">
 	<image>images/fluidtime.jpg</image>
@@ -1578,7 +1595,7 @@
 	  <link href="http://www.00forward.com">00Forward</link>
 	</software>
 	-->
-	
+
 	<!--
 	<software name="Moovl Prototype" by="Ed Burton" scroll="yes" resize="yes" width="700" height="650">
 	<image>images/moovl.gif</image>
@@ -1591,7 +1608,7 @@
 	  <link href="http://www.soda.co.uk">soda</link>
 	</software>
 	-->
-	
+
 	<software name="Bubble Chamber" by="Jared Tarbell" scroll="no" resize="no" width="435" height="460">
 	<image>images/chamber.gif</image>
 	  <description>
@@ -1602,7 +1619,7 @@
 	  <link href="http://www.levitated.net/p5/chamber">Bubble Chamber</link>
 	  <link href="http://www.levitated.net/">Levitated.net</link>
 	</software>
-	
+
 	<software name="Jack O Lantern" by="Elise Co" scroll="no" resize="no" width="400" height="400">
 	<image>images/jackolantern.jpg</image>
 	  <description>
@@ -1612,7 +1629,7 @@
 	  <source>jackolantern/jackolantern.pde</source>
 	  <link href="http://www.seetron.com/slcds.htm">LCD modules</link>
 	</software>
-	
+
 	<software name="Sonic Wire Sculptor" by="Amit Pitaru" scroll="no" resize="no" width="600" height="450">
 	<image>images/sonicwire.gif</image>
 	  <description>
@@ -1623,7 +1640,7 @@
 	  <link href="http://pitaru.com/">Pitaru.com</link>
 	  <link href="http://insertsilence.com/">InsertSilence</link>
 	</software>
-	
+
 	<software name="Tracking" by="Robert Hodgin" scroll="no" resize="no" width="800" height="564">
 	<image>images/tracking.jpg</image>
 	  <description>
@@ -1633,7 +1650,7 @@
 	  <source>tracking/tracking.pde</source>
 	  <link href="http://www.flight404.com/">Flight404</link>
 	</software>
-	
+
 	<software name="The Unbearable Lightness of Being a Pixel" by="Juha Huuskonen" scroll="no" resize="no" width="300" height="320">
 	<image>images/juhuu.gif</image>
 	  <description>
@@ -1643,7 +1660,7 @@
 	  <source>juhuu/juhuu.pde</source>
 	  <link href="http://www.juhuu.nu/">Juhuu.nu</link>
 	</software>
-	
+
 	<software name="Ricochet" by="Josh Nimoy, Mark Napier" scroll="no" resize="no" width="640" height="300">
 	<image>images/ricochet.gif</image>
 	  <description>
@@ -1654,7 +1671,7 @@
 	  <link href="http://www.jtnimoy.com/">JTNimoy</link>
 	  <link href="http://www.potatoland.org/">Potatoland</link>
 	</software>
-	
+
 	<software name="Skyline" by="Mike Davis" scroll="no" resize="no" width="300" height="200">
 	<image>images/skyline.gif</image>
 	  <description>
@@ -1664,7 +1681,7 @@
 	  <source>skyline/skyline.pde</source>
 	  <link href="http://www.lightcycle.org/">Lightcycle</link>
 	</software>
-	
+
 	<software name="Wiggle" by="Manny Tan" scroll="no" resize="no" width="400" height="400">
 	<image>images/wiggle.gif</image>
 	  <description>
@@ -1674,7 +1691,7 @@
 	  <source>wiggle/wiggle.pde</source>
 	  <link href="http://www.uncontrol.com/">Uncontrol</link>
 	</software>
-	
+
 	<software name="withoutTitle" by="Lia" scroll="no" resize="no" width="640" height="480">
 	<image>images/withouttitle.jpg</image>
 	  <description>
@@ -1685,7 +1702,7 @@
 	  <link href="http://www.re-move.org/">Re-Move</link>
 	  <link href="http://www.wofbot.org">Wofbot</link>
 	</software>
-	
+
 	<software name="Articulate" by="GroupC" scroll="no" resize="no" width="600" height="650">
 	<image>images/articulate.gif</image>
 	  <description>
@@ -1695,7 +1712,7 @@
 	  <source>articulate/articulate.pde</source>
 	  <link href="http://www.groupc.net">GroupC</link>
 	</software>
-	
+
 	<software name="SodaProcessing" by="Ed Burton" scroll="no" resize="no" width="280" height="255">
 	<image>images/sodaprocessing.gif</image>
 	  <description>
@@ -1706,18 +1723,18 @@
 	  <link href="http://www.soda.co.uk">Soda</link>
 	  <link href="http://sodaplay.com">SodaPlay</link>
 	</software>
-	
+
 	<software name="C_Drawer" by="Marius Watz" scroll="no" resize="no" width="600" height="440">
 	<image>images/c_drawer.jpg</image>
 	  <description>
-		Like drawing with a bunch of crayons in one hand. 
+		Like drawing with a bunch of crayons in one hand.
 	Simple and messy, but fun.
 	  </description>
 	  <location>works/cdrawer/index.html</location>
 	  <source>cdrawer/cdrawer.pde</source>
 	  <link href="http://www.evolutionzone.com/">Evolution Zone</link>
 	</software>
-	
+
 	<software name="Inequality" by="Josh On" scroll="no" resize="no" width="200" height="232">
 	<image>images/inequality.gif</image>
 	  <description>
@@ -1728,7 +1745,7 @@
 	  <link href="http://www.theyrule.net">They Rule</link>
 	  <link href="http://www.futurefarmers.com">Future Farmers</link>
 	</software>
-	
+
 	<software name="Pond" by="William Ngan" scroll="no" resize="no" width="600" height="400">
 	  <image>images/pond.gif</image>
 	  <description>
@@ -1739,7 +1756,7 @@
 	  <link href="http://www.metaphorical.net">Metaphorical</link>
 	  <link href="http://www.interaction.rca.ac.uk/alumni/99-01/william/">Royal College of Art</link>
 	</software>
-	
+
 	<software name="Hin_und_Her" by="Boris Müller" scroll="no" resize="no" width="729" height="570">
 	  <image>images/hinundher.gif</image>
 	  <description>
@@ -1749,7 +1766,7 @@
 	  <source>hinundher/hinundher.pde</source>
 	  <link href="http://www.esono.com">Esono</link>
 	</software>
-	
+
 	<software name="Yellowtail" by="Golan Levin" scroll="no" resize="no" width="488" height="288">
 	<image>images/yellowtail.gif</image>
 	  <description>
@@ -1760,7 +1777,7 @@
 	  <link href="http://www.flong.com/yellowtail/">Yellowtail</link>
 	  <link href="http://www.flong.com">Flong</link>
 	</software>
-	
+
 	<software name="Alphabot" by="Nikita Pashenkov" scroll="no" resize="no" width="400" height="400">
 	<image>images/004.gif</image>
 	  <description>
@@ -1771,7 +1788,7 @@
 	  <link href="http://acg.media.mit.edu/people/nik/projects/alphabot/">Alphabot</link>
 	  <link href="http://acg.media.mit.edu/">ACG</link>
 	</software>
-	
+
 	<software name="Europa" by="Glen Murphy" scroll="no" resize="no" width="301" height="401">
 	<image>images/europa.gif</image>
 	  <description>
@@ -1782,7 +1799,7 @@
 	  <link href="http://www.glenmurphy.com/">Glen Murphy</link>
 	  <link href="http://www.bodytag.org">Body Tag</link>
 	</software>
-	
+
 	<software name="Matchboxes" by="Schoenerwissen" scroll="no" resize="no" width="640" height="480">
 	<image>images/003.gif</image>
 	  <description>
@@ -1793,7 +1810,7 @@
 	  <link href="http://www.schoenerwissen.com/">Schoenerwissen</link>
 	  <link href="http://www.minitasking.com">Minitasking</link>
 	</software>
-	
+
 	<software name="Internet_Age" by="Reed Kram" scroll="no" resize="no" width="300" height="300">
 	<image>images/002.gif</image>
 	  <description>
@@ -1802,7 +1819,7 @@
 	  <source>002/code.html</source>
 	  <link href="http://www.kramdesign.com/">kramdesign</link>
 	</software>
-	
+
 	<software name="Valence" by="Ben Fry" scroll="no" resize="no" width="640" height="480">
 	<image>images/001.gif</image>
 	  <description>
@@ -1813,5 +1830,5 @@
 	  <link href="http://acg.media.mit.edu/people/fry">Genomic Cartography</link>
 	  <link href="http://acg.media.mit.edu/">ACG</link>
 	</software>
-	
+
 </curated>

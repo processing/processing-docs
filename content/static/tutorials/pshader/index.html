@@ -31,7 +31,7 @@
     Writing shaders requires an understanding of the individual stages involved in the rendering a scene with the GPU, and how we can use GLSL to program them. The sequence of these stages is called the "graphical pipeline" in the technical parlance of computer graphics, and we will now take a look at the main stages in the pipeline from the perspective of a Processing sketch.
   </p>
 
-<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and web coding sandboxes (for example <a href="https://www.shadertoy.com/">Shader Toy</a>, <a href="http://glsl.heroku.com/">GLSL Sandbox</a>, and <a href="https://www.vertexshaderart.com/">Vertex Shader Art</a>), that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, Cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.<p>
+<p>Note that the goal of this document is not to provide a programming guide to GLSL, but to describe in detail the new shader API in Processing so that users already familiar with GLSL can write their own custom shaders and then use them in Processing. There are several resources, such as <a href="http://www.lighthouse3d.com/tutorials/">online</a> <a href="http://ogldev.atspace.co.uk/">tutorials</a> and <a href="http://www.opengl.org/discussion_boards/forum.php">forums</a>, <a href="http://www.amazon.com/OpenGL-Shading-Language-3rd-Edition/dp/0321637631/ref=sr_1_1?">books</a>, and web coding sandboxes (for example <a href="https://www.shadertoy.com/">Shader Toy</a>, <a href="http://glslsandbox.com/">GLSL Sandbox</a>, and <a href="https://www.vertexshaderart.com/">Vertex Shader Art</a>), that can be recommended for learning GLSL programming. Furthermore, the GLSL experience gained using a different programming interface, platform or toolkit (openFrameworks, Cinder, webGL, iOS, Android, etc.) can be easily translated over to Processing.<p>
 
 <p>Let's start with a simple 3D sketch as the model to understand the relationship between the Processing functions and variables and the underlying pipeline running on the GPU. This sketch draws a quad with lights and some geometric transformations applied to it:
 
@@ -43,7 +43,7 @@
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(400, 400, <span style="color: #666666;">P3D</span>);
-&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();  
+&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
 }
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
@@ -63,7 +63,7 @@
 &nbsp;&nbsp;<span style="color: #006699;">fill</span>(200, 50, 50);
 &nbsp;&nbsp;<span style="color: #006699;">vertex</span>(+100, -100);
 &nbsp;&nbsp;<span style="color: #006699;">vertex</span>(-100, -100);
-&nbsp;&nbsp;<span style="color: #006699;">endShape</span>();  
+&nbsp;&nbsp;<span style="color: #006699;">endShape</span>();
 &nbsp;&nbsp;
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
@@ -88,7 +88,7 @@ The first stage in the pipeline is the vertex shader. It uses the vertex attribu
 </p>
 
 <p>
-The vertex shader doesn't know how the vertices are connected to each other forming a shape since it receives each vertex independently of the others. Therefore, the immediate output of the vertex stage is just the list of vertices projected onto the screen plane. In Processing we set how the vertices of a shape are connected with each other by passing an argument to <em>beginShape()</em>. This argument, which in the case of this example is <em>QUADS</em>, determines how the next stage in the pipeline, called primitive assembly, builds geometric primitives out of the individual vertices that come out of the vertex shader. 
+The vertex shader doesn't know how the vertices are connected to each other forming a shape since it receives each vertex independently of the others. Therefore, the immediate output of the vertex stage is just the list of vertices projected onto the screen plane. In Processing we set how the vertices of a shape are connected with each other by passing an argument to <em>beginShape()</em>. This argument, which in the case of this example is <em>QUADS</em>, determines how the next stage in the pipeline, called primitive assembly, builds geometric primitives out of the individual vertices that come out of the vertex shader.
 </p>
 
 <p>
@@ -110,7 +110,7 @@ for (int i = 0; i < vertexCount; i++) {
 <pre>
 function vertexShader(vertex) {
   projPos = projection * modelview * vertex.position;
-  litColor = lightColor * dot(vertex.normal, lightDirection);    
+  litColor = lightColor * dot(vertex.normal, lightDirection);
   return (projPos, litColor);
 }
 </pre>
@@ -138,7 +138,7 @@ The fragment shader can perform additional operations on each fragment, and in f
 </p>
 
 <p>
-From all the stages described in our simplified pipeline, only the vertex and fragment shaders can be modified to run our own custom code. The other stages are all hard-coded in the GPU. With this picture in mind, we can move forward and start working through the actual shader API in Processing. 
+From all the stages described in our simplified pipeline, only the vertex and fragment shaders can be modified to run our own custom code. The other stages are all hard-coded in the GPU. With this picture in mind, we can move forward and start working through the actual shader API in Processing.
 </p>
 
 <h3>The PShader class</h3>
@@ -167,7 +167,7 @@ A shader (program) is encapsulated by the <em>PShader</em> class. A <em>PShader<
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(toon);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(0); 
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;<span style="color: #CC6633;">float</span> dirY = (<span style="color: #FF6699;">mouseY</span> / float(<span style="color: #FF6699;">height</span>) - 0.5) * 2;
 &nbsp;&nbsp;<span style="color: #CC6633;">float</span> dirX = (<span style="color: #FF6699;">mouseX</span> / float(<span style="color: #FF6699;">width</span>) - 0.5) * 2;
 &nbsp;&nbsp;<span style="color: #006699;">directionalLight</span>(204, 204, 204, -dirX, -dirY, -1);
@@ -190,7 +190,7 @@ varying vec3 vertNormal;
 varying vec3 vertLightDir;
 
 void main() {
-  gl_Position = transform * position;  
+  gl_Position = transform * position;
   vertColor = color;
   vertNormal = normalize(normalMatrix * normal);
   vertLightDir = -lightNormal;
@@ -209,7 +209,7 @@ varying vec4 vertColor;
 varying vec3 vertNormal;
 varying vec3 vertLightDir;
 
-void main() {  
+void main() {
   float intensity;
   vec4 color;
   intensity = max(0.0, dot(vertLightDir, vertNormal));
@@ -224,7 +224,7 @@ void main() {
     color = vec4(vec3(0.2), 1.0);
   }
 
-  gl_FragColor = color * vertColor;  
+  gl_FragColor = color * vertColor;
 }
 </pre>
 </td></tr>
@@ -246,7 +246,7 @@ The PShader class includes the set() function to pass values from the sketch to 
 <h3>Types of shaders in Processing</h3>
 
 <p>
-From the code and pseudo-code examples presented in the previous sections, it can be appreciated that different shaders have different uniform and attribute variables. For example, a shader that does not compute lighting does not need uniforms holding the light source's position and color, for example. If we work with a low-level toolkit in C or C++ with direct access to the OpenGL API, we are free to name the uniforms and attributes of a shader in any way we like, since we have absolute control on the way the geometry is stored in our application, and how and when it is passed over to the GPU pipeline using the OpenGL functions. This is different when working in Processing, since the shaders are handled automatically by the renderers and should be able to handle the geometry that is described with the drawing API of Processing. This doesn't imply that custom shaders must render things in the same way as Processing does by default, quite in the contrary, the use of custom shaders opens up the possibility of greatly altering the rendering pipeline in Processing. However, custom shaders meant to be used in conjunction with the standard drawing API have to follow certain naming conventions, and are bound by some limitations. 
+From the code and pseudo-code examples presented in the previous sections, it can be appreciated that different shaders have different uniform and attribute variables. For example, a shader that does not compute lighting does not need uniforms holding the light source's position and color, for example. If we work with a low-level toolkit in C or C++ with direct access to the OpenGL API, we are free to name the uniforms and attributes of a shader in any way we like, since we have absolute control on the way the geometry is stored in our application, and how and when it is passed over to the GPU pipeline using the OpenGL functions. This is different when working in Processing, since the shaders are handled automatically by the renderers and should be able to handle the geometry that is described with the drawing API of Processing. This doesn't imply that custom shaders must render things in the same way as Processing does by default, quite in the contrary, the use of custom shaders opens up the possibility of greatly altering the rendering pipeline in Processing. However, custom shaders meant to be used in conjunction with the standard drawing API have to follow certain naming conventions, and are bound by some limitations.
 </p>
 
 <p>
@@ -258,9 +258,9 @@ Based on this uniform and attribute requirements, shaders in Processing must bel
 </p>
 
 <ul>
-<li>POINT shaders: used to render stroke points.</li> 
-<li>LINE shaders: used to render stroke lines.</li> 
-<li>TRIANGLE shaders: used to render anything else, which means that they will handle (lit/unlit, textured/non-textured) shapes. Because all shapes in Processing are ultimately made out of triangles, they are can be called TRIANGLE shaders.</li> 
+<li>POINT shaders: used to render stroke points.</li>
+<li>LINE shaders: used to render stroke lines.</li>
+<li>TRIANGLE shaders: used to render anything else, which means that they will handle (lit/unlit, textured/non-textured) shapes. Because all shapes in Processing are ultimately made out of triangles, they are can be called TRIANGLE shaders.</li>
 </ul>
 
 <p>
@@ -280,7 +280,7 @@ When setting a shader with the <em>shader()</em> function, we can specify the sh
 </pre>
 
 <p>
-This code will result in Processing using <em>pointShader</em> to render stroke points, <em>lineShader</em> to render lines, and <em>polyShader</em> to render the appropriate kind of geometry. 
+This code will result in Processing using <em>pointShader</em> to render stroke points, <em>lineShader</em> to render lines, and <em>polyShader</em> to render the appropriate kind of geometry.
 </p>
 
 <p>
@@ -344,11 +344,11 @@ We will go through the different types of shaders available in Processing and ex
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
-&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
-&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 
@@ -364,9 +364,9 @@ We will go through the different types of shaders available in Processing and ex
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> u = <span style="color: #006699;">float</span>(i) / detail;
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">normal</span>(x, 0, z);
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, -h/2, z * r, u, 0);
-&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);    
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);
 &nbsp;&nbsp;}
-&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>(); 
+&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>();
 &nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
 }
 </pre>
@@ -395,7 +395,7 @@ attribute vec4 color;
 varying vec4 vertColor;
 
 void main() {
-  gl_Position = transform * position;    
+  gl_Position = transform * position;
   vertColor = color;
 }
 
@@ -419,7 +419,7 @@ void main() {
 Now, we need to make two changes to our main program to make use of our new shader. At the end of our setup function we need to add
 </p>
 
-<pre>&nbsp;&nbsp;colorShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;colorfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;colorvert.glsl&quot;</span>);</pre> 
+<pre>&nbsp;&nbsp;colorShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;colorfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;colorvert.glsl&quot;</span>);</pre>
 
 <p>
 to load the shader files. Then, right after background(), add
@@ -462,20 +462,20 @@ Rendering textured geometry requires additional uniforms and attributes in the s
 <span style="color: #CC6633;">PShader</span> texShader;
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;texShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texvert.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;<span style="color: #006699;">shader</span>(texShader);  
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(texShader);
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
-&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
-&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 
@@ -492,9 +492,9 @@ Rendering textured geometry requires additional uniforms and attributes in the s
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> u = <span style="color: #006699;">float</span>(i) / detail;
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">normal</span>(x, 0, z);
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, -h/2, z * r, u, 0);
-&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);    
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);
 &nbsp;&nbsp;}
-&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>(); 
+&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>();
 &nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
 }
 
@@ -512,7 +512,7 @@ varying vec4 vertTexCoord;
 
 void main() {
   gl_Position = transform * position;
-    
+
   vertColor = color;
   vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
 }
@@ -549,7 +549,7 @@ Implementing a pixelate effect becomes very easy at the level of the fragment sh
 <pre>
 void main() {
   int si = int(vertTexCoord.s * 50.0);
-  int sj = int(vertTexCoord.t * 50.0);  
+  int sj = int(vertTexCoord.t * 50.0);
   gl_FragColor = texture2D(texture, vec2(float(si) / 50.0, float(sj) / 50.0)) * vertColor;
 }
 </pre>
@@ -587,7 +587,7 @@ Using the same geometry from the previous examples, we can now write a simple sh
 &nbsp;&nbsp;lightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;lightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;lightvert.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(lightShader);
@@ -595,8 +595,8 @@ Using the same geometry from the previous examples, we can now write a simple sh
 &nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>, 200);
 
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
-&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
-&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 
@@ -615,13 +615,13 @@ attribute vec3 normal;
 varying vec4 vertColor;
 
 void main() {
-  gl_Position = transform * position;    
-  vec3 ecPosition = vec3(modelview * position);  
+  gl_Position = transform * position;
+  vec3 ecPosition = vec3(modelview * position);
   vec3 ecNormal = normalize(normalMatrix * normal);
 
-  vec3 direction = normalize(lightPosition.xyz - ecPosition);    
+  vec3 direction = normalize(lightPosition.xyz - ecPosition);
   float intensity = max(0.0, dot(direction, ecNormal));
-  vertColor = vec4(intensity, intensity, intensity, 1) * color;             
+  vertColor = vec4(intensity, intensity, intensity, 1) * color;
 }
 
 <strong>lightfrag.glsl:</strong>
@@ -660,7 +660,7 @@ In this example, there is a single point light, but Processing can send to the s
 </ul>
 
 <p>
-The values in this uniforms completely specify any lighting configuration set in the sketch using the <a href="http://processing.org/reference/ambientLight_.html"><em>ambientLight()</em></a>, <a href="http://processing.org/reference/pointLight_.html"><em>pointLight()</em></a>, <a href="http://processing.org/reference/directionalLight_.html"><em>directionalLight()</em></a> and <a href="http://processing.org/reference/spotLight_.html"><em>spotLight()</em></a> functions in Processing. To see how all these uniforms are used in the default light shader, which covers all the possible lighting combinations, take a look at <a href="https://github.com/processing/processing/blob/master/core/src/processing/opengl/LightVert.glsl">its source code</a> from the Processing core. However, a valid light shader doesn't need to declare all of these uniforms, for example in the previous example we only needed the lightPosition uniform. 
+The values in this uniforms completely specify any lighting configuration set in the sketch using the <a href="http://processing.org/reference/ambientLight_.html"><em>ambientLight()</em></a>, <a href="http://processing.org/reference/pointLight_.html"><em>pointLight()</em></a>, <a href="http://processing.org/reference/directionalLight_.html"><em>directionalLight()</em></a> and <a href="http://processing.org/reference/spotLight_.html"><em>spotLight()</em></a> functions in Processing. To see how all these uniforms are used in the default light shader, which covers all the possible lighting combinations, take a look at <a href="https://github.com/processing/processing/blob/master/core/src/processing/opengl/LightVert.glsl">its source code</a> from the Processing core. However, a valid light shader doesn't need to declare all of these uniforms, for example in the previous example we only needed the lightPosition uniform.
 </p>
 
 <p>
@@ -689,11 +689,11 @@ varying vec3 ecNormal;
 varying vec3 lightDir;
 
 void main() {
-  gl_Position = transform * position;    
-  vec3 ecPosition = vec3(modelview * position);  
-  
+  gl_Position = transform * position;
+  vec3 ecPosition = vec3(modelview * position);
+
   ecNormal = normalize(normalMatrix * normal);
-  lightDir = normalize(lightPosition.xyz - ecPosition);  
+  lightDir = normalize(lightPosition.xyz - ecPosition);
   vertColor = color;
 }
 
@@ -708,7 +708,7 @@ varying vec4 vertColor;
 varying vec3 ecNormal;
 varying vec3 lightDir;
 
-void main() {  
+void main() {
   vec3 direction = normalize(lightDir);
   vec3 normal = normalize(ecNormal);
   float intensity = max(0.0, dot(direction, normal));
@@ -749,22 +749,22 @@ We can integrate the examples from the previous sections in the following sketch
 <span style="color: #CC6633;">PShader</span> texlightShader;
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;texlightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texlightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texlightvert.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(texlightShader);
 
-&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>, 200);  
+&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, <span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>, 200);
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
-&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
-&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 
@@ -786,15 +786,15 @@ varying vec4 vertColor;
 varying vec4 vertTexCoord;
 
 void main() {
-  gl_Position = transform * position;    
-  vec3 ecPosition = vec3(modelview * position);  
+  gl_Position = transform * position;
+  vec3 ecPosition = vec3(modelview * position);
   vec3 ecNormal = normalize(normalMatrix * normal);
 
-  vec3 direction = normalize(lightPosition.xyz - ecPosition);    
+  vec3 direction = normalize(lightPosition.xyz - ecPosition);
   float intensity = max(0.0, dot(direction, ecNormal));
-  vertColor = vec4(intensity, intensity, intensity, 1) * color;     
-  
-  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
+  vertColor = vec4(intensity, intensity, intensity, 1) * color;
+
+  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
 }
 
 <strong>texlightfrag.glsl:</strong>
@@ -844,14 +844,14 @@ varying vec3 lightDir;
 varying vec4 vertTexCoord;
 
 void main() {
-  gl_Position = transform * position;    
-  vec3 ecPosition = vec3(modelview * position);  
-  
-  ecNormal = normalize(normalMatrix * normal);    
-  lightDir = normalize(lightPosition.xyz - ecPosition);  
-  vertColor = color;  
-  
-  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);        
+  gl_Position = transform * position;
+  vec3 ecPosition = vec3(modelview * position);
+
+  ecNormal = normalize(normalMatrix * normal);
+  lightDir = normalize(lightPosition.xyz - ecPosition);
+  vertColor = color;
+
+  vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
 }
 
 <strong>pixlightxfrag.glsl:</strong>
@@ -922,7 +922,7 @@ void main() {
     gl_FragColor = vertColor;
   } else {
     gl_FragColor = vec4(0, 0, 0, 1);
-  }     
+  }
 }
 </pre>
 
@@ -941,20 +941,20 @@ The fragment shader samples the texture at position <em>vertTexCoord.st</em> and
 <span style="color: #CC6633;">PShader</span> bwShader;
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(100,&nbsp;200,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;bwShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;bwfrag.glsl&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(bwShader);
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(<span style="color: #FF6699;">width</span>/2, <span style="color: #FF6699;">height</span>/2);
-&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);  
-&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);  
+&nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(angle);
+&nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
 &nbsp;&nbsp;angle&nbsp;+=&nbsp;0.01;
 }
 </pre>
@@ -996,7 +996,7 @@ void main() {
   vec2 tc6 = vertTexCoord.st + vec2(-texOffset.s, +texOffset.t);
   vec2 tc7 = vertTexCoord.st + vec2(         0.0, +texOffset.t);
   vec2 tc8 = vertTexCoord.st + vec2(+texOffset.s, +texOffset.t);
-  
+
   vec4 col0 = texture2D(texture, tc0);
   vec4 col1 = texture2D(texture, tc1);
   vec4 col2 = texture2D(texture, tc2);
@@ -1007,8 +1007,8 @@ void main() {
   vec4 col7 = texture2D(texture, tc7);
   vec4 col8 = texture2D(texture, tc8);
 
-  vec4 sum = 8.0 * col4 - (col0 + col1 + col2 + col3 + col5 + col6 + col7 + col8); 
-  gl_FragColor = vec4(sum.rgb, 1.0) * vertColor; 
+  vec4 sum = 8.0 * col4 - (col0 + col1 + col2 + col3 + col5 + col6 + col7 + col8);
+  gl_FragColor = vec4(sum.rgb, 1.0) * vertColor;
 }
 </pre>
 </tr></td>
@@ -1038,7 +1038,7 @@ void main() {
   vec2 tc3 = vertTexCoord.st + vec2(+texOffset.s,          0.0);
   vec2 tc4 = vertTexCoord.st + vec2(         0.0, +texOffset.t);
   vec2 tc5 = vertTexCoord.st + vec2(+texOffset.s, +texOffset.t);
-  
+
   vec4 col0 = texture2D(texture, tc0);
   vec4 col1 = texture2D(texture, tc1);
   vec4 col2 = texture2D(texture, tc2);
@@ -1048,7 +1048,7 @@ void main() {
 
   vec4 sum = vec4(0.5) + (col0 + col1 + col2) - (col3 + col4 + col5);
   float lum = dot(sum, lumcoeff);
-  gl_FragColor = vec4(lum, lum, lum, 1.0) * vertColor;  
+  gl_FragColor = vec4(lum, lum, lum, 1.0) * vertColor;
 }
 </pre>
 </tr></td>
@@ -1093,13 +1093,13 @@ The output of these post-processing effects are displayed in the following image
 <span style="color: #CC6633;">PShader</span> embossShader;
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(480, 480, <span style="color: #666666;">P3D</span>);  
+&nbsp;&nbsp;<span style="color: #006699;">size</span>(480, 480, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;label&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;lachoy.jpg&quot;</span>);
 &nbsp;&nbsp;can&nbsp;=&nbsp;createCan(canSize,&nbsp;2&nbsp;*&nbsp;canSize,&nbsp;32,&nbsp;label);
 &nbsp;&nbsp;cap&nbsp;=&nbsp;createCap(canSize,&nbsp;32);
 &nbsp;&nbsp;
 &nbsp;&nbsp;colorShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;colorfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;colorvert.glsl&quot;</span>);
-&nbsp;&nbsp;lightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;lightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;lightvert.glsl&quot;</span>);  
+&nbsp;&nbsp;lightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;lightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;lightvert.glsl&quot;</span>);
 &nbsp;&nbsp;texShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texvert.glsl&quot;</span>);
 &nbsp;&nbsp;
 &nbsp;&nbsp;texlightShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;texlightfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;texlightvert.glsl&quot;</span>);
@@ -1113,10 +1113,10 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;selShader&nbsp;=&nbsp;texlightShader;
 &nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
-&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, texture shading&quot;</span>);  
+&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, texture shading&quot;</span>);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {    
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #CC6633;">float</span> x = 1.88 * canSize;
@@ -1141,7 +1141,7 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;<span style="color: #669933;">if</span> (useLight) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">pointLight</span>(255, 255, 255, centerx, centery, 200);
 &nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;<span style="color: #006699;">shader</span>(selShader);  
+&nbsp;&nbsp;<span style="color: #006699;">shader</span>(selShader);
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">translate</span>(centerx, centery, 65);
 &nbsp;&nbsp;<span style="color: #006699;">rotateY</span>(rotAngle);
@@ -1153,15 +1153,15 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;<span style="color: #006699;">shape</span>(can);
 &nbsp;&nbsp;<span style="color: #006699;">noLights</span>();
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;<span style="color: #006699;">resetShader</span>();  
+&nbsp;&nbsp;<span style="color: #006699;">resetShader</span>();
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
-&nbsp;&nbsp;<span style="color: #006699;">translate</span>(0, canSize - 5, 0);  
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(0, canSize - 5, 0);
 &nbsp;&nbsp;<span style="color: #006699;">shape</span>(cap);
 &nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
 
 &nbsp;&nbsp;<span style="color: #006699;">pushMatrix</span>();
-&nbsp;&nbsp;<span style="color: #006699;">translate</span>(0, -canSize + 5, 0);  
+&nbsp;&nbsp;<span style="color: #006699;">translate</span>(0, -canSize + 5, 0);
 &nbsp;&nbsp;<span style="color: #006699;">shape</span>(cap);
 &nbsp;&nbsp;<span style="color: #006699;">popMatrix</span>();
 &nbsp;&nbsp;
@@ -1181,9 +1181,9 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6633;">float</span> u = <span style="color: #006699;">float</span>(i) / detail;
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">normal</span>(x, 0, z);
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, -h/2, z * r, u, 0);
-&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);    
+&nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, +h/2, z * r, u, 1);
 &nbsp;&nbsp;}
-&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>(); 
+&nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>();
 &nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
 }
 
@@ -1200,7 +1200,7 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;&nbsp;&nbsp;sh.<span style="color: #006699;">vertex</span>(x * r, 0, z * r);
 &nbsp;&nbsp;}&nbsp;&nbsp;
 &nbsp;&nbsp;sh.<span style="color: #006699;">endShape</span>();
-&nbsp;&nbsp;<span style="color: #996633;">return</span> sh;  
+&nbsp;&nbsp;<span style="color: #996633;">return</span> sh;
 }
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>keyPressed</strong></span>() {
@@ -1208,47 +1208,47 @@ The output of these post-processing effects are displayed in the following image
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;No lights, no texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;colorShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;        
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;2&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, no texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;lightShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;    
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;3&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;No lights, texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;texShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;     
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;4&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Vertex lights, texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;texlightShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;    
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;5&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Pixel lights, no texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;pixlightShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>; 
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;6&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Pixel lights, texture shading&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;texlightxShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;      
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;7&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Black&amp;white texture filtering&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;bwShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;    
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;8&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Edge detection filtering&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;edgesShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;    
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;}&nbsp;<span style="color: #669933;">else</span> <span style="color: #669933;">if</span> (<span style="color: #FF6699;">key</span> == <span style="color: #7D4793;">&apos;9&apos;</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">println</span>(<span style="color: #7D4793;">&quot;Emboss filtering&quot;</span>);
 &nbsp;&nbsp;&nbsp;&nbsp;selShader&nbsp;=&nbsp;embossShader;
 &nbsp;&nbsp;&nbsp;&nbsp;useLight&nbsp;=&nbsp;<span style="color: #996633;">false</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;     
+&nbsp;&nbsp;&nbsp;&nbsp;useTexture&nbsp;=&nbsp;<span style="color: #996633;">true</span>;
 &nbsp;&nbsp;}
 }
 </pre>
@@ -1303,9 +1303,9 @@ Let's start with point rendering. P3D represents points as either rectangles (wh
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {  
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
-&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {   
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
 &nbsp;&nbsp;}&nbsp;&nbsp;
 }
@@ -1324,9 +1324,9 @@ varying vec4 vertColor;
 void main() {
   vec4 pos = modelview * position;
   vec4 clip = projection * pos;
-  
+
   gl_Position = clip + projection * vec4(offset, 0, 0);
- 
+
   vertColor = color;
 }
 
@@ -1339,7 +1339,7 @@ precision mediump int;
 
 varying vec4 vertColor;
 
-void main() {  
+void main() {
   gl_FragColor = vertColor;
 }
 </pre>
@@ -1372,7 +1372,7 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 &nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;weight&quot;</span>, weight);
 &nbsp;&nbsp;cloud1&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud1.png&quot;</span>);
 &nbsp;&nbsp;cloud2&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud2.png&quot;</span>);
-&nbsp;&nbsp;cloud3&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud3.png&quot;</span>);  
+&nbsp;&nbsp;cloud3&nbsp;=&nbsp;<span style="color: #006699;">loadImage</span>(<span style="color: #7D4793;">&quot;cloud3.png&quot;</span>);
 &nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sprite&quot;</span>, cloud1);
 &nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(weight);
@@ -1382,9 +1382,9 @@ The attribute <em>offset</em> contains the displacement that needs to be applied
 &nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 }
 
-<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {  
+<span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">shader</span>(pointShader, <span style="color: #666666;">POINTS</span>);
-&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {   
+&nbsp;&nbsp;<span style="color: #669933;">if</span> (<span style="color: #FF6699;">mousePressed</span>) {
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
 &nbsp;&nbsp;}&nbsp;&nbsp;
 }
@@ -1405,7 +1405,7 @@ uniform mat4 projection;
 uniform mat4 modelview;
 
 uniform float weight;
- 
+
 attribute vec4 position;
 attribute vec4 color;
 attribute vec2 offset;
@@ -1416,11 +1416,11 @@ varying vec2 texCoord;
 void main() {
   vec4 pos = modelview * position;
   vec4 clip = projection * pos;
-  
+
   gl_Position = clip + projection * vec4(offset, 0, 0);
-  
+
   texCoord = (vec2(0.5) + offset / weight);
-  
+
   vertColor = color;
 }
 
@@ -1436,7 +1436,7 @@ uniform sampler2D sprite;
 varying vec4 vertColor;
 varying vec2 texCoord;
 
-void main() {  
+void main() {
   gl_FragColor = texture2D(sprite, texCoord) * vertColor;
 }
 </pre>
@@ -1456,7 +1456,7 @@ maps the offset range onto the (0, 1) interval needed for texturing. The variabl
 <p><img src="imgs/pointsprite.png"></p>
 
 <p>
-Another limitation of the default point rendering in Processing that we can overcome with a custom point shader is the use of many vertices to represent a single point. We saw that in the case of square points, actually 5 vertices are sent to the GPU per point. In the case of rounds points, this number could be significantly higher since the point circles are approximated with regular polygons of n sides. The number n grows as the point is larger on the screen. 
+Another limitation of the default point rendering in Processing that we can overcome with a custom point shader is the use of many vertices to represent a single point. We saw that in the case of square points, actually 5 vertices are sent to the GPU per point. In the case of rounds points, this number could be significantly higher since the point circles are approximated with regular polygons of n sides. The number n grows as the point is larger on the screen.
 </p>
 
 <p>
@@ -1472,11 +1472,11 @@ One alternative solution is to generate the points procedurally in the fragment 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>setup</strong></span>() {
 &nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360, <span style="color: #666666;">P3D</span>);
 &nbsp;&nbsp;
-&nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pointfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pointvert.glsl&quot;</span>);  
+&nbsp;&nbsp;pointShader&nbsp;=&nbsp;<span style="color: #006699;">loadShader</span>(<span style="color: #7D4793;">&quot;pointfrag.glsl&quot;</span>, <span style="color: #7D4793;">&quot;pointvert.glsl&quot;</span>);
 &nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;sharpness&quot;</span>, 0.9);
 &nbsp;&nbsp;
 &nbsp;&nbsp;<span style="color: #006699;">strokeCap</span>(<span style="color: #666666;">SQUARE</span>);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);  
+&nbsp;&nbsp;<span style="color: #006699;">background</span>(0);
 }
 
 <span style="color: #996633;">void</span> <span style="color: #006699;"><strong>draw</strong></span>() {
@@ -1487,7 +1487,7 @@ One alternative solution is to generate the points procedurally in the fragment 
 &nbsp;&nbsp;&nbsp;&nbsp;pointShader.<span style="color: #006699;">set</span>(<span style="color: #7D4793;">&quot;weight&quot;</span>, w);
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(w);
 &nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(<span style="color: #006699;">random</span>(255), <span style="color: #006699;">random</span>(255), <span style="color: #006699;">random</span>(255));  
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">stroke</span>(<span style="color: #006699;">random</span>(255), <span style="color: #006699;">random</span>(255), <span style="color: #006699;">random</span>(255));
 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">point</span>(<span style="color: #FF6699;">mouseX</span>, <span style="color: #FF6699;">mouseY</span>);
 &nbsp;&nbsp;}
 }
@@ -1496,7 +1496,7 @@ One alternative solution is to generate the points procedurally in the fragment 
 
 uniform mat4 projection;
 uniform mat4 transform;
- 
+
 attribute vec4 position;
 attribute vec4 color;
 attribute vec2 offset;
@@ -1508,7 +1508,7 @@ varying vec2 pos;
 void main() {
   vec4 clip = transform * position;
   gl_Position = clip + projection * vec4(offset, 0, 0);
-  
+
   vertColor = color;
   center = clip.xy;
   pos = offset;
@@ -1528,12 +1528,12 @@ varying vec4 vertColor;
 varying vec2 center;
 varying vec2 pos;
 
-void main() {  
+void main() {
   float len = weight/2.0 - length(pos);
   vec4 color = vec4(1.0, 1.0, 1.0, len);
-  color = mix(vec4(0.0), color, sharpness);		  
-  color = clamp(color, 0.0, 1.0);		
-  gl_FragColor = color * vertColor; 
+  color = mix(vec4(0.0), color, sharpness);
+  color = clamp(color, 0.0, 1.0);
+  gl_FragColor = color * vertColor;
 }
 </pre>
 </tr></td>
@@ -1593,27 +1593,27 @@ attribute vec4 color;
 attribute vec4 direction;
 
 varying vec4 vertColor;
-  
+
 vec3 clipToWindow(vec4 clip, vec4 viewport) {
   vec3 dclip = clip.xyz / clip.w;
   vec2 xypos = (dclip.xy + vec2(1.0, 1.0)) * 0.5 * viewport.zw;
   return vec3(xypos, dclip.z * 0.5 + 0.5);
 }
-  
+
 void main() {
   vec4 clip0 = transform * position;
   vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
   float thickness = direction.w;
-  
-  vec3 win0 = clipToWindow(clip0, viewport); 
-  vec3 win1 = clipToWindow(clip1, viewport); 
+
+  vec3 win0 = clipToWindow(clip0, viewport);
+  vec3 win1 = clipToWindow(clip1, viewport);
   vec2 tangent = win1.xy - win0.xy;
-    
+
   vec2 normal = normalize(vec2(-tangent.y, tangent.x));
   vec2 offset = normal * thickness;
   gl_Position.xy = clip0.xy + offset.xy;
   gl_Position.zw = clip0.zw;
-  vertColor = color;  
+  vertColor = color;
 }
 
 <strong>linefrag.glsl:</strong>
@@ -1695,28 +1695,28 @@ attribute vec4 direction;
 varying vec2 center;
 varying vec2 normal;
 varying vec4 vertColor;
-  
+
 vec3 clipToWindow(vec4 clip, vec4 viewport) {
   vec3 dclip = clip.xyz / clip.w;
   vec2 xypos = (dclip.xy + vec2(1.0, 1.0)) * 0.5 * viewport.zw;
   return vec3(xypos, dclip.z * 0.5 + 0.5);
 }
-  
+
 void main() {
   vec4 clip0 = transform * position;
   vec4 clip1 = clip0 + transform * vec4(direction.xyz, 0);
   float thickness = direction.w;
-  
-  vec3 win0 = clipToWindow(clip0, viewport); 
-  vec3 win1 = clipToWindow(clip1, viewport); 
+
+  vec3 win0 = clipToWindow(clip0, viewport);
+  vec3 win1 = clipToWindow(clip1, viewport);
   vec2 tangent = win1.xy - win0.xy;
-    
+
   normal = normalize(vec2(-tangent.y, tangent.x));
   vec2 offset = normal * thickness;
   gl_Position.xy = clip0.xy + offset.xy;
   gl_Position.zw = clip0.zw;
-  vertColor = color;  
-  
+  vertColor = color;
+
   center = (win0.xy + win1.xy) / 2.0;
 }
 
@@ -1735,14 +1735,14 @@ varying vec4 vertColor;
 
 void main() {
   vec2 v = gl_FragCoord.xy - center;
-  float alpha = 1.0 - abs(2.0 * dot(normalize(normal), v) / weight);  
+  float alpha = 1.0 - abs(2.0 * dot(normalize(normal), v) / weight);
   gl_FragColor = vec4(vertColor.rgb, alpha);
 }
 </pre>
 </tr></td>
 </table>
 
-<p>The key calculation here is the dot product between the normal vector and the vector from the center of the stroke quad and the current fragment position, dot(normalize(normal), v), which will be exactly 0 along the spine of the quad, and so, giving alpha equal to 1.  
+<p>The key calculation here is the dot product between the normal vector and the vector from the center of the stroke quad and the current fragment position, dot(normalize(normal), v), which will be exactly 0 along the spine of the quad, and so, giving alpha equal to 1.
 </p>
 
 <p>The DISABLE_DEPTH_MASK hint in the sketch code is a simple (but not perfect) trick to avoid obvious visual artifacts due to the use of <a href="http://blogs.msdn.com/b/shawnhar/archive/2009/02/18/depth-sorting-alpha-blended-objects.aspx">semi-transparent geometry together with alpha blending</a>.</p>
@@ -1751,4 +1751,3 @@ void main() {
 </td>
 	</tr>
   </table>
-

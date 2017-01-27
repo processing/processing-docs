@@ -1,0 +1,566 @@
+<table width="650">
+    <tr>
+    <td>
+
+<p class="license">
+	This tutorial is from the book <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing, 2nd Edition</a> by Daniel Shiffman, published by Morgan Kaufmann, &copy; 2015 Elsevier Inc. All rights reserved. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>.
+</p>
+
+<h1 style="line-height: 0.7em;">Video</h1>
+<h3 style="line-height: 0.7em;"><em>Daniel Shiffman</em></h3>
+
+<h3>Live Video</h3>
+		
+<p>
+Now that you’ve explored static images in Processing, you are ready to move on to moving images, specifically from a live camera (and later, from a recorded movie). I’ll begin by walking through the basic steps of importing the video library and using the <tt>Capture</tt> class to display live video.
+<br /><br />
+		
+<strong>Step 1. Import the Processing video library.</strong>
+<br /><br />
+Although the video library is developed and maintained by the Processing Foundation, due to its size, it must still be downloaded separately through the contributions manager. The Video and Sound libraries need to be downloaded through the Library Manager. Select "Add Library..." from the "Import Library..." submenu within the Sketch menu.
+<br /><br />
+Once you’ve got the library installed, the next step is to import the library in your code. This is done by selecting the menu option Sketch → Import Library → Video, or by typing the following line of code (which should go at the very top of your sketch):
+<pre>
+import processing.video.*;
+</pre>
+Using the “Import Library” menu option does nothing other than automatically insert that line into your code, so manual typing is entirely equivalent.
+<br /><br />
+		
+<strong>Step 2. Declare a <tt>Capture</tt> object.</strong>
+<br /><br />
+You’ve recently seen how to create objects from classes built into the Processing language such as <tt>PShape</tt> and <tt>PImage</tt>. Both of these classes, it should be noted, are part of the <em>processing.core</em> library and, therefore,no import statement were required. The <em>processing.video</em> library has two useful classes inside of it — <tt>Capture</tt>, for live video, and <tt>Movie</tt>, for recorded video. In this step, I’ll be declaring a <tt>Capture</tt> object.<br />
+<pre>
+Capture video;
+</pre>
+		
+<strong>Step 3. Initailize the <tt>Capture</tt> object.</strong>
+<br /><br />
+The Capture object “video” is just like any other object — to construct an object, you use the new operator followed by the constructor. With a Capture object, this code typically appears in <tt>setup()</tt>.<br />
+<pre>
+video = new Capture();
+</pre>
+The above line of code is missing the appropriate arguments for the constructor. Remember, this is not a class you wrote yourself so there is no way to know what is required between the parentheses without consulting the online reference.
+<br /><br />
+The reference will show there are several ways to call the Capture constructor. A typical way to call the constructor is with three arguments:<br />
+<pre>
+void setup() {  
+  video = new Capture(this, 320, 240);
+}
+</pre>
+Let’s walk through the arguments used in the <tt>Capture</tt> constructor.
+		
+<ul>
+	<li><strong>this:</strong> If you’re confused by what <tt>this</tt> means, you are not alone. Technically speaking, <tt>this</tt> refers to the instance of a class in which the word this appears. Unfortunately, such a definition is likely to induce head spinning. Anicer way to think of it is as a self-referential statement. After all, what if you needed to refer to your Processing program within your own code? You might try to say “me” or “I.” Well, these words are not available in Java, so instead you say <tt>this</tt>. The reason you pass <tt>this</tt> into the <tt>Capture</tt> object is you are telling it: “Hey listen, I want to do video capture and when the camera has a new image I want you to alert this sketch.”</li>
+	<li><strong>320:</strong> Fortunately, the first argument, <tt>this</tt>, is the only confusing one. 320 refers to the width of thevideo captured by the camera.</li>
+	<li><strong>240:</strong> The height of the video.</li>
+</ul>
+		
+There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer. How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying: <br /> 
+<pre>
+printArray(Capture.list());
+</pre>
+You can use the text of these configurations to create a <tt>Capture</tt> object. On a Mac with a built-in camera,for example, this might look like:<br />
+<pre>
+video = new Capture(this, "name=FaceTime HD Camera (Built-in),size=320x240,fps=30");
+</pre>
+<tt>Capture.list()</tt> actually gives you an array so you can also simply refer to the index of the configuration you want.<br />
+<pre>
+video = new Capture(this, Capture.list()[0]);
+</pre>
+		
+<strong>Step 4. Start the capture process.</strong>
+<br /><br />
+Once the camera is ready, it’s up to you to tell Processing to start capturing images.<br />
+<pre>
+void setup() {  
+  video = new Capture(this, 320, 240);  
+  video.start();
+}
+</pre>
+In almost every case you want to begin capturing right in <tt>setup()</tt>. Nevertheless, <tt>start()</tt> is its own method, and you do have the option of, say, not starting capturing until some other time (such as when a button is pressed, etc.)
+<br /><br />
+
+<strong>Step 5. Read the image from the camera.</strong>
+There are two strategies for reading frames from the camera. I will briefly look at both and choose one forthe remainder of the examples in this chapter. Both strategies, however, operate under the same fundamental principle: I only want to read an image from the camera when a new frame is available to be read. 
+
+<br /><br />
+In order to check if an image is available, you use the function <tt>available()</tt>, which returns true or false depending on whether something is there. If it is there, the function <tt>read()</tt> is called and the frame from the camera is read into memory. You can do this over and over again in the <tt>draw()</tt> loop, always checking to see if a new image is free to be read.<br />
+<pre>
+void draw() {  
+  if (video.available()) {    
+    video.read();  
+  }
+}
+</pre>
+The second strategy, the “event” approach, requires a function that executes any time a certain event — in this case a camera event — occurs. The function <tt>mousePressed()</tt> is executed whenever the mouse is pressed. With video, you have the option to implement the function <tt>captureEvent()</tt>, which is invoked any time a capture event occurs, that is, a new frame is available from the camera. These event functions <tt>(mousePressed(), keyPressed(), captureEvent(),</tt> etc.) aresometimes referred to as a “callback.” And as a brief aside, if you’re following closely, this is where <tt>this</tt> fits in. The <tt>Capture</tt> object, <tt>video</tt>, knows to notify this sketch by invoking <tt>captureEvent()</tt> because you passed it a reference to <em>this sketch</em> when creating the <tt>Capture</tt> object <tt>video</tt>.
+<br /><br />
+<tt>captureEvent()</tt> is a function and therefore needs to live in its own block, outside of <tt>setup()</tt> and <tt>draw()</tt>.<br />
+<pre>
+void captureEvent(Capture video) {
+  video.read();
+}
+</pre>
+You might notice something odd about <tt>captureEvent()</tt>. It includes an argument of type <tt>Capture</tt> in its definition. This might seem redundant to you; after all, in this example I already have a global variable <tt>video</tt>. Nevertheless in the case where you might have more than one capture device, the same event function can be used for both and the video library will make sure that the correct <tt>Capture</tt> object is passed in to <tt>captureEvent()</tt>.
+<br /><br />
+To summarize, I want to call the function <tt>read()</tt> whenever there is something to read, and I can do so by either checking manually using <tt>available()</tt> within <tt>draw()</tt> or allowing a callback to handle it for you — <tt>captureEvent()</tt>. This allows sketches to operate more efficientlyby separating out the logic for reading from the camera from the main animation loop.
+<br /><br />
+<strong>Step 6. Display the video image.</strong>
+<br /><br />
+This is, without a doubt, the easiest part. You can think of a <tt>Capture</tt> object as a <tt>PImage</tt> that changes over time, and, in fact, a <tt>Capture</tt> object can be utilized in an identical manner as a <tt>PImage</tt> object.
+<br /><br />
+<img src="imgs/fig_16_01_capture.png" class="tut" />
+<pre>
+image(video, 0, 0);
+</pre>
+All of this is put together in the following code:<br />
+<pre>
+// Step 1. Import the video library.
+import processing video.
+
+//Step 2. Declare a capture object.
+Capture video;
+
+// Step 5. Read from the camera when a new image is available!
+void captureEvent(Capture video) {
+  video.read();
+}
+
+void setup() {  
+  size(320, 240);
+  
+  // Step 3. Initialize Capture object.
+  video = new Capture(this, 320, 240);
+  
+  // Step 4. Start the capturing process.
+  video.start();
+}
+
+// Step 6. Display the image.
+void draw() {  
+image(video, 0, 0);
+}
+</pre>
+Again, anything you can do with a <tt>PImage</tt> (resize, tint, move, etc.) you can do with a <tt>Capture</tt> object. As long as you <tt>read()</tt> from that object, the video image will update as you manipulate it. See the following example:
+<br /><br />
+<img src="imgs/fig_16_02_tintvideo.png" class="tut" />
+<pre>
+import processing.video.*;
+
+Capture video;void setup() {  
+  size(320, 240);  
+  video = new Capture(this, 320, 240); 
+  video.start();
+}
+
+void captureEvent(Capture video) {  
+  video.read();
+}
+
+void draw() {  
+  background(255);  
+  tint(mouseX, mouseY, 255);  
+  translate(width/2, height/2);  
+  imageMode(CENTER);  
+  rotate(PI/4);  
+  image(video, 0, 0, mouseX, mouseY);
+}
+</pre>
+Note that a video image can be tinted just like a <tt>PImage</tt>. It can also be moved, rotated, and sized just like a <tt>PImage</tt>. Following is the <a href="http://learningprocessing.com/examples/chp15/example-15-08-Brightness">“adjusting brightness”</a> example with a video image:
+<br /><br />
+<img src="imgs/fig_16_03_flashlight.png" class="tut" />
+<pre>
+// Step 1. Import the video library
+import processing.video.*;
+
+// Step 2. Declare a Capture object
+Capture video;
+
+void setup() {  
+  size(320, 240);  
+  
+  // Step 3. Initialize Capture object via Constructor
+  video = new Capture(this, 320, 240);  
+  video.start();
+}
+  
+// An event for when a new frame is available
+void captureEvent(Capture video) {  
+  // Step 4. Read the image from the camera.  
+  video.read();
+}
+void draw() {
+  loadPixels();
+  video.loadPixels();  
+
+  for (int x = 0; x < video.width; x++) {    
+    for (int y = 0; y < video.height; y++) {      
+      // Calculate the 1D location from a 2D grid
+      int loc = x + y * video.width;      
+    
+      // Get the red, green, blue values from a pixel      
+      float r = red  (video.pixels[loc]);      
+      float g = green(video.pixels[loc]);      
+      float b = blue (video.pixels[loc]);      
+      
+      // Calculate an amount to change brightness based on proximity to the mouse      
+      float d = dist(x, y, mouseX, mouseY);      
+      float adjustbrightness = map(d, 0, 100, 4, 0);      
+      r *= adjustbrightness;      
+      g *= adjustbrightness;      
+      b *= adjustbrightness;      
+      
+      // Constrain RGB to make sure they are within 0-255 color range      
+      r = constrain(r, 0, 255);      
+      g = constrain(g, 0, 255);      
+      b = constrain(b, 0, 255);      
+    
+      // Make a new color and set pixel in the window      
+      color c = color(r, g, b);      
+      pixels[loc] = c;    
+    }  
+  }  
+	
+  updatePixels();
+}
+</pre>
+</p>
+
+<h3>Recorded video</h3>
+<p>
+Displaying recorded video follows much of the same structure as live video. Processing’s video library accepts most video file formats; for specifics, visit the <tt>Movie</tt> <a href="https://www.processing.org/reference/libraries/video/Movie.html">reference</a>.<br /><br />
+  	
+<strong>Step 1. Instead of a Capture object, declare a Movie object.</strong>
+<pre>
+Movie movie;
+</pre>
+
+<strong>Step 2. Initialize Movie object.</strong><br />
+<pre>
+movie = new Movie(this, "testmovie.mov");
+</pre>
+The only necessary arguments are <tt>this</tt> and the movie’s filename enclosed in quotes. The movie file should be stored in the sketch’s data directory.
+
+<br /><br />
+<strong>Step 3. Start movie playing.</strong>
+<br /><br />
+There are two options, <tt>play()</tt>, which plays the movie once, or <tt>loop()</tt>, which loops it continuously.<br />
+<pre>
+movie.loop();
+</pre>
+
+<strong>Step 4. Read frame from movie.</strong>
+<br /><br />
+Again, this is identical to capture. You can either check to see if a new frame is available, or use a callback function.<br />
+<pre>
+void draw() {  
+  if (movie.available()) {    
+    movie.read();  
+  }
+}
+</pre>
+Or:<br />
+<pre>
+void movieEvent(Movie movie) {  
+  movie.read();
+}
+</pre>
+
+<strong>Step 5. Display the movie.</strong><br />
+<pre>
+image(movie, 0, 0);
+</pre>
+The following code shows the program all together:<br />
+<pre>
+import processing.video.*; 
+
+// Step 1. Declare a Movie object.
+Movie movie; 
+
+void setup() {  
+  size(320, 240);  
+
+  // Step 2. Initialize Movie object. The file "testmovie.mov" should live in the data folder.
+  movie = new Movie(this, "testmovie.mov");  
+
+  // Step 3. Start playing movie. To play just once play() can be used instead.
+  movie.loop();
+}
+
+// Step 4. Read new frames from the movie.
+void movieEvent(Movie movie) {  
+  movie.read();
+}
+
+// Step 5. Display movie.
+void draw() {
+  image(movie, 0, 0);
+}
+</pre>
+
+Although Processing is by no means the most sophisticated environment for displaying and manipulating recorded video, there are some more advanced features available in the video library. There are function sfor obtaining the duration (length measured in seconds) of a video, for speeding it up and slowing it down, and for jumping to a specific point in the video (among others). If you find that performance is sluggish and the video playback is choppy, I would suggest trying the <tt>P2D</tt> or <tt>P3D</tt> <a href="https://processing.org/tutorials/rendering/">renderers</a>.
+<br /><br />
+Following is an example that makes use of <tt>jump()</tt> (jump to a specific point in the video) and <tt>duration()</tt> (returns the length of movie in seconds). In this example, if <tt>mouseX</tt> equals 0, the video jumps to the beginning.  If <tt>mouseX</tt> equals <tt>width</tt>, it jumps to the end. Any other value is in between. The <tt>jump()</tt> function allows you to jump immediately to a point of time within the video. <tt>duration()</tt> returns the total length of the movie in seconds.<br />
+
+<pre>
+import processing.video.*;
+
+Movie movie;void setup() {  
+  size(200, 200);  
+  background(0);  
+  movie = new Movie(this, "testmovie.mov");
+}
+
+void movieEvent(Movie movie) {  
+  movie.read();
+}
+
+void draw() {  
+  // Ratio of mouse X over width  
+  float ratio = mouseX / (float) width;  
+  
+  movie.jump(ratio * movie.duration());   
+  
+  image(movie, 0, 0);
+}
+</pre>
+</p>
+
+<h3>Software mirrors</h3>
+<p>
+With small video cameras attached to more and more personal computers, developing software that manipulates an image in real-time is becoming increasingly popular. These types of applications are sometimes referred to as “mirrors,” as they provide a digital reflection of a viewer’s image. Processing’s extensive library of functions for graphics and its ability to capture from a camera in real-time make it an excellent environment for prototyping and experimenting with software mirrors.
+<br /><br />
+You can apply basic image processing techniques to video images, reading and replacing the pixels one by one. Taking this idea one step further, you can read the pixels and apply the colors to shapes drawn onscreen.
+<br /><br />
+I will begin with an example that captures a video at 80 × 60 pixels and renders it on a 640 × 480 window. For each pixel in the video, I will draw a rectangle eight pixels wide and eight pixels tall.
+<br /><br />
+Let’s first write the program that displays the grid of rectangles. In the following example, the <tt>videoScale</tt> variable stores the ratio of the window’s pixel size to the grid’s size and for every column and row, a rectangle is drawn at an (x,y) location scaled and sized by <tt>videoScale</tt>.
+<br /><br />
+<img src="imgs/fig_16_04_blankgrid.png" class="tut" />
+<pre>
+// Size of each cell in the grid, ratio of window size to video size
+int videoScale = 8; 
+// Number of columns and rows in the system
+int cols, rows;
+
+void setup() {  
+  size(640, 480);  
+  // Initialize columns and rows  
+  cols = width/videoScale;  
+  rows = height/videoScale;
+}
+
+void draw() {  
+  // Begin loop for columns  
+  for (int i = 0; i < cols; i++) {    
+    // Begin loop for rows    
+    for (int j = 0; j < rows; j++) {      
+      // Scaling up to draw a rectangle at (x,y)      
+      int x = i*videoScale;      
+      int y = j*videoScale;      
+      fill(255);      
+      stroke(0);      
+      rect(x, y, videoScale, videoScale);     
+    }  
+  }
+}
+</pre>
+Knowing that I want to have squares eight pixels wide by eight pixels high, I can calculate the number of columns as the width divided by eight and the number of rows as the height divided by eight.
+<ul>
+	<li>640/8 = 80 columns</li>
+	<li>480/8 = 60 rows</li>
+</ul>
+I can now capture a video image that is 80 × 60. This is useful because capturing a 640 × 480 video from a camera can be slow compared to 80 × 60. I only want to capture the color information at the resolution required for the sketch.
+<br /><br />
+<img src="imgs/fig_16_05_pixelated.png" class="tut" />
+<br /><br />
+For every square at column <tt>i</tt> and row <tt>j</tt>, I look up the color at pixel <tt>(i, j)</tt> in the video image and color it accordingly. See the following example with the new parts in bold:<br />
+<pre>
+// Size of each cell in the grid, ratio of window size to video size
+int videoScale = 8;
+// Number of columns and rows in the system
+int cols, rows;
+<strong>// Variable to hold onto Capture object
+Capture video;</strong>
+
+void setup() {  
+  size(640, 480);  
+  // Initialize columns and rows  
+  cols = width/videoScale;  
+  rows = height/videoScale;  
+  background(0);
+  <strong>video = new Capture(this, cols, rows);</strong>
+}
+
+<strong>// Read image from the camera
+void captureEvent(Capture video) {  
+  video.read();
+}</strong>
+
+void draw() {
+  <strong>video.loadPixels();  </strong>
+  // Begin loop for columns  
+  for (int i = 0; i < cols; i++) {    
+    // Begin loop for rows    
+    for (int j = 0; j < rows; j++) {      
+      // Where are you, pixel-wise?      
+      int x = i*videoScale;      
+      int y = j*videoScale;
+      <strong>color c = video.pixels[i + j*video.width];
+      fill(c);</strong>   
+      stroke(0);      
+      rect(x, y, videoScale, videoScale);    
+    }  
+  }
+}
+</pre>
+As you can see, expanding the simple grid system to include colors from video only requires a few additions. I have to declare and initialize the <tt>Capture</tt> object, read from it, and pull colors from the pixel array.<br /><br />
+<img src="imgs/fig_16_06_mirror.png" class="tut" />
+Less literal mappings of pixel colors to shapes in the grid can also be applied. In the following example, only the colors black and white are used. Squares are larger where brighter pixels in the video appear, and smaller for darker pixels.<br />
+<pre>
+<strong>// Each pixel from the video source is drawn as
+// a rectangle with size based on brightness.</strong>
+
+import processing.video.*;
+// Size of each cell in the grid
+int videoScale = 10;
+// Number of columns and rows in the system
+int cols, rows;
+// Variable for capture device
+Capture video;
+
+void setup() { 
+  size(640, 480);  
+  // Initialize columns and rows  
+  cols = width / videoScale;  
+  rows = height / videoScale;  
+  // Construct the Capture object  
+  video = new Capture(this, cols, rows);  
+  video.start();
+}
+
+void captureEvent(Capture video) {  
+  video.read();
+}
+
+void draw() {  
+  background(0);
+  video.loadPixels();  
+  // Begin loop for columns  
+  for (int i = 0; i < cols; i++) {    
+    // Begin loop for rows    
+    for (int j = 0; j < rows; j++) {      
+      // Where are you, pixel-wise?      
+      int x = i*videoScale;      
+      int y = j*videoScale;    
+      
+      // Reverse the column to mirro the image.
+      int loc = (video.width - i - 1) + j * video.width;       
+      
+      color c = video.pixels[loc];
+      // A rectangle's size is calculated as a function of the pixel’s brightness. 
+      // A bright pixel is a large rectangle, and a dark pixel is a small one.
+      float sz = (brightness(c)/255) * videoScale;       
+      
+      rectMode(CENTER);      
+      fill(255);      
+      noStroke();      
+      rect(x + videoScale/2, y + videoScale/2, sz, sz);    
+    }  
+  }
+}  
+</pre>
+It’s often useful to think of developing software mirrors in two steps. This will also help you think beyondthe more obvious mapping of pixels to shapes on a grid.
+<br /><br />
+<strong>Step 1. Develop an interesting pattern that covers an entire window.</strong>
+<br /><br />
+<strong>Step 2. Use a video’s pixels as a look-up table for coloring that pattern.</strong>
+<br /><br />
+Say for Step 1, I write a program that scribbles a random line around the window. Here is my algorithm, written in pseudocode.
+<ul>
+	<li>Start with an (x,y) position at the center of the screen.</li>
+	<li>Repeat forever the following:<br />
+		—Pick a new (x,y), staying within the window.<br />
+		—Draw a line from the old (x,y) to the new (x,y).<br />
+		—Save the new (x,y).</li>
+</ul>
+<br />
+<img src="imgs/fig_16_07_blank_scribble.png" class="tut" />
+<pre>
+// Two global variables
+float x;
+float y;
+
+void setup() {  
+  size(320, 240);  
+  background(255);  
+  // Start x and y in the center  
+  x = width/2;  
+  y = height/2;
+}
+
+void draw() {  
+  float newx = constrain(x + random(-20, 20), 0, width);   
+  float newy = constrain(y + random(-20, 20), 0, height);  
+
+  // Line from (x,y) to the (newx,newy)  
+  stroke(0);  
+  strokeWeight(4);  
+  line(x, y, newx, newy); 
+
+  x = newx;   
+  y = newy;
+}
+</pre>
+Now that I have finished the pattern generating sketch, I can change <tt>stroke()</tt> to set a color according to the video image. Note again the new lines of code added in bold in the following code:
+<br /><br />
+<img src="imgs/fig_16_08_scribblermirror.png" class="tut" />
+<pre>
+<strong>import processing.video.*;</strong>
+// Two global variables
+float x;
+float y;
+<strong>
+// Variable to hold onto Capture object.
+Capture video;</strong>
+
+void setup() {  
+  size(320, 240);  
+  background(255);  
+  // Start x and y in the center  
+  x = width/2;  
+  y = height/2;
+  <strong>// Start the capture process
+  video = new Capture(this, width, height);  
+  video.start();</strong>
+}
+<strong>
+void captureEvent(Capture video) {  
+  // Read image from the camera  video.read();
+}</strong>
+
+void draw() {
+  <strong>video.loadPixels();</strong>
+  float newx = constrain(x + random(-20, 20), 0, width);   
+  float newy = constrain(y + random(-20, 20), 0, height);
+  <strong>
+  // Find the midpoint of the line
+  int midx = int((newx + x) / 2);
+  int midy = int((newy + y) / 2);
+  // Pick the color from the video, reversing x
+  color c = video.pixels[(width-1-midx) + midy*video.width];
+  </strong>
+  // Draw a line from (x,y) to (newx,newy)  
+  stroke(c);  
+  strokeWeight(4);  
+  line(x, y, newx, newy);  
+  
+  // Save (newx,newy) in (x,y)  
+  x = newx;  
+  y = newy;
+}
+</pre>
+</p>
+
+</td>
+</tr>
+</table>
