@@ -213,7 +213,7 @@ class XPathBase {
       case 'Windows_95':
       case 'Windows_98':
       case 'Unknown OS':
-        // should catch Mac OS X compatible environment 
+        // should catch macOS compatible environment 
         if (!empty($_SERVER['SERVER_SOFTWARE']) 
             && preg_match('/Darwin/',$_SERVER['SERVER_SOFTWARE'])) { 
            // fall-through 

@@ -26,7 +26,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-This function returns the number "2" if the screen is a high-density screen (called a Retina display on OS X or high-dpi on Windows and Linux) and a "1" if not. This information is useful for a program to adapt to run at double the pixel density on a screen that supports it.
+This function returns the number "2" if the screen is a high-density screen (called a Retina display on macOS or high-dpi on Windows and Linux) and a "1" if not. This information is useful for a program to adapt to run at double the pixel density on a screen that supports it.
 ]]></description>
 
 </root>
