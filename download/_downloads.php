@@ -13,15 +13,15 @@
 
 		<!-- Downloads -->
 		<div class="downloads">
-			<span class="version">3.2.3</span>
-			<span class="version-date">(7 November 2016)</span>
+			<span class="version">3.2.4</span>
+			<span class="version-date">(29 January 2017)</span>
 			<ul class="current-downloads">
-				<li><a href="http://download.processing.org/processing-3.2.3-windows64.zip">Windows</a> 64-bit<br />
-				<a href="http://download.processing.org/processing-3.2.3-windows32.zip">Windows</a> 32-bit</li>
-				<li><a href="http://download.processing.org/processing-3.2.3-linux64.tgz">Linux</a> 64-bit<br />
-				<a href="http://download.processing.org/processing-3.2.3-linux32.tgz">Linux</a> 32-bit<br />
-				<a href="http://download.processing.org/processing-3.2.3-linux-armv6hf.tgz">Linux</a> ARMv6hf</li>
-				<li><a href="http://download.processing.org/processing-3.2.3-macosx.zip">Mac OS X</a></li>
+				<li><a href="http://download.processing.org/processing-3.2.4-windows64.zip">Windows</a> 64-bit<br />
+				<a href="http://download.processing.org/processing-3.2.4-windows32.zip">Windows</a> 32-bit</li>
+				<li><a href="http://download.processing.org/processing-3.2.4-linux64.tgz">Linux</a> 64-bit<br />
+				<a href="http://download.processing.org/processing-3.2.4-linux32.tgz">Linux</a> 32-bit<br />
+				<a href="http://download.processing.org/processing-3.2.4-linux-armv6hf.tgz">Linux</a> ARMv6hf</li>
+				<li><a href="http://download.processing.org/processing-3.2.4-macosx.zip">Mac OS X</a></li>
 
 			</ul>
 		</div>
@@ -45,6 +45,17 @@
 		<h3>Stable Releases</h3>
 		<ul>
                         <li>
+				<span class="version">3.2.4</span>
+				<span class="version-date">(29 January 2017)</span>
+				<a href="http://download.processing.org/processing-3.2.4-windows32.zip">Win 32</a>
+				<a href="http://download.processing.org/processing-3.2.4-windows64.zip">Win 64</a> 
+				<a href="http://download.processing.org/processing-3.2.4-linux32.tgz">Linux 32</a> 
+				<a href="http://download.processing.org/processing-3.2.4-linux64.tgz">Linux 64</a>
+				<a href="http://download.processing.org/processing-3.2.4-linux-armv6hf.tgz">Linux ARMv6hf</a>
+				<a href="http://download.processing.org/processing-3.2.4-macosx.zip">Mac OS X</a> 
+			</li>
+
+                        <li>
 				<span class="version">3.2.3</span>
 				<span class="version-date">(7 November 2016)</span>
 				<a href="http://download.processing.org/processing-3.2.3-windows32.zip">Win 32</a>
@@ -53,7 +64,8 @@
 				<a href="http://download.processing.org/processing-3.2.3-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-3.2.3-linux-armv6hf.tgz">Linux ARMv6hf</a>
 				<a href="http://download.processing.org/processing-3.2.3-macosx.zip">Mac OS X</a> 
-			</li>
+			</li>                        
+<!--
                         <li>
 				<span class="version">3.2.2</span>
 				<span class="version-date">(30 October 2016)</span>
@@ -65,7 +77,6 @@
 				<a href="http://download.processing.org/processing-3.2.2-macosx.zip">Mac OS X</a> 
 			</li>
 
-<!--                        
                         <li>
 				<span class="version">3.2.1</span>
 				<span class="version-date">(19 August 2016)</span>
