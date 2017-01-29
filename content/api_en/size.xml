@@ -61,7 +61,7 @@ As of Processing 3, to run a sketch at the full dimensions of a screen, use the 
 <br />
 The maximum width and height is limited by your operating system, and is usually the width and height of your actual screen. On some machines it may simply be the number of pixels on your current screen, meaning that a screen of 800 x 600 could support <b>size(1600, 300)</b>, since that is the same number of pixels. This varies widely, so you'll have to try different rendering modes and sizes until you get what you're looking for. If you need something larger, use <b>createGraphics</b> to create a non-visible drawing surface.<br />
 <br />
-The minimum width and height is around 100 pixels in each direction. This is the smallest that is supported across Windows, macOS, and Linux. We enforce the minimum size so that sketches will run identically on different machines.
+The minimum width and height is around 100 pixels in each direction. This is the smallest that is supported across Windows, Mac, and Linux. We enforce the minimum size so that sketches will run identically on different machines.
 <br />
 The <b>renderer</b> parameter selects which rendering engine to use. For example, if you will be drawing 3D shapes, use <b>P3D</b>. In addition to the default renderer, other renderers are:<br />
 <br />

@@ -1,7 +1,7 @@
 <!-- BEGIN [Download] -->
 <div class="download">
 
-	<h1 class="large-header"><span class="black">Download Processing.</span> Processing is available for Linux, macOS, and Windows. Select your choice to download the software below.</h1>
+	<h1 class="large-header"><span class="black">Download Processing.</span> Processing is available for Linux, Mac, and Windows. Select your choice to download the software below.</h1>
 	<? if($thankYou): ?>
 	<h5>Thank you for donating to the Processing Foundation.</h5>
 	<? endif; ?>
@@ -21,7 +21,7 @@
 				<li><a href="http://download.processing.org/processing-3.2.3-linux64.tgz">Linux</a> 64-bit<br />
 				<a href="http://download.processing.org/processing-3.2.3-linux32.tgz">Linux</a> 32-bit<br />
 				<a href="http://download.processing.org/processing-3.2.3-linux-armv6hf.tgz">Linux</a> ARMv6hf</li>
-				<li><a href="http://download.processing.org/processing-3.2.3-macosx.zip">macOS</a></li>
+				<li><a href="http://download.processing.org/processing-3.2.3-macosx.zip">Mac</a></li>
 
 			</ul>
 		</div>
@@ -52,7 +52,7 @@
 				<a href="http://download.processing.org/processing-3.2.3-linux32.tgz">Linux 32</a> 
 				<a href="http://download.processing.org/processing-3.2.3-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-3.2.3-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.2.3-macosx.zip">macOS</a> 
+				<a href="http://download.processing.org/processing-3.2.3-macosx.zip">Mac</a> 
 			</li>
                         <li>
 				<span class="version">3.2.2</span>
@@ -62,7 +62,7 @@
 				<a href="http://download.processing.org/processing-3.2.2-linux32.tgz">Linux 32</a> 
 				<a href="http://download.processing.org/processing-3.2.2-linux64.tgz">Linux 64</a>
 				<a href="http://download.processing.org/processing-3.2.2-linux-armv6hf.tgz">Linux ARMv6hf</a>
-				<a href="http://download.processing.org/processing-3.2.2-macosx.zip"macOS</a> 
+				<a href="http://download.processing.org/processing-3.2.2-macosx.zip"Mac</a> 
 			</li>
 
 <!--                        
@@ -96,7 +96,7 @@
 				<a href="http://download.processing.org/processing-2.2.1-windows64.zip">Win 64</a> 
 				<a href="http://download.processing.org/processing-2.2.1-linux32.tgz">Linux 32</a> 
 				<a href="http://download.processing.org/processing-2.2.1-linux64.tgz">Linux 64</a>
-				<a href="http://download.processing.org/processing-2.2.1-macosx.zip">macOS</a> 
+				<a href="http://download.processing.org/processing-2.2.1-macosx.zip">Mac</a> 
 			</li>
 
 			<li>
@@ -105,7 +105,7 @@
 				<a href="http://download.processing.org/processing-1.5.1-windows.zip">Win (standard)</a>
 				<a href="http://download.processing.org/processing-1.5.1-windows-expert.zip">Win (no Java)</a> 
 				<a href="http://download.processing.org/processing-1.5.1-linux.tgz">Linux x86</a> 
-				<a href="http://download.processing.org/processing-1.5.1-macosx.zip">macOS</a> 
+				<a href="http://download.processing.org/processing-1.5.1-macosx.zip">Mac</a> 
 			</li>
 		</ul>
 		<p>Earlier releases have been removed because we can only support the current versions of the software. To update old code, read the <a href="https://github.com/processing/processing/wiki/Changes">changes</a> page. Changes for each release can be found in <a href="https://raw.github.com/processing/processing/master/build/shared/revisions.txt">revisions.txt</a>. If you have problems with the current release, please <a href="https://github.com/processing/processing/issues?state=open">file a bug</a> so that we can fix it. Older releases can also be <a href="https://github.com/processing/processing">built from the source</a>. <a href="https://github.com/processing/processing/wiki/FAQ#whats-with-the-version-numbers">Read More</a> about the releases and their numbering. To use <a href="http://android.processing.org">Android Mode</a>, Processing 3 or later is required.</p>
