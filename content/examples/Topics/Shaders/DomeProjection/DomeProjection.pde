@@ -6,6 +6,8 @@
  * 
  * Based on the FullDomeTemplate code from Christopher Warnow: 
  * https://github.com/mphasize/FullDome
+ *
+ * Note: This example needs desktop-class graphics to function.
  * 
  */
  
