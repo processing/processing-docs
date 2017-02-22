@@ -44,7 +44,7 @@ void pinEvent(int pin) {
 <description><![CDATA[
 Allows interrupts to happen<br/>
 <br/>
-You can use <a href="GPIO_noInerrupts_.html">noInterrupts()</a> and interrupts() in tandem to make sure no interrupts are occuring while your sketch is doing a particular task. By default, interrupts are enabled.
+You can use <a href="GPIO_noInterrupts_.html">noInterrupts()</a> and interrupts() in tandem to make sure no interrupts are occuring while your sketch is doing a particular task. By default, interrupts are enabled.
 ]]></description>
 
 <syntax>
