@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Random Access Memory" by="Ralf Baecker" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/random.jpg</image>
+			<description>
+				Created by Berlin based Ralf Baecker, Random Access Memory is a fully functional digital memory. Instead of operating on semi-conducting components to represent either the binary states of 0 (zero) or 1 (one), the memory uses grains of sand as storage material.</description>
+			<location>http://www.rlfbckr.org/work/random-access-memory/</location>
+		 <link href="http://www.rlfbckr.org/work/random-access-memory/">Ralf Baecker</link>
+		 <link href="http://www.creativeapplications.net/processing/random-access-memory-materialising-mathematical-process-algorithm/">CreativeApplications.Net</link>
+	 </software>
+
 	<software name="Behavioural Complexity" by="AADRL" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/aadrl.jpg</image>
 		  <description>
