@@ -1420,6 +1420,62 @@ div.examples-nav {
 }
 div.examples-nav img { position: relative; top: 11px; }
 
+  .donate-card-row { 
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .donate-card {
+    text-align: center;
+    width: 30%;
+    border: 1px solid #CBCBCB;
+    /*background: #FAFAFA;*/
+    padding: 20px;
+    margin: 10px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .donate-card h4 {
+    line-height: 1.3;
+    margin: 0 0 0.5em 0;
+    color: #2c7bb5;
+  }
+  a.donate-card {
+    color: #252525;
+  }
+  a.donate-card:hover {
+    border-color: #2c7bb5;
+  }
+  .donate-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .donate-list li {
+    margin-bottom: 0;
+  }
+  .donate-list li:before {
+    content: '» '
+  }
+  .donate-content hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: none;
+    border: none;
+    border-top: 1px solid #CBCBCB;
+  }
 
 /**************************************************************** updates, courses, happenings ***/
 /*
