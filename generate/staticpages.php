@@ -47,7 +47,7 @@ writeFile('handbook/index.html', $page->out());
 // Added 4 April 2017 for Membership Initiative
 $page = new Page("Membership", "Download");
 $page->content(file_get_contents($source."membership.html"));
-writeFile('download/index.html', $page->out());
+writeFile('download/membership.html', $page->out());
 
 // Copy over the errata file for Processing: A Programming Handbook...
 // copy($source.'processing-errata.txt', $path.'books/processing-errata.txt');
