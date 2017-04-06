@@ -23,6 +23,7 @@ $pages = array(
         'Environment' => array('/reference/environment/', 2), 
         
     'Download'        => array('/download/', 1),
+    'Donate'        => array('/download/support.html', 1),
     
     'Shop'            => array('/shop/', 1),
     
@@ -56,7 +57,8 @@ function navigation($section = '')
     
 	    $html .= "\t\t\t\t\t" . l('Cover', $section == 'Cover') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br>\n";
+        $html .= "\t\t\t\t\t" . l('Donate', $section == 'Donate') . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Exhibition', $section == 'Exhibition') . "<br><br>\n";
 
