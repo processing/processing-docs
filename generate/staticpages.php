@@ -46,7 +46,7 @@ writeFile('handbook/index.html', $page->out());
 
 // Added 4 April 2017 for Membership Initiative
 $page = new Page("Support", "Download");
-$page->content(file_get_contents($source."membership.html"));
+$page->content(file_get_contents($source."support.html"));
 writeFile('download/support.html', $page->out());
 
 // Added 6 April 2017 for Membership Initiative
