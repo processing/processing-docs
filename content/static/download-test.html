@@ -1,5 +1,16 @@
 <div class="download">
 
+  <script>
+  $(function () {
+    $('[href*="download.processing.org"]').on('click', function (e) {
+      e.preventDefault()
+      window.open($(this).attr('href'))
+      window.location = '/download/support.html'
+      window.focus()
+    })
+  })
+  </script>
+
   <h1 class="large-header"><span class="black">Download Processing.</span> Processing is available for Linux, Mac OS X, and Windows. Select your choice to download the software below.</h1>
 
   <!-- Current Version -->
