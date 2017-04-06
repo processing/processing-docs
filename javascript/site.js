@@ -1,5 +1,13 @@
 $(function(){
 
+	// redirect download to support
+	$('.download [href*="download.processing.org"]').on('click', function (e) {
+	 e.preventDefault()
+	 window.open($(this).attr('href'))
+	 window.location = '/download/support.html'
+	 window.focus()
+	})
+
 	// sticky scroll
 	if(!Modernizr.touch){
 		$(window).scroll(function(){
@@ -97,3 +105,5 @@ function format_relative_time(time_ago) {
 	if ( time_ago.seconds > 1 )  return ' ' + time_ago.seconds + ' seconds ago';
 	return 'just now';
 }
+
+
