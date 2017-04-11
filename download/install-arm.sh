@@ -3,15 +3,22 @@
 # This script installs the latest version of Processing for ARM into /usr/local/lib
 # Run it like this: "curl https://processing.org/download/install-arm.sh | sudo sh"
 
-# this assumes that newer releases are at the top
-TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-armv6hf.tgz')"
+# check if on a 64-bit operating system
+if [[ $(file $(which file)) == *aarch64* ]]
+then
+  FLAVOR="arm64"
+  TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-arm64.tgz')"
+else
+  FLAVOR="armv6hf"
+  TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-armv6hf.tgz')"
+fi
 
 echo "\nDownloading $TAR..."
-curl -L $TAR > processing-linux-armv6hf-latest.tgz
+curl -L $TAR > processing-linux-$FLAVOR-latest.tgz
 
 echo "Installing in /usr/local..."
-tar fx processing-linux-armv6hf-latest.tgz -C /usr/local/lib
-rm -f processing-linux-armv6hf-latest.tgz
+tar fx processing-linux-$FLAVOR-latest.tgz -C /usr/local/lib
+rm -f processing-linux-$FLAVOR-latest.tgz
 
 # this returns the highest version installed
 VER="$(basename $(ls -dvr /usr/local/lib/processing-* | head -1))"
