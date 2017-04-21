@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>waitForInterrupt()</name>
+<name>waitFor()</name>
 
 <category>I/O</category>
 
@@ -20,14 +20,16 @@ void setup() {
 
   // trigger a reset of an external device with GPIO 4
   GPIO.digitalWrite(4, GPIO.HIGH);
+
   // wait for the device signalling us that it's ready
   // by pulling up our pin 5
-  boolean success = GPIO.waitForInterrupt(5, GPIO.RISING, 1000);
-  if (!success) {
-  	println("Device didn't wake up in time");
-  	exit();
-  }
-  // do something else...
+  GPIO.waitFor(5, GPIO.RISING, 1000);
+  // if this takes longer than 1000ms an exception will be raised
+
+  // GPIO.waitFor(5, GPIO.RISING);
+  // would alternatively wait indefinitely
+
+  // ...
 }
 
 ]]></code>
@@ -36,14 +38,13 @@ void setup() {
 <description><![CDATA[
 Waits for the value of an input pin to change<br/>
 <br/>
-The mode parameter determines when the function will return: GPIO.FALLING occurs when the level changes from high to low, GPIO.RISING when the level changes from low
-to high, and GPIO.CHANGE when either occurs.<br/>
+The mode parameter determines when the function will return: GPIO.FALLING occurs when the level changes from high to low, GPIO.RISING when the level changes from low to high, and GPIO.CHANGE when either occurs.<br/>
 <br/>
-This function returns true if the change, false if the timeout occured.
+The optional timeout parameter determines how many milliseconds the function will wait at the most. If the value of the input pin hasn't changed at this point, an exception is raised for this line. Without a timeout parameter the function will wait indefinitely until the input pin has changed to the desired state.
 ]]></description>
 
 <syntax>
-<c>GPIO</c>.waitForInterrupt()
+<c>GPIO</c>.waitFor()
 </syntax>
 
 <parameter></parameter>
