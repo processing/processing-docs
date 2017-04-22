@@ -23,6 +23,7 @@ $pages = array(
         'Environment' => array('/reference/environment/', 2), 
         
     'Download'        => array('/download/', 1),
+    'Donate'        => array('/download/support.html', 1),
     
     'Shop'            => array('/shop/', 1),
     
@@ -56,7 +57,8 @@ function navigation($section = '')
     
 	    $html .= "\t\t\t\t\t" . l('Cover', $section == 'Cover') . "<br><br>\n";
 
-	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br><br>\n";
+	    $html .= "\t\t\t\t\t" . l('Download', $section == 'Download') . "<br>\n";
+        $html .= "\t\t\t\t\t" . l('Donate', $section == 'Donate') . "<br><br>\n";
 
 	    $html .= "\t\t\t\t\t" . l('Exhibition', $section == 'Exhibition') . "<br><br>\n";
 
@@ -78,11 +80,12 @@ function navigation($section = '')
 	       
 	    $html .= "\t\t\t\t\t" . "<a href=\"http://forum.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Forum</a><br> \n";
         $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing\"" . 'class="outward"' . "><span>&raquo;</span>GitHub</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org/w/Report_Bugs\"" . 'class="outward"' . "><span>&raquo;</span>Issues</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org\"" . 'class="outward"' . "><span>&raquo;</span>Wiki</a><br> \n";
-        $html .= "\t\t\t\t\t" . "<a href=\"http://wiki.processing.org/w/FAQ\"" . 'class="outward"' . "><span>&raquo;</span>FAQ</a><br> \n";
+        $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing/processing/issues?state=open\"" . 'class="outward"' . "><span>&raquo;</span>Issues</a><br> \n";
+        $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing/processing/wiki/\"" . 'class="outward"' . "><span>&raquo;</span>Wiki</a><br> \n";
+        $html .= "\t\t\t\t\t" . "<a href=\"https://github.com/processing/processing/wiki/FAQ\"" . 'class="outward"' . "><span>&raquo;</span>FAQ</a><br> \n";
         $html .= "\t\t\t\t\t" . "<a href=\"https://twitter.com/processingOrg\"" . 'class="outward"' . "><span>&raquo;</span>Twitter</a><br> \n";
         $html .= "\t\t\t\t\t" . "<a href=\"https://www.facebook.com/page.processing\"" . 'class="outward"' . "><span>&raquo;</span>Facebook</a><br> \n";
+        $html .= "\t\t\t\t\t" . "<a href=\"https://medium.com/@ProcessingOrg\"" . 'class="outward"' . "><span>&raquo;</span>Medium</a><br> \n";
     
     $html .= "\t\t\t\t</div>\n";
 

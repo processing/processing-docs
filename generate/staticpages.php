@@ -44,6 +44,17 @@ $page = new Page("Handbook", "Handbook");
 $page->content(file_get_contents($source."handbook.html"));
 writeFile('handbook/index.html', $page->out());
 
+// Added 4 April 2017 for Membership Initiative
+$page = new Page("Support", "Donate");
+$page->content(file_get_contents($source."support.html"));
+writeFile('download/support.html', $page->out());
+
+// Added 6 April 2017 for Membership Initiative
+$page = new Page("Download", "Download");
+$page->content(file_get_contents($source."download.html"));
+writeFile('download/index.html', $page->out());
+
+
 // Copy over the errata file for Processing: A Programming Handbook...
 // copy($source.'processing-errata.txt', $path.'books/processing-errata.txt');
 // Copy over the media.zip file for Getting Started with Processing...
