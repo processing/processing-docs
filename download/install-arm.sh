@@ -9,7 +9,8 @@ case "$(file $(which file))" in
   *)       FLAVOR="armv6hf"; TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-armv6hf.tgz')" ;;
 esac
 
-echo "\nDownloading $TAR..."
+echo ""
+echo "Downloading $TAR..."
 curl -L $TAR > processing-linux-$FLAVOR-latest.tgz
 
 echo "Installing in /usr/local..."
@@ -36,4 +37,5 @@ sed -i 's|/opt/processing|/usr/local/lib/processing|' /usr/local/share/applicati
 # silence validation errors
 desktop-file-install /usr/local/share/applications/processing.desktop >/dev/null 2>&1
 
-echo "Done! You can start Processing by running \"processing\" in the terminal, or through the applications menu (might require a restart).\n"
+echo "Done! You can start Processing by running processing in the terminal, or through the applications menu (might require a restart)."
+echo ""
