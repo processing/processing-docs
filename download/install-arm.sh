@@ -4,14 +4,10 @@
 # Run it like this: "curl https://processing.org/download/install-arm.sh | sudo sh"
 
 # check if on a 64-bit operating system
-if [[ $(file $(which file)) == *aarch64* ]]
-then
-  FLAVOR="arm64"
-  TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-arm64.tgz')"
-else
-  FLAVOR="armv6hf"
-  TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-armv6hf.tgz')"
-fi
+case "$(file $(which file))" in
+  *aarch64*) FLAVOR="arm64"; TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-arm64.tgz')" ;;
+  *)       FLAVOR="armv6hf"; TAR="$(curl -sL https://api.github.com/repos/processing/processing/releases | grep -oh -m 1 'https.*linux-armv6hf.tgz')" ;;
+esac
 
 echo "\nDownloading $TAR..."
 curl -L $TAR > processing-linux-$FLAVOR-latest.tgz
