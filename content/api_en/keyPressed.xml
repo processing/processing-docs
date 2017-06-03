@@ -41,6 +41,8 @@ Because of how operating systems handle key repeats, holding down a key may caus
 Note that there is a similarly named boolean variable called <b>keyPressed</b>.  See its reference page for more information.
 <br /><br />
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
+<br /><br />
+With the release of macOS Sierra, Apple changed how key repeat works, so keyPressed may not function as expected. See <a href="https://github.com/processing/processing/wiki/Troubleshooting#key-repeat-on-macos-sierra">here</a> for details of the problem and how to fix it.
 ]]></description>
 
 </root>
