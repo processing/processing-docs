@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Objectifier" by="Bjørn Karmann" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/objectifier.jpg</image>
+			<description>
+				Objectifier empowers people to train objects in their daily environment to respond to their unique behaviours. Interacting with Objectifier is much like training a pet and it sees and understands its environment.</description>
+			<location>https://bjoernkarmann.dk/objectifier</location>
+		 <link href="https://bjoernkarmann.dk/objectifier">Bjørn Karmann</link>
+		 <link href="http://www.creativeapplications.net/processing/objectifier-device-to-train-domestic-objects/">CreativeApplications.Net</link>
+	 </software>
+
 	<software name="Random Access Memory" by="Ralf Baecker" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/random.jpg</image>
 			<description>
