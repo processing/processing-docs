@@ -85,7 +85,7 @@ function innerHTML(&$xml, $nodeName)
       // there are multiple instanced of eregi() in this document, 
       // replace all -- CR 5 July 2017
 	    //eregi("<$nodeName>(.*)<\/$nodeName>", $node->toString(), $matches);
-      preg_match("/<$nodeName>(.*)<\/$nodeName>/", $node->toString(), $matches);
+      preg_match("'<$nodeName>(.*?)<\/$nodeName>'si'", $node->toString(), $matches);
       // replace invalid <c> with <kbd>
       $string = str_replace(array('<c>', '</c>'), array('<kbd>', '</kbd>'), $matches[1]);
       if (substr($string, 0, 1) == "\n") { 
