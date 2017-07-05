@@ -81,10 +81,16 @@ function innerHTML(&$xml, $nodeName)
 	$nodes = $xml->getElementsByTagName($nodeName);
     if ($nodes->getLength() > 0) {
 	    $node = $nodes->item(0);
-	    eregi("<$nodeName>(.*)<\/$nodeName>", $node->toString(), $matches);
-        // replace invalid <c> with <kbd>
-        $string = str_replace(array('<c>', '</c>'), array('<kbd>', '</kbd>'), $matches[1]);
-        if (substr($string, 0, 1) == "\n") { $string = substr($string, 1); }
+      // The following line with eregi() stopped working PHP 7+
+      // there are multiple instanced of eregi() in this document, 
+      // replace all -- CR 5 July 2017
+	    //eregi("<$nodeName>(.*)<\/$nodeName>", $node->toString(), $matches);
+      preg_match("/<$nodeName>(.*)<\/$nodeName>/", $node->toString(), $matches, PCRE_CASELESS);
+      // replace invalid <c> with <kbd>
+      $string = str_replace(array('<c>', '</c>'), array('<kbd>', '</kbd>'), $matches[1]);
+      if (substr($string, 0, 1) == "\n") { 
+        $string = substr($string, 1); 
+      }
 	    return trim(chars($string));
     } else {
         return false;
@@ -429,7 +435,9 @@ Returns name of image for category title
 *****************************************************************/ 
 function category_image($cat)
 {
-    return strtolower(eregi_replace("[^A-Za-z0-9]", '', eregi_replace("\&(.+);", '', $cat))) . ".gif";
+    // Replaced 5 July 2017, CR
+    //return strtolower(eregi_replace("[^A-Za-z0-9]", '', eregi_replace("\&(.+);", '', $cat))) . ".gif";
+    return strtolower(preg_match("/[^A-Za-z0-9]/", '', preg_match("/\&(.+);/", '', $cat))) . ".gif";
 }
 
 /****************************************************************
@@ -440,12 +448,16 @@ function alpha_index($array)
     $per_col = ceil(count($array)/3);
     
     $firstchar = key($array);
-    $firstchar = eregi_replace("[^A-Za-z0-9]", '', $firstchar{0});
+    // Replaced 5 July 2017, CR
+    //$firstchar = eregi_replace("[^A-Za-z0-9]", '', $firstchar{0});
+    $firstchar = preg_match("/[^A-Za-z0-9]/", '', $firstchar{0});
     $count = 0;
     
     $html = "<div class=\"ref-col\">\n";
     foreach ($array as $key => $ref) {
-        if (eregi_replace("[^A-Za-z0-9]", '', $key{0}) != $firstchar) {
+        // Replaced 5 July 2017, CR
+        //if (eregi_replace("[^A-Za-z0-9]", '', $key{0}) != $firstchar) {
+        if (preg_match("/[^A-Za-z0-9]/", '', $key{0}) != $firstchar) {
             $firstchar = $key{0};
             $html .= "<br/>\n\n";
             if ($count >= $per_col) {
