@@ -165,11 +165,11 @@ if __name__ == "__main__":
     script = argv
     conf = 'sources.conf'
     fileout = 'contribs.txt'
-    minrev = 0
+    minrev = 228
     maxrev = 0
   elif len(argv) == 3:
     script, conf, fileout = argv
-    minrev = 0
+    minrev = 228
     maxrev = 0
   elif len(argv) == 5:
     script, conf, fileout, minrev, maxrev = argv
