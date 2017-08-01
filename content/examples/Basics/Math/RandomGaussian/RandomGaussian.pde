@@ -20,7 +20,6 @@ void draw() {
 
   noStroke();
   fill(255, 10);
-  noStroke();
   ellipse(x, height/2, 32, 32);   // Draw an ellipse at our "normal" random location
 }
 
