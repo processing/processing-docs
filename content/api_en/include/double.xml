@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-double a;            // Declare variable 'a' of type float
+double a;            // Declare variable 'a' of type double
 a = 1.5387;          // Assign 'a' the value 1.5387
 double b = -2.984;   // Declare variable 'b' and assign it the value -2.984
 double c = a + b;    // Declare variable 'c' and assign it the sum of 'a' and 'b'
