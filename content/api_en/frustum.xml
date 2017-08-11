@@ -25,7 +25,7 @@ Sets a perspective matrix as defined by the parameters.<br />
 <br />
 A frustum is a geometric form: a pyramid with its top cut off.  With the viewer's eye at the imaginary top of the pyramid, the six planes of the frustum act as clipping planes when rendering a 3D view.  Thus, any form inside the clipping planes is rendered and visible; anything outside those planes is not visible.<br />
 <br />
-Setting the frustum has the effect of changing the <em>perspective</em> with which the scene is rendered.  This can be acheived more simply in many cases by using <strong>perspective()</strong>.<br />
+Setting the frustum has the effect of changing the <em>perspective</em> with which the scene is rendered.  This can be achieved more simply in many cases by using <strong>perspective()</strong>.<br />
 <br />
 Note that the near value must be greater than zero (as the point of the frustum "pyramid" cannot converge "behind" the viewer).  Similarly, the far value must be greater than the near value (as the "far" plane of the frustum must be "farther away" from the viewer than the near plane).<br />
 <br />
