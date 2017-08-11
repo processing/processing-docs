@@ -38,7 +38,7 @@ String[] list = split(men, " ] ");
 <description><![CDATA[
 The <b>split()</b> function breaks a String into pieces using a character or string as the delimiter. The <b>delim</b> parameter specifies the character or characters that mark the boundaries between each piece. A String[] array is returned that contains each of the pieces.
 <br /> <br />
-If the result is a set of numbers, you can convert the String[] array to to a float[] or int[] array using the datatype conversion functions <b>int()</b> and <b>float()</b>.  (See the second example above.)
+If the result is a set of numbers, you can convert the String[] array to a float[] or int[] array using the datatype conversion functions <b>int()</b> and <b>float()</b>.  (See the second example above.)
 <br /> <br /> 
 The <b>splitTokens()</b> function works in a similar fashion, except that it splits using a range of characters instead of a specific character or sequence.
 <!--
