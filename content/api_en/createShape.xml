@@ -91,6 +91,7 @@ void setup() {
   alien = createShape(GROUP);
 
   // Make two shapes
+  ellipseMode(CORNER);
   head = createShape(ELLIPSE, -25, 0, 50, 50);
   head.setFill(color(255));
   body = createShape(RECT, -25, 45, 50, 40);
