@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Particle Flow" by="NEOANALOG" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/particleflow.jpg</image>
+			<description>
+				Particle Flow is a physical installation comprised of granules driven by gravity and topography forming an analogue particle system. A moving slanted plane and a grid of motorized stamps control the elements to form infinite variations of behaviours and patterns.</description>
+			<location>http://neoanalog.io/particle-flow/</location>
+		 <link href="http://neoanalog.io/particle-flow/">NEOANALOG</link>
+		 <link href="http://www.creativeapplications.net/processing/particle-flow-kinetic-particle-study-by-neoanalog/">CreativeApplications.Net</link>
+	 </software>
+
 	<software name="Objectifier" by="Bjørn Karmann" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/objectifier.jpg</image>
 			<description>
