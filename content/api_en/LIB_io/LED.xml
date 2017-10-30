@@ -17,8 +17,11 @@ LED greenLed;
 boolean ledOn = false;
 
 void setup() {
+  // list all available LEDs
+  printArray(LED.list());
+
   // the green LED is led0 on the Raspberry Pi
-  greenLed = new LED(LED.list()[0]);
+  greenLed = new LED("led0");
   frameRate(0.5);
 }
 
