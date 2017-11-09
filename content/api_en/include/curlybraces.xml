@@ -26,7 +26,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Define the beginning and end of functions blocks and statement blocks such as the <b>for</b> and <b>if</b> structures. Curly braces are also used for defining inital values in array declarations.
+Define the beginning and end of functions blocks and statement blocks such as the <b>for</b> and <b>if</b> structures. Curly braces are also used for defining initial values in array declarations.
 ]]></description>
 
 <syntax>
