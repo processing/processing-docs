@@ -9,7 +9,7 @@
 <type></type>
 
 <example>
-<image>resetMatrix_.png</image>
+<image></image>
 <code><![CDATA[
 size(100, 100, P3D);
 noFill();
