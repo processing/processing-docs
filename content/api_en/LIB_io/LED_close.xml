@@ -18,16 +18,16 @@ boolean ledOn = false;
 
 void setup() {
   // the green LED is led0 on the Raspberry Pi
-  greenLed = new LED(LED.list()[0]);
+  greenLed = new LED("led0");
   frameRate(1);
 }
 
 void draw() {
   ledOn = !ledOn;
   if (ledOn) {
-  	greenLed.set(1.0);
+  	greenLed.brightness(1.0);
   } else {
-  	greenLed.set(0.0);
+  	greenLed.brightness(0.0);
   }
 }
 

@@ -33,7 +33,7 @@ You’ve recently seen how to create objects from classes built into the Process
 Capture video;
 </pre>
 		
-<strong>Step 3. Initailize the <tt>Capture</tt> object.</strong>
+<strong>Step 3. Initialize the <tt>Capture</tt> object.</strong>
 <br /><br />
 The Capture object “video” is just like any other object — to construct an object, you use the new operator followed by the constructor. With a Capture object, this code typically appears in <tt>setup()</tt>.<br />
 <pre>
@@ -50,12 +50,12 @@ void setup() {
 Let’s walk through the arguments used in the <tt>Capture</tt> constructor.
 		
 <ul>
-	<li><strong>this:</strong> If you’re confused by what <tt>this</tt> means, you are not alone. Technically speaking, <tt>this</tt> refers to the instance of a class in which the word this appears. Unfortunately, such a definition is likely to induce head spinning. Anicer way to think of it is as a self-referential statement. After all, what if you needed to refer to your Processing program within your own code? You might try to say “me” or “I.” Well, these words are not available in Java, so instead you say <tt>this</tt>. The reason you pass <tt>this</tt> into the <tt>Capture</tt> object is you are telling it: “Hey listen, I want to do video capture and when the camera has a new image I want you to alert this sketch.”</li>
-	<li><strong>320:</strong> Fortunately, the first argument, <tt>this</tt>, is the only confusing one. 320 refers to the width of thevideo captured by the camera.</li>
+	<li><strong>this:</strong> If you’re confused by what <tt>this</tt> means, you are not alone. Technically speaking, <tt>this</tt> refers to the instance of a class in which the word this appears. Unfortunately, such a definition is likely to induce head spinning. A nicer way to think of it is as a self-referential statement. After all, what if you needed to refer to your Processing program within your own code? You might try to say “me” or “I.” Well, these words are not available in Java, so instead you say <tt>this</tt>. The reason you pass <tt>this</tt> into the <tt>Capture</tt> object is you are telling it: “Hey listen, I want to do video capture and when the camera has a new image I want you to alert this sketch.”</li>
+	<li><strong>320:</strong> Fortunately, the first argument, <tt>this</tt>, is the only confusing one. 320 refers to the width of the video captured by the camera.</li>
 	<li><strong>240:</strong> The height of the video.</li>
 </ul>
 		
-There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer. How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying: <br /> 
+There are some cases, however, where the above will not do. For example, what if you have multiple cameras attached to your computer? How do you select the one you want to capture? In addition, in some rare cases, you might also want to specify a frame rate from the camera. For these cases, Processing will give you a list of all possible camera configurations via <tt>Capture.list()</tt>. You can display these in your message console, for example, by saying: <br />
 <pre>
 printArray(Capture.list());
 </pre>
@@ -81,6 +81,7 @@ In almost every case you want to begin capturing right in <tt>setup()</tt>. Neve
 <br /><br />
 
 <strong>Step 5. Read the image from the camera.</strong>
+<br /><br />
 There are two strategies for reading frames from the camera. I will briefly look at both and choose one forthe remainder of the examples in this chapter. Both strategies, however, operate under the same fundamental principle: I only want to read an image from the camera when a new frame is available to be read. 
 
 <br /><br />
@@ -115,7 +116,7 @@ image(video, 0, 0);
 All of this is put together in the following code:<br />
 <pre>
 // Step 1. Import the video library.
-import processing video.
+import processing.video.*;
 
 //Step 2. Declare a capture object.
 Capture video;
@@ -146,7 +147,9 @@ Again, anything you can do with a <tt>PImage</tt> (resize, tint, move, etc.) you
 <pre>
 import processing.video.*;
 
-Capture video;void setup() {  
+Capture video;
+
+void setup() {
   size(320, 240);  
   video = new Capture(this, 320, 240); 
   video.start();
@@ -304,7 +307,9 @@ Following is an example that makes use of <tt>jump()</tt> (jump to a specific po
 <pre>
 import processing.video.*;
 
-Movie movie;void setup() {  
+Movie movie;
+
+void setup() {
   size(200, 200);  
   background(0);  
   movie = new Movie(this, "testmovie.mov");
@@ -375,6 +380,8 @@ I can now capture a video image that is 80 × 60. This is useful because capturi
 <br /><br />
 For every square at column <tt>i</tt> and row <tt>j</tt>, I look up the color at pixel <tt>(i, j)</tt> in the video image and color it accordingly. See the following example with the new parts in bold:<br />
 <pre>
+<strong>import processing.video.*;</strong>
+
 // Size of each cell in the grid, ratio of window size to video size
 int videoScale = 8;
 // Number of columns and rows in the system
@@ -388,7 +395,8 @@ void setup() {
   cols = width/videoScale;  
   rows = height/videoScale;  
   background(0);
-  <strong>video = new Capture(this, cols, rows);</strong>
+  <strong>video = new Capture(this, cols, rows);
+  video.start()</strong>
 }
 
 <strong>// Read image from the camera
@@ -535,13 +543,14 @@ void setup() {
 }
 <strong>
 void captureEvent(Capture video) {  
-  // Read image from the camera  video.read();
+  // Read image from the camera
+  video.read();
 }</strong>
 
 void draw() {
   <strong>video.loadPixels();</strong>
   float newx = constrain(x + random(-20, 20), 0, width);   
-  float newy = constrain(y + random(-20, 20), 0, height);
+  float newy = constrain(y + random(-20, 20), 0, height-1);
   <strong>
   // Find the midpoint of the line
   int midx = int((newx + x) / 2);

@@ -29,7 +29,7 @@ println(sb);  // Prints 'false-28R-32.61024'
 </example>
 
 <description><![CDATA[
-Converts any value of a primitive data type (<b>boolean</b>, <b>byte</b>, <b>char</b>, <b>color</b>, <b>double</b>, <b>float</b>, <b>int</b>, or <b>long</b>) to its <b>String</b> representation. For example, converting an integer with <b>str(3)</b> will return the <b>String</b> value of <b>"3"</b>, converting a float with <b>str(-12.6)</b> will return <b>"-12.6"</b>, and converting a boolean with <b>str(true)</b> will return <b>"true"</b>.<br />
+Converts a value of a primitive data type (<b>boolean</b>, <b>byte</b>, <b>char</b>, <b>int</b>, or <b>float</b>) to its <b>String</b> representation. For example, converting an integer with <b>str(3)</b> will return the <b>String</b> value of <b>"3"</b>, converting a float with <b>str(-12.6)</b> will return <b>"-12.6"</b>, and converting a boolean with <b>str(true)</b> will return <b>"true"</b>.<br />
 <br />
 When an array of values is passed in, then a <b>String</b> array of the same length is returned.
 ]]></description>

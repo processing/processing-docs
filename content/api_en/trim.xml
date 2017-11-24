@@ -18,7 +18,7 @@ println(s2);  // Prints "Somerville MA"
 
 String[] a1 = { " inconsistent ", " spacing" };  // Note spaces
 String[] a2 = trim(a1);
-println(a2);
+printArray(a2);
 // Prints the following array contents to the console:
 // [0] "inconsistent"
 // [1] "spacing"
