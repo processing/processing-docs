@@ -23,13 +23,13 @@ println(str2);  // Prints "CCCP" to the console
 <image></image>
 <code><![CDATA[
 // Comparing String objects, see reference below.
-String p = "potato";
+String p = new String("potato"); //If we directly use p="potato" it will be printed due to String Interning
 if (p == "potato") {
   println("p == potato, yep.");  // This will not print
 } 
 // The correct way to compare two Strings
 if (p.equals("potato")) {
-  println("Yes, the contents of p and potato are the same.");
+  println("Yes, the contents of p and potato are the same.");	//It will get printed
 }
 ]]></code>
 </example>
