@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="komorebi" by="Leslie Nooteboom" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/komorebi.jpg</image>
+			<description>
+				komorebi is a platform that uses a robotic projector and generative projections to replicate the natural reflections and shadows of sunlight. komorebi can create sunlight filtering through leaves or a dance of light and shadow.</description>
+			<location>http://komorebi.studio/</location>
+		 <link href="http://komorebi.studio/">Leslie Nooteboom</link>
+	 </software>
+
 	<software name="Particle Flow" by="NEOANALOG" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/particleflow.jpg</image>
 			<description>
