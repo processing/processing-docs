@@ -22,7 +22,8 @@ class Curated
 		$this->width	= getAttribute($xml, 'width');
 		$this->height	= getAttribute($xml, 'height');
         $this->image    = getValue($xml, 'image');
-        $this->description = innerHTML($xml, 'description');
+        //$this->description = innerHTML($xml, 'description');
+        $this->description = getValue($xml, 'description');
         $this->location = getValue($xml, 'location');
         
 		$links = $xml->getElementsByTagName('link');
