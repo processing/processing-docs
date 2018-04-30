@@ -19,7 +19,7 @@ $where = CONTENTDIR . 'static/';
 //`cd $path && /usr/bin/git pull https://github.com/processing/processing-docs/`;
 
 
-$libraries = array('net', 'serial', 'video', 'dxf', 'pdf', 'sound', 'io');
+$libraries = array('net', 'serial', 'video', 'dxf', 'pdf', 'sound', 'io', 'svg');
 $lib_dir = REFERENCEDIR.'libraries/';
 
 // Create Index
@@ -47,7 +47,7 @@ foreach ($libraries as $lib) {
 
     // template and copy index
     $index = CONTENTDIR.$source.'/index.html';
-    if($lib == 'pdf' || $lib == 'dxf') {
+    if($lib == 'pdf' || $lib == 'dxf' || $lib == 'svg') {
 	  //$page = new Page(strtoupper($lib) . ' \\ Libraries', 'Libraries', 'Library-index');
 	  $page = new Page(strtoupper($lib) . ' \\ Libraries', 'Libraries');
 	} else {
