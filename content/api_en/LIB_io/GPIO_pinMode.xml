@@ -38,10 +38,14 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Configures a pin to act either as input or output<br/>
+Configures a pin to act either as input (<b>INPUT</b>), or input with internal pull-up resistor (<b>INPUT_PULLUP</b>), or input with internal pull-down resistor (<b>INPUT_PULLDOWN</b>) or output (<b>OUTPUT</b>)<br/>
 <br/>
 Unlike on Arduino, where pins are implicitly set to inputs by default, it is necessary
-to call this function for any pin you want to access, including input pins.
+to call this function for any pin you want to access, including input pins.<br/>
+<br/>
+Pull-up and pull-down resistors are very useful when connecting buttons and switches, since they will force the value of the pin in a specified electrical state when no electrical connection is made, and the pin would otherwise be left "floating".<br/>
+<br/>
+The ability to set (and clear) pull-up and pull-down resistors is currently limited to the Raspberry Pi running the Raspbian distribution. On other systems, a warning will be shown.
 ]]></description>
 
 <syntax>
