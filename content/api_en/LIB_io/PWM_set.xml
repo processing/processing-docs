@@ -17,7 +17,9 @@
 </example>
 
 <description><![CDATA[
-Enables the PWM output
+Enables the PWM output<br/>
+<br/>
+When no period is specified, a default 1 kHz (1000 Hz) is used.
 ]]></description>
 
 <syntax>
