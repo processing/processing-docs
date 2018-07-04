@@ -38,7 +38,9 @@ out("---------------");
 out("Pulling in latest changes from processing/processing-sound/...");
 
 $soundRepoPath = "{$path}../processing-sound";
-$shell_output = shell_exec("cd $soundRepoPath && /usr/bin/git pull https://github.com/processing/processing-sound/ 2>&1");
+//$shell_output = shell_exec("cd $soundRepoPath && /usr/bin/git pull https://github.com/processing/processing-sound/ 2>&1");
+// clone new processing-sound library from work-in-progress repository instead
+$shell_output = shell_exec("rm -rf $soundRepoPath && mkdir $soundRepoPath && cd $soundRepoPath && /usr/bin/git clone https://github.com/kevinstadler/processing-sound.git . 2>&1");
 
 out($shell_output);
 out("---------------");
