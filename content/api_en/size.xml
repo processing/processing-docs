@@ -73,6 +73,8 @@ The <b>renderer</b> parameter selects which rendering engine to use. For example
 <br />
 <b>PDF</b>: The PDF renderer draws 2D graphics directly to an Acrobat PDF file. This produces excellent results when you need vector shapes for high-resolution output or printing. You must first use Import Library &rarr; PDF to make use of the library. More information can be found in the PDF library reference.<br />
 <br />
+<b>SVG</b>: The SVG renderer draws 2D graphics directly to an SVG file. This is great for importing into other vector programs or using for digital fabrication. You must first use Import Library &rarr; SVG Export to make use of the library.<br />
+<br />
 As of Processing 3.0, to use variables as the parameters to <b>size()</b> function, place the <b>size()</b> function within the <b>settings()</b> function (instead of <b>setup()</b>). There is more information about this on the <b>settings()</b> reference page.<br />
 <br />
 ]]></description>
