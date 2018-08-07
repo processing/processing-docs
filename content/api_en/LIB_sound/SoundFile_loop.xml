@@ -31,7 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Starts the playback in a loop of a soundfile.
+Starts playback which will loop at the end of the soundfile.
 ]]></description>
 
 <syntax>

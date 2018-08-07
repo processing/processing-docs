@@ -32,6 +32,7 @@ void draw() {
 
 This is a Soundfile Player which allows to play back and manipulate soundfiles. Supported formats are: WAV, AIF/AIFF, MP3.
 
+MP3 decoding can be very slow on ARM processors (Android/Raspberry Pi), we generally recommend you use lossless WAV or AIF files.
 ]]></description>
 
 <syntax>
@@ -76,10 +77,10 @@ This is a Soundfile Player which allows to play back and manipulate soundfiles. 
 <mdescription>Change the amplitude/volume of the player</mdescription>
 </method>
 
-<method>
+<!--method>
 <mname>add()</mname>
 <mdescription>Offset the output of the player by given value</mdescription>
-</method>
+</method-->
 
 <method>
 <mname>pan()</mname>

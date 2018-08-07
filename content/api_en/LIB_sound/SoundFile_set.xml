@@ -19,27 +19,26 @@ void setup() {
   size(640, 360);
   background(255);
     
-  // Load a soundfile from the data folder of the sketch and get the number of channels
+  // Load a soundfile from the data folder of the sketch
   file = new SoundFile(this, "sample.mp3");
-  println("SFSampleRate= " + file.sampleRate() + " Hz");
 }      
 
 void draw() {
 }
 
 void mousePressed() {
-  float rate=3;
-  float pos=0.5;
-  float amp=0.5;
-  float add=0;
-  file.set(rate, amp, add, pos);
+  float rate = 3;
+  float pos = 0.5;
+  float amp = 0.5;
+  float add = 0;
+  file.set(rate, pos, amp, add);
 }
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-Returns the sample rate of the soundfile as an int
+Set multiple playback parameters of the soundfile at once
 ]]></description>
 
 <syntax>
