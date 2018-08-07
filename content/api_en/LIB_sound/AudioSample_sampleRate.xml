@@ -13,15 +13,15 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SoundFile file;
+AudioSample sample;
 
 void setup() {
   size(640, 360);
   background(255);
     
   // Load a soundfile from the data folder of the sketch and get the sample rate
-  file = new SoundFile(this, "sample.mp3");
-  println("SFSampleRate= " + file.sampleRate() + " Hz");
+  sample = new AudioSample(this, 100000, 22050);
+  println("SampleRate= " + sample.sampleRate() + " Hz");
 }      
 
 void draw() {
@@ -31,7 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns the sample rate of the soundfile as an int
+Returns the sample rate of the audiosample as an int
 ]]></description>
 
 <syntax>
