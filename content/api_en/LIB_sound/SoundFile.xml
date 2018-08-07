@@ -9,7 +9,6 @@
 <usage>Application</usage>
 
 <example>
-<image></image>
 <code><![CDATA[
 import processing.sound.*;
 SoundFile file;

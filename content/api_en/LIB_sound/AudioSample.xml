@@ -47,6 +47,10 @@ This is just a placeholder to see which class descriptions are added by the refe
 <mdescription>Move the audiosample in a stereo panorama (only works for mono samples)</mdescription>
 </method>
 
+<related>
+SoundFile
+</related>
+
 <availability>2.0</availability>
 
 <type>Object</type>
