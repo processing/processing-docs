@@ -29,16 +29,6 @@ void draw() {
 Audio Device allows for configuring the audio server. If you need a low latency server you can reduce the buffer size. Allowed values are power of 2. For changing the sample rate pass the appropriate value in the constructor. 
 ]]></description>
 
-<syntax>
-</syntax>
-
-<parameters>
-
-</parameters>
-
-<method>
-</method>
-
 <constructor>
 AudioDevice(<c>parent</c>, <c>samplerate</c>, <c>buffersize</c>)
 </constructor>
@@ -57,10 +47,8 @@ AudioDevice(<c>parent</c>, <c>samplerate</c>, <c>buffersize</c>)
 <cdescription>int: buffersize (i.e. 32/64/128 ..) </cdescription>
 </cparameter>
 
-
-<returns></returns>
-
 <related>
+Sound
 </related>
 
 <availability>1.0</availability>
