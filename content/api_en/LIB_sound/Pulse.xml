@@ -32,71 +32,8 @@ void draw() {
 </example>
 
 <description><![CDATA[
-
-	DESCRIPTION
-
+This is a simple Pulse Oscillator. You can control the width of the pulse using the width() function. A width of 0.5 makes this oscillator identical to a square wave.
 ]]></description>
-
-<syntax>
-</syntax>
-
-<parameters>
-
-</parameters>
-
-<method>
-<mname>play()</mname>
-<mdescription>Start the oscillator</mdescription>
-</method>
-
-<method>
-<mname>stop()</mname>
-<mdescription>Stop the oscillator</mdescription>
-</method>
-
-<method>
-<mname>freq()</mname>
-<mdescription>Change the frequency of the oscillator</mdescription>
-</method>
-
-<method>
-<mname>width()</mname>
-<mdescription>Change the pulse width of the oscillator</mdescription>
-</method>
-
-<method>
-<mname>amp()</mname>
-<mdescription>Change the amplitude/volume of the oscillator</mdescription>
-</method>
-
-<method>
-<mname>add()</mname>
-<mdescription>Offset the output of the oscillator by given value</mdescription>
-</method>
-
-<method>
-<mname>pan()</mname>
-<mdescription>Move the sound in a stereo panorama</mdescription>
-</method>
-
-<method>
-<mname>set()</mname>
-<mdescription>Set multiple parameters at once</mdescription>
-</method>
-
-<constructor>
-Pulse(<c>parent</c>)
-</constructor>
-
-<cparameter>
-<clabel>parent</clabel>
-<cdescription>PApplet: typically use "this"</cdescription>
-</cparameter>
-
-<returns></returns>
-
-<related>
-</related>
 
 <availability>1.0</availability>
 

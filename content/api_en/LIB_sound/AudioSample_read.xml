@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>read()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+    
+  // Load a soundfile from the data folder of the sketch and get the sample rate
+  sample = new AudioSample(this, 100000, 22050);
+  println("SampleRate= " + sample.sampleRate() + " Hz");
+}      
+
+void draw() {
+}
+
+]]></code>
+</example>
+
+<related>write</related>
+
+<availability>1.0</availability>
+
+<type>Method</type>
+
+<partof>Library</partof>
+
+</root>
