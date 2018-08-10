@@ -38,10 +38,6 @@ void draw() {
 ]]></code>
 </example>
 
-<description><![CDATA[
-Is this reference site even built if the Sound class is not present in the processing-sound directory?
-]]></description>
-
 <related>
 AudioIn
 </related>

@@ -9,7 +9,7 @@
 <usage>Application</usage>
 
 <example>
-<image></image>
+<image>../../../images/LIB_sound/TriOsc.png</image>
 <code><![CDATA[
 import processing.sound.*;
 TriOsc triangle;
