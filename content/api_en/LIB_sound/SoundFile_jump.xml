@@ -21,7 +21,7 @@ void setup() {
     
   // Load a soundfile from the /data folder of the sketch and play it back
   file = new SoundFile(this, "sample.mp3");
-  file.jump(15.3);
+  file.jump(3.5);
 }      
 
 void draw() {
@@ -31,7 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Starts the playback of a soundfile.
+ Jump to a specific position in the soundfile while continuing to play.
 ]]></description>
 
 <syntax>

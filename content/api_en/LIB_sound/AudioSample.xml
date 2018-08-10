@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>AudioSample</name>
+
+<category>Sound</category>
+
+<subcategory>Audio Files</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create an array and manually write a single sine wave oscillation into it.
+  int resolution = 1000;
+  float[] sinewave = new float[resolution];
+  for (int i = 0; i < resolution; i++) {
+    sinewave[i] = sin(TWO_PI*i/resolution);
+  }
+
+  // Create the audiosample based on the data, set framerate to play 200 oscillations/second
+  sample = new AudioSample(this, sinewave, 200 * resolution);
+
+  // Play the sample in a loop (but don't make it too loud)
+  sample.amp(0.2);
+  sample.loop();
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+This is just a placeholder to see which class descriptions are added by the reference build process.
+]]></description>
+
+<method>
+<mname>pan()</mname>
+<mdescription>Move the audiosample in a stereo panorama (only works for mono samples)</mdescription>
+</method>
+
+<related>
+SoundFile
+</related>
+
+<availability>2.0</availability>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>

@@ -32,8 +32,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-This method changes the playback rate of the soundfile. 1 is the original speed. 0.5 is half speed and one octave down. 2 is double the speed and one octave up.
-
+Set the playback rate of the soundfile. 1 is the original speed. 0.5 is half speed and one octave down. 2 is double the speed and one octave up.
 ]]></description>
 
 <syntax>
