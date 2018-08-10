@@ -9,7 +9,7 @@
 <usage>Application</usage>
 
 <example>
-<image>../../../images/LIB_sound/SqrOsc.png</image>
+<image>../../../images/LIB_sound_SqrOsc.png</image>
 <code><![CDATA[
 import processing.sound.*;
 SqrOsc square;
@@ -32,11 +32,5 @@ void draw() {
 <description><![CDATA[
 This is a simple Square Wave Oscillator.
 ]]></description>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>Library</partof>
 
 </root>

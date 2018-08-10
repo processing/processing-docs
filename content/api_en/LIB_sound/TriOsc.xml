@@ -9,7 +9,7 @@
 <usage>Application</usage>
 
 <example>
-<image>../../../images/LIB_sound/TriOsc.png</image>
+<image>../../../images/LIB_sound_TriOsc.png</image>
 <code><![CDATA[
 import processing.sound.*;
 TriOsc triangle;
@@ -31,11 +31,5 @@ void draw() {
 <description><![CDATA[
 This is a simple Triangle Wave Oscillator
 ]]></description>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>Library</partof>
 
 </root>

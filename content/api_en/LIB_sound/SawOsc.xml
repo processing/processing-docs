@@ -9,7 +9,7 @@
 <usage>Application</usage>
 
 <example>
-<image>../../../images/LIB_sound/SawOsc.png</image>
+<image>../../../images/LIB_sound_SawOsc.png</image>
 <code><![CDATA[
 import processing.sound.*;
 SawOsc saw;
@@ -32,11 +32,5 @@ void draw() {
 <description><![CDATA[
 This is a simple Saw Wave Oscillator.
 ]]></description>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>Library</partof>
 
 </root>

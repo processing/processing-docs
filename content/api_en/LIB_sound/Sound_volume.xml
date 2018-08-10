@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>Sound</name>
+
+<name>volume()</name>
 
 <category>Sound</category>
 
 <subcategory>Configuration</subcategory>
 
-<usage>Application</usage>
+<usage>Web &amp; Application</usage>
 
 <example>
+<image></image>
 <code><![CDATA[
 import processing.sound.*;
 Sound s;
@@ -34,16 +36,11 @@ void draw() {
   // control the overall output volume of the whole Sound library.
   s.volume(amplitude);
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-The Sound class allows for configuring global properties of the sound library's audio synthesis and playback, such as the output device, sample rate or global output volume. Information on available input and output devices can be obtained by calling Sound.list()
+Set the overall output volume of the Processing sound library.
 ]]></description>
-
-<related>
-AudioIn
-</related>
 
 </root>

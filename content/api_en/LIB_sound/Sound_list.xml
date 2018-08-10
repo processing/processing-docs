@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>Sound.list()</name>
+
+<category>Sound</category>
+
+<subcategory>Configuration</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+void setup() {
+  Sound.list();
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Print and return information on available audio devices and their number of input/output channels.
+]]></description>
+
+</root>
