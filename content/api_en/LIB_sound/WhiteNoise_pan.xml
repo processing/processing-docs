@@ -36,19 +36,4 @@ void draw() {
 Pan the generator in a stereo panorama. -1.0 pans to the left channel and 1.0 to the right channel.
 ]]></description>
 
-<syntax>
-<c>noise</c>.pan(pos)
-</syntax>
-	
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
-
 </root>

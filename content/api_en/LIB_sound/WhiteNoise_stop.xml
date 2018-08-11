@@ -38,19 +38,4 @@ void mousePressed() {
 Stops the White Noise generator.
 ]]></description>
 
-<syntax>
-<c>noise</c>.stop()
-</syntax>
-	
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
-
 </root>

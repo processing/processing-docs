@@ -34,19 +34,4 @@ void draw() {
 The .add() method is useful for modulating other audio signals.
 ]]></description>
 
-<syntax>
-<c>noise</c>.add(add)
-</syntax>
-	
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
-
 </root>

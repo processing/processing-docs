@@ -41,19 +41,4 @@ void mousePressed() {
 Sets amplitude, add and pan position with one method. 
 ]]></description>
 
-<syntax>
-<c>noise</c>.set(amp, add, pos)
-</syntax>
-	
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
-
 </root>

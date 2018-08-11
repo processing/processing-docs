@@ -35,24 +35,4 @@ void draw() {
 Changes the amplitude/volume of the noise generator. Allowed values are between 0.0 and 1.0.
 ]]></description>
 
-<syntax>
-<c>noise</c>.amp(vol)
-</syntax>
-	
-<parameters>
-
-</parameters>
-
-
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
-
 </root>

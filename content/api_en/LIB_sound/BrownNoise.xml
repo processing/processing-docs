@@ -29,66 +29,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-
 This is a Brown Noise Generator. Brown Noise has a decrease of 6dB per octave.
-
 ]]></description>
-
-<syntax>
-</syntax>
-
-<parameters>
-
-</parameters>
-
-<method>
-<mname>play()</mname>
-<mdescription>Start the generator</mdescription>
-</method>
-
-<method>
-<mname>stop()</mname>
-<mdescription>Stop the generator</mdescription>
-</method>
-
-<method>
-<mname>amp()</mname>
-<mdescription>Change the amplitude/volume of the generator</mdescription>
-</method>
-
-<method>
-<mname>add()</mname>
-<mdescription>Offset the output of the generator by given value</mdescription>
-</method>
-
-<method>
-<mname>pan()</mname>
-<mdescription>Move the sound in a stereo panorama</mdescription>
-</method>
-
-<method>
-<mname>set()</mname>
-<mdescription>Set multiple parameters at once</mdescription>
-</method>
-
-<constructor>
-BrownNoise(<c>parent</c>)
-</constructor>
-
-<cparameter>
-<clabel>parent</clabel>
-<cdescription>PApplet: typically use "this"</cdescription>
-</cparameter>
-
-<returns></returns>
-
-<related>
-</related>
-
-<availability>1.0</availability>
-
-<type>Object</type>
-
-<partof>Library</partof>
 
 </root>
