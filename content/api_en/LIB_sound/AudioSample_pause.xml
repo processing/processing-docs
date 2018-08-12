@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
-<name>AudioSample</name>
 
-<category>Sound</category>
+<name>pause()</name>
 
-<subcategory>Audio Files</subcategory>
+<category>Sound Files</category>
 
-<usage>Application</usage>
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
 
 <example>
 <image></image>
@@ -27,25 +28,24 @@ void setup() {
 
   // Create the audiosample based on the data, set framerate to play 200 oscillations/second
   sample = new AudioSample(this, sinewave, 200 * resolution);
-
-  // Play the sample in a loop (but don't make it too loud)
-  sample.amp(0.2);
   sample.loop();
-}      
+}
 
 void draw() {
+}
+
+void mousePressed() {
+  if (sample.isPlaying()) {
+    sample.pause();
+  } else {
+    sample.loop();
+  }
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-This class allows you low-level access to an audio buffer to create, access, manipulate and play back sound samples.
-
-If you want to pre-load your audio sample with an audio file from disk you can do so using the SoundFile subclass.
+Stop the playback of the sample, but cue it to the current position. The next call to play() will continue playing where it left off.
 ]]></description>
-
-<related>
-SoundFile
-</related>
 
 </root>
