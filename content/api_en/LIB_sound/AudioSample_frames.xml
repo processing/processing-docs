@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>channels()</name>
+<name>frames()</name>
 
 <category>Sound Files</category>
 
@@ -13,25 +13,24 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SoundFile file;
+AudioSample sample;
 
 void setup() {
   size(640, 360);
   background(255);
 
-  // Load a soundfile from the /data folder of the sketch and get the number of channels
-  file = new SoundFile(this, "sample.mp3");
-  println(file.channels());
+  // Create an audiosample
+  sample = new AudioSample(this, 100000);
+  println("Number of audio frames: " + sample.frames());
 }
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Returns the number of channels in the soundfile as an int (1 for mono, 2 for stereo).
+Returns the number of frames of the audiosample as an int.
 ]]></description>
 
 </root>

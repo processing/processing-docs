@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>write()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create a new audiosample
+  sample = new AudioSample(this, 100000, 22050);
+
+  // A freshly initiated audiosample contains nothing but zeros, so let's
+  // write some data to it.
+
+  // Write a random number to the first frame
+  sample.write(0, rand());
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+The underlying data of the audiosample can be read and (over)written in several different ways:
+the method taking a single float array `data` replaces the sample data with the content of the given array. The array has to contain as many floats as there are frames in this sample.
+It is also possible to only write parts of the sample data using the method with four arguments, which allows you to specify the index of the first frame to write, the position in the array to take the data from, as well as how many frames should be copied over.
+Finally, the method taking two arguments simply sets the value of the single audio frame specified by the first argument to the given float value.
+]]></description>
+
+<related>
+AudioSample.read
+</related>
+</root>

@@ -18,24 +18,39 @@ AudioSample sample;
 void setup() {
   size(640, 360);
   background(255);
-    
-  // Load a soundfile from the data folder of the sketch and get the sample rate
+
+  // Create a new audiosample
   sample = new AudioSample(this, 100000, 22050);
-  println("SampleRate= " + sample.sampleRate() + " Hz");
+
+  // Read some data from it (the following calls are just for demonstration,
+  // a freshly initiated audiosample actually contains nothing but zeros)
+
+  // Read the very first frame:
+  float frame = sample.read(0);
+
+  // Read the entire sample
+  float[] sampleContent = new float[100000];
+  sample.read(sampleContent);
+
+  // Read only a part of the sample data
+  float[] subSample = new float[50000];
+  // Read 500000 frames, starting at frame 30000
+  sample.read(30000, subSample, 0, 50000);
 }      
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
-<related>write</related>
+<description><![CDATA[
+The underlying data of the audiosample can be read and written in several different ways:
+the method taking a single float array `data` gets the current sample data and write it into the given array. The array has to be able to store as many floats as there are frames in this sample.
+It is also possible to only read parts of the sample data using the method with four arguments, which allows you to specify the index of the first frame to read, the position in the array to write it to, as well as how many frames to copy over into the array in total.
+Finally, the method taking a single integer argument `index` returns the value of the single audio frame of the sample at this index as a float.
+]]></description>
 
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
+<related>
+AudioSample.frames()
+</related>
 </root>

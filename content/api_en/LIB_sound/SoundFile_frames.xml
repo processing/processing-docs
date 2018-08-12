@@ -31,22 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Returns the number of frames of the soundfile as an int
+Returns the number of frames of the soundfile as an int.
 ]]></description>
-
-<syntax>
-<c>file</c>.frames()
-</syntax>
-	
-<returns>int</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>
