@@ -28,7 +28,7 @@ void setup() {
 
   // Create the audiosample based on the data, set framerate to play 200 oscillations/second
   sample = new AudioSample(this, sinewave, 200 * resolution);
-  sample.loop();
+  sample.play();
 }
 
 void draw() {
@@ -38,7 +38,7 @@ void mousePressed() {
   if (sample.isPlaying()) {
     sample.pause();
   } else {
-    sample.loop();
+    sample.play();
   }
 }
 ]]></code>

@@ -27,27 +27,11 @@ void setup() {
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Cues the playhead to a fixed position in the soundfile.
+Cues the playhead to a fixed position in the soundfile. Note that cue() only affects the playhead for future calls to play(), but not to loop().
 ]]></description>
-
-<syntax>
-<c>file</c>.cue(second)
-</syntax>
-	
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

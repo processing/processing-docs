@@ -26,27 +26,11 @@ void setup() {
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Starts the playback of the soundfile. Only plays the soundfile once.
+Starts the playback of the soundfile. Only plays to the end of the soundfile once.
 ]]></description>
-
-<syntax>
-<c>file</c>.play()
-</syntax>
-	
-<returns></returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>jump()</name>
+<name>cue()</name>
 
 <category>Sound Files</category>
 
@@ -13,15 +13,16 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SoundFile file;
+AudioSample sample;
 
 void setup() {
   size(640, 360);
   background(255);
-    
-  // Load a soundfile from the /data folder of the sketch and play it back
-  file = new SoundFile(this, "sample.mp3");
-  file.jump(3.5);
+
+  // Create a new audiosample
+  sample = new AudioSample(this, 100000, 22050);
+  file.cue(3.5);
+  file.play();
 }      
 
 void draw() {
@@ -30,7 +31,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Jump to a specific position in the soundfile while continuing to play (or starting to play if it wasn't playing already).
+Cues the playhead to a fixed position in the audiosample. Note that cue() only affects the playhead for future calls to play(), but not to loop().
 ]]></description>
 
 </root>
