@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>sampleRate()</name>
+
+<category>Sound</category>
+
+<subcategory>Configuration</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+Sound s;
+
+void setup() {
+  size(200, 200);
+
+  // Create a Sound object for controlling the synthesis engine sample rate.
+  s = new Sound(this);
+  s.sampleRate(22050);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Get or set the internal sample rate of the synthesis engine.
+]]></description>
+
+</root>

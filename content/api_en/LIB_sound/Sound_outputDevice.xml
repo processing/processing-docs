@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>outputDevice()</name>
+
+<category>Sound</category>
+
+<subcategory>Configuration</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+void setup() {
+  // Create a Sound object and select the second sound device (device ids start at 0) for output
+  Sound s = new Sound(this);
+  s.outputDevice(1);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Choose the device (sound card) which the Sound library's audio output should be sent to. The output device should support stereo output (2 channels).
+]]></description>
+
+<related>
+AudioIn
+</related>
+
+</root>

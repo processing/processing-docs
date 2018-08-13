@@ -24,9 +24,11 @@ void setup() {
 
   // A freshly initiated audiosample contains nothing but zeros, so let's
   // write some data to it.
-
-  // Write a random number to the first frame
-  sample.write(0, rand());
+  for (int i = 0; i < sample.frames(); i++) {
+    // Random numbers  will make it sound like white noise
+    sample.write(i, random(-100, 100));
+  }
+  sample.play();
 }      
 
 void draw() {

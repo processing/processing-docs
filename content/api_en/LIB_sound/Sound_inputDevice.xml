@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>inputDevice()</name>
+
+<category>Sound</category>
+
+<subcategory>Configuration</subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+void setup() {
+  // Create a Sound object and select the second sound device (device ids start at 0) for input
+  Sound s = new Sound(this);
+  s.inputDevice(1);
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Choose the device (sound card) which should be used for grabbing audio input using AudioIn. Note that this setting affects the choice of sound card, which is not necessarily the same as the number of the input channel. If your sound card has more than one input channel, you can specify which channel to use in the constructor of the AudioIn class.
+]]></description>
+
+<related>
+AudioIn
+</related>
+
+</root>

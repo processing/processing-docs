@@ -41,34 +41,14 @@ void draw() {
   for(int i = 0; i < bands; i++){
   // The result of the FFT is normalized
   // draw the line for frequency band i scaling it up by 5 to get more amplitude.
-  line( i, height, i, height - spectrum[i]*height*5 );
+  line(i, height, i, height - spectrum[i]*height*5 );
   } 
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-Queries a value from the analyzer and returns a vector the size of the pre-defined number of bands. 
+Calculates the current frequency spectrum and returns it as an array with as many elements as frequency bands.
 ]]></description>
-
-<syntax>
-<c>amp</c>.analyze()
-</syntax>
-	
-<parameters>
-
-</parameters>
-
-
-<returns>float</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>

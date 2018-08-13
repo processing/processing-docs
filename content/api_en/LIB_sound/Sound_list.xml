@@ -22,6 +22,7 @@ void setup() {
 
 <description><![CDATA[
 Print and return information on available audio devices and their number of input/output channels.
+Under normal circumstances you will not want to call Sound.list() in your actual sketch code, but only for testing to figure out which sound cards are available on a new system and how to select them. However, if the order of devices on your system is prone to fluctuate from reboot to reboot, you can also use the device name array returned by the function to automate device selection by name in your own code.
 ]]></description>
 
 </root>
