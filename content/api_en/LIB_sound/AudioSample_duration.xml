@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root>
 
-<name>rate()</name>
+<name>duration()</name>
 
 <category>Sound Files</category>
 
@@ -13,16 +13,17 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SoundFile file;
+AudioSample sample;
 
 void setup() {
   size(640, 360);
   background(255);
-    
-  // Load a soundfile from the data folder of the sketch and play it back double the speed
-  file = new SoundFile(this, "sample.mp3");
-  file.loop();
-  file.rate(2);
+
+  // Create a new audiosample
+  sample = new AudioSample(this, 88200, 22050);
+
+  // 88200 samples at a sample rate of 22050 should return 4.0 seconds
+  println("Duration= " + sample.duration() + " seconds");
 }      
 
 void draw() {
@@ -31,7 +32,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Set the relative playback rate of the soundfile. 1 is the original speed. 0.5 is half speed and one octave down. 2 is double the speed and one octave up.
+Returns the duration of the audiosample in seconds.
 ]]></description>
 
 </root>

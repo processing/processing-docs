@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>resize()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create a new audiosample
+  sample = new AudioSample(this, 100000, 22050);
+
+  // ... do something with the audiosample ...
+
+  // Change to a 100.000 frames but in stereo
+  file.resize(100000, true);
+}      
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Resizes the underlying buffer of the audiosample to the given number of frames. Calling this method allocates a completely new buffer, so any ongoing playback will be stopped and all data currently stored in the sample will be lost.
+]]></description>
+
+</root>

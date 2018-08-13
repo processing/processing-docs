@@ -26,27 +26,11 @@ void setup() {
 
 void draw() {
 }
-
 ]]></code>
 </example>
 
 <description><![CDATA[
-Returns the duration of the soundfile in seconds
+Returns the duration of the soundfile in seconds.
 ]]></description>
-
-<syntax>
-<c>file</c>.duration()
-</syntax>
-	
-<returns>float</returns>
-
-<related></related>
-
-<availability>1.0</availability>
-
-<type>Method</type>
-
-<partof>Library</partof>
-
 
 </root>
