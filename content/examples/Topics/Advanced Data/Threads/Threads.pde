@@ -9,7 +9,6 @@
  * the code inside the function passed to thread() will operate
  * in the background.
  *
- * For more about threads, see: http://wiki.processing.org/w/Threading
  */
 
 // This sketch will load data from all of these URLs in a separate thread
