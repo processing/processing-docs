@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>isPlaying()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create a new audiosample and play it
+  sample = new AudioSample(this, 100000);
+  sample.play();
+
+  int i = 0;
+  while (true) {
+    delay(1000);
+    if (sample.isPlaying()) {
+      i++;
+      println("Sample is still playing after " + i + " seconds");
+    } else {
+      break;
+    }
+  }
+  println("Sample finished playing!");
+}      
+]]></code>
+</example>
+
+<description><![CDATA[
+Check whether this audiosample is currently playing.
+]]></description>
+
+</root>
