@@ -33,7 +33,7 @@ $pages = array(
         'People'      => array('/people/', 2),
         'Foundation'  => array('/foundation/', 2),
     
-    'FAQ'             => array('http://wiki.processing.org/w/FAQ', 1),
+    'FAQ'             => array('https://github.com/processing/processing/wiki', 1),
     
     );
 
