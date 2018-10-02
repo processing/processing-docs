@@ -43,7 +43,6 @@ void draw() {
   background(0);
 
   updateGeometry();
-  fill(255, 255, 245);
   for (int i = 0; i < nGestures; i++) {
     renderGesture(gestureArray[i], width, height);
   }
@@ -100,6 +99,7 @@ void renderGesture(Gesture gesture, int w, int h) {
       Polygon p;
       int cr;
 
+      fill(gesture.fillColor);
       beginShape(QUADS);
       int gnp = gesture.nPolys;
       for (int i=0; i<gnp; i++) {

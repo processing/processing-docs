@@ -13,6 +13,7 @@ class Gesture {
   Polygon polygons[];
   int nPoints;
   int nPolys;
+  color fillColor;
 
   float jumpDx, jumpDy;
   boolean exists;
@@ -34,6 +35,7 @@ class Gesture {
     }
     nPoints = 0;
     nPolys = 0;
+    fillColor = color(random(50, 255), random(50, 255), random(50, 255));
 
     exists = false;
     jumpDx = 0;
