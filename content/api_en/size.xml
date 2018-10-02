@@ -51,7 +51,7 @@ box(35);
 </example>
 
 <description><![CDATA[
-Defines the dimension of the display window width and height in units of pixels. In a program that has the <b>setup()</b> function, the <b>size()</b> function must be the first line of code inside <b>setup()</b>.<br />
+Defines the dimension of the display window width and height in units of pixels. In a program that has the <b>setup()</b> function, the <b>size()</b> function must be the first line of code inside <b>setup()</b>, and the <b>setup()</b> function must appear in the code tab with the same name as your sketch folder.<br />
 <br />
 The built-in variables <b>width</b> and <b>height</b> are set by the parameters passed to this function. For example, running <b>size(640, 480)</b> will assign 640 to the <b>width</b> variable and 480 to the height <b>variable</b>. If <b>size()</b> is not used, the window will be given a default size of 100 x 100 pixels.<br />
 <br />
