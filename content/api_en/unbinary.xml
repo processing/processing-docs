@@ -17,11 +17,20 @@ String s3 = "00000100";
 println(unbinary(s1));  // Prints "16"
 println(unbinary(s2));  // Prints "8"
 println(unbinary(s3));  // Prints "4"
+
+int i1 = 10000;
+int i2 = 1000;
+int i3 = 100
+println(unbinary(i1));  // Prints "16"
+println(unbinary(i2));  // Prints "8"
+println(unbinary(i3));  // Prints "4"
 ]]></code>
 </example>
 
 <description><![CDATA[
 Converts a <b>String</b> representation of a binary number to its equivalent integer value. For example, <b>unbinary("00001000")</b> will return <b>8</b>.
+
+Alternately, converts an <b>int</b> representation of a binary number to its equivalent integer value. For example, <b>unbinary(1000)</b> will return <b>8</b>.
 ]]></description>
 
 </root>
