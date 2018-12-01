@@ -1,7 +1,7 @@
 /**
  * Radial Gradient. 
  * 
- * Draws are series of concentric circles to create a gradient 
+ * Draws a series of concentric circles to create a gradient 
  * from one color to another.
  */
 
