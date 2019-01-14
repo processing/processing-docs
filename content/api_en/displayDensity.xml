@@ -11,9 +11,12 @@
 <example>
 <image></image>
 <code><![CDATA[
+void settings() {
+  pixelDensity(displayDensity());
+}
+
 void setup() {
   size(100, 100);
-  pixelDensity(displayDensity());
   noStroke();
 }
 
