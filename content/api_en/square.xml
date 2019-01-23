@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>square()</name>
+
+<category>Shape</category>
+
+<subcategory>2D Primitives</subcategory>
+
+<type></type>
+
+<example>
+<image>rect_0.png</image>
+<code><![CDATA[
+square(30, 20, 55);
+]]></code>
+</example>
+
+<description><![CDATA[
+Draws a square to the screen. A square is a four-sided shape with every angle at ninety degrees and each side is the same length. By default, the first two parameters set the location of the upper-left corner, the third sets the width and height. The way these parameters are interpreted, however, may be changed with the <b>rectMode()</b> function.<br />
+
+]]></description>
+
+</root>

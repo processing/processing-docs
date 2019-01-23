@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>circle()</name>
+
+<category>Shape</category>
+
+<subcategory>2D Primitives</subcategory>
+
+<type></type>
+
+<example>
+<image>ellipse_.png</image>
+<code><![CDATA[
+ellipse(56, 46, 55);
+]]></code>
+</example>
+
+<description><![CDATA[
+Draws a circle to the screen. By default, the first two parameters set the location of the center, and the third sets the shape's width and height. The origin may be changed with the <b>ellipseMode()</b> function.
+]]></description>
+
+
+</root>
