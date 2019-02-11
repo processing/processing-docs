@@ -1,7 +1,7 @@
 /**
  * Button. 
  * 
- * Click on one of the colored squares in the 
+ * Click on one of the colored shapes in the 
  * center of the image to change the color of 
  * the background. 
  */
