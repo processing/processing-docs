@@ -34,7 +34,7 @@ text("word", 12, 60);  // Default depth, no z-value specified
 <example>
 <image>text_2.png</image>
 <code><![CDATA[
-String s = "The quick brown fox jumped over the lazy dog.";
+String s = "The quick brown fox jumps over the lazy dog.";
 fill(50);
 text(s, 10, 10, 70, 80);  // Text wraps within text box
 ]]></code>
