@@ -28,6 +28,8 @@ void draw() {
 <example>
 <image></image>
 <code><![CDATA[
+int x = 0;
+
 void setup() {
   fullScreen(P2D, SPAN);
   smooth(4);
