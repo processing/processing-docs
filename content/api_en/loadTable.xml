@@ -11,7 +11,7 @@
 <example>
 <image></image>
 <code><![CDATA[
-// The following short CSV file called "mammals.csv" is parsed 
+// The following short CSV file called "mammals.csv" is parsed
 // in the code below. It must be in the project's "data" folder.
 //
 // id,species,name
@@ -22,20 +22,20 @@
 Table table;
 
 void setup() {
-  
+
   table = loadTable("mammals.csv", "header");
 
-  println(table.getRowCount() + " total rows in table"); 
+  println(table.getRowCount() + " total rows in table");
 
   for (TableRow row : table.rows()) {
-    
+
     int id = row.getInt("id");
     String species = row.getString("species");
     String name = row.getString("name");
-    
+
     println(name + " (" + species + ") has an ID of " + id);
   }
-  
+
 }
 
 // Sketch prints:
@@ -51,7 +51,9 @@ Reads the contents of a file or URL and creates an Table object with its values.
 <br />
 If the file contains a header row, include "header" in the <b>options</b> parameter. If the file does not have a header row, then simply omit the "header" option.<br />
 <br />
-When specifying both a header and the file type as the <b>options</b> parameter, separate the options with commas, as in: <b>loadTable("data.csv", "header, tsv")</b><br />
+Some CSV files contain newline (CR or LF) characters inside cells. This is rare, but adding the "newlines" option will handle them properly. (This is not enabled by default because the parsing code is much slower.)<br />
+<br />
+When specifying multiple options, separate them with commas, as in: <b>loadTable("data.csv", "header, tsv")</b><br />
 <br />
 All files loaded and saved by the Processing API use UTF-8 encoding.
 ]]></description>
