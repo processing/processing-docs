@@ -13,7 +13,7 @@
 <image></image>
 <code><![CDATA[
 import processing.sound.*;
-SinOsc noise;
+SinOsc sine;
 
 void setup() {
   size(640, 360);
