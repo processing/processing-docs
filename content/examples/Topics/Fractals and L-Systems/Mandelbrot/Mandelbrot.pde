@@ -55,7 +55,7 @@ for (int j = 0; j < height; j++) {
       // We suppose z = a+ib
       float aa = a * a;
       float bb = b * b;
-      double abs = Math.sqrt(aa+bb);
+      float abs = sqrt(aa + bb);
       if (abs > max) { // |z| = sqrt(a^2+b^2)
         // Now measure how much we exceeded the maximum: 
         float diffToLast = (float) (abs - absOld);
