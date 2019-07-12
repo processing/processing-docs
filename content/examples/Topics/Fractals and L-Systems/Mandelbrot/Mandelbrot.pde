@@ -49,7 +49,7 @@ for (int j = 0; j < height; j++) {
     float b = y;
     int n = 0;
     float max = 4.0;  // Infinity in our finite world is simple, let's just consider it 4
-    double absOld = 0.0;
+    float absOld = 0.0;
     float convergeNumber = maxiterations; // this will change if the while loop breaks due to non-convergence
     while (n < maxiterations) {
       // We suppose z = a+ib
