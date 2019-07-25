@@ -27,7 +27,7 @@ text("dp", 40, base);  // Draw text on baseline
 </example>
 
 <description><![CDATA[
-Returns ascent of the current font at its current size. This information is useful for determining the height of the font above the baseline. For example, adding the <b>textAscent()</b> and <b>textDescent()</b> values will give you the total height of the line.
+Returns ascent of the current font at its current size. This information is useful for determining the height of the font above the baseline.
 ]]></description>
 
 </root>

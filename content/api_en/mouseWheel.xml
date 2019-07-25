@@ -26,7 +26,7 @@ void mouseWheel(MouseEvent event) {
 </example>
 
 <description><![CDATA[
-The <b>mouseWheel()</b> function returns positive values when the mouse wheel is rotated down (toward the user), and negative values for the other direction (up or away from the user). On OS X with "natural" scrolling enabled, the values are opposite.
+The code within the <b>mouseWheel()</b> event function is run when the mouse wheel is moved. (Some mice don't have wheels and this function is only applicable with mice that have a wheel.) The <b>getCount()</b> function used within <b>mouseWheel()</b> returns positive values when the mouse wheel is rotated down (toward the user), and negative values for the other direction (up or away from the user). On OS X with "natural" scrolling enabled, the values are opposite.
 <br /><br />
 Mouse and keyboard events only work when a program has <b>draw()</b>. Without <b>draw()</b>, the code is only run once and then stops listening for events.
 ]]></description>
