@@ -51,10 +51,10 @@ function draw() {
 
   for(var i=1; i<width; i++) {
     stroke(255);
-    point(i, xvals[i]/3);
+    point(i, map(xvals[i], 0, width, 0, height/3-1));
     stroke(0);
     point(i, height/3+yvals[i]/3);
     stroke(255);
-    line(i, 2*height/3+bvals[i]/3, i, (2*height/3+bvals[i-1]/3));
+    line(i, (2*height/3) + bvals[i], i, (2*height/3) + bvals[i-1]);
   }
 }

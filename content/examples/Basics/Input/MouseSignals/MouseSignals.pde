@@ -11,8 +11,7 @@ int[] xvals;
 int[] yvals;
 int[] bvals;
 
-void setup() 
-{
+void setup() {
   size(640, 360);
   noSmooth();
   xvals = new int[width];
@@ -22,11 +21,10 @@ void setup()
 
 int arrayindex = 0;
 
-void draw()
-{
+void draw() {
   background(102);
   
-  for(int i = 1; i < width; i++) { 
+  for (int i = 1; i < width; i++) { 
     xvals[i-1] = xvals[i]; 
     yvals[i-1] = yvals[i];
     bvals[i-1] = bvals[i];
@@ -34,22 +32,28 @@ void draw()
   // Add the new values to the end of the array 
   xvals[width-1] = mouseX; 
   yvals[width-1] = mouseY;
-  if(mousePressed) {
+  
+  if (mousePressed == true) {
     bvals[width-1] = 0;
   } else {
-    bvals[width-1] = 255;
+    bvals[width-1] = height/3;
   }
   
   fill(255);
   noStroke();
   rect(0, height/3, width, height/3+1);
 
-  for(int i=1; i<width; i++) {
+  for(int i = 1; i < width; i++) {
+    // Draw the x-values
     stroke(255);
-    point(i, map(xvals[i],0,width,0,height/3-1));
+    point(i, map(xvals[i], 0, width, 0, height/3-1));
+    
+    // Draw the y-values
     stroke(0);
     point(i, height/3+yvals[i]/3);
+    
+    // Draw the mouse presses
     stroke(255);
-    line(i, 2*height/3+bvals[i]/3, i, (2*height/3+bvals[i-1]/3));
+    line(i, (2*height/3) + bvals[i], i, (2*height/3) + bvals[i-1]);
   }
 }
