@@ -14,12 +14,12 @@
 PShape s;
 
 void setup() {
-  size(100, 100);
+  size(200, 200, P2D);
 
   // Make a shape
   s = createShape();
   s.beginShape();
-  s.noStroke();
+  //s.noStroke();
 
   // Exterior part of shape
   s.vertex(-50,-50);
@@ -36,11 +36,11 @@ void setup() {
   s.endContour();
 
   // Finish off shape
-  s.endShape();
+  s.endShape(CLOSE);
 }
 
 void draw() {
-  background(52);
+  background(204);
   translate(width/2, height/2);
   s.rotate(0.01);
   shape(s);
