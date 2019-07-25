@@ -42,6 +42,8 @@ The keys included in the ASCII specification (BACKSPACE, TAB, ENTER, RETURN, ESC
 For those familiar with Java, the values for UP and DOWN are simply shorter versions of Java's <b>KeyEvent.VK_UP</b> and <b>KeyEvent.VK_DOWN</b>. Other <b>keyCode</b> values can be found in the Java <a href="http://download.oracle.com/javase/6/docs/api/java/awt/event/KeyEvent.html">KeyEvent</a> reference.
 <br /><br />
 There are issues with how <b>keyCode</b> behaves across different renderers and operating systems. Watch out for unexpected behavior as you switch renderers and operating systems and you are using keys are aren't mentioned in this reference entry.
+<br /><br />
+If you are using P2D or P3D as your renderer, use the <a href="https://jogamp.org/deployment/jogamp-next/javadoc/jogl/javadoc/com/jogamp/newt/event/KeyEvent.html">NEWT KeyEvent constants</a>.
 ]]></description>
 
 </root>
