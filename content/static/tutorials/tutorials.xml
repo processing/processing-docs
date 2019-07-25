@@ -119,12 +119,14 @@
 		<code>true</code>
 	</tutorial>
 	
+<!--
 	<tutorial>
 		<title>Processing in Eclipse</title>
 		<directory>eclipse</directory>
 		<imgs>true</imgs>
 		<code>false</code>
 	</tutorial>
+-->
     
     <tutorial>
 		<title>Electronics</title>
