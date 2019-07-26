@@ -44,8 +44,6 @@ This class allows you low-level access to an audio buffer to create, access, man
 If you want to pre-load your audio sample with an audio file from disk you can do so using the SoundFile subclass.
 ]]></description>
 
-<related>
-SoundFile
-</related>
+<related></related>
 
 </root>

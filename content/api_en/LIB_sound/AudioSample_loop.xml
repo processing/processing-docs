@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>play()</name>
+
+<category>Sound Files</category>
+
+<subcategory></subcategory>
+
+<usage>Web &amp; Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+AudioSample sample;
+
+void setup() {
+  size(640, 360);
+  background(255);
+
+  sample = new AudioSample(this, 100000);
+
+  // Fill it with random numbers (which will make it sound like white noise)
+  for (int i = 0; i < sample.frames(); i++) {
+    sample.write(i, random(-100, 100));
+  }
+  sample.play();
+}
+
+void draw() {
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Starts the playback of the audiosample. Only plays to the end of the audiosample once. If cue() or pause() were called previously, playback will resume from the cued position.
+]]></description>
+
+</root>
