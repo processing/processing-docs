@@ -52,15 +52,15 @@ blend(img, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST);
 <description><![CDATA[
 Blends a region of pixels from one image into another (or in itself again) with full alpha channel support. There is a choice of the following modes to blend the source pixels (A) with the ones of pixels in the destination image (B):<br />
 <br />
-BLEND - linear interpolation of colours: C = A*factor + B<br />
+BLEND - linear interpolation of colors: C = A*factor + B<br />
 <br />
 ADD - additive blending with white clip: C = min(A*factor + B, 255)<br />
 <br />
 SUBTRACT - subtractive blending with black clip: C = max(B - A*factor, 0)<br />
 <br />
-DARKEST - only the darkest colour succeeds: C = min(A*factor, B)<br />
+DARKEST - only the darkest color succeeds: C = min(A*factor, B)<br />
 <br />
-LIGHTEST - only the lightest colour succeeds: C = max(A*factor, B)<br />
+LIGHTEST - only the lightest color succeeds: C = max(A*factor, B)<br />
 <br />
 DIFFERENCE - subtract colors from underlying image.<br />
 <br />
