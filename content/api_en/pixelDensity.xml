@@ -57,9 +57,10 @@ void draw() {
 
 <description><![CDATA[
 This function is new with Processing 3.0. It makes it possible for Processing to render using all of the pixels on high resolutions screens like Apple Retina displays and Windows High-DPI displays. This function can only be run once within a program and it must be used right after <b>size()</b> in a program without a <b>setup()</b> and used within <b>setup()</b> when a program has one.  The <b>pixelDensity()</b> should only be used with hardcoded numbers (in almost all cases this number will be 2) or in combination with <b>displayDensity()</b> as in the third example above.
-
+<br /><br />
+When the pixel density is set to more than 1, it changes all of the pixel operations including the way <b>get()</b>, <b>set()</b>, <b>blend()</b>, <b>copy()</b>, and <b>updatePixels()</b> all work. See the reference for <b>pixelWidth</b> and <b>pixelHeight</b> for more information. 
+<br /><br />
 To use variables as the arguments to <b>pixelDensity()</b> function, place the <b>pixelDensity()</b> function within the <b>settings()</b> function. There is more information about this on the <b>settings()</b> reference page.
-
 ]]></description>
 
 </root>
