@@ -24,12 +24,9 @@ println(str2);  // Prints "CCCP" to the console
 <code><![CDATA[
 // Comparing String objects, see reference below.
 String p = "potato";
-if (p == "potato") {
-  println("p == potato, yep.");  // This will not print
-} 
 // The correct way to compare two Strings
 if (p.equals("potato")) {
-  println("Yes, the contents of p and potato are the same.");
+  println("Yes, the values are the same.");
 }
 ]]></code>
 </example>
