@@ -300,7 +300,7 @@ void draw() {
 }
 </pre>
 
-Although Processing is by no means the most sophisticated environment for displaying and manipulating recorded video, there are some more advanced features available in the video library. There are function sfor obtaining the duration (length measured in seconds) of a video, for speeding it up and slowing it down, and for jumping to a specific point in the video (among others). If you find that performance is sluggish and the video playback is choppy, I would suggest trying the <tt>P2D</tt> or <tt>P3D</tt> <a href="https://processing.org/tutorials/rendering/">renderers</a>.
+Although Processing is by no means the most sophisticated environment for displaying and manipulating recorded video, there are some more advanced features available in the video library. There are functions for obtaining the duration (length measured in seconds) of a video, for speeding it up and slowing it down, and for jumping to a specific point in the video (among others). If you find that performance is sluggish and the video playback is choppy, I would suggest trying the <tt>P2D</tt> or <tt>P3D</tt> <a href="https://processing.org/tutorials/rendering/">renderers</a>.
 <br /><br />
 Following is an example that makes use of <tt>jump()</tt> (jump to a specific point in the video) and <tt>duration()</tt> (returns the length of movie in seconds). In this example, if <tt>mouseX</tt> equals 0, the video jumps to the beginning.  If <tt>mouseX</tt> equals <tt>width</tt>, it jumps to the end. Any other value is in between. The <tt>jump()</tt> function allows you to jump immediately to a point of time within the video. <tt>duration()</tt> returns the total length of the movie in seconds.<br />
 

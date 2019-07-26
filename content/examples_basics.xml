@@ -27,7 +27,7 @@
 		<ex p5="true" file="IntegersFloats.html">Integers and Floats</ex>
 		<ex p5="true" file="TrueFalse.html">True/False</ex>
 		<ex p5="true" file="CharactersStrings.html">Characters and Strings</ex>
-		<ex p5="true" file="VariableScope.html">Variable Scope</ex>
+		<ex file="VariableScope.html">Variable Scope</ex>
 		<ex p5="true" file="DatatypeConversion.html">Datatype Conversion</ex>
 	</cat>
 	<cat label="Arrays">

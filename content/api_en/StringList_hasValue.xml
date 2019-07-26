@@ -21,8 +21,8 @@ void setup() {
   inventory.append("flour");
   inventory.append("tea");
   println(inventory);
-  if (inventory.hasValue("tea") == true) {
-    println("Yes, we have a tea"); 
+  if (inventory.hasValue("tea")) {
+    println("Yes, we have tea"); 
   } else {
     println("Sorry, no tea");
   }
