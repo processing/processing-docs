@@ -20,7 +20,7 @@ println(sa2);  // 'sa2' now contains OH, NY
 </example>
 
 <description><![CDATA[
-Decreases an array by one element and returns the shortened array.
+Decreases a one-dimensional array by one element and returns the shortened array.
 <br /> <br />
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) shorten(originalArray)</em>
 ]]></description>

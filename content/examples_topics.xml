@@ -50,7 +50,7 @@
 		<ex p5="true" file="EdgeDetection.html">Edge Detection</ex>
 		<ex p5="true" file="Convolution.html">Convolution</ex>
 		<ex p5="true" file="Histogram.html">Histogram</ex>
-		<ex p5="true" file="LinearImage.html">Linear Image</ex>
+		<ex file="LinearImage.html">Linear Image</ex>
 		<ex file="Zoom.html">Zoom</ex>
 		<ex file="Explode.html">Explode</ex>
 	</cat>

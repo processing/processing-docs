@@ -23,7 +23,7 @@ println(sa2);
 </example>
 
 <description><![CDATA[
-Expands an array by one element and adds data to the new position. The datatype of the <b>element</b> parameter must be the same as the datatype of the array.<br />
+Expands a one-dimensional array by one element and adds data to the new position. The datatype of the <b>element</b> parameter must be the same as the datatype of the array.<br />
 <br />
 When using an array of objects, the data returned from the function must be cast to the object array's data type. For example: <em>SomeClass[] items = (SomeClass[]) append(originalArray, element)</em>
 ]]></description>
