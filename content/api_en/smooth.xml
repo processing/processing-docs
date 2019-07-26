@@ -75,7 +75,7 @@ The default renderer uses <b>smooth(3)</b> by default. This is bicubic smoothing
 <br /><br />
 With Processing 3.0, <b>smooth()</b> is different than before. It was common to use <b>smooth()</b> and <b>noSmooth()</b> to turn on and off antialiasing within a sketch. Now, because of how the software has changed, <b>smooth()</b> can only be set once within a sketch. It can be used either at the top of a sketch without a <b>setup()</b>, or after the <b>size()</b> function when used in a sketch with <b>setup()</b>. The <b>noSmooth()</b> function also follows the same rules. 
 <br /><br />
-When <b>smooth()</b> is used with a <b>PGraphics</b> object, it should be run right after the object is created with<b>createGraphics()</b>, as shown in the Reference in the third example.
+When <b>smooth()</b> is used with a <b>PGraphics</b> object, it should be run right after the object is created with <b>createGraphics()</b>, as shown in the Reference in the third example.
 ]]></description>
 
 </root>

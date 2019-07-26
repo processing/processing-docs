@@ -11,13 +11,13 @@
 <example>
 <image></image>
 <code><![CDATA[
-
-PShape group;
+PShape house;
 
 void setup() {
+  size(200, 200);
 
   // Make a group PShape
-  group = createShape(GROUP);
+  house = createShape(GROUP);
   
   // Make three shapes
   PShape path = createShape();
@@ -30,21 +30,21 @@ void setup() {
   PShape circle = createShape(ELLIPSE, 0, 0, 20, 20);
   
   // Add all three as children
-  group.addChild(path);
-  group.addChild(rectangle);
-  group.addChild(circle);
+  house.addChild(path);
+  house.addChild(rectangle);
+  house.addChild(circle);
 }
 
 void draw() {
   background(52);
   translate(mouseX, mouseY);
-  shape(group);
+  shape(house);
 }
 ]]></code>
 </example>
 
 <description><![CDATA[
-This is a new reference entry for Processing 2.0. It will be updated shortly. For now, please check the Examples to see how to use this new syntax.
+Adds a child PShape to a parent PShape that is defined as a GROUP. In the reference example, the three shapes <b>path</b>, <b>rectangle</b>, and <b>circle</b> are added to a parent PShape variable named <b>house</b> that is a GROUP.   
 ]]></description>
 
 </root>
