@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>attrib()</name>
+
+<category>Rendering</category>
+
+<subcategory></subcategory>
+
+<type></type>
+
+<example>
+<image></image>
+<code><![CDATA[
+float angle;
+
+void setup() {
+ size(400, 400, P3D);
+ noStroke();
+}
+
+void draw() {
+ background(0);
+
+ pointLight(200, 200, 200, width/2, height/2, -200);
+
+ translate(width/2, height/2);
+ rotateY(angle);
+
+ beginShape(QUADS);
+ normal(0, 0, 1);
+ fill(50, 50, 200);
+
+ // A scalar attribute named brightness, affecting the next two vertices
+ attrib("brightness", 0.1);
+
+ // A vector attribute named tangent, affecting the first vertex
+ attrib("tangent", 0.1, 0.8, 0.1);
+ vertex(-100, 100);
+ // Another tangent vector, affecting the second vertex
+ attrib("tangent", -0.3, 1, 0);
+ vertex(100, 100);
+ fill(200, 50, 50);
+
+ // A new brightness value, affecting the last two vertices
+ attrib("brightness", 0.5);
+
+ attrib("tangent", 0.5, 0.5, 0.1);
+ vertex(100, -100);
+ attrib("tangent", 0.1, -0.9, 0);
+ vertex(-100, -100);
+ endShape();
+
+ angle += 0.01;
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+The <b>attrib()</b> function attaches custom values to each vertex in the scene. By default, Processing handles several per-vertex attributes: position, color, normal, texture coordinates, etc. These attributes are used by the renderer to determine how the geometry will look on the screen as result of applying the built-in shaders that compute texture, lighting, etc. However, if the coder sets a custom shader that does some additional rendering calculations, then she might need to pass additional information to the the shader in the form of custom attributes. These attributes can be of three types: position, normal, color, and other. The first three are meant to specify xyz coordinates, normal coordinates, and color components, respectively. The third type can be use to pass any kind of attribute value.
+]]></description>
+
+</root>
