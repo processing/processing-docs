@@ -45,17 +45,12 @@ A <b>BufferedReader</b> object is used to read files line-by-line as individual 
 Starting with Processing release 0134, all files loaded and saved by the Processing API use UTF-8 encoding. In previous releases, the default encoding for your platform was used, which causes problems when files are moved to other platforms.
 ]]></description>
 
+<syntax></syntax>
+
 <method>
 <mname>readLine()</mname>
 <mdescription>returns a String that is the current line in the text file</mdescription>
 </method>
-
-<syntax></syntax>
-
-<parameter>
-<label></label>
-<description></description>
-</parameter>
 
 <returns></returns>
 
@@ -67,7 +62,7 @@ catch
 
 <availability>1.0</availability>
 
-<type>Function</type>
+<type>Object</type>
 
 <partof>Core</partof>
 

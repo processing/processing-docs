@@ -44,7 +44,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Adds a child PShape to a parent PShape that is defined as a GROUP. In the reference example, the three shapes <b>path</b>, <b>rectangle</b>, and <b>circle</b> are added to a parent PShape variable named <b>house</b> that is a GROUP.   
+Adds a child PShape to a parent PShape that is defined as a GROUP. In the example, the three shapes <b>path</b>, <b>rectangle</b>, and <b>circle</b> are added to a parent PShape variable named <b>house</b> that is a GROUP.   
 ]]></description>
 
 </root>

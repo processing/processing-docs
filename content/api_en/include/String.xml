@@ -107,7 +107,6 @@ String(<c>data</c>, <c>offset</c>, <c>length</c>)
 <cdescription>int: number of characters</cdescription>
 </cparameter>
 
-
 <returns></returns>
 
 <related>
@@ -120,7 +119,5 @@ text()
 <type>Object</type>
 
 <partof>PDE</partof>
-
-
 
 </root>
