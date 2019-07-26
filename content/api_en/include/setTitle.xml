@@ -27,9 +27,9 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Sets the title to appear at the top of the window if the sketch isn't full screen.
+The <b>setTitle()</b> function defines the title to appear at the top of the sketch window.
 <br /><br />
-There are more features of PSurface in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
+There are more features of PSurface documented in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
 ]]></description>
 
 <syntax>

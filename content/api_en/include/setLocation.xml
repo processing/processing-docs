@@ -29,7 +29,7 @@ void draw() {
 <description><![CDATA[
 The <b>setLocation()</b> function defines the position of the Processing sketch in relation to the upper-left corner of the computer screen.
 <br /><br />
-There are more features of PSurface in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
+There are more features of PSurface documented in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
 ]]></description>
 
 <syntax>

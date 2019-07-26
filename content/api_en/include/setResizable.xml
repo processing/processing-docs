@@ -29,7 +29,7 @@ void draw() {
 <description><![CDATA[
 By default, Processing sketches can't be resized. When <b>surface.setResizable(true)</b> is used within a sketch, the window can be resized while it's running.
 <br /><br />
-There are more features of PSurface in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
+There are more features of PSurface documented in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
 ]]></description>
 
 <syntax>
