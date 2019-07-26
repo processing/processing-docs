@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>setResizable()</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<type>function</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(200, 200);
+  surface.setTitle("Hello World!");
+  surface.setResizable(true);
+  surface.setLocation(100, 100);
+}
+
+void draw() {
+  background(204);
+  line(0, 0, width, height);
+  line(width, 0, 0, height); 
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+By default, Processing sketches can't be resized. When <b>surface.setResizable(true)</b> is used within a sketch, the window can be resized while it's running.
+<br /><br />
+There are more features of PSurface in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
+]]></description>
+
+<syntax>
+surface.setResizable(resizable)
+</syntax>
+
+<parameter>
+<label>resizable</label>
+<description><![CDATA[boolean: true to make the surface resizable]]></description>
+</parameter>
+
+<returns>void</returns>
+
+<related>
+</related>
+
+<availability>3.0</availability>
+
+<type>Function</type>
+
+<partof>PDE</partof>
+
+</root>

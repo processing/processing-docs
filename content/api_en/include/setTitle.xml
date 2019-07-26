@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<name>setTitle()</name>
+
+<category>Structure</category>
+
+<subcategory></subcategory>
+
+<type>function</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(200, 200);
+  surface.setTitle("Hello World!");
+  surface.setResizable(true);
+  surface.setLocation(100, 100);
+}
+
+void draw() {
+  background(204);
+  line(0, 0, width, height);
+  line(width, 0, 0, height); 
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+Sets the title to appear at the top of the window if the sketch isn't full screen.
+<br /><br />
+There are more features of PSurface in the <a href="http://processing.github.io/processing-javadocs/core/processing/core/PSurfaceNone.html">Processing JavaDoc.</a> 
+]]></description>
+
+<syntax>
+surface.setTitle(title)
+</syntax>
+
+<parameter>
+<label>title</label>
+<description><![CDATA[String: name of the window]]></description>
+</parameter>
+
+<returns>void</returns>
+
+<related>
+</related>
+
+<availability>3.0</availability>
+
+<type>Function</type>
+
+<partof>PDE</partof>
+
+</root>
