@@ -21,7 +21,7 @@ updatePixels();
 </example>
 
 <description><![CDATA[
-Array containing the values for all the pixels in the display window. These values are of the color datatype. This array is the size of the display window. For example, if the image is 100x100 pixels, there will be 10000 values and if the window is 200x300 pixels, there will be 60000 values.<br />
+The <b>pixels[]</b> array contains the values for all the pixels in the display window. These values are of the color datatype. This array is defined by the size of the display window. For example, if the window is 100 x 100 pixels, there will be 10,000 values and if the window is 200 x 300 pixels, there will be 60,000 values.<br />
 <br />
 Before accessing this array, the data must loaded with the <b>loadPixels()</b> function. Failure to do so may result in a NullPointerException. Subsequent changes to the display window will not be reflected in <b>pixels</b> until <b>loadPixels()</b> is called again. After <b>pixels</b> has been modified, the <b>updatePixels()</b> function must be run to update the content of the display window.
 ]]></description>
