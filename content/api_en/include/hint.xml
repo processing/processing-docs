@@ -6,7 +6,27 @@
 
 <subcategory></subcategory>
 
-<type></type>
+<type>function</type>
+
+<example>
+<image></image>
+<code><![CDATA[
+void setup() {
+  size(200, 200, P3D); 
+  hint(DISABLE_DEPTH_TEST);
+}
+
+void draw() {
+  background(204);
+  pushMatrix();
+  translate(width/2, height/2);
+  rotateY(1);
+  box(60);
+  popMatrix();
+  line(10, 100, 190, 100);
+}
+]]></code>
+</example>
 
 <description><![CDATA[
 This function is used to enable or disable special features that control how graphics are drawn. In the course of developing Processing, we had to make hard decisions about tradeoffs between performance and visual quality. We put significant effort into determining what makes most sense for the largest number of users, and then use functions like <b>hint()</b> to allow people to tune the settings for their particular sketch. Implementing a <b>hint()</b> is a last resort that's used when a more elegant solution cannot be found. Some options might graduate to standard features instead of hints over time, or be added and removed between (major) releases.
@@ -47,5 +67,28 @@ Forces the P3D renderer to draw each shape (including its strokes) separately, i
 <b>ENABLE_STROKE_PERSPECTIVE</b><br />
 Enables stroke geometry (lines and points) to be affected by the perspective, meaning that they will look smaller as they move away from the camera.
 ]]></description>
+
+<syntax>
+hint(which)
+</syntax>
+
+<parameter>
+<label>which</label>
+<description><![CDATA[int: the hint mode to use]]></description>
+</parameter>
+
+<returns>void</returns>
+
+<related>
+PGraphics
+createGraphics()
+size()
+</related>
+
+<availability>1.0</availability>
+
+<type>Function</type>
+
+<partof>PDE</partof>
 
 </root>
