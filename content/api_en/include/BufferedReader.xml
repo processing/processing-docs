@@ -52,7 +52,7 @@ Starting with Processing release 0134, all files loaded and saved by the Process
 <mdescription>returns a String that is the current line in the text file</mdescription>
 </method>
 
-<constructor></constructor>
+<constructor> </constructor>
 
 <returns></returns>
 
