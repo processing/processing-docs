@@ -635,9 +635,10 @@ boolean mouseOverRect() {        // Test if mouse is over square
 <pre>
 // Read data from the serial port and set the position of a servomotor 
 // according to the value
+#include <Servo.h>
 
 Servo myservo;                   // Create servo object to control a servo
-int servoPin = 4;                // Connect yellow servo wire to digital I/O pin 4 
+int servoPin = 3;                // Connect yellow servo wire to digital I/O pin 3 (must be PWM) 
 int val = 0;                     // Data received from the serial port
 
 void setup() {
@@ -672,7 +673,12 @@ void setup() {
   noStroke(); 
   frameRate(10); 
   // Open the port that the board is connected to and use the same speed (9600 bps) 
-  port = new Serial(this, 9600); 
+  port = new Serial(this, 9600);  // Comment this line if it's not the correct port
+  // If the above does not work uncomment the lines below to choose the correct port
+  // List all the available serial ports, preceded by their index number:
+  //printArray(Serial.list());
+  // Instead of 0 input the index number of the port you are using:
+  //port = new Serial(this, Serial.list()[0], 9600);
 } 
 
 void draw() {   
