@@ -1,6 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <curated>
 
+	<software name="Pour Reception" by="Tore Knudsen, Simone Okholm Hansen and Victor Permild" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/pour.jpg</image>
+			<description>
+				‘Pour Reception’ is a playful radio that uses machine learning and tangible computing to challenge our cultural understanding of what an interface is and can be. Two glasses of water are turned into a digital material for the user to explore and appropriate.</description>
+			<location>http://www.toreknudsen.dk/work/pour-reception/</location>
+		 <link href="http://www.toreknudsen.dk/work/pour-reception/">Tore Knudsen</link>
+	 </software>
+
+	<software name="O is not a letter, it’s a circle" by="Gysin&Vanetti" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/digits.jpg</image>
+			<description>
+				Gysin-Vanetti are an artist duo exploring images and patterns using the type geometries of multipurpose displays. Using only prevailing forms, Gysin-Vanetti build images, animations and generate patterns.</description>
+			<location>https://www.creativeapplications.net/processing/gysin-vanetti-o-is-not-a-letter-its-a-circle/</location>
+		 <link href="http://www.gysin-vanetti.com/">Gysin&Vanetti</link>
+		 <link href="https://www.creativeapplications.net/processing/gysin-vanetti-o-is-not-a-letter-its-a-circle/">CreativeApplications.Net</link>
+	 </software>
+
+	<software name="Volume" by="Softlab" scroll="yes" resize="yes" width="1024" height="700">
+		<image>images/volume.jpg</image>
+			<description>
+				Created by NY based art and architecture collective Softlab, ‘Volume’ is an interactive cube of responsive mirrors that redirect light and sound to spatialize and reflect the excitement of surrounding festival goers.</description>
+			<location>http://softlabnyc.com/portfolio/volume/</location>
+		 <link href="http://softlabnyc.com/">Softlab</link>
+	 </software>
+
 	<software name="komorebi" by="Leslie Nooteboom" scroll="yes" resize="yes" width="1024" height="700">
 		<image>images/komorebi.jpg</image>
 			<description>
@@ -268,7 +293,6 @@
 		  </description>
 		  <location>http://markmckeague.com/work/city-symphonies/</location>
 		 <link href="http://markmckeague.com/work/city-symphonies/">Mark McKeague</link>
-		<link href="http://www.creativeapplications.net/maxmsp/city-symphonies-the-future-sound-of-traffic-by-mark-mckeague-di-rca-2012/">More on CreativeApplications.Net</link>
 	</software>
 
 	<software name="Silenc" by="Manas Karambelkar, Momo Miyazaki and Kenneth A. Robertsen" scroll="yes" resize="yes" width="1024" height="700">
@@ -278,7 +302,6 @@
 		  </description>
 		  <location>http://www.flickr.com/photos/kennethaleksander/sets/72157629659743887</location>
 		 <link href="http://www.flickr.com/photos/kennethaleksander/sets/72157629659743887">Flick Page</link>
-		<link href="http://www.creativeapplications.net/processing/silenc-at-ciid-visualisation-of-silent-letters-in-a-language-processing/">CreativeApplications.Net</link>
 	</software>
 
 	<software name="unnamed soundsculpture" by="Daniel Franke & Cedric Kiefer" scroll="yes" resize="yes" width="1024" height="700">
@@ -297,7 +320,6 @@
 		  </description>
 		  <location>http://www.the-product.org/soundmachines</location>
 		 <link href="http://www.the-product.org">The Product</link>
-		<link href="http://www.creativeapplications.net/processing/soundmachines-objects-sound/">CreativeApplications.Net</link>
 	</software>
 
 	<software name="Composition No. 1" by="Visual Editions" scroll="yes" resize="yes" width="1024" height="700">
