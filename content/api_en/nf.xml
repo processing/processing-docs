@@ -26,11 +26,16 @@ String se = nf(e, 5, 3);
 println(se);  // Prints "00040.200"
 String sf = nf(f, 3, 5);
 println(sf);  // Prints "009.01200"
+
+String sf2 = nf(f, 0, 5);
+println(sf2);  // Prints "9.01200"
+String sf3 = nf(f, 0, 2);
+println(sf3);  // Prints "9.01"
 ]]></code>
 </example>
 
 <description><![CDATA[
-Utility function for formatting numbers into strings. There are two versions: one for formatting floats, and one for formatting ints. The values for the <b>digits</b>, <b>left</b>, and <b>right</b> parameters should always be positive integers.<br /><br />As shown in the above example, <b>nf()</b> is used to add zeros to the left and/or right of a number. This is typically for aligning a list of numbers. To <em>remove</em> digits from a floating-point number, use the <b>int()</b>, <b>ceil()</b>, <b>floor()</b>, or <b>round()</b> functions.  
+Utility function for formatting numbers into strings. There are two versions: one for formatting floats, and one for formatting ints. The values for the <b>digits</b> and <b>right</b> parameters should always be positive integers. The <b>left</b> parameter should be positive or 0. If it is zero, only the right side is formatted.<br /><br />As shown in the above example, <b>nf()</b> is used to add zeros to the left and/or right of a number. This is typically for aligning a list of numbers. To <em>remove</em> digits from a floating-point number, use the <b>int()</b>, <b>ceil()</b>, <b>floor()</b>, or <b>round()</b> functions.  
 ]]></description>
 
 </root>
