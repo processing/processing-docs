@@ -1404,6 +1404,34 @@ void retrieveData() {
   JSONObject json = loadJSONObject("http://time.jsontest.com/");
   time = json.getString("time");
 }
+
+
+class Timer {
+
+  int savedTime;
+  boolean running = false;
+  int totalTime;
+
+  Timer(int tempTotalTime) {
+    totalTime = tempTotalTime;
+  }
+
+  void start() {
+    running = true;
+    savedTime = millis();
+  }
+
+  boolean isFinished() {
+    int passedTime = millis() - savedTime;
+    if (running &amp;&amp; passedTime > totalTime) {
+      running = false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+}
 </pre>
 
 <h3>APIs</h3>
