@@ -23,6 +23,7 @@
 			<p class="notice alert hide">Hello, this is a notice!</p>
 
 			<section class="generator">
+
 				<div class="presets">
 					<h3>Presets</h3>
 
@@ -32,13 +33,13 @@
 						<a href="#" class="preset-btn" data-presets='[ "git-pull", "exhibitions" ]'>Filip</a>
 						<a href="#" class="preset-btn" data-presets='[ "git-pull", "tutorials" ]'>Dan</a>
 						<a href="#" class="preset-btn" data-presets='[ "git-pull", "libraries", "tools", "contributions-2-x", "contributions-3-x" ]'>Elie</a>
-						<a href="#" class="preset-btn" data-presets='[ "git-pull", "cover", "environment", "examples", "static-pages", "reference" ]'>Scott</a>
-						<a href="#" class="preset-btn" data-presets='[ "git-pull", "foundation" ]'>Philip</a>
+						<!--<a href="#" class="preset-btn" data-presets='[ "git-pull", "cover", "environment", "examples", "static-pages", "reference" ]'>Scott</a>-->
+						<!--<a href="#" class="preset-btn" data-presets='[ "git-pull", "foundation" ]'>Philip</a>-->
 					</p>
 
 					<p>
-						<a href="#" class="preset-btn everything" data-presets='[ "git-pull", "cover", "reference", "exhibitions", "tutorials", "libraries", "tools", "static-pages", "examples", "environment", "foundation", "contributions-3-x", "contributions-2-x" ]'>Everything</a>
-						<a href="#" class="preset-btn everything" data-presets='[ "git-pull", "cover", "reference", "exhibitions", "tutorials", "libraries", "tools", "static-pages", "examples", "environment", "foundation" ]'>Site</a>
+						<a href="#" class="preset-btn everything" data-presets='[ "git-pull", "cover", "reference", "exhibitions", "tutorials", "libraries", "tools", "static-pages", "examples", "environment", "contributions-3-x", "contributions-2-x" ]'>Everything</a>
+						<a href="#" class="preset-btn everything" data-presets='[ "git-pull", "cover", "reference", "exhibitions", "tutorials", "libraries", "tools", "static-pages", "examples", "environment" ]'>Site</a>
 						<a href="#" class="preset-btn everything" data-presets='[]'>Nothing</a>
 					</p>
 				</div>
@@ -99,10 +100,12 @@
 					</p>
 
 
+					<!--
 					<p>
 						<input type="checkbox" name="option" value="foundation" id="foundation" data-command="foundation">
 						<label for="foundation">Foundation</label>
 					</p>
+				    -->
 
 					<p>
 						<span class="highlight">Contributions</span>
