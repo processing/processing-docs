@@ -8,6 +8,9 @@ If you have found an error in the Processing reference, examples, tutorials, or 
 The [processing](https://github.com/processing/processing) repository contains the source code for Processing itself. (Please use that link to file issues regarding the Processing software.)
 
 ### How to build the Javadoc
-In "build" in the Processing respository type "ant doc"
+
+1) In "build" in the "processing" repo, type "ant doc"
+2) Copy the three generated folders to the "processing-javadocs" repo
+3) Push changes
 
 <!-- Thanks Ben, Casey, and all the contributors for all things Processing! -->
