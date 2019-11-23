@@ -67,7 +67,7 @@ body {
 	-webkit-text-size-adjust: none;
 	
 	font-size			: 100%; 
-    font-size           : 0.79em;
+    font-size           : 0.85em; /* 0.79em; */
 	font-weight			: normal;
 	line-height			: 1.5em;
 	color				: #252525;
@@ -207,6 +207,7 @@ a.large-link:before {
 
 
 /* ================ HEADER ================== */
+
 #header {
 	width: 900px;
 	height: 106px;
@@ -324,6 +325,7 @@ a.large-link:before {
 	position: relative;
 }
 
+
 /* ================ FOOTER ================== */
 
 #footer {
@@ -344,6 +346,7 @@ a.large-link:before {
 	border-top: 1px solid #A6BCCF;
 	padding-top: 10px;
 }
+
 
 /* ================ TYPOGRAPHY ================== */
 
@@ -420,12 +423,11 @@ li {margin-bottom: 1em; }
 .large-header .black { color: #000; }
 .error { color: #f00; margin: 0; }
 
-/* ================ UI Elements ================== */
-
-
 
 /* ================== RANDOM CLASSES =============== */
+
 .clear { clear: both; }
+
 
 /* ================== PAGE SPECIFIC CSS =============== */
 
@@ -574,14 +576,7 @@ dl.network dt { font-style: normal; }
 dl.network dd { margin: 0; }
 dl.network dd.date { color: #999999; margin-bottom: 1em; }
 
-//p.network { margin: 0 23px 1em 0; width:200px; }
-//p.network span.date { color: #999999; }
-
 p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
-
-/**************************************************************** Foundation ***/
-
-.foundation-p { line-height: 0em; } 
 
 
 
@@ -589,8 +584,6 @@ p.exhibition-nav { margin-top: 20px; margin-bottom: 10px; }
 
 
 #Language h5 a { float: left; margin-left: -30px; }
-
-
 
 .skinny {
         margin-left    : 0px;
@@ -775,8 +768,6 @@ div.ref-col {
 
 /**************************************************************** download ***/
 
-/* download */
-
 #Download .download ul { list-style: none; margin: 0; padding: 0; }
 #Download span.version-date { color: #959595; }
 #Download h5 {
@@ -955,16 +946,13 @@ div.ref-col {
 
 /************************************************************** contribute ***/
 
-/*#Contribute h1 { margin-bottom: 0; }*/
 #Contribute .message { margin-top: 0; margin-right: 40px; }
 #Contribute .threecol { float: left; width: 210px; margin-right: 20px; }
 #Contribute .threecol p { margin-bottom: 2em; }
 
 
-
 /************************************************************** learning ***/
 
-/*#Learning  h1 { margin-bottom: 0; margin-top: 0;}*/
 #Learning .message { margin-top: 0; margin-right: 40px; }
 #Learning .threecol { float: left; width: 200px; margin-right: 30px; margin-top: 0px;}
 #Learning .threecol p { margin-bottom: 2em; }
@@ -976,12 +964,9 @@ div.ref-col {
 
 .doc-float { margin-right: 40px;}
 
-
-
 h2 { margin-bottom: 0; margin-top: 0;}
 
 .example-notice { margin: -1.0em 0 2.5em 0; color: #FF3399; clear: both; margin-right: 40px;}
-
 
 #Copyright p { margin-right: 20px; }
 
@@ -1051,7 +1036,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 
 /************************************************************** Books ***/
 
-/*#Books h1 { margin-bottom: 0; margin-top: 0;}*/
 #Books td { vertical-align: top; font-size: 1.0em}
 
 
@@ -1075,9 +1059,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	margin-top: 30px;
 }
 
-
-
-
 #Tools-index h5 { margin-bottom: 0; font-size: 1em; }
 #Tools-index .twocol p { margin-top: 0; }
 .lib-nav { display: block; 
@@ -1096,7 +1077,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Tools h4 { font-size: 1em; margin-bottom: .5em; }
 #Tools h4 a {float:left; margin-left:-30px; martin-top:-5px; }
 
-
 #Tools .threecol { 
 	float: left; 
 	width: 210px; 
@@ -1106,9 +1086,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 .threecol:nth-child(5) { margin: 0 !important; }
 
 
-
 /************************************************************** Library Indices ***/
-
 
 #Libraries .colone {
 	width: 300px;
@@ -1131,9 +1109,7 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Libraries .twocol-alt {
 	width: 330px;
 	float: left; 
-	//background: #cccccc;
 }
-
 
 #Libraries .twocol p { margin-top: 0; }
 
@@ -1159,8 +1135,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 	margin-bottom: 2px;
 }
 
-
-
 #Libraries .lib-nav { display: block; 
 	margin-bottom: 10px; 
 	margin-left: -30px; 
@@ -1171,7 +1145,6 @@ h2 { margin-bottom: 0; margin-top: 0;}
 #Libraries pre { margin-left: 30px; margin-bottom: 30px; }
 
 #Libraries h2 { margin-top: 2em; }
-/*#Libraries h3 { clear: both; margin-bottom: 0; }*/
 
 #Libraries h3 { margin-top: 0; margin-bottom: 0;}
 
@@ -1194,8 +1167,8 @@ h2 { margin-bottom: 0; margin-top: 0;}
 
 
 /************************************************************** environment ***/
-/*#Environment h1 { margin-top: 2em; }*/
-#Environment h5 { margin-top: 3em; }
+
+#Environment h5 { margin-top: 2em; margin-bottom: 1em; }
 #Environment h6 { margin-bottom: 0em; }
 #Environment h5 a { float: left; margin-left: -30px; }
 ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
@@ -1208,31 +1181,22 @@ ul.nostyle { margin: 0; padding: 0; list-style: none outside; }
 
 
 /************************************************************** overview ***/
+
 #Overview .content p,
 #Overview .content ul,
-#Overview .content table {
-	width: 560px;
-}
+#Overview .content table { width: 560px; }
 
 #Foundation .content p,
 #Foundation .content ul,
-#Foundation .content table {
-	width: 560px;
-}
-
+#Foundation .content table { width: 560px; }
 
 #People .content p,
 #People .content ul,
-#People .content table {
-	width: 560px;
-}
+#People .content table { width: 560px; }
 
 #people-f .content p,
 #people-f .content ul,
-#people-f .content table {
-	width: 680px;
-}
-
+#people-f .content table { width: 680px; }
 
 
 /************************************************************** examples ***/
@@ -1242,15 +1206,11 @@ p.doc-float { margin-left: 250px; }
 p.doc { margin-right: 40px; margin-top: 30px;}
 pre.code { clear: both; margin-top: 10px; }
 
-/* #examples-nav { margin-left: -44px; display: relative; } */
 //#examples-nav { margin-left: 0px; display: relative; }
 
 .examples-nav-div { margin-left: -44px; margin-top: -10px; width: 480px; display: relative; align: left; }
 
 #examples-nav img { display: absolute; top: 15px; left: 100px; }
-
-/*#Examples h1 { margin-bottom: 0; }*/
-
 
 div.updateRequired {
 	color:#999;
@@ -1267,7 +1227,9 @@ ul.examples {
 	-webkit-column-count:3; /* Safari and Chrome */
 	column-count:3;
 }
+
 ul.examples li { margin: 0; padding: 0; }
+
 ul.examples ul {
 	list-style: none;
 	padding: 0;
@@ -1275,14 +1237,17 @@ ul.examples ul {
         margin-bottom: 17px;
         width: 100%;
 }
+
 ul.examples ul li {
 	margin: 0;
 }
+
 div.examples-nav {
 	margin-left: -41px;
 	margin-bottom: 17px;
 	position: relative;
 }
+
 div.examples-nav img { position: relative; top: 11px; }
 
   .donate-card-row { 
@@ -1295,6 +1260,7 @@ div.examples-nav img { position: relative; top: 11px; }
     margin-left: -10px;
     margin-right: -10px;
   }
+
   .donate-card {
     text-align: center;
     width: 30%;
@@ -1312,28 +1278,35 @@ div.examples-nav img { position: relative; top: 11px; }
     -ms-flex-pack: center;
     justify-content: center;
   }
+  
   .donate-card h4 {
     line-height: 1.3;
     margin: 0 0 0.5em 0;
     color: #2c7bb5;
   }
+  
   a.donate-card {
     color: #252525;
   }
+  
   a.donate-card:hover {
     border-color: #2c7bb5;
   }
+  
   .donate-list {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
+  
   .donate-list li {
     margin-bottom: 0;
   }
+  
   .donate-list li:before {
     content: '» '
   }
+
   .donate-content hr {
     margin-top: 2em;
     margin-bottom: 2em;
