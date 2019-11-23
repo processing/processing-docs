@@ -28,9 +28,9 @@ $page->content(file_get_contents($source."overview.html"));
 writeFile('overview/index.html', $page->out());
 #copydirr($source.'/images', $path.'/images');
 
-$page = new Page("Foundation", "Foundation");
-$page->content(file_get_contents($source."foundation.html"));
-writeFile('foundation/index.html', $page->out());
+#$page = new Page("Foundation", "Foundation");
+#$page->content(file_get_contents($source."foundation.html"));
+#writeFile('foundation/index.html', $page->out());
 
 $page = new Page("People", "People");
 $page->content(file_get_contents($source."people.html"));
@@ -65,21 +65,21 @@ $page->content(file_get_contents($source."copyright.html"));
 writeFile('copyright.html', $page->out());
 
 // Copy over the images for the shop index
-if (!is_dir($path.'shop')) { 
-	mkdir($path.'shop', 0757);
-}
+#if (!is_dir($path.'shop')) { 
+#	mkdir($path.'shop', 0757);
+#}
 
-if (!is_dir($path.'shop/imgs')) { 
-	mkdir($path.'shop/imgs', 0757); 
-}
+#if (!is_dir($path.'shop/imgs')) { 
+#	mkdir($path.'shop/imgs', 0757); 
+#}
 
-if (is_dir($path.'shop/imgs')) { 
-	copydirr($source.'shop/imgs', $path.'shop/imgs', null, 0757, false);
-}
+#if (is_dir($path.'shop/imgs')) { 
+#	copydirr($source.'shop/imgs', $path.'shop/imgs', null, 0757, false);
+#}
 
-$page = new Page("Shop", "Shop");
-$page->content(file_get_contents($source.'shop/'."index.html"));
-writeFile('shop/index.html', $page->out());
+#$page = new Page("Shop", "Shop");
+#$page->content(file_get_contents($source.'shop/'."index.html"));
+#writeFile('shop/index.html', $page->out());
 
 $benchmark_end = microtime_float();
 $execution_time = round($benchmark_end - $benchmark_start, 4);
