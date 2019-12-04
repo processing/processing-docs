@@ -150,13 +150,13 @@ a.large-link:before {
 	background: linear-gradient(to bottom, #1d517e, #d1f94e);
 }
 
-#ribbon ul {
+#ribbon #ribbon-announce ul {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-#ribbon ul.left {
+#ribbon #ribbon-announce ul.left {
 	float: left;
 }
 
@@ -168,7 +168,7 @@ a.large-link:before {
 	float: right;
 }
 
-#ribbon ul li {
+#ribbon #ribbon-announce ul li {
 	display: inline-block;
 	margin: 0;
 	padding: 6px 10px 5px 10px;
@@ -177,7 +177,7 @@ a.large-link:before {
 	background-color: rgba(0, 0, 0, 0.12);
 }
 
-#ribbon ul.left li {
+#ribbon #ribbon-announce ul.left li {
 	float: left;
 	border-right: 1px solid #1a1a1a;
 }
@@ -198,16 +198,16 @@ a.large-link:before {
 	font-weight: bold;
 }
 
-#ribbon ul li a {
+#ribbon #ribbon-announce ul li a {
 	color: #b2b2b2;
 }
 
-#ribbon ul li.highlight {
+#ribbon #ribbon-announce ul li.highlight {
 	background-color: black;
 	border-right: none;
 }
 
-#ribbon ul li.highlight a {
+#ribbon #ribbon-announce ul li.highlight a {
 	color: white;
 	font-weight: bold;
 }
