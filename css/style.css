@@ -166,8 +166,8 @@ a.large-link:before {
 	padding: 0;
 }
 
-#ribbon-announce ul.left {
-	float: left;
+#ribbon-announce ul.center {
+	float: center;
 }
 
 #ribbon ul.right {
@@ -203,7 +203,6 @@ a.large-link:before {
 
 #ribbon-announce ul.center li {
 	float: center;
-	border-right: 1px solid #1a1a1a;
 }
 
 #ribbon ul.right li {
@@ -239,10 +238,6 @@ a.large-link:before {
 #ribbon ul li.highlight a {
 	color: white;
 	font-weight: bold;
-}
-
-#ribbon-announce ul li a {
-	color: #b2b2b2;
 }
 
 
