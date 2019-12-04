@@ -76,6 +76,7 @@ body {
 img { border: 0px solid #000000; }
 
 a {
+	cursor: pointer;
 	text-decoration: none;
 	font-weight: normal;
 	color: #2c7bb5;
