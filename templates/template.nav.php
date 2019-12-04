@@ -23,7 +23,8 @@ $pages = array(
         'Environment' => array('/reference/environment/', 2), 
         
     'Download'        => array('/download/', 1),
-    'Donate'        => array('/download/support.html', 1),
+    #'Donate'        => array('/download/support.html', 1),
+    'Donate'          => array('https://donorbox.org/supportpf2019-fundraising-campaign', 1),
     
     'Shop'            => array('/shop/', 1),
     

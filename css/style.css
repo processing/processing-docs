@@ -138,6 +138,7 @@ a.large-link:before {
 /* ================ RIBBON ================== */
 
 #ribbon {
+	text-align: center;
 	width: 900px;
 	height: auto;
 	background-color: #1d517e;
