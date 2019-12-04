@@ -201,8 +201,8 @@ a.large-link:before {
 	border-right: 1px solid #1a1a1a;
 }
 
-#ribbon-announce ul.left li {
-	float: left;
+#ribbon-announce ul.center li {
+	float: center;
 	border-right: 1px solid #1a1a1a;
 }
 
@@ -226,6 +226,11 @@ a.large-link:before {
 	color: #b2b2b2;
 }
 
+#ribbon-announce ul li a {
+    color: white;
+	font-weight: bold;
+}
+
 #ribbon ul li.highlight {
 	background-color: black;
 	border-right: none;
@@ -238,16 +243,6 @@ a.large-link:before {
 
 #ribbon-announce ul li a {
 	color: #b2b2b2;
-}
-
-#ribbon-announce ul li.highlight {
-	background-color: black;
-	border-right: none;
-}
-
-#ribbon-announce ul li.highlight a {
-	color: white;
-	font-weight: bold;
 }
 
 
