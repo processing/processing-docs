@@ -143,6 +143,13 @@ a.large-link:before {
 	background: linear-gradient(to bottom, #003b6e, #1d517e);
 }
 
+#ribbon-announce {
+	width: 900px;
+	height: auto;
+	background-color: #d1f94e;
+	background: linear-gradient(to bottom, #1d517e, #d1f94e);
+}
+
 #ribbon ul {
 	display: inline-block;
 	margin: 0;
