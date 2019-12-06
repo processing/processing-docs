@@ -214,6 +214,7 @@ a.large-link:before {
 	height: auto;
 	background-color: #d1f94e;
 	background: linear-gradient(to bottom, #1d517e, #d1f94e);
+	margin-bottom: 0px; /* added when placed below the header */
 }
 
 #ribbon-announce ul {
@@ -248,7 +249,7 @@ a.large-link:before {
 #header {
 	width: 900px;
 	height: 106px;
-	margin-bottom: 30px;
+	margin-bottom: 0px; /* was 30px, but changed to 0 when ribbon placed below header */
 	overflow: hidden;
 	background: #0c2033 url(../img/processing-web.png) center center no-repeat;
 	background-position: bottom;
