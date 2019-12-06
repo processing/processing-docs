@@ -214,7 +214,7 @@ a.large-link:before {
 	height: auto;
 	background-color: #d1f94e;
 	background: linear-gradient(to bottom, #1d517e, #d1f94e);
-	margin-bottom: 0px; /* added when placed below the header */
+	margin-bottom: 30px; /* added when placed below the header */
 }
 
 #ribbon-announce ul {
