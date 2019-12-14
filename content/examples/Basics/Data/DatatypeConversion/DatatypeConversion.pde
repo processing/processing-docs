@@ -16,7 +16,7 @@ textFont(createFont("SourceCodePro-Regular.ttf",24));
 char c;    // Chars are used for storing alphanumeric symbols
 float f;   // Floats are decimal numbers
 int i;     // Integers are values between 2,147,483,647 and -2147483648
-byte b;    // Bytes are values between -128 and 128
+byte b;    // Bytes are values between -128 and 127
 
 c = 'A';
 f = float(c);      // Sets f = 65.0
