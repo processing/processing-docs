@@ -228,7 +228,7 @@ if __name__ == "__main__":
 
         key = missing_key(exports)
         if key:
-          print 'Error reading', prop_url
+          print 'Error missing key', prop_url
           print "  No value for '%s'. Maybe it's a 404 page" % key
           continue
         # if no download is explicitly provided, use the default download url
