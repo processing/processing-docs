@@ -9,8 +9,6 @@ $pages = array(
     'Learning'        => array('/learning/', 1), 
     	'Tutorials'   => array('/tutorials/', 2),  
     	'Examples'      => array('/examples/', 2),  
-     #   '3D'          => array('/learning/3d/', 2),  
-     #   'Library'     => array('/learning/library/', 2),
         'Books'       	  => array('/books/', 2),
         'Handbook'        => array('/handbook/', 2),
 
@@ -24,7 +22,6 @@ $pages = array(
         
     'Download'        => array('/download/', 1),
     'Donate'        => array('/download/support.html', 1),
-    #'Donate'          => array('https://donorbox.org/supportpf2019-fundraising-campaign', 1),
     
     'Shop'            => array('/shop/', 1),
     
