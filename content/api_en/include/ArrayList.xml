@@ -64,7 +64,7 @@ An <b>ArrayList</b> stores a variable number of objects. This is similar to maki
 <br />
 An ArrayList is a resizable-array implementation of the Java List interface. It has many methods used to control and search its contents. For example, the length of the <b>ArrayList</b> is returned by its <b>size()</b> method, which is an integer value for the total number of elements in the list. An element is added to an <b>ArrayList</b> with the <b>add()</b> method and is deleted with the <b>remove()</b> method. The <b>get()</b> method returns the element at the specified position in the list. (See the above example for context.)<br />
 <br />
-For a list of the numerous <b>ArrayList</b> features, please read the <a href="http://download.oracle.com/javase/1,5.0/docs/api/java/util/ArrayList.html">Java reference description</a>.
+For a list of the numerous <b>ArrayList</b> features, please read the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">Java reference description</a>.
 ]]></description>
 
 <syntax></syntax>
