@@ -35,6 +35,8 @@ point(30, 75, -50);
 Draws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second value is the vertical value for the point, and the optional third value is the depth value. Drawing this shape in 3D with the <b>z</b> parameter requires the P3D parameter in combination with <b>size()</b> as shown in the above example.
 <br /><br />
 Use <b>stroke()</b> to set the color of a <b>point()</b>.
+<br /><br />
+Point appears round with the default <b>strokeCap(ROUND)</b> and square with <b>strokeCap(PROJECT)</b>. Points are invisible with <b>strokeCap(SQUARE)</b> (no cap).
 ]]></description>
 
 </root>

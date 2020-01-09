@@ -23,6 +23,8 @@ line(20, 70, 80, 70);
 
 <description><![CDATA[
 Sets the style for rendering line endings. These ends are either squared, extended, or rounded, each of which specified with the corresponding parameters: SQUARE, PROJECT, and ROUND. The default cap is ROUND.
+<br /><br />
+To make <b>point()</b> appear square, use <b>strokeCap(PROJECT)</b>. Using <b>strokeCap(SQUARE)</b> (no cap) causes points to become invisible.
 ]]></description>
 
 </root>
