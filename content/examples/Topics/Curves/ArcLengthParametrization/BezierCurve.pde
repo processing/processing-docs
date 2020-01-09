@@ -110,7 +110,7 @@ class BezierCurve {
     if (index < 0) {
       // if the index is negative, exact length is not in the table,
       // but it tells us where it should be in the table
-      // see http://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html#binarySearch(float[], float)
+      // see https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#binarySearch-float:A-float-
       
       // interpolate two surrounding indexes
       int nextIndex = -(index + 1);
