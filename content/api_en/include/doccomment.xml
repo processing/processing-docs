@@ -22,7 +22,9 @@ line(50, 0, 50, 100);
 </example>
 
 <description><![CDATA[
-Explanatory notes embedded within the code and written to the "index.html" file created when the code is exported. Doc comments (documentation comments) are used for sharing a description of your sketch when the program is exported. Export the code by hitting the "Export" button on the Toolbar.
+Explanatory notes embedded within the code. Doc comments (documentation comments) are used to describe and document your sketch, classes, and methods. Comments are ignored by the compiler.
+<br><br>
+Doc comments may be converted into browseable documentation using external editors and tools such as the command line javadoc, doc generators such as Doxygen, or IDEs such as Eclipse, Netbeans, or IntelliJ IDEA.
 ]]></description>
 
 <syntax>
