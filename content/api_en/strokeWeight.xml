@@ -22,6 +22,8 @@ line(20, 70, 80, 70);
 
 <description><![CDATA[
 Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.
+<br /><br />
+Using point() with strokeWeight(1) or smaller may draw nothing to the screen, depending on the graphics settings of the computer. Workarounds include setting the pixel using <b>set()</s> or drawing the point using either <b>circle()</b> or <b>square()</b>.
 ]]></description>
 
 </root>
