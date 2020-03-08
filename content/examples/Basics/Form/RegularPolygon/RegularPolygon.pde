@@ -24,7 +24,7 @@ void draw() {
   pushMatrix();
   translate(width*0.5, height*0.5);
   rotate(frameCount / 50.0);
-  polygon(0, 0, 80, 20);  // Icosahedron
+  polygon(0, 0, 80, 20);  // Icosagon
   popMatrix();
   
   pushMatrix();
