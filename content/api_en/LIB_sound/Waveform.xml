@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+
+<name>Waveform</name>
+
+<category>Sound</category>
+
+<subcategory>Analyzer</subcategory>
+
+<usage>Application</usage>
+
+<example>
+<image></image>
+<code><![CDATA[
+import processing.sound.*;
+
+SoundFile sample;
+Waveform waveform;
+
+int samples = 100;
+
+public void setup()
+{
+  size(640, 360);
+  background(255);
+
+  sample = new SoundFile(this, "beat.aiff");
+  sample.loop();
+
+  waveform = new Waveform(this, samples);
+  waveform.input(sample);
+}
+
+public void draw()
+{
+  background(0);
+  stroke(255);
+  strokeWeight(2);
+  noFill();
+
+
+  waveform.analyze();
+
+  beginShape();
+  for(int i = 0; i < samples; i++)
+  {
+    vertex(
+      map(i, 0, samples, 0, width),
+      map(waveform.data[i], -1, 1, 0, height)
+    );
+  }
+  endShape();
+}
+]]></code>
+</example>
+
+<description><![CDATA[
+  This is a Waveform analyzer. It returns the waveform of the of an audio stream the moment it is queried with the analyze() method.
+]]></description>
+
+<syntax>
+</syntax>
+
+<parameters>
+
+</parameters>
+
+<method>
+<mname>input()</mname>
+<mdescription>Define the audio input for the analyzer</mdescription>
+</method>
+
+<method>
+<mname>analyze()</mname>
+<mdescription>Gets the last nsamples captured from the connected input sound source, writes them
+ into this Waveform's `data` array, and returns it.</mdescription>
+</method>
+
+<method>
+<mname>stop()</mname>
+<mdescription>Stop the analyzer</mdescription>
+</method>
+
+<method>
+<mname>data</mname>
+<mdescription>`float[]` of length nsamples, with the sample amplitudes between `-1` and `1`</mdescription>
+</method>
+
+<constructor>
+Waveform(<c>parent</c>)
+</constructor>
+
+<cparameter>
+<clabel>parent</clabel>
+<cdescription>PApplet: typically use "this"</cdescription>
+</cparameter>
+
+<returns></returns>
+
+<related>
+</related>
+
+<type>Object</type>
+
+<partof>Library</partof>
+
+</root>
