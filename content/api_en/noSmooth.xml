@@ -38,7 +38,7 @@ void draw() {
 </example>
 
 <description><![CDATA[
-Draws all geometry and fonts with jagged (aliased) edges and images when hard edges between the pixels when enlarged rather than interpoloating pixels.  Note that <b>smooth()</b> is active by default, so it is necessary to call <b>noSmooth()</b> to disable smoothing of geometry, fonts, and images. Since the release of Processing 3.0, the <b>noSmooth()</b> function can only be run once for each sketch, either at the top of a sketch without a <b>setup()</b>, or after the <b>size()</b> function when used in a sketch with <b>setup()</b>. See the examples above for both scenarios.
+Draws all geometry and fonts with jagged (aliased) edges and images with hard edges between the pixels when enlarged rather than interpolating pixels.  Note that <b>smooth()</b> is active by default, so it is necessary to call <b>noSmooth()</b> to disable smoothing of geometry, fonts, and images. Since the release of Processing 3.0, the <b>noSmooth()</b> function can only be run once for each sketch, either at the top of a sketch without a <b>setup()</b>, or after the <b>size()</b> function when used in a sketch with <b>setup()</b>. See the examples above for both scenarios.
 ]]></description>
 
 </root>
