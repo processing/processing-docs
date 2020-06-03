@@ -19,25 +19,27 @@ int dataIn;
 void setup() {
   size(200, 200);
   myClient = new Client(this, "127.0.0.1", 5204);
+  noLoop();
 }
 
-void draw() { }  // Empty draw keeps the program running
+void draw() { 
+  background(dataIn);
+}
 
-// ClientEvent message is generated when the server 
-// sends data to an existing client.
+// ClientEvent message is generated when the 
+// server sends data to an existing client.
 void clientEvent(Client someClient) {
   print("Server Says:  ");
-  dataIn = myClient.read();
+  dataIn = someClient.read();
   println(dataIn);
-  background(dataIn);
-
+  redraw();
 }
 
 ]]></code>
 </example>
 
 <description><![CDATA[
-This function is called when a server sends a byte to an existing Client object.
+This function is called when a server sends a value to an existing Client object.
 ]]></description>
 
 <syntax>
