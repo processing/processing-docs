@@ -20,9 +20,10 @@ if (a == b) {
 </example>
 
 <description><![CDATA[
-Determines if two values are equivalent. Please note the equality operator (==) is different from the assignment operator (=) and although they look similar, they have a different use. If you're comparing two variables, the quality operator (==) only works with primitive data types like int, float, and char and not with composite data types like Array, Table, and PVector<br /> 
+Determines if two values are equivalent. Please note the equality operator (==) is different from the assignment operator (=) and although they look similar, they have a different use. If you're comparing two variables, the equality operator (==) only works with primitive data types like int, boolean, and char. It doesn't work with composite data types like Array, Table, and PVector.<br /> 
 <br />
-Note that when comparing String objects, you must use the <b>equals()</b> method instead of == to compare their contents. See the reference for String or the <a href="https://github.com/processing/processing/wiki/Troubleshooting#why-dont-these-strings-equal">troubleshooting</a> note for more explanation.
+Note that when comparing String objects, you must use the <b>equals()</b> method instead of ==. See the reference for String or the <a href="https://github.com/processing/processing/wiki/Troubleshooting#why-dont-these-strings-equal">troubleshooting</a> note for more explanation.<br /> 
+<br />
 ]]></description>
 
 <syntax>
