@@ -75,15 +75,12 @@
 		<ex file="TextureCube.html">Texture Cube</ex>
 	</cat>
 	<cat label="Simulate">
-		<ex p5="true" file="Spring.html">Spring</ex>
-		<ex p5="true" file="Springs.html">Springs</ex>
-		<ex p5="true" file="Chain.html">Chain</ex>
-		<ex file="SoftBody.html">Soft Body</ex>
-		<ex p5="true" file="Flocking.html">Flocking</ex>
 		<ex p5="true" file="SimpleParticleSystem.html">Simple Particle System</ex>
 		<ex p5="true" file="MultipleParticleSystems.html">Multiple Particle Systems</ex>
 		<ex p5="true" file="ForcesWithVectors.html">Forces With Vectors</ex>
 		<ex p5="true" file="SmokeParticleSystem.html">Smoke Particle System</ex>
+		<ex p5="true" file="Flocking.html">Flocking</ex>
+		<ex file="SoftBody.html">Soft Body</ex>
 	</cat>
 	<cat label="Vectors">
 		<ex p5="true" file="BouncingBall.html">Bouncing Ball</ex>
