@@ -233,140 +233,140 @@
 
 
 	<pre>
-<span style="color: #666666;">/**</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;1</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Five&nbsp;sine&nbsp;waves&nbsp;are&nbsp;layered&nbsp;to&nbsp;construct&nbsp;a&nbsp;cluster&nbsp;of&nbsp;frequencies.&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;method&nbsp;is&nbsp;called&nbsp;additive&nbsp;synthesis.&nbsp;Use&nbsp;the&nbsp;mouse&nbsp;position&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;inside&nbsp;the&nbsp;display&nbsp;window&nbsp;to&nbsp;detune&nbsp;the&nbsp;cluster.</span>
-<span style="color: #666666;">&nbsp;*/</span>
+/**
+ * Processing Sound Library, Example 1
+ * 
+ * Five sine waves are layered to construct a cluster of frequencies. 
+ * This method is called additive synthesis. Use the mouse position 
+ * inside the display window to detune the cluster.
+ */
 
-<span style="color: #33997E;">import</span> processing.sound.*;
+import processing.sound.*;
 
-SinOsc[]&nbsp;sineWaves;&nbsp;<span style="color: #666666;">// Array of sines</span>
-<span style="color: #E2661A;">float</span>[] sineFreq; <span style="color: #666666;">// Array of frequencies</span>
-<span style="color: #E2661A;">int</span> numSines = 5; <span style="color: #666666;">// Number of oscillators to use</span>
+SinOsc[] sineWaves; // Array of sines
+float[] sineFreq; // Array of frequencies
+int numSines = 5; // Number of oscillators to use
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {  
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+void setup() {  
+  size(640, 360);
+  background(255);
 
-&nbsp;&nbsp;sineWaves&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SinOsc[numSines]; <span style="color: #666666;">// Initialize the oscillators</span>
-&nbsp;&nbsp;sineFreq&nbsp;=&nbsp;<span style="color: #33997E;">new</span> <span style="color: #E2661A;">float</span>[numSines]; <span style="color: #666666;">// Initialize array for Frequencies</span>
+  sineWaves = new SinOsc[numSines]; // Initialize the oscillators
+  sineFreq = new float[numSines]; // Initialize array for Frequencies
 
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; numSines; i++) {
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Calculate the amplitude for each oscillator</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> sineVolume = (1.0 / numSines) / (i + 1);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Create the oscillators</span>
-&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SinOsc(<span style="color: #33997E;">this</span>);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Start Oscillators</span>
-&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].play();
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Set the amplitudes for all oscillators</span>
-&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].amp(sineVolume);
-&nbsp;&nbsp;}
+  for (int i = 0; i < numSines; i++) {
+    // Calculate the amplitude for each oscillator
+    float sineVolume = (1.0 / numSines) / (i + 1);
+    // Create the oscillators
+    sineWaves[i] = new SinOsc(this);
+    // Start Oscillators
+    sineWaves[i].play();
+    // Set the amplitudes for all oscillators
+    sineWaves[i].amp(sineVolume);
+  }
 }
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
-&nbsp;&nbsp;<span style="color: #666666;">//Map mouseY from 0 to 1</span>
-&nbsp;&nbsp;<span style="color: #E2661A;">float</span> yoffset = <span style="color: #006699;">map</span>(<span style="color: #D94A7A;">mouseY</span>, 0, <span style="color: #D94A7A;">height</span>, 0, 1);
-&nbsp;&nbsp;<span style="color: #666666;">//Map mouseY logarithmically to 150 - 1150 to create a base frequency range</span>
-&nbsp;&nbsp;<span style="color: #E2661A;">float</span> frequency = <span style="color: #006699;">pow</span>(1000, yoffset) + 150;
-&nbsp;&nbsp;<span style="color: #666666;">//Use mouseX mapped from -0.5 to 0.5 as a detune argument</span>
-&nbsp;&nbsp;<span style="color: #E2661A;">float</span> detune = <span style="color: #006699;">map</span>(<span style="color: #D94A7A;">mouseX</span>, 0, <span style="color: #D94A7A;">width</span>, -0.5, 0.5);
+void draw() {
+  //Map mouseY from 0 to 1
+  float yoffset = map(mouseY, 0, height, 0, 1);
+  //Map mouseY logarithmically to 150 - 1150 to create a base frequency range
+  float frequency = pow(1000, yoffset) + 150;
+  //Use mouseX mapped from -0.5 to 0.5 as a detune argument
+  float detune = map(mouseX, 0, width, -0.5, 0.5);
 
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; numSines; i++) { 
-&nbsp;&nbsp;&nbsp;&nbsp;sineFreq[i]&nbsp;=&nbsp;frequency&nbsp;*&nbsp;(i&nbsp;+&nbsp;1&nbsp;*&nbsp;detune);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Set the frequencies for all oscillators</span>
-&nbsp;&nbsp;&nbsp;&nbsp;sineWaves[i].freq(sineFreq[i]);
-&nbsp;&nbsp;}
+  for (int i = 0; i < numSines; i++) { 
+    sineFreq[i] = frequency * (i + 1 * detune);
+    // Set the frequencies for all oscillators
+    sineWaves[i].freq(sineFreq[i]);
+  }
 }
 	</pre>
 
 	<hr />
 
 	<pre>
-<span style="color: #666666;">/**</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;2</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;sketch&nbsp;shows&nbsp;how&nbsp;to&nbsp;use&nbsp;envelopes&nbsp;and&nbsp;oscillators.&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Envelopes&nbsp;describe&nbsp;to&nbsp;course&nbsp;of&nbsp;amplitude&nbsp;over&nbsp;time.&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;The&nbsp;Sound&nbsp;library&nbsp;provides&nbsp;an&nbsp;ASR&nbsp;envelope&nbsp;which&nbsp;stands&nbsp;for&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;attack,&nbsp;sustain,&nbsp;release.&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.________</span>
-<span style="color: #666666;">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
-<span style="color: #666666;">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---</span>
-<span style="color: #666666;">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;</span>
-<span style="color: #666666;">&nbsp;*/</span>
+/**
+ * Processing Sound Library, Example 2
+ * 
+ * This sketch shows how to use envelopes and oscillators. 
+ * Envelopes describe to course of amplitude over time. 
+ * The Sound library provides an ASR envelope which stands for 
+ * attack, sustain, release. 
+ * 
+ *       .________
+ *      .          ---
+ *     .              --- 
+ *    .                  ---
+ *    A       S        R 
+ */
 
-<span style="color: #33997E;">import</span> processing.sound.*;
+import processing.sound.*;
 
-<span style="color: #666666;">//&nbsp;Oscillator&nbsp;and&nbsp;envelope&nbsp;</span>
-TriOsc&nbsp;triOsc;
-Env&nbsp;env;&nbsp;
+TriOsc triOsc;
+Env env; 
 
-<span style="color: #666666;">//&nbsp;Times&nbsp;and&nbsp;levels&nbsp;for&nbsp;the&nbsp;ASR&nbsp;envelope</span>
-<span style="color: #E2661A;">float</span> attackTime = 0.001;
-<span style="color: #E2661A;">float</span> sustainTime = 0.004;
-<span style="color: #E2661A;">float</span> sustainLevel = 0.2;
-<span style="color: #E2661A;">float</span> releaseTime = 0.2;
+// Times and levels for the ASR envelope
+float attackTime = 0.001;
+float sustainTime = 0.004;
+float sustainLevel = 0.3;
+float releaseTime = 0.2;
 
-<span style="color: #666666;">//&nbsp;This&nbsp;is&nbsp;an&nbsp;octave&nbsp;in&nbsp;MIDI&nbsp;notes.</span>
-<span style="color: #E2661A;">int</span>[] midiSequence = { 
-&nbsp;&nbsp;60,&nbsp;61,&nbsp;62,&nbsp;63,&nbsp;64,&nbsp;65,&nbsp;66,&nbsp;67,&nbsp;68,&nbsp;69,&nbsp;70,&nbsp;71,&nbsp;72
-};&nbsp;
+// This is an octave in MIDI notes.
+int[] midiSequence = { 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72 }; 
 
-<span style="color: #666666;">//&nbsp;Set&nbsp;the&nbsp;duration&nbsp;between&nbsp;the&nbsp;notes</span>
-<span style="color: #E2661A;">int</span> duration = 200;
-<span style="color: #666666;">//&nbsp;Set&nbsp;the&nbsp;note&nbsp;trigger</span>
-<span style="color: #E2661A;">int</span> trigger = 0; 
+// Play a new note every 200ms
+int duration = 200;
 
-<span style="color: #666666;">//&nbsp;An&nbsp;index&nbsp;to&nbsp;count&nbsp;up&nbsp;the&nbsp;notes</span>
-<span style="color: #E2661A;">int</span> note = 0; 
+// This variable stores the point in time when the next note should be triggered
+int trigger = millis(); 
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+// An index to count up the notes
+int note = 0; 
 
-&nbsp;&nbsp;<span style="color: #666666;">// Create triangle wave and envelope </span>
-&nbsp;&nbsp;triOsc&nbsp;=&nbsp;<span style="color: #33997E;">new</span> TriOsc(<span style="color: #33997E;">this</span>);
-&nbsp;&nbsp;env&nbsp;&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Env(<span style="color: #33997E;">this</span>);
+void setup() {
+  size(640, 360);
+  background(255);
+
+  // Create triangle wave and start it
+  triOsc = new TriOsc(this);
+
+  // Create the envelope 
+  env = new Env(this);
 }
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() { 
+void draw() { 
 
-&nbsp;&nbsp;<span style="color: #666666;">// If value of trigger is equal to the computer clock and if not all </span>
-&nbsp;&nbsp;<span style="color: #666666;">// notes have been played yet, the next note gets triggered.</span>
-&nbsp;&nbsp;<span style="color: #669900;">if</span> ((<span style="color: #006699;">millis</span>() &gt; trigger) &amp;&amp; (note&lt;midiSequence.<span style="color: #33997E;">length</span>)) {
+  // If the determined trigger moment in time matches up with the computer clock and
+  // the sequence of notes hasn't been finished yet, the next note gets played.
+  if ((millis() > trigger) && (note&lt;midiSequence.length)) {
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// midiToFreq transforms the MIDI value into a frequency in Hz which we use </span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">//to control the triangle oscillator with an amplitute of 0.8</span>
-&nbsp;&nbsp;&nbsp;&nbsp;triOsc.play(midiToFreq(midiSequence[note]),&nbsp;0.8);
+    // midiToFreq transforms the MIDI value into a frequency in Hz which we use to
+    // control the triangle oscillator with an amplitute of 0.5
+    triOsc.play(midiToFreq(midiSequence[note]), 0.5);
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// The envelope gets triggered with the oscillator as input and the times and </span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// levels we defined earlier</span>
-&nbsp;&nbsp;&nbsp;&nbsp;env.play(triOsc,&nbsp;attackTime,&nbsp;sustainTime,&nbsp;sustainLevel,&nbsp;releaseTime);
+    // The envelope gets triggered with the oscillator as input and the times and
+    // levels we defined earlier
+    env.play(triOsc, attackTime, sustainTime, sustainLevel, releaseTime);
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Create the new trigger according to predefined durations and speed</span>
-&nbsp;&nbsp;&nbsp;&nbsp;trigger&nbsp;=&nbsp;<span style="color: #006699;">millis</span>() + duration;
+    // Create the new trigger according to predefined duration
+    trigger = millis() + duration;
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Advance by one note in the midiSequence;</span>
-&nbsp;&nbsp;&nbsp;&nbsp;note++;&nbsp;
+    // Advance by one note in the midiSequence;
+    note++; 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Loop the sequence</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span> (note == 12) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;0;
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;}
-}&nbsp;
+    // Loop the sequence, notice the jitter
+    if (note == 12) {
+      note = 0;
+    }
+  }
+} 
 
-<span style="color: #666666;">//&nbsp;This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;respective&nbsp;frequency&nbsp;of&nbsp;a&nbsp;MIDI&nbsp;note</span>
-<span style="color: #E2661A;">float</span> midiToFreq(<span style="color: #E2661A;">int</span> note) {
-&nbsp;&nbsp;<span style="color: #33997E;">return</span> (<span style="color: #006699;">pow</span>(2, ((note-69)/12.0)))*440;
+// This helper function calculates the respective frequency of a MIDI note
+float midiToFreq(int note) {
+  return (pow(2, ((note-69)/12.0))) * 440;
 }
 
-</pre>
+	</pre>
 
 	<hr />
 
@@ -380,100 +380,96 @@ Env&nbsp;env;&nbsp;
 
 
 <pre>
-<span style="color: #666666;">/**</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;3</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;example&nbsp;shows&nbsp;how&nbsp;to&nbsp;make&nbsp;a&nbsp;simple&nbsp;sampler&nbsp;and&nbsp;sequencer&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;with&nbsp;the&nbsp;Sound&nbsp;library.&nbsp;In&nbsp;this&nbsp;sketch,&nbsp;five&nbsp;different&nbsp;samples&nbsp;are&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;loaded&nbsp;and&nbsp;played&nbsp;back&nbsp;at&nbsp;different&nbsp;pitches,&nbsp;in&nbsp;this&nbsp;case&nbsp;five&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;different&nbsp;octaves.&nbsp;The&nbsp;sequencer&nbsp;triggers&nbsp;an&nbsp;event&nbsp;every&nbsp;200-1000&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;milliseconds&nbsp;randomly.&nbsp;Each&nbsp;time&nbsp;a&nbsp;sound&nbsp;is&nbsp;played&nbsp;a&nbsp;colored&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;rect&nbsp;with&nbsp;a&nbsp;random&nbsp;color&nbsp;is&nbsp;displayed.</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;Load&nbsp;this&nbsp;example&nbsp;with&nbsp;included&nbsp;MP3s&nbsp;from:&nbsp;</span>
-<span style="color: #666666;">&nbsp;&nbsp;&nbsp;Examples&nbsp;>&nbsp;Libraries&nbsp;>&nbsp;Sound&nbsp;>&nbsp;Soundfile&nbsp;>&nbsp;Sampler&nbsp;</span>
-<span style="color: #666666;">&nbsp;*/</span>
+/**
+ * Processing Sound Library, Example 3
+ * 
+ * This example shows how to make a simple sampler and sequencer 
+ * with the Sound library. In this sketch, five different samples are 
+ * loaded and played back at different pitches, in this case five 
+ * different octaves. The sequencer triggers an event every 200-1000 
+ * milliseconds randomly. Each time a sound is played a colored 
+ * rect with a random color is displayed.
+ * 
+ * Load this example with included sound files from the Processing Editor: 
+ * Examples > Libraries > Sound > Soundfile > Sampler 
+ */
 
-<span style="color: #33997E;">import</span> processing.sound.*;
+import processing.sound.*;
 
-SoundFile[]&nbsp;files;
+SoundFile[] file;
 
-<span style="color: #666666;">//&nbsp;Create&nbsp;an&nbsp;array&nbsp;of&nbsp;values&nbsp;which&nbsp;represent&nbsp;the&nbsp;octaves.&nbsp;</span>
-<span style="color: #666666;">//&nbsp;1.0&nbsp;is&nbsp;playback&nbsp;at&nbsp;normal&nbsp;speed,&nbsp;0.5&nbsp;is&nbsp;half&nbsp;and&nbsp;therefore&nbsp;</span>
-<span style="color: #666666;">//&nbsp;one&nbsp;octave&nbsp;down.&nbsp;2.0&nbsp;is&nbsp;double&nbsp;so&nbsp;one&nbsp;octave&nbsp;up.</span>
-<span style="color: #E2661A;">float</span>[] octave = { 
-&nbsp;&nbsp;0.25,&nbsp;0.5,&nbsp;1.0,&nbsp;2.0,&nbsp;4.0
-};
+// Define the number of samples 
+int numsounds = 5;
 
-<span style="color: #666666;">//&nbsp;The&nbsp;playSound&nbsp;array&nbsp;is&nbsp;defining&nbsp;how&nbsp;many&nbsp;samples&nbsp;will&nbsp;be&nbsp;</span>
-<span style="color: #666666;">//&nbsp;played&nbsp;at&nbsp;each&nbsp;trigger&nbsp;event</span>
-<span style="color: #E2661A;">int</span>[] playSound = { 
-&nbsp;&nbsp;1,&nbsp;1,&nbsp;1,&nbsp;1,&nbsp;1
-};
+// Create an array of values which represent the octaves. 
+// 1.0 is playback at normal speed, 0.5 is half and 
+// therefore one octave down. 2.0 is double so one octave up.
+float[] octave = {0.25, 0.5, 1.0, 2.0, 4.0};
 
-<span style="color: #666666;">//&nbsp;The&nbsp;trigger&nbsp;is&nbsp;an&nbsp;integer&nbsp;number&nbsp;in&nbsp;milliseconds&nbsp;so&nbsp;we&nbsp;</span>
-<span style="color: #666666;">//&nbsp;can&nbsp;schedule&nbsp;new&nbsp;events&nbsp;in&nbsp;the&nbsp;draw&nbsp;loop</span>
-<span style="color: #E2661A;">int</span> trigger=0;
+// The playSound array is defining how many samples will 
+// be played at each trigger event
+int[] playSound = {1, 1, 1, 1, 1};
 
-<span style="color: #666666;">//&nbsp;This&nbsp;array&nbsp;holds&nbsp;the&nbsp;pixel&nbsp;positions&nbsp;of&nbsp;the&nbsp;rectangles&nbsp;</span>
-<span style="color: #666666;">//&nbsp;that&nbsp;are&nbsp;drawn&nbsp;each&nbsp;event</span>
-<span style="color: #E2661A;">int</span>[] posx = {
-&nbsp;&nbsp;0,&nbsp;128,&nbsp;256,&nbsp;384,&nbsp;512
-};
+// The trigger is an integer number in milliseconds so we 
+// can schedule new events in the draw loop
+int trigger;
+
+// This array holds the pixel positions of the rectangles 
+// which are drawn each event
+int[] posx = {0, 128, 256, 384, 512};
 
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+void setup() {
+  size(640, 360);
+  background(255);
 
-&nbsp;&nbsp;<span style="color: #666666;">// Create an array of 5 empty soundfiles</span>
-&nbsp;&nbsp;files&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile[5];
+  // Create an array of empty soundfiles
+  file = new SoundFile[numsounds];
 
-&nbsp;&nbsp;<span style="color: #666666;">// Load 5 soundfiles from a folder in a for loop. By naming </span>
-&nbsp;&nbsp;<span style="color: #666666;">// the files 1., 2., 3., [...], n.aif it is easy to iterate </span>
-&nbsp;&nbsp;<span style="color: #666666;">// through the folder and load all files in one line of code.</span>
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; files.<span style="color: #33997E;">length</span>; i++) {
-&nbsp;&nbsp;&nbsp;&nbsp;files[i]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, (i+1) + <span style="color: #7D4793;">&quot;.aif&quot;</span>);
-&nbsp;&nbsp;}
+  // Load 5 soundfiles from a folder in a for loop. 
+  // By naming the files 1., 2., 3., n.aif it is easy to iterate
+  // through the folder and load all files in one line of code.
+  for (int i = 0; i < numsounds; i++) {
+    file[i] = new SoundFile(this, (i+1) + ".aif");
+  }
+
+  // Create a trigger which will be the basis for our random sequencer. 
+  trigger = millis();
 }
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
+void draw() {
 
-&nbsp;&nbsp;<span style="color: #666666;">// If the determined trigger moment in time matches up with </span>
-&nbsp;&nbsp;<span style="color: #666666;">// the computer clock events get triggered.</span>
-&nbsp;&nbsp;<span style="color: #669900;">if</span> (<span style="color: #006699;">millis</span>() &gt; trigger) {
+  // If the determined trigger moment in time matches up with the 
+  // computer clock events get triggered.
+  if (millis() > trigger) {
+    // Redraw the background every time to erase old rects
+    background(255);
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Redraw the background every time to erase old rects</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+    // By iterating through the playSound array we check for 1 or 0, 
+    // 1 plays a sound and draws a rect, for 0 nothing happens.
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// By iterating through the playSound array we check for </span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// 1 or 0, 1 plays a sound and draws a rect, for 0 nothing happens</span>
+    for (int i = 0; i < numsounds; i++) {      
+      // Check which indexes are 1 and 0.
+      if (playSound[i] == 1) {
+        float rate;
+        // Choose a random color and get set to noStroke()
+        fill(int(random(255)), int(random(255)), int(random(255)));
+        noStroke();
+        // Draw the rect in the positions we defined earlier in posx
+        rect(posx[i], 50, 128, 260);
+        // Choose a random index of the octave array
+        rate = octave[int(random(0, 5))];
+        // Play the soundfile from the array with the respective rate and loop set to false
+        file[i].play(rate, 1.0);
+      }
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; files.<span style="color: #33997E;">length</span>; i++) {      
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Check which indexes are 1 and 0.</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #669900;">if</span> (playSound[i] == 1) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #E2661A;">float</span> rate;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Choose a random color and get set to noStroke()</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255)), <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255)), <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255)));
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw the rect in the positions we defined earlier in posx</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>(posx[i], 50, 128, 260);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Choose a random index of the octave array</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate&nbsp;=&nbsp;octave[<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 5))];
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Play the soundfile from the array with the respective </span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// rate and loop set to false</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;files[i].play(rate,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      // Renew the indexes of playSound so that at the next event the order is different and randomized.
+      playSound[i] = int(random(0, 2));
+    }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Renew the indexes of playSound so that at the next event </span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// the order is different and randomized.</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;playSound[i]&nbsp;=&nbsp;<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(0, 2));
-&nbsp;&nbsp;&nbsp;&nbsp;}
-
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Create a new triggertime in the future, with a random offset </span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// between 200 and 1000 milliseconds</span>
-&nbsp;&nbsp;&nbsp;&nbsp;trigger&nbsp;=&nbsp;<span style="color: #006699;">millis</span>() + <span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(200, 1000));
-&nbsp;&nbsp;}
+    // Create a new triggertime in the future, with a random offset between 200 and 1000 milliseconds
+    trigger = millis() + int(random(200, 1000));
+  }
 }
 
 </pre>
@@ -481,84 +477,150 @@ SoundFile[]&nbsp;files;
 	<hr />
 
 <pre>
-<span style="color: #666666;">/**</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;4</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Five&nbsp;soundfiles&nbsp;are&nbsp;mapped&nbsp;to&nbsp;the&nbsp;numbers&nbsp;on&nbsp;the&nbsp;keyboard.&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Numbers&nbsp;1-5&nbsp;are&nbsp;played&nbsp;back&nbsp;an&nbsp;octave&nbsp;lower&nbsp;and&nbsp;numbers</span>
-<span style="color: #666666;">&nbsp;*&nbsp;6-0&nbsp;an&nbsp;octave&nbsp;higher.</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;Load&nbsp;this&nbsp;example&nbsp;with&nbsp;included&nbsp;MP3s&nbsp;from:&nbsp;</span>
-<span style="color: #666666;">&nbsp;&nbsp;&nbsp;Examples&nbsp;>&nbsp;Libraries&nbsp;>&nbsp;Sound&nbsp;>&nbsp;Soundfile&nbsp;>&nbsp;Keyboard&nbsp;</span>
-<span style="color: #666666;">&nbsp;*/</span>
+/**
+ * Processing Sound Library, Example 4
+ * 
+ * This example shows how to make a simple keyboard-triggered sampler with the Sound
+ * library. In this sketch 5 different short samples are loaded and played back at
+ * different speeds, which also changes their perceived pitch by one or two octaves.
+ * 
+ * Load this example with included sound files from the Processing Editor:  
+ * Examples > Libraries > Sound > Soundfile > Keyboard 
+ */
 
-<span style="color: #33997E;">import</span> processing.sound.*;
+import processing.sound.*;
 
-AudioDevice&nbsp;device;
-SoundFile[]&nbsp;file;
+SoundFile[] file;
 
-<span style="color: #E2661A;">int</span> red, green, blue;
+// Define the number of samples 
+int numsounds = 5;
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+// Define a variable to store the randomly generated background color in
+int backgroundColor[] = {255, 255, 255};
 
-&nbsp;&nbsp;<span style="color: #666666;">// Create an AudioDevice with low buffer size </span>
-&nbsp;&nbsp;<span style="color: #666666;">// and create an array containing 5 empty soundfiles</span>
-&nbsp;&nbsp;device&nbsp;=&nbsp;<span style="color: #33997E;">new</span> AudioDevice(<span style="color: #33997E;">this</span>, 48000, 32);
-&nbsp;&nbsp;file&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile[5];
+void setup() {
+  size(640, 360);
 
-&nbsp;&nbsp;<span style="color: #666666;">// Load 5 soundfiles from a folder in a for loop. </span>
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; file.<span style="color: #33997E;">length</span>; i++) {
-&nbsp;&nbsp;&nbsp;&nbsp;file[i]&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, (i+1) + <span style="color: #7D4793;">&quot;.aif&quot;</span>);
-&nbsp;&nbsp;}
+  // Create a Sound renderer and an array of empty soundfiles
+  file = new SoundFile[numsounds];
+
+  // Load 5 soundfiles from a folder in a for loop. By naming
+  // the files 1.aif, 2.aif, 3.aif, ..., n.aif it is easy to iterate
+  // through the folder and load all files in one line of code.
+  for (int i = 0; i < numsounds; i++) {
+    file[i] = new SoundFile(this, (i+1) + ".aif");
+  }
 }
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(red, green, blue);
+void draw() {
+  background(backgroundColor[0], backgroundColor[1], backgroundColor[2]);
 }
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>keyPressed</b></span>() {
-&nbsp;&nbsp;<span style="color: #666666;">// Set a random background color each time you hit then number keys</span>
-&nbsp;&nbsp;red=<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
-&nbsp;&nbsp;green=<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
-&nbsp;&nbsp;blue=<span style="color: #006699;">int</span>(<span style="color: #006699;">random</span>(255));
+void keyPressed() {
+  // We use a boolean helper variable to determine whether one of the branches
+  // of the switch-statement was activated or not
+  boolean validKey = true;
 
-&nbsp;&nbsp;<span style="color: #666666;">// Assign a sound to each number on your keyboard. 1-5 play at</span>
-&nbsp;&nbsp;<span style="color: #666666;">// an octave below the original pitch of the file, 6-0 play at</span>
-&nbsp;&nbsp;<span style="color: #666666;">// an octave above.</span>
-&nbsp;&nbsp;<span style="color: #669900;">switch</span>(<span style="color: #D94A7A;">key</span>) {
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;1&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[0].play(0.5,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;2&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[1].play(0.5,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;3&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[2].play(0.5,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;4&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[3].play(0.5,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;5&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[4].play(0.5,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;6&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[0].play(2.0,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;7&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[1].play(2.0,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;8&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[2].play(2.0,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;9&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[3].play(2.0,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;<span style="color: #33997E;">case</span> <span style="color: #7D4793;">&apos;0&apos;</span>:
-&nbsp;&nbsp;&nbsp;&nbsp;file[4].play(2.0,&nbsp;1.0);
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #33997E;">break</span>;
-&nbsp;&nbsp;}
+  switch(key) {
+  case 'a':
+    file[0].play(0.5, 1.0);
+    break;
+
+  case 's':
+    file[1].play(0.5, 1.0);
+    break;
+
+  case 'd':
+    file[2].play(0.5, 1.0);
+    break;
+
+  case 'f':
+    file[3].play(0.5, 1.0);
+    break;
+
+  case 'g':
+    file[4].play(0.5, 1.0);
+    break;
+
+  case 'h':
+    file[0].play(1.0, 1.0);
+    break;
+
+  case 'j':
+    file[1].play(1.0, 1.0);
+    break;
+
+  case 'k':
+    file[2].play(1.0, 1.0);
+    break;
+
+  case 'l':
+    file[3].play(1.0, 1.0);
+    break;
+
+  case ';':
+    file[4].play(1.0, 1.0);
+    break;
+
+  case '\'':
+    file[0].play(2.0, 1.0);
+    break;
+
+  case 'q':
+    file[1].play(2.0, 1.0);
+    break;
+
+  case 'w':
+    file[2].play(2.0, 1.0);
+    break;    
+
+  case 'e':
+    file[3].play(2.0, 1.0);
+    break;
+
+  case 'r':
+    file[4].play(2.0, 1.0);
+    break; 
+
+  case 't':
+    file[0].play(3.0, 1.0);
+    break;
+
+  case 'y':
+    file[1].play(3.0, 1.0);
+    break;
+
+  case 'u':
+    file[2].play(3.0, 1.0);
+    break;    
+
+  case 'i':
+    file[3].play(3.0, 1.0);
+    break;
+
+  case 'o':
+    file[4].play(3.0, 1.0);
+    break;
+
+  case 'p':
+    file[0].play(4.0, 1.0);
+    break;    
+
+  case '[':
+    file[1].play(4.0, 1.0);
+    break;
+
+    // no valid key was pressed, store that information
+  default:
+    validKey = false;
+  }
+
+  // If a new sample playback was triggered, change the background color
+  if (validKey) {
+    for (int i = 0; i < 3; i++) {
+      backgroundColor[i] = int(random(255));
+    }
+  }
 }
 
 </pre>
@@ -579,75 +641,74 @@ SoundFile[]&nbsp;file;
 
 
 <pre>
-<span style="color: #666666;">/**</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;5</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;sketch&nbsp;shows&nbsp;how&nbsp;to&nbsp;use&nbsp;the&nbsp;FFT&nbsp;class&nbsp;to&nbsp;analyze&nbsp;a&nbsp;stream&nbsp;&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;of&nbsp;sound.&nbsp;Change&nbsp;the&nbsp;variable&nbsp;bands&nbsp;to&nbsp;get&nbsp;more&nbsp;or&nbsp;less&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;spectral&nbsp;bands&nbsp;to&nbsp;work&nbsp;with.&nbsp;The&nbsp;smooth_factor&nbsp;variable&nbsp;determines&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;how&nbsp;much&nbsp;the&nbsp;signal&nbsp;will&nbsp;be&nbsp;smoothed&nbsp;on&nbsp;a&nbsp;scale&nbsp;form&nbsp;0-1.</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;Load&nbsp;this&nbsp;example&nbsp;with&nbsp;included&nbsp;MP3s&nbsp;from:&nbsp;</span>
-<span style="color: #666666;">&nbsp;&nbsp;&nbsp;Examples&nbsp;>&nbsp;Libraries&nbsp;>&nbsp;Sound&nbsp;>&nbsp;Analysis&nbsp;>&nbsp;FFTSpectrum&nbsp;</span>
-<span style="color: #666666;">&nbsp;*/</span>
+/**
+ * Processing Sound Library, Example 5
+ * 
+ * This sketch shows how to use the FFT class to analyze a stream
+ * of sound. Change the number of bands to get more spectral bands
+ * (at the expense of more coarse-grained time resolution of the spectrum).
+ * 
+ * Load this example with included sound files from the Processing Editor: 
+ * Examples > Libraries > Sound > Analysis > FFTSpectrum 
+ */
 
-<span style="color: #33997E;">import</span> processing.sound.*;
+import processing.sound.*;
 
-<span style="color: #666666;">//&nbsp;Declare&nbsp;the&nbsp;processing&nbsp;sound&nbsp;variables&nbsp;</span>
-SoundFile&nbsp;sample;
-FFT&nbsp;fft;
-AudioDevice&nbsp;device;
+// Declare the sound source and FFT analyzer variables
+SoundFile sample;
+FFT fft;
 
-<span style="color: #666666;">//&nbsp;Declare&nbsp;a&nbsp;scaling&nbsp;factor</span>
-<span style="color: #E2661A;">int</span> scale = 5;
+// Define how many FFT bands to use (this needs to be a power of two)
+int bands = 128;
 
-<span style="color: #666666;">//&nbsp;Define&nbsp;how&nbsp;many&nbsp;FFT&nbsp;bands&nbsp;we&nbsp;want</span>
-<span style="color: #E2661A;">int</span> bands = 128;
+// Define a smoothing factor which determines how much the spectrums of consecutive
+// points in time should be combined to create a smoother visualisation of the spectrum.
+// A smoothing factor of 1.0 means no smoothing (only the data from the newest analysis
+// is rendered), decrease the factor down towards 0.0 to have the visualisation update
+// more slowly, which is easier on the eye.
+float smoothingFactor = 0.2;
 
-<span style="color: #666666;">//&nbsp;declare&nbsp;a&nbsp;drawing&nbsp;variable&nbsp;for&nbsp;calculating&nbsp;rect&nbsp;width</span>
-<span style="color: #E2661A;">float</span> r_width;
+// Create a vector to store the smoothed spectrum data in
+float[] sum = new float[bands];
 
-<span style="color: #666666;">//&nbsp;Create&nbsp;a&nbsp;smoothing&nbsp;vector</span>
-<span style="color: #E2661A;">float</span>[] sum = <span style="color: #33997E;">new</span> <span style="color: #E2661A;">float</span>[bands];
+// Variables for drawing the spectrum:
+// Declare a scaling factor for adjusting the height of the rectangles
+int scale = 5;
+// Declare a drawing variable for calculating the width of the 
+float barWidth;
 
-<span style="color: #666666;">//&nbsp;Create&nbsp;a&nbsp;smoothing&nbsp;factor</span>
-<span style="color: #E2661A;">float</span> smooth_factor = 0.2;
+public void setup() {
+  size(640, 360);
+  background(255);
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(255);
+  // Calculate the width of the rects depending on how many bands we have
+  barWidth = width/float(bands);
 
-&nbsp;&nbsp;<span style="color: #666666;">// If the Buffersize is larger than the FFT Size, the FFT will fail</span>
-&nbsp;&nbsp;<span style="color: #666666;">// so we set Buffersize equal to bands</span>
-&nbsp;&nbsp;device&nbsp;=&nbsp;<span style="color: #33997E;">new</span> AudioDevice(<span style="color: #33997E;">this</span>, 44000, bands);
+  // Load and play a soundfile and loop it.
+  sample = new SoundFile(this, "beat.aiff");
+  sample.loop();
 
-&nbsp;&nbsp;<span style="color: #666666;">// Calculate the width of the rects depending on how many bands we have</span>
-&nbsp;&nbsp;r_width&nbsp;=&nbsp;<span style="color: #D94A7A;">width</span>/<span style="color: #006699;">float</span>(bands);
+  // Create the FFT analyzer and connect the playing soundfile to it.
+  fft = new FFT(this, bands);
+  fft.input(sample);
+}
 
-&nbsp;&nbsp;<span style="color: #666666;">// Load and play a soundfile and loop it. This has to be called </span>
-&nbsp;&nbsp;<span style="color: #666666;">// before the FFT is created.</span>
-&nbsp;&nbsp;sample&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, <span style="color: #7D4793;">&quot;beat.aiff&quot;</span>);
-&nbsp;&nbsp;sample.<span style="color: #006699;">loop</span>();
+public void draw() {
+  // Set background color, noStroke and fill color
+  background(125, 255, 125);
+  fill(255, 0, 150);
+  noStroke();
 
-&nbsp;&nbsp;<span style="color: #666666;">// Create and patch the FFT analyzer</span>
-&nbsp;&nbsp;fft&nbsp;=&nbsp;<span style="color: #33997E;">new</span> FFT(<span style="color: #33997E;">this</span>, bands);
-&nbsp;&nbsp;fft.input(sample);
-}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  // Perform the analysis
+  fft.analyze();
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
-&nbsp;&nbsp;<span style="color: #666666;">// Set background color, noStroke and fill color</span>
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(204);
-&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0, 0, 255);
-&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
+  for (int i = 0; i < bands; i++) {
+    // Smooth the FFT spectrum data by smoothing factor
+    sum[i] += (fft.spectrum[i] - sum[i]) * smoothingFactor;
 
-&nbsp;&nbsp;fft.analyze();
-&nbsp;&nbsp;<span style="color: #669900;">for</span> (<span style="color: #E2661A;">int</span> i = 0; i &lt; bands; i++) {
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Smooth the FFT data by smoothing factor</span>
-&nbsp;&nbsp;&nbsp;&nbsp;sum[i]&nbsp;+=&nbsp;(fft.spectrum[i]&nbsp;-&nbsp;sum[i])&nbsp;*&nbsp;smooth_factor;
-
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">// Draw the rects with a scale factor</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>( i*r_width, <span style="color: #D94A7A;">height</span>, r_width, -sum[i]*<span style="color: #D94A7A;">height</span>*scale );
-&nbsp;&nbsp;}
+    // Draw the rectangles, adjust their height using the scale factor
+    rect(i*barWidth, height, barWidth, -sum[i]*height*scale);
+  }
 }
 
 </pre>
@@ -655,60 +716,59 @@ AudioDevice&nbsp;device;
 	<hr />
 
 <pre>
-<span style="color: #666666;">/**</span>
-<span style="color: #666666;">&nbsp;*&nbsp;Processing&nbsp;Sound&nbsp;Library,&nbsp;Example&nbsp;6</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;*&nbsp;This&nbsp;sketch&nbsp;shows&nbsp;how&nbsp;to&nbsp;use&nbsp;the&nbsp;Amplitude&nbsp;class&nbsp;to&nbsp;analyze&nbsp;a</span>
-<span style="color: #666666;">&nbsp;*&nbsp;stream&nbsp;of&nbsp;sound.&nbsp;In&nbsp;this&nbsp;case&nbsp;a&nbsp;sample&nbsp;is&nbsp;analyzed.&nbsp;The&nbsp;smoothFactor</span>
-<span style="color: #666666;">&nbsp;*&nbsp;variable&nbsp;determines&nbsp;how&nbsp;much&nbsp;the&nbsp;signal&nbsp;will&nbsp;be&nbsp;smoothed&nbsp;on&nbsp;a&nbsp;scale</span>
-<span style="color: #666666;">&nbsp;*&nbsp;from&nbsp;0&nbsp;-&nbsp;1.</span>
-<span style="color: #666666;">&nbsp;*&nbsp;</span>
-<span style="color: #666666;">&nbsp;Load&nbsp;this&nbsp;example&nbsp;with&nbsp;included&nbsp;MP3s&nbsp;from:&nbsp;</span>
-<span style="color: #666666;">&nbsp;&nbsp;&nbsp;Examples&nbsp;>&nbsp;Libraries&nbsp;>&nbsp;Sound&nbsp;>&nbsp;Analysis&nbsp;>&nbsp;PeakAmplitude&nbsp;</span>
-<span style="color: #666666;">&nbsp;*/</span>
+/**
+ * Processing Sound Library, Example 6
+ * 
+ * This sketch shows how to use the Amplitude class to analyze the changing
+ * "loudness" of a stream of sound. In this case an audio sample is analyzed.
+ * 
+ * Load this example with included sound files from the Processing Editor: 
+ * Examples > Libraries > Sound > Analysis > PeakAmplitude 
+ */
 
-<span style="color: #33997E;">import</span> processing.sound.*;
+import processing.sound.*;
 
-<span style="color: #666666;">//&nbsp;Declare&nbsp;the&nbsp;processing&nbsp;sound&nbsp;variables&nbsp;</span>
-SoundFile&nbsp;sample;
-Amplitude&nbsp;rms;
+// Declare the processing sound variables 
+SoundFile sample;
+Amplitude rms;
 
-<span style="color: #666666;">//&nbsp;Declare&nbsp;a&nbsp;scaling&nbsp;factor</span>
-<span style="color: #E2661A;">float</span> scale = 5.0;
+// Declare a smooth factor to smooth out sudden changes in amplitude.
+// With a smooth factor of 1, only the last measured amplitude is used for the
+// visualisation, which can lead to very abrupt changes. As you decrease the
+// smooth factor towards 0, the measured amplitudes are averaged across frames,
+// leading to more pleasant gradual changes
+float smoothingFactor = 0.25;
 
-<span style="color: #666666;">//&nbsp;Declare&nbsp;a&nbsp;smooth&nbsp;factor</span>
-<span style="color: #E2661A;">float</span> smoothFactor = 0.25;
+// Used for storing the smoothed amplitude value
+float sum;
 
-<span style="color: #666666;">//&nbsp;Used&nbsp;for&nbsp;smoothing</span>
-<span style="color: #E2661A;">float</span> sum;
+public void setup() {
+  size(640, 360);
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>setup</b></span>() {
-&nbsp;&nbsp;<span style="color: #006699;">size</span>(640, 360);
+  //Load and play a soundfile and loop it
+  sample = new SoundFile(this, "beat.aiff");
+  sample.loop();
 
-&nbsp;&nbsp;<span style="color: #666666;">//Load and play a soundfile and loop it</span>
-&nbsp;&nbsp;sample&nbsp;=&nbsp;<span style="color: #33997E;">new</span> SoundFile(<span style="color: #33997E;">this</span>, <span style="color: #7D4793;">&quot;beat.aiff&quot;</span>);
-&nbsp;&nbsp;sample.<span style="color: #006699;">loop</span>();
+  // Create and patch the rms tracker
+  rms = new Amplitude(this);
+  rms.input(sample);
+}      
 
-&nbsp;&nbsp;<span style="color: #666666;">// Create and patch the rms tracker</span>
-&nbsp;&nbsp;rms&nbsp;=&nbsp;<span style="color: #33997E;">new</span> Amplitude(<span style="color: #33997E;">this</span>);
-&nbsp;&nbsp;rms.input(sample);
-}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public void draw() {
+  // Set background color, noStroke and fill color
+  background(125, 255, 125);
+  noStroke();
+  fill(255, 0, 150);
 
-<span style="color: #33997E;">void</span> <span style="color: #006699;"><b>draw</b></span>() {
-&nbsp;&nbsp;<span style="color: #666666;">// Set background color, noStroke and fill color</span>
-&nbsp;&nbsp;<span style="color: #006699;">background</span>(0, 0, 255);
-&nbsp;&nbsp;<span style="color: #006699;">noStroke</span>();
-&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255, 0, 150);
+  // smooth the rms data by smoothing factor
+  sum += (rms.analyze() - sum) * smoothingFactor;
 
-&nbsp;&nbsp;<span style="color: #666666;">// Smooth the rms data by smoothing factor</span>
-&nbsp;&nbsp;sum&nbsp;+=&nbsp;(rms.analyze()&nbsp;-&nbsp;sum)&nbsp;*&nbsp;smoothFactor;&nbsp;&nbsp;
+  // rms.analyze() return a value between 0 and 1. It's
+  // scaled to height/2 and then multiplied by a fixed scale factor
+  float rms_scaled = sum * (height/2) * 5;
 
-&nbsp;&nbsp;<span style="color: #666666;">// rms.analyze() return a value between 0 and 1. It&apos;s</span>
-&nbsp;&nbsp;<span style="color: #666666;">// scaled to height/2 and then multiplied by a scale factor</span>
-&nbsp;&nbsp;<span style="color: #E2661A;">float</span> rmsScaled = sum * (<span style="color: #D94A7A;">height</span>/2) * scale;
-
-&nbsp;&nbsp;<span style="color: #666666;">// Draw an ellipse at a size based on the audio analysis</span>
-&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(<span style="color: #D94A7A;">width</span>/2, <span style="color: #D94A7A;">height</span>/2, rmsScaled, rmsScaled);
+  // We draw a circle whose size is coupled to the audio analysis
+  ellipse(width/2, height/2, rms_scaled, rms_scaled);
 }
 
 </pre>
