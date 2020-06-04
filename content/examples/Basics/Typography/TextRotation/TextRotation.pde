@@ -10,8 +10,6 @@ float angleRotate = 0.0;
 void setup() {
   size(640, 360);
   background(0);
-  
-  pixelDensity(2);
 
   // Create the font from the .ttf file in the data folder
   f = createFont("SourceCodePro-Regular.ttf", 18);
