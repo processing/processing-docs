@@ -120,6 +120,7 @@
 	<cat label="Typography">
 		<ex p5="true" file="Letters.html">Letters</ex>
 		<ex p5="true" file="Words.html">Words</ex>
+		<ex p5="true" file="TextRotation.html">Text Rotation</ex>
 	</cat>
 	<cat label="Web">
 		<ex p5="true" file="EmbeddedLinks.html">Embedded Links</ex>
