@@ -252,6 +252,7 @@ double	KEYWORD5	double
 float 	KEYWORD5	float
 int	KEYWORD5	int
 long	KEYWORD5	long
+var   KEYWORD5
 
 
 # Flow structures
