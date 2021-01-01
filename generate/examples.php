@@ -81,7 +81,7 @@ foreach ($catBasics as $cat => $array) {
 $html .= "</ul>";
 
 //Create Topics html
-$html .= "<b>Topic Examples</b>. <i>Programs about to animation, interaction, motion, simulation, and more...</i><br /><br /><br />";
+$html .= "<b>Topic Examples</b>. <i>Programs about animation, interaction, motion, simulation, and more...</i><br /><br /><br />";
 $html .= "<ul class=\"examples\">\n";
 foreach ($catTopics as $cat => $array) {
     $html .= "<li><ul><li><b>$cat</b></li><br />";
