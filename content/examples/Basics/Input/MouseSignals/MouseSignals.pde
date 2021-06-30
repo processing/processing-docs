@@ -19,8 +19,6 @@ void setup() {
   bvals = new int[width];
 }
 
-int arrayindex = 0;
-
 void draw() {
   background(102);
   
