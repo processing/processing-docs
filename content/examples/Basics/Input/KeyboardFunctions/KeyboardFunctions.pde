@@ -1,6 +1,6 @@
 /**
  * Keyboard Functions. 
- * Modified from code by Martin. 
+ * Modified from code by Martin Gomez. 
  * Original 'Color Typewriter' concept by John Maeda. 
  * 
  * Click on the window to give it focus and press the letter keys to type colors. 
