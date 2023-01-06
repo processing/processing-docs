@@ -1,3 +1,7 @@
+> ⚠️ This repository is now deprecated and will be archived soon. If you have any issues or want to submit a pull request, please direct them to the [processing-website](https://github.com/processing/processing-website) repo. Make sure to check the [README](https://github.com/processing/processing-website/blob/main/README.md) for information on how to contribute to the documentation.
+
+<!-- ⌛️ If you see this after 2023 please archive this repository ⌛️ -->
+
 Processing Documentation
 ==========
 
